@@ -1,7 +1,7 @@
 #!/bin/bash
 #set -x
-DERIVATIVE_PACKAGES=/var/gensys/live-helper/guadalinexv6/chroot_local-packages
-DERIVATIVE_REPOSITORY=/var/gensys/deb-repositories/ubuntu-mirror
+DERIVATIVE_PACKAGES=/var/gensys/deb-repositories/gv6
+DERIVATIVE_REPOSITORY=/var/gensys/deb-repositories/derivative-repo
 REPREPRO=/usr/bin/reprepro
 LOG_FILE=/var/gensys/update-derivative.log
 CODENAME=buho
@@ -20,3 +20,5 @@ for pkg in $(ls $DERIVATIVE_PACKAGES | grep -E '.*deb$|.*dsc$');do
 	fi
   fi
 done
+
+chmod 755 -R $DERIVATIVE_REPOSITORY

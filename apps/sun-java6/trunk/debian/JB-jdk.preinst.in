@@ -14,6 +14,10 @@ errmsg()
     echo >&2 ''
 }
 
+# Guadalinex hack
+db_set shared/accepted-$license true
+db_set shared/present-$license true
+
 db_get shared/accepted-$license
 if [ "$RET" = "true" ]; then
     echo "$license license has already been accepted" >&2

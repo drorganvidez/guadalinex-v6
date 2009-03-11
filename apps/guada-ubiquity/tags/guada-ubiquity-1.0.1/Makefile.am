@@ -1,20 +1,11 @@
 SUBDIRS = src data
 
-intltool_extra = intltool-extract.in intltool-merge.in intltool-update.in
-
 CLEANFILES = \
-	configure.in
+	configure.in config.h.in
 
-DISTCLEANFILES =		\
-	intltool-extract	\
-	intltool-merge		\
-	intltool-update		\
-	po/.intltool-merge-cache \
-	gnome-doc-utils.make
+DISTCLEANFILES = aclocal.m4 compile py-compile config.guess config.sub configure depcomp install-sh ltmain.sh Makefile.in missing
 
 EXTRA_DIST = \
-	gnome-doc-utils.make 	\
-	$(intltool_extra)	\	
         AUTHORS                 \
         NEWS                    \
         README 

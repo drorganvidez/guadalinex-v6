@@ -1,0 +1,19 @@
+Source: guada-ubiquity
+Section: admin
+Priority: optional
+XSBC-Original-Maintainer: Roberto Majadas <roberto.majadas@openshine.com>
+Maintainer: Junta de Andalucía <packmaster@guadalinex.org>
+Uploaders: Juanje Ojeda Croissier <jojeda@emergya.es>
+Build-Depends: cdbs, debhelper (>= 5), debconf (>= 0.5.0)
+Standards-Version: 3.8.0
+Homepage: http://launchpad.net/guada-ubiquity
+Vcs-Browser: http://codebrowse.launchpad.net/~guadalinex-members/guada-ubiquity/trunk/changes
+Vcs-Bzr: http://bazaar.launchpad.net/~guadalinex-members/guada-ubiquity/trunk
+
+Package: guada-ubiquity
+Architecture: all
+XB-Python-Version: ${python:Versions}
+Depends: ubiquity-frontend-gtk, python-gnome2, python-dbus, ${misc:Depends}
+Description: Custom installer of Guadalinex 
+ This is the new installer of Guadalinex V6. It integrate the diskpreview
+ and other wonderful features.

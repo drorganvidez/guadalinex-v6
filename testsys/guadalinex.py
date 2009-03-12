@@ -36,7 +36,6 @@ gcs_dir = "gcs"
 #apps=[]
 apps=[
         "sun-java6",
-]
 #	"buildbotdummy",
 #        "casper-guada",
 #	"dumphive",
@@ -54,7 +53,7 @@ apps=[
 #        "lemurae",
 #        "lig",
 #	"ubiquity",
-#        "usplash-theme-guadalinex",
+        "usplash-theme-guadalinex",
 #        "vodafone-mobile-connect-card-driver-for-linux",
 #        "accesibility-profiles",
 #        "gedit-plugin-tloleo",
@@ -63,29 +62,29 @@ apps=[
 #        "gnome-volume-manager",
 #        "gru",
 #        "grubaker",
-#        "guada-ubiquity",
+        "guada-ubiquity",
 #        "informe-diagnostico",
 #        "mount-systray",
 #        "opensc",
 #        "sun-java6-6-06",
 #        "watermain",
-#]
+]
 
 # Lista de nombre de los metapkgs. El nombre debe coincidir con la rama de 
 # subversion que contiene el metapkg. La inclusión en esta lista de un nuevo 
 # metapkg hace que buildbot lo gestione automáticamente.
 metapkgs = [
 #	"guadalinex-about",
-#        "guadalinex-artwork",
+        "guadalinex-artwork",
         "guadalinex-desktop",
-#        "guadalinex-desktop-conf",
+        "guadalinex-desktop-conf",
 #	"guadalinex-example-content",
         "guadalinex-minimal",
-#        "guadalinex-minimal-conf",
+        "guadalinex-minimal-conf",
         "guadalinex-standard",
 #        "guadalinex-standard-conf",
 #	"guadalinex-user-manual",
-#        "meta-guadalinex-v5",
+        "meta-guadalinex-v6",
 #        "suplemento-dvd-gv5",
 #        "suplemento-gv5-desarrollo",
 #        "suplemento-gv5-educativo",

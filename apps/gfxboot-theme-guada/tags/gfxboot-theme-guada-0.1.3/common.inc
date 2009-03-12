@@ -1163,7 +1163,7 @@
   /infobox.bg          lightgray         def
   /infobox.text.normal black             def
 
-  /menu.bar.color      black       def
+  /menu.bar.color      orange       def
 
   small_layout {
     /frame1.pos  {  80 208 } def
@@ -1530,6 +1530,7 @@ dup .undef eq { pop "back.jpg" findfile } if
 /blue                0x0000a0          newcolor
 /red                 0xc00000          newcolor
 /green               0x009000          newcolor
+/orange		     0xfeb012          newcolor
 /yellow              0xffff20          newcolor
 /lightgray           0xd8deed          newcolor
 /dotcolor            0xa9bbcd          newcolor

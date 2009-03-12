@@ -14,7 +14,7 @@
 /panel.font	font.normal def
 /panel.normal	lightblue def
 %/panel.high	white def
-/panel.high	orange def
+/panel.high	darkblue def
 /panel.bg	lightgray def
 /panel.border	lightdotcolor def
 

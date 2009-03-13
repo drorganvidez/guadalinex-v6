@@ -37,16 +37,16 @@ gcs_dir = "gcs"
 apps=[
         "sun-java6",
 #	"buildbotdummy",
-#        "casper-guada",
+        "casper-guada",
 #	"dumphive",
 #        "escritorio-movistar",
 #        "g3g",
-#        "gcs",
+        "gcs",
 #        "gfxboot-theme-guada",
 #	"getatr",
-#	"guadafox",
+	"guadafox",
 #	"guadalinex-eadmin",
-#        "guadalinex-keyring",
+        "guadalinex-keyring",
 #        "guadalinex-supplement-generator",
 #        "guadalinex-supplement-installer",
 #        "hermes",
@@ -66,7 +66,6 @@ apps=[
 #        "informe-diagnostico",
 #        "mount-systray",
 #        "opensc",
-#        "sun-java6-6-06",
 #        "watermain",
 ]
 

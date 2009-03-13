@@ -1,0 +1,5 @@
+#!/bin/bash
+
+cd pkgbuilderbot; make stop; cd ..
+cd gensysbot; make stop; cd ..
+buildbot stop /var/gensys/testsys/gv6master

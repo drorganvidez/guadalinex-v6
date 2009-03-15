@@ -1,5 +1,9 @@
 #!/bin/sh
 
+set -e
+
+#DEBHELPER#
+
 if [ remove = "$1" ]; then
     rm -f /etc/firefox-3.0/profile/bookmarks.html
     dpkg-divert --package guadafox --remove --rename \

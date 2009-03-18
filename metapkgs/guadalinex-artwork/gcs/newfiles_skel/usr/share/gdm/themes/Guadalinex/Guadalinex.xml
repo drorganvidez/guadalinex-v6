@@ -8,11 +8,11 @@
     <pos y="0" x="0" width="100%" height="100%"/>
   </item>
 
-  <!-- guadalinex logo -->
+  <!-- guadalinex logo
     <item type="pixmap">
         <normal file="guadalinexv6.png" alpha="1.0"/>
         <pos x="50%" y="33%" width="200" height="scale" anchor="c"/>
-    </item>
+    </item> -->
 <!--
   <item type="pixmap">
      <normal file="gdm_barras.svg"/>
@@ -98,23 +98,23 @@
 
   <!-- password box -->
   
-  <item type="pixmap">
+  <item type="rect">
       <!-- <pos x="50%" y="58%" width="box" height="box" anchor="c" />-->
-      <pos x="50%" y="54%" width="360" height="130" anchor="c" />
-      <normal file="boundingbox.svg" alpha="1"/>
+      <pos x="49%" y="60%" width="360" height="130" anchor="c" />
+<!--      <normal file="boundingbox.svg" alpha="1"/> -->
       <box xpadding="5" ypadding="0" spacing="0" orientation="vertical">
 
-      <item type="rect">
+<!--      <item type="rect">
         <pos x="0" y="5" width="100%" height="box" expand="true"/>
-        <!-- <normal file="access_bar.svg"/> -->
+thiswascommented        <normal file="access_bar.svg"/>
         <box xpadding="20" ypadding="10" spacing="0" orientation="vertical">
          <item type="label" id="title">
            <pos x="0" y="0" width="box" height="box" expand="true"/>
            <normal font="FrancophilSans Bold 11" color="#ffffff"/>
-           <text>Acceso al sistema</text>
+           <text>Acceso al sistema</text> 
          </item>
         </box>
-      </item>
+      </item> -->
 
       <item type="rect">
          <pos x="0" y="0" width="100%" height="box" expand="true"/>
@@ -141,58 +141,59 @@
 
        </item>
 
-       <item type="rect">
-         <pos x="20" y="0" width="100%" height="box" expand="true"/>
-         <box xpadding="0" ypadding="20" spacing="0" orientation="horizontal" homogeneous="true">
-           <!-- language -->
-           <item type="rect" id="language_button" button="true">
-             <pos x="40%" y="15%" width="box" height="box" anchor="c"/>
-             <box xpadding="0" spacing="2" orientation="horizontal">
-               <item type="pixmap">
-                 <pos width="24" height="24"/>
-                 <normal file="icon-language.png"/>
-                 <prelight file="icon-language-prelight.png"/>
-                 <active file="icon-language-active.png"/>
-               </item>
-               <item type="label">
-                 <normal font="FrancophilSans Bold 11" color="#ffffff"/>
-                 <prelight font="FrancophilSans Bold 11" color="#647fb8"/>
-                 <active font="FrancophilSans Bold 11" color="#ffffff"/>
-                 <pos x="10" y="50%" anchor="w"/>
-                 <stock type="language"/>
-               </item>
-             </box>
-           </item>
-           <!-- session -->
-           <item type="rect" id="session_button" button="true">
-             <pos x="40%" y="15%" width="box" height="box" anchor="c"/>
-             <box xpadding="0" spacing="2" orientation="horizontal">
-               <item type="pixmap">
-                 <pos width="24" height="24"/>
-                 <normal file="icon-session.png"/>
-                 <prelight file="icon-session-prelight.png"/>
-                 <active file="icon-session-active.png"/>
-               </item>
-               <item type="label">
-                 <normal font="FrancophilSans Bold 11" color="#ffffff"/>
-                 <prelight font="FrancophilSans Bold 11" color="#647fb8"/>
-                 <active font="FrancophilSans Bold 11" color="#ffffff"/>
-                 <pos x="10" y="50%" anchor="w"/>
-                 <stock type="session"/>
-               </item>
-             </box>
-           </item>
-        </box>
-       </item>
 
       </box>
-  </item>
+  </item> 
 
+  <item type="rect">
+    <!-- <pos x="0" y="100" width="100%" height="box" expand="true"/> -->
+    <pos x="1%" y="100%" width="box" height="box" anchor="sw"/>
+    <box xpadding="0" ypadding="0" spacing="0" orientation="horizontal" homogeneous="true"> 
+      <!-- language -->
+      <item type="rect" id="language_button" button="true">
+        <pos x="40%" y="40%" width="box" height="box" anchor="c"/>
+        <box xpadding="20" spacing="2" orientation="horizontal">
+          <item type="pixmap">
+            <pos width="24" height="24"/>
+            <normal file="icon-language.png"/>
+            <prelight file="icon-language-prelight.png"/>
+            <active file="icon-language-active.png"/>
+          </item>
+          <item type="label">
+            <normal font="FrancophilSans Bold 11" color="#ffffff"/>
+            <prelight font="FrancophilSans Bold 11" color="#647fb8"/>
+            <active font="FrancophilSans Bold 11" color="#ffffff"/>
+            <pos x="10" y="50%" anchor="w"/>
+            <stock type="language"/>
+          </item>
+        </box>
+      </item>
+      <!-- session -->
+      <item type="rect" id="session_button" button="true">
+        <pos x="40%" y="40%" width="box" height="box" anchor="c"/>
+        <box xpadding="0" spacing="2" orientation="horizontal">
+          <item type="pixmap">
+            <pos width="24" height="24"/>
+            <normal file="icon-session.png"/>
+            <prelight file="icon-session-prelight.png"/>
+            <active file="icon-session-active.png"/>
+          </item>
+          <item type="label">
+            <normal font="FrancophilSans Bold 11" color="#ffffff"/>
+            <prelight font="FrancophilSans Bold 11" color="#647fb8"/>
+            <active font="FrancophilSans Bold 11" color="#ffffff"/>
+            <pos x="10" y="50%" anchor="w"/>
+            <stock type="session"/>
+          </item>
+        </box>
+      </item>
+   </box>
+  </item> 
 
 
   <!-- caps lock warning -->
   <item type="label" id="caps-lock-warning">
-    <pos x="50%" y="70%" anchor="c"/>
+    <pos x="50%" y="62%" anchor="c"/>
     <normal font="FrancophilSans Bold 11" color="#dc292b"/>
     <stock type="caps-lock-warning"/>
   </item>
@@ -200,7 +201,7 @@
 
   <!-- pam error -->
   <item type="label" id="pam-error">
-    <pos x="50%" y="75%" anchor="c" />
+    <pos x="50%" y="62%" anchor="c" />
     <normal font="FrancophilSans Bold 11" color="#dc292b"/>
     <text></text>
   </item>

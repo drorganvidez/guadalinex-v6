@@ -1,3 +1,5 @@
+gtk-icon-theme-name = "Human"
+
 style "clearlooks-default"
 {
   GtkButton      ::default_border    = { 0, 0, 0, 0 }
@@ -6,82 +8,51 @@ style "clearlooks-default"
   GtkRange       ::slider_width      = 15
   GtkRange       ::stepper_size      = 15
   
-  GtkScrollbar   ::min_slider_length = 30
+  GtkScrollbar   ::min_slider_length = 35
   GtkCheckButton ::indicator_size    = 14
   GtkMenuBar     ::internal-padding  = 0
   GtkTreeView    ::expander_size     = 14
   GtkExpander    ::expander_size     = 16
-  GtkScale       ::slider-length     = 27
+  GtkScale       ::slider-length     = 31
 #  GtkToolbar     ::button-relief     = GTK_RELIEF_NORMAL
 #  GtkMenuBar     ::shadow-type       = GTK_SHADOW_OUT
 #  GtkScrollbar   ::has-secondary-forward-stepper = 1
 #  GtkScrollbar   ::has-secondary-backward-stepper = 1
 
-  GtkButton      ::child-displacement-x = 1
-  GtkButton      ::child-displacement-y = 1
-
-  WnckTasklist   ::fade-overlay-rect = 0
+  GtkButton      ::child-displacement-x = 0
+  GtkButton      ::child-displacement-y = 0
 
   xthickness = 1
   ythickness = 1
 
-  fg[NORMAL]        = "#000000" # black
-  fg[PRELIGHT]      = "#000000" # black
-  fg[SELECTED]      = "#ffffff" # white 
-  fg[ACTIVE]        = "#000000" # black
-  fg[INSENSITIVE]   = "#b5b3ac" # dark beige
-#
-  bg[NORMAL]        = "#ede9e3"
-  bg[PRELIGHT]      = "#f9f7f3" # very light beige
-  bg[SELECTED]	    = "#131313" # deepsky
-  bg[INSENSITIVE]   = "#efebe5" # beige
-  bg[ACTIVE]        = "#d7d3ca" #"#d7d3ca" # dark beige
-#
-  base[NORMAL]      = "#ffffff" # white 
-  base[PRELIGHT]    = "#5f8ec4" # dark beige
-  base[ACTIVE]      = "#a69f91" # darker deepsky
-  base[SELECTED]    = "#5598d7" # deepsky
-  base[INSENSITIVE] = "#e8e5de" # beige
-#
-  text[NORMAL]      = "#000000" # black
-  text[PRELIGHT]    = "#548b95" # black
-#  text[ACTIVE]      = "#ffffff" # white
-#  text[SELECTED]    = "#ffffff" # white
-#  text[INSENSITIVE] = "#b5b3ac" # dark beige
+        fg[NORMAL]        = "#F3F3F3"
+        fg[PRELIGHT]      = "#687e94" # from background.jpg it is "Guadalinex V6" text colour
+        fg[ACTIVE]        = "#ffffff" # from background.jpg it is "Guadalinex V6" text colour
+        fg[INSENSITIVE]   = "#ffffff"   
 
-#  fg[NORMAL]      = "#000000"
-#  text[NORMAL]      = "#ffffff"
-#  bg[NORMAL]      = "#000033"
-#  base[NORMAL]    = "#000033"
+        bg[NORMAL]        = "#03284c" # dark blue from background.jpg bg
+        bg[PRELIGHT]      = "#02172b" # a bit darker blue than background.jpg bg
+        bg[ACTIVE]        = "#687e94"
+        bg[SELECTED]      = "#02172b"
+        bg[INSENSITIVE]   = "#ffffff"
 
-#  fg[INSENSITIVE]      = "#999999"
-#  bg[INSENSITIVE]      = "#333333"
-#  text[INSENSITIVE]      = "#999999"
-#  base[INSENSITIVE]      = "#333333"
+        base[NORMAL]      = "#ffffff"
+        base[PRELIGHT]    = "#ffffff"
+        base[ACTIVE]      = "#ffffff"
+        base[SELECTED]    = "#687e94"
+        base[INSENSITIVE] = "#ffffff"
 
-#  fg[PRELIGHT]    = "#000000"
-#  text[PRELIGHT]    = "#003333"
-#  bg[PRELIGHT]    = "#ffffff"
-#  base[PRELIGHT]    = "#ffffff"
+        text[NORMAL]      = "#F3F3F3"
+        text[PRELIGHT]    = "#F3F3F3"
+        text[ACTIVE]      = "#F3F3F3"
+        text[SELECTED]    = "#F3F3F3"
+        text[INSENSITIVE] = "#F3F3F3"
 
-#  fg[ACTIVE]      = "#000000"
-  text[ACTIVE]      = "#ffffff"
-#  bg[ACTIVE]      = "#666699"
-#  base[ACTIVE]      = "#666699"
-
-#  fg[SELECTED]    = "#ffffff"
-  text[SELECTED]    = "#000033"
-#  bg[SELECTED]    = "#ffffff"
-#  base[SELECTED]    = "#ffcccc"
-                                   
+ # font_name = "Sans 11"
 
   engine "clearlooks" 
   {
-    #scrollbar_color   = "#76acde"
     menubarstyle      = 2       # 0 = flat, 1 = sunken, 2 = flat gradient
-    menuitemstyle     = 1       # 0 = flat, 1 = 3d-ish (gradient), 2 = 3d-ish (button)
-    listviewitemstyle = 1       # 0 = flat, 1 = 3d-ish (gradient)
-    progressbarstyle  = 1       # 0 = candy bar, 1 = fancy candy bar, 2 = flat
     animation         = FALSE
   }
 }
@@ -101,15 +72,15 @@ style "clearlooks-wider" = "clearlooks-default"
 
 style "clearlooks-button" = "clearlooks-wider"
 {
-  bg[NORMAL]        = "#f6f4f1"
-  bg[INSENSITIVE]   = "#f2efeb"
-  bg[PRELIGHT]      = "#faf9f8"
+  bg[NORMAL]        = "#02172b"
+#  bg[PRELIGHT]      = "#171717"
+#  bg[ACTIVE]        = "#1F1F1F" 
+#  bg[SELECTED]      = "#000000"
+#  bg[INSENSITIVE]   = "#ffffff"
 }
 
 style "clearlooks-notebook" = "clearlooks-wide"
 {
-  bg[NORMAL]      = "#efebe5"
-  bg[INSENSITIVE] = "#efebe5"
 }
 
 style "clearlooks-tasklist" = "clearlooks-default"
@@ -122,61 +93,72 @@ style "clearlooks-menu" = "clearlooks-default"
 {
   xthickness = 2
   ythickness = 1
-  bg[NORMAL] = "#f9f7f3"
+  bg[NORMAL]        = "#03284c"
+#  bg[PRELIGHT]      = "#171717"
+#  bg[ACTIVE]        = "#1F1F1F"
+#  bg[SELECTED]      = "#000000"
+#  bg[INSENSITIVE]   = "#ffffff"
 }
 
 style "clearlooks-menubar-item" = "clearlooks-button"
 {
-    fg[PRELIGHT] = "#000000"
 }
 
 style "clearlooks-menu-item" = "clearlooks-default"
 {
   xthickness = 2
   ythickness = 3
-  fg[PRELIGHT] = "#ffffff"
-  text[PRELIGHT] = "#ffffff"
 }
 
 style "clearlooks-tree" = "clearlooks-default"
 {
   xthickness = 2
   ythickness = 2
+
 }
 
 style "clearlooks-frame-title" = "clearlooks-default"
 {
-  fg[NORMAL] = "#404040"
 }
 
 style "clearlooks-tooltips" = "clearlooks-default"
 {
   xthickness = 4
-  ythickness = 4
-  bg[NORMAL] = { 1.0,1.0,0.75 }
+  ythickness = 4 
 }
 
 style "clearlooks-progressbar" = "clearlooks-wide"
 {
-  xthickness = 1
-  ythickness = 1
-  fg[PRELIGHT]  = "#ffffff"
+  xthickness = 2
+  ythickness = 2
 }
 
 style "clearlooks-combo" = "clearlooks-button"
 {
 }
 
-style "clearlooks-menubar" = "blackrock-default"
+style "clearlooks-radiocheck" = "clearlooks-default"
 {
-  bg[NORMAL]   = "#bacedb"
+  bg[NORMAL]        = "#687e94"
+#  bg[PRELIGHT]      = "#FF9C36"
+  bg[ACTIVE]        = "#02172b"
+  base[NORMAL]        = "#02172b"
+  base[PRELIGHT]      = "#02172b"
+  base[SELECTED]      = "#02172b"
+  base[ACTIVE]        = "#02172b"
+
+}
+
+
+style "metacity-frame" = "clearlooks-default"
+{
 }
 	
 
 # widget styles
 class "GtkWidget" style "clearlooks-default"
 class "GtkButton" style "clearlooks-button"
-class "GtkScale"  style "clearlooks-button"
+#class "GtkScale"  style "clearlooks-button"
 class "GtkCombo"  style "clearlooks-button"
 class "GtkRange"  style "clearlooks-wide"
 class "GtkFrame"  style "clearlooks-wide"
@@ -185,6 +167,10 @@ class "GtkEntry"  style "clearlooks-wider"
 class "GtkMenuItem"    style "clearlooks-menu-item"
 class "GtkNotebook"    style "clearlooks-notebook"
 class "GtkProgressBar" style "clearlooks-progressbar"
+class "GtkRadio*" style "clearlooks-radiocheck"
+class "GtkCheck*" style "clearlooks-radiocheck"
+
+class "MetaFrames" style "metacity-frame"
  
 #class "GtkMenuBar" style "clearlooks-menubar"
 
@@ -208,4 +194,3 @@ widget_class "*.GtkFrame.GtkLabel" style "clearlooks-frame-title"
 # notebook stuff
 widget_class "*.GtkNotebook.*.GtkEventBox" style "clearlooks-notebook"
 widget_class "*.GtkNotebook.*.GtkViewport" style "clearlooks-notebook"
-

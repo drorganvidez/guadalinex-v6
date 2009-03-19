@@ -23,7 +23,7 @@
 /* Needed for the custom drawing functions */
 #include <usplash_backend.h>
 extern struct usplash_pixmap pixmap_usplash_640_400, pixmap_usplash_640_480;
-extern struct usplash_pixmap pixmap_usplash_800_600, pixmap_usplash_1024_768, pixmap_usplash_1365_768_scaled;
+extern struct usplash_pixmap pixmap_usplash_800_600, pixmap_usplash_1024_768, pixmap_usplash_1365_768;
 extern struct usplash_pixmap pixmap_throbber_back;
 extern struct usplash_pixmap pixmap_throbber_back_16;
 extern struct usplash_pixmap pixmap_throbber_fore;
@@ -40,7 +40,7 @@ void t_animate_step_16(struct usplash_theme* theme, int pulsating);
 struct usplash_theme usplash_theme_640_480;
 struct usplash_theme usplash_theme_800_600;
 struct usplash_theme usplash_theme_1024_768;
-struct usplash_theme usplash_theme_1365_768_scaled;
+struct usplash_theme usplash_theme_1365_768;
 
 /* Theme definition */
 struct usplash_theme usplash_theme = {
@@ -171,7 +171,7 @@ struct usplash_theme usplash_theme_800_600 = {
 
 struct usplash_theme usplash_theme_1024_768 = {
 	.version = THEME_VERSION,
-    .next = &usplash_theme_1365_768_scaled,
+    .next = &usplash_theme_1365_768,
     .ratio = USPLASH_4_3,
 
 	/* Background and font */
@@ -210,13 +210,13 @@ struct usplash_theme usplash_theme_1024_768 = {
     .animate_step = t_animate_step,
 };
 
-struct usplash_theme usplash_theme_1365_768_scaled = {
+struct usplash_theme usplash_theme_1365_768 = {
 	.version = THEME_VERSION,
     .next = NULL,
     .ratio = USPLASH_16_9,
 
 	/* Background and font */
-	.pixmap = &pixmap_usplash_1365_768_scaled,
+	.pixmap = &pixmap_usplash_1365_768,
 
 	/* Palette indexes */
 	.background             = 0,
@@ -228,16 +228,16 @@ struct usplash_theme usplash_theme_1365_768_scaled = {
 	.text_failure           = 55,
 
 	/* Progress bar position and size in pixels */
-  	.progressbar_x      = 352,
-  	.progressbar_y      = 475,
+  	.progressbar_x      = 523,
+  	.progressbar_y      = 375,
   	.progressbar_width  = 320,
   	.progressbar_height = 18,
 
 	/* Text box position and size in pixels */
-  	.text_x      = 322,
-  	.text_y      = 475,
-  	.text_width  = 380,
-  	.text_height = 200,
+  	.text_x      = 383,
+  	.text_y      = 415,
+  	.text_width  = 600,
+  	.text_height = 300,
 
 	/* Text details */
   	.line_height  = 15,

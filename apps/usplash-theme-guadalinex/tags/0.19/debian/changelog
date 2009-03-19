@@ -1,0 +1,134 @@
+usplash-theme-ubuntu (0.19) intrepid; urgency=low
+
+  * No-change rebuild against current usplash which bumped THEME_VERSION.
+
+ -- Martin Pitt <martin.pitt@ubuntu.com>  Wed, 23 Jul 2008 19:50:18 +0200
+
+usplash-theme-ubuntu (0.18) hardy; urgency=low
+
+  * Fix flickering of the progress bar. Thanks to Daniel Sargeant for the
+    patch! (LP: #205854)
+
+ -- Martin Pitt <martin.pitt@ubuntu.com>  Tue, 01 Apr 2008 16:15:40 +0200
+
+usplash-theme-ubuntu (0.17) gutsy; urgency=low
+
+  * Ensure throbber is centred; Change all 'theme' resolution (except
+    640x400x4) -> hardcoded 320px wide throbber, to match the pixmap.
+
+ -- Paul Sladen <sladen@ubuntu.com>  Mon, 24 Sep 2007 17:14:09 +0300
+
+usplash-theme-ubuntu (0.16) gutsy; urgency=low
+
+  * Try to fix widescreen progress-bar misalignment;
+    Change usplash_theme_1365_768_scaled so that:
+    322+380+322 = 1024
+
+ -- Paul Sladen <sladen@ubuntu.com>  Mon, 24 Sep 2007 17:14:09 +0300
+
+usplash-theme-ubuntu (0.15) gutsy; urgency=low
+
+  * Set Architecture to any, usplash works on sparc as well.
+
+ -- Steve Kowalik <stevenk@debian.org>  Mon, 25 Jun 2007 17:22:38 +1000
+
+usplash-theme-ubuntu (0.14) feisty; urgency=low
+
+  * [Kenneth Wimer]
+    - Fixing bug in throbber_fore.png 
+  * [Daniel Holbach]
+    - debian/control:
+      - bumped Standards-Version.
+    - debian/postrm:
+      - add #DEBHELPER# tag.
+
+ -- Daniel Holbach <daniel.holbach@ubuntu.com>  Thu,  5 Apr 2007 17:20:09 +0200
+
+usplash-theme-ubuntu (0.13) feisty; urgency=low
+
+  [ Dennis Kaarsemaker ]
+  * Fix broken palette indices. Some colors were just unreadable and some
+    color indices pointed outside the palette which could cause crashes.
+
+  [ Martin Pitt ]
+  * debian/control: Fix build dependency for the usplash-dev ->
+    libusplash-dev rename.
+
+ -- Martin Pitt <martin.pitt@ubuntu.com>  Mon, 19 Mar 2007 09:27:15 +0100
+
+usplash-theme-ubuntu (0.12) feisty; urgency=low
+
+  * updating the pics to final version - yippee! 
+
+ -- Kenneth Wimer <wimer@kde.org>  Wed, 14 Feb 2007 08:12:22 +0100
+
+usplash-theme-ubuntu (0.11) feisty; urgency=low
+
+  * updating pics again
+
+ -- Kenneth Wimer <wimer@kde.org>  Tue, 13 Feb 2007 16:05:39 +0100
+
+usplash-theme-ubuntu (0.10) feisty; urgency=low
+
+  * adding new pics for background and progress bar
+
+ -- Kenneth Wimer <wimer@kde.org>  Tue, 13 Feb 2007 13:06:34 +0100
+
+usplash-theme-ubuntu (0.9) feisty; urgency=low
+
+  * updating background pics and scrollbar
+
+ -- Kenneth Wimer <wimer@kde.org>  Mon, 12 Feb 2007 17:10:57 +0100
+
+usplash-theme-ubuntu (0.8) feisty; urgency=low
+
+  * updating pics for feisty
+
+ -- Kenneth Wimer <wimer@kde.org>  Thu,  8 Feb 2007 14:55:06 +0100
+
+usplash-theme-ubuntu (0.7) feisty; urgency=low
+
+  * Adding new bg pics for feisty
+  * Adding new progress bar with more desktop-like background
+
+ -- Kenneth Wimer <kenneth.wimer@ubuntu.com>  Thu,  8 Feb 2007 11:02:52 +0100
+
+usplash-theme-ubuntu (0.6) edgy; urgency=low
+
+  * Remove stray '/*' in 640x400 theme definition that caused the progress
+    bar definition to be commented out, and thus the values set to zero.
+
+ -- Scott James Remnant <scott@ubuntu.com>  Wed, 25 Oct 2006 09:02:22 +0100
+
+usplash-theme-ubuntu (0.5) edgy; urgency=low
+
+  * Center the throbber in 640x400 and 640x480 modes too.
+
+ -- Tollef Fog Heen <tfheen@ubuntu.com>  Mon, 23 Oct 2006 13:52:33 +0200
+
+usplash-theme-ubuntu (0.4) edgy; urgency=low
+
+  * Artwork tweak from Frank Schoep to make the backgrounds properly black
+    (closes: Malone #66107).
+  * Add debian/copyright: licence is CC-SA per Frank Schoep on IRC.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Sat, 21 Oct 2006 01:15:05 +0100
+
+usplash-theme-ubuntu (0.3) edgy; urgency=low
+
+  * Update to new artwork.
+
+ -- Tollef Fog Heen <tfheen@ubuntu.com>  Fri, 20 Oct 2006 16:23:52 +0200
+
+usplash-theme-ubuntu (0.2) edgy; urgency=low
+
+  * Add 640x400 theme from dapper.  Hack the progressbar functions so they
+    look slightly less bad than they'd otherwise do.
+
+ -- Tollef Fog Heen <tfheen@ubuntu.com>  Tue, 17 Oct 2006 02:26:48 +0200
+
+usplash-theme-ubuntu (0.1-1) edgy; urgency=low
+
+  * Initial release - this theme is nowhere near final!
+
+ -- Dennis Kaarsemaker <dennis@kaarsemaker.net>  Fri,  8 Sep 2006 19:45:01 +0200

@@ -55,13 +55,11 @@ fi
 # XXX - awful hack to stop xscreensaver locking the screen (#7150)
 echo 'RUNNING_UNDER_GDM="yes"' >> /root/etc/environment
 
-for file in /usr/share/applications/ubiquity-gtkui.desktop /usr/share/applications/kde/ubiquity-kdeui.desktop; do
-    if [ -f "/root/$file" ]; then
-        chroot /root install -d -o $USERNAME -g $USERNAME /home/$USERNAME/Escritorio
-        chroot /root install -D -o $USERNAME -g $USERNAME $file /home/$USERNAME/Escritorio/$(basename "$file")
-        break
-    fi
-done
+desktop_file="/root/usr/share/guada-ubiquity/ubiquity-guadaui.desktop"
+if [ -f "$desktop_file" ]; then
+    chroot /root install -d -o $USERNAME -g $USERNAME /home/$USERNAME/Escritorio
+    chroot /root install -D -o $USERNAME -g $USERNAME $desktop_file /home/$USERNAME/Escritorio/$(basename "$desktop_file")
+fi
 
 if [ -L /root/home/$USERNAME/Examples ]; then
     chroot /root install -o $USERNAME -g $USERNAME -d /home/$USERNAME/Escritorio/

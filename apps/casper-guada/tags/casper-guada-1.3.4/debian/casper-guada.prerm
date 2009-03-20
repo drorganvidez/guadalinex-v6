@@ -1,0 +1,14 @@
+#! /bin/sh
+
+set -e
+
+update-initramfs -u
+
+if [ remove = "$1" ]; then
+    rm -f /etc/casper.conf
+    dpkg-divert --package casper-guada --remove --rename \
+             --divert /etc/casper.conf.real /etc/casper.conf
+
+fi
+
+#DEBHELPER#

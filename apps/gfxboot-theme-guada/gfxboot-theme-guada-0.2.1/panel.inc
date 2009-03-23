@@ -13,7 +13,7 @@
 /panel.text.y	{ panel.y 5 add } def
 /panel.font	font.normal def
 /panel.normal	darkblue def
-/panel.high	white def
+/panel.high	realwhite def
 /panel.bg	black def
 /panel.border	lightdotcolor def
 

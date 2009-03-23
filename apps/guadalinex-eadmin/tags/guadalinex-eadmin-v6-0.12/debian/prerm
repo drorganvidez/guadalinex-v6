@@ -16,4 +16,7 @@ dpkg-divert --package guadalinex-eadmin --rename --quiet --remove /usr/share/ope
 rm -f /usr/share/opensc-dnie/inst_kde_pkcs11_cert.pl
 dpkg-divert --package guadalinex-eadmin --rename --quiet --remove /usr/share/opensc-dnie/inst_kde_pkcs11_cert.pl
 
+rm -f /usr/lib/jvm/java-6-sun/jre/lib/ext/jss33.jar
+rm -f /usr/lib/jvm/java-6-sun/jre/lib/i386/client/libjss3.so
+
 /usr/share/guadalinex-eadmin/restore_default_session.py

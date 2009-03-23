@@ -13,8 +13,8 @@ install: build
 	dh_clean -k
 
 	dh_install  "certmanager.py" "usr/bin"
-	dh_install  "jss33.jar" "usr/lib/jvm/java-6-sun/jre/lib/ext"
-	dh_install  "libjss3.so" "usr/lib/jvm/java-6-sun/jre/lib/i386/client"
+	#dh_install  "jss33.jar" "usr/lib/jvm/java-6-sun/jre/lib/ext"
+	#dh_install  "libjss3.so" "usr/lib/jvm/java-6-sun/jre/lib/i386/client"
 	dh_install  "change_default_session.py" "usr/share/guadalinex-eadmin"
 	dh_install  "restore_default_session.py" "usr/share/guadalinex-eadmin"
 	dh_install  "condiciones_uso.txt" "usr/share/ca-certificates/fnmt"

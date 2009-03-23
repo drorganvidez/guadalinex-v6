@@ -9,27 +9,30 @@
 # changelog:
 # 21/Mar/2007 chroot is not needed anymore
 
-import commands,sys,re
+import commands
+import sys
+import re
+
 cmd = "/usr/bin/zenity --title 'Recuperador del menú de arranque'"
 
 
 # Some useful functions:
 
 # menu: Shows a dialog with options
-def menu(text,header1,header2,options):
+def menu(text, header1, header2, options):
     params = cmd + " --height 250 --width 350 --list --text '" + text + \
             "' --column '" + header1 + "' --column '" + header2 + "' " + options
     out = ""
     while len(out) == 0:
-        st,out = commands.getstatusoutput(params)
+        st, out = commands.getstatusoutput(params)
         if st != 0:
             sys.exit()
-    return st,out
+    return st, out
 
 # info: Shows a simple message
 def info(text):
     params = cmd + " --width 350 --info --text '" + text + "'" 
-    st,out = commands.getstatusoutput(params)
+    st, out = commands.getstatusoutput(params)
     return
 
 # get_partitions: grabs disks and partitions info from /proc
@@ -53,7 +56,7 @@ def get_partitions():
                     partitions += "'" + items[4] + "' '" + \
                                   translate(items[4]) + "' "
         list.close 
-        return disks,partitions
+        return disks, partitions
 
 # tranlate: Converts from hda, sda.. format to human readable (likely)
 def translate(item):
@@ -68,8 +71,8 @@ def translate(item):
     return name
 
 # MAIN
-disks,partitions = get_partitions()
-status,output = menu("¿Donde ha instalado Guadalinex?", \
+disks, partitions = get_partitions()
+status, output = menu("¿Donde ha instalado Guadalinex?", \
                      "Disco", \
                      "Descripción", \
                       partitions)
@@ -85,21 +88,24 @@ el nuevo en la partición de Guadalinex.
 
 En caso de duda, seleccione la primera opción.""")
 
-status,output = menu("¿Donde desea el menú?","Opción","Descripción",options)
+status, output = menu("¿Donde desea el menú?", \
+                      "Opción", \
+                      "Descripción", \
+                       options)
 if output == "A":
     target = "/dev/" + disks[0]
 else:
     target = origin
 
-status,output = commands.getstatusoutput("mkdir /mnt/gru")
+status, output = commands.getstatusoutput("mkdir /mnt/gru")
 if status > 0:
     info("No es posible crear un directorio temporal")
     sys.exit(status)
 
-status,output = commands.getstatusoutput("mount " + origin + " /mnt/gru")
+status, output = commands.getstatusoutput("mount " + origin + " /mnt/gru")
 if status > 0:
     info("No es posible acceder a la particion seleccionada")
-    status,output = commands.getstatusoutput("rmdir /mnt/gru")
+    status, output = commands.getstatusoutput("rmdir /mnt/gru")
     sys.exit(status)
 
 
@@ -107,8 +113,8 @@ try:
     list = open("/mnt/gru/boot/grub/menu.lst")
 except:
     info("En esta partición no hay datos de menú instalables")
-    status,output = commands.getstatusoutput("umount /mnt/gru")
-    status,output = commands.getstatusoutput("rmdir /mnt/gru")
+    status, output = commands.getstatusoutput("umount /mnt/gru")
+    status, output = commands.getstatusoutput("rmdir /mnt/gru")
     sys.exit(status)
 
 menupoints = ""
@@ -118,18 +124,18 @@ while 1:
     if line == "":
         break
     if re.search("^title\s+", line):
-        key,value = re.split("title\s+", line, 1)
+        key, value = re.split("title\s+", line, 1)
         menupoints += value
 list.close() 
 
 info("Este es el menú que se instalará:\n\n" + menupoints)
 
 #status,output=commands.getstatusoutput("chroot /mnt/gru grub-install "+target)
-status,output = commands.getstatusoutput("/sbin/grub-install " + \
-                                         "--root-directory=/mnt/gru " + target)
+status, output = commands.getstatusoutput("/sbin/grub-install " + \
+                                          "--root-directory=/mnt/gru " + target)
 if status > 0:
     info("No es posible instalar el menú en " + target)
     print output
 
-status,output = commands.getstatusoutput("umount /mnt/gru")
-status,output = commands.getstatusoutput("rmdir /mnt/gru")
+status, output = commands.getstatusoutput("umount /mnt/gru")
+status, output = commands.getstatusoutput("rmdir /mnt/gru")

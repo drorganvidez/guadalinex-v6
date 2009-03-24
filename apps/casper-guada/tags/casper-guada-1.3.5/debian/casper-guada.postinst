@@ -1,0 +1,11 @@
+#! /bin/sh
+
+set -e
+
+update-initramfs -u
+
+dpkg-divert --package casper-guada --add --rename \
+         --divert /etc/casper.conf.real /etc/casper.conf
+ln -fs /usr/share/casper-guada/casper.conf /etc/casper.conf
+
+#DEBHELPER#

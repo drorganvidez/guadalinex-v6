@@ -731,6 +731,9 @@ write_kernel_entry()
 	if [ -n "$recovery_desc" ]; then
 		echo -n " $recovery_suffix"  >> $buffer
 	fi
+	if [ -n "$dapper_upgrade" -a -z "$kernel_options$recovery_desc" ]; then
+		echo -n " "  >> $buffer
+	fi
 	echo >> $buffer
 
 	if [ -n "$initrd" ]; then

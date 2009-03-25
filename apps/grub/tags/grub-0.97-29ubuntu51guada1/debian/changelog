@@ -1,3 +1,11 @@
+grub (0.97-29ubuntu18) UNRELEASED; urgency=low
+
+  * debian/update-grub: additional adjustment of the menu output when
+    emulating old grub for upgrades:  if there are no kernel options for the
+    kernel (such as for memtest), output a trailing space.
+
+ -- Steve Langasek <steve.langasek@ubuntu.com>  Fri, 22 Feb 2008 10:19:51 -0800
+
 grub (0.97-29ubuntu17) hardy; urgency=low
 
   * debian/update-grub: use db_x_loadtemplatefile instead of

@@ -6,6 +6,14 @@ grub (0.97-29ubuntu35) UNRELEASED; urgency=low
 
  -- Dustin Kirkland <kirkland@ubuntu.com>  Fri, 08 Aug 2008 18:11:18 -0500
 
+grub (0.97-29ubuntu33) intrepid; urgency=low
+
+  * kernel-helper: Run update-grub after creating last boot, in order to
+    propogate the saved cmdline for last-good-boot.
+  * last-good-boot: No need for console output in event script.
+
+ -- Ben Collins <ben.collins@canonical.com>  Thu, 07 Aug 2008 10:59:49 -0400
+
 grub (0.97-29ubuntu32) intrepid; urgency=low
 
   [ Johan Kiviniemi ]

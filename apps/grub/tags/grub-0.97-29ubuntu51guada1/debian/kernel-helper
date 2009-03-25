@@ -84,3 +84,6 @@ cat $mdir/modules.dep | sed -e \
 rm -rf "${lastkdir}" "${lastmdir}"
 mv "${lastkdir}.tmp" "${lastkdir}"
 mv "${lastmdir}.tmp" "${lastmdir}"
+
+# We must now run update-grub to get the right cmdline in place
+update-grub > /dev/null 2>&1

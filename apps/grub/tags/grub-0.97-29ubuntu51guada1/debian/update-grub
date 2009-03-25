@@ -301,9 +301,6 @@ boot_device=$(find_device "/boot")
 # Full path to the device.map
 device_map=$grub_dir/device.map
 
-# Enable crashdump menu alternative
-crashdump="0"
-
 # Default kernel options, overidden by the kopt statement in the menufile.
 loop_file=$(awk '$2=="/" && $4~"loop" {print $1}' /etc/fstab)
 if [ -n "$loop_file" ]; then
@@ -899,8 +896,16 @@ output_kernel_list() {
 		# do not lockold for the first entry
 		[ $counter -eq 1 ] && do_lockold=false
 
+		# If a debug image exists, boot with a crashkernel entry
+		# to trigger kexec-tools
+		crashdump=
+		if [ -e "/boot/vmlinux-debug-$kernelVersion" ]; then
+			crashdump="crashkernel=384M-2G:64M@16M,2G-:128M@16M"
+		fi
+
 		write_kernel_entry "$kernelVersion" "" "" "$grub_root_device" "$kernel" \
-			"$currentOpt $defoptions" "" "$initrd" "$savedefault" "$do_lockold" "$dapper_upgrade"
+			"$currentOpt $defoptions $crashdump" "" "$initrd" "$savedefault" \
+			"$do_lockold" "$dapper_upgrade"
 
 		# insert the alternative boot options
 		if test ! x"$alternative" = x"false" ; then
@@ -911,16 +916,10 @@ output_kernel_list() {
 
 				test x"$lockalternative" = x"true" && do_lockold=false
 				write_kernel_entry "$kernelVersion" "$descr" "$lockalternative" \
-					"$grub_root_device" "$kernel" "$currentOpt" "$suffix" "$initrd" \
-					"false" "$do_lockold" "$dapper_upgrade"
+					"$grub_root_device" "$kernel" "$currentOpt $crashdump" \
+					"$suffix" "$initrd" "false" "$do_lockold" \
+					"$dapper_upgrade"
 			done
-		fi
-
-		if [ "$crashdump" = "1" ] ; then
-			test x"$lockalternative" = x"true" && do_lockold=false
-			write_kernel_entry "$kernelVersion" "(crashdump mode)" "$lockalternative" \
-				"$grub_root_device" "$kernel" "$currentOpt" "crashkernel=64M@16M" "$initrd" \
-				"false" "$do_lockold" "$dapper_upgrade"
 		fi
 	done
 
@@ -1026,9 +1025,6 @@ else
 	esac
 fi
 
-# Extract the crashdump var
-crashdump=$(GetMenuOpt "crashdump" "$crashdump")
-
 # Extract the kernel options to use
 kopt=$(GetMenuOpt "kopt" "$kopt")
 
@@ -1114,11 +1110,6 @@ fi
 if [ -n "$CustomKopts" ] ; then
     echo "$CustomKopts" >> $buffer
 fi
-echo >> $buffer
-
-echo "## Setup crashdump menu entries" >> $buffer
-echo "## e.g. crashdump=1" >> $buffer
-echo "# crashdump=$crashdump" >> $buffer
 echo >> $buffer
 
 echo "## default grub root device" >> $buffer

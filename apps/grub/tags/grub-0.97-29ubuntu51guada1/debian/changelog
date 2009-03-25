@@ -8,6 +8,12 @@ grub (0.97-29ubuntu11) UNRELEASED; urgency=low
     remaining bug where regenerating menu.lst from scratch after it's been
     registered once with ucf would result in an empty kernel list.
     LP: #186412.
+  * Add a debconf template so that our ucf prompts don't refer to a filename
+    that has no meaning to the user
+  * Add Build-Depends on po-debconf for the above, and depend on
+    debconf-utils to allow for loading the debconf template from a
+    script that is not a package maintainer script.
+  * Raise depends to ucf (>= 3.004-0ubuntu2)
 
  -- Steve Langasek <steve.langasek@ubuntu.com>  Mon, 28 Jan 2008 12:17:41 -0800
 

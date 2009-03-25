@@ -960,7 +960,12 @@ ucf_update_kernels() {
 		cat $buffer > $ucf_menu_file
 	fi
 
-	ucf --debconf-ok --three-way "$buffer" $ucf_menu_file
+	# should be replaced by db_x_loadtemplate
+	debconf-loadtemplate ucf /var/lib/dpkg/info/grub.templates
+
+	ucf --debconf-ok \
+		--debconf-template grub/update_grub_changeprompt_threeway \
+		--three-way "$buffer" $ucf_menu_file
 	rm "$buffer"
 
 	# now re-merge the ucf results with the target file

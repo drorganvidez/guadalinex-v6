@@ -1,4 +1,4 @@
-grub (0.97-29ubuntu28) intrepid; urgency=low
+grub (0.97-29ubuntu28) UNRELEASED; urgency=low
 
   [ Colin King ]
   * debian/patches/uuid.diff: added uuid command, to select root device by
@@ -6,6 +6,10 @@ grub (0.97-29ubuntu28) intrepid; urgency=low
     reiserfs, and xfs filesystems, based on a heavily-modified version of the
     udev volume_id lib by Kay Sievers <kay.sievers@vrfy.org>.  LP: #244141.
   * Add uuid command to grub documenation
+
+  [ Steve Langasek ]
+  * Only delete the old event.d script on upgrade from the affected versions
+    of the package.
 
  -- Steve Langasek <steve.langasek@ubuntu.com>  Thu, 17 Jul 2008 22:01:21 +0100
 

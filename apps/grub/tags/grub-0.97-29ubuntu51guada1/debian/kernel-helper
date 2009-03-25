@@ -11,6 +11,15 @@ lastkdir="/boot/last-good-boot"
 lastmdir="/lib/modules/last-good-boot"
 fail_exit_val=1
 
+if test -e /etc/default/kernel-helper-rc; then
+	. /etc/default/kernel-helper-rc
+
+	if [ -n "$DISABLE_LAST_GOOD" ]; then
+		# Just quit silently
+		exit
+	fi
+fi
+
 usage() {
 	echo "Usage: $(basename $0) -i|-u" 1>&2
 	echo "  -i Create initial last-good-boot" 1>&2

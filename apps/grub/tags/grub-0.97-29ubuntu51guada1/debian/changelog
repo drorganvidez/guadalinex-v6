@@ -1,3 +1,13 @@
+grub (0.97-29ubuntu38) intrepid; urgency=low
+
+  * etc/default/kernel-helper-rc: Allow override to enable/disable
+    last-good-boot. Disable by default.
+  * update-grub: Do not add last-good-boot entry if none exists
+  * kernel-helper: Check default rc to see if we are enabled or not
+  * grub.postinst: Remove last-good-boot for prior versions
+
+ -- Ben Collins <ben.collins@canonical.com>  Fri, 10 Oct 2008 12:35:57 -0400
+
 grub (0.97-29ubuntu37) intrepid; urgency=low
 
   * debian/update-grub: use awk instead of read to find the boot device,

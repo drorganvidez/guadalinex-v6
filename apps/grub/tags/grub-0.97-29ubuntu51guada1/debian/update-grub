@@ -1384,20 +1384,21 @@ fi
 # it can appear out of nowhere.
 newerKernels=""
 last_good="/boot/last-good-boot/vmlinuz"
-for i in $sortedKernels ; do
+if [ -e "$last_good" ]; then
+	for i in $sortedKernels ; do
+		if [ "$last_good" != "" ]; then
+			newerKernels="$i $last_good"
+			last_good=""
+		else
+			newerKernels="$newerKernels $i"
+		fi
+	done
+	# Shouldn't happen, unless someone removed all the kernels
 	if [ "$last_good" != "" ]; then
-		newerKernels="$i $last_good"
-		last_good=""
-	else
-		newerKernels="$newerKernels $i"
+		newerKernels="$newerKernels $last_good"
 	fi
-done
-# Shouldn't happen, unless someone removed all the kernels
-if [ "$last_good" != "" ]; then
-	newerKernels="$newerKernels $last_good"
+	sortedKernels="$newerKernels"
 fi
-sortedKernels="$newerKernels"
-
 
 #Finding the value the default line
 use_grub_set_default="false"

@@ -84,8 +84,8 @@ if test "x$ac_cv_prog_gcc" = xyes; then
     if test "x$with_binutils" != x; then
       CFLAGS="-B$with_binutils/ $CFLAGS"
     fi
-    STAGE1_CFLAGS="-O2"
-    GRUB_CFLAGS="-O2"
+    STAGE1_CFLAGS="-O2 -fno-strict-aliasing"
+    GRUB_CFLAGS="-O2 -fno-strict-aliasing"
     AC_CACHE_CHECK([whether optimization for size works], size_flag, [
       saved_CFLAGS=$CFLAGS
       CFLAGS="-Os -g"
@@ -93,9 +93,9 @@ if test "x$ac_cv_prog_gcc" = xyes; then
       CFLAGS=$saved_CFLAGS
     ])
     if test "x$size_flag" = xyes; then
-      STAGE2_CFLAGS="-Os"
+      STAGE2_CFLAGS="-Os -fno-strict-aliasing"
     else
-      STAGE2_CFLAGS="-O2 -fno-strength-reduce -fno-unroll-loops"
+      STAGE2_CFLAGS="-O2 -fno-strength-reduce -fno-unroll-loops -fno-strict-aliasing"
     fi
     # OpenBSD has a GCC extension for protecting applications from
     # stack smashing attacks, but GRUB doesn't want this feature.

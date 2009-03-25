@@ -7,6 +7,11 @@ grub (0.97-29ubuntu19) UNRELEASED; urgency=low
   * debian/update-grub: use >> instead of > when writing to existing files
     so that the script continues to work if noclobber is set.  LP: #155423
 
+  [ Steve Langasek ]
+  * debian/patches/ext3_256byte_inode.diff: new patch cherry-picked from
+    Debian to support 256-byte inodes in ext3, for compatibility with recent
+    e2fsprogs upstream defaults. Thanks Stefan Lippers-Hollmann.
+
  -- David Futcher <bobbocanfly@gmail.com>  Sat, 01 Mar 2008 17:16:37 +0000
 
 grub (0.97-29ubuntu18) hardy; urgency=low

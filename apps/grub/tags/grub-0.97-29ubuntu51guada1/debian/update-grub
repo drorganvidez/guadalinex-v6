@@ -20,7 +20,7 @@
 # Contributors:
 #	Jason Thomas <jason@debian.org>
 #	David B.Harris <dbarclay10@yahoo.ca>
-#	Marc Haber <mh+debian-packages@zugschlus.de>
+#	Marc Haber <mh@zugschlus.de>
 #	Crispin Flowerday <crispin@zeus.com>
 
 # Abort on errors
@@ -990,20 +990,6 @@ esac
 ## heres where we start writing out the kernel entries
 counter=0
 
-if [ "$LET_US_TRY_GRUB_2" = "true" ] \
-  && test -f /boot/grub/core.img ; then
-	grub2name="$kernel_dir/grub/core.img"
-	echo "Found GRUB 2: $grub2name" >&2
-	cat >> $buffer << EOF
-title		Chainload into GRUB 2
-root		$grub_root_device
-kernel		$grub2name
-savedefault
-
-EOF
-fi
-    
-
 # Xen entries first.
 for kern in $xenKernels ; do
 	if test ! x"$howmany" = x"all" ; then
@@ -1121,6 +1107,18 @@ for kern in $sortedKernels ; do
 	fi
 done
 
+grub2name="/boot/grub/core.img"
+if test -f $grub2name ; then
+	echo "Found GRUB 2: $grub2name" >&2
+	cat >> $buffer << EOF
+title		Chainload into GRUB 2
+root		$grub_root_device
+kernel		$grub2name
+savedefault
+
+EOF
+fi
+    
 memtest86names="memtest86 memtest86+"
 
 if test ! x"$memtest86" = x"false" ; then
@@ -1172,9 +1170,7 @@ set_default_value() {
 }
 
 #Updating the default number
-if [ "$LET_US_TRY_GRUB_2" = "true" ] && test -f /boot/grub/core.img ; then
-	set_default_value "0"
-elif test -z "$notChangeDefault"; then
+if test -z "$notChangeDefault"; then
 	newDefaultNumberPlusOne=$(grep "^[[:blank:]]*title[[:blank:]]*" $menu | grep -n "${defaultEntry}" | cut -f1 -d ":" | sed -ne "1p")
 	if test -z "$newDefaultNumberPlusOne"; then
 		echo "Previous default entry removed, resetting to 0">&2

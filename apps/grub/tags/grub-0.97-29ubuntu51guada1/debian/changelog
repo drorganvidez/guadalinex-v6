@@ -1,3 +1,13 @@
+grub (0.97-29ubuntu9) hardy; urgency=low
+
+  * Add debian/patches/varargs.diff: Use proper va_start/arg/end macros
+    instead of pointer cowboying, so that grub does not segfault with anything
+    less ancient than gcc 3.4.
+  * debian/rules: Build with default gcc.
+  * debian/control: Drop gcc-3.4 build dependency.
+
+ -- Martin Pitt <martin.pitt@ubuntu.com>  Thu, 24 Jan 2008 12:51:23 +0000
+
 grub (0.97-29ubuntu8) hardy; urgency=low
 
   * Add missing #!/bin/sh line to debian/grub.postrm

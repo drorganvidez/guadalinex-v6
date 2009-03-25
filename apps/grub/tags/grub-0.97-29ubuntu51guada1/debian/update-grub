@@ -859,11 +859,26 @@ output_kernel_list() {
 			fi
 		fi
 		kernelName=$(basename $kern)
-		kernelVersion=$(echo $kernelName | sed -e 's/vmlinuz//')
-		initrdName=$(FindInitrdName "/boot" "$kernelVersion")
 		initrd=""
+		extra_opts=""
+
+		if [ "$kern" = "/boot/last-good-boot/vmlinuz" ]; then
+			kernelVersion="Last successful boot"
+			if [ -e "/boot/last-good-boot/initrd.img" ]; then
+				initrdName="/boot/last-good-boot/initrd.img"
+			fi
+			kernelName="last-good-boot/vmlinuz"
+			extra_opts="$extra_opts last-good-boot"
+		else
+			kernelVersion=$(echo $kernelName | sed -e 's/vmlinuz//')
+			initrdName=$(FindInitrdName "/boot" "$kernelVersion")
+			if [ -x "/usr/bin/makedumpfile" ] && [ -x "/sbin/kexec" ]; then
+				extra_opts="$extra_opts crashkernel=384M-2G:64M@16M,2G-:128M@16M"
+			fi
+		fi
 
 		kernel=$kernel_dir/$kernelName
+
 		if [ -n "$initrdName" ] ; then
 			initrd=$kernel_dir/$initrdName
 		fi
@@ -888,6 +903,7 @@ output_kernel_list() {
 				kernelVersion="Previous"
 			fi
 		fi
+
 		kernelVersion=$(echo $kernelVersion | sed -e 's/^-//')
 
 		currentOpt=$(get_kernel_opt $kernelVersion)
@@ -896,16 +912,11 @@ output_kernel_list() {
 		# do not lockold for the first entry
 		[ $counter -eq 1 ] && do_lockold=false
 
-		# If a debug image exists, boot with a crashkernel entry
-		# to trigger kexec-tools
-		crashdump=
-		if [ -e "/boot/vmlinux-debug-$kernelVersion" ]; then
-			crashdump="crashkernel=384M-2G:64M@16M,2G-:128M@16M"
+		if [ "$kernelName" != "last-good-boot/vmlinuz" ]; then
+			write_kernel_entry "$kernelVersion" "" "" "$grub_root_device" "$kernel" \
+				"$currentOpt $defoptions $extra_opts" "" "$initrd" "$savedefault" \
+				"$do_lockold" "$dapper_upgrade"
 		fi
-
-		write_kernel_entry "$kernelVersion" "" "" "$grub_root_device" "$kernel" \
-			"$currentOpt $defoptions $crashdump" "" "$initrd" "$savedefault" \
-			"$do_lockold" "$dapper_upgrade"
 
 		# insert the alternative boot options
 		if test ! x"$alternative" = x"false" ; then
@@ -916,7 +927,7 @@ output_kernel_list() {
 
 				test x"$lockalternative" = x"true" && do_lockold=false
 				write_kernel_entry "$kernelVersion" "$descr" "$lockalternative" \
-					"$grub_root_device" "$kernel" "$currentOpt $crashdump" \
+					"$grub_root_device" "$kernel" "$currentOpt $extra_opts" \
 					"$suffix" "$initrd" "false" "$do_lockold" \
 					"$dapper_upgrade"
 			done
@@ -1360,6 +1371,25 @@ fi
 if test -f "/boot/vmlinuz" ; then
 	sortedKernels="/boot/vmlinuz $sortedKernels"
 fi
+
+# Add our last-good-boot kernel, second in list. We always add it, because
+# it can appear out of nowhere.
+newerKernels=""
+last_good="/boot/last-good-boot/vmlinuz"
+for i in $sortedKernels ; do
+	if [ "$last_good" != "" ]; then
+		newerKernels="$i $last_good"
+		last_good=""
+	else
+		newerKernels="$newerKernels $i"
+	fi
+done
+# Shouldn't happen, unless someone removed all the kernels
+if [ "$last_good" != "" ]; then
+	newerKernels="$newerKernels $last_good"
+fi
+sortedKernels="$newerKernels"
+
 
 #Finding the value the default line
 use_grub_set_default="false"

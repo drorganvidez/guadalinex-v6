@@ -28,6 +28,9 @@
 # Abort on errors
 set -e
 
+# load debconf first, since this re-execs the script
+. /usr/share/debconf/confmodule
+
 host_os=`uname -s | tr '[A-Z]' '[a-z]'`
 
 abort() {
@@ -960,8 +963,7 @@ ucf_update_kernels() {
 		cat $buffer > $ucf_menu_file
 	fi
 
-	# should be replaced by db_x_loadtemplate
-	debconf-loadtemplate grub /var/lib/dpkg/info/grub.templates
+	db_x_loadtemplatefile /var/lib/dpkg/info/grub.templates grub
 
 	ucf --debconf-ok \
 		--debconf-template grub/update_grub_changeprompt_threeway \

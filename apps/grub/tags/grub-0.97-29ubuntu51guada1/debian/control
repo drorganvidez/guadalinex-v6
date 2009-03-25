@@ -11,7 +11,7 @@ XS-Vcs-Bzr: https://code.launchpad.net/~ubuntu-core-dev/grub/ubuntu
 
 Package: grub
 Architecture: i386 kfreebsd-i386 hurd-i386 amd64 kfreebsd-amd64 lpia
-Depends: ${shlibs:Depends}, volumeid, ucf (>= 3.004-0ubuntu2), debconf-utils
+Depends: ${shlibs:Depends}, volumeid, ucf (>= 3.004-0ubuntu2), debconf (>= 1.5.19) | cdebconf
 Suggests: grub-doc, mdadm
 Provides: linux-boot-loader
 Description: GRand Unified Bootloader

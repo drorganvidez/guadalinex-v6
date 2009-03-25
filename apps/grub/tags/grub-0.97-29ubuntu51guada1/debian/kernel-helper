@@ -95,4 +95,4 @@ mv "${lastkdir}.tmp" "${lastkdir}"
 mv "${lastmdir}.tmp" "${lastmdir}"
 
 # We must now run update-grub to get the right cmdline in place
-[ ! -e /boot/grub ] ||  update-grub > /dev/null 2>&1
+[ ! -e /boot/grub ] ||  update-grub 2>/dev/null

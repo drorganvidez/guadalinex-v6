@@ -6,6 +6,16 @@ grub (0.97-29ubuntu35) UNRELEASED; urgency=low
 
  -- Dustin Kirkland <kirkland@ubuntu.com>  Fri, 08 Aug 2008 18:11:18 -0500
 
+grub (0.97-29ubuntu32) intrepid; urgency=low
+
+  [ Johan Kiviniemi ]
+  * update-grub:
+    - Make sure initrdName is empty if no appropriate initrd is found.
+    - Fix initrd name for last-good-boot (was /boot//boot/last-good-boot/
+      initrd.img).
+
+ -- Ben Collins <ben.collins@canonical.com>  Tue, 29 Jul 2008 14:26:14 -0400
+
 grub (0.97-29ubuntu31) intrepid; urgency=low
 
   * kernel-helper: Save away the command line as well.

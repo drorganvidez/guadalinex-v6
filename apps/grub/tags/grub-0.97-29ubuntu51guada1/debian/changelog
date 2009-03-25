@@ -1,12 +1,13 @@
-grub (0.97-29ubuntu25) UNRELEASED; urgency=low
+grub (0.97-29ubuntu25) intrepid; urgency=low
 
+  [ Colin King ]
   * debian/patches/uuid.diff: added uuid command, to select root device by
     uuid. Supports uuid booting from ext2, ext3, fat, vfat, jfs, ocfs,
     reiserfs, and xfs filesystems, based on a heavily-modified version of the
     udev volume_id lib by Kay Sievers <kay.sievers@vrfy.org>.  LP: #244141.
   * Add uuid command to grub documenation
 
- -- Colin King <colin.king@canonical.com>  Fri, 27 Jun 2008 10:41:58 +0000
+ -- Steve Langasek <steve.langasek@ubuntu.com>  Thu, 17 Jul 2008 22:01:21 +0100
 
 grub (0.97-29ubuntu24) intrepid; urgency=low
 

@@ -1,0 +1,28 @@
+#
+# Ubuntu: https://bugs.launchpad.net/bugs/347790
+# Patch: http://launchpadlibrarian.net/24306356/splashimage_uuid.diff 
+# Description: Splash image not shown when using device UUID as root
+# The patch set the root stanza before the splashimage one when 
+# grub_root_device is an UUID value. Also will change the path prefix.
+=== modified file 'debian/update-grub'
+--- a/debian/update-grub	2009-02-12 17:16:11 +0000
++++ b/debian/update-grub	2009-03-24 12:44:59 +0000
+@@ -1270,7 +1270,16 @@
+ 
+ echo -n "Searching for splash image ... " >&2
+ current_splash=`grep '^splashimage=' ${menu_file} || true`
+-splashimage_path="splashimage=${grub_root_device}${grub_dir##${boot_device:+/boot}}/splash.xpm.gz"
++splash_root_device=""
++case "$grub_root_device" in
++	[^A-Za-z0-9]*)
++                splash_root_device=${grub_root_device}
++	;;
++	*)
++		echo "root	$grub_root_device" >> $buffer
++	;;
++esac
++splashimage_path="splashimage=${splash_root_device}${grub_dir##${boot_device:+/boot}}/splash.xpm.gz"
+ if [ `sed -e "/^$start/,/^$end/d" $menu_file | grep -c '^splashimage='` != "0" ] ; then
+        #checks for splashscreen defined outside the autoupdated part
+        splashimage=$(grep '^splashimage=' ${menu_file})
+

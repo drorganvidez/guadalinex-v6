@@ -1,14 +1,17 @@
-Source: informe-diagnostico
+Source: diagnostic-report
 Section: gnome
 Priority: optional
 Maintainer: Junta de Andalucia <packmaster@guadalinex.org> 
 Build-Depends: debhelper (>= 4.0.0), cdbs
-Standards-Version: 3.7.2
+Standards-Version: 3.8.0
+Homepage: http://launchpad.net/diagnostic-report
+Vcs-Browser: http://codebrowse.launchpad.net/~guadalinex-members/diagnostic-report/trunk/changes
+Vcs-Bzr: http://bazaar.launchpad.net/~guadalinex-members/diagnostic-report/trunk
 
-Package: informe-diagnostico
-Replaces: informe-hardware
-Provides: informe-hardware
-Conflicts: informe-hardware
+Package: diagnostic-report
+Replaces: informe-diagnostico
+Provides: diagnostic-report
+Conflicts: informe-diagnostico
 Architecture: any
 Depends: zenity, xresprobe 
 Description: Error reporting tool.

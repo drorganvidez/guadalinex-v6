@@ -51,13 +51,14 @@ fi
 # Constants
 FINAL_LOGFILE='diagnostics_report'
 if [ -n "$SUDO_USER" ]; then
+	HOME=/home/$SUDO_USER
 	# include XDG dirs
-	test -f $SUDO_USER/.config/user-dirs.dirs && . /home/$SUDO_USER/.config/user-dirs.dirs
+	test -f $HOME/.config/user-dirs.dirs && . $HOME/.config/user-dirs.dirs
         if [ -n $XDG_DESKTOP_DIR ]
 	then
-		DESTDIR=/home/$SUDO_USER/$XDG_DESKTOP_DIR
+		DESTDIR=$XDG_DESKTOP_DIR
 	else
-		DESTDIR=/home/$SUDO_USER
+		DESTDIR=$HOME
 	fi
 	REAL_USER=$SUDO_USER
 else
@@ -65,7 +66,7 @@ else
 	test -f $HOME/.config/user-dirs.dirs && . $HOME/.config/user-dirs.dirs
 	if [ -n $XDG_DESKTOP_DIR ]
 	then
-		DESTDIR=$HOME/$XDG_DESKTOP_DIR
+		DESTDIR=$XDG_DESKTOP_DIR
 	else
 		DESTDIR=$HOME
 	fi

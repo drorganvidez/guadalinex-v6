@@ -1,0 +1,171 @@
+F1Willkommen bei Ubuntu!Dies ist eine Live-CD-ROM für Ubuntu
+6.10, erstellt am 20070122.
+
+HILFE-INDEX
+
+SCHLAGWORTTHEMA
+
+<F1F1>   Diese Seite, das Inhaltsverzeichnis der Hilfe.
+<F2F2>   Voraussetzungen zum Betrieb von Ubuntu.
+<F3F3>   Bootmethoden für spezielle Arten, diese CD-ROM zu verwenden.
+<F4F4>   Zusätzliche Startmethoden; Rettung eines zerstörten Systems.
+<F5F5>   Spezielle Bootparameter, Übersicht.
+<F6F6>   Spezielle Bootparameter für spezielle Rechner.
+<F7F7>   Spezielle Bootparameter für ausgewählte Festplatten-Controller.
+<F8F8>   Spezielle Bootparameter für das Startsystem.
+<F9F9>   Wie man Hilfe findet.
+<F10F10>  Copyright und Garantie.
+
+Drücken Sie F2 bis F10 für Einzelheiten, oder Esc, um die Hilfe zu
+verlassen.F2VORAUSSETZUNGEN FÜR DAS INSTALLIEREN VON UBUNTUSie brauchen mindestens 128 Megabyte RAM, um dieses Ubuntu Live-System zu
+nutzen.
+
+Das Live-System braucht überhaupt keinen Platz auf Ihrer Festplatte.
+Vorhandene Swap-Partitionen werden jedoch genutzt.
+
+Die FAQ enthält weitere Informationen; das Dokument finden Sie auf der
+Ubuntu Webseite http://www.ubuntu.com/
+
+Vielen Dank, dass Sie Ubuntu gewählt haben!
+
+Drücken Sie F1 für das Hilfe Inhaltsverzeichnis, oder Esc, um die Hilfe zu
+verlassen.F3BOOT-METHODENVerfügbare Bootmethoden:
+
+live
+  Live-System starten.
+memtest
+  Hauptspeicher (RAM) überprüfen.
+
+Um eine dieser Bootmethoden zu verwenden, geben Sie sie ein, gefolgt von
+Boot-Parametern, falls gewünscht. Zum Beispiel:
+
+  boot: live acpi=off
+
+Wenn Sie unsicher sind, sollten Sie die voreingestellte Bootmethode ohne
+spezielle Parameter verwenden; drücken Sie dazu einfach die Eingabetaste.
+
+Drücken Sie F1 für das Hilfe Inhaltsverzeichnis, oder Esc, um die Hilfe zu
+verlassen.F4RETTUNG EINES ZERSTÖRTEN SYSTEMSDiese CD hat keinen extra Notfallmodus. Da aber das gesamte System von CD
+aus lauffähig ist, stehen ihnen alle Programme und Werkzeuge zur Verfügung,
+die Sie zum Wiederherstellen einer beschädigten Installation brauchen. Mit
+dem Web-Browser können Sie zudem nach Informationen suchen. Im Internet
+steht Ihnen ein umfangreiches Hilfsangebot zur Verfügung, womit Sie nahezu
+jedes Problem, das Ihr System am Hochfahren hindert, lösen können.
+
+Drücken Sie F1 für das Hilfe Inhaltsverzeichnis, oder Esc, um die Hilfe zu
+verlassen.F5SPEZIELLE BOOT-PARAMETER - ÜBERSICHTAuf manchen Systemen müssen Sie vielleicht einen Parameter hinter dem
+boot: Prompt angeben, um das System zu starten. Wenn zum Beispiel Linux
+Ihre Hardware nicht automatisch erkennt, müssen Sie deren Typ oder Adresse
+explizit angeben, damit sie erkannt wird.
+
+Um weitere Informationen abzurufen, welche Boot-Parameter angegeben werden
+können, drücken Sie:
+
+<F6F6>   Boot-Parameter für spezielle Rechner
+<F7F7>   Boot-Parameter für verschiedene Festplatten-Controller
+<F8F8>   Boot-Parameter, die vom Start-System verstanden werden
+
+Viele Kernel-Module werden vom Installationssystem dynamisch geladen; deren
+Parameter können nicht auf der Befehlszeile angegeben werden. Um Parameter
+einzugeben, wenn Module geladen werden, müssen Sie im Expertenmodus booten
+(siehe <F3F3>).
+
+Viele Kernel-Module werden vom Installationssystem dynamisch geladen; deren
+Parameter können nicht auf der Befehlszeile angegeben werden.
+
+Drücken Sie F1 für das Hilfe Inhaltsverzeichnis, oder Esc, um die Hilfe zu
+verlassen.F6SPEZIELLE BOOT-PARAMETER - VERSCHIEDENE HARDWAREDie folgenden Boot-Parameter können Sie am boot: Prompt eingeben, im
+Verbindung mit der Bootmethode(siehe <F3F3>>). Wenn Sie Hexadezimalzahlen
+eingeben, müssen sie 0x voranstellen (z.B. 0x300).
+
+HARDWARE                               PARAMETER ZUM FESTLEGEN VON
+
+IBM PS/1 oder ValuePoint (IDE Festplatte)
+                                       hd=cylinders,heads,sectors
+Einige IBM ThinkPads                   floppy.floppy=thinkpad
+IBM Pentium Microchannel               mca-pentium no-hlt
+Geschützte I/O-Port Bereiche           reserve=iobase,extent[,...]
+Abhilfe bei fehlerhaften Koprozessoren (alte Rechner)
+                                       no387
+Laptops mit Display-Problemen          vga=771
+Wenn Ihr System beim Starten einfriert, und die letzte Zeile
+"aec671x-detect.." lautet, versuchen Sie es mit
+                                       gdth=disable:y
+Wenn Ihr System nicht mehr reagiert oder andere Hardware-Fehler auftreten,
+schalten Sie die fehlerhafte APIC Unterbrechungsroutine ab mit
+                                       noapic nolapic
+
+Zum Beispiel:
+
+  boot: live vga=771 noapic nolapic
+
+Drücken Sie F1 für das Hilfe Inhaltsverzeichnis, oder Esc, um die Hilfe zu
+verlassen.F7SPEZIELLE BOOT-PARAMETER - VERSCHIEDENE FESTPLATTENDie folgenden Boot-Parameter können Sie am boot: Prompt, in Verbindung mit
+der Bootmethode (siehe <F3F3>).
+
+HARDWARE                     PARAMETER ZUM FESTLEGEN VON
+
+Adaptec 151x, 152x           aha152x.aha152x=iobase[,irq[,scsi-id[,reconnect]]]
+Adaptec 1542                 aha1542.aha1542=iobase[,buson,busoff[,dmaspeed]]
+Adaptec 274x, 284x           aic7xxx.aic7xxx=no_reset (enabled if non-zero)
+BusLogic SCSI Hosts          BusLogic.BusLogic=iobase
+Einige Rechner von DELL      aic7xxx.aic7xxx=no_probe
+
+Diese Liste ist unvollständig; weitere Informationen finden Sie im Dokument
+"kernel-parameters.txt" des Kernels.
+
+Zum Beispiel:
+
+  boot: live aic7xxx.aic7xxx=no_probe
+
+Drücken Sie F1 für das Hilfe Inhaltsverzeichnis, oder Esc, um die Hilfe zu
+verlassen.F8SPEZIELLE BOOT-PARAMETER - INSTALLATIONS-SYSTEMDie folgenden Boot-Parameter können Sie am boot: Prompt, in Verbindung mit
+der Bootmethode (siehe <F3F3>). Diese Parameter legen fest, wie der Start
+abläuft.
+
+ERGEBNIS                                PARAMETER
+
+Ausführliche Fehlersuche                DEBCONF_DEBUG=5
+Fehlersuche während des Startvorgangs   BOOT_DEBUG=2|3
+Framebuffer abschalten                  fb=false
+USB-Erkennung abschalten                debian-installer/probe/usb=false
+PCMCIA nicht starten                    hw-detect/start_pcmcia=false
+Statische Netzwerk-Konfiguration erzwingen
+                                        netcfg/disable_dhcp=true
+Tastaturbelegung setzen                 bootkbd=es
+Braille tty verwenden                   brltty=driver,device,texttable
+ACPI für PCI-Tabellen deaktivieren (nützlich für einige HP Server und
+Rechner mit VIA Chipsatz)               pci=noacpi
+
+Zum Beispiel:
+
+  boot: live fb=false
+
+Drücken Sie F1 für das Hilfe Inhaltsverzeichnis, oder Esc, um die Hilfe zu
+verlassen.F9HIFE BEKOMMENWenn Sie Ubuntu nicht starten können, verzweifeln Sie nicht! Das Ubuntu-Team
+hilft Ihnen gern! Wir sind sehr daran interessiert, von den Problemen beim
+Starten zu erfahren, weil sie im allgemeinen nicht nur bei einer Person
+auftreten. Entweder haben wir schon von Ihrem speziellen Problem gehört;
+dann können wir Ihnen eine schnelle Lösung liefern. Andernfalls würden wir
+gerne mehr darüber wissen und das Problem mit Ihnen durchgehen; der nächste
+Anwender, der auf dasselbe Problem stößt, wird dann von Ihrer Erfahrung
+profitieren!
+
+Die FAQ enthält weitere Informationen; das Dokument finden Sie auf der
+Ubuntu Webseite http://www.ubuntu.com/
+
+Drücken Sie F1 für das Hilfe Inhaltsverzeichnis, oder Esc, um die Hilfe zu
+verlassen.F10COPYRIGHT UND GARANTIEUbuntu ist urheberrechtlich geschützt: Copyright (C) 2004-2006 Canonical
+Ltd. Es enthält das Werk vieler anderer Original-Autoren und Mitwirkenden.
+
+Das Ubuntu System darf frei weiterverteilt werden. Nach dem Starten sind die
+genauen Bedingungen zur Verbreitung für jedes einzelne Paket in der
+entsprechenden Datei /usr/share/doc/Paketname/copyright beschrieben.
+
+Ubuntu kommt OHNE JEGLICHE GARANTIE, soweit rechtlich zulässig.
+
+Dieses System basiert auf Debian. Auf http://www.debian.org/ finden Sie
+Genaueres dazu, sowie Informationen zum Debian Projekt.
+
+Drücken Sie F1 für das Hilfe Inhaltsverzeichnis, oder Esc, um die Hilfe zu
+verlassen. 

@@ -1,0 +1,165 @@
+F1Witamy w Ubuntu!To jest uruchamialny CD-ROM dla Ubuntu
+6.10, data budowania: 20070122.
+
+Indeks pomocy
+
+KlawiszTemat
+
+<F1F1>   Ta strona - indeks pomocy.
+<F2F2>   Wymagania do uruchomienia Ubuntu.
+<F3F3>   Specjalne sposoby uruchomienia systemu z tego CD-ROM.
+<F4F4>   Dodatkowe metody startu; odzyskiwanie uszkodzonego systemu.
+<F5F5>   Przegląd specjalnych parametrów uruchomienia.
+<F6F6>   Specjalne parametry uruchomienia dla nietypowych komputerów.
+<F7F7>   Specjalne parametry uruchomienia dla wybranych kontrolerów dysków.
+<F8F8>   Specjalne parametry uruchomienia do rozruchu systemu.
+<F9F9>   Jak uzyskać pomoc.
+<F10F10>  Prawa autorskie i gwarancje.
+
+Naciśnij od F2 do F10, żeby obejrzeć szczegóły albo Esc, aby opuścić pomoc.F2Wymagania do instalacjiŻeby używać tego systemu z płyty, musisz mieć przynajmniej 128 megabajtów
+pamięci RAM.
+
+Ten system uruchamiany z płyty nie wymaga żadnego miejsca na dysku.
+Jednakże, jeśli posiadasz na dysku partycje wymiany, zostaną one
+wykorzystane.
+
+Więcej informacji znajdziesz w FAQ (najczęściej zadawanych pytaniach).
+Dokument ten możesz znaleźć na stronie Ubuntu, http://www.ubuntu.com/
+
+Dziękujemy za wybranie Ubuntu!
+
+Naciśnij F1, aby przejść do indeksu pomocy, lub Esc, aby opuścić pomoc.F3Sposoby uruchamianiaDostępne sposoby uruchomienia:
+
+live
+  Uruchamia system z płyty.
+memtest
+  Wykonuje sprawdzenie pamięci RAM.
+
+Aby użyć jednej z tych metod uruchamiania, należy wpisać jej nazwę w oknie
+polecenia uruchamiania, dodając ewentualnie za nią parametry uruchomienia.
+Na przykład:
+
+  boot: live acpi=off
+
+Jeśli nie masz pewności, której metody użyć, użyj domyślnej metody, bez
+żadnych parametrów, poprzez naciśnięcie klawisza Enter na głównym ekranie
+systemu rozruchowego.
+
+Naciśnij F1, aby przejść do indeksu pomocy, lub Esc, aby opuścić pomoc.F4ODZYSKIWANIE USZKODZONEGO SYSTEMUTa płyta CD nie ma specjalnego trybu odzyskiwania, jednak ponieważ cały
+system uruchamia się z płyty, możliwe jest użycie narzędzi wiersza poleceń
+oraz graficznych do naprawienia systemu, który nie uruchamia się poprawnie.
+Możliwe jest również użycie przeglądarki internetowej w celu uzyskania
+pomocy. W sieci dostępne są wyczerpujące porady dotyczące większośc
+iproblemów, które mogą spowodować nieprawidłowe uruchamianie się systemu.
+
+Naciśnij F1, aby przejść do indeksu pomocy, lub Esc, aby opuścić pomoc.F5Przegląd specjalnych parametrów uruchomieniaNa niektórych komputerach, może być konieczne podanie parametrów w linii
+boot: aby można było uruchomić system. Na przykład, Linux może nie być w
+stanie wykryć automatycznie Twojego sprzętu i wtedy musisz podać jego
+lokalizację lub typ, aby mógł zostać rozpoznany.
+
+Aby uzyskać więcej informacji o parametrach uruchomienia, których możesz
+użyć, naciśnij:
+
+<F6F6>   parametry uruchomienia dla nietypowych komputerów
+<F7F7>   parametry uruchomienia dla różnych kontrolerów dysków
+<F8F8>   parametry uruchomienia wykorzystywane przez system rozruchowy
+
+Wiele modułów jądra jest ładowanych dynamicznie przez program instalacyjny,
+ale parametry dla tych modułów nie mogą być podane w linii poleceń. Aby
+system zapytał o parametry modułów przed ich załadowaniem, uruchom system w
+trybie eksperta (patrz <F3F3>).
+
+Wiele modułów jądra jest ładowanych dynamicznie przez system rozruchowy, ale
+parametry dla tych modułów nie mogą być podane w linii poleceń.
+
+Naciśnij F1, aby przejść do indeksu pomocy, lub Esc, aby opuścić pomoc.F6Specjalne parametry uruchomienia - różny sprzętMożesz użyć następujących parametrów uruchomienia w linii boot: , w
+połączeniu z metodą uruchomienia (patrz <F3F3>>). Jeśli używasz liczb
+szesnastkowych, musisz użyć przedrostka 0x (np., 0x300).
+
+Sprzęt                                 Parametr
+
+IBM PS/1 lub ValuePoint (dysk IDE)     hd=cylindry,głowice,sektory
+Niektóre komputery IBM ThinkPad        floppy.floppy=thinkpad
+IBM Pentium Microchannel               mca-pentium no-hlt
+Ochrona zakresów portów I/O            reserve=baza,zakres[,...]
+Ominięcie niesprawnych FPU (stare komputery)
+                                       no387
+Laptopy z problemami wyświetlania na konsoli
+                                       vga=771
+Jeśli system zawiesza się przy uruchomieniu, a ostatni komunikat to
+"aec671x-detect..", spróbuj            gdth=disable:y
+Jeśli zauważysz zawieszenia systemu lub inne błędy sprzętowe, wyłącz
+niepoprawne przekierowanie przerwać w APIC
+                                       noapic nolapic
+
+Na przykład:
+
+  boot: live vga=771 noapic nolapic
+
+Naciśnij F1, aby przejść do indeksu pomocy, lub Esc, aby opuścić pomoc.F7Specjalne parametry uruchomienia - różne napędy dyskówMożesz użyć następujących parametrów uruchomienia w linii boot: , w
+połączeniu z metodą uruchomienia (patrz <F3F3>).
+
+Sprzęt                       Parametr
+
+Adaptec 151x, 152x           aha152x.aha152x=iobase[,irq[,scsi-id[,reconnect]]]
+Adaptec 1542                 aha1542.aha1542=iobase[,buson,busoff[,dmaspeed]]
+Adaptec 274x, 284x           aic7xxx.aic7xxx=no_reset (enabled if non-zero)
+Hosty SCSI BusLogic          BusLogic.BusLogic=iobase
+Niektóre komputery DELL      aic7xxx.aic7xxx=no_probe
+
+Niniejsza lista jest niekompletna, więcej w pliku jądra
+kernel-parameters.txt.
+
+Na przykład:
+
+  boot: live aic7xxx.aic7xxx=no_probe
+
+Naciśnij F1, aby przejść do indeksu pomocy, lub Esc, aby opuścić pomoc.F8Specjalne parametry uruchomienia - program instalacyjnyMożesz użyć następujących parametrów uruchomienia w linii boot: , w
+połączeniu z metodą uruchomienia (patrz <F3F3>). Te parametry określają
+zachowanie programu uruchamiającego system.
+
+Działanie                               Parametr
+
+Wyświetlanie informacji do znajdowania błędów
+                                        DEBCONF_DEBUG=5
+Znajdowanie błędów w sekwencji rozruchowej
+                                        BOOT_DEBUG=2|3
+Wyłączenie framebuffera                 fb=false
+Wyłączenie wyszukiwania USB             debian-installer/probe/usb=false
+Wyłączenie uruchamiania PCMCIA          hw-detect/start_pcmcia=false
+Wymuszenie statycznej konfiguracji sieci
+                                        netcfg/disable_dhcp=true
+Ustawienie mapy klawiatury              bootkbd=es
+Użyj terminala tty Braile'a             brltty=driver,device,texttable
+Wyłączenie ACPI dla map PCI (przydatne dla niektórych serwerów HP i
+komputerów opartych na Via)             pci=noacpi
+
+Na przykład:
+
+  boot: live fb=false
+
+Naciśnij F1, aby przejść do indeksu pomocy, lub Esc, aby opuścić pomoc.F9Uzyskiwanie pomocyJeśli nie możesz uruchomić systemu, nie panikuj! Zespół Ubuntu jest gotowy,
+aby Ci pomóc! Jesteśmy zwłaszcza zainteresowani problemami z uruchomieniem
+systemu, ponieważ zazwyczaj nie przytrafiają się tylko jednej osobie. Albo
+już słyszeliśmy o Twoim problemie i możemy podać sposób naprawienia, albo
+chcemy usłyszeć o problemie i wypracować z Tobą sposób jego naprawienia, tak
+by następny użytkownik, który napotka taki sam problem, mógł wykorzystać
+Twoje doświadczenia!
+
+Więcej informacji znajdziesz w FAQ (najczęściej zadawanych pytaniach).
+Dokument ten możesz znaleźć na stronie Ubuntu, http://www.ubuntu.com/
+
+Naciśnij F1, aby przejść do indeksu pomocy, lub Esc, aby opuścić pomoc.F10Prawa autorskie i gwarancjePrawa autorskie do Ubuntu: Copyright (C) 2004-2006 Canonical Ltd. Ubuntu
+zawiera wynik prac wielu autorów i współpracowników.
+
+System Ubuntu można dowolnie rozpowszechniać. Po uruchomieniu, dokładne
+warunki rozpowszechniania dla każdego pakietu są opisane w odpowiednim pliku
+/usr/share/doc/packagename/copyright.
+
+Ubuntu jest rozprowadzane BEZ ŻADNEJ GWARANCJI, w zakresie dopuszczalnym
+odpowiednimi prawami.
+
+Ten system jest oparty na Debianie. Więcej informacji o projekcie Debian
+znajdziesz na stronie http://www.debian.org/.
+
+Naciśnij F1, aby przejść do indeksu pomocy, lub Esc, aby opuścić pomoc. 

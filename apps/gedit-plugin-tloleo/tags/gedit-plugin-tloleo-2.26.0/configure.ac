@@ -1,9 +1,9 @@
 # Process this file with autoconf to produce a configure script.
 
-GEDIT_MAJOR=2.16.0
-GEDIT_PLUGINS_MAJOR=2.16.0
+GEDIT_MAJOR=2.26.0
+GEDIT_PLUGINS_MAJOR=2.26.0
 
-AC_INIT(gedit-plugin-TLoleo, 2.16.1, http://www.indisys.es/)
+AC_INIT(gedit-plugin-TLoleo, 2.26.0, http://www.indisys.es/)
 
 AC_CONFIG_SRCDIR([plugins])
 AC_CONFIG_MACRO_DIR([m4])

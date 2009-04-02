@@ -1,0 +1,30 @@
+Source: gedit-plugin-tloleo
+Section: gnome
+Priority: extra
+Maintainer: Junta de Andalucía <packmaster@guadalinex.org>
+Uploaders: Juanje Ojeda Croissier <jojeda@emergya.es>
+Build-Depends: cdbs,
+               debhelper (>= 7),
+               gnome-common,
+               libglib2.0-dev,
+               libgtk2.0-dev,
+               libgtksourceview2.0-dev,
+               gedit-dev,
+               libglade2-dev,
+               libgnomevfs2-dev
+Standards-Version: 3.8.0
+Homepage: http://launchpad.net/gedit-plugin-tloleo
+Vcs-Browser: http://codebrowse.launchpad.net/~guadalinex-members/gedit-plugin-tloleo/trunk/changes
+Vcs-Bzr: http://bazaar.launchpad.net/~guadalinex-members/gedit-plugin-tloleo/trunk
+
+Package: gedit-plugin-tloleo
+Architecture: any
+Depends: festival (>= 1.96), festvox-palpc16k (>=1.0.0), festvox-sflpc16k (>=1.0.0), ${shlibs:Depends}, ${misc:Depends}
+Description: Set of plugins for gedit
+  gedit-plugin-TLoleo contain a set of plugins for gedit, GNOME's text editor.
+  .
+  The following plugins are included:
+   * TLoleo: synthesizes the selected text with Festival using the Spanish
+  male voice from the Hispavoces project (http://forja.guadalinex.org/projects/hispavoces/). 
+  Developed by Intelligent Dialogue Systems S.L.
+  .

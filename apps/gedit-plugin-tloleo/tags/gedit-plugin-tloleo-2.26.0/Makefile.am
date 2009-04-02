@@ -11,9 +11,14 @@ EXTRA_DIST =			\
 	intltool-update.in
 
 DISTCLEANFILES = 		\
+	configure		\
+	aclocal.m4		\
 	gnome-doc-utils.make	\
 	intltool-extract 	\
 	intltool-merge 		\
-	intltool-update
+	intltool-update		\
+	m4/intltool.m4		\
+	po/Makefile.in.in	\
+	Makefile.in
 
 DISTCHECK_CONFIGURE_FLAGS = --with-plugins=really-all

@@ -24,6 +24,7 @@
 #endif
 
 #include <string.h> /* For strlen */
+#include <sys/stat.h>
 
 #include "gedit-TLoleo-plugin.h"
 #include "gedit-TLoleo-plugin-defs.h"

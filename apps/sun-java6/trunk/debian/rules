@@ -22,7 +22,7 @@ archdir		:= $(strip $(patsubst $(DEB_HOST_ARCH)=%, %, \
 			$(filter $(DEB_HOST_ARCH)=%, $(archdir_map))))
 
 TOP		:= usr/lib/jvm
-dirparts	:= $(shell basename sun-java6-6-12 | tr '-' ' ')
+dirparts	:= $(shell basename sun-java6-6-13 | tr '-' ' ')
 VENDOR		:= $(word 1, $(dirparts))
 Vendor		:= $(shell perl -e 'print ucfirst("$(VENDOR)");')
 javaname	:= $(shell echo $(word 2, $(dirparts)) | sed 's/[0-9.]*$$//')
@@ -43,7 +43,7 @@ jdirname	:= $(ia32_prefix)java-$(version)-$(VENDOR)-$(jdkversion).$(releng_ver)
 jdiralias	:= $(ia32_prefix)java-$(version)-$(VENDOR)
 srcdir		:= $(arch)-jdk
 bin_pattern	= jdk-$(subst .,_,$(version))-dlj-linux-%.bin
-bin_pattern	= jdk-6u12-dlj-linux-%.bin
+bin_pattern	= jdk-6u13-dlj-linux-%.bin
 all_archs	= $(filter $(subst =, , $(arch_map)), \
 			   $(subst -, , $(patsubst %.bin, %, $(wildcard *.bin))))
 priority	:= 63
@@ -300,8 +300,8 @@ compare-jre-jars:
 	  exit 1; \
 	fi
 
-diff_ignore = -I 'Saturday, January 17' \
-	-I 'Sat Jan 17' -I '^ *// java GenerateCharacter'
+diff_ignore = -I 'Monday, March 9' \
+	-I 'Mon Mar 09' -I '^ *// java GenerateCharacter'
 
 with_check = yes
 

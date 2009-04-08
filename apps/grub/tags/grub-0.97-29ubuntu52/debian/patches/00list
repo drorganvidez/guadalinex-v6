@@ -14,6 +14,7 @@ splashimage_help.diff
 grub-install_addsyncs.diff
 grub-install_regexp.diff
 grub-install_aoe_support.diff
+grub-install_storeversion.diff
 geometry-26kernel.diff
 print_func.diff
 mprotect.diff
@@ -24,3 +25,11 @@ crossreference_manpages.diff
 
 # We aren't building amd64 binaries, see #244498
 #fix_amd64_compile.diff
+
+# Ubuntu patches:
+quiet.diff
+gpt.diff
+# Fix from Mandriva (Ubuntu bug #106887):
+grub-0.95-mem_lower.patch
+# splashimage, postponed:
+#ubuntu_update_grub.diff

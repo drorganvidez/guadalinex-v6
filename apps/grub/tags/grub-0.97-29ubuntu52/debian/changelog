@@ -1,3 +1,58 @@
+grub (0.97-29ubuntu4) gutsy; urgency=low
+
+  * debian/update-grub: replace Ubuntu with lsb_release if possible
+    (LP: #83690, #19040)
+  * debian/update-grub: on upgrades, set the new savedefault option
+    to "true" if the user was using "default saved" (LP: #131858)
+
+ -- Tormod Volden <debian.tormod@gmail.com>  Mon, 03 Sep 2007 22:56:34 +0200
+
+grub (0.97-29ubuntu3) gutsy; urgency=low
+
+  * No-change upload to work around a soyuz bug and get us some
+    actual build records for lpia.
+
+ -- Adam Conrad <adconrad@ubuntu.com>  Fri, 10 Aug 2007 20:47:19 +1000
+
+grub (0.97-29ubuntu2) gutsy; urgency=low
+
+  * Add lpia to the list of supported architectures.
+
+ -- Matthias Klose <doko@ubuntu.com>  Fri, 10 Aug 2007 08:05:31 +0000
+
+grub (0.97-29ubuntu1) gutsy; urgency=low
+
+  * Merge from Debian unstable. Remaining Ubuntu changes:
+    - debian/control: build-depends on libc6-dev and gcc-3.4
+    - debian/control: depends on volumeid, provides linux-boot-loader
+    - debian/rules: use gcc-3.4
+    - debian/patches/grub-install_storeversion.diff
+    - debian/patches/quiet.diff
+    - debian/patches/gpt.diff
+    - debian/patches/grub-0.95-mem_lower.patch
+    - debian/update-grub: assorted Ubuntu tweaks
+      - use printf instead of echo -e
+      - split up warning about missing /boot/grub
+      - is_removable device handling
+      - crashdump handling
+      - get default root device from /etc/fstab
+      - rename title to "Ubuntu"
+      - quiet and splash default defoptions
+      - rename "single-user" to "recovery"
+      - timeout/hiddenmenu/colours defaults
+      - robust oldversion handling
+      - don't treat memtest as a kernel
+      - convert_kopt_to_uuid
+      - kopt_2_6 handling
+      - remove freebsd support
+    - configure.ac: -fno-strict-aliasing
+    - debian/grub.postinst: run update-grub on upgrade from dapper
+  * debian/patches/quiet.diff: Fix "help quiet" segfault (LP: #60163)
+  * debian/update-grub: New "savedefault" automagic option (default: false)
+    for adding the savedefault command to menu entries (LP: #66278)
+
+ -- Tormod Volden <debian.tormod@gmail.com>  Fri, 29 Jun 2007 16:38:06 +0200
+
 grub (0.97-29) unstable; urgency=low
 
   [ Otavio Salvador ]
@@ -99,6 +154,77 @@ grub (0.97-21) unstable; urgency=medium
 
  -- Otavio Salvador <otavio@debian.org>  Sun, 14 Jan 2007 23:20:48 -0200
 
+grub (0.97-20ubuntu7) gutsy; urgency=low
+
+  * Add patch from Mandriva grub-0.95-mem_lower.patch (Ubuntu bug #106887)
+    Allows grub to boot on some computer where only lilo and syslinux
+    would work. Uses memory detection similar to syslinux.
+    http://www.mail-archive.com/bug-grub@gnu.org/msg06526.html
+
+ -- Tormod Volden <debian.tormod@gmail.com>  Sat, 26 May 2007 11:15:23 +0200
+
+grub (0.97-20ubuntu6) feisty; urgency=low
+
+  * Migrate root=/dev/evms/[hs]d[a-z][0-9]* to UUIDs, since systems upgraded
+    from dapper to edgy may find themselves with such a root= option by
+    mistake (LP: #102148).
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Tue, 10 Apr 2007 13:37:42 +0100
+
+grub (0.97-20ubuntu5) feisty; urgency=low
+
+  * gcc-4.0 is no longer available. Switch back to gcc-3.4. Update build-deps
+    accordingly.
+
+ -- Ben Collins <bcollins@ubuntu.com>  Tue, 20 Mar 2007 08:32:42 -0400
+
+grub (0.97-20ubuntu4) feisty; urgency=low
+
+  * Change update-grub crashdump menu addition handling. We no longer have
+    kdump kernels, so users need to set crashdump=1 in menu.lst and rerun
+    update-grub to get this functionality.
+
+ -- Ben Collins <bcollins@ubuntu.com>  Fri,  2 Mar 2007 13:09:34 -0500
+
+grub (0.97-20ubuntu3) feisty; urgency=low
+
+  * Add GPT patch from
+    http://lists.gnu.org/archive/html/bug-grub/2006-07/msg00037.html, to
+    simplify support for Intel Macs (LP: #62386).
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Fri, 19 Jan 2007 10:42:32 +0000
+
+grub (0.97-20ubuntu2) feisty; urgency=low
+
+  * Fix broken comma-separation for memtest86 boot items.
+  * Migrate existing kopt_2_6 options to UUID (LP: #78901).
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Sun, 14 Jan 2007 01:29:08 +0000
+
+grub (0.97-20ubuntu1) feisty; urgency=low
+
+  * Resynchronise with Debian. Remaining changes:
+    - provide linux-boot-loader virtual package
+    - compile with gcc-4.0
+    - use -fno-strict-aliasing
+    - quiet boot and usplash support
+    - disabled patch to set splash
+    - store version of grub in /boot/grub/installed-version
+    - in update-grub use this file to determine whether the quiet option
+      is supported
+    - transition root option to mounting by UUID
+    - fix bashisms in update-grub
+    - rename "single-user" mode to "recovery" mode
+    - detect installation onto removable devices, and adjust root device
+    - don't override UUID= or LABEL= from /etc/fstab, leave it to the
+      initramfs to do the right thing
+    - kdump option detection
+    - drop "any-" from architecture names in debian/control
+  * update-grub: Remember to pass lockold arguments to write_kernel_entry
+    (LP: #73906).
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Wed, 20 Dec 2006 15:05:21 +0000
+
 grub (0.97-20) unstable; urgency=low
 
   * Add manpage for grub-set-default. Thanks for Patrick Schönfeld
@@ -108,6 +234,36 @@ grub (0.97-20) unstable; urgency=low
   * Write update-grub wrapper messages on stderr instead of stdout.
 
  -- Otavio Salvador <otavio@debian.org>  Wed,  6 Dec 2006 11:01:44 -0200
+
+grub (0.97-19ubuntu2) feisty; urgency=low
+
+  * s/any-// in debian/control -- Soyuz doesn't support it.
+
+ -- Scott James Remnant <scott@ubuntu.com>  Wed, 29 Nov 2006 14:02:30 +0000
+
+grub (0.97-19ubuntu1) feisty; urgency=low
+
+  * Merge from debian unstable, remaining changes:
+    - provide linux-boot-loader virtual package
+    - compile with gcc-4.0
+    - use -fno-strict-aliasing
+    - quiet boot and usplash support
+    - disabled patch to set splash
+    - store version of grub in /boot/grub/installed-version
+    - in update-grub use this file to determine whether the quiet option
+      is supported
+    - transition root option to mounting by UUID
+    - fix bashisms in update-grub
+    - rename "single-user" mode to "recovery" mode
+    - detect installation onto removable devices, and adjust root device
+    - don't override UUID= or LABEL= from /etc/fstab, leave it to the
+      initramfs to do the right thing
+    - kdump option detection
+
+  * Fix UUID conversion to correctly notice symlinks to /dev/mapper.
+  * Convert kopt_2_6 to UUID as well.  LP: #73090.
+
+ -- Scott James Remnant <scott@ubuntu.com>  Tue, 28 Nov 2006 11:40:54 +0000
 
 grub (0.97-19) unstable; urgency=low
 
@@ -262,6 +418,124 @@ grub (0.97-12) unstable; urgency=HIGH
 
  -- Otavio Salvador <otavio@debian.org>  Mon,  3 Jul 2006 20:25:36 -0300
 
+grub (0.97-11ubuntu14) edgy; urgency=low
+
+  * s/single-user/recovery/, revert Debian #370110.  Ubuntu: #62600.
+
+ -- Scott James Remnant <scott@ubuntu.com>  Thu, 19 Oct 2006 14:19:59 +0100
+
+grub (0.97-11ubuntu13) edgy; urgency=low
+
+  * Fix two missing redirects to stderr. This caused kernel postinst
+    to fail (lp: #63074)
+  
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Thu,  5 Oct 2006 11:50:36 +0200
+
+grub (0.97-11ubuntu12) edgy; urgency=low
+
+  * Don't convert /dev/md[0-9]* to UUID for now.  Ubuntu: #62476.
+
+ -- Scott James Remnant <scott@ubuntu.com>  Tue, 26 Sep 2006 17:18:55 +0100
+
+grub (0.97-11ubuntu11) edgy; urgency=low
+
+  * Make the boot message a little less jargon-y.
+
+ -- Scott James Remnant <scott@ubuntu.com>  Thu, 14 Sep 2006 09:33:41 +0100
+
+grub (0.97-11ubuntu10) edgy; urgency=low
+
+  * Don't transition LVM, evms and dev-mapper devices.  (Ubuntu #54002)
+
+ -- Scott James Remnant <scott@ubuntu.com>  Mon, 21 Aug 2006 09:48:55 +0200
+
+grub (0.97-11ubuntu9) edgy; urgency=low
+
+  * Fix a bashism in update-grub's abort function.
+  * Don't call update-grub on fresh install (closes: Malone #54067).
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Wed, 26 Jul 2006 11:29:08 +0100
+
+grub (0.97-11ubuntu8) edgy; urgency=low
+
+  * Change dependency to one on volumeid. 
+
+ -- Scott James Remnant <scott@ubuntu.com>  Tue, 25 Jul 2006 14:04:57 +0100
+
+grub (0.97-11ubuntu7) edgy; urgency=low
+
+  * Provide linux-boot-loader virtual package.
+
+  * Fix detection of kdump kernels to not abandon all hope when there
+    aren't any, and thus prevent kernel installs.
+
+  * On upgrade, alter the kopt line in menu.lst to refer to the root
+    filesystem by UUID.  We get install for free because fstab is parsed.
+
+ -- Scott James Remnant <scott@ubuntu.com>  Tue, 25 Jul 2006 02:36:33 +0100
+
+grub (0.97-11ubuntu6) edgy; urgency=low
+
+  * Add detection of kdump kernels to update-grub. Create hardcoded altoption
+    entries for usage.
+
+ -- Ben Collins <bcollins@ubuntu.com>  Tue, 18 Jul 2006 22:48:37 +0000
+
+grub (0.97-11ubuntu5) edgy; urgency=low
+
+  * Fix build-dep from gcc-3.4 to gcc-4.0, dropped somewhere during test
+    builds
+
+ -- Matt Zimmerman <mdz@ubuntu.com>  Mon, 10 Jul 2006 10:52:21 -0700
+
+grub (0.97-11ubuntu4) edgy; urgency=low
+
+  * When grub-install runs, store the version number of the package in
+    /boot/grub/installed-version
+  * In update-grub, use this file to determine whether the quiet option is
+    supported by the version of grub which has been installed
+
+ -- Matt Zimmerman <mdz@ubuntu.com>  Sun,  9 Jul 2006 15:49:25 -0700
+
+grub (0.97-11ubuntu3) edgy; urgency=low
+
+  * Use gcc-4.0 rather than gcc-3.4
+  * Disable diskless support.  This seems to cause some weird regressions
+
+ -- Matt Zimmerman <mdz@ubuntu.com>  Sun,  9 Jul 2006 14:57:46 -0700
+
+grub (0.97-11ubuntu2) edgy; urgency=low
+
+  * Use gcc-3.4 by default. Grub does wacky things when using 4.1.
+    (Closes: #51518). Work around for now until I can fix it properly.
+  * Enable diskless support. Enabled pci-drivers for diskless support 
+    (Closes: #49998).
+  * Updated patch from me to quiet grub when booting,
+    resolves the quieten-grub spec on the grub side (Closes: #20736).
+  * Turn off verbose booting by default for non-recovery kernels.
+  * Taken from debian:
+    - Applied patch from Michael Biebl <biebl@teco.edu> to fix failure to
+      catch the right root device when using RAID and new mdadm packages.
+
+ -- Chuck Short <zulcss@gmail.com>  Sat,  8 Jul 2006 07:42:21 -0400
+
+grub (0.97-11ubuntu1) edgy; urgency=low
+
+  * Resynchronize with Debian:
+    - debian/control: Updated build depends.
+    - debian/control.in: Updated build-depends.
+    - debian/update-grub: Retained Ubuntu changes
+    - Patches:
+      - Dropped odirect.diff since it breaks raid detection.
+      - Added grub-install_regxp - Use POSIX regexp to support more
+        locales. Fixes regexp to allow partitions later of hdg to work.
+      - Added print-func.diff. Allows beep in menu.lst. Useful for 
+        blind people.
+      - Added intelmac.diff.Kind of obvious. Allows intelmac support.
+      - Added cvs-sync.patch. Latest updates from grub cvs.
+
+ -- Chuck Short <zulcss@ubuntu.com>  Wed, 28 Jun 2006 17:11:45 +0100
+
 grub (0.97-11) unstable; urgency=low
 
   * Don't use /dev/ida!cXdYpZ format since ida RAID controllers aren't
@@ -399,7 +673,7 @@ grub (0.97-3) unstable; urgency=low
     update-grub to run with dash. (closes: #346127)
 
  -- Otavio Salvador <otavio@debian.org>  Mon,  9 Jan 2006 13:37:41 -0200
-  
+
 grub (0.97-2) unstable; urgency=low
 
   * Update debian/control. This caused the wrong NMU identification :(
@@ -412,6 +686,86 @@ grub (0.97-2) unstable; urgency=low
     typos on grub-floppy manpage. (closes: #342259)
 
  -- Otavio Salvador <otavio@debian.org>  Thu, 22 Dec 2005 15:57:17 -0200
+
+grub (0.97-1ubuntu9) dapper; urgency=low
+
+   * Taken from debian 0.97-7: (Ubuntu: #38182)
+     [ Kristian Edlund ]
+     Added the feature of letting update-grub update the default entry when
+     a new kernel is installed. Done partly by applying a patch from Thomas
+     Braun <thomas@akwgegner.de> 
+   * fix grub-reboot (Ubuntu: #31915)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Thu,  6 Apr 2006 05:03:48 +0200
+
+grub (0.97-1ubuntu8) dapper; urgency=low
+
+  * Drop build dependency on ia32-libs-dev.
+
+ -- Matthias Klose <doko@ubuntu.com>  Thu, 16 Mar 2006 15:32:40 +0000
+
+grub (0.97-1ubuntu7) dapper; urgency=low
+
+  * Build-depend on libc6-dev-i386, not libc6-i386-dev.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Wed, 15 Mar 2006 12:56:27 +0000
+
+grub (0.97-1ubuntu6) dapper; urgency=low
+
+  * Build-depend on libc6-i386-dev on amd64 in preference to ia32-libs-dev.
+  * Add I2O support (patch from i2o.shadowconnect.com; closes: Malone
+    #15466, #22220).
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Wed, 15 Mar 2006 12:25:17 +0000
+
+grub (0.97-1ubuntu5) dapper; urgency=low
+
+  * debian/patches/ubuntu_update_grub.diff:
+    - disabled again, caused too many trouble
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Tue, 21 Feb 2006 09:59:24 +0100
+
+grub (0.97-1ubuntu4) dapper; urgency=low
+
+  * debian/update-grub:
+    - if the user has not specified his own splash-image, use the one from
+      ubuntu
+  * debian/rules: use automake-1.9 instead of automake-1.8 
+  
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Thu, 16 Feb 2006 10:03:35 +0100
+
+grub (0.97-1ubuntu3) dapper; urgency=low
+
+  * Don't override UUID or LABEL statements from fstab, but leave it to
+    the initrd, initramfs or kernel to DTRT with them.
+
+ -- Tollef Fog Heen <tfheen@ubuntu.com>  Fri,  3 Feb 2006 18:31:02 +0100
+
+grub (0.97-1ubuntu2) dapper; urgency=low
+
+  * Modify update-grub to check if our root/boot is on a removable device
+    and take appropriate actions to write a proper menu.lst.
+    This happens only at install time. Further calls to update-grub will use
+    the default in menu.lst.
+
+ -- Fabio M. Di Nitto <fabbione@ubuntu.com>  Tue, 10 Jan 2006 10:49:38 +0100
+
+grub (0.97-1ubuntu1) dapper; urgency=low
+
+  * Resynchronise with Debian.
+  * Drop Nathaniel McCallum's nonaltoptions patch, done differently in
+    Debian (as defoptions); added migration code to deal with old Ubuntu
+    menu.lst files.
+  * Drop Matthew Garrett's stage 2 drive fallback patch, since upstream has
+    implemented a different solution which appears to address essentially
+    the same problem.
+  * Generated debian/control once from debian/control.in using
+    type-handling, but continue to avoid the build-dependency on
+    type-handling; the generated debian/control is in the source package.
+  * Disable fix_amd64_compile.diff for now; it causes configure to fail with
+    "GRUB requires a working absolute objcopy; upgrade your binutils".
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Wed, 30 Nov 2005 18:00:45 +0000
 
 grub (0.97-1) unstable; urgency=low
 
@@ -502,12 +856,71 @@ grub (0.95+cvs20040624-18) unstable; urgency=low
 
  -- Otavio Salvador <otavio@debian.org>  Sat, 29 Oct 2005 14:14:27 -0200
 
+grub (0.95+cvs20040624-17ubuntu7) breezy; urgency=low
+
+  * Build using gcc-3.4 -fno-strict-aliasing on all architectures.
+
+ -- Matthias Klose <doko@ubuntu.com>  Mon, 22 Aug 2005 18:32:25 +0200
+
+grub (0.95+cvs20040624-17ubuntu6) breezy; urgency=low
+
+  * Fix up the previous patch to avoid breaking some systems (Ubuntu 
+    #13910)
+
+ -- Matthew Garrett <mjg59@srcf.ucam.org>  Mon, 22 Aug 2005 04:06:26 +0100
+
+grub (0.95+cvs20040624-17ubuntu5) breezy; urgency=low
+
+  * Add support for falling back to the drive that grub was installed on 
+    when looking for stage 2 (Ubuntu #13511)
+
+ -- Matthew Garrett <mjg59@srcf.ucam.org>  Sat, 20 Aug 2005 13:03:45 +0100
+
+grub (0.95+cvs20040624-17ubuntu4) breezy; urgency=low
+
+  * In update-grub, don't set savedefault on recovery mode kernels
+
+ -- Matt Zimmerman <mdz@ubuntu.com>  Mon,  4 Jul 2005 09:11:31 -0700
+
+grub (0.95+cvs20040624-17ubuntu3) breezy; urgency=low
+
+  * Remove kernel name from memtest86
+    thanks to Simon Morgan (Ubuntu #11089)
+
+ -- Charles Majola <charles@ubuntu.com>  Fri,  1 Jul 2005 11:40:31 +0200
+
+grub (0.95+cvs20040624-17ubuntu2) breezy; urgency=low
+
+  * Use DEB_HOST_ARCH_* variables if available so that we work correctly
+    with dpkg 1.13.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Tue, 31 May 2005 19:40:34 +0100
+
+grub (0.95+cvs20040624-17ubuntu1) breezy; urgency=low
+
+  * Resynchronise with Debian.
+
+ -- Adam Conrad <adconrad@ubuntu.com>  Sat, 21 May 2005 12:26:49 +0000
+
 grub (0.95+cvs20040624-17) unstable; urgency=low
 
   * update-grub: fix sort order of new 4 digit kernel versions. 
     (closes: #304841)
 
  -- Jason Thomas <jason@debian.org>  Tue, 19 Apr 2005 09:38:07 +1000
+
+grub (0.95+cvs20040624-16ubuntu2) breezy; urgency=low
+
+  * Build using gcc-3.3 on i386*, upstream 0.97 is prepared for
+    gcc-4.
+
+ -- Matthias Klose <doko@ubuntu.com>  Mon, 16 May 2005 11:38:27 +0000
+
+grub (0.95+cvs20040624-16ubuntu1) breezy; urgency=low
+
+  * Merge Debian changes (#9367).
+
+ -- Martin Pitt <martin.pitt@ubuntu.com>  Fri, 15 Apr 2005 09:55:48 +0200
 
 grub (0.95+cvs20040624-16) unstable; urgency=low
 
@@ -534,6 +947,18 @@ grub (0.95+cvs20040624-15) unstable; urgency=low
 
  -- Jason Thomas <jason@debian.org>  Fri, 18 Feb 2005 10:20:31 +1100
 
+grub (0.95+cvs20040624-14ubuntu2) hoary; urgency=low
+
+  * A kernel named /boot/vmlinuz caused update-grub to loop infinitely.
+
+ -- Matthias Urlichs <smurf@debian.org>  Sat, 26 Feb 2005 09:58:20 +0100
+
+grub (0.95+cvs20040624-14ubuntu1) hoary; urgency=low
+
+  * Resynchronise with Debian.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Sun,  6 Feb 2005 11:30:58 +0000
+
 grub (0.95+cvs20040624-14) unstable; urgency=low
 
   * update-grub: add support for raid1
@@ -548,6 +973,19 @@ grub (0.95+cvs20040624-13) unstable; urgency=high
 
  -- Jason Thomas <jason@debian.org>  Mon, 17 Jan 2005 09:29:18 +1100
 
+grub (0.95+cvs20040624-12ubuntu2) hoary; urgency=low
+
+  * patches/mprotect.diff: New. Make simulated stack executable, fixing
+    segfaults with Linux 2.6.10 on systems with a hardware NX bit.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Sat,  5 Feb 2005 10:27:27 +0000
+
+grub (0.95+cvs20040624-12ubuntu1) hoary; urgency=low
+
+  * Resynchronise with Debian.
+
+ -- Colin Watson <cjwatson@canonical.com>  Mon, 29 Nov 2004 12:47:39 +0000
+
 grub (0.95+cvs20040624-12) unstable; urgency=low
 
   * update-grub should look for memtest86 in /boot
@@ -556,6 +994,12 @@ grub (0.95+cvs20040624-12) unstable; urgency=low
     (closes: #282530)
 
  -- Jason Thomas <jason@debian.org>  Tue, 23 Nov 2004 10:07:30 +1100
+
+grub (0.95+cvs20040624-11ubuntu1) hoary; urgency=low
+
+  * Resynchronise with Debian.
+
+ -- LaMont Jones <lamont@canonical.com>  Mon, 22 Nov 2004 20:40:32 -0700
 
 grub (0.95+cvs20040624-11) unstable; urgency=low
 
@@ -574,6 +1018,13 @@ grub (0.95+cvs20040624-11) unstable; urgency=low
   * Removed e2fsprogs from Build-Depends-Indep as it is an Essential package.
 
  -- Jason Thomas <jason@debian.org>  Fri, 19 Nov 2004 09:40:53 +1100
+
+grub (0.95+cvs20040624-10ubuntu1) hoary; urgency=low
+
+  * Resynchronise with Debian.
+  * Avoid use of type-handling.
+
+ -- Colin Watson <cjwatson@canonical.com>  Mon,  1 Nov 2004 14:50:22 +0000
 
 grub (0.95+cvs20040624-10) unstable; urgency=medium
 
@@ -647,6 +1098,115 @@ grub (0.95+cvs20040624-4) unstable; urgency=low
     - s/Grub-Devel/Grub Maintainers/g with the same goal.
 
  -- Robert Millan <rmh@debian.org>  Mon, 12 Jul 2004 14:09:29 +0200
+
+grub (0.95+cvs20040624-3ubuntu17) warty; urgency=low
+
+  * [debian/update-grub] Add an entry for memtest86+ if it is present
+
+ -- Matt Zimmerman <mdz@canonical.com>  Tue, 28 Sep 2004 00:34:02 -0700
+
+grub (0.95+cvs20040624-3ubuntu16) warty; urgency=low
+
+  * Add 2gb_limit from the 0.95+cvs20040624-8 grub package in Debian.
+    Thanks to Goswin Brederlow for writing the patch. (#1545)
+
+ -- Tollef Fog Heen <tfheen@raw.no>  Sat, 25 Sep 2004 10:55:37 +0200
+
+grub (0.95+cvs20040624-3ubuntu15) warty; urgency=low
+
+  * Backport from Debian:
+    - patches/raid_cciss.diff: New. Support for CCISS devices. (Closes: #261447)
+
+ -- Colin Watson <cjwatson@canonical.com>  Fri, 17 Sep 2004 18:18:25 +0100
+
+grub (0.95+cvs20040624-3ubuntu14) warty; urgency=low
+
+  * Really add Build-Depends: ia32-libs-dev [amd64]
+
+ -- Matt Zimmerman <mdz@canonical.com>  Sun,  5 Sep 2004 09:33:16 -0700
+
+grub (0.95+cvs20040624-3ubuntu13) warty; urgency=low
+
+  * use -static for compilation on amd64.
+  * fix up grub-disk to look in the correct pkglibdir
+  * Add ia32-libs-dev to build-depends for amd64.
+
+ -- Tollef Fog Heen <tfheen@raw.no>  Wed,  1 Sep 2004 10:08:13 +0200
+
+grub (0.95+cvs20040624-3ubuntu12) warty; urgency=low
+
+  * Changed default timeout from 2 to 3 seconds
+
+ -- Nathaniel McCallum <npmccallum@canonical.com>  Fri,  3 Sep 2004 15:53:48 -0400
+
+grub (0.95+cvs20040624-3ubuntu11) warty; urgency=low
+
+  * debian/update-grub: Cope with /boot on a separate partition (closes:
+    Warty #831).
+
+ -- Colin Watson <cjwatson@flatline.org.uk>  Thu, 26 Aug 2004 17:58:39 +0100
+
+grub (0.95+cvs20040624-3ubuntu10) warty; urgency=low
+
+  * debian/update-grub: added the hiddenmenu flag and lowered the timeout for
+    the default config
+
+ -- Nathaniel McCallum <npmccallum@gentoo.org>  Tue, 24 Aug 2004 16:30:09 -0400
+
+grub (0.95+cvs20040624-3ubuntu9) warty; urgency=low
+
+  * debian/update-grub: Ubuntu branding.
+
+ -- Colin Watson <cjwatson@flatline.org.uk>  Tue, 24 Aug 2004 20:53:40 +0100
+
+grub (0.95+cvs20040624-3ubuntu8) warty; urgency=low
+
+  * debian/update-grub: the quietinit option has been changed to 'splash'
+
+ -- Nathaniel McCallum <npmccallum@gentoo.org>  Fri, 20 Aug 2004 14:02:38 -0400
+
+grub (0.95+cvs20040624-3ubuntu7) warty; urgency=low
+
+  * debian/update-grub: added nonaltoptions, with quiet and quiet init 
+    as a default nonaltoption
+
+ -- Nathaniel McCallum <npmccallum@gentoo.org>  Fri, 13 Aug 2004 17:55:02 -0400
+
+grub (0.95+cvs20040624-3ubuntu6) warty; urgency=low
+
+  * Fix Build-Depends[-Indep].
+
+ -- LaMont Jones <lamont@mmjgroup.com>  Fri, 13 Aug 2004 02:50:27 -0600
+
+grub (0.95+cvs20040624-3ubuntu5) warty; urgency=low
+
+  * cleanup patches.
+
+ -- LaMont Jones <lamont@mmjgroup.com>  Mon,  9 Aug 2004 14:10:38 +0000
+
+grub (0.95+cvs20040624-3ubuntu4) warty; urgency=low
+
+  * debian/update-grub: turned off color menu as the default (clashes with splash)
+
+ -- Nathaniel McCallum <npmccallum@gentoo.org>  Thu, 29 Jul 2004 13:26:42 -0400
+
+grub (0.95+cvs20040624-3ubuntu3) warty; urgency=low
+
+  * debian/update-grub: now uses dynamically created directory variables
+
+ -- Nathaniel McCallum <npmccallum@gentoo.org>  Wed, 28 Jul 2004 21:26:17 -0400
+
+grub (0.95+cvs20040624-3ubuntu2) warty; urgency=low
+
+  * debian/update-grub: now detects for splash images and adds it to menu.lst
+
+ -- Nathaniel McCallum <npmccallum@gentoo.org>  Wed, 28 Jul 2004 20:19:52 -0400
+
+grub (0.95+cvs20040624-3ubuntu1) warty; urgency=low
+
+  * debian/control: Add amd64 to architecture list.
+
+ -- Colin Watson <cjwatson@flatline.org.uk>  Mon, 19 Jul 2004 19:06:39 +0100
 
 grub (0.95+cvs20040624-3) unstable; urgency=low
 
@@ -1549,3 +2109,4 @@ grub (0.4-1) unstable; urgency=low
   * Initial Release.
 
  -- Steve Dunham <dunham@debian.org>  Wed, 19 Nov 1997 23:42:47 -0500
+

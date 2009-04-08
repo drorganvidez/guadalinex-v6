@@ -32,7 +32,7 @@ abort() {
 	message=$@
 
 	echo >&2
-	echo -e "$message" >&2
+	printf '%s\n' "$message" >&2
 	echo >&2
 	exit 1
 }
@@ -49,7 +49,10 @@ find_grub_dir ()
 	done
 	
 	if [ -z "$grub_dir" ] ; then
-		abort "No GRUB directory found.\n To create a template run 'mkdir /boot/grub' first.\n To install grub, install it manually or try the 'grub-install' command.\n ### Warning, grub-install is used to change your MBR. ###"
+		abort "No GRUB directory found.
+ To create a template run 'mkdir /boot/grub' first.
+ To install grub, install it manually or try the 'grub-install' command.
+ ### Warning, grub-install is used to change your MBR. ###"
 	else
 		echo "found: $grub_dir" >&2
 	fi
@@ -255,6 +258,17 @@ convert_default () {
 	fi
 }
 
+is_removable () {
+	removabledevice="$(echo "$1" | sed -e 's%\([sh]d[a-z]\)[0-9]*$%\1%' -e 's%\(fd[0-9]*\)$%\1%' -e 's%/part[0-9]*$%/disc%' -e 's%\(c[0-7]d[0-9]*\).*$%\1%' -e 's%^/dev/%%g')"
+        if [ -e "/sys/block/$removabledevice/removable" ]; then
+                if [ "$(cat /sys/block/$removabledevice/removable)" != "0" ]; then
+                        echo "/dev/$removabledevice"
+                        return
+                fi
+        fi
+	echo ""
+}
+
 ## Configuration Options
 # directory's to look for the grub installation and the menu file
 grub_dirs="/boot/grub /boot/boot/grub"
@@ -279,11 +293,14 @@ boot_device=$(find_device "/boot")
 # Full path to the device.map
 device_map=$grub_dir/device.map
 
+# Enable crashdump menu alternative
+crashdump="0"
+
 # Default kernel options, overidden by the kopt statement in the menufile.
-kopt="root=$root_device ro"
+kopt="root=$(awk '$2 == "/" {print $1}' /etc/fstab) ro"
 
 # Title
-title="Debian GNU/`uname -s | sed -e s,GNU/,,g`"
+title=$(lsb_release --short --description 2>/dev/null) || title="Ubuntu"
 
 # should update-grub remember the default entry
 updatedefaultentry="false"
@@ -291,14 +308,25 @@ updatedefaultentry="false"
 # Drive(in GRUB terms) where the kernel is located. Overridden by the
 # kopt statement in menufile.
 # if we don't have a device.map then we can't use the convert function.
+check_removable=""
 if test -f "$device_map" ; then
 	if test -z "$boot_device" ; then
 		grub_root_device=$(convert_default "$root_device")
+		check_removable="$(is_removable "$root_device")"
 	else
 		grub_root_device=$(convert_default "$boot_device")
+		check_removable="$(is_removable "$boot_device")"
 	fi
 else
 	grub_root_device="(hd0,0)"
+fi
+
+# If the root/boot device is on a removable target, we need to override
+# the grub_root_device to (hd0,X). This is a requirement since the BIOS
+# will change device mapping dynamically if we switch boot device.
+
+if test -n "$check_removable" ; then
+	grub_root_device="$(echo "$grub_root_device" | sed -e 's/d.*,/d0,/g')"
 fi
 
 # should grub create the alternative boot options in the menu
@@ -309,7 +337,7 @@ fi
 
 # additional options to use with the default boot option, but not with the
 # alternatives
-	defoptions=""
+	defoptions="quiet splash"
 
 # should grub lock the old kernels
 	lockold="false"
@@ -321,7 +349,7 @@ fi
 	xenkopt="console=tty0"
 
 # options to use with the alternative boot options
-	altoptions="(single-user mode) single"
+	altoptions="(recovery mode) single"
 
 # controls howmany kernels are listed in the config file,
 # this does not include the alternative kernels
@@ -330,8 +358,18 @@ fi
 # should grub create a memtest86 entry
 	memtest86="true"
 
+# should grub add "savedefault" to default boot options
+	savedefault="false"
+
 # stores the command line arguments
 	command_line_arguments=$1
+
+# does this version of grub support the quiet option?
+if [ -f ${grub_dir}/installed-version ] && dpkg --compare-versions `cat ${grub_dir}/installed-version` ge 0.97-11ubuntu4; then
+    supports_quiet=true
+else
+    supports_quiet=false
+fi
 
 # read user configuration
 if test -f "/etc/default/grub" ; then
@@ -354,17 +392,21 @@ cat > "$newtemplate" <<EOF
 #
 # You can specify 'saved' instead of a number. In this case, the default entry
 # is the entry saved with the command 'savedefault'.
-# WARNING: If you are using dmraid do not change this entry to 'saved' or your
+# WARNING: If you are using dmraid do not use 'savedefault' or your
 # array will desync and will not let you boot your system.
 default		0
 
 ## timeout sec
 # Set a timeout, in SEC seconds, before automatically booting the default entry
 # (normally the first entry defined).
-timeout		5
+timeout		3
+
+## hiddenmenu
+# Hides the menu by default (press ESC to see the menu)
+hiddenmenu
 
 # Pretty colours
-color cyan/blue white/blue
+#color cyan/blue white/blue
 
 ## password ['--md5'] passwd
 # If used in the first section of a menu file, disable all interactive editing
@@ -579,7 +621,13 @@ get_kernel_opt()
 			if [ -n "$currentOpt" ] ; then
 				break
 			fi
+
+			oldversion="$version"
 			version=$(echo $version | sed 's/_\?[^_]*$//')
+			if [ "$version" = "$oldversion" ] ; then
+				# Break infinite loop, if the version isn't what we expect
+				break
+			fi
 		done
 	fi
 
@@ -619,7 +667,12 @@ write_kernel_entry()
 
 	echo -n "$title" >> $buffer
 	if [ -n "$kernel_version" ]; then
-		echo -n ", kernel $kernel_version" >> $buffer
+		echo -n ", " >> $buffer
+		# memtest86 is not strictly a kernel
+		if ! echo "$kernel_version" | grep -q ^memtest86; then
+			echo -n "kernel " >> $buffer
+		fi
+		echo -n "$kernel_version" >> $buffer
 	fi
 	if [ -n "$recovery_desc" ]; then
 		echo -n " $recovery_desc" >> $buffer
@@ -664,10 +717,53 @@ write_kernel_entry()
 		echo "$initrd" >> $buffer
 	fi
 
+	if [ ! -n "$recovery_desc" -a x"$supports_quiet" = x"true" ]; then
+		echo "quiet" >> $buffer
+	fi
+
 	if test x"$savedefault" = x"true" ; then
 		echo "savedefault" >> $buffer
 	fi
 	echo >> $buffer
+}
+
+convert_kopt_to_uuid()
+{
+	local kopt; kopt=$1
+
+	convert=false
+	root=$(echo "$kopt" | sed 's/.*root=//;s/ .*//')
+	case "$root" in
+		UUID=*|LABEL=*)
+			;;
+		/dev/disk/*)
+			;;
+		/dev/mapper/*)
+			;;
+		/dev/evms/[hs]d[a-z][0-9]*)
+			convert=:
+			;;
+		/dev/evms/*)
+			;;
+		/dev/md[0-9]*)
+			;;
+		/dev/*)
+			convert=:
+			;;
+	esac
+	if $convert; then
+		if [ -L "$DEV" ] && readlink "$DEV" | grep -q "^/dev/mapper/"
+		then
+			:
+		elif [ -b "$root" ]; then
+			uuid=$(/sbin/vol_id -u "$root" || true)
+			if [ -n "$uuid" ]; then
+				kopt=$(echo "$kopt" | sed "s/\(.*root=\)[^ ]*/\1UUID=$uuid/")
+			fi
+		fi
+	fi
+
+	echo "$kopt"
 }
 
 
@@ -708,16 +804,26 @@ else
 	esac
 fi
 
+# Extract the crashdump var
+crashdump=$(GetMenuOpt "crashdump" "$crashdump")
+
 # Extract the kernel options to use
 kopt=$(GetMenuOpt "kopt" "$kopt")
 
-# Set the kernel 2.6 option only for fresh install
-test -z "$(GetMenuOpt "kopt" "")" && kopt_2_6="root=$root_device ro"
+# Update the root device to mount-by-UUID
+kopt=$(convert_kopt_to_uuid "$kopt")
 
 # Extract options for specific kernels
 opts="$(ExtractMenuOpts "\(kopt_[[:alnum:]_]\+\)")"
 test -z "$opts" || eval "$opts"
-CustomKopts=$(GetMenuOpts "\(kopt_[[:alnum:]_]\+\)")
+CustomKopts=$(GetMenuOpts "\(kopt_[[:alnum:]_]\+\)" | \
+	grep -v "^# kopt_2_6=" || true)
+
+# Set the kernel 2.6 option only for fresh install (but convert it to
+# mount-by-UUID on upgrade)
+test -z "$kopt_2_6" && test -z "$(GetMenuOpt "kopt" "")" && \
+	kopt_2_6="root=$root_device ro"
+test -n "$kopt_2_6" && kopt_2_6=$(convert_kopt_to_uuid "$kopt_2_6")
 
 # Extract the grub root
 grub_root_device=$(GetMenuOpt "groot" "$grub_root_device")
@@ -732,6 +838,8 @@ alternative=$(GetMenuOpt "alternative" "$alternative")
 lockalternative=$(GetMenuOpt "lockalternative" "$lockalternative")
 
 # Extract the additional default options
+# Check nonaltoptions too for compatibility with Ubuntu <= 5.10
+defoptions=$(GetMenuOpt "nonaltoptions" "$defoptions")
 defoptions=$(GetMenuOpt "defoptions" "$defoptions")
 
 # Extract the lockold value
@@ -753,6 +861,10 @@ memtest86=$(GetMenuOpt "memtest86" "$memtest86")
 # Extract the updatedefaultentry option
 updatedefaultentry=$(GetMenuOpt "updatedefaultentry" "$updatedefaultentry")
 
+# If "default saved" is in use, set the default to true
+grep -q "^default.*saved" $menu && savedefault=true
+# Extract the savedefault option
+savedefault=$(GetMenuOpt "savedefault" "$savedefault")
 
 # Generate the menu options we want to insert
 buffer=$(tempfile)
@@ -772,11 +884,17 @@ echo "## e.g. kopt=root=/dev/hda1 ro" >> $buffer
 echo "##      kopt_2_6_8=root=/dev/hdc1 ro" >> $buffer
 echo "##      kopt_2_6_8_2_686=root=/dev/hdc2 ro" >> $buffer
 echo "# kopt=$kopt" >> $buffer
-if [ -n "$CustomKopts" ] ; then
-    echo "$CustomKopts" >> $buffer
-elif [ -n "$kopt_2_6" ] && [ "$kopt" != "$kopt_2_6" ]; then
+if [ -n "$kopt_2_6" ] && [ "$kopt" != "$kopt_2_6" ]; then
     echo "# kopt_2_6=$kopt_2_6" >> $buffer
 fi
+if [ -n "$CustomKopts" ] ; then
+    echo "$CustomKopts" >> $buffer
+fi
+echo >> $buffer
+
+echo "## Setup crashdump menu entries" >> $buffer
+echo "## e.g. crashdump=1" >> $buffer
+echo "# crashdump=$crashdump" >> $buffer
 echo >> $buffer
 
 echo "## default grub root device" >> $buffer
@@ -819,7 +937,7 @@ echo >> $buffer
 echo "## altoption boot targets option" >> $buffer
 echo "## multiple altoptions lines are allowed" >> $buffer
 echo "## e.g. altoptions=(extra menu suffix) extra boot options" >> $buffer
-echo "##      altoptions=(single-user) single" >> $buffer
+echo "##      altoptions=(recovery) single" >> $buffer
 
 if ! grep -q "^# altoptions" $menu ; then
 	echo "# altoptions=$altoptions" >> $buffer
@@ -846,6 +964,11 @@ echo >> $buffer
 echo "## should update-grub adjust the value of the default booted system" >> $buffer
 echo "## can be true or false" >> $buffer
 echo "# updatedefaultentry=$updatedefaultentry" >> $buffer
+echo >> $buffer
+
+echo "## should update-grub add savedefault to the default options" >> $buffer
+echo "## can be true or false" >> $buffer
+echo "# savedefault=$savedefault" >> $buffer
 echo >> $buffer
 
 echo "## ## End Default Options ##" >> $buffer
@@ -976,17 +1099,6 @@ else
 		notChangeDefault="yes"
 fi
 
-case "$host_os" in
-  freebsd|*/kfreebsd)
-    if test -e /boot/loader.gz ; then
-      kernel=/boot/loader.gz
-    else
-      kernel=/boot/loader
-    fi
-    write_kernel_entry "" "" "" "$grub_root_device" "$kernel" "" "" "" "true" ""
-  ;;
-esac
-
 ## heres where we start writing out the kernel entries
 counter=0
 
@@ -1023,7 +1135,7 @@ for kern in $xenKernels ; do
 			echo "Found Xen hypervisor $hypervisorVersion,  kernel: $kernel" >&2
 
 			write_kernel_entry "$kernelVersion" '' '' "$grub_root_device" \
-			  "$kernel" "$currentOpt $xenkopt" '' "$initrd" true '' \
+			  "$kernel" "$currentOpt $xenkopt" '' "$initrd" "$savedefault" '' \
 			  Xen "$hypervisor" "$hypervisorVersion" "$xenhopt"
 	        counter=$(($counter + 1))
 		fi
@@ -1036,7 +1148,7 @@ for kern in $xenKernels ; do
 			echo "Found Xen hypervisor $hypVersion,  kernel: $kernel" >&2
 
 			write_kernel_entry "$kernelVersion" '' '' "$grub_root_device" \
-			  "$kernel" "$currentOpt $xenkopt" '' "$initrd" true '' \
+			  "$kernel" "$currentOpt $xenkopt" '' "$initrd" "$savedefault" '' \
 			  Xen "$kernel_dir/$hypervisor" "$hypVersion" "$xenhopt"
 	        counter=$(($counter + 1))
 		done
@@ -1089,7 +1201,7 @@ for kern in $sortedKernels ; do
 	[ $counter -eq 1 ] && do_lockold=false
 
 	write_kernel_entry "$kernelVersion" "" "" "$grub_root_device" "$kernel" \
-		"$currentOpt $defoptions" "" "$initrd" "true" "$do_lockold"
+		"$currentOpt $defoptions" "" "$initrd" "$savedefault" "$do_lockold"
 
 	# insert the alternative boot options
 	if test ! x"$alternative" = x"false" ; then
@@ -1101,9 +1213,15 @@ for kern in $sortedKernels ; do
 			test x"$lockalternative" = x"true" && do_lockold=false
 			write_kernel_entry "$kernelVersion" "$descr" "$lockalternative" \
 				"$grub_root_device" "$kernel" "$currentOpt" "$suffix" "$initrd" \
-				"true" "$do_lockold"
-
+				"false" "$do_lockold"
 		done
+	fi
+
+	if [ "$crashdump" = "1" ] ; then
+		test x"$lockalternative" = x"true" && do_lockold=false
+		write_kernel_entry "$kernelVersion" "(crashdump mode)" "$lockalternative" \
+			"$grub_root_device" "$kernel" "$currentOpt" "crashkernel=64M@16M" "$initrd" \
+			"false" "$do_lockold"
 	fi
 done
 
@@ -1114,9 +1232,11 @@ if test -f $grub2name ; then
 title		Chainload into GRUB 2
 root		$grub_root_device
 kernel		$grub2name
-savedefault
-
 EOF
+	if test x"$savedefault" = x"true" ; then
+		echo "savedefault" >> $buffer
+	fi
+	echo >> $buffer
 fi
     
 memtest86names="memtest86 memtest86+"

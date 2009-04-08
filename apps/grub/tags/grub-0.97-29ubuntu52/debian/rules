@@ -28,15 +28,16 @@ endif
 # These are used for cross-compiling and for saving the configure script
 # from having to guess our platform (since we know it already)
 DEB_HOST_GNU_TYPE   ?= $(shell dpkg-architecture -qDEB_HOST_GNU_TYPE)
+DEB_HOST_GNU_SYSTEM   ?= $(shell dpkg-architecture -qDEB_HOST_GNU_SYSTEM)
 DEB_BUILD_GNU_TYPE  ?= $(shell dpkg-architecture -qDEB_BUILD_GNU_TYPE)
 DEB_BUILD_GNU_CPU  ?= $(shell dpkg-architecture -qDEB_BUILD_GNU_CPU)
 DEB_BUILD_GNU_SYSTEM  ?= $(shell dpkg-architecture -qDEB_BUILD_GNU_SYSTEM)
 
-# Add backward compatibility to allow backport to stable
-ifeq ($(DEB_HOST_GNU_SYSTEM), linux)
+# Add backward compatibility to allow backport to stable (+ lpia compatibility)
+ifneq (,$(findstring linux, $(DEB_HOST_GNU_SYSTEM)))
 DEB_HOST_GNU_SYSTEM=linux-gnu
 endif
-ifeq ($(DEB_BUILD_GNU_SYSTEM), linux)
+ifneq (,$(findstring linux, $(DEB_BUILD_GNU_SYSTEM)))
 DEB_BUILD_GNU_SYSTEM=linux-gnu
 endif
 
@@ -60,7 +61,7 @@ ifeq ($(DEB_BUILD_GNU_CPU),x86_64)
   LDFLAGS=-static
 endif
 
-CC=gcc
+CC=gcc-3.4
 
 patch: patch-stamp
 patch-stamp:

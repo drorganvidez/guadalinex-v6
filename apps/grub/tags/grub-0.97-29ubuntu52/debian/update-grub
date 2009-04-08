@@ -954,7 +954,11 @@ ucf_update_kernels() {
 
 	sed -ni -e"/$endopt/,/$end/p" "$buffer"
 
-	sed -n -e"/$endopt/,/$end/p" < $menu > $ucf_menu_file
+	if [ "x$initialconfig" = "x" ]; then
+		sed -n -e"/$endopt/,/$end/p" < $menu > $ucf_menu_file
+	else
+		cat $buffer > $ucf_menu_file
+	fi
 
 	ucf --debconf-ok --three-way "$buffer" $ucf_menu_file
 	rm "$buffer"
@@ -981,6 +985,7 @@ if [ -f "$menu_file" ] ; then
 	cp -f "$menu_file" "$menu_file~"
 else
 	# if not ask user if they want us to create one
+	initialconfig=1
 	menu="$menu_file"
 	echo >&2
 	echo >&2
@@ -1240,16 +1245,10 @@ if ! ucfq grub | grep -q $ucf_menu_file; then
 		s/^module[[:space:]]\+\([^[:space:]]*vmlinuz[^[:space:]]\+\).*/\1/p
 	}" < $menu | uniq`
 
-	# If the magic comments are missing, as is the case on initial
-	# install, register a blank file.
-	if [ "x$sortedKernels$xenKernels" = "x" ]; then
-		:> "$otherbuffer"
-	else
-		savebuffer="$buffer"
-		buffer="$otherbuffer"
-		output_kernel_list
-		buffer="$savebuffer"
-	fi
+	savebuffer="$buffer"
+	buffer="$otherbuffer"
+	output_kernel_list
+	buffer="$savebuffer"
 
 	ucf_update_kernels "$menu" "$otherbuffer"
 

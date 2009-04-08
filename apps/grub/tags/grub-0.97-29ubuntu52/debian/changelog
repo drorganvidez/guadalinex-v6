@@ -1,5 +1,21 @@
 grub (0.97-29ubuntu27) intrepid; urgency=low
 
+  [ Ben Collins ]
+
+  * Make sure to delete the old event.d script, as it stays around, which
+    means it gets called twice.
+
+  [ Johan Kiviniemi  ]
+
+  * Implement a parameter in kernel-helper to create an initial last-good-boot
+    if one doesn't exist. It will be used in grub postinst as well as when
+    removing a kernel in order to make sure a last-good-boot exists at all
+    times.
+
+ -- Ben Collins <ben.collins@canonical.com>  Thu, 17 Jul 2008 14:08:07 -0400
+
+grub (0.97-29ubuntu27) intrepid; urgency=low
+
   [ Colin King ]
   * debian/patches/uuid.diff: added uuid command, to select root device by
     uuid. Supports uuid booting from ext2, ext3, fat, vfat, jfs, ocfs,

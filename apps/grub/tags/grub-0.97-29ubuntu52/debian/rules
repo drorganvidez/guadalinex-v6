@@ -224,6 +224,9 @@ install-arch:
 
 	dh_install -s
 
+	install -D -m0755 debian/kernel-prerm.d-last-good-boot \
+		debian/grub/etc/kernel/prerm.d/last-good-boot
+
 # Must not depend on anything. This is to be called by
 # binary-arch/binary-indep
 # in another 'make' thread.

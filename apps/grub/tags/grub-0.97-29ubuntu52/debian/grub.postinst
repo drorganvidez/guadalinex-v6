@@ -8,6 +8,10 @@ if [ "$1" = "configure" ]; then
 		# This is an old misnamed config file we need to get rid of
 		rm -f /etc/event.d/event.d-last-good-boot
 	fi
+	if dpkg --compare-versions "$2" lt "0.97-29ubuntu38"; then
+		# Remnants of when this was default
+		rm -rf /boot/last-good-boot /lib/modules/last-good-boot
+	fi
 fi
 
 if [ "x$1" = xtriggered ] ; then

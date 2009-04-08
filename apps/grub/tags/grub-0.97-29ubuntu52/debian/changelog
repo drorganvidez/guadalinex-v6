@@ -1,3 +1,11 @@
+grub (0.97-29ubuntu37) UNRELEASED; urgency=low
+
+  * debian/update-grub: use awk instead of read to find the boot device,
+    as the latter fails when the last line of /etc/fstab lacks a
+    newline.  Thanks to Warren Turkal for the fix.  LP: #275365. 
+
+ -- Steve Langasek <steve.langasek@ubuntu.com>  Wed, 01 Oct 2008 10:58:57 -0700
+
 grub (0.97-29ubuntu36) intrepid; urgency=low
 
   * debian/patches/grub-install_better_raid.diff: remove the partition portion

@@ -72,14 +72,12 @@ find_device ()
 	# Autodetect current root device
 	device=
 	if [ -f /etc/fstab ] ; then
-		while read DEV MNT FOO; do
-			if `echo "$DEV" | grep -q "^#"`; then
-				continue
-			fi
-			if [ "$MNT" = "$mount_point" ]; then
-				device="$DEV";
-			fi
-		done < /etc/fstab
+		device=$(awk '$1!~/^#/{
+		  if ($2 == "'"$mount_point"'"){
+				print $1;
+				exit;
+			}
+		  }' /etc/fstab)
 	fi
 
 	if [ -n "$device" ] ; then

@@ -3,6 +3,9 @@ grub (0.97-29ubuntu18) UNRELEASED; urgency=low
   * debian/update-grub: additional adjustment of the menu output when
     emulating old grub for upgrades:  if there are no kernel options for the
     kernel (such as for memtest), output a trailing space.
+  * debian/update-grub: now that we're using debconf, the non-debconf prompt
+    (which we'll leave non-debconfed for the time being) needs to read from
+    file descriptor #2 instead of stdin.  LP: #194710.
 
  -- Steve Langasek <steve.langasek@ubuntu.com>  Fri, 22 Feb 2008 10:19:51 -0800
 

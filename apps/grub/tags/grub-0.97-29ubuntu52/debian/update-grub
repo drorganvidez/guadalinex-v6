@@ -1011,7 +1011,7 @@ else
 	else
 		echo -n "Would you like $menu_file generated for you? " >&2
 		echo -n "(y/N) " >&2
-		read answer
+		read answer <&2
 	fi
 
 	case "$answer" in

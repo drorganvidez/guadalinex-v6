@@ -1,3 +1,19 @@
+grub (0.97-29ubuntu24) intrepid; urgency=low
+
+  * update-grub: Use a range of sizes when setting up crashkernel=
+    - Less then 512M of physical memory, no crashkernel areas
+    - 512M -> 2G use 64M for crashkernel
+    - > 2G use 128M for crashkernel
+
+ -- Ben Collins <ben.collins@canonical.com>  Thu, 19 Jun 2008 11:21:26 -0400
+
+grub (0.97-29ubuntu23) intrepid; urgency=low
+
+  * Automatically add crashkernel= args to main kernel entries if a matching
+    -debug kernel is installed for it.
+
+ -- Ben Collins <ben.collins@canonical.com>  Wed, 18 Jun 2008 15:39:39 -0400
+
 grub (0.97-29ubuntu22) intrepid; urgency=low
 
   * debian/patches/graphics.diff: grub should not wait for an interactive

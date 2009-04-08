@@ -75,9 +75,8 @@ find_device ()
 		device=$(awk '$1!~/^#/{
 		  if ($2 == "'"$mount_point"'"){
 				print $1;
-				exit;
 			}
-		  }' /etc/fstab)
+		  }' /etc/fstab | tail -n 1)
 	fi
 
 	if [ -n "$device" ] ; then

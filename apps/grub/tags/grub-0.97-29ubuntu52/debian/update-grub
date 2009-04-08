@@ -912,14 +912,24 @@ output_kernel_list() {
 		# do not lockold for the first entry
 		[ $counter -eq 1 ] && do_lockold=false
 
-		if [ "$kernelName" != "last-good-boot/vmlinuz" ]; then
+		if [ "$kernelName" = "last-good-boot/vmlinuz" ]; then
+			if [ -e /boot/last-good-boot/cmdline ]; then
+				cmdline="$(cat /boot/last-good-boot/cmdline) last-good-boot"
+			else
+				cmdline="$currentOpt $defoptions $extra_opts"
+			fi
+			write_kernel_entry "$kernelVersion" "" "" "$grub_root_device" "$kernel" \
+				"$cmdline" "" "$initrd" "$savedefault" "$do_lockold" \
+				"$dapper_upgrade"
+		else
 			write_kernel_entry "$kernelVersion" "" "" "$grub_root_device" "$kernel" \
 				"$currentOpt $defoptions $extra_opts" "" "$initrd" "$savedefault" \
 				"$do_lockold" "$dapper_upgrade"
 		fi
 
 		# insert the alternative boot options
-		if test ! x"$alternative" = x"false" ; then
+		if test ! x"$alternative" = x"false" && \
+		   test ! x"$kernelName" = x"last-good-boot/vmlinuz"; then
 			# for each altoptions line do this stuff
 			sed -ne 's/# altoptions=\(.*\)/\1/p' $buffer | while read line; do
 				descr=$(echo $line | sed -ne 's/\(([^)]*)\)[[:space:]]\(.*\)/\1/p')

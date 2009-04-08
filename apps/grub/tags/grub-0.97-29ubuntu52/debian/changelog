@@ -6,6 +6,15 @@ grub (0.97-29ubuntu35) UNRELEASED; urgency=low
 
  -- Dustin Kirkland <kirkland@ubuntu.com>  Fri, 08 Aug 2008 18:11:18 -0500
 
+grub (0.97-29ubuntu31) intrepid; urgency=low
+
+  * kernel-helper: Save away the command line as well.
+  * update-grub: If there is a saved command line for last-good-boot, use it
+    so we reproduce the last boot as closely as possible (changes in command
+    line can also cause problems).
+
+ -- Ben Collins <ben.collins@canonical.com>  Mon, 28 Jul 2008 01:32:03 -0400
+
 grub (0.97-29ubuntu30) intrepid; urgency=low
 
   * Really fix kernel-helper this time. Left exit val at 1, was supposed to be

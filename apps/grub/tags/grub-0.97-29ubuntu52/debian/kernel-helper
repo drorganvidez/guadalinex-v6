@@ -64,7 +64,10 @@ else
 	ln /boot/initrd.img-$kver "${lastkdir}.tmp/initrd.img"
 	ln /boot/System.map-$kver "${lastkdir}.tmp/System.map"
 fi
+
+cat /proc/cmdline > "${lastkdir}.tmp/cmdline"
 echo $kver > ${lastkdir}.tmp/version
+
 if [ -e /proc/version_signature ]; then
 	cat /proc/version_signature > ${lastkdir}.tmp/version_signature
 fi

@@ -961,7 +961,7 @@ ucf_update_kernels() {
 	fi
 
 	# should be replaced by db_x_loadtemplate
-	debconf-loadtemplate ucf /var/lib/dpkg/info/grub.templates
+	debconf-loadtemplate grub /var/lib/dpkg/info/grub.templates
 
 	ucf --debconf-ok \
 		--debconf-template grub/update_grub_changeprompt_threeway \

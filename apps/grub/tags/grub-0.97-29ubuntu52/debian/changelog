@@ -6,6 +6,15 @@ grub (0.97-29ubuntu35) UNRELEASED; urgency=low
 
  -- Dustin Kirkland <kirkland@ubuntu.com>  Fri, 08 Aug 2008 18:11:18 -0500
 
+grub (0.97-29ubuntu34) intrepid; urgency=low
+
+  * debian/kernel-helper: Do not run update-grub at the end if /boot/grub/
+    does not exist, since that will make the entire script and thus package
+    configuration fail. d-i installs grub and calls update-grub later.
+    (LP: #256989)
+
+ -- Martin Pitt <martin.pitt@ubuntu.com>  Sun, 11 May 2008 12:08:37 +0200
+
 grub (0.97-29ubuntu33) intrepid; urgency=low
 
   * kernel-helper: Run update-grub after creating last boot, in order to

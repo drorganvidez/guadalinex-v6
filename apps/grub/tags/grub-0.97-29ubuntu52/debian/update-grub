@@ -742,7 +742,7 @@ write_kernel_entry()
 		echo "$initrd" >> $buffer
 	fi
 
-	if [ ! -n "$recovery_desc" -a x"$supports_quiet" = x"true" ]; then
+	if [ ! -n "$recovery_desc" -a x"$supports_quiet" = x"true" -a -z "$dapper_upgrade" ]; then
 		echo "quiet" >> $buffer
 	fi
 

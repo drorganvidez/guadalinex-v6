@@ -4,7 +4,7 @@
  * of the GNU Public License, incorporated herein by reference.
  *
  * Module         : sk_g16.h
- * Version        : $Revision: 1.2 $
+ * Version        : $Revision: 1.3 $
  *
  * Author         : M.Hipp (mhipp@student.uni-tuebingen.de)
  * changes by     : Patrick J.D. Weichmann
@@ -16,8 +16,8 @@
  *                  network device driver which uses this chip
  *
  * $Log: sk_g16.h,v $
- * Revision 1.2  2000/04/22 01:17:09  okuji
- * update the network support to etherboot-4.5.8.
+ * Revision 1.3  2000/07/29 19:22:54  okuji
+ * update the network support to etherboot-4.6.4.
  *
 -*/
 

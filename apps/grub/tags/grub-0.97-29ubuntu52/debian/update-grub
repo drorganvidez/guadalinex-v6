@@ -2,6 +2,7 @@
 #
 # Insert a list of installed kernels in a grub config file
 #   Copyright 2001 Wichert Akkerman <wichert@linux.com>
+#   Copyright 2007, 2008 Canonical Ltd.
 #
 # This file is free software; you can redistribute it and/or modify it
 # under the terms of the GNU General Public License as published by
@@ -22,6 +23,7 @@
 #	David B.Harris <dbarclay10@yahoo.ca>
 #	Marc Haber <mh@zugschlus.de>
 #	Crispin Flowerday <crispin@zeus.com>
+#	Steve Langasek <steve.langasek@canonical.com>
 
 # Abort on errors
 set -e
@@ -280,6 +282,9 @@ grub_dir=$(find_grub_dir)
 menu_file_basename=menu.lst
 menu_file=$grub_dir/$menu_file_basename
 
+# Full path to the menu.lst fragment used for ucf management
+ucf_menu_file=/var/run/grub/$menu_file_basename
+
 # Full path to the default file
 default_file_basename=default
 default_file=$grub_dir/$default_file_basename
@@ -297,7 +302,20 @@ device_map=$grub_dir/device.map
 crashdump="0"
 
 # Default kernel options, overidden by the kopt statement in the menufile.
-kopt="root=$(awk '$2 == "/" {print $1}' /etc/fstab) ro"
+loop_file=$(awk '$2=="/" && $4~"loop" {print $1}' /etc/fstab)
+if [ -f "$loop_file" ]; then
+	dev_mountpoint=$(awk '"'${loop_file}'"~"^"$2 && $2!="/" {print $1";"$2}' /proc/mounts|tail -n 1)
+	host_device="${dev_mountpoint%;*}"
+	host_mountpoint="${dev_mountpoint#*;}"
+fi
+if [ -n "$host_device" ]; then
+	boot_device=
+	root_device="$host_device"
+	default_kopt="root=$host_device loop=${loop_file#$host_mountpoint} ro"
+else
+	default_kopt="root=$root_device ro"
+fi
+kopt="$default_kopt"
 
 # Title
 title=$(lsb_release --short --description 2>/dev/null) || title="Ubuntu"
@@ -451,6 +469,9 @@ end="### END DEBIAN AUTOMAGIC KERNELS LIST"
 
 startopt="## ## Start Default Options ##"
 endopt="## ## End Default Options ##"
+
+# path to grub2
+grub2name="/boot/grub/core.img"
 
 # Extract options from config file
 ExtractMenuOpt()
@@ -766,6 +787,188 @@ convert_kopt_to_uuid()
 	echo "$kopt"
 }
 
+## write out the kernel entries
+output_kernel_list() {
+	counter=0
+
+	# Xen entries first.
+	for kern in $xenKernels ; do
+		if test ! x"$howmany" = x"all" ; then
+			if [ $counter -gt $howmany ] ; then
+				break
+			fi
+		fi
+
+		kernelName=$(basename $kern)
+		kernelVersion=$(echo $kernelName | sed -e 's/vmlinuz//')
+
+		initrdName=$(FindInitrdName "/boot" "$kernelVersion")
+		initrd=""
+
+		kernel=$kernel_dir/$kernelName
+		if [ -n "$initrdName" ] ; then
+			initrd=$kernel_dir/$initrdName
+		fi
+
+		kernelVersion=$(echo $kernelVersion | sed -e 's/^-//')
+		currentOpt=$(get_kernel_opt $kernelVersion)
+
+		hypervisorVersions=$(FindXenHypervisorVersions "$kernelVersion")
+
+		found=
+		for hypervisorVersion in $hypervisorVersions; do
+			hypervisor="$kernel_dir/xen-$hypervisorVersion.gz"
+			if [ -e "$hypervisor" ]; then
+				found=1
+
+				echo "Found Xen hypervisor $hypervisorVersion,  kernel: $kernel" >&2
+
+				write_kernel_entry "$kernelVersion" '' '' "$grub_root_device" \
+				  "$kernel" "$currentOpt $xenkopt" '' "$initrd" "$savedefault" '' \
+				  Xen "$hypervisor" "$hypervisorVersion" "$xenhopt"
+		        counter=$(($counter + 1))
+			fi
+		done
+
+		if [ -z $found ]; then
+			for hypervisor in $hypervisors; do
+				hypVersion=`basename "$hypervisor" .gz | sed s%xen-%%`
+		
+				echo "Found Xen hypervisor $hypVersion,  kernel: $kernel" >&2
+
+				write_kernel_entry "$kernelVersion" '' '' "$grub_root_device" \
+				  "$kernel" "$currentOpt $xenkopt" '' "$initrd" "$savedefault" '' \
+				  Xen "$kernel_dir/$hypervisor" "$hypVersion" "$xenhopt"
+		        counter=$(($counter + 1))
+			done
+		fi
+	done
+
+	for kern in $sortedKernels ; do
+		counter=$(($counter + 1))
+		if test ! x"$howmany" = x"all" ; then
+			if [ $counter -gt $howmany ] ; then 
+				break
+			fi
+		fi
+		kernelName=$(basename $kern)
+		kernelVersion=$(echo $kernelName | sed -e 's/vmlinuz//')
+		initrdName=$(FindInitrdName "/boot" "$kernelVersion")
+		initrd=""
+
+		kernel=$kernel_dir/$kernelName
+		if [ -n "$initrdName" ] ; then
+			initrd=$kernel_dir/$initrdName
+		fi
+
+		echo "Found kernel: $kernel" >&2
+
+		if [ "$kernelName" = "vmlinuz" ]; then
+			if [ -L "/boot/$kernelName" ]; then
+				kernelVersion=`readlink -f "/boot/$kernelName"`
+				kernelVersion=$(echo $kernelVersion | sed -e 's/.*vmlinuz-//')
+				kernelVersion="$kernelVersion Default"
+			else
+				kernelVersion="Default"
+			fi
+		fi
+		if [ "$kernelName" = "vmlinuz.old" ]; then
+			if [ -L "/boot/$kernelName" ]; then
+				kernelVersion=`readlink -f "/boot/$kernelName"`
+				kernelVersion=$(echo $kernelVersion | sed -e 's/.*vmlinuz-//')
+				kernelVersion="$kernelVersion Previous"
+			else
+				kernelVersion="Previous"
+			fi
+		fi
+		kernelVersion=$(echo $kernelVersion | sed -e 's/^-//')
+
+		currentOpt=$(get_kernel_opt $kernelVersion)
+
+		do_lockold=$lockold
+		# do not lockold for the first entry
+		[ $counter -eq 1 ] && do_lockold=false
+
+		write_kernel_entry "$kernelVersion" "" "" "$grub_root_device" "$kernel" \
+			"$currentOpt $defoptions" "" "$initrd" "$savedefault" "$do_lockold"
+
+		# insert the alternative boot options
+		if test ! x"$alternative" = x"false" ; then
+			# for each altoptions line do this stuff
+			sed -ne 's/# altoptions=\(.*\)/\1/p' $buffer | while read line; do
+				descr=$(echo $line | sed -ne 's/\(([^)]*)\)[[:space:]]\(.*\)/\1/p')
+				suffix=$(echo $line | sed -ne 's/\(([^)]*)\)[[:space:]]\(.*\)/\2/p')
+
+				test x"$lockalternative" = x"true" && do_lockold=false
+				write_kernel_entry "$kernelVersion" "$descr" "$lockalternative" \
+					"$grub_root_device" "$kernel" "$currentOpt" "$suffix" "$initrd" \
+					"false" "$do_lockold"
+			done
+		fi
+
+		if [ "$crashdump" = "1" ] ; then
+			test x"$lockalternative" = x"true" && do_lockold=false
+			write_kernel_entry "$kernelVersion" "(crashdump mode)" "$lockalternative" \
+				"$grub_root_device" "$kernel" "$currentOpt" "crashkernel=64M@16M" "$initrd" \
+				"false" "$do_lockold"
+		fi
+	done
+
+	if test -f $grub2name ; then
+		echo "Found GRUB 2: $grub2name" >&2
+		cat >> $buffer << EOF
+title		Chainload into GRUB 2
+root		$grub_root_device
+kernel		$grub2name
+EOF
+		if test x"$savedefault" = x"true" ; then
+			echo "savedefault" >> $buffer
+		fi
+		echo >> $buffer
+	fi
+    
+	memtest86names="memtest86 memtest86+"
+
+	if test ! x"$memtest86" = x"false" ; then
+		for name in $memtest86names ; do
+			if test -f "/boot/$name.bin" ; then
+				kernelVersion="$name"
+				kernel="$kernel_dir/$name.bin"
+				currentOpt=
+				initrd=
+
+				echo "Found kernel: $kernel" >&2
+
+				write_kernel_entry "$kernelVersion" "" "" "$grub_root_device" \
+				"$kernel" "$currentOpt" "" "$initrd" "false" ""
+			fi
+		done
+	fi
+
+	echo $end >> $buffer
+}
+
+ucf_update_kernels() {
+	local target; target="$1"
+	local buffer; buffer="$2"
+
+	sed -ni -e"/$endopt/,/$end/p" "$buffer"
+
+	sed -n -e"/$endopt/,/$end/p" < $menu > $ucf_menu_file
+
+	ucf --debconf-ok --three-way "$buffer" $ucf_menu_file
+	rm "$buffer"
+
+	# now re-merge the ucf results with the target file
+	sed -i -e "/^$endopt/,/^$end/ {
+		/^$endopt/r $ucf_menu_file
+		d
+	}
+	" $target
+
+	rm -f $ucf_menu_file ${ucf_menu_file}.ucf-old
+}
+
 
 echo -n "Testing for an existing GRUB $menu_file_basename file ... " >&2
 
@@ -822,7 +1025,7 @@ CustomKopts=$(GetMenuOpts "\(kopt_[[:alnum:]_]\+\)" | \
 # Set the kernel 2.6 option only for fresh install (but convert it to
 # mount-by-UUID on upgrade)
 test -z "$kopt_2_6" && test -z "$(GetMenuOpt "kopt" "")" && \
-	kopt_2_6="root=$root_device ro"
+	kopt_2_6="$default_kopt"
 test -n "$kopt_2_6" && kopt_2_6=$(convert_kopt_to_uuid "$kopt_2_6")
 
 # Extract the grub root
@@ -999,6 +1202,62 @@ else
 fi
 
 
+hypervisors=""
+for hyp in /boot/xen-*.gz; do
+    if [ ! -h "$hyp" ] && [ -f "$hyp" ]; then
+	hypervisors="$hypervisors `basename "$hyp"`"
+    fi
+done
+
+# figure out where grub looks for the kernels at boot time
+kernel_dir=/boot
+if [ -n "$boot_device" ] ; then
+	kernel_dir=
+fi
+
+
+# We need a static path to use for the ucf registration; since we're not
+# using the full menu.lst file (maybe we should, just copying it around?
+# C.f. discussion with Manoj), create a directory in a fixed location
+# even though we're not treating the file in that location as
+# persistent.
+mkdir -p /var/run/grub
+
+# The first time ucf sees the file, we can only assume any difference
+# between the magic comments and the kernel options is a result of local
+# mods, so this will result in a ucf prompt for anyone whose first
+# invocation of update-grub is as a result of updating the magic comments.
+if ! ucfq grub | grep -q $ucf_menu_file; then
+	otherbuffer=$(tempfile)
+	cat $buffer > $otherbuffer
+
+	sortedKernels=`sed -n -e "
+	/$endopt/,/$end/ {
+		s/^kernel[[:space:]]\+\([^[:space:]]\+\).*/\1/p
+	}" < $menu | grep -vE "memtest86|$grub2name|xen" | uniq`
+	xenKernels=`sed -n -e "
+	/$endopt/,/$end/ {
+		s/^module[[:space:]]\+\([^[:space:]]*vmlinuz[^[:space:]]\+\).*/\1/p
+	}" < $menu | uniq`
+
+	# If the magic comments are missing, as is the case on initial
+	# install, register a blank file.
+	if [ "x$sortedKernels$xenKernels" = "x" ]; then
+		:> "$otherbuffer"
+	else
+		savebuffer="$buffer"
+		buffer="$otherbuffer"
+		output_kernel_list
+		buffer="$savebuffer"
+	fi
+
+	ucf_update_kernels "$menu" "$otherbuffer"
+
+	# all done, now register it
+	ucfr grub $ucf_menu_file
+fi
+
+
 xenKernels=""
 for ver in `grep -l CONFIG_XEN_PRIVILEGED_GUEST=y /boot/config* | sed -e s%/boot/config-%%`; do
   # ver is a kernel version
@@ -1065,19 +1324,6 @@ if test -f "/boot/vmlinuz" ; then
 	sortedKernels="/boot/vmlinuz $sortedKernels"
 fi
 
-hypervisors=""
-for hyp in /boot/xen-*.gz; do
-    if [ ! -h "$hyp" ] && [ -f "$hyp" ]; then
-	hypervisors="$hypervisors `basename "$hyp"`"
-    fi
-done
-
-# figure out where grub looks for the kernels at boot time
-kernel_dir=/boot
-if [ -n "$boot_device" ] ; then
-	kernel_dir=
-fi
-
 #Finding the value the default line
 use_grub_set_default="false"
 if test "$updatedefaultentry" = "true" ; then
@@ -1099,165 +1345,12 @@ else
 		notChangeDefault="yes"
 fi
 
-## heres where we start writing out the kernel entries
-counter=0
+output_kernel_list
 
-# Xen entries first.
-for kern in $xenKernels ; do
-	if test ! x"$howmany" = x"all" ; then
-		if [ $counter -gt $howmany ] ; then
-			break
-		fi
-	fi
+otherbuffer=$(tempfile)
+cat $buffer > $otherbuffer
 
-	kernelName=$(basename $kern)
-	kernelVersion=$(echo $kernelName | sed -e 's/vmlinuz//')
-
-	initrdName=$(FindInitrdName "/boot" "$kernelVersion")
-	initrd=""
-
-	kernel=$kernel_dir/$kernelName
-	if [ -n "$initrdName" ] ; then
-		initrd=$kernel_dir/$initrdName
-	fi
-
-	kernelVersion=$(echo $kernelVersion | sed -e 's/^-//')
-	currentOpt=$(get_kernel_opt $kernelVersion)
-
-	hypervisorVersions=$(FindXenHypervisorVersions "$kernelVersion")
-
-	found=
-	for hypervisorVersion in $hypervisorVersions; do
-		hypervisor="$kernel_dir/xen-$hypervisorVersion.gz"
-		if [ -e "$hypervisor" ]; then
-			found=1
-
-			echo "Found Xen hypervisor $hypervisorVersion,  kernel: $kernel" >&2
-
-			write_kernel_entry "$kernelVersion" '' '' "$grub_root_device" \
-			  "$kernel" "$currentOpt $xenkopt" '' "$initrd" "$savedefault" '' \
-			  Xen "$hypervisor" "$hypervisorVersion" "$xenhopt"
-	        counter=$(($counter + 1))
-		fi
-	done
-
-	if [ -z $found ]; then
-		for hypervisor in $hypervisors; do
-			hypVersion=`basename "$hypervisor" .gz | sed s%xen-%%`
-		
-			echo "Found Xen hypervisor $hypVersion,  kernel: $kernel" >&2
-
-			write_kernel_entry "$kernelVersion" '' '' "$grub_root_device" \
-			  "$kernel" "$currentOpt $xenkopt" '' "$initrd" "$savedefault" '' \
-			  Xen "$kernel_dir/$hypervisor" "$hypVersion" "$xenhopt"
-	        counter=$(($counter + 1))
-		done
-	fi
-done
-
-for kern in $sortedKernels ; do
-	counter=$(($counter + 1))
-	if test ! x"$howmany" = x"all" ; then
-		if [ $counter -gt $howmany ] ; then 
-			break
-		fi
-	fi
-	kernelName=$(basename $kern)
-	kernelVersion=$(echo $kernelName | sed -e 's/vmlinuz//')
-	initrdName=$(FindInitrdName "/boot" "$kernelVersion")
-	initrd=""
-
-	kernel=$kernel_dir/$kernelName
-	if [ -n "$initrdName" ] ; then
-		initrd=$kernel_dir/$initrdName
-	fi
-
-	echo "Found kernel: $kernel" >&2
-
-	if [ "$kernelName" = "vmlinuz" ]; then
-		if [ -L "/boot/$kernelName" ]; then
-			kernelVersion=`readlink -f "/boot/$kernelName"`
-			kernelVersion=$(echo $kernelVersion | sed -e 's/.*vmlinuz-//')
-			kernelVersion="$kernelVersion Default"
-		else
-			kernelVersion="Default"
-		fi
-	fi
-	if [ "$kernelName" = "vmlinuz.old" ]; then
-		if [ -L "/boot/$kernelName" ]; then
-			kernelVersion=`readlink -f "/boot/$kernelName"`
-			kernelVersion=$(echo $kernelVersion | sed -e 's/.*vmlinuz-//')
-			kernelVersion="$kernelVersion Previous"
-		else
-			kernelVersion="Previous"
-		fi
-	fi
-	kernelVersion=$(echo $kernelVersion | sed -e 's/^-//')
-	
-	currentOpt=$(get_kernel_opt $kernelVersion)
-
-	do_lockold=$lockold
-	# do not lockold for the first entry
-	[ $counter -eq 1 ] && do_lockold=false
-
-	write_kernel_entry "$kernelVersion" "" "" "$grub_root_device" "$kernel" \
-		"$currentOpt $defoptions" "" "$initrd" "$savedefault" "$do_lockold"
-
-	# insert the alternative boot options
-	if test ! x"$alternative" = x"false" ; then
-		# for each altoptions line do this stuff
-		sed -ne 's/# altoptions=\(.*\)/\1/p' $buffer | while read line; do
-			descr=$(echo $line | sed -ne 's/\(([^)]*)\)[[:space:]]\(.*\)/\1/p')
-			suffix=$(echo $line | sed -ne 's/\(([^)]*)\)[[:space:]]\(.*\)/\2/p')
-
-			test x"$lockalternative" = x"true" && do_lockold=false
-			write_kernel_entry "$kernelVersion" "$descr" "$lockalternative" \
-				"$grub_root_device" "$kernel" "$currentOpt" "$suffix" "$initrd" \
-				"false" "$do_lockold"
-		done
-	fi
-
-	if [ "$crashdump" = "1" ] ; then
-		test x"$lockalternative" = x"true" && do_lockold=false
-		write_kernel_entry "$kernelVersion" "(crashdump mode)" "$lockalternative" \
-			"$grub_root_device" "$kernel" "$currentOpt" "crashkernel=64M@16M" "$initrd" \
-			"false" "$do_lockold"
-	fi
-done
-
-grub2name="/boot/grub/core.img"
-if test -f $grub2name ; then
-	echo "Found GRUB 2: $grub2name" >&2
-	cat >> $buffer << EOF
-title		Chainload into GRUB 2
-root		$grub_root_device
-kernel		$grub2name
-EOF
-	if test x"$savedefault" = x"true" ; then
-		echo "savedefault" >> $buffer
-	fi
-	echo >> $buffer
-fi
-    
-memtest86names="memtest86 memtest86+"
-
-if test ! x"$memtest86" = x"false" ; then
-	for name in $memtest86names ; do
-		if test -f "/boot/$name.bin" ; then
-			kernelVersion="$name"
-			kernel="$kernel_dir/$name.bin"
-			currentOpt=
-			initrd=
-
-			echo "Found kernel: $kernel" >&2
-
-			write_kernel_entry "$kernelVersion" "" "" "$grub_root_device" \
-			"$kernel" "$currentOpt" "" "$initrd" "false" ""
-		fi
-	done
-fi
-
-echo $end >> $buffer
+ucf_update_kernels "$buffer" "$otherbuffer"
 
 echo -n "Updating $menu ... " >&2
 # Insert the new options into the menu

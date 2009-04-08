@@ -1,7 +1,9 @@
 #!/bin/sh
 
 if [ "$1" = "configure" ]; then
-	if dpkg --compare-versions "$2" lt-nl "0.97-11ubuntu7"; then
+	if dpkg --compare-versions "$2" lt-nl "0.97-29ubuntu6"; then
 		update-grub
 	fi
 fi
+
+#DEBHELPER#

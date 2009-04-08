@@ -1164,7 +1164,7 @@ diff -Naur grub-0.97.orig/stage2/cmdline.c grub-0.97/stage2/cmdline.c
 diff -Naur grub-0.97.orig/stage2/graphics.c grub-0.97/stage2/graphics.c
 --- grub-0.97.orig/stage2/graphics.c	1969-12-31 21:00:00.000000000 -0300
 +++ grub-0.97/stage2/graphics.c	2005-06-13 19:13:31.000000000 -0300
-@@ -0,0 +1,585 @@
+@@ -0,0 +1,583 @@
 +/*
 + * graphics.c - graphics mode support for GRUB
 + * Implemented as a terminal type by Jeremy Katz <katzj@redhat.com> based
@@ -1341,8 +1341,6 @@ diff -Naur grub-0.97.orig/stage2/graphics.c grub-0.97/stage2/graphics.c
 +
 +    if (!read_image(splashimage)) {
 +        grub_printf("Failed to read splash image (%s)\n", splashimage);
-+        grub_printf("Press any key to continue...");
-+        getkey();
 +        set_videomode(saved_videomode);
 +        graphics_inited = 0;
 +        return 0;

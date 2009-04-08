@@ -1,3 +1,11 @@
+grub (0.97-29ubuntu22) intrepid; urgency=low
+
+  * debian/patches/graphics.diff: grub should not wait for an interactive
+    keypress on failure to locate splash image, bad for unattended booting,
+    (LP: #32216)
+
+ -- Dustin Kirkland <kirkland@ubuntu.com>  Thu, 29 May 2008 13:44:59 -0500
+
 grub (0.97-29ubuntu21) hardy; urgency=low
 
   * Change dependency on volumeid to one on udev.

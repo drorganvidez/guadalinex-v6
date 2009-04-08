@@ -1252,8 +1252,16 @@ if ! ucfq grub | grep -q $ucf_menu_file; then
 
 	savebuffer="$buffer"
 	buffer="$otherbuffer"
+	savetitle="$title"
+	title="$(sed -n -e "/$endopt/,/$end/ {
+		s/^title[[:space:]]\+\(.*\),.*/\1/p
+	}" < $menu | head -n 1)"
+	if [ -z "$title" ]; then
+		title="$savetitle"
+	fi
 	output_kernel_list
 	buffer="$savebuffer"
+	title="$savetitle"
 
 	ucf_update_kernels "$menu" "$otherbuffer"
 

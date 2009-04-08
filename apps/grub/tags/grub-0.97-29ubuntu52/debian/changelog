@@ -1,6 +1,11 @@
 grub (0.97-29ubuntu19) UNRELEASED; urgency=low
 
+  [ David Futcher ]
   * debian/presubj: Fixed spelling mistake (LP: #177540)
+
+  [ Tormod Volden ]
+  * debian/update-grub: use >> instead of > when writing to existing files
+    so that the script continues to work if noclobber is set.  LP: #155423
 
  -- David Futcher <bobbocanfly@gmail.com>  Sat, 01 Mar 2008 17:16:37 +0000
 

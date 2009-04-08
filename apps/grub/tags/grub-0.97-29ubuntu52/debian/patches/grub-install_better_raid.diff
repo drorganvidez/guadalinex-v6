@@ -55,7 +55,7 @@ diff -upr a/util/grub-install.in b/util/grub-install.in
 +		$grub_shell --device-map=/dev/null <<EOF >>$log_file
 +device ($hddev) $dev
 +root ($hddev,$grubroot)
-+setup --stage2=$grubdir/stage2 --prefix=$grub_prefix $force_lba ($hddev,$grubroot)
++setup $force_lba --stage2=$grubdir/stage2 --prefix=$grub_prefix ($hddev)
 +quit
 +EOF
 +	done

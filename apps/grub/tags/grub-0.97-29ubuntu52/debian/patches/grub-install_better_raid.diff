@@ -1,0 +1,93 @@
+--- grub-0.97/util/grub-install.in	2008-08-08 18:07:05.083697166 -0500
++++ grub-0.97.new/util/grub-install.in	2008-08-08 18:08:18.531757465 -0500
+@@ -186,8 +186,13 @@ convert () {
+ 
+     # If not found, print an error message and exit.
+     if test "x$tmp_drive" = x; then
+-	echo "$1 does not have any corresponding BIOS drive." 1>&2
+-	exit 1
++	# If /boot is on a RAID device, we'll auto detect the disks later
++	if mdadm --detail "$bootdir_device" >/dev/null 2>&1; then
++	    tmp_drive="$tmp_disk"
++	else
++	    echo "$1 does not have any corresponding BIOS drive." 1>&2
++	    exit 1
++	fi
+     fi
+ 
+     if test "x$tmp_part" != x; then
+@@ -410,6 +415,10 @@ if test -n "$tmp"; then
+     exit 1
+ fi
+ 
++# Get the root drive.
++root_device=`find_device ${rootdir}`
++bootdir_device=`find_device ${bootdir}`
++
+ # Check for INSTALL_DEVICE.
+ case "$install_device" in
+ /dev/*)
+@@ -431,10 +440,6 @@ case "$install_device" in
+     exit 1 ;;
+ esac
+ 
+-# Get the root drive.
+-root_device=`find_device ${rootdir}`
+-bootdir_device=`find_device ${bootdir}`
+-
+ # Check if the boot directory is in the same device as the root directory.
+ if test "x$root_device" != "x$bootdir_device"; then
+     # Perhaps the user has a separate boot partition.
+@@ -523,12 +528,51 @@ fi
+ # the raw device is in sync with any bufferring in filesystems.
+ sync
+ 
++# write grub to the RAID member device as specified by the global $frdev
++# variable
++# note that this assumes the RAID will be booted from the first BIOS device;
++# this should be corrected
++write_grub() {
++	echo "Installing GRUB to $frdev..."
++	$grub_shell --device-map=/dev/null <<EOF >>$log_file
++device (hd0,$frgrubroot) $frdev
++root (hd0,$frgrubroot)
++setup --stage2=$grubdir/stage2 --prefix=$grub_prefix $force_lba (hd0)
++quit
++EOF
++}
++
+ # Now perform the installation.
+-$grub_shell --batch $no_floppy --device-map=$device_map <<EOF >$log_file
++if echo "$install_device" | grep -q "/dev/md[0-9]" 2>/dev/null; then
++	# installing to an md device; write an MBR to each disk in the RAID
++	echo -n > $log_file
++	for frdisk in $(mdadm --detail "$install_device" 2>/dev/null | \
++			grep " active sync " 2>/dev/null | \
++			sed "s/^.* active sync\s*//" 2>/dev/null \
++	); do
++		frdev=$(echo "$frdisk" | sed "s/[0-9]\+$//")
++		frbootpart=${frdisk#$frdev}
++		frgrubroot=$((frbootpart-1))
++		write_grub
++	done
++elif set -- $(mdadm --detail "$bootdir_device" 2>/dev/null | \
++     grep " active sync " 2>/dev/null | \
++     sed "s/^.* active sync\s*//" 2>/dev/null | \
++     grep "$install_device" 2>/dev/null); then
++	# device is part of an md device; write an MBR to it
++	frdev=$(echo "$1" | sed "s/[0-9]\+$//")
++	frbootpart=${1#$frdev}
++	frgrubroot=$((frbootpart-1))
++	write_grub
++else
++	# traditional case, normal grub installation
++	echo "Installing GRUB to $install_device..."
++	$grub_shell --batch $no_floppy --device-map=$device_map <<EOF >$log_file
+ root $root_drive
+ setup $force_lba --stage2=$grubdir/stage2 --prefix=$grub_prefix $install_drive
+ quit
+ EOF
++fi
+ 
+ if ${xfs_frozen} ; then
+   xfs_freeze -u ${grubdir}

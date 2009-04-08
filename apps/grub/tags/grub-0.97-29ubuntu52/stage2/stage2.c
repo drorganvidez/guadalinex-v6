@@ -651,10 +651,7 @@ restart:
 		  *(new_heap++) = 0;
 
 		  if (config_entries)
-		    {
-		      current_entryno = first_entry + entryno;
-		      run_menu (heap, NULL, new_num_entries, new_heap, 0);
-		    }
+		    run_menu (heap, NULL, new_num_entries, new_heap, 0);
 		  else
 		    {
 		      cls ();
@@ -730,8 +727,7 @@ restart:
 	cur_entry = get_entry (config_entries, first_entry + entryno, 1);
 
       /* Set CURRENT_ENTRYNO for the command "savedefault".  */
-      if (config_entries)
-	current_entryno = first_entry + entryno;
+      current_entryno = first_entry + entryno;
       
       if (run_script (cur_entry, heap))
 	{

@@ -407,12 +407,6 @@ get_ataraid_disk_name (char *name, int unit)
 {
   sprintf (name, "/dev/ataraid/d%c", unit + '0');
 }
-
-static void
-get_i2o_disk_name (char *name, char unit)
-{
-  sprintf (name, "/dev/i2o/hd%c", unit);
-}
 #endif
 
 /* Check if DEVICE can be read. If an error occurs, return zero,
@@ -807,29 +801,6 @@ init_device_map (char ***map, const char *map_file, int floppy_disks)
 	  }
       }
   }
-    
-  /* This is for I2O - we have /dev/i2o/hd<logical drive><partition> */
-  {
-    int unit;
-
-    for (unit = 'a'; unit < 'f'; unit++)
-      {
-        char name[24];
-    
-        get_i2o_disk_name (name, unit);
-        if (check_device (name))
-          {
-              (*map)[num_hd + 0x80] = strdup (name);
-                  assert ((*map)[num_hd + 0x80]);
-                  
-	    /* If the device map file is opened, write the map.  */
-               if (fp)
-                     fprintf (fp, "(hd%d)\t%s\n", num_hd, name);
-                     
-	    num_hd++;
-          }
-      }
-  }
 #endif /* __linux__ */
   
   /* OK, close the device map file if opened.  */
@@ -889,12 +860,6 @@ write_to_partition (char **map, int drive, int partition,
     {
       if (strcmp (dev + strlen(dev) - 5, "/disc") == 0)
 	strcpy (dev + strlen(dev) - 5, "/part");
-    }
-  else
-    {
-      if ((strncmp (dev, "/dev/ataraid/", 13) == 0) ||
-         (strncmp (dev, "/dev/rd/", 8) == 0))
-        strcpy (dev + strlen(dev), "p");
     }
   sprintf (dev + strlen(dev), "%d", ((partition >> 16) & 0xFF) + 1);
   

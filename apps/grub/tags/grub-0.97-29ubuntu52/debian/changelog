@@ -1,3 +1,20 @@
+grub (0.97-29ubuntu16) hardy; urgency=low
+
+  * debian/grub.postinst, debian/grub.trigger:
+    - Add trigger 'update-grub' that will invoke /usr/sbin/update-grub 
+      for packages that need to trigger grub updates.
+
+ -- Jason Tang <jtang@tresys.com>  Mon, 04 Feb 2008 12:04:57 -0500
+
+grub (0.97-29ubuntu15) hardy; urgency=low
+
+  * Add support for virtio booting.
+  * Remove confusing mention of CFLAGS from debian/rules. It was not respected
+    anyway.
+  * unexport CPPFLAGS CFLAGS CXXFLAGS. grub wants them to be empty.
+
+ -- Soren Hansen <soren@ubuntu.com>  Tue, 12 Feb 2008 23:49:56 +0100
+
 grub (0.97-29ubuntu14) hardy; urgency=low
 
   * debian/update-grub:

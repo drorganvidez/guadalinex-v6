@@ -6,4 +6,8 @@ if [ "$1" = "configure" ]; then
 	fi
 fi
 
+if [ "x$1" = xtriggered ] ; then
+	/usr/sbin/update-grub
+fi
+
 #DEBHELPER#

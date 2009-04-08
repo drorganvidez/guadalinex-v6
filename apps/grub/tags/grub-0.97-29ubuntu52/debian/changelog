@@ -1,3 +1,13 @@
+grub (0.97-29ubuntu17) UNRELEASED; urgency=low
+
+  * debian/update-grub: use db_x_loadtemplatefile instead of
+    debconf-loadtemplate, so that we can call update-grub from maintainer
+    scripts of packages that do their own debconf prompting (LP: #189005).
+  * debian/control: depend on debconf (>= 1.5.19) | cdebconf instead of
+    debconf-utils, for the above change.
+
+ -- Steve Langasek <steve.langasek@ubuntu.com>  Mon, 18 Feb 2008 01:16:28 -0800
+
 grub (0.97-29ubuntu16) hardy; urgency=low
 
   * debian/grub.postinst, debian/grub.trigger:

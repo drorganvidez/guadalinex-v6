@@ -1,4 +1,4 @@
-grub (0.97-29ubuntu25) intrepid; urgency=low
+grub (0.97-29ubuntu27) intrepid; urgency=low
 
   [ Colin King ]
   * debian/patches/uuid.diff: added uuid command, to select root device by
@@ -9,6 +9,19 @@ grub (0.97-29ubuntu25) intrepid; urgency=low
 
  -- Steve Langasek <steve.langasek@ubuntu.com>  Thu, 17 Jul 2008 22:01:21 +0100
 
+grub (0.97-29ubuntu26) intrepid; urgency=low
+
+  * Fix filename for etc/event.d/last-good-boot
+
+ -- Ben Collins <ben.collins@canonical.com>  Mon, 14 Jul 2008 17:18:33 -0400
+
+grub (0.97-29ubuntu25) intrepid; urgency=low
+
+  * update-grub: Add entry for last-good-boot
+  * Changed build-dep to gcc-multilib to fix build failure.
+
+ -- Ben Collins <ben.collins@canonical.com>  Fri, 20 Jun 2008 15:03:05 -0400
+  
 grub (0.97-29ubuntu24) intrepid; urgency=low
 
   * update-grub: Use a range of sizes when setting up crashkernel=

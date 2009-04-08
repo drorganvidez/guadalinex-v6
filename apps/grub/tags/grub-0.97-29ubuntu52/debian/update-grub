@@ -859,13 +859,14 @@ output_kernel_list() {
 			fi
 		fi
 		kernelName=$(basename $kern)
+		initrdName=""
 		initrd=""
 		extra_opts=""
 
 		if [ "$kern" = "/boot/last-good-boot/vmlinuz" ]; then
 			kernelVersion="Last successful boot"
 			if [ -e "/boot/last-good-boot/initrd.img" ]; then
-				initrdName="/boot/last-good-boot/initrd.img"
+				initrdName="last-good-boot/initrd.img"
 			fi
 			kernelName="last-good-boot/vmlinuz"
 			extra_opts="$extra_opts last-good-boot"

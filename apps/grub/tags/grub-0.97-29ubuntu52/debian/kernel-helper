@@ -9,6 +9,7 @@ kver=$(uname -r)
 mdir="/lib/modules/$kver"
 lastkdir="/boot/last-good-boot"
 lastmdir="/lib/modules/last-good-boot"
+fail_exit_val=1
 
 usage() {
 	echo "Usage: $(basename $0) -i|-u" 1>&2
@@ -26,6 +27,8 @@ case "$1" in
 		# Quit silently, a last-good-boot already exists.
 		exit 0
 	fi
+	# No fail here
+	fail_exit_val=1
 	;;
 -u)
 	# Update last-good-boot.
@@ -42,12 +45,12 @@ fi
 
 if grep -q last-good-boot /proc/cmdline; then
 	# Quit silently. Don't update when booting the last good kernel
-	exit 0;
+	exit 0
 fi
 
 if [ ! -e "/boot/vmlinuz-$kver" -a ! -e "/boot/$kver/vmlinuz" ]; then
 	# Fail, since we cannot do anything here
-	exit 1;
+	exit $fail_exit_val
 fi
 
 rm -rf "${lastkdir}.tmp" "${lastmdir}.tmp"

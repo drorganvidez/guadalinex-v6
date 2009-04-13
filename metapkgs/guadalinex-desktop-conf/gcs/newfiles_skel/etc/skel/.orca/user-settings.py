@@ -25,6 +25,7 @@ orca.debug.debugLevel = orca.debug.LEVEL_SEVERE
 #orca.debug.eventDebugFilter = re.compile('[\S]*focus|[\S]*activ')
 #orca.debug.eventDebugFilter = re.compile('nomatch')
 #orca.debug.eventDebugFilter = re.compile('[\S]*:accessible-name')
+#orca.debug.eventDebugFilter = re.compile('[\S]*:(?!bounds-changed)')
 
 #orca.debug.debugFile = open(time.strftime('debug-%Y-%m-%d-%H:%M:%S.out'), 'w', 0)
 #orca.debug.debugFile = open('debug.out', 'w', 0)
@@ -35,8 +36,8 @@ orca.debug.debugLevel = orca.debug.LEVEL_SEVERE
 
 if False:
     import sys
-    import orca.util
-    sys.settrace(orca.util.traceit)
+    import orca.debug
+    sys.settrace(orca.debug.traceit)
     orca.debug.debugLevel = orca.debug.LEVEL_ALL
 
 orca.settings.orcaModifierKeys = ['Insert', 'KP_Insert']
@@ -44,7 +45,7 @@ orca.settings.enableSpeech = True
 orca.settings.speechServerFactory = 'orca.gnomespeechfactory'
 orca.settings.speechServerInfo = ['Festival GNOME Speech Driver', 'OAFIID:GNOME_Speech_SynthesisDriver_Festival:proto0.3']
 orca.settings.voices = {
-'default' : orca.acss.ACSS({'family': {'name': 'el_diphone'}}),
+'default' : orca.acss.ACSS({'family': {'locale': 'spanish', 'name': 'JuntaDeAndalucia_es_sf_diphone'}}),
 'uppercase' : orca.acss.ACSS({'average-pitch': 6}),
 'hyperlink' : orca.acss.ACSS({'average-pitch': 8}),
 }
@@ -75,13 +76,24 @@ orca.settings.magZoomerLeft = 384
 orca.settings.magZoomerRight = 758
 orca.settings.magZoomerTop = 0
 orca.settings.magZoomerBottom = 566
-orca.settings.magZoomFactor = 4
+orca.settings.magZoomFactor = 4.0
 orca.settings.enableMagZoomerColorInversion = False
 orca.settings.magSmoothingMode = orca.settings.MAG_SMOOTHING_MODE_BILINEAR
-orca.settings.magMouseTrackingMode = orca.settings.MAG_MOUSE_TRACKING_MODE_CENTERED
+orca.settings.magMouseTrackingMode = orca.settings.MAG_TRACKING_MODE_CENTERED
 orca.settings.verbalizePunctuationStyle = orca.settings.PUNCTUATION_STYLE_MOST
 
+# User customized pronunciation dictionary settings
+#
+import orca.pronunciation_dict
+
+orca.pronunciation_dict.pronunciation_dict={}
+
+import orca.orca_state
+
 try:
-    __import__("orca-customizations")
-except ImportError:
-    pass
+    reload(orca.orca_state.orcaCustomizations)
+except AttributeError:
+    try:
+        orca.orca_state.orcaCustomizations = __import__("orca-customizations")
+    except ImportError:
+        pass

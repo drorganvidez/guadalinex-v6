@@ -1,0 +1,32 @@
+<!DOCTYPE Menu
+  PUBLIC '-//freedesktop//DTD Menu 1.0//EN'
+  'http://standards.freedesktop.org/menu-spec/menu-1.0.dtd'>
+<Menu>
+	<Name>Applications</Name>
+	<MergeFile type="parent">/etc/xdg/menus/settings.menu</MergeFile>
+	<DefaultLayout inline="false"/>
+        <Menu>
+                <Name>guadalinex-help</Name>
+                <Directory>guadalinex-help.directory</Directory>
+                <Include>
+			<And>
+				<Category>Derivative</Category>
+				<Category>Help</Category>
+			</And>
+                        <Filename>guadalinex-about.desktop</Filename>
+                        <Filename>guadalinex-online-documentation.desktop</Filename>
+                        <Filename>guadalinex-community-support.desktop</Filename>
+                        <Filename>guadalinex-user-manual.desktop</Filename>
+                        <Filename>hermesdruid.desktop</Filename>
+                </Include>
+        </Menu>
+        <Layout>
+                <Merge type="menus"/>
+                <Menuname>Preferences</Menuname>
+                <Menuname>Administration</Menuname>
+                <Separator/>
+                <Menuname>guadalinex-help</Menuname>
+                <Filename>gnomecc.desktop</Filename>
+                <Merge type="files"/>
+        </Layout>
+</Menu>

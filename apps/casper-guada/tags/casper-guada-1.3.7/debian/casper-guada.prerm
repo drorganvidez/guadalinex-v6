@@ -8,6 +8,10 @@ if [ remove = "$1" ]; then
     rm -f /etc/casper.conf
     dpkg-divert --package casper-guada --remove --rename \
              --divert /etc/casper.conf.real /etc/casper.conf
+    rm -f /etc/init.d/ubiquity
+    dpkg-divert --package casper-guada --remove --rename \
+             --divert /etc/init.d/ubiquity.real /etc/init.d/ubiquity
+
 
 fi
 

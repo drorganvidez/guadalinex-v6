@@ -11,8 +11,9 @@ if [ remove = "$1" ]; then
     rm -f /etc/init.d/ubiquity
     dpkg-divert --package casper-guada --remove --rename \
              --divert /etc/init.d/ubiquity.real /etc/init.d/ubiquity
-
-
+    rm -f /usr/bin/ubiquity-dm
+    dpkg-divert --package casper-guada --remove --rename \
+             --divert /usr/bin/ubiquity-dm.real /usr/bin/ubiquity-dm
 fi
 
 #DEBHELPER#

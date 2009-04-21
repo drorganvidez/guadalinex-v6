@@ -1,20 +1,28 @@
 #!/bin/sh
 #DEBHELPER#
 
+# diverting opensc stuff
+dpkg-divert --package guadalinex-eadmin --rename --quiet --add /usr/share/opensc-ceres/inst_gnome_pkcs11_cert.pl
+ln -fs /usr/share/guadalinex-eadmin/opensc-ceres/inst_gnome_pkcs11_cert.pl /usr/share/opensc-ceres/inst_gnome_pkcs11_cert.pl
+dpkg-divert --package guadalinex-eadmin --rename --quiet --add /usr/share/opensc-ceres/inst_kde_pkcs11_cert.pl
+ln -fs /usr/share/guadalinex-eadmin/opensc-ceres/inst_kde_pkcs11_cert.pl /usr/share/opensc-ceres/inst_kde_pkcs11_cert.pl
+
+dpkg-divert --package guadalinex-eadmin --rename --quiet --add /usr/share/opensc-dnie/inst_gnome_pkcs11_cert.pl
+ln -fs /usr/share/guadalinex-eadmin/opensc-dnie/inst_gnome_pkcs11_cert.pl /usr/share/opensc-dnie/inst_gnome_pkcs11_cert.pl
+dpkg-divert --package guadalinex-eadmin --rename --quiet --add /usr/share/opensc-dnie/inst_kde_pkcs11_cert.pl
+ln -fs /usr/share/guadalinex-eadmin/opensc-dnie/inst_kde_pkcs11_cert.pl /usr/share/opensc-dnie/inst_kde_pkcs11_cert.pl
+
+# diverting firefox stuff
 dpkg-divert --package guadalinex-eadmin --rename --quiet --add /etc/firefox-3.0/pref/firefox.js
-ln -fs /etc/firefox-3.0/pref/firefox.js.gv5 /etc/firefox-3.0/pref/firefox.js
+ln -fs /etc/firefox-3.0/pref/firefox.js.gv6 /etc/firefox-3.0/pref/firefox.js
 
+# diverting gscriptor.desktop
 dpkg-divert --package guadalinex-eadmin --rename --quiet --add /usr/share/applications/gscriptor.desktop
-ln -fs /usr/share/applications/gscriptor.desktop.gv5 /usr/share/applications/gscriptor.desktop
+ln -fs /usr/share/applications/gscriptor.desktop.gv6 /usr/share/applications/gscriptor.desktop
 
+# symlinking sun-java stuff and setting permissions
 ln -fs /usr/share/guadalinex-eadmin/java/java-6-sun/jss33.jar /usr/lib/jvm/java-6-sun/jre/lib/ext/jss33.jar
-
 ln -fs /usr/share/guadalinex-eadmin/java/java-6-sun/libjss3.so /usr/lib/jvm/java-6-sun/jre/lib/i386/client/libjss3.so
 
-rm /usr/share/applications/gscriptor.desktop
-cp /usr/share/applications/gscriptor.desktop.gv5 /usr/share/applications/gscriptor.desktop
-
-/bin/chmod 755 /usr/lib/jvm/java-6-sun/jre/lib/i386/client/libjss3.so
-/bin/chmod 644 /usr/lib/jvm/java-6-sun/jre/lib/ext/jss33.jar
-
-/usr/share/guadalinex-eadmin/change_default_session.py
+test -f /usr/lib/jvm/java-6-sun/jre/lib/i386/client/libjss3.so && chmod 755 /usr/lib/jvm/java-6-sun/jre/lib/i386/client/libjss3.so
+test -f /usr/lib/jvm/java-6-sun/jre/lib/ext/jss33.jar && chmod 644 /usr/lib/jvm/java-6-sun/jre/lib/ext/jss33.jar

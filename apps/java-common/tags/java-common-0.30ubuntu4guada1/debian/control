@@ -1,0 +1,67 @@
+Source: java-common
+Section: misc
+Priority: optional
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+XSBC-Original-Maintainer: Debian Java Mailing List <debian-java@lists.debian.org>
+Uploaders: Stefan Gybas <sgybas@debian.org>, Arnaud Vandyck <avdyk@debian.org>, Michael Koch <konqueror@gmx.de>, Matthias Klose <doko@debian.org>
+Build-Depends: debhelper (>= 5)
+Build-Depends-Indep: debiandoc-sgml, docbook-utils, docbook-xml, dpsyco-devel, lynx
+Standards-Version: 3.7.3
+
+Package: java-common
+Architecture: all
+Suggests: equivs
+Description: Base of all Java packages
+ This package must be installed in the system if a Java environment
+ is desired. It covers useful information for Java users in
+ Debian GNU/Linux, including:
+  * The Java policy document which describes the layout of Java support in
+    Debian and how Java packages should behave.
+  * The Debian-Java-FAQ which provides information on the status of
+    Java support in Debian, available compilers, virtual machines, Java
+    programs and libraries as well as on legal issues.
+  * Information on how to create dummy packages to fulfill java2
+    requirements.
+
+Package: default-jre
+Section: interpreters
+Architecture: any
+Depends: default-jre-headless (= ${binary:Version}), ${jre}${jre:version} | sun-java6-jre
+Suggests: default-jre
+Provides: ${jre:provides}
+Description: Standard Java or Java compatible Runtime
+ This package points to the Java runtime, or Java compatible
+ runtime recommended for the ${jre:arch} architecture,
+ which is ${jdk} for ${jre:arch}.
+
+Package: default-jre-headless
+Section: interpreters
+Architecture: any
+Depends: ${jhl}${jre:version} | sun-java6-jre , java-common
+Suggests: default-jre
+Provides: ${jhl:provides}
+Description: Standard Java or Java compatible Runtime (headless)
+ This package points to the Java runtime, or Java compatible
+ runtime recommended for this architecture, which is
+ ${jhl} for ${jre:arch}.
+ .
+ The package is used as dependency for packages not needing a
+ graphical display during runtime.
+
+Package: default-jdk
+Section: devel
+Architecture: any
+Depends: default-jre (= ${binary:Version}), ${jdk}${jdk:version} | sun-java6-jdk
+Provides: ${jdk:provides}
+Description: Standard Java or Java compatible Development Kit
+ This package points to the Java runtime, or Java compatible
+ development kit recommended for this architecture, which is
+ ${jdk} for ${jre:arch}.
+
+Package: default-jdk-builddep
+Section: devel
+Architecture: any
+Depends: default-jdk (= ${binary:Version}) | sun-java6-jdk, ${jdk:builddep}
+Description: Standard Java or Java compatible build dependencies
+ This package points to the build dependencies used to build
+ packages requiring a Java or Java compatible Development Kit.

@@ -1,0 +1,328 @@
+java-common (0.30ubuntu4guada1) jaunty; urgency=low
+
+  * Changed depends to fit sun-java6-* aswell as openjdk.
+
+ -- Roberto C. Morano <rcmorano@emergya.es>  Wed, 22 Apr 2009 09:38:15 +0100
+
+java-common (0.30ubuntu4) jaunty; urgency=low
+
+  * Default to openjdk-6 on armel.
+
+ -- Matthias Klose <doko@ubuntu.com>  Mon, 17 Nov 2008 08:03:21 +0100
+
+java-common (0.30ubuntu3) intrepid; urgency=low
+
+  * On powerpc, default back to openjdk-6 instead of cacao-oj6. Still
+    more testsuite failures in the OpenJDK testsuite with cacao compared
+    to the zero port. 
+
+ -- Matthias Klose <doko@ubuntu.com>  Mon, 13 Oct 2008 18:09:39 +0000
+
+java-common (0.30ubuntu2) intrepid; urgency=low
+
+  * debian/rules
+    - Fix jvmdir for powerpc, so that default-java symlink is correct.
+      (LP: #256949)
+
+ -- Onkar Shinde <onkarshinde@ubuntu.com>  Wed, 13 Aug 2008 01:55:23 +0530
+
+java-common (0.30ubuntu1) intrepid; urgency=low
+
+  * On amd64, i386, ia64 and sparc, point default-* to openjdk-6,
+    on powerpc, point to cacao-oj6.
+
+ -- Matthias Klose <doko@ubuntu.com>  Wed, 30 Jul 2008 14:41:31 +0200
+
+java-common (0.30) unstable; urgency=low
+
+  * Fix description generation for default-jre. Closes: #476978.
+
+ -- Michael Koch <konqueror@gmx.de>  Sun, 27 Apr 2008 00:13:55 +0200
+
+java-common (0.29) unstable; urgency=low
+
+  * Do not build the default-* packages on alpha, arm, hppa.
+
+ -- Matthias Klose <doko@debian.org>  Tue, 08 Apr 2008 01:02:28 +0200
+
+java-common (0.28) unstable; urgency=low
+
+  [Matthias Klose]
+  * Build packages default-jre, default-jre-headless, default-jdk
+    and default-jdk-builddep.
+    Provides an abstraction for the preferred jre/jdk for a specific
+    architecture.  Build-depending on default-jdk-builddep ensures
+    a dependency on java-gcj-compat-dev even if the default jdk is
+    another than java-gcj-compat-dev. Discussion thread starting at
+    http://lists.debian.org/debian-java/2008/03/msg00007.html.
+  * update-java-alternatives: Add --jre-headless option.
+
+  [Michael Koch]
+  * Fix issues in scripts/update-java-alternatives.8
+  * Converted debian/java-common.doc-base.faq to utf-8 encoding.
+  * Fix bug in scripts/update-java-alternatives when usage is shown.
+  * Ignore lintian issues as they are false positives in our case.
+
+ -- Michael Koch <konqueror@gmx.de>  Wed, 02 Apr 2008 21:13:24 +0200
+
+java-common (0.27) unstable; urgency=low
+
+  * Updated FAQ. Closes: #449282.
+  * Updated debhelper level to 5.
+
+ -- Michael Koch <konqueror@gmx.de>  Mon, 12 Nov 2007 07:59:27 +0100
+
+java-common (0.26) unstable; urgency=low
+
+  * Fixed typo in package description. Closes: #363985.
+
+ -- Michael Koch <konqueror@gmx.de>  Thu, 28 Jun 2007 13:12:04 -0100
+
+java-common (0.25) unstable; urgency=low
+
+  [Matthias Klose]
+  * update-java-alternatives: Search for /usr/lib/jvm/.*.jinfo files
+    as well, new option --plugin.
+
+ -- Michael Koch <konqueror@gmx.de>  Tue,  9 May 2006 21:33:38 +0000
+
+java-common (0.24) unstable; urgency=low
+
+  [Matthias Klose]
+  * Search for the update-java-alternatives description files in
+    /usr/lib/jvm/*.jinfo.
+  * Add a script update-java-alternatives(8).
+
+  [Michael Koch]
+  * Updated DH_COMPAT level to 4.
+  * Updated Standards-Version to 3.7.2.
+  * Added myself to Uploaders field.
+  * Added myself to debian/copyright and updated address of FSF.
+  * Moved most of Build-Depends to Build-Depends-Indep.
+  * Removed CVS directories.
+
+ -- Michael Koch <konqueror@gmx.de>  Sat,  6 May 2006 22:20:14 +0000
+
+java-common (0.23) unstable; urgency=low
+
+  * Updated the Debian Java FAQ (closes: #156547, #252219), thanks to
+    Javier Fernandez-Sanguino Peña
+  * policy.xml: corrected typos (closes: #285303), thanks to Bill
+    Allombert
+  * debian/control:
+    + (Uploaders) removed Ola Lundqvist from the uploaders (see
+      debian-java mailing list, June 2005)
+    + (Uploaders) added myself
+    + (Uploaders) added Debian Java Maintainers (closes: #302887)
+  * debian/README.Debian: corrected wrong path the the faq and the policy
+    and a typo (closes: #197256, #285014), thanks to Vincent Lefevre
+  * debian/copyright: moved Ola from current maintainers to previous
+    maintainers, updated the file with the debhelper gpl template, added
+    copyright years (closes: #290189)
+
+ -- Arnaud Vandyck <avdyk@debian.org>  Sat, 11 Jun 2005 13:59:20 +0200
+
+java-common (0.22) unstable; urgency=low
+
+  * Changed Maintainer: to the Debian Java Mailing List and added myself
+    to Uploaders: (closes: #201670)
+  * Changed the long description to use a real item list
+  * Removed debian/java-common.README.debian since we now have build
+    dependencies
+  * Standards-Version: 3.6.1
+    + Changed Build-Depends-Indep to Build-Depends
+
+ -- Stefan Gybas <sgybas@debian.org>  Mon,  8 Sep 2003 11:18:55 +0200
+
+java-common (0.21) unstable; urgency=low
+
+  * Fixed dummy control files, closes: #201495.
+  * Updated java FAQ from CVS, closes: #197577.
+
+ -- Ola Lundqvist <opal@debian.org>  Thu, 17 Jul 2003 08:16:43 +0200
+
+java-common (0.20) unstable; urgency=low
+
+  * Updated Java FAQ from CVS, closes: #192286.
+
+ -- Ola Lundqvist <opal@debian.org>  Fri,  9 May 2003 13:14:44 +0200
+
+java-common (0.19) unstable; urgency=low
+
+  * Added JNI standardized directories, closes: #163390.
+    Thanks to Ben Burton <bab@debian.org> for the patch.
+  * Updated FAQ from cvs.
+  * Now refer to an url instead of listing free jvm:s, closes: #146731.
+  * Fixed doc section (is now Debian), closes: #187865.
+  * Rebuild, no longer junk in policy.txt, closes: #162377.
+
+ -- Ola Lundqvist <opal@debian.org>  Thu, 17 Apr 2003 13:32:41 +0200
+
+java-common (0.18) unstable; urgency=low
+
+  * Updated java faq from cvs to fix deb source line, closes: #162733.
+  * Fixed doc-base file, closes: #163102.
+  * Policy update as accepted by debian-java@lists.debian.org,
+    closes: #182466.
+  * Removed the last references about that this is a proposed policy. It
+    is no longer just a proposed policy.
+
+ -- Ola Lundqvist <opal@debian.org>  Mon, 31 Mar 2003 21:48:18 +0200
+
+java-common (0.17) unstable; urgency=low
+
+  * Fixed some xml errors and reference error to debian policy, using
+    patch from Ahmed <ahmed@baizid.org>, closes: #173033.
+  * Fixed Makefile so that it can produce proper txt output, closes:
+    #162377.
+
+ -- Ola Lundqvist <opal@debian.org>  Wed, 18 Dec 2002 05:56:54 +0100
+
+java-common (0.16) unstable; urgency=low
+
+  * Updated java policy with more about JNI, closes: #162282.
+
+ -- Ola Lundqvist <opal@debian.org>  Wed, 25 Sep 2002 16:50:48 +0200
+
+java-common (0.15) unstable; urgency=low
+
+  * Removed policy.sgml from source.
+  * Changed so that the policy is no longer PROPOSED.
+  * Some editorial changes.
+  * Java libraries should now only suggest java-virtual-machine,
+    closes: #159448.
+  * Documentation about -gcj and -jni, closes: #146771.
+  * Java-common now suggests equivs and contain instructions on how to create
+    a dummy package, closes: #159483. Thanks to
+    "Grzegorz Prokopski (Debian Developer)" <gadek@debian.org>.
+  * Fixed typo, closes: #160735.
+  * Updated debian-java-faq.
+  * Fixed build problem.
+  * Updated standards version.
+
+ -- Ola Lundqvist <opal@debian.org>  Wed, 25 Sep 2002 07:41:45 +0200
+
+java-common (0.14) unstable; urgency=low
+
+  * Fixed description again.
+
+ -- Ola Lundqvist <opal@debian.org>  Sun,  7 Apr 2002 12:03:11 +0200
+
+java-common (0.13) unstable; urgency=low
+
+  * Fixed description, closes: #141463.
+
+ -- Ola Lundqvist <opal@debian.org>  Sat,  6 Apr 2002 17:31:32 +0200
+
+java-common (0.12) unstable; urgency=low
+
+  * Fixed spaces in description, closes: #137179.
+  * Fixed doc-base bug, closes: #137516.
+
+ -- Ola Lundqvist <opal@lysator.liu.se>  Fri,  5 Apr 2002 21:25:34 +0200
+
+java-common (0.11) unstable; urgency=low
+
+  * Fixed doc-base problem, closes: #136994, #137022, #137031, #137063.
+
+ -- Ola Lundqvist <opal@debian.org>  Wed,  6 Mar 2002 16:10:04 +0100
+
+java-common (0.10) unstable; urgency=low
+
+  * Changed descriotion, closes: #118458.
+  * Added doc-base file, thanks to Javier Fernandez-Sanguino Pena
+    <jfs@dat.etsit.upm.es>, closes: #118459.
+  * Spelling things in policy, closes: #119801.
+  * Spelling issue in FAQ, closes: #127114.
+
+ -- Ola Lundqvist <opal@debian.org>  Mon,  4 Mar 2002 20:56:39 +0100
+
+java-common (0.9) unstable; urgency=low
+
+  * Updated the java policy. This is a major rewrite from all the information
+    that people seems to have agreed upon, in the debian-java@lists.debian.org
+    mailinglist. Closes: #107809, #107810.
+    Also converted it to docbook format.
+  * Removed manpage.
+  * Fixed the copyright file, closes: #55524.
+  * Removed java-compiler-dummy.
+  * Removed java-virtual-machine-dummy.
+  * Removed java1-runtime-dummy.
+  * Removed dummy config files. After this package is uploaded I'll ask for
+    the removal of the *-dummy packages that was previously mentioned in
+    the policy.
+
+ -- Ola Lundqvist <opal@debian.org>  Mon, 01 Oct 2001 13:43:56 +0200
+java-common (0.8) unstable; urgency=low
+
+  * Moved java-compiler-dummy to java-common.
+  * Moved java-virtual-machine-dummy to java-common.
+  * Created java1-runtime-dummy.
+  * Moved dummy config files, closes: #55527, #55747.
+  * Fixed manpage, closes: #55525.
+  * Fixed the copyright file, closes: #55524.
+  * No I will not add a jar hook. It does not require any special
+    classpaths and the jar program should exist in the package that
+    provides the binary, closes: #81647.
+  * Updated the java policy. This is a major rewrite from all the information
+    that people seems to have agreed upon, in the debian-java@lists.debian.org
+    mailinglist. Closes: #107809, #107810.
+
+ -- Ola Lundqvist <opal@debian.org>  Mon, 01 Oct 2001 13:43:56 +0200
+
+java-common (0.7) unstable; urgency=low
+
+  * New maintainer Ola Lundqvist, closes: #92816.
+  * Fixed /usr/doc problem with this rebuild, closes: #72498.
+  * Fixed standards version, closes: #79981, #86928.
+  * Misspelling seems to have been fixed, closes: #67152.
+
+ -- Ola Lundqvist <opal@debian.org>  Wed,  4 Apr 2001 23:07:10 +0200
+
+java-common (0.6) unstable; urgency=low
+
+  * Java FAQ now retrieved from the pristine source (DDP CVS)
+
+ -- Stephane Bortzmeyer <bortzmeyer@debian.org>  Thu,  7 Dec 2000 15:23:16 +0100
+
+java-common (0.5) unstable; urgency=low
+
+  * examples/ directory
+  * Debian packages at Blackdown in the FAQ
+
+ -- Stephane Bortzmeyer <bortzmeyer@debian.org>  Thu,  9 Nov 2000 17:23:30 +0100
+
+java-common (0.4) unstable; urgency=low
+
+  * A few fixes (URLs mostly). 
+
+ -- Stephane Bortzmeyer <bortzmeyer@debian.org>  Mon,  2 Oct 2000 11:26:10 +0200
+
+java-common (0.3) unstable; urgency=low
+
+  * Added the Debian-Java FAQ (maintained by Fernandez-Sanguino Pen~a 
+    <jfs@computer.org>) to the information provided by the package.
+
+ -- Stephane Bortzmeyer <bortzmeyer@debian.org>  Wed, 12 Jul 2000 16:08:32 +0200
+
+java-common (0.2) unstable; urgency=low
+
+  * The policy is now included, and in XML form. Closes #42114
+
+ -- Stephane Bortzmeyer <bortzmeyer@debian.org>  Thu,  2 Sep 1999 17:10:15 +0200
+
+java-common (0.1) unstable; urgency=low
+
+  * Proper versioning for a Debian-only package 
+
+ -- Stephane Bortzmeyer <bortzmeyer@debian.org>  Mon, 28 Jun 1999 15:00:52 +0200
+
+java-common (0.0-1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- Stephane Bortzmeyer <bortzmeyer@debian.org>  Wed, 23 Jun 1999 15:03:43 +0200
+
+Local variables:
+mode: debian-changelog
+End:

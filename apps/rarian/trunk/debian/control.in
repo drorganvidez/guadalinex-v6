@@ -35,9 +35,9 @@ Section: doc
 Architecture: any
 Pre-Depends: xml-core (>= 0.11ubuntu1)
 Depends: ${shlibs:Depends}, ${misc:Depends}, docbook-xml
-Provides: scrollkeeper
-Conflicts: scrollkeeper
-Replaces: scrollkeeper, librarian-dev (<< 0.8.1)
+Provides: scrollkeeper, libscrollkeeper0
+Conflicts: scrollkeeper, libscrollkeeper0
+Replaces: scrollkeeper, libscrollkeeper0, librarian-dev (<< 0.8.1)
 Description: Rarian is a documentation meta-data library (compatibility tools)
  Rarian (formerly Spoon) is a documentation meta-data library,
  designed as a replacement for Scrollkeeper.

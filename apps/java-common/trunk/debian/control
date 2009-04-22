@@ -26,7 +26,7 @@ Description: Base of all Java packages
 Package: default-jre
 Section: interpreters
 Architecture: any
-Depends: default-jre-headless (= ${binary:Version}), ${jre}${jre:version}
+Depends: default-jre-headless (= ${binary:Version}), ${jre}${jre:version} | sun-java6-jre
 Suggests: default-jre
 Provides: ${jre:provides}
 Description: Standard Java or Java compatible Runtime
@@ -37,7 +37,7 @@ Description: Standard Java or Java compatible Runtime
 Package: default-jre-headless
 Section: interpreters
 Architecture: any
-Depends: ${jhl}${jre:version}, java-common
+Depends: ${jhl}${jre:version} | sun-java6-jre , java-common
 Suggests: default-jre
 Provides: ${jhl:provides}
 Description: Standard Java or Java compatible Runtime (headless)
@@ -51,7 +51,7 @@ Description: Standard Java or Java compatible Runtime (headless)
 Package: default-jdk
 Section: devel
 Architecture: any
-Depends: default-jre (= ${binary:Version}), ${jdk}${jdk:version}
+Depends: default-jre (= ${binary:Version}), ${jdk}${jdk:version} | sun-java6-jdk
 Provides: ${jdk:provides}
 Description: Standard Java or Java compatible Development Kit
  This package points to the Java runtime, or Java compatible
@@ -61,7 +61,7 @@ Description: Standard Java or Java compatible Development Kit
 Package: default-jdk-builddep
 Section: devel
 Architecture: any
-Depends: default-jdk (= ${binary:Version}), ${jdk:builddep}
+Depends: default-jdk (= ${binary:Version}) | sun-java6-jdk, ${jdk:builddep}
 Description: Standard Java or Java compatible build dependencies
  This package points to the build dependencies used to build
  packages requiring a Java or Java compatible Development Kit.

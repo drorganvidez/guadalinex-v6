@@ -1,0 +1,155 @@
+#!/usr/bin/make -f
+# Made with the aid of dh_make, by Craig Small
+# Sample debian/rules that uses debhelper. GNU copyright 1997 by Joey Hess.
+# Some lines taken from debmake, by Cristoph Lameter.
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+, = ,
+S = $(EMPTY) $(EMPTY)
+mk_cslist = $(subst $(S),$(,)$(S),$(foreach v,$(1),$(v)-$(2)))
+vafilt = $(subst $(2)=,,$(filter $(2)=%,$(1)))
+jrel = $(subst java-common-0.,,$(notdir $(CURDIR)))
+
+DPKG_VARS := $(shell dpkg-architecture)
+DEB_HOST_ARCH ?= $(call vafilt,$(DPKG_VARS),DEB_HOST_ARCH)
+
+p_jre		= java-gcj-compat
+p_jhl		= java-gcj-compat-headless
+p_jdk		= java-gcj-compat-dev
+jdk_build_dep	=
+v_jre		= $(S)(>= 1.0.77-4)
+v_jdk		= $(v_jre)
+provides	= java java2 java5
+dversion	= 1.5-$(jrel)
+jvmdir		= java-gcj
+
+ifneq (,$(filter $(DEB_HOST_ARCH), amd64 armel i386 ia64 lpia powerpc sparc))
+  p_jre		= openjdk-6-jre
+  p_jhl		= openjdk-6-jre-headless
+  p_jdk		= openjdk-6-jdk
+  jdk_build_dep	= java-gcj-compat-dev
+  v_jre		= $(S)(>= 6b11)
+  v_jdk		= $(v_jre)
+  provides	= java java2 java5 java6
+  dversion	= 1.6-$(jrel)
+  jvmdir	= java-6-openjdk
+endif
+
+ifneq (,$(filter $(DEB_HOST_ARCH), alpha))
+  p_jre		= cacao-oj6-jre
+  p_hl		= cacao-oj6-jre-headless
+  p_jdk		= cacao-oj6-jdk
+  ifeq (,$(filter $(DEB_HOST_ARCH), alpha))
+    jdk_build_dep	= java-gcj-compat-dev
+  endif
+  v_jre		=
+  v_jdk		=
+  provides	= java java2 java5 java6
+  dversion	= 1.6-$(jrel)
+  jvmdir	= java-6-cacao
+endif
+
+ifneq (,$(filter $(DEB_HOST_ARCH), arm hppa))
+  p_jre		=
+  p_headless	=
+  p_jdk		=
+endif
+
+jre_provides	= $(call mk_cslist,$(provides),runtime)
+jhl_provides	= $(call mk_cslist,$(provides),runtime-headless)
+jdk_provides	= $(call mk_cslist,$(provides),sdk)
+
+build-indep: build-stamp
+build-stamp:
+	dh_testdir
+
+	$(MAKE)
+	touch build-stamp
+
+clean:
+	dh_testdir
+	dh_testroot
+	rm -f build-stamp install-stamp
+	$(MAKE) clean
+
+	dh_clean
+
+install-indep: install-stamp
+install-stamp: build-stamp
+	dh_testdir
+	dh_testroot
+	dh_clean -k -i
+	dh_installdirs -i
+
+	dh_installdocs -i
+	$(MAKE) install DESTDIR=$(CURDIR)/debian/java-common
+
+	dpsch-backupclean
+
+	touch install-stamp
+
+install-arch:
+	dh_testdir
+	dh_testroot
+	dh_clean -k -s
+
+
+binary-arch: install-arch
+ifneq (,$(p_jre))
+	dh_testdir -s
+	dh_testroot -s
+	dh_install -a
+	dh_installdocs -pdefault-jre-headless
+	dh_installchangelogs -pdefault-jre-headless
+	dh_link -pdefault-jre-headless \
+		usr/lib/jvm/$(jvmdir) usr/lib/jvm/default-java
+	for p in default-jre-headless default-jre default-jdk default-jdk-builddep; do \
+	  [ -z "$$t" ] && t=$$p && continue; \
+	  mkdir -p debian/$$p/usr/share/doc; \
+	  ln -sf $$t debian/$$p/usr/share/doc/$$p; \
+	  t=$$p; \
+	done
+	dh_compress -s
+	dh_fixperms -s
+	dh_installdeb -s
+	dh_gencontrol -s -- \
+		-v$(dversion) \
+		'-Vjre=$(p_jre)' \
+		'-Vjhl=$(p_jhl)' \
+		'-Vjdk=$(p_jdk)' \
+		'-Vjdk:builddep=$(jdk_build_dep)' \
+		'-Vjre:arch=$(DEB_HOST_ARCH)' \
+		'-Vjre:version=$(v_jre)' \
+		'-Vjdk:version=$(v_jdk)' \
+		'-Vjre:provides=$(jre_provides)' \
+		'-Vjhl:provides=$(jhl_provides)' \
+		'-Vjdk:provides=$(jdk_provides)' \
+
+	dh_md5sums -s
+	dh_builddeb -s
+endif
+
+# Build architecture-independent files here.
+binary-indep: build-indep install-indep
+	dh_testdir -i
+	dh_testroot -i
+	dh_install -i
+#	dh_installdebconf -i
+###	dh_installdocs -i
+	dh_installexamples -i
+	dpsch-cvsclean
+	dh_installmenu -i
+	dh_installman -i
+	dh_installchangelogs -i
+	dh_link -i
+	dh_compress -i
+	dh_fixperms -i
+	dh_installdeb -i
+	dh_gencontrol -i
+	dh_md5sums -i
+	dh_builddeb -i
+
+binary: binary-indep binary-arch
+.PHONY: build clean binary-indep binary-arch binary install configure

@@ -13,6 +13,7 @@ Homepage: http://java.sun.com/javase/
 Package: sun-java6-jre
 Section: non-free/libs
 Architecture: all
+Replaces: default-jre, default-jre-headless, openjdk-6-jre, openjdk-6-jre-headless, openjdk-6-jre-lib
 Provides: java-virtual-machine, java-runtime, java2-runtime, java5-runtime, java6-runtime, java-runtime-headless, java2-runtime-headless, java5-runtime-headless, java6-runtime-headless, default-jre, default-jre-headless, openjdk-6-jre, openjdk-6-jre-headless
 Pre-Depends: debconf (>= 0.5) | debconf-2.0
 Depends: java-common (>= 0.24), locales, sun-java6-bin (= ${binary:Version}) | ia32-sun-java6-bin (= ${binary:Version}), ${misc:Depends}

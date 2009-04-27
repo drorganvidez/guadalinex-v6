@@ -11,7 +11,7 @@ INSTALL_DATA = $(INSTALL) -m 644
 INSTALL_PROGRAM = $(INSTALL) -m 755
 
 usplash-theme-ubuntu.so: throbber_back.png.c.o throbber_back_16.png.c.o throbber_fore.png.c.o throbber_fore_16.png.c.o \
-						 usplash_1024_768.png.c.o usplash_1365_768_scaled.png.c.o usplash_800_600.png.c.o \
+						 usplash_1024_768.png.c.o usplash_1365_768.png.c.o usplash_800_600.png.c.o \
 						 usplash_640_400.png.c.o usplash_640_480.png.c.o usplash-theme-ubuntu.c.o
 	$(COMPILE) -shared -o $@ $^
 

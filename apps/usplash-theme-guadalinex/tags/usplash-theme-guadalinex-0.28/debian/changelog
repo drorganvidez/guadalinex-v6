@@ -1,8 +1,26 @@
-usplash-theme-ubuntu (0.12ubuntu1) feisty; urgency=low
+usplash-theme-ubuntu (0.14) feisty; urgency=low
 
-  * Fixing bug in throbber_fore.png 
+  * [Kenneth Wimer]
+    - Fixing bug in throbber_fore.png 
+  * [Daniel Holbach]
+    - debian/control:
+      - bumped Standards-Version.
+    - debian/postrm:
+      - add #DEBHELPER# tag.
 
- -- Kenneth Wimer <wimer@kde.org>  Thu,  5 Apr 2007 16:46:18 +0200
+ -- Daniel Holbach <daniel.holbach@ubuntu.com>  Thu,  5 Apr 2007 17:20:09 +0200
+
+usplash-theme-ubuntu (0.13) feisty; urgency=low
+
+  [ Dennis Kaarsemaker ]
+  * Fix broken palette indices. Some colors were just unreadable and some
+    color indices pointed outside the palette which could cause crashes.
+
+  [ Martin Pitt ]
+  * debian/control: Fix build dependency for the usplash-dev ->
+    libusplash-dev rename.
+
+ -- Martin Pitt <martin.pitt@ubuntu.com>  Mon, 19 Mar 2007 09:27:15 +0100
 
 usplash-theme-ubuntu (0.12) feisty; urgency=low
 

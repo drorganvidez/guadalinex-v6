@@ -1,0 +1,1138 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.3.7: http://docutils.sourceforge.net/" />
+<title>PySyck: Python bindings for the Syck YAML parser and emitter</title>
+<meta name="author" content="Kirill Simonov" />
+<style type="text/css">
+
+/*
+:Author: David Goodger
+:Contact: goodger@users.sourceforge.net
+:Date: $Date: 2004/12/22 19:03:27 $
+:Version: $Revision: 1.45 $
+:Copyright: This stylesheet has been placed in the public domain.
+
+Default cascading style sheet for the HTML output of Docutils.
+*/
+
+/* "! important" is used here to override other ``margin-top`` and
+   ``margin-bottom`` styles that are later in the stylesheet or 
+   more specific.  See <http://www.w3.org/TR/CSS1#the-cascade>. */
+.first {
+  margin-top: 0 ! important }
+
+.last {
+  margin-bottom: 0 ! important }
+
+.hidden {
+  display: none }
+
+a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+blockquote.epigraph {
+  margin: 2em 5em ; }
+
+dl.docutils dd {
+  margin-bottom: 0.5em }
+
+/* Uncomment (and remove this text!) to get bold-faced definition list terms
+dl.docutils dt {
+  font-weight: bold }
+*/
+
+div.abstract {
+  margin: 2em 5em }
+
+div.abstract p.topic-title {
+  font-weight: bold ;
+  text-align: center }
+
+div.admonition, div.attention, div.caution, div.danger, div.error,
+div.hint, div.important, div.note, div.tip, div.warning {
+  margin: 2em ;
+  border: medium outset ;
+  padding: 1em }
+
+div.admonition p.admonition-title, div.hint p.admonition-title,
+div.important p.admonition-title, div.note p.admonition-title,
+div.tip p.admonition-title {
+  font-weight: bold ;
+  font-family: sans-serif }
+
+div.attention p.admonition-title, div.caution p.admonition-title,
+div.danger p.admonition-title, div.error p.admonition-title,
+div.warning p.admonition-title {
+  color: red ;
+  font-weight: bold ;
+  font-family: sans-serif }
+
+/* Uncomment (and remove this text!) to get reduced vertical space in
+   compound paragraphs.
+div.compound .compound-first, div.compound .compound-middle {
+  margin-bottom: 0.5em }
+
+div.compound .compound-last, div.compound .compound-middle {
+  margin-top: 0.5em }
+*/
+
+div.dedication {
+  margin: 2em 5em ;
+  text-align: center ;
+  font-style: italic }
+
+div.dedication p.topic-title {
+  font-weight: bold ;
+  font-style: normal }
+
+div.figure {
+  margin-left: 2em }
+
+div.footer, div.header {
+  font-size: smaller }
+
+div.line-block {
+  display: block ;
+  margin-top: 1em ;
+  margin-bottom: 1em }
+
+div.line-block div.line-block {
+  margin-top: 0 ;
+  margin-bottom: 0 ;
+  margin-left: 1.5em }
+
+div.sidebar {
+  margin-left: 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+div.system-messages {
+  margin: 5em }
+
+div.system-messages h1 {
+  color: red }
+
+div.system-message {
+  border: medium outset ;
+  padding: 1em }
+
+div.system-message p.system-message-title {
+  color: red ;
+  font-weight: bold }
+
+div.topic {
+  margin: 2em }
+
+h1.title {
+  text-align: center }
+
+h2.subtitle {
+  text-align: center }
+
+hr.docutils {
+  width: 75% }
+
+ol.simple, ul.simple {
+  margin-bottom: 1em }
+
+ol.arabic {
+  list-style: decimal }
+
+ol.loweralpha {
+  list-style: lower-alpha }
+
+ol.upperalpha {
+  list-style: upper-alpha }
+
+ol.lowerroman {
+  list-style: lower-roman }
+
+ol.upperroman {
+  list-style: upper-roman }
+
+p.attribution {
+  text-align: right ;
+  margin-left: 50% }
+
+p.caption {
+  font-style: italic }
+
+p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+p.label {
+  white-space: nowrap }
+
+p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+p.topic-title {
+  font-weight: bold }
+
+pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font-family: serif ;
+  font-size: 100% }
+
+pre.line-block {
+  font-family: serif ;
+  font-size: 100% }
+
+pre.literal-block, pre.doctest-block {
+  margin-left: 2em ;
+  margin-right: 2em ;
+  background-color: #eeeeee }
+
+span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+span.interpreted {
+  font-family: sans-serif }
+
+span.option {
+  white-space: nowrap }
+
+span.option-argument {
+  font-style: italic }
+
+span.pre {
+  white-space: pre }
+
+span.problematic {
+  color: red }
+
+table.citation {
+  border-left: solid thin gray }
+
+table.docinfo {
+  margin: 2em 4em }
+
+table.docutils {
+  margin-top: 0.5em ;
+  margin-bottom: 0.5em }
+
+table.footnote {
+  border-left: solid thin black }
+
+table.docutils td, table.docutils th,
+table.docinfo td, table.docinfo th {
+  padding-left: 0.5em ;
+  padding-right: 0.5em ;
+  vertical-align: top }
+
+th.docinfo-name, th.field-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap }
+
+h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+tt.docutils {
+  background-color: #eeeeee }
+
+ul.auto-toc {
+  list-style-type: none }
+
+</style>
+</head>
+<body>
+<div class="document" id="pysyck-python-bindings-for-the-syck-yaml-parser-and-emitter">
+<h1 class="title">PySyck: Python bindings for the Syck YAML parser and emitter</h1>
+<table class="docinfo" frame="void" rules="none">
+<col class="docinfo-name" />
+<col class="docinfo-content" />
+<tbody valign="top">
+<tr><th class="docinfo-name">Author:</th>
+<td>Kirill Simonov</td></tr>
+<tr><th class="docinfo-name">Contact:</th>
+<td><a class="first last reference" href="mailto:xi&#64;resolvent.net">xi&#64;resolvent.net</a></td></tr>
+<tr class="field"><th class="docinfo-name">Web site:</th><td class="field-body"><a class="reference" href="http://pyyaml.org/wiki/PySyck">http://pyyaml.org/wiki/PySyck</a></td>
+</tr>
+</tbody>
+</table>
+<div class="contents topic" id="contents">
+<p class="topic-title first"><a name="contents">Contents</a></p>
+<ul class="simple">
+<li><a class="reference" href="#overview" id="id1" name="id1">Overview</a></li>
+<li><a class="reference" href="#requirements" id="id2" name="id2">Requirements</a></li>
+<li><a class="reference" href="#installation" id="id3" name="id3">Installation</a></li>
+<li><a class="reference" href="#usage" id="id4" name="id4">Usage</a><ul>
+<li><a class="reference" href="#quick-example" id="id5" name="id5">Quick Example</a></li>
+<li><a class="reference" href="#yaml-syntax" id="id6" name="id6">YAML syntax</a></li>
+<li><a class="reference" href="#common-tasks" id="id7" name="id7">Common Tasks</a><ul>
+<li><a class="reference" href="#import-the-module" id="id8" name="id8">Import the module</a></li>
+<li><a class="reference" href="#load-a-document-from-a-string" id="id9" name="id9">Load a document from a string</a></li>
+<li><a class="reference" href="#load-a-document-from-a-file" id="id10" name="id10">Load a document from a file</a></li>
+<li><a class="reference" href="#convert-a-python-object-to-a-yaml-document" id="id11" name="id11">Convert a Python object to a YAML document</a></li>
+<li><a class="reference" href="#dump-a-python-object-to-a-yaml-stream" id="id12" name="id12">Dump a Python object to a YAML stream</a></li>
+<li><a class="reference" href="#format-the-output-yaml-stream" id="id13" name="id13">Format the output YAML stream</a></li>
+<li><a class="reference" href="#load-several-documents-from-a-yaml-stream" id="id14" name="id14">Load several documents from a YAML stream</a></li>
+<li><a class="reference" href="#create-several-documents-in-a-yaml-stream" id="id15" name="id15">Create several documents in a YAML stream</a></li>
+<li><a class="reference" href="#construct-a-representation-tree-of-a-yaml-document" id="id16" name="id16">Construct a representation tree of a YAML document</a></li>
+<li><a class="reference" href="#convert-a-representation-tree-to-a-yaml-document" id="id17" name="id17">Convert a representation tree to a YAML document</a></li>
+<li><a class="reference" href="#use-pysyck-as-a-pickle-replacement" id="id18" name="id18">Use PySyck as a pickle replacement</a></li>
+<li><a class="reference" href="#use-pysyck-to-display-the-structure-of-a-complex-object" id="id19" name="id19">Use PySyck to display the structure of a complex object</a></li>
+<li><a class="reference" href="#use-pysyck-to-display-a-yaml-representation-graph" id="id20" name="id20">Use PySyck to display a YAML representation graph</a></li>
+<li><a class="reference" href="#use-python-specific-tags-in-yaml-documents" id="id21" name="id21">Use Python-specific tags in YAML documents</a></li>
+<li><a class="reference" href="#use-python-specific-tags-to-construct-functions-or-classes" id="id22" name="id22">Use Python-specific tags to construct functions or classes</a></li>
+<li><a class="reference" href="#use-python-specific-tags-to-construct-python-objects" id="id23" name="id23">Use Python-specific tags to construct Python objects</a></li>
+<li><a class="reference" href="#use-application-specific-tags" id="id24" name="id24">Use application specific tags</a></li>
+</ul>
+</li>
+<li><a class="reference" href="#reference" id="id25" name="id25">Reference</a><ul>
+<li><a class="reference" href="#functions" id="id26" name="id26">Functions</a></li>
+<li><a class="reference" href="#exceptions" id="id27" name="id27">Exceptions</a></li>
+<li><a class="reference" href="#nodes" id="id28" name="id28">Nodes</a></li>
+<li><a class="reference" href="#parser" id="id29" name="id29">Parser</a></li>
+<li><a class="reference" href="#emitter" id="id30" name="id30">Emitter</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference" href="#development-and-bug-reports" id="id31" name="id31">Development and Bug Reports</a></li>
+<li><a class="reference" href="#known-bugs" id="id32" name="id32">Known Bugs</a></li>
+<li><a class="reference" href="#history" id="id33" name="id33">History</a></li>
+<li><a class="reference" href="#author-and-copyright" id="id34" name="id34">Author and Copyright</a></li>
+</ul>
+</div>
+<div class="section" id="overview">
+<h1><a class="toc-backref" href="#id1" name="overview">Overview</a></h1>
+<p><a class="reference" href="http://yaml.org/">YAML</a> is a data serialization format designed for human readability and
+interaction with scripting languages.</p>
+<p><a class="reference" href="http://whytheluckystiff.net/syck/">Syck</a> is an extension for reading and writing YAML in scripting languages. Syck
+provides bindings to the <a class="reference" href="http://python.org/">Python</a> programming language, but they are somewhat
+limited and leak memory.</p>
+<p><a class="reference" href="http://pyyaml.org/wiki/PySyck">PySyck</a> is aimed to update the current Python bindings for Syck. The new
+bindings provide a wrapper for the Syck emitter and give access to YAML
+representation graphs.</p>
+<p><a class="reference" href="http://pyyaml.org/wiki/PySyck">PySyck</a> may be used for various tasks, in particular, as a replacement of the
+module <a class="reference" href="http://docs.python.org/lib/module-pickle.html">pickle</a>.</p>
+</div>
+<div class="section" id="requirements">
+<h1><a class="toc-backref" href="#id2" name="requirements">Requirements</a></h1>
+<p>PySyck requires Syck 0.55 or higher and Python 2.3 or higher.</p>
+</div>
+<div class="section" id="installation">
+<h1><a class="toc-backref" href="#id3" name="installation">Installation</a></h1>
+<p>Please note that Syck 0.55 or higher must be installed. We recommend to use
+<a class="reference" href="http://whytheluckystiff.net/syck/">Syck</a> from <a class="reference" href="http://code.whytheluckystiff.net/svn/syck/trunk">the Syck SVN repository</a> together with <a class="reference" href="http://pyyaml.org/wiki/SyckPatches">my Syck patches</a>. For
+your convenience, a tarball is provided:
+<a class="reference" href="http://pyyaml.org/download/pysyck/syck-0.61+svn232+patches.tar.gz">http://pyyaml.org/download/pysyck/syck-0.61+svn232+patches.tar.gz</a>.</p>
+<p>If you install PySyck from source, unpack the source tarball and type:</p>
+<pre class="literal-block">
+$ python setup.py install
+</pre>
+<p>Windows binaries for Python 2.3 and 2.4 are provided. Windows binaries are
+linked against <a class="reference" href="http://whytheluckystiff.net/syck/">Syck</a> statically.</p>
+</div>
+<div class="section" id="usage">
+<h1><a class="toc-backref" href="#id4" name="usage">Usage</a></h1>
+<p>The documentation is still rough and incomplete. See <a class="reference" href="http://pyyaml.org/browser/pysyck/">the source code</a> for
+more information.</p>
+<div class="section" id="quick-example">
+<h2><a class="toc-backref" href="#id5" name="quick-example">Quick Example</a></h2>
+<pre class="literal-block">
+&gt;&gt;&gt; from syck import *
+&gt;&gt;&gt; print load(&quot;&quot;&quot;
+... - foo
+... - bar
+... - baz
+... &quot;&quot;&quot;)
+['foo', 'bar', 'baz']
+&gt;&gt;&gt; print dump(['foo', 'bar', 'baz'])
+---
+- foo
+- bar
+- baz
+</pre>
+<p>Important notice: Do not load a YAML stream from any untrusted source.
+Like <tt class="docutils literal"><span class="pre">pickle.load</span></tt>, <tt class="docutils literal"><span class="pre">syck.load</span></tt> may call an arbitrary Python function.</p>
+</div>
+<div class="section" id="yaml-syntax">
+<h2><a class="toc-backref" href="#id6" name="yaml-syntax">YAML syntax</a></h2>
+<p>We do not describe the YAML syntax here. Please check <a class="reference" href="http://yaml.org/">http://yaml.org/</a> for the
+reference.</p>
+<p>In addition to the tags defined in <a class="reference" href="http://yaml.org/type/index.html">the YAML types repository</a>, PySyck understands
+the following Python-specific tags:</p>
+<ul class="simple">
+<li><tt class="docutils literal"><span class="pre">tag:python.yaml.org,2002:none</span></tt>,</li>
+<li><tt class="docutils literal"><span class="pre">tag:python.yaml.org,2002:bool</span></tt>,</li>
+<li><tt class="docutils literal"><span class="pre">tag:python.yaml.org,2002:int</span></tt>,</li>
+<li><tt class="docutils literal"><span class="pre">tag:python.yaml.org,2002:float</span></tt>,</li>
+<li><tt class="docutils literal"><span class="pre">tag:python.yaml.org,2002:str</span></tt>,</li>
+<li><tt class="docutils literal"><span class="pre">tag:python.yaml.org,2002:unicode</span></tt>,</li>
+<li><tt class="docutils literal"><span class="pre">tag:python.yaml.org,2002:list</span></tt>,</li>
+<li><tt class="docutils literal"><span class="pre">tag:python.yaml.org,2002:tuple</span></tt>,</li>
+<li><tt class="docutils literal"><span class="pre">tag:python.yaml.org,2002:dict</span></tt>,</li>
+<li><tt class="docutils literal"><span class="pre">tag:python.yaml.org,2002:name:...</span></tt>,</li>
+<li><tt class="docutils literal"><span class="pre">tag:python.yaml.org,2002:object:...</span></tt>,</li>
+<li><tt class="docutils literal"><span class="pre">tag:python.yaml.org,2002:new:...</span></tt>,</li>
+<li><tt class="docutils literal"><span class="pre">tag:python.yaml.org,2002:apply:...</span></tt>.</li>
+</ul>
+<p>Most of these tags are self-explanatory. The tags <tt class="docutils literal"><span class="pre">!python/name:...</span></tt>,
+<tt class="docutils literal"><span class="pre">!python/object:...</span></tt>, <tt class="docutils literal"><span class="pre">!python/new:...</span></tt>, and <tt class="docutils literal"><span class="pre">!python/apply:...</span></tt> are used
+for constructing Python functions, classes, and objects. See the sections <a class="reference" href="#use-python-specific-tags-in-yaml-documents">Use
+Python-specific tags in YAML documents</a> and <a class="reference" href="#use-python-specific-tags-to-construct-python-objects">Use Python-specific tags to
+construct Python objects</a> for some examples.</p>
+</div>
+<div class="section" id="common-tasks">
+<h2><a class="toc-backref" href="#id7" name="common-tasks">Common Tasks</a></h2>
+<div class="section" id="import-the-module">
+<h3><a class="toc-backref" href="#id8" name="import-the-module">Import the module</a></h3>
+<pre class="literal-block">
+&gt;&gt;&gt; from syck import *
+</pre>
+<p>or</p>
+<pre class="literal-block">
+&gt;&gt;&gt; import syck
+</pre>
+</div>
+<div class="section" id="load-a-document-from-a-string">
+<h3><a class="toc-backref" href="#id9" name="load-a-document-from-a-string">Load a document from a string</a></h3>
+<pre class="literal-block">
+&gt;&gt;&gt; source = &quot;...&quot;
+&gt;&gt;&gt; object = load(source)
+</pre>
+</div>
+<div class="section" id="load-a-document-from-a-file">
+<h3><a class="toc-backref" href="#id10" name="load-a-document-from-a-file">Load a document from a file</a></h3>
+<pre class="literal-block">
+&gt;&gt;&gt; source = file(..., 'r')
+&gt;&gt;&gt; object = load(source)
+</pre>
+</div>
+<div class="section" id="convert-a-python-object-to-a-yaml-document">
+<h3><a class="toc-backref" href="#id11" name="convert-a-python-object-to-a-yaml-document">Convert a Python object to a YAML document</a></h3>
+<pre class="literal-block">
+&gt;&gt;&gt; object = ...
+&gt;&gt;&gt; document = dump(object)
+</pre>
+</div>
+<div class="section" id="dump-a-python-object-to-a-yaml-stream">
+<h3><a class="toc-backref" href="#id12" name="dump-a-python-object-to-a-yaml-stream">Dump a Python object to a YAML stream</a></h3>
+<pre class="literal-block">
+&gt;&gt;&gt; object = ...
+&gt;&gt;&gt; output = file(..., 'w')
+&gt;&gt;&gt; dump(object, output)
+</pre>
+</div>
+<div class="section" id="format-the-output-yaml-stream">
+<h3><a class="toc-backref" href="#id13" name="format-the-output-yaml-stream">Format the output YAML stream</a></h3>
+<pre class="literal-block">
+&gt;&gt;&gt; object = ...
+&gt;&gt;&gt; output = file(..., 'w')
+&gt;&gt;&gt; dump(object, output,
+...     headless=False, use_header=False, use_version=False,
+...     explicit_typing=True, style=None, best_width=80, indent=2)
+</pre>
+</div>
+<div class="section" id="load-several-documents-from-a-yaml-stream">
+<h3><a class="toc-backref" href="#id14" name="load-several-documents-from-a-yaml-stream">Load several documents from a YAML stream</a></h3>
+<pre class="literal-block">
+&gt;&gt;&gt; source = ...
+&gt;&gt;&gt; objects = load_documents(source)
+&gt;&gt;&gt; for object in objects:
+...     # ...
+</pre>
+</div>
+<div class="section" id="create-several-documents-in-a-yaml-stream">
+<h3><a class="toc-backref" href="#id15" name="create-several-documents-in-a-yaml-stream">Create several documents in a YAML stream</a></h3>
+<pre class="literal-block">
+&gt;&gt;&gt; objects = [...]
+&gt;&gt;&gt; output = file(..., 'w')
+&gt;&gt;&gt; dump_documents(objects, output)
+</pre>
+</div>
+<div class="section" id="construct-a-representation-tree-of-a-yaml-document">
+<h3><a class="toc-backref" href="#id16" name="construct-a-representation-tree-of-a-yaml-document">Construct a representation tree of a YAML document</a></h3>
+<pre class="literal-block">
+&gt;&gt;&gt; source = ...
+&gt;&gt;&gt; root_node = parse(source)
+</pre>
+</div>
+<div class="section" id="convert-a-representation-tree-to-a-yaml-document">
+<h3><a class="toc-backref" href="#id17" name="convert-a-representation-tree-to-a-yaml-document">Convert a representation tree to a YAML document</a></h3>
+<pre class="literal-block">
+&gt;&gt;&gt; scalar_node = Scalar('...', tag='tag:...',
+...     style='...', indent=.., width=..)
+&gt;&gt;&gt; sequence_node = Seq(list_of_nodes, tag='tag:...', inline=..)
+&gt;&gt;&gt; mapping_node = Map(dictionary_of_nodes, tag='tag:...', inline=..)
+&gt;&gt;&gt; root_node = ...
+&gt;&gt;&gt; output = file(..., 'w')
+&gt;&gt;&gt; emit(root_node, output)
+</pre>
+</div>
+<div class="section" id="use-pysyck-as-a-pickle-replacement">
+<h3><a class="toc-backref" href="#id18" name="use-pysyck-as-a-pickle-replacement">Use PySyck as a pickle replacement</a></h3>
+<pre class="literal-block">
+&gt;&gt;&gt; object = ...
+&gt;&gt;&gt; stream = ...
+&gt;&gt;&gt; dump(object, stream)
+
+&gt;&gt;&gt; stream = ...
+&gt;&gt;&gt; object = load(stream)
+</pre>
+</div>
+<div class="section" id="use-pysyck-to-display-the-structure-of-a-complex-object">
+<h3><a class="toc-backref" href="#id19" name="use-pysyck-to-display-the-structure-of-a-complex-object">Use PySyck to display the structure of a complex object</a></h3>
+<pre class="literal-block">
+&gt;&gt;&gt; object = ...
+&gt;&gt;&gt; print dump(object)
+</pre>
+</div>
+<div class="section" id="use-pysyck-to-display-a-yaml-representation-graph">
+<h3><a class="toc-backref" href="#id20" name="use-pysyck-to-display-a-yaml-representation-graph">Use PySyck to display a YAML representation graph</a></h3>
+<pre class="literal-block">
+&gt;&gt;&gt; source = ...
+&gt;&gt;&gt; node = parse(source)
+&gt;&gt;&gt; print dump(node)
+</pre>
+</div>
+<div class="section" id="use-python-specific-tags-in-yaml-documents">
+<h3><a class="toc-backref" href="#id21" name="use-python-specific-tags-in-yaml-documents">Use Python-specific tags in YAML documents</a></h3>
+<pre class="literal-block">
+--- %YAML:1.0
+- !python/none ''       # You may also use '!null'.
+- !python/bool 'False'  # You may also use '!bool'.
+- !python/int '123'     # You may also use '!int'.
+- !python/long '1234567890'
+- !python/float '123.456789'  # Also '!float'.
+- !python/str 'a string'      # Also '!str'.
+- !python/unicode 'a unicode string encoded in utf-8'
+- !python/list [1, 2, 3]      # The same as '!seq' or no tag.
+- !python/tuple [1, 2, 3]
+- !python/dict { 1: foo, 2: bar } # The same as '!map' or no tag.
+</pre>
+</div>
+<div class="section" id="use-python-specific-tags-to-construct-functions-or-classes">
+<h3><a class="toc-backref" href="#id22" name="use-python-specific-tags-to-construct-functions-or-classes">Use Python-specific tags to construct functions or classes</a></h3>
+<pre class="literal-block">
+--- %YAML:1.0
+- !python/name:package.module.function_name ''
+- !python/name:package.module.class_name ''
+</pre>
+</div>
+<div class="section" id="use-python-specific-tags-to-construct-python-objects">
+<h3><a class="toc-backref" href="#id23" name="use-python-specific-tags-to-construct-python-objects">Use Python-specific tags to construct Python objects</a></h3>
+<pre class="literal-block">
+--- %YAML:1.0
+- !python/object:package.module.type
+  attribute1: value1
+  attribute2: value2
+  # ...
+- !python/new:package.module.type
+  - parameter1
+  - parameter2
+  # ...
+- !python/new:package.module.type
+  args: [parameter1, parameter2, ...]
+  kwds: {kwd1: val1, kwd2: val2, ...}
+  state: {attr1: val1, attr2: val2, ...}
+  # ...
+- !python/apply:package.module.function
+  - parameter1
+  - parameter2
+  # ...
+- !python/apply:package.module.function
+  args: [parameter1, parameter2, ...]
+  kwds: {kwd1: val1, kwd2: val2, ...}
+  state: {attr1: val1, attr2: val2, ...}
+  # ...
+</pre>
+</div>
+<div class="section" id="use-application-specific-tags">
+<h3><a class="toc-backref" href="#id24" name="use-application-specific-tags">Use application specific tags</a></h3>
+<pre class="literal-block">
+&gt;&gt;&gt; class MyClass:
+...   # ...
+
+&gt;&gt;&gt; class MyLoader(Loader):
+...     def construct_private_my_tag(self, node):
+...         # ...
+...         return MyClass(...)
+
+&gt;&gt;&gt; class MyDumper(Dumper):
+...     def represent_MyDumper(self, object):
+...         # ...
+...         return Map(...)
+
+&gt;&gt;&gt; source = &quot;&quot;&quot;--- !!my_tag { ... }&quot;&quot;&quot;
+&gt;&gt;&gt; my_instance = load(source, Loader=MyLoader)
+
+&gt;&gt;&gt; my_instance = MyClass(...)
+&gt;&gt;&gt; output = dump(my_instance, Dumper=MyDumper)
+</pre>
+</div>
+</div>
+<div class="section" id="reference">
+<h2><a class="toc-backref" href="#id25" name="reference">Reference</a></h2>
+<div class="section" id="functions">
+<h3><a class="toc-backref" href="#id26" name="functions">Functions</a></h3>
+<dl class="docutils">
+<dt><tt class="docutils literal"><span class="pre">load</span></tt> <span class="classifier-delimiter">:</span> <span class="classifier">function</span></dt>
+<dd><p class="first"><tt class="docutils literal"><span class="pre">load(source,</span> <span class="pre">Loader=Loader,</span> <span class="pre">**parameters)</span></tt></p>
+<p>The function <tt class="docutils literal"><span class="pre">load()</span></tt> returns a Python object corresponding to the first
+document in the source. If the source is empty, <tt class="docutils literal"><span class="pre">load()</span></tt> returns <tt class="docutils literal"><span class="pre">None</span></tt>.
+<tt class="docutils literal"><span class="pre">source</span></tt> must be a string or a file-like object that has the method
+<tt class="docutils literal"><span class="pre">read(max_length)</span></tt>.</p>
+<p>By default, the function <tt class="docutils literal"><span class="pre">load()</span></tt> uses an instance of the class <tt class="docutils literal"><span class="pre">Loader</span></tt>
+for parsing. You may use another class or pass additional parameters to the
+class constructor. See the section <a class="reference" href="#parser">Parser</a> for more details.</p>
+<p>Example:</p>
+<pre class="last literal-block">
+&gt;&gt;&gt; load(&quot;&quot;&quot;
+... - foo
+... - bar
+... - baz
+... &quot;&quot;&quot;)
+['foo', 'bar', 'baz']
+</pre>
+</dd>
+<dt><tt class="docutils literal"><span class="pre">parse</span></tt> <span class="classifier-delimiter">:</span> <span class="classifier">function</span></dt>
+<dd><p class="first"><tt class="docutils literal"><span class="pre">parse(source,</span> <span class="pre">Loader=Loader,</span> <span class="pre">**parameters)</span></tt></p>
+<p>The function <tt class="docutils literal"><span class="pre">parse()</span></tt> parses the source and returns a representation tree
+of the first document. <tt class="docutils literal"><span class="pre">source</span></tt> must be a string or a file-like object
+that has the method <tt class="docutils literal"><span class="pre">read(max_length)</span></tt>.</p>
+<p>By default, the function <tt class="docutils literal"><span class="pre">parse()</span></tt> uses an instance of the class <tt class="docutils literal"><span class="pre">Loader</span></tt>
+for parsing. You may use another class or pass additional parameters to the
+class constructor. See the section <a class="reference" href="#parser">Parser</a> for more details.</p>
+<p>Example:</p>
+<pre class="last literal-block">
+&gt;&gt;&gt; parse(&quot;&quot;&quot;
+... - foo
+... - bar
+... - baz
+... &quot;&quot;&quot;)
+&lt;_syck.Seq object at 0xb7a3f2fc&gt;
+</pre>
+</dd>
+<dt><tt class="docutils literal"><span class="pre">load_documents</span></tt> <span class="classifier-delimiter">:</span> <span class="classifier">function</span></dt>
+<dd><p class="first"><tt class="docutils literal"><span class="pre">load_documents(source,</span> <span class="pre">Loader=Loader,</span> <span class="pre">**parameters)</span></tt></p>
+<p>The function <tt class="docutils literal"><span class="pre">load_documents()</span></tt> parses the source and an iterator.  The
+iterator produces Python objects corresponding the documents of the source
+stream. <tt class="docutils literal"><span class="pre">source</span></tt> must be a string or a file-like object that has the method
+<tt class="docutils literal"><span class="pre">read(max_length)</span></tt>.</p>
+<p>By default, the function <tt class="docutils literal"><span class="pre">load_documents()</span></tt> uses an instance of the class
+<tt class="docutils literal"><span class="pre">Loader</span></tt> for parsing. You may use another class or pass additional
+parameters to the class constructor. See the section <a class="reference" href="#parser">Parser</a> for more
+details.</p>
+<p>Example:</p>
+<pre class="last literal-block">
+&gt;&gt;&gt; source = &quot;&quot;&quot;
+... --- &gt;
+... This is the
+... first document.
+... --- &gt;
+... This is the
+... next document.
+... --- &gt;
+... This is the
+... last document.
+... &quot;&quot;&quot;
+&gt;&gt;&gt; for object in load_documents(source): print object
+...
+This is the first document.
+
+This is the next document.
+
+This is the last document.
+</pre>
+</dd>
+<dt><tt class="docutils literal"><span class="pre">parse_documents</span></tt> <span class="classifier-delimiter">:</span> <span class="classifier">function</span></dt>
+<dd><p class="first"><tt class="docutils literal"><span class="pre">parse_documents(source,</span> <span class="pre">Loader=Loader,</span> <span class="pre">**parameters)</span></tt></p>
+<p class="last">The function <tt class="docutils literal"><span class="pre">parse_documents()</span></tt> is similar to <tt class="docutils literal"><span class="pre">load_documents()</span></tt>, but
+produces representation graphs for all documents in the source.</p>
+</dd>
+<dt><tt class="docutils literal"><span class="pre">dump</span></tt> <span class="classifier-delimiter">:</span> <span class="classifier">function</span></dt>
+<dd><p class="first"><tt class="docutils literal"><span class="pre">dump(object,</span> <span class="pre">output=None,</span> <span class="pre">Dumper=Dumper,</span> <span class="pre">**parameters)</span></tt></p>
+<p>The function <tt class="docutils literal"><span class="pre">dump()</span></tt> converts <tt class="docutils literal"><span class="pre">object</span></tt> to a representation graph
+and write it to <tt class="docutils literal"><span class="pre">output</span></tt>. <tt class="docutils literal"><span class="pre">output</span></tt> must be <tt class="docutils literal"><span class="pre">None</span></tt> or a file-like
+object that has the method <tt class="docutils literal"><span class="pre">write(data)</span></tt>. If <tt class="docutils literal"><span class="pre">output</span></tt> is <tt class="docutils literal"><span class="pre">None</span></tt>,
+<tt class="docutils literal"><span class="pre">dump()</span></tt> returns the generated document.</p>
+<p>By default, the function <tt class="docutils literal"><span class="pre">dump()</span></tt> uses an instance of the class <tt class="docutils literal"><span class="pre">Dumper</span></tt>
+for emitting. You may use another class or pass additional parameters to the
+class constructor. See the section <a class="reference" href="#emitter">Emitter</a> for more details.</p>
+<p>Example:</p>
+<pre class="last literal-block">
+&gt;&gt;&gt; object = ['foo', 'bar', ['baz']]
+&gt;&gt;&gt; dump(object, sys.stdout)
+---
+- foo
+- bar
+- - baz
+&gt;&gt;&gt; print dump(object)
+---
+- foo
+- bar
+- - baz
+
+&gt;&gt;&gt; print dump(object, use_version=True, indent=5)
+--- %YAML:1.0
+- foo
+- bar
+-    - baz
+</pre>
+</dd>
+<dt><tt class="docutils literal"><span class="pre">emit</span></tt> <span class="classifier-delimiter">:</span> <span class="classifier">function</span></dt>
+<dd><p class="first"><tt class="docutils literal"><span class="pre">emit(node,</span> <span class="pre">output=None,</span> <span class="pre">Dumper=Dumper,</span> <span class="pre">**parameters)</span></tt></p>
+<p>The function <tt class="docutils literal"><span class="pre">emit()</span></tt> write the representation graph to the output stream.
+<tt class="docutils literal"><span class="pre">output</span></tt> must be <tt class="docutils literal"><span class="pre">None</span></tt> or a file-like object that has the method
+<tt class="docutils literal"><span class="pre">write(data)</span></tt>. If <tt class="docutils literal"><span class="pre">output</span></tt> is <tt class="docutils literal"><span class="pre">None</span></tt>, <tt class="docutils literal"><span class="pre">emit()</span></tt> returns the generated
+document.</p>
+<p>By default, the function <tt class="docutils literal"><span class="pre">emit()</span></tt> uses an instance of the class <tt class="docutils literal"><span class="pre">Dumper</span></tt>
+for emitting. You may use another class or pass additional parameters to the
+class constructor. See the section <a class="reference" href="#emitter">Emitter</a> for more details.</p>
+<p>Example:</p>
+<pre class="last literal-block">
+&gt;&gt;&gt; foo = Scalar('a string')
+&gt;&gt;&gt; bar = Scalar('a unicode string', tag=&quot;tag:python.yaml.org,2002:unicode&quot;)
+&gt;&gt;&gt; baz = Scalar('12345', tag=&quot;tag:yaml.org,2002:int&quot;)
+&gt;&gt;&gt; seq = Seq([foo, bar, baz], tag=&quot;tag:python.taml.org,2002:tuple&quot;)
+&gt;&gt;&gt; print emit(seq, use_version=True)
+--- %YAML:1.0 !python.taml.org,2002/tuple
+- a string
+- !python/unicode a unicode string
+- 12345
+</pre>
+</dd>
+<dt><tt class="docutils literal"><span class="pre">dump_documents</span></tt> <span class="classifier-delimiter">:</span> <span class="classifier">function</span></dt>
+<dd><p class="first"><tt class="docutils literal"><span class="pre">dump_documents(objects,</span> <span class="pre">output=None,</span> <span class="pre">Dumper=Dumper,</span> <span class="pre">**parameters)</span></tt></p>
+<p>The function <tt class="docutils literal"><span class="pre">dump_documents()</span></tt> takes a list of objects and converts
+each object to a YAML document. If <tt class="docutils literal"><span class="pre">output</span></tt> is <tt class="docutils literal"><span class="pre">None</span></tt>, it returns
+the produced documents. Otherwise it writes down them to <tt class="docutils literal"><span class="pre">output</span></tt>,
+which must be a file-like object with the method <tt class="docutils literal"><span class="pre">write(data)</span></tt>.</p>
+<p>By default, the function <tt class="docutils literal"><span class="pre">dump_documents()</span></tt> uses an instance of the class
+<tt class="docutils literal"><span class="pre">Dumper</span></tt> for emitting. You may use another class or pass additional
+parameters to the class constructor. See the section <a class="reference" href="#emitter">Emitter</a> for more
+details.</p>
+<p>Example:</p>
+<pre class="last literal-block">
+&gt;&gt;&gt; print dump_documents(['foo', 'bar', 'baz'])
+--- foo
+--- bar
+--- baz
+</pre>
+</dd>
+<dt><tt class="docutils literal"><span class="pre">emit_documents</span></tt> <span class="classifier-delimiter">:</span> <span class="classifier">function</span></dt>
+<dd><p class="first"><tt class="docutils literal"><span class="pre">emit_documents(nodes,</span> <span class="pre">output=None,</span> <span class="pre">Dumper=Dumper,</span> <span class="pre">**parameters)</span></tt></p>
+<p class="last">The function <tt class="docutils literal"><span class="pre">emit_documents()</span></tt> is similar to <tt class="docutils literal"><span class="pre">dump_documents()</span></tt>, but
+it requires a list of representation graphs.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="exceptions">
+<h3><a class="toc-backref" href="#id27" name="exceptions">Exceptions</a></h3>
+<dl class="docutils">
+<dt><tt class="docutils literal"><span class="pre">error</span></tt> <span class="classifier-delimiter">:</span> <span class="classifier">exception</span></dt>
+<dd><p class="first">This exception is raised by the Syck parser when it detects a syntax error.</p>
+<p>The attribute <tt class="docutils literal"><span class="pre">args</span></tt> of the exception is a triple: <em>message</em>, <em>row</em>,
+<em>column</em>.</p>
+<p>Example:</p>
+<pre class="last literal-block">
+&gt;&gt;&gt; load(&quot;&quot;&quot;---
+... - foo
+... - '''
+... - bar
+... &quot;&quot;&quot;)
+Traceback (most recent call last):
+  File &quot;&lt;stdin&gt;&quot;, line 1, in ?
+  File &quot;build/lib.linux-i686-2.3/syck/loaders.py&quot;, line 384, in load
+  File &quot;build/lib.linux-i686-2.3/syck/loaders.py&quot;, line 42, in load
+_syck.error: ('syntax error', 4, 2)
+</pre>
+</dd>
+</dl>
+</div>
+<div class="section" id="nodes">
+<h3><a class="toc-backref" href="#id28" name="nodes">Nodes</a></h3>
+<p>The following four classes represents nodes in the YAML representation graph:</p>
+<dl class="docutils">
+<dt><tt class="docutils literal"><span class="pre">Node</span></tt> <span class="classifier-delimiter">:</span> <span class="classifier">class</span></dt>
+<dd><tt class="docutils literal"><span class="pre">Node</span></tt> is an abstract class; you cannot create an instance of the class
+<tt class="docutils literal"><span class="pre">Node</span></tt>. <tt class="docutils literal"><span class="pre">Node</span></tt> is the base class of <tt class="docutils literal"><span class="pre">Scalar</span></tt>, <tt class="docutils literal"><span class="pre">Seq</span></tt>, and <tt class="docutils literal"><span class="pre">Map</span></tt>.</dd>
+<dt><tt class="docutils literal"><span class="pre">Scalar</span></tt> <span class="classifier-delimiter">:</span> <span class="classifier">subclass of <tt class="docutils literal"><span class="pre">Node</span></tt></span></dt>
+<dd><tt class="docutils literal"><span class="pre">Scalar</span></tt> represents a scalar node. Its value is a string.</dd>
+<dt><tt class="docutils literal"><span class="pre">Seq</span></tt> <span class="classifier-delimiter">:</span> <span class="classifier">subclass of <tt class="docutils literal"><span class="pre">Node</span></tt></span></dt>
+<dd><tt class="docutils literal"><span class="pre">Seq</span></tt> represents a sequence node. Its value is a list of nodes.</dd>
+<dt><tt class="docutils literal"><span class="pre">Map</span></tt> <span class="classifier-delimiter">:</span> <span class="classifier">subclass of <tt class="docutils literal"><span class="pre">Node</span></tt></span></dt>
+<dd><tt class="docutils literal"><span class="pre">Map</span></tt> represents a mapping node. Its value is a list of pairs or a
+dictionary.</dd>
+</dl>
+<p>All instances of <tt class="docutils literal"><span class="pre">Scalar</span></tt>, <tt class="docutils literal"><span class="pre">Seq</span></tt>, and <tt class="docutils literal"><span class="pre">Map</span></tt> have the following
+attributes:</p>
+<dl class="docutils">
+<dt><tt class="docutils literal"><span class="pre">kind</span></tt> <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
+<dd><tt class="docutils literal"><span class="pre">'scalar'</span></tt>, <tt class="docutils literal"><span class="pre">'seq'</span></tt>, or <tt class="docutils literal"><span class="pre">'map'</span></tt>; read-only.</dd>
+<dt><tt class="docutils literal"><span class="pre">anchor</span></tt> <span class="classifier-delimiter">:</span> <span class="classifier">string or <tt class="docutils literal"><span class="pre">None</span></tt></span></dt>
+<dd>The node anchor.</dd>
+<dt><tt class="docutils literal"><span class="pre">tag</span></tt> <span class="classifier-delimiter">:</span> <span class="classifier">string or <tt class="docutils literal"><span class="pre">None</span></tt></span></dt>
+<dd>The node tag.</dd>
+<dt><tt class="docutils literal"><span class="pre">value</span></tt></dt>
+<dd>The node value. For scalar nodes, it should be a string. For sequence nodes,
+it should be a list. For mapping nodes, it should be a list of pairs or a
+dictionary.</dd>
+</dl>
+<p><tt class="docutils literal"><span class="pre">Scalar</span></tt> instances have additional attributes:</p>
+<dl class="docutils">
+<dt><tt class="docutils literal"><span class="pre">style</span></tt> <span class="classifier-delimiter">:</span> <span class="classifier">string or <tt class="docutils literal"><span class="pre">None</span></tt></span></dt>
+<dd>The node style. Possible values are <tt class="docutils literal"><span class="pre">None</span></tt> (means literal or plain),
+<tt class="docutils literal"><span class="pre">'1quote'</span></tt>, <tt class="docutils literal"><span class="pre">'2quote'</span></tt>, <tt class="docutils literal"><span class="pre">'fold'</span></tt>, <tt class="docutils literal"><span class="pre">'literal'</span></tt>, <tt class="docutils literal"><span class="pre">'plain'</span></tt>.</dd>
+<dt><tt class="docutils literal"><span class="pre">indent</span></tt> <span class="classifier-delimiter">:</span> <span class="classifier">integer</span></dt>
+<dd>The node indentation. <tt class="docutils literal"><span class="pre">0</span></tt> means the default value.</dd>
+<dt><tt class="docutils literal"><span class="pre">width</span></tt> <span class="classifier-delimiter">:</span> <span class="classifier">integer</span></dt>
+<dd>The width of the node field. Longer scalars will be broken on several lines
+to fit the field. <tt class="docutils literal"><span class="pre">0</span></tt> means the default value.</dd>
+<dt><tt class="docutils literal"><span class="pre">chomp</span></tt> <span class="classifier-delimiter">:</span> <span class="classifier">string or <tt class="docutils literal"><span class="pre">None</span></tt></span></dt>
+<dd>The chomping method. Possible values are <tt class="docutils literal"><span class="pre">None</span></tt> (clip), <tt class="docutils literal"><span class="pre">'-'</span></tt> (strip),
+<tt class="docutils literal"><span class="pre">'+'</span></tt> (keep).</dd>
+</dl>
+<p><tt class="docutils literal"><span class="pre">Seq</span></tt> and <tt class="docutils literal"><span class="pre">Map</span></tt> instances have an additional attribute:</p>
+<dl class="docutils">
+<dt><tt class="docutils literal"><span class="pre">inline</span></tt> <span class="classifier-delimiter">:</span> <span class="classifier">boolean</span></dt>
+<dd>The block/flow flag.</dd>
+</dl>
+<p>For example, let us create a representation graph and transform it into a YAML
+stream:</p>
+<pre class="literal-block">
+&gt;&gt;&gt; # Create three scalar nodes:
+&gt;&gt;&gt; foo = Scalar('foo', tag=&quot;tag:example.com,2005:foo&quot;, style='fold',
+...     indent=5)
+&gt;&gt;&gt; bar = Scalar('bar', style='1quote')
+&gt;&gt;&gt; baz = Scalar('baz')
+
+&gt;&gt;&gt; # Create a sequence node:
+&gt;&gt;&gt; seq = Seq([foo, bar, baz], tag=&quot;x-private:seq&quot;)
+
+&gt;&gt;&gt; # Emit it into a YAML stream:
+&gt;&gt;&gt; print emit(seq)
+--- !!seq
+- !example.com,2005/foo &gt;-
+     foo
+- 'bar'
+- baz
+</pre>
+<p>Now let us construct a representation graph from a YAML document:</p>
+<pre class="literal-block">
+&gt;&gt;&gt; # The function 'parse' generates a representation graph:
+&gt;&gt;&gt; root = parse(&quot;&quot;&quot;
+... - foo
+... - bar
+... - baz
+... &quot;&quot;&quot;)
+
+&gt;&gt;&gt; # The object 'root' is a sequence node:
+&gt;&gt;&gt; root
+&lt;_syck.Seq object at 0xb7e124b4&gt;
+
+&gt;&gt;&gt; # We can transform 'root' back into a YAML stream:
+&gt;&gt;&gt; print emit(root)
+---
+- foo
+- bar
+- baz
+
+&gt;&gt;&gt; # We can also display the structure of the representation tree using a
+&gt;&gt;&gt; # clever trick:
+&gt;&gt;&gt; print dump(root)
+--- !python/object:_syck.Seq
+value:
+- !python/object:_syck.Scalar
+  value: foo
+  tag: tag:yaml.org,2002:str
+- !python/object:_syck.Scalar
+  value: bar
+  tag: tag:yaml.org,2002:str
+- !python/object:_syck.Scalar
+  value: baz
+  tag: tag:yaml.org,2002:str
+</pre>
+</div>
+<div class="section" id="parser">
+<h3><a class="toc-backref" href="#id29" name="parser">Parser</a></h3>
+<dl class="docutils">
+<dt><tt class="docutils literal"><span class="pre">Parser</span></tt> <span class="classifier-delimiter">:</span> <span class="classifier">class</span></dt>
+<dd><p class="first">The class <tt class="docutils literal"><span class="pre">Parser</span></tt> is a low-level wrapper of a Syck YAML parser. It can
+generate a representation graph from a YAML stream.</p>
+<p>The class constructor has the following arguments:</p>
+<ul class="simple">
+<li><tt class="docutils literal"><span class="pre">Parser(source,</span> <span class="pre">implicit_typing=True,</span> <span class="pre">taguri_expansion=True)</span></tt>.</li>
+</ul>
+<p>The parameter <tt class="docutils literal"><span class="pre">source</span></tt> is a YAML stream. It must be a string
+or a file-like object. If it is not a string, it should have a
+method named <tt class="docutils literal"><span class="pre">read(max_length)</span></tt> that returns a string.</p>
+<p>It is not recommended to change the default values of the parameters
+<tt class="docutils literal"><span class="pre">implicit_typing</span></tt> and <tt class="docutils literal"><span class="pre">taguri_expansion</span></tt>. See the Syck documentation
+for more details about them.</p>
+<p>The class defines a single method:</p>
+<ul class="simple">
+<li><tt class="docutils literal"><span class="pre">Parser.parse()</span></tt>.</li>
+</ul>
+<p class="last">It parses the source and returns the root node of the corresponding
+representation graph. If the stream is finished, it returns <tt class="docutils literal"><span class="pre">None</span></tt> and
+set the flag <tt class="docutils literal"><span class="pre">eof</span></tt> on.</p>
+</dd>
+<dt><tt class="docutils literal"><span class="pre">GenericLoader</span></tt> <span class="classifier-delimiter">:</span> <span class="classifier">subclass of <tt class="docutils literal"><span class="pre">Parser</span></tt></span></dt>
+<dd><p class="first">The subclass <tt class="docutils literal"><span class="pre">GenericLoader</span></tt> defines two additional methods:</p>
+<ul class="simple">
+<li><tt class="docutils literal"><span class="pre">GenericLoader.load()</span></tt>,</li>
+<li><tt class="docutils literal"><span class="pre">GenericLoader.construct(node)</span></tt>.</li>
+</ul>
+<p class="last">The method <tt class="docutils literal"><span class="pre">load()</span></tt> parses the source and constructs the corresponding
+Python object. To generate an object by a node, <tt class="docutils literal"><span class="pre">load()</span></tt> uses the
+<tt class="docutils literal"><span class="pre">construct()</span></tt> method. The <tt class="docutils literal"><span class="pre">construct()</span></tt> method defined in
+<tt class="docutils literal"><span class="pre">GenericLoader</span></tt> just returns the value of the node: a string, a list,
+or a dictionary.</p>
+</dd>
+</dl>
+<p><tt class="docutils literal"><span class="pre">Loader</span></tt> : subclass of <tt class="docutils literal"><span class="pre">GenericLoader</span></tt></p>
+<blockquote>
+<p><tt class="docutils literal"><span class="pre">Loader</span></tt> redefines the method</p>
+<ul class="simple">
+<li><tt class="docutils literal"><span class="pre">Loader.construct(node)</span></tt>,</li>
+</ul>
+<p>defines an additional method:</p>
+<ul class="simple">
+<li><tt class="docutils literal"><span class="pre">Loader.find_constructor(node)</span></tt>,</li>
+</ul>
+<p>and add many other auxiliary methods for constructing Python objects.</p>
+<p><tt class="docutils literal"><span class="pre">Loader.construct()</span></tt> calls <tt class="docutils literal"><span class="pre">find_constructor()</span></tt> for the given node,
+and uses the returned constructor to generate a Python object.</p>
+<p><tt class="docutils literal"><span class="pre">Loader.find_constructor()</span></tt> determines the constructor of a node by
+the following rules:</p>
+<ul class="simple">
+<li>If the node tag has the form <tt class="docutils literal"><span class="pre">tag:yaml.org,2002:type_id</span></tt>, returns the
+method <tt class="docutils literal"><span class="pre">Loader.construct_type_id</span></tt>.</li>
+<li>If the node tag has the form <tt class="docutils literal"><span class="pre">tag:python.yaml.org,2002:type_id</span></tt>, returns
+the method <tt class="docutils literal"><span class="pre">Loader.construct_python_type_id</span></tt>.</li>
+<li>If the node tag has the form <tt class="docutils literal"><span class="pre">x-private:type_id</span></tt>, returns
+<tt class="docutils literal"><span class="pre">Loader.construct_private_type_id</span></tt>.</li>
+<li>If the node tag has the form <tt class="docutils literal"><span class="pre">tag:domain.tld,year:type_id</span></tt>, returns
+<tt class="docutils literal"><span class="pre">Loader.construct_domain_tld_year_type_id</span></tt>.</li>
+</ul>
+<p>See the source for more details.</p>
+</blockquote>
+<p>Let us show how <tt class="docutils literal"><span class="pre">Parser</span></tt>, <tt class="docutils literal"><span class="pre">GenericLoader</span></tt>, and <tt class="docutils literal"><span class="pre">Loader</span></tt> parse the same
+document:</p>
+<pre class="literal-block">
+&gt;&gt;&gt; # The source stream includes PySyck specific tags '!python/tuple'
+&gt;&gt;&gt; # and '!python/unicode'. It also includes implicitly typed integer
+&gt;&gt;&gt; # '12345'
+&gt;&gt;&gt; source = &quot;&quot;&quot;--- !python/tuple
+... - a string
+... - !python/unicode a unicode string
+... - 12345
+... &quot;&quot;&quot;
+
+&gt;&gt;&gt; # 'Parser.parse()' returns the root node of the representation tree:
+&gt;&gt;&gt; p = Parser(source)
+&gt;&gt;&gt; print p.parse()
+&lt;_syck.Seq object at 0xb7a33f54&gt;
+
+&gt;&gt;&gt; # 'GenericLoader.load()' returns a Python object, but ignores the tags:
+&gt;&gt;&gt; gl = GenericLoader(source)
+&gt;&gt;&gt; print gl.load()
+['a string', 'a unicode string', '12345']
+
+&gt;&gt;&gt; # 'Loader.load()' is aware of the tags:
+&gt;&gt;&gt; l = Loader(source)
+&gt;&gt;&gt; print l.load()
+('a string', u'a unicode string', 12345)
+</pre>
+</div>
+<div class="section" id="emitter">
+<h3><a class="toc-backref" href="#id30" name="emitter">Emitter</a></h3>
+<dl class="docutils">
+<dt><tt class="docutils literal"><span class="pre">Emitter</span></tt> <span class="classifier-delimiter">:</span> <span class="classifier">class</span></dt>
+<dd><p class="first">The class <tt class="docutils literal"><span class="pre">Emitter</span></tt> is a low-level wrapper of a Syck YAML emitter. It can
+generate a YAML stream from a representation graph.</p>
+<p>The class constructor has the following signature:</p>
+<ul class="simple">
+<li><tt class="docutils literal"><span class="pre">Emitter(output,</span> <span class="pre">headless=False,</span> <span class="pre">use_header=False,</span> <span class="pre">use_version=False,</span>
+<span class="pre">explicit_typing=True,</span> <span class="pre">style=None,</span> <span class="pre">best_width=80,</span> <span class="pre">indent=2)</span></tt>.</li>
+</ul>
+<p>The parameter <tt class="docutils literal"><span class="pre">output</span></tt> must be a file-like object that provides a method
+<tt class="docutils literal"><span class="pre">write(data)</span></tt>. The other parameters describe the formatting of the output
+document.</p>
+<p>The class defines a single method:</p>
+<ul class="simple">
+<li><tt class="docutils literal"><span class="pre">emit(node)</span></tt>.</li>
+</ul>
+<p class="last">The parameter <tt class="docutils literal"><span class="pre">node</span></tt> must be the root node of a YAML representation graph.
+The method <tt class="docutils literal"><span class="pre">emit()</span></tt> writes the generated YAML document to the <tt class="docutils literal"><span class="pre">output</span></tt>
+stream.</p>
+</dd>
+<dt><tt class="docutils literal"><span class="pre">GenericDumper</span></tt> <span class="classifier-delimiter">:</span> <span class="classifier">subclass of <tt class="docutils literal"><span class="pre">Emitter</span></tt></span></dt>
+<dd><p class="first">The subclass <tt class="docutils literal"><span class="pre">GenericDumper</span></tt> adds the following methods:</p>
+<ul class="simple">
+<li><tt class="docutils literal"><span class="pre">GenericDumper.dump(object)</span></tt>,</li>
+<li><tt class="docutils literal"><span class="pre">GenericDumper.represent(object)</span></tt>,</li>
+<li><tt class="docutils literal"><span class="pre">GenericDumper.allow_aliases(object)</span></tt>.</li>
+</ul>
+<p>The method <tt class="docutils literal"><span class="pre">dump()</span></tt> converts the given object into a representation graph,
+generates a YAML document, and writes it to the <tt class="docutils literal"><span class="pre">output</span></tt> stream. It uses
+the method <tt class="docutils literal"><span class="pre">represent()</span></tt> to convert an object to a representation node.
+The method <tt class="docutils literal"><span class="pre">represent()</span></tt> defined in <tt class="docutils literal"><span class="pre">GenericDumper</span></tt> generates a sequence
+node for a list object and a mapping node for a dictionary object. Otherwise
+it generates a scalar node with the value equal to <tt class="docutils literal"><span class="pre">str(object)</span></tt>.</p>
+<p>The Syck YAML emitter automatically detects if the same object is reffered
+from different parts of the graph and generates aliases for it. Unfortunately
+it does not work well with immutable Python objects such as strings, numbers,
+and tuples. To prevent generating unnecessary aliases, the method
+<tt class="docutils literal"><span class="pre">allow_aliases()</span></tt> is used. If <tt class="docutils literal"><span class="pre">allow_aliases()</span></tt> for a given object
+returns <tt class="docutils literal"><span class="pre">False</span></tt>, the alias will never be generated.</p>
+<p class="last">The <tt class="docutils literal"><span class="pre">allow_aliases()</span></tt> method defined in <tt class="docutils literal"><span class="pre">GenericDumper</span></tt> always returns
+<tt class="docutils literal"><span class="pre">True</span></tt>.</p>
+</dd>
+<dt><tt class="docutils literal"><span class="pre">Dumper</span></tt> <span class="classifier-delimiter">:</span> <span class="classifier">subclass of <tt class="docutils literal"><span class="pre">GenericDumper</span></tt></span></dt>
+<dd><p class="first">The subclass <tt class="docutils literal"><span class="pre">Dumpers</span></tt> redefines the methods:</p>
+<ul class="simple">
+<li><tt class="docutils literal"><span class="pre">Dumper.represent(object)</span></tt>,</li>
+<li><tt class="docutils literal"><span class="pre">Dumper.allow_aliases(object)</span></tt>,</li>
+</ul>
+<p>defines the method</p>
+<ul class="simple">
+<li><tt class="docutils literal"><span class="pre">Dumper.find_representer(object)</span></tt>,</li>
+</ul>
+<p>and add many other auxiliary methods for representing objects as nodes.</p>
+<p><tt class="docutils literal"><span class="pre">Dumper.find_representer()</span></tt> finds a method that can represent the given
+object as a node in a representation tree. <tt class="docutils literal"><span class="pre">find_representer()</span></tt> checks the
+class of the object. If the class has the form <tt class="docutils literal"><span class="pre">package.module.type</span></tt>,
+<tt class="docutils literal"><span class="pre">find_representer()</span></tt> returns the method
+<tt class="docutils literal"><span class="pre">Dumper.represent_package_module_type</span></tt> if it exists. If this method does
+not exists, <tt class="docutils literal"><span class="pre">find_representer()</span></tt> consults its base class, and so on.</p>
+<p><tt class="docutils literal"><span class="pre">Dumper.represent()</span></tt> calls <tt class="docutils literal"><span class="pre">Dumper.find_representer()</span></tt> for the given
+object and uses the returned method to generate a representation node.</p>
+<p class="last">See the source for more details.</p>
+</dd>
+</dl>
+<p>Let us show how <tt class="docutils literal"><span class="pre">Emitter</span></tt>, <tt class="docutils literal"><span class="pre">GenericDumper</span></tt>, and <tt class="docutils literal"><span class="pre">Dumper</span></tt> work:</p>
+<pre class="literal-block">
+&gt;&gt;&gt; # For our demonstration, we define a representation tree named 'seq'
+&gt;&gt;&gt; # and a Python tuple named 'object':
+&gt;&gt;&gt; foo = Scalar('a string')
+&gt;&gt;&gt; bar = Scalar('a unicode string', tag=&quot;tag:python.yaml.org,2002:unicode&quot;)
+&gt;&gt;&gt; baz = Scalar('12345', tag=&quot;tag:yaml.org,2002:int&quot;)
+&gt;&gt;&gt; seq = Seq([foo, bar, baz], tag=&quot;tag:python.taml.org,2002:tuple&quot;)
+&gt;&gt;&gt; object = ('a string', u'a unicode string', 12345)
+
+&gt;&gt;&gt; # An 'Emitter' instance can dump a representation tree into a stream,
+&gt;&gt;&gt; # but obviously failed to dump a Python object:
+&gt;&gt;&gt; e = Emitter(sys.stdout)
+&gt;&gt;&gt; e.emit(seq)
+--- !python.taml.org,2002/tuple
+- a string
+- !python/unicode a unicode string
+- 12345
+&gt;&gt;&gt; e.emit(object)
+Traceback (most recent call last):
+  File &quot;&lt;stdin&gt;&quot;, line 1, in ?
+TypeError: Node instance is required
+
+&gt;&gt;&gt; # A 'GenericDumper' instance dumps almost everything as a scalar:
+&gt;&gt;&gt; gd = GenericDumper(sys.stdout)
+&gt;&gt;&gt; gd.dump(seq)
+--- &lt;_syck.Seq object at 0xb7a3c2fc&gt;
+&gt;&gt;&gt; gd.dump(object)
+--- ('a string', u'a unicode string', 12345)
+
+&gt;&gt;&gt; # Finally, a 'Dumper' instance dumps a representation tree as a complex
+&gt;&gt;&gt; # Python object:
+&gt;&gt;&gt; d = Dumper(sys.stdout)
+&gt;&gt;&gt; d.dump(seq)
+--- !python/object:_syck.Seq
+value:
+- !python/object:_syck.Scalar
+  value: a string
+- !python/object:_syck.Scalar
+  value: a unicode string
+  tag: tag:python.yaml.org,2002:unicode
+- !python/object:_syck.Scalar
+  value: &quot;12345&quot;
+  tag: tag:yaml.org,2002:int
+tag: tag:python.taml.org,2002:tuple
+&gt;&gt;&gt; # It also dumps the 'object' object as expected:
+&gt;&gt;&gt; d.dump(object)
+--- !python/tuple
+- a string
+- !python/unicode a unicode string
+- 12345
+</pre>
+</div>
+</div>
+</div>
+<div class="section" id="development-and-bug-reports">
+<h1><a class="toc-backref" href="#id31" name="development-and-bug-reports">Development and Bug Reports</a></h1>
+<p>You may check out the <a class="reference" href="http://pyyaml.org/wiki/PySyck">PySyck</a> source code from <a class="reference" href="http://svn.pyyaml.org/pysyck/">PySyck SVN repository</a>.</p>
+<p>If you find a bug in <a class="reference" href="http://pyyaml.org/wiki/PySyck">PySyck</a>, please file a bug report to <a class="reference" href="http://pyyaml.org/newticket?component=pysyck">PySyck BTS</a>. You
+may review open bugs on <a class="reference" href="http://pyyaml.org/query?action=view&amp;component=pysyck&amp;order=priority">the list of active tickets</a>.</p>
+<p>You may use <a class="reference" href="http://lists.sourceforge.net/lists/listinfo/yaml-core">YAML-core mailing list</a> for discussions of <a class="reference" href="http://pyyaml.org/wiki/PySyck">PySyck</a>.</p>
+</div>
+<div class="section" id="known-bugs">
+<h1><a class="toc-backref" href="#id32" name="known-bugs">Known Bugs</a></h1>
+<p><a class="reference" href="http://pyyaml.org/wiki/PySyck">PySyck</a> does not support Unicode for real. It is a <a class="reference" href="http://whytheluckystiff.net/syck/">Syck</a> limitation.</p>
+</div>
+<div class="section" id="history">
+<h1><a class="toc-backref" href="#id33" name="history">History</a></h1>
+<ul class="simple">
+<li>PySyck-0.61.2 (2006-03-26):<ul>
+<li><tt class="docutils literal"><span class="pre">ext/_syckmodule.c</span></tt>: fix a leak in the parser (thanks, jbj).</li>
+<li><tt class="docutils literal"><span class="pre">setup.py</span></tt>: set the development status to Production/Stable.</li>
+</ul>
+</li>
+<li>PySyck-0.61.1 (2006-03-15):<ul>
+<li><tt class="docutils literal"><span class="pre">setup.py</span></tt>: check if <tt class="docutils literal"><span class="pre">syck.h</span></tt> is present, complain if it doesn't.</li>
+<li><tt class="docutils literal"><span class="pre">ext/_syckmodule.c</span></tt>: release <a class="reference" href="http://docs.python.org/api/threads.html">GIL</a> before calling <a class="reference" href="http://whytheluckystiff.net/syck/">Syck</a>. Note that this
+change broke Python 2.2 compatibility.</li>
+<li><tt class="docutils literal"><span class="pre">lib/syck/loader.py</span></tt>, <tt class="docutils literal"><span class="pre">lib/syck/dumper.py</span></tt>: change treatment of the
+<tt class="docutils literal"><span class="pre">!str</span></tt> tag. Now <tt class="docutils literal"><span class="pre">!str</span></tt>-tagged scalars are converted to Unicode strings
+if they are valid UTF-8, but are not valid ASCII.</li>
+<li>Windows binaries are compiled against the latest <a class="reference" href="http://whytheluckystiff.net/syck/">Syck</a> from
+<a class="reference" href="http://code.whytheluckystiff.net/svn/syck/trunk">the Syck SVN repository</a> with <a class="reference" href="http://pyyaml.org/wiki/SyckPatches">my Syck patches</a>.</li>
+<li>The site is moved to <a class="reference" href="http://pyyaml.org/wiki/PySyck">http://pyyaml.org/wiki/PySyck</a>.</li>
+</ul>
+</li>
+<li>PySyck-0.55.1 (2005-08-30): Initial release.</li>
+</ul>
+</div>
+<div class="section" id="author-and-copyright">
+<h1><a class="toc-backref" href="#id34" name="author-and-copyright">Author and Copyright</a></h1>
+<p>The <a class="reference" href="http://pyyaml.org/wiki/PySyck">PySyck</a> module was written by <a class="reference" href="mailto:xi&#64;resolvent.net">Kirill Simonov</a>.</p>
+<p><a class="reference" href="http://pyyaml.org/wiki/PySyck">PySyck</a> is released under the BSD license as <a class="reference" href="http://whytheluckystiff.net/syck/">Syck</a> itself.</p>
+<!-- vim: ft=rst: -->
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+Source: python-syck
+Section: python
+Priority: extra
+Maintainer: Thomas Jollans <thomas@jollans.com>
+Build-Depends: debhelper (>= 5), libsyck0-dev (>= 0.55+svn256), python-all-dev (>= 2.3), python-support (>= 0.3)
+Standards-Version: 3.7.2
+XS-Python-Version: >=2.3
+
+Package: python-syck
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, python (>=2.3)
+Replaces: python2.3-syck, python2.4-syck
+Conflicts: python2.3-syck, python2.4-syck
+Provides: python2.4-syck, python2.5-syck
+Description: PySyck python bindings to the Syck YAML parser kit
+ Syck is a simple YAML parser kit.
+ .
+ YAML(tm) (rhymes with 'camel') is a straightforward machine parsable
+ data serialization format designed for human readability and
+ interaction with scripting languages such as Perl and Python. YAML is
+ optimized for data serialization, formatted dumping, configuration
+ files, log files, Internet messaging and filtering. This specification
+ describes the YAML information model and serialization format. Together
+ with the Unicode standard for characters, it provides all the
+ information necessary to understand YAML Version 1.0 and construct
+ computer programs to process it.
+ .
+  Homepage: http://pyyaml.org/wiki/PySyck
+XB-Python-Version: ${python:Versions}
+

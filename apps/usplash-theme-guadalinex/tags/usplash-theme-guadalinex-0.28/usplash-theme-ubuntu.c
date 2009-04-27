@@ -43,7 +43,6 @@ struct usplash_theme usplash_theme_1024_768;
 struct usplash_theme usplash_theme_1365_768_scaled;
 
 /* Theme definition */
-/* Theme definition */
 struct usplash_theme usplash_theme = {
 	.version = THEME_VERSION, /* ALWAYS set this to THEME_VERSION, 
                                  it's a compatibility check */
@@ -260,37 +259,57 @@ void t_init(struct usplash_theme *theme) {
 }
 
 void t_clear_progressbar(struct usplash_theme *theme) {
-    t_draw_progressbar(theme, 0);
+    usplash_put(theme->progressbar_x, theme->progressbar_y, &pixmap_throbber_back);
 }
 
 void t_clear_progressbar_16(struct usplash_theme *theme) {
-    t_draw_progressbar_16(theme, 0);
+    usplash_put(theme->progressbar_x, theme->progressbar_y, &pixmap_throbber_back_16);
 }
 
 void t_draw_progressbar(struct usplash_theme *theme, int percentage) {
     int w = (pixmap_throbber_back.width * percentage / 100);
-    usplash_put(theme->progressbar_x, theme->progressbar_y, &pixmap_throbber_back);
     if(percentage == 0)
-        return;
-    if(percentage < 0)
-        usplash_put_part(theme->progressbar_x - w, theme->progressbar_y, pixmap_throbber_back.width + w,
-                         pixmap_throbber_back.height, &pixmap_throbber_fore, -w, 0);
-    else
+        usplash_put(theme->progressbar_x, theme->progressbar_y, &pixmap_throbber_back);
+    if(percentage < 0){/* Unloading */
+        w *= -1;
+        /* Draw background to left of foreground */
+        usplash_put_part(theme->progressbar_x, theme->progressbar_y, w, pixmap_throbber_back.height, 
+                         &pixmap_throbber_back, 0, 0);
+        /* Draw foreground to right of background */
+        usplash_put_part(theme->progressbar_x + w, theme->progressbar_y, pixmap_throbber_back.width - w,
+                         pixmap_throbber_back.height, &pixmap_throbber_fore, w, 0);
+    }
+    else{/* Loading */
+        /* Draw foreground to left of background */
         usplash_put_part(theme->progressbar_x, theme->progressbar_y, w, pixmap_throbber_back.height, 
                          &pixmap_throbber_fore, 0, 0);
+        /* Draw background ot right of foreground */
+        usplash_put_part(theme->progressbar_x + w, theme->progressbar_y, pixmap_throbber_back.width - w, pixmap_throbber_back.height, 
+                         &pixmap_throbber_back, w, 0);
+    }
 }
 
 void t_draw_progressbar_16(struct usplash_theme *theme, int percentage) {
     int w = (pixmap_throbber_back_16.width * percentage / 100);
-    usplash_put(theme->progressbar_x, theme->progressbar_y, &pixmap_throbber_back_16);
     if (percentage == 0)
-        return;
-    if (percentage < 0)
-        usplash_put_part(theme->progressbar_x - w, theme->progressbar_y, pixmap_throbber_back_16.width + w,
-                         pixmap_throbber_back_16.height, &pixmap_throbber_fore_16, -w, 0);
-    else
+        usplash_put(theme->progressbar_x, theme->progressbar_y, &pixmap_throbber_back_16);
+    if (percentage < 0){ /* Unloading */
+        w *= -1;
+        /* Draw background to left of foreground */
+        usplash_put_part(theme->progressbar_x, theme->progressbar_y, w, pixmap_throbber_back_16.height, 
+                         &pixmap_throbber_back_16, 0, 0);
+        /* Draw foreground to right of background */
+        usplash_put_part(theme->progressbar_x + w, theme->progressbar_y, pixmap_throbber_back_16.width - w,
+                         pixmap_throbber_back_16.height, &pixmap_throbber_fore_16, w, 0);
+    }
+    else{/* Loading */
+        /* Draw foreground to left of background */
         usplash_put_part(theme->progressbar_x, theme->progressbar_y, w, pixmap_throbber_back_16.height, 
                          &pixmap_throbber_fore_16, 0, 0);
+        /* Draw background to right of foreground */
+        usplash_put_part(theme->progressbar_x + w, theme->progressbar_y, pixmap_throbber_back_16.width - w, pixmap_throbber_back_16.height, 
+                         &pixmap_throbber_back_16, w, 0);
+    }
 }
 
 void t_animate_step(struct usplash_theme* theme, int pulsating) {
@@ -300,18 +319,27 @@ void t_animate_step(struct usplash_theme* theme, int pulsating) {
     static int step_width = 2;
     static int num_steps = 0;
     int x1;
+    int x2;
     num_steps = (pixmap_throbber_fore.width - pulse_width)/2;
 
     if (pulsating) {
-        t_draw_progressbar(theme, 0);
-    
-        if(pulsate_step < num_steps/2+1)
+        if(pulsate_step < num_steps/2+1){
 	        x1 = 2 * step_width * pulsate_step;
-        else
+        }
+        else{
 	        x1 = pixmap_throbber_fore.width - pulse_width - 2 * step_width * (pulsate_step - num_steps/2+1);
+        }
+        x2 = x1 + pulse_width;
 
+        /* Draw progress bar background on left side of foreground 'pulse' */
+        usplash_put_part(theme->progressbar_x, theme->progressbar_y, x1,
+                         pixmap_throbber_back.height, &pixmap_throbber_back, 0, 0);
+        /* Draw progress bar foreground 'pulse' */
         usplash_put_part(theme->progressbar_x + x1, theme->progressbar_y, pulse_width,
-                         pixmap_throbber_fore.height, &pixmap_throbber_fore, x1, 0);
+                         pixmap_throbber_back.height, &pixmap_throbber_fore, x1, 0);
+        /* Draw progress bar background on right side of foreground 'pulse' */
+        usplash_put_part(theme->progressbar_x + x2, theme->progressbar_y, pixmap_throbber_back.width - x2,
+                         pixmap_throbber_back.height, &pixmap_throbber_back, x2, 0);
 
         pulsate_step = (pulsate_step + 1) % num_steps;
     }
@@ -324,18 +352,27 @@ void t_animate_step_16(struct usplash_theme* theme, int pulsating) {
     static int step_width = 2;
     static int num_steps = 0;
     int x1;
+    int x2;
     num_steps = (pixmap_throbber_fore.width - pulse_width)/2;
 
     if (pulsating) {
-        t_draw_progressbar_16(theme, 0);
-    
-        if(pulsate_step < num_steps/2+1)
+        if(pulsate_step < num_steps/2+1){
 	        x1 = 2 * step_width * pulsate_step;
-        else
-	        x1 = pixmap_throbber_fore.width - pulse_width - 2 * step_width * (pulsate_step - num_steps/2+1);
+        }
+        else{
+            x1 = pixmap_throbber_fore_16.width - pulse_width - 2 * step_width * (pulsate_step - num_steps/2+1);
+        }
+        x2 = x1 + pulse_width;
 
+        /* Draw progress bar background on left side of foreground 'pulse' */
+        usplash_put_part(theme->progressbar_x, theme->progressbar_y, x1,
+                         pixmap_throbber_back_16.height, &pixmap_throbber_back_16, 0, 0);
+        /* Draw progress bar foreground 'pulse' */
         usplash_put_part(theme->progressbar_x + x1, theme->progressbar_y, pulse_width,
-                         pixmap_throbber_fore_16.height, &pixmap_throbber_fore_16, x1, 0);
+                         pixmap_throbber_back_16.height, &pixmap_throbber_fore_16, x1, 0);
+        /* Draw progress bar background on right side of foreground 'pulse' */
+        usplash_put_part(theme->progressbar_x + x2, theme->progressbar_y, pixmap_throbber_back_16.width - x2,
+                         pixmap_throbber_back_16.height, &pixmap_throbber_back_16, x2, 0);
 
         pulsate_step = (pulsate_step + 1) % num_steps;
     }

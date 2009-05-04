@@ -1,10 +1,10 @@
 #!/usr/bin/python
 # -*- coding: iso-8859-1 -*-
 
-# grubaker 1.1.0
+# grubaker 2.0.0
 # author: Alfonso E.M. alfonso@el-magnifico.org
 # date: 15/Apr/2006
-# last update: 24/Mar/2008 by Alfonso E.M.
+# last update: 22/Apr/2009 by Alfonso E.M.
 # Patches by JuanJe Ojeda
 
 import re
@@ -14,6 +14,8 @@ import gtk
 import gtk.glade
 import os,commands,sys
 import getopt
+import xml.etree.ElementTree as ET
+
 
 # DEBIAN MARKERS FOR AUTOMAGICALLY GENERATED KERNELS SECTION
 AUTOMAGIC_START="### BEGIN AUTOMAGIC KERNELS LIST"
@@ -29,13 +31,15 @@ class Menu:
 		"""
 
 		self.filename=filename
+		self.error=''
         	self.liststore = gtk.ListStore(str,str,int)
                 self.item=[]
-		self.error=''
 		
+		self.tree = ET.Element("menu.lst")
 		self.parsefile()
 
 
+### MENU.parsefile: reads menu.lst, and parses it into a tree (xml style) structure and in a gtk liststore
 	def parsefile(self):
 
         	self.liststore.clear()
@@ -48,39 +52,60 @@ class Menu:
 		else:
 			options=""
 			id=-1
-                        self.comments=""
-                        self.timeout="3"
-                        self.splashimage=""
-                        self.fallback=""
-                        self.default=""
+                        self.default_timeout="3"
+                        self.default_title=-1
+                        self.default_id=-1
 			mustreadoptions=False
-			mustreadcomments=True
+
+			comments=""
+			automagic=0
+			elements_counter=0
+			titles_counter=-1
+ 			self.node_before_magic=0
+			self.node_magic=0
+			self.node_after_magic=0
+		
+
 			while 1:
 				line=file.readline()
 				if line == "": 
                                        break
-                                if line == "\n":
-                                       continue
-# As menu.lst says:
-# "lines between the AUTOMAGIC KERNELS LIST markers will be modified
-# by the debian update-grub script except for the default options below"
 
+
+# As menu.lst says:
+# "lines between the AUTOMAGIC KERNELS LIST markers will be modified by the debian update-grub script except for the default options below"
 # So Grubaker must check (and keep) these odd markers 
                                   
 				if line.find(AUTOMAGIC_START) != -1:
 					i=self.liststore.append([gtk.STOCK_GOTO_BOTTOM,"ATENCION: el sistema puede modificar las siguientes líneas automáticamente",-1])
                                         self.item.append({})
-					continue
+					automagic=1
+					if self.node_before_magic == 0:
+					  self.node_before_magic=elements_counter
 				if line.find(AUTOMAGIC_END) != -1:
 					i=self.liststore.append([gtk.STOCK_GOTO_TOP,"Aquí termina la sección que se actualiza automáticamente",-2])
                                         self.item.append({})
-					continue
+					automagic=2
+
+
+
+# buffering commend until empty line or command
 				if line[:1] == "#":
-	                                if line.find("Grubaker") != -1:	
-						continue
-				        if mustreadcomments:
-				          self.comments=self.comments+line  
-                                        continue
+                                  if line.find("Grubaker") != -1:	
+     				    continue
+				  comments=comments+line  
+				  mustreadoptions=False
+				  continue
+# new comments block in tree
+				else:
+				  if comments != "":
+   			  	    block = ET.SubElement(self.tree, "comment")
+				    block.text=comments
+				    elements_counter+=1
+				    comments=""
+                                  if line == "\n":
+				    mustreadoptions=False
+                                    continue
 
 				line = line.replace("\n","")
                                 if re.search("[=\s]+",line):
@@ -88,38 +113,192 @@ class Menu:
                                 else:
                                   key=line
 				  value=''
-                                  
-				if key == "timeout":
-  				    self.timeout = value
-				elif key == "default":
-				    self.default = value
-				elif key == "splashimage":
-				    self.splashimage = value
-				elif key == "fallback":
-				    self.fallback = value
+                                
+# title block, start subblock with kernel options
+				if key == "title":
+                                        id+=1
+					titles_counter+=1   
 
-				elif key == "title":
-				        mustreadcomments=False
-                                        id = id + 1   
-					if self.default == str(id):
+                                        self.item.append({})
+                                        self.item[id]['title']=value
+					mustreadoptions=True
+
+					if self.default_title == titles_counter:
 						icon=gtk.STOCK_YES
+						self.default_id = id
+						self.item[id]['default']=True
 					else:
 						icon=gtk.STOCK_NO
+						self.item[id]['default']=False
 					i=self.liststore.append([icon,value,id])
-                                        self.item.append({})
-					mustreadoptions=True
+
+					key=key+str(id)
+	  				titleblock = ET.SubElement(self.tree, key)
+				        elements_counter+=1
+					titleblock.text=value
+
+					if automagic == 1 and self.node_before_magic == 0:
+					   self.node_before_magic=elements_counter
+
+# title options
 				else:
 					if mustreadoptions:
+					  subblock = ET.SubElement(titleblock, key)
+					  subblock.text=value
+					  subblock.set("id",str(id))
+
                                           self.item[id][key]=value
+
+ 				        else:  
+	   				  block = ET.SubElement(self.tree, key)
+				    	  elements_counter+=1
+				  	  block.text=value
+					  
+					  if key == 'default':
+					    self.default_title=int(value)
+
+
+				if automagic == 1 and self.node_magic == 0:
+					   self.node_magic=elements_counter
+				if automagic == 2 and self.node_after_magic == 0:
+					   self.node_after_magic=elements_counter
 	
 			file.close
+#			ET.ElementTree(self.tree).write("/tmp/menu1.lst.xml")
 
-	def write_key(self,i,k,wfile):
-		 if self.item[i].has_key(k):
-		   wfile.write(k+" \t"+self.item[i][k]+"\n")
-	   	   del self.item[i][k]			
+### MENU.set_value: change an element property in the tree 
+	def set_value(self,key,value):
+		 element=self.tree.find(key)
+		 if element == None:
+  		   element = ET.SubElement(self.tree, key)
+  	    	 element.text=value
 
+### MENU.set_on: activates a keyword or deletes it from the tree (like 'hiddenmenu')
+	def set_on(self,key,value):
+		 element=self.tree.find(key)
+		 if element == None and value == True:
+  		   element = ET.SubElement(self.tree, key)
+		 if element != None and value == False:
+		     self.tree.remove(element)
+
+### MENU.add_option: add an option to an element
+	def add_option(self,id,option,parent):
+		 if self.item[id].has_key(option):
+		   subblock=ET.SubElement(parent,option)
+                   subblock.set("id",str(id))
+		   if self.item[id][option] != "":
+		     subblock.text=self.item[id][option]
+	   	   del self.item[id][option]		
+
+
+### MENU.mod_option: changes element values
+	def mod_option(self,id,option,parent):
+
+		 subblock=parent.find(option)
+		 if subblock != None:
+		   if self.item[id].has_key(option):
+		     subblock.text=self.item[id][option]
+ 		   else:
+  		     parent.remove(subblock)
+		 else:
+		   if self.item[id].has_key(option):
+		     subblock=ET.SubElement(parent,option)
+		     subblock.text=self.item[id][option]
+                     subblock.set("id",str(id))
+
+### MENU.del_option: deletes element values
+	def del_option(self,id,option,parent):
+		 subblock=parent.find(option)
+		 if subblock != None:
+		   parent.remove(subblock)
+
+
+### MENU.mod_title: modifies an edited title and all its suboptions (kernel, root, initrd...)
+	def mod_title(self,titleblock,id):
+	  titleblock.text=self.item[id]["title"]
+# linux type
+	  if self.item[id].has_key("kernel"):
+ 	    for option in ('root','kernel','module','initrd'):
+              self.mod_option(id,option,titleblock)        
+ 	    for option in ('rootnoverify','makeactive','chainloader'):
+              self.del_option(id,option,titleblock)        
+# non-linux type
+	  else:
+ 	    for option in ('rootnoverify','makeactive','chainloader'):
+              self.mod_option(id,option,titleblock)
+ 	    for option in ('root','kernel','module','initrd'):
+              self.del_option(id,option,titleblock)        
+	  return
+
+### MENU.new_title: inserts a new menu item and all its suboptions
+	def new_title(self,id,magic):
+# figuring out where to insert a new title element
+# possible sections are: before automagic section, within or after it		
+# if titles exist (in one of those sections) we know where to add a new one
+# if not, we just can guess a good place!
+	  if magic == 0:
+	    position=self.node_before_magic
+	  elif magic == 1:
+	    position = self.node_magic
+          else:
+  	    position=self.node_after_magic
+
+#	  print magic,position,self.node_before_magic,self.node_magic,self.node_after_magic
+
+	  titleblock=ET.Element("title"+str(id))
+          titleblock.text=self.item[id]["title"]
+
+#	  root=self.tree.getroot()
+#	  root.insert(position,titleblock)
+	  self.tree.insert(position,titleblock)
+
+# Order is important !
+# First we'll write Linux options (ordered) then Windows ones
+	  if self.item[id].has_key("kernel"):
+	    for option in ('root','kernel','module','initrd'):
+              self.add_option(id,option,titleblock)
+	  else:
+	    for option in ('rootnoverify','makeactive','chainloader'):
+              self.add_option(id,option,titleblock)
+
+
+## MENU.write: Dump elements tree to file menu.lst
 	def write(self):
+
+# insert/delete menu items in tree structure from menu items array
+		titles_counter=0
+		iter=self.liststore.get_iter_first()
+		automagic=0
+		while iter != None:
+		  title=self.liststore.get_value(iter,1)
+                  id=self.liststore.get_value(iter,2)
+
+		  if id == -1:
+		    automagic=1
+                  if id == -2:
+	 	    automagic=2
+
+		  if id >= 0:
+    		    titleelement=self.tree.find("title"+str(id))
+		    if titleelement != None:
+		      if title == "DELETED":
+                        self.tree.remove(titleelement)
+                      else:
+                        self.mod_title(titleelement,id)
+		    else:
+		      self.new_title(id,automagic)
+		
+		    if id == self.default_id:
+		      block=self.tree.find("default")
+		      if block != None:
+ 		        block.text=str(titles_counter)
+		    titles_counter += 1
+
+		  iter=self.liststore.iter_next(iter)
+
+
+# tree is ready to be converted
+#		ET.ElementTree(self.tree).write("/tmp/menu2.lst.xml")
 
 		tmpfilename=self.filename+".tmp"
 		backupfilename=self.filename+".bak"
@@ -131,59 +310,32 @@ class Menu:
 			sys.exit("ERROR: "+self.filename+".tmp not writable")
 			return
 
-		newfile.write("# menu.lst edited with Grubaker\n\n")
-		newfile.write(self.comments)
-		
-		if self.default:
-			newfile.write("default	"+str(self.default)+"\n")
+# converting tree structure to menu.lst format
+		for element in self.tree.getiterator():
+		  text=element.text
 
-		if self.timeout:
-	                newfile.write("timeout	"+self.timeout+"\n")
-
-		if self.fallback:
-	                newfile.write("fallback	"+self.fallback+"\n")
-
-		if self.splashimage:
-	                newfile.write("splashimage="+self.splashimage+"\n")
-
-
-                newfile.write("\n\n")
-
-                iter=self.liststore.get_iter_first()
-		while iter != None:
-		      title=self.liststore.get_value(iter,1)
-                      id=self.liststore.get_value(iter,2)
-                      
-# Dummy items for DEBIAN AUTOMAGIC KERNEL LIST
-		      if id == -1 and automagic == 0:
-		      	 newfile.write(AUTOMAGIC_START+"\n")
-		      	 automagic = 1
-		      elif id == -2:
-		         if automagic == 0:
-   		      	    newfile.write(AUTOMAGIC_START+"\n")
-		      	 newfile.write(AUTOMAGIC_END+"\n")
-		      	 automagic == 2
-		      else:                      
-   		         newfile.write("title \t"+title+"\n")
-# Order is important !
-# First we'll write Linux options (ordered)
-		         self.write_key(id,'root',newfile)
-		         self.write_key(id,'kernel',newfile)
-		         self.write_key(id,'module',newfile)
-		         self.write_key(id,'initrd',newfile)
-# Second, Windows options (ordered)
-		         self.write_key(id,'rootnoverify',newfile)
-		         self.write_key(id,'kernel',newfile)
-		         self.write_key(id,'chainloader',newfile)
-# Then, whatever left (but "boot")
-		         for key in self.item[id].keys():
-			   if key != 'boot':
-       		             newfile.write(key+" \t"+self.item[id][key]+"\n")
-# "Boot", if exists, must be the latest (not needed, indeed!)
-		         self.write_key(id,'boot',newfile)
-
-                      newfile.write("\n")
-		      iter=self.liststore.iter_next(iter)
+    		  if element.tag == "menu.lst":
+		    newfile.write("# menu.lst edited with Grubaker\n\n")
+		    continue
+#   writing comments block
+    		  if element.tag == "comment":
+      		     newfile.write("\n"+text)
+    		     continue
+#   menu title block
+		  if element.tag[0:5] == "title":
+		    id=int(element.tag[5:])
+		    if self.item[id]["title"] != "DELETED":
+		      newfile.write("\ntitle "+text+"\n")                    
+#   keyword block
+                  else:
+		      if element.get("id") == None:
+			newfile.write("\n")
+	      	      if element.text: 
+		        newfile.write(element.tag+" "+text+"\n")
+		      else:
+		        newfile.write(element.tag+"\n")
+		      if element.get("id") == None:
+			newfile.write("\n")
 
 		newfile.close
 
@@ -191,6 +343,13 @@ class Menu:
 		os.rename(tmpfilename,self.filename)
 
 		return
+
+## MENU.set_default: sets a title as default boot
+	def set_default(self,id):
+		for i in range(0,len(self.item)):
+		  self.item[i]['default'] = False
+		self.item[id]['default'] = True
+		self.default_id=id
 
 class Appgui:
 	def __init__(self, menu):
@@ -217,7 +376,7 @@ class Appgui:
 		}
 
 		self.menu = menu
-#		self.xml = gtk.glade.XML("grubaker.glade")
+#		self.xml = gtk.glade.XML("./grubaker.glade")
 		self.xml = gtk.glade.XML("/usr/share/grubaker/grubaker.glade")
 		self.xml.signal_autoconnect (dic)
 		self.treeview = self.xml.get_widget('treeview1')
@@ -269,9 +428,10 @@ class Appgui:
 	            
         def bt_delete_clicked(self,widget):
                 (iter,id,title)=self.get_selected_item()
-# Dummy items are not deleteable
-                if id > 0:
+
+                if id >= 0:	# Dummy items are not deletable
                    self.menu.liststore.remove(iter)
+		   self.menu.item[id]["title"]="DELETED"
    	           self.change_item_buttons_state(False)
 		   self.menu_has_changed()
                 return
@@ -314,14 +474,24 @@ class Appgui:
                 return
 
         def bt_preferences_clicked(self,widget):
-		self.set_text('entry_timeout',self.menu.timeout)
-		self.set_text('entry_splashimage',self.menu.splashimage)
+		timeout=self.menu.tree.findtext("timeout") or self.menu.defaulttimeout
+
+		self.set_text('entry_timeout',timeout)
+
+		if self.menu.tree.find("hiddenmenu") != None:
+  		  self.set_active('check_hiddenmenu',True)
+
                 self.window_preferences.show()
 	        return
 
         def bt_preferences_ok_clicked(self,widget):
-  	        self.menu.timeout=self.get_value('entry_timeout')
-	        self.menu.splashimage=self.get_value('entry_splashimage')
+  	        self.menu.set_value("timeout",self.get_value('entry_timeout'))
+                widget=self.xml.get_widget('check_hiddenmenu')
+                if widget.get_active():
+    	          self.menu.set_on("hiddenmenu",True)
+		else:
+    	          self.menu.set_on("hiddenmenu",False)
+
 	        self.menu_has_changed()
 	        self.window_preferences.hide()  
 	        return  
@@ -330,24 +500,27 @@ class Appgui:
 	        self.window_preferences.hide()  
 		return True
 
+
+# APPGUI.edit_item: loading the menu edition windows
 	def edit_item(self,treeview,TreePath,TreeViewColumn):
                 (iter,id,title)=self.get_selected_item()
-# Dummy items are not editable
-                if id < 0:
+
+                if id < 0:	# Dummy items are not editable
 		   return
+
 		self.set_text('entry_title',title)
 		self.set_text('hidden_id',str(id))
+
+		if self.menu.item[id]['default']:
+                    self.set_active('check_default',True)
+                else:
+                    self.set_active('check_default',False)
+
 		
 		if self.menu.item[id].has_key('root'):
-		   rootkey='root'
+		  self.set_text('entry_disk',self.menu.item[id]['root'])
 		if self.menu.item[id].has_key('rootnoverify'):
-		   rootkey='rootnoverify'
-        	matches=re.search('.*hd(\d),(\d).*',self.menu.item[id][rootkey])
-                if matches:
-                        hd=int(matches.group(1))
-                        partition=int(matches.group(2))
-         		self.set_spin('spin_hd',hd)
-        		self.set_spin('spin_partition',partition)
+		  self.set_text('entry_disk',self.menu.item[id]['rootnoverify'])
 
 		if self.menu.item[id].has_key('kernel'):
 		    if re.search("\s+",self.menu.item[id]['kernel']):
@@ -377,16 +550,16 @@ class Appgui:
                     self.set_active('check_makeactive',False)
                 
                 self.window_edit.show()
-
 		  
 		return
 
+# APPGUI.bt_edit_ok_clicked: new title in the menu or an old entry has been modified
 	def bt_edit_ok_clicked(self,widget):
 
 		old_id=self.get_value('hidden_id')
 		title=self.get_value('entry_title')
 
-#old_id is a hidden input, empty for new menu items (tricky)
+# old_id is a hidden input, empty for new menu items (tricky)
 		if old_id != '':
 	                (iter,id,oldtitle)=self.get_selected_item()
         	        self.menu.liststore.set_value(iter,1,title)
@@ -397,10 +570,15 @@ class Appgui:
 			id=len(self.menu.item)-1
 			icon=gtk.STOCK_NO
 			i=self.menu.liststore.append([icon,title,id])
-                
-	        hd=self.get_spin('spin_hd')
-	        partition=self.get_spin('spin_partition')
 
+	        self.menu.item[id]['title']=title
+
+
+	        widget=self.xml.get_widget('check_default')
+	        default=widget.get_active()
+		if default:
+		   self.menu.set_default(id)
+                
 	        kernel=self.get_value('entry_kernel')
 	        options=self.get_value('entry_options')
 	        if kernel:
@@ -419,7 +597,8 @@ class Appgui:
 		else:
 		    rootkey='root'
 
-                self.menu.item[id][rootkey]='(hd'+str(hd)+','+str(partition)+')'
+	        disk=self.get_value('entry_disk')
+                self.menu.item[id][rootkey]=disk
 
 	        
 	        widget=self.xml.get_widget('check_makeactive')
@@ -437,17 +616,9 @@ class Appgui:
         def get_value(self,widgetname):
                 widget=self.xml.get_widget(widgetname)
 	        return widget.get_text()
-        def set_spin(self,widgetname,number):
-                widget=self.xml.get_widget(widgetname)
-	        widget.set_value(number)
-        def get_spin(self,widgetname):
-                widget=self.xml.get_widget(widgetname)
-	        return widget.get_value_as_int()
-
         def set_active(self,widgetname,value):
                 widget=self.xml.get_widget(widgetname)
 	        widget.set_active(value)
-
 
         def bt_edit_cancel_clicked(self,widget,*args):
 	        self.window_edit.hide()  

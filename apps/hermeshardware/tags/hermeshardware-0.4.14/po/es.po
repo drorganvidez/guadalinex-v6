@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-04-20 13:12+0200\n"
+"POT-Creation-Date: 2009-04-28 12:52+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -76,11 +76,11 @@ msgstr "Cámara digital conectada."
 msgid "Digital camera disconnected"
 msgstr "Cámara digital desconectada"
 
-#: actors/deviceactor.py:166
+#: actors/deviceactor.py:212
 msgid "Use device"
 msgstr "Utilizar dispositivo"
 
-#: actors/deviceactor.py:267 actors/usbscanner.py:113 actors/usbwebcam.py:117
+#: actors/deviceactor.py:347 actors/usbscanner.py:113 actors/usbwebcam.py:117
 msgid "Install required packages"
 msgstr "Instalar paquetes requeridos"
 
@@ -279,32 +279,32 @@ msgstr "Cámara Web conectada"
 msgid "Webcam disconnected"
 msgstr "Cámara web desconectada"
 
-#: actors/volume.py:81 actors/volume.py:90
+#: actors/volume.py:108 actors/volume.py:117
 msgid "Storage"
 msgstr "Almacenamiento"
 
-#: actors/volume.py:82
+#: actors/volume.py:109
 msgid "Device mounted on"
 msgstr "Dispositivo montado en"
 
-#: actors/volume.py:91
+#: actors/volume.py:118
 msgid "Device unmounted"
 msgstr "Dispositivo desmontado"
 
-#: actors/volume.py:98
+#: actors/volume.py:125
 msgid "Error:"
 msgstr "Error:"
 
-#: actors/wifinetwork.py:23 actors/wifinetwork.py:30
+#: actors/wifinetwork.py:79 actors/wifinetwork.py:91
 msgid "Wifi"
 msgstr "Wifi"
 
-#: actors/wifinetwork.py:24
+#: actors/wifinetwork.py:80
 #, python-format
 msgid "Wifi network interface conected: %s"
 msgstr "Interfaz Wifi conectada: %s"
 
-#: actors/wifinetwork.py:31
+#: actors/wifinetwork.py:92
 #, python-format
 msgid "Wifi network interface disconected: %s"
 msgstr "Interfaz de red Wifi desconectada: %s"
@@ -359,59 +359,59 @@ msgstr "Dispositivo Añadido"
 msgid "Connected"
 msgstr "Conectado"
 
-#: hermes_hardware.py:197 hermes_hardware.py:228 tests/test_notify.py:62
-#: utils/hermes_notifier.py:30
+#: hermes_hardware.py:196 hermes_hardware.py:227 tests/test_notify.py:62
+#: utils/hermes_notifier.py:87
 msgid "Warning"
 msgstr "Advertencia"
 
-#: hermes_hardware.py:198
+#: hermes_hardware.py:197
 #, fuzzy
 msgid "Unknown Device Connected"
 msgstr "Escáner conectado"
 
-#: hermes_hardware.py:213
+#: hermes_hardware.py:212
 msgid "Device Removed"
 msgstr "Dispositivo Desconectado"
 
-#: hermes_hardware.py:224
+#: hermes_hardware.py:223
 msgid "Disconnected"
 msgstr "Desconectado"
 
-#: hermes_hardware.py:229
+#: hermes_hardware.py:228
 #, fuzzy
 msgid "Unknown Device Removed"
 msgstr "Dispositivo Desconectado"
 
-#: hermes_hardware.py:257
+#: hermes_hardware.py:256
 msgid "Property Modified:"
 msgstr "Propiedad Modificada:"
 
-#: hermes_hardware.py:258
+#: hermes_hardware.py:257
 msgid "udi:"
 msgstr "Identificador Único de Dispositivo:"
 
-#: hermes_hardware.py:338
+#: hermes_hardware.py:337
 msgid "Device"
 msgstr "Dispositivo"
 
-#: hermes_hardware.py:451
+#: hermes_hardware.py:450
 msgid "usage: %prog [options]"
 msgstr "uso: %prog [opciones]"
 
-#: hermes_hardware.py:458
+#: hermes_hardware.py:457
 #, fuzzy
 msgid "Starts in debug mode."
 msgstr "Inicia en modo depuración."
 
-#: hermes_hardware.py:463
+#: hermes_hardware.py:462
 msgid "Capture device logs."
 msgstr "Captura registros de dispositivos."
 
-#: hermes_hardware.py:500
+#: hermes_hardware.py:499
 msgid "------------ Hermes started."
 msgstr "------------ Hermes iniciado."
 
-#: hermes_hardware.py:525
+#: hermes_hardware.py:524
 msgid "------------ Hermes finished."
 msgstr "------------ Hermes finalizado."
 
@@ -436,7 +436,7 @@ msgstr "Mensaje de prueba"
 msgid "Information"
 msgstr "Información"
 
-#: tests/test_notify.py:71 utils/hermes_notifier.py:32
+#: tests/test_notify.py:71 utils/hermes_notifier.py:89
 msgid "Error"
 msgstr "Error"
 
@@ -513,78 +513,112 @@ msgstr ""
 "\n"
 "Gracias."
 
-#: utils/hermes_notifier.py:28
+#: utils/hermes_notifier.py:85
 msgid "Info"
-msgstr "Info"
+msgstr "Información"
 
-#: utils/hermes_notifier.py:40 utils/hermes_notifier.py:393
+#: utils/hermes_notifier.py:102 utils/hermes_notifier.py:561
 msgid "Ask Info"
-msgstr "Info"
+msgstr "Información"
 
-#: utils/hermes_notifier.py:42 utils/hermes_notifier.py:408
+#: utils/hermes_notifier.py:104 utils/hermes_notifier.py:583
 msgid "Ask Warning"
 msgstr "Advertencia"
 
-#: utils/hermes_notifier.py:44 utils/hermes_notifier.py:422
+#: utils/hermes_notifier.py:106 utils/hermes_notifier.py:604
 msgid "Ask Error"
 msgstr "Error"
 
-#: utils/hermes_notifier.py:169
+#: utils/hermes_notifier.py:268
 msgid "Input"
 msgstr "Entrada"
 
-#: utils/hermes_notifier.py:283
+#: utils/hermes_notifier.py:417
 msgid "Close message"
 msgstr "Cerrar mensaje"
 
-#: utils/hermes_notifier.py:293
+#: utils/hermes_notifier.py:427
 msgid "Run action message"
 msgstr "Ejecutar mensaje de acción"
 
-#: utils/hermes_notifier.py:380
+#: utils/hermes_notifier.py:541
 msgid "HermesObject started"
 msgstr "HermesObject iniciado"
 
-#: utils/hermes_notifier.py:388
+#: utils/hermes_notifier.py:551
 msgid "Show Info"
-msgstr ""
+msgstr "Información"
 
-#: utils/hermes_notifier.py:402
+#: utils/hermes_notifier.py:572
 #, fuzzy
 msgid "Show Warning"
 msgstr "Advertencia"
 
-#: utils/hermes_notifier.py:417
+#: utils/hermes_notifier.py:594
 #, fuzzy
 msgid "Show Error"
 msgstr "Error"
 
-#: utils/hermes_notifier.py:435
+#: utils/hermes_notifier.py:622
 #, fuzzy
 msgid "Start in debug mode"
 msgstr "Inicia en modo depuración."
 
-#: utils/hermes_notifier.py:457
+#: utils/hermes_notifier.py:644
 msgid "Hermes Notifier Started"
 msgstr "Notificador de Hermes iniciado"
 
-#: utils/sudo.py:19
+#: utils/notification.py:107
+msgid "Trying to connect to ActionInvoked"
+msgstr "Intentando conectar a ActionInvoked"
+
+#: utils/notification.py:111
+msgid "ActionInvoked handler not configured."
+msgstr "Manejador de ActionInvoked no configurado"
+
+#: utils/notification.py:112
+msgid "Trying to run notification-daemon."
+msgstr "Intentando ejecutar el notification-daemon"
+
+#: utils/notification.py:243
+msgid "show:"
+msgstr "muestra:"
+
+#: utils/notification.py:252
+msgid "show_info:"
+msgstr "muestra_informacion:"
+
+#: utils/notification.py:261
+#, fuzzy
+msgid "show_warning:"
+msgstr "muestra_dvertencia"
+
+#: utils/notification.py:270
+#, fuzzy
+msgid "show_error:"
+msgstr "muestra_error:"
+
+#: utils/notification.py:284
+msgid "FileNotification: "
+msgstr "Notificacion a Fichero:"
+
+#: utils/sudo.py:67
 msgid "Type password"
 msgstr "Introduzca contraseña"
 
-#: utils/sudo.py:22
+#: utils/sudo.py:70
 msgid "User pressed cancel"
 msgstr "Usuario solicito cancelación"
 
-#: utils/sudo.py:27
+#: utils/sudo.py:75
 msgid "Three attemps for password"
 msgstr "Tres intentos fallidos de contraseña"
 
-#: utils/synaptic.py:23
+#: utils/synaptic.py:84
 msgid "Installing packages"
 msgstr "Instalando paquetes"
 
-#: utils/synaptic.py:25
+#: utils/synaptic.py:86
 msgid "Installed packages"
 msgstr "Paquetes instalados"
 

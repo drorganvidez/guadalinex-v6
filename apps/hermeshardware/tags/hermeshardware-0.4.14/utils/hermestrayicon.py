@@ -70,7 +70,7 @@ class HermesTrayIcon(TrayIcon):
         event_box.connect("button-press-event", self.on_mouse_press)
         image = gtk.Image()
         event_box.add(image)
-        image.set_from_file('/home/pchaso/dev/hermes2/img/logo_16.png')
+        image.set_from_file('/usr/share/hermes/img/logo_16.png')
         self.add(event_box)
 
         # Set up menu

@@ -118,10 +118,6 @@ class NotificationDaemon(object):
             timeout = 7000
             notify_actions = []
 
-        # [es] Incluimos el nombre de HERMES en el titulo de la notificacion 
-        #      emergente
-        # [en] Include HERMES name on the notification title
-        summary = "HERMES: " + summary
         res = self.iface.Notify("Hermes", 
                                 dbus.UInt32(0),
                                 dbus.String(icon),

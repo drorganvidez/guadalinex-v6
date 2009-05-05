@@ -164,25 +164,29 @@ class DeviceActor(object):
 
     def on_added(self):
         """ 
-        [es] 
+        [es] Interfaz para las acciones a ejecutar cuando se conecta el
+             dispositivo
         -----------------------------------------------------------------------
-        [en] 
+        [en] Interface for the actions to take when the device is connected
         """
         pass
 
     def on_removed(self):
         """ 
-        [es] 
+        [es] Interfaz para las acciones a ejecutar cuando se desconecta el
+             dispositivo
         -----------------------------------------------------------------------
-        [en] 
+        [en] Interface for the actions to take when the device is disconnected
         """
         pass
     
     def on_modified(self, prop_name):
         """ 
-        [es] 
+        [es] Interfaz para las acciones a ejecutar cuando se modifica alguna el
+             propiedad del dispositivo
         -----------------------------------------------------------------------
-        [en] 
+        [en] Interface for the actions to take when the device property is 
+             modified
         """
         pass
 
@@ -194,11 +198,12 @@ class PkgDeviceActor(DeviceActor):
          Es útil para simplicar todo esos actores que lo único que hacen es
          instalar software para que el dispositivo funcione.
     ---------------------------------------------------------------------------
-    [en] 
+    [en] This class encapsulates required logic for actors that need to check
+         and install packages.
+         Intends to simplify all those actors that need installing software in
+         order to make the device work.
     """
 	
-    """ 
-    """
     __icon_path__  = ''
     __iconoff_path__ = ''
     __device_title__ = ''
@@ -214,21 +219,20 @@ class PkgDeviceActor(DeviceActor):
 
     def __init__(self, message_render, device_properties):
         """ 
-        [es] 
+        [es] Metodo de inicializacion
         -----------------------------------------------------------------------
-        [en] 
+        [en] Initialization method
         """
         DeviceActor.__init__(self, message_render, device_properties)
         self.set_default_properties()
 
 
     def set_default_properties(self):
-        """ 
-        [es] 
-        -----------------------------------------------------------------------
-        [en] 
         """
-        """ Set default properties from config files.
+        [es] Establece las propiedades por defecto desde los ficheros de 
+             configuracion
+        -----------------------------------------------------------------------
+        [en] Set default properties from config files.
         """
         modname = self.__module__.split('.')[-1]
         config = None
@@ -250,14 +254,11 @@ class PkgDeviceActor(DeviceActor):
 
     def get_packages(module_name):
         """ 
-        [es] 
+        [es] Devuelve los paquetes para un actor en funcion de actors/config/*
+             y de la configuración del entorno de usuario.
         -----------------------------------------------------------------------
-        [en] 
-        """
-        """ Return packages for an actor.
-
-        Return packages for an actor based on actors/config/* files and on
-        user's desktop.
+        [en] Returns packages for an actor based on actors/config/* files and 
+             on user's desktop.
         """
         pkg_path = os.path.abspath('actors/config') + \
                 '/' + module_name + '.' + PkgDeviceActor._get_desktop()
@@ -274,47 +275,50 @@ class PkgDeviceActor(DeviceActor):
 
     def _get_desktop():
         """ 
-        [es] 
+        [es] Devuelve el nombre del escritorio (gnome o kde)
         -----------------------------------------------------------------------
-        [en] 
+        [en] Return desktop name (gnome, or kde)
         """
-        """ Return desktop name (gnome, or kde)
-        """
-        # Look for gnome
+        # [es] Buscamos el proceso gnome
+        # [en] Look for gnome process
         gnome_command = 'ps ux|grep gnome-settings|grep -v grep'
         is_gnome = bool(os.popen(gnome_command).read())
         if is_gnome:
             return "gnome"
 
-        # Look for kde
+        # [es] Buscamos el proceso kde
+        # [en] Look for kde process
         kde_command = 'ps ux|grep startkde|grep -v grep'
         is_kde = bool(os.popen(kde_command).read())
         if is_kde:
             return "kde"
-
-        # Default packages
+        # [es] Por defecto consideramos gnome
+        # [en] We consider gnome, by default 
         return "gnome"
 
     _get_desktop = staticmethod(_get_desktop)
 
 
     def on_added(self):
-        """ 
-        [es] 
+        """
+        [es] Se lanza cuando se detecta la conexion de un dispositivo que
+             que requiere algun software instalado.
         -----------------------------------------------------------------------
-        [en] 
+        [en] Runs when a device that needs some software installation is 
+             detected.
         """
         s = PkgInstaller()
 
         def execute_conn_commands():
             """ 
-            [es] 
+            [es] Ejecuta los comandos necesarios para conectar el dispositivo
             -------------------------------------------------------------------
-            [en] 
+            [en] Runs the needed commands when the device is connected
             """
             execute = True
 
-            # Obtain sudo permission if needed.
+            # [es] Obtiene permisos mediante sudo si es necesario instalar algo
+            # [en] Obtain sudo permission if needed to install something
             for command in self.__conn_commands__:
                 if command.strip().startswith('sudo'):
                     if not get_sudo():
@@ -327,9 +331,9 @@ class PkgDeviceActor(DeviceActor):
 
         def install_packages():
             """ 
-            [es] 
+            [es] Ejecuta la instalacion de los paquetes en __packages__
             -------------------------------------------------------------------
-            [en] 
+            [en] Installs packages from __packages__
             """
             s.install(self.__packages__)
             execute_conn_commands()
@@ -349,9 +353,9 @@ class PkgDeviceActor(DeviceActor):
 
     def on_removed(self):
         """ 
-        [es] 
+        [es] Acciones a tomar cuando se detecta la desconexion del dispositivo
         -----------------------------------------------------------------------
-        [en] 
+        [en] Actions to execute when device disconnection is detected
         """
         self.msg_render.show(self.__device_title__,
                 self.__device_disconn_description__,
@@ -361,9 +365,9 @@ class PkgDeviceActor(DeviceActor):
 
     def _install_packages(self):
         """ 
-        [es] 
+        [es] Instala todos los paquetes en __packages__
         -----------------------------------------------------------------------
-        [en] 
+        [en] Installs all the packages in __packages__
         """
         s = PkgInstaller()
         s.install(self.__packages__)
@@ -371,19 +375,19 @@ class PkgDeviceActor(DeviceActor):
 
     def _execute_conn_commands(self):
         """ 
-        [es] 
+        [es] Ejecuta los comandos de conexion en __conn_commands__
         -----------------------------------------------------------------------
-        [en] 
+        [en] Executes all the connection commands in __conn_commands__
         """
         for command in self.__conn_commands__:
             os.system(command)
 
 
     def _execute_disconn_commands(self):
-        """ 
-        [es] 
+        """
+        [es] Ejecuta los comandos de desconexion en __disconn_commands__
         -----------------------------------------------------------------------
-        [en] 
+        [en] Executes all the disconnection commands in __disconn_commands__
         """
         for command in self.__disconn_commands__:
             os.system(command)

@@ -53,18 +53,17 @@ from gettext import gettext as _
 MOUSEICON = os.path.abspath('actors/img/mouse.png')
 
 def is_valid(value):
-	return 'input' in value and 'input.mouse' in value 
+    return 'input' in value and 'input.mouse' in value 
 
 class Actor (DeviceActor):
 
     __required__ = {'linux.subsystem':'input', 
-		    'info.capabilities': is_valid
-	}
+                    'info.capabilities': is_valid}
 
     def on_added(self):
         self.msg_render.show(_("Mouse"), _("USB mouse connected"),
-                icon = MOUSEICON)
+                             icon = MOUSEICON)
 
     def on_removed(self):
         self.msg_render.show(_("Mouse"), _("USB mouse disconnected"),
-                icon = MOUSEICON)
+                             icon = MOUSEICON)

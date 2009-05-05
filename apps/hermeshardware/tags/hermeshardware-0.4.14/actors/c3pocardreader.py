@@ -62,6 +62,9 @@ from gettext import gettext as _
 
 CERTMANAGER_CMD = '/usr/bin/certmanager.py'
 
+C3POICON_ON = os.path.abspath('actors/img/usb.png')
+C3POICON_OFF = os.path.abspath('actors/img/usboff.png')
+
 class Actor(PkgDeviceActor):
     """
     [es] Implementación de la clase Actor para dispositivos lectores de
@@ -83,7 +86,7 @@ class Actor(PkgDeviceActor):
 
     def on_added(self):
         actions = {}
-	def configure_dnie():
+    def configure_dnie():
             os.system('%s --install-dnie' % CERTMANAGER_CMD)
 
         def configure_ceres():
@@ -115,3 +118,10 @@ class Actor(PkgDeviceActor):
 
 
 
+    def on_added(self):
+        self.msg_render.show(_("C3PO Card Reader"), _("C3PO connected"),
+                             icon = C3POICON_ON)
+
+    def on_removed(self):
+        self.msg_render.show(_("C3PO Card Reader"), _("C3PO disconnected"),
+                             icon = C3POICON_OFF)

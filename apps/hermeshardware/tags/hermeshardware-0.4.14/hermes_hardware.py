@@ -166,13 +166,13 @@ class DeviceListener:
         """
         [es] Cuando se detecta la conexión de un nuevo dispositivo se
              identifica el actor y se invoca el metodo on_added del mismo.
-	     Si no se reconoce el dispositivo se muestra un mensaje generico
-	     de "Dispositivo Desconocido Conectado"
+             Si no se reconoce el dispositivo se muestra un mensaje generico
+             de "Dispositivo Desconocido Conectado"
         -----------------------------------------------------------------------
         [en] When a new device connection is detected we try to identify
              the corresponding actor and we launch its on_added method.
-	     If device is not recognized then we show up a generic "Unknown
-	     Device Connected" message
+             If device is not recognized then we show up a generic "Unknown
+             Device Connected" message
         """
         self.logger.debug(_("Device Added") + ": " + str(udi))
         self.devicelist.save()
@@ -193,9 +193,8 @@ class DeviceListener:
                 actor.on_added()
             except:
                 self.logger.warning(str(traceback.format_exc()))
-        #else:
                 self.message_render.show_warning(_("Warning"),
-                                             _("Unknown Device Connected")+".")
+                                _("Unknown Device Connected")+".")
 
 
 
@@ -203,12 +202,12 @@ class DeviceListener:
         """
         [es] Cuando se detecta la desconexion de un dispositivo se invoca
              el metodo on_removed definido para el actor correspondiente.
-	     Si no se reconoce el dispositivo se da un mensaje genérico de 
-	     "Dispositivo Desconocido Desconectado"
+             Si no se reconoce el dispositivo se da un mensaje genérico de 
+             "Dispositivo Desconocido Desconectado"
         -----------------------------------------------------------------------
         [en] When a device disconnection is detected we launch the on_removed
              method defined for the corresponding actor. If device is not 
-	     recognized then we show up a generic "Unknown Device Removed" message
+             recognized then we show up a generic "Unknown Device Removed" message
         """
         self.logger.debug(_("Device Removed") + ": " + str(udi))
         self.devicelist.save()
@@ -293,14 +292,14 @@ class DeviceListener:
                 priority_actors[kpriority] = klass
 
         for i in  (4, 3, 2, 1, 0):
-	    if  priority_actors[i]: 
-		if priority_actors[i].__enabled__:
+            if  priority_actors[i]: 
+                if priority_actors[i].__enabled__:
                     actor_klass = priority_actors[i]
-		else: 
-                   # [es] Activamos el actor de nuevo para que pueda ser 
-                   #      comprobado en la proxima consulta
-                   # [en] Enable the actor again to check it in next polling
-		   priority_actors[i].__enabled__ = True	
+                else: 
+                    # [es] Activamos el actor de nuevo para que pueda ser 
+                    #      comprobado en la proxima consulta
+                    # [en] Enable the actor again to check it in next polling
+                    priority_actors[i].__enabled__ = True	
                 break
 
         actor = None 
@@ -481,7 +480,7 @@ def main():
         level = logging.INFO
 
     logfilename = '/var/tmp/hermes-hardware-' + \
-                   os.environ['USER'] + str(os.getuid()) + '.log' 
+                  os.environ['USER'] + str(os.getuid()) + '.log' 
 
     logging.basicConfig(level = level,
             format='%(asctime)s %(levelname)s %(message)s',

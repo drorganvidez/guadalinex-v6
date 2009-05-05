@@ -1,4 +1,51 @@
 # -*- coding: utf-8 -*-
+#
+# Authors: 
+#     Guadalinex developers team
+#     Jose Chaso (pchaso) <jose.chaso at gmail>
+#
+# [es] Modulo hermestrayicon -
+# [en] hermestrayicon module -
+#
+# Copyright (C) 2009 Junta de Andalucía
+# 
+# ----------------------------[es]----------------------------- 
+#
+# Este fichero es parte de Detección de Hardware de Guadalinex V6 
+# 
+# Este programa es software libre: puede redistribuirlo y/o modificarlo bajo 
+# los términos de la Licencia Pública General version 3 de GNU según 
+# es publicada por la Free Software Foundation.
+# 
+# Este programa se distribuye con la esperanza de que será útil, pero 
+# SIN NINGUNA GARANTÍA, incluso sin la garantías implicitas de 
+# MERCANTILIZACION, CALIDAD SATISFACTORIA o de CONVENIENCIA PARA UN PROPÓSITO 
+# PARTICULAR. Véase la Licencia Pública General de GNU para más detalles. 
+# 
+# Debería haber recibido una copia de la Licencia Pública General 
+# junto con este programa; si no ha sido así, 
+# visite <http://www.gnu.org/licenses/>
+# o escriba a la Free Software Foundation, Inc., 
+# 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA.
+# 
+# ----------------------------[en]----------------------------- 
+# 
+# This file is part of Guadalinex V6 Hardware Detection.
+#
+# This program is free software: you can redistribute it and/or modify it      
+# under the terms of the GNU General Public License version 3, as published    
+# by the Free Software Foundation.                                             
+#                                                                              
+# This program is distributed in the hope that it will be useful, but          
+# WITHOUT ANY WARRANTY; without even the implied warranties of                 
+# MERCHANTABILITY, SATISFACTORY QUALITY, or FITNESS FOR A PARTICULAR           
+# PURPOSE.  See the GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, visit <http://www.gnu.org/licenses/>
+# or write to the Free Software Foundation, Inc., 
+# 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+
 
 import os
 import sys
@@ -8,7 +55,11 @@ import gobject
 from egg.trayicon import TrayIcon
 
 class HermesTrayIcon(TrayIcon):
-
+    """ 
+    [es] 
+    -----------------------------------------------------------------------
+    [en] 
+    """
     def __init__(self):
         TrayIcon.__init__(self, 'Hermes TrayIcon')
 
@@ -29,6 +80,11 @@ class HermesTrayIcon(TrayIcon):
 
 
     def on_mouse_press(self, widget, event):
+        """ 
+        [es] 
+        -------------------------------------------------------------------
+        [en] 
+        """
         if event.button == 3:
             self.menu.popup(None, None, None,
                     event.button, event.time)
@@ -42,14 +98,28 @@ class HermesTrayIcon(TrayIcon):
 
 
 class HermesMenu(gtk.Menu):
-
+    """ 
+    [es] 
+    -----------------------------------------------------------------------
+    [en] 
+    """
     def __init__(self):
+        """ 
+        [es] 
+        -------------------------------------------------------------------
+        [en] 
+        """
         gtk.Menu.__init__(self)
 
         self._configure()
-    
+
 
     def _configure(self):
+        """ 
+        [es] 
+        -------------------------------------------------------------------
+        [en] 
+        """
         # Open coldassistant
         item = gtk.MenuItem('Abrir el asistente de acciones')
         item.connect('activate', self.on_open)
@@ -65,19 +135,33 @@ class HermesMenu(gtk.Menu):
 
 
     def on_quit(self, widget):
+        """ 
+        [es] 
+        -------------------------------------------------------------------
+        [en] 
+        """
         gtk.main_quit()
         sys.exit(0)
 
 
     def on_open(self, widget = None):
+        """ 
+        [es] 
+        -------------------------------------------------------------------
+        [en] 
+        """
         cursor = gtk.gdk.Cursor(gtk.gdk.WATCH)
         self.get_screen().get_root_window().set_cursor(cursor)
-#        os.system('hcoldassistant &')
-        os.system('/home/pchaso/dev/hermes2/hcoldassistant &')
-	gobject.timeout_add(2000, self.__timeout)
+        os.system('hcoldassistant &')
+        gobject.timeout_add(2000, self.__timeout)
 
 
     def __timeout(self):
+        """ 
+        [es] 
+        -------------------------------------------------------------------
+        [en] 
+        """
         cursor = gtk.gdk.Cursor(gtk.gdk.TOP_LEFT_ARROW)
         self.get_screen().get_root_window().set_cursor(cursor)
         # Exit loop

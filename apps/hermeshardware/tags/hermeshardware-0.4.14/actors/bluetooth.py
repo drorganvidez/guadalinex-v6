@@ -8,7 +8,7 @@
 # [es] Modulo bluetooth - Implementación del "actor hardware" para
 #         dispositivos bluetooth
 # [en] Bluetooth module - Bluetooth devices, "hardware actor"
-#          implementation
+#         implementation
 #
 # Copyright (C) 2009 Junta de Andalucía
 #

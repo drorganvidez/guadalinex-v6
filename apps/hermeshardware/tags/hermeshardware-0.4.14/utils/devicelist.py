@@ -54,6 +54,7 @@ import os
 import pwd
 import time
 
+from gettext import gettext as _
 from sets import Set
 
 class DeviceList:
@@ -114,7 +115,7 @@ class DeviceList:
         try:
             file = open(filename, 'r')
         except IOError:
-            self.logger.warning("Creating " + filename)
+            self.logger.warning(_("Creating ") + filename)
             self.save(filename)
             file = open(filename, 'r')
 
@@ -123,7 +124,7 @@ class DeviceList:
             file.close()
         except EOFError, e:
             self.__data_to_compare = {0:Set([])}
-            self.logger.warning("Error reading from: " + filename)
+            self.logger.warning(_("Error reading from: ") + filename)
 
 
 

@@ -48,7 +48,7 @@ import os.path
 
 from utils.synaptic import Synaptic
 from deviceactor import PkgDeviceActor
-from utils.grepmap import UsbGrepMap
+#from utils.grepmap import UsbGrepMap
 from gettext import gettext as _
 
 from usbactor import Actor
@@ -106,7 +106,7 @@ class UsbWebcamActorHack(object):
 
         def install_packages():
             if synaptic.install(UsbWebcamActorHack.PACKAGES):
-	        run_cheese()
+                run_cheese()
 
         synaptic = Synaptic()
 

@@ -171,7 +171,7 @@ class CaptureLogGui(object):
 
     def on_cancel(self, *args):
         """ 
-        [es] Cuando se recibe la señal de cancelacion se finaliza la 
+        [es] Cuando se recibe la seÃ±al de cancelacion se finaliza la 
              aplicacion
         -------------------------------------------------------------------
         [en] It finishes the application when cancel signal is received
@@ -181,7 +181,7 @@ class CaptureLogGui(object):
 
     def on_finish(self, *args):
         """ 
-        [es] Cuando se recibe la señal de finalizacion se cierra la 
+        [es] Cuando se recibe la seÃ±al de finalizacion se cierra la 
              aplicacion
         -------------------------------------------------------------------
         [en] It finishes the application when finish signal is received
@@ -191,7 +191,7 @@ class CaptureLogGui(object):
 
     def on_help_clicked(self, *args):
         """ 
-        [es] Cuando se recibe la señal de ayuda se lanza un navegador web y
+        [es] Cuando se recibe la seÃ±al de ayuda se lanza un navegador web y
              se carga el archivo de ayuda de la documentacion de hermes
         -------------------------------------------------------------------
         [en] It launches a web browser and loads the help file from hermes

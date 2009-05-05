@@ -1,5 +1,53 @@
 #!/usr/bin/python
 # -*- coding: utf8 -*- 
+#
+# Authors: 
+#     Guadalinex developers team
+#     Jose Chaso (pchaso) <jose.chaso at gmail>
+#
+# [es] Modulo hermes_notifier -
+# [en] hermes_notifier module -
+#
+# Copyright (C) 2009 Junta de Andalucía
+# 
+# ----------------------------[es]----------------------------- 
+#
+# Este fichero es parte de Detección de Hardware de Guadalinex V6 
+# 
+# Este programa es software libre: puede redistribuirlo y/o modificarlo bajo 
+# los términos de la Licencia Pública General version 3 de GNU según 
+# es publicada por la Free Software Foundation.
+# 
+# Este programa se distribuye con la esperanza de que será útil, pero 
+# SIN NINGUNA GARANTÍA, incluso sin la garantías implicitas de 
+# MERCANTILIZACION, CALIDAD SATISFACTORIA o de CONVENIENCIA PARA UN PROPÓSITO 
+# PARTICULAR. Véase la Licencia Pública General de GNU para más detalles. 
+# 
+# Debería haber recibido una copia de la Licencia Pública General 
+# junto con este programa; si no ha sido así, 
+# visite <http://www.gnu.org/licenses/>
+# o escriba a la Free Software Foundation, Inc., 
+# 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA.
+# 
+# ----------------------------[en]----------------------------- 
+# 
+# This file is part of Guadalinex V6 Hardware Detection.
+#
+# This program is free software: you can redistribute it and/or modify it      
+# under the terms of the GNU General Public License version 3, as published    
+# by the Free Software Foundation.                                             
+#                                                                              
+# This program is distributed in the hope that it will be useful, but          
+# WITHOUT ANY WARRANTY; without even the implied warranties of                 
+# MERCHANTABILITY, SATISFACTORY QUALITY, or FITNESS FOR A PARTICULAR           
+# PURPOSE.  See the GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, visit <http://www.gnu.org/licenses/>
+# or write to the Free Software Foundation, Inc., 
+# 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+
+
 
 import gtk
 import dbus
@@ -17,12 +65,21 @@ from Queue import Queue
 
 
 class DefaultMessageRender:
-
+    """ 
+    [es] 
+    -----------------------------------------------------------------------
+    [en] 
+    """
     def __init__(self):
         pass
 
 
     def show_message(self, message, type):
+        """ 
+        [es] 
+        -------------------------------------------------------------------
+        [en] 
+        """
         pstring = ''
         if type == gtk.MESSAGE_INFO:
             pstring = _("Info") + ": "
@@ -35,6 +92,11 @@ class DefaultMessageRender:
 
 
     def ask_message(self, message, type):
+        """ 
+        [es] 
+        -------------------------------------------------------------------
+        [en] 
+        """
         pstring = ''
         if type == gtk.MESSAGE_INFO:
             pstring = _("Ask Info") + ": "
@@ -48,8 +110,17 @@ class DefaultMessageRender:
 
 
 class HermesTray (egg.trayicon.TrayIcon):
-
+    """ 
+    [es] 
+    -----------------------------------------------------------------------
+    [en] 
+    """
     def __init__(self):
+        """ 
+        [es] 
+        -------------------------------------------------------------------
+        [en] 
+        """
         egg.trayicon.TrayIcon.__init__(self, "VT")
         #self.add(gtk.Label("VT"))
         img = gtk.Image()
@@ -62,10 +133,20 @@ class HermesTray (egg.trayicon.TrayIcon):
 
 
     def show_message(self, message, msg_type):
+        """ 
+        [es] 
+        -------------------------------------------------------------------
+        [en] 
+        """
         thread.start_new_thread(self.__show_message, (message, msg_type))
 
 
     def __show_message (self, message, msg_type):
+        """ 
+        [es] 
+        -------------------------------------------------------------------
+        [en] 
+        """
         self.abort()
         #Mostramos el trayicon
         gtk.gdk.threads_enter()
@@ -84,7 +165,9 @@ class HermesTray (egg.trayicon.TrayIcon):
 
         def timeout():
             """
-            Timeout handler than hide messagedialog
+            [es] 
+            -------------------------------------------------------------------
+            [en] Timeout handler than hide messagedialog
             """
             dlg.response(0)
             return False # So only is executed once
@@ -92,7 +175,9 @@ class HermesTray (egg.trayicon.TrayIcon):
 
         def timeout_2():
             """
-            Timeout handler than hide trayicon
+            [es] 
+            -------------------------------------------------------------------
+            [en] Timeout handler than hide trayicon
             """
             self.hide_all()
             return False
@@ -109,6 +194,11 @@ class HermesTray (egg.trayicon.TrayIcon):
 
 
     def show_question(self, question, default = 1):
+        """ 
+        [es] 
+        -------------------------------------------------------------------
+        [en] 
+        """
         #Show trayicon
         gtk.gdk.threads_enter()
         self.show_all()
@@ -122,8 +212,10 @@ class HermesTray (egg.trayicon.TrayIcon):
         self.__setup_dialog(dlg)
 
         def timeout():
-            """
-            Timeout handler than hide messagedialog
+            """ 
+            [es] 
+            -------------------------------------------------------------------
+            [en] Timeout handler than hide messagedialog
             """
             if default == 0:
                 dlg.response(gtk.RESPONSE_NO)
@@ -132,12 +224,14 @@ class HermesTray (egg.trayicon.TrayIcon):
             return False #Only execute once
 
         def timeout_2():
-            """
-            Timeout handler that hide trayicon
+            """ 
+            [es] 
+            -------------------------------------------------------------------
+            [en] Timeout handler that hide trayicon
             """
             self.hide_all()
             return False
-        
+ 
         gobject.timeout_add(7000, timeout)
         gobject.timeout_add(9000, timeout_2)
 
@@ -157,6 +251,11 @@ class HermesTray (egg.trayicon.TrayIcon):
 
 
     def show_entry(self, message):
+        """ 
+        [es] 
+        -------------------------------------------------------------------
+        [en] 
+        """
         """
         Shows a dialig with a text entry so the user can
         input any data
@@ -210,6 +309,11 @@ class HermesTray (egg.trayicon.TrayIcon):
 
 
     def abort(self):
+        """ 
+        [es] 
+        -------------------------------------------------------------------
+        [en] 
+        """
         gtk.gdk.threads_enter()
         try:
             self.dlg.destroy()
@@ -219,6 +323,11 @@ class HermesTray (egg.trayicon.TrayIcon):
 
 
     def __setup_dialog(self, dialog):
+        """ 
+        [es] 
+        -------------------------------------------------------------------
+        [en] 
+        """
         dialog.set_position(gtk.WIN_POS_CENTER_ON_PARENT)
         dialog.set_decorated(False) #Sin borde
         dialog.stick() #The message dialog shows in all workspaces
@@ -230,9 +339,19 @@ class HermesTray (egg.trayicon.TrayIcon):
 
 
 class HermesTray2:
+    """
+    [es] 
+    -----------------------------------------------------------------------
+    [en] 
+    """
     BACKGROUND_COLOR = gtk.gdk.Color(65500, 65535, 48573)
 
     def __init__(self):
+        """ 
+        [es] 
+        -------------------------------------------------------------------
+        [en] 
+        """
         self.trayicon = egg.trayicon.TrayIcon("VT")
         img = gtk.Image()
         img.set_from_file('img' + os.sep + 'trayicon.png')
@@ -253,14 +372,29 @@ class HermesTray2:
 
 
     def show_message(self, message, msg_type):
+        """ 
+        [es] 
+        -------------------------------------------------------------------
+        [en] 
+        """
         thread.start_new_thread(self.__show_message, (message, msg_type))
 
 
     def ask_message(self, message, msg_type):
+        """ 
+        [es] 
+        -------------------------------------------------------------------
+        [en] 
+        """
         return self.__show_message(message, msg_type, True)
 
 
     def __show_message (self, message, msg_type, ask = False):
+        """ 
+        [es] 
+        -------------------------------------------------------------------
+        [en] 
+        """
         gtk.threads_enter()
         dlg = gtk.MessageDialog(parent = self.main_window,
                                 type = msg_type,
@@ -308,7 +442,9 @@ class HermesTray2:
 
         def timeout():
             """
-            Hide messagedialog
+            [es] 
+            -------------------------------------------------------------------
+            [en] Hide messagedialog
             """
             if ask:
                 queue.put(0)
@@ -318,6 +454,11 @@ class HermesTray2:
 
 
         def timeout_2():
+            """
+            [es] 
+            -------------------------------------------------------------------
+            [en] 
+            """
             """
             Hide trayicon
             """
@@ -351,6 +492,11 @@ class HermesTray2:
 
 
     def __remove_message(self, vbox):
+        """ 
+        [es] 
+        -------------------------------------------------------------------
+        [en] 
+        """
         if vbox in self.box.get_children():
             self.box.remove(vbox)
             vbox.destroy()
@@ -359,6 +505,11 @@ class HermesTray2:
 
 
     def __setup_dialog(self, dialog):
+        """ 
+        [es] 
+        -------------------------------------------------------------------
+        [en] 
+        """
         dialog.set_gravity(gtk.gdk.GRAVITY_SOUTH_EAST) 
         dialog.set_resizable(False)
 
@@ -372,9 +523,19 @@ class HermesTray2:
         self.dlg = dialog
 
 class TrayObject(dbus.service.Object):
-
+    """ 
+    [es] 
+    -----------------------------------------------------------------------
+    [en] 
+    """
     def __init__(self, service, message_render = DefaultMessageRender()):
-        dbus.service.Object.__init__(self, service, "/org/guadalinex/HermesObject")
+        """ 
+        [es] 
+        -------------------------------------------------------------------
+        [en] 
+        """
+        dbus.service.Object.__init__(self, service,
+                                     "/org/guadalinex/HermesObject")
         self.message_render = message_render
         self.logger = logging.getLogger()
         self.logger.debug(_("HermesObject started"))
@@ -382,22 +543,31 @@ class TrayObject(dbus.service.Object):
 
     @dbus.decorators.method("org.guadalinex.IHermesNotifier")
     def show_info(self, message):
-        """
-        This method shows a info message
+        """ 
+        [es] 
+        -------------------------------------------------------------------
+        [en] This method shows a info message
         """
         self.logger.info(_("Show Info") + ": " + message)
         return self.message_render.show_message(message, gtk.MESSAGE_INFO)
 
     @dbus.decorators.method("org.guadalinex.IHermesNotifier")
     def ask_info(self, message):
+        """ 
+        [es] 
+        -------------------------------------------------------------------
+        [en] 
+        """
         self.logger.info(_("Ask Info") + ": " + message)
         return self.message_render.ask_message(message, gtk.MESSAGE_INFO)
 
 
     @dbus.decorators.method("org.guadalinex.IHermesNotifier")
     def show_warning(self, message):
-        """
-        This method shows a info message
+        """ 
+        [es] 
+        -------------------------------------------------------------------
+        [en] This method shows a info message
         """
         self.logger.info(_("Show Warning") + ": " + message)
         return self.message_render.show_message(message, gtk.MESSAGE_WARNING)
@@ -405,27 +575,44 @@ class TrayObject(dbus.service.Object):
 
     @dbus.decorators.method("org.guadalinex.IHermesNotifier")
     def ask_warning(self, message):
+        """ 
+        [es] 
+        -------------------------------------------------------------------
+        [en] 
+        """
         self.logger.info(_("Ask Warning") + ": " + message)
         return self.message_render.ask_message(message, gtk.MESSAGE_WARNING)
 
 
     @dbus.decorators.method("org.guadalinex.IHermesNotifier")
     def show_error(self, message):
-        """
-        This method shows a info message
+        """ 
+        [es] 
+        -------------------------------------------------------------------
+        [en] This method shows a info message
         """
         self.logger.info(_("Show Error") +  ": " + message)
         return self.message_render.show_message(message, gtk.MESSAGE_ERROR)
 
     @dbus.decorators.method("org.guadalinex.IHermesNotifier")
     def ask_error(self, message):
+        """ 
+        [es] 
+        -------------------------------------------------------------------
+        [en] 
+        """
         self.logger.info(_("Ask Error") + ": " + message)
         return self.message_render.ask_message(message, gtk.MESSAGE_ERROR)
 
 
 
 def main():
-    #Configure options
+    """ 
+    [es] 
+    -----------------------------------------------------------------------
+    [en] Configure options
+    """
+    
     parser = OptionParser(usage = 'usage: %prog [options]')
     parser.set_defaults(debug = False)
 

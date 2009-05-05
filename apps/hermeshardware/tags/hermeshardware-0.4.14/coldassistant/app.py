@@ -64,7 +64,7 @@ class Controller(object):
     """ 
     [es] Clase básica para la creación de una ventana GTK para el Asistente
          en frio. Desde esta ventana podremos ver dispositivos reconocidos por 
-	 hermes
+         hermes
     ---------------------------------------------------------------------------
     [en] Basic class to create a GTK window for coldassistant. From this window
          we can see hermes recognized devices

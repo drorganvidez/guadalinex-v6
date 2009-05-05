@@ -5,7 +5,7 @@
 #     Jose Chaso (pchaso) <jose.chaso at gmail>
 #
 # [es] Modulo cdrommount - Módulo que implementa el "actor hardware" para
-#          solucionar un problema de montaje de algunos CDROMs y DVDROMs en
+#         solucionar un problema de montaje de algunos CDROMs y DVDROMs en
 #         Guadalinex v4.1
 # [en] Cdrommount module - implements "hardware actor" to fix mount
 #         problems for some CDROM and DVDROM devices with Guadalinex v4.1
@@ -68,10 +68,10 @@ class Actor (VolumeActor):
 
     def on_added(self):
         """
-        [es] Cuando se detecta la inserción de un CDROM o un DVDROM se comprueba
-             si está habilitada la opcion de automontaje de volumenes. Si es
-             así se procede a montar el dispositivo en la ruta de disco
-             definida en fstab.
+        [es] Cuando se detecta la inserción de un CDROM o un DVDROM se 
+             comprueba si está habilitada la opcion de automontaje de
+             volumenes. Si es así se procede a montar el dispositivo en la ruta
+             de disco definida en fstab.
         -----------------------------------------------------------------------
         [en] When a new CDROM or DVDROM insertion is detected we need to check
              automount_media gnome desktop option. If its value is True we
@@ -84,8 +84,8 @@ class Actor (VolumeActor):
         self.logger.debug("gconf.key automount_media value is: %s", is_automount)
         if is_automount:
             self.logger.debug("gconf.key automount_media True")
-            os.system("pmount %s %s" % (self.properties['block.device'], 
-                      self.properties['linux.fstab.mountpoint'].split('/')[-1]))
+            os.system("pmount %s %s" % (self.properties['block.device',
+                 self.properties['linux.fstab.mountpoint'].split('/')[-1]))
 
             super(VolumeActor, self).on_added()
 

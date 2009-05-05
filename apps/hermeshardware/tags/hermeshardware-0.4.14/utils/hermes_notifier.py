@@ -29,17 +29,17 @@
 # o escriba a la Free Software Foundation, Inc., 
 # 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA.
 # 
-# ----------------------------[en]----------------------------- 
+# ----------------------------[en]-----------------------------
 # 
 # This file is part of Guadalinex V6 Hardware Detection.
 #
-# This program is free software: you can redistribute it and/or modify it      
-# under the terms of the GNU General Public License version 3, as published    
-# by the Free Software Foundation.                                             
-#                                                                              
-# This program is distributed in the hope that it will be useful, but          
-# WITHOUT ANY WARRANTY; without even the implied warranties of                 
-# MERCHANTABILITY, SATISFACTORY QUALITY, or FITNESS FOR A PARTICULAR           
+# This program is free software: you can redistribute it and/or modify it
+# under the terms of the GNU General Public License version 3, as published
+# by the Free Software Foundation.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranties of
+# MERCHANTABILITY, SATISFACTORY QUALITY, or FITNESS FOR A PARTICULAR
 # PURPOSE.  See the GNU General Public License for more details.
 #
 # You should have received a copy of the GNU General Public License

@@ -1,48 +1,52 @@
 # -*- coding: utf-8 -*-
-
-#Módulo deviceactor - Módulo que contiene la clase DeviceActor, clase base para
-#la creación de "actores de hardware"
 #
-#Copyright (C) 2005 Junta de Andalucía
+# Authors:
+#     Gumersindo Coronel Pérez (gcoronel)
+#     Jose Chaso (pchaso) <jose.chaso at gmail>
 #
-#Autor/es (Author/s):
+# [es] Modulo deviceactor - Contiene la clase DeviceActor, clase base para
+#                           la creación de "actores de hardware"
+# [en] deviceactor module - Contains DeviceActor class, used for the 
+#                           "hardware actors" creation.
 #
-#- Gumersindo Coronel Pérez <gcoronel@emergya.info>
+# Copyright (C) 2009 Junta de Andalucía
 #
-#Este fichero es parte de Detección de Hardware de Guadalinex 2005 
+# ----------------------------[es]---------------------------------------------
 #
-#Detección de Hardware de Guadalinex 2005  es software libre. Puede redistribuirlo y/o modificarlo 
-#bajo los términos de la Licencia Pública General de GNU según es 
-#publicada por la Free Software Foundation, bien de la versión 2 de dicha
-#Licencia o bien (según su elección) de cualquier versión posterior. 
+# Este fichero es parte de Detección de Hardware de Guadalinex V6
 #
-#Detección de Hardware de Guadalinex 2005  se distribuye con la esperanza de que sea útil, 
-#pero SIN NINGUNA GARANTÍA, incluso sin la garantía MERCANTIL 
-#implícita o sin garantizar la CONVENIENCIA PARA UN PROPÓSITO 
-#PARTICULAR. Véase la Licencia Pública General de GNU para más detalles. 
+# Este programa es software libre: puede redistribuirlo y/o modificarlo bajo
+# los términos de la Licencia Pública General version 3 de GNU según
+# es publicada por la Free Software Foundation.
 #
-#Debería haber recibido una copia de la Licencia Pública General 
-#junto con Detección de Hardware de Guadalinex 2005 . Si no ha sido así, escriba a la Free Software
-#Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA.
+# Este programa se distribuye con la esperanza de que será útil, pero
+# SIN NINGUNA GARANTÍA, incluso sin la garantías implicitas de
+# MERCANTILIZACION, CALIDAD SATISFACTORIA o de CONVENIENCIA PARA UN PROPÓSITO
+# PARTICULAR. Véase la Licencia Pública General de GNU para más detalles.
 #
-#-------------------------------------------------------------------------
+# Debería haber recibido una copia de la Licencia Pública General
+# junto con este programa; si no ha sido así,
+# visite <http://www.gnu.org/licenses/>
+# o escriba a la Free Software Foundation, Inc.,
+# 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA.
 #
-#This file is part of Detección de Hardware de Guadalinex 2005 .
+# ----------------------------[en]---------------------------------------------
 #
-#Detección de Hardware de Guadalinex 2005  is free software; you can redistribute it and/or modify
-#it under the terms of the GNU General Public License as published by
-#the Free Software Foundation; either version 2 of the License, or
-#at your option) any later version.
+# This file is part of Guadalinex V6 Hardware Detection.
 #
-#Detección de Hardware de Guadalinex 2005  is distributed in the hope that it will be useful,
-#but WITHOUT ANY WARRANTY; without even the implied warranty of
-#MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#GNU General Public License for more details.
+# This program is free software: you can redistribute it and/or modify it
+# under the terms of the GNU General Public License version 3, as published
+# by the Free Software Foundation.
 #
-#You should have received a copy of the GNU General Public License
-#along with Foobar; if not, write to the Free Software
-#Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
-
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranties of
+# MERCHANTABILITY, SATISFACTORY QUALITY, or FITNESS FOR A PARTICULAR
+# PURPOSE.  See the GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, visit <http://www.gnu.org/licenses/>
+# or write to the Free Software Foundation, Inc.,
+# 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
 
 """
@@ -103,26 +107,37 @@ import os
 import logging
 
 import dbus
-#from utils import syck
-#import syck
-#import yaml as syck
 import yaml
 
 from utils.pkginstaller import PkgInstaller
 from gettext import gettext as _
 
 class DeviceActor(object):
+    """ 
+    [es] Esta clase encapsula la lógica de actuación ante eventos en un 
+         dispositivo. Es una clase abstracta que sirve para crear 
+         "actores de dispositivos", que sirven para mostrar mensajes al 
+         insertar/quitar dispositivos
+    ---------------------------------------------------------------------------
+    [en] This class encapsulates the device related events handling logic.
+         It is an abstract class to create "device actors" to notify the user
+         about events related to those hardware devices.
     """
-    Esta clase encapsula la lógica de actuación ante eventos en un dispositivo,
 
-    Es una clase abstracta que sirve para crear "actores de dispositivos",
-    que sirven para mostrar mensajes al insertar/quitar dispositivos
-    """
-    __required__ = {} 
-    __priority__ = 3 # Values: 1, 2, 3, 4, 5. The higher value, the more priority.
-    __enabled__ = True # This can be used by an actor to disable another actor.
+    __required__ = {}
+    # [es] Valores: 1, 2, 3, 4, 5. A mayor valor, mayor prioridad.
+    # [en] Values: 1, 2, 3, 4, 5. The higher value, the more priority.
+    __priority__ = 3 
+    # [es] Puede ser usado por un actor para deshabilitar otro actor.
+    # [en] This can be used by an actor to disable another actor.
+    __enabled__ = True 
 
     def __init__(self, message_render, device_properties):
+        """ 
+        [es] 
+        -----------------------------------------------------------------------
+        [en] 
+        """
         self.message_render = self.msg_render = message_render
         self.properties = device_properties
         self.msg_no = None
@@ -131,10 +146,16 @@ class DeviceActor(object):
 
 
     def __on_property_modified(self, udi, num, values):
+        """ 
+        [es] 
+        -----------------------------------------------------------------------
+        [en] 
+        """
         for ele in values:
             key = ele[0]
 
-            #Update properties
+            # [es] Actualizamos las propiedades
+            # [en] Update properties
             obj = self.bus.get_object('org.freedesktop.Hal', self.udi)
             obj = dbus.Interface(obj, 'org.freedesktop.Hal.Device')
             self.properties = obj.GetAllProperties()
@@ -142,22 +163,41 @@ class DeviceActor(object):
             self.on_modified(key)
 
     def on_added(self):
+        """ 
+        [es] 
+        -----------------------------------------------------------------------
+        [en] 
+        """
         pass
 
     def on_removed(self):
+        """ 
+        [es] 
+        -----------------------------------------------------------------------
+        [en] 
+        """
         pass
     
     def on_modified(self, prop_name):
+        """ 
+        [es] 
+        -----------------------------------------------------------------------
+        [en] 
+        """
         pass
 
 
 class PkgDeviceActor(DeviceActor):
     """ 
-    Esta clase encapsula la lógica los actores que se encargan de 
-    comprobar e instalar paquetes determinados.
-
-    Es útil para simplicar todo esos actores que lo único que hacen es
-    instalar software para que el dispositivo funcione.
+    [es] Esta clase encapsula la lógica para los actores que necesitan
+         comprobar e instalar paquetes determinados.
+         Es útil para simplicar todo esos actores que lo único que hacen es
+         instalar software para que el dispositivo funcione.
+    ---------------------------------------------------------------------------
+    [en] 
+    """
+	
+    """ 
     """
     __icon_path__  = ''
     __iconoff_path__ = ''
@@ -173,11 +213,21 @@ class PkgDeviceActor(DeviceActor):
 
 
     def __init__(self, message_render, device_properties):
+        """ 
+        [es] 
+        -----------------------------------------------------------------------
+        [en] 
+        """
         DeviceActor.__init__(self, message_render, device_properties)
         self.set_default_properties()
 
 
     def set_default_properties(self):
+        """ 
+        [es] 
+        -----------------------------------------------------------------------
+        [en] 
+        """
         """ Set default properties from config files.
         """
         modname = self.__module__.split('.')[-1]
@@ -199,6 +249,11 @@ class PkgDeviceActor(DeviceActor):
 
 
     def get_packages(module_name):
+        """ 
+        [es] 
+        -----------------------------------------------------------------------
+        [en] 
+        """
         """ Return packages for an actor.
 
         Return packages for an actor based on actors/config/* files and on
@@ -218,6 +273,11 @@ class PkgDeviceActor(DeviceActor):
 
 
     def _get_desktop():
+        """ 
+        [es] 
+        -----------------------------------------------------------------------
+        [en] 
+        """
         """ Return desktop name (gnome, or kde)
         """
         # Look for gnome
@@ -239,9 +299,19 @@ class PkgDeviceActor(DeviceActor):
 
 
     def on_added(self):
+        """ 
+        [es] 
+        -----------------------------------------------------------------------
+        [en] 
+        """
         s = PkgInstaller()
 
         def execute_conn_commands():
+            """ 
+            [es] 
+            -------------------------------------------------------------------
+            [en] 
+            """
             execute = True
 
             # Obtain sudo permission if needed.
@@ -256,6 +326,11 @@ class PkgDeviceActor(DeviceActor):
                     os.system(command)
 
         def install_packages():
+            """ 
+            [es] 
+            -------------------------------------------------------------------
+            [en] 
+            """
             s.install(self.__packages__)
             execute_conn_commands()
 
@@ -273,6 +348,11 @@ class PkgDeviceActor(DeviceActor):
 
 
     def on_removed(self):
+        """ 
+        [es] 
+        -----------------------------------------------------------------------
+        [en] 
+        """
         self.msg_render.show(self.__device_title__,
                 self.__device_disconn_description__,
                 self.__iconoff_path__)
@@ -280,16 +360,31 @@ class PkgDeviceActor(DeviceActor):
 
 
     def _install_packages(self):
+        """ 
+        [es] 
+        -----------------------------------------------------------------------
+        [en] 
+        """
         s = PkgInstaller()
         s.install(self.__packages__)
 
 
     def _execute_conn_commands(self):
+        """ 
+        [es] 
+        -----------------------------------------------------------------------
+        [en] 
+        """
         for command in self.__conn_commands__:
             os.system(command)
 
 
     def _execute_disconn_commands(self):
+        """ 
+        [es] 
+        -----------------------------------------------------------------------
+        [en] 
+        """
         for command in self.__disconn_commands__:
             os.system(command)
 

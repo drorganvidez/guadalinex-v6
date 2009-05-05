@@ -71,10 +71,14 @@ class UsbGrepMap(object):
 
         vendorid = hex(vendorid)
         productid = hex(productid)
+## Codigo de prueba para evitar error de dependencias con grepmap
+#########################################    BORRAR
+        command = ""
+###################################################
 
-        command = "grepmap --usbmap "
-        command += "--file=%s %s %s 0 0 0 0 0 0 0" % \
-                (mapfile, vendorid, productid)
+#        command = "grepmap --usbmap "
+#        command += "--file=%s %s %s 0 0 0 0 0 0 0" % \
+#                (mapfile, vendorid, productid)
 
         return os.popen(command).read().strip()
 

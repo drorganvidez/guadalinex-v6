@@ -105,7 +105,8 @@ import logging
 import dbus
 #from utils import syck
 #import syck
-import yaml as syck
+#import yaml as syck
+import yaml
 
 from utils.pkginstaller import PkgInstaller
 from gettext import gettext as _
@@ -184,7 +185,7 @@ class PkgDeviceActor(DeviceActor):
         pkg_path = os.path.abspath('actors/config') + \
                 '/' + modname + '.' + PkgDeviceActor._get_desktop()
         try:
-            config = syck.load(open(pkg_path).read())
+            config = yaml.load(open(pkg_path).read())
         except Exception, e:
             print e
 
@@ -207,7 +208,7 @@ class PkgDeviceActor(DeviceActor):
                 '/' + module_name + '.' + PkgDeviceActor._get_desktop()
         config = {}
         try:
-            config = syck.load(open(pkg_path).read())
+            config = yaml.load(open(pkg_path).read())
         except Exception, e:
             pass
 

@@ -8,6 +8,18 @@
     <pos y="0" x="0" width="100%" height="100%"/>
   </item>
 
+  <!-- guadalinex logo -->
+    <item type="pixmap">
+        <normal file="guadalinex_logo.svg" alpha="1.0"/>
+        <pos x="50%" y="33%" anchor="c"/>
+    </item>
+
+  <!-- Junta de Andalucía logo -->
+    <item type="pixmap">
+        <normal file="juntaandalucia_logo.svg" alpha="1.0"/>
+        <pos x="50%" y="80%" width="22%" height="12%" anchor="c"/>
+    </item>
+
   <!-- bottom bar -->
   <item type="pixmap">
      <normal file="bottom_bar.svg"/>
@@ -53,9 +65,9 @@
   <!-- password box -->
   <item type="rect">
     <pos x="50%" y="51%" width="box" height="box" anchor="c"/>
-        <box xpadding="50" ypadding="29" spacing="2" orientation="vertical">
+        <box xpadding="50" ypadding="29" spacing="5" orientation="vertical">
           <item type="label" id="pam-prompt">
-            <pos x="2"/>
+            <pos x="2" y="0"/>
             <normal font="FrancophilSans Bold 11" color="#ffffff"/>
             <stock type="username-label"/>
           </item>
@@ -70,20 +82,20 @@
 <!-- caps lock warning -->
   <item type="label" id="caps-lock-warning">
 <pos x="0" y="48" anchor="nw"/>
-    <normal font="FrancophilSans Bold 11" color="#dc292b"/>
+    <normal font="FrancophilSans Bold 11" color="#ee6c0d"/>
     <stock type="caps-lock-warning"/>
   </item>
   <!-- timer warning -->
   <item type="label" id="timed-label">
     <pos x="0" y="48" anchor="nw"/>
     <show type="timed"/>
-    <normal font="FrancophilSans Bold 11" color="#dc292b"/>
+    <normal font="FrancophilSans Bold 11" color="#ee6c0d"/>
     <stock type="timed-label"/>
   </item>
   <!-- pam error -->
   <item type="label" id="pam-error">
     <pos x="52%" y="90" width="290" anchor="c" />
-    <normal font="FrancophilSans Bold 11" color="#dc292b"/><!--#dc292b-->
+    <normal font="FrancophilSans Bold 11" color="#ee6c0d"/><!--#dc292b-->
     <text></text>
   </item>
             </fixed>

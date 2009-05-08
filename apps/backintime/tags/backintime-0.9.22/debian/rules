@@ -1,0 +1,16 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+include /usr/share/cdbs/1/rules/debhelper.mk
+
+build/backintime-common::
+	make -f $(CURDIR)/Makefile.common DESTDIR=$(CURDIR)/debian/$(cdbs_curpkg) install
+
+build/backintime-gnome::
+	make -f $(CURDIR)/Makefile.gnome DESTDIR=$(CURDIR)/debian/$(cdbs_curpkg) install
+
+build/backintime-kde4::
+	make -f $(CURDIR)/Makefile.kde4 DESTDIR=$(CURDIR)/debian/$(cdbs_curpkg) install
+
+clean::
+	make -f $(CURDIR)/Makefile.common clean

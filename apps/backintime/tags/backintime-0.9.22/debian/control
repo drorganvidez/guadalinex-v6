@@ -1,0 +1,40 @@
+Source: backintime
+Section: gnome
+Priority: optional
+XSBC-Original-Maintainer: Oprea Dan <dan@le-web.org>
+Maintainer: Junta de Andalucia <packmaster@guadalinex.org> 
+Build-Depends: debhelper (>= 7), cdbs
+Standards-Version: 3.8.0
+Homepage: http://backintime.le-web.org/
+Vcs-Browser: http://bazaar.launchpad.net/~guadalinex-members/backintime/trunk/changes
+Vcs-Bzr: http://bazaar.launchpad.net/~guadalinex-members/backintime/trunk
+Upstream-Vcs-Browser: http://bazaar.launchpad.net/~dan-le-web/backintime/trunk/changes
+Upstream-Vcs-Bzr: https://bazaar.launchpad.net/~dan-le-web/backintime/trunk
+
+Package: backintime-common
+Priority: optional
+Section: utils
+Architecture: all
+Depends: python, rsync, cron
+Conflicts: backintime
+Replaces: backintime
+Description: Simple backup system (common)
+ This package contains non GUI files used by different GUI fontends.
+
+Package: backintime-gnome
+Priority: optional
+Section: gnome
+Architecture: all
+Depends: python-glade2, python-gnome2, python-notify, meld, gksu, backintime-common (= 0.9.22)
+Description: Simple backup system for GNOME Desktop
+ This is a GNOME GUI frontend for backintime-common.
+
+Package: backintime-kde4
+Priority: optional
+Section: kde
+Architecture: all
+Depends: x11-utils, kdesudo, python-kde4 (>= 4.1), backintime-common (= 0.9.22)
+Suggests: kompare
+Description: Simple backup system for KDE4 Desktop
+ This is a KDE4 (>= 4.1) GUI frontend for backintime-common.
+

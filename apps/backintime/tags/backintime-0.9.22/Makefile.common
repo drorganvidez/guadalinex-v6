@@ -1,0 +1,192 @@
+LANGS=sv sl sk ru pt pt_BR pl nb it he gl fr es de cs bg 
+SHELL=/bin/bash
+
+all: buildcommon 
+
+clean: cleancommon 
+
+install: installcommon 
+
+translations: po/sv.mo po/sl.mo po/sk.mo po/ru.mo po/pt.mo po/pt_BR.mo po/pl.mo po/nb.mo po/it.mo po/he.mo po/gl.mo po/fr.mo po/es.mo po/de.mo po/cs.mo po/bg.mo 
+
+po/sv.mo: po/sv.po
+	msgfmt -o po/sv.mo po/sv.po
+
+po/sl.mo: po/sl.po
+	msgfmt -o po/sl.mo po/sl.po
+
+po/sk.mo: po/sk.po
+	msgfmt -o po/sk.mo po/sk.po
+
+po/ru.mo: po/ru.po
+	msgfmt -o po/ru.mo po/ru.po
+
+po/pt.mo: po/pt.po
+	msgfmt -o po/pt.mo po/pt.po
+
+po/pt_BR.mo: po/pt_BR.po
+	msgfmt -o po/pt_BR.mo po/pt_BR.po
+
+po/pl.mo: po/pl.po
+	msgfmt -o po/pl.mo po/pl.po
+
+po/nb.mo: po/nb.po
+	msgfmt -o po/nb.mo po/nb.po
+
+po/it.mo: po/it.po
+	msgfmt -o po/it.mo po/it.po
+
+po/he.mo: po/he.po
+	msgfmt -o po/he.mo po/he.po
+
+po/gl.mo: po/gl.po
+	msgfmt -o po/gl.mo po/gl.po
+
+po/fr.mo: po/fr.po
+	msgfmt -o po/fr.mo po/fr.po
+
+po/es.mo: po/es.po
+	msgfmt -o po/es.mo po/es.po
+
+po/de.mo: po/de.po
+	msgfmt -o po/de.mo po/de.po
+
+po/cs.mo: po/cs.po
+	msgfmt -o po/cs.mo po/cs.po
+
+po/bg.mo: po/bg.po
+	msgfmt -o po/bg.mo po/bg.po
+
+installcommonlang:
+	install -d $(DEST)/share/locale/sv/LC_MESSAGES
+	install --mode=644 po/sv.mo $(DEST)/share/locale/sv/LC_MESSAGES/backintime.mo
+	install -d $(DEST)/share/locale/sl/LC_MESSAGES
+	install --mode=644 po/sl.mo $(DEST)/share/locale/sl/LC_MESSAGES/backintime.mo
+	install -d $(DEST)/share/locale/sk/LC_MESSAGES
+	install --mode=644 po/sk.mo $(DEST)/share/locale/sk/LC_MESSAGES/backintime.mo
+	install -d $(DEST)/share/locale/ru/LC_MESSAGES
+	install --mode=644 po/ru.mo $(DEST)/share/locale/ru/LC_MESSAGES/backintime.mo
+	install -d $(DEST)/share/locale/pt/LC_MESSAGES
+	install --mode=644 po/pt.mo $(DEST)/share/locale/pt/LC_MESSAGES/backintime.mo
+	install -d $(DEST)/share/locale/pt_BR/LC_MESSAGES
+	install --mode=644 po/pt_BR.mo $(DEST)/share/locale/pt_BR/LC_MESSAGES/backintime.mo
+	install -d $(DEST)/share/locale/pl/LC_MESSAGES
+	install --mode=644 po/pl.mo $(DEST)/share/locale/pl/LC_MESSAGES/backintime.mo
+	install -d $(DEST)/share/locale/nb/LC_MESSAGES
+	install --mode=644 po/nb.mo $(DEST)/share/locale/nb/LC_MESSAGES/backintime.mo
+	install -d $(DEST)/share/locale/it/LC_MESSAGES
+	install --mode=644 po/it.mo $(DEST)/share/locale/it/LC_MESSAGES/backintime.mo
+	install -d $(DEST)/share/locale/he/LC_MESSAGES
+	install --mode=644 po/he.mo $(DEST)/share/locale/he/LC_MESSAGES/backintime.mo
+	install -d $(DEST)/share/locale/gl/LC_MESSAGES
+	install --mode=644 po/gl.mo $(DEST)/share/locale/gl/LC_MESSAGES/backintime.mo
+	install -d $(DEST)/share/locale/fr/LC_MESSAGES
+	install --mode=644 po/fr.mo $(DEST)/share/locale/fr/LC_MESSAGES/backintime.mo
+	install -d $(DEST)/share/locale/es/LC_MESSAGES
+	install --mode=644 po/es.mo $(DEST)/share/locale/es/LC_MESSAGES/backintime.mo
+	install -d $(DEST)/share/locale/de/LC_MESSAGES
+	install --mode=644 po/de.mo $(DEST)/share/locale/de/LC_MESSAGES/backintime.mo
+	install -d $(DEST)/share/locale/cs/LC_MESSAGES
+	install --mode=644 po/cs.mo $(DEST)/share/locale/cs/LC_MESSAGES/backintime.mo
+	install -d $(DEST)/share/locale/bg/LC_MESSAGES
+	install --mode=644 po/bg.mo $(DEST)/share/locale/bg/LC_MESSAGES/backintime.mo
+
+installgnomelang:
+
+installkde4lang:
+	install -d $(DEST)/share/doc/kde4/HTML/en/backintime/figures
+	install --mode=644 docbook-kde4/en/*.docbook $(DEST)/share/doc/kde4/HTML/en/backintime
+	install --mode=644 docbook-kde4/en/figures/*.png $(DEST)/share/doc/kde4/HTML/en/backintime/figures
+
+PREFIX=/usr
+DEST=$(DESTDIR)$(PREFIX)
+
+buildcommon: translations
+
+cleancommon:
+	rm -f po/*.mo
+
+installcommon: buildcommon installcommonlang
+	#install python
+	install -d $(DEST)/share/backintime
+	install --mode=644 applicationinstance.py $(DEST)/share/backintime
+	install --mode=644 backintime.py $(DEST)/share/backintime
+	install --mode=644 config.py $(DEST)/share/backintime
+	install --mode=644 configfile.py $(DEST)/share/backintime
+	install --mode=644 guiapplicationinstance.py $(DEST)/share/backintime
+	install --mode=644 logger.py $(DEST)/share/backintime
+	install --mode=644 snapshots.py $(DEST)/share/backintime
+	install --mode=644 tools.py $(DEST)/share/backintime
+	
+	#install copyright file
+	install -d $(DEST)/share/doc/backintime-common
+	install --mode=644 debian_specific/copyright $(DEST)/share/doc/backintime-common
+	
+	#install doc file(s)
+	install -d $(DEST)/share/doc/backintime
+	install --mode=644 AUTHORS $(DEST)/share/doc/backintime
+	install --mode=644 LICENSE $(DEST)/share/doc/backintime
+	install --mode=644 README $(DEST)/share/doc/backintime
+	install --mode=644 TRANSLATIONS $(DEST)/share/doc/backintime
+	install --mode=644 VERSION $(DEST)/share/doc/backintime
+	install --mode=644 CHANGES $(DEST)/share/doc/backintime
+	
+	#install man file(s)
+	install -d $(DEST)/share/man/man1
+	install --mode=644 man/C/*.gz $(DEST)/share/man/man1
+	
+	#install application
+	install -d $(DEST)/bin
+	install backintime $(DEST)/bin
+
+buildgnome:
+
+cleangnome:
+
+installgnome: buildgnome installgnomelang
+	#install application
+	install -d $(DEST)/bin
+	install backintime-gnome $(DEST)/bin
+	
+	#install copyright file
+	install -d $(DEST)/share/doc/backintime-gnome
+	install --mode=644 debian_specific/copyright $(DEST)/share/doc/backintime-gnome
+	
+	#install python & glade file(s)
+	install -d $(DEST)/share/backintime
+	install --mode=644 gnome*.py $(DEST)/share/backintime
+	install --mode=644 *.glade $(DEST)/share/backintime
+	
+	#install .desktop file(s)
+	install -d $(DEST)/share/applications
+	install --mode=644 backintime-gnome*.desktop $(DEST)/share/applications
+	
+	#install gnome-help file(s)
+	install -d $(DEST)/share/gnome/help/backintime/C/figures
+	install --mode=644 docbook/C/*.xml $(DEST)/share/gnome/help/backintime/C
+	install --mode=644 docbook/C/figures/*.png $(DEST)/share/gnome/help/backintime/C/figures
+	
+	install -d $(DEST)/share/omf/backintime
+	install --mode=644 docbook/C/*.omf $(DEST)/share/omf/backintime
+
+buildkde4:
+
+cleankde4:
+
+installkde4: buildkde4 installkde4lang
+	#install application
+	install -d $(DEST)/bin
+	install backintime-kde4 $(DEST)/bin
+	
+	#install copyright file
+	install -d $(DEST)/share/doc/backintime-kde4
+	install --mode=644 debian_specific/copyright $(DEST)/share/doc/backintime-kde4
+	
+	#install python & glade file(s)
+	install -d $(DEST)/share/backintime
+	install --mode=644 kde4*.py $(DEST)/share/backintime
+	
+	#install .desktop file(s)
+	install -d $(DEST)/share/applications/kde4
+	install --mode=644 backintime-kde4*.desktop $(DEST)/share/applications/kde4
+

@@ -1,4 +1,4 @@
-grub (0.97-29ubuntu47) UNRELEASED; urgency=low
+grub (0.97-29ubuntu48) UNRELEASED; urgency=low
 
   * New patch, clear_esc_message, clears the "Press `ESC'" message when
     leaving this loop: at least a newline needs to be output for upcoming
@@ -6,6 +6,15 @@ grub (0.97-29ubuntu47) UNRELEASED; urgency=low
     clear the line completely as the message isn't needed anymore.
 
  -- Loic Minier <lool@dooz.org>  Thu, 20 Nov 2008 23:58:17 +0100
+
+grub (0.97-29ubuntu47) jaunty; urgency=low
+
+  [ Colin King ]
+
+  * New patch, ext4_support now allows grub to boot from ext4 partitions.
+    This patch orginated from Quentin Godfroy <godfroy@clipper.ens.fr>
+
+ -- Tim Gardner < tim.gardner@canonical.com>   Tue, 06 Jan 2009 17:24:26 +0000
 
 grub (0.97-29ubuntu46) jaunty; urgency=low
 

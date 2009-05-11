@@ -4,6 +4,8 @@ grub (0.97-29ubuntu50) UNRELEASED; urgency=low
     before comparing them (LP: #317085).
   * debian/kernel-prerm.d-last-good-boot: Don't fail if grub has been
     removed but not purged (LP: #272885).
+  * Depend on grub-common for grub-probe, needed to check whether XFS is in
+    use.
 
  -- Colin Watson <cjwatson@ubuntu.com>  Thu, 12 Feb 2009 17:08:00 +0000
 

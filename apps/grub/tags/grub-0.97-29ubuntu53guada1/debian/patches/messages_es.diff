@@ -118,3 +118,22 @@
        
        if (run_script (cur_entry, heap))
  	{
+--- grub_0.97/stage2/cmdline.c	2009-05-08 14:12:50.000000000 +0200
++++ grub_0.97.new/stage2/cmdline.c	2009-05-11 10:46:26.000000000 +0200
+@@ -50,11 +50,11 @@
+ void
+ print_cmdline_message (int forever)
+ {
+-  grub_printf("       [ Minimal BASH-like line editing is supported.   For\n"
+-              "         the   first   word,  TAB  lists  possible  command\n"
+-              "         completions.  Anywhere else TAB lists the possible\n"
+-              "         completions of a device/filename.%s ]\n",
+-              (forever ? "" : "  ESC at any time\n         exits."));
++  grub_printf("       [ Se dispone de un entorno minimo parecido BASH. Existe\n"
++              "         completado de lista comandos para la primera palabra\n"
++              "         usando el tabulador. Es posible completar tambien la\n"
++              "         lista de archivos o dispositivos con el tabulador.%s ]\n",
++              (forever ? "" : "\n  Pulse ESC en cualquier momento para salir."));
+ }
+ 
+ /* Find the builtin whose command name is COMMAND and return the

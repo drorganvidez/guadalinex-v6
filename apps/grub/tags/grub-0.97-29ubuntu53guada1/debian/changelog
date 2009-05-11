@@ -1,9 +1,18 @@
 grub (0.97-29ubuntu48) UNRELEASED; urgency=low
 
+  [ Loic Minier ]
   * New patch, clear_esc_message, clears the "Press `ESC'" message when
     leaving this loop: at least a newline needs to be output for upcoming
     messages to be started on the first column, so it's easiest to simply
     clear the line completely as the message isn't needed anymore.
+
+  [ Colin Watson ]
+  * Cherry-pick from Debian, fixing LP: #8058 (not merging yet due to some
+    revision control awkwardness):
+    - patches/xfs_freeze.diff: Replace with a new patch, which thaws XFS
+      inmediately after freezing it.  (Closes: #239111, #243835, #246111,
+      #309218, #425367) hopefully for good this time.  Thanks everyone who
+      sent their feedback, too many to list them here.
 
  -- Loic Minier <lool@dooz.org>  Thu, 20 Nov 2008 23:58:17 +0100
 

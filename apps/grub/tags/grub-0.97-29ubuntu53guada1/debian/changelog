@@ -1,3 +1,11 @@
+grub (0.97-29ubuntu51) UNRELEASED; urgency=low
+
+  * more_scsi_disks.diff: Add support for up to 256 SCSI disk devices on
+    Linux (LP: #335174). Due to BIOS disk numbering only at most 128 can be
+    bootable, so ensure we don't crash if there are more.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Wed, 04 Mar 2009 14:21:22 +0000
+
 grub (0.97-29ubuntu50) jaunty; urgency=low
 
   * debian/update-grub: Strip trailing slashes from mountpoints in fstab

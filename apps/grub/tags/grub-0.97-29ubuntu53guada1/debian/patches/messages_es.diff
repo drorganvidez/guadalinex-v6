@@ -1,0 +1,120 @@
+--- grub_0.97/stage2/stage2.c	2009-05-08 14:28:24.000000000 +0200
++++ grub_0.97.new/stage2/stage2.c	2009-05-08 14:37:24.000000000 +0200
+@@ -310,7 +310,7 @@
+ 	      grub_timeout--;
+ 	      
+ 	      /* Print a message.  */
+-	      grub_printf ("\rPress `ESC' to enter the menu... %d   ",
++	      grub_printf ("\rPara acceder al menú, pulse 'ESC'... %d   ",
+ 			   grub_timeout);
+ 	      clear_esc_message = 1;
+ 	    }
+@@ -332,31 +332,33 @@
+ 	print_border (3 + row_start, box_size);
+ 
+       grub_printf ("\n\
+-    Use the %c and %c keys to select which entry is highlighted.\n",
++    Use las teclas %c y %c para indicar qué opción desea seleccinar.\n",
+ 		   DISP_UP, DISP_DOWN);
+       
+       if (! auth && password)
+ 	{
+ 	  printf ("\
+-    Press enter to boot the selected OS or \'p\' to enter a\n\
+-    password to unlock the next set of features.");
++    Para arrancar el SO selecionado pulse \'p\' o para \n\
++    introducir la clave y acceder a las siguientes características.");
+ 	}
+       else
+ 	{
+ 	  if (config_entries)
+ 	    printf ("\
+-    Press enter to boot the selected OS, \'e\' to edit the\n\
+-    commands before booting, or \'c\' for a command-line.");
++    Pulse intro para arrancar el SO seleccionado, \'e\' para editar\n\
++    las opciones antes de arrancar, o \'c\' para acceder a la línea \n\
++    de comandos.");
+ 	  else
+ 	    printf ("\
+-    Press \'b\' to boot, \'e\' to edit the selected command in the\n\
+-    boot sequence, \'c\' for a command-line, \'o\' to open a new line\n\
+-    after (\'O\' for before) the selected line, \'d\' to remove the\n\
+-    selected line, or escape to go back to the main menu.");
++    Para arrancar pulse \'b\', \'e\' para editar la opción selecionada en\n\
++    la secuancia de arranque, \'c\' para la línea de comandos, \'o\' para \n\
++    añadir una línea después (\'O\' para antes) de la línea seleccionada,\n\
++    \'d\' para eliminar la línea seleccionada, o escape para volver\n\
++    al menú principal.");
+ 	}
+ 
+       if (current_term->flags & TERM_DUMB)
+-	grub_printf ("\n\nThe selected entry is %d ", entryno);
++	grub_printf ("\n\nLa entrada seleccionada es %d ", entryno);
+       else
+ 	print_entries (3 + row_start, box_size, first_entry, entryno, menu_entries);
+     }
+@@ -381,12 +383,12 @@
+ 	  time2 = time1;
+ 
+ 	  if (current_term->flags & TERM_DUMB)
+-	      grub_printf ("\r    Entry %d will be booted automatically in %d seconds.   ", 
++	      grub_printf ("\r    La entrada %d arrancará automáticamente en %d segundos.   ", 
+ 			   entryno, grub_timeout);
+ 	  else
+ 	    {
+ 	      gotoxy (3 + col_start, 10 + box_size + row_start);
+-	      grub_printf (" The highlighted entry will be booted automatically in %d seconds.   ",
++	      grub_printf ("En %d segundos arrancará automáticamente la entrada seleccionada.    ",
+ 			   grub_timeout);
+ 	      gotoxy ((col_end - 6), 4 + entryno + row_start);
+ 	  }
+@@ -405,7 +407,7 @@
+ 	     since we're comming in here also on GRUB_TIMEOUT == -1 and
+ 	     hang in GETKEY */
+ 	  if (current_term->flags & TERM_DUMB)
+-	    grub_printf ("\r    Highlighted entry is %d: ", entryno);
++	    grub_printf ("\r    La entrada seleccionada es %d: ", entryno);
+ 
+ 	  c = ASCII_CHAR (getkey ());
+ 
+@@ -637,7 +639,7 @@
+ 		    }
+ 		  else
+ 		    {
+-		      grub_printf ("Failed!\n      Press any key to continue...");
++		      grub_printf ("¡Error!\n      Pulse cualquier tecla para continuar...");
+ 		      getkey ();
+ 		      goto restart;
+ 		    }
+@@ -680,7 +682,7 @@
+ 		  if (config_entries)
+ 		    {
+ 		      current_entryno = first_entry + entryno;
+-		      run_menu (heap, NULL, new_num_entries, new_heap, 0);
++		      run_menu (heap, NULL, new_num_entries, new_heap, 0);
+ 		    }
+ 		  else
+ 		    {
+@@ -759,18 +761,18 @@
+      if (!quiet_boot)
+      {
+       if (config_entries)
+-	printf ("  Booting \'%s\'\n\n",
++	printf ("  Arrancando \'%s\'\n\n",
+ 		get_entry (menu_entries, first_entry + entryno, 0));
+       else
+-	printf ("  Booting command-list\n\n");
++	printf ("  Arrancando lista de comandos\n\n");
+       }
+-      
++
+       if (! cur_entry)
+ 	cur_entry = get_entry (config_entries, first_entry + entryno, 1);
+ 
+       /* Set CURRENT_ENTRYNO for the command "savedefault".  */
+       if (config_entries)
+-	current_entryno = first_entry + entryno;
++       current_entryno = first_entry + entryno;
+       
+       if (run_script (cur_entry, heap))
+ 	{

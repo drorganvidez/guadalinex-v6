@@ -1271,12 +1271,13 @@ echo >> $buffer
 echo -n "Searching for splash image ... " >&2
 current_splash=`grep '^splashimage=' ${menu_file} || true`
 splash_root_device=""
+splash_uuid=""
 case "$grub_root_device" in
 	[^A-Za-z0-9]*)
 		splash_root_device=${grub_root_device}
 	;;
 	*)
-		echo "uuid	$grub_root_device" >> $buffer
+		splash_uuid="uuid		$grub_root_device"
 	;;
 esac
 splashimage_path="splashimage=${splash_root_device}${grub_dir##${boot_device:+/boot}}/splash.xpm.gz"
@@ -1287,14 +1288,17 @@ if [ `sed -e "/^$start/,/^$end/d" $menu_file | grep -c '^splashimage='` != "0" ]
        echo >&2  
 elif [ -f "${grub_dir}/splash.xpm.gz" ]  && [ "$current_splash" = "" ]; then
        echo "found: /boot/grub/splash.xpm.gz" >&2
+       echo "$splash_uuid" >> $buffer
        echo "$splashimage_path" >> $buffer
        echo >> $buffer
 elif [ -f "${grub_dir}/splash.xpm.gz" ]  && [ "$current_splash" = "$splashimage_path" ]; then
        echo "found: /boot/grub/splash.xpm.gz" >&2
+       echo "$splash_uuid" >> $buffer
        echo "$splashimage_path" >> $buffer
        echo >> $buffer
 elif [ "$current_splash" != "" ] && [ "$current_splash" != "$splashimage_path" ]; then
        echo "found but preserving previous setting: $(grep '^splashimage=' ${menu_file})" >&2
+       echo "$splash_uuid" >> $buffer
        echo "$current_splash" >> $buffer
        echo >> $buffer
 else

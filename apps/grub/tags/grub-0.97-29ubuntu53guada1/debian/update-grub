@@ -396,7 +396,12 @@ updatedefaultentry="false"
 # if we don't have a device.map then we can't use the convert function.
 
 # Try to use a UUID instead of the GRUB device name.
-uuid=$(convert_to_uuid "$root_device")
+if test -z "$boot_device" ; then
+	uuid=$(convert_to_uuid "$root_device")
+else
+	uuid=$(convert_to_uuid "$boot_device")
+fi
+
 if [ -n "$uuid" ]; then
 	grub_root_device="$uuid"
 fi

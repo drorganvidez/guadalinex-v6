@@ -1,3 +1,11 @@
+grub (0.97-29ubuntu45) UNRELEASED; urgency=low
+
+  * grub-install: grab the appropriate UUID for the disk providing /boot,
+    whether on its own partition, or on / (LP: #285269); thanks to
+    Mike Wescott for the patch.
+
+ -- Dustin Kirkland <kirkland@ubuntu.com>  Tue, 21 Oct 2008 18:03:48 -0500
+
 grub (0.97-29ubuntu44) intrepid; urgency=low
 
   * Brown paper bag bug: readd convert_kopt_to_uuid and use it only on

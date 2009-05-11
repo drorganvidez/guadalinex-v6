@@ -1,3 +1,15 @@
+grub (0.97-29ubuntu46) jaunty; urgency=low
+
+  * debian/update-grub: 
+    - Added menu.lst option "in_domU" to be able to manually specify if 
+      update-grub should produce a menu.lst appropriate for a domU (true), a
+      non-virtualized environment (false), or the current environment as 
+      detected (detect).
+    - Based off patch submitted to DBTS by Evan Broder, thanks Evan. (479478)
+    - Closes LP: #291256
+
+ -- Cody A.W. Somerville <cody.somerville@canonical.com>  Thu, 06 Nov 2008 14:36:13 -0500
+
 grub (0.97-29ubuntu45) intrepid; urgency=low
 
   [ Dustin Kirkland ]

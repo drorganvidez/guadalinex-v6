@@ -461,6 +461,9 @@ fi
 # should grub add "savedefault" to default boot options
 	savedefault="false"
 
+# is grub running in a domU?
+    in_domU="detect"
+
 # stores the command line arguments
 	command_line_arguments=$1
 
@@ -1143,6 +1146,8 @@ howmany=$(GetMenuOpt "howmany" "$howmany")
 # Extract the memtest86 value
 memtest86=$(GetMenuOpt "memtest86" "$memtest86")
 
+# Extract the in_domU value
+in_domU=$(GetMenuOpt "in_domU" "$in_domU")
  
 # Extract the updatedefaultentry option
 updatedefaultentry=$(GetMenuOpt "updatedefaultentry" "$updatedefaultentry")
@@ -1235,6 +1240,13 @@ echo "##      howmany=7" >> $buffer
 echo "# howmany=$howmany" >> $buffer
 echo >> $buffer
 
+echo "## specify if running in Xen domU or have grub detect automatically" >> $buffer
+echo "## update-grub will ignore non-xen kernels when running in domU and vice versa" >> $buffer
+echo "## e.g. in_domU=detect" >> $buffer
+echo "##      in_domU=true" >> $buffer
+echo "##      in_domU=false" >> $buffer
+echo "# in_domU=$in_domU" >> $buffer
+echo >> $buffer
 
 echo "## should update-grub create memtest86 boot option" >> $buffer
 echo "## e.g. memtest86=true" >> $buffer
@@ -1377,9 +1389,12 @@ for ver in `grep -l CONFIG_XEN_PRIVILEGED_GUEST=y /boot/config* | sed -e s%/boot
     fi
 done
 
-in_domU=
-if [ -e /proc/xen/capabilities ] && ! grep -q "control_d" /proc/xen/capabilities; then
-	in_domU=1
+if test "$in_domU" = "detect" ; then
+    if [ -e /proc/xen/capabilities ] && ! grep -q "control_d" /proc/xen/capabilities; then
+        in_domU="true"
+    else
+        in_domU="false"
+    fi
 fi
 
 sortedKernels=""
@@ -1390,14 +1405,17 @@ for kern in $(/bin/ls -1vr /boot | grep -v "dpkg-*" | grep "^vmlinuz-") ; do
 		is_xen=
 	fi
 
-	if [ ! "$in_domU" ] && [ "$is_xen" ]; then
-	  # skip xen kernels
-          continue
-        elif [ "$in_domU" ] && ! [ "$is_xen" ]; then
-	  # skip non-xen kernels
-	  continue
-        fi
-        kern="/boot/$kern"
+    if [ "$in_domU" = "false" ] && [ "$is_xen" ]; then
+        # We aren't running in a Xen domU, skip xen kernels
+        echo "Ignoring Xen kernel on non-Xen host: $kern"
+        continue
+    elif [ "$in_domU" = "true" ] && ! [ "$is_xen" ]; then
+        # We are running in a Xen domU, skip non-xen kernels
+        echo "Ignoring non-Xen Kernel on Xen domU host: $kern"
+        continue
+    fi
+    
+    kern="/boot/$kern"
 	newerKernels=""
 	for i in $sortedKernels ; do
 	    res=$(CompareVersions "$kern" "$i")

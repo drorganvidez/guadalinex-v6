@@ -37,6 +37,7 @@ gcs_dir = "gcs"
 apps=[
         "sun-java6",
 #	"buildbotdummy",
+	"backintime",
         "casper-guada",
 	"ca-certificates-java",
 	"diagnostic-report",
@@ -55,26 +56,25 @@ apps=[
 #        "guadalinex-supplement-installer",
 	"gru",
 	"grub",
-#        "hermes",
+        "grubaker",
+        "hermeshardware",
 	"java-common",
         "lemurae",
 #        "lig",
 #	"ubiquity",
         "usplash-theme-guadalinex",
 #        "vodafone-mobile-connect-card-driver-for-linux",
-#        "accesibility-profiles",
+        "accessibility-profiles",
 #        "gedit-plugin-tloleo",
 #        "gnome-panel",
 #        "gnome-system-tools",
 #        "gnome-volume-manager",
-#        "gru",
-#        "grubaker",
         "python-syck",
         "guada-ubiquity",
         "mount-systray",
-	"rarian"
+	"rarian",
 #        "opensc",
-#        "watermain",
+        "watermain",
 ]
 
 # Lista de nombre de los metapkgs. El nombre debe coincidir con la rama de 
@@ -86,11 +86,12 @@ metapkgs = [
         "guadalinex-desktop",
         "guadalinex-desktop-conf",
 #	"guadalinex-example-content",
+	"guadalinex-extended-desktop",
         "guadalinex-minimal",
         "guadalinex-minimal-conf",
         "guadalinex-standard",
-#        "guadalinex-standard-conf",
-#	"guadalinex-user-manual",
+        "guadalinex-standard-conf",
+	"guadalinex-user-manual",
         "meta-guadalinex-v6",
 #        "suplemento-dvd-gv5",
 #        "suplemento-gv5-desarrollo",
@@ -145,7 +146,7 @@ derivative_env = {
 }
 
 # Script live-helper y variables de entorno que necesite para su ejecución
-livehelper = "/var/gensys/live-helper/guadalinexv6/build.sh"
+livehelper = "sudo /var/gensys/live-helper/guadalinexv6/build.sh"
 livehelper_env = { 
     "PATH" : path
 }

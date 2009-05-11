@@ -1,3 +1,13 @@
+grub (0.97-29ubuntu43) UNRELEASED; urgency=low
+
+  * Drop the convert_kopt_to_uuid handling: this is no longer needed because
+    all systems (new installs and upgrades from 8.04) should now have UUID
+    settings in menu.lst, and the code was never made to respect admin
+    overrides so update-grub is unusable for anyone who needs to specify
+    their root by device instead of by UUID.  LP: #62195.
+
+ -- Steve Langasek <steve.langasek@ubuntu.com>  Fri, 17 Oct 2008 15:29:56 -0700
+
 grub (0.97-29ubuntu42) intrepid; urgency=low
 
   * Fix test around root-by-uuid code.

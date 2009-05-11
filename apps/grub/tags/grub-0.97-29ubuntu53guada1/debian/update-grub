@@ -798,45 +798,6 @@ write_kernel_entry()
 	echo >> $buffer
 }
 
-convert_kopt_to_uuid()
-{
-	local kopt; kopt=$1
-
-	convert=false
-	root=$(echo "$kopt" | sed 's/.*root=//;s/ .*//')
-	case "$root" in
-		UUID=*|LABEL=*)
-			;;
-		/dev/disk/*)
-			;;
-		/dev/mapper/*)
-			;;
-		/dev/evms/[hs]d[a-z][0-9]*)
-			convert=:
-			;;
-		/dev/evms/*)
-			;;
-		/dev/md[0-9]*)
-			;;
-		/dev/*)
-			convert=:
-			;;
-	esac
-	if $convert; then
-		if [ -L "$DEV" ] && readlink "$DEV" | grep -q "^/dev/mapper/"
-		then
-			:
-		elif [ -b "$root" ]; then
-			uuid=$(/sbin/vol_id -u "$root" || true)
-			if [ -n "$uuid" ]; then
-				kopt=$(echo "$kopt" | sed "s/\(.*root=\)[^ ]*/\1UUID=$uuid/")
-			fi
-		fi
-	fi
-
-	echo "$kopt"
-}
-
 ## write out the kernel entries
 output_kernel_list() {
 	counter=0
@@ -1093,10 +1054,6 @@ fi
 # Extract the kernel options to use
 kopt=$(GetMenuOpt "kopt" "$kopt")
 
-# Update the root device to mount-by-UUID
-old_kopt="$kopt"
-kopt=$(convert_kopt_to_uuid "$kopt")
-
 # Extract options for specific kernels
 opts="$(ExtractMenuOpts "\(kopt_[[:alnum:]_]\+\)")"
 test -z "$opts" || eval "$opts"
@@ -1107,8 +1064,6 @@ CustomKopts=$(GetMenuOpts "\(kopt_[[:alnum:]_]\+\)" | \
 # mount-by-UUID on upgrade)
 test -z "$kopt_2_6" && test -z "$(GetMenuOpt "kopt" "")" && \
 	kopt_2_6="$default_kopt"
-old_kopt_2_6="$kopt_2_6"
-test -n "$kopt_2_6" && kopt_2_6=$(convert_kopt_to_uuid "$kopt_2_6")
 
 # Extract the grub root
 grub_root_device=$(GetMenuOpt "groot" "$grub_root_device")
@@ -1326,10 +1281,6 @@ if ! ucfq grub | grep -q $ucf_menu_file; then
 	if [ -z "$title" ]; then
 		title="$savetitle"
 	fi
-	savekopt="$kopt"
-	savekopt_2_6="$kopt_2_6"
-	kopt="$old_kopt"
-	kopt_2_6="$old_kopt_2_6"
 
 	# Hack: the kernel list output in Ubuntu 6.06 was different than
 	# in the current version, so to support smooth upgrades we need to
@@ -1350,8 +1301,6 @@ if ! ucfq grub | grep -q $ucf_menu_file; then
 	dapper_upgrade=""
 	buffer="$savebuffer"
 	title="$savetitle"
-	kopt="$savekopt"
-	kopt_2_6="$savekopt_2_6"
 
 	ucf_update_kernels "$menu" "$otherbuffer"
 

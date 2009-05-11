@@ -361,16 +361,18 @@ if [ -n "$uuid" ]; then
 fi
 
 check_removable=""
-if test -f "$device_map" && test -z "$uuid"; then
-	if test -z "$boot_device" ; then
-		grub_root_device=$(convert_default "$root_device")
-		check_removable="$(is_removable "$root_device")"
+if test -z "$uuid"; then
+	if test -f "$device_map"; then
+		if test -z "$boot_device" ; then
+			grub_root_device=$(convert_default "$root_device")
+			check_removable="$(is_removable "$root_device")"
+		else
+			grub_root_device=$(convert_default "$boot_device")
+			check_removable="$(is_removable "$boot_device")"
+		fi
 	else
-		grub_root_device=$(convert_default "$boot_device")
-		check_removable="$(is_removable "$boot_device")"
+		grub_root_device="(hd0,0)"
 	fi
-else
-	grub_root_device="(hd0,0)"
 fi
 
 # If the root/boot device is on a removable target, we need to override

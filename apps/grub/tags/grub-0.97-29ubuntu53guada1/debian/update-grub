@@ -301,6 +301,46 @@ convert_to_uuid()
 	echo "$uuid"
 }
 
+convert_kopt_to_uuid()
+{
+	local kopt; kopt=$1
+
+	convert=false
+	root=$(echo "$kopt" | sed 's/.*root=//;s/ .*//')
+	case "$root" in
+		UUID=*|LABEL=*)
+			;;
+		/dev/disk/*)
+			;;
+		/dev/mapper/*)
+			;;
+		/dev/evms/[hs]d[a-z][0-9]*)
+			convert=:
+			;;
+		/dev/evms/*)
+			;;
+		/dev/md[0-9]*)
+			;;
+		/dev/*)
+			convert=:
+			;;
+	esac
+	if $convert; then
+		if [ -L "$DEV" ] && readlink "$DEV" | grep -q "^/dev/mapper/"
+		then
+			:
+		elif [ -b "$root" ]; then
+			uuid=$(/sbin/vol_id -u "$root" || true)
+			if [ -n "$uuid" ]; then
+				kopt=$(echo "$kopt" | sed "s/\(.*root=\)[^ ]*/\1UUID=$uuid/")
+			fi
+		fi
+	fi
+
+	echo "$kopt"
+}
+
+
 ## Configuration Options
 # directory's to look for the grub installation and the menu file
 grub_dirs="/boot/grub /boot/boot/grub"
@@ -342,6 +382,7 @@ if [ -n "$host_device" ]; then
 else
 	default_kopt="root=$root_device ro"
 fi
+default_kopt="$(convert_kopt_to_uuid "$default_kopt")"
 kopt="$default_kopt"
 
 # Title

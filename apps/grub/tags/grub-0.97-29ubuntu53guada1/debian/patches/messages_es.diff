@@ -5,7 +5,7 @@
  	      
  	      /* Print a message.  */
 -	      grub_printf ("\rPress `ESC' to enter the menu... %d   ",
-+	      grub_printf ("\rPara acceder al menú, pulse 'ESC'... %d   ",
++	      grub_printf ("\rPara acceder al menu, pulse 'ESC'... %d   ",
  			   grub_timeout);
  	      clear_esc_message = 1;
  	    }
@@ -14,7 +14,7 @@
  
        grub_printf ("\n\
 -    Use the %c and %c keys to select which entry is highlighted.\n",
-+    Use las teclas %c y %c para indicar qué opción desea seleccinar.\n",
++    Use las teclas %c y %c para indicar que opcion desea seleccinar.\n",
  		   DISP_UP, DISP_DOWN);
        
        if (! auth && password)
@@ -23,7 +23,7 @@
 -    Press enter to boot the selected OS or \'p\' to enter a\n\
 -    password to unlock the next set of features.");
 +    Para arrancar el SO selecionado pulse \'p\' o para \n\
-+    introducir la clave y acceder a las siguientes características.");
++    introducir la clave y acceder a las siguientes caracteristicas.");
  	}
        else
  	{
@@ -32,7 +32,7 @@
 -    Press enter to boot the selected OS, \'e\' to edit the\n\
 -    commands before booting, or \'c\' for a command-line.");
 +    Pulse intro para arrancar el SO seleccionado, \'e\' para editar\n\
-+    las opciones antes de arrancar, o \'c\' para acceder a la línea \n\
++    las opciones antes de arrancar, o \'c\' para acceder a la linea \n\
 +    de comandos.");
  	  else
  	    printf ("\
@@ -40,11 +40,11 @@
 -    boot sequence, \'c\' for a command-line, \'o\' to open a new line\n\
 -    after (\'O\' for before) the selected line, \'d\' to remove the\n\
 -    selected line, or escape to go back to the main menu.");
-+    Para arrancar pulse \'b\', \'e\' para editar la opción selecionada en\n\
-+    la secuancia de arranque, \'c\' para la línea de comandos, \'o\' para \n\
-+    añadir una línea después (\'O\' para antes) de la línea seleccionada,\n\
-+    \'d\' para eliminar la línea seleccionada, o escape para volver\n\
-+    al menú principal.");
++    Para arrancar pulse \'b\', \'e\' para editar la opcion selecionada en\n\
++    la secuencia de arranque, \'c\' para la linea de comandos, \'o\' para \n\
++    anadir una linea despues (\'O\' para antes) de la linea seleccionada,\n\
++    \'d\' para eliminar la linea seleccionada, o escape para volver\n\
++    al menu principal.");
  	}
  
        if (current_term->flags & TERM_DUMB)
@@ -58,13 +58,13 @@
  
  	  if (current_term->flags & TERM_DUMB)
 -	      grub_printf ("\r    Entry %d will be booted automatically in %d seconds.   ", 
-+	      grub_printf ("\r    La entrada %d arrancará automáticamente en %d segundos.   ", 
++	      grub_printf ("\r    La entrada %d arrancara automáticamente en %d segundos.   ", 
  			   entryno, grub_timeout);
  	  else
  	    {
  	      gotoxy (3 + col_start, 10 + box_size + row_start);
 -	      grub_printf (" The highlighted entry will be booted automatically in %d seconds.   ",
-+	      grub_printf ("En %d segundos arrancará automáticamente la entrada seleccionada.    ",
++	      grub_printf ("En %d segundos arrancara automaticamente la entrada seleccionada.    ",
  			   grub_timeout);
  	      gotoxy ((col_end - 6), 4 + entryno + row_start);
  	  }

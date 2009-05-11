@@ -1270,7 +1270,16 @@ echo >> $buffer
 
 echo -n "Searching for splash image ... " >&2
 current_splash=`grep '^splashimage=' ${menu_file} || true`
-splashimage_path="splashimage=${grub_root_device}${grub_dir##${boot_device:+/boot}}/splash.xpm.gz"
+splash_root_device=""
+case "$grub_root_device" in
+	[^A-Za-z0-9]*)
+		splash_root_device=${grub_root_device}
+	;;
+	*)
+		echo "uuid	$grub_root_device" >> $buffer
+	;;
+esac
+splashimage_path="splashimage=${splash_root_device}${grub_dir##${boot_device:+/boot}}/splash.xpm.gz"
 if [ `sed -e "/^$start/,/^$end/d" $menu_file | grep -c '^splashimage='` != "0" ] ; then
        #checks for splashscreen defined outside the autoupdated part
        splashimage=$(grep '^splashimage=' ${menu_file})

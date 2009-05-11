@@ -1,8 +1,13 @@
 grub (0.97-29ubuntu52) UNRELEASED; urgency=low
 
+  [ Colin Watson ]
   * Remove old debian/patches/ubuntu_update_grub.diff. It wasn't applied
     anyway, but the fact that it patches files in debian/ was causing
     confusion. It's preserved in revision control if we need it later.
+
+  [ Juanje Ojeda ]
+  * debian/update-grub: Output uuid before splashimage if necessary
+    (LP: #347790).
 
  -- Colin Watson <cjwatson@ubuntu.com>  Fri, 03 Apr 2009 11:37:40 +0100
 

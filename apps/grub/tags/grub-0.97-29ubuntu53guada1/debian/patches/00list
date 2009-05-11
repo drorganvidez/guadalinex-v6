@@ -44,3 +44,11 @@ uuid_doc.diff
 
 # This patch supports writing multiple MBRs for RAID setups
 grub-install_better_raid.diff
+
+# Boot beautification
+# Clear the "Press `ESC'" message when leaving this loop: at least a newline
+# needs to be output for upcoming messages to be started on the first column,
+# so it's easiest to simply clear the line completely as the message isn't
+# needed anymore
+clear_esc_message.diff
+

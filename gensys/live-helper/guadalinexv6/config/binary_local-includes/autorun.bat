@@ -1,3 +1,3 @@
 @echo Cargando "index.html"...
-@start extras\info\indice.html
+@start extras\win32-apps\menu\index.html
 @exit

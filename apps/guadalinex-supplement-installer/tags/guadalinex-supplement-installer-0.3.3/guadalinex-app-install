@@ -1,0 +1,22 @@
+#!/bin/bash
+
+if [ ! -z "$(echo $@|grep -- --addon-cd)" ]
+then
+    MOUNTPOINT=${@#--addon-cd=}
+    if [ ! -z "$MOUNTPOINT" ]
+    then
+       if [[ "$MOUNTPOINT" =~ "GSD" ]];then
+          # Para que tire solo de los repos del cd
+          cp /etc/apt/sources.list /etc/apt/sources.list.addon
+          echo "" > /etc/apt/sources.list
+          gnome-app-install.distrib --addon-cd="$MOUNTPOINT"
+          cp /etc/apt/sources.list.addon /etc/apt/sources.list
+       else
+          gnome-app-install.distrib "$@"
+       fi
+    else
+        zenity --error --text "No hay ningún disco de suplementos en la unidad"
+    fi
+else
+    gnome-app-install.distrib "$@"
+fi

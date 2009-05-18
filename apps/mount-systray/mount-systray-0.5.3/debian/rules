@@ -13,3 +13,7 @@ include /usr/share/cdbs/1/rules/debhelper.mk
 include /usr/share/cdbs/1/class/gnome.mk
 
 DEB_CONFIGURE_SCRIPT := ./autogen.sh
+
+binary-install/mount-systray::
+	find . -name '*.py?' -exec rm '{}' ';'
+

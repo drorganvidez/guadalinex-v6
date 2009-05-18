@@ -1,3 +1,3 @@
 @echo Cargando "indice.html"...
-@start extras\info\indice.html
+@start extras\info\contenidos.html
 @exit

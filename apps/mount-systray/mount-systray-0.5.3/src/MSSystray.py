@@ -23,6 +23,7 @@ import gobject
 import pynotify
 import os
 import time
+import subprocess
 
 from MSConfig import MSConfig
 from MSDeviceManager import MSDeviceManager
@@ -175,7 +176,10 @@ class MSSystray:
                 self.sicon.set_blinking(False)
 
     def __is_hermes_running(self):
-        (i, o) = os.popen2("ps -eo user,cmd | grep hermes | grep %s" % os.environ["USER"])
+        cmd = "ps -eo user,cmd | grep hermes | grep %s" % os.environ["USER"]
+        p = subprocess.Popen(cmd, shell=True, stdin=subprocess.PIPE,
+                  stdout=subprocess.PIPE, close_fds=True)
+        (i, o) = (p.stdin, p.stdout)
         process_list = o.readlines()
         for x in process_list :
             tmp = x.split()

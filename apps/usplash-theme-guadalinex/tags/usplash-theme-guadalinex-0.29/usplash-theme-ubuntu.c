@@ -54,13 +54,13 @@ struct usplash_theme usplash_theme = {
 	.pixmap = &pixmap_usplash_640_400,
 
 	/* Palette indexes */
-	.background             = 0x0,
-  	.progressbar_background = 0x7,
-  	.progressbar_foreground = 0x156,
-	.text_background        = 0x0,
-	.text_foreground        = 0x33,
-	.text_success           = 0x15,
-	.text_failure           = 0x144,
+	.background             = 0,
+  	.progressbar_background = 32,
+  	.progressbar_foreground = 131,
+	.text_background        = 0,
+	.text_foreground        = 117,
+	.text_success           = 189,
+	.text_failure           = 55,
 
 	/* Progress bar position and size in pixels */
   	.progressbar_x      = 212,
@@ -96,13 +96,13 @@ struct usplash_theme usplash_theme_640_480 = {
 	.pixmap = &pixmap_usplash_640_480,
 
 	/* Palette indexes */
-	.background             = 0x0,
-  	.progressbar_background = 0x7,
-  	.progressbar_foreground = 0x156,
-	.text_background        = 0x0,
-	.text_foreground        = 0x33,
-	.text_success           = 0x15,
-	.text_failure           = 0x144,
+	.background             = 0,
+  	.progressbar_background = 32,
+  	.progressbar_foreground = 131,
+	.text_background        = 0,
+	.text_foreground        = 117,
+	.text_success           = 189,
+	.text_failure           = 55,
 
 	/* Progress bar position and size in pixels */
   	.progressbar_x      = 212,
@@ -138,13 +138,13 @@ struct usplash_theme usplash_theme_800_600 = {
 	.pixmap = &pixmap_usplash_800_600,
 
 	/* Palette indexes */
-	.background             = 0x0,
-  	.progressbar_background = 0x7,
-  	.progressbar_foreground = 0x156,
-	.text_background        = 0x0,
-	.text_foreground        = 0x33,
-	.text_success           = 0x15,
-	.text_failure           = 0x144,
+	.background             = 0,
+  	.progressbar_background = 32,
+  	.progressbar_foreground = 131,
+	.text_background        = 0,
+	.text_foreground        = 117,
+	.text_success           = 189,
+	.text_failure           = 55,
 
 	/* Progress bar position and size in pixels */
   	.progressbar_x      = 240,
@@ -179,13 +179,13 @@ struct usplash_theme usplash_theme_1024_768 = {
 	.pixmap = &pixmap_usplash_1024_768,
 
 	/* Palette indexes */
-	.background             = 0x0,
-  	.progressbar_background = 0x7,
-  	.progressbar_foreground = 0x156,
-	.text_background        = 0x0,
-	.text_foreground        = 0x33,
-	.text_success           = 0x15,
-	.text_failure           = 0x144,
+	.background             = 0,
+  	.progressbar_background = 32,
+  	.progressbar_foreground = 131,
+	.text_background        = 0,
+	.text_foreground        = 117,
+	.text_success           = 189,
+	.text_failure           = 55,
 
 	/* Progress bar position and size in pixels */
   	.progressbar_x      = 352,
@@ -220,13 +220,13 @@ struct usplash_theme usplash_theme_1365_768_scaled = {
 	.pixmap = &pixmap_usplash_1365_768_scaled,
 
 	/* Palette indexes */
-	.background             = 0x0,
-  	.progressbar_background = 0x7,
-  	.progressbar_foreground = 0x156,
-	.text_background        = 0x0,
-	.text_foreground        = 0x33,
-	.text_success           = 0x15,
-	.text_failure           = 0x144,
+	.background             = 0,
+  	.progressbar_background = 32,
+  	.progressbar_foreground = 131,
+	.text_background        = 0,
+	.text_foreground        = 117,
+	.text_success           = 189,
+	.text_failure           = 55,
 
 	/* Progress bar position and size in pixels */
   	.progressbar_x      = 352,

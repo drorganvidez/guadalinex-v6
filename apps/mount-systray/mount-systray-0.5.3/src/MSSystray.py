@@ -143,7 +143,7 @@ class MSSystray:
                 else:
                     msg = ""
 
-                self.show_notification(_("New device detected\n<small>(%s)</small>") % human_name,
+                self.show_notification(_("New device detected\n(%s)") % human_name,
                                        msg,
                                        self.stock_icons[volume_type])
             else:

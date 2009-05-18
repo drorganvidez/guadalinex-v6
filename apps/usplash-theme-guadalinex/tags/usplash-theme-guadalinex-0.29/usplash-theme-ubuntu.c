@@ -52,6 +52,14 @@ struct usplash_theme usplash_theme = {
 	/* Background and font */
 	.pixmap = &pixmap_usplash_640_400,
 
+        /* theme resolution; if 0, use width/height of pixmap */
+        .theme_width = 0,
+        .theme_height = 0,
+
+        /* position of pixmap */
+        .pixmap_x = 0,
+        .pixmap_y = 0,
+
 	/* Palette indexes */
 	.background             = 0,
   	.progressbar_background = 32,
@@ -93,6 +101,14 @@ struct usplash_theme usplash_theme_640_480 = {
 
 	/* Background and font */
 	.pixmap = &pixmap_usplash_640_480,
+
+        /* theme resolution; if 0, use width/height of pixmap */
+        .theme_width = 0,
+        .theme_height = 0,
+
+        /* position of pixmap */
+        .pixmap_x = 0,
+        .pixmap_y = 0,
 
 	/* Palette indexes */
 	.background             = 0,
@@ -136,6 +152,14 @@ struct usplash_theme usplash_theme_800_600 = {
 	/* Background and font */
 	.pixmap = &pixmap_usplash_800_600,
 
+        /* theme resolution; if 0, use width/height of pixmap */
+        .theme_width = 0,
+        .theme_height = 0,
+
+        /* position of pixmap */
+        .pixmap_x = 0,
+        .pixmap_y = 0,
+
 	/* Palette indexes */
 	.background             = 0,
   	.progressbar_background = 32,
@@ -176,6 +200,14 @@ struct usplash_theme usplash_theme_1024_768 = {
 
 	/* Background and font */
 	.pixmap = &pixmap_usplash_1024_768,
+
+        /* theme resolution; if 0, use width/height of pixmap */
+        .theme_width = 0,
+        .theme_height = 0,
+
+        /* position of pixmap */
+        .pixmap_x = 0,
+        .pixmap_y = 0,
 
 	/* Palette indexes */
 	.background             = 0,
@@ -218,6 +250,14 @@ struct usplash_theme usplash_theme_1365_768 = {
 	/* Background and font */
 	.pixmap = &pixmap_usplash_1365_768,
 
+        /* theme resolution; if 0, use width/height of pixmap */
+        .theme_width = 0,
+        .theme_height = 0,
+
+        /* position of pixmap */
+        .pixmap_x = 0,
+        .pixmap_y = 0,
+
 	/* Palette indexes */
 	.background             = 0,
   	.progressbar_background = 32,
@@ -254,8 +294,8 @@ struct usplash_theme usplash_theme_1365_768 = {
 void t_init(struct usplash_theme *theme) {
     int x, y;
     usplash_getdimensions(&x, &y);
-    theme->progressbar_x = (x - theme->pixmap->width)/2 + theme->progressbar_x;
-    theme->progressbar_y = (y - theme->pixmap->height)/2 + theme->progressbar_y;
+    theme->progressbar_x = (x - usplash_theme_width(theme))/2 + theme->progressbar_x;
+    theme->progressbar_y = (y - usplash_theme_height(theme))/2 + theme->progressbar_y;
 }
 
 void t_clear_progressbar(struct usplash_theme *theme) {

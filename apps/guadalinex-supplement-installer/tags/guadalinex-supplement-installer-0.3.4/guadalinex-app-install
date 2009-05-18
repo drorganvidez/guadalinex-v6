@@ -1,18 +1,47 @@
 #!/bin/bash
 
+function getmountpoint {
+	for dev in $(hal-find-by-capability --capability volume) ;
+	do
+	    is_disc=$(hal-get-property --udi $dev --key volume.is_disc)
+	    label=$(hal-get-property --udi $dev --key volume.label)
+	    if [[ "$is_disc" = "true" && "$label" =~ "GSD" ]]
+	    then
+	        mount_point=$(hal-get-property --udi $dev --key volume.mount_point)
+	        echo $mount_point
+	    fi
+	done
+}
+
+function backupsources {
+          # Para que tire solo de los repos del cd
+          cp /etc/apt/sources.list /etc/apt/sources.list.addon
+          echo "" > /etc/apt/sources.list
+}
+
+function restoresources {
+          cp /etc/apt/sources.list.addon /etc/apt/sources.list
+}
+
+
 if [ ! -z "$(echo $@|grep -- --addon-cd)" ]
 then
     MOUNTPOINT=${@#--addon-cd=}
     if [ ! -z "$MOUNTPOINT" ]
     then
        if [[ "$MOUNTPOINT" =~ "GSD" ]];then
-          # Para que tire solo de los repos del cd
-          cp /etc/apt/sources.list /etc/apt/sources.list.addon
-          echo "" > /etc/apt/sources.list
+	  backupsources
           gnome-app-install.distrib --addon-cd="$MOUNTPOINT"
-          cp /etc/apt/sources.list.addon /etc/apt/sources.list
-       else
-          gnome-app-install.distrib "$@"
+	  restoresources
+       else if [[ "$MOUNTPOINT" =~ "check-mount-point" ]]
+	    then
+		MOUNTPOINT=$(getmountpoint)
+		backupsources
+		gnome-app-install.distrib --addon-cd="$MOUNTPOINT"
+		restoresources
+	    else 
+		gnome-app-install.distrib "$@"
+	    fi
        fi
     else
         zenity --error --text "No hay ningún disco de suplementos en la unidad"

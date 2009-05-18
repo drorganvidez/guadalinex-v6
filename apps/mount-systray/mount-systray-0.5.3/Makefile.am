@@ -10,7 +10,16 @@ DISTCLEANFILES =		\
 	intltool-merge		\
 	intltool-update		\
 	po/.intltool-merge-cache \
-	gnome-doc-utils.make
+	gnome-doc-utils.make	\
+	Makefile.in		\
+	aclocal.m4		\
+	configure		\
+	data/Makefile.in	\
+	install-sh		\
+	missing			\
+	mkinstalldirs		\
+	po/Makefile.in.in	\
+	src/Makefile.in
 
 EXTRA_DIST = \
 	gnome-doc-utils.make \

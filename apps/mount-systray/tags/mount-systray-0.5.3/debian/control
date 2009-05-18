@@ -1,0 +1,25 @@
+Source: mount-systray
+Section: gnome
+Priority: optional
+XSBC-Original-Maintainer: Roberto Majadas <telemaco@openshine.com>
+Maintainer: Junta de Andalucía <packmaster@guadalinex.org>
+Uploaders: Juanje Ojeda Croissier <jojeda@emergya.es>
+Build-Depends: cdbs,
+               debhelper (>= 7),
+               python-gtk2-dev,
+               python-gnome2-dev,
+               libgconf2-dev,
+               gnome-pkg-tools,
+               gnome-common,
+               gnome-doc-utils,
+               python-glade2
+Standards-Version: 3.8.0
+Homepage: http://launchpad.net/mount-systray
+Vcs-Browser: http://codebrowse.launchpad.net/~guadalinex-members/mount-systray/trunk/changes
+Vcs-Bzr: http://bazaar.launchpad.net/~guadalinex-members/mount-systray/trunk
+
+Package: mount-systray
+Architecture: any
+Depends: python-gtk2, python-gnome2, pmount | gnome-mount, python-notify, ${misc:Depends}
+Description: Systray applicacion for umount devices easy
+ Systray applicacion for umount devices easy, with integrated notification.

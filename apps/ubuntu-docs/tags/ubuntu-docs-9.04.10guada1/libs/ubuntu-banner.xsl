@@ -23,7 +23,6 @@ urchinTracker();
     <input type="submit" name="sa" value="Search" />
   </div>
 </form>
-<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
 	<div id="sitename"><a href="https://help.ubuntu.com/"><img alt="Official Documentation" src="https://help.ubuntu.com/htdocs/ubuntunew/img/help-about.png" /><span>Official Documentation</span></a></div>
 	</div>
 </xsl:template>

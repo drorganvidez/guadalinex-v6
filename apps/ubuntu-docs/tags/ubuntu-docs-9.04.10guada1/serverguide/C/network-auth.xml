@@ -988,4 +988,581 @@ index           default                 sub
       </itemizedlist>
     </sect2>
   </sect1>
+  <sect1 id="kerberos" status="review">
+    <title>Kerberos</title>
+    
+    <para>
+    <application>Kerberos</application> is a network authentication system based on the principal of a trusted third party.
+    The other two parties being the user and the service the user wishes to authenticate to.  Not all services and applications
+    can use Kerberos, but for those that can, it brings the network environment one step closer to being Single Sign On (SSO).
+    </para>
+
+    <para>
+    This section covers installation and configuration of a Kerberos server, and some example client configurations.
+    </para>
+    
+    <sect2 id="kerberos-overview" status="review">
+      <title>Overview</title>
+
+      <para>
+      If you are new to Kerberos there are a few terms that are good to understand before setting up a Kerberos server.  Most of the terms
+      will relate to things you may be familiar with in other environments:
+      </para>
+
+      <itemizedlist>
+        <listitem>
+          <para>
+          <emphasis>Principal:</emphasis> any users, computers, and services provided by servers need to be defined as Kerberos Principals.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+          <emphasis>Instances:</emphasis> are used for service principals and special administrative principals.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+          <emphasis>Realms:</emphasis> the unique realm of control provided by the Kerberos installation.  Usually the DNS domain converted to 
+          uppercase (EXAMPLE.COM).
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+          <emphasis>Key Distribution Center:</emphasis> (KDC) consist of three parts, a database of all principals, the authentication server,
+          and the ticket granting server.  For each realm there must be at least one KDC.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+          <emphasis>Ticket Granting Ticket:</emphasis> issued by the Authentication Server (AS), the Ticket Granting Ticket (TGT) is encrypted in 
+          the user's password which is known only to the user and the KDC.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+          <emphasis>Ticket Granting Server:</emphasis> (TGS) issues service tickets to clients upon request.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+          <emphasis>Tickets:</emphasis> confirm the identity of the two principals.  One principal being a user and the other a service requested by 
+          the user.  Tickets establish an encryption key used for secure communication during the authenticated session.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+          <emphasis>Keytab Files:</emphasis> are files extracted from the KDC principal database and contain the encryption key for a service or
+          host.
+          </para>
+        </listitem>
+      </itemizedlist>
+
+      <para>
+      To put the pieces together, a Realm has at least one KDC, preferably two for redundancy, which contains a database of Principals.  When a 
+      user principal logs into a workstation, configured for Kerberos authentication, the KDC issues a Ticket Granting Ticket (TGT).  If the user
+      supplied credentials match, the user is authenticated and can then request tickets for Kerberized services from the Ticket Granting Server
+      (TGS).  The service tickets allow the user to authenticate to the service without entering another username and password.
+      </para>
+   
+    </sect2>
+    <sect2 id="kerberos-server" status="review">
+      <title>Kerberos Server</title>    
+      <sect3 id="kerberos-server-installation" status="review">
+        <title>Installation</title>
+
+        <para> 
+        Before installing the Kerberos server a properly configured DNS server is needed for your domain.  Since the Kerberos Realm by 
+        convention matches the domain name, this section uses the <emphasis>example.com</emphasis> domain configured in 
+        <xref linkend="dns-primarymaster-configuration"/>.  
+        </para>
+
+        <para>
+        The first step in installing a Kerberos Realm is to install the <application>krb5-kdc</application>  and 
+        <application>krb5-admin-server</application> packages.  From a terminal enter:
+        </para>
+
+<screen>
+<command>sudo apt-get install krb5-kdc krb5-admin-server</command>
+</screen>
+
+        <para>
+        You will be asked at the end of the install to supply a name for the Kerberos and Admin servers, which may or may not be the 
+        same server, for the realm.
+        </para>
+
+        <para>
+        Next, create the new realm with the <application>kdb5_newrealm</application> utility:
+        </para>
+
+<screen>
+<command>sudo sudo krb5_newrealm</command>
+</screen>
+
+      </sect3>
+      <sect3 id="kerberos-server-configuration" status="review">
+        <title>Configuration</title>
+      
+        <para>
+        The questions asked during installation are used to configure the <filename>/etc/krb5.conf</filename> file.  If you need to adjust 
+        the Key Distribution Center (KDC) settings simply edit the file and restart the <application>krb5-kdc</application> daemon.
+        </para>
+
+        <procedure>
+          <step>
+
+            <para>
+            Now that the KDC running an admin user is needed.  It is recommended to use a different username from your everyday username.  
+            Using the <application>kadmin.local</application> utility in a terminal prompt enter:
+            </para>
+
+<screen>
+<command>sudo kadmin.local</command>
+<computeroutput>Authenticating as principal root/admin@EXAMPLE.COM with password.
+kadmin.local:</computeroutput><userinput> addprinc steve/admin</userinput>
+<computeroutput>WARNING: no policy specified for steve/admin@EXAMPLE.COM; defaulting to no policy
+Enter password for principal "steve/admin@EXAMPLE.COM": 
+Re-enter password for principal "steve/admin@EXAMPLE.COM": 
+Principal "steve/admin@EXAMPLE.COM" created.
+kadmin.local:</computeroutput><userinput> quit</userinput>
+</screen>
+
+            <note>
+              <para>
+              Replace <emphasis>EXAMPLE.COM</emphasis> and <emphasis>steve/admin</emphasis> with your Realm and admin user.
+              </para>
+            </note>
+
+          </step>
+          <step>
+ 
+            <para>
+            Next, the new admin user needs to have the appropriate Access Control List (ACL) permissions.
+            The permissions are configured in the <filename>/etc/krb5kdc/kadm5.acl</filename> file:
+            </para>
+
+<programlisting>
+steve/admin@EXAMPLE.COM        *
+</programlisting>
+
+            <para>
+            This entry grants <emphasis>steve/admin</emphasis> the ability to perform any operation on all principals in the realm.
+            </para>
+
+          </step>
+          <step>
+
+            <para>
+            Now restart the <application>krb5-admin-server</application> for the new ACL to take affect:
+            </para>
+
+<screen>
+<command>sudo /etc/init.d/krb5-admin-server restart</command>
+</screen>
+
+          </step>
+          <step>
+
+            <para>
+            The new user principal can be tested using the <application>kinit utility</application>:
+            </para>
+
+<screen>
+<command>kinit steve/admin</command>
+<computeroutput>steve/admin@EXAMPLE.COM's Password:</computeroutput>
+</screen>          
+
+            <para>
+            After entering the password, use the <application>klist</application> utility to view information about the 
+            Ticket Granting Ticket (TGT):
+            </para>
+
+<screen>
+<command>klist</command>
+<computeroutput>Credentials cache: FILE:/tmp/krb5cc_1000
+        Principal: steve/admin@EXAMPLE.COM
+
+  Issued           Expires          Principal
+Jul 13 17:53:34  Jul 14 03:53:34  krbtgt/EXAMPLE.COM@EXAMPLE.COM</computeroutput>
+</screen>
+
+            <para>
+            You may need to add an entry into the <filename>/etc/hosts</filename> for the KDC.  For example:           
+            </para>
+            
+<programlisting>
+192.168.0.1   kdc01.example.com       kdc01
+</programlisting>
+
+            <para>
+            Replacing <emphasis>192.168.0.1</emphasis> with the IP address of your KDC.
+            </para>
+
+          </step>
+          <step>
+          
+            <para>
+            In order for clients to determine the KDC for the Realm some DNS SRV records are needed.  Add the following to 
+            <filename>/etc/named/db.example.com</filename>:
+            </para>
+
+<programlisting>
+_kerberos._udp.EXAMPLE.COM.     IN SRV 1  0 88  kdc01.example.com.
+_kerberos._tcp.EXAMPLE.COM.     IN SRV 1  0 88  kdc01.example.com.
+_kerberos._udp.EXAMPLE.COM.     IN SRV 10 0 88  kdc02.example.com. 
+_kerberos._tcp.EXAMPLE.COM.     IN SRV 10 0 88  kdc02.example.com. 
+_kerberos-adm._tcp.EXAMPLE.COM. IN SRV 1  0 749 kdc01.example.com.
+_kpasswd._udp.EXAMPLE.COM.      IN SRV 1  0 464 kdc01.example.com.
+</programlisting>
+
+            <note>
+              <para>
+              Replace <emphasis>EXAMPLE.COM</emphasis>, <emphasis>kdc01</emphasis>, and <emphasis>kdc02</emphasis> with your 
+              domain name, primary KDC, and secondary KDC.
+              </para>
+            </note>
+
+            <para>
+            See <xref linkend="dns"/> for detailed instructions on setting up DNS.
+            </para>
+
+          </step>
+        </procedure>
+       
+        <para>
+        Your new Kerberos Realm is now ready to authenticate clients.
+        </para>
+
+      </sect3>
+    </sect2>
+    <sect2 id="kerberos-secondary-kdc" status="review">
+      <title>Secondary KDC</title>
+
+      <para>
+      Once you have one Key Distribution Center (KDC) on your network, it is good practice to have a Secondary KDC in case the
+      primary becomes unavailable.
+      </para> 
+      
+      <procedure>
+        <step>
+        
+        <para>
+        First, install the packages, and when asked for the Kerberos and Admin server names enter the name of the Primary KDC:        
+        </para>
+
+<screen>
+<command>sudo apt-get install krb5-kdc krb5-admin-server</command>
+</screen>
+
+        </step>
+        <step>
+
+        <para>
+        Once you have the packages installed, create the Secondary KDC's host principal.  From a terminal prompt, enter:
+        </para>
+
+<screen>
+<command>kadmin -q "addprinc -randkey host/kdc02.example.com"</command>
+</screen>
+    
+        <note>
+          <para>
+          After, issuing any <application>kadmin</application> commands you will be prompted for your 
+          <emphasis>username/admin@EXAMPLE.COM</emphasis> principal password.
+          </para>
+        </note>
+      
+        </step>
+        <step>
+
+          <para>
+          Extract the <emphasis>keytab</emphasis> file:
+          </para>
+
+<screen>
+<command>kadmin -q "ktadd -k keytab.kdc02 host/kdc02.example.com"</command>
+</screen>
+
+        </step>
+        <step>
+
+          <para>
+          There should now be a <filename>keytab.kdc02</filename> in the current directory, move the file to 
+          <filename>/etc/krb5.keytab</filename>:
+          </para>
+
+<screen>
+<command>sudo mv keytab.kdc02 /etc/krb5.keytab</command>
+</screen>
+
+          <note>
+            <para>
+            If the path to the <filename>keytab.kdc02</filename> file is different adjust accordingly. 
+            </para>
+          </note>
+
+          <para>
+          Also, you can list the principals in a Keytab file, which can be useful when troubleshooting, using the 
+          <application>klist</application> utility:
+          </para>
+
+<screen>
+<command>sudo klist -k /etc/krb5.keytab</command>
+</screen>
+
+        </step>
+        <step>
+
+          <para>
+          Next, there needs to be a <filename>kpropd.acl</filename> file on each KDC that lists all KDCs for the Realm.  For example, 
+          on both primary and secondary KDC, create <filename>/etc/krb5kdc/kpropd.acl</filename>:
+          </para>
+
+<programlisting>
+host/kdc01.example.com@EXAMPLE.COM
+host/kdc02.example.com@EXAMPLE.COM
+</programlisting>
+
+        </step>
+        <step>
+
+          <para>
+          Create an empty database on the <emphasis>Secondary KDC</emphasis>:
+          </para>
+
+<screen>
+<command>sudo kdb5_util -s create</command>
+</screen>
+
+        </step>
+        <step>
+
+          <para>
+          Now start the <application>kpropd</application> daemon, which listens for connections from the 
+          <application>kprop</application> utility.  <application>kprop</application> is used to transfer 
+          dump files:
+          </para>
+
+<screen>
+<command>sudo kpropd -S</command>
+</screen>
+      
+        </step>
+        <step>
+
+          <para>
+          From a terminal on the <emphasis>Primary KDC</emphasis>, create a dump file of the principal database:
+          </para>
+
+<screen>
+<command>sudo kdb5_util dump /var/lib/krb5kdc/dump</command>
+</screen>
+
+        </step>
+        <step>
+
+          <para>
+          Extract the Primary KDC's <emphasis>keytab</emphasis> file and copy it to <filename>/etc/krb5.keytab</filename>:
+          </para>
+
+<screen>
+<command>kadmin -q "ktadd -k keytab.kdc01 host/kdc01.example.com"</command>
+<command>sudo mv keytab.kdc01 /etc/kr5b.keytab</command>
+</screen>
+
+          <note>
+            <para>
+            Make sure there is a <emphasis>host</emphasis> for <emphasis>kdc01.example.com</emphasis> before extracting the Keytab.
+            </para>
+          </note>
+
+        </step>
+        <step>
+
+          <para>
+          Using the <application>kprop</application> utility push the database to the Secondary KDC:
+          </para>
+
+<screen>
+<command>sudo kprop -r EXAMPLE.COM -f /var/lib/krb5kdc/dump kdc02.example.com</command>
+</screen>
+
+          <note>
+            <para>
+            There should be a <emphasis>SUCCEEDED</emphasis> message if the propagation worked.  If there is an error 
+            message check <filename>/var/log/syslog</filename> on the secondary KDC for more information.
+            </para>
+          </note>
+      
+          <para>
+          You may also want to create a <application>cron</application> job to periodically update the database on the Secondary KDC.  For 
+          example, the following will push the database every hour:
+          </para>
+
+<programlisting>
+# m h  dom mon dow   command
+0 * * * * kdb5_util dump /var/lib/krb5kdc/dump &amp;&amp; kprop -r EXAMPLE.COM -f /var/lib/krb5kdc/dump kdc02.example.com
+</programlisting>
+  
+        </step>
+        <step>
+
+          <para>
+          Back on the <emphasis>Secondary KDC</emphasis>, create a <emphasis>stash</emphasis> file to hold the Kerberos 
+          master key:
+          </para>
+
+<screen>
+<command>sudo kdb5_util stash</command>
+</screen>
+
+        </step>
+        <step>
+
+          <para>
+          Finally, start the <application>krb5-kdc</application> daemon on the Secondary KDC:
+          </para>
+
+<screen>
+<command>sudo /etc/init.d/krb5-kdc start</command>
+</screen>
+
+        </step>
+      </procedure>
+
+      <para>
+      The <emphasis>Secondary KDC</emphasis> should now be able to issue tickets for the Realm.  You can test this by stopping 
+      the <application>krb5-kdc</application> daemon on the Primary KDC, then use <application>kinit</application> to request a ticket.
+      If all goes well you should receive a ticket from the Secondary KDC.
+      </para>
+
+    </sect2>
+    <sect2 id="kerberos-linux-client" status="review">
+      <title>Kerberos Linux Client</title>    
+
+      <para>
+      This section covers configuring a Linux system as a <application>Kerberos</application> client.  This will allow access
+      to any kerberized services once a user has successfully logged into the system.
+      </para>
+
+      <sect3 id="kerberos-client-installation" status="review">
+        <title>Installation</title>
+
+        <para>
+        In order to authenticate to a Kerberos Realm, the <application>krb5-user</application> and <application>libpam-krb5</application>
+        packages are needed, along with a few others that are not strictly necessary but make life easier.  To install the packages 
+        enter the following in a terminal prompt:
+        </para>
+
+<screen>
+<command>sudo apt-get install krb5-user libpam-krb5 libpam-ccreds auth-client-config</command>
+</screen>
+
+        <para>
+        The <application>auth-client-config</application> package allows simple configuration of PAM for authentication from multiple 
+        sources, and the <application>libpam-ccreds</application> will cache authentication credentials allowing you to login in case the 
+        Key Distribution Center (KDC) is unavailable.  This package is also useful for laptops that may authenticate using Kerberos while 
+        on the corporate network, but will need to be accessed off the network as well.
+        </para>
+
+      </sect3>
+      <sect3 id="kerberos-client-configuration" status="review">
+        <title>Configuration</title>
+
+        <para>
+        To configure the client in a terminal enter:
+        </para>
+
+<screen>
+<command>sudo dpkg-reconfigure krb5-config</command>
+</screen>
+
+        <para>
+        You will then be prompted to enter the name of the Kerberos Realm.  Also, if you don't have DNS configured with Kerberos 
+        <emphasis>SRV</emphasis> records, the menu will prompt you for the hostname of the Key Distribution Center (KDC) and 
+        Realm Administration server.
+        </para>
+
+        <para>
+        The <application>dpkg-reconfigure</application> adds entries to the <filename>/etc/krb5.conf</filename> file for your Realm.
+        You should have entries similar to the following:
+        </para>
+
+<programlisting>
+[libdefaults]
+        default_realm = EXAMPLE.COM
+...
+[realms]
+        EXAMPLE.COM = }                
+                kdc = 192.168.0.1               
+                admin_server = 192.168.0.1
+        }
+</programlisting>
+
+        <para>
+        You can test the configuration by requesting a ticket using the <application>kinit</application> utility.  For example:
+        </para>
+
+<screen>
+<command>kinit steve@EXAMPLE.COM</command>
+<computeroutput>Password for steve@EXAMPLE.COM:</computeroutput>
+</screen>
+
+        <para>
+        When a ticket has been granted, the details can be viewed using <application>klist</application>:
+        </para>
+
+<screen>
+<command>klist</command>
+<computeroutput>Ticket cache: FILE:/tmp/krb5cc_1000
+Default principal: steve@EXAMPLE.COM
+
+Valid starting     Expires            Service principal
+07/24/08 05:18:56  07/24/08 15:18:56  krbtgt/EXAMPLE.COM@EXAMPLE.COM
+        renew until 07/25/08 05:18:57
+
+
+Kerberos 4 ticket cache: /tmp/tkt1000
+klist: You have no tickets cached</computeroutput>
+</screen>
+
+        <para>
+        Next, use the <application>auth-client-config</application> to configure the <application>libpam-krb5</application> module
+        to request a ticket during login:
+        </para>
+
+<screen>
+<command>sudo auth-client-config -a -p kerberos_example</command>
+</screen>
+
+        <para>
+        You will should now receive a ticket upon successful login authentication. 
+        </para>
+
+      </sect3>
+    </sect2>
+    <sect2 id="kerberos-resources" status="review">
+      <title>Resources</title>
+
+      <itemizedlist>
+        <listitem>
+          <para>
+          For more information on Kerberos see the <ulink url="http://web.mit.edu/Kerberos/">MIT Kerberos</ulink> site.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+          O'Reilly's <ulink url="http://oreilly.com/catalog/9780596004033/">Kerberos: The Definitive Guide</ulink> is a great reference when
+          setting up Kerberos.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+          Also, feel free to stop by the <emphasis>#ubuntu-server</emphasis> IRC channel on <ulink url="http://freenode.net/">Freenode</ulink>  
+          if you have Kerberos questions.
+          </para>
+        </listitem>
+      </itemizedlist>
+
+    </sect2>
+  </sect1>
 </chapter>

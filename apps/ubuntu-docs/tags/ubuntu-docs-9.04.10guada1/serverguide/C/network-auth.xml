@@ -1077,6 +1077,13 @@ index           default                 sub
         </para>
 
         <para>
+        Also, Kerberos is a time sensitive protocol.  So if the local system time between a client machine and the server differs by
+        more than five minutes (by default), the workstation will not be able to authenticate.  To correct the problem all hosts 
+        should have their time synchronized using the <emphasis>Network Time Protocol (NTP)</emphasis>.  For details
+        on setting up NTP see <xref linkend="NTP"/>.
+        </para>
+
+        <para>
         The first step in installing a Kerberos Realm is to install the <application>krb5-kdc</application>  and 
         <application>krb5-admin-server</application> packages.  From a terminal enter:
         </para>
@@ -1095,7 +1102,7 @@ index           default                 sub
         </para>
 
 <screen>
-<command>sudo sudo krb5_newrealm</command>
+<command>sudo krb5_newrealm</command>
 </screen>
 
       </sect3>
@@ -1126,9 +1133,16 @@ Principal "steve/admin@EXAMPLE.COM" created.
 kadmin.local:</computeroutput><userinput> quit</userinput>
 </screen>
 
+            <para>
+            In the the above example <emphasis role="italic">steve</emphasis> is the <emphasis>Principal</emphasis>, 
+            <emphasis role="italic">/admin</emphasis> is an <emphasis>Instance</emphasis>, and 
+            <emphasis role="italic">@EXAMPLE.COM</emphasis> signifies the realm.  The <emphasis role="italic">"every day"</emphasis>
+            Principal would be <emphasis>steve@EXAMPLE.COM</emphasis>, and should have only normal user rights.            
+            </para>
+
             <note>
               <para>
-              Replace <emphasis>EXAMPLE.COM</emphasis> and <emphasis>steve/admin</emphasis> with your Realm and admin user.
+              Replace <emphasis>EXAMPLE.COM</emphasis> and <emphasis>steve</emphasis> with your Realm and admin username.
               </para>
             </note>
 
@@ -1400,7 +1414,7 @@ host/kdc02.example.com@EXAMPLE.COM
 
 <programlisting>
 # m h  dom mon dow   command
-0 * * * * kdb5_util dump /var/lib/krb5kdc/dump &amp;&amp; kprop -r EXAMPLE.COM -f /var/lib/krb5kdc/dump kdc02.example.com
+0 * * * * /usr/sbin/kdb5_util dump /var/lib/krb5kdc/dump &amp;&amp; /usr/sbin/kprop -r EXAMPLE.COM -f /var/lib/krb5kdc/dump kdc02.example.com
 </programlisting>
   
         </step>

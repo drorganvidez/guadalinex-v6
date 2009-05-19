@@ -412,35 +412,13 @@ gidNumber: 10000
 	</para>
 
 	<para>
-	Now, to add your entries to the LDAP directory:
+	To add the entries to the LDAP directory use the <application>ldapadd</application> utility:
 	</para>
 
-	<itemizedlist>
-	    <listitem>
-	      <para>
-	      Stop <application>slapd</application>: 
-	      </para>
+
 <screen>
-<command>sudo /etc/init.d/slapd stop</command>
+<command>ldapadd -x -D cn=admin,dc=example,dc=com -W -f example.com.ldif</command>
 </screen>
-            </listitem>
-            <listitem>
-    	      <para>
-	      Add the content:
-	      </para>
-<screen>
-<command>sudo slapadd -l example.com.ldif</command>
-</screen>
-             </listitem>
-             <listitem>
-    	       <para>
-	       Start LDAP daemon:
-	       </para>
-<screen>
-<command>sudo /etc/init.d/slapd start</command>
-</screen>
-             </listitem>
-	</itemizedlist>
 
 	<para>
 	We can check that the content has been correctly added with the

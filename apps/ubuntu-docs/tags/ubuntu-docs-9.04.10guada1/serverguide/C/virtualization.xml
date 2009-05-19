@@ -384,67 +384,126 @@
   </sect1>
   <sect1 id="ubuntu-vm-builder" status="review">
     <title>ubuntu-vm-builder</title>
+
     <para>
     Originally developed to create the <emphasis>JeOS</emphasis> variant of Ubuntu Server Edition, <application>ubuntu-vm-builder</application>
     can be used to create customized virtual machines.
     </para>
+
     <para>
     <application>ubuntu-vm-builder</application> provides a method to quickly create a clean testing environment, a way to automate the 
     virtual machine installation process, and for software developers, the ability to integrate the creation of a virtual machine into 
     the build process of an application.  If using a local mirror the virtual machine creation process can take less than two minutes 
     from start to finish.
     </para>
+
     <para>
     To create a custom virtual machine, enter the following:
     </para>
+
 <screen>
 <command>sudo ubuntu-vm-builder kvm &distro-short-codename; --addpkg vim</command>
 </screen>
+
     <para>
     The above command will create a KVM image adding the <application>vim</application> package to the virtual machine.
     The default virtual machine image is <application>KVM</application>, but vmw6, vmserver, vbox, and qemu image options are also available.
     </para>
+
     <para>
     By adding additional <emphasis>--addpkg</emphasis> options any number of applications can be included in the image.  For example:
     </para>
+
 <screen>
 <command>sudo ubuntu-vm-builder kvm  &distro-short-codename; --addpkg vim --addpkg screen --mem 256</command>
 </screen>
     <para>
     Also notice that the <emphasis>--mem 256</emphasis> option increases the virtual machines memory from the default 128M.
     </para>
+
     <para>
     At the end of the image creation you will be prompted to confirm the additional package installation.
     After the image creation process has finished a directory named <filename role="directory">ubuntu-vm-&distro-short-codename;-i386</filename> 
-    or <filename role="directory">ubuntu-vm-&distro-short-codename;-amd64</filename> is created, and inside is the virtual machine image 
-    file named <filename>root.qcow2</filename> and a shell script, used to start the virtual machine, named according to the image type.
+    or <filename role="directory">ubuntu-vm-&distro-short-codename;-amd64</filename> is created.  The destination can be changed by using the 
+    <emphasis>-d</emphasis> option.  Inside the directory is an image file named <filename>root.qcow2</filename>
+    and a shell script, used to start the virtual machine.
     </para>
+
     <para>
-    Refer to the <application>ubuntu-vm-builder</application> man page for more customization options.
+    Another, usually quicker, way to install a VM is to pull the packages from an <emphasis>ISO</emphasis> file instead of the Internet.  For
+    example:
     </para>
+
+<screen>
+<command>sudo ubuntu-vm-builder kvm  &distro-short-codename; --mem 256 --iso /path/to/ubuntu-&distro-rev;-server-i386.iso</command>
+</screen>
+
+    <note>
+      <para>
+      If using an ISO file the VM may need to be updated after creation.
+      </para>
+    </note>
+ 
+    <para>
+    Some other interesting options:
+    </para>
+
+    <itemizedlist>
+      <listitem>
+        <para>
+        <emphasis>--user, --name, and --pass</emphasis>: set the username, full name, and password of the default user.
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+        <emphasis>--hostname and --domain</emphasis>: configures the hostname and domain of the virtual machine.
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+        <emphasis>--ip</emphasis>: allows you to give the VM an IP Address.
+        </para>
+        <para>
+        If using the <emphasis>--ip</emphasis> option you can also set the gateway, netmask, and DNS with the <emphasis>--gw</emphasis>,
+        <emphasis>--mask</emphasis>, and <emphasis>--dns</emphasis> options. 
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <para>
+    Refer to the <application>ubuntu-vm-builder</application> man page for more customization options: <command>man ubuntu-vm-builder</command>.
+    </para>
+
     <sect2 id="ubuntu-vm-builder-libvirt" status="review">
       <title>Using ubuntu-vm-builder with libvirt</title>
+
       <para>
       Combining <application>ubuntu-vm-builder</application> with <application>libvirt</application> provides a great environment for virtual machine 
       creation and management. 
       </para>
+
       <para>
       Use the <emphasis>--libvirt &lt;uri&gt;</emphasis> option to automatically add the newly created virtual machine to a libvirt domain.
       For example:
       </para>
+
 <screen>
 <command>sudo ubuntu-vm-builder kvm &distro-short-codename; --addpkg vim --mem 256 --libvirt qemu:///system</command>
 </screen>
+
       <para>
       Once the process has finished use <application>virsh</application> to start the virtual machine:
       </para>
+
 <screen>
 <command>virsh -c qemu:///system start ubuntu</command>
 </screen>
+
       <para>
       The default virtual machine name is <emphasis>ubuntu</emphasis> use the <emphasis>--hostname</emphasis> option to change it.  See 
       <xref linkend="virsh"/> for more details.
       </para>
+
     </sect2>
   </sect1>
 </chapter>

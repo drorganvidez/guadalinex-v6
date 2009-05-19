@@ -183,9 +183,120 @@ weather -i KINT >> /var/run/update-motd/60-local-weather
     </para>
 
     <para>
-    
+    Install <application>etckeeper</application> by entering the following in a terminal:
     </para>
 
+<screen>
+<command>sudo apt-get install etckeeper</command>
+</screen>
+
+    <para>
+    The main configuration file, <filename>/etc/etckeeper/etckeeper.conf</filename>, is fairly simple.  The main options being which
+    VCS and which package management system to use.  By default <application>etckeeper</application> is configured to use 
+    <application>bzr</application> for version control, <application>apt</application> for high level package mangement, and 
+    <application>dpkg</application> for low level package management.
+    </para>
+
+    <para>
+    With the package installed, it is time to initialize the repository.  In a terminal enter:
+    </para>
+
+<screen>
+<command>sudo etckeeper init</command>
+</screen>
+
+   <para>
+   Next, commit the files to the repository:
+   </para>
+
+<screen>
+<command>sudo etckeeper commit "initial import"</command>
+</screen>
+
+    <para>
+    Using the VCS commands you can view log information about files in <filename>/etc</filename>:
+    </para>
+
+<screen>
+<command>sudo bzr log /etc/passswd</command>
+</screen>
+
+    <para>
+    To demonstrate the integration with the package management system, install <application>postfix</application>:
+    </para>
+
+<screen>
+<command>sudo apt-get install postfix</command>
+</screen>
+
+    <para>
+    When the installation is finished, all the <application>postfix</application> configuration files should be committed to the
+    repository:
+    </para>
+
+<screen>
+<computeroutput>Committing to: /etc/
+added aliases.db
+modified group
+modified group-
+modified gshadow
+modified gshadow-
+modified passwd
+modified passwd-
+added postfix
+added resolvconf
+added rsyslog.d
+modified shadow
+modified shadow-
+added init.d/postfix
+added network/if-down.d/postfix
+added network/if-up.d/postfix
+added postfix/dynamicmaps.cf
+added postfix/main.cf
+added postfix/master.cf
+added postfix/post-install
+added postfix/postfix-files
+added postfix/postfix-script
+added postfix/sasl
+added ppp/ip-down.d
+added ppp/ip-down.d/postfix
+added ppp/ip-up.d/postfix
+added rc0.d/K20postfix
+added rc1.d/K20postfix
+added rc2.d/S20postfix
+added rc3.d/S20postfix
+added rc4.d/S20postfix
+added rc5.d/S20postfix
+added rc6.d/K20postfix
+added resolvconf/update-libc.d
+added resolvconf/update-libc.d/postfix
+added rsyslog.d/postfix.conf
+added ufw/applications.d/postfix
+Committed revision 2.</computeroutput>
+</screen>
+
+    <para>
+    For an example of how <application>etckeeper</application> tracks manual changes, add new a host to <filename>/etc/hosts</filename>.
+    Using <application>bzr</application> you can see which files have been modified:
+    </para>
+
+<screen>
+<command>sudo bzr status /etc/</command>
+<computeroutput>modified:
+  hosts</computeroutput>
+</screen>
+
+    <para>
+    Now commit the changes:
+    </para>
+
+<screen>
+<command>sudo etckeeper commit "new host"</command>
+</screen>
+
+    <para>
+    For more information on <application>bzr</application> see <xref linkend="bazaar"/>.
+    </para>
    
   </sect1>
   <sect1 id="screen-profiles" status="review">
@@ -279,6 +390,17 @@ weather -i KINT >> /var/run/update-motd/60-local-weather
         The Debian Package of the Day 
         <ulink url="http://debaday.debian.net/2007/10/04/weather-check-weather-conditions-and-forecasts-on-the-command-line/">weather</ulink>
         article has more details about using the <application>weather</application>utility.
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+        See the <ulink url="http://kitenet.net/~joey/code/etckeeper/">etckeeper</ulink> site for more details on using 
+        <application>etckeeper</application>.
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+        For the latest news and information about <application>bzr</application> see the <ulink url="http://bazaar-vcs.org/">bzr</ulink> web site.
         </para>
       </listitem>
       <listitem>

@@ -84,7 +84,7 @@ urchinTracker();
   <div id="ubuntulinks">
 
 	<p>The material in this document is available under a free license, see <a href="/legal.html">Legal</a> for details<br />
-	For information on contributing or to report a problem, visit the <a href="https://bugs.launchpad.net/ubuntu-doc">Ubuntu Documentation Project</a></p>
+	For information on contributing or to report a problem, visit the <a href="https://bugs.launchpad.net/ubuntu/+source/ubuntu-docs">bug page for Ubuntu Documentation</a></p>
 
   </div>
 

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2008-10-08 21:13+0100\n"
+"POT-Creation-Date: 2008-10-12 12:15+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -41,223 +41,243 @@ msgstr ""
 msgid "Connecting using Network Manager"
 msgstr ""
 
-#: internet/C/wireless.xml:24(para) 
+#: internet/C/wireless.xml:24(para) internet/C/wireless.xml:47(para) 
 msgid "<application>Network Manager</application> (<menuchoice><guimenu>System</guimenu><guimenuitem>Administration</guimenuitem><guimenuitem>Network</guimenuitem></menuchoice>) supports Roaming mode. This allows you to connect to any available wireless network in range."
 msgstr ""
 
-#: internet/C/wireless.xml:26(para) 
+#: internet/C/wireless.xml:26(para) internet/C/wireless.xml:49(para) 
 msgid "In the <guilabel>Taskbar</guilabel> click the <application>Network Manager</application> icon."
 msgstr ""
 
-#: internet/C/wireless.xml:27(para) 
+#: internet/C/wireless.xml:27(para) internet/C/wireless.xml:50(para) 
 msgid "Select your wireless network from the list."
 msgstr ""
 
-#: internet/C/wireless.xml:28(para) 
+#: internet/C/wireless.xml:28(para) internet/C/wireless.xml:51(para) 
 msgid "Enter your <guilabel>Network Key</guilabel>."
 msgstr ""
 
-#: internet/C/wireless.xml:29(para) 
+#: internet/C/wireless.xml:29(para) internet/C/wireless.xml:39(para) internet/C/wireless.xml:52(para) 
 msgid "Click <guibutton>Connect</guibutton>."
 msgstr ""
 
 #: internet/C/wireless.xml:33(title) 
-msgid "Manually connecting"
+msgid "Connecting to a hidden network"
 msgstr ""
 
 #: internet/C/wireless.xml:35(para) 
-msgid "Select the connection and press <guibutton>Properties</guibutton>."
+msgid "Left click the Network Manager icon in the system tray."
 msgstr ""
 
 #: internet/C/wireless.xml:36(para) 
-msgid "From the <guilabel>Network Name</guilabel> drop down box choose your router. If it is not shown your router may not broadcast its ID. In this case manually enter the ESSID."
+msgid "Click<guilabel>Connect to Hidden Wireless Network</guilabel>"
 msgstr ""
 
 #: internet/C/wireless.xml:37(para) 
-msgid "Select the <guilabel>Password Type</guilabel> and enter your password."
+msgid "In the network name text box enter the ESSID you are connecting to."
 msgstr ""
 
 #: internet/C/wireless.xml:38(para) 
-msgid "If your ISP gave you a static IP address then select <guilabel>Static IP Address</guilabel> from the <guilabel>Configuration</guilabel> box."
+msgid "Select the type of security used from the drop down list."
 msgstr ""
 
-#: internet/C/wireless.xml:39(para) 
-msgid "If your router assigns IP addresses then leave the <guilabel>Configuration</guilabel> as <guilabel>Automatic Configuration (DHCP)</guilabel>."
-msgstr ""
-
-#: internet/C/wireless.xml:40(para) internet/C/wireless.xml:115(para) 
-msgid "Click <guibutton>OK</guibutton>."
+#: internet/C/wireless.xml:44(title) 
+msgid "Change or disable a wireless network"
 msgstr ""
 
 #: internet/C/wireless.xml:46(title) 
-msgid "Troubleshooting"
+msgid "Connecting to another wireless network"
 msgstr ""
 
-#: internet/C/wireless.xml:47(para) 
-msgid "This troubleshooting guide is designed to be carried out in order."
-msgstr ""
-
-#: internet/C/wireless.xml:49(title) 
-msgid "Check for device recognition"
-msgstr ""
-
-#: internet/C/wireless.xml:51(para) 
-msgid "Open a <application>Terminal</application> (<menuchoice><guimenu>Applications</guimenu><guimenuitem>Accessories</guimenuitem><guimenuitem>Terminal</guimenuitem></menuchoice>) and type the command: <code>sudo lshw -C network</code>"
-msgstr ""
-
-#: internet/C/wireless.xml:53(para) 
-msgid "You should see an output, along with the words \"CLAIMED, UNCLAIMED, ENABLED or DISABLED\""
-msgstr ""
-
-#: internet/C/wireless.xml:55(para) 
-msgid "Claimed - this indicates a driver is loaded but not functioning, see <xref linkend=\"ndiswrapper\"/>"
-msgstr ""
-
-#: internet/C/wireless.xml:56(para) 
-msgid "Unclaimed - there is no driver loaded, see <xref linkend=\"ndiswrapper\"/>."
-msgstr ""
-
-#: internet/C/wireless.xml:57(para) 
-msgid "Enabled - move on to If there is a driver listed then see <xref linkend=\"troubleshooting-connection\"/>."
+#: internet/C/wireless.xml:56(title) 
+msgid "Disabling wireless connections"
 msgstr ""
 
 #: internet/C/wireless.xml:58(para) 
-msgid "Disabled - see <xref linkend=\"troubleshooting-disabled\"/>."
+msgid "Right click the Network Manager icon in the system tray."
 msgstr ""
 
-#: internet/C/wireless.xml:62(title) 
+#: internet/C/wireless.xml:59(para) 
+msgid "Click <guilabel>Enable Wireless</guilabel> removing the check mark."
+msgstr ""
+
+#: internet/C/wireless.xml:65(title) 
+msgid "Wireless troubleshooting"
+msgstr ""
+
+#: internet/C/wireless.xml:66(para) 
+msgid "While not exhaustive, this section covers some common problems faced with wireless support."
+msgstr ""
+
+#: internet/C/wireless.xml:67(para) 
+msgid "There is much more information available from the <ulink url=\"https://help.ubuntu.com/community/WifiDocs\">Community Documentation</ulink>."
+msgstr ""
+
+#: internet/C/wireless.xml:68(para) 
+msgid "This troubleshooting guide is designed to be carried out in order."
+msgstr ""
+
+#: internet/C/wireless.xml:70(title) 
 msgid "Check that the device is on"
 msgstr ""
 
-#: internet/C/wireless.xml:64(para) 
+#: internet/C/wireless.xml:72(para) 
 msgid "Many wireless network devices can be turned on or off. Check to see if there is a hardware switch, some devices can be switched off from Windows and may need to be turned back on from Windows."
 msgstr ""
 
-#: internet/C/wireless.xml:65(para) 
-msgid "If it is turned on then see <xref linkend=\"troubleshooting-connection\"/>."
-msgstr ""
-
-#: internet/C/wireless.xml:69(title) 
-msgid "Check for a connection to the router"
-msgstr ""
-
-#: internet/C/wireless.xml:71(para) 
-msgid "Open a <application>Terminal</application> (<menuchoice><guimenu>Applications</guimenu><guimenuitem>Accessories</guimenuitem><guimenuitem>Terminal</guimenuitem></menuchoice>) and type the command: <code>iwconfig</code>."
-msgstr ""
-
-#: internet/C/wireless.xml:72(para) 
-msgid "If there is an entry that says <code>ESSID=\"\"</code> then see <xref linkend=\"security-wpa\"/>."
-msgstr ""
-
 #: internet/C/wireless.xml:73(para) 
-msgid "If the ESSID for our router is shown there may be a problem with ACPI support. Boot the kernel with the <code>pci=noacpi</code> option."
+msgid "If it is turned on then see <xref linkend=\"troubleshooting-device\"/>."
 msgstr ""
 
 #: internet/C/wireless.xml:77(title) 
-msgid "Check IP assignment"
+msgid "Check for device recognition"
 msgstr ""
 
 #: internet/C/wireless.xml:79(para) 
-msgid "Open a <application>Terminal</application> (<menuchoice><guimenu>Applications</guimenu><guimenuitem>Accessories</guimenuitem><guimenuitem>Terminal</guimenuitem></menuchoice>) and type the command: <code>ifconfig</code>."
-msgstr ""
-
-#: internet/C/wireless.xml:80(para) 
-msgid "If there is an IP address shown see <xref linkend=\"troubleshooting-dns\"/>."
+msgid "Open a <application>Terminal</application> (<menuchoice><guimenu>Applications</guimenu><guimenuitem>Accessories</guimenuitem><guimenuitem>Terminal</guimenuitem></menuchoice>) and type the command: <code>sudo lshw -C network</code>"
 msgstr ""
 
 #: internet/C/wireless.xml:81(para) 
-msgid "From the <application>Terminal</application> enter the command: <code>sudo dhclient if_name</code> where if_name is the connection listed earlier."
-msgstr ""
-
-#: internet/C/wireless.xml:82(para) 
-msgid "If you receive a message that says <code>bound to xxx.xxx.xxx.xxx</code> then see <xref linkend=\"troubleshooting-dns\"/>"
+msgid "You should see an output, along with the words \"CLAIMED, UNCLAIMED, ENABLED or DISABLED\""
 msgstr ""
 
 #: internet/C/wireless.xml:83(para) 
-msgid "If not then reboot the system."
+msgid "Claimed - this indicates a driver is loaded but not functioning, see <xref linkend=\"ndiswrapper\"/>"
 msgstr ""
 
-#: internet/C/wireless.xml:87(title) 
-msgid "Check DNS"
+#: internet/C/wireless.xml:84(para) 
+msgid "Unclaimed - there is no driver loaded, see <xref linkend=\"ndiswrapper\"/>."
 msgstr ""
 
-#: internet/C/wireless.xml:89(para) 
-msgid "Open a <application>Terminal</application> (<menuchoice><guimenu>Applications</guimenu><guimenuitem>Accessories</guimenuitem><guimenuitem>Terminal</guimenuitem></menuchoice>) and type the command: <code>ping 82.211.81.158</code>."
+#: internet/C/wireless.xml:85(para) 
+msgid "Enabled - move on to If there is a driver listed then see <xref linkend=\"troubleshooting-connection\"/>."
 msgstr ""
 
-#: internet/C/wireless.xml:90(para) 
-msgid "Now type the command: <code>ping www.ubuntu.com</code>. If you get a response from the both then see <xref linkend=\"troubleshooting-ipv6\"/>."
+#: internet/C/wireless.xml:86(para) 
+msgid "Disabled - see <xref linkend=\"troubleshooting-disabled\"/>."
 msgstr ""
 
-#: internet/C/wireless.xml:91(para) 
-msgid "Type the command: <code>cat /etc/resolv.conf</code>. If there is no nameserver listed then contact your ISP and find out your primary and secondary domain name servers. Once you have this information see <xref linkend=\"wireless-connecting\"/>."
+#: internet/C/wireless.xml:90(title) 
+msgid "Check for a connection to the router"
 msgstr ""
 
-#: internet/C/wireless.xml:95(title) 
-msgid "IPv6 Not Supported"
+#: internet/C/wireless.xml:92(para) 
+msgid "Open a <application>Terminal</application> (<menuchoice><guimenu>Applications</guimenu><guimenuitem>Accessories</guimenuitem><guimenuitem>Terminal</guimenuitem></menuchoice>) and type the command: <code>iwconfig</code>."
 msgstr ""
 
-#: internet/C/wireless.xml:97(para) 
-msgid "IPv6 is supported by default in Ubuntu and can sometimes cause problems."
+#: internet/C/wireless.xml:93(para) 
+msgid "If there is an entry that says <code>ESSID=\"\"</code> then see <xref linkend=\"security-wpa\"/>."
 msgstr ""
 
-#: internet/C/wireless.xml:98(para) 
-msgid "To disable it, open a <application>Terminal</application> (<menuchoice><guimenu>Applications</guimenu><guimenuitem>Accessories</guimenuitem><guimenuitem>Terminal</guimenuitem></menuchoice>) and type the command: <code>gksudo gedit /etc/modprobe.d/aliases</code>."
+#: internet/C/wireless.xml:94(para) 
+msgid "If the ESSID for our router is shown there may be a problem with ACPI support. Boot the kernel with the <code>pci=noacpi</code> option."
 msgstr ""
 
-#: internet/C/wireless.xml:99(para) 
-msgid "Find the line <code>alias net-pf-10 ipv6</code> and change it to read <code>alias net-pf-10 off</code>."
+#: internet/C/wireless.xml:98(title) 
+msgid "Check IP assignment"
 msgstr ""
 
 #: internet/C/wireless.xml:100(para) 
-msgid "Reboot Ubuntu."
+msgid "Open a <application>Terminal</application> (<menuchoice><guimenu>Applications</guimenu><guimenuitem>Accessories</guimenuitem><guimenuitem>Terminal</guimenuitem></menuchoice>) and type the command: <code>ifconfig</code>."
 msgstr ""
 
-#: internet/C/wireless.xml:107(title) 
-msgid "Using Windows Wireless Drivers"
+#: internet/C/wireless.xml:101(para) 
+msgid "If there is an IP address shown see <xref linkend=\"troubleshooting-dns\"/>."
 msgstr ""
 
-#: internet/C/wireless.xml:108(para) 
-msgid "Ubuntu supports a system known as NDISWrapper. This allows you to use a Windows wireless device driver under Ubuntu."
+#: internet/C/wireless.xml:102(para) 
+msgid "From the <application>Terminal</application> enter the command: <code>sudo dhclient if_name</code> where if_name is the connection listed earlier."
+msgstr ""
+
+#: internet/C/wireless.xml:103(para) 
+msgid "If you receive a message that says <code>bound to xxx.xxx.xxx.xxx</code> then see <xref linkend=\"troubleshooting-dns\"/>"
+msgstr ""
+
+#: internet/C/wireless.xml:104(para) 
+msgid "If not then reboot the system."
+msgstr ""
+
+#: internet/C/wireless.xml:108(title) 
+msgid "Check DNS"
 msgstr ""
 
 #: internet/C/wireless.xml:110(para) 
-msgid "Obtain the Windows Driver for your system and locate the file that ends with <code>.inf</code>."
+msgid "Open a <application>Terminal</application> (<menuchoice><guimenu>Applications</guimenu><guimenuitem>Accessories</guimenuitem><guimenuitem>Terminal</guimenuitem></menuchoice>) and type the command: <code>ping -c3 85.190.27.2</code>."
 msgstr ""
 
 #: internet/C/wireless.xml:111(para) 
-msgid "Install <application>ndisgtk</application> (<menuchoice><guimenu>System</guimenu><guimenuitem>Administration</guimenuitem><guimenuitem>Synaptic Package Manager</guimenuitem></menuchoice>)."
+msgid "Now type the command: <code>ping www.ubuntu.com</code>. If you get a response from the both then see <xref linkend=\"troubleshooting-ipv6\"/>."
 msgstr ""
 
 #: internet/C/wireless.xml:112(para) 
+msgid "Type the command: <code>cat /etc/resolv.conf</code>. If there is no nameserver listed then contact your ISP and find out your primary and secondary domain name servers. Once you have this information see <xref linkend=\"wireless-connecting\"/>."
+msgstr ""
+
+#: internet/C/wireless.xml:116(title) 
+msgid "IPv6 Not Supported"
+msgstr ""
+
+#: internet/C/wireless.xml:118(para) 
+msgid "IPv6 is supported by default in Ubuntu and can sometimes cause problems."
+msgstr ""
+
+#: internet/C/wireless.xml:119(para) 
+msgid "To disable it, open a <application>Terminal</application> (<menuchoice><guimenu>Applications</guimenu><guimenuitem>Accessories</guimenuitem><guimenuitem>Terminal</guimenuitem></menuchoice>) and type the command: <code>gksudo gedit /etc/modprobe.d/aliases</code>."
+msgstr ""
+
+#: internet/C/wireless.xml:120(para) 
+msgid "Find the line <code>alias net-pf-10 ipv6</code> and change it to read <code>alias net-pf-10 off</code>."
+msgstr ""
+
+#: internet/C/wireless.xml:121(para) 
+msgid "Reboot Ubuntu."
+msgstr ""
+
+#: internet/C/wireless.xml:128(title) 
+msgid "Using Windows Wireless Drivers"
+msgstr ""
+
+#: internet/C/wireless.xml:129(para) 
+msgid "Ubuntu supports a system known as NDISWrapper. This allows you to use a Windows wireless device driver under Ubuntu."
+msgstr ""
+
+#: internet/C/wireless.xml:131(para) 
+msgid "Obtain the Windows Driver for your system and locate the file that ends with <code>.inf</code>."
+msgstr ""
+
+#: internet/C/wireless.xml:132(para) 
+msgid "Install <application>ndisgtk</application> (<menuchoice><guimenu>System</guimenu><guimenuitem>Administration</guimenuitem><guimenuitem>Synaptic Package Manager</guimenuitem></menuchoice>)."
+msgstr ""
+
+#: internet/C/wireless.xml:133(para) 
 msgid "Open <application>ndisgtk</application> (<menuchoice><guimenu>System</guimenu><guimenuitem>Administration</guimenuitem><guimenuitem>Windows Wireless Drivers</guimenuitem></menuchoice>)."
 msgstr ""
 
-#: internet/C/wireless.xml:113(para) 
+#: internet/C/wireless.xml:134(para) 
 msgid "Select <guilabel>Install new driver</guilabel>."
 msgstr ""
 
-#: internet/C/wireless.xml:114(para) 
+#: internet/C/wireless.xml:135(para) 
 msgid "Choose the location of your Windows .inf file and click <guibutton>Install</guibutton>."
 msgstr ""
 
-#: internet/C/wireless.xml:120(title) 
+#: internet/C/wireless.xml:136(para) 
+msgid "Click <guibutton>OK</guibutton>."
+msgstr ""
+
+#: internet/C/wireless.xml:141(title) 
 msgid "Wireless network security"
 msgstr ""
 
-#: internet/C/wireless.xml:123(title) 
+#: internet/C/wireless.xml:144(title) 
 msgid "Configuring WPA support."
 msgstr ""
 
-#: internet/C/wireless.xml:124(para) 
-msgid "WiFi Protected Access (WPA) is an based on WEP and provides stronger security."
+#: internet/C/wireless.xml:145(para) 
+msgid "WPA support is now integrated with <application>Network Manager</application>."
 msgstr ""
 
-#: internet/C/wireless.xml:125(para) 
-msgid "WPA is integrated with <application>Network Manager</application>. You must also have the <application>wpasupplicant</application> package installed."
-msgstr ""
-
-#: internet/C/wireless.xml:126(para) 
+#: internet/C/wireless.xml:146(para) 
 msgid "If you need to manually configure WPA support, see the <ulink url=\"https://help.ubuntu.com/community/WifiDocs/WPAHowTo?highlight=%28wpa%29\">Wiki Entry</ulink>."
 msgstr ""
 
@@ -994,7 +1014,7 @@ msgstr ""
 msgid "You must be a member of the <emphasis>admin</emphasis> group in order to change the computer host name."
 msgstr ""
 
-#: internet/C/networking.xml:31(para) internet/C/basics.xml:26(para) 
+#: internet/C/networking.xml:31(para) 
 msgid "Open <menuchoice><guimenu>System</guimenu><guimenuitem>Administration</guimenuitem><guimenuitem>Network</guimenuitem></menuchoice>."
 msgstr ""
 
@@ -1190,7 +1210,7 @@ msgstr ""
 msgid "Find the <guilabel>Folder sharing service (samba)</guilabel> and ensure that the checkbox next to it is checked. If it is not checked, press <guibutton>Unlock</guibutton> and enter your administrative password. Press <guibutton>Authenticate</guibutton>, then enable the Folder sharing service."
 msgstr ""
 
-#: internet/C/networking.xml:184(para) internet/C/basics.xml:74(para) 
+#: internet/C/networking.xml:184(para) internet/C/basics.xml:40(para) 
 msgid "Press <guibutton>Close</guibutton>"
 msgstr ""
 
@@ -1335,7 +1355,7 @@ msgstr ""
 msgid "Press <guibutton>Unlock</guibutton> and type your password to unlock the settings"
 msgstr ""
 
-#: internet/C/modem.xml:52(para) internet/C/basics.xml:116(para) 
+#: internet/C/modem.xml:52(para) internet/C/basics.xml:82(para) 
 msgid "Select the <guilabel>Connections</guilabel> tab."
 msgstr ""
 
@@ -1423,216 +1443,172 @@ msgstr ""
 msgid "Networking Basics"
 msgstr ""
 
-#: internet/C/basics.xml:18(title) 
-msgid "Basic Procedure"
-msgstr ""
-
-#: internet/C/basics.xml:19(para) 
-msgid "This section describes the basic procedure for connecting to the Internet."
-msgstr ""
-
-#: internet/C/basics.xml:21(para) 
-msgid "If you have a wireless connection or connect to the Internet through a modem (including an ADSL modem), and this section does not work, you should read <xref linkend=\"wireless\"/>, <xref linkend=\"adsl\"/> or <xref linkend=\"modem\"/>."
-msgstr ""
-
-#: internet/C/basics.xml:23(para) 
-msgid "To connect to the Internet:"
-msgstr ""
-
-#: internet/C/basics.xml:29(para) 
-msgid "Press <guibutton>Unlock</guibutton>."
-msgstr ""
-
-#: internet/C/basics.xml:32(para) 
-msgid "Enter your administrative password and press <guibutton>Authenticate</guibutton>."
-msgstr ""
-
-#: internet/C/basics.xml:35(para) 
-msgid "Go to the <guilabel>Connections</guilabel> tab and select the connection you wish to use."
-msgstr ""
-
-#: internet/C/basics.xml:38(para) 
-msgid "Press <guibutton>Properties</guibutton>."
-msgstr ""
-
-#: internet/C/basics.xml:41(para) 
-msgid "If your ISP or network administrator has given you a <emphasis>static IP address</emphasis>, <emphasis>subnet mask</emphasis>, and <emphasis>gateway address</emphasis>, set <guilabel>Configuration</guilabel> to <guilabel>Static IP address</guilabel>. Enter the IP address in the <guilabel>IP address</guilabel> field. Enter the provided subnet mask and gateway address in the <guilabel>Subnet mask</guilabel> and <guilabel>Gateway address</guilabel> fields. Press the <guilabel>OK</guilabel> button."
-msgstr ""
-
-#: internet/C/basics.xml:44(para) 
-msgid "If you were not provided with network information, set <guilabel>Configuration</guilabel> to <guilabel>Automatic configuration (DHCP)</guilabel> and press the <guibutton>OK</guibutton> button."
-msgstr ""
-
-#: internet/C/basics.xml:47(para) 
-msgid "Select the box next to your connection to enable it."
-msgstr ""
-
-#: internet/C/basics.xml:53(title) 
+#: internet/C/basics.xml:19(title) 
 msgid "Connect to a network"
 msgstr ""
 
-#: internet/C/basics.xml:54(para) 
+#: internet/C/basics.xml:20(para) 
 msgid "If you change the settings of your network connection or connect to a different network than usual, you may have to enable the connection yourself."
 msgstr ""
 
-#: internet/C/basics.xml:57(title) 
+#: internet/C/basics.xml:23(title) 
 msgid "Use Network Manager to connect to a network"
 msgstr ""
 
-#: internet/C/basics.xml:58(para) 
+#: internet/C/basics.xml:24(para) 
 msgid "If your network connection is managed by <application>Network Manager</application> the connection should be enabled automatically."
 msgstr ""
 
-#: internet/C/basics.xml:59(para) 
+#: internet/C/basics.xml:25(para) 
 msgid "If the connection is not enabled automatically:"
 msgstr ""
 
-#: internet/C/basics.xml:61(para) 
+#: internet/C/basics.xml:27(para) 
 msgid "Find the Network Manager icon in the notification area. It should look like a small signal strength indicator or a computer monitor and will probably be close to the clock"
 msgstr ""
 
-#: internet/C/basics.xml:62(para) 
+#: internet/C/basics.xml:28(para) 
 msgid "Right-click the icon and ensure that <guilabel>Enable Networking</guilabel> is selected in the popup menu."
 msgstr ""
 
-#: internet/C/basics.xml:63(para) 
+#: internet/C/basics.xml:29(para) 
 msgid "If you have a wireless network connection, make sure that <guilabel>Enable Wireless</guilabel> is selected."
 msgstr ""
 
-#: internet/C/basics.xml:64(para) 
+#: internet/C/basics.xml:30(para) 
 msgid "Left-click the Network Manager icon and then click on the network you want to connect to"
 msgstr ""
 
-#: internet/C/basics.xml:65(para) 
+#: internet/C/basics.xml:31(para) 
 msgid "After a short period you should receive a message which says <guilabel>Connection Established</guilabel>"
 msgstr ""
 
-#: internet/C/basics.xml:66(para) 
+#: internet/C/basics.xml:32(para) 
 msgid "You should now be connected to a network."
 msgstr ""
 
-#: internet/C/basics.xml:68(para) 
+#: internet/C/basics.xml:34(para) 
 msgid "If you are not connected to a network after following the procedure above:"
 msgstr ""
 
-#: internet/C/basics.xml:70(para) 
+#: internet/C/basics.xml:36(para) 
 msgid "Left-click the Network Manager icon again and press <guibutton>Manual configuration...</guibutton>"
 msgstr ""
 
-#: internet/C/basics.xml:71(para) 
+#: internet/C/basics.xml:37(para) 
 msgid "Select the <guilabel>Connections</guilabel> tab"
 msgstr ""
 
-#: internet/C/basics.xml:72(para) 
+#: internet/C/basics.xml:38(para) 
 msgid "Tick the box next to your network connection to enable the connection"
 msgstr ""
 
-#: internet/C/basics.xml:73(para) 
+#: internet/C/basics.xml:39(para) 
 msgid "The connection process make take a short while"
 msgstr ""
 
-#: internet/C/basics.xml:79(title) 
+#: internet/C/basics.xml:45(title) 
 msgid "Use the ifup command to connect to a network"
 msgstr ""
 
-#: internet/C/basics.xml:80(para) 
+#: internet/C/basics.xml:46(para) 
 msgid "<application>Ifup</application> is a command-line tool for enabling network connections."
 msgstr ""
 
-#: internet/C/basics.xml:81(para) 
+#: internet/C/basics.xml:47(para) 
 msgid "To enable a network connection:"
 msgstr ""
 
-#: internet/C/basics.xml:83(para) internet/C/basics.xml:127(para) 
+#: internet/C/basics.xml:49(para) internet/C/basics.xml:93(para) 
 msgid "Press <menuchoice><guimenu>Applications</guimenu><guimenuitem>Accessories</guimenuitem><guimenuitem>Terminal</guimenuitem></menuchoice> to open a terminal."
 msgstr ""
 
-#: internet/C/basics.xml:84(para) internet/C/basics.xml:128(para) 
+#: internet/C/basics.xml:50(para) internet/C/basics.xml:94(para) 
 msgid "Type <command>sudo ifdown eth1</command> in the terminal and press <keycap>Return</keycap>. Replace <emphasis>eth1</emphasis> with the name of your network interface if it is different."
 msgstr ""
 
-#: internet/C/basics.xml:85(para) internet/C/basics.xml:129(para) 
+#: internet/C/basics.xml:51(para) internet/C/basics.xml:95(para) 
 msgid "Enter your password if prompted."
 msgstr ""
 
-#: internet/C/basics.xml:86(para) 
+#: internet/C/basics.xml:52(para) 
 msgid "Type <command>sudo ifup eth1</command> in the terminal and press <keycap>Return</keycap>, again replacing <emphasis>eth1</emphasis> with the name of your network interface."
 msgstr ""
 
-#: internet/C/basics.xml:88(para) 
+#: internet/C/basics.xml:54(para) 
 msgid "If you have connected successfully, you should see a message similar to the following:"
 msgstr ""
 
-#: internet/C/basics.xml:89(screen) 
+#: internet/C/basics.xml:55(screen) 
 #, no-wrap
 msgid "DHCPACK from 192.168.2.1\nbound to 192.168.2.4 -- renewal in 536349522 seconds."
 msgstr ""
 
-#: internet/C/basics.xml:97(title) 
+#: internet/C/basics.xml:63(title) 
 msgid "Disable a network connection"
 msgstr ""
 
-#: internet/C/basics.xml:98(para) 
+#: internet/C/basics.xml:64(para) 
 msgid "Sometimes you may want to disable a network connection. There are several different ways of achieving this."
 msgstr ""
 
-#: internet/C/basics.xml:101(title) 
+#: internet/C/basics.xml:67(title) 
 msgid "Disconnecting using Network Manager"
 msgstr ""
 
-#: internet/C/basics.xml:102(para) 
+#: internet/C/basics.xml:68(para) 
 msgid "It is likely that <application>Network Manager</application> is running your network connections. If so, you must disconnect from the network by disabling your network connection in Network Manager:"
 msgstr ""
 
-#: internet/C/basics.xml:104(para) 
+#: internet/C/basics.xml:70(para) 
 msgid "Find the Network Manager icon in the notification area. It should look like a small signal strength indicator or a computer monitor and will probably be close to the clock."
 msgstr ""
 
-#: internet/C/basics.xml:105(para) 
+#: internet/C/basics.xml:71(para) 
 msgid "Right-click the icon and uncheck <guilabel>Enable Networking</guilabel>."
 msgstr ""
 
-#: internet/C/basics.xml:106(para) 
+#: internet/C/basics.xml:72(para) 
 msgid "You should be disconnected from the network."
 msgstr ""
 
-#: internet/C/basics.xml:111(title) 
+#: internet/C/basics.xml:77(title) 
 msgid "Disconnecting using Network Settings"
 msgstr ""
 
-#: internet/C/basics.xml:112(para) 
+#: internet/C/basics.xml:78(para) 
 msgid "If Network Manager is not running, use the <application>Network Settings</application> tool to disconnect your network connection:"
 msgstr ""
 
-#: internet/C/basics.xml:114(para) 
+#: internet/C/basics.xml:80(para) 
 msgid "Press <menuchoice><guimenu>System</guimenu><guimenuitem>Administration</guimenuitem><guimenuitem>Network</guimenuitem></menuchoice>."
 msgstr ""
 
-#: internet/C/basics.xml:115(para) 
+#: internet/C/basics.xml:81(para) 
 msgid "Press <guilabel>Unlock</guilabel>. Enter your administrative password and press the <guibutton>Authenticate</guibutton> button."
 msgstr ""
 
-#: internet/C/basics.xml:117(para) 
+#: internet/C/basics.xml:83(para) 
 msgid "Uncheck your network connection to disconnect it."
 msgstr ""
 
-#: internet/C/basics.xml:118(para) 
+#: internet/C/basics.xml:84(para) 
 msgid "Press the <guibutton>Close</guibutton> button."
 msgstr ""
 
-#: internet/C/basics.xml:123(title) 
+#: internet/C/basics.xml:89(title) 
 msgid "Disconnecting using the ifdown command"
 msgstr ""
 
-#: internet/C/basics.xml:124(para) 
+#: internet/C/basics.xml:90(para) 
 msgid "<application>Ifdown</application> is a command-line tool for disabling network connections."
 msgstr ""
 
-#: internet/C/basics.xml:125(para) 
+#: internet/C/basics.xml:91(para) 
 msgid "To disable a network connection using ifdown:"
 msgstr ""
 
-#: internet/C/basics.xml:130(para) 
+#: internet/C/basics.xml:96(para) 
 msgid "Your network connection should be disconnected."
 msgstr ""
 

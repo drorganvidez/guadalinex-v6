@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2008-04-05 14:45+0100\n"
+"POT-Creation-Date: 2008-08-03 16:01+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,7 +30,7 @@ msgid "Credits and License"
 msgstr ""
 
 #: basic-commands/C/basic-commands.xml:4(para) 
-msgid "This document is maintained by the Ubuntu documentation team (https://wiki.ubuntu.com/DocumentationTeam). For a list of contributors, see the <ulink url=\"../../../libs/C/contributors.xml\">contributors page</ulink>"
+msgid "This document is maintained by the Ubuntu documentation team (https://wiki.ubuntu.com/DocumentationTeam). For a list of contributors, see the <ulink url=\"../../libs/C/contributors.xml\">contributors page</ulink>"
 msgstr ""
 
 #: basic-commands/C/basic-commands.xml:5(para) 
@@ -50,7 +50,7 @@ msgid "A copy of the license is available here: <ulink url=\"/usr/share/ubuntu-d
 msgstr ""
 
 #: basic-commands/C/basic-commands.xml:14(year) 
-msgid "2004, 2005, 2006"
+msgid "2008"
 msgstr ""
 
 #: basic-commands/C/basic-commands.xml:15(ulink) 
@@ -246,278 +246,258 @@ msgid "lsb_release"
 msgstr ""
 
 #: basic-commands/C/basic-commands.xml:292(para) 
-msgid "The <emphasis role=\"strong\">lsb_release</emphasis> command with the <emphasis role=\"strong\">-a</emphasis> option prints version information for the Linux release you're running. For example, typing: <screen>lsb_release -a</screen> will give you: <screen>\nNo LSB modules are available.\nDistributor ID: Ubuntu\nDescription:    Ubuntu 8.04 \nRelease:        8.04\nCodename:       hardy</screen>"
+msgid "The <emphasis role=\"strong\">lsb_release</emphasis> command with the <emphasis role=\"strong\">-a</emphasis> option prints version information for the Linux release you're running. For example, typing: <screen>lsb_release -a</screen> will give you: <screen>\nNo LSB modules are available.\nDistributor ID: Ubuntu\nDescription:    Ubuntu 8.10 \nRelease:        8.10\nCodename:       hardy</screen>"
 msgstr ""
 
-#: basic-commands/C/basic-commands.xml:310(title) 
-msgid "ifconfig"
-msgstr ""
-
-#: basic-commands/C/basic-commands.xml:311(para) 
-msgid "The <command>ifconfig</command> command reports on your system's network interfaces."
-msgstr ""
-
-#: basic-commands/C/basic-commands.xml:319(title) 
+#: basic-commands/C/basic-commands.xml:311(title) 
 msgid "Executing Commands with Elevated Privileges"
 msgstr ""
 
-#: basic-commands/C/basic-commands.xml:320(para) 
+#: basic-commands/C/basic-commands.xml:312(para) 
 msgid "The following commands will need to be prefaced with the <command>sudo</command> command. Please see <ulink url=\"https://help.ubuntu.com/community/RootSudo\">RootSudo</ulink> for information on using <command>sudo</command>."
 msgstr ""
 
-#: basic-commands/C/basic-commands.xml:329(title) 
+#: basic-commands/C/basic-commands.xml:321(title) 
 msgid "Adding a New Group"
 msgstr ""
 
-#: basic-commands/C/basic-commands.xml:330(para) 
+#: basic-commands/C/basic-commands.xml:322(para) 
 msgid "The <command>addgroup</command> command is used to create a new group on the system. To create a new group, type: <screen>addgroup newgroup</screen> The above command will create a new group called <emphasis role=\"strong\">newgroup</emphasis>."
 msgstr ""
 
-#: basic-commands/C/basic-commands.xml:339(title) 
+#: basic-commands/C/basic-commands.xml:331(title) 
 msgid "Adding A New User"
 msgstr ""
 
-#: basic-commands/C/basic-commands.xml:340(para) 
+#: basic-commands/C/basic-commands.xml:332(para) 
 msgid "The <command>adduser</command> is used to create new users on the system. To create a new user, type: <screen>adduser newuser</screen> The above command will create a new user called <emphasis role=\"strong\">newuser</emphasis>."
 msgstr ""
 
-#: basic-commands/C/basic-commands.xml:347(para) 
+#: basic-commands/C/basic-commands.xml:339(para) 
 msgid "To assign a password for the new user use the <command>passwd</command> command: <screen>passwd newuser</screen>"
 msgstr ""
 
-#: basic-commands/C/basic-commands.xml:353(para) 
+#: basic-commands/C/basic-commands.xml:345(para) 
 msgid "Finally, to assign the new user to the new group, type: <screen>adduser newuser newgroup</screen>"
 msgstr ""
 
-#: basic-commands/C/basic-commands.xml:361(title) 
+#: basic-commands/C/basic-commands.xml:353(title) 
 msgid "Options"
 msgstr ""
 
-#: basic-commands/C/basic-commands.xml:362(para) 
+#: basic-commands/C/basic-commands.xml:354(para) 
 msgid "The default behavior for a command may usually be modified by adding a <emphasis role=\"strong\">-- <emphasis>option</emphasis></emphasis> to the command. The <link linkend=\"ls\"><command>ls</command></link> command, for example, has a <emphasis role=\"strong\">-s</emphasis> option so that <command>ls -s</command> will include file sizes in the listing. There is also a <emphasis role=\"strong\">-h</emphasis> option to get those sizes in a \"human readable\" format."
 msgstr ""
 
-#: basic-commands/C/basic-commands.xml:373(para) 
+#: basic-commands/C/basic-commands.xml:365(para) 
 msgid "Options can be grouped in clusters so <screen>ls -sh</screen> is exactly the same command as <screen>ls -s -h</screen> Most options have a long version, prefixed with two dashes instead of one, so even <screen>ls --size --human-readable</screen> is the same command."
 msgstr ""
 
-#: basic-commands/C/basic-commands.xml:384(title) 
+#: basic-commands/C/basic-commands.xml:376(title) 
 msgid "\"Man\" and getting help"
 msgstr ""
 
-#: basic-commands/C/basic-commands.xml:385(para) 
+#: basic-commands/C/basic-commands.xml:377(para) 
 msgid "<emphasis role=\"strong\"><emphasis>command</emphasis> --help</emphasis> and <emphasis role=\"strong\">man <emphasis>command</emphasis></emphasis> are the two most important tools at the command line."
 msgstr ""
 
-#: basic-commands/C/basic-commands.xml:392(para) 
+#: basic-commands/C/basic-commands.xml:384(para) 
 msgid "Virtually all commands understand the <emphasis role=\"strong\">-h</emphasis> (or <emphasis role=\"strong\">--help</emphasis>) option which will produce a short usage description of the command and it's options, then exit back to the command prompt. Type <screen>man -h</screen> or <screen>man --help</screen> to see this in action."
 msgstr ""
 
-#: basic-commands/C/basic-commands.xml:402(para) 
+#: basic-commands/C/basic-commands.xml:394(para) 
 msgid "Every command and nearly every application in Linux will have a man (manual) file, so finding them is as simple as typing <command>man command</command> to bring up a longer manual entry for the specified command. For example, <screen>man mv</screen> will bring up the <command>mv</command> (move) manual."
 msgstr ""
 
-#: basic-commands/C/basic-commands.xml:411(para) 
+#: basic-commands/C/basic-commands.xml:403(para) 
 msgid "Move up and down the man file with the arrow keys, and quit back to the command prompt with <keycap>q</keycap>."
 msgstr ""
 
-#: basic-commands/C/basic-commands.xml:416(para) 
+#: basic-commands/C/basic-commands.xml:408(para) 
 msgid "<screen>man man</screen> will bring up the manual entry for the <command>man</command> command, which is a good place to start."
 msgstr ""
 
-#: basic-commands/C/basic-commands.xml:422(para) 
+#: basic-commands/C/basic-commands.xml:414(para) 
 msgid "<screen>man intro</screen> is especially useful - it displays the \"Introduction to user commands\" which is a well-written, fairly brief introduction to the Linux command line."
 msgstr ""
 
-#: basic-commands/C/basic-commands.xml:427(para) 
+#: basic-commands/C/basic-commands.xml:419(para) 
 msgid "There are also <command>info</command> pages, which are generally more in-depth than <command>man</command> pages. Try <screen>info info</screen> for the introduction to info pages."
 msgstr ""
 
-#: basic-commands/C/basic-commands.xml:437(title) 
+#: basic-commands/C/basic-commands.xml:429(title) 
 msgid "Searching for man files"
 msgstr ""
 
-#: basic-commands/C/basic-commands.xml:438(para) 
+#: basic-commands/C/basic-commands.xml:430(para) 
 msgid "If you aren't sure which command or application you need to use, you can try searching the man files."
 msgstr ""
 
-#: basic-commands/C/basic-commands.xml:451(para) 
+#: basic-commands/C/basic-commands.xml:443(para) 
 msgid "This is the same as the <command>apropos</command> command."
 msgstr ""
 
-#: basic-commands/C/basic-commands.xml:444(para) 
+#: basic-commands/C/basic-commands.xml:436(para) 
 msgid "<command>man -k foo</command>, will search the man files for <emphasis>foo</emphasis>. Try <screen>man -k nautilus</screen> to see how this works. <placeholder-1/>"
 msgstr ""
 
-#: basic-commands/C/basic-commands.xml:464(para) 
+#: basic-commands/C/basic-commands.xml:456(para) 
 msgid "This is the same as the <command>whatis</command> command."
 msgstr ""
 
-#: basic-commands/C/basic-commands.xml:459(para) 
+#: basic-commands/C/basic-commands.xml:451(para) 
 msgid "<command>man -f foo</command>, searches only the titles of your system's man files. For example, try <screen>man -f gnome</screen><placeholder-1/>"
 msgstr ""
 
-#: basic-commands/C/basic-commands.xml:476(title) 
+#: basic-commands/C/basic-commands.xml:468(title) 
 msgid "Other Useful Things"
 msgstr ""
 
-#: basic-commands/C/basic-commands.xml:479(title) 
+#: basic-commands/C/basic-commands.xml:471(title) 
 msgid "Pasting in commands"
 msgstr ""
 
-#: basic-commands/C/basic-commands.xml:480(para) 
+#: basic-commands/C/basic-commands.xml:472(para) 
 msgid "Often, you will be referred to instructions that require commands to be pasted into the terminal. You might be wondering why the text you've copied from a web page using <keycombo><keycap>Ctrl</keycap><keycap>C</keycap></keycombo> won't paste in with <keycombo><keycap>Ctrl</keycap><keycap>V</keycap></keycombo>. Surely you don't have to type in all those nasty commands and filenames? Relax. Middle Button Click on your mouse (both buttons simultaneously on a two-button mouse) or Right Click and select <menuchoice><guimenuitem>Paste</guimenuitem></menuchoice> from the menu."
 msgstr ""
 
-#: basic-commands/C/basic-commands.xml:503(title) 
+#: basic-commands/C/basic-commands.xml:495(title) 
 msgid "Save on typing"
 msgstr ""
 
-#: basic-commands/C/basic-commands.xml:512(para) 
+#: basic-commands/C/basic-commands.xml:504(para) 
 msgid "<keycap>Up Arrow</keycap> or <keycombo><keycap>Ctrl</keycap><keycap>p</keycap></keycombo>"
 msgstr ""
 
-#: basic-commands/C/basic-commands.xml:522(para) 
+#: basic-commands/C/basic-commands.xml:514(para) 
 msgid "Scrolls through the commands you've entered previously."
 msgstr ""
 
-#: basic-commands/C/basic-commands.xml:530(para) 
+#: basic-commands/C/basic-commands.xml:522(para) 
 msgid "<keycap>Down Arrow</keycap> or <keycombo><keycap>Ctrl</keycap><keycap>n</keycap></keycombo>"
 msgstr ""
 
-#: basic-commands/C/basic-commands.xml:540(para) 
+#: basic-commands/C/basic-commands.xml:532(para) 
 msgid "Takes you back to a more recent command."
 msgstr ""
 
-#: basic-commands/C/basic-commands.xml:547(keycap) 
+#: basic-commands/C/basic-commands.xml:539(keycap) 
 msgid "Enter"
 msgstr ""
 
-#: basic-commands/C/basic-commands.xml:552(para) 
+#: basic-commands/C/basic-commands.xml:544(para) 
 msgid "When you have the command you want."
 msgstr ""
 
-#: basic-commands/C/basic-commands.xml:558(keycap) 
+#: basic-commands/C/basic-commands.xml:550(keycap) 
 msgid "Tab"
 msgstr ""
 
-#: basic-commands/C/basic-commands.xml:563(para) 
+#: basic-commands/C/basic-commands.xml:555(para) 
 msgid "A very useful feature. It autocompletes any commands or filenames, if there's only one option, or else gives you a list of options."
 msgstr ""
 
-#: basic-commands/C/basic-commands.xml:576(title) 
+#: basic-commands/C/basic-commands.xml:568(title) 
 msgid "Change the text"
 msgstr ""
 
-#: basic-commands/C/basic-commands.xml:577(para) 
+#: basic-commands/C/basic-commands.xml:569(para) 
 msgid "The mouse won't work. Use the <keycap>Left/Right arrow</keycap> keys to move around the line."
 msgstr ""
 
-#: basic-commands/C/basic-commands.xml:581(para) 
+#: basic-commands/C/basic-commands.xml:573(para) 
 msgid "When the cursor is where you want it in the line, typing <emphasis>inserts</emphasis> text, it doesn't overtype what's already there."
 msgstr ""
 
-#: basic-commands/C/basic-commands.xml:596(keycap) basic-commands/C/basic-commands.xml:612(keycap) basic-commands/C/basic-commands.xml:631(keycap) basic-commands/C/basic-commands.xml:641(keycap) basic-commands/C/basic-commands.xml:656(keycap) basic-commands/C/basic-commands.xml:670(keycap) 
-msgid "Ctrl"
+#: basic-commands/C/basic-commands.xml:586(para) 
+msgid "<keycombo><keycap>Ctrl</keycap><keycap>a</keycap></keycombo> or <keycap>Home</keycap>"
 msgstr ""
 
-#: basic-commands/C/basic-commands.xml:597(keycap) 
-msgid "a"
-msgstr ""
-
-#: basic-commands/C/basic-commands.xml:599(keycap) 
-msgid "Home"
-msgstr ""
-
-#: basic-commands/C/basic-commands.xml:604(para) 
+#: basic-commands/C/basic-commands.xml:596(para) 
 msgid "Moves the cursor to the <emphasis>start</emphasis> of a line."
 msgstr ""
 
-#: basic-commands/C/basic-commands.xml:613(keycap) 
-msgid "e"
+#: basic-commands/C/basic-commands.xml:602(para) 
+msgid "<keycombo><keycap>Ctrl</keycap><keycap>e</keycap></keycombo> or <keycap>End</keycap>"
 msgstr ""
 
-#: basic-commands/C/basic-commands.xml:615(keycap) 
-msgid "End"
+#: basic-commands/C/basic-commands.xml:612(para) 
+msgid "Moves the cursor to the <emphasis> end</emphasis> of a line."
 msgstr ""
 
-#: basic-commands/C/basic-commands.xml:620(para) 
-msgid "Moves the cursor to the <emphasis><emphasis role=\"strong\">e</emphasis>nd</emphasis> of a line."
+#: basic-commands/C/basic-commands.xml:623(keycap) basic-commands/C/basic-commands.xml:638(keycap) basic-commands/C/basic-commands.xml:652(keycap) 
+msgid "Ctrl"
 msgstr ""
 
-#: basic-commands/C/basic-commands.xml:632(keycap) 
-msgid "b"
-msgstr ""
-
-#: basic-commands/C/basic-commands.xml:642(keycap) 
+#: basic-commands/C/basic-commands.xml:624(keycap) 
 msgid "k"
 msgstr ""
 
-#: basic-commands/C/basic-commands.xml:648(para) 
+#: basic-commands/C/basic-commands.xml:630(para) 
 msgid "Deletes from the current cursor position to the end of the line."
 msgstr ""
 
-#: basic-commands/C/basic-commands.xml:657(keycap) 
+#: basic-commands/C/basic-commands.xml:639(keycap) 
 msgid "u"
 msgstr ""
 
-#: basic-commands/C/basic-commands.xml:663(para) 
+#: basic-commands/C/basic-commands.xml:645(para) 
 msgid "Deletes the whole of the current line."
 msgstr ""
 
-#: basic-commands/C/basic-commands.xml:671(keycap) 
+#: basic-commands/C/basic-commands.xml:653(keycap) 
 msgid "w"
 msgstr ""
 
-#: basic-commands/C/basic-commands.xml:677(para) 
+#: basic-commands/C/basic-commands.xml:659(para) 
 msgid "Deletes the word before the cursor."
 msgstr ""
 
-#: basic-commands/C/basic-commands.xml:687(title) 
+#: basic-commands/C/basic-commands.xml:669(title) 
 msgid "More Information"
 msgstr ""
 
-#: basic-commands/C/basic-commands.xml:688(para) 
+#: basic-commands/C/basic-commands.xml:670(para) 
 msgid "The following online guides are available:"
 msgstr ""
 
-#: basic-commands/C/basic-commands.xml:691(para) 
+#: basic-commands/C/basic-commands.xml:673(para) 
 msgid "<ulink url=\"https://help.ubuntu.com/community/AptGetHowto\"> AptGetHowto</ulink> - using apt-get to install packages from the command line."
 msgstr ""
 
-#: basic-commands/C/basic-commands.xml:698(para) 
+#: basic-commands/C/basic-commands.xml:680(para) 
 msgid "<ulink url=\"https://help.ubuntu.com/community/Repositories/CommandLine\"> Commandline Repository Editing</ulink> - adding the Universe/Multiverse repositories through the command line."
 msgstr ""
 
-#: basic-commands/C/basic-commands.xml:706(para) 
+#: basic-commands/C/basic-commands.xml:688(para) 
 msgid "<ulink url=\"https://help.ubuntu.com/community/grep\">grep Howto</ulink> - grep is a powerful command line search tool."
 msgstr ""
 
-#: basic-commands/C/basic-commands.xml:713(para) 
+#: basic-commands/C/basic-commands.xml:695(para) 
 msgid "<ulink url=\"https://help.ubuntu.com/community/find\">find </ulink> - locate files on the command line."
 msgstr ""
 
-#: basic-commands/C/basic-commands.xml:719(para) 
+#: basic-commands/C/basic-commands.xml:701(para) 
 msgid "<ulink url=\"https://help.ubuntu.com/community/CommandlineHowto\"> CommandlineHowto</ulink> - longer and more complete than this basic guide, but still unfinished."
 msgstr ""
 
-#: basic-commands/C/basic-commands.xml:726(para) 
+#: basic-commands/C/basic-commands.xml:708(para) 
 msgid "<ulink url=\"https://help.ubuntu.com/community/HowToReadline\"> HowToReadline</ulink> - information on some more advanced customization for the command line."
 msgstr ""
 
-#: basic-commands/C/basic-commands.xml:733(para) 
+#: basic-commands/C/basic-commands.xml:715(para) 
 msgid "For more detailed tutorials on the Linux command line, please see:"
 msgstr ""
 
-#: basic-commands/C/basic-commands.xml:739(para) 
+#: basic-commands/C/basic-commands.xml:721(para) 
 msgid "<ulink url=\"http://linuxcommand.org/\"/>- basic BASH tutorials, including BASH scripting"
 msgstr ""
 
-#: basic-commands/C/basic-commands.xml:745(para) 
+#: basic-commands/C/basic-commands.xml:727(para) 
 msgid "<ulink url=\"http://linuxsurvival.com/index.php\"/>- Java-based tutorials"
 msgstr ""
 
-#: basic-commands/C/basic-commands.xml:751(para) 
+#: basic-commands/C/basic-commands.xml:733(para) 
 msgid "<ulink url=\"http://rute.2038bug.com/index.html.gz\"/>- a massive online book about system administration, almost all from the command line."
 msgstr ""
 

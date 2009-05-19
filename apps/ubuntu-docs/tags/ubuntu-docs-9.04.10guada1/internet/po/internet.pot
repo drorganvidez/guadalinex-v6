@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2008-04-05 14:45+0100\n"
+"POT-Creation-Date: 2008-08-03 16:01+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -85,7 +85,7 @@ msgstr ""
 msgid "If your router assigns IP addresses then leave the <guilabel>Configuration</guilabel> as <guilabel>Automatic Configuration (DHCP)</guilabel>."
 msgstr ""
 
-#: internet/C/wireless.xml:40(para) internet/C/wireless.xml:117(para) 
+#: internet/C/wireless.xml:40(para) internet/C/wireless.xml:115(para) 
 msgid "Click <guibutton>OK</guibutton>."
 msgstr ""
 
@@ -102,166 +102,162 @@ msgid "Check for device recognition"
 msgstr ""
 
 #: internet/C/wireless.xml:51(para) 
-msgid "Open <application>Device Manager</application> (<menuchoice><guimenu>System</guimenu><guimenuitem>Preferences</guimenuitem><guimenuitem>Hardware Information</guimenuitem></menuchoice>)."
-msgstr ""
-
-#: internet/C/wireless.xml:52(para) 
-msgid "Check to see the hardware is recognised if it is then <xref linkend=\"troubleshooting-driver\"/>"
-msgstr ""
-
-#: internet/C/wireless.xml:53(para) 
-msgid "If your device is not displayed then there may be a hardware problem. Ensure if it is PCMCIA or PCI that it is inserted correctly."
-msgstr ""
-
-#: internet/C/wireless.xml:57(title) 
-msgid "Check for driver"
-msgstr ""
-
-#: internet/C/wireless.xml:59(para) 
 msgid "Open a <application>Terminal</application> (<menuchoice><guimenu>Applications</guimenu><guimenuitem>Accessories</guimenuitem><guimenuitem>Terminal</guimenuitem></menuchoice>) and type the command: <code>sudo lshw -C network</code>"
 msgstr ""
 
-#: internet/C/wireless.xml:60(para) 
-msgid "If there is a driver listed then see <xref linkend=\"troubleshooting-disabled\"/>."
+#: internet/C/wireless.xml:53(para) 
+msgid "You should see an output, along with the words \"CLAIMED, UNCLAIMED, ENABLED or DISABLED\""
 msgstr ""
 
-#: internet/C/wireless.xml:61(para) 
-msgid "Set up NDISWrapper (<xref linkend=\"ndiswrapper\"/>)."
+#: internet/C/wireless.xml:55(para) 
+msgid "Claimed - this indicates a driver is loaded but not functioning, see <xref linkend=\"ndiswrapper\"/>"
 msgstr ""
 
-#: internet/C/wireless.xml:65(title) 
-msgid "Check device is on"
+#: internet/C/wireless.xml:56(para) 
+msgid "Unclaimed - there is no driver loaded, see <xref linkend=\"ndiswrapper\"/>."
 msgstr ""
 
-#: internet/C/wireless.xml:67(para) 
-msgid "Many wireless network devices can be turned on or off. Check to see if the device is turned on by opening a <application>Terminal</application> (<menuchoice><guimenu>Applications</guimenu><guimenuitem>Accessories</guimenuitem><guimenuitem>Terminal</guimenuitem></menuchoice>) and type the command: <code>sudo lshw -C network</code>."
+#: internet/C/wireless.xml:57(para) 
+msgid "Enabled - move on to If there is a driver listed then see <xref linkend=\"troubleshooting-connection\"/>."
 msgstr ""
 
-#: internet/C/wireless.xml:68(para) 
+#: internet/C/wireless.xml:58(para) 
+msgid "Disabled - see <xref linkend=\"troubleshooting-disabled\"/>."
+msgstr ""
+
+#: internet/C/wireless.xml:62(title) 
+msgid "Check that the device is on"
+msgstr ""
+
+#: internet/C/wireless.xml:64(para) 
+msgid "Many wireless network devices can be turned on or off. Check to see if there is a hardware switch, some devices can be switched off from Windows and may need to be turned back on from Windows."
+msgstr ""
+
+#: internet/C/wireless.xml:65(para) 
 msgid "If it is turned on then see <xref linkend=\"troubleshooting-connection\"/>."
 msgstr ""
 
-#: internet/C/wireless.xml:72(title) 
+#: internet/C/wireless.xml:69(title) 
 msgid "Check for a connection to the router"
 msgstr ""
 
-#: internet/C/wireless.xml:74(para) 
+#: internet/C/wireless.xml:71(para) 
 msgid "Open a <application>Terminal</application> (<menuchoice><guimenu>Applications</guimenu><guimenuitem>Accessories</guimenuitem><guimenuitem>Terminal</guimenuitem></menuchoice>) and type the command: <code>iwconfig</code>."
 msgstr ""
 
-#: internet/C/wireless.xml:75(para) 
+#: internet/C/wireless.xml:72(para) 
 msgid "If there is an entry that says <code>ESSID=\"\"</code> then see <xref linkend=\"security-wpa\"/>."
 msgstr ""
 
-#: internet/C/wireless.xml:76(para) 
+#: internet/C/wireless.xml:73(para) 
 msgid "If the ESSID for our router is shown there may be a problem with ACPI support. Boot the kernel with the <code>pci=noacpi</code> option."
 msgstr ""
 
-#: internet/C/wireless.xml:80(title) 
+#: internet/C/wireless.xml:77(title) 
 msgid "Check IP assignment"
 msgstr ""
 
-#: internet/C/wireless.xml:82(para) 
+#: internet/C/wireless.xml:79(para) 
 msgid "Open a <application>Terminal</application> (<menuchoice><guimenu>Applications</guimenu><guimenuitem>Accessories</guimenuitem><guimenuitem>Terminal</guimenuitem></menuchoice>) and type the command: <code>ifconfig</code>."
 msgstr ""
 
-#: internet/C/wireless.xml:83(para) 
+#: internet/C/wireless.xml:80(para) 
 msgid "If there is an IP address shown see <xref linkend=\"troubleshooting-dns\"/>."
 msgstr ""
 
-#: internet/C/wireless.xml:84(para) 
+#: internet/C/wireless.xml:81(para) 
 msgid "From the <application>Terminal</application> enter the command: <code>sudo dhclient if_name</code> where if_name is the connection listed earlier."
 msgstr ""
 
-#: internet/C/wireless.xml:85(para) 
+#: internet/C/wireless.xml:82(para) 
 msgid "If you receive a message that says <code>bound to xxx.xxx.xxx.xxx</code> then see <xref linkend=\"troubleshooting-dns\"/>"
 msgstr ""
 
-#: internet/C/wireless.xml:86(para) 
+#: internet/C/wireless.xml:83(para) 
 msgid "If not then reboot the system."
 msgstr ""
 
-#: internet/C/wireless.xml:90(title) 
+#: internet/C/wireless.xml:87(title) 
 msgid "Check DNS"
 msgstr ""
 
-#: internet/C/wireless.xml:92(para) 
+#: internet/C/wireless.xml:89(para) 
 msgid "Open a <application>Terminal</application> (<menuchoice><guimenu>Applications</guimenu><guimenuitem>Accessories</guimenuitem><guimenuitem>Terminal</guimenuitem></menuchoice>) and type the command: <code>ping 82.211.81.158</code>."
 msgstr ""
 
-#: internet/C/wireless.xml:93(para) 
+#: internet/C/wireless.xml:90(para) 
 msgid "Now type the command: <code>ping www.ubuntu.com</code>. If you get a response from the both then see <xref linkend=\"troubleshooting-ipv6\"/>."
 msgstr ""
 
-#: internet/C/wireless.xml:94(para) 
+#: internet/C/wireless.xml:91(para) 
 msgid "Type the command: <code>cat /etc/resolv.conf</code>. If there is no nameserver listed then contact your ISP and find out your primary and secondary domain name servers. Once you have this information see <xref linkend=\"wireless-connecting\"/>."
 msgstr ""
 
-#: internet/C/wireless.xml:98(title) 
+#: internet/C/wireless.xml:95(title) 
 msgid "IPv6 Not Supported"
 msgstr ""
 
-#: internet/C/wireless.xml:100(para) 
+#: internet/C/wireless.xml:97(para) 
 msgid "IPv6 is supported by default in Ubuntu and can sometimes cause problems."
 msgstr ""
 
-#: internet/C/wireless.xml:101(para) 
+#: internet/C/wireless.xml:98(para) 
 msgid "To disable it, open a <application>Terminal</application> (<menuchoice><guimenu>Applications</guimenu><guimenuitem>Accessories</guimenuitem><guimenuitem>Terminal</guimenuitem></menuchoice>) and type the command: <code>gksudo gedit /etc/modprobe.d/aliases</code>."
 msgstr ""
 
-#: internet/C/wireless.xml:102(para) 
+#: internet/C/wireless.xml:99(para) 
 msgid "Find the line <code>alias net-pf-10 ipv6</code> and change it to read <code>alias net-pf-10 off</code>."
 msgstr ""
 
-#: internet/C/wireless.xml:103(para) 
+#: internet/C/wireless.xml:100(para) 
 msgid "Reboot Ubuntu."
 msgstr ""
 
-#: internet/C/wireless.xml:109(title) 
+#: internet/C/wireless.xml:107(title) 
 msgid "Using Windows Wireless Drivers"
 msgstr ""
 
-#: internet/C/wireless.xml:110(para) 
+#: internet/C/wireless.xml:108(para) 
 msgid "Ubuntu supports a system known as NDISWrapper. This allows you to use a Windows wireless device driver under Ubuntu."
 msgstr ""
 
-#: internet/C/wireless.xml:112(para) 
+#: internet/C/wireless.xml:110(para) 
 msgid "Obtain the Windows Driver for your system and locate the file that ends with <code>.inf</code>."
 msgstr ""
 
-#: internet/C/wireless.xml:113(para) 
+#: internet/C/wireless.xml:111(para) 
 msgid "Install <application>ndisgtk</application> (<menuchoice><guimenu>System</guimenu><guimenuitem>Administration</guimenuitem><guimenuitem>Synaptic Package Manager</guimenuitem></menuchoice>)."
 msgstr ""
 
-#: internet/C/wireless.xml:114(para) 
+#: internet/C/wireless.xml:112(para) 
 msgid "Open <application>ndisgtk</application> (<menuchoice><guimenu>System</guimenu><guimenuitem>Administration</guimenuitem><guimenuitem>Windows Wireless Drivers</guimenuitem></menuchoice>)."
 msgstr ""
 
-#: internet/C/wireless.xml:115(para) 
+#: internet/C/wireless.xml:113(para) 
 msgid "Select <guilabel>Install new driver</guilabel>."
 msgstr ""
 
-#: internet/C/wireless.xml:116(para) 
+#: internet/C/wireless.xml:114(para) 
 msgid "Choose the location of your Windows .inf file and click <guibutton>Install</guibutton>."
 msgstr ""
 
-#: internet/C/wireless.xml:122(title) 
+#: internet/C/wireless.xml:120(title) 
 msgid "Wireless network security"
 msgstr ""
 
-#: internet/C/wireless.xml:125(title) 
+#: internet/C/wireless.xml:123(title) 
 msgid "Configuring WPA support."
 msgstr ""
 
-#: internet/C/wireless.xml:126(para) 
+#: internet/C/wireless.xml:124(para) 
 msgid "WiFi Protected Access (WPA) is an based on WEP and provides stronger security."
 msgstr ""
 
-#: internet/C/wireless.xml:127(para) 
+#: internet/C/wireless.xml:125(para) 
 msgid "WPA is integrated with <application>Network Manager</application>. You must also have the <application>wpasupplicant</application> package installed."
 msgstr ""
 
-#: internet/C/wireless.xml:128(para) 
+#: internet/C/wireless.xml:126(para) 
 msgid "If you need to manually configure WPA support, see the <ulink url=\"https://help.ubuntu.com/community/WifiDocs/WPAHowTo?highlight=%28wpa%29\">Wiki Entry</ulink>."
 msgstr ""
 
@@ -318,7 +314,7 @@ msgid "Get plugins for your web browser"
 msgstr ""
 
 #: internet/C/web-apps.xml:35(para) 
-msgid "A plugin is a small program which extends the capabilities of another program. In the case of web browsers, plugins typically allow the browser to play different types of multimedia or to run small, web-based programs."
+msgid "A plugin is a small program which extends the capabilities of an existing program. In the case of web browsers, plugins typically allow the browser to play different types of multimedia or to run small web-based programs."
 msgstr ""
 
 #: internet/C/web-apps.xml:36(para) 
@@ -382,7 +378,7 @@ msgid "Audio and video plugins"
 msgstr ""
 
 #: internet/C/web-apps.xml:64(para) 
-msgid "Many different multimedia formats are used on the Internet, and so you may find that you are unable to play some audio and video files without first installing an appropriate plugin."
+msgid "Many different multimedia formats are used on the Internet and you may find that you are unable to play some audio and video files without installing an appropriate plugin."
 msgstr ""
 
 #: internet/C/web-apps.xml:65(para) 
@@ -430,7 +426,7 @@ msgid "Restart <application>Firefox</application> to make the plugin available."
 msgstr ""
 
 #: internet/C/web-apps.xml:88(para) 
-msgid "Installing the package as described above will download and install the plugin. You need an Internet connection for this to work. If, after installing the application, you need to download and install the plugin at a later time, enter the following command in a terminal: <screen>sudo dpkg-reconfigure flashplugin-nonfree</screen>"
+msgid "A copy of the Flash plugin is not actually included in the package, but is automatically downloaded from the Adobe website when you install the package. This is due to legal restrictions on the redistribution of the plugin. As a result, you must be connected to the Internet for the plugin to be downloaded successfully."
 msgstr ""
 
 #: internet/C/web-apps.xml:92(title) 
@@ -718,19 +714,19 @@ msgid "This section will cover a basic procedure to add news feeds to <applicati
 msgstr ""
 
 #: internet/C/web-apps.xml:256(para) 
-msgid "Press <guibutton>New Subscription</guibutton> on the Liferea toolbar,"
+msgid "If you're behind a proxy, select <menuchoice><guimenuitem>Tools</guimenuitem><guimenuitem>Preferences</guimenuitem><guimenuitem>Proxy</guimenuitem></menuchoice> and fill in your proxy details and click on the <guibutton>Close</guibutton> button,"
 msgstr ""
 
 #: internet/C/web-apps.xml:257(para) 
-msgid "Press the <guibutton>Advanced</guibutton> button,"
+msgid "Press <guibutton>New Subscription</guibutton> on the Liferea toolbar,"
 msgstr ""
 
 #: internet/C/web-apps.xml:258(para) 
-msgid "Enter the address of the RSS feed in the <guilabel>Source</guilabel> box,"
+msgid "Press the <guibutton>Advanced</guibutton> button,"
 msgstr ""
 
 #: internet/C/web-apps.xml:259(para) 
-msgid "If you're behind a proxy, select <menuchoice><guimenuitem>Program</guimenuitem><guimenuitem>Preferences</guimenuitem><guimenuitem>Proxy</guimenuitem></menuchoice> and fill in your proxy details and click on the <guibutton>Close</guibutton> button,"
+msgid "Enter the address of the RSS feed in the <guilabel>Source</guilabel> box,"
 msgstr ""
 
 #: internet/C/web-apps.xml:260(para) 
@@ -778,7 +774,7 @@ msgid "Credits and License"
 msgstr ""
 
 #: internet/C/troubleshooting.xml:4(para) internet/C/internet.xml:4(para) 
-msgid "This document is maintained by the Ubuntu documentation team (https://wiki.ubuntu.com/DocumentationTeam). For a list of contributors, see the <ulink url=\"../../../libs/C/contributors.xml\">contributors page</ulink>"
+msgid "This document is maintained by the Ubuntu documentation team (https://wiki.ubuntu.com/DocumentationTeam). For a list of contributors, see the <ulink url=\"../../libs/C/contributors.xml\">contributors page</ulink>"
 msgstr ""
 
 #: internet/C/troubleshooting.xml:5(para) internet/C/internet.xml:5(para) 
@@ -798,7 +794,7 @@ msgid "A copy of the license is available here: <ulink url=\"/usr/share/ubuntu-d
 msgstr ""
 
 #: internet/C/troubleshooting.xml:14(year) internet/C/internet.xml:14(year) 
-msgid "2004, 2005, 2006"
+msgid "2008"
 msgstr ""
 
 #: internet/C/troubleshooting.xml:15(ulink) internet/C/internet.xml:15(ulink) 
@@ -813,31 +809,31 @@ msgstr ""
 msgid "The Ubuntu Documentation Project"
 msgstr ""
 
-#: internet/C/troubleshooting.xml:21(title) internet/C/networking.xml:136(title) 
+#: internet/C/troubleshooting.xml:21(title) internet/C/networking.xml:191(title) 
 msgid "Tools to help with network connection problems"
 msgstr ""
 
-#: internet/C/troubleshooting.xml:22(para) internet/C/networking.xml:137(para) 
+#: internet/C/troubleshooting.xml:22(para) 
 msgid "If you have a network connection which is not working properly, you can use a few tools to help diagnose what the problem is."
 msgstr ""
 
-#: internet/C/troubleshooting.xml:23(para) internet/C/networking.xml:138(para) 
+#: internet/C/troubleshooting.xml:23(para) internet/C/networking.xml:193(para) 
 msgid "Most of the tools in this section require use of the Terminal, which you can open by pressing <menuchoice><guimenu>Applications</guimenu><guimenuitem>Accessories</guimenuitem><guimenuitem>Terminal</guimenuitem></menuchoice>."
 msgstr ""
 
 #: internet/C/troubleshooting.xml:26(title) 
-msgid "Identify wireless connections"
+msgid "Identify the wireless connections"
 msgstr ""
 
 #: internet/C/troubleshooting.xml:27(para) 
-msgid "<application>iwconfig</application> allows you to change certain settings of your wireless hardware. However, it is also very useful for identifying wireless connections."
+msgid "<application>iwconfig</application> allows you to change certain settings on your wireless hardware. However, it is also very useful for identifying wireless connections."
 msgstr ""
 
 #: internet/C/troubleshooting.xml:28(para) 
 msgid "To identify a wireless connection:"
 msgstr ""
 
-#: internet/C/troubleshooting.xml:30(para) internet/C/troubleshooting.xml:62(para) internet/C/troubleshooting.xml:78(para) internet/C/networking.xml:75(para) internet/C/networking.xml:144(para) internet/C/basics.xml:74(para) internet/C/basics.xml:117(para) 
+#: internet/C/troubleshooting.xml:30(para) internet/C/troubleshooting.xml:62(para) internet/C/troubleshooting.xml:79(para) 
 msgid "Press <menuchoice><guimenu>Applications</guimenu><guimenuitem>Accessories</guimenuitem><guimenuitem>Terminal</guimenuitem></menuchoice> to open a Terminal"
 msgstr ""
 
@@ -875,7 +871,7 @@ msgid "<emphasis>Link Quality</emphasis> gives a measure of the strength of the 
 msgstr ""
 
 #: internet/C/troubleshooting.xml:59(title) 
-msgid "Find information about wireless connections"
+msgid "Find information about the wireless connections"
 msgstr ""
 
 #: internet/C/troubleshooting.xml:60(para) 
@@ -898,67 +894,67 @@ msgstr ""
 msgid "<userinput>iwlist eth1 key</userinput> - Show information about wireless encryption"
 msgstr ""
 
-#: internet/C/troubleshooting.xml:75(title) internet/C/networking.xml:141(title) 
+#: internet/C/troubleshooting.xml:75(title) internet/C/networking.xml:196(title) 
 msgid "Get information about the current connection"
 msgstr ""
 
-#: internet/C/troubleshooting.xml:76(para) internet/C/networking.xml:142(para) 
-msgid "<application>ifconfig</application> is intended to allow you to change the settings of your network connections, but can also be used to list information about the current connection."
+#: internet/C/troubleshooting.xml:76(para) 
+msgid "<application>ifconfig</application> is intended to allow you to change the settings of your network connections, but it can also be used to list information about the current connection."
 msgstr ""
 
-#: internet/C/troubleshooting.xml:80(para) internet/C/networking.xml:146(para) 
+#: internet/C/troubleshooting.xml:81(para) 
 msgid "Type <userinput>ifconfig eth1</userinput> in the Terminal and press <keycap>Return</keycap>, replacing <emphasis>eth1</emphasis> with the name of your network interface if it is different."
 msgstr ""
 
-#: internet/C/troubleshooting.xml:82(para) internet/C/networking.xml:148(para) 
+#: internet/C/troubleshooting.xml:83(para) 
 msgid "<emphasis>inet addr</emphasis> gives the current <emphasis>IP address</emphasis> of the connection"
 msgstr ""
 
-#: internet/C/troubleshooting.xml:83(para) internet/C/networking.xml:149(para) 
+#: internet/C/troubleshooting.xml:84(para) 
 msgid "<emphasis>HWaddr</emphasis> gives the <emphasis>MAC address</emphasis> of your network device"
 msgstr ""
 
-#: internet/C/troubleshooting.xml:90(title) internet/C/networking.xml:177(title) 
-msgid "Check if a connection is working correctly"
+#: internet/C/troubleshooting.xml:91(title) 
+msgid "Check if a connection is working properly"
 msgstr ""
 
-#: internet/C/troubleshooting.xml:91(para) internet/C/networking.xml:157(para) internet/C/networking.xml:178(para) 
-msgid "A good way of checking if a connection is working correctly is to <emphasis>ping</emphasis> another computer on the network or the Internet."
+#: internet/C/troubleshooting.xml:92(para) 
+msgid "A good way of checking if a connection is working properly is to <emphasis>ping</emphasis> another computer on the network or the Internet."
 msgstr ""
 
-#: internet/C/troubleshooting.xml:92(para) internet/C/networking.xml:158(para) internet/C/networking.xml:179(para) 
+#: internet/C/troubleshooting.xml:93(para) internet/C/networking.xml:213(para) internet/C/networking.xml:234(para) 
 msgid "To check if you are connected to the Internet:"
 msgstr ""
 
-#: internet/C/troubleshooting.xml:94(para) internet/C/networking.xml:160(para) internet/C/networking.xml:181(para) 
+#: internet/C/troubleshooting.xml:95(para) 
 msgid "Press <menuchoice><guimenu>System</guimenu><guimenuitem>Administration</guimenuitem><guimenuitem>Network Tools</guimenuitem></menuchoice>"
 msgstr ""
 
-#: internet/C/troubleshooting.xml:95(para) internet/C/networking.xml:161(para) internet/C/networking.xml:182(para) 
+#: internet/C/troubleshooting.xml:96(para) 
 msgid "Select the <guilabel>Ping</guilabel> tab"
 msgstr ""
 
-#: internet/C/troubleshooting.xml:96(para) internet/C/networking.xml:183(para) 
+#: internet/C/troubleshooting.xml:97(para) 
 msgid "Type <userinput>ubuntu.com</userinput> into the <guilabel>Network address</guilabel> box and then press <guibutton>Ping</guibutton>"
 msgstr ""
 
-#: internet/C/troubleshooting.xml:98(para) internet/C/networking.xml:164(para) internet/C/networking.xml:185(para) 
+#: internet/C/troubleshooting.xml:99(para) internet/C/networking.xml:240(para) 
 msgid "After a while, a graph should appear. Look at the number for <guilabel>Successful packets</guilabel> under <guilabel>Transmission Statistics</guilabel>"
 msgstr ""
 
-#: internet/C/troubleshooting.xml:100(para) internet/C/networking.xml:166(para) internet/C/networking.xml:187(para) 
+#: internet/C/troubleshooting.xml:101(para) 
 msgid "<emphasis>100% successful packets</emphasis> - Your computer should have a good connection to the Internet"
 msgstr ""
 
-#: internet/C/troubleshooting.xml:101(para) internet/C/networking.xml:167(para) internet/C/networking.xml:188(para) 
+#: internet/C/troubleshooting.xml:102(para) 
 msgid "<emphasis>Less than 100% successful</emphasis> - Your computer probably has a poor connection to the Internet or a poor wireless signal"
 msgstr ""
 
-#: internet/C/troubleshooting.xml:102(para) internet/C/networking.xml:168(para) internet/C/networking.xml:189(para) 
+#: internet/C/troubleshooting.xml:103(para) internet/C/networking.xml:244(para) 
 msgid "<emphasis>0% successful packets</emphasis> - Your computer has a very bad connection, or is connected to an access point or router which is not connected to the Internet"
 msgstr ""
 
-#: internet/C/troubleshooting.xml:106(para) 
+#: internet/C/troubleshooting.xml:107(para) 
 msgid "If you get an error message which says <emphasis>The address 'ubuntu.com' cannot be found</emphasis>, then your computer is probably not connected to the Internet or cannot reach a <emphasis>DNS server</emphasis>."
 msgstr ""
 
@@ -967,7 +963,7 @@ msgid "Home Networks"
 msgstr ""
 
 #: internet/C/networking.xml:17(para) 
-msgid "This section provides instructions on how to communicate with other computers using a Local Area Network"
+msgid "This section provides instructions on how to communicate with other computers using a Local Area Network."
 msgstr ""
 
 #: internet/C/networking.xml:19(title) 
@@ -979,7 +975,7 @@ msgid "To view computers on the network, open <menuchoice><guimenu>Places</guime
 msgstr ""
 
 #: internet/C/networking.xml:21(para) 
-msgid "You may need to enter a username, password, and domain. You should obtain these from your network administrator if possible. The username and password will normally be the username and password of a user on the computer which you are trying to connect to. The domain can often be left blank."
+msgid "You may need to enter a username, password, and domain. You should obtain these from your network administrator if possible. The username and password will normally be the username and password for a user of the computer on which you are trying to connect. The domain can often be left blank."
 msgstr ""
 
 #: internet/C/networking.xml:22(para) 
@@ -994,159 +990,287 @@ msgstr ""
 msgid "When connected to a network, your computer can be referred to by its <emphasis>host name</emphasis>. It is possible to change the host name of your computer."
 msgstr ""
 
-#: internet/C/networking.xml:30(para) internet/C/basics.xml:26(para) 
+#: internet/C/networking.xml:28(para) 
+msgid "You must be a member of the <emphasis>admin</emphasis> group in order to change the computer host name."
+msgstr ""
+
+#: internet/C/networking.xml:31(para) internet/C/basics.xml:26(para) 
 msgid "Open <menuchoice><guimenu>System</guimenu><guimenuitem>Administration</guimenuitem><guimenuitem>Network</guimenuitem></menuchoice>."
 msgstr ""
 
-#: internet/C/networking.xml:33(para) 
-msgid "Click <guilabel>General</guilabel>, and enter the name of the computer in the <guilabel>Host name</guilabel> field."
+#: internet/C/networking.xml:34(para) 
+msgid "Press <guibutton>Unlock</guibutton> and enter your password in the <guilabel>Password for (username): </guilabel> field."
 msgstr ""
 
-#: internet/C/networking.xml:36(para) 
+#: internet/C/networking.xml:37(para) internet/C/networking.xml:63(para) 
+msgid "Press the <guibutton>Authenticate</guibutton> button."
+msgstr ""
+
+#: internet/C/networking.xml:40(para) 
+msgid "Click the <guilabel>General</guilabel> tab. Enter the name of the computer in the <guilabel>Host name</guilabel> field."
+msgstr ""
+
+#: internet/C/networking.xml:43(para) 
 msgid "Restart the computer for the change to take effect."
 msgstr ""
 
-#: internet/C/networking.xml:40(title) 
+#: internet/C/networking.xml:47(title) 
 msgid "Share files and folders with other computers"
 msgstr ""
 
-#: internet/C/networking.xml:41(para) 
-msgid "You can share files and folders with other people on your network."
+#: internet/C/networking.xml:48(para) 
+msgid "You can share files and folders with other people on your network through <application>Shared Folders</application> or <application>Nautilus</application>."
 msgstr ""
 
-#: internet/C/networking.xml:44(para) 
-msgid "Press <menuchoice><guimenu>System</guimenu><guimenuitem>Administration</guimenuitem><guimenuitem>Shared Folders</guimenuitem></menuchoice>"
+#: internet/C/networking.xml:50(title) 
+msgid "Sharing folders via the Shared Folders application"
 msgstr ""
 
-#: internet/C/networking.xml:47(para) 
-msgid "You may receive a message which says <guilabel>Sharing services are not installed</guilabel>. If this is the case, ensure that the two checkboxes in the message box are checked and press <guibutton>Install services</guibutton>. Sharing service support will then be downloaded and installed; this may take a while."
+#: internet/C/networking.xml:51(para) 
+msgid "To share folders using the <application>Shared Folders</application> application:"
 msgstr ""
 
-#: internet/C/networking.xml:50(para) 
-msgid "Select the <guilabel>Shared Folders</guilabel> tab and press <guibutton>Add</guibutton>"
+#: internet/C/networking.xml:54(para) internet/C/networking.xml:130(para) internet/C/networking.xml:199(para) 
+msgid "Press <menuchoice><guimenu>Applications</guimenu><guimenuitem>Accessories</guimenuitem><guimenuitem>Terminal</guimenuitem></menuchoice> to open a Terminal."
 msgstr ""
 
-#: internet/C/networking.xml:53(para) 
-msgid "Select the location of the folder you wish to share by changing the <guilabel>Path</guilabel> option"
+#: internet/C/networking.xml:57(para) 
+msgid "Type <command>shares-admin</command> and press <keycap>Return</keycap> to open <application>Shared Folders</application>."
 msgstr ""
 
-#: internet/C/networking.xml:56(para) 
-msgid "Choose <guilabel>Windows networks (SMB)</guilabel> from the <guilabel>Share through</guilabel> option"
+#: internet/C/networking.xml:60(para) 
+msgid "Press the <guibutton>Unlock</guibutton> button and enter your password in the <guilabel>Password for (username): </guilabel> field."
 msgstr ""
 
-#: internet/C/networking.xml:59(para) 
-msgid "Enter a name and comment for the shared folder"
+#: internet/C/networking.xml:66(para) internet/C/networking.xml:103(para) 
+msgid "You may receive a message which says <guilabel>Sharing services are not installed</guilabel>. If this happens, ensure that the two checkboxes in the message box are checked and press <guibutton>Install services</guibutton>. Sharing service support will then be downloaded and installed; this may take a while."
 msgstr ""
 
-#: internet/C/networking.xml:62(para) 
-msgid "If you would like people accessing the shared folder to be able to add, change and remove files in the folder, uncheck <guilabel>Read only</guilabel>. If you leave <guilabel>Read only</guilabel> checked, people will only be able to view files in the folder"
-msgstr ""
-
-#: internet/C/networking.xml:65(para) 
-msgid "Press <guibutton>OK</guibutton> to make the shared folder available. Other people on the same network (LAN) as you should now be able to access the folder"
-msgstr ""
-
-#: internet/C/networking.xml:68(para) 
-msgid "See the <ulink type=\"help\" url=\"ghelp:shares-admin\">Shared Folders Administration Tool manual</ulink> for more information on managing network shares."
-msgstr ""
-
-#: internet/C/networking.xml:71(title) 
-msgid "Accessing shared folders via Windows"
+#: internet/C/networking.xml:69(para) 
+msgid "Select the <guilabel>Shared Folders</guilabel> tab and press <guibutton>Add</guibutton>."
 msgstr ""
 
 #: internet/C/networking.xml:72(para) 
-msgid "If you would like to access a shared folder hosted on an Ubuntu computer by using computers running Windows, you may have to perform some additional steps:"
+msgid "Select the location of the folder you wish to share by changing the <guilabel>Path</guilabel> option."
+msgstr ""
+
+#: internet/C/networking.xml:75(para) 
+msgid "Choose <guilabel>Windows networks (SMB)</guilabel> from the <guilabel>Share through</guilabel> option."
 msgstr ""
 
 #: internet/C/networking.xml:78(para) 
-msgid "Type <userinput>sudo smbpasswd -a username</userinput>, replacing <quote>username</quote> with your own username. Press <keycap>Return</keycap> to run the command."
+msgid "Enter a name and comment for the shared folder."
 msgstr ""
 
-#: internet/C/networking.xml:80(para) 
-msgid "You can find out what your username is by typing <userinput>whoami</userinput> into the Terminal and then pressing <keycap>Return</keycap>"
+#: internet/C/networking.xml:81(para) 
+msgid "If you would like people accessing the shared folder to be able to add, change and remove files in the folder, uncheck <guilabel>Read only</guilabel>. If you leave <guilabel>Read only</guilabel> checked, people will only be able to view files in the folder."
 msgstr ""
 
 #: internet/C/networking.xml:84(para) 
-msgid "Enter your password when prompted with <quote>[sudo] password for username:</quote> and press <keycap>Return</keycap> again."
+msgid "Press <guibutton>OK</guibutton> to make the shared folder available. Other people on the same network (LAN) as you should now be able to access the folder."
 msgstr ""
 
-#: internet/C/networking.xml:87(para) 
-msgid "When prompted with <quote>New SMB password:</quote>, enter the password that you would like to use to access the shared folder and then press <keycap>Return</keycap>. You can leave the password blank if you like, which will allow anyone to access the shared folder."
+#: internet/C/networking.xml:87(para) internet/C/networking.xml:122(para) 
+msgid "See the <ulink type=\"help\" url=\"ghelp:shares-admin\">Shared Folders Administration Tool manual</ulink> for more information on managing network shares."
 msgstr ""
 
-#: internet/C/networking.xml:90(para) 
-msgid "When prompted with <quote>Retype new SMB password:</quote>, enter the password that you just entered and then press <keycap>Return</keycap>"
+#: internet/C/networking.xml:90(title) 
+msgid "Sharing folders via Nautilus"
 msgstr ""
 
-#: internet/C/networking.xml:93(para) 
-msgid "You should now be able to connect to the shared folders on the Ubuntu computer"
+#: internet/C/networking.xml:91(para) 
+msgid "To share folders using <application>Nautilus</application>:"
 msgstr ""
 
-#: internet/C/networking.xml:99(title) 
-msgid "Problems connecting to shared folders in Windows"
+#: internet/C/networking.xml:94(para) 
+msgid "Press <menuchoice><guimenu>Places</guimenu><guimenuitem>Computer</guimenuitem></menuchoice> to open a <application>File Browser</application> window."
+msgstr ""
+
+#: internet/C/networking.xml:97(para) 
+msgid "Right click the folder you wish to share and select <guimenuitem>Sharing Options</guimenuitem> on the popup menu."
 msgstr ""
 
 #: internet/C/networking.xml:100(para) 
+msgid "Select <guilabel>Share this folder</guilabel> from the popup menu. You may change the <guilabel> Share name</guilabel> field if you want to use a different share name."
+msgstr ""
+
+#: internet/C/networking.xml:106(para) 
+msgid "Select <guilabel>Allow other people to write in this folder</guilabel> if you wish to allow others to add, change, and remove files in this folder. If you leave this box unchecked, other people will only be able to view files in this folder. You may also fill in the <guilabel>Comment</guilabel> field."
+msgstr ""
+
+#: internet/C/networking.xml:109(para) 
+msgid "Select <guilabel>Guest access (for people without a user account)</guilabel> if you wish to allow guest users to access your files."
+msgstr ""
+
+#: internet/C/networking.xml:112(para) 
+msgid "Press <guibutton>Create share</guibutton> to make the shared folder available."
+msgstr ""
+
+#: internet/C/networking.xml:115(para) 
+msgid "You may receive a message stating that Nautilus needs to add some permissions to the folder in order to share it. If this happens, press <guibutton>Add the permissions automatically</guibutton>."
+msgstr ""
+
+#: internet/C/networking.xml:118(para) 
+msgid "Other people on the same network (LAN) as you should now be able to access the folder."
+msgstr ""
+
+#: internet/C/networking.xml:121(para) 
+msgid "You may receive a message which says <guilabel>You do not have permission to create a usershare</guilabel>. If this happens, contact your system administrator or configure the <application>Folder sharing service (samba)</application>."
+msgstr ""
+
+#: internet/C/networking.xml:126(title) 
+msgid "Accessing shared folders via Windows"
+msgstr ""
+
+#: internet/C/networking.xml:127(para) 
+msgid "If you would like to access a shared folder hosted on an Ubuntu computer by using computers running Windows, you may have to perform some additional steps:"
+msgstr ""
+
+#: internet/C/networking.xml:133(para) 
+msgid "Type <command>sudo smbpasswd -a username</command>, replacing <quote>username</quote> with your own username. Press <keycap>Return</keycap> to run the command."
+msgstr ""
+
+#: internet/C/networking.xml:135(para) 
+msgid "You can find out what your username is by typing <command>whoami</command> into the Terminal and then pressing <keycap>Return</keycap>."
+msgstr ""
+
+#: internet/C/networking.xml:139(para) 
+msgid "Enter your password when prompted with <quote>[sudo] password for username:</quote> and press <keycap>Return</keycap> again."
+msgstr ""
+
+#: internet/C/networking.xml:142(para) 
+msgid "When prompted with <quote>New SMB password:</quote>, enter the password that you would like to use to access the shared folder and then press <keycap>Return</keycap>. You can leave the password blank, which will allow anyone to access the shared folder."
+msgstr ""
+
+#: internet/C/networking.xml:145(para) 
+msgid "When prompted with <quote>Retype new SMB password:</quote>, enter the password that you just entered and then press <keycap>Return</keycap>."
+msgstr ""
+
+#: internet/C/networking.xml:148(para) 
+msgid "You should now be able to connect to the shared folders on the Ubuntu computer."
+msgstr ""
+
+#: internet/C/networking.xml:154(title) 
+msgid "Problems connecting to shared folders in Windows"
+msgstr ""
+
+#: internet/C/networking.xml:155(para) 
 msgid "If you are unable to connect to a shared folder using Windows, try using the <emphasis>IP address</emphasis> of the Ubuntu computer rather than its <emphasis>host name</emphasis> to access the share:"
 msgstr ""
 
-#: internet/C/networking.xml:104(para) 
-msgid "Press <menuchoice><guimenu>System</guimenu><guimenuitem>Administration</guimenuitem><guimenuitem>Network Tools</guimenuitem></menuchoice> and select the <guilabel>Devices</guilabel> tab"
-msgstr ""
-
-#: internet/C/networking.xml:107(para) 
-msgid "Select the name of your network connection from the <guilabel>Network device</guilabel> option list (for example, <quote>eth0</quote>). If you have several network connections, you may have to try this several times."
-msgstr ""
-
-#: internet/C/networking.xml:110(para) 
-msgid "Make a note of the number in the <guilabel>IP address</guilabel> column. It should consist of four numbers separated by dots (for example, <quote>192.168.2.10</quote>)"
-msgstr ""
-
-#: internet/C/networking.xml:113(para) 
-msgid "On the Windows computer, select <menuchoice><guimenuitem>Start</guimenuitem><guimenuitem>Run</guimenuitem></menuchoice> and type <userinput>\\\\ipaddress</userinput> in the text box, replacing <quote>ipaddress</quote> with the IP address of the Ubuntu computer"
-msgstr ""
-
-#: internet/C/networking.xml:116(para) 
-msgid "Press <guibutton>OK</guibutton> to connect to the shared folder"
-msgstr ""
-
-#: internet/C/networking.xml:120(para) 
-msgid "If you are still unable to access the shared folder, check that the folder sharing service is running on the Ubuntu computer:"
-msgstr ""
-
-#: internet/C/networking.xml:123(para) 
-msgid "Press <menuchoice><guimenu>System</guimenu><guimenuitem>Administration</guimenuitem><guimenuitem>Services</guimenuitem></menuchoice>"
-msgstr ""
-
-#: internet/C/networking.xml:126(para) 
-msgid "Find the <guilabel>Folder sharing service (samba)</guilabel> and ensure that the checkbox next to it is checked"
-msgstr ""
-
-#: internet/C/networking.xml:129(para) internet/C/basics.xml:65(para) internet/C/basics.xml:108(para) 
-msgid "Press <guibutton>Close</guibutton>"
-msgstr ""
-
-#: internet/C/networking.xml:132(para) 
-msgid "More information can be found on the Ubuntu <ulink url=\"https://help.ubuntu.com/community/SettingUpSamba\">community help pages</ulink>."
-msgstr ""
-
-#: internet/C/networking.xml:156(title) 
-msgid "Check the DNS"
+#: internet/C/networking.xml:159(para) 
+msgid "Press <menuchoice><guimenu>System</guimenu><guimenuitem>Administration</guimenuitem><guimenuitem>Network Tools</guimenuitem></menuchoice> and select the <guilabel>Devices</guilabel> tab."
 msgstr ""
 
 #: internet/C/networking.xml:162(para) 
-msgid "Type <userinput>82.211.81.158</userinput> into the <guilabel>Network address</guilabel> box and then press <guibutton>Ping</guibutton>"
+msgid "Select the name of your network connection from the <guilabel>Network device</guilabel> option list (for example, <quote>eth0</quote>). If you have several network connections, you may have to try this several times."
 msgstr ""
 
-#: internet/C/networking.xml:172(para) 
-msgid "If you get an error message which says <emphasis>The address '82.211.81.158' cannot be found</emphasis>, then there is no connection."
+#: internet/C/networking.xml:165(para) 
+msgid "Make a note of the number in the <guilabel>IP address</guilabel> column. It should consist of four numbers separated by dots (for example, <quote>192.168.2.10</quote>)"
 msgstr ""
 
-#: internet/C/networking.xml:173(para) 
+#: internet/C/networking.xml:168(para) 
+msgid "On the Windows computer, select <menuchoice><guimenuitem>Start</guimenuitem><guimenuitem>Run</guimenuitem></menuchoice> and type <userinput>\\\\ipaddress</userinput> in the text box, replacing <quote>ipaddress</quote> with the IP address of the Ubuntu computer"
+msgstr ""
+
+#: internet/C/networking.xml:171(para) 
+msgid "Press <guibutton>OK</guibutton> to connect to the shared folder."
+msgstr ""
+
+#: internet/C/networking.xml:175(para) 
+msgid "If you are still unable to access the shared folder, check that the folder sharing service is running on the Ubuntu computer:"
+msgstr ""
+
+#: internet/C/networking.xml:178(para) 
+msgid "Press <menuchoice><guimenu>System</guimenu><guimenuitem>Administration</guimenuitem><guimenuitem>Services</guimenuitem></menuchoice>"
+msgstr ""
+
+#: internet/C/networking.xml:181(para) 
+msgid "Find the <guilabel>Folder sharing service (samba)</guilabel> and ensure that the checkbox next to it is checked. If it is not checked, press <guibutton>Unlock</guibutton> and enter your administrative password. Press <guibutton>Authenticate</guibutton>, then enable the Folder sharing service."
+msgstr ""
+
+#: internet/C/networking.xml:184(para) internet/C/basics.xml:74(para) 
+msgid "Press <guibutton>Close</guibutton>"
+msgstr ""
+
+#: internet/C/networking.xml:187(para) 
+msgid "More information can be found on the Ubuntu <ulink url=\"https://help.ubuntu.com/community/SettingUpSamba\">community help pages</ulink>."
+msgstr ""
+
+#: internet/C/networking.xml:192(para) 
+msgid "If you have a network connection which is not working properly, you can use a few tools to help diagnose the problem."
+msgstr ""
+
+#: internet/C/networking.xml:197(para) 
+msgid "<application>ifconfig</application> is intended to allow you to change the settings of your network connections. It can also be used to list information about the current connection."
+msgstr ""
+
+#: internet/C/networking.xml:201(para) 
+msgid "Type <command>ifconfig eth1</command> in the Terminal and press <keycap>Return</keycap>. Replace <emphasis>eth1</emphasis> with the name of your network interface if it is different."
+msgstr ""
+
+#: internet/C/networking.xml:203(para) 
+msgid "<emphasis>inet addr</emphasis> shows the current <emphasis>IP address</emphasis> of the connection."
+msgstr ""
+
+#: internet/C/networking.xml:204(para) 
+msgid "<emphasis>HWaddr</emphasis> shows the <emphasis>MAC address</emphasis> of your network device."
+msgstr ""
+
+#: internet/C/networking.xml:211(title) 
+msgid "Check the DNS"
+msgstr ""
+
+#: internet/C/networking.xml:212(para) internet/C/networking.xml:233(para) 
+msgid "A good way of checking if a connection is working correctly is to <emphasis>ping</emphasis> another computer on the network or the Internet."
+msgstr ""
+
+#: internet/C/networking.xml:215(para) internet/C/networking.xml:236(para) 
+msgid "Press <menuchoice><guimenu>System</guimenu><guimenuitem>Administration</guimenuitem><guimenuitem>Network Tools</guimenuitem></menuchoice> to open the networking tools suite."
+msgstr ""
+
+#: internet/C/networking.xml:216(para) internet/C/networking.xml:237(para) 
+msgid "Select the <guilabel>Ping</guilabel> tab."
+msgstr ""
+
+#: internet/C/networking.xml:217(para) 
+msgid "Type <userinput>91.189.94.249</userinput> into the <guilabel>Network address</guilabel> box and then press <guibutton>Ping</guibutton>."
+msgstr ""
+
+#: internet/C/networking.xml:219(para) 
+msgid "After a while, a graph should appear. Look at the number for <guilabel>Successful packets</guilabel> under <guilabel>Transmission Statistics</guilabel>."
+msgstr ""
+
+#: internet/C/networking.xml:221(para) internet/C/networking.xml:242(para) 
+msgid "<emphasis>100% successful packets</emphasis> - Your computer has a good connection to the Internet."
+msgstr ""
+
+#: internet/C/networking.xml:222(para) internet/C/networking.xml:243(para) 
+msgid "<emphasis>Less than 100% successful</emphasis> - Your computer probably has a poor connection to the Internet or a poor wireless signal."
+msgstr ""
+
+#: internet/C/networking.xml:223(para) 
+msgid "<emphasis>0% successful packets</emphasis> - Your computer has a very bad connection, or is connected to an access point or router which is not connected to the Internet."
+msgstr ""
+
+#: internet/C/networking.xml:227(para) 
+msgid "If you get an error message which says <emphasis>The address '91.189.94.249' cannot be found</emphasis>, then there is no connection."
+msgstr ""
+
+#: internet/C/networking.xml:228(para) 
 msgid "If the address is found then try the next stage."
 msgstr ""
 
-#: internet/C/networking.xml:193(para) 
+#: internet/C/networking.xml:232(title) 
+msgid "Check if a connection is working correctly"
+msgstr ""
+
+#: internet/C/networking.xml:238(para) 
+msgid "Type <userinput>ubuntu.com</userinput> into the <guilabel>Network address</guilabel> box and then press <guibutton>Ping</guibutton>."
+msgstr ""
+
+#: internet/C/networking.xml:248(para) 
 msgid "If you get an error message which says <emphasis>The address 'ubuntu.com' cannot be found</emphasis>, then you cannot reach a <emphasis>DNS server</emphasis>."
 msgstr ""
 
@@ -1203,7 +1327,7 @@ msgstr ""
 msgid "ISP Phone Number; Username; Password; Domain Name Server (DNS) addresses."
 msgstr ""
 
-#: internet/C/modem.xml:50(para) internet/C/basics.xml:105(para) 
+#: internet/C/modem.xml:50(para) 
 msgid "Press <menuchoice><guimenu>System</guimenu><guimenuitem>Administration</guimenuitem><guimenuitem>Network</guimenuitem></menuchoice>"
 msgstr ""
 
@@ -1211,7 +1335,7 @@ msgstr ""
 msgid "Press <guibutton>Unlock</guibutton> and type your password to unlock the settings"
 msgstr ""
 
-#: internet/C/modem.xml:52(para) 
+#: internet/C/modem.xml:52(para) internet/C/basics.xml:116(para) 
 msgid "Select the <guilabel>Connections</guilabel> tab."
 msgstr ""
 
@@ -1316,168 +1440,200 @@ msgid "To connect to the Internet:"
 msgstr ""
 
 #: internet/C/basics.xml:29(para) 
-msgid "Go to the <guilabel>Connections</guilabel> tab and click the connection you wish to use to select it."
+msgid "Press <guibutton>Unlock</guibutton>."
 msgstr ""
 
 #: internet/C/basics.xml:32(para) 
-msgid "Press <guibutton>Properties</guibutton> to change any settings."
+msgid "Enter your administrative password and press <guibutton>Authenticate</guibutton>."
 msgstr ""
 
 #: internet/C/basics.xml:35(para) 
-msgid "If your ISP or network administrator has given you an <emphasis>IP address</emphasis>, set <guilabel>Configuration</guilabel> to <guilabel>Static IP address</guilabel>, then enter the address in the <guilabel>IP address</guilabel> field and click <guibutton>OK</guibutton>. Otherwise, set <guilabel>Configuration</guilabel> to <guilabel>Automatic configuration (DHCP)</guilabel> and click <guibutton>OK</guibutton>."
+msgid "Go to the <guilabel>Connections</guilabel> tab and select the connection you wish to use."
 msgstr ""
 
 #: internet/C/basics.xml:38(para) 
-msgid "Tick the box next to your connection to enable it."
+msgid "Press <guibutton>Properties</guibutton>."
 msgstr ""
 
-#: internet/C/basics.xml:44(title) 
+#: internet/C/basics.xml:41(para) 
+msgid "If your ISP or network administrator has given you a <emphasis>static IP address</emphasis>, <emphasis>subnet mask</emphasis>, and <emphasis>gateway address</emphasis>, set <guilabel>Configuration</guilabel> to <guilabel>Static IP address</guilabel>. Enter the IP address in the <guilabel>IP address</guilabel> field. Enter the provided subnet mask and gateway address in the <guilabel>Subnet mask</guilabel> and <guilabel>Gateway address</guilabel> fields. Press the <guilabel>OK</guilabel> button."
+msgstr ""
+
+#: internet/C/basics.xml:44(para) 
+msgid "If you were not provided with network information, set <guilabel>Configuration</guilabel> to <guilabel>Automatic configuration (DHCP)</guilabel> and press the <guibutton>OK</guibutton> button."
+msgstr ""
+
+#: internet/C/basics.xml:47(para) 
+msgid "Select the box next to your connection to enable it."
+msgstr ""
+
+#: internet/C/basics.xml:53(title) 
 msgid "Connect to a network"
 msgstr ""
 
-#: internet/C/basics.xml:45(para) 
+#: internet/C/basics.xml:54(para) 
 msgid "If you change the settings of your network connection or connect to a different network than usual, you may have to enable the connection yourself."
 msgstr ""
 
-#: internet/C/basics.xml:48(title) 
+#: internet/C/basics.xml:57(title) 
 msgid "Use Network Manager to connect to a network"
 msgstr ""
 
-#: internet/C/basics.xml:49(para) 
-msgid "If your network connection is managed by <application>Network Manager</application> (as most are), the connection should be enabled automatically."
-msgstr ""
-
-#: internet/C/basics.xml:50(para) 
-msgid "If the connection is not enabled automatically:"
-msgstr ""
-
-#: internet/C/basics.xml:52(para) internet/C/basics.xml:95(para) 
-msgid "Find the Network Manager icon in the notification area. It should look like a small signal strength indicator or a computer monitor and will probably be close to the clock"
-msgstr ""
-
-#: internet/C/basics.xml:53(para) 
-msgid "Right-click the icon and ensure that <guilabel>Enable Networking</guilabel> is ticked"
-msgstr ""
-
-#: internet/C/basics.xml:54(para) 
-msgid "If you have a wireless network connection, also ensure that <guilabel>Enable Wireless</guilabel> is ticked"
-msgstr ""
-
-#: internet/C/basics.xml:55(para) 
-msgid "Left-click once on the Network Manager icon and then click on the network you want to connect to"
-msgstr ""
-
-#: internet/C/basics.xml:56(para) 
-msgid "After a short period you should receive a message which says <guilabel>Connection Established</guilabel>"
-msgstr ""
-
-#: internet/C/basics.xml:57(para) 
-msgid "You should now be connected to a network."
+#: internet/C/basics.xml:58(para) 
+msgid "If your network connection is managed by <application>Network Manager</application> the connection should be enabled automatically."
 msgstr ""
 
 #: internet/C/basics.xml:59(para) 
-msgid "If you are not connected to a network after following the procedure above:"
+msgid "If the connection is not enabled automatically:"
 msgstr ""
 
 #: internet/C/basics.xml:61(para) 
-msgid "Left-click the Network Manager icon again and press <guibutton>Manual configuration...</guibutton>"
+msgid "Find the Network Manager icon in the notification area. It should look like a small signal strength indicator or a computer monitor and will probably be close to the clock"
 msgstr ""
 
-#: internet/C/basics.xml:62(para) internet/C/basics.xml:106(para) 
-msgid "Select the <guilabel>Connections</guilabel> tab"
+#: internet/C/basics.xml:62(para) 
+msgid "Right-click the icon and ensure that <guilabel>Enable Networking</guilabel> is selected in the popup menu."
 msgstr ""
 
 #: internet/C/basics.xml:63(para) 
-msgid "Tick the box next to your network connection to enable the connection"
+msgid "If you have a wireless network connection, make sure that <guilabel>Enable Wireless</guilabel> is selected."
 msgstr ""
 
 #: internet/C/basics.xml:64(para) 
-msgid "The connection process make take a short while"
+msgid "Left-click the Network Manager icon and then click on the network you want to connect to"
 msgstr ""
 
-#: internet/C/basics.xml:70(title) 
-msgid "Use the ifup command to connect to a network"
+#: internet/C/basics.xml:65(para) 
+msgid "After a short period you should receive a message which says <guilabel>Connection Established</guilabel>"
+msgstr ""
+
+#: internet/C/basics.xml:66(para) 
+msgid "You should now be connected to a network."
+msgstr ""
+
+#: internet/C/basics.xml:68(para) 
+msgid "If you are not connected to a network after following the procedure above:"
+msgstr ""
+
+#: internet/C/basics.xml:70(para) 
+msgid "Left-click the Network Manager icon again and press <guibutton>Manual configuration...</guibutton>"
 msgstr ""
 
 #: internet/C/basics.xml:71(para) 
-msgid "<application>ifup</application> is a command-line tool for enabling network connections."
+msgid "Select the <guilabel>Connections</guilabel> tab"
 msgstr ""
 
 #: internet/C/basics.xml:72(para) 
+msgid "Tick the box next to your network connection to enable the connection"
+msgstr ""
+
+#: internet/C/basics.xml:73(para) 
+msgid "The connection process make take a short while"
+msgstr ""
+
+#: internet/C/basics.xml:79(title) 
+msgid "Use the ifup command to connect to a network"
+msgstr ""
+
+#: internet/C/basics.xml:80(para) 
+msgid "<application>Ifup</application> is a command-line tool for enabling network connections."
+msgstr ""
+
+#: internet/C/basics.xml:81(para) 
 msgid "To enable a network connection:"
 msgstr ""
 
-#: internet/C/basics.xml:75(para) internet/C/basics.xml:118(para) 
-msgid "Type <userinput>sudo ifdown eth1</userinput> in the Terminal and press <keycap>Return</keycap>, replacing <emphasis>eth1</emphasis> with the name of your network interface if it is different"
+#: internet/C/basics.xml:83(para) internet/C/basics.xml:127(para) 
+msgid "Press <menuchoice><guimenu>Applications</guimenu><guimenuitem>Accessories</guimenuitem><guimenuitem>Terminal</guimenuitem></menuchoice> to open a terminal."
 msgstr ""
 
-#: internet/C/basics.xml:76(para) internet/C/basics.xml:119(para) 
-msgid "Enter your password if prompted"
+#: internet/C/basics.xml:84(para) internet/C/basics.xml:128(para) 
+msgid "Type <command>sudo ifdown eth1</command> in the terminal and press <keycap>Return</keycap>. Replace <emphasis>eth1</emphasis> with the name of your network interface if it is different."
 msgstr ""
 
-#: internet/C/basics.xml:77(para) 
-msgid "Type <userinput>sudo ifup eth1</userinput> in the Terminal and press <keycap>Return</keycap>, again replacing <emphasis>eth1</emphasis> with the name of your network interface"
+#: internet/C/basics.xml:85(para) internet/C/basics.xml:129(para) 
+msgid "Enter your password if prompted."
 msgstr ""
 
-#: internet/C/basics.xml:79(para) 
-msgid "If you have connected successfully, you should see a message similar to the following (the numbers may be different):"
+#: internet/C/basics.xml:86(para) 
+msgid "Type <command>sudo ifup eth1</command> in the terminal and press <keycap>Return</keycap>, again replacing <emphasis>eth1</emphasis> with the name of your network interface."
 msgstr ""
 
-#: internet/C/basics.xml:80(screen) 
+#: internet/C/basics.xml:88(para) 
+msgid "If you have connected successfully, you should see a message similar to the following:"
+msgstr ""
+
+#: internet/C/basics.xml:89(screen) 
 #, no-wrap
 msgid "DHCPACK from 192.168.2.1\nbound to 192.168.2.4 -- renewal in 536349522 seconds."
 msgstr ""
 
-#: internet/C/basics.xml:88(title) 
+#: internet/C/basics.xml:97(title) 
 msgid "Disable a network connection"
 msgstr ""
 
-#: internet/C/basics.xml:89(para) 
+#: internet/C/basics.xml:98(para) 
 msgid "Sometimes you may want to disable a network connection. There are several different ways of achieving this."
 msgstr ""
 
-#: internet/C/basics.xml:92(title) 
+#: internet/C/basics.xml:101(title) 
 msgid "Disconnecting using Network Manager"
 msgstr ""
 
-#: internet/C/basics.xml:93(para) 
+#: internet/C/basics.xml:102(para) 
 msgid "It is likely that <application>Network Manager</application> is running your network connections. If so, you must disconnect from the network by disabling your network connection in Network Manager:"
 msgstr ""
 
-#: internet/C/basics.xml:96(para) 
-msgid "Right-click the icon and uncheck <guilabel>Enable Networking</guilabel>"
+#: internet/C/basics.xml:104(para) 
+msgid "Find the Network Manager icon in the notification area. It should look like a small signal strength indicator or a computer monitor and will probably be close to the clock."
 msgstr ""
 
-#: internet/C/basics.xml:97(para) 
-msgid "You should be disconnected from the network"
+#: internet/C/basics.xml:105(para) 
+msgid "Right-click the icon and uncheck <guilabel>Enable Networking</guilabel>."
 msgstr ""
 
-#: internet/C/basics.xml:102(title) 
+#: internet/C/basics.xml:106(para) 
+msgid "You should be disconnected from the network."
+msgstr ""
+
+#: internet/C/basics.xml:111(title) 
 msgid "Disconnecting using Network Settings"
 msgstr ""
 
-#: internet/C/basics.xml:103(para) 
+#: internet/C/basics.xml:112(para) 
 msgid "If Network Manager is not running, use the <application>Network Settings</application> tool to disconnect your network connection:"
 msgstr ""
 
-#: internet/C/basics.xml:107(para) 
-msgid "Uncheck your network connection to disconnect it"
-msgstr ""
-
-#: internet/C/basics.xml:113(title) 
-msgid "Disconnecting using the ifdown command"
-msgstr ""
-
 #: internet/C/basics.xml:114(para) 
-msgid "<application>ifdown</application> is a command-line tool for disabling network connections."
+msgid "Press <menuchoice><guimenu>System</guimenu><guimenuitem>Administration</guimenuitem><guimenuitem>Network</guimenuitem></menuchoice>."
 msgstr ""
 
 #: internet/C/basics.xml:115(para) 
+msgid "Press <guilabel>Unlock</guilabel>. Enter your administrative password and press the <guibutton>Authenticate</guibutton> button."
+msgstr ""
+
+#: internet/C/basics.xml:117(para) 
+msgid "Uncheck your network connection to disconnect it."
+msgstr ""
+
+#: internet/C/basics.xml:118(para) 
+msgid "Press the <guibutton>Close</guibutton> button."
+msgstr ""
+
+#: internet/C/basics.xml:123(title) 
+msgid "Disconnecting using the ifdown command"
+msgstr ""
+
+#: internet/C/basics.xml:124(para) 
+msgid "<application>Ifdown</application> is a command-line tool for disabling network connections."
+msgstr ""
+
+#: internet/C/basics.xml:125(para) 
 msgid "To disable a network connection using ifdown:"
 msgstr ""
 
-#: internet/C/basics.xml:120(para) 
-msgid "Your network connection should be disconnected"
+#: internet/C/basics.xml:130(para) 
+msgid "Your network connection should be disconnected."
 msgstr ""
 
 #: internet/C/adsl.xml:16(title) 
@@ -1489,7 +1645,7 @@ msgid "USB ADSL Modems"
 msgstr ""
 
 #: internet/C/adsl.xml:19(para) 
-msgid "Often parts of ADSL USB modem drivers are proprietary, closed source software and so cannot be supplied with Ubuntu. To get a modem to work with these drivers, you will need to download files from Internet with a computer having a working connection, then transfer the downloaded files to you Ubuntu installation."
+msgid "Often parts of ADSL USB modem drivers are proprietary, closed source software and so cannot be supplied with Ubuntu. To get a modem to work with these drivers, you will need to download files from Internet with a computer having a working connection, then transfer the downloaded files to your Ubuntu installation."
 msgstr ""
 
 #: internet/C/adsl.xml:20(para) 

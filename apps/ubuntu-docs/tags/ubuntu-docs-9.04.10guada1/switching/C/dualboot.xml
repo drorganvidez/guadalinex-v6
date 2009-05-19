@@ -12,11 +12,11 @@
 
 <chapter id="dualboot" status="review">
 	<title>Dual-booting with Windows</title>
-	<para>This chapter provides instructions and tips on installing Ubuntu and Windows XP onto the same system.</para>
+	<para>This chapter provides instructions and tips on installing Ubuntu and Windows on the same system.</para>
 	<sect1 id="dualboot-intro" status="review">
 		<title>Introduction</title>
-		<para>It is possible to have more than one operating system installed on a computer at once. While only one <emphasis>operating system</emphasis> can be run at once, it is possible to choose which one to start when the computer is initially turned on. This is called <emphasis>dual-booting</emphasis></para>
-		<para>This quick guide is intended to help you to install Ubuntu onto a computer alongside a copy of Windows. You will be able to select whether to start Ubuntu or Windows each time your computer starts up.</para>
+		<para>It is possible to have more than one operating system installed on a computer at once. While only one <emphasis>operating system</emphasis> can be run at once, you may choose which one to start when the computer is initially turned on. This is called <emphasis>dual-booting</emphasis></para>
+		<para>This quick guide is intended to help you to install Ubuntu onto a computer alongside a copy of Windows.</para>
 		<sect2 id="dualboot-intro-advantages" status="review">
 			<title>Advantages of dual-booting</title>
 			<itemizedlist>
@@ -50,9 +50,9 @@
 		<sect2 id="dualboot-concepts-partitions" status="review">
 			<title>Hard disk partitions</title>
 			<para>Your hard disk can be split up into many separate <emphasis>partitions</emphasis>, in a similar way that a large room can be partitioned by dividing walls. Each partition, while still being on the same physical device, is treated as being entirely separate to other partitions - it is as if you have multiple hard drives installed rather than just one. In Windows, each partition has its own <emphasis>drive letter</emphasis>. You might have a C, D and E drive which, while being treated as separate devices, are in fact all stored on the same hard disk.</para>
-			<para>For operating systems to be able to co-exist on the same computer, they should be installed onto separate partitions. This means that, to dual-boot between Ubuntu and Windows, you must partition your hard disk in a suitable manner.</para>
+			<para>For operating systems to be able to co-exist on the same computer, they should be installed onto separate partitions. This means that to dual-boot between Ubuntu and Windows, you must partition your hard disk in a suitable manner.</para>
 			<para>By partitioning your disk, you are splitting the storage capacity of your hard disk into separate, differently-sized chunks. You should choose the sizes of each partition carefully to prevent running out of storage space on a partition.</para>
-			<para>Because each partition is treated as a separate device, each partition must be <emphasis>formatted</emphasis> with a <emphasis>filesystem</emphasis>. Formatting is the process of creating a filesystem on a partition. A filesystem is a method which an operating system uses to store your files - there are many different filesystems, each with its own advantages and limitations. Common filesystems used in a dual boot system include NTFS, FAT32, and ext3. NTFS, to which Linux cannot safely write data, is the default filesystem used by Windows. Ubuntu treats this filesystem as read-only. ext3 is a native Linux filesystem that can be accessed from Windows using various tools such as ext2fs. FAT32 (also know as vfat) is a filesystem to which Linux can write safely. Hence, in a dual system, a FAT32 filesystem is commonly used as a way of sharing files between Linux and Windows.</para>
+			<para>Because each partition is treated as a separate device, each partition must be <emphasis>formatted</emphasis> with a <emphasis>filesystem</emphasis>. Formatting is the process of creating a filesystem on a partition. A filesystem is a method which an operating system uses to store your files - there are many different filesystems, each with its own advantages and limitations. Common filesystems used in a dual boot system include NTFS, FAT32, and ext3. NTFS is the default filesystem used by Windows.  ext3 is a native Linux filesystem that can be accessed from Windows using various tools such as ext2fs. FAT32 (also know as vfat) is a filesystem to which Linux can write safely. Hence, in a dual system, a FAT32 filesystem is commonly used as a way of sharing files between Linux and Windows.</para>
 			<para>There are two different types of partition. <emphasis>Primary</emphasis> partitions can contain only one filesystem and a maximum of four of them can be used on a hard disk. <emphasis>Extended</emphasis> partitions can contain many other partitions, but only one can be used per hard disk.</para>
 		</sect2>
 		<sect2 id="dualboot-concepts-bootloader" status="review">
@@ -73,12 +73,12 @@
 				<listitem><para>Press <menuchoice><guimenuitem>Start</guimenuitem><guimenuitem>Run</guimenuitem></menuchoice>. The <application>Run</application> dialog should appear.</para></listitem>
 				<listitem><para>Type <emphasis>diskmgr.msc</emphasis> into the box provided and press <guibutton>Run</guibutton>.</para></listitem>
 				<listitem><para>The <application>Disk Management Snap-In</application> shows the status of all of the storage devices connected to your computer. Find the device with the <emphasis>C:</emphasis> drive on it. This should be your primary hard disk (if you have more than one installed).</para></listitem>
-				<listitem><para>Note down the total capacity of the hard disk and also the order and size of all of the partitions on the disk (if there is more than one).</para></listitem>
+				<listitem><para>Note down the total capacity of the hard disk and the order and size of the partitions on the disk (if there is more than one).</para></listitem>
 			</orderedlist>
 		</sect2>
 		<sect2 id="dualboot-planning-scheme" status="review">
 			<title>Deciding what partitions to use</title>
-			<para>Windows will probably use one or two partitions only, though these are likely to take up the entire hard disk. You must decide how much disk space you will need for Windows, and how much you would like to be able to use in Ubuntu.</para>
+			<para>Windows generally uses one or two partitions, though these are likely to take up the entire hard disk. You must decide how much disk space you will need for Windows, and how much you would like use in Ubuntu.</para>
 			<note>
 				<title>Recovery partitions</title>
 				<para>Many computer manufacturers install recovery partitions onto their computers to allow you to restore Windows in case of problems. These tend to be small partitions which are inaccessible from Windows. Because these partitions may be the sole method of recovering Windows in case of a problem, it is recommended that you do not attempt to change or remove such recovery partitions.</para>
@@ -87,10 +87,10 @@
 	</sect1>
 	<sect1 id="dualboot-procedure" status="review">
 		<title>Setting up a dual-boot configuration</title>
-		<para>This section provides the procedure required to set up a dual-boot system with Ubuntu and <application>Windows XP</application>.</para>
+		<para>This section provides the procedure required to set up a dual-boot system with Ubuntu and Windows.</para>
 		<orderedlist>
-			<listitem><para>From within Windows, run the Windows defragmentation tool on the <filename>C drive</filename>. This can be accessed by going to <menuchoice><guimenuitem>Start</guimenuitem><guimenuitem>Run</guimenuitem></menuchoice>, typing <emphasis>defrag</emphasis> in the box provided and then pressing <guibutton>OK</guibutton>.</para></listitem>
-			<listitem><para>Defragmentation may take a very long time, up to several hours. Once it has finished, insert your Ubuntu Desktop CD into your disc drive and reboot your PC.</para></listitem>
+			<listitem><para>From within Windows, run the Windows defragmentation tool. This can be accessed in XP by going to <menuchoice><guimenuitem>Start</guimenuitem><guimenuitem>Run</guimenuitem></menuchoice>, typing <emphasis>defrag</emphasis> in the box provided and then pressing <guibutton>OK</guibutton>, or by going to <menuchoice><guimenuitem>Start</guimenuitem><guimenuitem>Programs</guimenuitem><guimenuitem>Accessories</guimenuitem><guimenuitem>Deframentation Tool</guimenuitem><guimenuitem>Defragment now</guimenuitem></menuchoice> in Vista.</para></listitem>
+			<listitem><para>Defragmentation may take several hours. Once it has finished, insert your Ubuntu Desktop CD into your disc drive and reboot your PC.</para></listitem>
 			<listitem><para>Follow the instructions given in the <xref linkend="installing"/> section until the installer shows the screen titled <guilabel>Prepare disk space</guilabel>.</para></listitem>
 			<listitem><para>Choose <guilabel>Manually edit partition table</guilabel>. The disk partitioning tool will start, showing a list of the partitions currently set up on the computer.</para></listitem>
 			<listitem><para>Select the partition which contains Windows. You may be able to identify it from its size or label. Once you are sure that you have identified the correct partition, press <keycap>Enter</keycap>.</para></listitem>
@@ -102,7 +102,7 @@
 			<listitem><para>Also, create a partition for your Ubuntu installation, of at least 10 GB.</para></listitem>
 			<listitem><para>Select <guilabel>Finish partitioning and write changes to disk</guilabel> to permanently apply your changes. This operation may take a while, and cannot be reversed.</para></listitem>
 			<listitem><para>Finish installing Ubuntu according to the instructions on-screen or the <xref linkend="installing"/> section.</para></listitem>
-			<listitem><para>On rebooting your computer after installation, you should be presented with a list of operating systems to boot. Ubuntu should have automatically detected your Windows installation and added an option to boot it on this screen. You can select it using the arrow keys on the keyboard, and can start it by pressing <keycap>Enter</keycap>.</para></listitem>
+			<listitem><para>Upon rebooting your computer after installation, you will be presented with a list of operating systems to boot. Ubuntu should have automatically detected your Windows installation and added an option to boot it on this screen. You can select it using the arrow keys on the keyboard, and can start it by pressing <keycap>Enter</keycap>.</para></listitem>
 		</orderedlist>
 	</sect1>
 	<sect1 id="dualboot-custom" status="review">

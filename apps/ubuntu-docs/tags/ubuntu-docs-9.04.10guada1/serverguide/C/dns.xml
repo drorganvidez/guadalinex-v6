@@ -289,13 +289,13 @@ zone "1.168.192.in-addr.arpa" {
 <programlisting>
 zone "example.com" {
 	type slave;
-        file "db.example.com";
+        file "/var/cache/bind/db.example.com";
         masters { 192.168.1.10; };
 };        
       
 zone "1.168.192.in-addr.arpa" {
 	type slave;
-        file "db.192";
+        file "/var/cache/bind/db.192";
         masters { 192.168.1.10; };
 };
 </programlisting>
@@ -322,6 +322,15 @@ slave zone "100.18.172.in-addr.arpa" (IN) loaded (serial 3)
               Note: A zone is only transferred if the <emphasis>Serial Number</emphasis> on the Primary is larger than the one on the Secondary. 
 	      </para>
 	    </note>
+
+	    <note>
+	      <para>
+              The default directory for non-authoritative zone files is <filename>/var/cache/bind/</filename>. This directory is also configured
+              in <application>AppArmor</application> to allow the <application>named</application> daemon to write to.  For more information on
+              AppArmor see <xref linkend="apparmor"/>.
+	      </para>
+	    </note>
+
 	  </sect2>
       </sect1>
       <sect1 id="dns-troubleshooting" status="review">

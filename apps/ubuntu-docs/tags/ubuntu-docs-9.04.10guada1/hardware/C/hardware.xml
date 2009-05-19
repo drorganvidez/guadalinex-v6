@@ -110,19 +110,17 @@
 	  </indexterm>
 
 	<sect2 id="checking-usage" status="review">
-	    <title>Checking disk capacity</title>
-	    <para>To check the amount of free and used space on a disk, do either of the following:
-	      <itemizedlist>
-	      		<listitem>
-	      			<para>Press &computer;, right click on the disk you want to check and select <guilabel>Properties</guilabel>. 
-	      			The free space on the disk will be displayed on the <guilabel>Basic</guilabel> tab.</para>
-	      		</listitem>
-	      		<listitem>
-	      			<para>Press &system-monitor; and select the <guilabel>File Systems</guilabel> tab. All disks currently 
-	      			connected to the system should be displayed in the list, along with their free and used capacities.</para>
-	      		</listitem>
-	      </itemizedlist>
-	    </para>
+        <title>Checking how much disk space is available</title>
+        <para>
+        Click &system-monitor; and select the <guilabel>File Systems</guilabel> 
+        tab to see how much hard disk space is available on your computer.
+        </para>
+        <para>
+        Alternatively, click &computer;, right-click a hard disk, click 
+        <guilabel>Properties</guilabel> and select the 
+        <guilabel>Basic</guilabel> tab to see a summary of the disk space 
+        currently available on that disk.
+        </para>
 	    
 	    <sect3 id="advanced-disk-analysis" status="review">
 	      <title>Advanced disk-usage analysis</title>
@@ -140,6 +138,78 @@
 	      </para>
 	    </sect3>
 	  </sect2>
+
+    <sect2 id="free-disk-space" status="review">
+    <title>How can I free-up some disk space?</title>
+    <para>
+    There are several simple ways of making more disk space available:
+    </para>
+
+    <itemizedlist>
+        <listitem>
+        <para>
+        Empty your trash by right-clicking the Trash icon on the bottom panel 
+        and selecting <guilabel>Empty the Trash folder</guilabel>.
+        </para>
+        </listitem>
+        <listitem>
+        <para>
+        Install the <ulink url="apt:system-cleaner-gtk">Cruft Remover</ulink> 
+        and run it by clicking &cruft-remover;. This will remove unused or 
+        obsolete software packages from your computer. Read the list of 
+        packages carefully before you click <guibutton>Cleanup</guibutton>; 
+        packages that you have manually downloaded and installed may be listed 
+        as unused, even though they are not.
+        </para>
+        </listitem>
+        <listitem>
+        <para>
+        Remove software packages that you no longer use. See 
+        <ulink type="help" url="ghelp:add-applications#gnome-app-install">
+        Add/Remove Applications</ulink> for information on removing packages.
+        </para>
+        </listitem>
+        <listitem>
+        <para>
+        Delete files that you no longer need. You can use the Disk Usage 
+        Analyzer (&baobab;) to find which files are taking up the most space. 
+        Be careful not to delete files that you still need!
+        </para>
+        </listitem>
+    </itemizedlist>
+
+    <para>
+    You can also compress and archive your old, rarely-used documents:
+    </para>
+
+    <procedure>
+        <step>
+        <para>
+        Select the files and folders that you want to compress, right-click one 
+        of them and select <guilabel>Create Archive</guilabel>.
+        </para>
+        </step>
+        <step>
+        <para>
+        Choose a name, location and format for the file (the 
+        <filename>.tar.gz</filename> format is the most commonly used on 
+        Ubuntu, <filename>.zip</filename> is compatible with Windows and 
+        <filename>.tar.lzma</filename> usually offers the best compression).
+        </para>
+        </step>
+        <step>
+        <para>
+        Click <guibutton>Create</guibutton>. An archive file will be created 
+        containing compressed copies of your files.
+        </para>
+        </step>
+        <step>
+        <para>
+        Delete the old uncompressed files to free some disk space.
+        </para>
+        </step>
+    </procedure>
+    </sect2>
 
 	  <sect2 id="partitioning-device" status="review">
 	    <title>Partitioning a device</title>
@@ -407,28 +477,6 @@
 <sect1 id="laptops" status="review">
 	<title>Laptops</title>
 	<para>This section contains information for people using Ubuntu on a laptop computer.</para>	
-	<sect2 id="laptops-suspending" status="review">
-		<title>Suspending and hibernating laptops</title>
-		<para>In order to save battery power, you can put your laptop into one of a number of power-saving modes when you are not using it. The available modes are detailed below:</para>
-		<itemizedlist>
-			<listitem><para><emphasis role='strong'>Suspending</emphasis> a laptop is like putting the computer to sleep. The computer will still be turned on and all of your work will be left open, but the laptop will use much less battery power. You can wake the computer by pressing a key or clicking the mouse.</para></listitem>
-			<listitem><para><emphasis role='strong'>Hibernating</emphasis> is turning the computer off completely while saving the current state of the computer (such as keeping all of your open documents). When you turn the computer back on after hibernating, all of your work should be restored as it was before hibernation. No power is used when the computer is hibernating.</para></listitem>
-			<listitem><para><emphasis role='strong'>Shutting down</emphasis> is turning the computer off completely, without saving the current state of the computer. No power is used when the computer is shut down.</para></listitem>
-			<listitem><para><emphasis role='strong'>Resuming</emphasis> is bringing the computer out of a power saving mode and back into normal operation. You can resume the computer from being suspended by pressing a keyboard button or by clicking the mouse. You can resume from being hibernated by pressing the power button on your computer.</para></listitem>
-		</itemizedlist>
-		<para>You can manually put your computer into a power-saving mode by pressing &quit; and then pressing the appropriate button.</para>
-		<caution>
-			<para>Some computers may have problems going into certain power saving modes. The best way of checking if your computer can handle a power-saving mode is to try to switch to that mode and see if it behaves as you expected. Always make sure you save important documents before suspending or hibernating.</para>
-		</caution>
-		<sect3 id="laptops-suspending-troubleshooting" status="review">
-			<title>Fixing problems with suspending, hibernating and resuming</title>
-			<para>If your computer cannot suspend, hibernate or resume properly, there may be a number of things that you can try to get it working correctly.</para>
-			<itemizedlist>
-				<listitem><para>Check the test report for your laptop, if one has been made (see <xref linkend="laptops-testing-reports" />).</para></listitem>
-				<listitem><para>Ask for assistance through an <ulink url='http://www.ubuntu.com/support/free'>Ubuntu support channel</ulink>.</para></listitem>
-			</itemizedlist>
-		</sect3>
-	</sect2>
 	<sect2 id="laptops-pm" status="review">
 		<title>Power management settings</title>
 		<para>You may wish to change the power management settings of your laptop in order to help extend its battery life and reduce energy wastage.</para>
@@ -476,7 +524,189 @@
 		<para>You can participate in laptop testing yourself by contacting the <ulink url='https://wiki.ubuntu.com/LaptopTestingTeam'>Laptop Testing Team</ulink>.</para>
 	</sect2>
 </sect1>
+
+
+
+
+<sect1 id="pm-suspending" status="review">
+	<title>Suspending and hibernating your computer</title>
+	<para>
+	In order to save power, you can put your computer into one of a number of 
+	power-saving modes when you are not using it:</para>
+	<itemizedlist>
+		<listitem>
+		<para>
+		<emphasis role='strong'>Suspending</emphasis> a computer is like 
+		putting the computer to sleep. The computer will still be turned on and 
+		all of your work will be left open, but it will use much less power. 
+		You can wake the computer by pressing a key or clicking the mouse.
+		</para>
+		</listitem>
+		<listitem>
+		<para>
+		<emphasis role='strong'>Hibernating</emphasis> is turning the computer 
+		off completely while saving the current state of the computer (such as 
+		keeping all of your open documents). When you turn the computer back on 
+		after hibernating, all of your work should be restored as it was before 
+		hibernation. No power is used when the computer is hibernating.
+		</para>
+		</listitem>
+		<listitem>
+		<para>
+		<emphasis role='strong'>Shutting down</emphasis> is turning the 
+		computer off completely, without saving the current state of the 
+		computer. No power is used when the computer is shut down.
+		</para>
+		</listitem>
+		<listitem>
+		<para>
+		<emphasis role='strong'>Resuming</emphasis> is bringing the computer 
+		out of a power saving mode and back into normal operation. You can 
+		resume the computer from being suspended by pressing a keyboard button 
+		or by clicking the mouse. You can resume from being hibernated by 
+		pressing the power button on your computer.
+		</para>
+		</listitem>
+	</itemizedlist>
 	
+	<para>
+	You can manually put your computer into a power-saving mode by pressing 
+	&quit; and then pressing the appropriate button.
+	</para>
+	
+	<caution>
+	<para>
+	Some computers may have problems going into certain power saving modes. 
+	The best way of checking if your computer can handle a power-saving mode 
+	is to try to switch to that mode and see if it behaves as you expected. 
+	Always make sure you save important documents before suspending or 
+	hibernating.
+	</para>
+	</caution>
+
+<sect2 id="pm-suspend-hibernate-fails" status="review">
+    <title>My computer does not suspend or hibernate correctly</title>
+    <para>
+    Some computers are unable to suspend or hibernate correctly with Ubuntu. 
+    If this is the case for your computer, you may notice some of the following 
+    symptoms:
+    </para>
+    <itemizedlist>
+        <listitem>
+        <para>
+        The computer does not turn off after you click to hibernate it.
+        </para>
+        </listitem>
+        <listitem>
+        <para>
+        When you turn the computer on after hibernating it, your previously 
+        open programs are not restored.
+        </para>
+        </listitem>
+        <listitem>
+        <para>
+        The computer will not wake up after you have suspended it.
+        </para>
+        </listitem>
+        <listitem>
+        <para>
+        Certain programs or hardware devices stop working correctly after 
+        resuming from hibernation or waking-up from being suspended.
+        </para>
+        </listitem>
+    </itemizedlist>
+    <para>
+    If you suffer from any of these problems, you should report a bug to 
+    <ulink url="https://bugs.launchpad.net/ubuntu/+filebug">Launchpad</ulink>. 
+    The problems will hopefully be fixed in a subsequent version of Ubuntu. You 
+    may also like to see if the <link linkend="pm-general-method">General 
+    method for trying to get suspend and hibernate working</link> works for you.
+    </para>
+    <para>
+    If your hardware does not work properly after suspending or hibernating 
+    your computer, restart your computer and it should return to normal. If a 
+    program does not work properly, try closing the program and then starting 
+    it again.
+    </para>
+
+    <caution>
+    <para>
+    Make sure that you save all of your open documents before testing for 
+    suspend and hibernate problems.
+    </para>
+    </caution>
+
+<sect3 id="pm-general-method" status="review">
+    <title>General method for trying to get suspend and hibernate 
+    working</title>
+
+    <para>
+    You may be able to get suspend and hibernate working on your computer, but 
+    this can involve a lot of work. The method below should work for many 
+    computers. If it does not work for yours, please seek support using one of 
+    the many help and support channels for Ubuntu.
+    </para>
+
+    <procedure>
+    <step>
+    <para>
+    Download the <ulink url="http://people.freedesktop.org/~hughsient/quirk/quirk-suspend-debug.html">
+    Quirk Checker script</ulink> to your Home folder.
+    </para>
+    </step>
+    <step>
+    <para>
+    Find the <filename>quirk-checker.sh</filename> file in your Home folder, 
+    right-click it and select <guilabel>Properties</guilabel>. Select the 
+    <guilabel>Permissions</guilabel> tab, check <guilabel>Allow executing file 
+    as program</guilabel> and click <guibutton>Close</guibutton>.
+    </para>
+    </step>
+    <step>
+    <para>
+    Open a Terminal (&terminal;), type 
+    <userinput>./quirk-checker.sh</userinput> and press <keycap>Enter</keycap>.
+    </para>
+    </step>
+    <step>
+    <para>
+    Follow the suggestions that the script makes. These may involve editing 
+    important system files, so you should seek support if you are unsure of 
+    what you are doing.
+    </para>
+    </step>
+    </procedure>
+
+    <caution>
+    <para>
+    Before making the changes recommended by the Quirk Checker, create back-up 
+    copies of the files that you are going to change.
+    </para>
+    </caution>
+
+</sect3>
+</sect2>
+
+<sect2 id="pm-hibernate-pattern" status="review">
+    <title>Why do I get a strange pattern on the screen when I hibernate my 
+    computer?</title>
+    <para>
+    Your screen may show a black and white pattern just after you click to 
+    hibernate your computer. This is usually nothing to worry about and is just 
+    how the graphics cards of some computers respond to the initial stages of 
+    the hibernation process.
+    </para>
+    <para>
+    If the computer displays the pattern for a prolonged period of time without 
+    turning itself off then you may have a problem with hibernation. See 
+    <link linkend="pm-suspend-hibernate-fails">My computer does not suspend 
+    or hibernate correctly</link> for more information.
+    </para>
+</sect2>	
+	
+</sect1>
+
+
 <sect1 id="input-devices" status="review">
 	<title>Mice and keyboards</title>
 	<para>This section provides instructions on using and configuring mice, keyboards and other input devices to make them more comfortable for you to use.</para>

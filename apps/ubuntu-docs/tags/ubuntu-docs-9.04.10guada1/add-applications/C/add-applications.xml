@@ -15,21 +15,23 @@
 	<title>Adding, Removing and Updating Applications</title>
     	&legalnotice;
 	</articleinfo>
-	<para>In this section you can learn how to use a package manager to add or remove applications in Ubuntu with a few clicks. You can also learn about more advanced techniques of managing applications and discover some optional applications which you can add to Ubuntu.</para>
+	<para>This section discusses how applications are installed, removed and kept up to date. Also covered are how packages are stored by Ubuntu and made available for download.</para>
+	<para>It also covers some more advanced techniques for managing applications.</para>
 	<sect1 id="add-applications-introduction" status="review">
 		<title>What is a package manager?</title>
-		<para>A package manager is a program that installs and uninstalls software, and keeps track of all the components each piece of software needs.</para>
-		<para>To add or remove applications in Ubuntu, you need to use a <emphasis>package manager</emphasis>. It will automatically download the software required from the Internet and install it.</para>
-		<para>There are three main package managers you can use in Ubuntu:</para>
+		<para>A package manager is used to install, remove and upgrade software. Linux software often requires other programs to run - a package manager can also find, download and install these. Such programs are known as dependancies.</para>
+		<para>There are three main package management programs you can use in Ubuntu:</para>
 		<itemizedlist>
-			<listitem><para><link linkend="gnome-app-install"><application>Add/Remove Applications</application></link> - The easiest way to install and uninstall programs.</para></listitem>
-			<listitem><para><link linkend="synaptic"><application>Synaptic</application></link> - Advanced control of software and other system components.</para></listitem>
-			<listitem><para><link linkend="apt"><application>Apt</application></link> - If you prefer using the Terminal.</para></listitem>
+			<listitem><para><link linkend="gnome-app-install"><application>Add/Remove Applications</application></link> - Quickly installs and removes popular programs, as well as providing ratings.</para></listitem>
+			<listitem><para><link linkend="synaptic"><application>Synaptic</application></link> - Allows more advanced management, such as installing applications by task.</para></listitem>
+			<listitem><para><link linkend="apt"><application>Apt</application></link> - Allowing package management from the command line.</para></listitem>
 		</itemizedlist>
 		<note>
-			<para>If you open more than one of these programs at once, they may not work. Close them all and open just one.</para>
+			<para>These three methods all access the program to install software called dpkg. This means that if you try to open more than one, the new instance will not open.</para>
 		</note>
-		<para>You need administrative access to use any of these programs. See <ulink type="help" url="ghelp:administrative">Administrative Tasks</ulink> for more details.</para>
+		<note>
+			<para>Most package management tasks require administrative access, see (<ulink type="help" url="ghelp:administrative">Administrative Tasks</ulink> for more details.</para>
+		</note>
 	</sect1>
 	
 	<sect1 id="extra-repositories" status="review">
@@ -60,7 +62,7 @@
 			</step>
 			<step>
 				<para>Enter the <guilabel>APT line</guilabel> for the extra repository. This should be available from the website of the repository or similar, and should look similar to the following:</para>
-				<screen>deb http://ftp.debian.org etch main</screen>
+<screen>deb http://ftp.debian.org etch main</screen>
 			</step>
 			<step><para>Press <guibutton>Add Source</guibutton> and then click <guibutton>Close</guibutton> to save your changes.</para>
 			</step>
@@ -74,7 +76,7 @@
 	</sect1>
   <sect1 id="gnome-app-install" status="review">
 		<title>Add/Remove Applications</title>
-		<para>With the <guimenuitem>Add/Remove</guimenuitem> item in the <guimenu>Applications</guimenu> menu, you can install programs to do new things with Ubuntu. You can also remove programs you do not want. You need administrative access to use <application>Add/Remove Applications</application> (see <ulink type="help" url="ghelp:administrative">Administrative Tasks</ulink> for more details).</para>
+		<para>With the <guimenuitem>Add/Remove</guimenuitem> item in the <guimenu>Applications</guimenu> menu, you can install programs to do new things with Ubuntu. You can also remove programs which you do not want. You need administrative access to use <application>Add/Remove Applications</application> (see <ulink type="help" url="ghelp:administrative">Administrative Tasks</ulink> for more details).</para>
 		<para>If you know the name of a program you want to install, enter it in the <guilabel>Search</guilabel> field. Otherwise, begin by choosing a software category on the left.</para>
 		<para>Programs that are already installed have a check mark next to their name. Uncheck a program if you want to remove it from your computer.</para>
 		<para>When you click <guibutton>Apply Changes</guibutton>, any new software will be downloaded from the Internet, and Ubuntu will make any other changes you selected. If you have not activated the online package archive, you may be asked to insert your Ubuntu CD-ROM to install some packages.</para>
@@ -155,6 +157,10 @@
 	To remove a package:
 	<screen>sudo apt-get remove <replaceable>package</replaceable></screen>
       </para>
+      <para>
+	To remove a package and all its dependancies (that are not in use by other programs):
+	<screen>sudo apt-get autoremove <replaceable>package</replaceable></screen>
+      </para>      
       <para>
 	To list other <application>apt</application> commands and options:
 	<screen>apt-get help</screen>

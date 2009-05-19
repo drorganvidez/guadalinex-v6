@@ -33,8 +33,8 @@
     <sect1 id="jeos-initial-setup" status="review">
       <title>Initial Setup</title>
       <para>
-      At this point in time, JeOS is meant to run under VMWare Server, VMWare ESX, and KVM.  It may not work under other virtualization
-      technologies yet. It is assumed in this tutorial that you have already installed a VMWare or KVM environment. We also assume that
+      At this point in time, JeOS is meant to run under VMware Server, VMware ESX, and KVM.  It may not work under other virtualization
+      technologies yet. It is assumed in this tutorial that you have already installed a VMware or KVM environment. We also assume that
       you know how to use a text based text editor such as <application>nano</application> or <application>vi</application>. If you 
       have not used any of them before, you can get an overview of the various text editors available by reading the 
       <ulink url="https://help.ubuntu.com/community/PowerUsersTextEditors">PowerUsersTextEditors</ulink> page.
@@ -68,7 +68,7 @@
     <sect1 id="jeos-installation" status="review">
       <title>JeOS Installation</title>
       <para>
-      Installation of JeOS is done the same way you would install any other OS in VMWare/KVM, but here are a few thing to consider:
+      Installation of JeOS is done the same way you would install any other OS in VMware/KVM, but here are a few thing to consider:
       </para>
       <itemizedlist>
         <listitem>
@@ -92,7 +92,7 @@
       <sect2 id="jeos-defining-virtualmachine" status="review">
         <title>Defining the Virtual Machine</title>
         <para>
-	The following example is based on using VMWare server:
+	The following example is based on using VMware server:
         </para>
         <orderedlist>
           <listitem>
@@ -200,7 +200,7 @@
 	    </listitem>
           </itemizedlist>
         </sect3>
-        <sect3 id="jeos-partitioning" status="reveiw">
+        <sect3 id="jeos-partitioning" status="review">
           <title>Partitioning</title>
           <para>
           Partitioning of the virtual appliance will have to take into consideration what you are planning to do with is. 
@@ -209,7 +209,7 @@
           <filename>/var</filename> and <filename>/tmp</filename> partition would make sense. 
           </para>
         </sect3>
-        <sect3 id="jeos-user-password" status="reveiw">
+        <sect3 id="jeos-user-password" status="review">
           <title>User and Password</title>
           <para>
           Again setting up a virtual appliance, you will need to provide a default user and password that is generic so 
@@ -226,11 +226,11 @@
       <para>
       Once we are done with the initial installation of JeOS and our virtual machine is now waiting with a login prompt, 
       we now have to prepare our operating to accommodate our application. It is generally a good time to make a snapshot  
-      of your clean VMWare image, so that if a mistake is made later on, it will be possible to revert to a blank page 
+      of your clean VMware image, so that if a mistake is made later on, it will be possible to revert to a blank page 
       without having to reinstall everything.
       </para>
       <para>
-      The very first thing to do after install of the sytem is to check that it is up to date. This is done by running: 
+      The very first thing to do after install of the system is to check that it is up to date. This is done by running: 
       </para>
 <screen>
 <command>sudo apt-get update &amp;&amp; sudo apt-get upgrade</command>
@@ -238,7 +238,7 @@
       <sect2 id="joes-installing-vmwaretools" status="review">
         <title>Installing VMware Tools</title>
         <para>
-        VMWare Tools will allow to have a better control of our appliance by the VMware environment, so it is a pretty 
+        VMware Tools will allow to have a better control of our appliance by the VMware environment, so it is a pretty 
         good idea to set it up.
         </para>
         <itemizedlist>
@@ -284,8 +284,8 @@
           </listitem>
         </itemizedlist>
 	<para>
-        Also available for <application>VMWare</application> is the <application>open-vm-tools</application> package, an 
-        Open Source implementation of <application>VMWare Tools</application>.  If using <application>KVM</application> at this time
+        Also available for <application>VMware</application> is the <application>open-vm-tools</application> package, an 
+        Open Source implementation of <application>VMware Tools</application>.  If using <application>KVM</application> at this time
 	there is no equivalent package, however.
 	</para>
 	<para>
@@ -364,7 +364,7 @@
         </itemizedlist>
       </sect2>
     </sect1>
-    <sect1 id="jeos-installing-application" status="reveiw">
+    <sect1 id="jeos-installing-application" status="review">
       <title>Installing and Maintaining the Application</title>
       <para>
       In general this is a 4 step process:
@@ -446,7 +446,7 @@ mysql>
         <itemizedlist>
           <listitem>
             <para>
-	    Then we can create our user and exit the mysql monitor:
+	    Then we can create our user and exit the MySQL monitor:
             </para>
           </listitem> 
         </itemizedlist>
@@ -607,7 +607,7 @@ while ($i &lt; $cnt) {
       <itemizedlist>
         <listitem>
           <para>
-          Re-install openssh if the appliance can be accessed this way.
+          Re-install OpenSSH if the appliance can be accessed this way.
           </para>
         </listitem>
         <listitem>
@@ -659,13 +659,13 @@ echo "Thank you for choosing our sample-app appliance"
 echo "For the security of the appliance, we need you to change this user password now."
 passwd
 
-# Now change the mysql password
+# Now change the MySQL password
 echo "We now need you to specify a new MySQL root password"
 let done=0
 while [ $done -eq 0 ]; do
-  read -e -s -r -p "New mysql root password:" PASS1
+  read -e -s -r -p "New MySQL root password:" PASS1
   echo ""
-  read -e -s -r -p "Retype mysql root password:" PASS2
+  read -e -s -r -p "Retype MySQL root password:" PASS2
   if [[ "$PASS1" == "$PASS2" ]]; then
     let done=1
     #perform the actual change assuming that our initial password is default
@@ -675,7 +675,7 @@ while [ $done -eq 0 ]; do
   fi
 done
 
-#Perform the reinstall of openssh so that the key is regenerated
+#Perform the reinstall of OpenSSH so that the key is regenerated
 echo "We are now going to generate your ssh keys."
 sudo apt-get --purge -y remove openssh-server
 sudo apt-get install -y openssh-server
@@ -757,7 +757,7 @@ sudo apt-get install -y openssh-server
         </listitem>
         <listitem>
           <para>
-          In VMWare management console:
+          In VMware management console:
           </para>
           <itemizedlist>
             <listitem><para>Go to your virtual machine settings.</para></listitem>
@@ -780,7 +780,7 @@ sudo apt-get install -y openssh-server
       <itemizedlist>
         <listitem>
           <para>
-          IRC: #ubuntu-server on Freenode
+          IRC: #ubuntu-server on freenode
           </para>
         </listitem>
         <listitem>

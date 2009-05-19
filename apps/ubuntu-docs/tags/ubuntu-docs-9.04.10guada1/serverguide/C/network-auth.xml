@@ -101,7 +101,7 @@
 	</note>
 
 	<para>
-	LDAP directories can be populated with LDIF (Ldap Directory
+	LDAP directories can be populated with LDIF (LDAP Directory
 	Interchange Format) files. Copy the following example LDIF file, naming it
 	<filename>example.com.ldif</filename>, somewhere on your system:
 	</para>
@@ -324,13 +324,13 @@ syncrepl rid=123
 	<note>
 	  <para>
 	  This example uses the <emphasis>john</emphasis> user we created above to authenticate the sync process.  Be sure
-	  to use an account with sufficient priviliges.  Also, replace <emphasis role="italic">ldap://ldap01.example.com:389</emphasis>
+	  to use an account with sufficient privileges.  Also, replace <emphasis role="italic">ldap://ldap01.example.com:389</emphasis>
 	  with the appropriate host name.
 	  </para>
 	</note>
 
 	<para>
-	Now restart the consumer <application>slapd</application> deamon:
+	Now restart the consumer <application>slapd</application> daemon:
 	</para>
 <screen>
 <command>sudo /etc/init.d/slapd restart</command>

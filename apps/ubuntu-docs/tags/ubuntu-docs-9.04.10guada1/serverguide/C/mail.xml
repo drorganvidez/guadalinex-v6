@@ -177,7 +177,7 @@ sudo postconf -e 'myhostname = mail.example.com'
             <note>
             <para>
             After running all the commands, <application>Postfix</application> is configured for SMTP-AUTH 
-	    and a self-signed cerficiate has been created for TLS encryption.
+	    and a self-signed certificate has been created for TLS encryption.
             </para>
             </note>
             <para>
@@ -429,7 +429,7 @@ auth_debug_passwords=yes
         <sect2 id="exim4-configuration" status="review">
           <title>Configuration</title>
             <para>
-            To configure <application>exim4</application>, run the following command:
+            To configure <application>Exim4</application>, run the following command:
 	    </para>
 <screen>
 <command>sudo dpkg-reconfigure exim4-config</command>
@@ -437,7 +437,7 @@ auth_debug_passwords=yes
 	    <para>
             The user interface will be displayed. The user interface
             lets you configure many parameters. For example, In
-            <application>exim4</application> the configuration files are
+            <application>Exim4</application> the configuration files are
             split among multiple files. If you wish to have them in one
             file you can configure accordingly in this user interface.
             </para>
@@ -471,7 +471,7 @@ auth_debug_passwords=yes
             </warning>
 	    <para>
             You can run the following command to start
-            <application>exim4</application> daemon.
+            <application>Exim4</application> daemon.
 	    </para>
 <screen>
 <command>sudo /etc/init.d/exim4 start</command>
@@ -589,7 +589,7 @@ START=yes
             To configure <application>dovecot</application>, you can edit the file
             <filename>/etc/dovecot/dovecot.conf</filename>. You can
             choose the protocol you use. It could be pop3, pop3s (pop3
-            secure), imap and imaps (imap secure). A description of these protocols is beyond the scope of this guide. For further information, refer to the wikipedia articles on <ulink
+            secure), imap and imaps (imap secure). A description of these protocols is beyond the scope of this guide. For further information, refer to the Wikipedia articles on <ulink
             url="http://en.wikipedia.org/wiki/POP3">POP3</ulink> and
             <ulink
             url="http://en.wikipedia.org/wiki/Internet_Message_Access_Protocol">IMAP</ulink>.
@@ -610,7 +610,7 @@ protocols = pop3 pop3s imap imaps
             role="strong">mbox</emphasis> formats. These are the most
             commonly used mailbox formats. They both have their own
             benefits and are discussed on <ulink
-            url="http://wiki.dovecot.org/MailboxFormat">the dovecot website</ulink>.
+            url="http://wiki.dovecot.org/MailboxFormat">the Dovecot web site</ulink>.
             </para>
             <para>
             Once you have chosen your mailbox type, edit the file
@@ -877,10 +877,10 @@ lists.example.com      mailman:
 <command>sudo /etc/init.d/exim4 start</command>
 </screen>
 	      <para>
-In order to make mailman work with exim4, you need to configure exim4.
-As mentioned earlier, by default, exim4 uses multiple configuration
+In order to make mailman work with Exim4, you need to configure Exim4.
+As mentioned earlier, by default, Exim4 uses multiple configuration
 files of different types. For details, please refer to the <ulink
-url="http://www.exim.org">Exim</ulink> website.  To run mailman, we
+url="http://www.exim.org">Exim</ulink> web site.  To run mailman, we
 should add new a configuration file to the following configuration
 types: 
               <itemizedlist spacing="compact">
@@ -1216,7 +1216,7 @@ instructions in the email to subscribe.
 	     <title>ClamAV</title>
 	     <para>
    	     The default behaviour of <application>ClamAV</application> will fit our needs. 
- 	     For more Clamav configuration options, check the configuration files in 
+ 	     For more ClamAV configuration options, check the configuration files in 
 	     <filename>/etc/clamav</filename>.
 	     </para>
 	     <para>
@@ -1230,7 +1230,7 @@ instructions in the email to subscribe.
 	   <sect3 id="spamassassin-configuration" status="review">
 	     <title>Spamassassin</title>
 	     <para>
-	     Spamasssassin automatically detects optional components and will use them if they are present. This means that there is no need to 
+	     Spamassassin automatically detects optional components and will use them if they are present. This means that there is no need to 
 	     configure <application>pyzor</application> and <application>razor</application>.  
 	     </para>
 	     <para>
@@ -1404,7 +1404,7 @@ $log_level = 2;
 </programlisting>
 	     <note>
  	       <para>
-	       When the <application>Amavisd-new</application> log output is increased <application>Spamassassin</application> log ouput is also
+	       When the <application>Amavisd-new</application> log output is increased <application>Spamassassin</application> log output is also
 	       increased.
 	       </para>
 	     </note>

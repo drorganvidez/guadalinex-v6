@@ -57,7 +57,7 @@ hostname=$(hostname -s)
 archive_file="$hostname-$day.tgz"
 
 # Print start status message.
-echo "Backuping up $backup_files to $dest/$archive_file"
+echo "Backing up $backup_files to $dest/$archive_file"
 date
 echo
 
@@ -438,7 +438,7 @@ else
 fi
 
 # Print start status message.
-echo "Backuping up $backup_files to $dest/$archive_file"
+echo "Backing up $backup_files to $dest/$archive_file"
 date
 echo
 
@@ -458,7 +458,7 @@ ls -lh $dest/
       </para>
       <para> 
       It is good practice to take backup media off site in case of a disaster.  In the shell script example the backup 
-      media is another server providing an NFS share.  In all likelyhood taking the NFS server to another location would not
+      media is another server providing an NFS share.  In all likelihood taking the NFS server to another location would not
       be practical.  
       Depending upon connection speeds it may be an option to copy the archive file over a WAN link to a server in another location.
       </para>
@@ -497,7 +497,7 @@ backup_files="/home /var/spool/mail /etc /root /boot /opt"
 dest="/dev/st0"
 
 # Print start status message.
-echo "Backuping up $backup_files to $dest"
+echo "Backing up $backup_files to $dest"
 date
 echo
 
@@ -694,7 +694,7 @@ Device {
         </listitem>
         <listitem>
           <para>
-          After editing <filename>/etc/bacula/bacula-sd.conf</filename> the <application>Storage</application> deamon will need to be 
+          After editing <filename>/etc/bacula/bacula-sd.conf</filename> the <application>Storage</application> daemon will need to be 
           restarted:
           </para>
 <screen>

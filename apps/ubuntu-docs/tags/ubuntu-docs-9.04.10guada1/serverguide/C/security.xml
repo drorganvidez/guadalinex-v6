@@ -331,7 +331,7 @@ AllowGroups sshlogin
 	</para>
 
    <sect2 id="disable-ctrl-alt-delete" status="review">
-	<title>Disable CTRL+ALT+Delete</title>
+	<title>Disable Ctrl+Alt+Delete</title>
 	<para>
 	First and foremost, anyone that has physical access to the keyboard can simply use the <keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap><keycap>Delete</keycap></keycombo> key combination to reboot the server without having to log on.  Sure, someone could simply unplug the power source, but you should still prevent the use of this key combination on a production server.  This forces an attacker to take more drastic measures to reboot the server, and will prevent accidental reboots at the same time.
 	</para>
@@ -367,7 +367,7 @@ AllowGroups sshlogin
 		</listitem>
 		</itemizedlist>
 	<para>
-	You can prevent these actions by adding a password to grub's configuration file of <filename>/boot/grub/menu.lst</filename>, which will be required to unlock grub's more advanced features prior to use.
+	You can prevent these actions by adding a password to GRUB's configuration file of <filename>/boot/grub/menu.lst</filename>, which will be required to unlock GRUB's more advanced features prior to use.
 	</para>
 		<itemizedlist>
 	  	<listitem>
@@ -1073,7 +1073,7 @@ sudo iptables -A INPUT -m state --state NEW -p tcp --dport 80 -j LOG --log-prefi
 		  <itemizedlist>
 		    <listitem>
 		      <para>
-		      Include your test plan and testcases.
+		      Include your test plan and test cases.
   		      </para>
 		    </listitem>
 		    <listitem>

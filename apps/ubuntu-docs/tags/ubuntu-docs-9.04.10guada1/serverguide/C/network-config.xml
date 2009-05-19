@@ -32,8 +32,8 @@
       <sect2 id="ethernet" status="review">
         <title>Ethernet</title> 
           <para>
-	  Most ethernet configuration is centralized in a single file,
-	  <filename>/etc/network/interfaces</filename>.  If you have no ethernet devices, 
+	  Most Ethernet configuration is centralized in a single file,
+	  <filename>/etc/network/interfaces</filename>.  If you have no Ethernet devices, 
 	  only the loopback interface will appear in this file, and it will look something
 	  like this:
 	  </para>
@@ -48,7 +48,7 @@ address 127.0.0.1
 netmask 255.0.0.0
 </programlisting>
 	  <para>
-	  If you have only one ethernet device, eth0, and it gets its configuration from a
+	  If you have only one Ethernet device, eth0, and it gets its configuration from a
 	  DHCP server, and it should come up automatically at boot, only two additional 
 	  lines are required:
 	  </para>
@@ -70,7 +70,7 @@ iface eth0 inet dhcp
 	  <filename>/etc/resolv.conf</filename> file.)
 	  </para>
 	  <para>
-	  To configure your ethernet device with a static IP address and custom 
+	  To configure your Ethernet device with a static IP address and custom 
 	  configuration, some more information will be required.  Suppose you want to 
 	  assign the IP address	192.168.0.2 to the device eth1, with the typical netmask 
 	  of 255.255.255.0.  Your default gateway's IP address is 192.168.0.1.  You would 
@@ -198,8 +198,8 @@ nameserver 208.185.179.218
             The two protocol components of TCP/IP deal with different aspects of computer networking.
             <emphasis>Internet Protocol</emphasis>, the "IP" of TCP/IP is a 
 			connectionless protocol which deals only with network packet routing using the <emphasis 
-			role="italics">IP datagram</emphasis> as the basic unit of networking information.  The 
-			IP datagram consists of a header followed by a message.  The <emphasis>
+			role="italics">IP Datagram</emphasis> as the basic unit of networking information.  The 
+			IP Datagram consists of a header followed by a message.  The <emphasis>
 			Transmission Control Protocol</emphasis> is the "TCP" of TCP/IP and enables network hosts 
 			to establish connections which may be used to exchange data streams.  TCP also guarantees 
 			that the data between connections is delivered and that it arrives at one network host in 
@@ -288,7 +288,7 @@ nameserver 208.185.179.218
                   Nameserver. In order for your system to be able to resolve network hostnames into their
                   corresponding IP addresses, you must specify valid Nameserver Addresses which you are authorized to use
                   in your system's TCP/IP configuration.  In many cases these addresses can and will be provided by your
-                  network service provider, but many free and publicly accessible Nameservers are available for use, such as
+                  network service provider, but many free and publicly accessible nameservers are available for use, such as
                   the Level3 (Verizon) servers with IP addresses from
                   4.2.2.1 to 4.2.2.6. </para>
                      <tip>
@@ -569,7 +569,7 @@ This page describes methods for keeping your computer's time accurate. This is u
 NTP is a TCP/IP protocol for synchronising time over a network. Basically a client requests the current time from a server, and uses it to set its own clock.  
 </para>
 	<para>
-Behind this simple description, there is a lot of complexity - there are tiers of NTP servers, with the tier one NTP servers connected to atomic clocks (often via GPS), and tier two and three servers spreading the load of actually handling requests across the internet. Also the client software is a lot more complex than you might think - it has to factor out communication delays, and adjust the time in a way that does not upset all the other processes that run on the server. But luckily all that complexity is hidden from you! 
+Behind this simple description, there is a lot of complexity - there are tiers of NTP servers, with the tier one NTP servers connected to atomic clocks (often via GPS), and tier two and three servers spreading the load of actually handling requests across the Internet. Also the client software is a lot more complex than you might think - it has to factor out communication delays, and adjust the time in a way that does not upset all the other processes that run on the server. But luckily all that complexity is hidden from you! 
 </para>
 	<para>
 Ubuntu has two ways of automatically setting your time: ntpdate and ntpd. 

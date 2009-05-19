@@ -152,13 +152,21 @@
        line:
        </para>
 
-<programlisting>data_dir = '/org/moin/mywiki/data'</programlisting>
+<programlisting>data_dir = '/org/mywiki/data'</programlisting>
 
        <para>
        to
        </para>
 
 <programlisting>data_dir = '/usr/share/moin/mywiki/data'</programlisting>
+
+       <para>
+       Also, below the <emphasis>data_dir</emphasis> option add the <emphasis>data_underlay_dir</emphasis>:
+       </para>
+
+<programlisting>
+data_underlay_dir='/usr/share/moin/mywiki/underlay'
+</programlisting>
 
        <note>
          <para>
@@ -194,7 +202,7 @@
 <programlisting>
 ### moin
   ScriptAlias /mywiki "/usr/share/moin/mywiki/moin.cgi"
-  alias /wiki "/usr/share/moin/htdocs"
+  alias /moin_static181 "/usr/share/moin/htdocs"
   &lt;Directory /usr/share/moin/htdocs&gt;
   Order allow,deny
   allow from all

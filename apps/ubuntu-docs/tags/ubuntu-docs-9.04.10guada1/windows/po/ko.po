@@ -7,22 +7,22 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-08-03 16:01+0100\n"
-"PO-Revision-Date: 2008-10-09 07:12+0000\n"
-"Last-Translator: Namhyung Kim <namhyung@gmail.com>\n"
+"POT-Creation-Date: 2009-03-26 16:35+0000\n"
+"PO-Revision-Date: 2009-03-15 15:57+0000\n"
+"Last-Translator: Shin Hungjae <f9mbfxzcdve8@gmail.com>\n"
 "Language-Team: Korean <ko@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2008-10-19 12:17+0000\n"
+"X-Launchpad-Export-Date: 2009-04-01 10:49+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: windows/C/windows-C.omf:6(creator) windows/C/windows-C.omf:7(maintainer)
 msgid "ubuntu-doc@lists.ubuntu.com (Ubuntu Documentation Project)"
 msgstr "ubuntu-doc@lists.ubuntu.com (우분투 문서화 프로젝트)"
 
-#: windows/C/windows-C.omf:8(title)
-msgid "If you've been using Windows"
+#: windows/C/windows-C.omf:8(title) windows/C/windows.xml:15(title)
+msgid "If you have been using Windows"
 msgstr "Windows를 사용해 오셨다면"
 
 #: windows/C/windows-C.omf:9(date)
@@ -32,10 +32,6 @@ msgstr "2006년 9월 7일"
 #: windows/C/windows-C.omf:11(description)
 msgid "Placeholder."
 msgstr "Placeholder."
-
-#: windows/C/windows.xml:15(title)
-msgid "If you have been using Windows"
-msgstr "Windows를 사용해 오셨다면"
 
 #: windows/C/windows.xml:3(title)
 msgid "Credits and License"
@@ -47,6 +43,9 @@ msgid ""
 "(https://wiki.ubuntu.com/DocumentationTeam). For a list of contributors, see "
 "the <ulink url=\"../../libs/C/contributors.xml\">contributors page</ulink>"
 msgstr ""
+"이 문서는 우분투 문서 팀(https://wiki.ubuntu.com/DocumentationTeam)에서 관리합니다. 공헌자 목록은 "
+"다음을 보세요 <ulink url=\"../../libs/C/contributors.xml\">contributors "
+"page</ulink>."
 
 #: windows/C/windows.xml:5(para)
 msgid ""
@@ -77,10 +76,12 @@ msgid ""
 "A copy of the license is available here: <ulink url=\"/usr/share/ubuntu-"
 "docs/libs/C/ccbysa.xml\">Creative Commons ShareAlike License</ulink>."
 msgstr ""
+"인증서 복사는 다음에서 하십시요: <ulink url=\"/usr/share/ubuntu-"
+"docs/libs/C/ccbysa.xml\">Creative Commons ShareAlike License</ulink>."
 
 #: windows/C/windows.xml:14(year)
 msgid "2008"
-msgstr ""
+msgstr "2008"
 
 #: windows/C/windows.xml:15(ulink)
 msgid "Ubuntu Documentation Project"
@@ -562,24 +563,23 @@ msgstr ""
 msgid ""
 "A black screen called <application>Command Prompt</application> will appear. "
 "Into the screen, type <screen>ipconfig /all</screen> and press "
-"<keycap>Return</keycap>. This will list a set of network settings for each "
-"of the networking devices you have installed. You may have one or several "
+"<keycap>Enter</keycap>. This will list a set of network settings for each of "
+"the networking devices you have installed. You may have one or several "
 "networking devices."
 msgstr ""
-"<application>커맨드 프롬프트</application>라고 부르는 검은 화면이 나타날 것입니다. 이 화면 안에서 "
-"<screen>ipconfig /all</screen>을 입력하고 <keycap>Enter</keycap> 키를 누릅니다. 이 명령은 "
-"여러분이 설치한 각 네트워크 장치들에 대한 네트워크 설정 정보들을 보여줄 것입니다. 여러분은 적어도 하나 이상의 네트워크 장치를 가지고 "
-"있을 것입니다."
+"<application>명령 입력기</application>에서 검은화면이 나타날때, 화면에 <screen>ipconfig "
+"/all</screen>를 입력하고 <keycap>Enter</keycap>를 누르세요. 설치된 네트워크 장치 각각의 네트워크 설정이 "
+"나열될것입니다. 한개이상을 네트워크장치를 가지고 있는것입니다."
 
 #: windows/C/preparing.xml:153(para)
 msgid ""
 "Now, type <screen>ipconfig /all &gt; C:\\network_settings.txt</screen> and "
-"then press <keycap>Return</keycap>. This will store the settings you have "
+"then press <keycap>Enter</keycap>. This will store the settings you have "
 "just seen in the file <filename>C:\\network_settings.txt</filename>."
 msgstr ""
-"이제 <screen>ipconfig /all &gt; C:\\network_settings.txt</screen>를 입력하고 "
-"<keycap>Enter</keycap> 키를 누릅니다. 이 명령은 네트워크 설정 정보를 여러분이 입력한 <filename>C:\\"
-"network_settings.txt</filename> 파일에 기록할 것입니다."
+"<screen>ipconfig /all &gt; C:\\network_settings.txt</screen>를 입력하고 "
+"<keycap>Enter</keycap>를 누르세요. <filename>C:\\network_settings.txt</filename>에 "
+"금방 나열된 설정이 저장됩니다."
 
 #: windows/C/preparing.xml:154(para)
 msgid ""
@@ -842,14 +842,13 @@ msgstr "이메일과 메일 계정 설정"
 #: windows/C/preparing.xml:231(para)
 msgid ""
 "You can use the same email account in Ubuntu as you have done in Windows. If "
-"you have a Web-based email account, then you should simply be able to access "
-"it using the a web browser as you would have done in Windows. Otherwise, "
-"please note down the following information so that you can re-create your "
-"account settings on Ubuntu:"
+"you have a web-based email account you should simply be able to access it "
+"using a web browser as you would have done in Windows. Otherwise, please "
+"note down the following information so that you can re-create your account "
+"settings on Ubuntu:"
 msgstr ""
-"여러분은 윈도우즈에서 이용하던 이메일 계정을 우분투에서도 그대로 사용할 수 있습니다. 만약 웹 기반의 이메일 계정을 가지고 있다면, 웹 "
-"브라우저를 통해 윈도우즈에서 이용하던 것과 동일하게 이용할 수 있습니다. 그렇지 않다면 다음 정보들을 메모하여, 우분투에서도 여러분의 "
-"계정 설정을 다시 생성할 수 있습니다."
+"윈도우에서 처럼 우분투에서도 동일한 전자메일계정을 사용할 수 있습니다. 웹기반 전자메일 계정을 가지고 있으면 윈도우처럼 웹브라우즈를 "
+"사용해서 쉽게 접속할 수 있습니다. 그렇지 않으면 다음 정보를 기록해 두고 우분투에서 계정정보를  새로 만들 수 있습니다."
 
 #: windows/C/preparing.xml:233(para)
 msgid "Email address"
@@ -2177,25 +2176,21 @@ msgstr "로그오프"
 #: windows/C/glossary.xml:69(para)
 msgid ""
 "To close all your programs and leave the computer ready for someone else to "
-"log in, choose "
-"<menuchoice><guimenu>System</guimenu><guimenuitem>Quit...</guimenuitem></menu"
-"choice>, then <guilabel>Log Out</guilabel>."
+"log in, click the <application>User Switcher</application> in the top right "
+"hand corner of the screen and then press <guibutton>Log out</guibutton>."
 msgstr ""
-"실행 중인 모든 프로그램을 종료하고 다른 사람이 컴퓨터를 사용할 수 있게 하려면, "
-"<menuchoice><guimenu>시스템</guimenu><guimenuitem>끝내기...</guimenuitem></menuchoi"
-"ce> 를 선택하고 <guilabel>로그아웃</guilabel> 을 누릅니다."
 
-#: windows/C/glossary.xml:77(glossterm)
+#: windows/C/glossary.xml:78(glossterm)
 msgid "My Computer"
 msgstr "내 컴퓨터"
 
-#: windows/C/glossary.xml:79(para)
+#: windows/C/glossary.xml:80(para)
 msgid ""
 "Equivalent items to those in the <quote>My Computer</quote> window are found "
 "in various places in Ubuntu."
 msgstr "<quote>내 컴퓨터</quote>에 해당하는 항목들은 우분투 내의 여러 곳에서 찾을 수 있습니다."
 
-#: windows/C/glossary.xml:85(para)
+#: windows/C/glossary.xml:86(para)
 msgid ""
 "To see the disks and storage devices connected to the computer, choose "
 "<menuchoice><guimenu>Places</guimenu><guimenuitem>Computer</guimenuitem></men"
@@ -2205,11 +2200,11 @@ msgstr ""
 "<menuchoice><guimenu>위치</guimenu><guimenuitem>컴퓨터</guimenuitem></menuchoice>를"
 " 선택하십시오."
 
-#: windows/C/glossary.xml:100(glossterm)
+#: windows/C/glossary.xml:101(glossterm)
 msgid "My Documents"
 msgstr "내 문서"
 
-#: windows/C/glossary.xml:102(para)
+#: windows/C/glossary.xml:103(para)
 msgid ""
 "Inside your home folder "
 "(<menuchoice><guimenu>Places</guimenu><guimenuitem>Home "
@@ -2219,11 +2214,11 @@ msgstr ""
 "여러분의 홈 폴더 (<menuchoice><guimenu>위치</guimenu><guimenuitem>내 "
 "폴더</guimenuitem></menuchoice>) 내에서는 여러 가지 문서나 파일들을 관리할 수 있습니다."
 
-#: windows/C/glossary.xml:110(glossterm)
+#: windows/C/glossary.xml:111(glossterm)
 msgid "Printers &amp; Faxes"
 msgstr "프린터와 팩스"
 
-#: windows/C/glossary.xml:112(para)
+#: windows/C/glossary.xml:113(para)
 msgid ""
 "Open "
 "<menuchoice><guimenu>System</guimenu><guimenuitem>Administration</guimenuitem"
@@ -2234,11 +2229,11 @@ msgstr ""
 "<menuchoice><guimenu>시스템</guimenu><guimenuitem>관리</guimenuitem><guimenuitem>P"
 "rinting</guimenuitem></menuchoice>을 누릅니다. 우분투는 팩스를 지원하지 않습니다."
 
-#: windows/C/glossary.xml:118(glossterm)
+#: windows/C/glossary.xml:119(glossterm)
 msgid "Recycle Bin"
 msgstr "휴지통"
 
-#: windows/C/glossary.xml:120(para)
+#: windows/C/glossary.xml:121(para)
 msgid ""
 "The <guilabel>Trash</guilabel> works much the same way as the Recycle Bin. "
 "The Trash is almost always at the bottom right corner of the screen."
@@ -2246,30 +2241,24 @@ msgstr ""
 "우분투의 <guilabel>휴지통</guilabel>은 윈도우즈의 휴지통과 매우 비슷하게 동작합니다. 휴지통은 거의 항상 화면의 오른쪽 "
 "아래에 있습니다."
 
-#: windows/C/glossary.xml:128(glossterm)
+#: windows/C/glossary.xml:129(glossterm)
 msgid "Standby"
 msgstr "대기 모드"
 
-#: windows/C/glossary.xml:130(para)
+#: windows/C/glossary.xml:131(para)
 msgid ""
 "To put your computer into a power-saving mode until you resume using it, "
-"choose "
-"<menuchoice><guimenu>System</guimenu><guimenuitem>Quit...</guimenuitem></menu"
-"choice>, then <guilabel>Suspend</guilabel> or "
+"click the <application>User Switcher</application> in the top right hand "
+"corner of the screen, then <guilabel>Suspend</guilabel> or "
 "<guilabel>Hibernate</guilabel>. (<guilabel>Hibernate</guilabel> requires no "
 "power at all, but is slower, and is not available on some types of computer.)"
 msgstr ""
-"다음에 사용할 때까지 컴퓨터를 절전 모드에 두려면, "
-"<menuchoice><guimenu>시스템</guimenu><guimenuitem>끝내기...</guimenuitem></menuchoi"
-"ce> 를 선택하고 <guilabel>절전 모드</guilabel> 혹은 <guilabel>최대절전</guilabel> 을 누릅니다. "
-"(<guilabel>최대절전</guilabel> 은 전원을 전혀 필요로 하지 않지만 더 느리고, 어떤 종류의 컴퓨터에서는 동작하지 "
-"않습니다.)"
 
-#: windows/C/glossary.xml:140(glossterm)
+#: windows/C/glossary.xml:142(glossterm)
 msgid "Start button"
 msgstr "시작 버튼"
 
-#: windows/C/glossary.xml:142(para)
+#: windows/C/glossary.xml:144(para)
 msgid ""
 "The three menus at the top left of the screen "
 "&mdash;<guimenu>Applications</guimenu>, <guimenu>Places</guimenu>, and "
@@ -2279,11 +2268,11 @@ msgstr ""
 "화면의 왼쪽 위에 있는 세 가지 메뉴들&mdash;<guimenu>프로그램</guimenu>, <guimenu>위치</guimenu>, "
 "<guimenu>시스템</guimenu>&mdash;은 윈도우즈의 시작 메뉴에서 하는 대부분의 작업들을 수행합니다."
 
-#: windows/C/glossary.xml:151(glossterm)
+#: windows/C/glossary.xml:153(glossterm)
 msgid "Task Manager"
 msgstr "작업 관리자"
 
-#: windows/C/glossary.xml:153(para)
+#: windows/C/glossary.xml:155(para)
 msgid ""
 "To see or halt currently running programs, or to track processor and memory "
 "usage, choose "
@@ -2294,11 +2283,11 @@ msgstr ""
 "<menuchoice><guimenu>시스템</guimenu><guisubmenu>관리</guisubmenu><guimenuitem>시스템"
 " 감시</guimenuitem></menuchoice>를 누르십시오."
 
-#: windows/C/glossary.xml:160(glossterm)
+#: windows/C/glossary.xml:162(glossterm)
 msgid "Windows Media Player"
 msgstr "Windows Media Player"
 
-#: windows/C/glossary.xml:162(para)
+#: windows/C/glossary.xml:164(para)
 msgid ""
 "Programs that play music and movies, and rip music CDs, are available from "
 "<menuchoice><guimenu>Applications</guimenu><guimenuitem>Sound &amp; "
@@ -2308,11 +2297,11 @@ msgstr ""
 "<menuchoice><guimenu>프로그램</guimenu><guimenuitem>음악과 "
 "비디오</guimenuitem></menuchoice> 메뉴에서 찾을 수 있습니다."
 
-#: windows/C/glossary.xml:169(glossterm)
+#: windows/C/glossary.xml:171(glossterm)
 msgid "Windows Update"
 msgstr "Windows Update"
 
-#: windows/C/glossary.xml:171(para)
+#: windows/C/glossary.xml:173(para)
 msgid ""
 "To check for updates to Ubuntu, open "
 "<menuchoice><guimenu>System</guimenu><guimenuitem>Administration</guimenuitem"
@@ -2347,7 +2336,72 @@ msgstr ""
 "Launchpad Contributions:\n"
 "  DasomOLI https://launchpad.net/~dasomoli\n"
 "  Jason Kim https://launchpad.net/~kineticflow\n"
-"  Namhyung Kim https://launchpad.net/~namhyung"
+"  Namhyung Kim https://launchpad.net/~namhyung\n"
+"\n"
+"Launchpad Contributions:\n"
+"  DasomOLI https://launchpad.net/~dasomoli\n"
+"  Jason Kim https://launchpad.net/~kineticflow\n"
+"  Namhyung Kim https://launchpad.net/~namhyung\n"
+"  Shin Hungjae https://launchpad.net/~fplive"
+
+#~ msgid "If you've been using Windows"
+#~ msgstr "Windows를 사용해 오셨다면"
+
+#~ msgid ""
+#~ "A black screen called <application>Command Prompt</application> will appear. "
+#~ "Into the screen, type <screen>ipconfig /all</screen> and press "
+#~ "<keycap>Return</keycap>. This will list a set of network settings for each "
+#~ "of the networking devices you have installed. You may have one or several "
+#~ "networking devices."
+#~ msgstr ""
+#~ "<application>커맨드 프롬프트</application>라고 부르는 검은 화면이 나타날 것입니다. 이 화면 안에서 "
+#~ "<screen>ipconfig /all</screen>을 입력하고 <keycap>Enter</keycap> 키를 누릅니다. 이 명령은 "
+#~ "여러분이 설치한 각 네트워크 장치들에 대한 네트워크 설정 정보들을 보여줄 것입니다. 여러분은 적어도 하나 이상의 네트워크 장치를 가지고 "
+#~ "있을 것입니다."
+
+#~ msgid ""
+#~ "Now, type <screen>ipconfig /all &gt; C:\\network_settings.txt</screen> and "
+#~ "then press <keycap>Return</keycap>. This will store the settings you have "
+#~ "just seen in the file <filename>C:\\network_settings.txt</filename>."
+#~ msgstr ""
+#~ "이제 <screen>ipconfig /all &gt; C:\\network_settings.txt</screen>를 입력하고 "
+#~ "<keycap>Enter</keycap> 키를 누릅니다. 이 명령은 네트워크 설정 정보를 여러분이 입력한 <filename>C:\\"
+#~ "network_settings.txt</filename> 파일에 기록할 것입니다."
+
+#~ msgid ""
+#~ "You can use the same email account in Ubuntu as you have done in Windows. If "
+#~ "you have a Web-based email account, then you should simply be able to access "
+#~ "it using the a web browser as you would have done in Windows. Otherwise, "
+#~ "please note down the following information so that you can re-create your "
+#~ "account settings on Ubuntu:"
+#~ msgstr ""
+#~ "여러분은 윈도우즈에서 이용하던 이메일 계정을 우분투에서도 그대로 사용할 수 있습니다. 만약 웹 기반의 이메일 계정을 가지고 있다면, 웹 "
+#~ "브라우저를 통해 윈도우즈에서 이용하던 것과 동일하게 이용할 수 있습니다. 그렇지 않다면 다음 정보들을 메모하여, 우분투에서도 여러분의 "
+#~ "계정 설정을 다시 생성할 수 있습니다."
+
+#~ msgid ""
+#~ "To close all your programs and leave the computer ready for someone else to "
+#~ "log in, choose "
+#~ "<menuchoice><guimenu>System</guimenu><guimenuitem>Quit...</guimenuitem></menu"
+#~ "choice>, then <guilabel>Log Out</guilabel>."
+#~ msgstr ""
+#~ "실행 중인 모든 프로그램을 종료하고 다른 사람이 컴퓨터를 사용할 수 있게 하려면, "
+#~ "<menuchoice><guimenu>시스템</guimenu><guimenuitem>끝내기...</guimenuitem></menuchoi"
+#~ "ce> 를 선택하고 <guilabel>로그아웃</guilabel> 을 누릅니다."
+
+#~ msgid ""
+#~ "To put your computer into a power-saving mode until you resume using it, "
+#~ "choose "
+#~ "<menuchoice><guimenu>System</guimenu><guimenuitem>Quit...</guimenuitem></menu"
+#~ "choice>, then <guilabel>Suspend</guilabel> or "
+#~ "<guilabel>Hibernate</guilabel>. (<guilabel>Hibernate</guilabel> requires no "
+#~ "power at all, but is slower, and is not available on some types of computer.)"
+#~ msgstr ""
+#~ "다음에 사용할 때까지 컴퓨터를 절전 모드에 두려면, "
+#~ "<menuchoice><guimenu>시스템</guimenu><guimenuitem>끝내기...</guimenuitem></menuchoi"
+#~ "ce> 를 선택하고 <guilabel>절전 모드</guilabel> 혹은 <guilabel>최대절전</guilabel> 을 누릅니다. "
+#~ "(<guilabel>최대절전</guilabel> 은 전원을 전혀 필요로 하지 않지만 더 느리고, 어떤 종류의 컴퓨터에서는 동작하지 "
+#~ "않습니다.)"
 
 #~ msgid ""
 #~ "This document is maintained by the Ubuntu documentation team "

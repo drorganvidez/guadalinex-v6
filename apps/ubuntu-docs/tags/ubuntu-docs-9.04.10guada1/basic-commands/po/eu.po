@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-docs\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2008-10-12 20:18+0100\n"
-"PO-Revision-Date: 2008-04-23 23:22+0000\n"
+"POT-Creation-Date: 2009-03-26 16:34+0000\n"
+"PO-Revision-Date: 2009-01-13 03:41+0000\n"
 "Last-Translator: Launchpad Translations Administrators "
 "<rosetta@launchpad.net>\n"
 "Language-Team: Basque <eu@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2008-10-19 12:44+0000\n"
+"X-Launchpad-Export-Date: 2009-04-01 11:05+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: basic-commands/C/basic-commands-C.omf:6(creator) basic-commands/C/basic-commands-C.omf:7(maintainer)
@@ -23,8 +23,8 @@ msgid "ubuntu-doc@lists.ubuntu.com (Ubuntu Documentation Project)"
 msgstr "ubuntu-doc@lists.ubuntu.com (Ubuntu Dokumentatzeko Proiektua)"
 
 #: basic-commands/C/basic-commands-C.omf:8(title) basic-commands/C/basic-commands.xml:13(title)
-msgid "Basic Commands"
-msgstr "Oinarrizko Aginduak"
+msgid "Using the Command Line"
+msgstr ""
 
 #: basic-commands/C/basic-commands-C.omf:9(date)
 msgid "2006-09-07"
@@ -44,6 +44,10 @@ msgid ""
 "(https://wiki.ubuntu.com/DocumentationTeam). For a list of contributors, see "
 "the <ulink url=\"../../libs/C/contributors.xml\">contributors page</ulink>"
 msgstr ""
+"Dokumentu hau Ubuntu documentation team-ek "
+"(https://wiki.ubuntu.com/DocumentationTeam) mantentzen du. Laguntzaile "
+"zerrenda <ulink url=\"../../libs/C/contributors.xml\">laguntzaile "
+"orrian</ulink> ikus dezakezu"
 
 #: basic-commands/C/basic-commands.xml:5(para)
 msgid ""
@@ -78,10 +82,12 @@ msgid ""
 "A copy of the license is available here: <ulink url=\"/usr/share/ubuntu-"
 "docs/libs/C/ccbysa.xml\">Creative Commons ShareAlike License</ulink>."
 msgstr ""
+"Lizentziaren kopia dago eskuragarri hemen: <ulink url=\"/usr/share/ubuntu-"
+"docs/libs/C/ccbysa.xml\">Creative Commons ShareAlike License</ulink>."
 
 #: basic-commands/C/basic-commands.xml:14(year)
 msgid "2008"
-msgstr ""
+msgstr "2008"
 
 #: basic-commands/C/basic-commands.xml:15(ulink)
 msgid "Ubuntu Documentation Project"
@@ -465,15 +471,15 @@ msgstr "lsb_release"
 
 #: basic-commands/C/basic-commands.xml:292(para)
 msgid ""
-"The <emphasis role=\"strong\">lsb_release</emphasis> command with the "
-"<emphasis role=\"strong\">-a</emphasis> option prints version information "
-"for the Linux release you're running. For example, typing: "
-"<screen>lsb_release -a</screen> will give you: <screen>\n"
+"The <command>lsb_release</command> command with the <emphasis "
+"role=\"strong\">-a</emphasis> option prints version information for the "
+"Linux release you're running. For example, typing: <screen>lsb_release -"
+"a</screen> will give you: <screen>\n"
 "No LSB modules are available.\n"
 "Distributor ID: Ubuntu\n"
-"Description:    Ubuntu 8.10 \n"
-"Release:        8.10\n"
-"Codename:       intrepid</screen>"
+"Description:    Ubuntu 9.04 \n"
+"Release:        9.04\n"
+"Codename:       jaunty</screen>"
 msgstr ""
 
 #: basic-commands/C/basic-commands.xml:311(title)
@@ -691,40 +697,49 @@ msgstr ""
 "gnome</screen><placeholder-1/>"
 
 #: basic-commands/C/basic-commands.xml:468(title)
+msgid "Cutting and pasting"
+msgstr ""
+
+#: basic-commands/C/basic-commands.xml:469(para)
+msgid ""
+"Often, you will be referred to instructions that require commands to be "
+"pasted into the terminal."
+msgstr ""
+
+#: basic-commands/C/basic-commands.xml:471(para)
+msgid ""
+"You might be wondering why the text you've copied from a web page using "
+"<keycombo><keycap>Ctrl</keycap><keycap>C</keycap></keycombo> won't paste in "
+"with <keycombo><keycap>Ctrl</keycap><keycap>V</keycap></keycombo>, the shell "
+"uses a different combination for paste "
+"<keycombo><keycap>Shift</keycap><keycap>Insert</keycap></keycombo>. This can "
+"also be done using the mouse, by right-clicking in the terminal and clicking "
+"<menuchoice><guimenuitem>Paste</guimenuitem></menuchoice> from the menu."
+msgstr ""
+
+#: basic-commands/C/basic-commands.xml:479(para)
+msgid ""
+"You can also select the required commands in your web browser and then "
+"subsequently click the middle button on your mouse (or simply click buttons "
+"simultaneously on a two-button mouse) in the terminal to paste in the select "
+"command."
+msgstr ""
+
+#: basic-commands/C/basic-commands.xml:483(para)
+msgid ""
+"These actions may mean something entirely different to other terminal "
+"emulators. Consult your emulator's documentation for details."
+msgstr ""
+
+#: basic-commands/C/basic-commands.xml:488(title)
 msgid "Other Useful Things"
 msgstr "Beste Gauza Erabilgarri Batzuk"
 
-#: basic-commands/C/basic-commands.xml:471(title)
-msgid "Pasting in commands"
-msgstr "Aginduak itsastea"
-
-#: basic-commands/C/basic-commands.xml:472(para)
-msgid ""
-"Often, you will be referred to instructions that require commands to be "
-"pasted into the terminal. You might be wondering why the text you've copied "
-"from a web page using "
-"<keycombo><keycap>Ctrl</keycap><keycap>C</keycap></keycombo> won't paste in "
-"with <keycombo><keycap>Ctrl</keycap><keycap>V</keycap></keycombo>. Surely "
-"you don't have to type in all those nasty commands and filenames? Relax. "
-"Middle Button Click on your mouse (both buttons simultaneously on a two-"
-"button mouse) or Right Click and select "
-"<menuchoice><guimenuitem>Paste</guimenuitem></menuchoice> from the menu."
-msgstr ""
-"Askotan, jasoko dituzun argibideak jarraitzeko, aginduak itsatsi beharko "
-"dituzu terminalean. Ziurrenik, ez duzu ulertuko zergatik ezin duzun webgune "
-"batetik testu bat kopiatu "
-"<keycombo><keycap>Ctrl</keycap><keycap>C</keycap></keycombo> erabiliz eta "
-"ondoren <keycombo><keycap>Ctrl</keycap><keycap>V</keycap></keycombo> "
-"erabiliz itsatsi. Ez dituzu agindu eta fitxategi-izen guzti horiek idatzi "
-"nahi? Lasai. Erdiko botoiarekin klik egin ezazu zure saguan (bi botoidun "
-"sagua bada, bi botoiak batera sakatu itzazu) edo eskuin klik egin ezazu eta "
-"<menuchoice><guimenuitem>Itsatsi</guimenuitem></menuchoice> hautatu."
-
-#: basic-commands/C/basic-commands.xml:495(title)
+#: basic-commands/C/basic-commands.xml:490(title)
 msgid "Save on typing"
 msgstr "Azkarrago idatzi"
 
-#: basic-commands/C/basic-commands.xml:504(para)
+#: basic-commands/C/basic-commands.xml:499(para)
 msgid ""
 "<keycap>Up Arrow</keycap> or "
 "<keycombo><keycap>Ctrl</keycap><keycap>p</keycap></keycombo>"
@@ -732,11 +747,11 @@ msgstr ""
 "<keycap>Gora gezia</keycap> edo "
 "<keycombo><keycap>Ctrl</keycap><keycap>p</keycap></keycombo>"
 
-#: basic-commands/C/basic-commands.xml:514(para)
+#: basic-commands/C/basic-commands.xml:509(para)
 msgid "Scrolls through the commands you've entered previously."
 msgstr "Aurretik idatzi dituzun aginduak eskuratu."
 
-#: basic-commands/C/basic-commands.xml:522(para)
+#: basic-commands/C/basic-commands.xml:517(para)
 msgid ""
 "<keycap>Down Arrow</keycap> or "
 "<keycombo><keycap>Ctrl</keycap><keycap>n</keycap></keycombo>"
@@ -744,23 +759,23 @@ msgstr ""
 "<keycap>Behera gezia</keycap> edo "
 "<keycombo><keycap>Ctrl</keycap><keycap>n</keycap></keycombo>"
 
-#: basic-commands/C/basic-commands.xml:532(para)
+#: basic-commands/C/basic-commands.xml:527(para)
 msgid "Takes you back to a more recent command."
 msgstr "Agindu berriago bat eskuratu."
 
-#: basic-commands/C/basic-commands.xml:539(keycap)
+#: basic-commands/C/basic-commands.xml:534(keycap)
 msgid "Enter"
 msgstr "Enter"
 
-#: basic-commands/C/basic-commands.xml:544(para)
+#: basic-commands/C/basic-commands.xml:539(para)
 msgid "When you have the command you want."
 msgstr "Nahi duzun agindua baduzunean"
 
-#: basic-commands/C/basic-commands.xml:550(keycap)
+#: basic-commands/C/basic-commands.xml:545(keycap)
 msgid "Tab"
 msgstr "Tab"
 
-#: basic-commands/C/basic-commands.xml:555(para)
+#: basic-commands/C/basic-commands.xml:550(para)
 msgid ""
 "A very useful feature. It autocompletes any commands or filenames, if "
 "there's only one option, or else gives you a list of options."
@@ -769,11 +784,11 @@ msgstr ""
 "agindua automatikoki osatuko du guztiz; bestela, aukeren zerrenda bat emango "
 "dizu."
 
-#: basic-commands/C/basic-commands.xml:568(title)
+#: basic-commands/C/basic-commands.xml:563(title)
 msgid "Change the text"
 msgstr "Testua aldatu"
 
-#: basic-commands/C/basic-commands.xml:569(para)
+#: basic-commands/C/basic-commands.xml:564(para)
 msgid ""
 "The mouse won't work. Use the <keycap>Left/Right arrow</keycap> keys to move "
 "around the line."
@@ -781,7 +796,7 @@ msgstr ""
 "Ezingo duzu saguarekin egin. <keycap>Eskuin/Ezker gezia</keycap> teklak "
 "erabili itzazu lerroan zehar mugitzeko."
 
-#: basic-commands/C/basic-commands.xml:573(para)
+#: basic-commands/C/basic-commands.xml:568(para)
 msgid ""
 "When the cursor is where you want it in the line, typing "
 "<emphasis>inserts</emphasis> text, it doesn't overtype what's already there."
@@ -789,63 +804,67 @@ msgstr ""
 "Kurtsorea lerroan kokatu duzunean, idatzi ezazu testua "
 "<emphasis>txertatzeko</emphasis> (ez da jadanik dagoena gainidatziko)."
 
-#: basic-commands/C/basic-commands.xml:586(para)
+#: basic-commands/C/basic-commands.xml:581(para)
 msgid ""
 "<keycombo><keycap>Ctrl</keycap><keycap>a</keycap></keycombo> or "
 "<keycap>Home</keycap>"
 msgstr ""
+"<keycombo><keycap>Ctrl</keycap><keycap>a</keycap></keycombo> edo "
+"<keycap>Home</keycap>"
 
-#: basic-commands/C/basic-commands.xml:596(para)
+#: basic-commands/C/basic-commands.xml:591(para)
 msgid "Moves the cursor to the <emphasis>start</emphasis> of a line."
 msgstr "Lerroaren <emphasis>hasiera</emphasis>ra mugitzen du kurtsorea."
 
-#: basic-commands/C/basic-commands.xml:602(para)
+#: basic-commands/C/basic-commands.xml:597(para)
 msgid ""
 "<keycombo><keycap>Ctrl</keycap><keycap>e</keycap></keycombo> or "
 "<keycap>End</keycap>"
 msgstr ""
+"<keycombo><keycap>Ctrl</keycap><keycap>e</keycap></keycombo> edo "
+"<keycap>End</keycap>"
 
-#: basic-commands/C/basic-commands.xml:612(para)
+#: basic-commands/C/basic-commands.xml:607(para)
 msgid "Moves the cursor to the <emphasis> end</emphasis> of a line."
-msgstr ""
+msgstr "Kurtsorea lerroaren <emphasis>amaiera</emphasis> mugitzen du."
 
-#: basic-commands/C/basic-commands.xml:623(keycap) basic-commands/C/basic-commands.xml:638(keycap) basic-commands/C/basic-commands.xml:652(keycap)
+#: basic-commands/C/basic-commands.xml:618(keycap) basic-commands/C/basic-commands.xml:633(keycap) basic-commands/C/basic-commands.xml:647(keycap)
 msgid "Ctrl"
 msgstr "Ctrl"
 
-#: basic-commands/C/basic-commands.xml:624(keycap)
+#: basic-commands/C/basic-commands.xml:619(keycap)
 msgid "k"
 msgstr "k"
 
-#: basic-commands/C/basic-commands.xml:630(para)
+#: basic-commands/C/basic-commands.xml:625(para)
 msgid "Deletes from the current cursor position to the end of the line."
 msgstr "Kurtsoretik lerroaren amaierarartekoak ezabatzen ditu."
 
-#: basic-commands/C/basic-commands.xml:639(keycap)
+#: basic-commands/C/basic-commands.xml:634(keycap)
 msgid "u"
 msgstr "u"
 
-#: basic-commands/C/basic-commands.xml:645(para)
+#: basic-commands/C/basic-commands.xml:640(para)
 msgid "Deletes the whole of the current line."
 msgstr "Uneko lerro osoa ezabatzen du."
 
-#: basic-commands/C/basic-commands.xml:653(keycap)
+#: basic-commands/C/basic-commands.xml:648(keycap)
 msgid "w"
 msgstr "w"
 
-#: basic-commands/C/basic-commands.xml:659(para)
+#: basic-commands/C/basic-commands.xml:654(para)
 msgid "Deletes the word before the cursor."
 msgstr "Kurtsorearen aurreko hitza ezabatzen du."
 
-#: basic-commands/C/basic-commands.xml:669(title)
+#: basic-commands/C/basic-commands.xml:664(title)
 msgid "More Information"
 msgstr "Informazio Gehiago"
 
-#: basic-commands/C/basic-commands.xml:670(para)
+#: basic-commands/C/basic-commands.xml:665(para)
 msgid "The following online guides are available:"
 msgstr "Ondorengo online-gidak dituzu eskuragarri:"
 
-#: basic-commands/C/basic-commands.xml:673(para)
+#: basic-commands/C/basic-commands.xml:668(para)
 msgid ""
 "<ulink url=\"https://help.ubuntu.com/community/AptGetHowto\"> "
 "AptGetHowto</ulink> - using apt-get to install packages from the command "
@@ -855,7 +874,7 @@ msgstr ""
 "AptGetHowto</ulink> - nola erabili apt-get agindu-lerroa erabiliz "
 "instalatzeko paketeak."
 
-#: basic-commands/C/basic-commands.xml:680(para)
+#: basic-commands/C/basic-commands.xml:675(para)
 msgid ""
 "<ulink url=\"https://help.ubuntu.com/community/Repositories/CommandLine\"> "
 "Commandline Repository Editing</ulink> - adding the Universe/Multiverse "
@@ -865,7 +884,7 @@ msgstr ""
 "Commandline Repository Editing</ulink> - nola gehitu Universe/Multiverse "
 "errepositorioak agindu-lerroa erabiliz."
 
-#: basic-commands/C/basic-commands.xml:688(para)
+#: basic-commands/C/basic-commands.xml:683(para)
 msgid ""
 "<ulink url=\"https://help.ubuntu.com/community/grep\">grep Howto</ulink> - "
 "grep is a powerful command line search tool."
@@ -873,7 +892,7 @@ msgstr ""
 "<ulink url=\"https://help.ubuntu.com/community/grep\">grep Howto</ulink> - "
 "agindu-lerroa erabiliz bilaketak egiteko tresna boteretsua da grep."
 
-#: basic-commands/C/basic-commands.xml:695(para)
+#: basic-commands/C/basic-commands.xml:690(para)
 msgid ""
 "<ulink url=\"https://help.ubuntu.com/community/find\">find </ulink> - locate "
 "files on the command line."
@@ -881,7 +900,7 @@ msgstr ""
 "<ulink url=\"https://help.ubuntu.com/community/find\">find </ulink> - agindu-"
 "lerroa erabiliz bilatu fitxategiak."
 
-#: basic-commands/C/basic-commands.xml:701(para)
+#: basic-commands/C/basic-commands.xml:696(para)
 msgid ""
 "<ulink url=\"https://help.ubuntu.com/community/CommandlineHowto\"> "
 "CommandlineHowto</ulink> - longer and more complete than this basic guide, "
@@ -891,7 +910,7 @@ msgstr ""
 "CommandlineHowto</ulink> - oinarrizko gida hau baina luzeago eta osatuagoa, "
 "nahiz eta ez dagoen oraindik amaitua."
 
-#: basic-commands/C/basic-commands.xml:708(para)
+#: basic-commands/C/basic-commands.xml:703(para)
 msgid ""
 "<ulink url=\"https://help.ubuntu.com/community/HowToReadline\"> "
 "HowToReadline</ulink> - information on some more advanced customization for "
@@ -901,12 +920,12 @@ msgstr ""
 "HowToReadline</ulink> - agindu-lerroaren pertsonalizazio aurreratu gehiagori "
 "buruzko informazio gehiago."
 
-#: basic-commands/C/basic-commands.xml:715(para)
+#: basic-commands/C/basic-commands.xml:710(para)
 msgid "For more detailed tutorials on the Linux command line, please see:"
 msgstr ""
 "Linuxen agindu-lerroari buruzko gida osatuagoak eskuratzeko, irakurri:"
 
-#: basic-commands/C/basic-commands.xml:721(para)
+#: basic-commands/C/basic-commands.xml:716(para)
 msgid ""
 "<ulink url=\"http://linuxcommand.org/\"/>- basic BASH tutorials, including "
 "BASH scripting"
@@ -914,14 +933,14 @@ msgstr ""
 "<ulink url=\"http://linuxcommand.org/\"/>- oinarrizko BASH gidak, BASH "
 "scripting-ari buruzkoak barne"
 
-#: basic-commands/C/basic-commands.xml:727(para)
+#: basic-commands/C/basic-commands.xml:722(para)
 msgid ""
 "<ulink url=\"http://linuxsurvival.com/index.php\"/>- Java-based tutorials"
 msgstr ""
 "<ulink url=\"http://linuxsurvival.com/index.php\"/>- Javan oinarritutako "
 "gidak"
 
-#: basic-commands/C/basic-commands.xml:733(para)
+#: basic-commands/C/basic-commands.xml:728(para)
 msgid ""
 "<ulink url=\"http://rute.2038bug.com/index.html.gz\"/>- a massive online "
 "book about system administration, almost all from the command line."
@@ -949,7 +968,41 @@ msgstr ""
 "Launchpad Contributions:\n"
 "  Launchpad Translations Administrators https://launchpad.net/~rosetta-"
 "admins\n"
+"  Mikel Pascual Aldabaldetreku https://launchpad.net/~mpascual\n"
+"\n"
+"Launchpad Contributions:\n"
+"  Jon Intxaurbe https://launchpad.net/~joinzar\n"
+"  Launchpad Translations Administrators https://launchpad.net/~rosetta-"
+"admins\n"
+"  Mikel Larreategi https://launchpad.net/~erral\n"
 "  Mikel Pascual Aldabaldetreku https://launchpad.net/~mpascual"
+
+#~ msgid "Basic Commands"
+#~ msgstr "Oinarrizko Aginduak"
+
+#~ msgid "Pasting in commands"
+#~ msgstr "Aginduak itsastea"
+
+#~ msgid ""
+#~ "Often, you will be referred to instructions that require commands to be "
+#~ "pasted into the terminal. You might be wondering why the text you've copied "
+#~ "from a web page using "
+#~ "<keycombo><keycap>Ctrl</keycap><keycap>C</keycap></keycombo> won't paste in "
+#~ "with <keycombo><keycap>Ctrl</keycap><keycap>V</keycap></keycombo>. Surely "
+#~ "you don't have to type in all those nasty commands and filenames? Relax. "
+#~ "Middle Button Click on your mouse (both buttons simultaneously on a two-"
+#~ "button mouse) or Right Click and select "
+#~ "<menuchoice><guimenuitem>Paste</guimenuitem></menuchoice> from the menu."
+#~ msgstr ""
+#~ "Askotan, jasoko dituzun argibideak jarraitzeko, aginduak itsatsi beharko "
+#~ "dituzu terminalean. Ziurrenik, ez duzu ulertuko zergatik ezin duzun webgune "
+#~ "batetik testu bat kopiatu "
+#~ "<keycombo><keycap>Ctrl</keycap><keycap>C</keycap></keycombo> erabiliz eta "
+#~ "ondoren <keycombo><keycap>Ctrl</keycap><keycap>V</keycap></keycombo> "
+#~ "erabiliz itsatsi. Ez dituzu agindu eta fitxategi-izen guzti horiek idatzi "
+#~ "nahi? Lasai. Erdiko botoiarekin klik egin ezazu zure saguan (bi botoidun "
+#~ "sagua bada, bi botoiak batera sakatu itzazu) edo eskuin klik egin ezazu eta "
+#~ "<menuchoice><guimenuitem>Itsatsi</guimenuitem></menuchoice> hautatu."
 
 #~ msgid ""
 #~ "Moves the cursor to the <emphasis><emphasis "

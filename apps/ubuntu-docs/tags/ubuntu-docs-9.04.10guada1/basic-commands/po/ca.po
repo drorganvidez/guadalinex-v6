@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-docs\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2008-10-12 20:18+0100\n"
-"PO-Revision-Date: 2008-10-15 19:04+0000\n"
+"POT-Creation-Date: 2009-03-26 16:34+0000\n"
+"PO-Revision-Date: 2009-03-29 19:17+0000\n"
 "Last-Translator: Joan Duran <jodufi@gmail.com>\n"
 "Language-Team: Catalan <ubuntu-l10n-ca@lists.ubuntu.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2008-10-19 12:43+0000\n"
+"X-Launchpad-Export-Date: 2009-04-01 11:05+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: basic-commands/C/basic-commands-C.omf:6(creator) basic-commands/C/basic-commands-C.omf:7(maintainer)
@@ -22,8 +22,8 @@ msgid "ubuntu-doc@lists.ubuntu.com (Ubuntu Documentation Project)"
 msgstr "ubuntu-doc@lists.ubuntu.com (projecte de documentació de l'Ubuntu)"
 
 #: basic-commands/C/basic-commands-C.omf:8(title) basic-commands/C/basic-commands.xml:13(title)
-msgid "Basic Commands"
-msgstr "Ordres bàsiques"
+msgid "Using the Command Line"
+msgstr "Utilització de la línia d'ordres"
 
 #: basic-commands/C/basic-commands-C.omf:9(date)
 msgid "2006-09-07"
@@ -471,25 +471,25 @@ msgstr "lsb_release"
 
 #: basic-commands/C/basic-commands.xml:292(para)
 msgid ""
-"The <emphasis role=\"strong\">lsb_release</emphasis> command with the "
-"<emphasis role=\"strong\">-a</emphasis> option prints version information "
-"for the Linux release you're running. For example, typing: "
-"<screen>lsb_release -a</screen> will give you: <screen>\n"
+"The <command>lsb_release</command> command with the <emphasis "
+"role=\"strong\">-a</emphasis> option prints version information for the "
+"Linux release you're running. For example, typing: <screen>lsb_release -"
+"a</screen> will give you: <screen>\n"
 "No LSB modules are available.\n"
 "Distributor ID: Ubuntu\n"
-"Description:    Ubuntu 8.10 \n"
-"Release:        8.10\n"
-"Codename:       intrepid</screen>"
+"Description:    Ubuntu 9.04 \n"
+"Release:        9.04\n"
+"Codename:       jaunty</screen>"
 msgstr ""
-"L'ordre <emphasis role=\\\"strong\\\">lsb_release</emphasis> amb l'opció "
-"<emphasis role=\\\"strong\\\">-a</emphasis> imprimeix informació de la "
-"versió per a la distribució Linux que esteu executant. Per exemple, en "
-"teclejar <screen>lsb_release -a</screen> us proporcionarà: <screen>\\n\n"
+"L'ordre <command>lsb_release</command> amb l'opció <emphasis "
+"role=\"strong\">-a</emphasis> imprimeix informació de la versió per a la "
+"distribució Linux que esteu executant. Per exemple, en escriure "
+"<screen>lsb_release -a</screen> es mostrarà el següent: <screen>\\n\n"
 "No LSB modules are available.\n"
 "Distributor ID: Ubuntu\n"
-"Description: Ubuntu 8.10 \n"
-"Release: 8.10\n"
-"Codename: intrepid</screen>"
+"Description: Ubuntu 9.04 \n"
+"Release: 9.04\n"
+"Codename: jaunty</screen>"
 
 #: basic-commands/C/basic-commands.xml:311(title)
 msgid "Executing Commands with Elevated Privileges"
@@ -708,40 +708,67 @@ msgstr ""
 "1/>"
 
 #: basic-commands/C/basic-commands.xml:468(title)
+msgid "Cutting and pasting"
+msgstr "Com retallar i enganxar"
+
+#: basic-commands/C/basic-commands.xml:469(para)
+msgid ""
+"Often, you will be referred to instructions that require commands to be "
+"pasted into the terminal."
+msgstr ""
+"A vegades trobareu instruccions que requereixen que enganxeu ordres al "
+"terminal."
+
+#: basic-commands/C/basic-commands.xml:471(para)
+msgid ""
+"You might be wondering why the text you've copied from a web page using "
+"<keycombo><keycap>Ctrl</keycap><keycap>C</keycap></keycombo> won't paste in "
+"with <keycombo><keycap>Ctrl</keycap><keycap>V</keycap></keycombo>, the shell "
+"uses a different combination for paste "
+"<keycombo><keycap>Shift</keycap><keycap>Insert</keycap></keycombo>. This can "
+"also be done using the mouse, by right-clicking in the terminal and clicking "
+"<menuchoice><guimenuitem>Paste</guimenuitem></menuchoice> from the menu."
+msgstr ""
+"Potser us preguntareu perquè el text que heu copiat d'una pàgina web a "
+"través de la combinació de tecles "
+"<keycombo><keycap>Ctrl</keycap><keycap>C</keycap></keycombo> no s'enganxa "
+"amb la combinació "
+"<keycombo><keycap>Ctrl</keycap><keycap>V</keycap></keycombo>. Això és degut "
+"al fet que l'intèrpret d'ordres utilitza una combinació diferent per a "
+"enganxar: <keycombo><keycap>Maj</keycap><keycap>Ins</keycap></keycombo>. "
+"Això també es pot dur a terme amb el ratolí, fent clic amb el botó secundari "
+"al terminal i triant l'opció "
+"<menuchoice><guimenuitem>Enganxa</guimenuitem></menuchoice> del menú."
+
+#: basic-commands/C/basic-commands.xml:479(para)
+msgid ""
+"You can also select the required commands in your web browser and then "
+"subsequently click the middle button on your mouse (or simply click buttons "
+"simultaneously on a two-button mouse) in the terminal to paste in the select "
+"command."
+msgstr ""
+"També podeu seleccionar les ordres requerides al navegador web i llavors fer "
+"clic amb el botó central del ratolí (o bé clicar ambdós botons en un ratolí "
+"de dos botons) al terminal per a enganxar l'ordre seleccionada."
+
+#: basic-commands/C/basic-commands.xml:483(para)
+msgid ""
+"These actions may mean something entirely different to other terminal "
+"emulators. Consult your emulator's documentation for details."
+msgstr ""
+"Aquestes accions poden tenir un significat totalment diferent en altres "
+"emuladors de terminal. Per a obtenir més informació consulteu la "
+"documentació del vostre emulador."
+
+#: basic-commands/C/basic-commands.xml:488(title)
 msgid "Other Useful Things"
 msgstr "Altres coses útils"
 
-#: basic-commands/C/basic-commands.xml:471(title)
-msgid "Pasting in commands"
-msgstr "Com enganxar les ordres"
-
-#: basic-commands/C/basic-commands.xml:472(para)
-msgid ""
-"Often, you will be referred to instructions that require commands to be "
-"pasted into the terminal. You might be wondering why the text you've copied "
-"from a web page using "
-"<keycombo><keycap>Ctrl</keycap><keycap>C</keycap></keycombo> won't paste in "
-"with <keycombo><keycap>Ctrl</keycap><keycap>V</keycap></keycombo>. Surely "
-"you don't have to type in all those nasty commands and filenames? Relax. "
-"Middle Button Click on your mouse (both buttons simultaneously on a two-"
-"button mouse) or Right Click and select "
-"<menuchoice><guimenuitem>Paste</guimenuitem></menuchoice> from the menu."
-msgstr ""
-"A vegades trobareu instruccions que requereixen ordres que s'han d'enganxar "
-"al terminal. Potser us pregunteu per què el text que heu copiat d'una pàgina "
-"web en utilitzar "
-"<keycombo><keycap>Ctrl</keycap><keycap>C</keycap></keycombo> no s'enganxa "
-"amb <keycombo><keycap>Ctrl</keycap><keycap>V</keycap></keycombo>. Haureu de "
-"teclejar totes aquestes ordres i noms de fitxers? Tranquil·litat. Feu clic "
-"amb el botó central del ratolí (o ambdós botons en un ratolí que només té "
-"dos botons) o feu clic amb el botó secundari i seleccioneu "
-"<menuchoice><guimenuitem>Enganxa</guimenuitem></menuchoice> des del menú."
-
-#: basic-commands/C/basic-commands.xml:495(title)
+#: basic-commands/C/basic-commands.xml:490(title)
 msgid "Save on typing"
 msgstr "Com estalviar-se de teclejar tant"
 
-#: basic-commands/C/basic-commands.xml:504(para)
+#: basic-commands/C/basic-commands.xml:499(para)
 msgid ""
 "<keycap>Up Arrow</keycap> or "
 "<keycombo><keycap>Ctrl</keycap><keycap>p</keycap></keycombo>"
@@ -749,11 +776,11 @@ msgstr ""
 "<keycap>Cursor amunt</keycap> o "
 "<keycombo><keycap>Ctrl</keycap><keycap>p</keycap></keycombo>"
 
-#: basic-commands/C/basic-commands.xml:514(para)
+#: basic-commands/C/basic-commands.xml:509(para)
 msgid "Scrolls through the commands you've entered previously."
 msgstr "Es desplaça a través de les ordres que heu introduït anteriorment."
 
-#: basic-commands/C/basic-commands.xml:522(para)
+#: basic-commands/C/basic-commands.xml:517(para)
 msgid ""
 "<keycap>Down Arrow</keycap> or "
 "<keycombo><keycap>Ctrl</keycap><keycap>n</keycap></keycombo>"
@@ -761,23 +788,23 @@ msgstr ""
 "<keycap>Cursor avall</keycap> o "
 "<keycombo><keycap>Ctrl</keycap><keycap>n</keycap></keycombo>"
 
-#: basic-commands/C/basic-commands.xml:532(para)
+#: basic-commands/C/basic-commands.xml:527(para)
 msgid "Takes you back to a more recent command."
 msgstr "Us torna cap a una ordre més recent."
 
-#: basic-commands/C/basic-commands.xml:539(keycap)
+#: basic-commands/C/basic-commands.xml:534(keycap)
 msgid "Enter"
 msgstr "Retorn"
 
-#: basic-commands/C/basic-commands.xml:544(para)
+#: basic-commands/C/basic-commands.xml:539(para)
 msgid "When you have the command you want."
 msgstr "Quan tingueu l'ordre que voleu."
 
-#: basic-commands/C/basic-commands.xml:550(keycap)
+#: basic-commands/C/basic-commands.xml:545(keycap)
 msgid "Tab"
 msgstr "Tab"
 
-#: basic-commands/C/basic-commands.xml:555(para)
+#: basic-commands/C/basic-commands.xml:550(para)
 msgid ""
 "A very useful feature. It autocompletes any commands or filenames, if "
 "there's only one option, or else gives you a list of options."
@@ -786,11 +813,11 @@ msgstr ""
 "ordre o nom de fitxer si només hi ha una opció, si no us proporciona una "
 "llista d'opcions."
 
-#: basic-commands/C/basic-commands.xml:568(title)
+#: basic-commands/C/basic-commands.xml:563(title)
 msgid "Change the text"
 msgstr "Canvieu el text"
 
-#: basic-commands/C/basic-commands.xml:569(para)
+#: basic-commands/C/basic-commands.xml:564(para)
 msgid ""
 "The mouse won't work. Use the <keycap>Left/Right arrow</keycap> keys to move "
 "around the line."
@@ -798,7 +825,7 @@ msgstr ""
 "El ratolí no funciona. Utilitzeu les tecles <keycap>cursor "
 "esquerra/dreta</keycap> per a moure-us a través de la línia."
 
-#: basic-commands/C/basic-commands.xml:573(para)
+#: basic-commands/C/basic-commands.xml:568(para)
 msgid ""
 "When the cursor is where you want it in the line, typing "
 "<emphasis>inserts</emphasis> text, it doesn't overtype what's already there."
@@ -807,7 +834,7 @@ msgstr ""
 "<emphasis>s'inserirà</emphasis> text en comptes de sobreescriure el que ja "
 "hi ha."
 
-#: basic-commands/C/basic-commands.xml:586(para)
+#: basic-commands/C/basic-commands.xml:581(para)
 msgid ""
 "<keycombo><keycap>Ctrl</keycap><keycap>a</keycap></keycombo> or "
 "<keycap>Home</keycap>"
@@ -815,11 +842,11 @@ msgstr ""
 "<keycombo><keycap>Ctrl</keycap><keycap>a</keycap></keycombo> o "
 "<keycap>Inici</keycap>"
 
-#: basic-commands/C/basic-commands.xml:596(para)
+#: basic-commands/C/basic-commands.xml:591(para)
 msgid "Moves the cursor to the <emphasis>start</emphasis> of a line."
 msgstr "Mou el cursor a l'<emphasis>inici</emphasis> de la línia."
 
-#: basic-commands/C/basic-commands.xml:602(para)
+#: basic-commands/C/basic-commands.xml:597(para)
 msgid ""
 "<keycombo><keycap>Ctrl</keycap><keycap>e</keycap></keycombo> or "
 "<keycap>End</keycap>"
@@ -827,48 +854,48 @@ msgstr ""
 "<keycombo><keycap>Ctrl</keycap><keycap>e</keycap></keycombo> o "
 "<keycap>Final</keycap>"
 
-#: basic-commands/C/basic-commands.xml:612(para)
+#: basic-commands/C/basic-commands.xml:607(para)
 msgid "Moves the cursor to the <emphasis> end</emphasis> of a line."
 msgstr "Mou el cursor cap al <emphasis>final</emphasis> d'una línia."
 
-#: basic-commands/C/basic-commands.xml:623(keycap) basic-commands/C/basic-commands.xml:638(keycap) basic-commands/C/basic-commands.xml:652(keycap)
+#: basic-commands/C/basic-commands.xml:618(keycap) basic-commands/C/basic-commands.xml:633(keycap) basic-commands/C/basic-commands.xml:647(keycap)
 msgid "Ctrl"
 msgstr "Ctrl"
 
-#: basic-commands/C/basic-commands.xml:624(keycap)
+#: basic-commands/C/basic-commands.xml:619(keycap)
 msgid "k"
 msgstr "k"
 
-#: basic-commands/C/basic-commands.xml:630(para)
+#: basic-commands/C/basic-commands.xml:625(para)
 msgid "Deletes from the current cursor position to the end of the line."
 msgstr ""
 "Suprimeix des de la posició actual del cursor fins al final de la línia."
 
-#: basic-commands/C/basic-commands.xml:639(keycap)
+#: basic-commands/C/basic-commands.xml:634(keycap)
 msgid "u"
 msgstr "u"
 
-#: basic-commands/C/basic-commands.xml:645(para)
+#: basic-commands/C/basic-commands.xml:640(para)
 msgid "Deletes the whole of the current line."
 msgstr "Suprimeix tota la línia actual"
 
-#: basic-commands/C/basic-commands.xml:653(keycap)
+#: basic-commands/C/basic-commands.xml:648(keycap)
 msgid "w"
 msgstr "w"
 
-#: basic-commands/C/basic-commands.xml:659(para)
+#: basic-commands/C/basic-commands.xml:654(para)
 msgid "Deletes the word before the cursor."
 msgstr "Suprimeix la paraula situada abans del cursor"
 
-#: basic-commands/C/basic-commands.xml:669(title)
+#: basic-commands/C/basic-commands.xml:664(title)
 msgid "More Information"
 msgstr "Més informació"
 
-#: basic-commands/C/basic-commands.xml:670(para)
+#: basic-commands/C/basic-commands.xml:665(para)
 msgid "The following online guides are available:"
 msgstr "Hi ha disponibles les guies en línia següents:"
 
-#: basic-commands/C/basic-commands.xml:673(para)
+#: basic-commands/C/basic-commands.xml:668(para)
 msgid ""
 "<ulink url=\"https://help.ubuntu.com/community/AptGetHowto\"> "
 "AptGetHowto</ulink> - using apt-get to install packages from the command "
@@ -878,7 +905,7 @@ msgstr ""
 "AptGetHowto</ulink> - utilització de l'apt-get per a instal·lar paquets des "
 "de la línia d'ordres."
 
-#: basic-commands/C/basic-commands.xml:680(para)
+#: basic-commands/C/basic-commands.xml:675(para)
 msgid ""
 "<ulink url=\"https://help.ubuntu.com/community/Repositories/CommandLine\"> "
 "Commandline Repository Editing</ulink> - adding the Universe/Multiverse "
@@ -888,7 +915,7 @@ msgstr ""
 "Commandline Repository Editing</ulink> - com afegir els dipòsits "
 "Universe/Multiverse a través de la línia d'ordres."
 
-#: basic-commands/C/basic-commands.xml:688(para)
+#: basic-commands/C/basic-commands.xml:683(para)
 msgid ""
 "<ulink url=\"https://help.ubuntu.com/community/grep\">grep Howto</ulink> - "
 "grep is a powerful command line search tool."
@@ -896,7 +923,7 @@ msgstr ""
 "<ulink url=\"https://help.ubuntu.com/community/grep\">grep Howto</ulink> - "
 "el grep és una potent eina de cerca per a la línia d'ordres."
 
-#: basic-commands/C/basic-commands.xml:695(para)
+#: basic-commands/C/basic-commands.xml:690(para)
 msgid ""
 "<ulink url=\"https://help.ubuntu.com/community/find\">find </ulink> - locate "
 "files on the command line."
@@ -904,7 +931,7 @@ msgstr ""
 "<ulink url=\"https://help.ubuntu.com/community/find\">find </ulink> - cerca "
 "fitxers a la línia d'ordres."
 
-#: basic-commands/C/basic-commands.xml:701(para)
+#: basic-commands/C/basic-commands.xml:696(para)
 msgid ""
 "<ulink url=\"https://help.ubuntu.com/community/CommandlineHowto\"> "
 "CommandlineHowto</ulink> - longer and more complete than this basic guide, "
@@ -914,7 +941,7 @@ msgstr ""
 "CommandlineHowto</ulink> - més llarga i completa que aquesta guia bàsica, "
 "però encara inacabada."
 
-#: basic-commands/C/basic-commands.xml:708(para)
+#: basic-commands/C/basic-commands.xml:703(para)
 msgid ""
 "<ulink url=\"https://help.ubuntu.com/community/HowToReadline\"> "
 "HowToReadline</ulink> - information on some more advanced customization for "
@@ -924,13 +951,13 @@ msgstr ""
 "HowToReadline</ulink> - informació d'algunes opcions de personalització més "
 "avançades per a la línia d'ordres."
 
-#: basic-commands/C/basic-commands.xml:715(para)
+#: basic-commands/C/basic-commands.xml:710(para)
 msgid "For more detailed tutorials on the Linux command line, please see:"
 msgstr ""
 "Per a més programes d'aprenentatge detallats sobre la línia d'ordres del "
 "Linux, vegeu:"
 
-#: basic-commands/C/basic-commands.xml:721(para)
+#: basic-commands/C/basic-commands.xml:716(para)
 msgid ""
 "<ulink url=\"http://linuxcommand.org/\"/>- basic BASH tutorials, including "
 "BASH scripting"
@@ -938,14 +965,14 @@ msgstr ""
 "<ulink url=\"http://linuxcommand.org/\"/>- programes d'aprenentatge bàsics "
 "del BASH, incloent la creació d'scripts"
 
-#: basic-commands/C/basic-commands.xml:727(para)
+#: basic-commands/C/basic-commands.xml:722(para)
 msgid ""
 "<ulink url=\"http://linuxsurvival.com/index.php\"/>- Java-based tutorials"
 msgstr ""
 "<ulink url=\"http://linuxsurvival.com/index.php\"/>- programes "
 "d'aprenentatge basats en Java"
 
-#: basic-commands/C/basic-commands.xml:733(para)
+#: basic-commands/C/basic-commands.xml:728(para)
 msgid ""
 "<ulink url=\"http://rute.2038bug.com/index.html.gz\"/>- a massive online "
 "book about system administration, almost all from the command line."
@@ -975,7 +1002,61 @@ msgstr ""
 "  David Planella https://launchpad.net/~dpm\n"
 "  J. https://launchpad.net/~jose-manuel-rodriguez-moreno\n"
 "  Joan Duran https://launchpad.net/~jodufi\n"
-"  Launchpad Translations Administrators https://launchpad.net/~rosetta-admins"
+"  Launchpad Translations Administrators https://launchpad.net/~rosetta-"
+"admins\n"
+"\n"
+"Launchpad Contributions:\n"
+"  David Planella https://launchpad.net/~dpm\n"
+"  J. https://launchpad.net/~jose-manuel-rodriguez-moreno\n"
+"  Joan Duran https://launchpad.net/~jodufi"
+
+#~ msgid "Basic Commands"
+#~ msgstr "Ordres bàsiques"
+
+#~ msgid ""
+#~ "The <emphasis role=\"strong\">lsb_release</emphasis> command with the "
+#~ "<emphasis role=\"strong\">-a</emphasis> option prints version information "
+#~ "for the Linux release you're running. For example, typing: "
+#~ "<screen>lsb_release -a</screen> will give you: <screen>\n"
+#~ "No LSB modules are available.\n"
+#~ "Distributor ID: Ubuntu\n"
+#~ "Description:    Ubuntu 8.10 \n"
+#~ "Release:        8.10\n"
+#~ "Codename:       intrepid</screen>"
+#~ msgstr ""
+#~ "L'ordre <emphasis role=\\\"strong\\\">lsb_release</emphasis> amb l'opció "
+#~ "<emphasis role=\\\"strong\\\">-a</emphasis> imprimeix informació de la "
+#~ "versió per a la distribució Linux que esteu executant. Per exemple, en "
+#~ "teclejar <screen>lsb_release -a</screen> us proporcionarà: <screen>\\n\n"
+#~ "No LSB modules are available.\n"
+#~ "Distributor ID: Ubuntu\n"
+#~ "Description: Ubuntu 8.10 \n"
+#~ "Release: 8.10\n"
+#~ "Codename: intrepid</screen>"
+
+#~ msgid "Pasting in commands"
+#~ msgstr "Com enganxar les ordres"
+
+#~ msgid ""
+#~ "Often, you will be referred to instructions that require commands to be "
+#~ "pasted into the terminal. You might be wondering why the text you've copied "
+#~ "from a web page using "
+#~ "<keycombo><keycap>Ctrl</keycap><keycap>C</keycap></keycombo> won't paste in "
+#~ "with <keycombo><keycap>Ctrl</keycap><keycap>V</keycap></keycombo>. Surely "
+#~ "you don't have to type in all those nasty commands and filenames? Relax. "
+#~ "Middle Button Click on your mouse (both buttons simultaneously on a two-"
+#~ "button mouse) or Right Click and select "
+#~ "<menuchoice><guimenuitem>Paste</guimenuitem></menuchoice> from the menu."
+#~ msgstr ""
+#~ "A vegades trobareu instruccions que requereixen ordres que s'han d'enganxar "
+#~ "al terminal. Potser us pregunteu per què el text que heu copiat d'una pàgina "
+#~ "web en utilitzar "
+#~ "<keycombo><keycap>Ctrl</keycap><keycap>C</keycap></keycombo> no s'enganxa "
+#~ "amb <keycombo><keycap>Ctrl</keycap><keycap>V</keycap></keycombo>. Haureu de "
+#~ "teclejar totes aquestes ordres i noms de fitxers? Tranquil·litat. Feu clic "
+#~ "amb el botó central del ratolí (o ambdós botons en un ratolí que només té "
+#~ "dos botons) o feu clic amb el botó secundari i seleccioneu "
+#~ "<menuchoice><guimenuitem>Enganxa</guimenuitem></menuchoice> des del menú."
 
 #~ msgid ""
 #~ "The <command>ifconfig</command> command reports on your system's network "

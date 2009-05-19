@@ -7,28 +7,27 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-docs\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2008-10-08 21:13+0100\n"
-"PO-Revision-Date: 2008-04-24 00:16+0000\n"
-"Last-Translator: Launchpad Translations Administrators "
-"<rosetta@launchpad.net>\n"
+"POT-Creation-Date: 2009-03-26 16:34+0000\n"
+"PO-Revision-Date: 2009-03-30 23:46+0000\n"
+"Last-Translator: Shushi Kurose <md81bird@hitaki.net>\n"
 "Language-Team: Japanese <ja@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2008-10-19 12:42+0000\n"
+"X-Launchpad-Export-Date: 2009-04-01 10:47+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: musicvideophotos/C/musicvideophotos-C.omf:6(creator)
 msgid "ubuntu-doc@lists.ubuntu.com (Ubuntu Documentation Project)"
-msgstr "ubuntu-doc@lists.ubuntu.com (Ubuntu Documentation Project)"
+msgstr "ubuntu-doc@lists.ubuntu.com (Ubuntu ドキュメンテーション・プロジェクト)"
 
 #: musicvideophotos/C/musicvideophotos-C.omf:7(maintainer)
 msgid "mdke@ubuntu.com (Matthew East)"
 msgstr "mdke@ubuntu.com (Matthew East)"
 
-#: musicvideophotos/C/musicvideophotos-C.omf:8(title)
-msgid "Music, Videos and Photos"
-msgstr "音楽/ビデオ/写真"
+#: musicvideophotos/C/musicvideophotos-C.omf:8(title) musicvideophotos/C/musicvideophotos.xml:16(title)
+msgid "Music, Video and Photos"
+msgstr "音楽、ビデオ、写真"
 
 #: musicvideophotos/C/musicvideophotos-C.omf:9(date)
 msgid "2006-09-07"
@@ -40,9 +39,913 @@ msgid ""
 "managing and editing your photos and pictures."
 msgstr "音楽・ビデオファイル、CD、DVDの再生および写真や絵のインポート、管理、編集などについて。"
 
-#: musicvideophotos/C/musicvideophotos.xml:18(title)
-msgid "Music, video and photos"
-msgstr "音楽/ビデオ/写真"
+#: musicvideophotos/C/video.xml:16(title)
+msgid "Movies, DVDs and videos"
+msgstr "映画、DVD、ビデオ"
+
+#: musicvideophotos/C/video.xml:17(para)
+msgid ""
+"You can watch movies and video clips with the <application>Totem Movie "
+"Player</application> "
+"(<menuchoice><guimenu>Applications</guimenu><guimenuitem>Sound &amp; "
+"Video</guimenuitem><guimenuitem>Movie Player</guimenuitem></menuchoice>)."
+msgstr ""
+"<application>Totem Movie Player</application> で動画やビデオクリップを見ることができます "
+"(<menuchoice><guimenu>アプリケーション</guimenu><guimenuitem>サウンドとビデオ</guimenuitem><g"
+"uimenuitem>動画プレイヤー</guimenuitem></menuchoice>)。"
+
+#: musicvideophotos/C/video.xml:23(title)
+msgid "Playing DVDs"
+msgstr "DVDの再生"
+
+#: musicvideophotos/C/video.xml:24(para)
+msgid ""
+"In order to play DVDs you must install some additional software. "
+"Unfortunately, DVD support cannot be provided by default in Ubuntu due to "
+"legal restrictions in some countries."
+msgstr ""
+"DVDを再生するにはいくつかの追加ソフトウェアをインストールする必要があります。しかし不幸なことに、DVDサポートはいくつかの国では法律上の制限があるため"
+"、Ubuntuに含んでデフォルトで提供することができません。"
+
+#: musicvideophotos/C/video.xml:30(para)
+msgid ""
+"Read about <ulink url=\"ghelp:add-applications#restricted-software\"> "
+"restricted formats</ulink> before following the instructions below. There "
+"are some legal issues that you should be aware of."
+msgstr ""
+"以下の指示に従う前に、<ulink url=\"ghelp:add-applications#restricted-software\"> "
+"制限されたフォーマット</ulink> について読んでおいてください。 あなたが注意する必要がある法律上の問題点について書いてあります。"
+
+#: musicvideophotos/C/video.xml:38(para)
+msgid ""
+"Install the <ulink url=\"apt:libdvdnav4\">libdvdnav4</ulink>, <ulink "
+"url=\"apt:libdvdread3\">libdvdread3</ulink>, <ulink url=\"apt:gstreamer0.10-"
+"plugins-bad\">gstreamer0.10-plugins-bad</ulink> and <ulink "
+"url=\"apt:gstreamer0.10-plugins-ugly\">gstreamer0.10-plugins-ugly</ulink> "
+"packages."
+msgstr ""
+"<ulink url=\"apt:libdvdnav4\">libdvdnav4</ulink>、 <ulink "
+"url=\"apt:libdvdread3\">libdvdread3</ulink>、 <ulink url=\"apt:gstreamer0.10-"
+"plugins-bad\">gstreamer0.10-plugins-bad</ulink> 、 <ulink "
+"url=\"apt:gstreamer0.10-plugins-ugly\">gstreamer0.10-plugins-ugly</ulink> "
+"といったパッケージをインストールしてください。"
+
+#: musicvideophotos/C/video.xml:47(para)
+msgid ""
+"If you would like to play encrypted DVDs, press "
+"<menuchoice><guimenu>Applications</guimenu><guimenuitem>Accessories</guimenui"
+"tem><guimenuitem>Terminal</guimenuitem></menuchoice> and type the following "
+"into the screen which appears, followed by the <keycap>Enter</keycap> key: "
+"<screen>sudo /usr/share/doc/libdvdread3/install-css.sh</screen>"
+msgstr ""
+"暗号化されたDVDを再生したいのであれば、<menuchoice><guimenu>アプリケーション</guimenu><guimenuitem>アクセサ"
+"リ</guimenuitem><guimenuitem>端末</guimenuitem></menuchoice> "
+"を押して、表示された画面の中で以下のように入力した後で<keycap>Enter</keycap> キーを押してください。 <screen>sudo "
+"/usr/share/doc/libdvdread3/install-css.sh</screen>"
+
+#: musicvideophotos/C/video.xml:55(para)
+msgid ""
+"Enter your password if prompted. The <application>libdvdcss2</application> "
+"package will be downloaded and installed from a website."
+msgstr ""
+"パスワードを求められた場合は入力してください。<application>libdvdcss2</application>パッケージはWebサイトからダウン"
+"ロードされ、インストールされます。"
+
+#: musicvideophotos/C/video.xml:62(para)
+msgid ""
+"Insert a DVD into your drive. It should open automatically in the Movie "
+"Player."
+msgstr "DVDをドライブに挿入すれば、動画プレイヤーの中で自動的に開かれるでしょう。"
+
+#: musicvideophotos/C/video.xml:70(title)
+msgid "Where have the menus on my DVDs gone?"
+msgstr "DVDのメニューはどこに行ったの?"
+
+#: musicvideophotos/C/video.xml:71(para)
+msgid ""
+"DVD menus are not currently supported by the default Movie Player. To be "
+"able to use the menus on a disc, you must install an alternative movie "
+"player such as <ulink url=\"apt:gxine\">gxine</ulink> or <ulink "
+"url=\"apt:vlc\">VLC</ulink>."
+msgstr ""
+"DVDのメニューはデフォルトの動画プレイヤーでは現在サポートされていません。ディスクのメニューが使用できるようにするには、<ulink "
+"url=\"apt:gxine\">gxine</ulink> または <ulink "
+"url=\"apt:vlc\">VLC</ulink>といった他の動画プレイヤーをインストールする必要があるでしょう。"
+
+#: musicvideophotos/C/video.xml:77(para)
+msgid ""
+"To make DVDs automatically play in the alternative movie player when "
+"inserted, open <menuchoice><guimenu>Places</guimenu><guimenuitem>Home "
+"Folder</guimenuitem></menuchoice>, click "
+"<menuchoice><guimenu>Edit</guimenu><guimenuitem>Preferences</guimenuitem></me"
+"nuchoice> and then click the <guilabel>Media</guilabel> tab. Select the "
+"alternative player from the <guibutton>DVD Video</guibutton> list."
+msgstr ""
+
+#: musicvideophotos/C/video.xml:91(title)
+msgid "How can I get my videos to play?"
+msgstr "手持ちのビデオを再生するには?"
+
+#: musicvideophotos/C/video.xml:92(para)
+msgid ""
+"Some video formats, such as Flash, QuickTime, and Windows Media Video, are "
+"proprietary and so support for them cannot be included in Ubuntu by default. "
+"You must install some extra software to allow playback."
+msgstr ""
+"Flash、QuickTime、Windows Media "
+"ビデオといったビデオフォーマットはプロプライエタリなものであるため、それらをサポートをデフォルトでUbuntuに含めることができません。再生するには、追加"
+"ソフトウェアのインストールが必要になります。"
+
+#: musicvideophotos/C/video.xml:97(para)
+msgid ""
+"In order to play the most common proprietary formats in the Totem movie "
+"player or Firefox web browser, <ulink url=\"apt:ubuntu-restricted-"
+"extras\">install the ubuntu-restricted-extras package</ulink> (see <ulink "
+"url=\"ghelp:add-applications#restricted-software\">Restricted "
+"Software</ulink> for more information)."
+msgstr ""
+
+#: musicvideophotos/C/video.xml:105(title)
+msgid "Video files"
+msgstr "動画ファイル"
+
+#: musicvideophotos/C/video.xml:107(emphasis)
+msgid "(e.g. QuickTime, Windows Media)"
+msgstr "(例: QuickTimeやWindows Media)"
+
+#: musicvideophotos/C/video.xml:109(para)
+msgid ""
+"If you try to play an unsupported video file, you will be asked if you would "
+"like to <guilabel>search for a suitable codec</guilabel>. Click "
+"<guibutton>Search</guibutton> and, when the <guilabel>Install multimedia "
+"codecs</guilabel> window appears, select one of the codecs displayed in the "
+"list and click <guibutton>Install</guibutton>."
+msgstr ""
+
+#: musicvideophotos/C/video.xml:116(para)
+msgid ""
+"If you are asked to <guilabel>confirm installation of restricted "
+"software</guilabel>, the codec required to play your video may have some "
+"<ulink url=\"ghelp:add-applications#restricted-software\">legal "
+"restrictions</ulink> which you should be aware of. If you think that the "
+"restrictions do not apply to you, press <guibutton>Confirm</guibutton> to "
+"continue with the installation."
+msgstr ""
+
+#: musicvideophotos/C/video.xml:124(para)
+msgid ""
+"Once installation is complete, the video should begin to play. If not, try "
+"closing and then re-opening the video."
+msgstr ""
+
+#: musicvideophotos/C/video.xml:131(title)
+msgid "Flash videos"
+msgstr "Flash動画"
+
+#: musicvideophotos/C/video.xml:133(emphasis)
+msgid "(e.g. Youtube, iPlayer)"
+msgstr "(例えば YoutubeやiPlayer)"
+
+#: musicvideophotos/C/video.xml:135(para)
+msgid ""
+"When you first try to play a Flash video in the Firefox web browser, a bar "
+"will appear at the top of the window saying that <guilabel>additional "
+"plugins are required</guilabel>. Press the <guibutton>Install Missing "
+"Plugins</guibutton> button and follow the instructions on-screen to install "
+"a Flash player."
+msgstr ""
+
+#: musicvideophotos/C/video.xml:142(para)
+msgid ""
+"You will be offered the choice of several players. The <guilabel>Adobe Flash "
+"Player</guilabel> is the official plugin, which should offer the best "
+"support for videos. Unfortunately, it is proprietary software and so cannot "
+"be supported directly by Ubuntu. The Swfdec and Gnash players are not "
+"proprietary and so are supported. You may also find them to be more stable "
+"(cause fewer problems) than the official player."
+msgstr ""
+
+#: musicvideophotos/C/video.xml:154(title)
+msgid "Streaming video"
+msgstr "ストリーミング・ビデオ"
+
+#: musicvideophotos/C/video.xml:156(emphasis)
+msgid "(e.g. RealVideo)"
+msgstr "(例: RealVideo)"
+
+#: musicvideophotos/C/video.xml:158(para)
+msgid ""
+"The most reliable way of playing RealVideo-format videos is to install the "
+"official RealPlayer software. See <link linkend=\"video-realplayer\"> "
+"Installing and configuring RealPlayer</link> for full instructions."
+msgstr ""
+
+#: musicvideophotos/C/video.xml:163(para)
+msgid ""
+"Support for most other types of streaming video can be added by following "
+"the instructions for <link linkend=\"video-playback-file\">video "
+"files</link> or <link linkend=\"video-playback-flash\">Flash videos</link>. "
+"If you are having difficulties getting a video to stream in your web "
+"browser, right-click the video and select <guilabel>Open with \"Movie "
+"Player\"</guilabel> if that option is available."
+msgstr ""
+
+#: musicvideophotos/C/video.xml:176(title)
+msgid "Videos that are otherwise unsupported"
+msgstr ""
+
+#: musicvideophotos/C/video.xml:177(para)
+msgid ""
+"If none of the other instructions in this section work with a particular "
+"video, try using a different media player. <ulink "
+"url=\"apt:vlc\">VLC</ulink> and <ulink url=\"apt:mplayer\">MPlayer</ulink> "
+"support a wide range of formats; it is recommended that you try one of these."
+msgstr ""
+
+#: musicvideophotos/C/video.xml:189(title)
+msgid "Installing and configuring RealPlayer"
+msgstr "RealPlayerのインストールと設定"
+
+#: musicvideophotos/C/video.xml:190(para)
+msgid ""
+"RealPlayer is a proprietary application, and so is not installed in the "
+"usual way."
+msgstr "RealPlayerはプロプライエタリなアプリケーションなので、いつものやり方ではインストールできません。"
+
+#: musicvideophotos/C/video.xml:196(para)
+msgid ""
+"Download a suitable Linux installer from the <ulink "
+"url=\"http://uk.real.com/player/select/\"> RealPlayer website</ulink> and "
+"save it in your Home folder."
+msgstr ""
+
+#: musicvideophotos/C/video.xml:203(para)
+msgid ""
+"Open a Terminal "
+"(<menuchoice><guimenu>Applications</guimenu><guimenuitem>Accessories</guimenu"
+"item><guimenuitem>Terminal</guimenuitem></menuchoice>) and type the "
+"following, pressing <keycap>Enter</keycap> at the end of each line and "
+"typing your password when prompted:"
+msgstr ""
+
+#: musicvideophotos/C/video.xml:208(screen)
+#, no-wrap
+msgid ""
+"\n"
+"sudo chmod a+x RealPlayer*\n"
+"sudo ./RealPlayer*"
+msgstr ""
+"\n"
+"sudo chmod a+x RealPlayer*\n"
+"sudo ./RealPlayer*"
+
+#: musicvideophotos/C/video.xml:213(para)
+msgid ""
+"You should see the text <guilabel>Extracting files for Helix "
+"installation</guilabel> on the screen if the installer has started properly. "
+"When asked a question by the installer, press <keycap>Enter</keycap> to "
+"accept the default."
+msgstr ""
+
+#: musicvideophotos/C/video.xml:221(para)
+msgid ""
+"When the installer has finished copying files, press "
+"<menuchoice><guimenu>Applications</guimenu><guimenuitem>Sound &amp; "
+"Video</guimenuitem><guimenuitem>RealPlayer 11</guimenuitem></menuchoice> and "
+"follow the instructions on the screen to complete set-up."
+msgstr ""
+
+#: musicvideophotos/C/video.xml:228(para)
+msgid ""
+"For more in-depth instructions, see the <ulink "
+"url=\"https://help.ubuntu.com/community/RealPlayerInstallationMethods\"> "
+"community help wiki</ulink>."
+msgstr ""
+
+#: musicvideophotos/C/video.xml:237(title)
+msgid "Recording and editing video"
+msgstr "レコーディングとビデオ編集"
+
+#: musicvideophotos/C/video.xml:238(para)
+msgid ""
+"There are numerous video capture and editing programs available for Ubuntu. "
+"Some of the most popular include <ulink url=\"apt:kino\">Kino</ulink>, "
+"<ulink url=\"apt:kdenlive\">Kdenlive</ulink>, and <ulink "
+"url=\"apt:pitivi\">Pitivi</ulink>."
+msgstr ""
+
+#: musicvideophotos/C/troubleshooting.xml:16(title)
+msgid "Solutions to common problems"
+msgstr ""
+
+#: musicvideophotos/C/troubleshooting.xml:17(para)
+msgid "This section offers some solutions to commonly asked problems."
+msgstr ""
+
+#: musicvideophotos/C/troubleshooting.xml:19(para)
+msgid ""
+"Prevent CDs from playing when inserted, see <xref linkend=\"music-cd-"
+"autoplay\"/>"
+msgstr ""
+
+#: musicvideophotos/C/troubleshooting.xml:20(para)
+msgid ""
+"Song names and covert art are wrong, see <xref linkend=\"music-"
+"missingmetadata\"/>"
+msgstr ""
+
+#: musicvideophotos/C/troubleshooting.xml:21(para)
+msgid ""
+"Rhythmbox can't rip MP3, see <xref linkend=\"music-missingmetadata\"/>"
+msgstr ""
+
+#: musicvideophotos/C/troubleshooting.xml:22(para)
+msgid ""
+"My MP3 player works in Windows but not in Ubuntu, see <xref linkend=\"music-"
+"portable-mtp\"/>"
+msgstr ""
+
+#: musicvideophotos/C/troubleshooting.xml:23(para)
+msgid "I cant play videos, see <xref linkend=\"video-dvd\"/>"
+msgstr ""
+
+#: musicvideophotos/C/troubleshooting.xml:24(para)
+msgid "I can't find menus on dvd, see <xref linkend=\"video-dvdmenus\"/>"
+msgstr ""
+
+#: musicvideophotos/C/troubleshooting.xml:25(para)
+msgid ""
+"I can't play Quicktime or WMV, see <xref linkend=\"video-playback-file\"/>"
+msgstr ""
+
+#: musicvideophotos/C/troubleshooting.xml:26(para)
+msgid ""
+"I can't play flash video, see <xref linkend=\"video-playback-flash\"/>"
+msgstr ""
+
+#: musicvideophotos/C/troubleshooting.xml:27(para)
+msgid "I can't play Realmedia, see <xref linkend=\"video-realplayer\"/>"
+msgstr ""
+
+#: musicvideophotos/C/troubleshooting.xml:28(para)
+msgid "My microphone isn't working, see <xref linkend=\"music-microphone\"/>"
+msgstr ""
+
+#: musicvideophotos/C/photos.xml:16(title)
+msgid "Photos and cameras"
+msgstr "写真とカメラ"
+
+#: musicvideophotos/C/photos.xml:17(para)
+msgid ""
+"There are many tools available to help you to work with your digital photo "
+"collection."
+msgstr "デジタル・フォトコレクションを扱うのに役立つ多くのツールがあります。"
+
+#: musicvideophotos/C/photos.xml:23(title)
+msgid "Import photos from a digital camera"
+msgstr "デジタル・カメラから写真をインポートします"
+
+#: musicvideophotos/C/photos.xml:24(para)
+msgid ""
+"Ubuntu automatically detects most digital cameras when you plug them in, and "
+"will offer to import your photos automatically."
+msgstr "Ubuntuは、デジタルカメラが接続されたときにはほとんどの場合自動的に検知して、あなたの写真をインポートするよう提案するでしょう。"
+
+#: musicvideophotos/C/photos.xml:28(para)
+msgid "To import photos from your camera:"
+msgstr "カメラから写真をインポート:"
+
+#: musicvideophotos/C/photos.xml:33(para)
+msgid ""
+"Plug-in and switch on the camera by placing it in review mode. Ubuntu should "
+"ask you if you would like to import the photos that the camera contains."
+msgstr ""
+"コンピューターに接続したカメラのスイッチを閲覧モードに切り替えてください。そうするとUbuntuは、カメラに保存されている写真をインポートしたいかどうかを"
+"あなたに尋ねます。"
+
+#: musicvideophotos/C/photos.xml:40(para)
+msgid ""
+"Click on <guibutton>Import</guibutton>. You should then see a preview of the "
+"photos."
+msgstr "<guibutton>インポート</guibutton> をクリックすると、写真のプレビューが見れます。"
+
+#: musicvideophotos/C/photos.xml:46(para)
+msgid ""
+"Choose a location to save your photos to, then click on "
+"<guibutton>Import</guibutton>. The photos will be saved to your hard drive."
+msgstr ""
+"写真を保存する場所を選んでから<guibutton>インポート</guibutton>をクリックしてください。写真はあなたのハードディスクに保存されます。"
+
+#: musicvideophotos/C/photos.xml:54(para)
+msgid "If Ubuntu does not ask you if it can import the photos:"
+msgstr "写真をインポートする際に、Ubuntuにたずねられなかった場合は:"
+
+#: musicvideophotos/C/photos.xml:59(para)
+msgid ""
+"Open "
+"<menuchoice><guimenu>Applications</guimenu><guimenuitem>Graphics</guimenuitem"
+"><guimenuitem>F-Spot Photo Manager</guimenuitem></menuchoice> and choose "
+"<menuchoice><guimenu>File</guimenu><guimenuitem>Import</guimenuitem></menucho"
+"ice>."
+msgstr ""
+
+#: musicvideophotos/C/photos.xml:68(para)
+msgid ""
+"Select your camera as the <guilabel>Import Source</guilabel> and then click "
+"<guibutton>Import</guibutton> to begin importing your photos."
+msgstr ""
+
+#: musicvideophotos/C/photos.xml:75(para)
+msgid ""
+"If your camera does not appear as an import source, press "
+"<menuchoice><guimenu>Places</guimenu><guimenuitem>Computer</guimenuitem></men"
+"uchoice> and check if your camera is visible there as a removable storage "
+"device. If it is, you can then copy the photos manually using the "
+"<application>File Browser</application>."
+msgstr ""
+"もしあなたのカメラがインポートソースとして表示されない場合は、<menuchoice><guimenu>場所</guimenu><guimenuitem>"
+"コンピュータ</guimenuitem></menuchoice>をクリックして、あなたのカメラがリムーバブル・ストレージ・デバイスとして表示されているか"
+"どうかを確かめてください。もし表示されているなら、<application>ファイル・ブラウザ</application>を使って手動であなたの写真をコピ"
+"ーすることができます。"
+
+#: musicvideophotos/C/photos.xml:85(title)
+msgid "Organize your photo collection"
+msgstr "写真コレクションの整理"
+
+#: musicvideophotos/C/photos.xml:86(para)
+msgid ""
+"<application>F-Spot</application> provides a complete solution for managing "
+"your photo collection. To start it, choose "
+"<menuchoice><guimenu>Applications</guimenu><guimenuitem>Graphics</guimenuitem"
+"><guimenuitem>F-Spot Photo Manager</guimenuitem></menuchoice>."
+msgstr ""
+"<application>F-Spot</application>はあなたのフォト・コレクションを管理する洗練された方法を提供します。F-"
+"Spotを開始するには、<menuchoice><guimenu>アプリケーション</guimenu><guimenuitem>グラフィックス</guim"
+"enuitem><guimenuitem>F-Spot フォト・マネージャ</guimenuitem></menuchoice>を選択します。"
+
+#: musicvideophotos/C/photos.xml:89(para)
+msgid ""
+"With <application>F-Spot</application>, you can import photos from your "
+"digital camera or USB stick, tag them with familiar terms, do touch ups, and "
+"edit them in different ways. In addition to this, you can upload photos "
+"easily to your Flickr, PicasaWeb album and other online photo galleries."
+msgstr ""
+"<application>F-"
+"Spot</application>を使ってあなたのデジタル・カメラやUSBメモリー・スティックから写真をインポートし、わかりやすい条件（単語）でタグ付け"
+"して記憶しやすくし、様々な方法で編集することができます。さらにはFlickrやPicasaウェブ・アルバムそのほかのオンライン・フォト・ギャラリーへ簡単に"
+"写真をアップロードすることもできます。"
+
+#: musicvideophotos/C/photos.xml:96(para)
+msgid ""
+"For help with <application>F-Spot Photo Manager</application>, see the "
+"<ulink type=\"help\" url=\"ghelp:f-spot\">F-Spot User Guide</ulink>."
+msgstr ""
+"<application>F-Spot フォト・マネージャ</application>についてのヘルプは<ulink type=\"help\" "
+"url=\"ghelp:f-spot\">F-Spot ユーザ・ガイド</ulinkをご覧ください。"
+
+#: musicvideophotos/C/photos.xml:103(title)
+msgid "Watch a slideshow of photos"
+msgstr "写真のスライドショーを見る"
+
+#: musicvideophotos/C/photos.xml:104(para)
+msgid ""
+"If you want to show off your photos in all of their glory, why not run a "
+"slideshow of them?"
+msgstr "もしあなたが自分の写真を他の人に見せたいときは、写真をスライドショーにしてみませんか？"
+
+#: musicvideophotos/C/photos.xml:110(para)
+msgid ""
+"Watch a slideshow using the <ulink type=\"help\" url=\"ghelp:eog#eog-"
+"fullscreen\"> Image Viewer</ulink>"
+msgstr ""
+
+#: musicvideophotos/C/photos.xml:117(para)
+msgid ""
+"Watch a slideshow using the <ulink type=\"help\" url=\"ghelp:f-spot#enjoying-"
+"fullscreen-mode-and-slideshows\"> F-Spot Photo Manager</ulink>"
+msgstr ""
+
+#: musicvideophotos/C/photos.xml:126(title)
+msgid "Setting a Slideshow as Your Screensaver"
+msgstr "スクリーンセーバーにスライドショーを設定する"
+
+#: musicvideophotos/C/photos.xml:127(para)
+msgid "You can use a slideshow of your photos as you screensaver:"
+msgstr "あなたの写真コレクションのスライドショーをスクリーンセーバーとして使うことができます。"
+
+#: musicvideophotos/C/photos.xml:132(para)
+msgid ""
+"Press "
+"<menuchoice><guimenu>System</guimenu><guimenuitem>Preferences</guimenuitem><g"
+"uimenuitem>Screensaver</guimenuitem></menuchoice>"
+msgstr ""
+"<menuchoice><guimenu>システム</guimenu><guimenuitem>設定</guimenuitem><guimenuitem>"
+"スクリーンセーバー</guimenuitem></menuchoice>をクリックします。"
+
+#: musicvideophotos/C/photos.xml:137(para)
+msgid "Select the <guilabel>F-Spot photos</guilabel> screensaver theme"
+msgstr "<guilabel>F-Spotの画像</guilabel>スクリーンセーバーのテーマを選択します。"
+
+#: musicvideophotos/C/photos.xml:143(para)
+msgid ""
+"Photos which are tagged as <guilabel>Favorites</guilabel> in <application>F-"
+"Spot Photo Manager</application> will be displayed as your screensaver"
+msgstr ""
+"<application>F-Spot "
+"フォト・マネージャ</application>で<guilabel>お気に入り</guilabel>というタグを付けた写真は、スクリーンセーバーとして画面"
+"に表示されます。"
+
+#: musicvideophotos/C/photos.xml:151(para)
+msgid "If you would like to change which tag is used for the slideshow:"
+msgstr "スライドショーに使うタグを変更したいときは"
+
+#: musicvideophotos/C/photos.xml:156(para)
+msgid "Open F-Spot"
+msgstr "F-Spotを起動します"
+
+#: musicvideophotos/C/photos.xml:161(para)
+msgid ""
+"Press "
+"<menuchoice><guimenuitem>Edit</guimenuitem><guimenuitem>Preferences</guimenui"
+"tem></menuchoice>"
+msgstr ""
+"<menuchoice><guimenuitem>編集</guimenuitem><guimenuitem>設定</guimenuitem></menuc"
+"hoice>をクリックします。"
+
+#: musicvideophotos/C/photos.xml:170(para)
+msgid "Under <guilabel>Screensaver</guilabel>, select the desired tag"
+msgstr "<guilabel>スクリーンセーバー</guilabel>から希望のタグを選択します。"
+
+#: musicvideophotos/C/photos.xml:175(para)
+msgid "Press <guibutton>Close</guibutton>"
+msgstr "<guibutton>閉じる</guibutton>を押してください。"
+
+#: musicvideophotos/C/photos.xml:183(title)
+msgid "Printing photos"
+msgstr "写真の印刷"
+
+#: musicvideophotos/C/photos.xml:184(para)
+msgid "Printing your photos is great way to share them with others."
+msgstr "印刷した写真なら他の人と一緒に共有することができます。"
+
+#: musicvideophotos/C/photos.xml:189(para)
+msgid ""
+"Double-click the photo you want to print to open it in the "
+"<application>Image Viewer</application>"
+msgstr "印刷したい写真をダブルクリックして<application>画像ビューア</application>で開きます。"
+
+#: musicvideophotos/C/photos.xml:195(para)
+msgid ""
+"Press <menuchoice><guimenuitem>File</guimenuitem><guimenuitem>Page "
+"Setup</guimenuitem></menuchoice>"
+msgstr ""
+
+#: musicvideophotos/C/photos.xml:203(para)
+msgid ""
+"Under <guilabel>Format for</guilabel>, select the printer which you are "
+"going to use"
+msgstr "<guilabel>フォーマット</guilabel>であなたが使用するプリンタを選択します"
+
+#: musicvideophotos/C/photos.xml:209(para)
+msgid ""
+"Under <guilabel>Paper size</guilabel>, select the size of the paper which "
+"you are going to print the photo onto"
+msgstr "<guilabel>用紙のサイズ</guilabel>で写真を印刷する用紙のサイズを選択します"
+
+#: musicvideophotos/C/photos.xml:215(para)
+msgid ""
+"Under <guilabel>Orientation</guilabel>, choose the orientation of the photo "
+"on the paper"
+msgstr "<guilabel>用紙の向き</guilabel>で写真の印刷位置を定めます"
+
+#: musicvideophotos/C/photos.xml:223(para)
+msgid "Press <guibutton>Apply</guibutton>"
+msgstr "<guibutton>適用</guibutton>をクリックします"
+
+#: musicvideophotos/C/photos.xml:228(para)
+msgid ""
+"Press "
+"<menuchoice><guimenuitem>File</guimenuitem><guimenuitem>Print</guimenuitem></"
+"menuchoice>"
+msgstr ""
+
+#: musicvideophotos/C/photos.xml:237(para)
+msgid "Change any settings as appropriate (see below)"
+msgstr "すべての設定を適切に変更します（下記を参照）"
+
+#: musicvideophotos/C/photos.xml:242(para)
+msgid "Press <guibutton>Print</guibutton> to print the photo"
+msgstr "<guibutton>印刷</guibutton>をクリックして写真を印刷します"
+
+#: musicvideophotos/C/photos.xml:249(title)
+msgid "Printer Settings"
+msgstr "プリンタ設定"
+
+#: musicvideophotos/C/photos.xml:250(para)
+msgid ""
+"You can tweak your printing settings to get the best results. All of these "
+"settings can be found in the "
+"<menuchoice><guimenuitem>File</guimenuitem><guimenuitem>Print</guimenuitem></"
+"menuchoice> window."
+msgstr ""
+
+#: musicvideophotos/C/photos.xml:259(para)
+msgid ""
+"Make sure that you select your printer from the list on the "
+"<guilabel>General</guilabel> tab to get the full range of settings supported "
+"by your printer."
+msgstr ""
+"あなたのプリンタがサポートしているあらゆる種類の設定を確認するには、<guilabel>全般</guilabel>タブのプリンタのリストから正しいプリンタ"
+"が選択されていることを確かめてください。"
+
+#: musicvideophotos/C/photos.xml:265(para)
+msgid ""
+"Different makes of printer will have different printer settings. The "
+"settings below are only provided as a guide for what you may be able to "
+"change with your particular printer."
+msgstr ""
+"プリンタが違えば当然その設定方法も異なることになります。下記の設定方法はあなたのプリンターで変更（調節）ができるかもしれない設定項目についてのガイドとして"
+"提供されます。"
+
+#: musicvideophotos/C/photos.xml:273(title)
+msgid "Paper Type"
+msgstr "用紙の種類"
+
+#: musicvideophotos/C/photos.xml:274(para)
+msgid ""
+"The paper type that you use has a large impact on the quality of your "
+"printed photo. You should set the paper type to match the paper which you "
+"are using in your printer to prevent poor results. Using a "
+"<emphasis>glossy</emphasis> paper type with only <emphasis>plain</emphasis> "
+"paper loaded into your printer will generally produce poor results, for "
+"example."
+msgstr ""
+"印刷用紙の種類は印刷された写真の品質に多大な影響を与えます。印刷の失敗を防ぐには印刷用紙の種類に合わせて「用紙の種類」を設定しなければなりません。たとえば"
+"プリンターには<emphasis>普通紙</emphasis>しかセットされていないのに<emphasis>光沢紙</emphasis>に設定にしてしまっ"
+"た場合の印刷結果はたいていひどいものになります。"
+
+#: musicvideophotos/C/photos.xml:282(para)
+msgid ""
+"This setting may automatically change the amount of ink which is used, in "
+"order to get the best results and to prevent smudging. How this is handled "
+"will depend on your printer."
+msgstr ""
+"この設定項目を変更した場合インクの滲みを防ぎ最適な印刷結果を得るために、使用されるインク量が自動的に調節されるかもしれません。これはプリンターによりけりで"
+"す。"
+
+#: musicvideophotos/C/photos.xml:290(title)
+msgid "Print Quality"
+msgstr "印刷品質"
+
+#: musicvideophotos/C/photos.xml:291(para)
+msgid ""
+"Print quality is generally measured in <emphasis>DPI</emphasis> (dots per "
+"inch). A greater DPI value should result in better print quality."
+msgstr ""
+"印刷品質は通常<emphasis>DPI</emphasis>(dots per "
+"inch)という単位で測られます。DPIが大きければ印刷品質は当然良くなります。"
+
+#: musicvideophotos/C/photos.xml:298(para)
+msgid ""
+"Choose <guilabel>Draft</guilabel> for making quick draft prints which don't "
+"use much ink"
+msgstr ""
+"ドラフト（草稿）としてすばやく印刷するなら<guilabel>ドラフト</guilabel>(Draft)を選択します。ドラフト印刷なら使用インクが少なく"
+"て済みます。"
+
+#: musicvideophotos/C/photos.xml:304(para)
+msgid ""
+"Choose <guilabel>Best Quality</guilabel> or <guilabel>Photo</guilabel> for "
+"making high quality prints. Printing will be slower and will use more ink"
+msgstr ""
+"高い品質で印刷するには<guilabel>高品位</guilabel>(Best "
+"Quality)か<guilabel>写真</guilabel>(Photo)を選択します。印刷速度がより遅く、またより多量のインクを使用します。"
+
+#: musicvideophotos/C/photos.xml:315(title)
+msgid "Advanced Photo Printing"
+msgstr "高度な写真印刷"
+
+#: musicvideophotos/C/photos.xml:316(para)
+msgid ""
+"For advanced photo printing, <ulink url=\"apt:photoprint\">install the "
+"<application>PhotoPrint</application> package</ulink> from the universe "
+"repository. Once installed, press "
+"<menuchoice><guimenu>Applications</guimenu><guimenuitem>Graphics</guimenuitem"
+"><guimenuitem>PhotoPrint</guimenuitem></menuchoice> to start PhotoPrint."
+msgstr ""
+
+#: musicvideophotos/C/photos.xml:322(para)
+msgid "PhotoPrint allows you to fine-tune your printing settings."
+msgstr "PhotoPrintを使えば印刷設定をより細かく調整できます。"
+
+#: musicvideophotos/C/photos.xml:327(para)
+msgid ""
+"Under <guilabel>Page Size</guilabel>, change the page size to the size of "
+"paper that you want to print onto."
+msgstr "<guilabel>Page Size</guilabel>(用紙サイズ)を、あなたが使用する用紙サイズに変更します。"
+
+#: musicvideophotos/C/photos.xml:333(para)
+msgid ""
+"Under <guilabel>Layout</guilabel>, change the number of columns and rows to "
+"reflect the number of photos that you want to put onto a page"
+msgstr ""
+"<guilabel>Layout</guilabel>(レイアウト)で、１ページに配置する画像の枚数をrows(行)とcolumns(列)の数で指定します"
+"。"
+
+#: musicvideophotos/C/photos.xml:340(para)
+msgid ""
+"To change the amount of spacing between photos, change the "
+"<guilabel>Horizontal</guilabel> and <guilabel>Vertical</guilabel> settings "
+"under <guilabel>Gutters</guilabel>"
+msgstr ""
+"写真同士の間隔を変更するには、<guilabel>Gutters</guilabel>(間隔)の<guilabel>Horizontal</guilabe"
+"l>(水平方向)と<guilabel>Vertical</guilabel>(垂直方向)の設定を変更します。"
+
+#: musicvideophotos/C/photos.xml:348(para)
+msgid ""
+"To add a photo to the page, press "
+"<menuchoice><guimenuitem>Image</guimenuitem><guimenuitem>Add "
+"Image</guimenuitem></menuchoice> and select a photo"
+msgstr ""
+"あるページに写真を追加するには、<menuchoice><guimenuitem>Image</guimenuitem><guimenuitem>Add "
+"Image</guimenuitem></menuchoice>をクリックして、追加する写真を選んでください。"
+
+#: musicvideophotos/C/photos.xml:357(para)
+msgid ""
+"To change the advanced printer settings, press "
+"<menuchoice><guimenuitem>File</guimenuitem><guimenuitem>Print "
+"Setup</guimenuitem></menuchoice>"
+msgstr ""
+
+#: musicvideophotos/C/photos.xml:364(para)
+msgid ""
+"You may need to select the correct printer model on the "
+"<guilabel>Output</guilabel> tab"
+msgstr "<guilabel>Output</guilabel>タブで適切なプリンターの型番を選択する必要があるかもしれません。"
+
+#: musicvideophotos/C/photos.xml:370(para)
+msgid ""
+"Press "
+"<menuchoice><guimenuitem>File</guimenuitem><guimenuitem>Print</guimenuitem></"
+"menuchoice> to print your photos"
+msgstr ""
+"写真印刷するには<menuchoice><guimenuitem>File</guimenuitem><guimenuitem>Print</guimen"
+"uitem></menuchoice>をクリックします。"
+
+#: musicvideophotos/C/photos.xml:383(title)
+msgid "Sharing your photos"
+msgstr "写真の共有"
+
+#: musicvideophotos/C/photos.xml:384(para)
+msgid ""
+"If you want to share your collection of photos with others, why not use an "
+"online photo sharing service or burn a CD of your photos? Ubuntu has plenty "
+"of tools to help you share your pictures."
+msgstr ""
+"もしあなたが他の人と一緒に写真コレクションを共有したければ、オンラインの写真共有サービスを利用するか、写真をCDに焼くのはどうでしょうか？。Ubuntuに"
+"は、あなたが画像を共有する手助けをするのに充分なツールが備わっています。"
+
+#: musicvideophotos/C/photos.xml:396(para)
+msgid ""
+"Share your photos over the Internet using a <ulink type=\"help\" "
+"url=\"ghelp:f-spot#sharing-flickr-or-php-gallery\"> photo sharing "
+"service</ulink> or a <ulink type=\"help\" url=\"ghelp:f-spot#website-gallery-"
+"folder\">web gallery</ulink>."
+msgstr ""
+
+#: musicvideophotos/C/photos.xml:404(para)
+msgid "Burn a CD of your photos using the <xref linkend=\"cdburning\"/>"
+msgstr ""
+
+#: musicvideophotos/C/photos.xml:410(para)
+msgid "Present a <xref linkend=\"photos-slideshow\"/>"
+msgstr ""
+
+#: musicvideophotos/C/photos.xml:416(para)
+msgid ""
+"<ulink type=\"help\" url=\"ghelp:f-spot#sharing-e-mail\"> E-mail "
+"copies</ulink> of your photos directly."
+msgstr ""
+
+#: musicvideophotos/C/photos.xml:425(title)
+msgid "Edit and improve photos"
+msgstr "写真の編集/改善"
+
+#: musicvideophotos/C/photos.xml:426(para)
+msgid ""
+"Sometimes, you may need to adjust or touch-up a photo to make it look better "
+"or to remove some flaw. <application>F-Spot</application> includes a few "
+"basic tools for doing this. To access these tools, press the <guibutton>Edit "
+"Photo</guibutton> button and then click on one of the tools at the bottom of "
+"the screen."
+msgstr ""
+"写真のあらを隠したり見栄えをより良くするための調整や修正が必要になることがあるかもしれません。<application>F-"
+"Spot</application>には、そうした作業に使用する2, "
+"3の基本的なツールが含まれます。これらのツールにアクセスするには<guibutton>Edit "
+"Image</guibutton>(画像の編集)ボタンをクリックして、画面下に表示されているツールの中から一つを選んでクリックしてください。"
+
+#: musicvideophotos/C/photos.xml:433(para)
+msgid ""
+"The <application>GIMP Image Editor</application> is much more advanced. It "
+"is installed in Ubuntu by default, and can be started by choosing "
+"<menuchoice><guimenu>Applications</guimenu><guimenuitem>Graphics</guimenuitem"
+"><guimenuitem>GIMP Image Editor</guimenuitem></menuchoice>."
+msgstr ""
+"<application>GIMP Image "
+"Editor</application>はさらに高度な機能を持っています。これはUbuntuにデフォルトでインストールされており、<menuchoice>"
+"<guimenu>アプリケーション</guimenu><guimenuitem>グラフィックス</guimenuitem><guimenuitem>GIM"
+"P Image Editor</guimenuitem></menuchoice>から起動できます。"
+
+#: musicvideophotos/C/photos.xml:438(para)
+msgid ""
+"The GIMP has many professional-level features. It includes tools for "
+"selections, drawing, creating paths, masks, filters, effects, and more."
+msgstr ""
+"GIMP には多くのプロフェッショナル・レベルの機能があります。選択、作図、パス作成、マスク、フィルタ、視覚効果、その他のツールが含まれます。"
+
+#: musicvideophotos/C/photos.xml:444(title)
+msgid "Rotating photos"
+msgstr "画像の回転"
+
+#: musicvideophotos/C/photos.xml:445(para)
+msgid ""
+"You may find that you have some photos which are the wrong way up. It is "
+"easy to rotate photos so that they're the right way up again."
+msgstr "ときには逆さまになった写真があるかもしれません。写真を回転させて上下を正すことは簡単です。"
+
+#: musicvideophotos/C/photos.xml:449(para)
+msgid ""
+"The <ulink type=\"help\" url=\"ghelp:eog#eog-manipulate\"> Image "
+"Viewer</ulink>, F-Spot Photo Manager and the GIMP Image Editor are all "
+"capable of rotating photos."
+msgstr ""
+
+#: musicvideophotos/C/photos.xml:457(title)
+msgid "Resizing photos"
+msgstr "写真のリサイズ"
+
+#: musicvideophotos/C/photos.xml:458(para)
+msgid ""
+"You can resize photos which are too big. If you have a photo which has a "
+"large file size, resizing it will also reduce the file size."
+msgstr "写真が大きすぎるときはリサイズできます。ファイルサイズが大きいときにはリサイズすればファイルサイズも小さくなります。"
+
+#: musicvideophotos/C/photos.xml:462(para)
+msgid ""
+"The <application>GIMP Image Editor</application> supports several methods of "
+"resizing photos. We will concentrate on the simplest method."
+msgstr ""
+"<application>GIMP Image "
+"Editor</application>は写真をリサイズする数種類の方法に対応していますが、ここではもっとも簡単な方法だけを説明します。"
+
+#: musicvideophotos/C/photos.xml:469(para)
+msgid "Open the photo you want to resize in the GIMP Image Editor"
+msgstr ""
+
+#: musicvideophotos/C/photos.xml:474(para)
+msgid ""
+"Press <menuchoice><guimenuitem>Image</guimenuitem><guimenuitem>Scale "
+"Image</guimenuitem></menuchoice>"
+msgstr ""
+
+#: musicvideophotos/C/photos.xml:483(para)
+msgid ""
+"Adjust the <guilabel>Width</guilabel> or <guilabel>Height</guilabel> as "
+"appropriate. The image will be kept to scale."
+msgstr ""
+"<guilabel>幅</guilabel>と<guilabel>高さ</guilabel>を調節します。このときイメージの縦横比率は保たれます。"
+
+#: musicvideophotos/C/photos.xml:488(para)
+msgid ""
+"If you want to adjust the width and height independently, press the link "
+"button which connects the <guilabel>Width</guilabel> and "
+"<guilabel>Height</guilabel> boxes, so that it looks like a broken link."
+msgstr ""
+"幅や高さのどちらか一方だけを微調整したいときは、<guilabel>幅</guilabel>ボックスと<guilabel>高さ</guilabel>ボック"
+"スを結合しているリンクボタンをクリックします（するとリンクが解除されたようにボタンが変化します）。"
+
+#: musicvideophotos/C/photos.xml:496(para)
+msgid ""
+"Under <guilabel>Quality</guilabel>, change the "
+"<guilabel>Interpolation</guilabel> to <guilabel>Cubic (Best)</guilabel>. "
+"This will give you the best quality resized image"
+msgstr ""
+"<guilabel>品質</guilabel>で<guilabel>補間の種類</guilabel>を<guilabel>キュービック</guilabel"
+">に変更します。こうすれば最高画質でイメージがリサイズされます。"
+
+#: musicvideophotos/C/photos.xml:504(para)
+msgid "Press <guilabel>Scale</guilabel> to resize the photo"
+msgstr "<guilabel>拡大縮小</guilabel>をクリックして写真をリサイズします"
+
+#: musicvideophotos/C/photos.xml:509(para)
+msgid ""
+"Press <menuchoice><guimenuitem>File</guimenuitem><guimenuitem>Save "
+"As</guimenuitem></menuchoice> and choose a new filename for the photo"
+msgstr ""
+
+#: musicvideophotos/C/photos.xml:518(para)
+msgid "Press <guilabel>Save</guilabel> to save the resized photo"
+msgstr "<guilabel>保存</guilabel>をクリックしてリサイズした写真を保存します。"
 
 #: musicvideophotos/C/musicvideophotos.xml:3(title)
 msgid "Credits and License"
@@ -107,29 +1010,21 @@ msgstr "Canonical Ltd.と<placeholder-1/>一同"
 msgid "The Ubuntu Documentation Project"
 msgstr "Ubuntu Documentation Project"
 
-#: musicvideophotos/C/musicvideophotos.xml:21(para)
+#: musicvideophotos/C/music.xml:16(title)
+msgid "Music"
+msgstr ""
+
+#: musicvideophotos/C/music.xml:17(para)
 msgid ""
 "This section describes how to import, organize and use music, videos and "
 "photos with Ubuntu."
 msgstr "このセクションは、Ubuntuで音楽、ビデオ、写真をインポートや管理や利用する方法について記述しています。"
 
-#: musicvideophotos/C/musicvideophotos.xml:27(title)
-msgid "Music and audio"
-msgstr "音楽とオーディオ"
-
-#: musicvideophotos/C/musicvideophotos.xml:28(para)
-msgid ""
-"Whether you want to play, rip, edit or organize your music, Ubuntu has the "
-"tools that you need."
+#: musicvideophotos/C/music.xml:20(title)
+msgid "Listen"
 msgstr ""
-"あなたが音楽を演奏したいか、リッピングしたいか、編集したいか、または管理したいかにかかわらず、\n"
-"Ubuntuには、あなたが必要とするツールがあります。"
 
-#: musicvideophotos/C/musicvideophotos.xml:34(title)
-msgid "Listen to audio files and CDs"
-msgstr "ファイルやCDの音楽を聴くには"
-
-#: musicvideophotos/C/musicvideophotos.xml:35(para)
+#: musicvideophotos/C/music.xml:21(para)
 msgid ""
 "You can use <application>Rhythmbox</application> "
 "(<menuchoice><guimenu>Applications</guimenu><guimenuitem>Sound &amp; "
@@ -147,20 +1042,19 @@ msgstr ""
 "(<menuchoice><guimenu>アプリケーション</guimenu><guimenuitem>サウンドとビデオ</guimenuitem><g"
 "uimenuitem>ムービープレイヤー</guimenuitem></menuchoice>) を使うことができます。"
 
-#: musicvideophotos/C/musicvideophotos.xml:41(para)
+#: musicvideophotos/C/music.xml:25(para)
 msgid ""
-"Audio files will be opened in Movie Player when double-clicked, but "
-"Rhythmbox is better at handling large music collections."
+"Audio files will be opened in Movie Player when double-clicked but Rhythmbox "
+"is better at handling large music collections."
 msgstr ""
-"音楽ファイルはダブルクリックしたときにムービープレイヤーで開きますが、Rhythmboxが大量の音楽コレクションを扱うはより良いでしょう。"
 
-#: musicvideophotos/C/musicvideophotos.xml:46(para)
+#: musicvideophotos/C/music.xml:28(para)
 msgid ""
-"Rhythmbox is also able to play audio CDs, and should open automatically when "
-"you insert a CD."
-msgstr "Rhythmboxは音楽CDを再生できますし、CDを挿入したときに自動的に開きます。"
+"Rhythmbox is also able to play audio CDs and work with MP3 players. It "
+"should open automatically when you insert a CD."
+msgstr ""
 
-#: musicvideophotos/C/musicvideophotos.xml:50(para)
+#: musicvideophotos/C/music.xml:30(para)
 msgid ""
 "See the <ulink type=\"help\" url=\"ghelp:rhythmbox\"> Rhythmbox "
 "manual</ulink> for more information."
@@ -168,17 +1062,17 @@ msgstr ""
 "より多くの情報は<ulink type=\"help\" url=\"ghelp:rhythmbox\"> "
 "Rhythmboxマニュアル</ulink>を見てください。"
 
-#: musicvideophotos/C/musicvideophotos.xml:56(title)
+#: musicvideophotos/C/music.xml:33(title)
 msgid "How can I prevent CDs from playing when I insert them?"
 msgstr "CDを挿入したときにCDを再生しないようにするには?"
 
-#: musicvideophotos/C/musicvideophotos.xml:57(para)
+#: musicvideophotos/C/music.xml:34(para)
 msgid ""
 "Rhythmbox should start playing a CD automatically when you insert it into "
 "your CD drive."
 msgstr "RhythmboxはCDドライブにCDを挿入したときに自動的にCDを再生開始します。"
 
-#: musicvideophotos/C/musicvideophotos.xml:61(para)
+#: musicvideophotos/C/music.xml:36(para)
 msgid ""
 "To prevent this from happening, open your Home folder by clicking "
 "<menuchoice><guimenu>Places</guimenu><guimenuitem>Home "
@@ -190,7 +1084,7 @@ msgid ""
 "Finally, press <guibutton>Close</guibutton>."
 msgstr ""
 
-#: musicvideophotos/C/musicvideophotos.xml:72(para)
+#: musicvideophotos/C/music.xml:45(para)
 msgid ""
 "See the <ulink type=\"help\" url=\"ghelp:user-guide#nautilus-preferences\"> "
 "Nautilus Preferences article</ulink> for more information."
@@ -198,18 +1092,18 @@ msgstr ""
 "より多くの情報は <ulink type=\"help\" url=\"ghelp:user-guide#nautilus-preferences\"> "
 "Nautilus Preferences article</ulink>を見てください。"
 
-#: musicvideophotos/C/musicvideophotos.xml:79(title)
+#: musicvideophotos/C/music.xml:49(title)
 msgid "Song names/cover art are missing/wrong for some songs"
 msgstr ""
 
-#: musicvideophotos/C/musicvideophotos.xml:80(para)
+#: musicvideophotos/C/music.xml:50(para)
 msgid ""
 "Music player applications fetch cover art and other information about songs "
 "from the Internet. If song names or cover art are missing, make sure that "
 "you are connected to the Internet."
 msgstr ""
 
-#: musicvideophotos/C/musicvideophotos.xml:85(para)
+#: musicvideophotos/C/music.xml:53(para)
 msgid ""
 "Sometimes, your music player may not be able to identify a particular song "
 "or album correctly. If this is the case, you can add the correct information "
@@ -218,11 +1112,11 @@ msgid ""
 "aac\">EasyTAG</ulink>. Some music players even have their own tag editor."
 msgstr ""
 
-#: musicvideophotos/C/musicvideophotos.xml:94(emphasis)
+#: musicvideophotos/C/music.xml:59(emphasis)
 msgid "If only the album cover art is missing for an album:"
 msgstr ""
 
-#: musicvideophotos/C/musicvideophotos.xml:99(para)
+#: musicvideophotos/C/music.xml:62(para)
 msgid ""
 "Find a picture of the album cover on the Internet. <ulink "
 "url=\"http://www.amazon.com/\">Amazon</ulink> and other music retailers "
@@ -230,65 +1124,91 @@ msgid ""
 "<guibutton>Save Image As</guibutton> to save it to your computer."
 msgstr ""
 
-#: musicvideophotos/C/musicvideophotos.xml:108(para)
+#: musicvideophotos/C/music.xml:67(para)
 msgid ""
 "Rename the picture to <filename>cover.jpg</filename> and copy it into the "
 "folder which contains the songs from the album."
 msgstr ""
 
-#: musicvideophotos/C/musicvideophotos.xml:114(para)
+#: musicvideophotos/C/music.xml:69(para)
 msgid ""
 "Rhythmbox and most other music players should display the correct cover art "
 "when a song from the album is next played."
 msgstr ""
 
-#: musicvideophotos/C/musicvideophotos.xml:120(para)
+#: musicvideophotos/C/music.xml:72(para)
 msgid ""
 "Rhythmbox and some other music players allow you to drag a picture onto "
 "their cover art display area to change or add cover art for an album."
 msgstr ""
 
-#: musicvideophotos/C/musicvideophotos.xml:128(title)
-msgid "Copy music from a CD to your computer"
-msgstr "CDから音楽をコンピュータに複製する"
+#: musicvideophotos/C/music.xml:77(title)
+msgid "Extract from a CD"
+msgstr "CDから追加"
 
-#: musicvideophotos/C/musicvideophotos.xml:129(para)
+#: musicvideophotos/C/music.xml:78(para)
 msgid ""
-"You can copy music from a CD to your computer so that you do not have to "
+"You can extract music from a CD to your computer so that you do not have to "
 "have the CD in the drive to play songs from it. You can then copy the songs "
-"to a digital audio player, such as an iPod."
+"to a digital audio player, such as an MP3 player."
 msgstr ""
 
-#: musicvideophotos/C/musicvideophotos.xml:134(para)
+#: musicvideophotos/C/music.xml:82(para)
 msgid ""
-"Applications which perform this task for you are called <emphasis>CD "
-"rippers</emphasis> or <emphasis>extractors</emphasis>. The music is often "
-"<emphasis>compressed</emphasis> when you copy it, so that it takes up less "
-"space on your hard disk. MP3 and WMA files are examples of compressed audio "
-"files."
+"Rhythmbox stores extracted files in the Music folder "
+"(<menuchoice><guimenu>Places</guimenu><guimenuitem>Music</guimenuitem></menuc"
+"hoice>)."
 msgstr ""
 
-#: musicvideophotos/C/musicvideophotos.xml:140(para)
+#: musicvideophotos/C/music.xml:85(para)
+msgid "Insert an Audio CD."
+msgstr ""
+
+#: musicvideophotos/C/music.xml:86(para)
 msgid ""
-"Rhythmbox can copy CDs to your computer in a range of different formats. See "
-"the <ulink type=\"help\" url=\"ghelp:rhythmbox#cd-import\"> Rhythmbox "
-"manual</ulink> for instructions. Other applications, such as <ulink "
-"type=\"help\" url=\"ghelp:sound-juicer\">Sound Juicer</ulink>, can also be "
-"used to extract songs from CDs."
+"You will be prompted to choose which application to launch, choose "
+"<guilabel>Open Rhythmbox Music Player</guilabel>."
 msgstr ""
 
-#: musicvideophotos/C/musicvideophotos.xml:148(para)
+#: musicvideophotos/C/music.xml:88(para)
+msgid "Click <guibutton>OK</guibutton>."
+msgstr ""
+
+#: musicvideophotos/C/music.xml:89(para)
 msgid ""
-"The <filename>Music</filename> folder is a good place to store your music "
-"files when you copy them from a CD; most audio applications look there by "
-"default when searching for your music."
+"In the left hand pane, under <guilabel>Devices</guilabel>, right click the "
+"CD name you want to extract."
 msgstr ""
 
-#: musicvideophotos/C/musicvideophotos.xml:157(title)
-msgid "Copy music to a CD"
-msgstr "CDに音楽を複製する"
+#: musicvideophotos/C/music.xml:91(para)
+msgid "Click <guibutton>Extract to Library</guibutton>."
+msgstr ""
 
-#: musicvideophotos/C/musicvideophotos.xml:158(para)
+#: musicvideophotos/C/music.xml:93(para) musicvideophotos/C/music.xml:202(para)
+msgid ""
+"You can change the default file format used by Rhythmbox when copying CDs. "
+"Click "
+"<menuchoice><guimenuitem>Edit</guimenuitem><guimenuitem>Preferences</guimenui"
+"tem><guimenuitem>Music</guimenuitem></menuchoice> and change the "
+"<guilabel>Preferred Format</guilabel> to the format of your choice. In "
+"future, all CDs copied to your computer will be copied in this format."
+msgstr ""
+
+#: musicvideophotos/C/music.xml:105(para) musicvideophotos/C/music.xml:215(para)
+msgid ""
+"If an MP3 option is not shown in the <guilabel>Preferred Format </guilabel> "
+"list, <ulink url=\"apt:gstreamer0.10-plugins-ugly-multiverse\">install the "
+"<application>gstreamer0.10-plugins-ugly-multiverse</application> "
+"package</ulink> and restart Rhythmbox. The option <guilabel>CD Quality, MP3 "
+"(.mp3 type) </guilabel> should appear in the <guilabel>Preferred Format "
+"</guilabel> list."
+msgstr ""
+
+#: musicvideophotos/C/music.xml:116(title)
+msgid "Copy to a CD"
+msgstr ""
+
+#: musicvideophotos/C/music.xml:117(para)
 msgid ""
 "You can create your own audio CDs by copying music from your computer onto a "
 "blank disc. CDs that you create in this way should play in any device that "
@@ -296,7 +1216,7 @@ msgid ""
 "burner (also called a CD writer). Most computers have one of these."
 msgstr ""
 
-#: musicvideophotos/C/musicvideophotos.xml:165(para)
+#: musicvideophotos/C/music.xml:124(para)
 msgid ""
 "To begin creating an audio CD, start Brasero "
 "(<menuchoice><guimenu>Applications</guimenu><guimenuitem>Sound &amp; "
@@ -307,7 +1227,7 @@ msgid ""
 "<guibutton>Burn</guibutton> to copy the songs to a CD."
 msgstr ""
 
-#: musicvideophotos/C/musicvideophotos.xml:171(para)
+#: musicvideophotos/C/music.xml:130(para)
 msgid ""
 "You will also need to select the maximum duration of the CD which you "
 "inserted (e.g. 80 minutes), which can be done by clicking on the small CD "
@@ -315,7 +1235,7 @@ msgid ""
 "selected more files than can fit on the disc."
 msgstr ""
 
-#: musicvideophotos/C/musicvideophotos.xml:177(para)
+#: musicvideophotos/C/music.xml:136(para)
 msgid ""
 "See the <ulink type=\"help\" url=\"ghelp:brasero\"> Brasero manual</ulink> "
 "for full instructions."
@@ -323,11 +1243,11 @@ msgstr ""
 "すべての説明については<ulink type=\"help\" url=\"ghelp:brasero\"> Brasero "
 "manual</ulink> を見てください。"
 
-#: musicvideophotos/C/musicvideophotos.xml:184(title)
-msgid "Use an iPod or other portable music player"
-msgstr "iPodや他のポータブル・ミュージックプレイヤーを利用する"
+#: musicvideophotos/C/music.xml:142(title)
+msgid "Portable music players"
+msgstr ""
 
-#: musicvideophotos/C/musicvideophotos.xml:185(para)
+#: musicvideophotos/C/music.xml:143(para)
 msgid ""
 "Ubuntu will work with most portable audio players, including iPods. "
 "Normally, all you have to do is plug the player into your computer and then "
@@ -338,7 +1258,11 @@ msgid ""
 "information."
 msgstr ""
 
-#: musicvideophotos/C/musicvideophotos.xml:195(para)
+#: musicvideophotos/C/music.xml:154(title)
+msgid "iPod"
+msgstr ""
+
+#: musicvideophotos/C/music.xml:155(para)
 msgid ""
 "If you have a portable music player which can also display photos and "
 "videos, you may prefer to use <ulink url=\"apt:banshee\">Banshee</ulink>, "
@@ -348,19 +1272,71 @@ msgid ""
 "url=\"apt:gtkpod\">gtkpod</ulink> for handling multimedia."
 msgstr ""
 
-#: musicvideophotos/C/musicvideophotos.xml:205(title)
-msgid "My portable audio player does not recognize songs copied from Ubuntu"
-msgstr "私のポータブル・オーディオプレイヤーがUbuntuからの音楽の複製を認識しません"
-
-#: musicvideophotos/C/musicvideophotos.xml:207(para)
-msgid ""
-"When you copy music from a CD onto a computer, it must be stored in a "
-"specific <emphasis>audio format</emphasis>. The default format used by "
-"Rhythmbox is Ogg Vorbis (<filename>.ogg</filename> or "
-"<filename>.oga</filename>)."
+#: musicvideophotos/C/music.xml:165(title)
+msgid "MTP Media Players"
 msgstr ""
 
-#: musicvideophotos/C/musicvideophotos.xml:213(para)
+#: musicvideophotos/C/music.xml:166(para)
+msgid ""
+"A number of MP3 players, such as those produced by Samsung use Media "
+"Transfer Protocol(MTP). These devices, when used with the correct driver, "
+"often appear in Windows as a media device but can be accessed as a USB "
+"device."
+msgstr ""
+
+#: musicvideophotos/C/music.xml:170(para)
+msgid "Ubuntu supports these devices but requires two steps:"
+msgstr ""
+
+#: musicvideophotos/C/music.xml:172(para)
+msgid ""
+"Install the <ulink "
+"url=\"apt:mtpfs\"><application>mtpfs</application></ulink> and <ulink "
+"url=\"apt:mtpfs\"><application>mtp-tools</application></ulink> packages."
+msgstr ""
+
+#: musicvideophotos/C/music.xml:174(para)
+msgid ""
+"Open <menuchoice><guimenu>Applications</guimenu><guimenuitem>Sound &amp; "
+"Video</guimenuitem><guimenuitem>Rhythmbox Music "
+"Player</guimenuitem></menuchoice>."
+msgstr ""
+
+#: musicvideophotos/C/music.xml:175(para)
+msgid ""
+"Click "
+"<menuchoice><guimenu>Edit</guimenu><guimenuitem>Plugins</guimenuitem></menuch"
+"oice>"
+msgstr ""
+
+#: musicvideophotos/C/music.xml:176(para)
+msgid "Tick the <guilabel>Portable Players - MTP</guilabel> plugin."
+msgstr ""
+
+#: musicvideophotos/C/music.xml:177(para)
+msgid "Click <guibutton>Close</guibutton>."
+msgstr ""
+
+#: musicvideophotos/C/music.xml:179(para)
+msgid ""
+"Your device will now be displayed in the left hand pane under "
+"<guilabel>Devices</guilabel> when connected."
+msgstr ""
+
+#: musicvideophotos/C/music.xml:184(title)
+msgid "Converting audio files"
+msgstr ""
+
+#: musicvideophotos/C/music.xml:185(para)
+msgid ""
+"When you extract music from a CD onto a computer, it must be stored in a "
+"specific <emphasis>audio format</emphasis>. The default format used by "
+"Rhythmbox is Ogg Vorbis (<filename>.ogg</filename> or "
+"<filename>.oga</filename>). This is explained in <xref linkend=\"music-"
+"extract\"/>."
+msgstr ""
+
+#: musicvideophotos/C/music.xml:190(para)
 msgid ""
 "Not all portable audio players are able to play files in the Ogg Vorbis "
 "format; for example, iPods cannot play this format. In order for your player "
@@ -369,44 +1345,25 @@ msgid ""
 "is usually a safe bet."
 msgstr ""
 
-#: musicvideophotos/C/musicvideophotos.xml:220(para)
+#: musicvideophotos/C/music.xml:197(para)
 msgid ""
 "You can convert existing audio files to other formats using <ulink "
 "url=\"apt:soundconverter\">Sound Converter</ulink>. The output format can be "
 "selected in the Sound Converter preferences."
 msgstr ""
 
-#: musicvideophotos/C/musicvideophotos.xml:225(para)
-msgid ""
-"You can change the default file format used by Rhythmbox when copying CDs. "
-"Click "
-"<menuchoice><guimenuitem>Edit</guimenuitem><guimenuitem>Preferences</guimenui"
-"tem><guimenuitem>Music</guimenuitem></menuchoice> and change the "
-"<guilabel>Preferred Format</guilabel> to the format of your choice. In "
-"future, all CDs copied to your computer will be copied in this format."
+#: musicvideophotos/C/music.xml:226(title)
+msgid "Podcasts and Internet radio stations"
 msgstr ""
 
-#: musicvideophotos/C/musicvideophotos.xml:238(para)
-msgid ""
-"If an MP3 option is not shown in the <guilabel>Preferred Format </guilabel> "
-"list, install the <ulink url=\"apt:gstreamer0.10-plugins-ugly-multiverse\"> "
-"gstreamer0.10-plugins-ugly-multiverse</ulink> package and restart Rhythmbox. "
-"The option <guilabel>CD Quality, MP3 (.mp3 type) </guilabel> should appear "
-"in the <guilabel>Preferred Format </guilabel> list."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:252(title)
-msgid "Listen to podcasts and Internet radio stations"
-msgstr "ポッドキャストやインターネット・ラジオ局を聴く"
-
-#: musicvideophotos/C/musicvideophotos.xml:253(para)
+#: musicvideophotos/C/music.xml:227(para)
 msgid ""
 "<emphasis role=\"strong\">Podcasts</emphasis> are pre-recorded shows which "
 "you can download and listen to on your computer or portable audio player. "
 "Thousands of podcasts are available and most can be downloaded for free."
 msgstr ""
 
-#: musicvideophotos/C/musicvideophotos.xml:259(para)
+#: musicvideophotos/C/music.xml:233(para)
 msgid ""
 "You can use Rhythmbox to download and play podcasts; select "
 "<guilabel>Podcasts</guilabel> from the <guilabel>Library</guilabel> section "
@@ -417,7 +1374,7 @@ msgid ""
 "url=\"apt:penguintv\">PenguinTV</ulink>."
 msgstr ""
 
-#: musicvideophotos/C/musicvideophotos.xml:268(para)
+#: musicvideophotos/C/music.xml:242(para)
 msgid ""
 "<emphasis role=\"strong\">Internet radio stations</emphasis> are live "
 "<emphasis>audio streams</emphasis>, similar to standard radio but "
@@ -428,7 +1385,7 @@ msgid ""
 "manual</ulink> for more details."
 msgstr ""
 
-#: musicvideophotos/C/musicvideophotos.xml:278(para)
+#: musicvideophotos/C/music.xml:252(para)
 msgid ""
 "<emphasis role=\"strong\">RealAudio streams</emphasis>, as used by some "
 "Internet radio stations, are not supported by Rhythmbox. To listen to this "
@@ -436,18 +1393,18 @@ msgid ""
 "RealPlayer</link>."
 msgstr ""
 
-#: musicvideophotos/C/musicvideophotos.xml:287(title)
+#: musicvideophotos/C/music.xml:261(title)
 msgid "Download music from the Internet"
 msgstr "インターネットから音楽をダウンロードする"
 
-#: musicvideophotos/C/musicvideophotos.xml:288(para)
+#: musicvideophotos/C/music.xml:262(para)
 msgid ""
 "Many websites which allow you to buy music online and download it onto your "
 "computer are designed to work with Microsoft Windows only. As a result, some "
 "services will not work with Ubuntu."
 msgstr ""
 
-#: musicvideophotos/C/musicvideophotos.xml:293(para)
+#: musicvideophotos/C/music.xml:267(para)
 msgid ""
 "Ubuntu is able to play most audio formats, including MP3, WMA and AAC. "
 "However, it does not support the various DRM (Digital Rights Management) "
@@ -457,7 +1414,7 @@ msgid ""
 "restricted and so cannot be played."
 msgstr ""
 
-#: musicvideophotos/C/musicvideophotos.xml:301(para)
+#: musicvideophotos/C/music.xml:275(para)
 msgid ""
 "Two services which offer unrestricted (DRM-free) music are <ulink "
 "url=\"http://www.jamendo.com\">Jamendo</ulink> and <ulink "
@@ -467,7 +1424,7 @@ msgid ""
 "manual</ulink> for more information)."
 msgstr ""
 
-#: musicvideophotos/C/musicvideophotos.xml:310(para)
+#: musicvideophotos/C/music.xml:284(para)
 msgid ""
 "Downloading music from the Internet without the permission of its copyright "
 "holder is considered illegal in many countries. You should check that you "
@@ -475,17 +1432,17 @@ msgid ""
 "computer."
 msgstr ""
 
-#: musicvideophotos/C/musicvideophotos.xml:320(title)
+#: musicvideophotos/C/music.xml:293(title)
 msgid "Recording sounds"
 msgstr "サウンド・レコーディング"
 
-#: musicvideophotos/C/musicvideophotos.xml:321(para)
+#: musicvideophotos/C/music.xml:294(para)
 msgid ""
 "You can record sounds onto your computer if you have a microphone or other "
 "recording equipment connected to it."
 msgstr ""
 
-#: musicvideophotos/C/musicvideophotos.xml:325(para)
+#: musicvideophotos/C/music.xml:298(para)
 msgid ""
 "To start a basic sound recording application, press "
 "<keycombo><keycap>Alt</keycap><keycap>F2</keycap></keycombo>, type "
@@ -495,36 +1452,36 @@ msgid ""
 "use it."
 msgstr ""
 
-#: musicvideophotos/C/musicvideophotos.xml:333(para)
+#: musicvideophotos/C/music.xml:306(para)
 msgid ""
 "For more advanced recording needs, you may like to try a multi-track audio "
 "editor such as <ulink url=\"apt:jokosher\">Jokosher</ulink> or <ulink "
 "url=\"apt:audacity\">Audacity</ulink>."
 msgstr ""
 
-#: musicvideophotos/C/musicvideophotos.xml:339(para)
+#: musicvideophotos/C/music.xml:312(para)
 msgid ""
 "Many other professional-level recording tools are available for Ubuntu. See "
 "the <ulink url=\"http://ubuntustudio.org/\"> Ubuntu Studio website</ulink> "
 "for more information."
 msgstr ""
 
-#: musicvideophotos/C/musicvideophotos.xml:346(title)
+#: musicvideophotos/C/music.xml:319(title)
 msgid "My microphone does not work or is too quiet"
 msgstr "マイクが動作しないか、とても小さい"
 
-#: musicvideophotos/C/musicvideophotos.xml:352(emphasis)
+#: musicvideophotos/C/music.xml:325(emphasis)
 msgid "Check that the microphone is connected to the correct socket"
 msgstr "マイクが正しいソケットに接続しているか確認します"
 
-#: musicvideophotos/C/musicvideophotos.xml:356(para)
+#: musicvideophotos/C/music.xml:329(para)
 msgid ""
 "Most computers have three or more similar-looking audio sockets, so you "
 "should check that the microphone is plugged into the correct one. It is "
 "usually colored pink and has a microphone icon next to it."
 msgstr ""
 
-#: musicvideophotos/C/musicvideophotos.xml:362(para)
+#: musicvideophotos/C/music.xml:335(para)
 msgid ""
 "In some rare cases, sockets do not work as labeled. For example, your "
 "microphone socket may act as the <quote>Line Out</quote> socket and vice "
@@ -532,17 +1489,17 @@ msgid ""
 "microphone socket."
 msgstr ""
 
-#: musicvideophotos/C/musicvideophotos.xml:371(emphasis)
+#: musicvideophotos/C/music.xml:344(emphasis)
 msgid "Check that the microphone is not muted in the settings"
-msgstr ""
+msgstr "マイクが設定でミュートになっていないか確認する"
 
-#: musicvideophotos/C/musicvideophotos.xml:375(para)
+#: musicvideophotos/C/music.xml:348(para)
 msgid ""
 "The microphone input may have been muted or its volume reduced in the system "
 "settings."
-msgstr ""
+msgstr "マイクの入力がミュートであるか、システムの設定でボリュームが小さくなっているかもしれません。"
 
-#: musicvideophotos/C/musicvideophotos.xml:381(para)
+#: musicvideophotos/C/music.xml:354(para)
 msgid ""
 "Right-click the speaker icon on the panel at the top of your screen and "
 "select <guilabel>Open Volume Control</guilabel>. If you do not have a "
@@ -552,16 +1509,14 @@ msgid ""
 "<guibutton>Run</guibutton> instead."
 msgstr ""
 
-#: musicvideophotos/C/musicvideophotos.xml:394(para)
+#: musicvideophotos/C/music.xml:367(para)
 msgid ""
-"When the Volume Control opens, click "
-"<menuchoice><guimenuitem>Edit</guimenuitem><guimenuitem>Preferences</guimenui"
-"tem></menuchoice> and make sure that all of the items related to the "
-"microphone settings are checked. Click <guibutton>Close</guibutton> to "
-"return to the volume control."
+"When the Volume Control opens, click <guibutton>Preferences</guibutton> and "
+"make sure that all of the items related to the microphone settings are "
+"checked. Click <guibutton>Close</guibutton> to return to the volume control."
 msgstr ""
 
-#: musicvideophotos/C/musicvideophotos.xml:407(para)
+#: musicvideophotos/C/music.xml:377(para)
 msgid ""
 "Under the <guilabel>Playback</guilabel> tab, make sure that all of the "
 "microphone settings are unmuted and that their volume is set high enough. If "
@@ -570,7 +1525,7 @@ msgid ""
 "microphone."
 msgstr ""
 
-#: musicvideophotos/C/musicvideophotos.xml:417(para)
+#: musicvideophotos/C/music.xml:387(para)
 msgid ""
 "You may also find it necessary to change other settings to get your "
 "microphone to work properly. For example, the <guilabel>Mic Boost</guilabel> "
@@ -580,873 +1535,38 @@ msgid ""
 "of your microphone."
 msgstr ""
 
-#: musicvideophotos/C/musicvideophotos.xml:432(emphasis)
+#: musicvideophotos/C/music.xml:402(emphasis)
 msgid "Check the volume control on the microphone"
-msgstr ""
+msgstr "マイクのボリュームコントロールを確認する"
 
-#: musicvideophotos/C/musicvideophotos.xml:436(para)
+#: musicvideophotos/C/music.xml:406(para)
 msgid ""
 "Some microphones have an integrated volume control. Check that the volume "
 "control on your microphone is turned up."
 msgstr ""
 
-#: musicvideophotos/C/musicvideophotos.xml:443(emphasis)
+#: musicvideophotos/C/music.xml:413(emphasis)
 msgid "Check the volume control in the recording application"
-msgstr ""
+msgstr "レコーディング・アプリケーションのボリュームコントロールを確認する"
 
-#: musicvideophotos/C/musicvideophotos.xml:447(para)
+#: musicvideophotos/C/music.xml:417(para)
 msgid ""
 "Some applications allow you to change the volume of the microphone from "
 "within the application. Check the volume settings in the application that "
 "you are using."
 msgstr ""
 
-#: musicvideophotos/C/musicvideophotos.xml:459(title)
-msgid "Movies, DVDs and videos"
-msgstr "映画、DVD、ビデオ"
-
-#: musicvideophotos/C/musicvideophotos.xml:460(para)
-msgid ""
-"You can watch movies and video clips with the <application>Totem Movie "
-"Player</application> "
-"(<menuchoice><guimenu>Applications</guimenu><guimenuitem>Sound &amp; "
-"Video</guimenuitem><guimenuitem>Movie Player</guimenuitem></menuchoice>)."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:466(title)
-msgid "Playing DVDs"
-msgstr "DVDの再生"
-
-#: musicvideophotos/C/musicvideophotos.xml:467(para)
-msgid ""
-"In order to play DVDs you must install some additional software. "
-"Unfortunately, DVD support cannot be provided by default in Ubuntu due to "
-"legal restrictions in some countries."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:473(para)
-msgid ""
-"Read about <ulink url=\"ghelp:add-applications#restricted-software\"> "
-"restricted formats</ulink> before following the instructions below. There "
-"are some legal issues that you should be aware of."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:481(para)
-msgid ""
-"Install the <ulink url=\"apt:libdvdnav4\">libdvdnav4</ulink>, <ulink "
-"url=\"apt:libdvdread3\">libdvdread3</ulink> and <ulink "
-"url=\"apt:gstreamer0.10-plugins-ugly\"> gstreamer0.10-plugins-ugly</ulink> "
-"packages."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:490(para)
-msgid ""
-"If you would like to play encrypted DVDs, press "
-"<menuchoice><guimenu>Applications</guimenu><guimenuitem>Accessories</guimenui"
-"tem><guimenuitem>Terminal</guimenuitem></menuchoice> and type the following "
-"into the screen which appears, followed by the <keycap>Enter</keycap> key: "
-"<screen>sudo /usr/share/doc/libdvdread3/install-css.sh</screen>"
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:498(para)
-msgid ""
-"Enter your password if prompted. The <application>libdvdcss2</application> "
-"package will be downloaded and installed from a website."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:505(para)
-msgid ""
-"Insert a DVD into your drive. It should open automatically in the Movie "
-"Player."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:513(title)
-msgid "Where have the menus on my DVDs gone?"
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:514(para)
-msgid ""
-"DVD menus are not currently supported by the default Movie Player. To be "
-"able to use the menus on a disc, you must install an alternative movie "
-"player such as <ulink url=\"apt:gxine\">gxine</ulink> or <ulink "
-"url=\"apt:vlc\">VLC</ulink>."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:520(para)
-msgid ""
-"To make DVDs automatically play in the alternative movie player when "
-"inserted, open <menuchoice><guimenu>Places</guimenu><guimenuitem>Home "
-"Folder</guimenuitem></menuchoice>, click "
-"<menuchoice><guimenu>Edit</guimenu><guimenuitem>Preferences</guimenuitem></me"
-"nuchoice> and then click the <guilabel>Media</guilabel> tab. Select the "
-"alternative player from the <guibutton>DVD Video</guibutton> list."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:534(title)
-msgid "How can I get my videos to play?"
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:536(para)
-msgid ""
-"Some video formats, such as Flash, QuickTime, and Windows Media Video, are "
-"proprietary and so support for them cannot be included in Ubuntu by default. "
-"You must install some extra software to allow playback."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:541(para)
-msgid ""
-"In order to play the most common proprietary formats in the Totem movie "
-"player or Firefox web browser, install the <ulink url=\"apt:ubuntu-"
-"restricted-extras\"> ubuntu-restricted-extras</ulink> package (see <ulink "
-"url=\"ghelp:add-applications#restricted-software\">Restricted "
-"Software</ulink> for more information)."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:550(title)
-msgid "Video files"
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:552(emphasis)
-msgid "(e.g. QuickTime, Windows Media)"
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:554(para)
-msgid ""
-"If you try to play an unsupported video file, you will be asked if you would "
-"like to <guilabel>search for a suitable codec</guilabel>. Click "
-"<guibutton>Search</guibutton> and, when the <guilabel>Install multimedia "
-"codecs</guilabel> window appears, select one of the codecs displayed in the "
-"list and click <guibutton>Install</guibutton>."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:561(para)
-msgid ""
-"If you are asked to <guilabel>confirm installation of restricted "
-"software</guilabel>, the codec required to play your video may have some "
-"<ulink url=\"ghelp:add-applications#restricted-software\">legal "
-"restrictions</ulink> which you should be aware of. If you think that the "
-"restrictions do not apply to you, press <guibutton>Confirm</guibutton> to "
-"continue with the installation."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:569(para)
-msgid ""
-"Once installation is complete, the video should begin to play. If not, try "
-"closing and then re-opening the video."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:576(title)
-msgid "Flash videos"
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:578(emphasis)
-msgid "(e.g. Youtube, iPlayer)"
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:580(para)
-msgid ""
-"When you first try to play a Flash video in the Firefox web browser, a bar "
-"will appear at the top of the window saying that <guilabel>additional "
-"plugins are required</guilabel>. Press the <guibutton>Install Missing "
-"Plugins</guibutton> button and follow the instructions on-screen to install "
-"a Flash player."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:587(para)
-msgid ""
-"You will be offered the choice of several players. The <guilabel>Adobe Flash "
-"Player</guilabel> is the official plugin, which should offer the best "
-"support for videos. Unfortunately, it is proprietary software and so cannot "
-"be supported directly by Ubuntu. The Swfdec and Gnash players are not "
-"proprietary and so are supported. You may also find them to be more stable "
-"(cause fewer problems) than the official player."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:599(title)
-msgid "Streaming video"
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:601(emphasis)
-msgid "(e.g. RealVideo)"
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:603(para)
-msgid ""
-"The most reliable way of playing RealVideo-format videos is to install the "
-"official RealPlayer software. See <link linkend=\"video-realplayer\"> "
-"Installing and configuring RealPlayer</link> for full instructions."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:608(para)
-msgid ""
-"Support for most other types of streaming video can be added by following "
-"the instructions for <link linkend=\"video-playback-file\">video "
-"files</link> or <link linkend=\"video-playback-flash\">Flash videos</link>. "
-"If you are having difficulties getting a video to stream in your web "
-"browser, right-click the video and select <guilabel>Open with \"Movie "
-"Player\"</guilabel> if that option is available."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:621(title)
-msgid "Videos that are otherwise unsupported"
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:622(para)
-msgid ""
-"If none of the other instructions in this section work with a particular "
-"video, try using a different media player. <ulink "
-"url=\"apt:vlc\">VLC</ulink> and <ulink url=\"apt:mplayer\">MPlayer</ulink> "
-"support a wide range of formats; it is recommended that you try one of these."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:634(title)
-msgid "Installing and configuring RealPlayer"
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:635(para)
-msgid ""
-"RealPlayer is a proprietary application, and so is not installed in the "
-"usual way."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:641(para)
-msgid ""
-"Download a suitable Linux installer from the <ulink "
-"url=\"http://uk.real.com/player/select/\"> RealPlayer website</ulink> and "
-"save it in your Home folder."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:648(para)
-msgid ""
-"Open a Terminal "
-"(<menuchoice><guimenu>Applications</guimenu><guimenuitem>Accessories</guimenu"
-"item><guimenuitem>Terminal</guimenuitem></menuchoice>) and type the "
-"following, pressing <keycap>Enter</keycap> at the end of each line and "
-"typing your password when prompted:"
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:653(screen)
-#, no-wrap
-msgid ""
-"\n"
-"sudo chmod a+x RealPlayer*\n"
-"sudo ./RealPlayer*"
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:658(para)
-msgid ""
-"You should see the text <guilabel>Extracting files for Helix "
-"installation</guilabel> on the screen if the installer has started properly. "
-"When asked a question by the installer, press <keycap>Enter</keycap> to "
-"accept the default."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:666(para)
-msgid ""
-"When the installer has finished copying files, press "
-"<menuchoice><guimenu>Applications</guimenu><guimenuitem>Sound &amp; "
-"Video</guimenuitem><guimenuitem>RealPlayer 11</guimenuitem></menuchoice> and "
-"follow the instructions on the screen to complete set-up."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:673(para)
-msgid ""
-"For more in-depth instructions, see the <ulink "
-"url=\"https://help.ubuntu.com/community/RealPlayerInstallationMethods\"> "
-"community help wiki</ulink>."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:682(title)
-msgid "Recording and editing video"
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:683(para)
-msgid ""
-"There are numerous video capture and editing programs available for Ubuntu. "
-"Some of the most popular include <ulink url=\"apt:kino\">Kino</ulink>, "
-"<ulink url=\"apt:kdenlive\">Kdenlive</ulink>, and <ulink "
-"url=\"apt:pitivi\">Pitivi</ulink>."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:724(title)
-msgid "Photos and cameras"
-msgstr "写真とカメラ"
-
-#: musicvideophotos/C/musicvideophotos.xml:725(para)
-msgid ""
-"There are many tools available to help you to work with your digital photo "
-"collection."
-msgstr "デジタル・フォトコレクションを扱うのに役立つ多くのツールがあります。"
-
-#: musicvideophotos/C/musicvideophotos.xml:731(title)
-msgid "Import photos from a digital camera"
-msgstr "デジタル・カメラから写真をインポートします"
-
-#: musicvideophotos/C/musicvideophotos.xml:732(para)
-msgid ""
-"Ubuntu automatically detects most digital cameras when you plug them in, and "
-"will offer to import your photos automatically."
-msgstr "Ubuntuは、デジタルカメラが接続されたときにはほとんどの場合自動的に検知して、あなたの写真をインポートするよう提案するでしょう。"
-
-#: musicvideophotos/C/musicvideophotos.xml:736(para)
-msgid "To import photos from your camera:"
-msgstr "カメラから写真をインポート:"
-
-#: musicvideophotos/C/musicvideophotos.xml:741(para)
-msgid ""
-"Plug-in and switch on the camera by placing it in review mode. Ubuntu should "
-"ask you if you would like to import the photos that the camera contains."
-msgstr ""
-"コンピューターに接続したカメラのスイッチを閲覧モードに切り替えてください。そうするとUbuntuは、カメラに保存されている写真をインポートしたいかどうかを"
-"あなたに尋ねます。"
-
-#: musicvideophotos/C/musicvideophotos.xml:748(para)
-msgid ""
-"Click on <guibutton>Import</guibutton>. You should then see a preview of the "
-"photos."
-msgstr "<guibutton>インポート</guibutton> をクリックすると、写真のプレビューが見れます。"
-
-#: musicvideophotos/C/musicvideophotos.xml:754(para)
-msgid ""
-"Choose a location to save your photos to, then click on "
-"<guibutton>Import</guibutton>. The photos will be saved to your hard drive."
-msgstr ""
-"写真を保存する場所を選んでから<guibutton>インポート</guibutton>をクリックしてください。写真はあなたのハードディスクに保存されます。"
-
-#: musicvideophotos/C/musicvideophotos.xml:762(para)
-msgid "If Ubuntu does not ask you if it can import the photos:"
-msgstr "写真をインポートする際に、Ubuntuにたずねられなかった場合は:"
-
-#: musicvideophotos/C/musicvideophotos.xml:767(para)
-msgid ""
-"Open "
-"<menuchoice><guimenu>Applications</guimenu><guimenuitem>Graphics</guimenuitem"
-"><guimenuitem>F-Spot Photo Manager</guimenuitem></menuchoice> and choose "
-"<menuchoice><guimenu>File</guimenu><guimenuitem>Import</guimenuitem></menucho"
-"ice>."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:776(para)
-msgid ""
-"Select your camera as the <guilabel>Import Source</guilabel> and then click "
-"<guibutton>Import</guibutton> to begin importing your photos."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:783(para)
-msgid ""
-"If your camera does not appear as an import source, press "
-"<menuchoice><guimenu>Places</guimenu><guimenuitem>Computer</guimenuitem></men"
-"uchoice> and check if your camera is visible there as a removable storage "
-"device. If it is, you can then copy the photos manually using the "
-"<application>File Browser</application>."
-msgstr ""
-"もしあなたのカメラがインポートソースとして表示されない場合は、<menuchoice><guimenu>場所</guimenu><guimenuitem>"
-"コンピュータ</guimenuitem></menuchoice>をクリックして、あなたのカメラがリムーバブル・ストレージ・デバイスとして表示されているか"
-"どうかを確かめてください。もし表示されているなら、<application>ファイル・ブラウザ</application>を使って手動であなたの写真をコピ"
-"ーすることができます。"
-
-#: musicvideophotos/C/musicvideophotos.xml:793(title)
-msgid "Organize your photo collection"
-msgstr "写真コレクションの整理"
-
-#: musicvideophotos/C/musicvideophotos.xml:794(para)
-msgid ""
-"<application>F-Spot</application> provides a complete solution for managing "
-"your photo collection. To start it, choose "
-"<menuchoice><guimenu>Applications</guimenu><guimenuitem>Graphics</guimenuitem"
-"><guimenuitem>F-Spot Photo Manager</guimenuitem></menuchoice>."
-msgstr ""
-"<application>F-Spot</application>はあなたのフォト・コレクションを管理する洗練された方法を提供します。F-"
-"Spotを開始するには、<menuchoice><guimenu>アプリケーション</guimenu><guimenuitem>グラフィックス</guim"
-"enuitem><guimenuitem>F-Spot フォト・マネージャ</guimenuitem></menuchoice>を選択します。"
-
-#: musicvideophotos/C/musicvideophotos.xml:798(para)
-msgid ""
-"With <application>F-Spot</application>, you can import photos from your "
-"digital camera or USB stick, tag them with familiar terms, do touch ups, and "
-"edit them in different ways. In addition to this, you can upload photos "
-"easily to your Flickr, PicasaWeb album and other online photo galleries."
-msgstr ""
-"<application>F-"
-"Spot</application>を使ってあなたのデジタル・カメラやUSBメモリー・スティックから写真をインポートし、わかりやすい条件（単語）でタグ付け"
-"して記憶しやすくし、様々な方法で編集することができます。さらにはFlickrやPicasaウェブ・アルバムそのほかのオンライン・フォト・ギャラリーへ簡単に"
-"写真をアップロードすることもできます。"
-
-#: musicvideophotos/C/musicvideophotos.xml:805(para)
-msgid ""
-"For help with <application>F-Spot Photo Manager</application>, see the "
-"<ulink type=\"help\" url=\"ghelp:f-spot\">F-Spot User Guide</ulink>."
-msgstr ""
-"<application>F-Spot フォト・マネージャ</application>についてのヘルプは<ulink type=\"help\" "
-"url=\"ghelp:f-spot\">F-Spot ユーザ・ガイド</ulinkをご覧ください。"
-
-#: musicvideophotos/C/musicvideophotos.xml:812(title)
-msgid "Watch a slideshow of photos"
-msgstr "写真のスライドショーを見る"
-
-#: musicvideophotos/C/musicvideophotos.xml:813(para)
-msgid ""
-"If you want to show off your photos in all of their glory, why not run a "
-"slideshow of them?"
-msgstr "もしあなたが自分の写真を他の人に見せたいときは、写真をスライドショーにしてみませんか？"
-
-#: musicvideophotos/C/musicvideophotos.xml:819(para)
-msgid ""
-"Watch a slideshow using the <ulink type=\"help\" url=\"ghelp:eog#eog-"
-"fullscreen\"> Image Viewer</ulink>"
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:826(para)
-msgid ""
-"Watch a slideshow using the <ulink type=\"help\" url=\"ghelp:f-spot#enjoying-"
-"fullscreen-mode-and-slideshows\"> F-Spot Photo Manager</ulink>"
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:835(title)
-msgid "Setting a Slideshow as Your Screensaver"
-msgstr "スクリーンセーバーにスライドショーを設定する"
-
-#: musicvideophotos/C/musicvideophotos.xml:836(para)
-msgid "You can use a slideshow of your photos as you screensaver:"
-msgstr "あなたの写真コレクションのスライドショーをスクリーンセーバーとして使うことができます。"
-
-#: musicvideophotos/C/musicvideophotos.xml:841(para)
-msgid ""
-"Press "
-"<menuchoice><guimenu>System</guimenu><guimenuitem>Preferences</guimenuitem><g"
-"uimenuitem>Screensaver</guimenuitem></menuchoice>"
-msgstr ""
-"<menuchoice><guimenu>システム</guimenu><guimenuitem>設定</guimenuitem><guimenuitem>"
-"スクリーンセーバー</guimenuitem></menuchoice>をクリックします。"
-
-#: musicvideophotos/C/musicvideophotos.xml:846(para)
-msgid "Select the <guilabel>F-Spot photos</guilabel> screensaver theme"
-msgstr "<guilabel>F-Spotの画像</guilabel>スクリーンセーバーのテーマを選択します。"
-
-#: musicvideophotos/C/musicvideophotos.xml:852(para)
-msgid ""
-"Photos which are tagged as <guilabel>Favorites</guilabel> in <application>F-"
-"Spot Photo Manager</application> will be displayed as your screensaver"
-msgstr ""
-"<application>F-Spot "
-"フォト・マネージャ</application>で<guilabel>お気に入り</guilabel>というタグを付けた写真は、スクリーンセーバーとして画面"
-"に表示されます。"
-
-#: musicvideophotos/C/musicvideophotos.xml:860(para)
-msgid "If you would like to change which tag is used for the slideshow:"
-msgstr "スライドショーに使うタグを変更したいときは"
-
-#: musicvideophotos/C/musicvideophotos.xml:865(para)
-msgid "Open F-Spot"
-msgstr "F-Spotを起動します"
-
-#: musicvideophotos/C/musicvideophotos.xml:870(para)
-msgid ""
-"Press "
-"<menuchoice><guimenuitem>Edit</guimenuitem><guimenuitem>Preferences</guimenui"
-"tem></menuchoice>"
-msgstr ""
-"<menuchoice><guimenuitem>編集</guimenuitem><guimenuitem>設定</guimenuitem></menuc"
-"hoice>をクリックします。"
-
-#: musicvideophotos/C/musicvideophotos.xml:879(para)
-msgid "Under <guilabel>Screensaver</guilabel>, select the desired tag"
-msgstr "<guilabel>スクリーンセーバー</guilabel>から希望のタグを選択します。"
-
-#: musicvideophotos/C/musicvideophotos.xml:884(para)
-msgid "Press <guibutton>Close</guibutton>"
-msgstr "<guibutton>閉じる</guibutton>を押してください。"
-
-#: musicvideophotos/C/musicvideophotos.xml:892(title)
-msgid "Printing photos"
-msgstr "写真の印刷"
-
-#: musicvideophotos/C/musicvideophotos.xml:893(para)
-msgid "Printing your photos is great way to share them with others."
-msgstr "印刷した写真なら他の人と一緒に共有することができます。"
-
-#: musicvideophotos/C/musicvideophotos.xml:898(para)
-msgid ""
-"Double-click the photo you want to print to open it in the "
-"<application>Image Viewer</application>"
-msgstr "印刷したい写真をダブルクリックして<application>画像ビューア</application>で開きます。"
-
-#: musicvideophotos/C/musicvideophotos.xml:904(para)
-msgid ""
-"Press <menuchoice><guimenuitem>File</guimenuitem><guimenuitem>Page "
-"Setup</guimenuitem></menuchoice>"
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:912(para)
-msgid ""
-"Under <guilabel>Format for</guilabel>, select the printer which you are "
-"going to use"
-msgstr "<guilabel>フォーマット</guilabel>であなたが使用するプリンタを選択します"
-
-#: musicvideophotos/C/musicvideophotos.xml:918(para)
-msgid ""
-"Under <guilabel>Paper size</guilabel>, select the size of the paper which "
-"you are going to print the photo onto"
-msgstr "<guilabel>用紙のサイズ</guilabel>で写真を印刷する用紙のサイズを選択します"
-
-#: musicvideophotos/C/musicvideophotos.xml:924(para)
-msgid ""
-"Under <guilabel>Orientation</guilabel>, choose the orientation of the photo "
-"on the paper"
-msgstr "<guilabel>用紙の向き</guilabel>で写真の印刷位置を定めます"
-
-#: musicvideophotos/C/musicvideophotos.xml:932(para)
-msgid "Press <guibutton>Apply</guibutton>"
-msgstr "<guibutton>適用</guibutton>をクリックします"
-
-#: musicvideophotos/C/musicvideophotos.xml:937(para)
-msgid ""
-"Press "
-"<menuchoice><guimenuitem>File</guimenuitem><guimenuitem>Print</guimenuitem></"
-"menuchoice>"
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:946(para)
-msgid "Change any settings as appropriate (see below)"
-msgstr "すべての設定を適切に変更します（下記を参照）"
-
-#: musicvideophotos/C/musicvideophotos.xml:951(para)
-msgid "Press <guibutton>Print</guibutton> to print the photo"
-msgstr "<guibutton>印刷</guibutton>をクリックして写真を印刷します"
-
-#: musicvideophotos/C/musicvideophotos.xml:958(title)
-msgid "Printer Settings"
-msgstr "プリンタ設定"
-
-#: musicvideophotos/C/musicvideophotos.xml:959(para)
-msgid ""
-"You can tweak your printing settings to get the best results. All of these "
-"settings can be found in the "
-"<menuchoice><guimenuitem>File</guimenuitem><guimenuitem>Print</guimenuitem></"
-"menuchoice> window."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:968(para)
-msgid ""
-"Make sure that you select your printer from the list on the "
-"<guilabel>General</guilabel> tab to get the full range of settings supported "
-"by your printer."
-msgstr ""
-"あなたのプリンタがサポートしているあらゆる種類の設定を確認するには、<guilabel>全般</guilabel>タブのプリンタのリストから正しいプリンタ"
-"が選択されていることを確かめてください。"
-
-#: musicvideophotos/C/musicvideophotos.xml:974(para)
-msgid ""
-"Different makes of printer will have different printer settings. The "
-"settings below are only provided as a guide for what you may be able to "
-"change with your particular printer."
-msgstr ""
-"プリンタが違えば当然その設定方法も異なることになります。下記の設定方法はあなたのプリンターで変更（調節）ができるかもしれない設定項目についてのガイドとして"
-"提供されます。"
-
-#: musicvideophotos/C/musicvideophotos.xml:982(title)
-msgid "Paper Type"
-msgstr "用紙の種類"
-
-#: musicvideophotos/C/musicvideophotos.xml:983(para)
-msgid ""
-"The paper type that you use has a large impact on the quality of your "
-"printed photo. You should set the paper type to match the paper which you "
-"are using in your printer to prevent poor results. Using a "
-"<emphasis>glossy</emphasis> paper type with only <emphasis>plain</emphasis> "
-"paper loaded into your printer will generally produce poor results, for "
-"example."
-msgstr ""
-"印刷用紙の種類は印刷された写真の品質に多大な影響を与えます。印刷の失敗を防ぐには印刷用紙の種類に合わせて「用紙の種類」を設定しなければなりません。たとえば"
-"プリンターには<emphasis>普通紙</emphasis>しかセットされていないのに<emphasis>光沢紙</emphasis>に設定にしてしまっ"
-"た場合の印刷結果はたいていひどいものになります。"
-
-#: musicvideophotos/C/musicvideophotos.xml:991(para)
-msgid ""
-"This setting may automatically change the amount of ink which is used, in "
-"order to get the best results and to prevent smudging. How this is handled "
-"will depend on your printer."
-msgstr ""
-"この設定項目を変更した場合インクの滲みを防ぎ最適な印刷結果を得るために、使用されるインク量が自動的に調節されるかもしれません。これはプリンターによりけりで"
-"す。"
-
-#: musicvideophotos/C/musicvideophotos.xml:999(title)
-msgid "Print Quality"
-msgstr "印刷品質"
-
-#: musicvideophotos/C/musicvideophotos.xml:1000(para)
-msgid ""
-"Print quality is generally measured in <emphasis>DPI</emphasis> (dots per "
-"inch). A greater DPI value should result in better print quality."
-msgstr ""
-"印刷品質は通常<emphasis>DPI</emphasis>(dots per "
-"inch)という単位で測られます。DPIが大きければ印刷品質は当然良くなります。"
-
-#: musicvideophotos/C/musicvideophotos.xml:1007(para)
-msgid ""
-"Choose <guilabel>Draft</guilabel> for making quick draft prints which don't "
-"use much ink"
-msgstr ""
-"ドラフト（草稿）としてすばやく印刷するなら<guilabel>ドラフト</guilabel>(Draft)を選択します。ドラフト印刷なら使用インクが少なく"
-"て済みます。"
-
-#: musicvideophotos/C/musicvideophotos.xml:1013(para)
-msgid ""
-"Choose <guilabel>Best Quality</guilabel> or <guilabel>Photo</guilabel> for "
-"making high quality prints. Printing will be slower and will use more ink"
-msgstr ""
-"高い品質で印刷するには<guilabel>高品位</guilabel>(Best "
-"Quality)か<guilabel>写真</guilabel>(Photo)を選択します。印刷速度がより遅く、またより多量のインクを使用します。"
-
-#: musicvideophotos/C/musicvideophotos.xml:1024(title)
-msgid "Advanced Photo Printing"
-msgstr "高度な写真印刷"
-
-#: musicvideophotos/C/musicvideophotos.xml:1025(para)
-msgid ""
-"For advanced photo printing, install <application>PhotoPrint</application> "
-"(see <ulink type=\"help\" url=\"ghelp:add-applications\"> Adding, Removing "
-"and Updating Applications</ulink>). Once installed, press "
-"<menuchoice><guimenu>Applications</guimenu><guimenuitem>Graphics</guimenuitem"
-"><guimenuitem>PhotoPrint</guimenuitem></menuchoice> to start PhotoPrint."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:1032(para)
-msgid "PhotoPrint allows you to fine-tune your printing settings."
-msgstr "PhotoPrintを使えば印刷設定をより細かく調整できます。"
-
-#: musicvideophotos/C/musicvideophotos.xml:1037(para)
-msgid ""
-"Under <guilabel>Page Size</guilabel>, change the page size to the size of "
-"paper that you want to print onto."
-msgstr "<guilabel>Page Size</guilabel>(用紙サイズ)を、あなたが使用する用紙サイズに変更します。"
-
-#: musicvideophotos/C/musicvideophotos.xml:1043(para)
-msgid ""
-"Under <guilabel>Layout</guilabel>, change the number of columns and rows to "
-"reflect the number of photos that you want to put onto a page"
-msgstr ""
-"<guilabel>Layout</guilabel>(レイアウト)で、１ページに配置する画像の枚数をrows(行)とcolumns(列)の数で指定します"
-"。"
-
-#: musicvideophotos/C/musicvideophotos.xml:1050(para)
-msgid ""
-"To change the amount of spacing between photos, change the "
-"<guilabel>Horizontal</guilabel> and <guilabel>Vertical</guilabel> settings "
-"under <guilabel>Gutters</guilabel>"
-msgstr ""
-"写真同士の間隔を変更するには、<guilabel>Gutters</guilabel>(間隔)の<guilabel>Horizontal</guilabe"
-"l>(水平方向)と<guilabel>Vertical</guilabel>(垂直方向)の設定を変更します。"
-
-#: musicvideophotos/C/musicvideophotos.xml:1058(para)
-msgid ""
-"To add a photo to the page, press "
-"<menuchoice><guimenuitem>Image</guimenuitem><guimenuitem>Add "
-"Image</guimenuitem></menuchoice> and select a photo"
-msgstr ""
-"あるページに写真を追加するには、<menuchoice><guimenuitem>Image</guimenuitem><guimenuitem>Add "
-"Image</guimenuitem></menuchoice>をクリックして、追加する写真を選んでください。"
-
-#: musicvideophotos/C/musicvideophotos.xml:1067(para)
-msgid ""
-"To change the advanced printer settings, press "
-"<menuchoice><guimenuitem>File</guimenuitem><guimenuitem>Print "
-"Setup</guimenuitem></menuchoice>"
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:1074(para)
-msgid ""
-"You may need to select the correct printer model on the "
-"<guilabel>Output</guilabel> tab"
-msgstr "<guilabel>Output</guilabel>タブで適切なプリンターの型番を選択する必要があるかもしれません。"
-
-#: musicvideophotos/C/musicvideophotos.xml:1080(para)
-msgid ""
-"Press "
-"<menuchoice><guimenuitem>File</guimenuitem><guimenuitem>Print</guimenuitem></"
-"menuchoice> to print your photos"
-msgstr ""
-"写真印刷するには<menuchoice><guimenuitem>File</guimenuitem><guimenuitem>Print</guimen"
-"uitem></menuchoice>をクリックします。"
-
-#: musicvideophotos/C/musicvideophotos.xml:1093(title)
-msgid "Sharing your photos"
-msgstr "写真の共有"
-
-#: musicvideophotos/C/musicvideophotos.xml:1094(para)
-msgid ""
-"If you want to share your collection of photos with others, why not use an "
-"online photo sharing service or burn a CD of your photos? Ubuntu has plenty "
-"of tools to help you share your pictures."
-msgstr ""
-"もしあなたが他の人と一緒に写真コレクションを共有したければ、オンラインの写真共有サービスを利用するか、写真をCDに焼くのはどうでしょうか？。Ubuntuに"
-"は、あなたが画像を共有する手助けをするのに充分なツールが備わっています。"
-
-#: musicvideophotos/C/musicvideophotos.xml:1101(para)
-msgid ""
-"<ulink type=\"help\" url=\"ghelp:musicvideophotos#photos-printing\"> Print "
-"copies</ulink> of your photos."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:1107(para)
-msgid ""
-"Share your photos over the Internet using a <ulink type=\"help\" "
-"url=\"ghelp:f-spot#sharing-flickr-or-php-gallery\"> photo sharing "
-"service</ulink> or a <ulink type=\"help\" url=\"ghelp:f-spot#website-gallery-"
-"folder\">web gallery</ulink>."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:1115(para)
-msgid ""
-"Burn a CD of your photos using the <ulink type=\"help\" "
-"url=\"ghelp:musicvideophotos#cdburning\"> File Browser</ulink> or <ulink "
-"type=\"help\" url=\"ghelp:f-spot#sharing-burn-to-cd\"> F-Spot Photo "
-"Manager</ulink>."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:1124(para)
-msgid ""
-"Present a <ulink type=\"help\" url=\"ghelp:musicvideophotos#photos-"
-"slideshow\"> slideshow</ulink> of your photos."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:1131(para)
-msgid ""
-"<ulink type=\"help\" url=\"ghelp:f-spot#sharing-e-mail\"> E-mail "
-"copies</ulink> of your photos directly."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:1140(title)
-msgid "Edit and improve photos"
-msgstr "写真の編集/改善"
-
-#: musicvideophotos/C/musicvideophotos.xml:1141(para)
-msgid ""
-"Sometimes, you may need to adjust or touch-up a photo to make it look better "
-"or to remove some flaw. <application>F-Spot</application> includes a few "
-"basic tools for doing this. To access these tools, press the <guibutton>Edit "
-"Photo</guibutton> button and then click on one of the tools at the bottom of "
-"the screen."
-msgstr ""
-"写真のあらを隠したり見栄えをより良くするための調整や修正が必要になることがあるかもしれません。<application>F-"
-"Spot</application>には、そうした作業に使用する2, "
-"3の基本的なツールが含まれます。これらのツールにアクセスするには<guibutton>Edit "
-"Image</guibutton>(画像の編集)ボタンをクリックして、画面下に表示されているツールの中から一つを選んでクリックしてください。"
-
-#: musicvideophotos/C/musicvideophotos.xml:1148(para)
-msgid ""
-"The <application>GIMP Image Editor</application> is much more advanced. It "
-"is installed in Ubuntu by default, and can be started by choosing "
-"<menuchoice><guimenu>Applications</guimenu><guimenuitem>Graphics</guimenuitem"
-"><guimenuitem>GIMP Image Editor</guimenuitem></menuchoice>."
-msgstr ""
-"<application>GIMP Image "
-"Editor</application>はさらに高度な機能を持っています。これはUbuntuにデフォルトでインストールされており、<menuchoice>"
-"<guimenu>アプリケーション</guimenu><guimenuitem>グラフィックス</guimenuitem><guimenuitem>GIM"
-"P Image Editor</guimenuitem></menuchoice>から起動できます。"
-
-#: musicvideophotos/C/musicvideophotos.xml:1153(para)
-msgid ""
-"The GIMP has many professional-level features. It includes tools for "
-"selections, drawing, creating paths, masks, filters, effects, and more."
-msgstr ""
-"GIMP には多くのプロフェッショナル・レベルの機能があります。選択、作図、パス作成、マスク、フィルタ、視覚効果、その他のツールが含まれます。"
-
-#: musicvideophotos/C/musicvideophotos.xml:1159(title)
-msgid "Rotating photos"
-msgstr "画像の回転"
-
-#: musicvideophotos/C/musicvideophotos.xml:1160(para)
-msgid ""
-"You may find that you have some photos which are the wrong way up. It is "
-"easy to rotate photos so that they're the right way up again."
-msgstr "ときには逆さまになった写真があるかもしれません。写真を回転させて上下を正すことは簡単です。"
-
-#: musicvideophotos/C/musicvideophotos.xml:1164(para)
-msgid ""
-"The <ulink type=\"help\" url=\"ghelp:eog#eog-manipulate\"> Image "
-"Viewer</ulink>, F-Spot Photo Manager and the GIMP Image Editor are all "
-"capable of rotating photos."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:1172(title)
-msgid "Resizing photos"
-msgstr "写真のリサイズ"
-
-#: musicvideophotos/C/musicvideophotos.xml:1173(para)
-msgid ""
-"You can resize photos which are too big. If you have a photo which has a "
-"large file size, resizing it will also reduce the file size."
-msgstr "写真が大きすぎるときはリサイズできます。ファイルサイズが大きいときにはリサイズすればファイルサイズも小さくなります。"
-
-#: musicvideophotos/C/musicvideophotos.xml:1177(para)
-msgid ""
-"The <application>GIMP Image Editor</application> supports several methods of "
-"resizing photos. We will concentrate on the simplest method."
-msgstr ""
-"<application>GIMP Image "
-"Editor</application>は写真をリサイズする数種類の方法に対応していますが、ここではもっとも簡単な方法だけを説明します。"
-
-#: musicvideophotos/C/musicvideophotos.xml:1184(para)
-msgid "Open the photo you want to resize in the GIMP Image Editor"
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:1189(para)
-msgid ""
-"Press <menuchoice><guimenuitem>Image</guimenuitem><guimenuitem>Scale "
-"Image</guimenuitem></menuchoice>"
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:1198(para)
-msgid ""
-"Adjust the <guilabel>Width</guilabel> or <guilabel>Height</guilabel> as "
-"appropriate. The image will be kept to scale."
-msgstr ""
-"<guilabel>幅</guilabel>と<guilabel>高さ</guilabel>を調節します。このときイメージの縦横比率は保たれます。"
-
-#: musicvideophotos/C/musicvideophotos.xml:1203(para)
-msgid ""
-"If you want to adjust the width and height independently, press the link "
-"button which connects the <guilabel>Width</guilabel> and "
-"<guilabel>Height</guilabel> boxes, so that it looks like a broken link."
-msgstr ""
-"幅や高さのどちらか一方だけを微調整したいときは、<guilabel>幅</guilabel>ボックスと<guilabel>高さ</guilabel>ボック"
-"スを結合しているリンクボタンをクリックします（するとリンクが解除されたようにボタンが変化します）。"
-
-#: musicvideophotos/C/musicvideophotos.xml:1211(para)
-msgid ""
-"Under <guilabel>Quality</guilabel>, change the "
-"<guilabel>Interpolation</guilabel> to <guilabel>Cubic (Best)</guilabel>. "
-"This will give you the best quality resized image"
-msgstr ""
-"<guilabel>品質</guilabel>で<guilabel>補間の種類</guilabel>を<guilabel>キュービック</guilabel"
-">に変更します。こうすれば最高画質でイメージがリサイズされます。"
-
-#: musicvideophotos/C/musicvideophotos.xml:1219(para)
-msgid "Press <guilabel>Scale</guilabel> to resize the photo"
-msgstr "<guilabel>拡大縮小</guilabel>をクリックして写真をリサイズします"
-
-#: musicvideophotos/C/musicvideophotos.xml:1224(para)
-msgid ""
-"Press <menuchoice><guimenuitem>File</guimenuitem><guimenuitem>Save "
-"As</guimenuitem></menuchoice> and choose a new filename for the photo"
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:1233(para)
-msgid "Press <guilabel>Save</guilabel> to save the resized photo"
-msgstr "<guilabel>保存</guilabel>をクリックしてリサイズした写真を保存します。"
-
-#: musicvideophotos/C/musicvideophotos.xml:1243(title)
+#: musicvideophotos/C/cd.xml:16(title)
 msgid "Burning CDs and DVDs"
 msgstr ""
 
-#: musicvideophotos/C/musicvideophotos.xml:1244(para)
+#: musicvideophotos/C/cd.xml:17(para)
 msgid ""
 "You can make your own CDs by <emphasis>burning</emphasis> files onto a blank "
 "disc using the <emphasis>CD writer drive</emphasis> of your computer."
 msgstr ""
 
-#: musicvideophotos/C/musicvideophotos.xml:1248(para)
+#: musicvideophotos/C/cd.xml:21(para)
 msgid ""
 "Use the Brasero Disc Burning software to create data, audio and video CDs, "
 "copy CDs and DVDs and create CDs from disc image files. Click "
@@ -1455,1012 +1575,29 @@ msgid ""
 "Burning</guimenuitem></menuchoice> to start Brasero."
 msgstr ""
 
-#: musicvideophotos/C/musicvideophotos.xml:1253(para)
+#: musicvideophotos/C/cd.xml:26(para)
 msgid ""
-"For help and instructions, open Brasero and click "
-"<menuchoice><guimenuitem>Help</guimenuitem><guimenuitem>Contents</guimenuitem"
-"></menuchoice> to view a full manual."
+"For help and instructions, see the <ulink url=\"ghelp:brasero\">Brasero "
+"manual</ulink>."
 msgstr ""
 
 #. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2.
-#: musicvideophotos/C/musicvideophotos.xml:0(None)
+#: musicvideophotos/C/cd.xml:0(None)
 msgid "translator-credits"
 msgstr ""
 "Launchpad Contributions:\n"
 "  CMasami https://launchpad.net/~cmasami\n"
 "  Kanetaka Suto https://launchpad.net/~kanetaka\n"
 "  Kentaro Kazuhama https://launchpad.net/~kazken3\n"
-"  Launchpad Translations Administrators https://launchpad.net/~rosetta-"
-"admins\n"
 "  Mitsuya Shibata https://launchpad.net/~cosmos-door\n"
 "  Shushi Kurose https://launchpad.net/~kurokuro\n"
-"  Yuji Kaneko https://launchpad.net/~yujikaneko"
+"  Y.Nishiwaki https://launchpad.net/~annamoito"
 
-#~ msgid ""
-#~ "As well as online audio broadcasts (podcasts), many video broadcasts are "
-#~ "available from the Internet too. Ubuntu provides several optional "
-#~ "applications which you can use to watch videos from the Internet:"
-#~ msgstr ""
-#~ "オンラインオーディオ放送（ポッドキャスト）と同じように多くのビデオ放送がインターネットで視聴可能です。Ubuntuはインターネットでビデオを視聴できるよう"
-#~ "にするいくつかの追加アプリケーションを提供します。"
+#~ msgid "Music and audio"
+#~ msgstr "音楽とオーディオ"
 
-#~ msgid ""
-#~ "If you would like to turn your computer into a multimedia production suite, "
-#~ "why not consider installing <ulink url=\"http://ubuntustudio.org/\">Ubuntu "
-#~ "Studio</ulink>? It provides a large selection of applications for creating "
-#~ "audio, video and graphics."
-#~ msgstr ""
-#~ "あなたのコンピューターをマルチメディア製作マシンにしたいなら<ulink url=\"http://ubuntustudio.org/\">Ubuntu "
-#~ "Studio</ulink>のインストールを検討してみてはいかがでしょうか？これはオーディオやビデオ、グラフィクス作成のために精選された数多くのアプリケー"
-#~ "ションを提供します。"
+#~ msgid "Music, Videos and Photos"
+#~ msgstr "音楽/ビデオ/写真"
 
-#~ msgid ""
-#~ "For the <application>VLC</application> plugin, install the "
-#~ "<application>mozilla-plugin-vlc</application> package."
-#~ msgstr ""
-#~ "<application>VLC</application>プラグインが必要なら<application>mozilla-plugin-"
-#~ "vlc</application>パッケージをインストールしてください。"
-
-#~ msgid ""
-#~ "<application>Kino</application> is an advanced video editor. It features "
-#~ "excellent integration with IEEE-1394 (Firewire) for capture, VTR control, "
-#~ "and recording back to the camera. It captures video to disk in Raw DV and "
-#~ "AVI format, in both type-1 DV and type-2 DV (separate audio stream) "
-#~ "encodings."
-#~ msgstr ""
-#~ "<application>Kino</application>は高度な機能を持つビデオエディタです。その特徴は見事に統合された機能、すなわちキャプチャのた"
-#~ "めのIEEE-1394 (Firewire) 、VTRコントロール、カメラへの再録画の統合です。このエディタでビデオ画像を取り込み、Raw "
-#~ "DVフォーマットやAVIフォーマット、type-1 DVやtype-2 DV（セパレートオーディオストリーム）エンコーディングでディスクに保存します"
-
-#~ msgid "Playing audio CDs"
-#~ msgstr "音楽CDの再生"
-
-#~ msgid ""
-#~ "Press <menuchoice><guimenuitem>File</guimenuitem><guimenuitem>Save "
-#~ "As...</guimenuitem></menuchoice> and choose a new filename for the photo"
-#~ msgstr ""
-#~ "<menuchoice><guimenuitem>ファイル</guimenuitem><guimenuitem>別名で保存...</guimenuitem"
-#~ "></menuchoice>をクリックして修正した写真に新しいファイル名をつけます。"
-
-#~ msgid "Graveman"
-#~ msgstr "Graveman"
-
-#~ msgid ""
-#~ "Select your camera as the <guilabel>Import Source</guilabel> and then press "
-#~ "<guibutton>Import</guibutton> to begin importing your photos."
-#~ msgstr ""
-#~ "<guilabel>取り込み元</guilabel>としてあなたのカメラを選んで<guibutton>取り込む</guibutton>をクリックしたら写真"
-#~ "のインポートが始まります。"
-
-#~ msgid ""
-#~ "A <emphasis>multimedia codec</emphasis> is a small piece of software which "
-#~ "allows you to watch videos or listen to music of a specific format. There "
-#~ "are many different multimedia formats and so you may need to install several "
-#~ "codecs. Ubuntu includes many codecs by default."
-#~ msgstr ""
-#~ "<emphasis>マルチメディア・コーデック</emphasis>は、特定のフォーマットで作成されたビデオを観たり音楽を聴いたりできるようにするためのソ"
-#~ "フトウェアを構成する一部分です。マルチメディア・フォーマットにはたくさんの種類のものがあり、あなたはコーデックをいくつもインストールする必要があるかもしれ"
-#~ "ません。Ubuntuには既定の状態で既に多くのコーデックが組み込まれています。"
-
-#~ msgid "Edit sounds and music"
-#~ msgstr "音声や音楽の編集"
-
-#~ msgid ""
-#~ "Install the <application>Last-Exit</application> player to listen to the "
-#~ "<ulink url=\"http://www.last.fm\">Last.fm</ulink> service."
-#~ msgstr ""
-#~ "<ulink url=\"http://www.last.fm\">Last.fm</ulink>サービスを聴くには<application>Last-"
-#~ "Exit</application>プレイヤーをインストールしてください。"
-
-#~ msgid ""
-#~ "As an alternative to <application>Sound Juicer</application>, the "
-#~ "<application>Rhythmbox Music Player</application> is also able to play CDs. "
-#~ "Simply insert a CD, ignore or close <application>Sound Juicer</application>, "
-#~ "start <application>Rhythmbox</application> and double-click the audio CD "
-#~ "item in the <guilabel>Devices</guilabel> list."
-#~ msgstr ""
-#~ "<application>Sound Juicer</application>の代わりになるものとしては、<application>Rhythmbox "
-#~ "ミュージック/プレイヤー</application>もCDの再生ができます。CDを挿入し、<application>Sound "
-#~ "Juicer</application>を無視または終了し、<application>Rhythmbox</application>を開始して<guila"
-#~ "bel>ライブラリ</guilabel>一覧からオーディオCDをダブルクリックしてください。"
-
-#~ msgid ""
-#~ "This document is maintained by the Ubuntu documentation team "
-#~ "(https://wiki.ubuntu.com/DocumentationTeam). For a list of contributors, see "
-#~ "the <ulink url=\"../../../common/C/contributors.xml\">contributors "
-#~ "page</ulink>"
-#~ msgstr ""
-#~ "このドキュメントはUbuntuドキュメンテーション・チーム(https://wiki.ubuntu.com/DocumentationTeam) "
-#~ "が保守しています。貢献者の一覧は、<ulink "
-#~ "url=\"../../../common/C/contributors.xml\">contributors page</ulink> "
-#~ "を参照してください。"
-
-#~ msgid "Kitty"
-#~ msgstr "Kitty"
-
-#~ msgid ""
-#~ "Users of <emphasis>Creative Nomad Jukebox</emphasis> audio players may need "
-#~ "to install the <application>gnomad2</application> package from the "
-#~ "<quote>Universe</quote> repository to be able to use their device (see "
-#~ "<ulink type=\"help\" url=\"ghelp:add-applications\">Add "
-#~ "Applications</ulink>)."
-#~ msgstr ""
-#~ "<emphasis>Creative Nomad "
-#~ "Jukebox</emphasis>オーディオプレイヤーのユーザーは、プレイヤーを使用できるようにするため<quote>Universe</quote>リ"
-#~ "ポジトリから<application>gnomad2</application>パッケージをインストールする必要があるでしょう（<ulink "
-#~ "type=\"help\" url=\"ghelp:add-applications\">アプリケーションの追加</ulink>をご覧ください）。"
-
-#~ msgid ""
-#~ "You can watch movies and video clips in Ubuntu by using the "
-#~ "<application>Totem Movie Player</application>."
-#~ msgstr ""
-#~ "Ubuntuでは <application>Totem 動画プレイヤー</application> を利用して映画やビデオクリップを見ることができます。"
-
-#~ msgid ""
-#~ "Ubuntu supports many other audio players. Most of these work simply by "
-#~ "plugging them in to your computer and copying music onto them."
-#~ msgstr ""
-#~ "Ubuntuはそのほか多くのオーディオ・プレイヤーに対応しています。その多くはあなたのコンピューターに差し込むだけで音楽ファイルをコピーできます。"
-
-#~ msgid ""
-#~ "The <ulink type=\"help\" url=\"ghelp:rhythmbox#cd-burning\">Rhythmbox Music "
-#~ "Player</ulink> is also able to burn audio CDs."
-#~ msgstr ""
-#~ "<ulink type=\"help\" url=\"ghelp:rhythmbox#cd-burning\">Rhythmbox "
-#~ "ミュージック・プレイヤー</ulink>でもオーディオCDを作成できます。"
-
-#~ msgid ""
-#~ "Install the <application>gxine</application> package (see <ulink "
-#~ "type=\"help\" url=\"ghelp:add-applications\">Add Applications</ulink>)"
-#~ msgstr ""
-#~ "<application>gxine</application>パッケージをインストールします（<ulink type=\"help\" "
-#~ "url=\"ghelp:add-applications\">アプリケーションの追加</ulink>をご覧ください）。"
-
-#~ msgid ""
-#~ "Many alternative music players are available apart from the default "
-#~ "Rhythmbox Music Player. These include Amarok, Banshee Music Player, Beep "
-#~ "Media Player, Exaile! and Muine Music Player. Each player has its own "
-#~ "strengths and weaknesses, and which one you use will probably depend on "
-#~ "personal preference."
-#~ msgstr ""
-#~ "標準のRhythmbox "
-#~ "ミュージック・プレイヤーの他にも、多くの音楽再生アプリケーションが利用できます。他の音楽再生アプリケーションとしては、Amarok、 Banshee "
-#~ "Music Player、Beep Media Player、Exaile!、Muine Music "
-#~ "Playerがあります。それぞれのプレイヤーはそれぞれに長所と短所をもっていますが、どのプレイヤーを使うかはひとりひとりの好み次第です。"
-
-#~ msgid "libdvdread3"
-#~ msgstr "libdvdread3"
-
-#~ msgid ""
-#~ "To ensure that DVDs use <application>gxine</application> automatically when "
-#~ "inserted, open <menuchoice><guimenu>Places</guimenu><guimenuitem>Home "
-#~ "Folder</guimenuitem></menuchoice> and select "
-#~ "<menuchoice><guimenu>Edit</guimenu><guimenuitem>Preferences</guimenuitem></me"
-#~ "nuchoice> and then click on the <guilabel>Media</guilabel> tab. Choose "
-#~ "<application>gxine</application> from the <guibutton>DVD Video</guibutton> "
-#~ "option."
-#~ msgstr ""
-#~ "DVDを挿入したときに自動的に<application>gxine</application>を使うには、<menuchoice><guimenu>場所<"
-#~ "/guimenu><guimenuitem>ホーム・フォルダ</guimenuitem></menuchoice>を開き、<menuchoice><gui"
-#~ "menu>編集</guimenu><guimenuitem>設定</guimenuitem></menuchoice>を選択し、<guilabel>メディ"
-#~ "ア</guilabel>タブをクリックします。<guibutton>DVD "
-#~ "ビデオ</guibutton>で、<application>gxine</application>を選択します。"
-
-#~ msgid ""
-#~ "In order to play DVDs, you must install some additional software. "
-#~ "Unfortunately, DVD support cannot be provided by default in Ubuntu due to "
-#~ "legal and technical restrictions."
-#~ msgstr ""
-#~ "DVDを再生するにはいくつか追加ソフトウェアをインストールしなければなりません。残念ながらUbuntuでは、法的及び技術的制約な理由からデフォルトではDV"
-#~ "D対応を提供できません。"
-
-#~ msgid "Miro"
-#~ msgstr "Miro"
-
-#~ msgid ""
-#~ "Press "
-#~ "<menuchoice><guimenuitem>File</guimenuitem><guimenuitem>Print...</guimenuitem"
-#~ "></menuchoice>"
-#~ msgstr ""
-#~ "<menuchoice><guimenuitem>ファイル</guimenuitem><guimenuitem>印刷...</guimenuitem></"
-#~ "menuchoice>をクリックします"
-
-#~ msgid ""
-#~ "To add music to your audio CD, either drag music from your File Browser or "
-#~ "press the <guibutton>Add</guibutton> button. Alternatively, if you have not "
-#~ "yet selected any files, the frame to the right of the window will offer "
-#~ "other file selection choices."
-#~ msgstr ""
-#~ "オーディオCDに音楽を追加するには、ファイル・ブラウザから音楽ファイルをドラッグするか、<guibutton>Add</guibutton>ボタンを押して"
-#~ "ください。もしまだ何もファイルを選択していない場合は、ウィンドウの右フレームにファイルの選択方法が表示されるでしょう。"
-
-#~ msgid ""
-#~ "See <ulink type=\"help\" url=\"ghelp:add-applications\">Add "
-#~ "Applications</ulink> for help on installing new software."
-#~ msgstr ""
-#~ "新しいソフトをインストールするためのヘルプは <ulink type=\"help\" url=\"ghelp:add-"
-#~ "applications\">アプリケーションの追加</ulink> を参照してください。"
-
-#~ msgid ""
-#~ "Present a <ulink type=\"help\" url=\"ghelp:musicvideophotos#photos-"
-#~ "slideshow\">slideshow</ulink> of your photos."
-#~ msgstr ""
-#~ "あなたの写真の<ulink type=\"help\" url=\"ghelp:musicvideophotos#photos-"
-#~ "slideshow\">スライドショー</ulink>を実行します。"
-
-#~ msgid ""
-#~ "<application>DeVeDe</application> is a DVD authoring application capable of "
-#~ "creating DVD discs which can be played in set-top DVD players."
-#~ msgstr ""
-#~ "<application>DeVeDe</application>は、セットトップ(set-"
-#~ "top)DVDプレイヤーで再生可能なDVDディスクを作成できるDVDオーサリングアプリケーションです。"
-
-#~ msgid ""
-#~ "For the <application>Mplayer</application> plugin, install the "
-#~ "<application>mozilla-mplayer</application> package."
-#~ msgstr ""
-#~ "<application>Mplayer</application>用のプラグインが必要なら<application>mozilla-"
-#~ "mplayer</application>パッケージをインストールしてください。"
-
-#~ msgid ""
-#~ "For more information, see <ulink "
-#~ "url=\"http://www.kinodv.org/article/static/2\">the Kino website</ulink>."
-#~ msgstr ""
-#~ "詳細な情報は、<ulink url=\"http://www.kinodv.org/article/static/2\">the Kino "
-#~ "website</ulink> を参照してください。"
-
-#~ msgid ""
-#~ "<application>gxine</application> with <application>Xine extra "
-#~ "plugins</application>"
-#~ msgstr ""
-#~ "<application>gxine</application> と <application>Xine 拡張プラグイン</application>"
-
-#~ msgid ""
-#~ "If you would like to play encrypted DVDs (see the legal note above), press "
-#~ "<menuchoice><guimenu>Applications</guimenu><guimenuitem>Accessories</guimenui"
-#~ "tem><guimenuitem>Terminal</guimenuitem></menuchoice> and type the following "
-#~ "into the screen which appears, followed by the <keycap>Return</keycap> "
-#~ "key:<screen>sudo /usr/share/doc/libdvdread3/install-css.sh</screen>"
-#~ msgstr ""
-#~ "もしあなたが暗号化されたDVDを再生したいなら、<menuchoice><guimenu>アプリケーション</guimenu><guimenuitem>ア"
-#~ "クセサリ</guimenuitem><guimenuitem>端末</guimenuitem></menuchoice>をクリックして、表示された画面に<"
-#~ "screen>sudo /usr/share/doc/libdvdread3/install-"
-#~ "css.sh</screen>と入力した後に<keycap>Return</keycap>キーを押下してください。"
-
-#~ msgid ""
-#~ "Videos can come in a range of different formats. However, some of these "
-#~ "formats are proprietary or commercial and so cannot be included in Ubuntu by "
-#~ "default. As a result, additional software must be installed to allow you to "
-#~ "view such formats. The following applications may be able to play certain "
-#~ "formats which the default applications are unable to handle:"
-#~ msgstr ""
-#~ "ビデオのフォーマットは、DVDのフォーマットとは系統がまったく異なるものだと言ってよいでしょう。とはいえ、そのフォーマットのうちのいくつかはプロプライエタ"
-#~ "リ（proprietary）またはコマーシャル（commercial）ですので、Ubuntuにデフォルトで搭載することができません。その結果として、そうし"
-#~ "たフォーマットで録画されたビデオを見るためには追加ソフトをインストールしなければなりません。次のようなアプリケーションは、デフォルトのアプリケーションでは"
-#~ "取り扱うことのできない上記のようなフォーマットを再生できるでしょう。"
-
-#~ msgid ""
-#~ "Install the <application>gtkpod</application> package from the "
-#~ "<quote>Universe</quote> repository (see <ulink type=\"help\" url=\"ghelp:add-"
-#~ "applications\">Add Applications</ulink>)."
-#~ msgstr ""
-#~ "<quote>Universe</quote>リポジトリ（<ulink type=\"help\" url=\"ghelp:add-"
-#~ "applications\">アプリケーションの追加</ulink>をご覧ください）から<application>gtkpod</application>"
-#~ "パッケージをインストールしてください。"
-
-#~ msgid ""
-#~ "Many videos available on the Internet can be played from within your web "
-#~ "browser. However, many of these require an additional <emphasis>browser "
-#~ "plugin</emphasis> to be installed first."
-#~ msgstr ""
-#~ "インターネットで利用できる多くのビデオはウェブブラウザ内で再生できます。しかしそうしたビデオの多くは、まず再生のための<emphasis>ブラウザのプラグ"
-#~ "イン</emphasis>を追加インストールすることが必要です。"
-
-#~ msgid ""
-#~ "For a free (open-source) <application>Flash</application> plugin, install "
-#~ "the <application>mozilla-plugin-gnash</application> package. For the "
-#~ "proprietary <application>Flash</application> plugin, install the "
-#~ "<application>flashplugin-nonfree</application> package. See <ulink "
-#~ "type=\"help\" url=\"ghelp:internet#web-plugins-flash\">Flash multimedia "
-#~ "plugin</ulink> for more information."
-#~ msgstr ""
-#~ "フリー（オープンソース）の<application>Flash</application>プラグインが必要なら<application>mozilla-"
-#~ "plugin-"
-#~ "gnash</application>パッケージをインストールしてください。なお、プロプライエタリの<application>Flash</applica"
-#~ "tion>プラグインが必要なら<application>flashplugin-"
-#~ "nonfree</application>パッケージをインストールしてください。flashプラグインの詳細については<ulink "
-#~ "type=\"help\" url=\"ghelp:internet#web-plugins-flash\">Flash multimedia "
-#~ "plugin</ulink>をご覧ください。"
-
-#~ msgid ""
-#~ "Press <menuchoice><guimenuitem>File</guimenuitem><guimenuitem>Page "
-#~ "Setup...</guimenuitem></menuchoice>"
-#~ msgstr ""
-#~ "<menuchoice><guimenuitem>ファイル</guimenuitem><guimenuitem>ページの設定...</guimenuite"
-#~ "m></menuchoice>をクリックします"
-
-#~ msgid ""
-#~ "<application>Thoggen DVD Ripper</application> allows you to back-up your "
-#~ "DVDs onto your computer."
-#~ msgstr ""
-#~ "<application>Thoggen DVD リッパー</application> を使えばDVDをコンピュータにバックアップすることができます。"
-
-#~ msgid ""
-#~ "Install <application>RealPlayer 10</application> to watch and listen to "
-#~ "streams in the <emphasis>Real Media</emphasis> formats. "
-#~ "<application>RealPlayer</application> is available from the "
-#~ "<emphasis>Commercial</emphasis> repository."
-#~ msgstr ""
-#~ "<emphasis>Real Media</emphasis>フォーマットのストリームを視聴するには<application>RealPlayer "
-#~ "10</application>をインストールしてください。<application>RealPlayer</application>は<emphasis"
-#~ ">Commercial</emphasis>リポジトリからインストールできます。"
-
-#~ msgid "Watch videos in a web browser"
-#~ msgstr "ウェブブラウザで動画を閲覧するには"
-
-#~ msgid ""
-#~ "You will also need to select the size of the CD which you inserted (74, 80, "
-#~ "90, or 100 minutes), which can be done by clicking on the CD icon located "
-#~ "below the frame on the right. Brasero will warn you if you exceed the set "
-#~ "limit."
-#~ msgstr ""
-#~ "挿入したCDのサイズ（74分、80分、90分、100分）を選択する必要があるかもしれません。その場合は、右フレームの下にあるCDアイコンをクリックし、選択"
-#~ "してください。もしも指定した上限を越える場合は、Braseroが警告を発します。"
-
-#~ msgid ""
-#~ "Watch a slideshow using the <ulink type=\"help\" url=\"ghelp:eog#eog-"
-#~ "fullscreen\">Image Viewer</ulink>"
-#~ msgstr ""
-#~ "<ulink type=\"help\" url=\"ghelp:eog#eog-"
-#~ "fullscreen\">画像ビューア</ulink>を使ってスライドショーを見る。"
-
-#~ msgid ""
-#~ "To transfer music files to and from an iPod, you can use "
-#~ "<application>gtkpod</application>:"
-#~ msgstr "iPodと楽曲をやりとりするには、<application>gtkpod</application>が使えます。"
-
-#~ msgid ""
-#~ "To install extra codecs, press "
-#~ "<menuchoice><guimenu>Applications</guimenu><guimenuitem>Add/Remove...</guimen"
-#~ "uitem></menuchoice>, type <quote>codec</quote> in the "
-#~ "<guilabel>Search</guilabel> box and select which codecs you want to install. "
-#~ "Press <guibutton>Apply</guibutton> to install the selected codecs."
-#~ msgstr ""
-#~ "追加のコーデックをインストールするには、<menuchoice><guimenu>アプリケーション</guimenu><guimenuitem>追加と削除"
-#~ "...</guimenuitem></menuchoice>をクリックし、<guilabel>検索</guilabel>内に<quote>codec</q"
-#~ "uote>と入力して、検索で該当したものからあなたがインストールしたいコーデックを選びます。<guibutton>変更の適用</guibutton>をクリ"
-#~ "ックすれば選択したコーデックがインストールされます。"
-
-#~ msgid ""
-#~ "When you first use <application>Rhythmbox</application>, it will scan your "
-#~ "home folder for any supported music files you have and will make them "
-#~ "available to be played automatically."
-#~ msgstr ""
-#~ "<application>Rhythmbox</application> "
-#~ "を最初に使ったときに、あなたの持っている全てのサポートされた音楽ファイルをホームフォルダからスキャンし、自動的に再生できるようにします。"
-
-#~ msgid ""
-#~ "Watch a slideshow using the <ulink type=\"help\" url=\"ghelp:f-spot#enjoying-"
-#~ "fullscreen-mode-and-slideshows\">F-Spot Photo Manager</ulink>"
-#~ msgstr ""
-#~ "<ulink type=\"help\" url=\"ghelp:f-spot#enjoying-fullscreen-mode-and-"
-#~ "slideshows\">F-Spot フォト・マネージャ</ulink>を使ってスライドショーを見る。"
-
-#~ msgid ""
-#~ "To access these optional features, press "
-#~ "<menuchoice><guimenuitem>Edit</guimenuitem><guimenuitem>Plugins...</guimenuit"
-#~ "em></menuchoice> and select the features which you would like to use by "
-#~ "ticking them."
-#~ msgstr ""
-#~ "このようなオプション機能にアクセスするには、<menuchoice><guimenuitem>編集< "
-#~ "/guimenuitem><guimenuitem>Plugins...</guimenuitem></menuchoice> "
-#~ "をクリックし、使用する機能をチェックします。"
-
-#~ msgid "PenguinTV Media Aggregator"
-#~ msgstr "PenguinTV メディア・アグリゲータ"
-
-#~ msgid ""
-#~ "To change the advanced printer settings, press "
-#~ "<menuchoice><guimenuitem>File</guimenuitem><guimenuitem>Print "
-#~ "Setup...</guimenuitem></menuchoice>"
-#~ msgstr ""
-#~ "プリンターの詳細設定を変更するには<menuchoice><guimenuitem>File</guimenuitem><guimenuitem>Prin"
-#~ "t Setup...</guimenuitem></menuchoice>をクリックしてください。"
-
-#~ msgid "Playing proprietary formats"
-#~ msgstr "プロプライエタリなフォーマットの再生"
-
-#~ msgid ""
-#~ "Restart <application>Firefox</application> to make the newly-installed "
-#~ "plugins available."
-#~ msgstr ""
-#~ "<application>Firefox</application> を再起動して、新しくインストールしたプラグインを利用可能にしてください。"
-
-#~ msgid ""
-#~ "Whether you want to play, rip, edit or organize your music, Ubuntu has the "
-#~ "tools you need."
-#~ msgstr "音楽の再生、リッピング、編集または管理などのすべてにおいてUbuntuは必要なツールを備えています。"
-
-#~ msgid "Other audio-related tasks"
-#~ msgstr "オーディオに関するその他のタスク"
-
-#~ msgid ""
-#~ "Press <menuchoice><guimenuitem>Image</guimenuitem><guimenuitem>Scale "
-#~ "Image...</guimenuitem></menuchoice>"
-#~ msgstr ""
-#~ "<menuchoice><guimenuitem>画像</guimenuitem><guimenuitem>画像拡大縮小...</guimenuitem>"
-#~ "</menuchoice>をクリックします。"
-
-#~ msgid ""
-#~ "Share your photos over the Internet using a <ulink type=\"help\" "
-#~ "url=\"ghelp:f-spot#sharing-flickr-or-php-gallery\">photo sharing "
-#~ "service</ulink> or a <ulink type=\"help\" url=\"ghelp:f-spot#website-gallery-"
-#~ "folder\">web gallery</ulink>."
-#~ msgstr ""
-#~ "インターネットを通じて写真を共有するには、<ulink type=\"help\" url=\"ghelp:f-spot#sharing-flickr-"
-#~ "or-php-gallery\">画像共有サービス</ulink>か<ulink type=\"help\" url=\"ghelp:f-"
-#~ "spot#website-gallery-folder\">ウェブ・ギャラリー</ulink>を使用します。"
-
-#~ msgid ""
-#~ "You can listen to <emphasis>streaming audio</emphasis> from the Internet. "
-#~ "This can be thought of as an online radio service, as it is usually "
-#~ "broadcast live."
-#~ msgstr ""
-#~ "インターネットで<emphasis>ストリーミング・オーディオ</emphasis>を聴くことが出来ます。これは生放送のオンライン・ラジオ・サービスのよう"
-#~ "なものです。"
-
-#~ msgid "Ripping audio CDs"
-#~ msgstr "音楽CDのリッピング"
-
-#~ msgid ""
-#~ "Many commercial DVDs are <emphasis>encrypted</emphasis> and so require the "
-#~ "use of <emphasis>decryption</emphasis> software in order to play them. In "
-#~ "some countries, the use of such decryption software is not permitted by law. "
-#~ "Verify that you are within your rights in using it."
-#~ msgstr ""
-#~ "多くの市販DVDは<emphasis>暗号化</emphasis>されているため、再生の際には<emphasis>解読</emphasis>ソフトウェアを"
-#~ "使用する必要があります。いくつかの国々ではそうした解読ソフトウェアの使用が法的に許可されていません。使用にあたってはあなたに正当な権利があるかどうか確認し"
-#~ "てください。"
-
-#~ msgid ""
-#~ "To edit audio, install <ulink "
-#~ "url=\"http://www.jokosher.org/\">Jokosher</ulink> or <ulink "
-#~ "url=\"http://audacity.sourceforge.net/\">Audacity</ulink>. Jokosher is able "
-#~ "to record audio as well as edit it, and Audacity provides many powerful "
-#~ "sound-editing features."
-#~ msgstr ""
-#~ "オーディオの編集をするには、<ulink "
-#~ "url=\"http://www.jokosher.org/\">Jokosher</ulink>または<ulink "
-#~ "url=\"http://audacity.sourceforge.net/\">Audacity</ulink>をインストールしてください。Jokosh"
-#~ "erはオーディオの編集だけでなく録音も出来ます。Audacityは多種多様なサウンド編集機能を提供します。"
-
-#~ msgid ""
-#~ "See the <ulink type=\"help\" url=\"ghelp:rhythmbox\">Rhythmbox "
-#~ "manual</ulink> for more information."
-#~ msgstr ""
-#~ "詳しいことについては<ulink type=\"help\" "
-#~ "url=\"ghelp:rhythmbox\">Rhythmboxマニュアル</ulink>をご覧ください。"
-
-#~ msgid ""
-#~ "<application>PiTiVi Video Editor</application> is a simple, easy to use "
-#~ "video editor."
-#~ msgstr "<application>PiTiVi Video Editor</application>はシンプルで使いやすいビデオ編集ソフトです。"
-
-#~ msgid ""
-#~ "See <ulink type=\"help\" url=\"ghelp:musicvideophotos#codecs\">Multimedia "
-#~ "Codecs</ulink> for information on installing support for other audio and "
-#~ "video formats."
-#~ msgstr ""
-#~ "他の音楽または動画フォーマットのインストールサポートに関する情報は、<ulink type=\"help\" "
-#~ "url=\"ghelp:musicvideophotos#codecs\">マルチメディア・コーデック</ulink> を参照してください。"
-
-#~ msgid "Listen to Podcasts"
-#~ msgstr "Podcastを聴く"
-
-#~ msgid ""
-#~ "If you have music files which have incorrect or incomplete information about "
-#~ "the artist or album which they are from, install <application>Cowbell Music "
-#~ "Organizer</application>. Cowbell allows you to edit track details, and can "
-#~ "automatically correct track information for many CDs."
-#~ msgstr ""
-#~ "アーティストやアルバムに関する誤った（または不完全な）情報を含んだ音楽ファイルがあったときは、<application>Cowbell Music "
-#~ "Organizer</application>をインストールしてください。Cowbellは、多くのCDについては自動的にトラック情報を訂正しますし、自動訂"
-#~ "正できないときでもあなたが自分でトラックの詳細情報を編集することができます。"
-
-#~ msgid ""
-#~ "You can play music directly off an iPod with <application>Rhythmbox Music "
-#~ "Player</application>. Plug the iPod into the computer, and open "
-#~ "<application>Rhythmbox</application>."
-#~ msgstr ""
-#~ "<application>Rhythmbox "
-#~ "ミュージック・プレイヤー</application>を使うことで、直接iPodの中にある楽曲を再生できます。iPodをコンピュータに接続し、<applic"
-#~ "ation>Rhythmbox</application>を開いてください。"
-
-#~ msgid "Play and organize music"
-#~ msgstr "音楽の再生と整理"
-
-#~ msgid ""
-#~ "This section describes how to import, organize and use music, video and "
-#~ "photos with Ubuntu."
-#~ msgstr "このセクションでは、Ubuntuで音楽/映像/写真をどのように取り込み/整理/使用するか説明します。"
-
-#~ msgid "libdvdnav4"
-#~ msgstr "libdvdnav4"
-
-#~ msgid ""
-#~ "If you have appropriate audio hardware (such as a microphone), you can "
-#~ "record sounds onto your computer. Choose "
-#~ "<menuchoice><guimenu>Applications</guimenu><guimenuitem>Sound &amp; "
-#~ "Video</guimenuitem><guimenuitem>Sound Recorder</guimenuitem></menuchoice> to "
-#~ "start the Sound Recorder. Alternatively, press "
-#~ "<keycombo><keycap>Alt</keycap><keycap>F2</keycap></keycombo>, type "
-#~ "<quote>gnome-sound-recorder</quote> and press <guibutton>Run</guibutton>. "
-#~ "See the <ulink type=\"help\" url=\"ghelp:gnome-sound-recorder#grecord-"
-#~ "usage\">Sound Recorder manual</ulink> for further instructions."
-#~ msgstr ""
-#~ "適切なオーディオハードウェア（例えばマイクロフォンなど）を持っているなら、コンピュータに録音することができます。<menuchoice><guimenu>"
-#~ "アプリケーション</guimenu><guimenuitem>サウンドとビデオ</guimenuitem><guimenuitem>サウンド・レコーダ</"
-#~ "guimenuitem></menuchoice>を選択して、サウンド・レコーダを起動してください。もしくは、<keycombo><keycap>Alt<"
-#~ "/keycap><keycap>F2</keycap></keycombo>を押し、<quote>gnome-sound-"
-#~ "recorder</quote>と入力し、<guibutton>実行</guibutton>を押します。さらに詳しいことは、<ulink "
-#~ "type=\"help\" url=\"ghelp:gnome-sound-recorder#grecord-usage\">Sound "
-#~ "Recorderマニュアル</ulink>をご覧ください。"
-
-#~ msgid "2004, 2005, 2006"
-#~ msgstr "2004, 2005, 2006"
-
-#~ msgid ""
-#~ "When you put a blank (recordable) CD in the drive, Ubuntu will ask if you "
-#~ "want to make an audio or data CD. Clicking on <guibutton>Make Audio "
-#~ "CD</guibutton> will open the <application>Brasero</application><guilabel>New "
-#~ "audio disc project</guilabel> window. Alternatively, you can launch "
-#~ "<application>Brasero</application> by pressing "
-#~ "<menuchoice><guimenu>Applications</guimenu><guimenuitem>Sound &amp; "
-#~ "Video</guimenuitem><guimenuitem>Brasero Disc "
-#~ "Burning</guimenuitem></menuchoice>, but you will need to click on the "
-#~ "<guibutton>Audio project</guibutton> button to begin creating your audio CD."
-#~ msgstr ""
-#~ "ドライブに空の（記録可能な）CDを挿入すると、オーディオCDとデータCDのどちらを作成したいか尋ねられます。<guibutton>オーディオCDを作成する"
-#~ "</guibutton>をクリックすれば、<application>Brasero</application><guilabel>新しい音楽ディスクのプロ"
-#~ "ジェクト</guilabel>ウィンドウが立ち上がります。<menuchoice><guimenu>アプリケーション</guimenu><guimenui"
-#~ "tem>サウンドとビデオ</guimenuitem><guimenuitem>Brasero Disc "
-#~ "Burning</guimenuitem></menuchoice>を選択することでも、<application>Brasero</application"
-#~ ">を起動することができますが、オーディオCDを作成するためにはさらに<guibutton>Audio "
-#~ "project</guibutton>ボタンを押す必要があります。"
-
-#~ msgid ""
-#~ "See the <ulink url=\"https://help.ubuntu.com/community/IPodHowto\">Community "
-#~ "Help pages</ulink> for more information on using an iPod with Ubuntu."
-#~ msgstr ""
-#~ "UbuntuでiPodを使うための詳しい情報は<ulink "
-#~ "url=\"https://help.ubuntu.com/community/IPodHowto\">Community Help "
-#~ "pages</ulink>をご覧ください。"
-
-#~ msgid ""
-#~ "Open the photo you want to resize in the <application>GIMP Image "
-#~ "Editor</application>"
-#~ msgstr "リサイズしたい写真を<application>GIMP Image Editor</application>で開きます"
-
-#~ msgid "Xfburn"
-#~ msgstr "Xfburn"
-
-#~ msgid "CD/DVD Writer GnomeBaker"
-#~ msgstr "CD/DVD Writer GnomeBaker"
-
-#~ msgid ""
-#~ "Podcasts are a way of listening to music and radio shows broadcast on the "
-#~ "Internet. Thousands of different shows are available, such as <ulink "
-#~ "url=\"http://www.bbc.co.uk/radio/waystolisten/podcasts/\">BBC Radio</ulink>, "
-#~ "<ulink url=\"http://www.lugradio.org/\">LugRadio</ulink> and <ulink "
-#~ "url=\"http://www.thenakedscientists.com\">The Naked Scientists</ulink>. The "
-#~ "Rhythmbox Music Player is able to play podcasts. See the <ulink "
-#~ "type=\"help\" url=\"ghelp:rhythmbox#podcast\">Rhythmbox manual</ulink> for "
-#~ "more information."
-#~ msgstr ""
-#~ "Podcast (ポッドキャスト)はインターネットで音楽やラジオ放送を聴く方法の一つです。<ulink "
-#~ "url=\"http://www.bbc.co.uk/radio/waystolisten/podcasts/\">BBC Radio</ulink>、 "
-#~ "<ulink url=\"http://www.lugradio.org/\">LugRadio</ulink>、<ulink "
-#~ "url=\"http://www.thenakedscientists.com\">The Naked "
-#~ "Scientists</ulink>など数千局を視聴できます。Rhythmbox "
-#~ "ミュージック・プレイヤーはPodcastを再生できます。詳しくは<ulink type=\"help\" "
-#~ "url=\"ghelp:rhythmbox#podcast\">Rhythmbox マニュアル</ulink>をご覧ください。"
-
-#~ msgid ""
-#~ "For more information, see <ulink "
-#~ "url=\"http://www.rastersoft.com/programas/devede.html\">the DeVeDe "
-#~ "website</ulink>."
-#~ msgstr ""
-#~ "詳細は、<ulink url=\"http://www.rastersoft.com/programas/devede.html\">DeVeDe "
-#~ "ウェブサイト</ulink>をご覧になってください。"
-
-#~ msgid "K3b"
-#~ msgstr "K3b"
-
-#~ msgid "Watch video podcasts"
-#~ msgstr "ビデオpodcastを見る"
-
-#~ msgid "Gnome CD Master"
-#~ msgstr "Gnome CD Master"
-
-#~ msgid ""
-#~ "<application>Rhythmbox</application> is able to play most streaming audio, "
-#~ "such as online radio shows. However, some services require a special player "
-#~ "to be used."
-#~ msgstr ""
-#~ "<application>Rhythmbox</application>は、例えばオンラインラジオなど、ほとんどのストリーミング・オーディオを再生できます"
-#~ "。しかしながら、いくつかのサービスでは、視聴するために特別なプレーヤが必要です。"
-
-#~ msgid "Install a full suite of multimedia editing applications"
-#~ msgstr "マルチメディア編集アプリケーション・スイートのインストール"
-
-#~ msgid ""
-#~ "<application>Subtitle Editor</application> can be used to edit subtitles for "
-#~ "videos."
-#~ msgstr "<application>サブタイトルエディタ</application> はビデオにサブタイトルを付けることができます。"
-
-#~ msgid ""
-#~ "It is possible to copy music from your computer onto a CD, so that it can be "
-#~ "played in another CD player. You must have a CD recording drive to be able "
-#~ "to do this."
-#~ msgstr "コンピュータからCDへ音楽ファイルをコピーすることも可能ですので、作成したものをCDプレイヤーで再生することができます。"
-
-#~ msgid ""
-#~ "If you would like to keep a copy of an audio CD on your computer without "
-#~ "needing to insert the CD to listen to it, it is possible to "
-#~ "<emphasis>rip</emphasis> or <emphasis>extract</emphasis> the music onto your "
-#~ "computer."
-#~ msgstr ""
-#~ "再生のときにそのCDを挿入せずにすむようにオーディオCDのコピーをあなたのコンピューター上に保存しておきたければ、コンピューターへ<emphasis>切り"
-#~ "出し</emphasis>か<emphasis>抽出</emphasis>しておくことができます。"
-
-#~ msgid ""
-#~ "For the <application>Helix</application> plugin, install the "
-#~ "<application>mozilla-helix-player</application> package."
-#~ msgstr ""
-#~ "<application>Helix</application>プラグインが必要なら<application>mozilla-helix-"
-#~ "player</application>パッケージをインストールしてください。"
-
-#~ msgid ""
-#~ "Open "
-#~ "<menuchoice><guimenu>Applications</guimenu><guimenuitem>Graphics</guimenuitem"
-#~ "><guimenuitem>F-Spot Photo Manager</guimenuitem></menuchoice> and choose "
-#~ "<menuchoice><guimenu>File</guimenu><guimenuitem>Import...</guimenuitem></menu"
-#~ "choice>."
-#~ msgstr ""
-#~ "<menuchoice><guimenu>アプリケーション</guimenu><guimenuitem>グラフィックス</guimenuitem><gui"
-#~ "menuitem>F-Spot "
-#~ "フォトマネージャ</guimenuitem></menuchoice>を開いて<menuchoice><guimenu>ファイル</guimenu><gu"
-#~ "imenuitem>インポート...</guimenuitem></menuchoice>をクリックします。"
-
-#~ msgid ""
-#~ "For advanced photo printing, install <application>PhotoPrint</application> "
-#~ "(see <ulink type=\"help\" url=\"ghelp:add-applications\">Adding, Removing "
-#~ "and Updating Applications</ulink>). Once installed, press "
-#~ "<menuchoice><guimenu>Applications</guimenu><guimenuitem>Graphics</guimenuitem"
-#~ "><guimenuitem>PhotoPrint</guimenuitem></menuchoice> to start PhotoPrint."
-#~ msgstr ""
-#~ "より高度な写真印刷を行うには<application>PhotoPrint</application>をインストールしてください（インストール方法について"
-#~ "は<ulink type=\"help\" url=\"ghelp:add-"
-#~ "applications\">アプリケーションの追加、削除、アップデート</ulink>をご覧ください）。インストールが完了したら<menuchoice>"
-#~ "<guimenu>アプリケーション</guimenu><guimenuitem>グラフィックス</guimenuitem><guimenuitem>Pho"
-#~ "toPrint</guimenuitem></menuchoice>をクリックしてPhotoPrintを起動します。"
-
-#~ msgid ""
-#~ "Other applications, such as <application>Mplayer</application> and "
-#~ "<application>Xine</application>, do not use the "
-#~ "<application>Gstreamer</application> framework. Due to patent and copyright "
-#~ "restrictions, codecs for these programs are not included in Ubuntu by "
-#~ "default. For more information on these read the <ulink "
-#~ "url=\"https://help.ubuntu.com/community/RestrictedFormats\">Restricted "
-#~ "Formats</ulink> wiki page."
-#~ msgstr ""
-#~ "<application>Mplayer</application>や<application>Xine</application>のような別のアプリケー"
-#~ "ションでは<application>Gstreamer</application>フレームワークを使用しません。特許や著作権にもとづく制限のために、既定状"
-#~ "態のUbuntuにはそうしたプログラム（アプリケーション）のコーデックが組み込まれていません。これらに関する詳しい情報は<ulink "
-#~ "url=\"https://help.ubuntu.com/community/RestrictedFormats\">Restricted "
-#~ "Formats</ulink>(制限付きのフォーマット)wikiページをお読みください。"
-
-#~ msgid ""
-#~ "The <ulink type=\"help\" url=\"ghelp:eog#eog-manipulate\">Image "
-#~ "Viewer</ulink>, F-Spot Photo Manager, <ulink type=\"help\" "
-#~ "url=\"ghelp:gthumb#gthumb-rotate-jpeg\">gThumb Image Viewer</ulink> and the "
-#~ "GIMP Image Editor are all capable of rotating photos."
-#~ msgstr ""
-#~ "<ulink type=\"help\" url=\"ghelp:eog#eog-manipulate\">画像ビューア</ulink>、F-Spot "
-#~ "フォト・マネージャ、 <ulink type=\"help\" url=\"ghelp:gthumb#gthumb-rotate-"
-#~ "jpeg\">gThumb 画像ビューア</ulink>、GIMP Image Editorは、どれも写真を回転させること可能です。"
-
-#~ msgid ""
-#~ "Burn a CD of your photos using the <ulink type=\"help\" "
-#~ "url=\"ghelp:musicvideophotos#cdburning\">File Browser</ulink> or <ulink "
-#~ "type=\"help\" url=\"ghelp:f-spot#sharing-burn-to-cd\">F-Spot Photo "
-#~ "Manager</ulink>."
-#~ msgstr ""
-#~ "写真をCDに焼き付けるには、<ulink type=\"help\" "
-#~ "url=\"ghelp:musicvideophotos#cdburning\">ファイル・ブラウザ</ulink>か<ulink "
-#~ "type=\"help\" url=\"ghelp:f-spot#sharing-burn-to-cd\">F-Spot "
-#~ "フォト・マネージャ</ulink>を使用します。"
-
-#~ msgid "Ubuntu supports many portable audio players, including the iPod."
-#~ msgstr "UbuntuはiPodを含め、多くのポータブル音楽プレーヤをサポートしています。"
-
-#~ msgid "Burn CDs and DVDs"
-#~ msgstr "CDやDVDの作成"
-
-#~ msgid ""
-#~ "<application>Sound Juicer CD Extractor</application> is able to rip CDs. To "
-#~ "start <application>Sound Juicer</application> manually, choose "
-#~ "<menuchoice><guimenu>Applications</guimenu><guimenuitem>Sound &amp; "
-#~ "Video</guimenuitem><guimenuitem>Audio CD "
-#~ "Extractor</guimenuitem></menuchoice>. Alternatively, it should start "
-#~ "automatically when you insert a CD."
-#~ msgstr ""
-#~ "<application>Sound Juicer CD "
-#~ "取り込みツール</application>でCDをリッピングすることができます。<menuchoice><guimenu>アプリケーション</guimen"
-#~ "u><guimenuitem>サウンドとビデオ</guimenuitem><guimenuitem>音楽 CD "
-#~ "取り込みツール</guimenuitem></menuchoice>を選択すれば、<application>Sound "
-#~ "Juicer</application>を起動できます。また、CDを挿入すれば自動的に起動します。"
-
-#~ msgid ""
-#~ "To play and organize your music, Ubuntu comes with <application>Rhythmbox "
-#~ "Music Player</application>. To start <application>Rhythmbox</application>, "
-#~ "choose <menuchoice><guimenu>Applications</guimenu><guimenuitem>Sound &amp; "
-#~ "Video</guimenuitem><guimenuitem>Rhythmbox Music "
-#~ "Player</guimenuitem></menuchoice>."
-#~ msgstr ""
-#~ "音楽を再生したり整理するのに、Ubuntuには <application>Rhythmbox ミュージック・プレイヤー</application> "
-#~ "があります。<application>Rhythmbox</application> "
-#~ "を開始するには、<menuchoice><guimenu>アプリケーション</guimenu><guimenuitem>サウンドとビデオ</guimenu"
-#~ "item><guimenuitem>Rhythmbox ミュージック・プレイヤー</guimenuitem></menuchoice> "
-#~ "を選択してください。"
-
-#~ msgid ""
-#~ "For more information, see <ulink url=\"http://stopmotion.bjoernen.com/\">the "
-#~ "Stopmotion website</ulink>."
-#~ msgstr ""
-#~ "詳細は、<ulink url=\"http://stopmotion.bjoernen.com/\">Stopmotion "
-#~ "ウェブサイト</ulink>をご覧になってください。"
-
-#~ msgid ""
-#~ "The plugins you require depend on the format of the videos you would like to "
-#~ "watch. A short list of plugins available for the default "
-#~ "<application>Firefox Web Browser</application> is given below:"
-#~ msgstr ""
-#~ "あなたが必要とするプラグインは、あなたが視聴したいビデオのフォーマットによって異なります。Ubuntu既定の<application>Firefox "
-#~ "ウェブ・ブラウザ</application>で使用可能なプラグインの簡単な一覧を下に示します。"
-
-#~ msgid ""
-#~ "For help on installing additional software, see <ulink type=\"help\" "
-#~ "url=\"ghelp:add-applications\">Add Applications</ulink>."
-#~ msgstr ""
-#~ "追加ソフトウェアをインストールする際のヘルプは、<ulink type=\"help\" url=\"ghelp:add-"
-#~ "applications\">アプリケーションの追加</ulink> を参照してください。"
-
-#~ msgid ""
-#~ "When you insert an audio CD, the <application>Sound Juicer</application> CD "
-#~ "player and ripper opens automatically. If you are connected to the Internet, "
-#~ "<application>Sound Juicer</application> will display the CD artist, album "
-#~ "and track names."
-#~ msgstr ""
-#~ "オーディオCDを挿入すると<application>Sound "
-#~ "Juicer</application>CD取り込みツールが自動的に起動します。あなたがインターネットに接続していれば、<application>Soun"
-#~ "d Juicer</application>はCDのアーティスト名、アルバム名、トラック名を表示します。"
-
-#~ msgid ""
-#~ "For more information, see <ulink url=\"http://thoggen.net/\">the Thoggen "
-#~ "website</ulink>."
-#~ msgstr ""
-#~ "詳細は、<ulink url=\"http://thoggen.net/\">Thoggen ウェブサイト</ulink>をご覧になってください。"
-
-#~ msgid ""
-#~ "To play the CD, click the <guibutton>Play</guibutton> button or press "
-#~ "<keycombo><keycap>Ctrl</keycap><keycap>P</keycap></keycombo>. To play a "
-#~ "particular track, double-click on the track or select the track and click "
-#~ "<guibutton>Play</guibutton>."
-#~ msgstr ""
-#~ "CDを再生するには<guibutton>演奏</guibutton>ボタンをクリックするかまたはキーボードの<keycombo><keycap>Ctrl<"
-#~ "/keycap><keycap>P</keycap></keycombo>を押下してください。特定のトラックを再生するには、トラック名をダブルクリックする"
-#~ "かまたはトラックを選択して<guibutton>演奏</guibutton>をクリックしてください。"
-
-#~ msgid ""
-#~ "Many applications in Ubuntu use the <application>GStreamer</application> "
-#~ "open source multimedia framework. The codec plugins for "
-#~ "<application>GStreamer</application> are organised in different packages "
-#~ "depending on the licensing that applies to the various codecs. You can see "
-#~ "which codecs are contained in which plugin on the <ulink "
-#~ "url=\"http://gstreamer.freedesktop.org/documentation/plugins.html\">GStreamer"
-#~ " website</ulink>."
-#~ msgstr ""
-#~ "Ubuntuの多くのアプリケーションはオープンソースのマルチメディアフレームワークである<application>GStreamer</applicati"
-#~ "on>を使用しています。<application>GStreamer</application>のコーデックプラグインはさまざまなコーデックに適用されるラ"
-#~ "イセンスごとに異なるパッケージで構成されています。どのコーデックがどのプラグインに含まれるかの確認は、<ulink "
-#~ "url=\"http://gstreamer.freedesktop.org/documentation/plugins.html\">GStreamer"
-#~ " ウェブサイト</ulink>でできます。"
-
-#~ msgid ""
-#~ "Ubuntu provides a wide range of tools for all of your audio playing, editing "
-#~ "and recording needs."
-#~ msgstr "Ubuntuはオーディオ再生・編集・録音に必要な各種のツールを提供します。"
-
-#~ msgid ""
-#~ "<application>Stopmotion</application> allows you to create videos using the "
-#~ "stop-motion animation technique."
-#~ msgstr ""
-#~ "<application>Stopmotion</application>を使えば、ストップモーション・アニメーション技法を使ったビデオを作成することがで"
-#~ "きます。"
-
-#~ msgid ""
-#~ "<ulink type=\"help\" url=\"ghelp:f-spot#sharing-e-mail\">E-mail "
-#~ "copies</ulink> of your photos directly."
-#~ msgstr ""
-#~ "<ulink type=\"help\" url=\"ghelp:f-spot#sharing-e-"
-#~ "mail\">電子メールで送る</ulink>は写真を直接電子メールで送ります。"
-
-#~ msgid ""
-#~ "When you insert a DVD into your drive, it should now open automatically "
-#~ "using <application>Totem Movie Player</application>."
-#~ msgstr ""
-#~ "DVDをドライブに挿入すると、自動的に<application>Totem 動画プレイヤー</application>が起動するでしょう。"
-
-#~ msgid ""
-#~ "To run <application>gtkpod</application>, choose "
-#~ "<menuchoice><guimenu>Applications</guimenu><guisubmenu>Sound &amp; "
-#~ "Video</guisubmenu><guimenuitem>gtkpod</guimenuitem></menuchoice>."
-#~ msgstr ""
-#~ "<application>gtkpod</application>を実行するには、<menuchoice><guimenu>アプリケーション</guime"
-#~ "nu><guisubmenu>サウンドとビデオ</guisubmenu><guimenuitem>gtkpod</guimenuitem></menuch"
-#~ "oice> を選択します。"
-
-#~ msgid "Listen to online audio streams"
-#~ msgstr "オンライン音楽ストリームを聞く"
-
-#~ msgid ""
-#~ "You can make your own CDs by <emphasis>burning</emphasis> files onto a blank "
-#~ "disc using the <emphasis>CD Writer Drive</emphasis> of your computer."
-#~ msgstr ""
-#~ "コンピュータの<emphasis>CD "
-#~ "ライター</emphasis>でブランクディスクにファイルを<emphasis>書き込み</emphasis>して自分だけのCDを作成できます。"
-
-#~ msgid "Record and edit video"
-#~ msgstr "ビデオの録画と編集"
-
-#~ msgid "Use a different music player"
-#~ msgstr "他のミュージックプレイヤーを使用する"
-
-#~ msgid ""
-#~ "In some countries, the use of certain codecs may be prohibited by law. You "
-#~ "should verify that you are permitted to use them before installing them."
-#~ msgstr ""
-#~ "いくつかの国々では、特定のコーデックの使用が法律で禁止されているかもしれません。あなたがコーデックをインストールする際には、その使用が法的に許可されている"
-#~ "かどうかを確認すべきです。"
-
-#~ msgid "Change the track details of music"
-#~ msgstr "音楽トラックの詳細を変更する"
-
-#~ msgid ""
-#~ "Install the following packages (see <ulink type=\"help\" url=\"ghelp:add-"
-#~ "applications\">Add Applications</ulink>):"
-#~ msgstr ""
-#~ "次のパッケージをインストールしてください（<ulink type=\"help\" url=\"ghelp:add-"
-#~ "applications\">アプリケーションの追加</ulink>をご覧ください）。"
-
-#~ msgid ""
-#~ "<application>Rhythmbox</application> supports many useful features, some of "
-#~ "which are turned off by default. For example, it can show the album cover of "
-#~ "the song currently being played, or share music with others."
-#~ msgstr ""
-#~ "<application>Rhythmbox</application>は多くの便利な機能をサポートしています（いくつかは既定では無効に設定されています）"
-#~ "。たとえば再生中のアルバムのジャケットを表示したり、他の人と音楽ファイルを共有したりする機能もあります。"
-
-#~ msgid "CD/DVD Burning Applications"
-#~ msgstr "CD/DVD 作成アプリケーション"
-
-#~ msgid ""
-#~ "Ubuntu comes with a selection of tools to help you record and edit video."
-#~ msgstr "Ubuntuには動画を録画したり編集するのに役立つツールのセレクションがあります。"
-
-#~ msgid ""
-#~ "Follow the instructions in the Sound Juicer manual on <ulink type=\"help\" "
-#~ "url=\"ghelp:sound-juicer#extracting\">how to rip audio CDs</ulink>."
-#~ msgstr ""
-#~ "Sound Juicerのマニュアルの<ulink type=\"help\" url=\"ghelp:sound-"
-#~ "juicer#extracting\">オーディオCDの切り出し</ulink>に従ってください。"
-
-#~ msgid ""
-#~ "Unfortunately, <application>Totem Movie Player</application> has no support "
-#~ "for the menu feature of DVDs. To use this feature, you can install an "
-#~ "alternative program such as <application>gxine</application>, like this:"
-#~ msgstr ""
-#~ "残念ながら、<application>Totem "
-#~ "動画プレイヤー</application>はDVDのメニュー機能をサポートしていません。この機能を使うためには、<application>gxine</a"
-#~ "pplication>など別のプログラムを次のようにインストールする必要があります："
-
-#~ msgid ""
-#~ "A copy of the license is available here: <ulink url=\"/usr/share/ubuntu-"
-#~ "docs/common/C/ccbysa.xml\">Creative Commons ShareAlike License</ulink>."
-#~ msgstr ""
-#~ "このライセンスのコピーは以下で参照可能です: <ulink url=\"/usr/share/ubuntu-"
-#~ "docs/common/C/ccbysa.xml\">Creative Commons ShareAlike License</ulink>。"
-
-#~ msgid ""
-#~ "For more information, see <ulink "
-#~ "url=\"http://www.pitivi.org/wiki/Main_Page\">the PiTiVi website</ulink>."
-#~ msgstr ""
-#~ "詳細は、<ulink url=\"http://www.pitivi.org/wiki/Main_Page\">PiTiVi "
-#~ "ウェブサイト</ulink>をご覧になってください。"
-
-#~ msgid ""
-#~ "You can tweak your printing settings to get the best results. All of these "
-#~ "settings can be found in the "
-#~ "<menuchoice><guimenuitem>File</guimenuitem><guimenuitem>Print...</guimenuitem"
-#~ "></menuchoice> window."
-#~ msgstr ""
-#~ "プリンタの設定を微調整すれば最高の印刷結果を得ることができます。プリンタの設定はすべて<menuchoice><guimenuitem>ファイル</gui"
-#~ "menuitem><guimenuitem>印刷...</guimenuitem></menuchoice>ウィンドウで見ることができます。"
-
-#~ msgid "Use a portable audio player"
-#~ msgstr "ポータブル音楽プレーヤの利用"
-
-#~ msgid "Using an iPod"
-#~ msgstr "iPodの利用"
-
-#~ msgid ""
-#~ "Ubuntu includes CD burning capabilities by default, and allows you to easily "
-#~ "<ulink type=\"help\" url=\"ghelp:user-guide#nautilus-cdwriter-data\">create "
-#~ "data CDs</ulink>, <ulink type=\"help\" url=\"ghelp:user-guide#nautilus-"
-#~ "cdwriter-copy\">copy CDs and DVDs</ulink> and <ulink type=\"help\" "
-#~ "url=\"ghelp:user-guide#nautilus-cdwriter-writeimage\">create CDs from a disc "
-#~ "image file</ulink>."
-#~ msgstr ""
-#~ "UbuntuにはデフォルトでCD書き込み機能が含まれており、簡単に<ulink type=\"help\" url=\"ghelp:user-"
-#~ "guide#nautilus-cdwriter-data\">データCDの作成</ulink>、<ulink type=\"help\" "
-#~ "url=\"ghelp:user-guide#nautilus-cdwriter-copy\">ディスクのコピー</ulink>、<ulink "
-#~ "type=\"help\" url=\"ghelp:user-guide#nautilus-cdwriter-"
-#~ "writeimage\">ディスク・イメージ・ファイルからCDを作成</ulink>できます。"
-
-#~ msgid ""
-#~ "There are a number of more advanced CD and DVD burning applications which "
-#~ "you may find useful."
-#~ msgstr "あなたが便利と思うようなより高機能のCD/DVD作成アプリケーションはほかにもたくさんあります。"
-
-#~ msgid "Burning audio CDs"
-#~ msgstr "音楽CDの書き込み"
-
-#~ msgid "MPlayer Movie Player"
-#~ msgstr "MPlayer 動画プレーヤ"
-
-#~ msgid "What is a codec?"
-#~ msgstr "コーデックとはどのようなものか？"
-
-#~ msgid ""
-#~ "<ulink type=\"help\" url=\"ghelp:musicvideophotos#photos-printing\">Print "
-#~ "copies</ulink> of your photos."
-#~ msgstr ""
-#~ "<ulink type=\"help\" url=\"ghelp:musicvideophotos#photos-"
-#~ "printing\">印刷部数</ulink>を指定します。"
-
-#~ msgid "Using other audio players"
-#~ msgstr "他の音楽プレーヤを利用"
-
-#~ msgid ""
-#~ "For more information, see <ulink "
-#~ "url=\"http://kitone.free.fr/subtitleeditor/\">the Subtitle Editor "
-#~ "website</ulink>."
-#~ msgstr ""
-#~ "詳細は、<ulink url=\"http://kitone.free.fr/subtitleeditor/\">Subtitle Editor "
-#~ "ウェブサイト</ulink>をご覧になってください。"
-
-#~ msgid ""
-#~ "Start <application>Totem</application> by clicking "
-#~ "<menuchoice><guimenu>Applications</guimenu><guimenuitem>Sound &amp; "
-#~ "Video</guimenuitem><guimenuitem>Movie Player</guimenuitem></menuchoice>."
-#~ msgstr ""
-#~ "<application>Totem</application> を開始するには、 "
-#~ "<menuchoice><guimenu>アプリケーション</guimenu><guimenuitem>サウンドとビデオ</guimenuitem><gu"
-#~ "imenuitem>動画プレイヤー</guimenuitem></menuchoice> をクリックしてください。"
-
-#~ msgid "Record sounds and music"
-#~ msgstr "音声や音楽の録音"
-
-#~ msgid "VLC media player"
-#~ msgstr "VLC メディアプレイヤー"
+#~ msgid "Music, video and photos"
+#~ msgstr "音楽/ビデオ/写真"

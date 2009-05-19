@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-docs\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2008-10-12 20:18+0100\n"
-"PO-Revision-Date: 2008-09-15 15:04+0000\n"
-"Last-Translator: Elísabet Einarsdóttir <eeinarsdottir@gmail.com>\n"
+"POT-Creation-Date: 2009-03-26 16:34+0000\n"
+"PO-Revision-Date: 2009-02-21 08:40+0000\n"
+"Last-Translator: Baldur <baldurpet@gmail.com>\n"
 "Language-Team: Icelandic <is@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2008-10-19 12:43+0000\n"
+"X-Launchpad-Export-Date: 2009-04-01 11:06+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: basic-commands/C/basic-commands-C.omf:6(creator) basic-commands/C/basic-commands-C.omf:7(maintainer)
@@ -22,8 +22,8 @@ msgid "ubuntu-doc@lists.ubuntu.com (Ubuntu Documentation Project)"
 msgstr "ubuntu-doc@lists.ubuntu.com (Ubuntu skjölunarverkefnið)"
 
 #: basic-commands/C/basic-commands-C.omf:8(title) basic-commands/C/basic-commands.xml:13(title)
-msgid "Basic Commands"
-msgstr "Grunn skipanir"
+msgid "Using the Command Line"
+msgstr ""
 
 #: basic-commands/C/basic-commands-C.omf:9(date)
 msgid "2006-09-07"
@@ -43,6 +43,10 @@ msgid ""
 "(https://wiki.ubuntu.com/DocumentationTeam). For a list of contributors, see "
 "the <ulink url=\"../../libs/C/contributors.xml\">contributors page</ulink>"
 msgstr ""
+"Þetta skjal var gert af skjölunarverkefni Ubuntu "
+"(https://wiki.ubuntu.com/DocumentationTeam). Til að sjá lista af þeim sem "
+"stóðu að þessu má sjá <ulink url=\"../../libs/C/contributors.xml\">listann "
+"yfir aðstandendur</ulink>"
 
 #: basic-commands/C/basic-commands.xml:5(para)
 msgid ""
@@ -77,10 +81,12 @@ msgid ""
 "A copy of the license is available here: <ulink url=\"/usr/share/ubuntu-"
 "docs/libs/C/ccbysa.xml\">Creative Commons ShareAlike License</ulink>."
 msgstr ""
+"Hægt er að sjá afrit af leyfinu hér: <ulink url=\"/usr/share/ubuntu-"
+"docs/libs/C/ccbysa.xml\">Creative Commons ShareAlike leyfið</ulink>."
 
 #: basic-commands/C/basic-commands.xml:14(year)
 msgid "2008"
-msgstr ""
+msgstr "2008"
 
 #: basic-commands/C/basic-commands.xml:15(ulink)
 msgid "Ubuntu Documentation Project"
@@ -202,13 +208,15 @@ msgstr ""
 
 #: basic-commands/C/basic-commands.xml:106(para)
 msgid "To navigate into the root directory, type: <screen>cd /</screen>"
-msgstr ""
+msgstr "Til þess að komast í rótina, sláðu inn: <screen>cd /</screen>"
 
 #: basic-commands/C/basic-commands.xml:112(para)
 msgid ""
 "To navigate to your home directory, type: <screen>cd</screen> or <screen>cd "
 "~</screen>"
 msgstr ""
+"Til þess að komast í heimamöppuna, sláðu inn: <screen>cd</screen> eða "
+"<screen>cd ~</screen>"
 
 #: basic-commands/C/basic-commands.xml:118(para)
 msgid ""
@@ -229,7 +237,7 @@ msgstr ""
 
 #: basic-commands/C/basic-commands.xml:129(para)
 msgid "To navigate up one directory level, type: <screen>cd ..</screen>"
-msgstr ""
+msgstr "Til að fara upp um eina möppu skrifaðu: <screen>cd ..</screen>"
 
 #: basic-commands/C/basic-commands.xml:135(para)
 msgid ""
@@ -269,6 +277,13 @@ msgid ""
 "<filename class=\"directory\">Desktop</filename> directory, will show "
 "<computeroutput>/home/username/Desktop</computeroutput>. <placeholder-1/>"
 msgstr ""
+"Skipunin <command>pwd</command> segir þér í hvaða möppu þú ert á stundinni "
+"(skammstöfunin <acronym>pwd</acronym> stendur fyrir <quote>print working "
+"directory</quote> sem þýðir „birta þá möppu sem verið er að vinna í“). Ef þú "
+"myndir til dæmis skrifa <screen>pwd</screen> þegar þú ert í möppunni "
+"<filename class=\"directory\">Desktop</filename> þá mun "
+"<computeroutput>/home/notandanafn/Desktop</computeroutput> birtast á "
+"skjánum. <placeholder-1/>"
 
 #: basic-commands/C/basic-commands.xml:178(title)
 msgid "ls"
@@ -303,6 +318,10 @@ msgid ""
 "<filename>foo</filename> and name it <filename>bar</filename>. "
 "<filename>foo</filename> will be unchanged."
 msgstr ""
+"Skipunin <command>cp</command> býr til afrit af skrám. Ef þú skrifar til "
+"dæmis: <screen>cp foo bar</screen> þá býr tölvan til afrit af "
+"<filename>foo</filename> sem heitir <filename>bar</filename>. Skráin "
+"<filename>foo</filename> mun haldast óbreytt."
 
 #: basic-commands/C/basic-commands.xml:204(title)
 msgid "mv"
@@ -317,6 +336,12 @@ msgid ""
 "<filename>foo</filename> to your <filename "
 "class=\"directory\">Desktop</filename> directory but will not rename it."
 msgstr ""
+"Skipunin <command>mv</command> færir skrár yfir á annan stað, eða "
+"endurnefnir þær. Til dæmis: <screen>mv foo bar</screen> breytir nafninu á "
+"skránni <filename>foo</filename> í <filename>bar</filename>. <screen>mv foo "
+"~/Desktop</screen> færir hins vegar skránna <filename>foo</filename> yfir á "
+"<filename class=\"directory\">skjáborðið þitt</filename> án þess að breyta "
+"nafninu á henni."
 
 #: basic-commands/C/basic-commands.xml:218(title)
 msgid "rm"
@@ -337,6 +362,10 @@ msgid ""
 "<screen>rm -R foobar</screen> will remove the directory foobar, <emphasis "
 "role=\"strong\">and all of its contents!</emphasis>"
 msgstr ""
+"Skipunin <command>rm</command> fjarlægir vanalega ekki möppur. Ef þú vilt "
+"fjarlægja möppu þá verðurðu að bæta við valkostinum <command>-R</command>. "
+"Skipunin <screen>rm -R foobar</screen> eyðir til dæmis möppunni foobar, "
+"<emphasis role=\"strong\">og öllu innihaldi hennar!</emphasis>"
 
 #: basic-commands/C/basic-commands.xml:233(title)
 msgid "mkdir"
@@ -348,6 +377,9 @@ msgid ""
 "example, typing: <screen>mkdir music</screen> will create a directory named "
 "<filename class=\"directory\">music</filename> in the current directory."
 msgstr ""
+"Skipunin <command>mkdir</command> gerir þér kleift að skapa möppur. Ef þú "
+"til dæmis skrifar : <screen>mkdir tonlist</screen> myndast mappa sem heitir  "
+"<filename class=\"directory\">tonlist</filename> í núverandi möppu."
 
 #: basic-commands/C/basic-commands.xml:244(title)
 msgid "System Information Commands"
@@ -364,10 +396,15 @@ msgid ""
 "(M) and gigabytes (G) instead of blocks (<emphasis role=\"strong\">-"
 "h</emphasis> means \"human-readable\")."
 msgstr ""
+"Skipunin <command>df</command> birtir hve stóran hlut skráakerfið notar á "
+"hverri deild. <screen>df -h</screen> birtir upplýsingarnar með því að nota "
+"megabæt (M) og gígabæt (G) í staðin fyrir að mæla þær í bálkum (<emphasis "
+"role=\"strong\">-h</emphasis> stendur fyrir „human-readable“ sem á við að "
+"þetta eigi að vera auðlesanlegt)."
 
 #: basic-commands/C/basic-commands.xml:258(title)
 msgid "free"
-msgstr ""
+msgstr "eftir"
 
 #: basic-commands/C/basic-commands.xml:259(para)
 msgid ""
@@ -417,15 +454,15 @@ msgstr "lsb_release"
 
 #: basic-commands/C/basic-commands.xml:292(para)
 msgid ""
-"The <emphasis role=\"strong\">lsb_release</emphasis> command with the "
-"<emphasis role=\"strong\">-a</emphasis> option prints version information "
-"for the Linux release you're running. For example, typing: "
-"<screen>lsb_release -a</screen> will give you: <screen>\n"
+"The <command>lsb_release</command> command with the <emphasis "
+"role=\"strong\">-a</emphasis> option prints version information for the "
+"Linux release you're running. For example, typing: <screen>lsb_release -"
+"a</screen> will give you: <screen>\n"
 "No LSB modules are available.\n"
 "Distributor ID: Ubuntu\n"
-"Description:    Ubuntu 8.10 \n"
-"Release:        8.10\n"
-"Codename:       intrepid</screen>"
+"Description:    Ubuntu 9.04 \n"
+"Release:        9.04\n"
+"Codename:       jaunty</screen>"
 msgstr ""
 
 #: basic-commands/C/basic-commands.xml:311(title)
@@ -439,6 +476,10 @@ msgid ""
 "url=\"https://help.ubuntu.com/community/RootSudo\">RootSudo</ulink> for "
 "information on using <command>sudo</command>."
 msgstr ""
+"Setja þarf <command>sudo</command> skipunina fyrir framan eftirfarandi "
+"skipanir. Sjá má <ulink "
+"url=\"https://help.ubuntu.com/community/RootSudo\">RootSudo</ulink> til að "
+"fá upplýsingar um hvernig nota skal <command>sudo</command> skipunina."
 
 #: basic-commands/C/basic-commands.xml:321(title)
 msgid "Adding a New Group"
@@ -466,18 +507,27 @@ msgid ""
 "create a new user, type: <screen>adduser newuser</screen> The above command "
 "will create a new user called <emphasis role=\"strong\">newuser</emphasis>."
 msgstr ""
+"Skipunina <command>adduser</command> notar maður til að bæta við notendum í "
+"kerfinu. Til að bæta við notanda, skrifaðu: <screen>adduser newuser</screen> "
+"Þetta bætir við notanda sem heitir  <emphasis "
+"role=\"strong\">newuser</emphasis>."
 
 #: basic-commands/C/basic-commands.xml:339(para)
 msgid ""
 "To assign a password for the new user use the <command>passwd</command> "
 "command: <screen>passwd newuser</screen>"
 msgstr ""
+"Til að gefa nýjum notanda lykilorð má nota <command>passwd</command> "
+"skipunina (<acronym>passwd</acronym> er stytting á enska orðinu „password“ "
+"sem þýðir „lykilorð“ eða „aðgangsorð“).: <screen>passwd nyr_notandi</screen>"
 
 #: basic-commands/C/basic-commands.xml:345(para)
 msgid ""
 "Finally, to assign the new user to the new group, type: <screen>adduser "
 "newuser newgroup</screen>"
 msgstr ""
+"Að lokun má setja nýjan notanda í nýjan hóp með því að skrifa: "
+"<screen>adduser nyr_notandi nyr_hopur</screen>"
 
 #: basic-commands/C/basic-commands.xml:353(title)
 msgid "Options"
@@ -493,6 +543,13 @@ msgid ""
 "also a <emphasis role=\"strong\">-h</emphasis> option to get those sizes in "
 "a \"human readable\" format."
 msgstr ""
+"Hægt er að breyta venjulegri hegðun skipana með því að bæta við <emphasis "
+"role=\"strong\">-- <emphasis>eiginleika</emphasis></emphasis> við skipunina. "
+"Hægt er að bæta <emphasis role=\"strong\">-s</emphasis> við skipunina <link "
+"linkend=\"ls\"><command>ls</command></link> þannig að <command>ls -"
+"s</command> birti stærð skránna líka. Valkosturinn <emphasis "
+"role=\"strong\">-h</emphasis> lætur stærðirnar birtast þannig að þær séu "
+"auðlesnari („human readable“)."
 
 #: basic-commands/C/basic-commands.xml:365(para)
 msgid ""
@@ -501,6 +558,11 @@ msgid ""
 "prefixed with two dashes instead of one, so even <screen>ls --size --human-"
 "readable</screen> is the same command."
 msgstr ""
+"Hægt er að setja valkosti saman þannig að skipunin <screen>ls -sh</screen> "
+"geirir það sama og skipunin <screen>ls -s -h</screen>. Hægt er að skrifa "
+"flestar skipanir á lengri máta, þar sem tvö bandstrik eru notuð í stað eins. "
+"þannig að skipunin <screen>ls --size --human-readable</screen> gerir líka "
+"það sama."
 
 #: basic-commands/C/basic-commands.xml:376(title)
 msgid "\"Man\" and getting help"
@@ -512,6 +574,9 @@ msgid ""
 "<emphasis role=\"strong\">man <emphasis>command</emphasis></emphasis> are "
 "the two most important tools at the command line."
 msgstr ""
+"<emphasis role=\"strong\"><emphasis>skipunin</emphasis> --help</emphasis> og "
+"<emphasis role=\"strong\">man <emphasis>skipunin</emphasis></emphasis> eru "
+"meðal tveggja mikilvægustu tóla sem hægt er að nota í skipanalínunni."
 
 #: basic-commands/C/basic-commands.xml:384(para)
 msgid ""
@@ -521,6 +586,11 @@ msgid ""
 "exit back to the command prompt. Type <screen>man -h</screen> or <screen>man "
 "--help</screen> to see this in action."
 msgstr ""
+"Nær allar skipanir skilja <emphasis role=\"strong\">-h</emphasis> (þ.e.a.s. "
+"<emphasis role=\"strong\">--help</emphasis>) valmöguleikann sem sýnir hjálp "
+"fyrir skipunina og fer svo aftur í skipanalínuna. Prufaðu að skrifa "
+"<screen>man -h</screen> eða <screen>man --help</screen> til að sjá hvernig "
+"þetta virkar."
 
 #: basic-commands/C/basic-commands.xml:394(para)
 msgid ""
@@ -530,18 +600,28 @@ msgid ""
 "<screen>man mv</screen> will bring up the <command>mv</command> (move) "
 "manual."
 msgstr ""
+"Allar skipanir og nær öll forrit hafa man („manual“ eða notendahandbók), "
+"enda þarf bara að skrifa <command>man skipun</command> til að fá að sjá "
+"notendahandbókina fyrir skipunina sem valin var. Ef skrifað er <screen>man "
+"mv</screen> kemur upp handbókin fyrir <command>mv</command> skipunina "
+"(„færa“)."
 
 #: basic-commands/C/basic-commands.xml:403(para)
 msgid ""
 "Move up and down the man file with the arrow keys, and quit back to the "
 "command prompt with <keycap>q</keycap>."
 msgstr ""
+"Hægt er að færa sig upp og niður handbókina með örvatökkunum, og hægt er að "
+"fara úr henni með því að ýta á <keycap>q</keycap> (fyrir „quit“, eða að "
+"hætta)."
 
 #: basic-commands/C/basic-commands.xml:408(para)
 msgid ""
 "<screen>man man</screen> will bring up the manual entry for the "
 "<command>man</command> command, which is a good place to start."
 msgstr ""
+"<screen>man man</screen> birtir handbókina fyrir skipunina "
+"<command>man</command>. Þetta er góður staður til að byrja að læra á þetta."
 
 #: basic-commands/C/basic-commands.xml:414(para)
 msgid ""
@@ -549,6 +629,9 @@ msgid ""
 "\"Introduction to user commands\" which is a well-written, fairly brief "
 "introduction to the Linux command line."
 msgstr ""
+"<screen>man intro</screen> er hjálpsamt þar sem það birtir „Introduction to "
+"user commands“ sem er vel skrifaður og stuttur inngangur fyrir Linux "
+"skipanalínuna."
 
 #: basic-commands/C/basic-commands.xml:419(para)
 msgid ""
@@ -556,6 +639,10 @@ msgid ""
 "depth than <command>man</command> pages. Try <screen>info info</screen> for "
 "the introduction to info pages."
 msgstr ""
+"Einnig eru til <command>info</command>  síður (stytting á „information“ sem "
+"er enska og þýðir upplýsingar) sem fjalla að öllu jöfnu betur um skipanir en "
+"<command>man</command> síðurnar. Til að sjá upplýsingar um info síðuna má "
+"skrifa <screen>info info</screen>."
 
 #: basic-commands/C/basic-commands.xml:429(title)
 msgid "Searching for man files"
@@ -566,10 +653,12 @@ msgid ""
 "If you aren't sure which command or application you need to use, you can try "
 "searching the man files."
 msgstr ""
+"Ef þú ert ekki viss um það hvaða skipun eða forrit er best að nota þá "
+"geturðu reynt að leita í man skránum."
 
 #: basic-commands/C/basic-commands.xml:443(para)
 msgid "This is the same as the <command>apropos</command> command."
-msgstr ""
+msgstr "Þetta gerir það sama og <command>apropos</command> skipunin."
 
 #: basic-commands/C/basic-commands.xml:436(para)
 msgid ""
@@ -577,167 +666,214 @@ msgid ""
 "<emphasis>foo</emphasis>. Try <screen>man -k nautilus</screen> to see how "
 "this works. <placeholder-1/>"
 msgstr ""
+"<command>man -k foo</command>, leitar í leiðbeiningunum að "
+"<emphasis>foo</emphasis>. Prufaðu að skrifa <screen>man -k nautilus</screen> "
+"til að sjá hvernig þetta virkar. <placeholder-1/>"
 
 #: basic-commands/C/basic-commands.xml:456(para)
 msgid "This is the same as the <command>whatis</command> command."
-msgstr ""
+msgstr "Þetta er sama og <command>whatis</command> skipunin."
 
 #: basic-commands/C/basic-commands.xml:451(para)
 msgid ""
 "<command>man -f foo</command>, searches only the titles of your system's man "
 "files. For example, try <screen>man -f gnome</screen><placeholder-1/>"
 msgstr ""
+"Skipunin <command>man -f foo</command> leitar í nöfnum man skránna. Prufaðu "
+"til dæmis að leita að <screen>man -f gnome</screen><placeholder-1/>"
 
 #: basic-commands/C/basic-commands.xml:468(title)
-msgid "Other Useful Things"
-msgstr "Aðrir Gagnlegir Hlutir"
+msgid "Cutting and pasting"
+msgstr ""
 
-#: basic-commands/C/basic-commands.xml:471(title)
-msgid "Pasting in commands"
-msgstr "Líma inn skipanir"
-
-#: basic-commands/C/basic-commands.xml:472(para)
+#: basic-commands/C/basic-commands.xml:469(para)
 msgid ""
 "Often, you will be referred to instructions that require commands to be "
-"pasted into the terminal. You might be wondering why the text you've copied "
-"from a web page using "
+"pasted into the terminal."
+msgstr ""
+
+#: basic-commands/C/basic-commands.xml:471(para)
+msgid ""
+"You might be wondering why the text you've copied from a web page using "
 "<keycombo><keycap>Ctrl</keycap><keycap>C</keycap></keycombo> won't paste in "
-"with <keycombo><keycap>Ctrl</keycap><keycap>V</keycap></keycombo>. Surely "
-"you don't have to type in all those nasty commands and filenames? Relax. "
-"Middle Button Click on your mouse (both buttons simultaneously on a two-"
-"button mouse) or Right Click and select "
+"with <keycombo><keycap>Ctrl</keycap><keycap>V</keycap></keycombo>, the shell "
+"uses a different combination for paste "
+"<keycombo><keycap>Shift</keycap><keycap>Insert</keycap></keycombo>. This can "
+"also be done using the mouse, by right-clicking in the terminal and clicking "
 "<menuchoice><guimenuitem>Paste</guimenuitem></menuchoice> from the menu."
 msgstr ""
 
-#: basic-commands/C/basic-commands.xml:495(title)
-msgid "Save on typing"
+#: basic-commands/C/basic-commands.xml:479(para)
+msgid ""
+"You can also select the required commands in your web browser and then "
+"subsequently click the middle button on your mouse (or simply click buttons "
+"simultaneously on a two-button mouse) in the terminal to paste in the select "
+"command."
 msgstr ""
 
-#: basic-commands/C/basic-commands.xml:504(para)
+#: basic-commands/C/basic-commands.xml:483(para)
+msgid ""
+"These actions may mean something entirely different to other terminal "
+"emulators. Consult your emulator's documentation for details."
+msgstr ""
+
+#: basic-commands/C/basic-commands.xml:488(title)
+msgid "Other Useful Things"
+msgstr "Aðrir Gagnlegir Hlutir"
+
+#: basic-commands/C/basic-commands.xml:490(title)
+msgid "Save on typing"
+msgstr "Sparaðu þér innsláttinn"
+
+#: basic-commands/C/basic-commands.xml:499(para)
 msgid ""
 "<keycap>Up Arrow</keycap> or "
 "<keycombo><keycap>Ctrl</keycap><keycap>p</keycap></keycombo>"
 msgstr ""
+"<keycap>Upp takkinn</keycap> eða "
+"<keycombo><keycap>Ctrl</keycap><keycap>p</keycap></keycombo>"
 
-#: basic-commands/C/basic-commands.xml:514(para)
+#: basic-commands/C/basic-commands.xml:509(para)
 msgid "Scrolls through the commands you've entered previously."
-msgstr ""
+msgstr "Rúllar í gegnum þær skipanir sem þú hefur áður gert."
 
-#: basic-commands/C/basic-commands.xml:522(para)
+#: basic-commands/C/basic-commands.xml:517(para)
 msgid ""
 "<keycap>Down Arrow</keycap> or "
 "<keycombo><keycap>Ctrl</keycap><keycap>n</keycap></keycombo>"
 msgstr ""
+"<keycap>Niður takkinn</keycap> eða "
+"<keycombo><keycap>Ctrl</keycap><keycap>n</keycap></keycombo>"
 
-#: basic-commands/C/basic-commands.xml:532(para)
+#: basic-commands/C/basic-commands.xml:527(para)
 msgid "Takes you back to a more recent command."
 msgstr "Færir þig aftur yfir í nýlegri skipanir."
 
-#: basic-commands/C/basic-commands.xml:539(keycap)
+#: basic-commands/C/basic-commands.xml:534(keycap)
 msgid "Enter"
-msgstr ""
+msgstr "Enter"
 
-#: basic-commands/C/basic-commands.xml:544(para)
+#: basic-commands/C/basic-commands.xml:539(para)
 msgid "When you have the command you want."
-msgstr ""
+msgstr "Þegar þú hefur þá skipun sem þú vilt hafa."
 
-#: basic-commands/C/basic-commands.xml:550(keycap)
+#: basic-commands/C/basic-commands.xml:545(keycap)
 msgid "Tab"
 msgstr "Stafahopp"
 
-#: basic-commands/C/basic-commands.xml:555(para)
+#: basic-commands/C/basic-commands.xml:550(para)
 msgid ""
 "A very useful feature. It autocompletes any commands or filenames, if "
 "there's only one option, or else gives you a list of options."
 msgstr ""
+"Mjög hjálpsamur eiginleiki sem klárar heiti skipana eða skráa ef það er "
+"aðeins einn möguleiki. Annars kemur upp listi af þeim möguleikum sem koma "
+"til greina."
 
-#: basic-commands/C/basic-commands.xml:568(title)
+#: basic-commands/C/basic-commands.xml:563(title)
 msgid "Change the text"
 msgstr "Breyta textanum"
 
-#: basic-commands/C/basic-commands.xml:569(para)
+#: basic-commands/C/basic-commands.xml:564(para)
 msgid ""
 "The mouse won't work. Use the <keycap>Left/Right arrow</keycap> keys to move "
 "around the line."
 msgstr ""
+"Músin virkar ekki. Notaðu <keycap>vinstri og hægri örvatakkana</keycap> til "
+"að færa bendilinn."
 
-#: basic-commands/C/basic-commands.xml:573(para)
+#: basic-commands/C/basic-commands.xml:568(para)
 msgid ""
 "When the cursor is where you want it in the line, typing "
 "<emphasis>inserts</emphasis> text, it doesn't overtype what's already there."
 msgstr ""
+"Þegar bendillinn er þegar sem þú vilt þá <emphasis>bætist við "
+"texti</emphasis> þegar þú skrifar, þú skrifar ekki yfir textann sem er þegar "
+"á staðnum."
 
-#: basic-commands/C/basic-commands.xml:586(para)
+#: basic-commands/C/basic-commands.xml:581(para)
 msgid ""
 "<keycombo><keycap>Ctrl</keycap><keycap>a</keycap></keycombo> or "
 "<keycap>Home</keycap>"
 msgstr ""
+"<keycombo><keycap>Ctrl</keycap><keycap>a</keycap></keycombo> eða "
+"<keycap>Home</keycap>"
 
-#: basic-commands/C/basic-commands.xml:596(para)
+#: basic-commands/C/basic-commands.xml:591(para)
 msgid "Moves the cursor to the <emphasis>start</emphasis> of a line."
-msgstr ""
+msgstr "Færir bendil í  <emphasis>byrjun</emphasis> raðar."
 
-#: basic-commands/C/basic-commands.xml:602(para)
+#: basic-commands/C/basic-commands.xml:597(para)
 msgid ""
 "<keycombo><keycap>Ctrl</keycap><keycap>e</keycap></keycombo> or "
 "<keycap>End</keycap>"
 msgstr ""
+"<keycombo><keycap>Ctrl</keycap><keycap>e</keycap></keycombo> eða "
+"<keycap>End</keycap>"
 
-#: basic-commands/C/basic-commands.xml:612(para)
+#: basic-commands/C/basic-commands.xml:607(para)
 msgid "Moves the cursor to the <emphasis> end</emphasis> of a line."
-msgstr ""
+msgstr "Færa músabendilinn út á <emphasis>enda</emphasis> línunnar."
 
-#: basic-commands/C/basic-commands.xml:623(keycap) basic-commands/C/basic-commands.xml:638(keycap) basic-commands/C/basic-commands.xml:652(keycap)
+#: basic-commands/C/basic-commands.xml:618(keycap) basic-commands/C/basic-commands.xml:633(keycap) basic-commands/C/basic-commands.xml:647(keycap)
 msgid "Ctrl"
 msgstr "Ctrl"
 
-#: basic-commands/C/basic-commands.xml:624(keycap)
+#: basic-commands/C/basic-commands.xml:619(keycap)
 msgid "k"
 msgstr "k"
 
-#: basic-commands/C/basic-commands.xml:630(para)
+#: basic-commands/C/basic-commands.xml:625(para)
 msgid "Deletes from the current cursor position to the end of the line."
-msgstr ""
+msgstr "Eyðir öllu frá núverandi staf og út að enda línunnar."
 
-#: basic-commands/C/basic-commands.xml:639(keycap)
+#: basic-commands/C/basic-commands.xml:634(keycap)
 msgid "u"
 msgstr "u"
 
-#: basic-commands/C/basic-commands.xml:645(para)
+#: basic-commands/C/basic-commands.xml:640(para)
 msgid "Deletes the whole of the current line."
-msgstr ""
+msgstr "Eyðir öllu á eftir þeim stað sem þú ert á."
 
-#: basic-commands/C/basic-commands.xml:653(keycap)
+#: basic-commands/C/basic-commands.xml:648(keycap)
 msgid "w"
 msgstr "w"
 
-#: basic-commands/C/basic-commands.xml:659(para)
+#: basic-commands/C/basic-commands.xml:654(para)
 msgid "Deletes the word before the cursor."
 msgstr "Eyðir orðinu fyrir framan bendilinn."
 
-#: basic-commands/C/basic-commands.xml:669(title)
+#: basic-commands/C/basic-commands.xml:664(title)
 msgid "More Information"
 msgstr "Meiri upplýsingar"
 
-#: basic-commands/C/basic-commands.xml:670(para)
+#: basic-commands/C/basic-commands.xml:665(para)
 msgid "The following online guides are available:"
 msgstr "Eftirfarandi leiðbeiningar eru til taks á internetinu:"
 
-#: basic-commands/C/basic-commands.xml:673(para)
+#: basic-commands/C/basic-commands.xml:668(para)
 msgid ""
 "<ulink url=\"https://help.ubuntu.com/community/AptGetHowto\"> "
 "AptGetHowto</ulink> - using apt-get to install packages from the command "
 "line."
 msgstr ""
+"<ulink url=\"https://help.ubuntu.com/community/AptGetHowto\"> "
+"AptGetHowto</ulink> - (á ensku) hvernig nota skal apt-get til að setja upp "
+"pakka eða forrit með skipanalínunni."
 
-#: basic-commands/C/basic-commands.xml:680(para)
+#: basic-commands/C/basic-commands.xml:675(para)
 msgid ""
 "<ulink url=\"https://help.ubuntu.com/community/Repositories/CommandLine\"> "
 "Commandline Repository Editing</ulink> - adding the Universe/Multiverse "
 "repositories through the command line."
 msgstr ""
+"<ulink url=\"https://help.ubuntu.com/community/Repositories/CommandLine\"> "
+"Commandline Repository Editing</ulink> - Að breyta gagnahirslum með "
+"skipanalínunni (á ensku), bæta við ákveðnum gagnahirslum viðhaldið af "
+"samfélaginu eða hamlað af lagalegum ástæðum eða höfundarrétti í gegnum "
+"skipanalínuna."
 
-#: basic-commands/C/basic-commands.xml:688(para)
+#: basic-commands/C/basic-commands.xml:683(para)
 msgid ""
 "<ulink url=\"https://help.ubuntu.com/community/grep\">grep Howto</ulink> - "
 "grep is a powerful command line search tool."
@@ -745,46 +881,57 @@ msgstr ""
 "<ulink url=\"https://help.ubuntu.com/community/grep\">grep Howto</ulink> - "
 "grep er öflugt leitartól fyrir skipanalínuna."
 
-#: basic-commands/C/basic-commands.xml:695(para)
+#: basic-commands/C/basic-commands.xml:690(para)
 msgid ""
 "<ulink url=\"https://help.ubuntu.com/community/find\">find </ulink> - locate "
 "files on the command line."
 msgstr ""
+"<ulink url=\"https://help.ubuntu.com/community/find\">find </ulink> - Finna "
+"(á ensku), hvernig best er að finna skrár með skipanalínunni."
 
-#: basic-commands/C/basic-commands.xml:701(para)
+#: basic-commands/C/basic-commands.xml:696(para)
 msgid ""
 "<ulink url=\"https://help.ubuntu.com/community/CommandlineHowto\"> "
 "CommandlineHowto</ulink> - longer and more complete than this basic guide, "
 "but still unfinished."
 msgstr ""
+"<ulink url=\"https://help.ubuntu.com/community/CommandlineHowto\"> "
+"CommandlineHowto</ulink> - Hvernig nota skal skipanalínuna (á ensku), lengri "
+"og ýtarlegri útskýring á skipanalínunni, sem er þó ókláruð."
 
-#: basic-commands/C/basic-commands.xml:708(para)
+#: basic-commands/C/basic-commands.xml:703(para)
 msgid ""
 "<ulink url=\"https://help.ubuntu.com/community/HowToReadline\"> "
 "HowToReadline</ulink> - information on some more advanced customization for "
 "the command line."
 msgstr ""
+"<ulink url=\"https://help.ubuntu.com/community/HowToReadline\"> "
+"HowToReadline </ulink> - (á ensku) nánari upplýsingar um skipanalínuna."
 
-#: basic-commands/C/basic-commands.xml:715(para)
+#: basic-commands/C/basic-commands.xml:710(para)
 msgid "For more detailed tutorials on the Linux command line, please see:"
-msgstr ""
+msgstr "Ef þú hefur áhuga á að læra meira um skipanalínuna í Linux má sjá:"
 
-#: basic-commands/C/basic-commands.xml:721(para)
+#: basic-commands/C/basic-commands.xml:716(para)
 msgid ""
 "<ulink url=\"http://linuxcommand.org/\"/>- basic BASH tutorials, including "
 "BASH scripting"
-msgstr ""
+msgstr "<ulink url=\"http://linuxcommand.org/\"/>- einföld kennsla í BASH"
 
-#: basic-commands/C/basic-commands.xml:727(para)
+#: basic-commands/C/basic-commands.xml:722(para)
 msgid ""
 "<ulink url=\"http://linuxsurvival.com/index.php\"/>- Java-based tutorials"
 msgstr ""
+"<ulink url=\"http://linuxsurvival.com/index.php\"/>- kennsluefni byggt á Java"
 
-#: basic-commands/C/basic-commands.xml:733(para)
+#: basic-commands/C/basic-commands.xml:728(para)
 msgid ""
 "<ulink url=\"http://rute.2038bug.com/index.html.gz\"/>- a massive online "
 "book about system administration, almost all from the command line."
 msgstr ""
+"<ulink url=\"http://rute.2038bug.com/index.html.gz\"/>- þung og mikil bók "
+"sem fjallar um allt sem tengist kerfisstjórn, þar sem nær allt er framkvæmt "
+"með skipanalínunni."
 
 #. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2.
 #: basic-commands/C/basic-commands.xml:0(None)
@@ -818,7 +965,22 @@ msgstr ""
 "admins\n"
 "  Stefán Sigurjónsson https://launchpad.net/~stefans-mmedia\n"
 "  Tómas A. Árnason https://launchpad.net/~tomas-tomasarnason\n"
+"  jarnkarlinn https://launchpad.net/~jarnkarlinn\n"
+"\n"
+"Launchpad Contributions:\n"
+"  Baldur https://launchpad.net/~baldurpet\n"
+"  Elísabet Einarsdóttir https://launchpad.net/~eeinarsdottir\n"
+"  Freyr Gunnar Ólafsson https://launchpad.net/~gnarlin\n"
+"  Jóhann Sigurðsson https://launchpad.net/~kuturinn\n"
+"  Stefán Sigurjónsson https://launchpad.net/~stefans-mmedia\n"
+"  Tómas A. Árnason https://launchpad.net/~tomas-tomasarnason\n"
 "  jarnkarlinn https://launchpad.net/~jarnkarlinn"
+
+#~ msgid "Basic Commands"
+#~ msgstr "Grunn skipanir"
+
+#~ msgid "Pasting in commands"
+#~ msgstr "Líma inn skipanir"
 
 #~ msgid "a"
 #~ msgstr "a"

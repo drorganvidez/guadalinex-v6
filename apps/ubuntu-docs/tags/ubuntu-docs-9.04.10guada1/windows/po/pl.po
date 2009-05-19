@@ -7,23 +7,23 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-08-03 16:01+0100\n"
-"PO-Revision-Date: 2008-04-23 23:38+0000\n"
+"POT-Creation-Date: 2009-03-26 16:35+0000\n"
+"PO-Revision-Date: 2009-01-12 20:25+0000\n"
 "Last-Translator: Launchpad Translations Administrators "
 "<rosetta@launchpad.net>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2008-10-19 12:19+0000\n"
+"X-Launchpad-Export-Date: 2009-04-01 10:49+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: windows/C/windows-C.omf:6(creator) windows/C/windows-C.omf:7(maintainer)
 msgid "ubuntu-doc@lists.ubuntu.com (Ubuntu Documentation Project)"
 msgstr "ubuntu-doc@lists.ubuntu.com (Projekt Dokumentacji Ubuntu)"
 
-#: windows/C/windows-C.omf:8(title)
-msgid "If you've been using Windows"
+#: windows/C/windows-C.omf:8(title) windows/C/windows.xml:15(title)
+msgid "If you have been using Windows"
 msgstr "Jeśli używałeś systemu Windows"
 
 #: windows/C/windows-C.omf:9(date)
@@ -33,10 +33,6 @@ msgstr "2006-09-07"
 #: windows/C/windows-C.omf:11(description)
 msgid "Placeholder."
 msgstr ""
-
-#: windows/C/windows.xml:15(title)
-msgid "If you have been using Windows"
-msgstr "Jeśli używałeś systemu Windows"
 
 #: windows/C/windows.xml:3(title)
 msgid "Credits and License"
@@ -173,6 +169,16 @@ msgid ""
 "(DRM)</emphasis> software, as DRM restrictions can render files unplayable "
 "in all applications but the one in which they were applied."
 msgstr ""
+"Niestety, z powodu ograniczeń prawnych i kwestii technicznych związanych z "
+"kilkoma popularnymi formatami dźwięku, Ubuntu nie może odtwarzać niektórych "
+"plików dźwiękowych od razu po zainstalowaniu. Pomimo tego, że wsparcie dla "
+"niektórych zastrzeżonych formatów może zostać dodane po zainstalowaniu "
+"Ubuntu, warto przekonwertować pliki dźwiękowe do dobrze obsługiwanych "
+"formatów. Szczególnie ma to znaczenie w przypadku plików, które zostały "
+"zakodowane przy użyciu oprogramowania zawierającego <emphasis>Digital Rights "
+"Management (DRM)</emphasis>, jako że z powodu ograniczeń DRM pliki mogą być "
+"odtwarzane tylko przez tą aplikację do której zostały przypisane "
+"uprawnienia, a nie przez dowolną aplikację."
 
 #: windows/C/preparing.xml:32(para)
 msgid ""
@@ -512,12 +518,18 @@ msgid ""
 "Connections</guimenuitem><guimenuitem>Internet "
 "Options</guimenuitem></menuchoice>."
 msgstr ""
+"Jeśli <guilabel>Panel sterowania</guilabel> posiada bordowe tło, wybierz "
+"opcję <menuchoice><guimenuitem>Połączenia sieciowe i "
+"Internet</guimenuitem><guimenuitem>Opcje "
+"internetowe</guimenuitem></menuchoice>."
 
 #: windows/C/preparing.xml:130(para)
 msgid ""
 "If the <guilabel>Control Panel</guilabel> has a white background, press "
 "<guilabel>Internet Options</guilabel>."
 msgstr ""
+"Jeśli <guilabel>Panel sterowania</guilabel> posiada białe tło, naciśnij "
+"<guilabel>Opcje internetowe</guilabel>."
 
 #: windows/C/preparing.xml:121(para)
 msgid ""
@@ -607,25 +619,17 @@ msgstr ""
 msgid ""
 "A black screen called <application>Command Prompt</application> will appear. "
 "Into the screen, type <screen>ipconfig /all</screen> and press "
-"<keycap>Return</keycap>. This will list a set of network settings for each "
-"of the networking devices you have installed. You may have one or several "
+"<keycap>Enter</keycap>. This will list a set of network settings for each of "
+"the networking devices you have installed. You may have one or several "
 "networking devices."
 msgstr ""
-"Pojawi się czarne okno. Jest to <application>Wiersz polecenia</application>. "
-"Wpisz <screen>ipconfig /all</screen> i naciśnij <keycap>Enter</keycap>. "
-"Pojawi się lista ustawień sieciowych każdego urządzenia, które masz "
-"zainstalowane. Możesz posiadać jedno lub więcej urządzeń."
 
 #: windows/C/preparing.xml:153(para)
 msgid ""
 "Now, type <screen>ipconfig /all &gt; C:\\network_settings.txt</screen> and "
-"then press <keycap>Return</keycap>. This will store the settings you have "
+"then press <keycap>Enter</keycap>. This will store the settings you have "
 "just seen in the file <filename>C:\\network_settings.txt</filename>."
 msgstr ""
-"Teraz wpisz <screen>ipconfig /all &gt; C:\\ustawienia_sieci.txt</screen> i "
-"naciśnij <keycap>Enter</keycap>. Dzięki temu poleceniu ustawienia, które "
-"właśnie zobaczyłeś zostaną zapisane do pliku <filename>C:\\"
-"ustawienia_sieci.txt</filename>."
 
 #: windows/C/preparing.xml:154(para)
 msgid ""
@@ -847,10 +851,12 @@ msgstr "Mozilla Firefox"
 msgid ""
 "To backup your <application>Mozilla Firefox</application> web browser:"
 msgstr ""
+"Aby zarchiwizować swoją przeglądarkę <application>Mozilla "
+"Firefox</application>:"
 
 #: windows/C/preparing.xml:212(para)
 msgid "Start <application>Mozilla Firefox</application>."
-msgstr ""
+msgstr "Uruchom program <application>Mozilla Firefox</application>."
 
 #: windows/C/preparing.xml:213(para)
 msgid ""
@@ -867,7 +873,7 @@ msgstr ""
 
 #: windows/C/preparing.xml:215(para) windows/C/preparing.xml:225(para)
 msgid "Choose a filename. Press <guibutton>Save</guibutton>."
-msgstr ""
+msgstr "Wybierz nazwę pliku. Naciśnij <guibutton>Zapisz</guibutton>."
 
 #: windows/C/preparing.xml:219(title)
 msgid "Opera"
@@ -876,10 +882,11 @@ msgstr "Opera"
 #: windows/C/preparing.xml:220(para)
 msgid "To backup your <application>Opera</application> web browser:"
 msgstr ""
+"Aby zarchiwizować swoją przeglądarkę <application>Opera</application>:"
 
 #: windows/C/preparing.xml:222(para)
 msgid "Start <application>Opera</application>."
-msgstr ""
+msgstr "Uruchom program <application>Opera</application>."
 
 #: windows/C/preparing.xml:223(para)
 msgid ""
@@ -895,16 +902,11 @@ msgstr "E-maile i ustawienia konta pocztowego"
 #: windows/C/preparing.xml:231(para)
 msgid ""
 "You can use the same email account in Ubuntu as you have done in Windows. If "
-"you have a Web-based email account, then you should simply be able to access "
-"it using the a web browser as you would have done in Windows. Otherwise, "
-"please note down the following information so that you can re-create your "
-"account settings on Ubuntu:"
+"you have a web-based email account you should simply be able to access it "
+"using a web browser as you would have done in Windows. Otherwise, please "
+"note down the following information so that you can re-create your account "
+"settings on Ubuntu:"
 msgstr ""
-"W Ubuntu możesz korzystać z tego samego konta pocztowego co w Windows. Jeśli "
-"korzystasz z konta pocztowego opartego na przeglądarce internetowej, "
-"powinieneś być w stanie używać go w Ubuntu dokładnie w ten sam sposób co "
-"dotąd, przy pomocy przeglądarki. W przeciwnym razie zanotuj następujące "
-"informacje, tak by móc odtworzyć konto pocztowe w Ubuntu."
 
 #: windows/C/preparing.xml:233(para)
 msgid "Email address"
@@ -1018,7 +1020,7 @@ msgstr ""
 
 #: windows/C/preparing.xml:255(title)
 msgid "Exporting mail messages from Outlook Express"
-msgstr ""
+msgstr "Eksportowanie wiadomości pocztowych z aplikacji Outlook Express"
 
 #: windows/C/preparing.xml:256(para)
 msgid ""
@@ -1999,6 +2001,9 @@ msgid ""
 "<menuchoice><guimenu>Applications</guimenu><guimenuitem>Internet</guimenuitem"
 "><guimenuitem>Evolution Mail</guimenuitem></menuchoice>."
 msgstr ""
+"Uruchom aplikację <application>Evolution</application> przez wybranie "
+"<menuchoice><guimenu>Aplikacje</guimenu><guimenuitem>Internet</guimenuitem><g"
+"uimenuitem>Poczta Evolution</guimenuitem></menuchoice>."
 
 #: windows/C/migratingdata.xml:63(para) windows/C/migratingdata.xml:77(para) windows/C/migratingdata.xml:90(para)
 msgid ""
@@ -2346,16 +2351,15 @@ msgstr "Wyloguj"
 #: windows/C/glossary.xml:69(para)
 msgid ""
 "To close all your programs and leave the computer ready for someone else to "
-"log in, choose "
-"<menuchoice><guimenu>System</guimenu><guimenuitem>Quit...</guimenuitem></menu"
-"choice>, then <guilabel>Log Out</guilabel>."
+"log in, click the <application>User Switcher</application> in the top right "
+"hand corner of the screen and then press <guibutton>Log out</guibutton>."
 msgstr ""
 
-#: windows/C/glossary.xml:77(glossterm)
+#: windows/C/glossary.xml:78(glossterm)
 msgid "My Computer"
 msgstr "Mój komputer"
 
-#: windows/C/glossary.xml:79(para)
+#: windows/C/glossary.xml:80(para)
 msgid ""
 "Equivalent items to those in the <quote>My Computer</quote> window are found "
 "in various places in Ubuntu."
@@ -2363,7 +2367,7 @@ msgstr ""
 "Odpowiedniki elementów z <quote>Mojego komputera</quote> w Ubuntu znajdują "
 "się w różnych miejscach."
 
-#: windows/C/glossary.xml:85(para)
+#: windows/C/glossary.xml:86(para)
 msgid ""
 "To see the disks and storage devices connected to the computer, choose "
 "<menuchoice><guimenu>Places</guimenu><guimenuitem>Computer</guimenuitem></men"
@@ -2373,11 +2377,11 @@ msgstr ""
 "<menuchoice><guimenu>Miejsca</guimenu><guimenuitem>Komputer</guimenuitem></me"
 "nuchoice>."
 
-#: windows/C/glossary.xml:100(glossterm)
+#: windows/C/glossary.xml:101(glossterm)
 msgid "My Documents"
 msgstr "Moje dokumenty"
 
-#: windows/C/glossary.xml:102(para)
+#: windows/C/glossary.xml:103(para)
 msgid ""
 "Inside your home folder "
 "(<menuchoice><guimenu>Places</guimenu><guimenuitem>Home "
@@ -2389,11 +2393,11 @@ msgstr ""
 "domowy</guimenuitem></menuchoice>) możesz porządkować swoje dokumenty i inne "
 "pliki w jakich tylko chcesz folderach."
 
-#: windows/C/glossary.xml:110(glossterm)
+#: windows/C/glossary.xml:111(glossterm)
 msgid "Printers &amp; Faxes"
 msgstr "Drukarki i faksy"
 
-#: windows/C/glossary.xml:112(para)
+#: windows/C/glossary.xml:113(para)
 msgid ""
 "Open "
 "<menuchoice><guimenu>System</guimenu><guimenuitem>Administration</guimenuitem"
@@ -2405,11 +2409,11 @@ msgstr ""
 "<guimenuitem>Drukarki</guimenuitem></menuchoice>, aby ustawić drukarki. "
 "Ubuntu nie obsługuje faksowania."
 
-#: windows/C/glossary.xml:118(glossterm)
+#: windows/C/glossary.xml:119(glossterm)
 msgid "Recycle Bin"
 msgstr "Kosz"
 
-#: windows/C/glossary.xml:120(para)
+#: windows/C/glossary.xml:121(para)
 msgid ""
 "The <guilabel>Trash</guilabel> works much the same way as the Recycle Bin. "
 "The Trash is almost always at the bottom right corner of the screen."
@@ -2417,32 +2421,24 @@ msgstr ""
 "<guilabel>Kosz</guilabel> w Ubuntu działa podobnie, jak w Windows. Kosz jest "
 "prawie zawsze w prawym dolnym rogu ekranu."
 
-#: windows/C/glossary.xml:128(glossterm)
+#: windows/C/glossary.xml:129(glossterm)
 msgid "Standby"
 msgstr ""
 
-#: windows/C/glossary.xml:130(para)
+#: windows/C/glossary.xml:131(para)
 msgid ""
 "To put your computer into a power-saving mode until you resume using it, "
-"choose "
-"<menuchoice><guimenu>System</guimenu><guimenuitem>Quit...</guimenuitem></menu"
-"choice>, then <guilabel>Suspend</guilabel> or "
+"click the <application>User Switcher</application> in the top right hand "
+"corner of the screen, then <guilabel>Suspend</guilabel> or "
 "<guilabel>Hibernate</guilabel>. (<guilabel>Hibernate</guilabel> requires no "
 "power at all, but is slower, and is not available on some types of computer.)"
 msgstr ""
-"Aby wprowadzić komputer w stan oszczędzania energii, dopóki go nie "
-"wybudzisz, wybierz "
-"<menuchoice><guimenu>System</guimenu><guimenuitem>Zamknij...</guimenuitem></m"
-"enuchoice>, a następnie <guilabel>Wstrzymaj</guilabel> lub "
-"<guilabel>Hibernuj</guilabel>. (<guilabel>Hibernacja</guilabel> nie wymaga "
-"zasilania w ogóle, ale jest wolniejsza i może być niedostępna na niektórych "
-"typach komputerów.)"
 
-#: windows/C/glossary.xml:140(glossterm)
+#: windows/C/glossary.xml:142(glossterm)
 msgid "Start button"
 msgstr "Przycisk Start"
 
-#: windows/C/glossary.xml:142(para)
+#: windows/C/glossary.xml:144(para)
 msgid ""
 "The three menus at the top left of the screen "
 "&mdash;<guimenu>Applications</guimenu>, <guimenu>Places</guimenu>, and "
@@ -2453,11 +2449,11 @@ msgstr ""
 "<guimenu>Miejsca</guimenu> i <guimenu>System</guimenu>&mdash; zawierają w "
 "większości te same rzeczy, co menu Start w Windows."
 
-#: windows/C/glossary.xml:151(glossterm)
+#: windows/C/glossary.xml:153(glossterm)
 msgid "Task Manager"
 msgstr "Menadżer zadań"
 
-#: windows/C/glossary.xml:153(para)
+#: windows/C/glossary.xml:155(para)
 msgid ""
 "To see or halt currently running programs, or to track processor and memory "
 "usage, choose "
@@ -2469,11 +2465,11 @@ msgstr ""
 "<menuchoice><guimenu>System</guimenu><guisubmenu>Administracja</guisubmenu><g"
 "uimenuitem>Monitor systemu</guimenuitem></menuchoice>."
 
-#: windows/C/glossary.xml:160(glossterm)
+#: windows/C/glossary.xml:162(glossterm)
 msgid "Windows Media Player"
 msgstr "Windows Media Player"
 
-#: windows/C/glossary.xml:162(para)
+#: windows/C/glossary.xml:164(para)
 msgid ""
 "Programs that play music and movies, and rip music CDs, are available from "
 "<menuchoice><guimenu>Applications</guimenu><guimenuitem>Sound &amp; "
@@ -2483,11 +2479,11 @@ msgstr ""
 "dostępne w menu <menuchoice><guimenu>Aplikacje</guimenu><guimenuitem>Dźwięk "
 "i obraz</guimenuitem></menuchoice>."
 
-#: windows/C/glossary.xml:169(glossterm)
+#: windows/C/glossary.xml:171(glossterm)
 msgid "Windows Update"
 msgstr "Windows Update"
 
-#: windows/C/glossary.xml:171(para)
+#: windows/C/glossary.xml:173(para)
 msgid ""
 "To check for updates to Ubuntu, open "
 "<menuchoice><guimenu>System</guimenu><guimenuitem>Administration</guimenuitem"
@@ -2531,7 +2527,73 @@ msgstr ""
 "  Launchpad Translations Administrators https://launchpad.net/~rosetta-"
 "admins\n"
 "  Mateusz Tybura https://launchpad.net/~wujciol\n"
-"  Piotr Strębski https://launchpad.net/~strebski"
+"  Piotr Strębski https://launchpad.net/~strebski\n"
+"\n"
+"Launchpad Contributions:\n"
+"  Arkadiusz Lipiec https://launchpad.net/~alus\n"
+"  Dominik Zablotny https://launchpad.net/~doza\n"
+"  Katsudon https://launchpad.net/~katsudon\n"
+"  Krzysiek N. https://launchpad.net/~kn\n"
+"  Launchpad Translations Administrators https://launchpad.net/~rosetta-"
+"admins\n"
+"  Mateusz Tybura https://launchpad.net/~wujciol\n"
+"  Piotr Strębski https://launchpad.net/~strebski\n"
+"  Wiatrak https://launchpad.net/~wiatrak.\n"
+"  ochach https://launchpad.net/~ochach"
+
+#~ msgid "If you've been using Windows"
+#~ msgstr "Jeśli używałeś systemu Windows"
+
+#~ msgid ""
+#~ "A black screen called <application>Command Prompt</application> will appear. "
+#~ "Into the screen, type <screen>ipconfig /all</screen> and press "
+#~ "<keycap>Return</keycap>. This will list a set of network settings for each "
+#~ "of the networking devices you have installed. You may have one or several "
+#~ "networking devices."
+#~ msgstr ""
+#~ "Pojawi się czarne okno. Jest to <application>Wiersz polecenia</application>. "
+#~ "Wpisz <screen>ipconfig /all</screen> i naciśnij <keycap>Enter</keycap>. "
+#~ "Pojawi się lista ustawień sieciowych każdego urządzenia, które masz "
+#~ "zainstalowane. Możesz posiadać jedno lub więcej urządzeń."
+
+#~ msgid ""
+#~ "Now, type <screen>ipconfig /all &gt; C:\\network_settings.txt</screen> and "
+#~ "then press <keycap>Return</keycap>. This will store the settings you have "
+#~ "just seen in the file <filename>C:\\network_settings.txt</filename>."
+#~ msgstr ""
+#~ "Teraz wpisz <screen>ipconfig /all &gt; C:\\ustawienia_sieci.txt</screen> i "
+#~ "naciśnij <keycap>Enter</keycap>. Dzięki temu poleceniu ustawienia, które "
+#~ "właśnie zobaczyłeś zostaną zapisane do pliku <filename>C:\\"
+#~ "ustawienia_sieci.txt</filename>."
+
+#~ msgid ""
+#~ "You can use the same email account in Ubuntu as you have done in Windows. If "
+#~ "you have a Web-based email account, then you should simply be able to access "
+#~ "it using the a web browser as you would have done in Windows. Otherwise, "
+#~ "please note down the following information so that you can re-create your "
+#~ "account settings on Ubuntu:"
+#~ msgstr ""
+#~ "W Ubuntu możesz korzystać z tego samego konta pocztowego co w Windows. Jeśli "
+#~ "korzystasz z konta pocztowego opartego na przeglądarce internetowej, "
+#~ "powinieneś być w stanie używać go w Ubuntu dokładnie w ten sam sposób co "
+#~ "dotąd, przy pomocy przeglądarki. W przeciwnym razie zanotuj następujące "
+#~ "informacje, tak by móc odtworzyć konto pocztowe w Ubuntu."
+
+#~ msgid ""
+#~ "To put your computer into a power-saving mode until you resume using it, "
+#~ "choose "
+#~ "<menuchoice><guimenu>System</guimenu><guimenuitem>Quit...</guimenuitem></menu"
+#~ "choice>, then <guilabel>Suspend</guilabel> or "
+#~ "<guilabel>Hibernate</guilabel>. (<guilabel>Hibernate</guilabel> requires no "
+#~ "power at all, but is slower, and is not available on some types of computer.)"
+#~ msgstr ""
+#~ "Aby wprowadzić komputer w stan oszczędzania energii, dopóki go nie "
+#~ "wybudzisz, wybierz "
+#~ "<menuchoice><guimenu>System</guimenu><guimenuitem>Zamknij...</guimenuitem></m"
+#~ "enuchoice>, a następnie <guilabel>Wstrzymaj</guilabel> lub "
+#~ "<guilabel>Hibernuj</guilabel>. (<guilabel>Hibernacja</guilabel> nie wymaga "
+#~ "zasilania w ogóle, ale jest wolniejsza i może być niedostępna na niektórych "
+#~ "typach komputerów.)"
 
 #~ msgid ""
 #~ "This document is maintained by the Ubuntu documentation team "

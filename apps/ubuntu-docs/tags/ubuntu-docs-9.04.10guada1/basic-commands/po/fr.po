@@ -9,14 +9,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu_basic-commands_po_basic-commands-fr\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2008-10-12 20:18+0100\n"
-"PO-Revision-Date: 2008-10-12 12:23+0000\n"
+"POT-Creation-Date: 2009-03-26 16:34+0000\n"
+"PO-Revision-Date: 2009-03-27 13:51+0000\n"
 "Last-Translator: Bruno Patri <bruno.patri@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2008-10-19 12:44+0000\n"
+"X-Launchpad-Export-Date: 2009-04-01 11:06+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: basic-commands/C/basic-commands-C.omf:6(creator) basic-commands/C/basic-commands-C.omf:7(maintainer)
@@ -24,8 +24,8 @@ msgid "ubuntu-doc@lists.ubuntu.com (Ubuntu Documentation Project)"
 msgstr "ubuntu-doc@lists.ubuntu.com (Projet de documentation d'Ubuntu)"
 
 #: basic-commands/C/basic-commands-C.omf:8(title) basic-commands/C/basic-commands.xml:13(title)
-msgid "Basic Commands"
-msgstr "Commandes de base"
+msgid "Using the Command Line"
+msgstr "Utilisation de la ligne de commande"
 
 #: basic-commands/C/basic-commands-C.omf:9(date)
 msgid "2006-09-07"
@@ -477,16 +477,25 @@ msgstr "lsb_release"
 
 #: basic-commands/C/basic-commands.xml:292(para)
 msgid ""
-"The <emphasis role=\"strong\">lsb_release</emphasis> command with the "
-"<emphasis role=\"strong\">-a</emphasis> option prints version information "
-"for the Linux release you're running. For example, typing: "
-"<screen>lsb_release -a</screen> will give you: <screen>\n"
+"The <command>lsb_release</command> command with the <emphasis "
+"role=\"strong\">-a</emphasis> option prints version information for the "
+"Linux release you're running. For example, typing: <screen>lsb_release -"
+"a</screen> will give you: <screen>\n"
 "No LSB modules are available.\n"
 "Distributor ID: Ubuntu\n"
-"Description:    Ubuntu 8.10 \n"
-"Release:        8.10\n"
-"Codename:       intrepid</screen>"
+"Description:    Ubuntu 9.04 \n"
+"Release:        9.04\n"
+"Codename:       jaunty</screen>"
 msgstr ""
+"La commande <command>lsb_release</command> avec l'option <emphasis "
+"role=\"strong\">-a</emphasis> donne les informations sur la version de Linux "
+"que vous utilisez. Par exemple, taper : <screen>lsb_release -a</screen> vous "
+"donnera : <screen>\n"
+"No LSB modules are available.\n"
+"Distributor ID: Ubuntu\n"
+"Description: Ubuntu 9.04\n"
+"Release: 9.04\n"
+"Codename: jaunty</screen>"
 
 #: basic-commands/C/basic-commands.xml:311(title)
 msgid "Executing Commands with Elevated Privileges"
@@ -707,41 +716,65 @@ msgstr ""
 "gnome</screen><placeholder-1/>"
 
 #: basic-commands/C/basic-commands.xml:468(title)
+msgid "Cutting and pasting"
+msgstr "Copier et coller"
+
+#: basic-commands/C/basic-commands.xml:469(para)
+msgid ""
+"Often, you will be referred to instructions that require commands to be "
+"pasted into the terminal."
+msgstr ""
+"Il vous sera fréquemment proposé de copier certaines commandes dans un "
+"terminal."
+
+#: basic-commands/C/basic-commands.xml:471(para)
+msgid ""
+"You might be wondering why the text you've copied from a web page using "
+"<keycombo><keycap>Ctrl</keycap><keycap>C</keycap></keycombo> won't paste in "
+"with <keycombo><keycap>Ctrl</keycap><keycap>V</keycap></keycombo>, the shell "
+"uses a different combination for paste "
+"<keycombo><keycap>Shift</keycap><keycap>Insert</keycap></keycombo>. This can "
+"also be done using the mouse, by right-clicking in the terminal and clicking "
+"<menuchoice><guimenuitem>Paste</guimenuitem></menuchoice> from the menu."
+msgstr ""
+"Vous pourriez vous demander pourquoi un texte copié dans une page Web avec "
+"<keycombo><keycap>Ctrl</keycap><keycap>C</keycap></keycombo> ne veut pas se "
+"coller avec <keycombo><keycap>Ctrl</keycap><keycap>V</keycap></keycombo>. Le "
+"terminal utilise un raccourci clavier différent pour coller : "
+"<keycombo><keycap>Shift</keycap><keycap>Insert</keycap></keycombo>. Ceci "
+"peut également se faire par un clic droit dans le terminal, en choisissant "
+"<menuchoice><guimenuitem>Coller</guimenuitem></menuchoice> dans le menu."
+
+#: basic-commands/C/basic-commands.xml:479(para)
+msgid ""
+"You can also select the required commands in your web browser and then "
+"subsequently click the middle button on your mouse (or simply click buttons "
+"simultaneously on a two-button mouse) in the terminal to paste in the select "
+"command."
+msgstr ""
+"Un autre méthode consiste à sélectionner les commandes requises dans votre "
+"navigateur Web, puis à cliquer avec le bouton central (sur une souris à 2 "
+"boutons ,cliquez avec les 2 simultanément) de la souris dans le terminal "
+"pour copier ce que vous venez de sélectionner"
+
+#: basic-commands/C/basic-commands.xml:483(para)
+msgid ""
+"These actions may mean something entirely different to other terminal "
+"emulators. Consult your emulator's documentation for details."
+msgstr ""
+"Ces actions peuvent représenter quelque chose de très différent dans "
+"d'autres émulateurs de terminaux. Veuillez consulter la documentation de "
+"votre émulateur de terminal pour plus de renseignements."
+
+#: basic-commands/C/basic-commands.xml:488(title)
 msgid "Other Useful Things"
 msgstr "Autres choses utiles"
 
-#: basic-commands/C/basic-commands.xml:471(title)
-msgid "Pasting in commands"
-msgstr "Coller dans la ligne de commande"
-
-#: basic-commands/C/basic-commands.xml:472(para)
-msgid ""
-"Often, you will be referred to instructions that require commands to be "
-"pasted into the terminal. You might be wondering why the text you've copied "
-"from a web page using "
-"<keycombo><keycap>Ctrl</keycap><keycap>C</keycap></keycombo> won't paste in "
-"with <keycombo><keycap>Ctrl</keycap><keycap>V</keycap></keycombo>. Surely "
-"you don't have to type in all those nasty commands and filenames? Relax. "
-"Middle Button Click on your mouse (both buttons simultaneously on a two-"
-"button mouse) or Right Click and select "
-"<menuchoice><guimenuitem>Paste</guimenuitem></menuchoice> from the menu."
-msgstr ""
-"Souvent, vous suivrez des instototions qui demandent de coller des commandes "
-"dans la console. Vous vous demanderez sûrement pourquoi le texte que vous "
-"avez copié d'une page internet utilisant "
-"<keycombo><keycap>Ctrl</keycap><keycap>C</keycap></keycombo> ne se colle pas "
-"avec <keycombo><keycap>Ctrl</keycap><keycap>V</keycap></keycombo> dans la "
-"console. Vous n'allez quand même pas devoir taper toutes ces commandes et "
-"noms de fichiers compliqués ? Pas d'inquiétude, cliquez sur le bouton du "
-"milieu de la souris (les deux boutons simultanément sur une souris à deux "
-"boutons) ou faites un clic droit et sélectionnez "
-"<menuchoice><guimenuitem>coller</guimenuitem></menuchoice> dans le menu."
-
-#: basic-commands/C/basic-commands.xml:495(title)
+#: basic-commands/C/basic-commands.xml:490(title)
 msgid "Save on typing"
 msgstr "Minimiser la frappe"
 
-#: basic-commands/C/basic-commands.xml:504(para)
+#: basic-commands/C/basic-commands.xml:499(para)
 msgid ""
 "<keycap>Up Arrow</keycap> or "
 "<keycombo><keycap>Ctrl</keycap><keycap>p</keycap></keycombo>"
@@ -749,11 +782,11 @@ msgstr ""
 "<keycap>Flèche vers le haut</keycap> ou "
 "<keycombo><keycap>Ctrl</keycap><keycap>p</keycap></keycombo>"
 
-#: basic-commands/C/basic-commands.xml:514(para)
+#: basic-commands/C/basic-commands.xml:509(para)
 msgid "Scrolls through the commands you've entered previously."
 msgstr "Fait défiler les commandes que vous avez précédemment entrées."
 
-#: basic-commands/C/basic-commands.xml:522(para)
+#: basic-commands/C/basic-commands.xml:517(para)
 msgid ""
 "<keycap>Down Arrow</keycap> or "
 "<keycombo><keycap>Ctrl</keycap><keycap>n</keycap></keycombo>"
@@ -761,23 +794,23 @@ msgstr ""
 "<keycap>Flèche vers le bas</keycap> ou "
 "<keycombo><keycap>Ctrl</keycap><keycap>n</keycap></keycombo>"
 
-#: basic-commands/C/basic-commands.xml:532(para)
+#: basic-commands/C/basic-commands.xml:527(para)
 msgid "Takes you back to a more recent command."
 msgstr "Vous ramène à une commande plus récente."
 
-#: basic-commands/C/basic-commands.xml:539(keycap)
+#: basic-commands/C/basic-commands.xml:534(keycap)
 msgid "Enter"
 msgstr "Entrée"
 
-#: basic-commands/C/basic-commands.xml:544(para)
+#: basic-commands/C/basic-commands.xml:539(para)
 msgid "When you have the command you want."
 msgstr "Lorsque la commande désirée est affichée."
 
-#: basic-commands/C/basic-commands.xml:550(keycap)
+#: basic-commands/C/basic-commands.xml:545(keycap)
 msgid "Tab"
 msgstr "Tab"
 
-#: basic-commands/C/basic-commands.xml:555(para)
+#: basic-commands/C/basic-commands.xml:550(para)
 msgid ""
 "A very useful feature. It autocompletes any commands or filenames, if "
 "there's only one option, or else gives you a list of options."
@@ -786,11 +819,11 @@ msgstr ""
 "quelle commande ou nom de fichier si il n'y a qu'une seule possibilité, ou "
 "vous affiche une liste de possibilités."
 
-#: basic-commands/C/basic-commands.xml:568(title)
+#: basic-commands/C/basic-commands.xml:563(title)
 msgid "Change the text"
 msgstr "Modifier le texte"
 
-#: basic-commands/C/basic-commands.xml:569(para)
+#: basic-commands/C/basic-commands.xml:564(para)
 msgid ""
 "The mouse won't work. Use the <keycap>Left/Right arrow</keycap> keys to move "
 "around the line."
@@ -798,7 +831,7 @@ msgstr ""
 "La souris ne fonctionnera pas. Utilisez les touches <keycap>Gauche</keycap> "
 "ou <keycap>Droite</keycap> pour vous déplacer sur la ligne."
 
-#: basic-commands/C/basic-commands.xml:573(para)
+#: basic-commands/C/basic-commands.xml:568(para)
 msgid ""
 "When the cursor is where you want it in the line, typing "
 "<emphasis>inserts</emphasis> text, it doesn't overtype what's already there."
@@ -806,7 +839,7 @@ msgstr ""
 "Quand le curseur sera sur la position que vous souhaitez, tout texte que "
 "vous tapez sera <emphasis>inséré</emphasis>, cela n'effacera pas la suite."
 
-#: basic-commands/C/basic-commands.xml:586(para)
+#: basic-commands/C/basic-commands.xml:581(para)
 msgid ""
 "<keycombo><keycap>Ctrl</keycap><keycap>a</keycap></keycombo> or "
 "<keycap>Home</keycap>"
@@ -814,11 +847,11 @@ msgstr ""
 "<keycombo><keycap>Ctrl</keycap><keycap>a</keycap></keycombo> ou "
 "<keycap>Home</keycap>(Début)"
 
-#: basic-commands/C/basic-commands.xml:596(para)
+#: basic-commands/C/basic-commands.xml:591(para)
 msgid "Moves the cursor to the <emphasis>start</emphasis> of a line."
 msgstr "Place le curseur en <emphasis>début</emphasis> de ligne."
 
-#: basic-commands/C/basic-commands.xml:602(para)
+#: basic-commands/C/basic-commands.xml:597(para)
 msgid ""
 "<keycombo><keycap>Ctrl</keycap><keycap>e</keycap></keycombo> or "
 "<keycap>End</keycap>"
@@ -826,48 +859,48 @@ msgstr ""
 "<keycombo><keycap>Ctrl</keycap><keycap>e</keycap></keycombo> ou "
 "<keycap>End</keycap>(Fin)"
 
-#: basic-commands/C/basic-commands.xml:612(para)
+#: basic-commands/C/basic-commands.xml:607(para)
 msgid "Moves the cursor to the <emphasis> end</emphasis> of a line."
 msgstr "Déplace le curseur à la <emphasis> fin</emphasis> d'une ligne."
 
-#: basic-commands/C/basic-commands.xml:623(keycap) basic-commands/C/basic-commands.xml:638(keycap) basic-commands/C/basic-commands.xml:652(keycap)
+#: basic-commands/C/basic-commands.xml:618(keycap) basic-commands/C/basic-commands.xml:633(keycap) basic-commands/C/basic-commands.xml:647(keycap)
 msgid "Ctrl"
 msgstr "Ctrl"
 
-#: basic-commands/C/basic-commands.xml:624(keycap)
+#: basic-commands/C/basic-commands.xml:619(keycap)
 msgid "k"
 msgstr "k"
 
-#: basic-commands/C/basic-commands.xml:630(para)
+#: basic-commands/C/basic-commands.xml:625(para)
 msgid "Deletes from the current cursor position to the end of the line."
 msgstr ""
 "Efface la ligne depuis la position courante du curseur jusqu'à la fin."
 
-#: basic-commands/C/basic-commands.xml:639(keycap)
+#: basic-commands/C/basic-commands.xml:634(keycap)
 msgid "u"
 msgstr "u"
 
-#: basic-commands/C/basic-commands.xml:645(para)
+#: basic-commands/C/basic-commands.xml:640(para)
 msgid "Deletes the whole of the current line."
 msgstr "Efface complètement la lignecourante."
 
-#: basic-commands/C/basic-commands.xml:653(keycap)
+#: basic-commands/C/basic-commands.xml:648(keycap)
 msgid "w"
 msgstr "w"
 
-#: basic-commands/C/basic-commands.xml:659(para)
+#: basic-commands/C/basic-commands.xml:654(para)
 msgid "Deletes the word before the cursor."
 msgstr "Efface le mot situé avant le curseur."
 
-#: basic-commands/C/basic-commands.xml:669(title)
+#: basic-commands/C/basic-commands.xml:664(title)
 msgid "More Information"
 msgstr "Plus d'informations"
 
-#: basic-commands/C/basic-commands.xml:670(para)
+#: basic-commands/C/basic-commands.xml:665(para)
 msgid "The following online guides are available:"
 msgstr "Les guides suivants sont disponibles en ligne :"
 
-#: basic-commands/C/basic-commands.xml:673(para)
+#: basic-commands/C/basic-commands.xml:668(para)
 msgid ""
 "<ulink url=\"https://help.ubuntu.com/community/AptGetHowto\"> "
 "AptGetHowto</ulink> - using apt-get to install packages from the command "
@@ -877,7 +910,7 @@ msgstr ""
 "apt</ulink> - utilisation de apt-get pour installer les paquets en ligne de "
 "commande."
 
-#: basic-commands/C/basic-commands.xml:680(para)
+#: basic-commands/C/basic-commands.xml:675(para)
 msgid ""
 "<ulink url=\"https://help.ubuntu.com/community/Repositories/CommandLine\"> "
 "Commandline Repository Editing</ulink> - adding the Universe/Multiverse "
@@ -889,7 +922,7 @@ msgstr ""
 "page <ulink url=\"http://doc.ubuntu-fr.org/depots\">du wiki "
 "francophone</ulink>."
 
-#: basic-commands/C/basic-commands.xml:688(para)
+#: basic-commands/C/basic-commands.xml:683(para)
 msgid ""
 "<ulink url=\"https://help.ubuntu.com/community/grep\">grep Howto</ulink> - "
 "grep is a powerful command line search tool."
@@ -897,7 +930,7 @@ msgstr ""
 "<ulink url=\"https://help.ubuntu.com/community/grep\">grep Howto</ulink> (en "
 "anglais) - grep est un puissant outil de recherche en ligne de commande."
 
-#: basic-commands/C/basic-commands.xml:695(para)
+#: basic-commands/C/basic-commands.xml:690(para)
 msgid ""
 "<ulink url=\"https://help.ubuntu.com/community/find\">find </ulink> - locate "
 "files on the command line."
@@ -905,7 +938,7 @@ msgstr ""
 "<ulink url=\"https://help.ubuntu.com/community/find\">find </ulink> (en "
 "anglais) - localiser des fichiers en ligne de commande."
 
-#: basic-commands/C/basic-commands.xml:701(para)
+#: basic-commands/C/basic-commands.xml:696(para)
 msgid ""
 "<ulink url=\"https://help.ubuntu.com/community/CommandlineHowto\"> "
 "CommandlineHowto</ulink> - longer and more complete than this basic guide, "
@@ -915,7 +948,7 @@ msgstr ""
 "de commande</ulink> - plus long et plus complet que ce guide, mais pour "
 "l'instant encore incomplet."
 
-#: basic-commands/C/basic-commands.xml:708(para)
+#: basic-commands/C/basic-commands.xml:703(para)
 msgid ""
 "<ulink url=\"https://help.ubuntu.com/community/HowToReadline\"> "
 "HowToReadline</ulink> - information on some more advanced customization for "
@@ -925,12 +958,12 @@ msgstr ""
 "HowToReadline</ulink> (en anglais) - des informations pour une "
 "personnalisation avancée de la ligne de commande."
 
-#: basic-commands/C/basic-commands.xml:715(para)
+#: basic-commands/C/basic-commands.xml:710(para)
 msgid "For more detailed tutorials on the Linux command line, please see:"
 msgstr ""
 "Pour des tutoriaux plus détaillés sur la ligne de commande Linux, voyez :"
 
-#: basic-commands/C/basic-commands.xml:721(para)
+#: basic-commands/C/basic-commands.xml:716(para)
 msgid ""
 "<ulink url=\"http://linuxcommand.org/\"/>- basic BASH tutorials, including "
 "BASH scripting"
@@ -938,14 +971,14 @@ msgstr ""
 "<ulink url=\"http://linuxcommand.org/\"/> (en anglais) - tutoriaux BASH de "
 "base, y compris les scripts BASH"
 
-#: basic-commands/C/basic-commands.xml:727(para)
+#: basic-commands/C/basic-commands.xml:722(para)
 msgid ""
 "<ulink url=\"http://linuxsurvival.com/index.php\"/>- Java-based tutorials"
 msgstr ""
 "<ulink url=\"http://linuxsurvival.com/index.php\"/>(en anglais) - Tutoriaux "
 "basés sur Java"
 
-#: basic-commands/C/basic-commands.xml:733(para)
+#: basic-commands/C/basic-commands.xml:728(para)
 msgid ""
 "<ulink url=\"http://rute.2038bug.com/index.html.gz\"/>- a massive online "
 "book about system administration, almost all from the command line."
@@ -1031,7 +1064,55 @@ msgstr ""
 "  Rozkannou https://launchpad.net/~jamelot\n"
 "  Vincent Legout https://launchpad.net/~bixente\n"
 "  amine Say https://launchpad.net/~aminesay\n"
+"  jloup78 https://launchpad.net/~jean-loup-gregoire\n"
+"\n"
+"Launchpad Contributions:\n"
+"  Arnaud Faucher https://launchpad.net/~arnaud-faucher\n"
+"  Beber https://launchpad.net/~bertrand-goareguer\n"
+"  Bruno Patri https://launchpad.net/~bruno-patri\n"
+"  Dimitri Torterat https://launchpad.net/~diti\n"
+"  Doyen Philippe https://launchpad.net/~dyphil\n"
+"  Etienne Malandain https://launchpad.net/~etienne-malandain\n"
+"  Fabien Lusseau https://launchpad.net/~fabien-beosfrance\n"
+"  Fantomas https://launchpad.net/~phan-thomas\n"
+"  Fred Senis https://launchpad.net/~fredsenis\n"
+"  Julien Hémono https://launchpad.net/~julien-hemono\n"
+"  Lionel Duval https://launchpad.net/~fennec\n"
+"  Marc-André Turcotte https://launchpad.net/~matmat07\n"
+"  Morgan GERMAIN https://launchpad.net/~morgan-germain\n"
+"  Nicolas DERIVE https://launchpad.net/~kalon33\n"
+"  Rozkannou https://launchpad.net/~jamelot\n"
+"  Vincent Legout https://launchpad.net/~bixente\n"
+"  amine Say https://launchpad.net/~aminesay\n"
 "  jloup78 https://launchpad.net/~jean-loup-gregoire"
+
+#~ msgid "Basic Commands"
+#~ msgstr "Commandes de base"
+
+#~ msgid "Pasting in commands"
+#~ msgstr "Coller dans la ligne de commande"
+
+#~ msgid ""
+#~ "Often, you will be referred to instructions that require commands to be "
+#~ "pasted into the terminal. You might be wondering why the text you've copied "
+#~ "from a web page using "
+#~ "<keycombo><keycap>Ctrl</keycap><keycap>C</keycap></keycombo> won't paste in "
+#~ "with <keycombo><keycap>Ctrl</keycap><keycap>V</keycap></keycombo>. Surely "
+#~ "you don't have to type in all those nasty commands and filenames? Relax. "
+#~ "Middle Button Click on your mouse (both buttons simultaneously on a two-"
+#~ "button mouse) or Right Click and select "
+#~ "<menuchoice><guimenuitem>Paste</guimenuitem></menuchoice> from the menu."
+#~ msgstr ""
+#~ "Souvent, vous suivrez des instototions qui demandent de coller des commandes "
+#~ "dans la console. Vous vous demanderez sûrement pourquoi le texte que vous "
+#~ "avez copié d'une page internet utilisant "
+#~ "<keycombo><keycap>Ctrl</keycap><keycap>C</keycap></keycombo> ne se colle pas "
+#~ "avec <keycombo><keycap>Ctrl</keycap><keycap>V</keycap></keycombo> dans la "
+#~ "console. Vous n'allez quand même pas devoir taper toutes ces commandes et "
+#~ "noms de fichiers compliqués ? Pas d'inquiétude, cliquez sur le bouton du "
+#~ "milieu de la souris (les deux boutons simultanément sur une souris à deux "
+#~ "boutons) ou faites un clic droit et sélectionnez "
+#~ "<menuchoice><guimenuitem>coller</guimenuitem></menuchoice> dans le menu."
 
 #~ msgid ""
 #~ "Moves the cursor to the <emphasis><emphasis "

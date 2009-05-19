@@ -7,23 +7,23 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-docs\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2008-08-03 16:01+0100\n"
-"PO-Revision-Date: 2008-10-04 09:29+0000\n"
-"Last-Translator: Adi Roiban <adi@roiban.ro>\n"
+"POT-Creation-Date: 2009-03-26 16:34+0000\n"
+"PO-Revision-Date: 2009-03-15 13:09+0000\n"
+"Last-Translator: Doru Horișco <DoruHushHush@gmail.com>\n"
 "Language-Team: Romanian <ro@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2008-10-19 12:51+0000\n"
+"X-Launchpad-Export-Date: 2009-04-01 10:39+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: hardware/C/hardware-C.omf:6(creator) hardware/C/hardware-C.omf:7(maintainer)
 msgid "ubuntu-doc@lists.ubuntu.com (Ubuntu Documentation Project)"
 msgstr "ubuntu-doc@lists.ubuntu.com (Proiectul de Documentație Ubuntu)"
 
-#: hardware/C/hardware-C.omf:8(title)
-msgid "Hardware"
-msgstr "Hardware"
+#: hardware/C/hardware-C.omf:8(title) hardware/C/hardware.xml:20(title)
+msgid "Working with Hardware Devices"
+msgstr ""
 
 #: hardware/C/hardware-C.omf:9(date)
 msgid "2006-09-07"
@@ -32,10 +32,6 @@ msgstr "07-09-2006"
 #: hardware/C/hardware-C.omf:11(description)
 msgid "Placeholder."
 msgstr ""
-
-#: hardware/C/hardware.xml:20(title)
-msgid "Working with hardware devices"
-msgstr "Lucrul cu dispozitive fizice"
 
 #: hardware/C/hardware.xml:3(title)
 msgid "Credits and License"
@@ -47,6 +43,10 @@ msgid ""
 "(https://wiki.ubuntu.com/DocumentationTeam). For a list of contributors, see "
 "the <ulink url=\"../../libs/C/contributors.xml\">contributors page</ulink>"
 msgstr ""
+"Acest document este întreținut de echipa de documentație Ubuntu "
+"(https://wiki.ubuntu.com/DocumentationTeam). Lista colaboratorilor o puteți "
+"consulta pe  <ulink url=\"../../libs/C/contributors.xml\">pagina "
+"colaboratorilor</ulink>"
 
 #: hardware/C/hardware.xml:5(para)
 msgid ""
@@ -83,10 +83,12 @@ msgid ""
 "A copy of the license is available here: <ulink url=\"/usr/share/ubuntu-"
 "docs/libs/C/ccbysa.xml\">Creative Commons ShareAlike License</ulink>."
 msgstr ""
+"O copie a licenței este disponibilă aici: <ulink url=\"/usr/share/ubuntu-"
+"docs/libs/C/ccbysa.xml\">Licența Creative Commons ShareAlike</ulink>."
 
 #: hardware/C/hardware.xml:14(year)
 msgid "2008"
-msgstr ""
+msgstr "2008"
 
 #: hardware/C/hardware.xml:15(ulink)
 msgid "Ubuntu Documentation Project"
@@ -219,11 +221,8 @@ msgstr ""
 msgid ""
 "Press "
 "<menuchoice><guimenu>System</guimenu><guimenuitem>Administration</guimenuitem"
-"><guimenuitem>Hardware drivers</guimenuitem></menuchoice>"
+"><guimenuitem>Hardware Drivers</guimenuitem></menuchoice>"
 msgstr ""
-"Apăsaţi "
-"<menuchoice><guimenu>Sistem</guimenu><guimenuitem>Administrare</guimenuitem><"
-"guimenuitem>Administrator drivere cu restricţii</guimenuitem></menuchoice>"
 
 #: hardware/C/hardware.xml:47(para)
 msgid ""
@@ -339,52 +338,32 @@ msgid "file system"
 msgstr "sistem de fişiere"
 
 #: hardware/C/hardware.xml:113(title)
-msgid "Checking disk capacity"
-msgstr "Verificare spaţiu disponibil pe hard disk"
-
-#: hardware/C/hardware.xml:117(para)
-msgid ""
-"Press "
-"<menuchoice><guimenu>Places</guimenu><guimenuitem>Computer</guimenuitem></men"
-"uchoice>, right click on the disk you want to check and select "
-"<guilabel>Properties</guilabel>. The free space on the disk will be "
-"displayed on the <guilabel>Basic</guilabel> tab."
-msgstr ""
-"Apăsaţi "
-"<menuchoice><guimenu>Locuri</guimenu><guimenuitem>Computer</guimenuitem></men"
-"uchoice>, apăsaţi click dreapta pe discul dorit şi selectaţi opţiunea "
-"<guilabel>Proprietăţi</guilabel>. Spaţiul liber pe disc va fi afişat în tab-"
-"ul <guilabel>Simplu</guilabel>."
-
-#: hardware/C/hardware.xml:121(para)
-msgid ""
-"Press "
-"<menuchoice><guimenu>System</guimenu><guisubmenu>Administration</guisubmenu><"
-"guimenuitem>System Monitor</guimenuitem></menuchoice> and select the "
-"<guilabel>File Systems</guilabel> tab. All disks currently connected to the "
-"system should be displayed in the list, along with their free and used "
-"capacities."
-msgstr ""
-"Apăsaţi "
-"<menuchoice><guimenu>Sistem</guimenu><guisubmenu>Administrare</guisubmenu><gu"
-"imenuitem>Monitorizare sistem</guimenuitem></menuchoice> şi selectaţi tab-ul "
-"<guilabel>Sisteme de fişiere</guilabel>. Va fi afişată o lista cu discurile "
-"din sistem care va conţine spaţiul disponibil şi spaţiul utilizat pe fiecare "
-"dintre acestea."
+msgid "Checking how much disk space is available"
+msgstr "Se verifică cât spațiu este disponibil pe disc"
 
 #: hardware/C/hardware.xml:114(para)
 msgid ""
-"To check the amount of free and used space on a disk, do either of the "
-"following: <placeholder-1/>"
+"Click "
+"<menuchoice><guimenu>System</guimenu><guisubmenu>Administration</guisubmenu><"
+"guimenuitem>System Monitor</guimenuitem></menuchoice> and select the "
+"<guilabel>File Systems</guilabel> tab to see how much hard disk space is "
+"available on your computer."
 msgstr ""
-"Pentru verificare staţiului liber şi utilizat pe un disc, urmaţi una dintre "
-"următoarele alternative: <placeholder-1/>"
 
-#: hardware/C/hardware.xml:128(title)
+#: hardware/C/hardware.xml:118(para)
+msgid ""
+"Alternatively, click "
+"<menuchoice><guimenu>Places</guimenu><guimenuitem>Computer</guimenuitem></men"
+"uchoice>, right-click a hard disk, click <guilabel>Properties</guilabel> and "
+"select the <guilabel>Basic</guilabel> tab to see a summary of the disk space "
+"currently available on that disk."
+msgstr ""
+
+#: hardware/C/hardware.xml:126(title)
 msgid "Advanced disk-usage analysis"
 msgstr "Analiza extinsă a gradului de utilizare a discurilor"
 
-#: hardware/C/hardware.xml:129(para)
+#: hardware/C/hardware.xml:127(para)
 msgid ""
 "For a more accurate analysis of your filesystem, press "
 "<menuchoice><guimenu>Applications</guimenu><guimenuitem>Accessories</guimenui"
@@ -397,7 +376,7 @@ msgstr ""
 "pentru pornirea aplicaţiei  <application>Analizor grad utilizare "
 "discuri</application>."
 
-#: hardware/C/hardware.xml:133(para)
+#: hardware/C/hardware.xml:131(para)
 msgid ""
 "Press <guibutton>Scan Home</guibutton> to scan your home directory, or press "
 "<guibutton>Scan Filesystem</guibutton> to scan the whole filesystem."
@@ -406,7 +385,7 @@ msgstr ""
 "directorului Acasă, sau <guibutton>Analizează sistem de fişiere</guibutton> "
 "pentru analiza întregului sistem de fişiere."
 
-#: hardware/C/hardware.xml:137(para)
+#: hardware/C/hardware.xml:135(para)
 msgid ""
 "See the <ulink url=\"ghelp:baobab\" type=\"help\">Disk Usage Analyzer "
 "Manual</ulink> for more information."
@@ -414,30 +393,105 @@ msgstr ""
 "Pentru mai multe informaţii, vezi <ulink url=\"ghelp:baobab\" "
 "type=\"help\">manualul analizorului grad de utilizare discuri</ulink>"
 
-#: hardware/C/hardware.xml:145(title)
+#: hardware/C/hardware.xml:143(title)
+msgid "How can I free-up some disk space?"
+msgstr "Cum pot să eliberez spațiu pe disc?"
+
+#: hardware/C/hardware.xml:144(para)
+msgid "There are several simple ways of making more disk space available:"
+msgstr "Există câteva metode simple pentru a elibera spațiu pe disc:"
+
+#: hardware/C/hardware.xml:150(para)
+msgid ""
+"Empty your trash by right-clicking the Trash icon on the bottom panel and "
+"selecting <guilabel>Empty the Trash folder</guilabel>."
+msgstr ""
+
+#: hardware/C/hardware.xml:156(para)
+msgid ""
+"<ulink url=\"apt:computer-janitor-gtk\">Install <application>Computer "
+"Janitor</application></ulink> and run it by clicking "
+"<menuchoice><guimenu>System</guimenu><guisubmenu>Administration</guisubmenu><"
+"guisubmenu>System Janitor</guisubmenu></menuchoice>. This will remove unused "
+"or obsolete software packages from your computer. Read the list of packages "
+"carefully before you click <guibutton>Cleanup</guibutton>; packages that you "
+"have manually downloaded and installed may be listed as unused, even though "
+"they are not."
+msgstr ""
+
+#: hardware/C/hardware.xml:166(para)
+msgid ""
+"Remove software packages that you no longer use. See <ulink type=\"help\" "
+"url=\"ghelp:add-applications#gnome-app-install\"> Add/Remove "
+"Applications</ulink> for information on removing packages."
+msgstr ""
+"Eliminați pachetele software pe care nu le mai folosiți. Vizitați <ulink "
+"type=\"help\" url=\"ghelp:add-applications#gnome-app-"
+"install\">Instalare/Dezinstalare aplicații</ulink> pentru mai multe "
+"informații despre eliminarea pachetelor."
+
+#: hardware/C/hardware.xml:173(para)
+msgid ""
+"Delete files that you no longer need. You can use the Disk Usage Analyzer "
+"(<menuchoice><guimenu>Applications</guimenu><guimenuitem>Accessories</guimenu"
+"item><guimenuitem>Disk Usage Analyzer</guimenuitem></menuchoice>) to find "
+"which files are taking up the most space. Be careful not to delete files "
+"that you still need!"
+msgstr ""
+
+#: hardware/C/hardware.xml:181(para)
+msgid "You can also compress and archive your old, rarely-used documents:"
+msgstr ""
+"Puteți de asemenea să vă comprimați și arhivați fișierele vechi, rar "
+"folosite:"
+
+#: hardware/C/hardware.xml:187(para)
+msgid ""
+"Select the files and folders that you want to compress, right-click one of "
+"them and select <guilabel>Create Archive</guilabel>."
+msgstr ""
+"Selectați fișierele și dosarele pe care doriți să le comprimați, efectuați "
+"clic dreapta pe unul dintre ele și alegeți <guilabel>Creează "
+"arhivă</guilabel>."
+
+#: hardware/C/hardware.xml:193(para)
+msgid ""
+"Choose a name, location and format for the file (the "
+"<filename>.tar.gz</filename> format is the most commonly used on Ubuntu, "
+"<filename>.zip</filename> is compatible with Windows and "
+"<filename>.tar.lzma</filename> usually offers the best compression)."
+msgstr ""
+"Alegeți un nume, o locație și un format pentru fișier (formatul "
+"<filename>.tar.gz</filename> este cel mai des folosit în Ubuntu, formatul "
+"<filename>.zip</filename> este compatibil cu Windows iar formatul "
+"<filename>.tar.lzma</filename> oferă de obicei cea mai bună compresie)."
+
+#: hardware/C/hardware.xml:201(para)
+msgid ""
+"Click <guibutton>Create</guibutton>. An archive file will be created "
+"containing compressed copies of your files."
+msgstr ""
+
+#: hardware/C/hardware.xml:207(para)
+msgid "Delete the old uncompressed files to free some disk space."
+msgstr ""
+"Stergeți fișierele vechi necomprimate pentru a elibera spațiu pe disc."
+
+#: hardware/C/hardware.xml:215(title)
 msgid "Partitioning a device"
 msgstr "Pariţionarea dispozitivelor de stocare a informaţiei"
 
-#: hardware/C/hardware.xml:146(para)
+#: hardware/C/hardware.xml:216(para)
 msgid ""
 "You can use <application>GNOME Partition Editor</application> to partition "
-"storage devices. Install the <application>gparted</application> package (see "
-"<ulink type=\"help\" url=\"ghelp:add-applications\">Add "
-"Applications</ulink>) and then press "
+"storage devices. <ulink url=\"apt:gparted\">Install the "
+"<application>gparted</application> package </ulink> and then press "
 "<menuchoice><guimenu>System</guimenu><guisubmenu>Administration "
 "</guisubmenu><guimenuitem>Gnome Partition Editor</guimenuitem></menuchoice> "
 "to start the partition editor."
 msgstr ""
-"Pentru partiţionarea unui dispozitiv de stocare a informaţiei puteţi utiliza "
-"aplicaţia <application>Editor de partiţii</application> din GNOME. Instalaţi "
-"pachetul software <application>gparted</application> (vezi <ulink "
-"type=\"help\" url=\"ghelp:add-applications\">Instalare aplicaţii</ulink>). "
-"Alegeţi din meniu "
-"<menuchoice><guimenu>Sistem</guimenu><guisubmenu>Administrare</guisubmenu><gu"
-"imenuitem>Editor de partiţii</guimenuitem></menuchoice> pentru pornirea "
-"aplicaţiei."
 
-#: hardware/C/hardware.xml:151(para)
+#: hardware/C/hardware.xml:221(para)
 msgid ""
 "Be careful when altering disk partitions, as it is possible to lose your "
 "data if you delete or change the wrong partition."
@@ -446,11 +500,11 @@ msgstr ""
 "pierde datele stocate pe disc prin modificarea sau ştergerea greşită a unei "
 "partiţii."
 
-#: hardware/C/hardware.xml:155(title)
+#: hardware/C/hardware.xml:225(title)
 msgid "Freeing space for a new partition"
 msgstr "Eliberarea spaţiului pentru o partiţie nouă"
 
-#: hardware/C/hardware.xml:163(para) hardware/C/hardware.xml:248(para)
+#: hardware/C/hardware.xml:233(para) hardware/C/hardware.xml:318(para)
 msgid ""
 "Press <menuchoice><guimenu>System</guimenu><guisubmenu>Administration "
 "</guisubmenu><guimenuitem>Gnome Partition Editor</guimenuitem></menuchoice>."
@@ -459,7 +513,7 @@ msgstr ""
 "<menuchoice><guimenu>Sistem</guimenu><guisubmenu>Administrare</guisubmenu><gu"
 "imenuitem>Editor de partiţii</guimenuitem></menuchoice>."
 
-#: hardware/C/hardware.xml:168(para) hardware/C/hardware.xml:209(para) hardware/C/hardware.xml:253(para)
+#: hardware/C/hardware.xml:238(para) hardware/C/hardware.xml:279(para) hardware/C/hardware.xml:323(para)
 msgid ""
 "Select the device to partition from the drop-down list at the top-right of "
 "the main window."
@@ -467,7 +521,7 @@ msgstr ""
 "Selectaţi dispozitivul de partiţionat din lista cu derulare din colţul "
 "dreapta-sus al ferestrei principale."
 
-#: hardware/C/hardware.xml:174(para) hardware/C/hardware.xml:259(para)
+#: hardware/C/hardware.xml:244(para) hardware/C/hardware.xml:329(para)
 msgid ""
 "A list of partitions will appear. Select the desired partition and choose "
 "<menuchoice><guimenu>Partition</guimenu><guimenuitem>Unmount</guimenuitem></m"
@@ -478,7 +532,7 @@ msgstr ""
 "<menuchoice><guimenu>Partiţie</guimenu><guimenuitem>Demontează</guimenuitem><"
 "/menuchoice>."
 
-#: hardware/C/hardware.xml:183(para)
+#: hardware/C/hardware.xml:253(para)
 msgid ""
 "To resize the partition choose <guilabel>Resize/Move</guilabel>. The dialog "
 "<guilabel>Resize/Move</guilabel> will be shown. You can use the "
@@ -496,13 +550,13 @@ msgstr ""
 "asemenea, puteţi deplasa capetele reprezentării grafice pentru ajustarea "
 "dimensiunii partiţiei."
 
-#: hardware/C/hardware.xml:195(para)
+#: hardware/C/hardware.xml:265(para)
 msgid "To apply the changes, click <guibutton>Resize/Move</guibutton>."
 msgstr ""
 "Pentru validarea modificărilor apăsaţi "
 "<guibutton>Redimensionează/Mută</guibutton>."
 
-#: hardware/C/hardware.xml:156(para)
+#: hardware/C/hardware.xml:226(para)
 msgid ""
 "To create a new partition inside an already partitioned device, you must "
 "first resize an existing partition. If you already have free space, skip to "
@@ -514,11 +568,11 @@ msgstr ""
 "disc este suficient puteţi trece la <xref linkend=\"creating-new-"
 "partition\"/>; altfel, urmaţi procedura de mai jos: <placeholder-1/>"
 
-#: hardware/C/hardware.xml:204(title)
+#: hardware/C/hardware.xml:274(title)
 msgid "Creating a new partition"
 msgstr "Crearea unei partiţii noi"
 
-#: hardware/C/hardware.xml:215(para)
+#: hardware/C/hardware.xml:285(para)
 msgid ""
 "A list of partitions will appear. Select the one called "
 "<guilabel>unallocated</guilabel> and click <guibutton>New</guibutton>."
@@ -527,7 +581,7 @@ msgstr ""
 "<guilabel>spaţiu nealocat</guilabel> şi apăsaţi butonul "
 "<guibutton>Nou</guibutton>."
 
-#: hardware/C/hardware.xml:222(para)
+#: hardware/C/hardware.xml:292(para)
 msgid ""
 "From the <guilabel>Filesystem</guilabel> drop-down list choose the desired "
 "type of filesystem to use and click <guibutton>Add</guibutton>."
@@ -535,22 +589,22 @@ msgstr ""
 "Alegeţi din lista cu derulare <guilabel>Sistem de fişiere</guilabel> tipul "
 "dorit şi apăsaţi <guibutton>Adaugă</guibutton>."
 
-#: hardware/C/hardware.xml:229(para) hardware/C/hardware.xml:277(para)
+#: hardware/C/hardware.xml:299(para) hardware/C/hardware.xml:347(para)
 msgid "To apply all the changes made, click <guibutton>Apply</guibutton>."
 msgstr ""
 "Pentru validarea modificărilor apăsaţi <guibutton>Aplică</guibutton>."
 
-#: hardware/C/hardware.xml:205(para)
+#: hardware/C/hardware.xml:275(para)
 msgid "To create a new partition: <placeholder-1/>"
 msgstr ""
 "Pentru crearea unei partiţii noi, urmaţi procedura de mai jos: <placeholder-"
 "1/>"
 
-#: hardware/C/hardware.xml:240(title)
+#: hardware/C/hardware.xml:310(title)
 msgid "Formatting a partition"
 msgstr "Formatarea unei partiţii"
 
-#: hardware/C/hardware.xml:241(para)
+#: hardware/C/hardware.xml:311(para)
 msgid ""
 "You can use <application>GNOME Partition Editor</application> to format disk "
 "partitions (see <xref linkend=\"partitioning-device\"/> for more information "
@@ -561,7 +615,7 @@ msgstr ""
 "<application>Editorul de partiţii</application>, vezi <xref "
 "linkend=\"partitioning-device\"/>)."
 
-#: hardware/C/hardware.xml:268(para)
+#: hardware/C/hardware.xml:338(para)
 msgid ""
 "Select the partition you want to format and choose "
 "<menuchoice><guimenu>Partition</guimenu><guimenuitem>Format "
@@ -572,13 +626,13 @@ msgstr ""
 "<menuchoice><guimenu>Partiţie</guimenu><guimenuitem>Formatare "
 "ca</guimenuitem></menuchoice> şi selectaţi tipul dorit de sistem de fişiere."
 
-#: hardware/C/hardware.xml:244(para)
+#: hardware/C/hardware.xml:314(para)
 msgid "To format a partition, do as follows: <placeholder-1/>"
 msgstr ""
 "Pentru formatarea unei partiţii, urmaţi procedura de mai jos: <placeholder-"
 "1/>"
 
-#: hardware/C/hardware.xml:286(para)
+#: hardware/C/hardware.xml:356(para)
 msgid ""
 "Pressing <guibutton>Apply</guibutton> will cause all of the files on the "
 "partition to be permanently deleted."
@@ -586,11 +640,11 @@ msgstr ""
 "În urma apăsării butonului <guibutton>Aplică</guibutton> fisierele din "
 "partiţie vor fi şterse permanent."
 
-#: hardware/C/hardware.xml:294(title)
+#: hardware/C/hardware.xml:364(title)
 msgid "What is formatting?"
 msgstr "Ce este formatarea"
 
-#: hardware/C/hardware.xml:295(para)
+#: hardware/C/hardware.xml:365(para)
 msgid ""
 "To format a hard disk, device or partition means to prepare that particular "
 "device to be used for storing data."
@@ -599,7 +653,7 @@ msgstr ""
 "informaţiei, sau a unei partiţii reprezintă ansamblul de operaţiuni de "
 "iniţializare în vederea stocării de informaţii."
 
-#: hardware/C/hardware.xml:299(para)
+#: hardware/C/hardware.xml:369(para)
 msgid ""
 "The operation of formatting a hard disk or partition is when a specific data-"
 "storage format is applied to that device; this format is the "
@@ -609,7 +663,7 @@ msgstr ""
 "specific mediilor de stocare este aplicat acestui dispozitiv; acest format "
 "este <quote>sistemul de fișiere</quote>."
 
-#: hardware/C/hardware.xml:304(para)
+#: hardware/C/hardware.xml:374(para)
 msgid ""
 "When you buy a disk it is usually not formatted, and cannot yet be used for "
 "storing data. When you format the device, you will notice that the free "
@@ -627,11 +681,11 @@ msgstr ""
 "folosesc standarde diferite pentru a măsura capacitatea unui disc, ceea ce "
 "generează alte discrepanțe."
 
-#: hardware/C/hardware.xml:316(title)
+#: hardware/C/hardware.xml:386(title)
 msgid "What is a filesystem?"
 msgstr "Ce este un sistem de fișiere?"
 
-#: hardware/C/hardware.xml:317(para)
+#: hardware/C/hardware.xml:387(para)
 msgid ""
 "A filesystem is a particular way of storing and organizing files on a "
 "storage device such as a hard disk, and is an important part of an operating "
@@ -643,7 +697,7 @@ msgstr ""
 "unui sistem de operare. Fără un sistem de fișiere, accesarea și stocarea "
 "fișierelor nu este posibilă."
 
-#: hardware/C/hardware.xml:327(para)
+#: hardware/C/hardware.xml:397(para)
 msgid ""
 "ext2 and ext3: these are usually found on GNU/Linux operating systems. "
 "Ubuntu uses <emphasis>ext3</emphasis> as its default filesystem."
@@ -652,7 +706,7 @@ msgstr ""
 "GNU/Linux. Ubuntu utilizează <emphasis>ext3</emphasis> ca sistem de fișiere "
 "standard."
 
-#: hardware/C/hardware.xml:334(para)
+#: hardware/C/hardware.xml:404(para)
 msgid ""
 "<acronym>FAT16</acronym> and <acronym>FAT32</acronym>: these are Microsoft "
 "Windows filesystems found on older computers. If you would like to share "
@@ -664,7 +718,7 @@ msgstr ""
 "doriți să partajați date între două calculatoare, formatul "
 "<emphasis><acronym>FAT32</acronym></emphasis> este o alegere bună."
 
-#: hardware/C/hardware.xml:342(para)
+#: hardware/C/hardware.xml:412(para)
 msgid ""
 "<acronym>NTFS</acronym>: this is the filesystem type used by more modern "
 "versions of Microsoft Windows."
@@ -672,25 +726,25 @@ msgstr ""
 "<acronym>NTFS</acronym>: acesta este sistemul de fișiere folosit de "
 "versiunile mai moderne de Microsoft Windows."
 
-#: hardware/C/hardware.xml:348(para)
+#: hardware/C/hardware.xml:418(para)
 msgid ""
 "<acronym>HFS+</acronym>: this is the Mac OS X default filesystem type."
 msgstr ""
 "<acronym>HFS+</acronym>: acesta este sistemul de fișiere implicit al "
 "sistemului de operare Mac OS X."
 
-#: hardware/C/hardware.xml:323(para)
+#: hardware/C/hardware.xml:393(para)
 msgid ""
 "There are different types of filesystem. The most common are: <placeholder-"
 "1/>"
 msgstr ""
 "Există mai multe tipuri de sisteme de fisiere. Cele mai des utilizate sunt:"
 
-#: hardware/C/hardware.xml:357(title)
+#: hardware/C/hardware.xml:427(title)
 msgid "What is a Partition?"
 msgstr "Ce este o partiţie?"
 
-#: hardware/C/hardware.xml:358(para)
+#: hardware/C/hardware.xml:428(para)
 msgid ""
 "A partition is a means of dividing the storage capacity of a device, such as "
 "a hard disk, into several parts which can then be treated as separate "
@@ -700,7 +754,7 @@ msgstr ""
 "ar fi un disc fix, în mai multe părți, care pot fi apoi tratate ca "
 "dispozitive de stocare separate (<quote>dispozitive logice</quote>)."
 
-#: hardware/C/hardware.xml:363(para)
+#: hardware/C/hardware.xml:433(para)
 msgid ""
 "Each logical device is seen by the operating system as a distinct device, "
 "and thus is treated as an independent disk."
@@ -708,29 +762,29 @@ msgstr ""
 "Fiecare dispozitiv logic este luat în considerare de către sistemul de "
 "operare în mod independent, ca un disc separat."
 
-#: hardware/C/hardware.xml:371(para)
+#: hardware/C/hardware.xml:441(para)
 msgid "To retrieve free space"
 msgstr "Pentru a recupera spațiu liber"
 
-#: hardware/C/hardware.xml:376(para)
+#: hardware/C/hardware.xml:446(para)
 msgid "To install different operating systems"
 msgstr "Pentru a instala diferite sisteme de operare"
 
-#: hardware/C/hardware.xml:381(para)
+#: hardware/C/hardware.xml:451(para)
 msgid "To better organize data on the hard disk"
 msgstr "Pentru o mai bună organizare a datelor pe hard disk"
 
-#: hardware/C/hardware.xml:367(para)
+#: hardware/C/hardware.xml:437(para)
 msgid ""
 "Partitioning a hard disk can be done for several reasons: <placeholder-1/>"
 msgstr ""
 "Un hard disk poate fi partiţionat din mai multe motive: <placeholder-1/>"
 
-#: hardware/C/hardware.xml:390(title)
+#: hardware/C/hardware.xml:460(title)
 msgid "Mounting and Unmounting Devices"
 msgstr "Montarea şi demontarea dispozitivelor de stocare"
 
-#: hardware/C/hardware.xml:391(para)
+#: hardware/C/hardware.xml:461(para)
 msgid ""
 "When you connect a removable storage device to your computer, it must be "
 "<emphasis>mounted</emphasis> by the operating system so that you are able to "
@@ -741,7 +795,7 @@ msgstr ""
 "de operare, pentru ca dumneavoastră să puteți accesa fișierele de pe "
 "dispozitivul respectiv."
 
-#: hardware/C/hardware.xml:394(para)
+#: hardware/C/hardware.xml:464(para)
 msgid ""
 "To find out how to mount and unmount storage devices, see <ulink "
 "type=\"help\" url=\"ghelp:user-guide#gosnautilus-460\">Using Removable "
@@ -751,7 +805,7 @@ msgstr ""
 "consultați <ulink type=\"help\" url=\"ghelp:user-guide#gosnautilus-"
 "460\">Folosirea mediilor amovabile</ulink>."
 
-#: hardware/C/hardware.xml:398(para)
+#: hardware/C/hardware.xml:468(para)
 msgid ""
 "When you copy files to a storage device, they are not always written to the "
 "device immediately. Instead, they are often stored in a queue so that they "
@@ -768,43 +822,211 @@ msgstr ""
 "lucru, întotdeauna trebuie să <emphasis>demontați</emphasis> un dispozitiv "
 "de stocare înainte de a-l deconecta."
 
-#: hardware/C/hardware.xml:408(title)
+#: hardware/C/hardware.xml:478(title)
 msgid "Laptops"
 msgstr "Despre laptopuri"
 
-#: hardware/C/hardware.xml:409(para)
+#: hardware/C/hardware.xml:479(para)
 msgid ""
 "This section contains information for people using Ubuntu on a laptop "
 "computer."
 msgstr "Această secţiune este adresată utilizatorilor de Ubuntu pe laptop."
 
-#: hardware/C/hardware.xml:411(title)
-msgid "Suspending and hibernating laptops"
-msgstr "Suspendarea şi hibernarea"
+#: hardware/C/hardware.xml:481(title)
+msgid "Power management settings"
+msgstr "Configurarea sistemului de administrare a consumului"
 
-#: hardware/C/hardware.xml:412(para)
+#: hardware/C/hardware.xml:482(para)
 msgid ""
-"In order to save battery power, you can put your laptop into one of a number "
-"of power-saving modes when you are not using it. The available modes are "
-"detailed below:"
+"You may wish to change the power management settings of your laptop in order "
+"to help extend its battery life and reduce energy wastage."
 msgstr ""
-"Pentru evitarea descărcării acumulatorului, în perioadele în care nu este "
-"utilizat laptopurile pot fi puse într-una dintre stările de consum redus de "
-"energie, după cum urmează:"
+"Puteţi reconfigura sistemul de administrare a consumului de energie în "
+"scopul prelungirii timpului de viaţă al acumulatorilor sau pentru "
+"optimizarea consumului energetic."
 
-#: hardware/C/hardware.xml:414(para)
+#: hardware/C/hardware.xml:485(para)
 msgid ""
-"<emphasis role=\"strong\">Suspending</emphasis> a laptop is like putting the "
-"computer to sleep. The computer will still be turned on and all of your work "
-"will be left open, but the laptop will use much less battery power. You can "
-"wake the computer by pressing a key or clicking the mouse."
+"Press "
+"<menuchoice><guimenu>System</guimenu><guimenuitem>Preferences</guimenuitem><g"
+"uimenuitem>Power Management</guimenuitem></menuchoice>."
 msgstr ""
-"<emphasis role=\"strong\">Suspendarea</emphasis> este o stare de aşa-zisă "
-"adormire. Calculatorul este pornit, programele sunt funcţionale, însă "
-"laptopul va avea un consum redus de energie. Calculatorul poate fi trezit "
-"din această stare prin apăsarea unei taste sau printr-un click de mouse."
+"Alegeţi din meniu "
+"<menuchoice><guimenu>Sistem</guimenu><guimenuitem>Preferinţe</guimenuitem><gu"
+"imenuitem>Administrator consum</guimenuitem></menuchoice>."
 
-#: hardware/C/hardware.xml:415(para)
+#: hardware/C/hardware.xml:488(para)
+msgid "Change the settings as appropriate. Changes are applied instantly."
+msgstr ""
+"Alegeţi valorile pe care le consideraţi potrivite pentru diferitele opţiuni "
+"disponibile. Modificările se activează imediat, fără să fie nevoie de "
+"confirmare."
+
+#: hardware/C/hardware.xml:492(para)
+msgid ""
+"Displaying a screensaver may use more power than simply letting the screen "
+"go blank. Turning off the screensaver could slightly improve the battery "
+"life of your laptop."
+msgstr ""
+"Este posibil ca activarea unui screensaver să conducă la un consum mai "
+"important de energie faţă de varianta de comutare a ecranului in mod "
+"inactiv. Dezactivarea screensaver-ului ar putea îmbunătăţi timpul de viaţă "
+"al acumulatorului."
+
+#: hardware/C/hardware.xml:495(para)
+msgid ""
+"Press "
+"<menuchoice><guimenu>System</guimenu><guimenuitem>Preferences</guimenuitem><g"
+"uimenuitem>Screensaver</guimenuitem></menuchoice>."
+msgstr ""
+"Alegeţi din meniu "
+"<menuchoice><guimenu>Sistem</guimenu><guimenuitem>Preferinţe</guimenuitem><gu"
+"imenuitem>Screensaver</guimenuitem></menuchoice>."
+
+#: hardware/C/hardware.xml:498(para)
+msgid ""
+"Change the <guilabel>Screensaver theme</guilabel> to <guilabel>Blank "
+"screen</guilabel>. This will simply display a blank screen as a screensaver."
+msgstr ""
+"Alegeţi pentru parametrul <guilabel>Temă screensaver</guilabel> valoarea "
+"<guilabel>Ecran gol</guilabel>. Această opţiune conduce la dezactivarea "
+"afişării pe ecran pe timpul rulării screensaver-ului."
+
+#: hardware/C/hardware.xml:502(para)
+msgid ""
+"When your laptop is running on battery, one of the biggest drains on power "
+"is the display. Turning the brightness of the display down could improve "
+"battery life significantly; many laptops allow you to do this by pressing "
+"<keycombo><keycap>Fn</keycap><keycap>F7</keycap></keycombo> several times."
+msgstr ""
+"Pe timpul cât este deconectat de la reţeaua electrică, unul dintre cei mai "
+"mari consumatori de energie este afişarea pe ecran. Reducerea strălucirii la "
+"afişare poate îmbunătăţi semnificativ timpul de viaţă al acumulatorului; "
+"această operaţiune poate fi executată pe majoritatea laptopurilor prin "
+"apăsarea de câteva ori a combinaţiei de taste "
+"<keycombo><keycap>Fn</keycap><keycap>F7</keycap></keycombo>."
+
+#: hardware/C/hardware.xml:506(title) hardware/C/hardware.xml:777(ulink)
+msgid "Touchpads"
+msgstr "Touchpad-uri"
+
+#: hardware/C/hardware.xml:507(para)
+msgid ""
+"Most laptop computers come with a touchpad, which is used to control the "
+"mouse pointer. There are many ways of changing the way that the touchpad "
+"behaves; the most basic touchpad settings can be configured in the following "
+"way."
+msgstr ""
+"Majoritatea laptopurilor sunt dotate cu un touchpad utilizat pentru "
+"controlul indicatorului de mouse. Modul de comportare al touchpad-ului poate "
+"fi configurat în mai multe feluri; configuraţia de bază poate fi stabilită "
+"în modul următor:"
+
+#: hardware/C/hardware.xml:509(para)
+msgid ""
+"Press "
+"<menuchoice><guimenu>System</guimenu><guimenuitem>Preferences</guimenuitem><g"
+"uimenuitem>Mouse</guimenuitem></menuchoice>."
+msgstr ""
+"Alegeţi din meniu "
+"<menuchoice><guimenu>Sistem</guimenu><guimenuitem>Preferinţe</guimenuitem><gu"
+"imenuitem>Mouse</guimenuitem></menuchoice>."
+
+#: hardware/C/hardware.xml:510(para)
+msgid "Select the <guilabel>Touchpad</guilabel> tab."
+msgstr "Selectați categoria <guilabel>Touchpad</guilabel>."
+
+#: hardware/C/hardware.xml:511(para)
+msgid ""
+"Here you can change the touchpad settings to your liking. Changes should "
+"take effect immediately."
+msgstr ""
+"Configuraţi parametrii touchpad-ului după preferinţe. Modificările se "
+"activează imediat, fără confirmare."
+
+#: hardware/C/hardware.xml:513(para)
+msgid ""
+"Some touchpads may be detected as normal mouse devices, even though they are "
+"actually touchpads. In this case, the <guilabel>Touchpad</guilabel> tab will "
+"not be available in the mouse preferences."
+msgstr ""
+"Anumite dispozitive touchpad vor fi detectate ca fiind un maus normal, chiar "
+"dacă ele sunt, de fapt, touchpad-uri. În acest caz, nu va fi disponibilă "
+"categoria <guilabel>Touchpad</guilabel> în preferințele mausului."
+
+#: hardware/C/hardware.xml:515(para)
+msgid ""
+"See the <ulink "
+"url=\"https://help.ubuntu.com/community/SynapticsTouchpad\">community "
+"support pages</ulink> for more information on touchpads."
+msgstr ""
+"Pentru mai multe informaţii despre ecranele tactile, vezi <ulink "
+"url=\"https://help.ubuntu.com/community/SynapticsTouchpad\">paginile de "
+"suport tehnic ale comunităţii Ubuntu</ulink>"
+
+#: hardware/C/hardware.xml:519(title)
+msgid "Finding laptop testing reports"
+msgstr "Localizarea rapoartelor de testare pentru laptopuri"
+
+#: hardware/C/hardware.xml:520(para)
+msgid ""
+"Many laptops are regularly tested by the Ubuntu community to ensure that "
+"various features work correctly. The results of these tests are available "
+"for you to read, and may offer insight into any problems you might be "
+"experiencing with your laptop."
+msgstr ""
+"Multe tipuri de laptopuri sunt testate regulat de către comunitatea Ubuntu "
+"pentru verificarea implementării corecte a diferitelor facilităţi "
+"disponibile. Rezultatele acestor teste sunt disponibile public pentru "
+"consultare şi pot oferi informaţii importante pentru depistarea cauzelor "
+"unor probleme întâmpinate în utilizarea unui laptop."
+
+#: hardware/C/hardware.xml:522(para)
+msgid ""
+"See the Laptop Testing <ulink "
+"url=\"https://wiki.ubuntu.com/LaptopTestingTeam\">community support "
+"pages</ulink> for a full listing of available laptop tests."
+msgstr ""
+"Pentru o listă completă a rapoartelor de testare disponibile, vezi <ulink "
+"url=\"https://wiki.ubuntu.com/LaptopTestingTeam\">paginile de suport tehnic "
+"ale comunităţii Ubuntu</ulink>."
+
+#: hardware/C/hardware.xml:524(para)
+msgid ""
+"You can participate in laptop testing yourself by contacting the <ulink "
+"url=\"https://wiki.ubuntu.com/LaptopTestingTeam\">Laptop Testing "
+"Team</ulink>."
+msgstr ""
+"Puteţi participa chiar dumneavoastră la proiectul de testare a laptopurilor "
+"contactând <ulink url=\"https://wiki.ubuntu.com/LaptopTestingTeam\">Echipa "
+"de testare a laptopurilor</ulink>."
+
+#: hardware/C/hardware.xml:532(title)
+msgid "Suspending and hibernating your computer"
+msgstr ""
+"Cum să puneți în suspendare și în hibernare calculatorul dumneavoastră"
+
+#: hardware/C/hardware.xml:533(para)
+msgid ""
+"In order to save power, you can put your computer into one of a number of "
+"power-saving modes when you are not using it:"
+msgstr ""
+"Pentru a economisi energie când nu folosiți calculatorul, puteți să-l puneți "
+"într-unul din modurile de consum redus:"
+
+#: hardware/C/hardware.xml:538(para)
+msgid ""
+"<emphasis role=\"strong\">Suspending</emphasis> a computer is like putting "
+"the computer to sleep. The computer will still be turned on and all of your "
+"work will be left open, but it will use much less power. You can wake the "
+"computer by pressing a key or clicking the mouse."
+msgstr ""
+"<emphasis role=\"strong\">Suspendarea</emphasis> unui calculator este ca și "
+"cum am pune calculatorul să doarmă. Calculatorul încă va fi pornit și toate "
+"aplicațiile dumneavoastră vor rămâne deschise, dar va folosi mult mai puțină "
+"energie. Puteți trezi calculatorul apăsând o tastă sau un buton al mausului."
+
+#: hardware/C/hardware.xml:546(para)
 msgid ""
 "<emphasis role=\"strong\">Hibernating</emphasis> is turning the computer off "
 "completely while saving the current state of the computer (such as keeping "
@@ -819,7 +1041,7 @@ msgstr ""
 "de hibernare. Pe timpul hibernării, calculatorul nu folosește deloc curent "
 "electric."
 
-#: hardware/C/hardware.xml:416(para)
+#: hardware/C/hardware.xml:555(para)
 msgid ""
 "<emphasis role=\"strong\">Shutting down</emphasis> is turning the computer "
 "off completely, without saving the current state of the computer. No power "
@@ -829,7 +1051,7 @@ msgstr ""
 "fără a salva starea curentă a acestuia. Calculatorul nu folosește deloc "
 "curent electric când este închis."
 
-#: hardware/C/hardware.xml:417(para)
+#: hardware/C/hardware.xml:562(para)
 msgid ""
 "<emphasis role=\"strong\">Resuming</emphasis> is bringing the computer out "
 "of a power saving mode and back into normal operation. You can resume the "
@@ -843,18 +1065,14 @@ msgstr ""
 "taste sau printr-un click de mouse, iar din starea de hibernare prin "
 "apăsarea butonului de pornire al calculatorului."
 
-#: hardware/C/hardware.xml:419(para)
+#: hardware/C/hardware.xml:572(para)
 msgid ""
-"You can manually put your computer into a power-saving mode by pressing "
-"<menuchoice><guimenu>System</guimenu><guimenuitem>Quit...</guimenuitem></menu"
-"choice> and then pressing the appropriate button."
+"You can manually put your computer into a power-saving mode by pressing the "
+"<application>User Switcher</application> in the top right hand corner of the "
+"screen and then pressing the appropriate button."
 msgstr ""
-"Calculatorul poate fi pus într-o stare de consum redus de energie prin "
-"alegerea opţiunii din meniu "
-"<menuchoice><guimenu>Sistem</guimenu><guimenuitem>Ieşire...</guimenuitem></me"
-"nuchoice> şi, apoi, prin apăsarea butonului corespunzător."
 
-#: hardware/C/hardware.xml:421(para)
+#: hardware/C/hardware.xml:579(para)
 msgid ""
 "Some computers may have problems going into certain power saving modes. The "
 "best way of checking if your computer can handle a power-saving mode is to "
@@ -868,209 +1086,157 @@ msgstr ""
 "Întotdeauna asigurați-vă că ați salvat documentele importante înainte de "
 "suspendare sau hibernare."
 
-#: hardware/C/hardware.xml:424(title)
-msgid "Fixing problems with suspending, hibernating and resuming"
-msgstr "Rezolvarea problemelor legate de suspendare, hibernare sau repornire"
+#: hardware/C/hardware.xml:589(title)
+msgid "My computer does not suspend or hibernate correctly"
+msgstr "Calculatorul meu nu se suspendă sau nu hibernează corect"
 
-#: hardware/C/hardware.xml:425(para)
+#: hardware/C/hardware.xml:590(para)
 msgid ""
-"If your computer cannot suspend, hibernate or resume properly, there may be "
-"a number of things that you can try to get it working correctly."
+"Some computers are unable to suspend or hibernate correctly with Ubuntu. If "
+"this is the case for your computer, you may notice some of the following "
+"symptoms:"
 msgstr ""
-"În cazul în care calculatorul nu se comportă corect la suspendare, la "
-"hibernare sau la revenire puteţi apela la una dintre următoarele variante:"
 
-#: hardware/C/hardware.xml:427(para)
+#: hardware/C/hardware.xml:597(para)
+msgid "The computer does not turn off after you click to hibernate it."
+msgstr "Calculatorul nu se oprește după ce apăsați pe butonul de hibernare."
+
+#: hardware/C/hardware.xml:602(para)
 msgid ""
-"Check the test report for your laptop, if one has been made (see <xref "
-"linkend=\"laptops-testing-reports\"/>)."
+"When you turn the computer on after hibernating it, your previously open "
+"programs are not restored."
 msgstr ""
-"Consultaţi raportul de testare pentru laptopul dumneavoastră (dacă există, "
-"vezi <xref linkend=\"laptops-testing-reports\"/>)."
+"După ce vă porniți calculatorul din modul hibernare, programele deschise "
+"anterior nu sunt restabilite."
 
-#: hardware/C/hardware.xml:428(para)
+#: hardware/C/hardware.xml:608(para)
+msgid "The computer will not wake up after you have suspended it."
+msgstr "Calculatorul nu se trezește după ce l-ați suspendat."
+
+#: hardware/C/hardware.xml:613(para)
 msgid ""
-"Ask for assistance through an <ulink "
-"url=\"http://www.ubuntu.com/support/free\">Ubuntu support channel</ulink>."
+"Certain programs or hardware devices stop working correctly after resuming "
+"from hibernation or waking-up from being suspended."
 msgstr ""
-"Solicitaţi asistenţă pe unul dintre <ulink "
-"url=\"http://www.ubuntu.com/support/free\">canalele de suport tehnic "
-"Ubuntu</ulink>."
+"Anumite programe și componente hardware nu mai funcționează corect după "
+"revenirea din modul hibernare sau din modul suspendare."
 
-#: hardware/C/hardware.xml:433(title)
-msgid "Power management settings"
-msgstr "Configurarea sistemului de administrare a consumului"
-
-#: hardware/C/hardware.xml:434(para)
+#: hardware/C/hardware.xml:619(para)
 msgid ""
-"You may wish to change the power management settings of your laptop in order "
-"to help extend its battery life and reduce energy wastage."
+"If you suffer from any of these problems, you should report a bug to <ulink "
+"url=\"https://bugs.launchpad.net/ubuntu/+filebug\">Launchpad</ulink>. The "
+"problems will hopefully be fixed in a subsequent version of Ubuntu. You may "
+"also like to see if the <link linkend=\"pm-general-method\">General method "
+"for trying to get suspend and hibernate working</link> works for you."
 msgstr ""
-"Puteţi reconfigura sistemul de administrare a consumului de energie în "
-"scopul prelungirii timpului de viaţă al acumulatorilor sau pentru "
-"optimizarea consumului energetic."
+"Dacă apare una dintre aceste probleme, ar trebui să raportați această "
+"defecțiune la <ulink "
+"url=\"https://bugs.launchpad.net/ubuntu/+filebug\">Launchpad</ulink>. "
+"Problemele ar trebui să fie rezolvate într-o versiune viitoare de Ubuntu. "
+"Puteți, de asemenea, verifica dacă pentru dumneavoastră funcționează <link "
+"linkend=\"pm-general-method\">Metoda generală pentru a face să meargă "
+"suspendarea și hibernarea</link>."
 
-#: hardware/C/hardware.xml:437(para)
+#: hardware/C/hardware.xml:626(para)
 msgid ""
-"Press "
-"<menuchoice><guimenu>System</guimenu><guimenuitem>Preferences</guimenuitem><g"
-"uimenuitem>Power Management</guimenuitem></menuchoice>."
+"If your hardware does not work properly after suspending or hibernating your "
+"computer, restart your computer and it should return to normal. If a program "
+"does not work properly, try closing the program and then starting it again."
 msgstr ""
-"Alegeţi din meniu "
-"<menuchoice><guimenu>Sistem</guimenu><guimenuitem>Preferinţe</guimenuitem><gu"
-"imenuitem>Administrator consum</guimenuitem></menuchoice>."
+"Dacă nu funcționează corect componentele hardware ale calculatorului "
+"dumneavoastră după suspendare sau hibernare, reporniți calculatorul și ar "
+"trebui să revină la normal. Dacă un program nu funcționează corect, "
+"încercați să-l închideți și să-l porniți din nou."
 
-#: hardware/C/hardware.xml:440(para)
-msgid "Change the settings as appropriate. Changes are applied instantly."
-msgstr ""
-"Alegeţi valorile pe care le consideraţi potrivite pentru diferitele opţiuni "
-"disponibile. Modificările se activează imediat, fără să fie nevoie de "
-"confirmare."
-
-#: hardware/C/hardware.xml:444(para)
+#: hardware/C/hardware.xml:634(para)
 msgid ""
-"Displaying a screensaver may use more power than simply letting the screen "
-"go blank. Turning off the screensaver could slightly improve the battery "
-"life of your laptop."
+"Make sure that you save all of your open documents before testing for "
+"suspend and hibernate problems."
 msgstr ""
-"Este posibil ca activarea unui screensaver să conducă la un consum mai "
-"important de energie faţă de varianta de comutare a ecranului in mod "
-"inactiv. Dezactivarea screensaver-ului ar putea îmbunătăţi timpul de viaţă "
-"al acumulatorului."
+"Asigurați-vă că salvați toate documentele importante deschise înainte să "
+"faceți testul pentru probleme la suspendare sau hibernare."
 
-#: hardware/C/hardware.xml:447(para)
+#: hardware/C/hardware.xml:641(title)
+msgid "General method for trying to get suspend and hibernate working"
+msgstr "Metodă generală pentru a face să meargă suspendarea și hibernarea"
+
+#: hardware/C/hardware.xml:644(para)
 msgid ""
-"Press "
-"<menuchoice><guimenu>System</guimenu><guimenuitem>Preferences</guimenuitem><g"
-"uimenuitem>Screensaver</guimenuitem></menuchoice>."
+"You may be able to get suspend and hibernate working on your computer, but "
+"this can involve a lot of work. The method below should work for many "
+"computers. If it does not work for yours, please seek support using one of "
+"the many help and support channels for Ubuntu."
 msgstr ""
-"Alegeţi din meniu "
-"<menuchoice><guimenu>Sistem</guimenu><guimenuitem>Preferinţe</guimenuitem><gu"
-"imenuitem>Screensaver</guimenuitem></menuchoice>."
 
-#: hardware/C/hardware.xml:450(para)
+#: hardware/C/hardware.xml:653(para)
 msgid ""
-"Change the <guilabel>Screensaver theme</guilabel> to <guilabel>Blank "
-"screen</guilabel>. This will simply display a blank screen as a screensaver."
+"Download the <ulink "
+"url=\"http://people.freedesktop.org/~hughsient/quirk/quirk-suspend-"
+"debug.html\"> Quirk Checker script</ulink> to your Home folder."
 msgstr ""
-"Alegeţi pentru parametrul <guilabel>Temă screensaver</guilabel> valoarea "
-"<guilabel>Ecran gol</guilabel>. Această opţiune conduce la dezactivarea "
-"afişării pe ecran pe timpul rulării screensaver-ului."
+"Descărcați <ulink url=\"http://people.freedesktop.org/~hughsient/quirk/quirk-"
+"suspend-debug.html\"> Quirk Checker script</ulink> în dosarul Acasă."
 
-#: hardware/C/hardware.xml:454(para)
+#: hardware/C/hardware.xml:659(para)
 msgid ""
-"When your laptop is running on battery, one of the biggest drains on power "
-"is the display. Turning the brightness of the display down could improve "
-"battery life significantly; many laptops allow you to do this by pressing "
-"<keycombo><keycap>Fn</keycap><keycap>F7</keycap></keycombo> several times."
+"Find the <filename>quirk-checker.sh</filename> file in your Home folder, "
+"right-click it and select <guilabel>Properties</guilabel>. Select the "
+"<guilabel>Permissions</guilabel> tab, check <guilabel>Allow executing file "
+"as program</guilabel> and click <guibutton>Close</guibutton>."
 msgstr ""
-"Pe timpul cât este deconectat de la reţeaua electrică, unul dintre cei mai "
-"mari consumatori de energie este afişarea pe ecran. Reducerea strălucirii la "
-"afişare poate îmbunătăţi semnificativ timpul de viaţă al acumulatorului; "
-"această operaţiune poate fi executată pe majoritatea laptopurilor prin "
-"apăsarea de câteva ori a combinaţiei de taste "
-"<keycombo><keycap>Fn</keycap><keycap>F7</keycap></keycombo>."
+"Găsiți fișierul <filename>quirk-checker.sh</filename> în directorul Acasă, "
+"efectuați clic dreapta pe el și alegeți <guilabel>Proprietăți</guilabel>. "
+"Selectați fila <guilabel>Permisiuni</guilabel>, bifați <guilabel>Permite "
+"execuția fișierului drept program</guilabel> și apăsați "
+"<guibutton>Închide</guibutton>."
 
-#: hardware/C/hardware.xml:458(title) hardware/C/hardware.xml:546(ulink)
-msgid "Touchpads"
-msgstr "Touchpad-uri"
-
-#: hardware/C/hardware.xml:459(para)
+#: hardware/C/hardware.xml:667(para)
 msgid ""
-"Most laptop computers come with a touchpad, which is used to control the "
-"mouse pointer. There are many ways of changing the way that the touchpad "
-"behaves; the most basic touchpad settings can be configured in the following "
-"way."
+"Open a Terminal "
+"(<menuchoice><guimenu>Applications</guimenu><guimenuitem>Accessories</guimenu"
+"item><guimenuitem>Terminal</guimenuitem></menuchoice>), type "
+"<userinput>./quirk-checker.sh</userinput> and press <keycap>Enter</keycap>."
 msgstr ""
-"Majoritatea laptopurilor sunt dotate cu un touchpad utilizat pentru "
-"controlul indicatorului de mouse. Modul de comportare al touchpad-ului poate "
-"fi configurat în mai multe feluri; configuraţia de bază poate fi stabilită "
-"în modul următor:"
 
-#: hardware/C/hardware.xml:461(para)
+#: hardware/C/hardware.xml:673(para)
 msgid ""
-"Press "
-"<menuchoice><guimenu>System</guimenu><guimenuitem>Preferences</guimenuitem><g"
-"uimenuitem>Mouse</guimenuitem></menuchoice>."
+"Follow the suggestions that the script makes. These may involve editing "
+"important system files, so you should seek support if you are unsure of what "
+"you are doing."
 msgstr ""
-"Alegeţi din meniu "
-"<menuchoice><guimenu>Sistem</guimenu><guimenuitem>Preferinţe</guimenuitem><gu"
-"imenuitem>Mouse</guimenuitem></menuchoice>."
 
-#: hardware/C/hardware.xml:462(para)
-msgid "Select the <guilabel>Touchpad</guilabel> tab."
-msgstr "Selectați categoria <guilabel>Touchpad</guilabel>."
-
-#: hardware/C/hardware.xml:463(para)
+#: hardware/C/hardware.xml:682(para)
 msgid ""
-"Here you can change the touchpad settings to your liking. Changes should "
-"take effect immediately."
+"Before making the changes recommended by the Quirk Checker, create back-up "
+"copies of the files that you are going to change."
 msgstr ""
-"Configuraţi parametrii touchpad-ului după preferinţe. Modificările se "
-"activează imediat, fără confirmare."
 
-#: hardware/C/hardware.xml:465(para)
+#: hardware/C/hardware.xml:692(title)
 msgid ""
-"Some touchpads may be detected as normal mouse devices, even though they are "
-"actually touchpads. In this case, the <guilabel>Touchpad</guilabel> tab will "
-"not be available in the mouse preferences."
+"Why do I get a strange pattern on the screen when I hibernate my computer?"
 msgstr ""
-"Anumite dispozitive touchpad vor fi detectate ca fiind un maus normal, chiar "
-"dacă ele sunt, de fapt, touchpad-uri. În acest caz, nu va fi disponibilă "
-"categoria <guilabel>Touchpad</guilabel> în preferințele mausului."
 
-#: hardware/C/hardware.xml:467(para)
+#: hardware/C/hardware.xml:694(para)
 msgid ""
-"See the <ulink "
-"url=\"https://help.ubuntu.com/community/SynapticsTouchpad\">community "
-"support pages</ulink> for more information on touchpads."
+"Your screen may show a black and white pattern just after you click to "
+"hibernate your computer. This is usually nothing to worry about and is just "
+"how the graphics cards of some computers respond to the initial stages of "
+"the hibernation process."
 msgstr ""
-"Pentru mai multe informaţii despre ecranele tactile, vezi <ulink "
-"url=\"https://help.ubuntu.com/community/SynapticsTouchpad\">paginile de "
-"suport tehnic ale comunităţii Ubuntu</ulink>"
 
-#: hardware/C/hardware.xml:471(title)
-msgid "Finding laptop testing reports"
-msgstr "Localizarea rapoartelor de testare pentru laptopuri"
-
-#: hardware/C/hardware.xml:472(para)
+#: hardware/C/hardware.xml:700(para)
 msgid ""
-"Many laptops are regularly tested by the Ubuntu community to ensure that "
-"various features work correctly. The results of these tests are available "
-"for you to read, and may offer insight into any problems you might be "
-"experiencing with your laptop."
+"If the computer displays the pattern for a prolonged period of time without "
+"turning itself off then you may have a problem with hibernation. See <link "
+"linkend=\"pm-suspend-hibernate-fails\">My computer does not suspend or "
+"hibernate correctly</link> for more information."
 msgstr ""
-"Multe tipuri de laptopuri sunt testate regulat de către comunitatea Ubuntu "
-"pentru verificarea implementării corecte a diferitelor facilităţi "
-"disponibile. Rezultatele acestor teste sunt disponibile public pentru "
-"consultare şi pot oferi informaţii importante pentru depistarea cauzelor "
-"unor probleme întâmpinate în utilizarea unui laptop."
 
-#: hardware/C/hardware.xml:474(para)
-msgid ""
-"See the Laptop Testing <ulink "
-"url=\"https://wiki.ubuntu.com/LaptopTestingTeam\">community support "
-"pages</ulink> for a full listing of available laptop tests."
-msgstr ""
-"Pentru o listă completă a rapoartelor de testare disponibile, vezi <ulink "
-"url=\"https://wiki.ubuntu.com/LaptopTestingTeam\">paginile de suport tehnic "
-"ale comunităţii Ubuntu</ulink>."
-
-#: hardware/C/hardware.xml:476(para)
-msgid ""
-"You can participate in laptop testing yourself by contacting the <ulink "
-"url=\"https://wiki.ubuntu.com/LaptopTestingTeam\">Laptop Testing "
-"Team</ulink>."
-msgstr ""
-"Puteţi participa chiar dumneavoastră la proiectul de testare a laptopurilor "
-"contactând <ulink url=\"https://wiki.ubuntu.com/LaptopTestingTeam\">Echipa "
-"de testare a laptopurilor</ulink>."
-
-#: hardware/C/hardware.xml:481(title)
+#: hardware/C/hardware.xml:712(title)
 msgid "Mice and keyboards"
 msgstr "Mouse-uri şi tastaturi"
 
-#: hardware/C/hardware.xml:482(para)
+#: hardware/C/hardware.xml:713(para)
 msgid ""
 "This section provides instructions on using and configuring mice, keyboards "
 "and other input devices to make them more comfortable for you to use."
@@ -1078,11 +1244,11 @@ msgstr ""
 "Această secţiune cuprinde informaţii privitoare la utilizarea si "
 "configurarea mouse-urilor, a tastaturilor şi a altor dispozitive de intrare."
 
-#: hardware/C/hardware.xml:484(title)
+#: hardware/C/hardware.xml:715(title)
 msgid "Mice and other pointing devices"
 msgstr "Mouse-uri şi alte dispozitive indicatoare"
 
-#: hardware/C/hardware.xml:485(para)
+#: hardware/C/hardware.xml:716(para)
 msgid ""
 "You can change numerous options related to your mouse, such as how fast the "
 "pointer moves and how clicks are interpreted by the computer."
@@ -1091,22 +1257,22 @@ msgstr ""
 "mouse-ului, cum ar fi viteza indicatorului sau modul de interpretare al "
 "clicurilor."
 
-#: hardware/C/hardware.xml:488(ulink)
+#: hardware/C/hardware.xml:719(ulink)
 msgid "Mouse Skills"
 msgstr "Capabilităţile unui mouse"
 
-#: hardware/C/hardware.xml:489(para)
+#: hardware/C/hardware.xml:720(para)
 msgid ""
 "Information on basic mouse skills, such as pointing, clicking and dragging."
 msgstr ""
 "Informaţii despre capabilităţile de bază ale unui mouse, cum ar fi "
 "indicarea, clickul sau tragerea."
 
-#: hardware/C/hardware.xml:492(ulink)
+#: hardware/C/hardware.xml:723(ulink)
 msgid "Mouse Preferences"
 msgstr "Preferinţe mouse"
 
-#: hardware/C/hardware.xml:493(para)
+#: hardware/C/hardware.xml:724(para)
 msgid ""
 "Instructions on how to change various settings related to your mouse, such "
 "as whether the mouse is left-handed and how fast the pointer moves."
@@ -1115,11 +1281,11 @@ msgstr ""
 "cum ar fi alegerea modului pentru stângaci sau dreptaci sau a vitezei de "
 "deplasare a indicatorului."
 
-#: hardware/C/hardware.xml:496(ulink)
+#: hardware/C/hardware.xml:727(ulink)
 msgid "Accessibility - Configuring the Mouse"
 msgstr "Tehnologii de asistenţă - Configurarea mouse-ului"
 
-#: hardware/C/hardware.xml:497(para)
+#: hardware/C/hardware.xml:728(para)
 msgid ""
 "Information on changing mouse preferences for users of assistive "
 "technologies."
@@ -1127,23 +1293,23 @@ msgstr ""
 "Informaţii pentru configurarea mouse-ului pentru utilizatorii de tehnologii "
 "de asistenţă."
 
-#: hardware/C/hardware.xml:500(ulink)
+#: hardware/C/hardware.xml:731(ulink)
 msgid "Accessibility - Configuring Alternative Pointing Devices"
 msgstr ""
 "Tehnologii de asistenţă - Configurarea unor dispozitive indicatoare "
 "alternative"
 
-#: hardware/C/hardware.xml:501(para)
+#: hardware/C/hardware.xml:732(para)
 msgid "Information on using a pointing device other than a mouse."
 msgstr ""
 "Informaţii pentru utilizarea unor dispozitive indicatoare, altele decât "
 "mouse-ul."
 
-#: hardware/C/hardware.xml:507(title)
+#: hardware/C/hardware.xml:738(title)
 msgid "Keyboards"
 msgstr "Tastaturi"
 
-#: hardware/C/hardware.xml:508(para)
+#: hardware/C/hardware.xml:739(para)
 msgid ""
 "There are many options related to your keyboard which you can change, such "
 "as the keyboard language and keyboard shortcuts."
@@ -1151,30 +1317,30 @@ msgstr ""
 "Multe opţiuni legate de funcţionarea tastaturii pot fi modificate, cum ar fi "
 "limba sau acceleratorii."
 
-#: hardware/C/hardware.xml:511(ulink)
+#: hardware/C/hardware.xml:742(ulink)
 msgid "Basic Keyboard Skills"
 msgstr "Capabilităţile de bază ale tastaturii"
 
-#: hardware/C/hardware.xml:512(para)
+#: hardware/C/hardware.xml:743(para)
 msgid "Information on basic keyboard usage."
 msgstr "Informaţii de bază legate de utilizarea unei tastaturi."
 
-#: hardware/C/hardware.xml:515(ulink)
+#: hardware/C/hardware.xml:746(ulink)
 msgid "Keyboard Preferences"
 msgstr "Preferinţe tastatură"
 
-#: hardware/C/hardware.xml:516(para)
+#: hardware/C/hardware.xml:747(para)
 msgid ""
 "Change settings related to your keyboard, such as the layout of the keyboard."
 msgstr ""
 "Configurarea opţiunilor legate de tastatură, cum ar fi macheta (schema de "
 "amplasare a tastelor)."
 
-#: hardware/C/hardware.xml:519(ulink)
+#: hardware/C/hardware.xml:750(ulink)
 msgid "Keyboard Indicator"
 msgstr "Indicator tastatură"
 
-#: hardware/C/hardware.xml:520(para)
+#: hardware/C/hardware.xml:751(para)
 msgid ""
 "The manual of the Keyboard Indicator, which allows you to change between "
 "different keyboard layouts."
@@ -1182,11 +1348,11 @@ msgstr ""
 "Manualul Indicatorului de tastatura, iconiţa care vă permite comutarea "
 "machetei de tastatura."
 
-#: hardware/C/hardware.xml:523(ulink)
+#: hardware/C/hardware.xml:754(ulink)
 msgid "Accessibility - Configuring the Mouse and Keyboard"
 msgstr "Tehnologii de asistenţă - Configurarea mouse-ului şi a tastaturii"
 
-#: hardware/C/hardware.xml:524(para)
+#: hardware/C/hardware.xml:755(para)
 msgid ""
 "Information on configuring the mouse and keyboard for users of assistive "
 "technologies."
@@ -1194,21 +1360,21 @@ msgstr ""
 "Informaţii despre opţiunile de configurare ale mouse-ului sau tastaturii în "
 "contextul tehnologiilor de asistenţă."
 
-#: hardware/C/hardware.xml:527(ulink)
+#: hardware/C/hardware.xml:758(ulink)
 msgid "Using the Keyboard to Navigate the Desktop"
 msgstr "Utilizarea tastaturii pentru navigare în cadrul supafeţei de lucru"
 
-#: hardware/C/hardware.xml:528(para)
+#: hardware/C/hardware.xml:759(para)
 msgid "A guide on how to navigate the desktop using only a keyboard."
 msgstr ""
 "Un ghid pentru navigarea în cadrul supafeţei de lucru utilizând numai "
 "tastatura."
 
-#: hardware/C/hardware.xml:531(ulink)
+#: hardware/C/hardware.xml:762(ulink)
 msgid "Keyboard Accessibility Monitor"
 msgstr "Administrator de tehnologii asistive pentru tastatură"
 
-#: hardware/C/hardware.xml:532(para)
+#: hardware/C/hardware.xml:763(para)
 msgid ""
 "The manual of the Keyboard Accessibility Monitor, which shows the status of "
 "any keyboard accessibility features which are turned on."
@@ -1216,11 +1382,11 @@ msgstr ""
 "Manualul aplicaţiei de administrare de tehnologii asistive pentru tastatură, "
 "în care sunt prezentate facilităţile asistive activate sau inactive."
 
-#: hardware/C/hardware.xml:535(ulink)
+#: hardware/C/hardware.xml:766(ulink)
 msgid "Using the Character Palette"
 msgstr "Utilizarea paletei de caractere"
 
-#: hardware/C/hardware.xml:536(para)
+#: hardware/C/hardware.xml:767(para)
 msgid ""
 "Use the Character Palette to insert letters and symbols which are not on "
 "your keyboard."
@@ -1228,17 +1394,17 @@ msgstr ""
 "Utilizarea paletei de caractere pentru inserarea de caractere sau simboluri "
 "inexistente pe tastatură."
 
-#: hardware/C/hardware.xml:542(title)
+#: hardware/C/hardware.xml:773(title)
 msgid "Touchpads and graphics tablets"
 msgstr "Touchpad-uri şi tablete grafice"
 
-#: hardware/C/hardware.xml:543(para)
+#: hardware/C/hardware.xml:774(para)
 msgid "You can use a touchpad or graphics tablet to move a mouse pointer."
 msgstr ""
 "Pentru deplasarea indicatorului de mouse se pot utiliza touchpad-uri sau "
 "tablete grafice."
 
-#: hardware/C/hardware.xml:547(para)
+#: hardware/C/hardware.xml:778(para)
 msgid "Information on changing the settings of a laptop touchpad."
 msgstr "Informaţii despre configurarea unui touchpad de laptop."
 
@@ -1267,7 +1433,144 @@ msgstr ""
 "  Ionuț Jula https://launchpad.net/~ionutjula\n"
 "  Liviu Uţiu https://launchpad.net/~liviu\n"
 "  Visubu51 https://launchpad.net/~vassi51\n"
+"  marianvasile https://launchpad.net/~marianvasile-upcmail\n"
+"\n"
+"Launchpad Contributions:\n"
+"  Adi Roiban https://launchpad.net/~adiroiban\n"
+"  Andrei Brănescu https://launchpad.net/~andreibranescu\n"
+"  Doru Horișco https://launchpad.net/~doruhushhush\n"
+"  Ionuț Jula https://launchpad.net/~ionutjula\n"
+"  Liviu Uţiu https://launchpad.net/~liviu\n"
 "  marianvasile https://launchpad.net/~marianvasile-upcmail"
+
+#~ msgid "Hardware"
+#~ msgstr "Hardware"
+
+#~ msgid "Working with hardware devices"
+#~ msgstr "Lucrul cu dispozitive fizice"
+
+#~ msgid ""
+#~ "Press "
+#~ "<menuchoice><guimenu>System</guimenu><guimenuitem>Administration</guimenuitem"
+#~ "><guimenuitem>Hardware drivers</guimenuitem></menuchoice>"
+#~ msgstr ""
+#~ "Apăsaţi "
+#~ "<menuchoice><guimenu>Sistem</guimenu><guimenuitem>Administrare</guimenuitem><"
+#~ "guimenuitem>Administrator drivere cu restricţii</guimenuitem></menuchoice>"
+
+#~ msgid "Checking disk capacity"
+#~ msgstr "Verificare spaţiu disponibil pe hard disk"
+
+#~ msgid ""
+#~ "Press "
+#~ "<menuchoice><guimenu>Places</guimenu><guimenuitem>Computer</guimenuitem></men"
+#~ "uchoice>, right click on the disk you want to check and select "
+#~ "<guilabel>Properties</guilabel>. The free space on the disk will be "
+#~ "displayed on the <guilabel>Basic</guilabel> tab."
+#~ msgstr ""
+#~ "Apăsaţi "
+#~ "<menuchoice><guimenu>Locuri</guimenu><guimenuitem>Computer</guimenuitem></men"
+#~ "uchoice>, apăsaţi click dreapta pe discul dorit şi selectaţi opţiunea "
+#~ "<guilabel>Proprietăţi</guilabel>. Spaţiul liber pe disc va fi afişat în tab-"
+#~ "ul <guilabel>Simplu</guilabel>."
+
+#~ msgid ""
+#~ "Press "
+#~ "<menuchoice><guimenu>System</guimenu><guisubmenu>Administration</guisubmenu><"
+#~ "guimenuitem>System Monitor</guimenuitem></menuchoice> and select the "
+#~ "<guilabel>File Systems</guilabel> tab. All disks currently connected to the "
+#~ "system should be displayed in the list, along with their free and used "
+#~ "capacities."
+#~ msgstr ""
+#~ "Apăsaţi "
+#~ "<menuchoice><guimenu>Sistem</guimenu><guisubmenu>Administrare</guisubmenu><gu"
+#~ "imenuitem>Monitorizare sistem</guimenuitem></menuchoice> şi selectaţi tab-ul "
+#~ "<guilabel>Sisteme de fişiere</guilabel>. Va fi afişată o lista cu discurile "
+#~ "din sistem care va conţine spaţiul disponibil şi spaţiul utilizat pe fiecare "
+#~ "dintre acestea."
+
+#~ msgid ""
+#~ "To check the amount of free and used space on a disk, do either of the "
+#~ "following: <placeholder-1/>"
+#~ msgstr ""
+#~ "Pentru verificare staţiului liber şi utilizat pe un disc, urmaţi una dintre "
+#~ "următoarele alternative: <placeholder-1/>"
+
+#~ msgid ""
+#~ "You can use <application>GNOME Partition Editor</application> to partition "
+#~ "storage devices. Install the <application>gparted</application> package (see "
+#~ "<ulink type=\"help\" url=\"ghelp:add-applications\">Add "
+#~ "Applications</ulink>) and then press "
+#~ "<menuchoice><guimenu>System</guimenu><guisubmenu>Administration "
+#~ "</guisubmenu><guimenuitem>Gnome Partition Editor</guimenuitem></menuchoice> "
+#~ "to start the partition editor."
+#~ msgstr ""
+#~ "Pentru partiţionarea unui dispozitiv de stocare a informaţiei puteţi utiliza "
+#~ "aplicaţia <application>Editor de partiţii</application> din GNOME. Instalaţi "
+#~ "pachetul software <application>gparted</application> (vezi <ulink "
+#~ "type=\"help\" url=\"ghelp:add-applications\">Instalare aplicaţii</ulink>). "
+#~ "Alegeţi din meniu "
+#~ "<menuchoice><guimenu>Sistem</guimenu><guisubmenu>Administrare</guisubmenu><gu"
+#~ "imenuitem>Editor de partiţii</guimenuitem></menuchoice> pentru pornirea "
+#~ "aplicaţiei."
+
+#~ msgid "Suspending and hibernating laptops"
+#~ msgstr "Suspendarea şi hibernarea"
+
+#~ msgid ""
+#~ "In order to save battery power, you can put your laptop into one of a number "
+#~ "of power-saving modes when you are not using it. The available modes are "
+#~ "detailed below:"
+#~ msgstr ""
+#~ "Pentru evitarea descărcării acumulatorului, în perioadele în care nu este "
+#~ "utilizat laptopurile pot fi puse într-una dintre stările de consum redus de "
+#~ "energie, după cum urmează:"
+
+#~ msgid ""
+#~ "<emphasis role=\"strong\">Suspending</emphasis> a laptop is like putting the "
+#~ "computer to sleep. The computer will still be turned on and all of your work "
+#~ "will be left open, but the laptop will use much less battery power. You can "
+#~ "wake the computer by pressing a key or clicking the mouse."
+#~ msgstr ""
+#~ "<emphasis role=\"strong\">Suspendarea</emphasis> este o stare de aşa-zisă "
+#~ "adormire. Calculatorul este pornit, programele sunt funcţionale, însă "
+#~ "laptopul va avea un consum redus de energie. Calculatorul poate fi trezit "
+#~ "din această stare prin apăsarea unei taste sau printr-un click de mouse."
+
+#~ msgid ""
+#~ "You can manually put your computer into a power-saving mode by pressing "
+#~ "<menuchoice><guimenu>System</guimenu><guimenuitem>Quit...</guimenuitem></menu"
+#~ "choice> and then pressing the appropriate button."
+#~ msgstr ""
+#~ "Calculatorul poate fi pus într-o stare de consum redus de energie prin "
+#~ "alegerea opţiunii din meniu "
+#~ "<menuchoice><guimenu>Sistem</guimenu><guimenuitem>Ieşire...</guimenuitem></me"
+#~ "nuchoice> şi, apoi, prin apăsarea butonului corespunzător."
+
+#~ msgid "Fixing problems with suspending, hibernating and resuming"
+#~ msgstr "Rezolvarea problemelor legate de suspendare, hibernare sau repornire"
+
+#~ msgid ""
+#~ "If your computer cannot suspend, hibernate or resume properly, there may be "
+#~ "a number of things that you can try to get it working correctly."
+#~ msgstr ""
+#~ "În cazul în care calculatorul nu se comportă corect la suspendare, la "
+#~ "hibernare sau la revenire puteţi apela la una dintre următoarele variante:"
+
+#~ msgid ""
+#~ "Check the test report for your laptop, if one has been made (see <xref "
+#~ "linkend=\"laptops-testing-reports\"/>)."
+#~ msgstr ""
+#~ "Consultaţi raportul de testare pentru laptopul dumneavoastră (dacă există, "
+#~ "vezi <xref linkend=\"laptops-testing-reports\"/>)."
+
+#~ msgid ""
+#~ "Ask for assistance through an <ulink "
+#~ "url=\"http://www.ubuntu.com/support/free\">Ubuntu support channel</ulink>."
+#~ msgstr ""
+#~ "Solicitaţi asistenţă pe unul dintre <ulink "
+#~ "url=\"http://www.ubuntu.com/support/free\">canalele de suport tehnic "
+#~ "Ubuntu</ulink>."
 
 #~ msgid ""
 #~ "This document is maintained by the Ubuntu documentation team "

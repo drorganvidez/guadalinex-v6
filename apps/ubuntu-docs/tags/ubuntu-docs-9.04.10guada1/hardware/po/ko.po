@@ -7,24 +7,23 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-docs\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2008-08-03 16:01+0100\n"
-"PO-Revision-Date: 2008-04-23 23:31+0000\n"
-"Last-Translator: Launchpad Translations Administrators "
-"<rosetta@launchpad.net>\n"
+"POT-Creation-Date: 2009-03-26 16:34+0000\n"
+"PO-Revision-Date: 2009-03-15 16:21+0000\n"
+"Last-Translator: Shin Hungjae <f9mbfxzcdve8@gmail.com>\n"
 "Language-Team: Korean <ko@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2008-10-19 12:51+0000\n"
+"X-Launchpad-Export-Date: 2009-04-01 10:40+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: hardware/C/hardware-C.omf:6(creator) hardware/C/hardware-C.omf:7(maintainer)
 msgid "ubuntu-doc@lists.ubuntu.com (Ubuntu Documentation Project)"
 msgstr "ubuntu-doc@lists.ubuntu.com (우분투 문서화 프로젝트)"
 
-#: hardware/C/hardware-C.omf:8(title)
-msgid "Hardware"
-msgstr "하드웨어"
+#: hardware/C/hardware-C.omf:8(title) hardware/C/hardware.xml:20(title)
+msgid "Working with Hardware Devices"
+msgstr ""
 
 #: hardware/C/hardware-C.omf:9(date)
 msgid "2006-09-07"
@@ -33,10 +32,6 @@ msgstr "2006년 9월 7일"
 #: hardware/C/hardware-C.omf:11(description)
 msgid "Placeholder."
 msgstr "Placeholder."
-
-#: hardware/C/hardware.xml:20(title)
-msgid "Working with hardware devices"
-msgstr "하드웨어 장치 설정하기"
 
 #: hardware/C/hardware.xml:3(title)
 msgid "Credits and License"
@@ -48,6 +43,8 @@ msgid ""
 "(https://wiki.ubuntu.com/DocumentationTeam). For a list of contributors, see "
 "the <ulink url=\"../../libs/C/contributors.xml\">contributors page</ulink>"
 msgstr ""
+"이 문서는 우분투 문서 팀(https://wiki.ubuntu.com/DocumentationTeam)에서 관리합니다. 공헌자 목록은 "
+"<ulink url=\"../../libs/C/contributors.xml\">공헌자</ulink>를 보세요."
 
 #: hardware/C/hardware.xml:5(para)
 msgid ""
@@ -78,10 +75,12 @@ msgid ""
 "A copy of the license is available here: <ulink url=\"/usr/share/ubuntu-"
 "docs/libs/C/ccbysa.xml\">Creative Commons ShareAlike License</ulink>."
 msgstr ""
+"인증서 복사는 여기서 하세요: <ulink url=\"/usr/share/ubuntu-"
+"docs/libs/C/ccbysa.xml\">Creative Commons ShareAlike License</ulink>."
 
 #: hardware/C/hardware.xml:14(year)
 msgid "2008"
-msgstr ""
+msgstr "2008"
 
 #: hardware/C/hardware.xml:15(ulink)
 msgid "Ubuntu Documentation Project"
@@ -196,10 +195,8 @@ msgstr "어떤 장치에 대해 제한된 드라이버를 사용하려면:"
 msgid ""
 "Press "
 "<menuchoice><guimenu>System</guimenu><guimenuitem>Administration</guimenuitem"
-"><guimenuitem>Hardware drivers</guimenuitem></menuchoice>"
+"><guimenuitem>Hardware Drivers</guimenuitem></menuchoice>"
 msgstr ""
-"<menuchoice><guimenu>시스템</guimenu><guimenuitem>관리</guimenuitem><guimenuitem>하"
-"드웨어 드라이버</guimenuitem></menuchoice>를 고르세요."
 
 #: hardware/C/hardware.xml:47(para)
 msgid ""
@@ -301,45 +298,39 @@ msgid "file system"
 msgstr "파일 시스템"
 
 #: hardware/C/hardware.xml:113(title)
-msgid "Checking disk capacity"
-msgstr "디스크 용량 확인하기"
-
-#: hardware/C/hardware.xml:117(para)
-msgid ""
-"Press "
-"<menuchoice><guimenu>Places</guimenu><guimenuitem>Computer</guimenuitem></men"
-"uchoice>, right click on the disk you want to check and select "
-"<guilabel>Properties</guilabel>. The free space on the disk will be "
-"displayed on the <guilabel>Basic</guilabel> tab."
-msgstr ""
-"<menuchoice><guimenu>위치</guimenu><guimenuitem>컴퓨터</guimenuitem></menuchoice>를"
-" 누르고 확인하고 싶은 디스크 상에서 우클릭한 후 <guilabel>속성</guilabel>을 선택하세요. 디스크 상의 사용가능한 공간이 "
-"<guilabel>기본</guilabel> 탭에 표시될 것입니다."
-
-#: hardware/C/hardware.xml:121(para)
-msgid ""
-"Press "
-"<menuchoice><guimenu>System</guimenu><guisubmenu>Administration</guisubmenu><"
-"guimenuitem>System Monitor</guimenuitem></menuchoice> and select the "
-"<guilabel>File Systems</guilabel> tab. All disks currently connected to the "
-"system should be displayed in the list, along with their free and used "
-"capacities."
-msgstr ""
-"<menuchoice><guimenu>시스템</guimenu><guisubmenu>관리</guisubmenu><guimenuitem>시스템"
-" 감시</guimenuitem></menuchoice>를 누르고 <guilabel>파일 시스템</guilabel> 탭을 선택하세요. "
-"시스템에 현재 연결된 모든 디스크가 사용가능과 사용중인 공간과 함께 목록에 표시되어 질 것입니다."
+msgid "Checking how much disk space is available"
+msgstr "남은공간 검사중"
 
 #: hardware/C/hardware.xml:114(para)
 msgid ""
-"To check the amount of free and used space on a disk, do either of the "
-"following: <placeholder-1/>"
-msgstr "디스크상의 사용가능과 사용중인 공간의 양을 확인하고 싶으면 다음과 같이 하세요: <placeholder-1/>"
+"Click "
+"<menuchoice><guimenu>System</guimenu><guisubmenu>Administration</guisubmenu><"
+"guimenuitem>System Monitor</guimenuitem></menuchoice> and select the "
+"<guilabel>File Systems</guilabel> tab to see how much hard disk space is "
+"available on your computer."
+msgstr ""
+"<menuchoice><guimenu>시스템</guimenu><guisubmenu>관리자</guisubmenu><guimenuitem>시스"
+"템 모니터</guimenuitem></menuchoice>를 클릭하고 <guilabel>File Systems</guilabel>을 "
+"선택하면 이용가능한 공간이 어느정도 있는지 볼수 있습니다."
 
-#: hardware/C/hardware.xml:128(title)
+#: hardware/C/hardware.xml:118(para)
+msgid ""
+"Alternatively, click "
+"<menuchoice><guimenu>Places</guimenu><guimenuitem>Computer</guimenuitem></men"
+"uchoice>, right-click a hard disk, click <guilabel>Properties</guilabel> and "
+"select the <guilabel>Basic</guilabel> tab to see a summary of the disk space "
+"currently available on that disk."
+msgstr ""
+"대체로 "
+"<menuchoice><guimenu>장소</guimenu><guimenuitem>컴퓨터</guimenuitem></menuchoice>를"
+" 클릭, HDD에서 오른쪽 클릭하고 <guilabel>속성</guilabel>을 클릭하고  "
+"<guilabel>기본</guilabel>에서도 남은 공간을 확인하실 수 있습니다."
+
+#: hardware/C/hardware.xml:126(title)
 msgid "Advanced disk-usage analysis"
 msgstr "고급 디스크 사용 분석"
 
-#: hardware/C/hardware.xml:129(para)
+#: hardware/C/hardware.xml:127(para)
 msgid ""
 "For a more accurate analysis of your filesystem, press "
 "<menuchoice><guimenu>Applications</guimenu><guimenuitem>Accessories</guimenui"
@@ -350,7 +341,7 @@ msgstr ""
 "<menuchoice><guimenu>프로그램</guimenu><guimenuitem>보조프로그램</guimenuitem><guimenui"
 "tem>디스크 사용량 분석</guimenuitem></menuchoice>을 누르세요."
 
-#: hardware/C/hardware.xml:133(para)
+#: hardware/C/hardware.xml:131(para)
 msgid ""
 "Press <guibutton>Scan Home</guibutton> to scan your home directory, or press "
 "<guibutton>Scan Filesystem</guibutton> to scan the whole filesystem."
@@ -358,7 +349,7 @@ msgstr ""
 "여러분의 홈 디렉토리를 검사하기 위해서 <guibutton>홈 검사</guibutton>를 누르거나, 전체 파일 시스템을 검사하기 위해서 "
 "<guibutton>파일 시스템 검사</guibutton>를 누르세요."
 
-#: hardware/C/hardware.xml:137(para)
+#: hardware/C/hardware.xml:135(para)
 msgid ""
 "See the <ulink url=\"ghelp:baobab\" type=\"help\">Disk Usage Analyzer "
 "Manual</ulink> for more information."
@@ -366,37 +357,103 @@ msgstr ""
 "더 많은 정보를 위해서는 <ulink url=\"ghelp:baobab\" type=\"help\">디스크 사용량 분석 "
 "설명서</ulink>를 참고하세요."
 
-#: hardware/C/hardware.xml:145(title)
+#: hardware/C/hardware.xml:143(title)
+msgid "How can I free-up some disk space?"
+msgstr ""
+
+#: hardware/C/hardware.xml:144(para)
+msgid "There are several simple ways of making more disk space available:"
+msgstr ""
+
+#: hardware/C/hardware.xml:150(para)
+msgid ""
+"Empty your trash by right-clicking the Trash icon on the bottom panel and "
+"selecting <guilabel>Empty the Trash folder</guilabel>."
+msgstr ""
+
+#: hardware/C/hardware.xml:156(para)
+msgid ""
+"<ulink url=\"apt:computer-janitor-gtk\">Install <application>Computer "
+"Janitor</application></ulink> and run it by clicking "
+"<menuchoice><guimenu>System</guimenu><guisubmenu>Administration</guisubmenu><"
+"guisubmenu>System Janitor</guisubmenu></menuchoice>. This will remove unused "
+"or obsolete software packages from your computer. Read the list of packages "
+"carefully before you click <guibutton>Cleanup</guibutton>; packages that you "
+"have manually downloaded and installed may be listed as unused, even though "
+"they are not."
+msgstr ""
+
+#: hardware/C/hardware.xml:166(para)
+msgid ""
+"Remove software packages that you no longer use. See <ulink type=\"help\" "
+"url=\"ghelp:add-applications#gnome-app-install\"> Add/Remove "
+"Applications</ulink> for information on removing packages."
+msgstr ""
+"더 이상 사용하지 않는 무른모 꾸러미 제거하기. <ulink type=\"help\" url=\"ghelp:add-"
+"applications#gnome-app-install\"> 프로그램 추가/삭제</ulink>를 보세요. 꾸러미 제거시 필요한 정보입니다."
+
+#: hardware/C/hardware.xml:173(para)
+msgid ""
+"Delete files that you no longer need. You can use the Disk Usage Analyzer "
+"(<menuchoice><guimenu>Applications</guimenu><guimenuitem>Accessories</guimenu"
+"item><guimenuitem>Disk Usage Analyzer</guimenuitem></menuchoice>) to find "
+"which files are taking up the most space. Be careful not to delete files "
+"that you still need!"
+msgstr ""
+
+#: hardware/C/hardware.xml:181(para)
+msgid "You can also compress and archive your old, rarely-used documents:"
+msgstr "거의 사용하지 않는 문서, 오래된 파일을 압축할 수 있습니다."
+
+#: hardware/C/hardware.xml:187(para)
+msgid ""
+"Select the files and folders that you want to compress, right-click one of "
+"them and select <guilabel>Create Archive</guilabel>."
+msgstr ""
+
+#: hardware/C/hardware.xml:193(para)
+msgid ""
+"Choose a name, location and format for the file (the "
+"<filename>.tar.gz</filename> format is the most commonly used on Ubuntu, "
+"<filename>.zip</filename> is compatible with Windows and "
+"<filename>.tar.lzma</filename> usually offers the best compression)."
+msgstr ""
+
+#: hardware/C/hardware.xml:201(para)
+msgid ""
+"Click <guibutton>Create</guibutton>. An archive file will be created "
+"containing compressed copies of your files."
+msgstr ""
+
+#: hardware/C/hardware.xml:207(para)
+msgid "Delete the old uncompressed files to free some disk space."
+msgstr "디스크의 공간확보를 위해 오래된 압축되지 않은 파일 삭제하기."
+
+#: hardware/C/hardware.xml:215(title)
 msgid "Partitioning a device"
 msgstr "장치 파티션 나누기"
 
-#: hardware/C/hardware.xml:146(para)
+#: hardware/C/hardware.xml:216(para)
 msgid ""
 "You can use <application>GNOME Partition Editor</application> to partition "
-"storage devices. Install the <application>gparted</application> package (see "
-"<ulink type=\"help\" url=\"ghelp:add-applications\">Add "
-"Applications</ulink>) and then press "
+"storage devices. <ulink url=\"apt:gparted\">Install the "
+"<application>gparted</application> package </ulink> and then press "
 "<menuchoice><guimenu>System</guimenu><guisubmenu>Administration "
 "</guisubmenu><guimenuitem>Gnome Partition Editor</guimenuitem></menuchoice> "
 "to start the partition editor."
 msgstr ""
-"저장 장치의 파티션을 나누기 위해서 <application>그놈 파티션 편집기</application>를 사용할 수 있습니다. "
-"<application>gparted</application>꾸러미를 설치(<ulink type=\"help\" "
-"url=\"ghelp:add-applications\">추가/제거...</ulink> 참고)하고 파티션 편집기를 시작하기 위해서 "
-"<menuchoice><guimenu>시스템</guimenu><guisubmenu>관리</guisubmenu><guimenuitem>파티션"
-" 편집기</guimenuitem></menuchoice>를 누르세요."
 
-#: hardware/C/hardware.xml:151(para)
+#: hardware/C/hardware.xml:221(para)
 msgid ""
 "Be careful when altering disk partitions, as it is possible to lose your "
 "data if you delete or change the wrong partition."
 msgstr "잘못된 파티션을 지우거나 변경할 때 데이터를 잃을 수 있으므로 디스크 파티션을 바꿀 때 조심하세요."
 
-#: hardware/C/hardware.xml:155(title)
+#: hardware/C/hardware.xml:225(title)
 msgid "Freeing space for a new partition"
 msgstr "새 파티션을 위한 공간 남기기"
 
-#: hardware/C/hardware.xml:163(para) hardware/C/hardware.xml:248(para)
+#: hardware/C/hardware.xml:233(para) hardware/C/hardware.xml:318(para)
 msgid ""
 "Press <menuchoice><guimenu>System</guimenu><guisubmenu>Administration "
 "</guisubmenu><guimenuitem>Gnome Partition Editor</guimenuitem></menuchoice>."
@@ -404,13 +461,13 @@ msgstr ""
 "<menuchoice><guimenu>시스템</guimenu><guisubmenu>관리</guisubmenu><guimenuitem>파티션"
 " 편집기</guimenuitem></menuchoice>를 누르세요."
 
-#: hardware/C/hardware.xml:168(para) hardware/C/hardware.xml:209(para) hardware/C/hardware.xml:253(para)
+#: hardware/C/hardware.xml:238(para) hardware/C/hardware.xml:279(para) hardware/C/hardware.xml:323(para)
 msgid ""
 "Select the device to partition from the drop-down list at the top-right of "
 "the main window."
 msgstr "메인 창의 오른쪽 위편에 있는 드롭다운 목록에서 파티션을 나눌 장치를 선택합니다."
 
-#: hardware/C/hardware.xml:174(para) hardware/C/hardware.xml:259(para)
+#: hardware/C/hardware.xml:244(para) hardware/C/hardware.xml:329(para)
 msgid ""
 "A list of partitions will appear. Select the desired partition and choose "
 "<menuchoice><guimenu>Partition</guimenu><guimenuitem>Unmount</guimenuitem></m"
@@ -420,7 +477,7 @@ msgstr ""
 "<menuchoice><guimenu>파티션</guimenu><guimenuitem>마운트 "
 "해제</guimenuitem></menuchoice>를 고르세요."
 
-#: hardware/C/hardware.xml:183(para)
+#: hardware/C/hardware.xml:253(para)
 msgid ""
 "To resize the partition choose <guilabel>Resize/Move</guilabel>. The dialog "
 "<guilabel>Resize/Move</guilabel> will be shown. You can use the "
@@ -435,11 +492,11 @@ msgstr ""
 "<guilabel>Free Space Preceding (MiB)</guilabel>은 이 파티션 앞에 얼만큼의 공간을 비게 할 것인지 "
 "정하기 위해 사용할 수 있습니다. 다른 방법으로, 여러분은 파티션 사이즈를 조정하는데 슬라이더를 사용할 수 있습니다."
 
-#: hardware/C/hardware.xml:195(para)
+#: hardware/C/hardware.xml:265(para)
 msgid "To apply the changes, click <guibutton>Resize/Move</guibutton>."
 msgstr "변경 사항을 적용하려면 <guilabel>크기 조정/이동</guilabel> 을 누릅니다."
 
-#: hardware/C/hardware.xml:156(para)
+#: hardware/C/hardware.xml:226(para)
 msgid ""
 "To create a new partition inside an already partitioned device, you must "
 "first resize an existing partition. If you already have free space, skip to "
@@ -450,11 +507,11 @@ msgstr ""
 "<xref linkend=\"creating-new-partition\"/>를 넘기세요; 아니라면 다음 지시를 따르세요: "
 "<placeholder-1/>"
 
-#: hardware/C/hardware.xml:204(title)
+#: hardware/C/hardware.xml:274(title)
 msgid "Creating a new partition"
 msgstr "새 파티션 만들기"
 
-#: hardware/C/hardware.xml:215(para)
+#: hardware/C/hardware.xml:285(para)
 msgid ""
 "A list of partitions will appear. Select the one called "
 "<guilabel>unallocated</guilabel> and click <guibutton>New</guibutton>."
@@ -462,7 +519,7 @@ msgstr ""
 "파티션의 목록이 보일 것입니다. <guilabel>할당되지 않음</guilabel> 부분에 있는 파티션을 하나 선택하고 "
 "<guibutton>새 파티션</guibutton> 을 클릭합니다."
 
-#: hardware/C/hardware.xml:222(para)
+#: hardware/C/hardware.xml:292(para)
 msgid ""
 "From the <guilabel>Filesystem</guilabel> drop-down list choose the desired "
 "type of filesystem to use and click <guibutton>Add</guibutton>."
@@ -470,19 +527,19 @@ msgstr ""
 "<guilabel>파일 시스템</guilabel> 드롭다운 목록에서 원하는 종류의 파일 시스템을 선택하고 "
 "<guibutton>추가</guibutton> 를 클릭합니다."
 
-#: hardware/C/hardware.xml:229(para) hardware/C/hardware.xml:277(para)
+#: hardware/C/hardware.xml:299(para) hardware/C/hardware.xml:347(para)
 msgid "To apply all the changes made, click <guibutton>Apply</guibutton>."
 msgstr "변경 사항을 적용하려면 <guibutton>적용</guibutton> 을 클릭합니다."
 
-#: hardware/C/hardware.xml:205(para)
+#: hardware/C/hardware.xml:275(para)
 msgid "To create a new partition: <placeholder-1/>"
 msgstr "새로운 파티션을 만들려면: <placeholder-1/>"
 
-#: hardware/C/hardware.xml:240(title)
+#: hardware/C/hardware.xml:310(title)
 msgid "Formatting a partition"
 msgstr "파티션 포멧하기"
 
-#: hardware/C/hardware.xml:241(para)
+#: hardware/C/hardware.xml:311(para)
 msgid ""
 "You can use <application>GNOME Partition Editor</application> to format disk "
 "partitions (see <xref linkend=\"partitioning-device\"/> for more information "
@@ -492,7 +549,7 @@ msgstr ""
 "있습니다(<application>그놈 파티션 편집기</application>에 대한 더 자세한 정보는 <xref "
 "linkend=\"partitioning-device\"/>를 참고)."
 
-#: hardware/C/hardware.xml:268(para)
+#: hardware/C/hardware.xml:338(para)
 msgid ""
 "Select the partition you want to format and choose "
 "<menuchoice><guimenu>Partition</guimenu><guimenuitem>Format "
@@ -503,27 +560,27 @@ msgstr ""
 "<menuchoice><guimenu>파티션</guimenu><guimenuitem>포맷</guimenuitem></menuchoice> "
 "을 누르고, 파티션을 포맷할 파일 시스템의 형식을 목록에서 선택합니다."
 
-#: hardware/C/hardware.xml:244(para)
+#: hardware/C/hardware.xml:314(para)
 msgid "To format a partition, do as follows: <placeholder-1/>"
 msgstr "파티션을 포맷하려면, 다음을 따라하십시오: <placeholder-1/>"
 
-#: hardware/C/hardware.xml:286(para)
+#: hardware/C/hardware.xml:356(para)
 msgid ""
 "Pressing <guibutton>Apply</guibutton> will cause all of the files on the "
 "partition to be permanently deleted."
 msgstr "<guibutton>적용</guibutton> 을 누르면, 파티션 내의 모든 파일들이 영원히 삭제될 것입니다."
 
-#: hardware/C/hardware.xml:294(title)
+#: hardware/C/hardware.xml:364(title)
 msgid "What is formatting?"
 msgstr "포멧팅은 무엇일까요?"
 
-#: hardware/C/hardware.xml:295(para)
+#: hardware/C/hardware.xml:365(para)
 msgid ""
 "To format a hard disk, device or partition means to prepare that particular "
 "device to be used for storing data."
 msgstr "하드디스크, 장치 또는 파티션을 포멧한다는 것은 데이터를 저장하기 위해 사용되어지는 장치를 특정하게 준비한다는 것입니다."
 
-#: hardware/C/hardware.xml:299(para)
+#: hardware/C/hardware.xml:369(para)
 msgid ""
 "The operation of formatting a hard disk or partition is when a specific data-"
 "storage format is applied to that device; this format is the "
@@ -532,7 +589,7 @@ msgstr ""
 "하드디스크나 파티션의 포멧 동작은 특정 데이터 저장 형식이 그 장치로 적용될 때 됩니다.; 이 형식이 <quote>파일 "
 "시스템</quote>입니다."
 
-#: hardware/C/hardware.xml:304(para)
+#: hardware/C/hardware.xml:374(para)
 msgid ""
 "When you buy a disk it is usually not formatted, and cannot yet be used for "
 "storing data. When you format the device, you will notice that the free "
@@ -546,11 +603,11 @@ msgstr ""
 "때문입니다;이 공간은 파일 시스템이 차지합니다. 또한, 디스크 생산자들은 종종 디스크 용량을 측정하는 것과 다른 더 많이 불일치하는 "
 "표준을 사용합니다."
 
-#: hardware/C/hardware.xml:316(title)
+#: hardware/C/hardware.xml:386(title)
 msgid "What is a filesystem?"
 msgstr "파일 시스템은 무엇일까요?"
 
-#: hardware/C/hardware.xml:317(para)
+#: hardware/C/hardware.xml:387(para)
 msgid ""
 "A filesystem is a particular way of storing and organizing files on a "
 "storage device such as a hard disk, and is an important part of an operating "
@@ -560,7 +617,7 @@ msgstr ""
 "파일 시스템은 하드디스크와 같은 저장 장치에 파일을 저장하고 구성하는 특정한 방법입니다. 그리고 그것은 운영체제의 중요한 일부입니다. "
 "파일 시스템 없이는 파일에 접근하고 저장하는 것은 불가능할 것입니다."
 
-#: hardware/C/hardware.xml:327(para)
+#: hardware/C/hardware.xml:397(para)
 msgid ""
 "ext2 and ext3: these are usually found on GNU/Linux operating systems. "
 "Ubuntu uses <emphasis>ext3</emphasis> as its default filesystem."
@@ -568,7 +625,7 @@ msgstr ""
 "ext2 와 ext3; 이 것들은 일반적으로 GNU/Linux 운영체제에서 사용됩니다. 우분투는 "
 "<emphasis>ext3</emphasis>를 기본 파일 시스템으로 사용합니다."
 
-#: hardware/C/hardware.xml:334(para)
+#: hardware/C/hardware.xml:404(para)
 msgid ""
 "<acronym>FAT16</acronym> and <acronym>FAT32</acronym>: these are Microsoft "
 "Windows filesystems found on older computers. If you would like to share "
@@ -579,29 +636,29 @@ msgstr ""
 "파일시스템으로 오래된 컴퓨터에서 사용됩니다. 만약 두 컴퓨터간에 데이터를 공유하고 싶다면, "
 "<emphasis><acronym>FAT32</acronym></emphasis> 형식은 좋은 선택입니다."
 
-#: hardware/C/hardware.xml:342(para)
+#: hardware/C/hardware.xml:412(para)
 msgid ""
 "<acronym>NTFS</acronym>: this is the filesystem type used by more modern "
 "versions of Microsoft Windows."
 msgstr "<acronym>NTFS</acronym>: 이 것은 마이크로소프트 윈도우즈의 더 최근에 사용되는 파일 시스템입니다."
 
-#: hardware/C/hardware.xml:348(para)
+#: hardware/C/hardware.xml:418(para)
 msgid ""
 "<acronym>HFS+</acronym>: this is the Mac OS X default filesystem type."
 msgstr "<acronym>HFS+</acronym>: 이 것은 OS X의 기본 파일 시스템 형식입니다."
 
-#: hardware/C/hardware.xml:323(para)
+#: hardware/C/hardware.xml:393(para)
 msgid ""
 "There are different types of filesystem. The most common are: <placeholder-"
 "1/>"
 msgstr ""
 "파일 시스템에는 여러 종류가 존재합니다. 이들 중 가장 널리 사용되는 것들은 다음과 같습니다: <placeholder-1/>"
 
-#: hardware/C/hardware.xml:357(title)
+#: hardware/C/hardware.xml:427(title)
 msgid "What is a Partition?"
 msgstr "파티션은 무엇입니까?"
 
-#: hardware/C/hardware.xml:358(para)
+#: hardware/C/hardware.xml:428(para)
 msgid ""
 "A partition is a means of dividing the storage capacity of a device, such as "
 "a hard disk, into several parts which can then be treated as separate "
@@ -610,34 +667,34 @@ msgstr ""
 "파티션은 하드 디스크와 같은 장치의 저장 용량을 여러개의 저장 장치처럼 다룰 수 있도록(<quote>논리 장치</quote>) 여러개의 "
 "부분으로 나누는 방법입니다."
 
-#: hardware/C/hardware.xml:363(para)
+#: hardware/C/hardware.xml:433(para)
 msgid ""
 "Each logical device is seen by the operating system as a distinct device, "
 "and thus is treated as an independent disk."
 msgstr "운영체제는 각각의 논리 장치를 별개의 장치로 인식하며, 따라서 이들은 독립적인 디스크처럼 처리합니다."
 
-#: hardware/C/hardware.xml:371(para)
+#: hardware/C/hardware.xml:441(para)
 msgid "To retrieve free space"
 msgstr "사용가능한 공간 되찾기"
 
-#: hardware/C/hardware.xml:376(para)
+#: hardware/C/hardware.xml:446(para)
 msgid "To install different operating systems"
 msgstr "다른 운영체제 설치하기"
 
-#: hardware/C/hardware.xml:381(para)
+#: hardware/C/hardware.xml:451(para)
 msgid "To better organize data on the hard disk"
 msgstr "하드 디스크상의 데이터를 더 좋게 조직하기"
 
-#: hardware/C/hardware.xml:367(para)
+#: hardware/C/hardware.xml:437(para)
 msgid ""
 "Partitioning a hard disk can be done for several reasons: <placeholder-1/>"
 msgstr "다음과 같은 이유들로 인해 하드 디스크를 파티션으로 나누어 사용합니다: <placeholder-1/>"
 
-#: hardware/C/hardware.xml:390(title)
+#: hardware/C/hardware.xml:460(title)
 msgid "Mounting and Unmounting Devices"
 msgstr "장치 마운트/해제 하기"
 
-#: hardware/C/hardware.xml:391(para)
+#: hardware/C/hardware.xml:461(para)
 msgid ""
 "When you connect a removable storage device to your computer, it must be "
 "<emphasis>mounted</emphasis> by the operating system so that you are able to "
@@ -646,7 +703,7 @@ msgstr ""
 "여러분의 컴퓨터에 제거가능한 저장 장치를 연결시켰을 때, 그 장치의 파일을 접근할 수 있도록 하기 위해서 운영체제에 의해 "
 "<emphasis>마운트</emphasis>되어져야 합니다."
 
-#: hardware/C/hardware.xml:394(para)
+#: hardware/C/hardware.xml:464(para)
 msgid ""
 "To find out how to mount and unmount storage devices, see <ulink "
 "type=\"help\" url=\"ghelp:user-guide#gosnautilus-460\">Using Removable "
@@ -655,7 +712,7 @@ msgstr ""
 "저장 장치를 마운트하고 마운트 해제하는 방법에 대해 찾고 싶다면 <ulink type=\"help\" url=\"ghelp:user-"
 "guide#gosnautilus-460\">제거 가능한 미디어 사용하기</ulink>를 참고하세요."
 
-#: hardware/C/hardware.xml:398(para)
+#: hardware/C/hardware.xml:468(para)
 msgid ""
 "When you copy files to a storage device, they are not always written to the "
 "device immediately. Instead, they are often stored in a queue so that they "
@@ -669,131 +726,27 @@ msgstr ""
 "파일들을 읽게 됩니다. 이 것을 막기 위해서 언제나 그 장치를 제거하기 전에 저장 장치를 <emphasis>마운트 "
 "해제</emphasis>하세요."
 
-#: hardware/C/hardware.xml:408(title)
+#: hardware/C/hardware.xml:478(title)
 msgid "Laptops"
 msgstr "노트북"
 
-#: hardware/C/hardware.xml:409(para)
+#: hardware/C/hardware.xml:479(para)
 msgid ""
 "This section contains information for people using Ubuntu on a laptop "
 "computer."
 msgstr "이 부분에서는 노트북(laptop) 컴퓨터에서 우분투를 사용하는 분들에 대한 정보를 제공합니다."
 
-#: hardware/C/hardware.xml:411(title)
-msgid "Suspending and hibernating laptops"
-msgstr "노트북의 절전모드 사용하기"
-
-#: hardware/C/hardware.xml:412(para)
-msgid ""
-"In order to save battery power, you can put your laptop into one of a number "
-"of power-saving modes when you are not using it. The available modes are "
-"detailed below:"
-msgstr ""
-"전원을 절약하기 위해서는, 노트북을 사용하지 않는 경우에 몇 가지 절전 모드 중의 하나로 둘 수 있습니다. 이용할 수 있는 모드들은 "
-"아래에서 자세히 설명합니다."
-
-#: hardware/C/hardware.xml:414(para)
-msgid ""
-"<emphasis role=\"strong\">Suspending</emphasis> a laptop is like putting the "
-"computer to sleep. The computer will still be turned on and all of your work "
-"will be left open, but the laptop will use much less battery power. You can "
-"wake the computer by pressing a key or clicking the mouse."
-msgstr ""
-"<emphasis role=\"strong\">절전</emphasis> 모드를 선택하면 노트북을 잠들게 하는 것과 같습니다. 컴퓨터는 "
-"여전히 켜진 상태이며 모든 작업은 그대로 열려져 있지만 노트북은 더 적은 전력을 사용할 것입니다. 컴퓨터를 깨우려면 키보드를 누르거나 "
-"마우스를 클릭하면 됩니다."
-
-#: hardware/C/hardware.xml:415(para)
-msgid ""
-"<emphasis role=\"strong\">Hibernating</emphasis> is turning the computer off "
-"completely while saving the current state of the computer (such as keeping "
-"all of your open documents). When you turn the computer back on after "
-"hibernating, all of your work should be restored as it was before "
-"hibernation. No power is used when the computer is hibernating."
-msgstr ""
-"<emphasis role=\"strong\">최대 절전</emphasis>은 컴퓨터의 현재 상태를 저장하면서(모든 열려진 문서들을 "
-"보존하는 것과 같이) 컴퓨터를 완전히 끄는 것 입니다. 여러분이 최대 절전 후에 컴퓨터를 다시 켰을 때, 모든 여러분의 작업은 최대 "
-"절전의 전처럼 복구됩니다. 컴퓨터를 최대 절전으로 하였을 때 컴퓨터는 전원이 필요없습니다."
-
-#: hardware/C/hardware.xml:416(para)
-msgid ""
-"<emphasis role=\"strong\">Shutting down</emphasis> is turning the computer "
-"off completely, without saving the current state of the computer. No power "
-"is used when the computer is shut down."
-msgstr ""
-"<emphasis role=\"strong\">컴퓨터 끄기</emphasis>는 컴퓨터의 현재 상태에 대한 저장 없이 컴퓨터를 완전히 "
-"끄는 것입니다. 컴퓨터 끄기가 되면 전원이 필요없습니다."
-
-#: hardware/C/hardware.xml:417(para)
-msgid ""
-"<emphasis role=\"strong\">Resuming</emphasis> is bringing the computer out "
-"of a power saving mode and back into normal operation. You can resume the "
-"computer from being suspended by pressing a keyboard button or by clicking "
-"the mouse. You can resume from being hibernated by pressing the power button "
-"on your computer."
-msgstr ""
-"<emphasis role=\"strong\">다시 실행</emphasis> 하면 컴퓨터를 절전 모드에서 일반 모드로 되돌립니다 "
-"(깨웁니다). 절전 모드에서는 키보드 버튼을 누르거나 마우스를 클릭하면 컴퓨터가 깨어납니다. 최대절전 모드에서는 컴퓨터의 전원 버튼을 "
-"눌러 컴퓨터를 깨울 수 있습니다."
-
-#: hardware/C/hardware.xml:419(para)
-msgid ""
-"You can manually put your computer into a power-saving mode by pressing "
-"<menuchoice><guimenu>System</guimenu><guimenuitem>Quit...</guimenuitem></menu"
-"choice> and then pressing the appropriate button."
-msgstr ""
-"<menuchoice><guimenu>시스템</guimenu><guimenuitem>끝내기...</guimenuitem></menuchoi"
-"ce> 를 누르고 적절한 버튼을 선택하여 컴퓨터를 직접 절전 모드 중의 하나로 들어가게 할 수 있습니다."
-
-#: hardware/C/hardware.xml:421(para)
-msgid ""
-"Some computers may have problems going into certain power saving modes. The "
-"best way of checking if your computer can handle a power-saving mode is to "
-"try to switch to that mode and see if it behaves as you expected. Always "
-"make sure you save important documents before suspending or hibernating."
-msgstr ""
-"오떤 컴퓨터는 전원 절약 모드에서 문제가 생길 수도 있습니다. 컴퓨터가 전원-절약 모드를 잘 처리하는지 확인하는 가장 좋은 방법은 그 "
-"것을 껐다켰다하면서 원하는대로 동작하는지 보는 것입니다. 언제나 최대절전이나 절전 전에 중요한 문서는 저장하는 것을 잊지 마세요."
-
-#: hardware/C/hardware.xml:424(title)
-msgid "Fixing problems with suspending, hibernating and resuming"
-msgstr "절전, 최대절전 모드 사용 시의 문제점 해결하기"
-
-#: hardware/C/hardware.xml:425(para)
-msgid ""
-"If your computer cannot suspend, hibernate or resume properly, there may be "
-"a number of things that you can try to get it working correctly."
-msgstr ""
-"만약 여러분의 컴퓨터가 절전, 최대절전 모드로 들어가지 않거나 깨어나지 않는다면, 이를 해결하기 위해 시도해 볼 수 있는 몇 가지 "
-"방법들이 있습니다."
-
-#: hardware/C/hardware.xml:427(para)
-msgid ""
-"Check the test report for your laptop, if one has been made (see <xref "
-"linkend=\"laptops-testing-reports\"/>)."
-msgstr ""
-"여러분이 사용 중인 컴퓨터에 대한 테스트를 누군가 보고해 두었는지 점검합니다 (<xref linkend=\"laptops-testing-"
-"reports\"/> 참조)."
-
-#: hardware/C/hardware.xml:428(para)
-msgid ""
-"Ask for assistance through an <ulink "
-"url=\"http://www.ubuntu.com/support/free\">Ubuntu support channel</ulink>."
-msgstr ""
-"<ulink url=\"http://www.ubuntu.com/support/free\">우분투 지원 채널</ulink> 에 도움을 "
-"요청해 봅니다."
-
-#: hardware/C/hardware.xml:433(title)
+#: hardware/C/hardware.xml:481(title)
 msgid "Power management settings"
 msgstr "전원 관리 설정"
 
-#: hardware/C/hardware.xml:434(para)
+#: hardware/C/hardware.xml:482(para)
 msgid ""
 "You may wish to change the power management settings of your laptop in order "
 "to help extend its battery life and reduce energy wastage."
 msgstr "노트북의 배터리 수명을 늘이거나 에너지 낭비를 줄이기위해 전원 관리 설정을 변경해야 할 수도 있을 것입니다."
 
-#: hardware/C/hardware.xml:437(para)
+#: hardware/C/hardware.xml:485(para)
 msgid ""
 "Press "
 "<menuchoice><guimenu>System</guimenu><guimenuitem>Preferences</guimenuitem><g"
@@ -802,11 +755,11 @@ msgstr ""
 "<menuchoice><guimenu>시스템</guimenu><guimenuitem>기본 "
 "설정</guimenuitem><guimenuitem>전원 관리</guimenuitem></menuchoice> 를 누릅니다."
 
-#: hardware/C/hardware.xml:440(para)
+#: hardware/C/hardware.xml:488(para)
 msgid "Change the settings as appropriate. Changes are applied instantly."
 msgstr "설정을 적절히 변경합니다. 변경 사항은 즉시 적용됩니다."
 
-#: hardware/C/hardware.xml:444(para)
+#: hardware/C/hardware.xml:492(para)
 msgid ""
 "Displaying a screensaver may use more power than simply letting the screen "
 "go blank. Turning off the screensaver could slightly improve the battery "
@@ -815,7 +768,7 @@ msgstr ""
 "화면 보호기를 사용하는 것은 그냥 빈 화면으로 두는 것보다 좀 더 많은 전력을 소모할 것입니다. 화면 보호기를 꺼두면 노트북의 배터리 "
 "수명을 조금 연장할 수 있을 것입니다."
 
-#: hardware/C/hardware.xml:447(para)
+#: hardware/C/hardware.xml:495(para)
 msgid ""
 "Press "
 "<menuchoice><guimenu>System</guimenu><guimenuitem>Preferences</guimenuitem><g"
@@ -824,7 +777,7 @@ msgstr ""
 "<menuchoice><guimenu>시스템</guimenu><guimenuitem>기본 "
 "설정</guimenuitem><guimenuitem>화면 보호기</guimenuitem></menuchoice> 를 누릅니다."
 
-#: hardware/C/hardware.xml:450(para)
+#: hardware/C/hardware.xml:498(para)
 msgid ""
 "Change the <guilabel>Screensaver theme</guilabel> to <guilabel>Blank "
 "screen</guilabel>. This will simply display a blank screen as a screensaver."
@@ -832,7 +785,7 @@ msgstr ""
 "<guilabel>화면 보호기 테마</guilabel> 를 <guilabel>빈 화면</guilabel> 으로 설정합니다. 이것은 화면 "
 "보호기로 단지 아무 것도 없는 검은 화면을 보여줄 것입니다."
 
-#: hardware/C/hardware.xml:454(para)
+#: hardware/C/hardware.xml:502(para)
 msgid ""
 "When your laptop is running on battery, one of the biggest drains on power "
 "is the display. Turning the brightness of the display down could improve "
@@ -844,11 +797,11 @@ msgstr ""
 "<keycombo><keycap>Fn</keycap><keycap>F7</keycap></keycombo> 키를 여러번 눌러 조정할 수 "
 "있도록 해 줍니다."
 
-#: hardware/C/hardware.xml:458(title) hardware/C/hardware.xml:546(ulink)
+#: hardware/C/hardware.xml:506(title) hardware/C/hardware.xml:777(ulink)
 msgid "Touchpads"
 msgstr "터치패드"
 
-#: hardware/C/hardware.xml:459(para)
+#: hardware/C/hardware.xml:507(para)
 msgid ""
 "Most laptop computers come with a touchpad, which is used to control the "
 "mouse pointer. There are many ways of changing the way that the touchpad "
@@ -858,7 +811,7 @@ msgstr ""
 "대부분의 노트북 컴퓨터들은 마우스 포인터를 제어하는데 사용되는 터치패드를 제공합니다. 많은 터치 패드의 행동을 바꾸는 방법은 많이 "
 "있습니다; 대부분의 기본 터치 패드 설정은 다음 방법으로 설정될 수 있습니다."
 
-#: hardware/C/hardware.xml:461(para)
+#: hardware/C/hardware.xml:509(para)
 msgid ""
 "Press "
 "<menuchoice><guimenu>System</guimenu><guimenuitem>Preferences</guimenuitem><g"
@@ -867,17 +820,17 @@ msgstr ""
 "<menuchoice><guimenu>시스템</guimenu><guimenuitem>기본 "
 "설정</guimenuitem><guimenuitem>마우스</guimenuitem></menuchoice>를 누릅니다."
 
-#: hardware/C/hardware.xml:462(para)
+#: hardware/C/hardware.xml:510(para)
 msgid "Select the <guilabel>Touchpad</guilabel> tab."
 msgstr "<guilabel>터치패드</guilabel> 탭을 선택하세요."
 
-#: hardware/C/hardware.xml:463(para)
+#: hardware/C/hardware.xml:511(para)
 msgid ""
 "Here you can change the touchpad settings to your liking. Changes should "
 "take effect immediately."
 msgstr "여기서 여러분은 여러분이 좋아하는 터치 패드 설정으로 변경할 수 있습니다. 변경은 즉시 적용됩니다."
 
-#: hardware/C/hardware.xml:465(para)
+#: hardware/C/hardware.xml:513(para)
 msgid ""
 "Some touchpads may be detected as normal mouse devices, even though they are "
 "actually touchpads. In this case, the <guilabel>Touchpad</guilabel> tab will "
@@ -886,7 +839,7 @@ msgstr ""
 "어떤 태치패드는 실제 터치패드일지라도 보통 마우스 장치처럼 탐지될 수 있습니다. 이 경우 "
 "<guilabel>Touchpad</guilabel>이 마우스 속성에서 사용가능하지 않을 것입니다."
 
-#: hardware/C/hardware.xml:467(para)
+#: hardware/C/hardware.xml:515(para)
 msgid ""
 "See the <ulink "
 "url=\"https://help.ubuntu.com/community/SynapticsTouchpad\">community "
@@ -896,11 +849,11 @@ msgstr ""
 "url=\"https://help.ubuntu.com/community/SynapticsTouchpad\">커뮤니티 지원 "
 "페이지</ulink> 를 참조하기 바랍니다."
 
-#: hardware/C/hardware.xml:471(title)
+#: hardware/C/hardware.xml:519(title)
 msgid "Finding laptop testing reports"
 msgstr "노트북 테스트 보고서 찾기"
 
-#: hardware/C/hardware.xml:472(para)
+#: hardware/C/hardware.xml:520(para)
 msgid ""
 "Many laptops are regularly tested by the Ubuntu community to ensure that "
 "various features work correctly. The results of these tests are available "
@@ -910,7 +863,7 @@ msgstr ""
 "대부분의 노트북들은 여러 가지 기능들이 올바로 동작하는지 확인하기 위해 우분투 커뮤니티에서 정기적으로 검사합니다. 여러분은 이러한 테스트 "
 "결과를 살펴보고 자신의 노트북에 어떤 문제가 생길 수 있는지에 대한 통찰도 얻을 수 있을 것입니다."
 
-#: hardware/C/hardware.xml:474(para)
+#: hardware/C/hardware.xml:522(para)
 msgid ""
 "See the Laptop Testing <ulink "
 "url=\"https://wiki.ubuntu.com/LaptopTestingTeam\">community support "
@@ -920,7 +873,7 @@ msgstr ""
 "url=\"https://wiki.ubuntu.com/LaptopTestingTeam\">커뮤니티 지원 페이지</ulink> 에서 이용 "
 "가능한 노트북의 전체 목록을 찾아볼 수 있습니다."
 
-#: hardware/C/hardware.xml:476(para)
+#: hardware/C/hardware.xml:524(para)
 msgid ""
 "You can participate in laptop testing yourself by contacting the <ulink "
 "url=\"https://wiki.ubuntu.com/LaptopTestingTeam\">Laptop Testing "
@@ -929,147 +882,337 @@ msgstr ""
 "<ulink url=\"https://wiki.ubuntu.com/LaptopTestingTeam\">노트북 테스트 팀</ulink> 과 "
 "연락하여 스스로 테스트에 참여할 수도 있습니다."
 
-#: hardware/C/hardware.xml:481(title)
+#: hardware/C/hardware.xml:532(title)
+msgid "Suspending and hibernating your computer"
+msgstr "컴퓨터를 대기/최대절전 진입중 ..."
+
+#: hardware/C/hardware.xml:533(para)
+msgid ""
+"In order to save power, you can put your computer into one of a number of "
+"power-saving modes when you are not using it:"
+msgstr ""
+
+#: hardware/C/hardware.xml:538(para)
+msgid ""
+"<emphasis role=\"strong\">Suspending</emphasis> a computer is like putting "
+"the computer to sleep. The computer will still be turned on and all of your "
+"work will be left open, but it will use much less power. You can wake the "
+"computer by pressing a key or clicking the mouse."
+msgstr ""
+
+#: hardware/C/hardware.xml:546(para)
+msgid ""
+"<emphasis role=\"strong\">Hibernating</emphasis> is turning the computer off "
+"completely while saving the current state of the computer (such as keeping "
+"all of your open documents). When you turn the computer back on after "
+"hibernating, all of your work should be restored as it was before "
+"hibernation. No power is used when the computer is hibernating."
+msgstr ""
+"<emphasis role=\"strong\">최대 절전</emphasis>은 컴퓨터의 현재 상태를 저장하면서(모든 열려진 문서들을 "
+"보존하는 것과 같이) 컴퓨터를 완전히 끄는 것 입니다. 여러분이 최대 절전 후에 컴퓨터를 다시 켰을 때, 모든 여러분의 작업은 최대 "
+"절전의 전처럼 복구됩니다. 컴퓨터를 최대 절전으로 하였을 때 컴퓨터는 전원이 필요없습니다."
+
+#: hardware/C/hardware.xml:555(para)
+msgid ""
+"<emphasis role=\"strong\">Shutting down</emphasis> is turning the computer "
+"off completely, without saving the current state of the computer. No power "
+"is used when the computer is shut down."
+msgstr ""
+"<emphasis role=\"strong\">컴퓨터 끄기</emphasis>는 컴퓨터의 현재 상태에 대한 저장 없이 컴퓨터를 완전히 "
+"끄는 것입니다. 컴퓨터 끄기가 되면 전원이 필요없습니다."
+
+#: hardware/C/hardware.xml:562(para)
+msgid ""
+"<emphasis role=\"strong\">Resuming</emphasis> is bringing the computer out "
+"of a power saving mode and back into normal operation. You can resume the "
+"computer from being suspended by pressing a keyboard button or by clicking "
+"the mouse. You can resume from being hibernated by pressing the power button "
+"on your computer."
+msgstr ""
+"<emphasis role=\"strong\">다시 실행</emphasis> 하면 컴퓨터를 절전 모드에서 일반 모드로 되돌립니다 "
+"(깨웁니다). 절전 모드에서는 키보드 버튼을 누르거나 마우스를 클릭하면 컴퓨터가 깨어납니다. 최대절전 모드에서는 컴퓨터의 전원 버튼을 "
+"눌러 컴퓨터를 깨울 수 있습니다."
+
+#: hardware/C/hardware.xml:572(para)
+msgid ""
+"You can manually put your computer into a power-saving mode by pressing the "
+"<application>User Switcher</application> in the top right hand corner of the "
+"screen and then pressing the appropriate button."
+msgstr ""
+
+#: hardware/C/hardware.xml:579(para)
+msgid ""
+"Some computers may have problems going into certain power saving modes. The "
+"best way of checking if your computer can handle a power-saving mode is to "
+"try to switch to that mode and see if it behaves as you expected. Always "
+"make sure you save important documents before suspending or hibernating."
+msgstr ""
+"오떤 컴퓨터는 전원 절약 모드에서 문제가 생길 수도 있습니다. 컴퓨터가 전원-절약 모드를 잘 처리하는지 확인하는 가장 좋은 방법은 그 "
+"것을 껐다켰다하면서 원하는대로 동작하는지 보는 것입니다. 언제나 최대절전이나 절전 전에 중요한 문서는 저장하는 것을 잊지 마세요."
+
+#: hardware/C/hardware.xml:589(title)
+msgid "My computer does not suspend or hibernate correctly"
+msgstr "컴퓨터가  정사적인 대기나 최대절전을 할 수 없습니다."
+
+#: hardware/C/hardware.xml:590(para)
+msgid ""
+"Some computers are unable to suspend or hibernate correctly with Ubuntu. If "
+"this is the case for your computer, you may notice some of the following "
+"symptoms:"
+msgstr ""
+
+#: hardware/C/hardware.xml:597(para)
+msgid "The computer does not turn off after you click to hibernate it."
+msgstr "컴퓨터가 최대절전선택후 꺼지지 않습니다."
+
+#: hardware/C/hardware.xml:602(para)
+msgid ""
+"When you turn the computer on after hibernating it, your previously open "
+"programs are not restored."
+msgstr "최대절전후 컴퓨터를 켤때 이전에 열렸던 프로그램이 복구 되지 않았습니다."
+
+#: hardware/C/hardware.xml:608(para)
+msgid "The computer will not wake up after you have suspended it."
+msgstr "컴퓨터가 대기후에 돌아오지 않습니다."
+
+#: hardware/C/hardware.xml:613(para)
+msgid ""
+"Certain programs or hardware devices stop working correctly after resuming "
+"from hibernation or waking-up from being suspended."
+msgstr ""
+
+#: hardware/C/hardware.xml:619(para)
+msgid ""
+"If you suffer from any of these problems, you should report a bug to <ulink "
+"url=\"https://bugs.launchpad.net/ubuntu/+filebug\">Launchpad</ulink>. The "
+"problems will hopefully be fixed in a subsequent version of Ubuntu. You may "
+"also like to see if the <link linkend=\"pm-general-method\">General method "
+"for trying to get suspend and hibernate working</link> works for you."
+msgstr ""
+
+#: hardware/C/hardware.xml:626(para)
+msgid ""
+"If your hardware does not work properly after suspending or hibernating your "
+"computer, restart your computer and it should return to normal. If a program "
+"does not work properly, try closing the program and then starting it again."
+msgstr ""
+
+#: hardware/C/hardware.xml:634(para)
+msgid ""
+"Make sure that you save all of your open documents before testing for "
+"suspend and hibernate problems."
+msgstr ""
+
+#: hardware/C/hardware.xml:641(title)
+msgid "General method for trying to get suspend and hibernate working"
+msgstr ""
+
+#: hardware/C/hardware.xml:644(para)
+msgid ""
+"You may be able to get suspend and hibernate working on your computer, but "
+"this can involve a lot of work. The method below should work for many "
+"computers. If it does not work for yours, please seek support using one of "
+"the many help and support channels for Ubuntu."
+msgstr ""
+
+#: hardware/C/hardware.xml:653(para)
+msgid ""
+"Download the <ulink "
+"url=\"http://people.freedesktop.org/~hughsient/quirk/quirk-suspend-"
+"debug.html\"> Quirk Checker script</ulink> to your Home folder."
+msgstr ""
+
+#: hardware/C/hardware.xml:659(para)
+msgid ""
+"Find the <filename>quirk-checker.sh</filename> file in your Home folder, "
+"right-click it and select <guilabel>Properties</guilabel>. Select the "
+"<guilabel>Permissions</guilabel> tab, check <guilabel>Allow executing file "
+"as program</guilabel> and click <guibutton>Close</guibutton>."
+msgstr ""
+
+#: hardware/C/hardware.xml:667(para)
+msgid ""
+"Open a Terminal "
+"(<menuchoice><guimenu>Applications</guimenu><guimenuitem>Accessories</guimenu"
+"item><guimenuitem>Terminal</guimenuitem></menuchoice>), type "
+"<userinput>./quirk-checker.sh</userinput> and press <keycap>Enter</keycap>."
+msgstr ""
+
+#: hardware/C/hardware.xml:673(para)
+msgid ""
+"Follow the suggestions that the script makes. These may involve editing "
+"important system files, so you should seek support if you are unsure of what "
+"you are doing."
+msgstr ""
+
+#: hardware/C/hardware.xml:682(para)
+msgid ""
+"Before making the changes recommended by the Quirk Checker, create back-up "
+"copies of the files that you are going to change."
+msgstr ""
+
+#: hardware/C/hardware.xml:692(title)
+msgid ""
+"Why do I get a strange pattern on the screen when I hibernate my computer?"
+msgstr ""
+
+#: hardware/C/hardware.xml:694(para)
+msgid ""
+"Your screen may show a black and white pattern just after you click to "
+"hibernate your computer. This is usually nothing to worry about and is just "
+"how the graphics cards of some computers respond to the initial stages of "
+"the hibernation process."
+msgstr ""
+
+#: hardware/C/hardware.xml:700(para)
+msgid ""
+"If the computer displays the pattern for a prolonged period of time without "
+"turning itself off then you may have a problem with hibernation. See <link "
+"linkend=\"pm-suspend-hibernate-fails\">My computer does not suspend or "
+"hibernate correctly</link> for more information."
+msgstr ""
+
+#: hardware/C/hardware.xml:712(title)
 msgid "Mice and keyboards"
 msgstr "마우스와 키보드"
 
-#: hardware/C/hardware.xml:482(para)
+#: hardware/C/hardware.xml:713(para)
 msgid ""
 "This section provides instructions on using and configuring mice, keyboards "
 "and other input devices to make them more comfortable for you to use."
 msgstr "이 부분에서는 마우스와 키보드 및 다른 입력 장치들을 보다 편리하게 사용하고 설정하는 방법에 대해 설명합니다."
 
-#: hardware/C/hardware.xml:484(title)
+#: hardware/C/hardware.xml:715(title)
 msgid "Mice and other pointing devices"
 msgstr "마우스 및 다른 포인팅 장치"
 
-#: hardware/C/hardware.xml:485(para)
+#: hardware/C/hardware.xml:716(para)
 msgid ""
 "You can change numerous options related to your mouse, such as how fast the "
 "pointer moves and how clicks are interpreted by the computer."
 msgstr "포인터의 이동 속도, 클릭 시의 동작 등과 같은 마우스와 관련된 수 많은 옵션들을 변경할 수 있습니다."
 
-#: hardware/C/hardware.xml:488(ulink)
+#: hardware/C/hardware.xml:719(ulink)
 msgid "Mouse Skills"
 msgstr "마우스 기술"
 
-#: hardware/C/hardware.xml:489(para)
+#: hardware/C/hardware.xml:720(para)
 msgid ""
 "Information on basic mouse skills, such as pointing, clicking and dragging."
 msgstr "포인팅, 클릭, 끌기와 같은 기본적인 마우스 기술에 대한 정보"
 
-#: hardware/C/hardware.xml:492(ulink)
+#: hardware/C/hardware.xml:723(ulink)
 msgid "Mouse Preferences"
 msgstr "마우스 기본 설정"
 
-#: hardware/C/hardware.xml:493(para)
+#: hardware/C/hardware.xml:724(para)
 msgid ""
 "Instructions on how to change various settings related to your mouse, such "
 "as whether the mouse is left-handed and how fast the pointer moves."
 msgstr "왼손잡이용 마우스의 사용 여부, 포인터 이동 속도와 같은 마우스에 관련된 여러 설정들을 변경하는 방법"
 
-#: hardware/C/hardware.xml:496(ulink)
+#: hardware/C/hardware.xml:727(ulink)
 msgid "Accessibility - Configuring the Mouse"
 msgstr "접근성 - 마우스 설정"
 
-#: hardware/C/hardware.xml:497(para)
+#: hardware/C/hardware.xml:728(para)
 msgid ""
 "Information on changing mouse preferences for users of assistive "
 "technologies."
 msgstr "보조 기술 사용자를 위한 마우스 속성 변경에 대한 정보"
 
-#: hardware/C/hardware.xml:500(ulink)
+#: hardware/C/hardware.xml:731(ulink)
 msgid "Accessibility - Configuring Alternative Pointing Devices"
 msgstr "접근성 - 다른 포인팅 장치 설정"
 
-#: hardware/C/hardware.xml:501(para)
+#: hardware/C/hardware.xml:732(para)
 msgid "Information on using a pointing device other than a mouse."
 msgstr "마우스가 아닌 다른 포인팅 장치를 사용하는 방법"
 
-#: hardware/C/hardware.xml:507(title)
+#: hardware/C/hardware.xml:738(title)
 msgid "Keyboards"
 msgstr "키보드"
 
-#: hardware/C/hardware.xml:508(para)
+#: hardware/C/hardware.xml:739(para)
 msgid ""
 "There are many options related to your keyboard which you can change, such "
 "as the keyboard language and keyboard shortcuts."
 msgstr "키보드 언어, 키보드 바로가기와 같은 키보드와 관련된 여러 가지 변경 가능한 옵션들이 존재합니다."
 
-#: hardware/C/hardware.xml:511(ulink)
+#: hardware/C/hardware.xml:742(ulink)
 msgid "Basic Keyboard Skills"
 msgstr "기본적인 키보드 기술"
 
-#: hardware/C/hardware.xml:512(para)
+#: hardware/C/hardware.xml:743(para)
 msgid "Information on basic keyboard usage."
 msgstr "기본적인 키보드 사용법에 대한 정보"
 
-#: hardware/C/hardware.xml:515(ulink)
+#: hardware/C/hardware.xml:746(ulink)
 msgid "Keyboard Preferences"
 msgstr "키보드 기본 설정"
 
-#: hardware/C/hardware.xml:516(para)
+#: hardware/C/hardware.xml:747(para)
 msgid ""
 "Change settings related to your keyboard, such as the layout of the keyboard."
 msgstr "키보드 레이아웃과 같은 키보드와 관련된 설정을 변경하는 방법"
 
-#: hardware/C/hardware.xml:519(ulink)
+#: hardware/C/hardware.xml:750(ulink)
 msgid "Keyboard Indicator"
 msgstr "키보드 표시기"
 
-#: hardware/C/hardware.xml:520(para)
+#: hardware/C/hardware.xml:751(para)
 msgid ""
 "The manual of the Keyboard Indicator, which allows you to change between "
 "different keyboard layouts."
 msgstr "다른 키보드 레이아웃으로 변경할 수 있게 도와주는 키보드 표시기의 설명서"
 
-#: hardware/C/hardware.xml:523(ulink)
+#: hardware/C/hardware.xml:754(ulink)
 msgid "Accessibility - Configuring the Mouse and Keyboard"
 msgstr "접근성 - 마우스 및 키보드 설정"
 
-#: hardware/C/hardware.xml:524(para)
+#: hardware/C/hardware.xml:755(para)
 msgid ""
 "Information on configuring the mouse and keyboard for users of assistive "
 "technologies."
 msgstr "보조 기술이 필요한 (장애가 있는) 사용자들을 위해 마우스와 키보드를 설정하는 법에 대한 정보"
 
-#: hardware/C/hardware.xml:527(ulink)
+#: hardware/C/hardware.xml:758(ulink)
 msgid "Using the Keyboard to Navigate the Desktop"
 msgstr "키보드를 이용하여 데스크탑 탐색하기"
 
-#: hardware/C/hardware.xml:528(para)
+#: hardware/C/hardware.xml:759(para)
 msgid "A guide on how to navigate the desktop using only a keyboard."
 msgstr "키보드만을 이용하여 데스크탑을 탐색하는 방법에 대한 안내"
 
-#: hardware/C/hardware.xml:531(ulink)
+#: hardware/C/hardware.xml:762(ulink)
 msgid "Keyboard Accessibility Monitor"
 msgstr "키보드 접근성 모니터"
 
-#: hardware/C/hardware.xml:532(para)
+#: hardware/C/hardware.xml:763(para)
 msgid ""
 "The manual of the Keyboard Accessibility Monitor, which shows the status of "
 "any keyboard accessibility features which are turned on."
 msgstr "키보드 접근성 기능이 사용 중인지 표시해 주는 키보드 접근성 모니터에 대한 설명서"
 
-#: hardware/C/hardware.xml:535(ulink)
+#: hardware/C/hardware.xml:766(ulink)
 msgid "Using the Character Palette"
 msgstr "문자표 사용하기"
 
-#: hardware/C/hardware.xml:536(para)
+#: hardware/C/hardware.xml:767(para)
 msgid ""
 "Use the Character Palette to insert letters and symbols which are not on "
 "your keyboard."
 msgstr "문자표를 이용하여 키보드 상에 없는 문자와 기호들을 입력하는 방법"
 
-#: hardware/C/hardware.xml:542(title)
+#: hardware/C/hardware.xml:773(title)
 msgid "Touchpads and graphics tablets"
 msgstr "터치패드 및 그래픽 태블릿"
 
-#: hardware/C/hardware.xml:543(para)
+#: hardware/C/hardware.xml:774(para)
 msgid "You can use a touchpad or graphics tablet to move a mouse pointer."
 msgstr "터치패드 혹은 그래픽 태블릿을 이용하여 마우스 포인터를 움직일 수 있습니다."
 
-#: hardware/C/hardware.xml:547(para)
+#: hardware/C/hardware.xml:778(para)
 msgid "Information on changing the settings of a laptop touchpad."
 msgstr "노트북의 터치패드 설정을 변경하는 방법"
 
@@ -1095,7 +1238,127 @@ msgstr ""
 "  DasomOLI https://launchpad.net/~dasomoli\n"
 "  Launchpad Translations Administrators https://launchpad.net/~rosetta-"
 "admins\n"
-"  Namhyung Kim https://launchpad.net/~namhyung"
+"  Namhyung Kim https://launchpad.net/~namhyung\n"
+"\n"
+"Launchpad Contributions:\n"
+"  DasomOLI https://launchpad.net/~dasomoli\n"
+"  Launchpad Translations Administrators https://launchpad.net/~rosetta-"
+"admins\n"
+"  Namhyung Kim https://launchpad.net/~namhyung\n"
+"  Shin Hungjae https://launchpad.net/~fplive"
+
+#~ msgid "Hardware"
+#~ msgstr "하드웨어"
+
+#~ msgid "Working with hardware devices"
+#~ msgstr "하드웨어 장치 설정하기"
+
+#~ msgid ""
+#~ "Press "
+#~ "<menuchoice><guimenu>System</guimenu><guimenuitem>Administration</guimenuitem"
+#~ "><guimenuitem>Hardware drivers</guimenuitem></menuchoice>"
+#~ msgstr ""
+#~ "<menuchoice><guimenu>시스템</guimenu><guimenuitem>관리</guimenuitem><guimenuitem>하"
+#~ "드웨어 드라이버</guimenuitem></menuchoice>를 고르세요."
+
+#~ msgid "Checking disk capacity"
+#~ msgstr "디스크 용량 확인하기"
+
+#~ msgid ""
+#~ "Press "
+#~ "<menuchoice><guimenu>Places</guimenu><guimenuitem>Computer</guimenuitem></men"
+#~ "uchoice>, right click on the disk you want to check and select "
+#~ "<guilabel>Properties</guilabel>. The free space on the disk will be "
+#~ "displayed on the <guilabel>Basic</guilabel> tab."
+#~ msgstr ""
+#~ "<menuchoice><guimenu>위치</guimenu><guimenuitem>컴퓨터</guimenuitem></menuchoice>를"
+#~ " 누르고 확인하고 싶은 디스크 상에서 우클릭한 후 <guilabel>속성</guilabel>을 선택하세요. 디스크 상의 사용가능한 공간이 "
+#~ "<guilabel>기본</guilabel> 탭에 표시될 것입니다."
+
+#~ msgid ""
+#~ "Press "
+#~ "<menuchoice><guimenu>System</guimenu><guisubmenu>Administration</guisubmenu><"
+#~ "guimenuitem>System Monitor</guimenuitem></menuchoice> and select the "
+#~ "<guilabel>File Systems</guilabel> tab. All disks currently connected to the "
+#~ "system should be displayed in the list, along with their free and used "
+#~ "capacities."
+#~ msgstr ""
+#~ "<menuchoice><guimenu>시스템</guimenu><guisubmenu>관리</guisubmenu><guimenuitem>시스템"
+#~ " 감시</guimenuitem></menuchoice>를 누르고 <guilabel>파일 시스템</guilabel> 탭을 선택하세요. "
+#~ "시스템에 현재 연결된 모든 디스크가 사용가능과 사용중인 공간과 함께 목록에 표시되어 질 것입니다."
+
+#~ msgid ""
+#~ "To check the amount of free and used space on a disk, do either of the "
+#~ "following: <placeholder-1/>"
+#~ msgstr "디스크상의 사용가능과 사용중인 공간의 양을 확인하고 싶으면 다음과 같이 하세요: <placeholder-1/>"
+
+#~ msgid ""
+#~ "You can use <application>GNOME Partition Editor</application> to partition "
+#~ "storage devices. Install the <application>gparted</application> package (see "
+#~ "<ulink type=\"help\" url=\"ghelp:add-applications\">Add "
+#~ "Applications</ulink>) and then press "
+#~ "<menuchoice><guimenu>System</guimenu><guisubmenu>Administration "
+#~ "</guisubmenu><guimenuitem>Gnome Partition Editor</guimenuitem></menuchoice> "
+#~ "to start the partition editor."
+#~ msgstr ""
+#~ "저장 장치의 파티션을 나누기 위해서 <application>그놈 파티션 편집기</application>를 사용할 수 있습니다. "
+#~ "<application>gparted</application>꾸러미를 설치(<ulink type=\"help\" "
+#~ "url=\"ghelp:add-applications\">추가/제거...</ulink> 참고)하고 파티션 편집기를 시작하기 위해서 "
+#~ "<menuchoice><guimenu>시스템</guimenu><guisubmenu>관리</guisubmenu><guimenuitem>파티션"
+#~ " 편집기</guimenuitem></menuchoice>를 누르세요."
+
+#~ msgid "Suspending and hibernating laptops"
+#~ msgstr "노트북의 절전모드 사용하기"
+
+#~ msgid ""
+#~ "In order to save battery power, you can put your laptop into one of a number "
+#~ "of power-saving modes when you are not using it. The available modes are "
+#~ "detailed below:"
+#~ msgstr ""
+#~ "전원을 절약하기 위해서는, 노트북을 사용하지 않는 경우에 몇 가지 절전 모드 중의 하나로 둘 수 있습니다. 이용할 수 있는 모드들은 "
+#~ "아래에서 자세히 설명합니다."
+
+#~ msgid ""
+#~ "<emphasis role=\"strong\">Suspending</emphasis> a laptop is like putting the "
+#~ "computer to sleep. The computer will still be turned on and all of your work "
+#~ "will be left open, but the laptop will use much less battery power. You can "
+#~ "wake the computer by pressing a key or clicking the mouse."
+#~ msgstr ""
+#~ "<emphasis role=\"strong\">절전</emphasis> 모드를 선택하면 노트북을 잠들게 하는 것과 같습니다. 컴퓨터는 "
+#~ "여전히 켜진 상태이며 모든 작업은 그대로 열려져 있지만 노트북은 더 적은 전력을 사용할 것입니다. 컴퓨터를 깨우려면 키보드를 누르거나 "
+#~ "마우스를 클릭하면 됩니다."
+
+#~ msgid ""
+#~ "You can manually put your computer into a power-saving mode by pressing "
+#~ "<menuchoice><guimenu>System</guimenu><guimenuitem>Quit...</guimenuitem></menu"
+#~ "choice> and then pressing the appropriate button."
+#~ msgstr ""
+#~ "<menuchoice><guimenu>시스템</guimenu><guimenuitem>끝내기...</guimenuitem></menuchoi"
+#~ "ce> 를 누르고 적절한 버튼을 선택하여 컴퓨터를 직접 절전 모드 중의 하나로 들어가게 할 수 있습니다."
+
+#~ msgid "Fixing problems with suspending, hibernating and resuming"
+#~ msgstr "절전, 최대절전 모드 사용 시의 문제점 해결하기"
+
+#~ msgid ""
+#~ "If your computer cannot suspend, hibernate or resume properly, there may be "
+#~ "a number of things that you can try to get it working correctly."
+#~ msgstr ""
+#~ "만약 여러분의 컴퓨터가 절전, 최대절전 모드로 들어가지 않거나 깨어나지 않는다면, 이를 해결하기 위해 시도해 볼 수 있는 몇 가지 "
+#~ "방법들이 있습니다."
+
+#~ msgid ""
+#~ "Check the test report for your laptop, if one has been made (see <xref "
+#~ "linkend=\"laptops-testing-reports\"/>)."
+#~ msgstr ""
+#~ "여러분이 사용 중인 컴퓨터에 대한 테스트를 누군가 보고해 두었는지 점검합니다 (<xref linkend=\"laptops-testing-"
+#~ "reports\"/> 참조)."
+
+#~ msgid ""
+#~ "Ask for assistance through an <ulink "
+#~ "url=\"http://www.ubuntu.com/support/free\">Ubuntu support channel</ulink>."
+#~ msgstr ""
+#~ "<ulink url=\"http://www.ubuntu.com/support/free\">우분투 지원 채널</ulink> 에 도움을 "
+#~ "요청해 봅니다."
 
 #~ msgid ""
 #~ "This document is maintained by the Ubuntu documentation team "

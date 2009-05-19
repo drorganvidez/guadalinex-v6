@@ -9,14 +9,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-desktopguide-cs\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2008-10-12 20:18+0100\n"
-"PO-Revision-Date: 2008-10-15 18:07+0000\n"
+"POT-Creation-Date: 2009-03-26 16:34+0000\n"
+"PO-Revision-Date: 2009-03-27 15:08+0000\n"
 "Last-Translator: Kamil Páral <ripper42@gmail.com>\n"
 "Language-Team: <cs@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2008-10-19 12:43+0000\n"
+"X-Launchpad-Export-Date: 2009-04-01 11:06+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: basic-commands/C/basic-commands-C.omf:6(creator) basic-commands/C/basic-commands-C.omf:7(maintainer)
@@ -24,8 +24,8 @@ msgid "ubuntu-doc@lists.ubuntu.com (Ubuntu Documentation Project)"
 msgstr "ubuntu-doc@lists.ubuntu.com (Dokumentační projekt Ubuntu)"
 
 #: basic-commands/C/basic-commands-C.omf:8(title) basic-commands/C/basic-commands.xml:13(title)
-msgid "Basic Commands"
-msgstr "Základní příkazy"
+msgid "Using the Command Line"
+msgstr "Použití příkazové řádky"
 
 #: basic-commands/C/basic-commands-C.omf:9(date)
 msgid "2006-09-07"
@@ -461,24 +461,25 @@ msgstr "lsb_release"
 
 #: basic-commands/C/basic-commands.xml:292(para)
 msgid ""
-"The <emphasis role=\"strong\">lsb_release</emphasis> command with the "
-"<emphasis role=\"strong\">-a</emphasis> option prints version information "
-"for the Linux release you're running. For example, typing: "
-"<screen>lsb_release -a</screen> will give you: <screen>\n"
+"The <command>lsb_release</command> command with the <emphasis "
+"role=\"strong\">-a</emphasis> option prints version information for the "
+"Linux release you're running. For example, typing: <screen>lsb_release -"
+"a</screen> will give you: <screen>\n"
 "No LSB modules are available.\n"
 "Distributor ID: Ubuntu\n"
-"Description:    Ubuntu 8.10 \n"
-"Release:        8.10\n"
-"Codename:       intrepid</screen>"
+"Description:    Ubuntu 9.04 \n"
+"Release:        9.04\n"
+"Codename:       jaunty</screen>"
 msgstr ""
-"Příkaz <emphasis role=\"strong\">lsb_release</emphasis> s volbou <emphasis "
-"role=\"strong\">-a</emphasis> vypisuje informace o vašem vydání Linuxu. "
-"Například napsáním: <screen>lsb_release -a</screen> obdržíte: <screen>\n"
+"Příkaz <command>lsb_release</command> s přepínačem <emphasis "
+"role=\"strong\">-a</emphasis> vypíše informace o verzi vydání Linuxu, který "
+"máte právě spuštěný. Například, po napsání: <screen>lsb_release -a</screen> "
+"se vypíše: <screen>\n"
 "No LSB modules are available.\n"
 "Distributor ID: Ubuntu\n"
-"Description:    Ubuntu 8.10 \n"
-"Release:        8.10\n"
-"Codename:       intrepid</screen>"
+"Description:    Ubuntu 9.04 \n"
+"Release:        9.04\n"
+"Codename:       jaunty</screen>"
 
 #: basic-commands/C/basic-commands.xml:311(title)
 msgid "Executing Commands with Elevated Privileges"
@@ -692,40 +693,64 @@ msgstr ""
 "Zkuste například <screen>man -f gnome</screen><placeholder-1/>"
 
 #: basic-commands/C/basic-commands.xml:468(title)
+msgid "Cutting and pasting"
+msgstr "Vyjmutí a vložení"
+
+#: basic-commands/C/basic-commands.xml:469(para)
+msgid ""
+"Often, you will be referred to instructions that require commands to be "
+"pasted into the terminal."
+msgstr ""
+"Často budete odkázáni na instrukce, které vyžadují vložit příkazy do "
+"terminálu."
+
+#: basic-commands/C/basic-commands.xml:471(para)
+msgid ""
+"You might be wondering why the text you've copied from a web page using "
+"<keycombo><keycap>Ctrl</keycap><keycap>C</keycap></keycombo> won't paste in "
+"with <keycombo><keycap>Ctrl</keycap><keycap>V</keycap></keycombo>, the shell "
+"uses a different combination for paste "
+"<keycombo><keycap>Shift</keycap><keycap>Insert</keycap></keycombo>. This can "
+"also be done using the mouse, by right-clicking in the terminal and clicking "
+"<menuchoice><guimenuitem>Paste</guimenuitem></menuchoice> from the menu."
+msgstr ""
+"Můžete se divit, proč text zkopírovaný z webové stránky pomocí "
+"<keycombo><keycap>Ctrl</keycap><keycap>C</keycap></keycombo> se nevloží "
+"pomocí <keycombo><keycap>Ctrl</keycap><keycap>V</keycap></keycombo>. "
+"Terminál používá pro vložení odlišnou klávesovou zkratku "
+"<keycombo><keycap>Shift</keycap><keycap>Insert</keycap></keycombo>. Taktéž "
+"to můžete provést myší pravým kliknutím v terminálu a zvolením "
+"<menuchoice><guimenuitem>Vložit</guimenuitem></menuchoice> z nabídky."
+
+#: basic-commands/C/basic-commands.xml:479(para)
+msgid ""
+"You can also select the required commands in your web browser and then "
+"subsequently click the middle button on your mouse (or simply click buttons "
+"simultaneously on a two-button mouse) in the terminal to paste in the select "
+"command."
+msgstr ""
+"Také můžete označit požadovaný příkaz ve vašem webovém prohlížeči a následně "
+"kliknout na prostřední tlačítko vaší myši (nebo jednoduše kliknout na obě "
+"tlačítka zároveň na dvoutlačítkové myši) v terminálu, což do něj vloží "
+"označený příkaz."
+
+#: basic-commands/C/basic-commands.xml:483(para)
+msgid ""
+"These actions may mean something entirely different to other terminal "
+"emulators. Consult your emulator's documentation for details."
+msgstr ""
+"Tyto akce mohou fungovat zcela rozdílně v závislosti na emulátoru terminálu. "
+"Chcete-li zjistit více podrobností, podívejte se do dokumentace k emulátoru."
+
+#: basic-commands/C/basic-commands.xml:488(title)
 msgid "Other Useful Things"
 msgstr "Další užitečné věci"
 
-#: basic-commands/C/basic-commands.xml:471(title)
-msgid "Pasting in commands"
-msgstr "Vkládání příkazů"
-
-#: basic-commands/C/basic-commands.xml:472(para)
-msgid ""
-"Often, you will be referred to instructions that require commands to be "
-"pasted into the terminal. You might be wondering why the text you've copied "
-"from a web page using "
-"<keycombo><keycap>Ctrl</keycap><keycap>C</keycap></keycombo> won't paste in "
-"with <keycombo><keycap>Ctrl</keycap><keycap>V</keycap></keycombo>. Surely "
-"you don't have to type in all those nasty commands and filenames? Relax. "
-"Middle Button Click on your mouse (both buttons simultaneously on a two-"
-"button mouse) or Right Click and select "
-"<menuchoice><guimenuitem>Paste</guimenuitem></menuchoice> from the menu."
-msgstr ""
-"Často se budete setkávat s instrukcemi, které požadují vložení příkazu do "
-"terminálu. Může vás zaskočit, že text, který zkopírujete z webové stránky "
-"pomocí <keycombo><keycap>Ctrl</keycap><keycap>C</keycap></keycombo> se do "
-"příkazové řádky zkratkou "
-"<keycombo><keycap>Ctrl</keycap><keycap>V</keycap></keycombo> nevloží. "
-"Nemusíte ovšem všechny ty příkazy a názvy souborů opisovat. Stačí, když v "
-"terminálu stiskněte prostřední tlačítko myši (obě tlačítka současně na "
-"dvoutlačítkové myši), nebo klikněte pravým tlačítkem a z nabídky vyberete "
-"<menuchoice><guimenuitem>Vložit</guimenuitem></menuchoice>."
-
-#: basic-commands/C/basic-commands.xml:495(title)
+#: basic-commands/C/basic-commands.xml:490(title)
 msgid "Save on typing"
 msgstr "Ušetřete si psaní"
 
-#: basic-commands/C/basic-commands.xml:504(para)
+#: basic-commands/C/basic-commands.xml:499(para)
 msgid ""
 "<keycap>Up Arrow</keycap> or "
 "<keycombo><keycap>Ctrl</keycap><keycap>p</keycap></keycombo>"
@@ -733,11 +758,11 @@ msgstr ""
 "<keycap>Šipka nahoru</keycap> nebo "
 "<keycombo><keycap>Ctrl</keycap><keycap>p</keycap></keycombo>"
 
-#: basic-commands/C/basic-commands.xml:514(para)
+#: basic-commands/C/basic-commands.xml:509(para)
 msgid "Scrolls through the commands you've entered previously."
 msgstr "Prochází skrz dříve zadané příkazy."
 
-#: basic-commands/C/basic-commands.xml:522(para)
+#: basic-commands/C/basic-commands.xml:517(para)
 msgid ""
 "<keycap>Down Arrow</keycap> or "
 "<keycombo><keycap>Ctrl</keycap><keycap>n</keycap></keycombo>"
@@ -745,23 +770,23 @@ msgstr ""
 "<keycap>Šipka dolů</keycap> nebo "
 "<keycombo><keycap>Ctrl</keycap><keycap>n</keycap></keycombo>"
 
-#: basic-commands/C/basic-commands.xml:532(para)
+#: basic-commands/C/basic-commands.xml:527(para)
 msgid "Takes you back to a more recent command."
 msgstr "Přesune vás zpátky na nověji zadaný příkaz."
 
-#: basic-commands/C/basic-commands.xml:539(keycap)
+#: basic-commands/C/basic-commands.xml:534(keycap)
 msgid "Enter"
 msgstr "Enter"
 
-#: basic-commands/C/basic-commands.xml:544(para)
+#: basic-commands/C/basic-commands.xml:539(para)
 msgid "When you have the command you want."
 msgstr "Když máte ten příkaz, který chcete."
 
-#: basic-commands/C/basic-commands.xml:550(keycap)
+#: basic-commands/C/basic-commands.xml:545(keycap)
 msgid "Tab"
 msgstr "Tab"
 
-#: basic-commands/C/basic-commands.xml:555(para)
+#: basic-commands/C/basic-commands.xml:550(para)
 msgid ""
 "A very useful feature. It autocompletes any commands or filenames, if "
 "there's only one option, or else gives you a list of options."
@@ -769,11 +794,11 @@ msgstr ""
 "Velice užitečná funkce. Automaticky doplní jakékoliv příkazy nebo jména "
 "souborů, pokud existuje jen jedna možnost, jinak vám zobrazí seznam možností."
 
-#: basic-commands/C/basic-commands.xml:568(title)
+#: basic-commands/C/basic-commands.xml:563(title)
 msgid "Change the text"
 msgstr "Změňte text"
 
-#: basic-commands/C/basic-commands.xml:569(para)
+#: basic-commands/C/basic-commands.xml:564(para)
 msgid ""
 "The mouse won't work. Use the <keycap>Left/Right arrow</keycap> keys to move "
 "around the line."
@@ -781,7 +806,7 @@ msgstr ""
 "Myš nebude fungovat. Použijte <keycap>levou/pravou šipku</keycap> pro pohyb "
 "po řádku."
 
-#: basic-commands/C/basic-commands.xml:573(para)
+#: basic-commands/C/basic-commands.xml:568(para)
 msgid ""
 "When the cursor is where you want it in the line, typing "
 "<emphasis>inserts</emphasis> text, it doesn't overtype what's already there."
@@ -789,7 +814,7 @@ msgstr ""
 "Až máte kurzor v řádku tam, kde chcete, psaní <emphasis>vkládá</emphasis> "
 "text, nepřepisuje původní obsah."
 
-#: basic-commands/C/basic-commands.xml:586(para)
+#: basic-commands/C/basic-commands.xml:581(para)
 msgid ""
 "<keycombo><keycap>Ctrl</keycap><keycap>a</keycap></keycombo> or "
 "<keycap>Home</keycap>"
@@ -797,11 +822,11 @@ msgstr ""
 "<keycombo><keycap>Ctrl</keycap><keycap>a</keycap></keycombo> nebo "
 "<keycap>Home</keycap>"
 
-#: basic-commands/C/basic-commands.xml:596(para)
+#: basic-commands/C/basic-commands.xml:591(para)
 msgid "Moves the cursor to the <emphasis>start</emphasis> of a line."
 msgstr "Přesune kurzor na <emphasis>začátek</emphasis> řádku."
 
-#: basic-commands/C/basic-commands.xml:602(para)
+#: basic-commands/C/basic-commands.xml:597(para)
 msgid ""
 "<keycombo><keycap>Ctrl</keycap><keycap>e</keycap></keycombo> or "
 "<keycap>End</keycap>"
@@ -809,47 +834,47 @@ msgstr ""
 "<keycombo><keycap>Ctrl</keycap><keycap>e</keycap></keycombo> nebo "
 "<keycap>End</keycap>"
 
-#: basic-commands/C/basic-commands.xml:612(para)
+#: basic-commands/C/basic-commands.xml:607(para)
 msgid "Moves the cursor to the <emphasis> end</emphasis> of a line."
 msgstr "Přesune kurzor na <emphasis> konec</emphasis> řádku."
 
-#: basic-commands/C/basic-commands.xml:623(keycap) basic-commands/C/basic-commands.xml:638(keycap) basic-commands/C/basic-commands.xml:652(keycap)
+#: basic-commands/C/basic-commands.xml:618(keycap) basic-commands/C/basic-commands.xml:633(keycap) basic-commands/C/basic-commands.xml:647(keycap)
 msgid "Ctrl"
 msgstr "Ctrl"
 
-#: basic-commands/C/basic-commands.xml:624(keycap)
+#: basic-commands/C/basic-commands.xml:619(keycap)
 msgid "k"
 msgstr "k"
 
-#: basic-commands/C/basic-commands.xml:630(para)
+#: basic-commands/C/basic-commands.xml:625(para)
 msgid "Deletes from the current cursor position to the end of the line."
 msgstr "Smaže vše od aktuální pozice kurzoru do konce řádku."
 
-#: basic-commands/C/basic-commands.xml:639(keycap)
+#: basic-commands/C/basic-commands.xml:634(keycap)
 msgid "u"
 msgstr "u"
 
-#: basic-commands/C/basic-commands.xml:645(para)
+#: basic-commands/C/basic-commands.xml:640(para)
 msgid "Deletes the whole of the current line."
 msgstr "Smaže celý aktuální řádek."
 
-#: basic-commands/C/basic-commands.xml:653(keycap)
+#: basic-commands/C/basic-commands.xml:648(keycap)
 msgid "w"
 msgstr "w"
 
-#: basic-commands/C/basic-commands.xml:659(para)
+#: basic-commands/C/basic-commands.xml:654(para)
 msgid "Deletes the word before the cursor."
 msgstr "Smaže slovo před kurzorem."
 
-#: basic-commands/C/basic-commands.xml:669(title)
+#: basic-commands/C/basic-commands.xml:664(title)
 msgid "More Information"
 msgstr "Více informací"
 
-#: basic-commands/C/basic-commands.xml:670(para)
+#: basic-commands/C/basic-commands.xml:665(para)
 msgid "The following online guides are available:"
 msgstr "Následující online průvodci jsou dostupní:"
 
-#: basic-commands/C/basic-commands.xml:673(para)
+#: basic-commands/C/basic-commands.xml:668(para)
 msgid ""
 "<ulink url=\"https://help.ubuntu.com/community/AptGetHowto\"> "
 "AptGetHowto</ulink> - using apt-get to install packages from the command "
@@ -858,7 +883,7 @@ msgstr ""
 "<ulink url=\"http://wiki.ubuntu.cz/apt\"> apt</ulink> - použití apt-get pro "
 "instalaci balíků z příkazové řádky"
 
-#: basic-commands/C/basic-commands.xml:680(para)
+#: basic-commands/C/basic-commands.xml:675(para)
 msgid ""
 "<ulink url=\"https://help.ubuntu.com/community/Repositories/CommandLine\"> "
 "Commandline Repository Editing</ulink> - adding the Universe/Multiverse "
@@ -868,7 +893,7 @@ msgstr ""
 "Úprava zdrojů příkazovou řádkou</ulink> - přidávání Universe/Multiverse "
 "zdrojů pomocí příkazové řádky."
 
-#: basic-commands/C/basic-commands.xml:688(para)
+#: basic-commands/C/basic-commands.xml:683(para)
 msgid ""
 "<ulink url=\"https://help.ubuntu.com/community/grep\">grep Howto</ulink> - "
 "grep is a powerful command line search tool."
@@ -876,7 +901,7 @@ msgstr ""
 "<ulink url=\"https://help.ubuntu.com/community/grep\">Jak na grep</ulink> - "
 "grep je mocný vyhledávací příkaz příkazové řádky."
 
-#: basic-commands/C/basic-commands.xml:695(para)
+#: basic-commands/C/basic-commands.xml:690(para)
 msgid ""
 "<ulink url=\"https://help.ubuntu.com/community/find\">find </ulink> - locate "
 "files on the command line."
@@ -884,7 +909,7 @@ msgstr ""
 "<ulink url=\"https://help.ubuntu.com/community/find\">find </ulink> - "
 "nalezněte soubory příkazovou řádkou."
 
-#: basic-commands/C/basic-commands.xml:701(para)
+#: basic-commands/C/basic-commands.xml:696(para)
 msgid ""
 "<ulink url=\"https://help.ubuntu.com/community/CommandlineHowto\"> "
 "CommandlineHowto</ulink> - longer and more complete than this basic guide, "
@@ -894,7 +919,7 @@ msgstr ""
 "příkazovou řádku</ulink> - delší a komplexnější než základní průvodce, ale "
 "stále nedokončené."
 
-#: basic-commands/C/basic-commands.xml:708(para)
+#: basic-commands/C/basic-commands.xml:703(para)
 msgid ""
 "<ulink url=\"https://help.ubuntu.com/community/HowToReadline\"> "
 "HowToReadline</ulink> - information on some more advanced customization for "
@@ -904,11 +929,11 @@ msgstr ""
 "readline</ulink> - informace o některých pokročilejších úpravách příkazové "
 "řádky."
 
-#: basic-commands/C/basic-commands.xml:715(para)
+#: basic-commands/C/basic-commands.xml:710(para)
 msgid "For more detailed tutorials on the Linux command line, please see:"
 msgstr "Pro detailnější návody o linuxové příkazové řádce, navštivte:"
 
-#: basic-commands/C/basic-commands.xml:721(para)
+#: basic-commands/C/basic-commands.xml:716(para)
 msgid ""
 "<ulink url=\"http://linuxcommand.org/\"/>- basic BASH tutorials, including "
 "BASH scripting"
@@ -916,13 +941,13 @@ msgstr ""
 "<ulink url=\"http://linuxcommand.org/\"/>- základní návody na BASH, včetně "
 "skriptování BASH"
 
-#: basic-commands/C/basic-commands.xml:727(para)
+#: basic-commands/C/basic-commands.xml:722(para)
 msgid ""
 "<ulink url=\"http://linuxsurvival.com/index.php\"/>- Java-based tutorials"
 msgstr ""
 "<ulink url=\"http://linuxsurvival.com/index.php\"/>- návody za použití Javy"
 
-#: basic-commands/C/basic-commands.xml:733(para)
+#: basic-commands/C/basic-commands.xml:728(para)
 msgid ""
 "<ulink url=\"http://rute.2038bug.com/index.html.gz\"/>- a massive online "
 "book about system administration, almost all from the command line."
@@ -964,7 +989,63 @@ msgstr ""
 "  Lubomír Sedlář https://launchpad.net/~lubomir-sedlar\n"
 "  Martin Böhm https://launchpad.net/~martin.bohm\n"
 "  hyrou-men https://launchpad.net/~jan-hrdka\n"
+"  stuchy https://launchpad.net/~honza-stourac\n"
+"\n"
+"Launchpad Contributions:\n"
+"  Adewzen https://launchpad.net/~adewzen\n"
+"  Adrian Guniš https://launchpad.net/~andygun\n"
+"  Hýroumen https://launchpad.net/~jan-hrdina\n"
+"  Kamil Páral https://launchpad.net/~kamil.paral\n"
+"  Lubomír Sedlář https://launchpad.net/~lubomir-sedlar\n"
+"  Martin Böhm https://launchpad.net/~martin.bohm\n"
 "  stuchy https://launchpad.net/~honza-stourac"
+
+#~ msgid "Basic Commands"
+#~ msgstr "Základní příkazy"
+
+#~ msgid ""
+#~ "The <emphasis role=\"strong\">lsb_release</emphasis> command with the "
+#~ "<emphasis role=\"strong\">-a</emphasis> option prints version information "
+#~ "for the Linux release you're running. For example, typing: "
+#~ "<screen>lsb_release -a</screen> will give you: <screen>\n"
+#~ "No LSB modules are available.\n"
+#~ "Distributor ID: Ubuntu\n"
+#~ "Description:    Ubuntu 8.10 \n"
+#~ "Release:        8.10\n"
+#~ "Codename:       intrepid</screen>"
+#~ msgstr ""
+#~ "Příkaz <emphasis role=\"strong\">lsb_release</emphasis> s volbou <emphasis "
+#~ "role=\"strong\">-a</emphasis> vypisuje informace o vašem vydání Linuxu. "
+#~ "Například napsáním: <screen>lsb_release -a</screen> obdržíte: <screen>\n"
+#~ "No LSB modules are available.\n"
+#~ "Distributor ID: Ubuntu\n"
+#~ "Description:    Ubuntu 8.10 \n"
+#~ "Release:        8.10\n"
+#~ "Codename:       intrepid</screen>"
+
+#~ msgid "Pasting in commands"
+#~ msgstr "Vkládání příkazů"
+
+#~ msgid ""
+#~ "Often, you will be referred to instructions that require commands to be "
+#~ "pasted into the terminal. You might be wondering why the text you've copied "
+#~ "from a web page using "
+#~ "<keycombo><keycap>Ctrl</keycap><keycap>C</keycap></keycombo> won't paste in "
+#~ "with <keycombo><keycap>Ctrl</keycap><keycap>V</keycap></keycombo>. Surely "
+#~ "you don't have to type in all those nasty commands and filenames? Relax. "
+#~ "Middle Button Click on your mouse (both buttons simultaneously on a two-"
+#~ "button mouse) or Right Click and select "
+#~ "<menuchoice><guimenuitem>Paste</guimenuitem></menuchoice> from the menu."
+#~ msgstr ""
+#~ "Často se budete setkávat s instrukcemi, které požadují vložení příkazu do "
+#~ "terminálu. Může vás zaskočit, že text, který zkopírujete z webové stránky "
+#~ "pomocí <keycombo><keycap>Ctrl</keycap><keycap>C</keycap></keycombo> se do "
+#~ "příkazové řádky zkratkou "
+#~ "<keycombo><keycap>Ctrl</keycap><keycap>V</keycap></keycombo> nevloží. "
+#~ "Nemusíte ovšem všechny ty příkazy a názvy souborů opisovat. Stačí, když v "
+#~ "terminálu stiskněte prostřední tlačítko myši (obě tlačítka současně na "
+#~ "dvoutlačítkové myši), nebo klikněte pravým tlačítkem a z nabídky vyberete "
+#~ "<menuchoice><guimenuitem>Vložit</guimenuitem></menuchoice>."
 
 #~ msgid ""
 #~ "Moves the cursor to the <emphasis><emphasis "

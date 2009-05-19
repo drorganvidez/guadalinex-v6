@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-docs\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2008-10-12 20:18+0100\n"
-"PO-Revision-Date: 2008-10-11 09:54+0000\n"
+"POT-Creation-Date: 2009-03-26 16:34+0000\n"
+"PO-Revision-Date: 2009-03-28 11:09+0000\n"
 "Last-Translator: Daniel Nylander <yeager@ubuntu.com>\n"
 "Language-Team: Swedish <sv@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2008-10-19 12:43+0000\n"
+"X-Launchpad-Export-Date: 2009-04-01 11:05+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: basic-commands/C/basic-commands-C.omf:6(creator) basic-commands/C/basic-commands-C.omf:7(maintainer)
@@ -22,8 +22,8 @@ msgid "ubuntu-doc@lists.ubuntu.com (Ubuntu Documentation Project)"
 msgstr "ubuntu-doc@lists.ubuntu.com (Ubuntus dokumentationsprojekt)"
 
 #: basic-commands/C/basic-commands-C.omf:8(title) basic-commands/C/basic-commands.xml:13(title)
-msgid "Basic Commands"
-msgstr "Grundläggande kommandon"
+msgid "Using the Command Line"
+msgstr "Använda kommandoraden"
 
 #: basic-commands/C/basic-commands-C.omf:9(date)
 msgid "2006-09-07"
@@ -469,16 +469,25 @@ msgstr "lsb_release"
 
 #: basic-commands/C/basic-commands.xml:292(para)
 msgid ""
-"The <emphasis role=\"strong\">lsb_release</emphasis> command with the "
-"<emphasis role=\"strong\">-a</emphasis> option prints version information "
-"for the Linux release you're running. For example, typing: "
-"<screen>lsb_release -a</screen> will give you: <screen>\n"
+"The <command>lsb_release</command> command with the <emphasis "
+"role=\"strong\">-a</emphasis> option prints version information for the "
+"Linux release you're running. For example, typing: <screen>lsb_release -"
+"a</screen> will give you: <screen>\n"
 "No LSB modules are available.\n"
 "Distributor ID: Ubuntu\n"
-"Description:    Ubuntu 8.10 \n"
-"Release:        8.10\n"
-"Codename:       intrepid</screen>"
+"Description:    Ubuntu 9.04 \n"
+"Release:        9.04\n"
+"Codename:       jaunty</screen>"
 msgstr ""
+"Kommandot <command>lsb_release</command> med flaggan <emphasis "
+"role=\"strong\">-a</emphasis> skriver ut versionsinformation för den Linux-"
+"utgåva som du kör. Exempelvis kommer: <screen>lsb_release -a</screen> att ge "
+"dig: <screen>\n"
+"No LSB modules are available.\n"
+"Distributor ID: Ubuntu\n"
+"Description:    Ubuntu 9.04 \n"
+"Release:        9.04\n"
+"Codename:       jaunty</screen>"
 
 #: basic-commands/C/basic-commands.xml:311(title)
 msgid "Executing Commands with Elevated Privileges"
@@ -694,40 +703,64 @@ msgstr ""
 "ditt system. Prova till exempel <screen>man -f gnome</screen><placeholder-1/>"
 
 #: basic-commands/C/basic-commands.xml:468(title)
+msgid "Cutting and pasting"
+msgstr "Klipp ut och klistra in"
+
+#: basic-commands/C/basic-commands.xml:469(para)
+msgid ""
+"Often, you will be referred to instructions that require commands to be "
+"pasted into the terminal."
+msgstr ""
+"Du kommer ofta att refereras till instruktioner som kräver att kommandon "
+"klistras in i terminalen."
+
+#: basic-commands/C/basic-commands.xml:471(para)
+msgid ""
+"You might be wondering why the text you've copied from a web page using "
+"<keycombo><keycap>Ctrl</keycap><keycap>C</keycap></keycombo> won't paste in "
+"with <keycombo><keycap>Ctrl</keycap><keycap>V</keycap></keycombo>, the shell "
+"uses a different combination for paste "
+"<keycombo><keycap>Shift</keycap><keycap>Insert</keycap></keycombo>. This can "
+"also be done using the mouse, by right-clicking in the terminal and clicking "
+"<menuchoice><guimenuitem>Paste</guimenuitem></menuchoice> from the menu."
+msgstr ""
+"Du kanske undrar varför texten som du har kopierat från en webbsida med "
+"<keycombo><keycap>Ctrl</keycap><keycap>C</keycap></keycombo> inte kommer att "
+"klistras in med "
+"<keycombo><keycap>Ctrl</keycap><keycap>V</keycap></keycombo>, skalet "
+"använder en annan kombination för klistra in "
+"<keycombo><keycap>Skift</keycap><keycap>Insert</keycap></keycombo>. Detta "
+"kan även göras med musen genom att högerklicka i terminalen samt klicka på "
+"<menuchoice><guimenuitem>Klistra in</guimenuitem></menuchoice> från menyn."
+
+#: basic-commands/C/basic-commands.xml:479(para)
+msgid ""
+"You can also select the required commands in your web browser and then "
+"subsequently click the middle button on your mouse (or simply click buttons "
+"simultaneously on a two-button mouse) in the terminal to paste in the select "
+"command."
+msgstr ""
+"Du kan även välja de nödvändiga kommandona i din webbläsare och sedan klicka "
+"på mittenknappen på din mus (eller helt enkelt klicka på både höger och "
+"vänster musknapp samtidigt) i terminalen för att klistra in kommandot."
+
+#: basic-commands/C/basic-commands.xml:483(para)
+msgid ""
+"These actions may mean something entirely different to other terminal "
+"emulators. Consult your emulator's documentation for details."
+msgstr ""
+"Dessa åtgärder kan betyda någonting helt annat i andra terminalemulatorer. "
+"Referera till dokumentationen för din emulator för ytterligare information."
+
+#: basic-commands/C/basic-commands.xml:488(title)
 msgid "Other Useful Things"
 msgstr "Andra användbara ting"
 
-#: basic-commands/C/basic-commands.xml:471(title)
-msgid "Pasting in commands"
-msgstr "Klistra in kommandon"
-
-#: basic-commands/C/basic-commands.xml:472(para)
-msgid ""
-"Often, you will be referred to instructions that require commands to be "
-"pasted into the terminal. You might be wondering why the text you've copied "
-"from a web page using "
-"<keycombo><keycap>Ctrl</keycap><keycap>C</keycap></keycombo> won't paste in "
-"with <keycombo><keycap>Ctrl</keycap><keycap>V</keycap></keycombo>. Surely "
-"you don't have to type in all those nasty commands and filenames? Relax. "
-"Middle Button Click on your mouse (both buttons simultaneously on a two-"
-"button mouse) or Right Click and select "
-"<menuchoice><guimenuitem>Paste</guimenuitem></menuchoice> from the menu."
-msgstr ""
-"Ofta blir du refererad till instruktioner som kräver att kommandon klistras "
-"in i terminalen. Du kanske undrar varför texten som du har kopierat från en "
-"webbsida med <keycombo><keycap>Ctrl</keycap><keycap>C</keycap></keycombo> "
-"inte kan klistras in med "
-"<keycombo><keycap>Ctrl</keycap><keycap>V</keycap></keycombo>. Måste du "
-"verkligen skriva in alla dessa skumma kommandon och filnamn? Lugn. Klicka "
-"med mittenknappen på din mus (båda knapparna samtidigt på en tvåknapparsmus) "
-"eller högerklicka och välj <menuchoice><guimenuitem>Klistra "
-"in</guimenuitem></menuchoice> från menyn."
-
-#: basic-commands/C/basic-commands.xml:495(title)
+#: basic-commands/C/basic-commands.xml:490(title)
 msgid "Save on typing"
 msgstr "Spara tid"
 
-#: basic-commands/C/basic-commands.xml:504(para)
+#: basic-commands/C/basic-commands.xml:499(para)
 msgid ""
 "<keycap>Up Arrow</keycap> or "
 "<keycombo><keycap>Ctrl</keycap><keycap>p</keycap></keycombo>"
@@ -735,11 +768,11 @@ msgstr ""
 "<keycap>Uppåtpil</keycap> eller "
 "<keycombo><keycap>Ctrl</keycap><keycap>p</keycap></keycombo>"
 
-#: basic-commands/C/basic-commands.xml:514(para)
+#: basic-commands/C/basic-commands.xml:509(para)
 msgid "Scrolls through the commands you've entered previously."
 msgstr "Rullar genom de kommandon som du tidigare använt."
 
-#: basic-commands/C/basic-commands.xml:522(para)
+#: basic-commands/C/basic-commands.xml:517(para)
 msgid ""
 "<keycap>Down Arrow</keycap> or "
 "<keycombo><keycap>Ctrl</keycap><keycap>n</keycap></keycombo>"
@@ -747,23 +780,23 @@ msgstr ""
 "<keycap>Nedåtpil</keycap> eller "
 "<keycombo><keycap>Ctrl</keycap><keycap>n</keycap></keycombo>"
 
-#: basic-commands/C/basic-commands.xml:532(para)
+#: basic-commands/C/basic-commands.xml:527(para)
 msgid "Takes you back to a more recent command."
 msgstr "Tar dig tillbaka till ett tidigare kommando."
 
-#: basic-commands/C/basic-commands.xml:539(keycap)
+#: basic-commands/C/basic-commands.xml:534(keycap)
 msgid "Enter"
 msgstr "Enter"
 
-#: basic-commands/C/basic-commands.xml:544(para)
+#: basic-commands/C/basic-commands.xml:539(para)
 msgid "When you have the command you want."
 msgstr "När du har fått kommandot som du vill använda."
 
-#: basic-commands/C/basic-commands.xml:550(keycap)
+#: basic-commands/C/basic-commands.xml:545(keycap)
 msgid "Tab"
 msgstr "Tabb"
 
-#: basic-commands/C/basic-commands.xml:555(para)
+#: basic-commands/C/basic-commands.xml:550(para)
 msgid ""
 "A very useful feature. It autocompletes any commands or filenames, if "
 "there's only one option, or else gives you a list of options."
@@ -772,11 +805,11 @@ msgstr ""
 "eller filnamn, om det endast finns ett alternativ, eller ger dig en lista "
 "över alternativ."
 
-#: basic-commands/C/basic-commands.xml:568(title)
+#: basic-commands/C/basic-commands.xml:563(title)
 msgid "Change the text"
 msgstr "Ändra texten"
 
-#: basic-commands/C/basic-commands.xml:569(para)
+#: basic-commands/C/basic-commands.xml:564(para)
 msgid ""
 "The mouse won't work. Use the <keycap>Left/Right arrow</keycap> keys to move "
 "around the line."
@@ -784,7 +817,7 @@ msgstr ""
 "Musen fungerar inte. Använd tangenterna <keycap>vänster/högerpil</keycap> "
 "för att förflytta dig på raden."
 
-#: basic-commands/C/basic-commands.xml:573(para)
+#: basic-commands/C/basic-commands.xml:568(para)
 msgid ""
 "When the cursor is where you want it in the line, typing "
 "<emphasis>inserts</emphasis> text, it doesn't overtype what's already there."
@@ -792,7 +825,7 @@ msgstr ""
 "När markören är där du vill att den ska vara på raden kan du <emphasis>mata "
 "in</emphasis> text, den skriver inte över vad som redan finns där."
 
-#: basic-commands/C/basic-commands.xml:586(para)
+#: basic-commands/C/basic-commands.xml:581(para)
 msgid ""
 "<keycombo><keycap>Ctrl</keycap><keycap>a</keycap></keycombo> or "
 "<keycap>Home</keycap>"
@@ -800,11 +833,11 @@ msgstr ""
 "<keycombo><keycap>Ctrl</keycap><keycap>a</keycap></keycombo> eller "
 "<keycap>Home</keycap>"
 
-#: basic-commands/C/basic-commands.xml:596(para)
+#: basic-commands/C/basic-commands.xml:591(para)
 msgid "Moves the cursor to the <emphasis>start</emphasis> of a line."
 msgstr "Flyttar markören till <emphasis>början</emphasis> av en rad."
 
-#: basic-commands/C/basic-commands.xml:602(para)
+#: basic-commands/C/basic-commands.xml:597(para)
 msgid ""
 "<keycombo><keycap>Ctrl</keycap><keycap>e</keycap></keycombo> or "
 "<keycap>End</keycap>"
@@ -812,47 +845,47 @@ msgstr ""
 "<keycombo><keycap>Ctrl</keycap><keycap>e</keycap></keycombo> eller "
 "<keycap>End</keycap>"
 
-#: basic-commands/C/basic-commands.xml:612(para)
+#: basic-commands/C/basic-commands.xml:607(para)
 msgid "Moves the cursor to the <emphasis> end</emphasis> of a line."
 msgstr "Flyttar markören till <emphasis> slutet</emphasis> av en rad."
 
-#: basic-commands/C/basic-commands.xml:623(keycap) basic-commands/C/basic-commands.xml:638(keycap) basic-commands/C/basic-commands.xml:652(keycap)
+#: basic-commands/C/basic-commands.xml:618(keycap) basic-commands/C/basic-commands.xml:633(keycap) basic-commands/C/basic-commands.xml:647(keycap)
 msgid "Ctrl"
 msgstr "Ctrl"
 
-#: basic-commands/C/basic-commands.xml:624(keycap)
+#: basic-commands/C/basic-commands.xml:619(keycap)
 msgid "k"
 msgstr "k"
 
-#: basic-commands/C/basic-commands.xml:630(para)
+#: basic-commands/C/basic-commands.xml:625(para)
 msgid "Deletes from the current cursor position to the end of the line."
 msgstr "Tar bort från den aktuella markörpositionen till slutet av raden."
 
-#: basic-commands/C/basic-commands.xml:639(keycap)
+#: basic-commands/C/basic-commands.xml:634(keycap)
 msgid "u"
 msgstr "u"
 
-#: basic-commands/C/basic-commands.xml:645(para)
+#: basic-commands/C/basic-commands.xml:640(para)
 msgid "Deletes the whole of the current line."
 msgstr "Tar bort hela den aktuella raden."
 
-#: basic-commands/C/basic-commands.xml:653(keycap)
+#: basic-commands/C/basic-commands.xml:648(keycap)
 msgid "w"
 msgstr "w"
 
-#: basic-commands/C/basic-commands.xml:659(para)
+#: basic-commands/C/basic-commands.xml:654(para)
 msgid "Deletes the word before the cursor."
 msgstr "Tar bort ordet före markören."
 
-#: basic-commands/C/basic-commands.xml:669(title)
+#: basic-commands/C/basic-commands.xml:664(title)
 msgid "More Information"
 msgstr "Mer information"
 
-#: basic-commands/C/basic-commands.xml:670(para)
+#: basic-commands/C/basic-commands.xml:665(para)
 msgid "The following online guides are available:"
 msgstr "Följande guider finns tillgängliga:"
 
-#: basic-commands/C/basic-commands.xml:673(para)
+#: basic-commands/C/basic-commands.xml:668(para)
 msgid ""
 "<ulink url=\"https://help.ubuntu.com/community/AptGetHowto\"> "
 "AptGetHowto</ulink> - using apt-get to install packages from the command "
@@ -862,7 +895,7 @@ msgstr ""
 "AptGetHowto</ulink> - använd apt-get för att installera paket från "
 "kommandoraden."
 
-#: basic-commands/C/basic-commands.xml:680(para)
+#: basic-commands/C/basic-commands.xml:675(para)
 msgid ""
 "<ulink url=\"https://help.ubuntu.com/community/Repositories/CommandLine\"> "
 "Commandline Repository Editing</ulink> - adding the Universe/Multiverse "
@@ -872,7 +905,7 @@ msgstr ""
 "Commandline Repository Editing</ulink> - lägg till förråden universe och "
 "multiverse via kommandoraden."
 
-#: basic-commands/C/basic-commands.xml:688(para)
+#: basic-commands/C/basic-commands.xml:683(para)
 msgid ""
 "<ulink url=\"https://help.ubuntu.com/community/grep\">grep Howto</ulink> - "
 "grep is a powerful command line search tool."
@@ -880,7 +913,7 @@ msgstr ""
 "<ulink url=\"https://help.ubuntu.com/community/grep\">grep Howto</ulink> - "
 "grep är ett kraftfullt sökverktyg för kommandoraden."
 
-#: basic-commands/C/basic-commands.xml:695(para)
+#: basic-commands/C/basic-commands.xml:690(para)
 msgid ""
 "<ulink url=\"https://help.ubuntu.com/community/find\">find </ulink> - locate "
 "files on the command line."
@@ -888,7 +921,7 @@ msgstr ""
 "<ulink url=\"https://help.ubuntu.com/community/find\">find </ulink> - leta "
 "efter filer via kommandoraden."
 
-#: basic-commands/C/basic-commands.xml:701(para)
+#: basic-commands/C/basic-commands.xml:696(para)
 msgid ""
 "<ulink url=\"https://help.ubuntu.com/community/CommandlineHowto\"> "
 "CommandlineHowto</ulink> - longer and more complete than this basic guide, "
@@ -898,7 +931,7 @@ msgstr ""
 "CommandlineHowto</ulink> - längre och mer komplett än den grundläggande "
 "guiden, dock inte helt färdig ännu."
 
-#: basic-commands/C/basic-commands.xml:708(para)
+#: basic-commands/C/basic-commands.xml:703(para)
 msgid ""
 "<ulink url=\"https://help.ubuntu.com/community/HowToReadline\"> "
 "HowToReadline</ulink> - information on some more advanced customization for "
@@ -908,12 +941,12 @@ msgstr ""
 "HowToReadline</ulink> - information om mer avancerad anpassning för "
 "kommandoraden."
 
-#: basic-commands/C/basic-commands.xml:715(para)
+#: basic-commands/C/basic-commands.xml:710(para)
 msgid "For more detailed tutorials on the Linux command line, please see:"
 msgstr ""
 "Se följande webbplatser för mer detaljerade handledningar om Linuxkommandon:"
 
-#: basic-commands/C/basic-commands.xml:721(para)
+#: basic-commands/C/basic-commands.xml:716(para)
 msgid ""
 "<ulink url=\"http://linuxcommand.org/\"/>- basic BASH tutorials, including "
 "BASH scripting"
@@ -921,14 +954,14 @@ msgstr ""
 "<ulink url=\"http://linuxcommand.org/\"/>- grundläggande BASH-handledningar, "
 "innefattar även BASH-skript"
 
-#: basic-commands/C/basic-commands.xml:727(para)
+#: basic-commands/C/basic-commands.xml:722(para)
 msgid ""
 "<ulink url=\"http://linuxsurvival.com/index.php\"/>- Java-based tutorials"
 msgstr ""
 "<ulink url=\"http://linuxsurvival.com/index.php\"/>- Javabaserade "
 "handledningar"
 
-#: basic-commands/C/basic-commands.xml:733(para)
+#: basic-commands/C/basic-commands.xml:728(para)
 msgid ""
 "<ulink url=\"http://rute.2038bug.com/index.html.gz\"/>- a massive online "
 "book about system administration, almost all from the command line."
@@ -965,7 +998,42 @@ msgstr ""
 "  HenrikAn https://launchpad.net/~henrik-reg-1\n"
 "  Leonard Broman https://launchpad.net/~firepiper\n"
 "  NGK https://launchpad.net/~ayumi-evolution\n"
+"  Torbjörn Hed https://launchpad.net/~torbjorn-hed\n"
+"\n"
+"Launchpad Contributions:\n"
+"  Daniel Nylander https://launchpad.net/~yeager\n"
+"  Dennis Gren https://launchpad.net/~omvdennis-deactivatedaccount\n"
+"  HenrikAn https://launchpad.net/~henrikan\n"
+"  Leonard Broman https://launchpad.net/~firepiper\n"
+"  NGK https://launchpad.net/~ayumi-evolution\n"
 "  Torbjörn Hed https://launchpad.net/~torbjorn-hed"
+
+#~ msgid "Basic Commands"
+#~ msgstr "Grundläggande kommandon"
+
+#~ msgid "Pasting in commands"
+#~ msgstr "Klistra in kommandon"
+
+#~ msgid ""
+#~ "Often, you will be referred to instructions that require commands to be "
+#~ "pasted into the terminal. You might be wondering why the text you've copied "
+#~ "from a web page using "
+#~ "<keycombo><keycap>Ctrl</keycap><keycap>C</keycap></keycombo> won't paste in "
+#~ "with <keycombo><keycap>Ctrl</keycap><keycap>V</keycap></keycombo>. Surely "
+#~ "you don't have to type in all those nasty commands and filenames? Relax. "
+#~ "Middle Button Click on your mouse (both buttons simultaneously on a two-"
+#~ "button mouse) or Right Click and select "
+#~ "<menuchoice><guimenuitem>Paste</guimenuitem></menuchoice> from the menu."
+#~ msgstr ""
+#~ "Ofta blir du refererad till instruktioner som kräver att kommandon klistras "
+#~ "in i terminalen. Du kanske undrar varför texten som du har kopierat från en "
+#~ "webbsida med <keycombo><keycap>Ctrl</keycap><keycap>C</keycap></keycombo> "
+#~ "inte kan klistras in med "
+#~ "<keycombo><keycap>Ctrl</keycap><keycap>V</keycap></keycombo>. Måste du "
+#~ "verkligen skriva in alla dessa skumma kommandon och filnamn? Lugn. Klicka "
+#~ "med mittenknappen på din mus (båda knapparna samtidigt på en tvåknapparsmus) "
+#~ "eller högerklicka och välj <menuchoice><guimenuitem>Klistra "
+#~ "in</guimenuitem></menuchoice> från menyn."
 
 #~ msgid ""
 #~ "Moves the cursor to the <emphasis><emphasis "

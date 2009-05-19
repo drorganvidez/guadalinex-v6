@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-docs\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2008-10-08 21:13+0100\n"
-"PO-Revision-Date: 2008-10-16 09:42+0000\n"
+"POT-Creation-Date: 2009-03-26 16:34+0000\n"
+"PO-Revision-Date: 2009-03-28 09:06+0000\n"
 "Last-Translator: Timo Jyrinki <timo.jyrinki@iki.fi>\n"
 "Language-Team: Finnish <fi@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2008-10-19 12:32+0000\n"
+"X-Launchpad-Export-Date: 2009-04-01 10:36+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: programming/C/programming-C.omf:6(creator) programming/C/programming-C.omf:7(maintainer)
@@ -22,8 +22,8 @@ msgid "ubuntu-doc@lists.ubuntu.com (Ubuntu Documentation Project)"
 msgstr "ubuntu-doc@lists.ubuntu.com (Ubuntun dokumentaatioprojekti)"
 
 #: programming/C/programming-C.omf:8(title) programming/C/programming.xml:15(title)
-msgid "Programming"
-msgstr "Ohjelmointi"
+msgid "Writing Your Own Programs"
+msgstr "Omien ohjelmien kirjoittaminen"
 
 #: programming/C/programming-C.omf:9(date)
 msgid "2006-09-07"
@@ -122,50 +122,60 @@ msgstr ""
 "oppimaan, miten kehittää ja ajaa ohjelmia. Alla on lista lähteistä, jotka "
 "voivat olla hyödyllisiä."
 
-#: programming/C/programming.xml:24(citetitle) programming/C/programming.xml:27(citetitle)
+#: programming/C/programming.xml:24(citetitle)
 msgid "Dive Into Python"
 msgstr "Dive Into Python"
 
 #: programming/C/programming.xml:25(para)
 msgid ""
-"<citetitle>Dive Into Python</citetitle> is a book for learning how to "
+"<application>Dive Into Python</application> is a book for learning how to "
 "program in Python, aimed at programmers with some previous experience."
 msgstr ""
-"<citetitle>Dive Into Python</citetitle> -kirja opastaa, kuinka Pythonilla "
-"ohjelmoidaan. Se on tarkoitettu ohjelmoijille, joilla on jonkilainen kokemus "
-"ohjelmoinnista."
+"<application>Dive Into Python</application> on Python-oppikirja "
+"ohjelmoijille, joilla on jonkin verran kokemusta muista ohjelmointikielistä."
 
-#: programming/C/programming.xml:27(ulink)
-msgid "Read <placeholder-1/>"
-msgstr "Lue <placeholder-1/>"
+#: programming/C/programming.xml:28(para)
+msgid ""
+"<ulink url=\"apt:diveintopython\">Install the "
+"<application>diveintopython</application> package</ulink>."
+msgstr ""
+"<ulink url=\"apt:diveintopython\">Asenna paketti "
+"<application>diveintopython</application></ulink>."
 
-#: programming/C/programming.xml:31(title)
+#: programming/C/programming.xml:31(para)
+msgid ""
+"To access the documentation, visit <ulink "
+"url=\"file:///usr/share/doc/diveintopython/html/toc/index.html\">diveintopyth"
+"on</ulink>."
+msgstr ""
+"Asentamisen jälkeen pääset lukemaan kirjaa tästä: <ulink "
+"url=\"file:///usr/share/doc/diveintopython/html/toc/index.html\">Dive into "
+"Python</ulink>."
+
+#: programming/C/programming.xml:36(title)
 msgid "PyGTK Tutorial"
 msgstr "PyGTK Ohje"
 
-#: programming/C/programming.xml:32(para)
+#: programming/C/programming.xml:37(para)
 msgid ""
-"PyGTK Tutorial is a tutorial on developing with the graphical toolkit often "
-"used for developing Ubuntu applications. It assumes that you have knowledge "
-"of Python but not necessarily GTK."
+"<application>PyGTK Tutorial</application> is a tutorial on developing with "
+"the graphical toolkit often used for developing Ubuntu applications. It "
+"assumes that you have knowledge of Python but not necessarily GTK."
 msgstr ""
-"PyGTK-opas opettaa käyttämään graafisia työkaluja, joita yleensä käytetään "
-"Ubuntun ohjelmia kehitettäessä. Oppaassa oletetaan, että tunnet Python-"
-"ohjelmoinnin perusteet, mutta GTK:n tunteminen ei ole välttämätöntä."
+"<application>PyGTK-ohje</application> opettaa käyttämään GTK-kirjastoa "
+"graafisten käyttöliittymien ohjelmointiin. GTK:ta käytetään yleensä "
+"kehitettäessä Ubuntun sovelluksia. Oppaassa oletetaan, että tunnet Python-"
+"ohjelmoinnin perusteet."
 
-#: programming/C/programming.xml:36(para)
+#: programming/C/programming.xml:41(para)
 msgid ""
-"Install the <application>python-gtk2-tutorial</application> package (see "
-"<ulink type=\"help\" url=\"ghelp:add-applications\">Add "
-"Applications</ulink>). You will need to use <application>Synaptic Package "
-"Manager</application> to install this package."
+"<ulink url=\"apt:python-gtk2-tutorial\">Install the <application>python-gtk2-"
+"tutorial</application> package</ulink>."
 msgstr ""
-"Asenna paketti <application>python-gtk2-tutorial</application> <application> "
-"(katso <ulink type=\"help\" url=\"ghelp:add-applications\">Lisää "
-"sovelluksia</ulink>). Ohjelmapakettien asentaminen onnistuu "
-"<application>Synaptic</application>-nimisellä pakettienhallintaohjelmalla."
+"<ulink url=\"apt:python-gtk2-tutorial\">Asenna paketti <application>python-"
+"gtk2-tutorial</application></ulink>."
 
-#: programming/C/programming.xml:40(para)
+#: programming/C/programming.xml:44(para)
 msgid ""
 "To access the documentation, visit <ulink url=\"file:///usr/share/doc/python-"
 "gtk2-tutorial/html/index.html\">python-gtk-tutorial</ulink>."
@@ -174,11 +184,11 @@ msgstr ""
 "url=\"file:///usr/share/doc/python-gtk2-tutorial/html/index.html\">python-"
 "gtk-tutorial</ulink>."
 
-#: programming/C/programming.xml:46(title)
+#: programming/C/programming.xml:50(title)
 msgid "Devhelp"
 msgstr "Devhelp"
 
-#: programming/C/programming.xml:47(para)
+#: programming/C/programming.xml:51(para)
 msgid ""
 "<application>Devhelp</application> is an application to read and search all "
 "of the documentation that you install."
@@ -186,15 +196,15 @@ msgstr ""
 "<application>Devhelp</application> on ohjelma, jolla voit lukea ja etsiä "
 "tietoa kaikista oppaista, jotka olet asentanut."
 
-#: programming/C/programming.xml:51(para)
+#: programming/C/programming.xml:55(para)
 msgid ""
-"Install the <application>devhelp</application> package (see <ulink "
-"type=\"help\" url=\"ghelp:add-applications\">Add Applications</ulink>)."
+"<ulink url=\"apt:devhelp\">Install the <application>devhelp</application> "
+"package</ulink>."
 msgstr ""
-"Asenna <application>devhelp</application>-paketti (katso <ulink "
-"type=\"help\" url=\"ghelp:add-applications\">Ohjelmien asentaminen</ulink>)."
+"<ulink url=\"apt:devhelp\">Asenna paketti <application>devhelp</application> "
+"package</ulink>."
 
-#: programming/C/programming.xml:54(para)
+#: programming/C/programming.xml:58(para)
 msgid ""
 "Choose "
 "<menuchoice><guimenu>Applications</guimenu><guisubmenu>Programming</guisubmen"
@@ -204,11 +214,11 @@ msgstr ""
 "<menuchoice><guimenu>Sovellukset</guimenu><guisubmenu>Ohjelmointi</guisubmenu"
 "><guimenuitem>Devhelp</guimenuitem></menuchoice>."
 
-#: programming/C/programming.xml:61(title)
+#: programming/C/programming.xml:65(title)
 msgid "C and C++"
 msgstr "C ja C++"
 
-#: programming/C/programming.xml:62(para)
+#: programming/C/programming.xml:66(para)
 msgid ""
 "Compiling C and C++ programs requires some packages that are not installed "
 "by default."
@@ -216,15 +226,15 @@ msgstr ""
 "C- ja C++-kielisten ohjelmien kääntämiseen tarvitset muutamia paketteja, "
 "joita ei asenneta oletuksena."
 
-#: programming/C/programming.xml:65(para)
+#: programming/C/programming.xml:69(para)
 msgid ""
-"Install the <application>build-essential</application> package (see <ulink "
-"type=\"help\" url=\"ghelp:add-applications\">Add Applications</ulink>)."
+"<ulink url=\"apt:build-essential\">Install the <application>build-"
+"essential</application> package</ulink>."
 msgstr ""
-"Asenna <application>build-essential</application>-paketti (katso <ulink "
-"type=\"help\" url=\"ghelp:add-applications\">Ohjelmien asentaminen</ulink>)."
+"<ulink url=\"apt:build-essential\">Asenna paketti <application>build-"
+"essential</application></ulink>."
 
-#: programming/C/programming.xml:68(para)
+#: programming/C/programming.xml:72(para)
 msgid ""
 "There are many tools available for C and C++ developers. Those wishing to "
 "develop graphical applications will find that choosing a graphical "
@@ -239,11 +249,11 @@ msgstr ""
 "kehittämiseen ovat <quote>GTK/GNOME</quote> ja <quote>Qt/KDE</quote>, joihin "
 "molempiin kuuluu omat työkalut ja ohjeet."
 
-#: programming/C/programming.xml:70(title)
+#: programming/C/programming.xml:74(title)
 msgid "Anjuta IDE for GNOME"
 msgstr "Anjuta-kehitysympäristö GNOME:lle"
 
-#: programming/C/programming.xml:71(para)
+#: programming/C/programming.xml:75(para)
 msgid ""
 "<application>Anjuta</application> is an IDE for developing applications in C "
 "and C++ for the <quote>GNOME</quote> platform."
@@ -251,65 +261,30 @@ msgstr ""
 "<application>Anjuta</application> on kehitysympäristö C- ja C++-kielisten "
 "ohjelmien kirjoittamiseen <quote>GNOME</quite>:lle."
 
-#: programming/C/programming.xml:74(para)
+#: programming/C/programming.xml:78(para)
 msgid ""
-"Install the <application>anjuta</application> package from the "
-"<quote>Universe</quote> repository (see <ulink type=\"help\" url=\"ghelp:add-"
-"applications\">Add Applications</ulink>)."
+"<ulink url=\"apt:anjuta\">Install the <application>anjuta</application> "
+"package</ulink>."
 msgstr ""
-"Asenna paketti <application>anjuta</application> <quote>Universe</quote>-"
-"pakettivarastosta (katso <ulink type=\"help\" url=\"ghelp:add-"
-"applications\">Ohjelmien asentaminen</ulink>)."
+"<ulink url=\"apt:anjuta\">Asenna paketti "
+"<application>anjuta</application></ulink>."
 
-#: programming/C/programming.xml:77(para)
-msgid ""
-"Press <keycombo><keycap>Alt</keycap><keycap>F2</keycap></keycombo>, type "
-"<quote>anjuta</quote> and press <guibutton>Run</guibutton> to start using "
-"<application>Anjuta</application>."
-msgstr ""
-"Valitse <keycombo><keycap>Alt</keycap><keycap>F2</keycap></keycombo>, "
-"kirjoita <quote>anjuta</quote> ja paina <guibutton>Suorita</guibutton>-"
-"painiketta käynnistääksesi <application>Anjuta</application>n."
-
-#: programming/C/programming.xml:82(title)
-msgid "KDevelop IDE for KDE"
-msgstr "KDevelop-kehitysympäristö KDE:lle"
-
-#: programming/C/programming.xml:83(para)
-msgid ""
-"<application>KDevelop</application> is an IDE for developing applications in "
-"C and C++ for the <quote>KDE</quote> platform."
-msgstr ""
-"<application>KDevelop</application> on kehitysympäristö C- ja C++-kielisten "
-"ohjelmien kirjoittamiseksi <quote>KDE</quote>:lle."
-
-#: programming/C/programming.xml:86(para)
-msgid ""
-"Install the <application>kdevelop</application> package from the "
-"<quote>Universe</quote> repository (see <ulink type=\"help\" url=\"ghelp:add-"
-"applications\">Add Applications</ulink>)."
-msgstr ""
-"Asenna paketti <application>kdevelop</application> <quote>Universe</quote>-"
-"pakettivarastosta (katso <ulink type=\"help\" url=\"ghelp:add-"
-"applications\">Ohjelmien asentaminen</ulink>)."
-
-#: programming/C/programming.xml:89(para)
+#: programming/C/programming.xml:81(para)
 msgid ""
 "Press "
-"<menuchoice><guimenu>Applications</guimenu><guisubmenu>Programming</guisubmen"
-"u><guimenuitem>KDevelop</guimenuitem></menuchoice> to start using "
-"<application>KDevelop</application>."
+"<menuchoice><guimenu>Applications</guimenu><guimenuitem>Programming</guimenui"
+"tem><guimenuitem>Anjuta IDE</guimenuitem></menuchoice> to start using "
+"<application>anjuta</application>."
 msgstr ""
-"Valitse "
-"<menuchoice><guimenu>Sovellukset</guimenu><guisubmenu>Ohjelmointi</guisubmenu"
-"><guimenuitem>KDevelop</guimenuitem></menuchoice> käynnistääksesi "
-"<application>KDevelop</application>in."
+"Käynnistä <application>Anjuta</application> valitsemalla "
+"<menuchoice><guimenu>Sovellukset</guimenu><guimenuitem>Ohjelmointi</guimenuit"
+"em><guimenuitem>Anjuta IDE</guimenuitem></menuchoice>"
 
-#: programming/C/programming.xml:96(title)
+#: programming/C/programming.xml:88(title)
 msgid "Java"
 msgstr "Java"
 
-#: programming/C/programming.xml:98(para)
+#: programming/C/programming.xml:90(para)
 msgid ""
 "For <emphasis>PowerPC</emphasis> machines, see <ulink "
 "url=\"https://help.ubuntu.com/community/Java\">Ubuntu Help Online</ulink>."
@@ -317,7 +292,7 @@ msgstr ""
 "<emphasis>PowerPC</emphasis>-koneita varten katso: <ulink "
 "url=\"https://help.ubuntu.com/community/Java\">Ubuntu Help Online</ulink>."
 
-#: programming/C/programming.xml:100(para)
+#: programming/C/programming.xml:92(para)
 msgid ""
 "Java, developed by Sun Microsystems, is and interpreted language which is "
 "compiled to bytecode. This bytecode can be run on any Java Virtual Machine, "
@@ -330,38 +305,34 @@ msgstr ""
 "oliopohjainen, sen syntaksi on lähellä C-kieltä ja se on suunniteltu "
 "turvalliseksi."
 
-#: programming/C/programming.xml:102(title)
+#: programming/C/programming.xml:94(title)
 msgid "Installation"
 msgstr "Asentaminen"
 
-#: programming/C/programming.xml:103(para)
+#: programming/C/programming.xml:95(para)
 msgid ""
 "Ubuntu supports both Java 1.5 and 1.6 in both Sun and Open Source flavors."
 msgstr ""
 "Ubuntu tukee Javan 1.5- ja 1.6-versioita sekä Sunin että avoimen lähdekoodin "
 "versioina."
 
-#: programming/C/programming.xml:105(title)
+#: programming/C/programming.xml:97(title)
 msgid "JDK 1.5"
 msgstr "JDK 1.5"
 
-#: programming/C/programming.xml:108(para) programming/C/programming.xml:127(para)
+#: programming/C/programming.xml:100(para)
 msgid ""
-"Install <application>sun-java5-jdk</application> from the "
-"<quote>Multiverse</quote> repository (see <ulink type=\"help\" "
-"url=\"ghelp:add-applications\">Add Applications</ulink>). You will need to "
-"use <application>Synaptic Package Manager</application> to install these "
-"packages."
+"<ulink url=\"apt:sun-java5-jdk\">Install the <application>sun-java5-"
+"jdk</application> package</ulink>."
 msgstr ""
-"Asenna paketti <application>sun-java5-jdk</application> "
-"<quote>Multiverse</quote>-pakettivarastosta (katso <ulink type=\"help\" "
-"url=\"ghelp:add-applications\">Lisää sovelluksia</ulink>)."
+"<ulink url=\"apt:sun-java5-jdk\">Asenna paketti <application>sun-java5-"
+"jdk</application></ulink>."
 
-#: programming/C/programming.xml:112(para) programming/C/programming.xml:131(para)
+#: programming/C/programming.xml:103(para) programming/C/programming.xml:121(para)
 msgid "Read the Java license presented. You must accept it to continue."
 msgstr "Lue ja hyväksy Javan lisenssiehdot."
 
-#: programming/C/programming.xml:115(para)
+#: programming/C/programming.xml:106(para)
 msgid ""
 "To get your system to use Sun Java instead of the open-source (but less "
 "functional) GIJ that is installed by default, run: <screen>sudo update-"
@@ -372,11 +343,11 @@ msgstr ""
 "toimivan) GIJ:n sijaan aja komento <screen>sudo update-alternatives --config "
 "java</screen> ja valitse <filename>j2re1.5-sun</filename>."
 
-#: programming/C/programming.xml:123(title)
+#: programming/C/programming.xml:114(title)
 msgid "JDK 1.6"
 msgstr "JDK 1.6"
 
-#: programming/C/programming.xml:124(para)
+#: programming/C/programming.xml:115(para)
 msgid ""
 "Java 1.6 is also available, and can be installed by following the above "
 "directions, swapping all instances of 1.5 to 1.6"
@@ -384,7 +355,15 @@ msgstr ""
 "Javan versio 1.6 on myös saatavilla. Voit asentaa sen edellisten ohjeiden "
 "mukaisesti käyttämällä versiota 1.6 version 1.5 tilalla."
 
-#: programming/C/programming.xml:134(para)
+#: programming/C/programming.xml:118(para)
+msgid ""
+"<ulink url=\"apt:sun-java6-jdk\">Install the <application>sun-java6-"
+"jdk</application> package</ulink>."
+msgstr ""
+"<ulink url=\"apt:sun-java6-jdk\">Asenna paketti <application>sun-java6-"
+"jdk</application></ulink>."
+
+#: programming/C/programming.xml:124(para)
 msgid ""
 "To get your system to use Sun Java instead of the open-source (but less "
 "functional) GIJ that is installed by default, run: <screen>sudo update-"
@@ -395,17 +374,18 @@ msgstr ""
 "sijaan, suorita: <screen>sudo update-alternatives --config java</screen> ja "
 "valitse vaihtoehto, jossa mainitaan <filename>j2re1.6-sun</filename>."
 
-#: programming/C/programming.xml:143(title)
+#: programming/C/programming.xml:133(title)
 msgid "Hello World"
 msgstr "Hei Maailma"
 
-#: programming/C/programming.xml:144(para)
+#: programming/C/programming.xml:134(para)
 msgid ""
-"Enter the following code into a text editior and save it as \"Hello.java\":"
+"Enter the following code into a text editor and save it as \"Hello.java\":"
 msgstr ""
-"Syötä seuraava koodi tekstieditoriin ja tallenna se nimellä \"Hello.java\":"
+"Kirjoita seuraava koodi tekstieditoriin ja tallenna se nimellä "
+"\"Hello.java\":"
 
-#: programming/C/programming.xml:145(screen)
+#: programming/C/programming.xml:135(screen)
 #, no-wrap
 msgid ""
 "public class Hello {\n"
@@ -420,23 +400,24 @@ msgstr ""
 "    }\n"
 "}\n"
 
-#: programming/C/programming.xml:151(para)
+#: programming/C/programming.xml:141(para)
 msgid ""
-"Open a terminal and run your code by typing:<screen>javac Hello.java; java "
+"Open a terminal and compile your code by typing:<screen>javac "
+"Hello.java</screen>. You can then run your code by typing:<screen>java "
 "Hello</screen>"
 msgstr ""
-"Käynnistä pääte ja suorita koodisi komennolla:<screen>javac Hello.java; java "
-"Hello</screen>"
+"Käynnistä pääte ja käännä koodi komennolla<screen>javac Hello.java</screen>. "
+"Tämän jälkeen voit suorittaa ohjelmasi komennolla<screen>java Hello</screen>"
 
-#: programming/C/programming.xml:154(title)
+#: programming/C/programming.xml:144(title)
 msgid "Integrated Development Environments"
 msgstr "Integroidut kehitysympäristöt"
 
-#: programming/C/programming.xml:156(title)
+#: programming/C/programming.xml:146(title)
 msgid "Eclipse IDE for Java"
 msgstr "Eclipse-kehitysympristö Javalle"
 
-#: programming/C/programming.xml:157(para)
+#: programming/C/programming.xml:147(para)
 msgid ""
 "The <application>Eclipse</application> platform provides a complete, "
 "extensible Java development environment."
@@ -444,17 +425,15 @@ msgstr ""
 "<application>Eclipse</application>-ympäristö tarjoaa täydellisen "
 "kehitysympäristön Javalle."
 
-#: programming/C/programming.xml:160(para)
+#: programming/C/programming.xml:150(para)
 msgid ""
-"Install the <application>eclipse</application> package from the "
-"<quote>Universe</quote> repository (see <ulink type=\"help\" url=\"ghelp:add-"
-"applications\">Add Applications</ulink>)."
+"<ulink url=\"apt:eclipse\">Install the <application>eclipse</application> "
+"package</ulink>."
 msgstr ""
-"Asenna paketti <application>eclipse</application> <quote>Universe</quote>-"
-"pakettivarastosta (katso <ulink type=\"help\" url=\"ghelp:add-"
-"applications\">Ohjelmien asentaminen</ulink>)."
+"<ulink url=\"apt:eclipse\">Asenna paketti "
+"<application>eclipse</application></ulink>."
 
-#: programming/C/programming.xml:163(para)
+#: programming/C/programming.xml:153(para)
 msgid ""
 "Press "
 "<menuchoice><guimenuitem>Applications</guimenuitem><guimenuitem>Programming</"
@@ -466,11 +445,11 @@ msgstr ""
 "uimenuitem><guimenuitem>Eclipse IDE</guimenuitem></menuchoice> "
 "käynnistääksesi <application>Eclipse</application>n."
 
-#: programming/C/programming.xml:168(title)
+#: programming/C/programming.xml:158(title)
 msgid "Netbeans"
 msgstr "Netbeans"
 
-#: programming/C/programming.xml:169(para)
+#: programming/C/programming.xml:159(para)
 msgid ""
 "The <application>Netbeans</application> platform provides a complete, "
 "extensible Java development environment."
@@ -478,21 +457,19 @@ msgstr ""
 "<application>Netbeans</application> tarjoaa täydellisen ja laajennattavan "
 "Java kehitysympäristön."
 
-#: programming/C/programming.xml:172(para)
+#: programming/C/programming.xml:162(para)
 msgid ""
-"Install the <application>Netbeans</application> package from the "
-"<quote>Universe</quote> repository (see <ulink type=\"help\" url=\"ghelp:add-"
-"applications\">Add Applications</ulink>)."
+"<ulink url=\"apt:netbeans\">Install the <application>netbeans</application> "
+"package</ulink>."
 msgstr ""
-"Asenna <application>Netbeans</application>-paketti <quote>Universe</quote>-"
-"pakettivarastosta (katso <ulink type=\"help\" url=\"ghelp:add-"
-"applications\">Lisää sovelluksia</ulink>)."
+"<ulink url=\"apt:netbeans\">Asenna <application>netbeans</application>-"
+"paketti</ulink>."
 
-#: programming/C/programming.xml:180(title)
+#: programming/C/programming.xml:170(title)
 msgid "Other programming languages"
 msgstr "Muut ohjelmointikielet"
 
-#: programming/C/programming.xml:181(para)
+#: programming/C/programming.xml:171(para)
 msgid ""
 "There are many programming tools available in Ubuntu for many different "
 "programming languages. This section provides a short list of some of the "
@@ -501,11 +478,11 @@ msgstr ""
 "Ubuntulle on tarjolla työkaluja lukuisille eri ohjelmointikielille. Tässä "
 "osassa esitetään lyhyt lista joistain yleisesti käytetyistä kielistä."
 
-#: programming/C/programming.xml:184(title)
+#: programming/C/programming.xml:174(title)
 msgid "Mono .NET development environment"
 msgstr "Mono .NET -kehitysympäristö"
 
-#: programming/C/programming.xml:185(para)
+#: programming/C/programming.xml:175(para)
 msgid ""
 "<application>Mono</application> is an implementation of the "
 "<application>.NET</application> stack, which allows you to write cross-"
@@ -521,17 +498,18 @@ msgstr ""
 "löytyy <ulink url=\"http://www.mono-project.com/\">Mono-projektin "
 "kotisivuilta</ulink>."
 
-#: programming/C/programming.xml:188(para)
+#: programming/C/programming.xml:178(para)
 msgid ""
-"Install the <application>monodevelop</application> and "
-"<application>monodoc</application> packages from the <quote>Universe</quote> "
-"repository."
+"Install the <ulink "
+"url=\"apt:monodevelop\"><application>monodevelop</application></ulink> and "
+"<ulink url=\"apt:monodoc\"><application>monodoc</application></ulink> "
+"packages."
 msgstr ""
-"Asenna <application>monodevelop</application>- ja  "
-"<application>monodoc</application>-paketit <quote>Universe</quote>-"
-"pakettivarastosta."
+"Asenna paketit <ulink "
+"url=\"apt:monodevelop\"><application>monodevelop</application></ulink> ja "
+"<ulink url=\"apt:monodoc\"><application>monodoc</application></ulink>."
 
-#: programming/C/programming.xml:191(para)
+#: programming/C/programming.xml:181(para)
 msgid ""
 "Press "
 "<menuchoice><guimenuitem>Applications</guimenuitem><guimenuitem>Programming</"
@@ -543,7 +521,7 @@ msgstr ""
 "uimenuitem><guimenuitem>MonoDevelop</guimenuitem></menuchoice> "
 "käynnistääksesi <application>MonoDevelop</application>-kehitysympäristön."
 
-#: programming/C/programming.xml:194(para)
+#: programming/C/programming.xml:184(para)
 msgid ""
 "Press "
 "<menuchoice><guimenuitem>Applications</guimenuitem><guimenuitem>Programming</"
@@ -555,11 +533,11 @@ msgstr ""
 "uimenuitem><guimenuitem>MonoDoc</guimenuitem></menuchoice> käynnistääksesi "
 "<application>Monodoc</application>-ohjeselaimen."
 
-#: programming/C/programming.xml:200(title)
+#: programming/C/programming.xml:190(title)
 msgid "Gambas graphical BASIC language"
 msgstr "Gambas - graafinen BASIC-kieli"
 
-#: programming/C/programming.xml:201(para)
+#: programming/C/programming.xml:191(para)
 msgid ""
 "<application>Gambas</application> is a <application>Visual "
 "Basic</application>-like development environment, which allows you to "
@@ -570,15 +548,15 @@ msgstr ""
 "tyylinen kehitysympäristö, joka mahdollistaa graafisten ohjelmien "
 "suunnittelun ja kehityksen helposti opittavaa BASIC-kieltä käyttäen."
 
-#: programming/C/programming.xml:204(para)
+#: programming/C/programming.xml:194(para)
 msgid ""
-"Install the <application>gambas</application> package from the "
-"<quote>Universe</quote> repository."
+"<ulink url=\"apt:gambas\">Install the <application>gambas</application> "
+"package</ulink>."
 msgstr ""
-"Asenna paketti <application>gambas</application>  <quote>Universe</quote>-"
-"pakettilähteestä."
+"<ulink url=\"apt:gambas\">Asenna paketti "
+"<application>gambas</application></ulink>."
 
-#: programming/C/programming.xml:207(para)
+#: programming/C/programming.xml:197(para)
 msgid ""
 "Press "
 "<menuchoice><guimenuitem>Applications</guimenuitem><guimenuitem>Programming</"
@@ -590,7 +568,7 @@ msgstr ""
 "uimenuitem><guimenuitem>Gambas</guimenuitem></menuchoice> käynnistääksesi "
 "<application>Gambas</application>-kehitysympäristön."
 
-#: programming/C/programming.xml:210(para)
+#: programming/C/programming.xml:200(para)
 msgid ""
 "A set of example applications are provided with "
 "<application>Gambas</application>, which you can use to help you to learn "
@@ -605,139 +583,84 @@ msgstr ""
 "<guibutton>Examples</guibutton> <guilabel>Welcome to Gambas!</guilabel>-"
 "ikkunasta ja valitse esimerkki, jota haluat tarkastella."
 
-#: programming/C/programming.xml:215(title)
+#: programming/C/programming.xml:205(title)
 msgid "Development Tools"
 msgstr "Ohjelmistokehitystyökalut"
 
-#: programming/C/programming.xml:216(para)
+#: programming/C/programming.xml:206(para)
 msgid ""
-"There are many development tools available for Ubuntu. A list of some of "
-"these is included below."
+"There are many development tools available for Ubuntu. A selection of these "
+"are described below."
 msgstr ""
-"Ubuntulle on tarjolla lukuisia kehitystyökaluja. Tässä on listattuna joitain "
-"tavallisimpia."
+"Ubuntulle on tarjolla monia työkaluja ohjelmistokehitykseen. Seuraavassa on "
+"esitelty joitain yleisimpiä."
 
-#: programming/C/programming.xml:218(title)
-msgid "Integrated Development Environments (IDEs) and source-code editors"
-msgstr "Kehitysympäristöt (IDE:t) ja koodieditoreja."
+#: programming/C/programming.xml:208(title)
+msgid "Version control systems"
+msgstr "Versionhallintajärjestelmät"
 
-#: programming/C/programming.xml:220(para)
+#: programming/C/programming.xml:210(title)
+msgid "Bazaar-NG"
+msgstr "Bazaar-NG"
+
+#: programming/C/programming.xml:211(para)
 msgid ""
-"<ulink url=\"http://anjuta.sourceforge.net/\">Anjuta</ulink> is an "
-"Integrated Development Environment (IDE) for C and C++."
+"<application>Bazaar-NG</application> is a decentralised version control "
+"system used for Ubuntu development"
 msgstr ""
-"<ulink url=\"http://anjuta.sourceforge.net/\">Anjuta</ulink> on "
-"kehitysympäristö (IDE) C ja C++-ohjelmointikielille."
+"<application>Bazaar-NG</application> on hajautettu "
+"versionhallintajärjestelmä, jota käytetään Ubuntun kehityksessä."
 
-#: programming/C/programming.xml:222(para)
+#: programming/C/programming.xml:214(para)
 msgid ""
-"<ulink url=\"http://bluefish.openoffice.nl/index.html\">Bluefish</ulink> is "
-"a powerful editor for experienced web designers and programmers."
+"Install the <ulink url=\"apt:bzr\"><application>bzr</application></ulink> "
+"and the <ulink url=\"apt:bzr-gtk\"><application>bzr-"
+"gtk</application></ulink> packages."
 msgstr ""
-"<ulink url=\"http://bluefish.openoffice.nl/index.html\">Bluefish</ulink> on "
-"tehokas editori kokeneille web-suunnittelijoille ja ohjelmoijille."
+"Asenna paketit <ulink url=\"apt:bzr\"><application>bzr</application></ulink> "
+"ja <ulink url=\"apt:bzr-gtk\"><application>bzr-gtk</application></ulink>."
 
-#: programming/C/programming.xml:224(para)
+#: programming/C/programming.xml:217(para)
 msgid ""
-"<ulink url=\"http://www.eclipse.org/\">Eclipse</ulink> is an IDE for Java "
-"and other programming languages. It forms the basis for closed-source "
-"programs such as JBuilder."
+"Press "
+"<menuchoice><guimenu>Applications</guimenu><guisubmenu>Programming</guisubmen"
+"u><guimenuitem>Olive bazaar Branch Manager</guimenuitem></menuchoice> to "
+"start the <application>Bazaar-GTK</application> graphical interface or to "
+"use the command line interface open a terminal and type: <screen>bzr</screen>"
 msgstr ""
-"<ulink url=\"http://www.eclipse.org/\">Eclipse</ulink> on kehitysympäristö "
-"Javalle ja muille ohjelmointikielille. Se muodostaa myös pohjan suljetun "
-"lähdekoodin ohjelmille kuten JBuilderille."
+"Valitse "
+"<menuchoice><guimenu>Sovellukset</guimenu><guisubmenu>Ohjelmointi</guisubmenu"
+"><guimenuitem>Olive bazaar Branch Manager</guimenuitem></menuchoice> "
+"käynnistääksesi <application>Bazaar-GTK</application>:n tai käytä "
+"komentorivikäyttöliittymää kirjoittamalla päätteeseen komento "
+"<screen>bzr</screen>"
 
-#: programming/C/programming.xml:226(para)
+#: programming/C/programming.xml:222(title)
+msgid "Other version control systems"
+msgstr "Muut versionhallintajärjestelmät"
+
+#: programming/C/programming.xml:225(para)
 msgid ""
-"<ulink url=\"http://www.die-offenbachs.de/eric/\">Eric</ulink> is a fully "
-"featured Python and Ruby IDE."
+"<ulink url=\"http://subversion.tigris.org/\">Subversion</ulink> (SVN) is a "
+"version control system intended as a replacement for CVS."
 msgstr ""
-"<ulink url=\"http://www.die-offenbachs.de/eric/\">Eric</ulink> on "
-"monipuolinen ohjelmointiympäristö (IDE) Python ja Ruby -ohjelmointikielille."
+"<ulink url=\"http://subversion.tigris.org/\">Subversion</ulink> (SVN) on "
+"CVS:n korvaajaksi kehitetty versionhallintajärjestelmä."
 
 #: programming/C/programming.xml:228(para)
 msgid ""
-"<ulink url=\"http://geany.uvena.de/\">Geany</ulink> is a general-purpose IDE "
-"which can handle manydifferent programming and markup languages."
+"<ulink url=\"http://www.nongnu.org/cvs/\">CVS</ulink> is also available, "
+"however you should give strong consideration to using other version control "
+"systems for new projects."
 msgstr ""
-"<ulink url=\"http://geany.uvena.de/\">Geany</ulink> on yleiskäyttöinen IDE "
-"joka hallitsee useita eri ohjelmointi- ja merkintäkieliä."
+"<ulink url=\"http://www.nongnu.org/cvs/\">CVS</ulink> on myös käytettävissä. "
+"Sitä ei kuitenkaan yleensä kannata käyttää uusien projektien kanssa."
 
-#: programming/C/programming.xml:230(para)
-msgid ""
-"<ulink url=\"http://www.python.org/idle/\">IDLE</ulink> is the Python IDE "
-"built with the Tkinter GUI toolkit."
-msgstr ""
-"<ulink url=\"http://www.python.org/idle/\">IDLE</ulink> on kehitysympäristö "
-"Pythonille. Se sisältää Tkinter-työkalupaketin graafisten ohjelmien tekoon."
-
-#: programming/C/programming.xml:232(para)
-msgid ""
-"<ulink url=\"http://www.kdevelop.org/\">KDevelop</ulink> is a IDE for KDE "
-"which supports many programming languages."
-msgstr ""
-"<ulink url=\"http://www.kdevelop.org/\">KDevelop</ulink> on kehitysympäristö "
-"(IDE) KDE:lle. Se tukee monia eri ohjelmointikieliä."
-
-#: programming/C/programming.xml:234(para)
-msgid ""
-"<ulink url=\"http://www.monodevelop.com/Main_Page\">MonoDevelop</ulink> is "
-"an IDE for writing Mono/.NET applications in C# and other languages."
-msgstr ""
-"<ulink url=\"http://www.monodevelop.com/Main_Page\">MonoDevelop</ulink> on "
-"kehitysympäristö Mono/.NET-ohjelmien kirjoittamiseen C#:llä ja muilla "
-"kielillä."
-
-#: programming/C/programming.xml:236(para)
-msgid ""
-"<ulink url=\"http://www.netbeans.org/index.html\">NetBeans</ulink> is a Java "
-"IDE that features support for CVS and a form builder."
-msgstr ""
-"<ulink url=\"http://www.netbeans.org/index.html\">NetBeans</ulink> on Java-"
-"kehitysympäristö, jossa on CVS-tuki ja lomakemuokkain."
-
-#: programming/C/programming.xml:238(para)
-msgid ""
-"<ulink url=\"http://quanta.kdewebdev.org/\">Quanta</ulink> is a powerful IDE "
-"for web development and features support for DocBook editing."
-msgstr ""
-"<ulink url=\"http://quanta.kdewebdev.org/\">Quanta</ulink> on tehokas "
-"kehitysympäristö WWW-sivujen kehittämiseen. Se tarjoaa myös työkalut DocBook-"
-"tiedostojen muokkaamiseen."
-
-#: programming/C/programming.xml:244(title)
-msgid "Source-code management systems"
-msgstr "Ohjelmakoodin hallintajärjestelmät"
-
-#: programming/C/programming.xml:247(para)
-msgid ""
-"<ulink url=\"http://www.bazaar-ng.org/\">Bazaar-NG</ulink> is a "
-"decentralised version control system used for Ubuntu development."
-msgstr ""
-"<ulink url=\"http://www.bazaar-ng.org/\">Bazaar-NG</ulink> on hajautettu "
-"versionhallintajärjestelmä, jota käytetään Ubuntun kehityksessä."
-
-#: programming/C/programming.xml:249(para)
-msgid ""
-"<ulink url=\"http://www.nongnu.org/cvs/\">CVS</ulink> is an advanced version "
-"control system used by many open-source projects."
-msgstr ""
-"<ulink url=\"http://www.nongnu.org/cvs/\">CVS</ulink> on monien avoimen "
-"lähdekoodin ohjelmien käyttämä kehittynyt versionhallintajärjestelmä."
-
-#: programming/C/programming.xml:251(para)
-msgid ""
-"<ulink url=\"http://subversion.tigris.org/\">Subversion</ulink> (SVN) is a "
-"powerful version control system intended as a replacement for CVS."
-msgstr ""
-"<ulink url=\"http://subversion.tigris.org/\">Subversion</ulink> (SVN) on "
-"tehokas versionhallintajärjestelmä, joka on kehitetty korvaamaan CVS."
-
-#: programming/C/programming.xml:257(title)
+#: programming/C/programming.xml:236(title)
 msgid "Other tools"
 msgstr "Muut työkalut"
 
-#: programming/C/programming.xml:259(para)
+#: programming/C/programming.xml:238(para)
 msgid ""
 "<ulink url=\"http://glade.gnome.org/\">Glade</ulink> is a user interface "
 "designer for building GNOME and GTK applications."
@@ -775,7 +698,276 @@ msgstr ""
 "  Heikki Mäntysaari https://launchpad.net/~heikki-mantysaari\n"
 "  Mikko Piippo https://launchpad.net/~piippo-cc\n"
 "  Timo Jyrinki https://launchpad.net/~timo-jyrinki\n"
+"  Tommi Tauriainen https://launchpad.net/~t-tauriainen\n"
+"\n"
+"Launchpad Contributions:\n"
+"  Eero Salokannel https://launchpad.net/~epatic\n"
+"  Elias Julkunen https://launchpad.net/~eliasj\n"
+"  Heikki Mäntysaari https://launchpad.net/~heikki-mantysaari\n"
+"  Mikko Piippo https://launchpad.net/~piippo-cc\n"
+"  Timo Jyrinki https://launchpad.net/~timo-jyrinki\n"
 "  Tommi Tauriainen https://launchpad.net/~t-tauriainen"
+
+#~ msgid "Programming"
+#~ msgstr "Ohjelmointi"
+
+#~ msgid ""
+#~ "<citetitle>Dive Into Python</citetitle> is a book for learning how to "
+#~ "program in Python, aimed at programmers with some previous experience."
+#~ msgstr ""
+#~ "<citetitle>Dive Into Python</citetitle> -kirja opastaa, kuinka Pythonilla "
+#~ "ohjelmoidaan. Se on tarkoitettu ohjelmoijille, joilla on jonkilainen kokemus "
+#~ "ohjelmoinnista."
+
+#~ msgid "Read <placeholder-1/>"
+#~ msgstr "Lue <placeholder-1/>"
+
+#~ msgid ""
+#~ "PyGTK Tutorial is a tutorial on developing with the graphical toolkit often "
+#~ "used for developing Ubuntu applications. It assumes that you have knowledge "
+#~ "of Python but not necessarily GTK."
+#~ msgstr ""
+#~ "PyGTK-opas opettaa käyttämään graafisia työkaluja, joita yleensä käytetään "
+#~ "Ubuntun ohjelmia kehitettäessä. Oppaassa oletetaan, että tunnet Python-"
+#~ "ohjelmoinnin perusteet, mutta GTK:n tunteminen ei ole välttämätöntä."
+
+#~ msgid ""
+#~ "Install the <application>python-gtk2-tutorial</application> package (see "
+#~ "<ulink type=\"help\" url=\"ghelp:add-applications\">Add "
+#~ "Applications</ulink>). You will need to use <application>Synaptic Package "
+#~ "Manager</application> to install this package."
+#~ msgstr ""
+#~ "Asenna paketti <application>python-gtk2-tutorial</application> <application> "
+#~ "(katso <ulink type=\"help\" url=\"ghelp:add-applications\">Lisää "
+#~ "sovelluksia</ulink>). Ohjelmapakettien asentaminen onnistuu "
+#~ "<application>Synaptic</application>-nimisellä pakettienhallintaohjelmalla."
+
+#~ msgid ""
+#~ "Install the <application>devhelp</application> package (see <ulink "
+#~ "type=\"help\" url=\"ghelp:add-applications\">Add Applications</ulink>)."
+#~ msgstr ""
+#~ "Asenna <application>devhelp</application>-paketti (katso <ulink "
+#~ "type=\"help\" url=\"ghelp:add-applications\">Ohjelmien asentaminen</ulink>)."
+
+#~ msgid ""
+#~ "Install the <application>build-essential</application> package (see <ulink "
+#~ "type=\"help\" url=\"ghelp:add-applications\">Add Applications</ulink>)."
+#~ msgstr ""
+#~ "Asenna <application>build-essential</application>-paketti (katso <ulink "
+#~ "type=\"help\" url=\"ghelp:add-applications\">Ohjelmien asentaminen</ulink>)."
+
+#~ msgid ""
+#~ "Install the <application>anjuta</application> package from the "
+#~ "<quote>Universe</quote> repository (see <ulink type=\"help\" url=\"ghelp:add-"
+#~ "applications\">Add Applications</ulink>)."
+#~ msgstr ""
+#~ "Asenna paketti <application>anjuta</application> <quote>Universe</quote>-"
+#~ "pakettivarastosta (katso <ulink type=\"help\" url=\"ghelp:add-"
+#~ "applications\">Ohjelmien asentaminen</ulink>)."
+
+#~ msgid ""
+#~ "Press <keycombo><keycap>Alt</keycap><keycap>F2</keycap></keycombo>, type "
+#~ "<quote>anjuta</quote> and press <guibutton>Run</guibutton> to start using "
+#~ "<application>Anjuta</application>."
+#~ msgstr ""
+#~ "Valitse <keycombo><keycap>Alt</keycap><keycap>F2</keycap></keycombo>, "
+#~ "kirjoita <quote>anjuta</quote> ja paina <guibutton>Suorita</guibutton>-"
+#~ "painiketta käynnistääksesi <application>Anjuta</application>n."
+
+#~ msgid "KDevelop IDE for KDE"
+#~ msgstr "KDevelop-kehitysympäristö KDE:lle"
+
+#~ msgid ""
+#~ "<application>KDevelop</application> is an IDE for developing applications in "
+#~ "C and C++ for the <quote>KDE</quote> platform."
+#~ msgstr ""
+#~ "<application>KDevelop</application> on kehitysympäristö C- ja C++-kielisten "
+#~ "ohjelmien kirjoittamiseksi <quote>KDE</quote>:lle."
+
+#~ msgid ""
+#~ "Install the <application>kdevelop</application> package from the "
+#~ "<quote>Universe</quote> repository (see <ulink type=\"help\" url=\"ghelp:add-"
+#~ "applications\">Add Applications</ulink>)."
+#~ msgstr ""
+#~ "Asenna paketti <application>kdevelop</application> <quote>Universe</quote>-"
+#~ "pakettivarastosta (katso <ulink type=\"help\" url=\"ghelp:add-"
+#~ "applications\">Ohjelmien asentaminen</ulink>)."
+
+#~ msgid ""
+#~ "Press "
+#~ "<menuchoice><guimenu>Applications</guimenu><guisubmenu>Programming</guisubmen"
+#~ "u><guimenuitem>KDevelop</guimenuitem></menuchoice> to start using "
+#~ "<application>KDevelop</application>."
+#~ msgstr ""
+#~ "Valitse "
+#~ "<menuchoice><guimenu>Sovellukset</guimenu><guisubmenu>Ohjelmointi</guisubmenu"
+#~ "><guimenuitem>KDevelop</guimenuitem></menuchoice> käynnistääksesi "
+#~ "<application>KDevelop</application>in."
+
+#~ msgid ""
+#~ "Install <application>sun-java5-jdk</application> from the "
+#~ "<quote>Multiverse</quote> repository (see <ulink type=\"help\" "
+#~ "url=\"ghelp:add-applications\">Add Applications</ulink>). You will need to "
+#~ "use <application>Synaptic Package Manager</application> to install these "
+#~ "packages."
+#~ msgstr ""
+#~ "Asenna paketti <application>sun-java5-jdk</application> "
+#~ "<quote>Multiverse</quote>-pakettivarastosta (katso <ulink type=\"help\" "
+#~ "url=\"ghelp:add-applications\">Lisää sovelluksia</ulink>)."
+
+#~ msgid ""
+#~ "Enter the following code into a text editior and save it as \"Hello.java\":"
+#~ msgstr ""
+#~ "Syötä seuraava koodi tekstieditoriin ja tallenna se nimellä \"Hello.java\":"
+
+#~ msgid ""
+#~ "Open a terminal and run your code by typing:<screen>javac Hello.java; java "
+#~ "Hello</screen>"
+#~ msgstr ""
+#~ "Käynnistä pääte ja suorita koodisi komennolla:<screen>javac Hello.java; java "
+#~ "Hello</screen>"
+
+#~ msgid ""
+#~ "Install the <application>eclipse</application> package from the "
+#~ "<quote>Universe</quote> repository (see <ulink type=\"help\" url=\"ghelp:add-"
+#~ "applications\">Add Applications</ulink>)."
+#~ msgstr ""
+#~ "Asenna paketti <application>eclipse</application> <quote>Universe</quote>-"
+#~ "pakettivarastosta (katso <ulink type=\"help\" url=\"ghelp:add-"
+#~ "applications\">Ohjelmien asentaminen</ulink>)."
+
+#~ msgid ""
+#~ "Install the <application>Netbeans</application> package from the "
+#~ "<quote>Universe</quote> repository (see <ulink type=\"help\" url=\"ghelp:add-"
+#~ "applications\">Add Applications</ulink>)."
+#~ msgstr ""
+#~ "Asenna <application>Netbeans</application>-paketti <quote>Universe</quote>-"
+#~ "pakettivarastosta (katso <ulink type=\"help\" url=\"ghelp:add-"
+#~ "applications\">Lisää sovelluksia</ulink>)."
+
+#~ msgid ""
+#~ "Install the <application>monodevelop</application> and "
+#~ "<application>monodoc</application> packages from the <quote>Universe</quote> "
+#~ "repository."
+#~ msgstr ""
+#~ "Asenna <application>monodevelop</application>- ja  "
+#~ "<application>monodoc</application>-paketit <quote>Universe</quote>-"
+#~ "pakettivarastosta."
+
+#~ msgid ""
+#~ "Install the <application>gambas</application> package from the "
+#~ "<quote>Universe</quote> repository."
+#~ msgstr ""
+#~ "Asenna paketti <application>gambas</application>  <quote>Universe</quote>-"
+#~ "pakettilähteestä."
+
+#~ msgid ""
+#~ "There are many development tools available for Ubuntu. A list of some of "
+#~ "these is included below."
+#~ msgstr ""
+#~ "Ubuntulle on tarjolla lukuisia kehitystyökaluja. Tässä on listattuna joitain "
+#~ "tavallisimpia."
+
+#~ msgid "Integrated Development Environments (IDEs) and source-code editors"
+#~ msgstr "Kehitysympäristöt (IDE:t) ja koodieditoreja."
+
+#~ msgid ""
+#~ "<ulink url=\"http://anjuta.sourceforge.net/\">Anjuta</ulink> is an "
+#~ "Integrated Development Environment (IDE) for C and C++."
+#~ msgstr ""
+#~ "<ulink url=\"http://anjuta.sourceforge.net/\">Anjuta</ulink> on "
+#~ "kehitysympäristö (IDE) C ja C++-ohjelmointikielille."
+
+#~ msgid ""
+#~ "<ulink url=\"http://bluefish.openoffice.nl/index.html\">Bluefish</ulink> is "
+#~ "a powerful editor for experienced web designers and programmers."
+#~ msgstr ""
+#~ "<ulink url=\"http://bluefish.openoffice.nl/index.html\">Bluefish</ulink> on "
+#~ "tehokas editori kokeneille web-suunnittelijoille ja ohjelmoijille."
+
+#~ msgid ""
+#~ "<ulink url=\"http://www.eclipse.org/\">Eclipse</ulink> is an IDE for Java "
+#~ "and other programming languages. It forms the basis for closed-source "
+#~ "programs such as JBuilder."
+#~ msgstr ""
+#~ "<ulink url=\"http://www.eclipse.org/\">Eclipse</ulink> on kehitysympäristö "
+#~ "Javalle ja muille ohjelmointikielille. Se muodostaa myös pohjan suljetun "
+#~ "lähdekoodin ohjelmille kuten JBuilderille."
+
+#~ msgid ""
+#~ "<ulink url=\"http://www.die-offenbachs.de/eric/\">Eric</ulink> is a fully "
+#~ "featured Python and Ruby IDE."
+#~ msgstr ""
+#~ "<ulink url=\"http://www.die-offenbachs.de/eric/\">Eric</ulink> on "
+#~ "monipuolinen ohjelmointiympäristö (IDE) Python ja Ruby -ohjelmointikielille."
+
+#~ msgid ""
+#~ "<ulink url=\"http://geany.uvena.de/\">Geany</ulink> is a general-purpose IDE "
+#~ "which can handle manydifferent programming and markup languages."
+#~ msgstr ""
+#~ "<ulink url=\"http://geany.uvena.de/\">Geany</ulink> on yleiskäyttöinen IDE "
+#~ "joka hallitsee useita eri ohjelmointi- ja merkintäkieliä."
+
+#~ msgid ""
+#~ "<ulink url=\"http://www.python.org/idle/\">IDLE</ulink> is the Python IDE "
+#~ "built with the Tkinter GUI toolkit."
+#~ msgstr ""
+#~ "<ulink url=\"http://www.python.org/idle/\">IDLE</ulink> on kehitysympäristö "
+#~ "Pythonille. Se sisältää Tkinter-työkalupaketin graafisten ohjelmien tekoon."
+
+#~ msgid ""
+#~ "<ulink url=\"http://www.kdevelop.org/\">KDevelop</ulink> is a IDE for KDE "
+#~ "which supports many programming languages."
+#~ msgstr ""
+#~ "<ulink url=\"http://www.kdevelop.org/\">KDevelop</ulink> on kehitysympäristö "
+#~ "(IDE) KDE:lle. Se tukee monia eri ohjelmointikieliä."
+
+#~ msgid ""
+#~ "<ulink url=\"http://www.monodevelop.com/Main_Page\">MonoDevelop</ulink> is "
+#~ "an IDE for writing Mono/.NET applications in C# and other languages."
+#~ msgstr ""
+#~ "<ulink url=\"http://www.monodevelop.com/Main_Page\">MonoDevelop</ulink> on "
+#~ "kehitysympäristö Mono/.NET-ohjelmien kirjoittamiseen C#:llä ja muilla "
+#~ "kielillä."
+
+#~ msgid ""
+#~ "<ulink url=\"http://www.netbeans.org/index.html\">NetBeans</ulink> is a Java "
+#~ "IDE that features support for CVS and a form builder."
+#~ msgstr ""
+#~ "<ulink url=\"http://www.netbeans.org/index.html\">NetBeans</ulink> on Java-"
+#~ "kehitysympäristö, jossa on CVS-tuki ja lomakemuokkain."
+
+#~ msgid ""
+#~ "<ulink url=\"http://quanta.kdewebdev.org/\">Quanta</ulink> is a powerful IDE "
+#~ "for web development and features support for DocBook editing."
+#~ msgstr ""
+#~ "<ulink url=\"http://quanta.kdewebdev.org/\">Quanta</ulink> on tehokas "
+#~ "kehitysympäristö WWW-sivujen kehittämiseen. Se tarjoaa myös työkalut DocBook-"
+#~ "tiedostojen muokkaamiseen."
+
+#~ msgid "Source-code management systems"
+#~ msgstr "Ohjelmakoodin hallintajärjestelmät"
+
+#~ msgid ""
+#~ "<ulink url=\"http://www.bazaar-ng.org/\">Bazaar-NG</ulink> is a "
+#~ "decentralised version control system used for Ubuntu development."
+#~ msgstr ""
+#~ "<ulink url=\"http://www.bazaar-ng.org/\">Bazaar-NG</ulink> on hajautettu "
+#~ "versionhallintajärjestelmä, jota käytetään Ubuntun kehityksessä."
+
+#~ msgid ""
+#~ "<ulink url=\"http://www.nongnu.org/cvs/\">CVS</ulink> is an advanced version "
+#~ "control system used by many open-source projects."
+#~ msgstr ""
+#~ "<ulink url=\"http://www.nongnu.org/cvs/\">CVS</ulink> on monien avoimen "
+#~ "lähdekoodin ohjelmien käyttämä kehittynyt versionhallintajärjestelmä."
+
+#~ msgid ""
+#~ "<ulink url=\"http://subversion.tigris.org/\">Subversion</ulink> (SVN) is a "
+#~ "powerful version control system intended as a replacement for CVS."
+#~ msgstr ""
+#~ "<ulink url=\"http://subversion.tigris.org/\">Subversion</ulink> (SVN) on "
+#~ "tehokas versionhallintajärjestelmä, joka on kehitetty korvaamaan CVS."
 
 #~ msgid ""
 #~ "This document is maintained by the Ubuntu documentation team "

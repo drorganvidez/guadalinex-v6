@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-docs\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2008-10-08 21:13+0100\n"
-"PO-Revision-Date: 2008-10-16 20:58+0000\n"
+"POT-Creation-Date: 2009-03-26 16:34+0000\n"
+"PO-Revision-Date: 2009-03-28 11:24+0000\n"
 "Last-Translator: Daniel Nylander <yeager@ubuntu.com>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2008-10-19 12:41+0000\n"
+"X-Launchpad-Export-Date: 2009-04-01 10:47+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: musicvideophotos/C/musicvideophotos-C.omf:6(creator)
@@ -25,8 +25,8 @@ msgstr "ubuntu-doc@lists.ubuntu.com (Ubuntus dokumentationsprojekt)"
 msgid "mdke@ubuntu.com (Matthew East)"
 msgstr "mdke@ubuntu.com (Matthew East)"
 
-#: musicvideophotos/C/musicvideophotos-C.omf:8(title)
-msgid "Music, Videos and Photos"
+#: musicvideophotos/C/musicvideophotos-C.omf:8(title) musicvideophotos/C/musicvideophotos.xml:16(title)
+msgid "Music, Video and Photos"
 msgstr "Musik, video och foton"
 
 #: musicvideophotos/C/musicvideophotos-C.omf:9(date)
@@ -41,9 +41,1103 @@ msgstr ""
 "Allt om att spela musik och video filer, cd- och dvd-skivor samt även "
 "importera, organisera och redigera dina foton och bilder."
 
-#: musicvideophotos/C/musicvideophotos.xml:18(title)
-msgid "Music, video and photos"
-msgstr "Musik, video och foton"
+#: musicvideophotos/C/video.xml:16(title)
+msgid "Movies, DVDs and videos"
+msgstr "Filmer, dvd och video"
+
+#: musicvideophotos/C/video.xml:17(para)
+msgid ""
+"You can watch movies and video clips with the <application>Totem Movie "
+"Player</application> "
+"(<menuchoice><guimenu>Applications</guimenu><guimenuitem>Sound &amp; "
+"Video</guimenuitem><guimenuitem>Movie Player</guimenuitem></menuchoice>)."
+msgstr ""
+"Du kan se på film och videoklipp med <application>Filmuppspelaren "
+"Totem</application> (<menuchoice><guimenu>Program</guimenu><guimenuitem>Ljud "
+"och "
+"video</guimenuitem><guimenuitem>Filmuppspelare</guimenuitem></menuchoice>)."
+
+#: musicvideophotos/C/video.xml:23(title)
+msgid "Playing DVDs"
+msgstr "Spela dvd-filmer"
+
+#: musicvideophotos/C/video.xml:24(para)
+msgid ""
+"In order to play DVDs you must install some additional software. "
+"Unfortunately, DVD support cannot be provided by default in Ubuntu due to "
+"legal restrictions in some countries."
+msgstr ""
+"För att spela upp dvd-filmer så måste du installera ytterligare programvara. "
+"Tyvärr kan inte dvd-stöd tillhandahållas som standard i Ubuntu på grund av "
+"juridiska begränsningar i vissa länder."
+
+#: musicvideophotos/C/video.xml:30(para)
+msgid ""
+"Read about <ulink url=\"ghelp:add-applications#restricted-software\"> "
+"restricted formats</ulink> before following the instructions below. There "
+"are some legal issues that you should be aware of."
+msgstr ""
+"Läs mer om <ulink url=\"ghelp:add-applications#restricted-software\"> "
+"inskränkta format</ulink> innan du följer instruktionerna nedan. Det finns "
+"vissa juridiska aspekter som du bör känna till."
+
+#: musicvideophotos/C/video.xml:38(para)
+msgid ""
+"Install the <ulink url=\"apt:libdvdnav4\">libdvdnav4</ulink>, <ulink "
+"url=\"apt:libdvdread3\">libdvdread3</ulink>, <ulink url=\"apt:gstreamer0.10-"
+"plugins-bad\">gstreamer0.10-plugins-bad</ulink> and <ulink "
+"url=\"apt:gstreamer0.10-plugins-ugly\">gstreamer0.10-plugins-ugly</ulink> "
+"packages."
+msgstr ""
+"Installera paketen <ulink url=\"apt:libdvdnav4\">libdvdnav4</ulink>, <ulink "
+"url=\"apt:libdvdread3\">libdvdread3</ulink>, <ulink url=\"apt:gstreamer0.10-"
+"plugins-bad\">gstreamer0.10-plugins-bad</ulink> och <ulink "
+"url=\"apt:gstreamer0.10-plugins-ugly\">gstreamer0.10-plugins-ugly</ulink>."
+
+#: musicvideophotos/C/video.xml:47(para)
+msgid ""
+"If you would like to play encrypted DVDs, press "
+"<menuchoice><guimenu>Applications</guimenu><guimenuitem>Accessories</guimenui"
+"tem><guimenuitem>Terminal</guimenuitem></menuchoice> and type the following "
+"into the screen which appears, followed by the <keycap>Enter</keycap> key: "
+"<screen>sudo /usr/share/doc/libdvdread3/install-css.sh</screen>"
+msgstr ""
+"Om du vill spela krypterade DVD-skivor, tryck "
+"<menuchoice><guimenu>Program</guimenu><guimenuitem>Tillbehör</guimenuitem><gu"
+"imenuitem>Terminal</guimenuitem></menuchoice> och skriv in följande i "
+"fönstret som kommer upp, följt av <keycap>Enter</keycap>: <screen>sudo "
+"/usr/share/doc/libdvdread3/install-css.sh</screen>"
+
+#: musicvideophotos/C/video.xml:55(para)
+msgid ""
+"Enter your password if prompted. The <application>libdvdcss2</application> "
+"package will be downloaded and installed from a website."
+msgstr ""
+"Ange ditt lösenord om du tillfrågas. Paketet "
+"<application>libdvdcss2</application> kommer att hämtas och installeras från "
+"en webbplats."
+
+#: musicvideophotos/C/video.xml:62(para)
+msgid ""
+"Insert a DVD into your drive. It should open automatically in the Movie "
+"Player."
+msgstr ""
+"Mata in en dvd-skiva i din enhet. Den ska öppnas automatiskt i "
+"Filmuppspelare."
+
+#: musicvideophotos/C/video.xml:70(title)
+msgid "Where have the menus on my DVDs gone?"
+msgstr "Var har menyerna i mina dvd-filmer tagit vägen?"
+
+#: musicvideophotos/C/video.xml:71(para)
+msgid ""
+"DVD menus are not currently supported by the default Movie Player. To be "
+"able to use the menus on a disc, you must install an alternative movie "
+"player such as <ulink url=\"apt:gxine\">gxine</ulink> or <ulink "
+"url=\"apt:vlc\">VLC</ulink>."
+msgstr ""
+"Dvd-menyer stöd för närvarande inte som standard i Filmuppspelare. För att "
+"kunna använda menyerna på en skiva så måste du installera en alternativ "
+"filmuppspelare såsom <ulink url=\"apt:gxine\">gxine</ulink> eller <ulink "
+"url=\"apt:vlc\">VLC</ulink>."
+
+#: musicvideophotos/C/video.xml:77(para)
+msgid ""
+"To make DVDs automatically play in the alternative movie player when "
+"inserted, open <menuchoice><guimenu>Places</guimenu><guimenuitem>Home "
+"Folder</guimenuitem></menuchoice>, click "
+"<menuchoice><guimenu>Edit</guimenu><guimenuitem>Preferences</guimenuitem></me"
+"nuchoice> and then click the <guilabel>Media</guilabel> tab. Select the "
+"alternative player from the <guibutton>DVD Video</guibutton> list."
+msgstr ""
+"För att göra så att DVD-skivor automatiskt spelas i en alternativ "
+"filmspelare när de matas in, öppna "
+"<menuchoice><guimenu>Platser</guimenu><guimenuitem>Hemmapp</guimenuitem></men"
+"uchoice>, klicka "
+"<menuchoice><guimenu>Redigera</guimenu><guimenuitem>Inställningar</guimenuite"
+"m></menuchoice> och klicka på fliken <guilabel>Media</guilabel>. Välj en "
+"alternativ spelare från listan vid <guibutton>DVD-video</guibutton>."
+
+#: musicvideophotos/C/video.xml:91(title)
+msgid "How can I get my videos to play?"
+msgstr "Hur kan jag få mina videofilmer att spelas?"
+
+#: musicvideophotos/C/video.xml:92(para)
+msgid ""
+"Some video formats, such as Flash, QuickTime, and Windows Media Video, are "
+"proprietary and so support for them cannot be included in Ubuntu by default. "
+"You must install some extra software to allow playback."
+msgstr ""
+"Vissa videoformat, såsom Flash, QuickTime och Windows Media Video, är "
+"proprietära och därför kan inte stöd för dessa inkluderas i Ubuntu som "
+"standard. Du måste installera extra programvara för att tillåta uppspelning."
+
+#: musicvideophotos/C/video.xml:97(para)
+msgid ""
+"In order to play the most common proprietary formats in the Totem movie "
+"player or Firefox web browser, <ulink url=\"apt:ubuntu-restricted-"
+"extras\">install the ubuntu-restricted-extras package</ulink> (see <ulink "
+"url=\"ghelp:add-applications#restricted-software\">Restricted "
+"Software</ulink> for more information)."
+msgstr ""
+"För att kunna spela de vanligaste proprietära formaten i filmuppspelaren "
+"Totem eller webbläsaren Firefox, installera paketet <ulink url=\"apt:ubuntu-"
+"restricted-extras\">ubuntu-restricted-extras</ulink> (se <ulink "
+"url=\"ghelp:add-applications#restricted-software\">Inskränkt och icke-fri "
+"programvara</ulink> för ytterligare information)."
+
+#: musicvideophotos/C/video.xml:105(title)
+msgid "Video files"
+msgstr "Videofiler"
+
+#: musicvideophotos/C/video.xml:107(emphasis)
+msgid "(e.g. QuickTime, Windows Media)"
+msgstr "(t.ex. QuickTime, Windows Media)"
+
+#: musicvideophotos/C/video.xml:109(para)
+msgid ""
+"If you try to play an unsupported video file, you will be asked if you would "
+"like to <guilabel>search for a suitable codec</guilabel>. Click "
+"<guibutton>Search</guibutton> and, when the <guilabel>Install multimedia "
+"codecs</guilabel> window appears, select one of the codecs displayed in the "
+"list and click <guibutton>Install</guibutton>."
+msgstr ""
+"Om du försöker spela en videofil som saknar stöd, så kommer du bli "
+"tillfrågad om du vill <guilabel>söka efter en lämplig kodek</guilabel>. "
+"Klicka på <guibutton>Sök</guibutton> och när fönstret <guilabel>Installera "
+"mediainsticksmoduler</guilabel> visas, välj en av de kodekar som visas i "
+"listan och klicka på <guibutton>Installera</guibutton>."
+
+#: musicvideophotos/C/video.xml:116(para)
+msgid ""
+"If you are asked to <guilabel>confirm installation of restricted "
+"software</guilabel>, the codec required to play your video may have some "
+"<ulink url=\"ghelp:add-applications#restricted-software\">legal "
+"restrictions</ulink> which you should be aware of. If you think that the "
+"restrictions do not apply to you, press <guibutton>Confirm</guibutton> to "
+"continue with the installation."
+msgstr ""
+"Om du tillfrågas om att <guilabel>bekräfta installation av begränsad "
+"mjukvara</guilabel>, kan den codec som krävs för att spela upp din film ha "
+"<ulink url=\"ghelp:add-applications#restricted-software\">legala "
+"begränsningar</ulink> vilka du bör vara medveten om. Om dessa begränsningar "
+"inte gäller dig, tryck <guibutton>Bekräfta</guibutton> för att fortsätta "
+"installationen."
+
+#: musicvideophotos/C/video.xml:124(para)
+msgid ""
+"Once installation is complete, the video should begin to play. If not, try "
+"closing and then re-opening the video."
+msgstr ""
+"När installationen är färdig så ska videon börja spelas upp. Om inte, prova "
+"att stänga och öppna videon igen."
+
+#: musicvideophotos/C/video.xml:131(title)
+msgid "Flash videos"
+msgstr "Flash-video"
+
+#: musicvideophotos/C/video.xml:133(emphasis)
+msgid "(e.g. Youtube, iPlayer)"
+msgstr "(t.ex. Youtube, iPlayer)"
+
+#: musicvideophotos/C/video.xml:135(para)
+msgid ""
+"When you first try to play a Flash video in the Firefox web browser, a bar "
+"will appear at the top of the window saying that <guilabel>additional "
+"plugins are required</guilabel>. Press the <guibutton>Install Missing "
+"Plugins</guibutton> button and follow the instructions on-screen to install "
+"a Flash player."
+msgstr ""
+"När du första gången försöker spela en flashvideo i Firefox kommer ett "
+"meddelande att synas högst upp i fönstret som säger att "
+"<guilabel>Ytterligare insticksmoduler krävs för att visa all media på den "
+"här sidan</guilabel>. Klicka på <guibutton>Installera saknade "
+"insticksmoduler</guibutton> och följ instruktionerna på skärmen för att "
+"installera en flashspelare."
+
+#: musicvideophotos/C/video.xml:142(para)
+msgid ""
+"You will be offered the choice of several players. The <guilabel>Adobe Flash "
+"Player</guilabel> is the official plugin, which should offer the best "
+"support for videos. Unfortunately, it is proprietary software and so cannot "
+"be supported directly by Ubuntu. The Swfdec and Gnash players are not "
+"proprietary and so are supported. You may also find them to be more stable "
+"(cause fewer problems) than the official player."
+msgstr ""
+"Du kommer att få välja mellan flera spelare. <guilabel>Adobe Flash "
+"Player</guilabel> är den officiella insticksmodulen, som ska ge det bästa "
+"stödet för filmer. Dessvärre, så är det proprietär programvara och kan inte "
+"få ett direkt stöd av Ubuntu. Swfdec och Gnash-spelarna är inte proprietära "
+"och stöds därför i Ubuntu. Du kan också uppleva att de är stabilare (orsakar "
+"färre problem) än den officiella flashspelaren."
+
+#: musicvideophotos/C/video.xml:154(title)
+msgid "Streaming video"
+msgstr "Strömmande video"
+
+#: musicvideophotos/C/video.xml:156(emphasis)
+msgid "(e.g. RealVideo)"
+msgstr "(t.ex. RealVideo)"
+
+#: musicvideophotos/C/video.xml:158(para)
+msgid ""
+"The most reliable way of playing RealVideo-format videos is to install the "
+"official RealPlayer software. See <link linkend=\"video-realplayer\"> "
+"Installing and configuring RealPlayer</link> for full instructions."
+msgstr ""
+"Det mest tillförlitliga sättet att spela upp video med RealVideo-formatet är "
+"att installera den officiella RealPlayer-programvaran. Se <link "
+"linkend=\"video-realplayer\"> Installera och konfigurera RealPlayer</link> "
+"för kompletta instruktioner."
+
+#: musicvideophotos/C/video.xml:163(para)
+msgid ""
+"Support for most other types of streaming video can be added by following "
+"the instructions for <link linkend=\"video-playback-file\">video "
+"files</link> or <link linkend=\"video-playback-flash\">Flash videos</link>. "
+"If you are having difficulties getting a video to stream in your web "
+"browser, right-click the video and select <guilabel>Open with \"Movie "
+"Player\"</guilabel> if that option is available."
+msgstr ""
+"Stöd för de flesta typer av strömmande video kan läggas till genom att följa "
+"instruktionerna för <link linkend=\"video-playback-file\">videofiler</link> "
+"eller <link linkend=\"video-playback-flash\">Flash-video</link>. om du får "
+"problem med att visa strömmande media i webbläsaren, högerklicka på "
+"videolänken och välj <guilabel>Öppna med \"Filmuppspelare\"</guilabel> om "
+"det alternativet finns tillgängligt."
+
+#: musicvideophotos/C/video.xml:176(title)
+msgid "Videos that are otherwise unsupported"
+msgstr "Videor som normalt sett inte stöds"
+
+#: musicvideophotos/C/video.xml:177(para)
+msgid ""
+"If none of the other instructions in this section work with a particular "
+"video, try using a different media player. <ulink "
+"url=\"apt:vlc\">VLC</ulink> and <ulink url=\"apt:mplayer\">MPlayer</ulink> "
+"support a wide range of formats; it is recommended that you try one of these."
+msgstr ""
+"Om ingen av de andra instruktionerna i detta avsnitt fungerar med en "
+"specifik video så kan du prova att använda en annan mediaspelare. <ulink "
+"url=\"apt:vlc\">VLC</ulink> och <ulink url=\"apt:mplayer\">MPlayer</ulink> "
+"har stöd för en mängd olika format; det rekommenderas att du provar en av "
+"dessa."
+
+#: musicvideophotos/C/video.xml:189(title)
+msgid "Installing and configuring RealPlayer"
+msgstr "Installera och konfigurera RealPlayer"
+
+#: musicvideophotos/C/video.xml:190(para)
+msgid ""
+"RealPlayer is a proprietary application, and so is not installed in the "
+"usual way."
+msgstr ""
+"RealPlayer är ett proprietärt program och därför installeras det inte på "
+"vanligt sätt."
+
+#: musicvideophotos/C/video.xml:196(para)
+msgid ""
+"Download a suitable Linux installer from the <ulink "
+"url=\"http://uk.real.com/player/select/\"> RealPlayer website</ulink> and "
+"save it in your Home folder."
+msgstr ""
+"Hämta ner ett lämpligt installationsprogram för Linux från <ulink "
+"url=\"http://uk.real.com/player/select/\"> RealPlayers webbplats</ulink> och "
+"spara det i din hemkatalog."
+
+#: musicvideophotos/C/video.xml:203(para)
+msgid ""
+"Open a Terminal "
+"(<menuchoice><guimenu>Applications</guimenu><guimenuitem>Accessories</guimenu"
+"item><guimenuitem>Terminal</guimenuitem></menuchoice>) and type the "
+"following, pressing <keycap>Enter</keycap> at the end of each line and "
+"typing your password when prompted:"
+msgstr ""
+"Öppna en terminal "
+"(<menuchoice><guimenu>Program</guimenu><guimenuitem>Tillbehör</guimenuitem><g"
+"uimenuitem>Terminal</guimenuitem></menuchoice>) och skriv in följande. Tryck "
+"sedan <keycap>Enter</keycap> på slutet av varje rad och skriv in ditt "
+"lösenord när du tillfrågas:"
+
+#: musicvideophotos/C/video.xml:208(screen)
+#, no-wrap
+msgid ""
+"\n"
+"sudo chmod a+x RealPlayer*\n"
+"sudo ./RealPlayer*"
+msgstr ""
+"\n"
+"sudo chmod a+x RealPlayer*\n"
+"sudo ./RealPlayer*"
+
+#: musicvideophotos/C/video.xml:213(para)
+msgid ""
+"You should see the text <guilabel>Extracting files for Helix "
+"installation</guilabel> on the screen if the installer has started properly. "
+"When asked a question by the installer, press <keycap>Enter</keycap> to "
+"accept the default."
+msgstr ""
+"Du bör se texten <guilabel>Extracting files for Helix "
+"installation</guilabel> på skärmen om installationen har startat korrekt. "
+"När installationsprogrammet ställer frågor, tryck <keycap>Enter</keycap> för "
+"att godkänna de förinställda valen."
+
+#: musicvideophotos/C/video.xml:221(para)
+msgid ""
+"When the installer has finished copying files, press "
+"<menuchoice><guimenu>Applications</guimenu><guimenuitem>Sound &amp; "
+"Video</guimenuitem><guimenuitem>RealPlayer 11</guimenuitem></menuchoice> and "
+"follow the instructions on the screen to complete set-up."
+msgstr ""
+"När installationsprogrammet kopierat färdigt alla filer, tryck "
+"<menuchoice><guimenu>Program</guimenu><guimenuitem>Ljud och "
+"video</guimenuitem><guimenuitem>RealPlayer 11</guimenuitem></menuchoice> och "
+"följ instruktionerna på skärmen för att avsluta konfigureringen."
+
+#: musicvideophotos/C/video.xml:228(para)
+msgid ""
+"For more in-depth instructions, see the <ulink "
+"url=\"https://help.ubuntu.com/community/RealPlayerInstallationMethods\"> "
+"community help wiki</ulink>."
+msgstr ""
+"För mera djupgående instruktioner, se <ulink "
+"url=\"https://help.ubuntu.com/community/RealPlayerInstallationMethods\"> "
+"gemenskapens hjälpwiki</ulink>."
+
+#: musicvideophotos/C/video.xml:237(title)
+msgid "Recording and editing video"
+msgstr "Spela in och redigera video"
+
+#: musicvideophotos/C/video.xml:238(para)
+msgid ""
+"There are numerous video capture and editing programs available for Ubuntu. "
+"Some of the most popular include <ulink url=\"apt:kino\">Kino</ulink>, "
+"<ulink url=\"apt:kdenlive\">Kdenlive</ulink>, and <ulink "
+"url=\"apt:pitivi\">Pitivi</ulink>."
+msgstr ""
+"Det finns flera program för videoinspelning och redigering tillgängliga för "
+"Ubuntu. Några av de mest populära inkluderar <ulink "
+"url=\"apt:kino\">Kino</ulink>, <ulink url=\"apt:kdenlive\">Kdenlive</ulink>, "
+"och <ulink url=\"apt:pitivi\">Pitivi</ulink>."
+
+#: musicvideophotos/C/troubleshooting.xml:16(title)
+msgid "Solutions to common problems"
+msgstr "Lösningar på vanliga problem"
+
+#: musicvideophotos/C/troubleshooting.xml:17(para)
+msgid "This section offers some solutions to commonly asked problems."
+msgstr ""
+"Detta avsnitt erbjuder några lösningar på vanliga problemställningar."
+
+#: musicvideophotos/C/troubleshooting.xml:19(para)
+msgid ""
+"Prevent CDs from playing when inserted, see <xref linkend=\"music-cd-"
+"autoplay\"/>"
+msgstr ""
+"Förhindra cd-skivor för att spelas upp när de matas in, se <xref "
+"linkend=\"music-cd-autoplay\"/>"
+
+#: musicvideophotos/C/troubleshooting.xml:20(para)
+msgid ""
+"Song names and covert art are wrong, see <xref linkend=\"music-"
+"missingmetadata\"/>"
+msgstr ""
+"Låtnamn och omslagsbilder är fel, se <xref linkend=\"music-"
+"missingmetadata\"/>"
+
+#: musicvideophotos/C/troubleshooting.xml:21(para)
+msgid ""
+"Rhythmbox can't rip MP3, see <xref linkend=\"music-missingmetadata\"/>"
+msgstr ""
+"Rhythmbox kan inte extrahera MP3, se <xref linkend=\"music-"
+"missingmetadata\"/>"
+
+#: musicvideophotos/C/troubleshooting.xml:22(para)
+msgid ""
+"My MP3 player works in Windows but not in Ubuntu, see <xref linkend=\"music-"
+"portable-mtp\"/>"
+msgstr ""
+"Min MP3-spelare fungerar i Windows men inte i Ubuntu, se <xref "
+"linkend=\"music-portable-mtp\"/>"
+
+#: musicvideophotos/C/troubleshooting.xml:23(para)
+msgid "I cant play videos, see <xref linkend=\"video-dvd\"/>"
+msgstr "Jag kan inte spela upp videofiler, se <xref linkend=\"video-dvd\"/>"
+
+#: musicvideophotos/C/troubleshooting.xml:24(para)
+msgid "I can't find menus on dvd, see <xref linkend=\"video-dvdmenus\"/>"
+msgstr ""
+"Jag kan inte hitta menyer på dvd-filmer, se <xref linkend=\"video-"
+"dvdmenus\"/>"
+
+#: musicvideophotos/C/troubleshooting.xml:25(para)
+msgid ""
+"I can't play Quicktime or WMV, see <xref linkend=\"video-playback-file\"/>"
+msgstr ""
+"Jag kan inte spela upp Quicktime eller WMV, se <xref linkend=\"video-"
+"playback-file\"/>"
+
+#: musicvideophotos/C/troubleshooting.xml:26(para)
+msgid ""
+"I can't play flash video, see <xref linkend=\"video-playback-flash\"/>"
+msgstr ""
+"Jag kan inte spela upp flash-video, se <xref linkend=\"video-playback-"
+"flash\"/>"
+
+#: musicvideophotos/C/troubleshooting.xml:27(para)
+msgid "I can't play Realmedia, see <xref linkend=\"video-realplayer\"/>"
+msgstr ""
+"Jag kan inte spela upp Realmedia, se <xref linkend=\"video-realplayer\"/>"
+
+#: musicvideophotos/C/troubleshooting.xml:28(para)
+msgid "My microphone isn't working, see <xref linkend=\"music-microphone\"/>"
+msgstr "Min mikrofon fungerar inte, se <xref linkend=\"music-microphone\"/>"
+
+#: musicvideophotos/C/photos.xml:16(title)
+msgid "Photos and cameras"
+msgstr "Foton och kameror"
+
+#: musicvideophotos/C/photos.xml:17(para)
+msgid ""
+"There are many tools available to help you to work with your digital photo "
+"collection."
+msgstr ""
+"Det finns många verktyg för att hjälpa till med arbetet med din digitala "
+"fotosamling"
+
+#: musicvideophotos/C/photos.xml:23(title)
+msgid "Import photos from a digital camera"
+msgstr "Importera bilder från en digitalkamera"
+
+#: musicvideophotos/C/photos.xml:24(para)
+msgid ""
+"Ubuntu automatically detects most digital cameras when you plug them in, and "
+"will offer to import your photos automatically."
+msgstr ""
+"Ubuntu upptäcker automatiskt de flesta digitalkamerorna när de ansluts och "
+"erbjuder automatisk import av bilderna."
+
+#: musicvideophotos/C/photos.xml:28(para)
+msgid "To import photos from your camera:"
+msgstr "För att importera foton från din kamera:"
+
+#: musicvideophotos/C/photos.xml:33(para)
+msgid ""
+"Plug-in and switch on the camera by placing it in review mode. Ubuntu should "
+"ask you if you would like to import the photos that the camera contains."
+msgstr ""
+"Anslut och slå på kameran i granskningsläget. Ubuntu kommer fråga om du vill "
+"importera bilderna som kameran innehåller."
+
+#: musicvideophotos/C/photos.xml:40(para)
+msgid ""
+"Click on <guibutton>Import</guibutton>. You should then see a preview of the "
+"photos."
+msgstr ""
+"Klicka på <guibutton>Importera</guibutton>. Då visas förhandgranskningen av "
+"bilderna."
+
+#: musicvideophotos/C/photos.xml:46(para)
+msgid ""
+"Choose a location to save your photos to, then click on "
+"<guibutton>Import</guibutton>. The photos will be saved to your hard drive."
+msgstr ""
+"Välj en plats att spara bilderna på, klicka sedan på "
+"<guibutton>Importera</guibutton>. Då kommer bilderna sparas på din hårddisk."
+
+#: musicvideophotos/C/photos.xml:54(para)
+msgid "If Ubuntu does not ask you if it can import the photos:"
+msgstr "Om Ubuntu inte frågar dig om att importera bilderna:"
+
+#: musicvideophotos/C/photos.xml:59(para)
+msgid ""
+"Open "
+"<menuchoice><guimenu>Applications</guimenu><guimenuitem>Graphics</guimenuitem"
+"><guimenuitem>F-Spot Photo Manager</guimenuitem></menuchoice> and choose "
+"<menuchoice><guimenu>File</guimenu><guimenuitem>Import</guimenuitem></menucho"
+"ice>."
+msgstr ""
+"Öppna "
+"<menuchoice><guimenu>Program</guimenu><guimenuitem>Grafik</guimenuitem><guime"
+"nuitem>Fotohanteraren F-Spot</guimenuitem></menuchoice> och välj "
+"<menuchoice><guimenu>Arkiv</guimenu><guimenuitem>Importera</guimenuitem></men"
+"uchoice>."
+
+#: musicvideophotos/C/photos.xml:68(para)
+msgid ""
+"Select your camera as the <guilabel>Import Source</guilabel> and then click "
+"<guibutton>Import</guibutton> to begin importing your photos."
+msgstr ""
+"Välj din kamera som <guilabel>Importkälla</guilabel> och klicka sedan på "
+"<guibutton>Importera</guibutton> för att påbörja importen av dina foton."
+
+#: musicvideophotos/C/photos.xml:75(para)
+msgid ""
+"If your camera does not appear as an import source, press "
+"<menuchoice><guimenu>Places</guimenu><guimenuitem>Computer</guimenuitem></men"
+"uchoice> and check if your camera is visible there as a removable storage "
+"device. If it is, you can then copy the photos manually using the "
+"<application>File Browser</application>."
+msgstr ""
+"Om din kamera inte visas som en importkälla, klicka på "
+"<menuchoice><guimenu>Platser</guimenu><guimenuitem>Dator</guimenuitem></menuc"
+"hoice> och kontrollera om din kamera är synlig som en flyttbar "
+"lagringsenhet. Om den är det, kopiera då bilderna manuellt genom att använda "
+"<application>Filbläddraren</application>."
+
+#: musicvideophotos/C/photos.xml:85(title)
+msgid "Organize your photo collection"
+msgstr "Organisera din fotosamling"
+
+#: musicvideophotos/C/photos.xml:86(para)
+msgid ""
+"<application>F-Spot</application> provides a complete solution for managing "
+"your photo collection. To start it, choose "
+"<menuchoice><guimenu>Applications</guimenu><guimenuitem>Graphics</guimenuitem"
+"><guimenuitem>F-Spot Photo Manager</guimenuitem></menuchoice>."
+msgstr ""
+"<application>F-Spot</application> tillhandahåller en komplett lösning för "
+"att hantera din fotosamling. För att starta det, välj "
+"<menuchoice><guimenu>Program</guimenu><guimenuitem>Grafik</guimenuitem><guime"
+"nuitem>Fotohanteraren F-Spot</guimenuitem></menuchoice>."
+
+#: musicvideophotos/C/photos.xml:89(para)
+msgid ""
+"With <application>F-Spot</application>, you can import photos from your "
+"digital camera or USB stick, tag them with familiar terms, do touch ups, and "
+"edit them in different ways. In addition to this, you can upload photos "
+"easily to your Flickr, PicasaWeb album and other online photo galleries."
+msgstr ""
+"Med <application>F-Spot</application> kan du importera dina bilder från en "
+"digitalkamera eller USB-minne, ge bilderna välbekanta taggar, gör "
+"förbättringar och redigera dem på olika sätt. Utöver detta så kan du enkelt "
+"posta dina bilder till Flickr, PicasaWeb-album och andra fotogallerier på "
+"Internet."
+
+#: musicvideophotos/C/photos.xml:96(para)
+msgid ""
+"For help with <application>F-Spot Photo Manager</application>, see the "
+"<ulink type=\"help\" url=\"ghelp:f-spot\">F-Spot User Guide</ulink>."
+msgstr ""
+"För hjälp med <application>Fotohanteraren F-Spot</application>, se <ulink "
+"type=\"help\" url=\"ghelp:f-spot\">Användarguide för F-Spot</ulink>."
+
+#: musicvideophotos/C/photos.xml:103(title)
+msgid "Watch a slideshow of photos"
+msgstr "Se på ett bildspel"
+
+#: musicvideophotos/C/photos.xml:104(para)
+msgid ""
+"If you want to show off your photos in all of their glory, why not run a "
+"slideshow of them?"
+msgstr ""
+"Om du vill visa upp dina foton för din familj och vänner, varför inte spela "
+"upp ett bildspel?"
+
+#: musicvideophotos/C/photos.xml:110(para)
+msgid ""
+"Watch a slideshow using the <ulink type=\"help\" url=\"ghelp:eog#eog-"
+"fullscreen\"> Image Viewer</ulink>"
+msgstr ""
+"Se på ett bildspel med hjälp av <ulink type=\"help\" url=\"ghelp:eog#eog-"
+"fullscreen\"> Bildvisare</ulink>"
+
+#: musicvideophotos/C/photos.xml:117(para)
+msgid ""
+"Watch a slideshow using the <ulink type=\"help\" url=\"ghelp:f-spot#enjoying-"
+"fullscreen-mode-and-slideshows\"> F-Spot Photo Manager</ulink>"
+msgstr ""
+"Se på ett bildspel med hjälp av <ulink type=\"help\" url=\"ghelp:f-"
+"spot#enjoying-fullscreen-mode-and-slideshows\"> Fotohanteraren F-Spot</ulink>"
+
+#: musicvideophotos/C/photos.xml:126(title)
+msgid "Setting a Slideshow as Your Screensaver"
+msgstr "Ställ in ett bildspel som din skärmsläckare"
+
+#: musicvideophotos/C/photos.xml:127(para)
+msgid "You can use a slideshow of your photos as you screensaver:"
+msgstr "Du kan använda ett bildspel av dina foton som din skärmsläckare:"
+
+#: musicvideophotos/C/photos.xml:132(para)
+msgid ""
+"Press "
+"<menuchoice><guimenu>System</guimenu><guimenuitem>Preferences</guimenuitem><g"
+"uimenuitem>Screensaver</guimenuitem></menuchoice>"
+msgstr ""
+"Tryck på "
+"<menuchoice><guimenu>System</guimenu><guimenuitem>Inställningar</guimenuitem>"
+"<guimenuitem>Skärmsläckare</guimenuitem></menuchoice>"
+
+#: musicvideophotos/C/photos.xml:137(para)
+msgid "Select the <guilabel>F-Spot photos</guilabel> screensaver theme"
+msgstr "Välj skärmsläckartemat <guilabel>Foton från F-Spot</guilabel>"
+
+#: musicvideophotos/C/photos.xml:143(para)
+msgid ""
+"Photos which are tagged as <guilabel>Favorites</guilabel> in <application>F-"
+"Spot Photo Manager</application> will be displayed as your screensaver"
+msgstr ""
+"Foton som är taggade som <guilabel>Favoriter</guilabel> i "
+"<application>Fotohanteraren F-Spot</application> kommer att visas som din "
+"skärmsläckare"
+
+#: musicvideophotos/C/photos.xml:151(para)
+msgid "If you would like to change which tag is used for the slideshow:"
+msgstr "Om du vill ändra vilken tagg som ska användas för bildspelet:"
+
+#: musicvideophotos/C/photos.xml:156(para)
+msgid "Open F-Spot"
+msgstr "Öppna F-Spot"
+
+#: musicvideophotos/C/photos.xml:161(para)
+msgid ""
+"Press "
+"<menuchoice><guimenuitem>Edit</guimenuitem><guimenuitem>Preferences</guimenui"
+"tem></menuchoice>"
+msgstr ""
+"Tryck på "
+"<menuchoice><guimenuitem>Redigera</guimenuitem><guimenuitem>Inställningar</gu"
+"imenuitem></menuchoice>"
+
+#: musicvideophotos/C/photos.xml:170(para)
+msgid "Under <guilabel>Screensaver</guilabel>, select the desired tag"
+msgstr ""
+"Välj önskad tagg under alternativet <guilabel>Skärmsläckare</guilabel>"
+
+#: musicvideophotos/C/photos.xml:175(para)
+msgid "Press <guibutton>Close</guibutton>"
+msgstr "Tryck på <guibutton>Stäng</guibutton>"
+
+#: musicvideophotos/C/photos.xml:183(title)
+msgid "Printing photos"
+msgstr "Skriv ut foton"
+
+#: musicvideophotos/C/photos.xml:184(para)
+msgid "Printing your photos is great way to share them with others."
+msgstr ""
+"Skriva ut dina foton är ett bra sätt att dela med dig av dem till andra."
+
+#: musicvideophotos/C/photos.xml:189(para)
+msgid ""
+"Double-click the photo you want to print to open it in the "
+"<application>Image Viewer</application>"
+msgstr ""
+"Dubbelklicka på fotot som du vill skriva ut för att öppna det i "
+"<application>Bildvisare</application>"
+
+#: musicvideophotos/C/photos.xml:195(para)
+msgid ""
+"Press <menuchoice><guimenuitem>File</guimenuitem><guimenuitem>Page "
+"Setup</guimenuitem></menuchoice>"
+msgstr ""
+"Tryck på "
+"<menuchoice><guimenuitem>Arkiv</guimenuitem><guimenuitem>Sidkonfiguration</gu"
+"imenuitem></menuchoice>"
+
+#: musicvideophotos/C/photos.xml:203(para)
+msgid ""
+"Under <guilabel>Format for</guilabel>, select the printer which you are "
+"going to use"
+msgstr ""
+"Under <guilabel>Format för</guilabel>, välj skrivaren som du vill använda"
+
+#: musicvideophotos/C/photos.xml:209(para)
+msgid ""
+"Under <guilabel>Paper size</guilabel>, select the size of the paper which "
+"you are going to print the photo onto"
+msgstr ""
+"Under <guilabel>Pappersstorlek</guilabel>, välj storleken på pappret som du "
+"kommer att skriva ut fotot på"
+
+#: musicvideophotos/C/photos.xml:215(para)
+msgid ""
+"Under <guilabel>Orientation</guilabel>, choose the orientation of the photo "
+"on the paper"
+msgstr ""
+"Under <guilabel>Orientering</guilabel>, välj orienteringen för fotot på "
+"pappret"
+
+#: musicvideophotos/C/photos.xml:223(para)
+msgid "Press <guibutton>Apply</guibutton>"
+msgstr "Tryck på <guibutton>Verkställ</guibutton>"
+
+#: musicvideophotos/C/photos.xml:228(para)
+msgid ""
+"Press "
+"<menuchoice><guimenuitem>File</guimenuitem><guimenuitem>Print</guimenuitem></"
+"menuchoice>"
+msgstr ""
+"Tryck på <menuchoice><guimenuitem>Arkiv</guimenuitem><guimenuitem>Skriv "
+"ut</guimenuitem></menuchoice>"
+
+#: musicvideophotos/C/photos.xml:237(para)
+msgid "Change any settings as appropriate (see below)"
+msgstr "Ändra inställningarna på lämpligt sätt (se nedan)"
+
+#: musicvideophotos/C/photos.xml:242(para)
+msgid "Press <guibutton>Print</guibutton> to print the photo"
+msgstr "Tryck på <guibutton>Skriv ut</guibutton> för att skriva ut fotot"
+
+#: musicvideophotos/C/photos.xml:249(title)
+msgid "Printer Settings"
+msgstr "Skrivarinställningar"
+
+#: musicvideophotos/C/photos.xml:250(para)
+msgid ""
+"You can tweak your printing settings to get the best results. All of these "
+"settings can be found in the "
+"<menuchoice><guimenuitem>File</guimenuitem><guimenuitem>Print</guimenuitem></"
+"menuchoice> window."
+msgstr ""
+"Du kan justera utskriftsinställningarna för att få bästa resultat. Alla "
+"dessa inställningar kan nås i fönstret "
+"<menuchoice><guimenuitem>Arkiv</guimenuitem><guimenuitem>Skriv "
+"ut</guimenuitem></menuchoice>."
+
+#: musicvideophotos/C/photos.xml:259(para)
+msgid ""
+"Make sure that you select your printer from the list on the "
+"<guilabel>General</guilabel> tab to get the full range of settings supported "
+"by your printer."
+msgstr ""
+"Kontrollera att du har valt din skrivare från listan i fliken "
+"<guilabel>Allmänt</guilabel> för att få alla inställningar som stöds av din "
+"skrivare."
+
+#: musicvideophotos/C/photos.xml:265(para)
+msgid ""
+"Different makes of printer will have different printer settings. The "
+"settings below are only provided as a guide for what you may be able to "
+"change with your particular printer."
+msgstr ""
+"Olika tillverkare av skrivare har olika skrivarinställningar. "
+"Inställningarna nedan tillhandahålls endast som en guide för vad du kanske "
+"kan ändra för din specifika skrivare."
+
+#: musicvideophotos/C/photos.xml:273(title)
+msgid "Paper Type"
+msgstr "Papperstyp"
+
+#: musicvideophotos/C/photos.xml:274(para)
+msgid ""
+"The paper type that you use has a large impact on the quality of your "
+"printed photo. You should set the paper type to match the paper which you "
+"are using in your printer to prevent poor results. Using a "
+"<emphasis>glossy</emphasis> paper type with only <emphasis>plain</emphasis> "
+"paper loaded into your printer will generally produce poor results, for "
+"example."
+msgstr ""
+"Papperstypen som du använder har en stor inverkan på kvaliteten för ditt "
+"utskrivna foto. Du bör ställa in papperstypen för att passa pappret som du "
+"använder i din skrivare för att förhindra dåliga utskrifter. Till exempel om "
+"du använder ett papper av <emphasis>glansig</emphasis> (glossy) typ med "
+"endast <emphasis>vanliga</emphasis> papper i din skrivare kommer det oftast "
+"att ge dåliga utskrifter."
+
+#: musicvideophotos/C/photos.xml:282(para)
+msgid ""
+"This setting may automatically change the amount of ink which is used, in "
+"order to get the best results and to prevent smudging. How this is handled "
+"will depend on your printer."
+msgstr ""
+"Den här inställningen kan automatiskt ändra mängden bläck som används för "
+"att få det bästa resultatet och förhindra utsmetning. Din skrivare bestämmer "
+"hur det hanteras."
+
+#: musicvideophotos/C/photos.xml:290(title)
+msgid "Print Quality"
+msgstr "Utskriftskvalitet"
+
+#: musicvideophotos/C/photos.xml:291(para)
+msgid ""
+"Print quality is generally measured in <emphasis>DPI</emphasis> (dots per "
+"inch). A greater DPI value should result in better print quality."
+msgstr ""
+"Utskriftskvaliteten mäts oftas i <emphasis>DPI</emphasis> (punkter per tum). "
+"Ett större DPI-värde bör resultera i bättre utskriftskvalitet."
+
+#: musicvideophotos/C/photos.xml:298(para)
+msgid ""
+"Choose <guilabel>Draft</guilabel> for making quick draft prints which don't "
+"use much ink"
+msgstr ""
+"Välj <guilabel>Utkast</guilabel> för att göra en snabb utskrift som inte "
+"använder så mycket bläck"
+
+#: musicvideophotos/C/photos.xml:304(para)
+msgid ""
+"Choose <guilabel>Best Quality</guilabel> or <guilabel>Photo</guilabel> for "
+"making high quality prints. Printing will be slower and will use more ink"
+msgstr ""
+"Välj <guilabel>Bäst kvalitet</guilabel> eller <guilabel>Foto</guilabel> för "
+"att skapa högkvalitativa utskrifter. Utskriften kommer att vara långsammare "
+"och kommer att använda mer bläck"
+
+#: musicvideophotos/C/photos.xml:315(title)
+msgid "Advanced Photo Printing"
+msgstr "Avancerad fotoutskrift"
+
+#: musicvideophotos/C/photos.xml:316(para)
+msgid ""
+"For advanced photo printing, <ulink url=\"apt:photoprint\">install the "
+"<application>PhotoPrint</application> package</ulink> from the universe "
+"repository. Once installed, press "
+"<menuchoice><guimenu>Applications</guimenu><guimenuitem>Graphics</guimenuitem"
+"><guimenuitem>PhotoPrint</guimenuitem></menuchoice> to start PhotoPrint."
+msgstr ""
+"För avanserade fotoutskrifter, <ulink url=\"apt:photoprint\">installera "
+"paketet <application>PhotoPrint</application></ulink> från förrådet "
+"universe. Efter installationen, tryck på "
+"<menuchoice><guimenu>Program</guimenu><guimenuitem>Grafik</guimenuitem><guime"
+"nuitem>PhotoPrint</guimenuitem></menuchoice> för att starta PhotoPrint."
+
+#: musicvideophotos/C/photos.xml:322(para)
+msgid "PhotoPrint allows you to fine-tune your printing settings."
+msgstr "PhotoPrint låter dig finjustera dina utskriftsinställningar."
+
+#: musicvideophotos/C/photos.xml:327(para)
+msgid ""
+"Under <guilabel>Page Size</guilabel>, change the page size to the size of "
+"paper that you want to print onto."
+msgstr ""
+"Under <guilabel>Sidstorlek</guilabel> kan du ändra storleken på pappret som "
+"du vill skriva ut på."
+
+#: musicvideophotos/C/photos.xml:333(para)
+msgid ""
+"Under <guilabel>Layout</guilabel>, change the number of columns and rows to "
+"reflect the number of photos that you want to put onto a page"
+msgstr ""
+"Under <guilabel>Layout</guilabel> kan du ändra antalet kolumner och rader "
+"för att passa antalet foton som du vill lägga på en sida"
+
+#: musicvideophotos/C/photos.xml:340(para)
+msgid ""
+"To change the amount of spacing between photos, change the "
+"<guilabel>Horizontal</guilabel> and <guilabel>Vertical</guilabel> settings "
+"under <guilabel>Gutters</guilabel>"
+msgstr ""
+"För att ändra utrymmet mellan dina foton kan du ändra på inställningarna för "
+"<guilabel>Horisontellt</guilabel> och <guilabel>Vertikalt</guilabel> under "
+"<guilabel>Mellanrum</guilabel>"
+
+#: musicvideophotos/C/photos.xml:348(para)
+msgid ""
+"To add a photo to the page, press "
+"<menuchoice><guimenuitem>Image</guimenuitem><guimenuitem>Add "
+"Image</guimenuitem></menuchoice> and select a photo"
+msgstr ""
+"För att lägga till ett foto till sidan, tryck på "
+"<menuchoice><guimenuitem>Bild</guimenuitem><guimenuitem>Lägg till "
+"bild</guimenuitem></menuchoice> och välj ett foto"
+
+#: musicvideophotos/C/photos.xml:357(para)
+msgid ""
+"To change the advanced printer settings, press "
+"<menuchoice><guimenuitem>File</guimenuitem><guimenuitem>Print "
+"Setup</guimenuitem></menuchoice>"
+msgstr ""
+"Tryck på "
+"<menuchoice><guimenuitem>Arkiv</guimenuitem><guimenuitem>Sidkonfiguration</gu"
+"imenuitem></menuchoice> för att ändra avancerade skrivarinställningar"
+
+#: musicvideophotos/C/photos.xml:364(para)
+msgid ""
+"You may need to select the correct printer model on the "
+"<guilabel>Output</guilabel> tab"
+msgstr ""
+"Du kan behöver välja den korrekta skrivarmodellen i fliken "
+"<guilabel>Utmatning</guilabel>"
+
+#: musicvideophotos/C/photos.xml:370(para)
+msgid ""
+"Press "
+"<menuchoice><guimenuitem>File</guimenuitem><guimenuitem>Print</guimenuitem></"
+"menuchoice> to print your photos"
+msgstr ""
+"Tryck på <menuchoice><guimenuitem>Arkiv</guimenuitem><guimenuitem>Skriv "
+"ut</guimenuitem></menuchoice> för att skriva ut dina foton"
+
+#: musicvideophotos/C/photos.xml:383(title)
+msgid "Sharing your photos"
+msgstr "Dela ut dina foton"
+
+#: musicvideophotos/C/photos.xml:384(para)
+msgid ""
+"If you want to share your collection of photos with others, why not use an "
+"online photo sharing service or burn a CD of your photos? Ubuntu has plenty "
+"of tools to help you share your pictures."
+msgstr ""
+"Om du vill dela med dig av dina fotoalbum med dina vänner kan du använda dig "
+"av en fotodelningstjänst på nätet eller bränna en cd-skiva med dina foton. "
+"Ubuntu har flera verktyg för att hjälpa dig att dela med dig av dina bilder."
+
+#: musicvideophotos/C/photos.xml:396(para)
+msgid ""
+"Share your photos over the Internet using a <ulink type=\"help\" "
+"url=\"ghelp:f-spot#sharing-flickr-or-php-gallery\"> photo sharing "
+"service</ulink> or a <ulink type=\"help\" url=\"ghelp:f-spot#website-gallery-"
+"folder\">web gallery</ulink>."
+msgstr ""
+"Dela ut dina foton över Internet med hjälp av en <ulink type=\"help\" "
+"url=\"ghelp:f-spot#sharing-flickr-or-php-gallery\"> "
+"fotodelningstjänst</ulink> eller ett <ulink type=\"help\" url=\"ghelp:f-"
+"spot#website-gallery-folder\">webbgalleri</ulink>."
+
+#: musicvideophotos/C/photos.xml:404(para)
+msgid "Burn a CD of your photos using the <xref linkend=\"cdburning\"/>"
+msgstr ""
+"Bränn en cd-skiva med dina foton med hjälp av <xref linkend=\"cdburning\"/>"
+
+#: musicvideophotos/C/photos.xml:410(para)
+msgid "Present a <xref linkend=\"photos-slideshow\"/>"
+msgstr "Visa en <xref linkend=\"photos-slideshow\"/>"
+
+#: musicvideophotos/C/photos.xml:416(para)
+msgid ""
+"<ulink type=\"help\" url=\"ghelp:f-spot#sharing-e-mail\"> E-mail "
+"copies</ulink> of your photos directly."
+msgstr ""
+"<ulink type=\"help\" url=\"ghelp:f-spot#sharing-e-mail\"> E-posta "
+"kopior</ulink> av dina foton direkt."
+
+#: musicvideophotos/C/photos.xml:425(title)
+msgid "Edit and improve photos"
+msgstr "Redigera och förbättra foton"
+
+#: musicvideophotos/C/photos.xml:426(para)
+msgid ""
+"Sometimes, you may need to adjust or touch-up a photo to make it look better "
+"or to remove some flaw. <application>F-Spot</application> includes a few "
+"basic tools for doing this. To access these tools, press the <guibutton>Edit "
+"Photo</guibutton> button and then click on one of the tools at the bottom of "
+"the screen."
+msgstr ""
+"Ibland kan du behöva redigera eller förbättra en bild för att den skall se "
+"bättre ut eller för att ta bort fel. <application>F-Spot</application> "
+"inkluderar några basverktyg för att göra detta. För att komma åt verktygen, "
+"klicka på <guibutton>Redigera foto</guibutton> knappen och klicka därefter "
+"på något av verktygen i nederkanten av skärmen."
+
+#: musicvideophotos/C/photos.xml:433(para)
+msgid ""
+"The <application>GIMP Image Editor</application> is much more advanced. It "
+"is installed in Ubuntu by default, and can be started by choosing "
+"<menuchoice><guimenu>Applications</guimenu><guimenuitem>Graphics</guimenuitem"
+"><guimenuitem>GIMP Image Editor</guimenuitem></menuchoice>."
+msgstr ""
+"Programmet <application>Bildredigeraren GIMP</application> är mycket mer "
+"avancerat det är installerat i Ubuntu som standard och kan startas genom att "
+"välja "
+"<menuchoice><guimenu>Program</guimenu><guimenuitem>Grafik</guimenuitem><guime"
+"nuitem>Bildredigeraren GIMP</guimenuitem></menuchoice>."
+
+#: musicvideophotos/C/photos.xml:438(para)
+msgid ""
+"The GIMP has many professional-level features. It includes tools for "
+"selections, drawing, creating paths, masks, filters, effects, and more."
+msgstr ""
+"Bildredigeraren GIMP har många professionella egenskaper. Det innehåller "
+"markeringsverktyg, målarverktyg och verktyg för att skapa lager, filter, "
+"effekter och mycket annat."
+
+#: musicvideophotos/C/photos.xml:444(title)
+msgid "Rotating photos"
+msgstr "Rotera foton"
+
+#: musicvideophotos/C/photos.xml:445(para)
+msgid ""
+"You may find that you have some photos which are the wrong way up. It is "
+"easy to rotate photos so that they're the right way up again."
+msgstr ""
+"Du kanske har några foton som är felvända. Det är enkelt att rotera foton så "
+"att rätt sida är uppåt igen."
+
+#: musicvideophotos/C/photos.xml:449(para)
+msgid ""
+"The <ulink type=\"help\" url=\"ghelp:eog#eog-manipulate\"> Image "
+"Viewer</ulink>, F-Spot Photo Manager and the GIMP Image Editor are all "
+"capable of rotating photos."
+msgstr ""
+"<ulink type=\"help\" url=\"ghelp:eog#eog-manipulate\"> Bildvisare</ulink>, "
+"fotohanteraren F-Spot och bildredigeraren GIMP kan alla klara av att rotera "
+"bilder."
+
+#: musicvideophotos/C/photos.xml:457(title)
+msgid "Resizing photos"
+msgstr "Ändra storlek på foton"
+
+#: musicvideophotos/C/photos.xml:458(para)
+msgid ""
+"You can resize photos which are too big. If you have a photo which has a "
+"large file size, resizing it will also reduce the file size."
+msgstr ""
+"Du kan ändra storlek på foton som är för stora. Om du har ett foto som har "
+"en stor filstorlek kommer storleksändringen även att minska filstorleken."
+
+#: musicvideophotos/C/photos.xml:462(para)
+msgid ""
+"The <application>GIMP Image Editor</application> supports several methods of "
+"resizing photos. We will concentrate on the simplest method."
+msgstr ""
+"<application>Bildredigeraren GIMP</application> har stöd för flera typer av "
+"storleksändring av foton. Vi kommer att beskriva den enklaste metoden här."
+
+#: musicvideophotos/C/photos.xml:469(para)
+msgid "Open the photo you want to resize in the GIMP Image Editor"
+msgstr "Öppna fotot som du vill storleksändra i bildredigeraren GIMP"
+
+#: musicvideophotos/C/photos.xml:474(para)
+msgid ""
+"Press <menuchoice><guimenuitem>Image</guimenuitem><guimenuitem>Scale "
+"Image</guimenuitem></menuchoice>"
+msgstr ""
+"Tryck på <menuchoice><guimenuitem>Bild</guimenuitem><guimenuitem>Skala "
+"bild</guimenuitem></menuchoice>"
+
+#: musicvideophotos/C/photos.xml:483(para)
+msgid ""
+"Adjust the <guilabel>Width</guilabel> or <guilabel>Height</guilabel> as "
+"appropriate. The image will be kept to scale."
+msgstr ""
+"Justera <guilabel>Bredd</guilabel> eller <guilabel>Höjd</guilabel> på "
+"lämpligt sätt. Bildens proportioner kommer att bibehållas."
+
+#: musicvideophotos/C/photos.xml:488(para)
+msgid ""
+"If you want to adjust the width and height independently, press the link "
+"button which connects the <guilabel>Width</guilabel> and "
+"<guilabel>Height</guilabel> boxes, so that it looks like a broken link."
+msgstr ""
+"Om du individuellt vill justera bredd och höjd kan du klicka på länkknappen "
+"som kopplar ihop rutorna <guilabel>Bredd</guilabel> och "
+"<guilabel>Höjd</guilabel>, så att det ser ut som länken har brutits."
+
+#: musicvideophotos/C/photos.xml:496(para)
+msgid ""
+"Under <guilabel>Quality</guilabel>, change the "
+"<guilabel>Interpolation</guilabel> to <guilabel>Cubic (Best)</guilabel>. "
+"This will give you the best quality resized image"
+msgstr ""
+"Under <guilabel>Kvalitet</guilabel>, ändra "
+"<guilabel>Interpolation</guilabel> till <guilabel>Kubisk (bästa)</guilabel>. "
+"Det kommer att ge dig en storleksändrad bild med bästa kvaliteten"
+
+#: musicvideophotos/C/photos.xml:504(para)
+msgid "Press <guilabel>Scale</guilabel> to resize the photo"
+msgstr "Tryck på <guilabel>Skala</guilabel> för att ändra storlek på fotot"
+
+#: musicvideophotos/C/photos.xml:509(para)
+msgid ""
+"Press <menuchoice><guimenuitem>File</guimenuitem><guimenuitem>Save "
+"As</guimenuitem></menuchoice> and choose a new filename for the photo"
+msgstr ""
+"Tryck på <menuchoice><guimenuitem>Arkiv</guimenuitem><guimenuitem>Spara "
+"som</guimenuitem></menuchoice> och välj ett nytt filnamn för fotot"
+
+#: musicvideophotos/C/photos.xml:518(para)
+msgid "Press <guilabel>Save</guilabel> to save the resized photo"
+msgstr "Tryck på <guilabel>Spara</guilabel> för att spara det ändrade fotot"
 
 #: musicvideophotos/C/musicvideophotos.xml:3(title)
 msgid "Credits and License"
@@ -113,7 +1207,11 @@ msgstr "Canonical Ltd. och medlemmar från <placeholder-1/>"
 msgid "The Ubuntu Documentation Project"
 msgstr "Ubuntus dokumentationsprojekt"
 
-#: musicvideophotos/C/musicvideophotos.xml:21(para)
+#: musicvideophotos/C/music.xml:16(title)
+msgid "Music"
+msgstr "Musik"
+
+#: musicvideophotos/C/music.xml:17(para)
 msgid ""
 "This section describes how to import, organize and use music, videos and "
 "photos with Ubuntu."
@@ -121,21 +1219,11 @@ msgstr ""
 "Detta avsnitt beskriver hur man importerar, organiserar och använder musik, "
 "video och foton med Ubuntu."
 
-#: musicvideophotos/C/musicvideophotos.xml:27(title)
-msgid "Music and audio"
-msgstr "Musik och ljud"
+#: musicvideophotos/C/music.xml:20(title)
+msgid "Listen"
+msgstr "Lyssna"
 
-#: musicvideophotos/C/musicvideophotos.xml:28(para)
-msgid ""
-"Whether you want to play, rip, edit or organize your music, Ubuntu has the "
-"tools that you need."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:34(title)
-msgid "Listen to audio files and CDs"
-msgstr "Lyssna på ljudfiler och cd-skivor"
-
-#: musicvideophotos/C/musicvideophotos.xml:35(para)
+#: musicvideophotos/C/music.xml:21(para)
 msgid ""
 "You can use <application>Rhythmbox</application> "
 "(<menuchoice><guimenu>Applications</guimenu><guimenuitem>Sound &amp; "
@@ -146,20 +1234,32 @@ msgid ""
 "Video</guimenuitem><guimenuitem>Movie Player</guimenuitem></menuchoice>) to "
 "listen to music on your computer."
 msgstr ""
+"Du kan använda <application>Rhythmbox</application> "
+"(<menuchoice><guimenu>Program</guimenu><guimenuitem>Ljud och "
+"video</guimenuitem><guimenuitem>Musikspelaren "
+"Rhythmbox</guimenuitem></menuchoice>) och "
+"<application>Filmuppspelare</application> "
+"(<menuchoice><guimenu>Program</guimenu><guimenuitem>Ljud och "
+"video</guimenuitem><guimenuitem>Filmuppspelare</guimenuitem></menuchoice>) "
+"för att lyssna på musik på din dator."
 
-#: musicvideophotos/C/musicvideophotos.xml:41(para)
+#: musicvideophotos/C/music.xml:25(para)
 msgid ""
-"Audio files will be opened in Movie Player when double-clicked, but "
-"Rhythmbox is better at handling large music collections."
+"Audio files will be opened in Movie Player when double-clicked but Rhythmbox "
+"is better at handling large music collections."
 msgstr ""
+"Ljudfiler kommer att öppnas i Filmupppspelare när de dubbelklickas men "
+"Rhythmbox är bättre på att hantera större musiksamlingar."
 
-#: musicvideophotos/C/musicvideophotos.xml:46(para)
+#: musicvideophotos/C/music.xml:28(para)
 msgid ""
-"Rhythmbox is also able to play audio CDs, and should open automatically when "
-"you insert a CD."
+"Rhythmbox is also able to play audio CDs and work with MP3 players. It "
+"should open automatically when you insert a CD."
 msgstr ""
+"Rhythmbox kan även spela upp ljud-cd-skivor och fungerar med MP3-spelare. "
+"Det bör öppnas automatiskt när du matar in en cd-skiva."
 
-#: musicvideophotos/C/musicvideophotos.xml:50(para)
+#: musicvideophotos/C/music.xml:30(para)
 msgid ""
 "See the <ulink type=\"help\" url=\"ghelp:rhythmbox\"> Rhythmbox "
 "manual</ulink> for more information."
@@ -167,17 +1267,19 @@ msgstr ""
 "Se handboken för <ulink type=\"help\" url=\"ghelp:rhythmbox\"> "
 "Rhythmbox</ulink> för mer information."
 
-#: musicvideophotos/C/musicvideophotos.xml:56(title)
+#: musicvideophotos/C/music.xml:33(title)
 msgid "How can I prevent CDs from playing when I insert them?"
 msgstr "Hur kan jag förhindra att cd-skivor spelas upp när jag matar in dem?"
 
-#: musicvideophotos/C/musicvideophotos.xml:57(para)
+#: musicvideophotos/C/music.xml:34(para)
 msgid ""
 "Rhythmbox should start playing a CD automatically when you insert it into "
 "your CD drive."
 msgstr ""
+"Rhythmbox ska börja spela upp en cd-skiva automatiskt när du matar in den i "
+"cd-enheten."
 
-#: musicvideophotos/C/musicvideophotos.xml:61(para)
+#: musicvideophotos/C/music.xml:36(para)
 msgid ""
 "To prevent this from happening, open your Home folder by clicking "
 "<menuchoice><guimenu>Places</guimenu><guimenuitem>Home "
@@ -188,25 +1290,37 @@ msgid ""
 "<guilabel>CD Audio</guilabel> option to <guilabel>Do Nothing</guilabel>. "
 "Finally, press <guibutton>Close</guibutton>."
 msgstr ""
+"För att förhindra detta från att hända, öppna din hemmapp genom att klicka "
+"på <menuchoice><guimenu>Platser</guimenu><guimenuitem>Hemmapp</guimenuitem></"
+"menuchoice> på panelen vid toppen av skärmen. Därefter, klicka på "
+"<menuchoice><guimenuitem>Redigera</guimenuitem><guimenuitem>Inställningar</gu"
+"imenuitem><guimenuitem>Media</guimenuitem></menuchoice> och ändra valet "
+"<guilabel>CD-ljud</guilabel> till <guilabel>Gör ingenting</guilabel>. "
+"Slutligen, klicka på <guibutton>Stäng</guibutton>."
 
-#: musicvideophotos/C/musicvideophotos.xml:72(para)
+#: musicvideophotos/C/music.xml:45(para)
 msgid ""
 "See the <ulink type=\"help\" url=\"ghelp:user-guide#nautilus-preferences\"> "
 "Nautilus Preferences article</ulink> for more information."
 msgstr ""
+"Se avsnittet om <ulink type=\"help\" url=\"ghelp:user-guide#nautilus-"
+"preferences\"> Nautilus-inställningar</ulink> för mer information."
 
-#: musicvideophotos/C/musicvideophotos.xml:79(title)
+#: musicvideophotos/C/music.xml:49(title)
 msgid "Song names/cover art are missing/wrong for some songs"
-msgstr ""
+msgstr "Låtnamn/omslagsbilder saknas eller är felaktiga för vissa låtar"
 
-#: musicvideophotos/C/musicvideophotos.xml:80(para)
+#: musicvideophotos/C/music.xml:50(para)
 msgid ""
 "Music player applications fetch cover art and other information about songs "
 "from the Internet. If song names or cover art are missing, make sure that "
 "you are connected to the Internet."
 msgstr ""
+"Musikspelarprogram hämtar omslagsbilder och annan information om låtar från "
+"Internet. Om låtnamn eller omslagsbilder saknas bör du försäkra dig om att "
+"du är ansluten till Internet."
 
-#: musicvideophotos/C/musicvideophotos.xml:85(para)
+#: musicvideophotos/C/music.xml:53(para)
 msgid ""
 "Sometimes, your music player may not be able to identify a particular song "
 "or album correctly. If this is the case, you can add the correct information "
@@ -214,20 +1328,29 @@ msgid ""
 "url=\"apt:cowbell\">Cowbell</ulink> or <ulink url=\"apt:easytag-"
 "aac\">EasyTAG</ulink>. Some music players even have their own tag editor."
 msgstr ""
+"Ibland kan det vara så att din musikspelare inte kan identifiera en speciell "
+"låt eller ett album korrekt. Om så är fallet, kan du lägga till den korrekta "
+"informationen manuellt, genom att använda en tag-redigerare såsom <ulink "
+"url=\"apt:cowbell\">Cowbell</ulink> eller <ulink url=\"apt:easytag-"
+"aac\">EasyTAG</ulink>. Vissa musikspelare har sin egna tag-redigerare."
 
-#: musicvideophotos/C/musicvideophotos.xml:94(emphasis)
+#: musicvideophotos/C/music.xml:59(emphasis)
 msgid "If only the album cover art is missing for an album:"
-msgstr ""
+msgstr "Om bara omslagsbilden saknas för ett album:"
 
-#: musicvideophotos/C/musicvideophotos.xml:99(para)
+#: musicvideophotos/C/music.xml:62(para)
 msgid ""
 "Find a picture of the album cover on the Internet. <ulink "
 "url=\"http://www.amazon.com/\">Amazon</ulink> and other music retailers "
 "often display pictures of the album cover; right-click it and click "
 "<guibutton>Save Image As</guibutton> to save it to your computer."
 msgstr ""
+"Hitta en bild av albumomslaget på Internet. <ulink "
+"url=\"http://www.amazon.com/\">Amazon</ulink> och andra musikåterförsäljare "
+"visar ofta en bild av omslaget; högerklicka på det, och välj "
+"<guibutton>Spara bild som</guibutton> för att spara det till din dator."
 
-#: musicvideophotos/C/musicvideophotos.xml:108(para)
+#: musicvideophotos/C/music.xml:67(para)
 msgid ""
 "Rename the picture to <filename>cover.jpg</filename> and copy it into the "
 "folder which contains the songs from the album."
@@ -235,7 +1358,7 @@ msgstr ""
 "Byt namn på bilden till <filename>cover.jpg</filename> och kopiera den till "
 "mappen som innehåller låtarna från albumet."
 
-#: musicvideophotos/C/musicvideophotos.xml:114(para)
+#: musicvideophotos/C/music.xml:69(para)
 msgid ""
 "Rhythmbox and most other music players should display the correct cover art "
 "when a song from the album is next played."
@@ -243,61 +1366,116 @@ msgstr ""
 "Rhythmbox och de flesta andra musikspelare ska visa den korrekta "
 "omslagsbilden när en låt från albumet spelas upp nästa gång."
 
-#: musicvideophotos/C/musicvideophotos.xml:120(para)
+#: musicvideophotos/C/music.xml:72(para)
 msgid ""
 "Rhythmbox and some other music players allow you to drag a picture onto "
 "their cover art display area to change or add cover art for an album."
 msgstr ""
+"Rhythmbox och vissa andra musikspelare låter dig dra en bild till "
+"omslagsbildens plats för att ändra eller lägga till omslag för ett album."
 
-#: musicvideophotos/C/musicvideophotos.xml:128(title)
-msgid "Copy music from a CD to your computer"
-msgstr "Kopiera musik från en cd-skiva till din dator"
+#: musicvideophotos/C/music.xml:77(title)
+msgid "Extract from a CD"
+msgstr "Extrahera från en cd-skiva"
 
-#: musicvideophotos/C/musicvideophotos.xml:129(para)
+#: musicvideophotos/C/music.xml:78(para)
 msgid ""
-"You can copy music from a CD to your computer so that you do not have to "
+"You can extract music from a CD to your computer so that you do not have to "
 "have the CD in the drive to play songs from it. You can then copy the songs "
-"to a digital audio player, such as an iPod."
+"to a digital audio player, such as an MP3 player."
 msgstr ""
+"Du kan extrahera musik från en cd-skiva till din dator så att du inte "
+"behöver cd-skivan i enheten för att spela upp låtar från den. Du kan sedan "
+"kopiera låtarna till en digital ljudspelare, såsom en MP3-spelare."
 
-#: musicvideophotos/C/musicvideophotos.xml:134(para)
+#: musicvideophotos/C/music.xml:82(para)
 msgid ""
-"Applications which perform this task for you are called <emphasis>CD "
-"rippers</emphasis> or <emphasis>extractors</emphasis>. The music is often "
-"<emphasis>compressed</emphasis> when you copy it, so that it takes up less "
-"space on your hard disk. MP3 and WMA files are examples of compressed audio "
-"files."
+"Rhythmbox stores extracted files in the Music folder "
+"(<menuchoice><guimenu>Places</guimenu><guimenuitem>Music</guimenuitem></menuc"
+"hoice>)."
 msgstr ""
+"Rhythmbox lagrar extraherade filer i mappen Musik "
+"(<menuchoice><guimenu>Platser</guimenu><guimenuitem>Musik</guimenuitem></menu"
+"choice>)."
 
-#: musicvideophotos/C/musicvideophotos.xml:140(para)
+#: musicvideophotos/C/music.xml:85(para)
+msgid "Insert an Audio CD."
+msgstr "Mata in en ljud-cd."
+
+#: musicvideophotos/C/music.xml:86(para)
 msgid ""
-"Rhythmbox can copy CDs to your computer in a range of different formats. See "
-"the <ulink type=\"help\" url=\"ghelp:rhythmbox#cd-import\"> Rhythmbox "
-"manual</ulink> for instructions. Other applications, such as <ulink "
-"type=\"help\" url=\"ghelp:sound-juicer\">Sound Juicer</ulink>, can also be "
-"used to extract songs from CDs."
+"You will be prompted to choose which application to launch, choose "
+"<guilabel>Open Rhythmbox Music Player</guilabel>."
 msgstr ""
+"Du kommer att bli tillfrågad om att välja vilket program som ska startas, "
+"välj <guilabel>Öppna Musikspelaren Rhythmbox</guilabel>."
 
-#: musicvideophotos/C/musicvideophotos.xml:148(para)
+#: musicvideophotos/C/music.xml:88(para)
+msgid "Click <guibutton>OK</guibutton>."
+msgstr "Klicka på <guibutton>OK</guibutton>."
+
+#: musicvideophotos/C/music.xml:89(para)
 msgid ""
-"The <filename>Music</filename> folder is a good place to store your music "
-"files when you copy them from a CD; most audio applications look there by "
-"default when searching for your music."
+"In the left hand pane, under <guilabel>Devices</guilabel>, right click the "
+"CD name you want to extract."
 msgstr ""
+"I vänstra panelen, under <guilabel>Enheter</guilabel>, högerklicka på cd-"
+"namnet som du vill extrahera."
 
-#: musicvideophotos/C/musicvideophotos.xml:157(title)
-msgid "Copy music to a CD"
-msgstr "Kopiera musik till en cd-skiva"
+#: musicvideophotos/C/music.xml:91(para)
+msgid "Click <guibutton>Extract to Library</guibutton>."
+msgstr "Klicka på <guibutton>Extrahera till bibliotek</guibutton>."
 
-#: musicvideophotos/C/musicvideophotos.xml:158(para)
+#: musicvideophotos/C/music.xml:93(para) musicvideophotos/C/music.xml:202(para)
+msgid ""
+"You can change the default file format used by Rhythmbox when copying CDs. "
+"Click "
+"<menuchoice><guimenuitem>Edit</guimenuitem><guimenuitem>Preferences</guimenui"
+"tem><guimenuitem>Music</guimenuitem></menuchoice> and change the "
+"<guilabel>Preferred Format</guilabel> to the format of your choice. In "
+"future, all CDs copied to your computer will be copied in this format."
+msgstr ""
+"Du kan ändra det förinställda filformatet som Rhythmbox använder vid "
+"kopiering av CD-skivor. Klicka på "
+"<menuchoice><guimenuitem>Redigera</guimenuitem><guimenuitem>Inställningar</gu"
+"imenuitem><guimenuitem>Musik</guimenuitem></menuchoice> och ändra "
+"<guilabel>Föredraget format</guilabel> till det format du tänkt att använda. "
+"I framtiden kommer alla CD-skivor du kopierar att kopieras i det här "
+"formatet."
+
+#: musicvideophotos/C/music.xml:105(para) musicvideophotos/C/music.xml:215(para)
+msgid ""
+"If an MP3 option is not shown in the <guilabel>Preferred Format </guilabel> "
+"list, <ulink url=\"apt:gstreamer0.10-plugins-ugly-multiverse\">install the "
+"<application>gstreamer0.10-plugins-ugly-multiverse</application> "
+"package</ulink> and restart Rhythmbox. The option <guilabel>CD Quality, MP3 "
+"(.mp3 type) </guilabel> should appear in the <guilabel>Preferred Format "
+"</guilabel> list."
+msgstr ""
+"Om alternativet MP3 inte visas i listan över <guilabel>Föredraget format "
+"</guilabel> <ulink url=\"apt:gstreamer0.10-plugins-ugly-"
+"multiverse\">installera paketet <application>gstreamer0.10-plugins-ugly-"
+"multiverse</application></ulink> och starta om Rhythmbox. Alternativet "
+"<guilabel>Cd-kvalitet, MP3 (.mp3 typ) </guilabel> skall visas i listan över "
+"<guilabel>Föredraget format</guilabel>."
+
+#: musicvideophotos/C/music.xml:116(title)
+msgid "Copy to a CD"
+msgstr "Kopiera till en cd-skiva"
+
+#: musicvideophotos/C/music.xml:117(para)
 msgid ""
 "You can create your own audio CDs by copying music from your computer onto a "
 "blank disc. CDs that you create in this way should play in any device that "
 "can play standard (manufactured) audio CDs. All that is required is a CD "
 "burner (also called a CD writer). Most computers have one of these."
 msgstr ""
+"Du kan skapa egna CD-skivor genom att kopiera musik från din dator till en "
+"blank CD-skiva. CD-skivor du skapar på detta sätt kan spelas i alla spelare "
+"som kan spela vanliga (tillverkade) musik CD-skivor. Allt som krävs är en CD-"
+"Brännare (kallas även CD-skrivare). De flesta datorer har en."
 
-#: musicvideophotos/C/musicvideophotos.xml:165(para)
+#: musicvideophotos/C/music.xml:124(para)
 msgid ""
 "To begin creating an audio CD, start Brasero "
 "(<menuchoice><guimenu>Applications</guimenu><guimenuitem>Sound &amp; "
@@ -307,26 +1485,40 @@ msgid ""
 "want to add to the CD and add them to the project. Finally, click "
 "<guibutton>Burn</guibutton> to copy the songs to a CD."
 msgstr ""
+"För att börja skapa en ljud-CD, startar du Brasero "
+"(<menuchoice><guimenu>Program</guimenu><guimenuitem>Ljud och "
+"video</guimenuitem><guimenuitem>Skivbrännaren "
+"Brasero</guimenuitem></menuchoice>) och välj "
+"<guibutton>Ljudprojekt</guibutton> från huvudfönstret. Välj därefter låtarna "
+"som du vill lägga på CD-skivan och lägg dem till projektet. Till sist, "
+"klicka på <guibutton>Bränn</guibutton> för att kopiera låtarna till CD-"
+"skivan."
 
-#: musicvideophotos/C/musicvideophotos.xml:171(para)
+#: musicvideophotos/C/music.xml:130(para)
 msgid ""
 "You will also need to select the maximum duration of the CD which you "
 "inserted (e.g. 80 minutes), which can be done by clicking on the small CD "
 "icon near the bottom of the window. Brasero will warn you if you have "
 "selected more files than can fit on the disc."
 msgstr ""
+"Du behöver också ange en maximal längd på skivan du satt in (tex. 80 "
+"minuter), vilket kan göras genom att klicka på den lilla CD-ikonen nära "
+"botten på fönstret. Brasero varnar dig ifall du har valt fler filer än det "
+"finns plats till på skivan."
 
-#: musicvideophotos/C/musicvideophotos.xml:177(para)
+#: musicvideophotos/C/music.xml:136(para)
 msgid ""
 "See the <ulink type=\"help\" url=\"ghelp:brasero\"> Brasero manual</ulink> "
 "for full instructions."
 msgstr ""
+"Se <ulink type=\"help\" url=\"ghelp:brasero\"> handboken för Brasero</ulink> "
+"för fullständiga instruktioner."
 
-#: musicvideophotos/C/musicvideophotos.xml:184(title)
-msgid "Use an iPod or other portable music player"
-msgstr "Använd en iPod eller någon annan bärbar musikspelare"
+#: musicvideophotos/C/music.xml:142(title)
+msgid "Portable music players"
+msgstr "Bärbara musikspelare"
 
-#: musicvideophotos/C/musicvideophotos.xml:185(para)
+#: musicvideophotos/C/music.xml:143(para)
 msgid ""
 "Ubuntu will work with most portable audio players, including iPods. "
 "Normally, all you have to do is plug the player into your computer and then "
@@ -336,8 +1528,18 @@ msgid ""
 "type=\"help\" url=\"ghelp:rhythmbox\">Rhythmbox manual</ulink> for more "
 "information."
 msgstr ""
+"Ubuntu fungerar med de flesta portabla musikspelarna, inklusive iPod. "
+"Normalt, behöver du endast ansluta spelaren till din dator och använda "
+"Rhythmbox för att kopiera låtar till och från spelaren. Spelaren bör under "
+"sektionen <guilabel>Enheter</guilabel> av listan som är under knappen "
+"<guibutton>Spela</guibutton> button. för mer införmation,läs <ulink "
+"type=\"help\" url=\"ghelp:rhythmbox\">Rhythmbox-manualen</ulink>."
 
-#: musicvideophotos/C/musicvideophotos.xml:195(para)
+#: musicvideophotos/C/music.xml:154(title)
+msgid "iPod"
+msgstr "iPod"
+
+#: musicvideophotos/C/music.xml:155(para)
 msgid ""
 "If you have a portable music player which can also display photos and "
 "videos, you may prefer to use <ulink url=\"apt:banshee\">Banshee</ulink>, "
@@ -346,20 +1548,97 @@ msgid ""
 "url=\"apt:gpixpod\">GPixPod</ulink> and <ulink "
 "url=\"apt:gtkpod\">gtkpod</ulink> for handling multimedia."
 msgstr ""
+"Om du har en portabel musikspelare som också kan visa foton och filmer, så "
+"kanske du föredrar att använda <ulink url=\"apt:banshee\">Banshee</ulink>, "
+"som är en musikspelare med bra stöd för sådana enheter. iPod-ägare vill "
+"kanske också prova speciellt skrivna program så som <ulink "
+"url=\"apt:gpixpod\">GPixPod</ulink> och <ulink "
+"url=\"apt:gtkpod\">gtkpod</ulink> för hantering av multimedia."
 
-#: musicvideophotos/C/musicvideophotos.xml:205(title)
-msgid "My portable audio player does not recognize songs copied from Ubuntu"
-msgstr ""
+#: musicvideophotos/C/music.xml:165(title)
+msgid "MTP Media Players"
+msgstr "MTP-mediaspelare"
 
-#: musicvideophotos/C/musicvideophotos.xml:207(para)
+#: musicvideophotos/C/music.xml:166(para)
 msgid ""
-"When you copy music from a CD onto a computer, it must be stored in a "
+"A number of MP3 players, such as those produced by Samsung use Media "
+"Transfer Protocol(MTP). These devices, when used with the correct driver, "
+"often appear in Windows as a media device but can be accessed as a USB "
+"device."
+msgstr ""
+"Ett antal MP3-spelare, såsom de som produceras av Samsung, använder Media "
+"Transfer Protocol(MTP). Dessa enheter, när de används med korrekt drivrutin, "
+"visas oftast i Windows som en mediaenhet men kan kommas åt som en USB-enhet."
+
+#: musicvideophotos/C/music.xml:170(para)
+msgid "Ubuntu supports these devices but requires two steps:"
+msgstr "Ubuntu har stöd för dessa enheter men kräver två steg:"
+
+#: musicvideophotos/C/music.xml:172(para)
+msgid ""
+"Install the <ulink "
+"url=\"apt:mtpfs\"><application>mtpfs</application></ulink> and <ulink "
+"url=\"apt:mtpfs\"><application>mtp-tools</application></ulink> packages."
+msgstr ""
+"Installera paketen <ulink "
+"url=\"apt:mtpfs\"><application>mtpfs</application></ulink> och <ulink "
+"url=\"apt:mtpfs\"><application>mtp-tools</application></ulink>."
+
+#: musicvideophotos/C/music.xml:174(para)
+msgid ""
+"Open <menuchoice><guimenu>Applications</guimenu><guimenuitem>Sound &amp; "
+"Video</guimenuitem><guimenuitem>Rhythmbox Music "
+"Player</guimenuitem></menuchoice>."
+msgstr ""
+"Öppna <menuchoice><guimenu>Program</guimenu><guimenuitem>Ljud och "
+"video</guimenuitem><guimenuitem>Musikspelaren "
+"Rhythmbox</guimenuitem></menuchoice>."
+
+#: musicvideophotos/C/music.xml:175(para)
+msgid ""
+"Click "
+"<menuchoice><guimenu>Edit</guimenu><guimenuitem>Plugins</guimenuitem></menuch"
+"oice>"
+msgstr ""
+"Klicka på "
+"<menuchoice><guimenu>Redigera</guimenu><guimenuitem>Insticksmoduler</guimenui"
+"tem></menuchoice>"
+
+#: musicvideophotos/C/music.xml:176(para)
+msgid "Tick the <guilabel>Portable Players - MTP</guilabel> plugin."
+msgstr "Klicka i insticksmodulen <guilabel>Bärbara spelare - MTP</guilabel>."
+
+#: musicvideophotos/C/music.xml:177(para)
+msgid "Click <guibutton>Close</guibutton>."
+msgstr "Klicka på <guibutton>Stäng</guibutton>."
+
+#: musicvideophotos/C/music.xml:179(para)
+msgid ""
+"Your device will now be displayed in the left hand pane under "
+"<guilabel>Devices</guilabel> when connected."
+msgstr ""
+"Din enhet kommer nu att visas i vänstra panelen under "
+"<guilabel>Enheter</guilabel> när den är ansluten."
+
+#: musicvideophotos/C/music.xml:184(title)
+msgid "Converting audio files"
+msgstr "Konvertera ljudfiler"
+
+#: musicvideophotos/C/music.xml:185(para)
+msgid ""
+"When you extract music from a CD onto a computer, it must be stored in a "
 "specific <emphasis>audio format</emphasis>. The default format used by "
 "Rhythmbox is Ogg Vorbis (<filename>.ogg</filename> or "
-"<filename>.oga</filename>)."
+"<filename>.oga</filename>). This is explained in <xref linkend=\"music-"
+"extract\"/>."
 msgstr ""
+"När du extraherar musik från en cd-skiva till en dator så måste den lagras i "
+"ett specifikt <emphasis>ljudformat</emphasis>. Standardformatet som används "
+"av Rhythmbox är Ogg Vorbis (<filename>.ogg</filename> eller "
+"<filename>.oga</filename>). Detta förklaras i <xref linkend=\"music-"
+"extract\"/>."
 
-#: musicvideophotos/C/musicvideophotos.xml:213(para)
+#: musicvideophotos/C/music.xml:190(para)
 msgid ""
 "Not all portable audio players are able to play files in the Ogg Vorbis "
 "format; for example, iPods cannot play this format. In order for your player "
@@ -367,38 +1646,27 @@ msgid ""
 "supports. Nearly every player on the market supports the MP3 format, so this "
 "is usually a safe bet."
 msgstr ""
+"Inte alla musikspelare kan spela filer i Ogg Vorbis-formatet; till exempel "
+"så kan inte iPod-spelare spela detta format. För att din spelare skall kunna "
+"spela upp filerna måste de konverteras till ett format som den stöder. "
+"Nästan alla musikspelare på marknaden stöder MP3-formatet, så detta är "
+"oftast ett säkert kort."
 
-#: musicvideophotos/C/musicvideophotos.xml:220(para)
+#: musicvideophotos/C/music.xml:197(para)
 msgid ""
 "You can convert existing audio files to other formats using <ulink "
 "url=\"apt:soundconverter\">Sound Converter</ulink>. The output format can be "
 "selected in the Sound Converter preferences."
 msgstr ""
+"Du kan konvertera befintliga ljudfiler till andra format med <ulink "
+"url=\"apt:soundconverter\">Ljudkonverterare</ulink>. Utdataformatet kan "
+"väljas i inställningarna för Ljudkonverterare."
 
-#: musicvideophotos/C/musicvideophotos.xml:225(para)
-msgid ""
-"You can change the default file format used by Rhythmbox when copying CDs. "
-"Click "
-"<menuchoice><guimenuitem>Edit</guimenuitem><guimenuitem>Preferences</guimenui"
-"tem><guimenuitem>Music</guimenuitem></menuchoice> and change the "
-"<guilabel>Preferred Format</guilabel> to the format of your choice. In "
-"future, all CDs copied to your computer will be copied in this format."
-msgstr ""
+#: musicvideophotos/C/music.xml:226(title)
+msgid "Podcasts and Internet radio stations"
+msgstr "Poddsändningar och internetradiostationer"
 
-#: musicvideophotos/C/musicvideophotos.xml:238(para)
-msgid ""
-"If an MP3 option is not shown in the <guilabel>Preferred Format </guilabel> "
-"list, install the <ulink url=\"apt:gstreamer0.10-plugins-ugly-multiverse\"> "
-"gstreamer0.10-plugins-ugly-multiverse</ulink> package and restart Rhythmbox. "
-"The option <guilabel>CD Quality, MP3 (.mp3 type) </guilabel> should appear "
-"in the <guilabel>Preferred Format </guilabel> list."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:252(title)
-msgid "Listen to podcasts and Internet radio stations"
-msgstr "Lyssna på poddsändningar och radiostationer på Internet"
-
-#: musicvideophotos/C/musicvideophotos.xml:253(para)
+#: musicvideophotos/C/music.xml:227(para)
 msgid ""
 "<emphasis role=\"strong\">Podcasts</emphasis> are pre-recorded shows which "
 "you can download and listen to on your computer or portable audio player. "
@@ -409,7 +1677,7 @@ msgstr ""
 "Tusentals poddsändningar finns tillgängliga och de flesta kan hämtas ner "
 "gratis."
 
-#: musicvideophotos/C/musicvideophotos.xml:259(para)
+#: musicvideophotos/C/music.xml:233(para)
 msgid ""
 "You can use Rhythmbox to download and play podcasts; select "
 "<guilabel>Podcasts</guilabel> from the <guilabel>Library</guilabel> section "
@@ -419,8 +1687,16 @@ msgid ""
 "<ulink url=\"apt:gpodder\">gPodder</ulink> or <ulink "
 "url=\"apt:penguintv\">PenguinTV</ulink>."
 msgstr ""
+"Du kan använda Rhythmbox till att hämta ner och spela upp poddsändningar; "
+"välj <guilabel>Poddsändningar</guilabel> från sektionen "
+"<guilabel>Bibliotek</guilabel> i Rhythmbox-fönstret för att komma igång. "
+"<ulink type=\"help\" url=\"ghelp:rhythmbox\">Handboken för Rhythmbox</ulink> "
+"har ytterligare instruktioner. Alternativt kanske du föredrar att använda en "
+"dedicerad poddsändningshanterare såsom <ulink "
+"url=\"apt:gpodder\">gPodder</ulink> eller <ulink "
+"url=\"apt:penguintv\">PenguinTV</ulink>."
 
-#: musicvideophotos/C/musicvideophotos.xml:268(para)
+#: musicvideophotos/C/music.xml:242(para)
 msgid ""
 "<emphasis role=\"strong\">Internet radio stations</emphasis> are live "
 "<emphasis>audio streams</emphasis>, similar to standard radio but "
@@ -430,27 +1706,41 @@ msgid ""
 "and see the <ulink type=\"help\" url=\"ghelp:rhythmbox\">Rhythmbox "
 "manual</ulink> for more details."
 msgstr ""
+"<emphasis role=\"strong\">Internetradiostationer</emphasis> är direkta "
+"<emphasis>ljudströmmar</emphasis>, ungefär som vanlig radio, fast det sänds "
+"över internet. Du kan använda Rhythmbox för att lyssna på internetradio; "
+"välj <guilabel>Radio</guilabel> från <guilabel>Bibliotek</guilabel>-"
+"sektionen av Rhythmbox för att komma igång. Läs <ulink type=\"help\" "
+"url=\"ghelp:rhythmbox\">Rhythmbox manualen</ulink> för mer information."
 
-#: musicvideophotos/C/musicvideophotos.xml:278(para)
+#: musicvideophotos/C/music.xml:252(para)
 msgid ""
 "<emphasis role=\"strong\">RealAudio streams</emphasis>, as used by some "
 "Internet radio stations, are not supported by Rhythmbox. To listen to this "
 "type of stream, <link linkend=\"video-realplayer\"> install "
 "RealPlayer</link>."
 msgstr ""
+"<emphasis role=\"strong\">RealAudio-strömmar</emphasis>, om används av vissa "
+"internetradiostationer stöds inte av Rhythmbox. För att lyssna på den här "
+"typen av strömmar, <link linkend=\"video-realplayer\"> installera "
+"RealPlayer</link>."
 
-#: musicvideophotos/C/musicvideophotos.xml:287(title)
+#: musicvideophotos/C/music.xml:261(title)
 msgid "Download music from the Internet"
 msgstr "Hämta ner musik från Internet"
 
-#: musicvideophotos/C/musicvideophotos.xml:288(para)
+#: musicvideophotos/C/music.xml:262(para)
 msgid ""
 "Many websites which allow you to buy music online and download it onto your "
 "computer are designed to work with Microsoft Windows only. As a result, some "
 "services will not work with Ubuntu."
 msgstr ""
+"Många webbplatser som tillhandahåller möjligheten att köpa musik på nätet "
+"och ladda ner musiken till din dator är designade att enbart fungera med "
+"Microsoft Windows. Resultatet av detta är att vissa av dessa tjänster inte "
+"fungerar med Ubuntu."
 
-#: musicvideophotos/C/musicvideophotos.xml:293(para)
+#: musicvideophotos/C/music.xml:267(para)
 msgid ""
 "Ubuntu is able to play most audio formats, including MP3, WMA and AAC. "
 "However, it does not support the various DRM (Digital Rights Management) "
@@ -459,8 +1749,15 @@ msgid ""
 "Ubuntu. In particular, nearly all music from the iTunes music store is DRM-"
 "restricted and so cannot be played."
 msgstr ""
+"Ubuntu kan spela de flesta ljudformat, inklusive MP3, WMA och AAC. Däremot "
+"stöds inte filer skyddade med olika typer av DRM (Digital Rights "
+"Management), som vissa butiker använder för att begränsa åtkomsten till "
+"filerna. Om du laddar ner ljudfiler som har detta skydd kommer dessa "
+"sannolikt inte att fungera i Ubuntu. I synnerhet, nästan all musik från "
+"musikaffären i iTunes är begränsad med detta skydd och kommer därmed inte "
+"att kunna spelas."
 
-#: musicvideophotos/C/musicvideophotos.xml:301(para)
+#: musicvideophotos/C/music.xml:275(para)
 msgid ""
 "Two services which offer unrestricted (DRM-free) music are <ulink "
 "url=\"http://www.jamendo.com\">Jamendo</ulink> and <ulink "
@@ -469,26 +1766,38 @@ msgid ""
 "enabled (see the <ulink type=\"help\" url=\"ghelp:rhythmbox\"> Rhythmbox "
 "manual</ulink> for more information)."
 msgstr ""
+"Två tjänster som erbjuder obegränsad (DRM-fri) musik är <ulink "
+"url=\"http://www.jamendo.com\">Jamendo</ulink> och <ulink "
+"url=\"\">Magnatune</ulink>. Du kan köpa musik från båda dessa butiker på "
+"nätet eller direkt inuti Rhythmbox om rätt insticksmoduler är aktiverade "
+"(läs <ulink type=\"help\" url=\"ghelp:rhythmbox\"> Rhythmbox "
+"manualen</ulink> för mer information)."
 
-#: musicvideophotos/C/musicvideophotos.xml:310(para)
+#: musicvideophotos/C/music.xml:284(para)
 msgid ""
 "Downloading music from the Internet without the permission of its copyright "
 "holder is considered illegal in many countries. You should check that you "
 "are within your rights to download a music file before saving it onto your "
 "computer."
 msgstr ""
+"Hämta ner musik från Internet utan tillstånd från dess "
+"upphovsrättsinnehavare anses vara olagligt i många länder. Du bör "
+"kontrollera att du har tillstånd att hämta ner en musikfil innan du sparar "
+"den på din dator."
 
-#: musicvideophotos/C/musicvideophotos.xml:320(title)
+#: musicvideophotos/C/music.xml:293(title)
 msgid "Recording sounds"
 msgstr "Spela in ljud"
 
-#: musicvideophotos/C/musicvideophotos.xml:321(para)
+#: musicvideophotos/C/music.xml:294(para)
 msgid ""
 "You can record sounds onto your computer if you have a microphone or other "
 "recording equipment connected to it."
 msgstr ""
+"Du kan spela in ljud till din dator om du har en mikrofon eller annan "
+"inspelningsutrustning ansluten till den."
 
-#: musicvideophotos/C/musicvideophotos.xml:325(para)
+#: musicvideophotos/C/music.xml:298(para)
 msgid ""
 "To start a basic sound recording application, press "
 "<keycombo><keycap>Alt</keycap><keycap>F2</keycap></keycombo>, type "
@@ -497,55 +1806,76 @@ msgid ""
 "sound-recorder\"> Sound Recorder manual</ulink> for instructions on how to "
 "use it."
 msgstr ""
+"För att starta ett enkelt ljudinspelningsprogram, tryck "
+"<keycombo><keycap>Alt</keycap><keycap>F2</keycap></keycombo>, skriv "
+"<userinput>gnome-sound-recorder</userinput> i textrutan och klicka därefter "
+"på <guibutton>Kör</guibutton>. Läs <ulink type=\"help\" url=\"ghelp:gnome-"
+"sound-recorder\"> Sound Recorder manualen</ulink> för instruktioner om hur "
+"man använder det."
 
-#: musicvideophotos/C/musicvideophotos.xml:333(para)
+#: musicvideophotos/C/music.xml:306(para)
 msgid ""
 "For more advanced recording needs, you may like to try a multi-track audio "
 "editor such as <ulink url=\"apt:jokosher\">Jokosher</ulink> or <ulink "
 "url=\"apt:audacity\">Audacity</ulink>."
 msgstr ""
+"För mer avancerade inspelningsbehov kan du prova en flerspårig "
+"ljudredigerare såsom <ulink url=\"apt:jokosher\">Jokosher</ulink> eller "
+"<ulink url=\"apt:audacity\">Audacity</ulink>."
 
-#: musicvideophotos/C/musicvideophotos.xml:339(para)
+#: musicvideophotos/C/music.xml:312(para)
 msgid ""
 "Many other professional-level recording tools are available for Ubuntu. See "
 "the <ulink url=\"http://ubuntustudio.org/\"> Ubuntu Studio website</ulink> "
 "for more information."
 msgstr ""
+"Många andra professionella inspelningsverktyg finns tillgängliga för Ubuntu. "
+"Se webbplatsen för <ulink url=\"http://ubuntustudio.org/\"> Ubuntu "
+"Studio</ulink> för mer information."
 
-#: musicvideophotos/C/musicvideophotos.xml:346(title)
+#: musicvideophotos/C/music.xml:319(title)
 msgid "My microphone does not work or is too quiet"
-msgstr ""
+msgstr "Min mikrofon fungerar inte eller är för tyst"
 
-#: musicvideophotos/C/musicvideophotos.xml:352(emphasis)
+#: musicvideophotos/C/music.xml:325(emphasis)
 msgid "Check that the microphone is connected to the correct socket"
-msgstr ""
+msgstr "Kontrollera att mikrofonen är ansluten till rätt kontakt"
 
-#: musicvideophotos/C/musicvideophotos.xml:356(para)
+#: musicvideophotos/C/music.xml:329(para)
 msgid ""
 "Most computers have three or more similar-looking audio sockets, so you "
 "should check that the microphone is plugged into the correct one. It is "
 "usually colored pink and has a microphone icon next to it."
 msgstr ""
+"De flesta datorer har tre eller fler ljudkontakter som ser lika ut då du bör "
+"kontrollera att mikrofonen är ansluten i rätt kontakt. Den är oftast rosa "
+"och har en mikrofonikon bredvid sig."
 
-#: musicvideophotos/C/musicvideophotos.xml:362(para)
+#: musicvideophotos/C/music.xml:335(para)
 msgid ""
 "In some rare cases, sockets do not work as labeled. For example, your "
 "microphone socket may act as the <quote>Line Out</quote> socket and vice "
 "versa. If this is the case, use trial and error to find the correct "
 "microphone socket."
 msgstr ""
+"I vissa sällsynta fall fungerar inte vissa av datorns kontakter så som de är "
+"märkta. Till exempel kan mikrofoningången ibland fungera som <quote>Linje-"
+"ut</quote> och tvärtom. I dessa fall får du prova dig fram till rätt "
+"mikrofonkontakt."
 
-#: musicvideophotos/C/musicvideophotos.xml:371(emphasis)
+#: musicvideophotos/C/music.xml:344(emphasis)
 msgid "Check that the microphone is not muted in the settings"
-msgstr ""
+msgstr "Kontrollera att mikronfonen inte är tystad i inställningarna"
 
-#: musicvideophotos/C/musicvideophotos.xml:375(para)
+#: musicvideophotos/C/music.xml:348(para)
 msgid ""
 "The microphone input may have been muted or its volume reduced in the system "
 "settings."
 msgstr ""
+"Mikrofoningången kan har blivit tystad (mute) eller dess volym minskad i "
+"systeminställningarna."
 
-#: musicvideophotos/C/musicvideophotos.xml:381(para)
+#: musicvideophotos/C/music.xml:354(para)
 msgid ""
 "Right-click the speaker icon on the panel at the top of your screen and "
 "select <guilabel>Open Volume Control</guilabel>. If you do not have a "
@@ -554,17 +1884,25 @@ msgid ""
 "<userinput>gnome-volume-control</userinput> and click "
 "<guibutton>Run</guibutton> instead."
 msgstr ""
+"Högerklicka på högtalarikonen i panelen överst på din skärm och välj "
+"<guilabel>Öppna volymkontroll</guilabel>. Om du inte har en högtalarikon på "
+"din panel, tryck på "
+"<keycombo><keycap>Alt</keycap><keycap>F2</keycap></keycombo>, skriv in "
+"<userinput>gnome-volume-control</userinput> och klicka på "
+"<guibutton>Kör</guibutton> istället."
 
-#: musicvideophotos/C/musicvideophotos.xml:394(para)
+#: musicvideophotos/C/music.xml:367(para)
 msgid ""
-"When the Volume Control opens, click "
-"<menuchoice><guimenuitem>Edit</guimenuitem><guimenuitem>Preferences</guimenui"
-"tem></menuchoice> and make sure that all of the items related to the "
-"microphone settings are checked. Click <guibutton>Close</guibutton> to "
-"return to the volume control."
+"When the Volume Control opens, click <guibutton>Preferences</guibutton> and "
+"make sure that all of the items related to the microphone settings are "
+"checked. Click <guibutton>Close</guibutton> to return to the volume control."
 msgstr ""
+"När Volymkontroll öppnas, klicka på <guibutton>Inställningar</guibutton> och "
+"försäkra dig om att alla objekt som är relaterade till "
+"mikrofoninställningarna är förkryssade. Klicka på "
+"<guibutton>Stäng</guibutton> för att återgå till volymkontrollen."
 
-#: musicvideophotos/C/musicvideophotos.xml:407(para)
+#: musicvideophotos/C/music.xml:377(para)
 msgid ""
 "Under the <guilabel>Playback</guilabel> tab, make sure that all of the "
 "microphone settings are unmuted and that their volume is set high enough. If "
@@ -572,8 +1910,13 @@ msgid ""
 "displayed underneath its volume slider; click that icon to unmute the "
 "microphone."
 msgstr ""
+"Under fliken <guilabel>Uppspelning</guilabel>, kontrollera så att "
+"mikrofoninställningarna är i otystat läge och att volymen är satt "
+"tillräckligt högt. Om en mikrofon är tystad kommer en högtalarikon med ett "
+"rött kryss över att synas under volymkontrollen; klicka på ikonen för att "
+"\"otysta\" mikrofonen."
 
-#: musicvideophotos/C/musicvideophotos.xml:417(para)
+#: musicvideophotos/C/music.xml:387(para)
 msgid ""
 "You may also find it necessary to change other settings to get your "
 "microphone to work properly. For example, the <guilabel>Mic Boost</guilabel> "
@@ -582,935 +1925,52 @@ msgid ""
 "setting under the <guilabel>Options</guilabel> tab can all affect the volume "
 "of your microphone."
 msgstr ""
+"Du kan också finna det nödvändigt att ändra andra inställningar för att få "
+"din mikrofon att fungera ordentligt. Till exempel, <guilabel>Mic "
+"Boost</guilabel> och <guilabel>External Amplifier</guilabel> inställningarna "
+"under fliken <guilabel>Växlar</guilabel> och inställningen <guilabel>Mic "
+"Select</guilabel> under fliken <guilabel>Alternativ</guilabel> alla dessa "
+"kan påverka volymen för din mikrofon."
 
-#: musicvideophotos/C/musicvideophotos.xml:432(emphasis)
+#: musicvideophotos/C/music.xml:402(emphasis)
 msgid "Check the volume control on the microphone"
-msgstr ""
+msgstr "Kontrollera volymkontrollen på mikrofonen"
 
-#: musicvideophotos/C/musicvideophotos.xml:436(para)
+#: musicvideophotos/C/music.xml:406(para)
 msgid ""
 "Some microphones have an integrated volume control. Check that the volume "
 "control on your microphone is turned up."
 msgstr ""
+"Vissa mikrofoner har en integrerad volymkontroll. Kontrollera att "
+"volymkontrollen på din mikrofon är uppskruvad."
 
-#: musicvideophotos/C/musicvideophotos.xml:443(emphasis)
+#: musicvideophotos/C/music.xml:413(emphasis)
 msgid "Check the volume control in the recording application"
-msgstr ""
+msgstr "Kontrollera volymkontrollen i inspelningsprogrammet"
 
-#: musicvideophotos/C/musicvideophotos.xml:447(para)
+#: musicvideophotos/C/music.xml:417(para)
 msgid ""
 "Some applications allow you to change the volume of the microphone from "
 "within the application. Check the volume settings in the application that "
 "you are using."
 msgstr ""
+"Vissa program låter dig ändra volymen på mikrofonen inifrån programmet. "
+"Kontrollera volyminställningarna i programmet som du använder."
 
-#: musicvideophotos/C/musicvideophotos.xml:459(title)
-msgid "Movies, DVDs and videos"
-msgstr "Filmer, dvd och video"
-
-#: musicvideophotos/C/musicvideophotos.xml:460(para)
-msgid ""
-"You can watch movies and video clips with the <application>Totem Movie "
-"Player</application> "
-"(<menuchoice><guimenu>Applications</guimenu><guimenuitem>Sound &amp; "
-"Video</guimenuitem><guimenuitem>Movie Player</guimenuitem></menuchoice>)."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:466(title)
-msgid "Playing DVDs"
-msgstr "Spela dvd-filmer"
-
-#: musicvideophotos/C/musicvideophotos.xml:467(para)
-msgid ""
-"In order to play DVDs you must install some additional software. "
-"Unfortunately, DVD support cannot be provided by default in Ubuntu due to "
-"legal restrictions in some countries."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:473(para)
-msgid ""
-"Read about <ulink url=\"ghelp:add-applications#restricted-software\"> "
-"restricted formats</ulink> before following the instructions below. There "
-"are some legal issues that you should be aware of."
-msgstr ""
-"Läs mer om <ulink url=\"ghelp:add-applications#restricted-software\"> "
-"inskränkta format</ulink> innan du följer instruktionerna nedan. Det finns "
-"vissa juridiska aspekter som du bör känna till."
-
-#: musicvideophotos/C/musicvideophotos.xml:481(para)
-msgid ""
-"Install the <ulink url=\"apt:libdvdnav4\">libdvdnav4</ulink>, <ulink "
-"url=\"apt:libdvdread3\">libdvdread3</ulink> and <ulink "
-"url=\"apt:gstreamer0.10-plugins-ugly\"> gstreamer0.10-plugins-ugly</ulink> "
-"packages."
-msgstr ""
-"Installera paketen <ulink url=\"apt:libdvdnav4\">libdvdnav4</ulink>, <ulink "
-"url=\"apt:libdvdread3\">libdvdread3</ulink> och <ulink "
-"url=\"apt:gstreamer0.10-plugins-ugly\"> gstreamer0.10-plugins-ugly</ulink>."
-
-#: musicvideophotos/C/musicvideophotos.xml:490(para)
-msgid ""
-"If you would like to play encrypted DVDs, press "
-"<menuchoice><guimenu>Applications</guimenu><guimenuitem>Accessories</guimenui"
-"tem><guimenuitem>Terminal</guimenuitem></menuchoice> and type the following "
-"into the screen which appears, followed by the <keycap>Enter</keycap> key: "
-"<screen>sudo /usr/share/doc/libdvdread3/install-css.sh</screen>"
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:498(para)
-msgid ""
-"Enter your password if prompted. The <application>libdvdcss2</application> "
-"package will be downloaded and installed from a website."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:505(para)
-msgid ""
-"Insert a DVD into your drive. It should open automatically in the Movie "
-"Player."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:513(title)
-msgid "Where have the menus on my DVDs gone?"
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:514(para)
-msgid ""
-"DVD menus are not currently supported by the default Movie Player. To be "
-"able to use the menus on a disc, you must install an alternative movie "
-"player such as <ulink url=\"apt:gxine\">gxine</ulink> or <ulink "
-"url=\"apt:vlc\">VLC</ulink>."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:520(para)
-msgid ""
-"To make DVDs automatically play in the alternative movie player when "
-"inserted, open <menuchoice><guimenu>Places</guimenu><guimenuitem>Home "
-"Folder</guimenuitem></menuchoice>, click "
-"<menuchoice><guimenu>Edit</guimenu><guimenuitem>Preferences</guimenuitem></me"
-"nuchoice> and then click the <guilabel>Media</guilabel> tab. Select the "
-"alternative player from the <guibutton>DVD Video</guibutton> list."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:534(title)
-msgid "How can I get my videos to play?"
-msgstr "Hur kan jag få mina videofilmer att spelas?"
-
-#: musicvideophotos/C/musicvideophotos.xml:536(para)
-msgid ""
-"Some video formats, such as Flash, QuickTime, and Windows Media Video, are "
-"proprietary and so support for them cannot be included in Ubuntu by default. "
-"You must install some extra software to allow playback."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:541(para)
-msgid ""
-"In order to play the most common proprietary formats in the Totem movie "
-"player or Firefox web browser, install the <ulink url=\"apt:ubuntu-"
-"restricted-extras\"> ubuntu-restricted-extras</ulink> package (see <ulink "
-"url=\"ghelp:add-applications#restricted-software\">Restricted "
-"Software</ulink> for more information)."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:550(title)
-msgid "Video files"
-msgstr "Videofiler"
-
-#: musicvideophotos/C/musicvideophotos.xml:552(emphasis)
-msgid "(e.g. QuickTime, Windows Media)"
-msgstr "(t.ex. QuickTime, Windows Media)"
-
-#: musicvideophotos/C/musicvideophotos.xml:554(para)
-msgid ""
-"If you try to play an unsupported video file, you will be asked if you would "
-"like to <guilabel>search for a suitable codec</guilabel>. Click "
-"<guibutton>Search</guibutton> and, when the <guilabel>Install multimedia "
-"codecs</guilabel> window appears, select one of the codecs displayed in the "
-"list and click <guibutton>Install</guibutton>."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:561(para)
-msgid ""
-"If you are asked to <guilabel>confirm installation of restricted "
-"software</guilabel>, the codec required to play your video may have some "
-"<ulink url=\"ghelp:add-applications#restricted-software\">legal "
-"restrictions</ulink> which you should be aware of. If you think that the "
-"restrictions do not apply to you, press <guibutton>Confirm</guibutton> to "
-"continue with the installation."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:569(para)
-msgid ""
-"Once installation is complete, the video should begin to play. If not, try "
-"closing and then re-opening the video."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:576(title)
-msgid "Flash videos"
-msgstr "Flash-video"
-
-#: musicvideophotos/C/musicvideophotos.xml:578(emphasis)
-msgid "(e.g. Youtube, iPlayer)"
-msgstr "(t.ex. Youtube, iPlayer)"
-
-#: musicvideophotos/C/musicvideophotos.xml:580(para)
-msgid ""
-"When you first try to play a Flash video in the Firefox web browser, a bar "
-"will appear at the top of the window saying that <guilabel>additional "
-"plugins are required</guilabel>. Press the <guibutton>Install Missing "
-"Plugins</guibutton> button and follow the instructions on-screen to install "
-"a Flash player."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:587(para)
-msgid ""
-"You will be offered the choice of several players. The <guilabel>Adobe Flash "
-"Player</guilabel> is the official plugin, which should offer the best "
-"support for videos. Unfortunately, it is proprietary software and so cannot "
-"be supported directly by Ubuntu. The Swfdec and Gnash players are not "
-"proprietary and so are supported. You may also find them to be more stable "
-"(cause fewer problems) than the official player."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:599(title)
-msgid "Streaming video"
-msgstr "Strömmande video"
-
-#: musicvideophotos/C/musicvideophotos.xml:601(emphasis)
-msgid "(e.g. RealVideo)"
-msgstr "(t.ex. RealVideo)"
-
-#: musicvideophotos/C/musicvideophotos.xml:603(para)
-msgid ""
-"The most reliable way of playing RealVideo-format videos is to install the "
-"official RealPlayer software. See <link linkend=\"video-realplayer\"> "
-"Installing and configuring RealPlayer</link> for full instructions."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:608(para)
-msgid ""
-"Support for most other types of streaming video can be added by following "
-"the instructions for <link linkend=\"video-playback-file\">video "
-"files</link> or <link linkend=\"video-playback-flash\">Flash videos</link>. "
-"If you are having difficulties getting a video to stream in your web "
-"browser, right-click the video and select <guilabel>Open with \"Movie "
-"Player\"</guilabel> if that option is available."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:621(title)
-msgid "Videos that are otherwise unsupported"
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:622(para)
-msgid ""
-"If none of the other instructions in this section work with a particular "
-"video, try using a different media player. <ulink "
-"url=\"apt:vlc\">VLC</ulink> and <ulink url=\"apt:mplayer\">MPlayer</ulink> "
-"support a wide range of formats; it is recommended that you try one of these."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:634(title)
-msgid "Installing and configuring RealPlayer"
-msgstr "Installera och konfigurera RealPlayer"
-
-#: musicvideophotos/C/musicvideophotos.xml:635(para)
-msgid ""
-"RealPlayer is a proprietary application, and so is not installed in the "
-"usual way."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:641(para)
-msgid ""
-"Download a suitable Linux installer from the <ulink "
-"url=\"http://uk.real.com/player/select/\"> RealPlayer website</ulink> and "
-"save it in your Home folder."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:648(para)
-msgid ""
-"Open a Terminal "
-"(<menuchoice><guimenu>Applications</guimenu><guimenuitem>Accessories</guimenu"
-"item><guimenuitem>Terminal</guimenuitem></menuchoice>) and type the "
-"following, pressing <keycap>Enter</keycap> at the end of each line and "
-"typing your password when prompted:"
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:653(screen)
-#, no-wrap
-msgid ""
-"\n"
-"sudo chmod a+x RealPlayer*\n"
-"sudo ./RealPlayer*"
-msgstr ""
-"\n"
-"sudo chmod a+x RealPlayer*\n"
-"sudo ./RealPlayer*"
-
-#: musicvideophotos/C/musicvideophotos.xml:658(para)
-msgid ""
-"You should see the text <guilabel>Extracting files for Helix "
-"installation</guilabel> on the screen if the installer has started properly. "
-"When asked a question by the installer, press <keycap>Enter</keycap> to "
-"accept the default."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:666(para)
-msgid ""
-"When the installer has finished copying files, press "
-"<menuchoice><guimenu>Applications</guimenu><guimenuitem>Sound &amp; "
-"Video</guimenuitem><guimenuitem>RealPlayer 11</guimenuitem></menuchoice> and "
-"follow the instructions on the screen to complete set-up."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:673(para)
-msgid ""
-"For more in-depth instructions, see the <ulink "
-"url=\"https://help.ubuntu.com/community/RealPlayerInstallationMethods\"> "
-"community help wiki</ulink>."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:682(title)
-msgid "Recording and editing video"
-msgstr "Spela in och redigera video"
-
-#: musicvideophotos/C/musicvideophotos.xml:683(para)
-msgid ""
-"There are numerous video capture and editing programs available for Ubuntu. "
-"Some of the most popular include <ulink url=\"apt:kino\">Kino</ulink>, "
-"<ulink url=\"apt:kdenlive\">Kdenlive</ulink>, and <ulink "
-"url=\"apt:pitivi\">Pitivi</ulink>."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:724(title)
-msgid "Photos and cameras"
-msgstr "Foton och kameror"
-
-#: musicvideophotos/C/musicvideophotos.xml:725(para)
-msgid ""
-"There are many tools available to help you to work with your digital photo "
-"collection."
-msgstr ""
-"Det finns många verktyg för att hjälpa till med arbetet med din digitala "
-"fotosamling"
-
-#: musicvideophotos/C/musicvideophotos.xml:731(title)
-msgid "Import photos from a digital camera"
-msgstr "Importera bilder från en digitalkamera"
-
-#: musicvideophotos/C/musicvideophotos.xml:732(para)
-msgid ""
-"Ubuntu automatically detects most digital cameras when you plug them in, and "
-"will offer to import your photos automatically."
-msgstr ""
-"Ubuntu upptäcker automatiskt de flesta digitalkamerorna när de ansluts och "
-"erbjuder automatisk import av bilderna."
-
-#: musicvideophotos/C/musicvideophotos.xml:736(para)
-msgid "To import photos from your camera:"
-msgstr "För att importera foton från din kamera:"
-
-#: musicvideophotos/C/musicvideophotos.xml:741(para)
-msgid ""
-"Plug-in and switch on the camera by placing it in review mode. Ubuntu should "
-"ask you if you would like to import the photos that the camera contains."
-msgstr ""
-"Anslut och slå på kameran i granskningsläget. Ubuntu kommer fråga om du vill "
-"importera bilderna som kameran innehåller."
-
-#: musicvideophotos/C/musicvideophotos.xml:748(para)
-msgid ""
-"Click on <guibutton>Import</guibutton>. You should then see a preview of the "
-"photos."
-msgstr ""
-"Klicka på <guibutton>Importera</guibutton>. Då visas förhandgranskningen av "
-"bilderna."
-
-#: musicvideophotos/C/musicvideophotos.xml:754(para)
-msgid ""
-"Choose a location to save your photos to, then click on "
-"<guibutton>Import</guibutton>. The photos will be saved to your hard drive."
-msgstr ""
-"Välj en plats att spara bilderna på, klicka sedan på "
-"<guibutton>Importera</guibutton>. Då kommer bilderna sparas på din hårddisk."
-
-#: musicvideophotos/C/musicvideophotos.xml:762(para)
-msgid "If Ubuntu does not ask you if it can import the photos:"
-msgstr "Om Ubuntu inte frågar dig om att importera bilderna:"
-
-#: musicvideophotos/C/musicvideophotos.xml:767(para)
-msgid ""
-"Open "
-"<menuchoice><guimenu>Applications</guimenu><guimenuitem>Graphics</guimenuitem"
-"><guimenuitem>F-Spot Photo Manager</guimenuitem></menuchoice> and choose "
-"<menuchoice><guimenu>File</guimenu><guimenuitem>Import</guimenuitem></menucho"
-"ice>."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:776(para)
-msgid ""
-"Select your camera as the <guilabel>Import Source</guilabel> and then click "
-"<guibutton>Import</guibutton> to begin importing your photos."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:783(para)
-msgid ""
-"If your camera does not appear as an import source, press "
-"<menuchoice><guimenu>Places</guimenu><guimenuitem>Computer</guimenuitem></men"
-"uchoice> and check if your camera is visible there as a removable storage "
-"device. If it is, you can then copy the photos manually using the "
-"<application>File Browser</application>."
-msgstr ""
-"Om din kamera inte visas som en importkälla, klicka på "
-"<menuchoice><guimenu>Platser</guimenu><guimenuitem>Dator</guimenuitem></menuc"
-"hoice> och kontrollera om din kamera är synlig som en flyttbar "
-"lagringsenhet. Om den är det, kopiera då bilderna manuellt genom att använda "
-"<application>Filbläddraren</application>."
-
-#: musicvideophotos/C/musicvideophotos.xml:793(title)
-msgid "Organize your photo collection"
-msgstr "Organisera din fotosamling"
-
-#: musicvideophotos/C/musicvideophotos.xml:794(para)
-msgid ""
-"<application>F-Spot</application> provides a complete solution for managing "
-"your photo collection. To start it, choose "
-"<menuchoice><guimenu>Applications</guimenu><guimenuitem>Graphics</guimenuitem"
-"><guimenuitem>F-Spot Photo Manager</guimenuitem></menuchoice>."
-msgstr ""
-"<application>F-Spot</application> tillhandahåller en komplett lösning för "
-"att hantera din fotosamling. För att starta det, välj "
-"<menuchoice><guimenu>Program</guimenu><guimenuitem>Grafik</guimenuitem><guime"
-"nuitem>Fotohanteraren F-Spot</guimenuitem></menuchoice>."
-
-#: musicvideophotos/C/musicvideophotos.xml:798(para)
-msgid ""
-"With <application>F-Spot</application>, you can import photos from your "
-"digital camera or USB stick, tag them with familiar terms, do touch ups, and "
-"edit them in different ways. In addition to this, you can upload photos "
-"easily to your Flickr, PicasaWeb album and other online photo galleries."
-msgstr ""
-"Med <application>F-Spot</application> kan du importera dina bilder från en "
-"digitalkamera eller USB-minne, ge bilderna välbekanta taggar, gör "
-"förbättringar och redigera dem på olika sätt. Utöver detta så kan du enkelt "
-"posta dina bilder till Flickr, PicasaWeb-album och andra fotogallerier på "
-"Internet."
-
-#: musicvideophotos/C/musicvideophotos.xml:805(para)
-msgid ""
-"For help with <application>F-Spot Photo Manager</application>, see the "
-"<ulink type=\"help\" url=\"ghelp:f-spot\">F-Spot User Guide</ulink>."
-msgstr ""
-"För hjälp med <application>Fotohanteraren F-Spot</application>, se <ulink "
-"type=\"help\" url=\"ghelp:f-spot\">Användarguide för F-Spot</ulink>."
-
-#: musicvideophotos/C/musicvideophotos.xml:812(title)
-msgid "Watch a slideshow of photos"
-msgstr "Se på ett bildspel"
-
-#: musicvideophotos/C/musicvideophotos.xml:813(para)
-msgid ""
-"If you want to show off your photos in all of their glory, why not run a "
-"slideshow of them?"
-msgstr ""
-"Om du vill visa upp dina foton för din familj och vänner, varför inte spela "
-"upp ett bildspel?"
-
-#: musicvideophotos/C/musicvideophotos.xml:819(para)
-msgid ""
-"Watch a slideshow using the <ulink type=\"help\" url=\"ghelp:eog#eog-"
-"fullscreen\"> Image Viewer</ulink>"
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:826(para)
-msgid ""
-"Watch a slideshow using the <ulink type=\"help\" url=\"ghelp:f-spot#enjoying-"
-"fullscreen-mode-and-slideshows\"> F-Spot Photo Manager</ulink>"
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:835(title)
-msgid "Setting a Slideshow as Your Screensaver"
-msgstr "Ställ in ett bildspel som din skärmsläckare"
-
-#: musicvideophotos/C/musicvideophotos.xml:836(para)
-msgid "You can use a slideshow of your photos as you screensaver:"
-msgstr "Du kan använda ett bildspel av dina foton som din skärmsläckare:"
-
-#: musicvideophotos/C/musicvideophotos.xml:841(para)
-msgid ""
-"Press "
-"<menuchoice><guimenu>System</guimenu><guimenuitem>Preferences</guimenuitem><g"
-"uimenuitem>Screensaver</guimenuitem></menuchoice>"
-msgstr ""
-"Tryck på "
-"<menuchoice><guimenu>System</guimenu><guimenuitem>Inställningar</guimenuitem>"
-"<guimenuitem>Skärmsläckare</guimenuitem></menuchoice>"
-
-#: musicvideophotos/C/musicvideophotos.xml:846(para)
-msgid "Select the <guilabel>F-Spot photos</guilabel> screensaver theme"
-msgstr "Välj skärmsläckartemat <guilabel>Foton från F-Spot</guilabel>"
-
-#: musicvideophotos/C/musicvideophotos.xml:852(para)
-msgid ""
-"Photos which are tagged as <guilabel>Favorites</guilabel> in <application>F-"
-"Spot Photo Manager</application> will be displayed as your screensaver"
-msgstr ""
-"Foton som är taggade som <guilabel>Favoriter</guilabel> i "
-"<application>Fotohanteraren F-Spot</application> kommer att visas som din "
-"skärmsläckare"
-
-#: musicvideophotos/C/musicvideophotos.xml:860(para)
-msgid "If you would like to change which tag is used for the slideshow:"
-msgstr "Om du vill ändra vilken tagg som ska användas för bildspelet:"
-
-#: musicvideophotos/C/musicvideophotos.xml:865(para)
-msgid "Open F-Spot"
-msgstr "Öppna F-Spot"
-
-#: musicvideophotos/C/musicvideophotos.xml:870(para)
-msgid ""
-"Press "
-"<menuchoice><guimenuitem>Edit</guimenuitem><guimenuitem>Preferences</guimenui"
-"tem></menuchoice>"
-msgstr ""
-"Tryck på "
-"<menuchoice><guimenuitem>Redigera</guimenuitem><guimenuitem>Inställningar</gu"
-"imenuitem></menuchoice>"
-
-#: musicvideophotos/C/musicvideophotos.xml:879(para)
-msgid "Under <guilabel>Screensaver</guilabel>, select the desired tag"
-msgstr ""
-"Välj önskad tagg under alternativet <guilabel>Skärmsläckare</guilabel>"
-
-#: musicvideophotos/C/musicvideophotos.xml:884(para)
-msgid "Press <guibutton>Close</guibutton>"
-msgstr "Tryck på <guibutton>Stäng</guibutton>"
-
-#: musicvideophotos/C/musicvideophotos.xml:892(title)
-msgid "Printing photos"
-msgstr "Skriv ut foton"
-
-#: musicvideophotos/C/musicvideophotos.xml:893(para)
-msgid "Printing your photos is great way to share them with others."
-msgstr ""
-"Skriva ut dina foton är ett bra sätt att dela med dig av dem till andra."
-
-#: musicvideophotos/C/musicvideophotos.xml:898(para)
-msgid ""
-"Double-click the photo you want to print to open it in the "
-"<application>Image Viewer</application>"
-msgstr ""
-"Dubbelklicka på fotot som du vill skriva ut för att öppna det i "
-"<application>Bildvisare</application>"
-
-#: musicvideophotos/C/musicvideophotos.xml:904(para)
-msgid ""
-"Press <menuchoice><guimenuitem>File</guimenuitem><guimenuitem>Page "
-"Setup</guimenuitem></menuchoice>"
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:912(para)
-msgid ""
-"Under <guilabel>Format for</guilabel>, select the printer which you are "
-"going to use"
-msgstr ""
-"Under <guilabel>Format för</guilabel>, välj skrivaren som du vill använda"
-
-#: musicvideophotos/C/musicvideophotos.xml:918(para)
-msgid ""
-"Under <guilabel>Paper size</guilabel>, select the size of the paper which "
-"you are going to print the photo onto"
-msgstr ""
-"Under <guilabel>Pappersstorlek</guilabel>, välj storleken på pappret som du "
-"kommer att skriva ut fotot på"
-
-#: musicvideophotos/C/musicvideophotos.xml:924(para)
-msgid ""
-"Under <guilabel>Orientation</guilabel>, choose the orientation of the photo "
-"on the paper"
-msgstr ""
-"Under <guilabel>Orientering</guilabel>, välj orienteringen för fotot på "
-"pappret"
-
-#: musicvideophotos/C/musicvideophotos.xml:932(para)
-msgid "Press <guibutton>Apply</guibutton>"
-msgstr "Tryck på <guibutton>Verkställ</guibutton>"
-
-#: musicvideophotos/C/musicvideophotos.xml:937(para)
-msgid ""
-"Press "
-"<menuchoice><guimenuitem>File</guimenuitem><guimenuitem>Print</guimenuitem></"
-"menuchoice>"
-msgstr ""
-"Tryck på <menuchoice><guimenuitem>Arkiv</guimenuitem><guimenuitem>Skriv "
-"ut</guimenuitem></menuchoice>"
-
-#: musicvideophotos/C/musicvideophotos.xml:946(para)
-msgid "Change any settings as appropriate (see below)"
-msgstr "Ändra inställningarna på lämpligt sätt (se nedan)"
-
-#: musicvideophotos/C/musicvideophotos.xml:951(para)
-msgid "Press <guibutton>Print</guibutton> to print the photo"
-msgstr "Tryck på <guibutton>Skriv ut</guibutton> för att skriva ut fotot"
-
-#: musicvideophotos/C/musicvideophotos.xml:958(title)
-msgid "Printer Settings"
-msgstr "Skrivarinställningar"
-
-#: musicvideophotos/C/musicvideophotos.xml:959(para)
-msgid ""
-"You can tweak your printing settings to get the best results. All of these "
-"settings can be found in the "
-"<menuchoice><guimenuitem>File</guimenuitem><guimenuitem>Print</guimenuitem></"
-"menuchoice> window."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:968(para)
-msgid ""
-"Make sure that you select your printer from the list on the "
-"<guilabel>General</guilabel> tab to get the full range of settings supported "
-"by your printer."
-msgstr ""
-"Kontrollera att du har valt din skrivare från listan i fliken "
-"<guilabel>Allmänt</guilabel> för att få alla inställningar som stöds av din "
-"skrivare."
-
-#: musicvideophotos/C/musicvideophotos.xml:974(para)
-msgid ""
-"Different makes of printer will have different printer settings. The "
-"settings below are only provided as a guide for what you may be able to "
-"change with your particular printer."
-msgstr ""
-"Olika tillverkare av skrivare har olika skrivarinställningar. "
-"Inställningarna nedan tillhandahålls endast som en guide för vad du kanske "
-"kan ändra för din specifika skrivare."
-
-#: musicvideophotos/C/musicvideophotos.xml:982(title)
-msgid "Paper Type"
-msgstr "Papperstyp"
-
-#: musicvideophotos/C/musicvideophotos.xml:983(para)
-msgid ""
-"The paper type that you use has a large impact on the quality of your "
-"printed photo. You should set the paper type to match the paper which you "
-"are using in your printer to prevent poor results. Using a "
-"<emphasis>glossy</emphasis> paper type with only <emphasis>plain</emphasis> "
-"paper loaded into your printer will generally produce poor results, for "
-"example."
-msgstr ""
-"Papperstypen som du använder har en stor inverkan på kvaliteten för ditt "
-"utskrivna foto. Du bör ställa in papperstypen för att passa pappret som du "
-"använder i din skrivare för att förhindra dåliga utskrifter. Till exempel om "
-"du använder ett papper av <emphasis>glansig</emphasis> (glossy) typ med "
-"endast <emphasis>vanliga</emphasis> papper i din skrivare kommer det oftast "
-"att ge dåliga utskrifter."
-
-#: musicvideophotos/C/musicvideophotos.xml:991(para)
-msgid ""
-"This setting may automatically change the amount of ink which is used, in "
-"order to get the best results and to prevent smudging. How this is handled "
-"will depend on your printer."
-msgstr ""
-"Den här inställningen kan automatiskt ändra mängden bläck som används för "
-"att få det bästa resultatet och förhindra utsmetning. Din skrivare bestämmer "
-"hur det hanteras."
-
-#: musicvideophotos/C/musicvideophotos.xml:999(title)
-msgid "Print Quality"
-msgstr "Utskriftskvalitet"
-
-#: musicvideophotos/C/musicvideophotos.xml:1000(para)
-msgid ""
-"Print quality is generally measured in <emphasis>DPI</emphasis> (dots per "
-"inch). A greater DPI value should result in better print quality."
-msgstr ""
-"Utskriftskvaliteten mäts oftas i <emphasis>DPI</emphasis> (punkter per tum). "
-"Ett större DPI-värde bör resultera i bättre utskriftskvalitet."
-
-#: musicvideophotos/C/musicvideophotos.xml:1007(para)
-msgid ""
-"Choose <guilabel>Draft</guilabel> for making quick draft prints which don't "
-"use much ink"
-msgstr ""
-"Välj <guilabel>Utkast</guilabel> för att göra en snabb utskrift som inte "
-"använder så mycket bläck"
-
-#: musicvideophotos/C/musicvideophotos.xml:1013(para)
-msgid ""
-"Choose <guilabel>Best Quality</guilabel> or <guilabel>Photo</guilabel> for "
-"making high quality prints. Printing will be slower and will use more ink"
-msgstr ""
-"Välj <guilabel>Bäst kvalitet</guilabel> eller <guilabel>Foto</guilabel> för "
-"att skapa högkvalitativa utskrifter. Utskriften kommer att vara långsammare "
-"och kommer att använda mer bläck"
-
-#: musicvideophotos/C/musicvideophotos.xml:1024(title)
-msgid "Advanced Photo Printing"
-msgstr "Avancerad fotoutskrift"
-
-#: musicvideophotos/C/musicvideophotos.xml:1025(para)
-msgid ""
-"For advanced photo printing, install <application>PhotoPrint</application> "
-"(see <ulink type=\"help\" url=\"ghelp:add-applications\"> Adding, Removing "
-"and Updating Applications</ulink>). Once installed, press "
-"<menuchoice><guimenu>Applications</guimenu><guimenuitem>Graphics</guimenuitem"
-"><guimenuitem>PhotoPrint</guimenuitem></menuchoice> to start PhotoPrint."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:1032(para)
-msgid "PhotoPrint allows you to fine-tune your printing settings."
-msgstr "PhotoPrint låter dig finjustera dina utskriftsinställningar."
-
-#: musicvideophotos/C/musicvideophotos.xml:1037(para)
-msgid ""
-"Under <guilabel>Page Size</guilabel>, change the page size to the size of "
-"paper that you want to print onto."
-msgstr ""
-"Under <guilabel>Sidstorlek</guilabel> kan du ändra storleken på pappret som "
-"du vill skriva ut på."
-
-#: musicvideophotos/C/musicvideophotos.xml:1043(para)
-msgid ""
-"Under <guilabel>Layout</guilabel>, change the number of columns and rows to "
-"reflect the number of photos that you want to put onto a page"
-msgstr ""
-"Under <guilabel>Layout</guilabel> kan du ändra antalet kolumner och rader "
-"för att passa antalet foton som du vill lägga på en sida"
-
-#: musicvideophotos/C/musicvideophotos.xml:1050(para)
-msgid ""
-"To change the amount of spacing between photos, change the "
-"<guilabel>Horizontal</guilabel> and <guilabel>Vertical</guilabel> settings "
-"under <guilabel>Gutters</guilabel>"
-msgstr ""
-"För att ändra utrymmet mellan dina foton kan du ändra på inställningarna för "
-"<guilabel>Horisontellt</guilabel> och <guilabel>Vertikalt</guilabel> under "
-"<guilabel>Mellanrum</guilabel>"
-
-#: musicvideophotos/C/musicvideophotos.xml:1058(para)
-msgid ""
-"To add a photo to the page, press "
-"<menuchoice><guimenuitem>Image</guimenuitem><guimenuitem>Add "
-"Image</guimenuitem></menuchoice> and select a photo"
-msgstr ""
-"För att lägga till ett foto till sidan, tryck på "
-"<menuchoice><guimenuitem>Bild</guimenuitem><guimenuitem>Lägg till "
-"bild</guimenuitem></menuchoice> och välj ett foto"
-
-#: musicvideophotos/C/musicvideophotos.xml:1067(para)
-msgid ""
-"To change the advanced printer settings, press "
-"<menuchoice><guimenuitem>File</guimenuitem><guimenuitem>Print "
-"Setup</guimenuitem></menuchoice>"
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:1074(para)
-msgid ""
-"You may need to select the correct printer model on the "
-"<guilabel>Output</guilabel> tab"
-msgstr ""
-"Du kan behöver välja den korrekta skrivarmodellen i fliken "
-"<guilabel>Utmatning</guilabel>"
-
-#: musicvideophotos/C/musicvideophotos.xml:1080(para)
-msgid ""
-"Press "
-"<menuchoice><guimenuitem>File</guimenuitem><guimenuitem>Print</guimenuitem></"
-"menuchoice> to print your photos"
-msgstr ""
-"Tryck på <menuchoice><guimenuitem>Arkiv</guimenuitem><guimenuitem>Skriv "
-"ut</guimenuitem></menuchoice> för att skriva ut dina foton"
-
-#: musicvideophotos/C/musicvideophotos.xml:1093(title)
-msgid "Sharing your photos"
-msgstr "Dela ut dina foton"
-
-#: musicvideophotos/C/musicvideophotos.xml:1094(para)
-msgid ""
-"If you want to share your collection of photos with others, why not use an "
-"online photo sharing service or burn a CD of your photos? Ubuntu has plenty "
-"of tools to help you share your pictures."
-msgstr ""
-"Om du vill dela med dig av dina fotoalbum med dina vänner kan du använda dig "
-"av en fotodelningstjänst på nätet eller bränna en cd-skiva med dina foton. "
-"Ubuntu har flera verktyg för att hjälpa dig att dela med dig av dina bilder."
-
-#: musicvideophotos/C/musicvideophotos.xml:1101(para)
-msgid ""
-"<ulink type=\"help\" url=\"ghelp:musicvideophotos#photos-printing\"> Print "
-"copies</ulink> of your photos."
-msgstr ""
-"<ulink type=\"help\" url=\"ghelp:musicvideophotos#photos-printing\"> Skriv "
-"ut kopior</ulink> av dina foton."
-
-#: musicvideophotos/C/musicvideophotos.xml:1107(para)
-msgid ""
-"Share your photos over the Internet using a <ulink type=\"help\" "
-"url=\"ghelp:f-spot#sharing-flickr-or-php-gallery\"> photo sharing "
-"service</ulink> or a <ulink type=\"help\" url=\"ghelp:f-spot#website-gallery-"
-"folder\">web gallery</ulink>."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:1115(para)
-msgid ""
-"Burn a CD of your photos using the <ulink type=\"help\" "
-"url=\"ghelp:musicvideophotos#cdburning\"> File Browser</ulink> or <ulink "
-"type=\"help\" url=\"ghelp:f-spot#sharing-burn-to-cd\"> F-Spot Photo "
-"Manager</ulink>."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:1124(para)
-msgid ""
-"Present a <ulink type=\"help\" url=\"ghelp:musicvideophotos#photos-"
-"slideshow\"> slideshow</ulink> of your photos."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:1131(para)
-msgid ""
-"<ulink type=\"help\" url=\"ghelp:f-spot#sharing-e-mail\"> E-mail "
-"copies</ulink> of your photos directly."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:1140(title)
-msgid "Edit and improve photos"
-msgstr "Redigera och förbättra foton"
-
-#: musicvideophotos/C/musicvideophotos.xml:1141(para)
-msgid ""
-"Sometimes, you may need to adjust or touch-up a photo to make it look better "
-"or to remove some flaw. <application>F-Spot</application> includes a few "
-"basic tools for doing this. To access these tools, press the <guibutton>Edit "
-"Photo</guibutton> button and then click on one of the tools at the bottom of "
-"the screen."
-msgstr ""
-"Ibland kan du behöva redigera eller förbättra en bild för att den skall se "
-"bättre ut eller för att ta bort fel. <application>F-Spot</application> "
-"inkluderar några basverktyg för att göra detta. För att komma åt verktygen, "
-"klicka på <guibutton>Redigera foto</guibutton> knappen och klicka därefter "
-"på något av verktygen i nederkanten av skärmen."
-
-#: musicvideophotos/C/musicvideophotos.xml:1148(para)
-msgid ""
-"The <application>GIMP Image Editor</application> is much more advanced. It "
-"is installed in Ubuntu by default, and can be started by choosing "
-"<menuchoice><guimenu>Applications</guimenu><guimenuitem>Graphics</guimenuitem"
-"><guimenuitem>GIMP Image Editor</guimenuitem></menuchoice>."
-msgstr ""
-"Programmet <application>Bildredigeraren GIMP</application> är mycket mer "
-"avancerat det är installerat i Ubuntu som standard och kan startas genom att "
-"välja "
-"<menuchoice><guimenu>Program</guimenu><guimenuitem>Grafik</guimenuitem><guime"
-"nuitem>Bildredigeraren GIMP</guimenuitem></menuchoice>."
-
-#: musicvideophotos/C/musicvideophotos.xml:1153(para)
-msgid ""
-"The GIMP has many professional-level features. It includes tools for "
-"selections, drawing, creating paths, masks, filters, effects, and more."
-msgstr ""
-"Bildredigeraren GIMP har många professionella egenskaper. Det innehåller "
-"markeringsverktyg, målarverktyg och verktyg för att skapa lager, filter, "
-"effekter och mycket annat."
-
-#: musicvideophotos/C/musicvideophotos.xml:1159(title)
-msgid "Rotating photos"
-msgstr "Rotera foton"
-
-#: musicvideophotos/C/musicvideophotos.xml:1160(para)
-msgid ""
-"You may find that you have some photos which are the wrong way up. It is "
-"easy to rotate photos so that they're the right way up again."
-msgstr ""
-"Du kanske har några foton som är felvända. Det är enkelt att rotera foton så "
-"att rätt sida är uppåt igen."
-
-#: musicvideophotos/C/musicvideophotos.xml:1164(para)
-msgid ""
-"The <ulink type=\"help\" url=\"ghelp:eog#eog-manipulate\"> Image "
-"Viewer</ulink>, F-Spot Photo Manager and the GIMP Image Editor are all "
-"capable of rotating photos."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:1172(title)
-msgid "Resizing photos"
-msgstr "Ändra storlek på foton"
-
-#: musicvideophotos/C/musicvideophotos.xml:1173(para)
-msgid ""
-"You can resize photos which are too big. If you have a photo which has a "
-"large file size, resizing it will also reduce the file size."
-msgstr ""
-"Du kan ändra storlek på foton som är för stora. Om du har ett foto som har "
-"en stor filstorlek kommer storleksändringen även att minska filstorleken."
-
-#: musicvideophotos/C/musicvideophotos.xml:1177(para)
-msgid ""
-"The <application>GIMP Image Editor</application> supports several methods of "
-"resizing photos. We will concentrate on the simplest method."
-msgstr ""
-"<application>Bildredigeraren GIMP</application> har stöd för flera typer av "
-"storleksändring av foton. Vi kommer att beskriva den enklaste metoden här."
-
-#: musicvideophotos/C/musicvideophotos.xml:1184(para)
-msgid "Open the photo you want to resize in the GIMP Image Editor"
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:1189(para)
-msgid ""
-"Press <menuchoice><guimenuitem>Image</guimenuitem><guimenuitem>Scale "
-"Image</guimenuitem></menuchoice>"
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:1198(para)
-msgid ""
-"Adjust the <guilabel>Width</guilabel> or <guilabel>Height</guilabel> as "
-"appropriate. The image will be kept to scale."
-msgstr ""
-"Justera <guilabel>Bredd</guilabel> eller <guilabel>Höjd</guilabel> på "
-"lämpligt sätt. Bildens proportioner kommer att bibehållas."
-
-#: musicvideophotos/C/musicvideophotos.xml:1203(para)
-msgid ""
-"If you want to adjust the width and height independently, press the link "
-"button which connects the <guilabel>Width</guilabel> and "
-"<guilabel>Height</guilabel> boxes, so that it looks like a broken link."
-msgstr ""
-"Om du individuellt vill justera bredd och höjd kan du klicka på länkknappen "
-"som kopplar ihop rutorna <guilabel>Bredd</guilabel> och "
-"<guilabel>Höjd</guilabel>, så att det ser ut som länken har brutits."
-
-#: musicvideophotos/C/musicvideophotos.xml:1211(para)
-msgid ""
-"Under <guilabel>Quality</guilabel>, change the "
-"<guilabel>Interpolation</guilabel> to <guilabel>Cubic (Best)</guilabel>. "
-"This will give you the best quality resized image"
-msgstr ""
-"Under <guilabel>Kvalitet</guilabel>, ändra "
-"<guilabel>Interpolation</guilabel> till <guilabel>Kubisk (bästa)</guilabel>. "
-"Det kommer att ge dig en storleksändrad bild med bästa kvaliteten"
-
-#: musicvideophotos/C/musicvideophotos.xml:1219(para)
-msgid "Press <guilabel>Scale</guilabel> to resize the photo"
-msgstr "Tryck på <guilabel>Skala</guilabel> för att ändra storlek på fotot"
-
-#: musicvideophotos/C/musicvideophotos.xml:1224(para)
-msgid ""
-"Press <menuchoice><guimenuitem>File</guimenuitem><guimenuitem>Save "
-"As</guimenuitem></menuchoice> and choose a new filename for the photo"
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:1233(para)
-msgid "Press <guilabel>Save</guilabel> to save the resized photo"
-msgstr "Tryck på <guilabel>Spara</guilabel> för att spara det ändrade fotot"
-
-#: musicvideophotos/C/musicvideophotos.xml:1243(title)
+#: musicvideophotos/C/cd.xml:16(title)
 msgid "Burning CDs and DVDs"
 msgstr "Bränn cd- och dvd-skivor"
 
-#: musicvideophotos/C/musicvideophotos.xml:1244(para)
+#: musicvideophotos/C/cd.xml:17(para)
 msgid ""
 "You can make your own CDs by <emphasis>burning</emphasis> files onto a blank "
 "disc using the <emphasis>CD writer drive</emphasis> of your computer."
 msgstr ""
+"Du kan skapa dina egna CD-skivor genom att <emphasis>bränna</emphasis> filer "
+"till en tom skiva med hjälp av <emphasis>CD-brännaren</emphasis> på din "
+"dator."
 
-#: musicvideophotos/C/musicvideophotos.xml:1248(para)
+#: musicvideophotos/C/cd.xml:21(para)
 msgid ""
 "Use the Brasero Disc Burning software to create data, audio and video CDs, "
 "copy CDs and DVDs and create CDs from disc image files. Click "
@@ -1518,16 +1978,23 @@ msgid ""
 "Video</guimenuitem><guimenuitem>Brasero Disc "
 "Burning</guimenuitem></menuchoice> to start Brasero."
 msgstr ""
+"Använd skrivbrännarprogrammet Brasero för att skapa data-, ljud- och "
+"videoskivor, kopiera cd- och dvd-skivor samt skapa cd-skivor från "
+"skivavbildningsfiler. Klicka på "
+"<menuchoice><guimenu>Program</guimenu><guimenuitem>Ljud och "
+"video</guimenuitem><guimenuitem>Skivbrännaren "
+"Brasero</guimenuitem></menuchoice> för att starta Brasero."
 
-#: musicvideophotos/C/musicvideophotos.xml:1253(para)
+#: musicvideophotos/C/cd.xml:26(para)
 msgid ""
-"For help and instructions, open Brasero and click "
-"<menuchoice><guimenuitem>Help</guimenuitem><guimenuitem>Contents</guimenuitem"
-"></menuchoice> to view a full manual."
+"For help and instructions, see the <ulink url=\"ghelp:brasero\">Brasero "
+"manual</ulink>."
 msgstr ""
+"Se <ulink url=\"ghelp:brasero\">handboken för Brasero</ulink> för hjälp och "
+"instruktioner."
 
 #. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2.
-#: musicvideophotos/C/musicvideophotos.xml:0(None)
+#: musicvideophotos/C/cd.xml:0(None)
 msgid "translator-credits"
 msgstr ""
 "Launchpad Contributions:\n"
@@ -1543,1080 +2010,52 @@ msgstr ""
 "\n"
 "Launchpad Contributions:\n"
 "  Daniel Nylander https://launchpad.net/~yeager\n"
-"  Torbjörn Hed https://launchpad.net/~torbjorn-hed"
+"  Torbjörn Hed https://launchpad.net/~torbjorn-hed\n"
+"\n"
+"Launchpad Contributions:\n"
+"  Daniel Nylander https://launchpad.net/~yeager\n"
+"  Dennis Gren https://launchpad.net/~omvdennis-deactivatedaccount\n"
+"  Håkan Hagman https://launchpad.net/~sagabusan\n"
+"  Torbjörn Hed https://launchpad.net/~torbjorn-hed\n"
+"  WearZeeP https://launchpad.net/~wearzeep"
 
-#~ msgid ""
-#~ "As well as online audio broadcasts (podcasts), many video broadcasts are "
-#~ "available from the Internet too. Ubuntu provides several optional "
-#~ "applications which you can use to watch videos from the Internet:"
-#~ msgstr ""
-#~ "Liksom internetradiosändningar (poddradio) finns det många videosändningar "
-#~ "tillgängliga på Internet. Ubuntu tillhandahåller flera valfria program som "
-#~ "kan användas för att titta på video från Internet."
-
-#~ msgid ""
-#~ "If you would like to turn your computer into a multimedia production suite, "
-#~ "why not consider installing <ulink url=\"http://ubuntustudio.org/\">Ubuntu "
-#~ "Studio</ulink>? It provides a large selection of applications for creating "
-#~ "audio, video and graphics."
-#~ msgstr ""
-#~ "Om du vill använda din dator till multimediaproduktion kan du installera "
-#~ "<ulink url=\"http://ubuntustudio.org/\">Ubuntu Studio</ulink>. Det "
-#~ "tillhandahåller ett stort urval program för att skapa ljud, video och grafik."
-
-#~ msgid ""
-#~ "For the <application>VLC</application> plugin, install the "
-#~ "<application>mozilla-plugin-vlc</application> package."
-#~ msgstr ""
-#~ "Installera paketet <application>mozilla-plugin-vlc</application> för att få "
-#~ "insticksmodulen för <application>VLC</application>."
-
-#~ msgid ""
-#~ "<application>Kino</application> is an advanced video editor. It features "
-#~ "excellent integration with IEEE-1394 (Firewire) for capture, VTR control, "
-#~ "and recording back to the camera. It captures video to disk in Raw DV and "
-#~ "AVI format, in both type-1 DV and type-2 DV (separate audio stream) "
-#~ "encodings."
-#~ msgstr ""
-#~ "<application>Kino</application>är ett avancerat videoredigeringsprogram. Det "
-#~ "kännetecknas av utmärkt integration med IEEE-1394 (firewire) för att läsa "
-#~ "in, VTR-kontroll och spela in på en kamera. Det läser in video till disk i "
-#~ "formaten RawDV och AVI, i båda kodningarna typ-1 DV eller typ-2 DV (separat "
-#~ "ljudström)."
-
-#~ msgid "Playing audio CDs"
-#~ msgstr "Spela ljudskivor"
-
-#~ msgid ""
-#~ "Press <menuchoice><guimenuitem>File</guimenuitem><guimenuitem>Save "
-#~ "As...</guimenuitem></menuchoice> and choose a new filename for the photo"
-#~ msgstr ""
-#~ "Tryck på <menuchoice><guimenuitem>Arkiv</guimenuitem><guimenuitem>Spara "
-#~ "som...</guimenuitem></menuchoice> och välj ett nytt filnamn för fotot"
-
-#~ msgid "Graveman"
-#~ msgstr "Graveman"
-
-#~ msgid ""
-#~ "Select your camera as the <guilabel>Import Source</guilabel> and then press "
-#~ "<guibutton>Import</guibutton> to begin importing your photos."
-#~ msgstr ""
-#~ "Välj din kamera som <guilabel>Importkälla</guilabel> och klicka på "
-#~ "<guibutton>Importera</guibutton> för att påbörja importeringen av dina "
-#~ "bilder."
-
-#~ msgid ""
-#~ "A <emphasis>multimedia codec</emphasis> is a small piece of software which "
-#~ "allows you to watch videos or listen to music of a specific format. There "
-#~ "are many different multimedia formats and so you may need to install several "
-#~ "codecs. Ubuntu includes many codecs by default."
-#~ msgstr ""
-#~ "En <emphasis>multimediakodek</emphasis> är ett litet program som ger "
-#~ "möjlighet att titta på video eller lyssna på musik från ett speciellt "
-#~ "format. Det finns många olika multimediaformat och du kommer behöva "
-#~ "installera flera olika kodek. Ubuntu innehåller många kodekar som standard."
-
-#~ msgid "Edit sounds and music"
-#~ msgstr "Redigera ljud och musik"
-
-#~ msgid ""
-#~ "Install the <application>Last-Exit</application> player to listen to the "
-#~ "<ulink url=\"http://www.last.fm\">Last.fm</ulink> service."
-#~ msgstr ""
-#~ "Installera spelaren <application>Last-Exit</application> för att lyssna på "
-#~ "<ulink url=\"http://www.last.fm\">Last.fm</ulink>-tjänsten."
-
-#~ msgid ""
-#~ "As an alternative to <application>Sound Juicer</application>, the "
-#~ "<application>Rhythmbox Music Player</application> is also able to play CDs. "
-#~ "Simply insert a CD, ignore or close <application>Sound Juicer</application>, "
-#~ "start <application>Rhythmbox</application> and double-click the audio CD "
-#~ "item in the <guilabel>Devices</guilabel> list."
-#~ msgstr ""
-#~ "Som ett alternativ till <application>Sound Juicer</application> finns "
-#~ "programmet <application>Musikspelaren Rhythmbox</application> som också kan "
-#~ "spela musikskivor. Mata in en skiva, ignorera eller stäng <application>Sound "
-#~ "Juicer</application>, starta <application>Rhythmbox</application> och "
-#~ "dubbelklicka på cd-ikonen i <guilabel>Källa</guilabel>-listan."
-
-#~ msgid ""
-#~ "This document is maintained by the Ubuntu documentation team "
-#~ "(https://wiki.ubuntu.com/DocumentationTeam). For a list of contributors, see "
-#~ "the <ulink url=\"../../../common/C/contributors.xml\">contributors "
-#~ "page</ulink>"
-#~ msgstr ""
-#~ "Det här dokumentet underhålls av Ubuntus dokumentationsteam "
-#~ "(https://wiki.ubuntu.com/DocumentationTeam). För en lista över "
-#~ "bidragsgivare, se den här <ulink "
-#~ "url=\"../../../common/C/contributors.xml\">sidan</ulink>"
-
-#~ msgid "Kitty"
-#~ msgstr "Kitty"
-
-#~ msgid ""
-#~ "Users of <emphasis>Creative Nomad Jukebox</emphasis> audio players may need "
-#~ "to install the <application>gnomad2</application> package from the "
-#~ "<quote>Universe</quote> repository to be able to use their device (see "
-#~ "<ulink type=\"help\" url=\"ghelp:add-applications\">Add "
-#~ "Applications</ulink>)."
-#~ msgstr ""
-#~ "Användare med musikspelaren <emphasis>Creative Nomad Jukebox</emphasis> "
-#~ "behöver installera paketet <application>gnomad2</application> från "
-#~ "<quote>Universe</quote>-förrådet, för att enkelt kunna använda sin spelare "
-#~ "(se <ulink type=\"help\" url=\"ghelp:add-applications\">Lägg till "
-#~ "program</ulink>)."
-
-#~ msgid ""
-#~ "You can watch movies and video clips in Ubuntu by using the "
-#~ "<application>Totem Movie Player</application>."
-#~ msgstr ""
-#~ "Du kan titta på film och videoklipp i Ubuntu genom att använda "
-#~ "<application>Filmuppspelaren Totem</application>."
-
-#~ msgid ""
-#~ "Ubuntu supports many other audio players. Most of these work simply by "
-#~ "plugging them in to your computer and copying music onto them."
-#~ msgstr ""
-#~ "Ubuntu har stöd för flera andra musikspelare. De flesta av dem fungerar "
-#~ "genom att koppla in dem i datorn och kopiera över musikfilerna."
-
-#~ msgid ""
-#~ "The <ulink type=\"help\" url=\"ghelp:rhythmbox#cd-burning\">Rhythmbox Music "
-#~ "Player</ulink> is also able to burn audio CDs."
-#~ msgstr ""
-#~ "<ulink type=\"help\" url=\"ghelp:rhythmbox#cd-burning\">Musikspelaren "
-#~ "Rhythmbox</ulink> kan även bränna ljudskivor."
-
-#~ msgid ""
-#~ "Install the <application>gxine</application> package (see <ulink "
-#~ "type=\"help\" url=\"ghelp:add-applications\">Add Applications</ulink>)"
-#~ msgstr ""
-#~ "Installera paketet <application>gxine</application> (se <ulink type=\"help\" "
-#~ "url=\"ghelp:add-applications\">Lägg till program</ulink>)"
-
-#~ msgid ""
-#~ "Many alternative music players are available apart from the default "
-#~ "Rhythmbox Music Player. These include Amarok, Banshee Music Player, Beep "
-#~ "Media Player, Exaile! and Muine Music Player. Each player has its own "
-#~ "strengths and weaknesses, and which one you use will probably depend on "
-#~ "personal preference."
-#~ msgstr ""
-#~ "Många alternativa musikspelare finns tillgängliga förutom standardspelaren "
-#~ "Rhythmbox. Dessa inkluderar Amarok, Musikspelaren Banshee, Beep Media "
-#~ "Player, Exaile! och Musikspelaren Muine. Varje spelare har sina egna "
-#~ "fördelar och nackdelar och du kan välja den som du själv anser passa dina "
-#~ "behov."
-
-#~ msgid "libdvdread3"
-#~ msgstr "libdvdread3"
-
-#~ msgid ""
-#~ "To ensure that DVDs use <application>gxine</application> automatically when "
-#~ "inserted, open <menuchoice><guimenu>Places</guimenu><guimenuitem>Home "
-#~ "Folder</guimenuitem></menuchoice> and select "
-#~ "<menuchoice><guimenu>Edit</guimenu><guimenuitem>Preferences</guimenuitem></me"
-#~ "nuchoice> and then click on the <guilabel>Media</guilabel> tab. Choose "
-#~ "<application>gxine</application> from the <guibutton>DVD Video</guibutton> "
-#~ "option."
-#~ msgstr ""
-#~ "För att försäkra dig om att dvd-skivor använder "
-#~ "<application>gxine</application> automatiskt när de matas in kan du öppna "
-#~ "<menuchoice><guimenu>Platser</guimenu><guimenuitem>Hemmapp</guimenuitem></men"
-#~ "uchoice> och välja "
-#~ "<menuchoice><guimenu>Redigera</guimenu><guimenuitem>Inställningar</guimenuite"
-#~ "m></menuchoice> och sedan klicka på fliken <guilabel>Media</guilabel>. Välj "
-#~ "<application>gxine</application> från alternativet <guibutton>Dvd-"
-#~ "video</guibutton>."
-
-#~ msgid ""
-#~ "In order to play DVDs, you must install some additional software. "
-#~ "Unfortunately, DVD support cannot be provided by default in Ubuntu due to "
-#~ "legal and technical restrictions."
-#~ msgstr ""
-#~ "Du behöver installera ytterligare programvara för att kunna spela upp dvd-"
-#~ "filmer. Dvd-stöd kan inte tillhandahållas som standard i Ubuntu på grund av "
-#~ "legala och tekniska begränsningar."
-
-#~ msgid "Miro"
-#~ msgstr "Miro"
-
-#~ msgid ""
-#~ "Press "
-#~ "<menuchoice><guimenuitem>File</guimenuitem><guimenuitem>Print...</guimenuitem"
-#~ "></menuchoice>"
-#~ msgstr ""
-#~ "Tryck på <menuchoice><guimenuitem>Arkiv</guimenuitem><guimenuitem>Skriv "
-#~ "ut...</guimenuitem></menuchoice>"
-
-#~ msgid ""
-#~ "To add music to your audio CD, either drag music from your File Browser or "
-#~ "press the <guibutton>Add</guibutton> button. Alternatively, if you have not "
-#~ "yet selected any files, the frame to the right of the window will offer "
-#~ "other file selection choices."
-#~ msgstr ""
-#~ "För att lägga till musik till din musik-cd, dra och släpp musikfilerna från "
-#~ "din filhanterare eller tryck på knappen <guibutton>Lägg till</guibutton>. Om "
-#~ "du ännu inte har valt några filer, så kommer ramen till höger av fönstret ge "
-#~ "dig andra möjligheter för att välja filer."
-
-#~ msgid ""
-#~ "See <ulink type=\"help\" url=\"ghelp:add-applications\">Add "
-#~ "Applications</ulink> for help on installing new software."
-#~ msgstr ""
-#~ "Läs mer på <ulink type=\"help\" url=\"ghelp:add-applications\">Lägg till "
-#~ "program</ulink> för hjälp med att installera nya program."
-
-#~ msgid ""
-#~ "Present a <ulink type=\"help\" url=\"ghelp:musicvideophotos#photos-"
-#~ "slideshow\">slideshow</ulink> of your photos."
-#~ msgstr ""
-#~ "Visa upp ett <ulink type=\"help\" url=\"ghelp:musicvideophotos#photos-"
-#~ "slideshow\">bildspel</ulink> av dina foton."
-
-#~ msgid ""
-#~ "<application>DeVeDe</application> is a DVD authoring application capable of "
-#~ "creating DVD discs which can be played in set-top DVD players."
-#~ msgstr ""
-#~ "<application>DeVeDe</application> är ett dvd-författarprogram för att skapa "
-#~ "dvd-skivor som går att spela med en dvd-spelare."
-
-#~ msgid ""
-#~ "For the <application>Mplayer</application> plugin, install the "
-#~ "<application>mozilla-mplayer</application> package."
-#~ msgstr ""
-#~ "Installera paketet <application>mozilla-mplayer</application> för att få "
-#~ "insticksmodulen för <application>Mplayer</application>."
-
-#~ msgid ""
-#~ "For more information, see <ulink "
-#~ "url=\"http://www.kinodv.org/article/static/2\">the Kino website</ulink>."
-#~ msgstr ""
-#~ "För mer information, se <ulink "
-#~ "url=\"http://www.kinodv.org/article/static/2\">Kinos webbplats</ulink>."
-
-#~ msgid ""
-#~ "<application>gxine</application> with <application>Xine extra "
-#~ "plugins</application>"
-#~ msgstr ""
-#~ "<application>gxine</application> med <application>extra Xine-"
-#~ "insticksmoduler</application>"
-
-#~ msgid ""
-#~ "If you would like to play encrypted DVDs (see the legal note above), press "
-#~ "<menuchoice><guimenu>Applications</guimenu><guimenuitem>Accessories</guimenui"
-#~ "tem><guimenuitem>Terminal</guimenuitem></menuchoice> and type the following "
-#~ "into the screen which appears, followed by the <keycap>Return</keycap> "
-#~ "key:<screen>sudo /usr/share/doc/libdvdread3/install-css.sh</screen>"
-#~ msgstr ""
-#~ "Om du vill spela upp krypterade dvd-filmer (se legal information ovan) kan "
-#~ "du trycka på "
-#~ "<menuchoice><guimenu>Program</guimenu><guimenuitem>Tillbehör</guimenuitem><gu"
-#~ "imenuitem>Terminal</guimenuitem></menuchoice> och skriva in följande i "
-#~ "skärmen som visas, följt av <keycap>Return</keycap>:<screen>sudo "
-#~ "/usr/share/doc/libdvdread3/install-css.sh</screen>"
-
-#~ msgid ""
-#~ "Videos can come in a range of different formats. However, some of these "
-#~ "formats are proprietary or commercial and so cannot be included in Ubuntu by "
-#~ "default. As a result, additional software must be installed to allow you to "
-#~ "view such formats. The following applications may be able to play certain "
-#~ "formats which the default applications are unable to handle:"
-#~ msgstr ""
-#~ "Videofilmer finns i flera olika format, emellertid så har vissa av dessa "
-#~ "format ett skyddat ägande eller så är de kommersiella och kan därför inte "
-#~ "installeras som standard i Ubuntu.  Som ett resultat av detta så måste "
-#~ "ytterligare program installeras för att möjliggöra uppspelning av dessa "
-#~ "format. Följande program kan spela vissa av de format som standardspelaren "
-#~ "inte klarar."
-
-#~ msgid ""
-#~ "Install the <application>gtkpod</application> package from the "
-#~ "<quote>Universe</quote> repository (see <ulink type=\"help\" url=\"ghelp:add-"
-#~ "applications\">Add Applications</ulink>)."
-#~ msgstr ""
-#~ "Installera paketet <application>gtkpod</application> från "
-#~ "<quote>Universe</quote>-förrådet (se <ulink type=\"help\" url=\"ghelp:add-"
-#~ "applications\">Lägg till program</ulink>)."
-
-#~ msgid ""
-#~ "Many videos available on the Internet can be played from within your web "
-#~ "browser. However, many of these require an additional <emphasis>browser "
-#~ "plugin</emphasis> to be installed first."
-#~ msgstr ""
-#~ "Många videoströmmar på Internet kan spelas upp direkt i webbläsaren. Dock "
-#~ "kräver flera av dessa att en extra <emphasis>insticksmodul</emphasis> "
-#~ "installeras först."
-
-#~ msgid ""
-#~ "For a free (open-source) <application>Flash</application> plugin, install "
-#~ "the <application>mozilla-plugin-gnash</application> package. For the "
-#~ "proprietary <application>Flash</application> plugin, install the "
-#~ "<application>flashplugin-nonfree</application> package. See <ulink "
-#~ "type=\"help\" url=\"ghelp:internet#web-plugins-flash\">Flash multimedia "
-#~ "plugin</ulink> for more information."
-#~ msgstr ""
-#~ "För en fri (öppen källkod) insticksmodul för "
-#~ "<application>Flash</application> kan du installera paketet "
-#~ "<application>mozilla-plugin-gnash</application>. För den proprietära "
-#~ "insticksmodulen för <application>Flash</application> kan du installera "
-#~ "paketet <application>flashplugin-nonfree</application>. Se <ulink "
-#~ "type=\"help\" url=\"ghelp:internet#web-plugins-"
-#~ "flash\">Multimediainsticksmodul för Flash</ulink> för mer information."
-
-#~ msgid ""
-#~ "Press <menuchoice><guimenuitem>File</guimenuitem><guimenuitem>Page "
-#~ "Setup...</guimenuitem></menuchoice>"
-#~ msgstr ""
-#~ "Tryck på "
-#~ "<menuchoice><guimenuitem>Arkiv</guimenuitem><guimenuitem>Sidinställningar...<"
-#~ "/guimenuitem></menuchoice>"
-
-#~ msgid ""
-#~ "<application>Thoggen DVD Ripper</application> allows you to back-up your "
-#~ "DVDs onto your computer."
-#~ msgstr ""
-#~ "<application>Dvd-ripparen Thoggen</application> låter dig kopiera dina dvd-"
-#~ "filmer till datorn."
-
-#~ msgid ""
-#~ "Install <application>RealPlayer 10</application> to watch and listen to "
-#~ "streams in the <emphasis>Real Media</emphasis> formats. "
-#~ "<application>RealPlayer</application> is available from the "
-#~ "<emphasis>Commercial</emphasis> repository."
-#~ msgstr ""
-#~ "Installera <application>RealPlayer 10</application> för att titta och lyssna "
-#~ "på sändningar i <emphasis>Real Media</emphasis>-formatet. "
-#~ "<application>RealPlayer</application> finns att hämta från "
-#~ "<emphasis>Commercial</emphasis>-förrådet."
-
-#~ msgid "Watch videos in a web browser"
-#~ msgstr "Se på video i webbläsaren"
-
-#~ msgid ""
-#~ "You will also need to select the size of the CD which you inserted (74, 80, "
-#~ "90, or 100 minutes), which can be done by clicking on the CD icon located "
-#~ "below the frame on the right. Brasero will warn you if you exceed the set "
-#~ "limit."
-#~ msgstr ""
-#~ "Du behöver också välja storleken på cd-skivan du matat in (74, 80, 90 eller "
-#~ "100 minuter), vilket kan göras genom att klicka på cd-ikonen som finns under "
-#~ "ramen på höger sida. Brasero kommer att varna dig om du överskrider den "
-#~ "valda gränsen."
-
-#~ msgid ""
-#~ "Watch a slideshow using the <ulink type=\"help\" url=\"ghelp:eog#eog-"
-#~ "fullscreen\">Image Viewer</ulink>"
-#~ msgstr ""
-#~ "Se på ett bildspel med programmet <ulink type=\"help\" url=\"ghelp:eog#eog-"
-#~ "fullscreen\">Bildvisare</ulink>"
-
-#~ msgid ""
-#~ "To transfer music files to and from an iPod, you can use "
-#~ "<application>gtkpod</application>:"
-#~ msgstr ""
-#~ "För att överföra musik till och från en iPod kan du använda dig av "
-#~ "<application>gtkpod</application>:"
-
-#~ msgid ""
-#~ "To install extra codecs, press "
-#~ "<menuchoice><guimenu>Applications</guimenu><guimenuitem>Add/Remove...</guimen"
-#~ "uitem></menuchoice>, type <quote>codec</quote> in the "
-#~ "<guilabel>Search</guilabel> box and select which codecs you want to install. "
-#~ "Press <guibutton>Apply</guibutton> to install the selected codecs."
-#~ msgstr ""
-#~ "För att installera extra kodekar kan du trycka på "
-#~ "<menuchoice><guimenu>Program</guimenu><guimenuitem>Lägg till/Ta "
-#~ "bort...</guimenuitem></menuchoice>, skriva in <quote>codec</quote> i fältet "
-#~ "<guilabel>Sök</guilabel> och välja de kodekar som du vill installera. Tryck "
-#~ "på <guibutton>Verkställ</guibutton> för att installera de markerade "
-#~ "kodekarna."
-
-#~ msgid ""
-#~ "When you first use <application>Rhythmbox</application>, it will scan your "
-#~ "home folder for any supported music files you have and will make them "
-#~ "available to be played automatically."
-#~ msgstr ""
-#~ "Första gången du använder <application>Rhythmbox</application>, kommer den "
-#~ "söka igenom din hemmapp efter musikfiler som stöds och automatiskt göra dem "
-#~ "tillgängliga för uppspelning."
-
-#~ msgid ""
-#~ "Watch a slideshow using the <ulink type=\"help\" url=\"ghelp:f-spot#enjoying-"
-#~ "fullscreen-mode-and-slideshows\">F-Spot Photo Manager</ulink>"
-#~ msgstr ""
-#~ "Se på ett bildspel med <ulink type=\"help\" url=\"ghelp:f-spot#enjoying-"
-#~ "fullscreen-mode-and-slideshows\">Fotohanteraren F-Spot</ulink>"
-
-#~ msgid ""
-#~ "To access these optional features, press "
-#~ "<menuchoice><guimenuitem>Edit</guimenuitem><guimenuitem>Plugins...</guimenuit"
-#~ "em></menuchoice> and select the features which you would like to use by "
-#~ "ticking them."
-#~ msgstr ""
-#~ "För att komma åt dessa funktioner kan du trycka på "
-#~ "<menuchoice><guimenuitem>Redigera</guimenuitem><guimenuitem>Insticksmoduler.."
-#~ ".</guimenuitem></menuchoice> och välja funktionerna som du vill använda "
-#~ "genom att kryssa för alternativen."
-
-#~ msgid "PenguinTV Media Aggregator"
-#~ msgstr "PenguinTV Media Aggregator"
-
-#~ msgid ""
-#~ "To change the advanced printer settings, press "
-#~ "<menuchoice><guimenuitem>File</guimenuitem><guimenuitem>Print "
-#~ "Setup...</guimenuitem></menuchoice>"
-#~ msgstr ""
-#~ "För att ändra de avancerade skrivarinställningarna, tryck på "
-#~ "<menuchoice><guimenuitem>Arkiv</guimenuitem><guimenuitem>Skrivarkonfiguration"
-#~ "...</guimenuitem></menuchoice>"
-
-#~ msgid "Playing proprietary formats"
-#~ msgstr "Spela upp proprietära format"
-
-#~ msgid ""
-#~ "Restart <application>Firefox</application> to make the newly-installed "
-#~ "plugins available."
-#~ msgstr ""
-#~ "Starta om <application>Firefox</application> för att börja använda de nya "
-#~ "insticksmodulerna."
-
-#~ msgid ""
-#~ "Whether you want to play, rip, edit or organize your music, Ubuntu has the "
-#~ "tools you need."
-#~ msgstr ""
-#~ "Ubuntu har verktygen du behöver för att spela upp, extrahera, redigera och "
-#~ "organisera din musik."
-
-#~ msgid "Other audio-related tasks"
-#~ msgstr "Övriga ljudrelaterade uppgifter"
-
-#~ msgid ""
-#~ "Press <menuchoice><guimenuitem>Image</guimenuitem><guimenuitem>Scale "
-#~ "Image...</guimenuitem></menuchoice>"
-#~ msgstr ""
-#~ "Tryck på <menuchoice><guimenuitem>Bild</guimenuitem><guimenuitem>Skala "
-#~ "bild...</guimenuitem></menuchoice>"
-
-#~ msgid ""
-#~ "Share your photos over the Internet using a <ulink type=\"help\" "
-#~ "url=\"ghelp:f-spot#sharing-flickr-or-php-gallery\">photo sharing "
-#~ "service</ulink> or a <ulink type=\"help\" url=\"ghelp:f-spot#website-gallery-"
-#~ "folder\">web gallery</ulink>."
-#~ msgstr ""
-#~ "Dela ut dina foton över Internet med hjälp av en <ulink type=\"help\" "
-#~ "url=\"ghelp:f-spot#sharing-flickr-or-php-"
-#~ "gallery\">fotodelningstjänst</ulink> eller ett <ulink type=\"help\" "
-#~ "url=\"ghelp:f-spot#website-gallery-folder\">webbgalleri</ulink>."
-
-#~ msgid ""
-#~ "You can listen to <emphasis>streaming audio</emphasis> from the Internet. "
-#~ "This can be thought of as an online radio service, as it is usually "
-#~ "broadcast live."
-#~ msgstr ""
-#~ "Du kan lyssna på <emphasis>strömmande ljud</emphasis> från Internet. Det kan "
-#~ "förklaras som en radiotjänst på nätet eftersom det normalt är direktsändning."
-
-#~ msgid "Ripping audio CDs"
-#~ msgstr "Extrahera ljudskivor"
-
-#~ msgid ""
-#~ "Many commercial DVDs are <emphasis>encrypted</emphasis> and so require the "
-#~ "use of <emphasis>decryption</emphasis> software in order to play them. In "
-#~ "some countries, the use of such decryption software is not permitted by law. "
-#~ "Verify that you are within your rights in using it."
-#~ msgstr ""
-#~ "Många kommersiella dvd-filmer är <emphasis>krypterade</emphasis> och kräver "
-#~ "att man använder programvara för <emphasis>dekryptering</emphasis> för att "
-#~ "kunna spela upp dem. I vissa länder är användningen av sådan programvara för "
-#~ "kryptering olaglig. Kontrollera att du får använda sådan programvara innan "
-#~ "du använder den."
-
-#~ msgid ""
-#~ "To edit audio, install <ulink "
-#~ "url=\"http://www.jokosher.org/\">Jokosher</ulink> or <ulink "
-#~ "url=\"http://audacity.sourceforge.net/\">Audacity</ulink>. Jokosher is able "
-#~ "to record audio as well as edit it, and Audacity provides many powerful "
-#~ "sound-editing features."
-#~ msgstr ""
-#~ "Installera <ulink url=\"http://www.jokosher.org/\">Jokosher</ulink> eller "
-#~ "<ulink url=\"http://audacity.sourceforge.net/\">Audacity</ulink> för att "
-#~ "redigera ljud. Jokosher kan spela in ljud såväl som att redigera den, och "
-#~ "Audacity tillhandahåller många kraftfulla ljudredigeringsfunktioner."
-
-#~ msgid ""
-#~ "See the <ulink type=\"help\" url=\"ghelp:rhythmbox\">Rhythmbox "
-#~ "manual</ulink> for more information."
-#~ msgstr ""
-#~ "Se <ulink type=\"help\" url=\"ghelp:rhythmbox\">Handbok för "
-#~ "Rhythmbox</ulink> för mer information."
-
-#~ msgid ""
-#~ "<application>PiTiVi Video Editor</application> is a simple, easy to use "
-#~ "video editor."
-#~ msgstr ""
-#~ "<application>Videoredigeraren Pitivi</application> är en videoredigerare som "
-#~ "är enkel att använda."
-
-#~ msgid ""
-#~ "See <ulink type=\"help\" url=\"ghelp:musicvideophotos#codecs\">Multimedia "
-#~ "Codecs</ulink> for information on installing support for other audio and "
-#~ "video formats."
-#~ msgstr ""
-#~ "Läs mer på <ulink type=\"help\" "
-#~ "url=\"ghelp:musicvideophotos#codecs\">Multimedia kodekar</ulink> för mer "
-#~ "information om stöd för andra ljud och videoformat."
-
-#~ msgid "Listen to Podcasts"
-#~ msgstr "Lyssna på poddsändningar"
-
-#~ msgid ""
-#~ "If you have music files which have incorrect or incomplete information about "
-#~ "the artist or album which they are from, install <application>Cowbell Music "
-#~ "Organizer</application>. Cowbell allows you to edit track details, and can "
-#~ "automatically correct track information for many CDs."
-#~ msgstr ""
-#~ "Om du har musikfiler som innehåller felaktig eller ofullständig information "
-#~ "om artisten eller albumet som låtarna tillhör, kan du installera "
-#~ "<application>Cowbell musikorganisatör</application>. Cowbell låter dig "
-#~ "redigera spårdetaljer och kan automatiskt rätta till spårinformation för "
-#~ "många cd-skivor."
-
-#~ msgid ""
-#~ "You can play music directly off an iPod with <application>Rhythmbox Music "
-#~ "Player</application>. Plug the iPod into the computer, and open "
-#~ "<application>Rhythmbox</application>."
-#~ msgstr ""
-#~ "Det går att spela musik direkt från en iPod med <application>Musikspelaren "
-#~ "Rhythmbox</application>. Koppla in din iPod till datorn och öppna "
-#~ "<application>Rhythmbox</application>."
-
-#~ msgid "Play and organize music"
-#~ msgstr "Spela och organisera musik"
-
-#~ msgid ""
-#~ "This section describes how to import, organize and use music, video and "
-#~ "photos with Ubuntu."
-#~ msgstr ""
-#~ "Det här avsnittet beskriver hur man importerar, organiserar och använder "
-#~ "ljud, video och foto i Ubuntu."
-
-#~ msgid "libdvdnav4"
-#~ msgstr "libdvdnav4"
-
-#~ msgid ""
-#~ "If you have appropriate audio hardware (such as a microphone), you can "
-#~ "record sounds onto your computer. Choose "
-#~ "<menuchoice><guimenu>Applications</guimenu><guimenuitem>Sound &amp; "
-#~ "Video</guimenuitem><guimenuitem>Sound Recorder</guimenuitem></menuchoice> to "
-#~ "start the Sound Recorder. Alternatively, press "
-#~ "<keycombo><keycap>Alt</keycap><keycap>F2</keycap></keycombo>, type "
-#~ "<quote>gnome-sound-recorder</quote> and press <guibutton>Run</guibutton>. "
-#~ "See the <ulink type=\"help\" url=\"ghelp:gnome-sound-recorder#grecord-"
-#~ "usage\">Sound Recorder manual</ulink> for further instructions."
-#~ msgstr ""
-#~ "Om du har lämplig ljudhårdvara (såsom en mikrofon) kan du spela in ljud till "
-#~ "din dator. Välj <menuchoice><guimenu>Program</guimenu><guimenuitem>Ljud och "
-#~ "video</guimenuitem><guimenuitem>Ljudinspelare</guimenuitem></menuchoice> för "
-#~ "att starta Ljudinspelaren. Ett annat alternativ är att trycka på "
-#~ "<keycombo><keycap>Alt</keycap><keycap>F2</keycap></keycombo>, skriv in "
-#~ "<quote>gnome-sound-recorder</quote> och tryck på <guibutton>Kör</guibutton>. "
-#~ "Se <ulink type=\"help\" url=\"ghelp:gnome-sound-recorder#grecord-"
-#~ "usage\">Handbok för Ljudinspelare</ulink> för ytterligare instruktioner."
-
-#~ msgid "2004, 2005, 2006"
-#~ msgstr "2004, 2005, 2006"
-
-#~ msgid ""
-#~ "When you put a blank (recordable) CD in the drive, Ubuntu will ask if you "
-#~ "want to make an audio or data CD. Clicking on <guibutton>Make Audio "
-#~ "CD</guibutton> will open the <application>Brasero</application><guilabel>New "
-#~ "audio disc project</guilabel> window. Alternatively, you can launch "
-#~ "<application>Brasero</application> by pressing "
-#~ "<menuchoice><guimenu>Applications</guimenu><guimenuitem>Sound &amp; "
-#~ "Video</guimenuitem><guimenuitem>Brasero Disc "
-#~ "Burning</guimenuitem></menuchoice>, but you will need to click on the "
-#~ "<guibutton>Audio project</guibutton> button to begin creating your audio CD."
-#~ msgstr ""
-#~ "När du matar in en blank (inspelningsbar) cd-skiva kommer Ubuntu fråga om du "
-#~ "vill skapa en ljud-cd-skiva eller data-cd-skiva. Genom att klicka på "
-#~ "<guibutton>Skapa ljud-cd-skiva</guibutton> så kommer fönstret "
-#~ "<application>Brasero</application><guilabel>Nytt projekt för "
-#~ "ljudskiva</guilabel> att öppnas. Alternativt så kan du starta "
-#~ "<application>Brasero</application> genom att klicka på "
-#~ "<menuchoice><guimenu>Program</guimenu><guimenuitem>Ljud och "
-#~ "video</guimenuitem><guimenuitem>Skrivbrännaren "
-#~ "Brassero</guimenuitem></menuchoice>, men du kommer att behöva klicka på "
-#~ "knappen <guibutton>Ljudprojekt</guibutton> för att börja skapa din ljud-cd-"
-#~ "skiva."
-
-#~ msgid ""
-#~ "See the <ulink url=\"https://help.ubuntu.com/community/IPodHowto\">Community "
-#~ "Help pages</ulink> for more information on using an iPod with Ubuntu."
-#~ msgstr ""
-#~ "Se <ulink url=\"https://help.ubuntu.com/community/IPodHowto\">gemenskapens "
-#~ "hjälpsidor</ulink> för mer information om hur man använder iPod med Ubuntu."
-
-#~ msgid ""
-#~ "Open the photo you want to resize in the <application>GIMP Image "
-#~ "Editor</application>"
-#~ msgstr ""
-#~ "Öppna fotot som du vill ändra storlek på i <application>Bildredigeraren "
-#~ "GIMP</application>"
-
-#~ msgid "Xfburn"
-#~ msgstr "Xfburn"
-
-#~ msgid "CD/DVD Writer GnomeBaker"
-#~ msgstr "Cd/dvd-skrivaren GnomeBaker"
-
-#~ msgid ""
-#~ "Podcasts are a way of listening to music and radio shows broadcast on the "
-#~ "Internet. Thousands of different shows are available, such as <ulink "
-#~ "url=\"http://www.bbc.co.uk/radio/waystolisten/podcasts/\">BBC Radio</ulink>, "
-#~ "<ulink url=\"http://www.lugradio.org/\">LugRadio</ulink> and <ulink "
-#~ "url=\"http://www.thenakedscientists.com\">The Naked Scientists</ulink>. The "
-#~ "Rhythmbox Music Player is able to play podcasts. See the <ulink "
-#~ "type=\"help\" url=\"ghelp:rhythmbox#podcast\">Rhythmbox manual</ulink> for "
-#~ "more information."
-#~ msgstr ""
-#~ "Poddsändningar är ett sätt att lyssna på musik och radioprogram som sänds ut "
-#~ "på Internet. Tusentals olika program finns tillgängliga, såsom <ulink "
-#~ "url=\"http://www.bbc.co.uk/radio/waystolisten/podcasts/\">BBC Radio</ulink>, "
-#~ "<ulink url=\"http://www.lugradio.org/\">LugRadio</ulink> och <ulink "
-#~ "url=\"http://www.thenakedscientists.com\">The Naked Scientists</ulink>. "
-#~ "Musikspelaren Rhythmbox kan spela upp dessa poddsändningar. Se <ulink "
-#~ "type=\"help\" url=\"ghelp:rhythmbox#podcast\">Handbok för Rhythmbox</ulink> "
-#~ "för mer information."
-
-#~ msgid ""
-#~ "For more information, see <ulink "
-#~ "url=\"http://www.rastersoft.com/programas/devede.html\">the DeVeDe "
-#~ "website</ulink>."
-#~ msgstr ""
-#~ "För mer information, gå till webbplatsen för <ulink "
-#~ "url=\"http://www.rastersoft.com/programas/devede.html\">DeVeDe</ulink>."
-
-#~ msgid "K3b"
-#~ msgstr "K3b"
-
-#~ msgid "Watch video podcasts"
-#~ msgstr "Se på videopoddsändningar"
-
-#~ msgid "Gnome CD Master"
-#~ msgstr "Gnome CD Master"
-
-#~ msgid ""
-#~ "<application>Rhythmbox</application> is able to play most streaming audio, "
-#~ "such as online radio shows. However, some services require a special player "
-#~ "to be used."
-#~ msgstr ""
-#~ "<application>Rhythmbox</application> kan spela många typer av strömmande "
-#~ "ljud såsom internetradioprogram. Likväl så kan vissa sändningar kräva att en "
-#~ "speciell spelare används."
-
-#~ msgid "Install a full suite of multimedia editing applications"
-#~ msgstr "Installera en fullständig svit av redigeringsprogram för multimedia"
-
-#~ msgid ""
-#~ "<application>Subtitle Editor</application> can be used to edit subtitles for "
-#~ "videos."
-#~ msgstr ""
-#~ "<application>Subtitle Editor</application> kan användas till att redigera "
-#~ "undertexter för videofilmer."
-
-#~ msgid ""
-#~ "It is possible to copy music from your computer onto a CD, so that it can be "
-#~ "played in another CD player. You must have a CD recording drive to be able "
-#~ "to do this."
-#~ msgstr ""
-#~ "Det är möjligt att kopiera musik från dator till cd-skiva, så att den kan "
-#~ "spelas i en vanlig cd-spelare. Du behöver en cd-brännare för att kunna göra "
-#~ "detta."
-
-#~ msgid ""
-#~ "If you would like to keep a copy of an audio CD on your computer without "
-#~ "needing to insert the CD to listen to it, it is possible to "
-#~ "<emphasis>rip</emphasis> or <emphasis>extract</emphasis> the music onto your "
-#~ "computer."
-#~ msgstr ""
-#~ "Om du vill spara en kopia av en musikskiva på datorn utan att behöva mata in "
-#~ "skivan varje gång du vill lyssna på den, då är det möjligt att "
-#~ "<emphasis>rippa</emphasis> eller <emphasis>extrahera</emphasis> låtarna till "
-#~ "datorn."
-
-#~ msgid ""
-#~ "For the <application>Helix</application> plugin, install the "
-#~ "<application>mozilla-helix-player</application> package."
-#~ msgstr ""
-#~ "Installera paketet <application>mozilla-helix-player</application> för att "
-#~ "få insticksmodulen för <application>Helix</application>."
-
-#~ msgid ""
-#~ "Open "
-#~ "<menuchoice><guimenu>Applications</guimenu><guimenuitem>Graphics</guimenuitem"
-#~ "><guimenuitem>F-Spot Photo Manager</guimenuitem></menuchoice> and choose "
-#~ "<menuchoice><guimenu>File</guimenu><guimenuitem>Import...</guimenuitem></menu"
-#~ "choice>."
-#~ msgstr ""
-#~ "Öppna "
-#~ "<menuchoice><guimenu>Program</guimenu><guimenuitem>Grafik</guimenuitem><guime"
-#~ "nuitem>Fotohanteraren F-Spot</guimenuitem></menuchoice> och välj "
-#~ "<menuchoice><guimenu>Arkiv</guimenu><guimenuitem>Importera...</guimenuitem></"
-#~ "menuchoice>."
-
-#~ msgid ""
-#~ "For advanced photo printing, install <application>PhotoPrint</application> "
-#~ "(see <ulink type=\"help\" url=\"ghelp:add-applications\">Adding, Removing "
-#~ "and Updating Applications</ulink>). Once installed, press "
-#~ "<menuchoice><guimenu>Applications</guimenu><guimenuitem>Graphics</guimenuitem"
-#~ "><guimenuitem>PhotoPrint</guimenuitem></menuchoice> to start PhotoPrint."
-#~ msgstr ""
-#~ "För avancerade fotoutskrifter, installera "
-#~ "<application>PhotoPrint</application> (se <ulink type=\"help\" "
-#~ "url=\"ghelp:add-applications\">Lägg till, ta bort och uppdatera "
-#~ "program</ulink>). När det är installerat, tryck på "
-#~ "<menuchoice><guimenu>Program</guimenu><guimenuitem>Grafik</guimenuitem><guime"
-#~ "nuitem>PhotoPrint</guimenuitem></menuchoice> för att starta PhotoPrint."
-
-#~ msgid ""
-#~ "Other applications, such as <application>Mplayer</application> and "
-#~ "<application>Xine</application>, do not use the "
-#~ "<application>Gstreamer</application> framework. Due to patent and copyright "
-#~ "restrictions, codecs for these programs are not included in Ubuntu by "
-#~ "default. For more information on these read the <ulink "
-#~ "url=\"https://help.ubuntu.com/community/RestrictedFormats\">Restricted "
-#~ "Formats</ulink> wiki page."
-#~ msgstr ""
-#~ "Andra program, såsom <application>Mplayer</application> och "
-#~ "<application>Xine</application> använder inte ramverket "
-#~ "<application>Gstreamer</application>. På grund av patent och "
-#~ "upphovsrättsliga begränsningar kan kodekar för dessa program inte inkluderas "
-#~ "i Ubuntu som standard. För mer information om dessa kan du läsa wikisidan "
-#~ "<ulink "
-#~ "url=\"https://help.ubuntu.com/community/RestrictedFormats\">Restricted Format"
-#~ "s</ulink>."
-
-#~ msgid ""
-#~ "The <ulink type=\"help\" url=\"ghelp:eog#eog-manipulate\">Image "
-#~ "Viewer</ulink>, F-Spot Photo Manager, <ulink type=\"help\" "
-#~ "url=\"ghelp:gthumb#gthumb-rotate-jpeg\">gThumb Image Viewer</ulink> and the "
-#~ "GIMP Image Editor are all capable of rotating photos."
-#~ msgstr ""
-#~ "<ulink type=\"help\" url=\"ghelp:eog#eog-manipulate\">Bildvisare</ulink>, "
-#~ "Fotohanteraren F-Spot, <ulink type=\"help\" url=\"ghelp:gthumb#gthumb-rotate-"
-#~ "jpeg\">Bildvisaren gThumb</ulink> och Bildredigeraren GIMP har alla "
-#~ "möjligheten att rotera foton."
-
-#~ msgid ""
-#~ "Burn a CD of your photos using the <ulink type=\"help\" "
-#~ "url=\"ghelp:musicvideophotos#cdburning\">File Browser</ulink> or <ulink "
-#~ "type=\"help\" url=\"ghelp:f-spot#sharing-burn-to-cd\">F-Spot Photo "
-#~ "Manager</ulink>."
-#~ msgstr ""
-#~ "Bränn en cd-skiva med dina foton med hjälp av <ulink type=\"help\" "
-#~ "url=\"ghelp:musicvideophotos#cdburning\">Filbläddraren</ulink> eller <ulink "
-#~ "type=\"help\" url=\"ghelp:f-spot#sharing-burn-to-cd\">Fotohanteraren F-"
-#~ "Spot</ulink>."
-
-#~ msgid "Ubuntu supports many portable audio players, including the iPod."
-#~ msgstr "Ubuntu har stöd för flera portabla ljudspelare, inkluderat iPod."
+#~ msgid "Music and audio"
+#~ msgstr "Musik och ljud"
 
-#~ msgid "Burn CDs and DVDs"
-#~ msgstr "Bränn cd- och dvd-skivor"
+#~ msgid "Music, Videos and Photos"
+#~ msgstr "Musik, video och foton"
 
-#~ msgid ""
-#~ "<application>Sound Juicer CD Extractor</application> is able to rip CDs. To "
-#~ "start <application>Sound Juicer</application> manually, choose "
-#~ "<menuchoice><guimenu>Applications</guimenu><guimenuitem>Sound &amp; "
-#~ "Video</guimenuitem><guimenuitem>Audio CD "
-#~ "Extractor</guimenuitem></menuchoice>. Alternatively, it should start "
-#~ "automatically when you insert a CD."
-#~ msgstr ""
-#~ "<application>Cd-extraheraren Sound Juicer</application> kan extrahera cd-"
-#~ "skivor. För att starta <application>Sound Juicer</application> manuellt, "
-#~ "välj <menuchoice><guimenu>Program</guimenu><guimenuitem>Ljud och "
-#~ "video</guimenuitem><guimenuitem>Ljudskivsextraherare</guimenuitem></menuchoic"
-#~ "e>. Alternativt ska det starta automatiskt när du matar in en skiva."
-
-#~ msgid ""
-#~ "To play and organize your music, Ubuntu comes with <application>Rhythmbox "
-#~ "Music Player</application>. To start <application>Rhythmbox</application>, "
-#~ "choose <menuchoice><guimenu>Applications</guimenu><guimenuitem>Sound &amp; "
-#~ "Video</guimenuitem><guimenuitem>Rhythmbox Music "
-#~ "Player</guimenuitem></menuchoice>."
-#~ msgstr ""
-#~ "För att spela och organisera din musik, Ubuntu kommer med "
-#~ "<application>Musikspelaren Rhythmbox</application>. För att starta "
-#~ "<application>Rhythmbox</application>, välj "
-#~ "<menuchoice><guimenu>Program</guimenu><guimenuitem>Ljud och "
-#~ "video</guimenuitem><guimenuitem>Musikspelaren "
-#~ "Rhythmbox</guimenuitem></menuchoice>."
-
-#~ msgid ""
-#~ "For more information, see <ulink url=\"http://stopmotion.bjoernen.com/\">the "
-#~ "Stopmotion website</ulink>."
-#~ msgstr ""
-#~ "För mer information, gå till webbplatsen för <ulink "
-#~ "url=\"http://stopmotion.bjoernen.com/\">Stopmotion</ulink>."
-
-#~ msgid ""
-#~ "The plugins you require depend on the format of the videos you would like to "
-#~ "watch. A short list of plugins available for the default "
-#~ "<application>Firefox Web Browser</application> is given below:"
-#~ msgstr ""
-#~ "Vilken insticksmodul som krävs beror på videoformatet du vill titta på. En "
-#~ "kort lista över insticksmoduler tillgängliga för <application>Webbläsaren "
-#~ "Firefox</application> visas nedan:"
-
-#~ msgid ""
-#~ "For help on installing additional software, see <ulink type=\"help\" "
-#~ "url=\"ghelp:add-applications\">Add Applications</ulink>."
-#~ msgstr ""
-#~ "För hjälp att installera ytterligare program <ulink type=\"help\" "
-#~ "url=\"ghelp:add-applications\">Lägg till program</ulink>."
-
-#~ msgid ""
-#~ "When you insert an audio CD, the <application>Sound Juicer</application> CD "
-#~ "player and ripper opens automatically. If you are connected to the Internet, "
-#~ "<application>Sound Juicer</application> will display the CD artist, album "
-#~ "and track names."
-#~ msgstr ""
-#~ "När du matar in en ljudskiva kommer cd-spelaren och extraheraren "
-#~ "<application>Sound Juicer</application> att automatiskt startas. Är du "
-#~ "ansluten till Internet så kommer <application>Sound Juicer</application> att "
-#~ "visa artist, album och låtnamn för skivan."
-
-#~ msgid ""
-#~ "For more information, see <ulink url=\"http://thoggen.net/\">the Thoggen "
-#~ "website</ulink>."
-#~ msgstr ""
-#~ "För mer information, gå till webbplatsen för <ulink "
-#~ "url=\"http://thoggen.net/\">Thoggen</ulink>."
-
-#~ msgid ""
-#~ "To play the CD, click the <guibutton>Play</guibutton> button or press "
-#~ "<keycombo><keycap>Ctrl</keycap><keycap>P</keycap></keycombo>. To play a "
-#~ "particular track, double-click on the track or select the track and click "
-#~ "<guibutton>Play</guibutton>."
-#~ msgstr ""
-#~ "För att spela skivan, klicka på <guibutton>Spela</guibutton> knappen eller "
-#~ "tryck <keycombo><keycap>Ctrl</keycap><keycap>P</keycap></keycombo>. För att "
-#~ "spela en viss låt, dubbelklicka på låten eller markera låten och klicka på "
-#~ "<guibutton>Spela</guibutton>."
-
-#~ msgid ""
-#~ "Many applications in Ubuntu use the <application>GStreamer</application> "
-#~ "open source multimedia framework. The codec plugins for "
-#~ "<application>GStreamer</application> are organised in different packages "
-#~ "depending on the licensing that applies to the various codecs. You can see "
-#~ "which codecs are contained in which plugin on the <ulink "
-#~ "url=\"http://gstreamer.freedesktop.org/documentation/plugins.html\">GStreamer"
-#~ " website</ulink>."
-#~ msgstr ""
-#~ "Många program i Ubuntu använder det öppna multimediaramverket "
-#~ "<application>GStreamer</application>. Kodekar för "
-#~ "<application>GStreamer</application> är organiserade i olika paket beroende "
-#~ "på vilken licens som gäller. Det går att se vilka kodekar som finns i vilket "
-#~ "paket på <ulink "
-#~ "url=\"http://gstreamer.freedesktop.org/documentation/plugins.html\">GStreamer"
-#~ "s webbsida</ulink>."
-
-#~ msgid ""
-#~ "Ubuntu provides a wide range of tools for all of your audio playing, editing "
-#~ "and recording needs."
-#~ msgstr ""
-#~ "Ubuntu tillhandahåller ett stort urval verktyg för uppspelning, redigering "
-#~ "och inspelning av ljud."
-
-#~ msgid ""
-#~ "<application>Stopmotion</application> allows you to create videos using the "
-#~ "stop-motion animation technique."
-#~ msgstr ""
-#~ "<application>Stopmotion</application> låter dig skapa en video genom att "
-#~ "använda animeringstekniken stop-motion."
-
-#~ msgid ""
-#~ "<ulink type=\"help\" url=\"ghelp:f-spot#sharing-e-mail\">E-mail "
-#~ "copies</ulink> of your photos directly."
-#~ msgstr ""
-#~ "<ulink type=\"help\" url=\"ghelp:f-spot#sharing-e-mail\">E-posta "
-#~ "kopior</ulink> av dina foton direkt."
-
-#~ msgid ""
-#~ "When you insert a DVD into your drive, it should now open automatically "
-#~ "using <application>Totem Movie Player</application>."
-#~ msgstr ""
-#~ "När du matar in en dvd-skiva i din enhet kommer den nu att automatiskt "
-#~ "öppnas med <application>Filmuppspelaren Totem</application>."
-
-#~ msgid ""
-#~ "To run <application>gtkpod</application>, choose "
-#~ "<menuchoice><guimenu>Applications</guimenu><guisubmenu>Sound &amp; "
-#~ "Video</guisubmenu><guimenuitem>gtkpod</guimenuitem></menuchoice>."
-#~ msgstr ""
-#~ "För att starta <application>gtkpod</application>, välj "
-#~ "<menuchoice><guimenu>Program</guimenu><guisubmenu>Ljud och "
-#~ "video</guisubmenu><guimenuitem>gtkpod</guimenuitem></menuchoice>."
-
-#~ msgid "Listen to online audio streams"
-#~ msgstr "Lyssna på ljudfiler från nätet"
-
-#~ msgid ""
-#~ "You can make your own CDs by <emphasis>burning</emphasis> files onto a blank "
-#~ "disc using the <emphasis>CD Writer Drive</emphasis> of your computer."
-#~ msgstr ""
-#~ "Du kan göra dina egna cd-skivor genom att <emphasis>bränna</emphasis> filer "
-#~ "på en tom skiva med <emphasis>cd-brännaren</emphasis> i din dator."
-
-#~ msgid "Record and edit video"
-#~ msgstr "Spela in och redigera video"
-
-#~ msgid "Use a different music player"
-#~ msgstr "Använd en annan musikspelare"
-
-#~ msgid ""
-#~ "In some countries, the use of certain codecs may be prohibited by law. You "
-#~ "should verify that you are permitted to use them before installing them."
-#~ msgstr ""
-#~ "I vissa länder är användningen av vissa kodekar förbjudet enligt lag. Du bör "
-#~ "försäkra dig om att du får använda dem innan du installerar dem."
-
-#~ msgid "Change the track details of music"
-#~ msgstr "Ändra spårinformation"
-
-#~ msgid ""
-#~ "Install the following packages (see <ulink type=\"help\" url=\"ghelp:add-"
-#~ "applications\">Add Applications</ulink>):"
-#~ msgstr ""
-#~ "Installera följande paket (se <ulink type=\"help\" url=\"ghelp:add-"
-#~ "applications\">Lägg till program</ulink>):"
-
-#~ msgid ""
-#~ "<application>Rhythmbox</application> supports many useful features, some of "
-#~ "which are turned off by default. For example, it can show the album cover of "
-#~ "the song currently being played, or share music with others."
-#~ msgstr ""
-#~ "<application>Rhythmbox</application> har stöd för många användbara "
-#~ "funktioner varav några är avstängda som standard. Till exempel kan det visa "
-#~ "albumomslag för låten som spelas upp eller dela ut musik till andra."
-
-#~ msgid "CD/DVD Burning Applications"
-#~ msgstr "Program för att bränna cd/dvd-skivor"
-
-#~ msgid ""
-#~ "Ubuntu comes with a selection of tools to help you record and edit video."
-#~ msgstr ""
-#~ "Ubuntu tillhandahåller ett urval av verktyg för att hjälpa till med att "
-#~ "spela in och redigera video."
-
-#~ msgid ""
-#~ "Follow the instructions in the Sound Juicer manual on <ulink type=\"help\" "
-#~ "url=\"ghelp:sound-juicer#extracting\">how to rip audio CDs</ulink>."
-#~ msgstr ""
-#~ "Följ instruktionerna i handboken för Sound Juicer för <ulink type=\"help\" "
-#~ "url=\"ghelp:sound-juicer#extracting\">hur man extraherar ljudskivor</ulink>."
-
-#~ msgid ""
-#~ "Unfortunately, <application>Totem Movie Player</application> has no support "
-#~ "for the menu feature of DVDs. To use this feature, you can install an "
-#~ "alternative program such as <application>gxine</application>, like this:"
-#~ msgstr ""
-#~ "Tyvärr så saknar <application>Filmuppspelaren Totem</application> stöd för "
-#~ "menyfunktionen på dvd-skivor. För att använda denna funktion kan du "
-#~ "installera ett alternativt program såsom <application>gxine</application>. "
-#~ "Gör så här:"
-
-#~ msgid ""
-#~ "A copy of the license is available here: <ulink url=\"/usr/share/ubuntu-"
-#~ "docs/common/C/ccbysa.xml\">Creative Commons ShareAlike License</ulink>."
-#~ msgstr ""
-#~ "En kopia av licensen finns tillgänglig här: <ulink url=\"/usr/share/ubuntu-"
-#~ "docs/common/C/ccbysa.xml\">Creative Commons ShareAlike License</ulink>."
+#~ msgid "Music, video and photos"
+#~ msgstr "Musik, video och foton"
 
-#~ msgid ""
-#~ "For more information, see <ulink "
-#~ "url=\"http://www.pitivi.org/wiki/Main_Page\">the PiTiVi website</ulink>."
-#~ msgstr ""
-#~ "För mer information, gå till webbplatsen för <ulink "
-#~ "url=\"http://www.pitivi.org/wiki/Main_Page\">PiTiVi</ulink>."
+#~ msgid "Listen to audio files and CDs"
+#~ msgstr "Lyssna på ljudfiler och cd-skivor"
 
-#~ msgid ""
-#~ "You can tweak your printing settings to get the best results. All of these "
-#~ "settings can be found in the "
-#~ "<menuchoice><guimenuitem>File</guimenuitem><guimenuitem>Print...</guimenuitem"
-#~ "></menuchoice> window."
-#~ msgstr ""
-#~ "Du kan justera dina utskriftsinställningar för att få bästa resultatet. Alla "
-#~ "dessa inställningar kan hittas i fönstret "
-#~ "<menuchoice><guimenuitem>Arkiv</guimenuitem><guimenuitem>Skriv "
-#~ "ut...</guimenuitem></menuchoice>."
+#~ msgid "Copy music from a CD to your computer"
+#~ msgstr "Kopiera musik från en cd-skiva till din dator"
 
-#~ msgid "Use a portable audio player"
-#~ msgstr "Använd en portabel musikspelare"
+#~ msgid "Copy music to a CD"
+#~ msgstr "Kopiera musik till en cd-skiva"
 
-#~ msgid "Using an iPod"
-#~ msgstr "Använd en iPod"
+#~ msgid "Use an iPod or other portable music player"
+#~ msgstr "Använd en iPod eller någon annan bärbar musikspelare"
 
-#~ msgid ""
-#~ "Ubuntu includes CD burning capabilities by default, and allows you to easily "
-#~ "<ulink type=\"help\" url=\"ghelp:user-guide#nautilus-cdwriter-data\">create "
-#~ "data CDs</ulink>, <ulink type=\"help\" url=\"ghelp:user-guide#nautilus-"
-#~ "cdwriter-copy\">copy CDs and DVDs</ulink> and <ulink type=\"help\" "
-#~ "url=\"ghelp:user-guide#nautilus-cdwriter-writeimage\">create CDs from a disc "
-#~ "image file</ulink>."
-#~ msgstr ""
-#~ "Ubuntu inkluderar stöd för cd-bränning som standard och låter dig enkelt "
-#~ "<ulink type=\"help\" url=\"ghelp:user-guide#nautilus-cdwriter-data\">skapa "
-#~ "dataskivor</ulink>, <ulink type=\"help\" url=\"ghelp:user-guide#nautilus-"
-#~ "cdwriter-copy\">kopiera cd- och dvd-skivor</ulink> samt <ulink type=\"help\" "
-#~ "url=\"ghelp:user-guide#nautilus-cdwriter-writeimage\">skapa cd-skivor från "
-#~ "en skivavbildsfil</ulink>."
+#~ msgid "Listen to podcasts and Internet radio stations"
+#~ msgstr "Lyssna på poddsändningar och radiostationer på Internet"
 
 #~ msgid ""
-#~ "There are a number of more advanced CD and DVD burning applications which "
-#~ "you may find useful."
+#~ "Install the <ulink url=\"apt:libdvdnav4\">libdvdnav4</ulink>, <ulink "
+#~ "url=\"apt:libdvdread3\">libdvdread3</ulink> and <ulink "
+#~ "url=\"apt:gstreamer0.10-plugins-ugly\"> gstreamer0.10-plugins-ugly</ulink> "
+#~ "packages."
 #~ msgstr ""
-#~ "Det finns ett antal mer avancerade program för cd- och dvd-bränning som du "
-#~ "kanske ser som användbara."
-
-#~ msgid "Burning audio CDs"
-#~ msgstr "Bränn musikskivor"
-
-#~ msgid "MPlayer Movie Player"
-#~ msgstr "Filmspelaren MPlayer"
-
-#~ msgid "What is a codec?"
-#~ msgstr "Vad är en kodek?"
+#~ "Installera paketen <ulink url=\"apt:libdvdnav4\">libdvdnav4</ulink>, <ulink "
+#~ "url=\"apt:libdvdread3\">libdvdread3</ulink> och <ulink "
+#~ "url=\"apt:gstreamer0.10-plugins-ugly\"> gstreamer0.10-plugins-ugly</ulink>."
 
 #~ msgid ""
-#~ "<ulink type=\"help\" url=\"ghelp:musicvideophotos#photos-printing\">Print "
+#~ "<ulink type=\"help\" url=\"ghelp:musicvideophotos#photos-printing\"> Print "
 #~ "copies</ulink> of your photos."
 #~ msgstr ""
-#~ "<ulink type=\"help\" url=\"ghelp:musicvideophotos#photos-printing\">Skriv ut "
-#~ "kopior</ulink> av dina foton."
-
-#~ msgid "Using other audio players"
-#~ msgstr "Använd andra musikspelare"
-
-#~ msgid ""
-#~ "For more information, see <ulink "
-#~ "url=\"http://kitone.free.fr/subtitleeditor/\">the Subtitle Editor "
-#~ "website</ulink>."
-#~ msgstr ""
-#~ "För mer information, gå till webbplatsen för <ulink "
-#~ "url=\"http://kitone.free.fr/subtitleeditor/\">Subtitle Editor</ulink>."
-
-#~ msgid ""
-#~ "Start <application>Totem</application> by clicking "
-#~ "<menuchoice><guimenu>Applications</guimenu><guimenuitem>Sound &amp; "
-#~ "Video</guimenuitem><guimenuitem>Movie Player</guimenuitem></menuchoice>."
-#~ msgstr ""
-#~ "Starta <application>Totem</application> genom att klicka på "
-#~ "<menuchoice><guimenu>Program</guimenu><guimenuitem>Ljud och "
-#~ "video</guimenuitem><guimenuitem>Filmuppspelare</guimenuitem></menuchoice>."
-
-#~ msgid "Record sounds and music"
-#~ msgstr "Spela in ljud och musik"
-
-#~ msgid "VLC media player"
-#~ msgstr "Mediaspelaren VLC"
+#~ "<ulink type=\"help\" url=\"ghelp:musicvideophotos#photos-printing\"> Skriv "
+#~ "ut kopior</ulink> av dina foton."

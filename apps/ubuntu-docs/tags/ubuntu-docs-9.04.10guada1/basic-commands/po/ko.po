@@ -7,15 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-docs\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2008-10-12 20:18+0100\n"
-"PO-Revision-Date: 2008-04-23 23:24+0000\n"
-"Last-Translator: Launchpad Translations Administrators "
-"<rosetta@launchpad.net>\n"
+"POT-Creation-Date: 2009-03-26 16:34+0000\n"
+"PO-Revision-Date: 2009-03-28 12:17+0000\n"
+"Last-Translator: Seongho Choo <somebody@kangwon.ac.kr>\n"
 "Language-Team: Korean <ko@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2008-10-19 12:43+0000\n"
+"X-Launchpad-Export-Date: 2009-04-01 11:06+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: basic-commands/C/basic-commands-C.omf:6(creator) basic-commands/C/basic-commands-C.omf:7(maintainer)
@@ -23,8 +22,8 @@ msgid "ubuntu-doc@lists.ubuntu.com (Ubuntu Documentation Project)"
 msgstr "ubuntu-doc@lists.ubuntu.com (우분투 문서화 프로젝트)"
 
 #: basic-commands/C/basic-commands-C.omf:8(title) basic-commands/C/basic-commands.xml:13(title)
-msgid "Basic Commands"
-msgstr "기본 명령어"
+msgid "Using the Command Line"
+msgstr ""
 
 #: basic-commands/C/basic-commands-C.omf:9(date)
 msgid "2006-09-07"
@@ -44,6 +43,8 @@ msgid ""
 "(https://wiki.ubuntu.com/DocumentationTeam). For a list of contributors, see "
 "the <ulink url=\"../../libs/C/contributors.xml\">contributors page</ulink>"
 msgstr ""
+"이 문서는 우분투 문서화 팀 (https://wiki.ubuntu.com/DocumentationTeam) 에서 관리합니다.  공헌자 "
+"리스트는, <ulink url=\"../../libs/C/contributors.xml\">공헌자 페이지</ulink>에서 보세요."
 
 #: basic-commands/C/basic-commands.xml:5(para)
 msgid ""
@@ -73,10 +74,12 @@ msgid ""
 "A copy of the license is available here: <ulink url=\"/usr/share/ubuntu-"
 "docs/libs/C/ccbysa.xml\">Creative Commons ShareAlike License</ulink>."
 msgstr ""
+"라이센스 복사본은 여기에서: <ulink url=\"/usr/share/ubuntu-"
+"docs/libs/C/ccbysa.xml\">Creative Commons ShareAlike License</ulink>."
 
 #: basic-commands/C/basic-commands.xml:14(year)
 msgid "2008"
-msgstr ""
+msgstr "2008"
 
 #: basic-commands/C/basic-commands.xml:15(ulink)
 msgid "Ubuntu Documentation Project"
@@ -216,7 +219,7 @@ msgstr ""
 
 #: basic-commands/C/basic-commands.xml:129(para)
 msgid "To navigate up one directory level, type: <screen>cd ..</screen>"
-msgstr "한 단계 위의 디렉토리로 이동하려면 다음을 입력하세요: <screen>cd ..</screen>"
+msgstr "한 단계 위의 디렉터리로 이동하려면 다음을 입력하세요: <screen>cd ..</screen>"
 
 #: basic-commands/C/basic-commands.xml:135(para)
 msgid ""
@@ -429,20 +432,28 @@ msgstr "lsb_release"
 
 #: basic-commands/C/basic-commands.xml:292(para)
 msgid ""
-"The <emphasis role=\"strong\">lsb_release</emphasis> command with the "
-"<emphasis role=\"strong\">-a</emphasis> option prints version information "
-"for the Linux release you're running. For example, typing: "
-"<screen>lsb_release -a</screen> will give you: <screen>\n"
+"The <command>lsb_release</command> command with the <emphasis "
+"role=\"strong\">-a</emphasis> option prints version information for the "
+"Linux release you're running. For example, typing: <screen>lsb_release -"
+"a</screen> will give you: <screen>\n"
 "No LSB modules are available.\n"
 "Distributor ID: Ubuntu\n"
-"Description:    Ubuntu 8.10 \n"
-"Release:        8.10\n"
-"Codename:       intrepid</screen>"
+"Description:    Ubuntu 9.04 \n"
+"Release:        9.04\n"
+"Codename:       jaunty</screen>"
 msgstr ""
+"<emphasis role=\"strong\">-a</emphasis>을 사용한 <command>lsb_release</command> "
+"명령은 현재 실행중인 리눅스의 판번정보를 출력합니다. 예를 들어 <screen>lsb_release -a</screen>를 실행시키면 "
+"<screen>\n"
+"LSB모듈이 없음\n"
+"Distributor ID: Ubuntu\n"
+"Description: Ubuntu 9.04 \n"
+"Release: 9.04\n"
+"Codename: jaunty</screen>"
 
 #: basic-commands/C/basic-commands.xml:311(title)
 msgid "Executing Commands with Elevated Privileges"
-msgstr "다른 사용자 권한으로 명령어 실행하기"
+msgstr "다른 사용자 권한으로 명령 실행하기"
 
 #: basic-commands/C/basic-commands.xml:312(para)
 msgid ""
@@ -643,37 +654,49 @@ msgstr ""
 "<screen>man -f gnome</screen> 명령을 실행해 보십시오. <placeholder-1/>"
 
 #: basic-commands/C/basic-commands.xml:468(title)
+msgid "Cutting and pasting"
+msgstr ""
+
+#: basic-commands/C/basic-commands.xml:469(para)
+msgid ""
+"Often, you will be referred to instructions that require commands to be "
+"pasted into the terminal."
+msgstr ""
+
+#: basic-commands/C/basic-commands.xml:471(para)
+msgid ""
+"You might be wondering why the text you've copied from a web page using "
+"<keycombo><keycap>Ctrl</keycap><keycap>C</keycap></keycombo> won't paste in "
+"with <keycombo><keycap>Ctrl</keycap><keycap>V</keycap></keycombo>, the shell "
+"uses a different combination for paste "
+"<keycombo><keycap>Shift</keycap><keycap>Insert</keycap></keycombo>. This can "
+"also be done using the mouse, by right-clicking in the terminal and clicking "
+"<menuchoice><guimenuitem>Paste</guimenuitem></menuchoice> from the menu."
+msgstr ""
+
+#: basic-commands/C/basic-commands.xml:479(para)
+msgid ""
+"You can also select the required commands in your web browser and then "
+"subsequently click the middle button on your mouse (or simply click buttons "
+"simultaneously on a two-button mouse) in the terminal to paste in the select "
+"command."
+msgstr ""
+
+#: basic-commands/C/basic-commands.xml:483(para)
+msgid ""
+"These actions may mean something entirely different to other terminal "
+"emulators. Consult your emulator's documentation for details."
+msgstr ""
+
+#: basic-commands/C/basic-commands.xml:488(title)
 msgid "Other Useful Things"
 msgstr "다른 유용한 내용들"
 
-#: basic-commands/C/basic-commands.xml:471(title)
-msgid "Pasting in commands"
-msgstr "명령행에 텍스트 붙여넣기"
-
-#: basic-commands/C/basic-commands.xml:472(para)
-msgid ""
-"Often, you will be referred to instructions that require commands to be "
-"pasted into the terminal. You might be wondering why the text you've copied "
-"from a web page using "
-"<keycombo><keycap>Ctrl</keycap><keycap>C</keycap></keycombo> won't paste in "
-"with <keycombo><keycap>Ctrl</keycap><keycap>V</keycap></keycombo>. Surely "
-"you don't have to type in all those nasty commands and filenames? Relax. "
-"Middle Button Click on your mouse (both buttons simultaneously on a two-"
-"button mouse) or Right Click and select "
-"<menuchoice><guimenuitem>Paste</guimenuitem></menuchoice> from the menu."
-msgstr ""
-"때때로 여러분은 지시에 따라 터미널에서 명령을 실행해야 할 필요가 있을 것입니다. 이 때 웹 페이지에서 "
-"<keycombo><keycap>Ctrl</keycap><keycap>C</keycap></keycombo> 키를 이용해 복사한 글들이 "
-"왜 <keycombo><keycap>Ctrl</keycap><keycap>V</keycap></keycombo> 키를 통해 붙여넣기가 "
-"안되는지 궁금해 할 것입니다. 물론 여러분이 이런 괘씸한 명령어들과 파일 이름등을 모두 입력할 필요는 없습니다. 진정하세요. 마우스의 "
-"가운데 버튼을(버튼이 두 개 뿐인 마우스를 사용한다면 두 버튼을 동시에) 클릭하거나 오른쪽 버튼을 누른 후 나오는 메뉴에서 "
-"<menuchoice><guimenuitem>붙여넣기</guimenuitem></menuchoice> 를 선택하면 됩니다."
-
-#: basic-commands/C/basic-commands.xml:495(title)
+#: basic-commands/C/basic-commands.xml:490(title)
 msgid "Save on typing"
 msgstr "타이핑 횟수 줄이기"
 
-#: basic-commands/C/basic-commands.xml:504(para)
+#: basic-commands/C/basic-commands.xml:499(para)
 msgid ""
 "<keycap>Up Arrow</keycap> or "
 "<keycombo><keycap>Ctrl</keycap><keycap>p</keycap></keycombo>"
@@ -681,11 +704,11 @@ msgstr ""
 "<keycap>위쪽 방향</keycap> 키 혹은 "
 "<keycombo><keycap>Ctrl</keycap><keycap>p</keycap></keycombo> 키"
 
-#: basic-commands/C/basic-commands.xml:514(para)
+#: basic-commands/C/basic-commands.xml:509(para)
 msgid "Scrolls through the commands you've entered previously."
 msgstr "이전에 입력한 명령어들을 차례로 보여줍니다."
 
-#: basic-commands/C/basic-commands.xml:522(para)
+#: basic-commands/C/basic-commands.xml:517(para)
 msgid ""
 "<keycap>Down Arrow</keycap> or "
 "<keycombo><keycap>Ctrl</keycap><keycap>n</keycap></keycombo>"
@@ -693,23 +716,23 @@ msgstr ""
 "<keycap>아래쪽 방향</keycap> 키 혹은 "
 "<keycombo><keycap>Ctrl</keycap><keycap>n</keycap></keycombo> 키"
 
-#: basic-commands/C/basic-commands.xml:532(para)
+#: basic-commands/C/basic-commands.xml:527(para)
 msgid "Takes you back to a more recent command."
 msgstr "좀더 최근에 입력한 명령어들로 (차례대로) 돌아옵니다."
 
-#: basic-commands/C/basic-commands.xml:539(keycap)
+#: basic-commands/C/basic-commands.xml:534(keycap)
 msgid "Enter"
 msgstr "Enter 키"
 
-#: basic-commands/C/basic-commands.xml:544(para)
+#: basic-commands/C/basic-commands.xml:539(para)
 msgid "When you have the command you want."
-msgstr "원하는 명령어를 찾았을 때 입력합니다."
+msgstr "원하는 명령을 찾았을 때 입력합니다."
 
-#: basic-commands/C/basic-commands.xml:550(keycap)
+#: basic-commands/C/basic-commands.xml:545(keycap)
 msgid "Tab"
 msgstr "Tab 키"
 
-#: basic-commands/C/basic-commands.xml:555(para)
+#: basic-commands/C/basic-commands.xml:550(para)
 msgid ""
 "A very useful feature. It autocompletes any commands or filenames, if "
 "there's only one option, or else gives you a list of options."
@@ -717,17 +740,17 @@ msgstr ""
 "아주 편리한 기능입니다. 여러분이 입력하고 있는 명령어나 파일 이름이 유일한 것이라면 자동으로 완성해 주고, 여러 가지 선택이 가능하다면 "
 "그에 대한 목록을 보여줍니다."
 
-#: basic-commands/C/basic-commands.xml:568(title)
+#: basic-commands/C/basic-commands.xml:563(title)
 msgid "Change the text"
 msgstr "텍스트 변경하기"
 
-#: basic-commands/C/basic-commands.xml:569(para)
+#: basic-commands/C/basic-commands.xml:564(para)
 msgid ""
 "The mouse won't work. Use the <keycap>Left/Right arrow</keycap> keys to move "
 "around the line."
 msgstr "마우스로는 동작하지 않습니다. <keycap>왼쪽/오른쪽 방향</keycap> 키를 이용하여 이동합니다."
 
-#: basic-commands/C/basic-commands.xml:573(para)
+#: basic-commands/C/basic-commands.xml:568(para)
 msgid ""
 "When the cursor is where you want it in the line, typing "
 "<emphasis>inserts</emphasis> text, it doesn't overtype what's already there."
@@ -735,63 +758,67 @@ msgstr ""
 "커서를 원하는 위치로 옮긴 후에, 입력하면 텍스트를 <emphasis>추가</emphasis> 합니다. 이것은 이미 작성된 내용을 "
 "덮어쓰지 않습니다."
 
-#: basic-commands/C/basic-commands.xml:586(para)
+#: basic-commands/C/basic-commands.xml:581(para)
 msgid ""
 "<keycombo><keycap>Ctrl</keycap><keycap>a</keycap></keycombo> or "
 "<keycap>Home</keycap>"
 msgstr ""
+"<keycombo><keycap>Ctrl</keycap><keycap>a</keycap></keycombo> 또는 "
+"<keycap>Home</keycap>"
 
-#: basic-commands/C/basic-commands.xml:596(para)
+#: basic-commands/C/basic-commands.xml:591(para)
 msgid "Moves the cursor to the <emphasis>start</emphasis> of a line."
 msgstr "커서를 그 줄의 <emphasis>시작</emphasis> 위치로 옮깁니다."
 
-#: basic-commands/C/basic-commands.xml:602(para)
+#: basic-commands/C/basic-commands.xml:597(para)
 msgid ""
 "<keycombo><keycap>Ctrl</keycap><keycap>e</keycap></keycombo> or "
 "<keycap>End</keycap>"
 msgstr ""
+"<keycombo><keycap>Ctrl</keycap><keycap>e</keycap></keycombo> 또는 "
+"<keycap>End</keycap>"
 
-#: basic-commands/C/basic-commands.xml:612(para)
+#: basic-commands/C/basic-commands.xml:607(para)
 msgid "Moves the cursor to the <emphasis> end</emphasis> of a line."
-msgstr ""
+msgstr "줄의 <emphasis>끝(end)</emphasis>으로  커서를 옮기세요."
 
-#: basic-commands/C/basic-commands.xml:623(keycap) basic-commands/C/basic-commands.xml:638(keycap) basic-commands/C/basic-commands.xml:652(keycap)
+#: basic-commands/C/basic-commands.xml:618(keycap) basic-commands/C/basic-commands.xml:633(keycap) basic-commands/C/basic-commands.xml:647(keycap)
 msgid "Ctrl"
 msgstr "Ctrl"
 
-#: basic-commands/C/basic-commands.xml:624(keycap)
+#: basic-commands/C/basic-commands.xml:619(keycap)
 msgid "k"
 msgstr "k"
 
-#: basic-commands/C/basic-commands.xml:630(para)
+#: basic-commands/C/basic-commands.xml:625(para)
 msgid "Deletes from the current cursor position to the end of the line."
 msgstr "현재 커서 위치에서 그 줄의 끝까지의 내용을 지웁니다."
 
-#: basic-commands/C/basic-commands.xml:639(keycap)
+#: basic-commands/C/basic-commands.xml:634(keycap)
 msgid "u"
 msgstr "u"
 
-#: basic-commands/C/basic-commands.xml:645(para)
+#: basic-commands/C/basic-commands.xml:640(para)
 msgid "Deletes the whole of the current line."
 msgstr "현재 줄의 내용을 모두 지웁니다."
 
-#: basic-commands/C/basic-commands.xml:653(keycap)
+#: basic-commands/C/basic-commands.xml:648(keycap)
 msgid "w"
 msgstr "w"
 
-#: basic-commands/C/basic-commands.xml:659(para)
+#: basic-commands/C/basic-commands.xml:654(para)
 msgid "Deletes the word before the cursor."
 msgstr "커서 앞의 단어를 지웁니다."
 
-#: basic-commands/C/basic-commands.xml:669(title)
+#: basic-commands/C/basic-commands.xml:664(title)
 msgid "More Information"
 msgstr "자세한 정보"
 
-#: basic-commands/C/basic-commands.xml:670(para)
+#: basic-commands/C/basic-commands.xml:665(para)
 msgid "The following online guides are available:"
 msgstr "다음과 같은 온라인 안내서들을 참고할 수 있습니다:"
 
-#: basic-commands/C/basic-commands.xml:673(para)
+#: basic-commands/C/basic-commands.xml:668(para)
 msgid ""
 "<ulink url=\"https://help.ubuntu.com/community/AptGetHowto\"> "
 "AptGetHowto</ulink> - using apt-get to install packages from the command "
@@ -800,7 +827,7 @@ msgstr ""
 "<ulink url=\"https://help.ubuntu.com/community/AptGetHowto\"> "
 "AptGetHowto</ulink> - 명령행에서 apt-get을 이용하여 꾸러미를 설치하는 방법"
 
-#: basic-commands/C/basic-commands.xml:680(para)
+#: basic-commands/C/basic-commands.xml:675(para)
 msgid ""
 "<ulink url=\"https://help.ubuntu.com/community/Repositories/CommandLine\"> "
 "Commandline Repository Editing</ulink> - adding the Universe/Multiverse "
@@ -809,7 +836,7 @@ msgstr ""
 "<ulink url=\"https://help.ubuntu.com/community/Repositories/CommandLine\"> "
 "명령행 저장소 편집</ulink> - 명령행에서 Universe/Multiverse 저장소 추가하기"
 
-#: basic-commands/C/basic-commands.xml:688(para)
+#: basic-commands/C/basic-commands.xml:683(para)
 msgid ""
 "<ulink url=\"https://help.ubuntu.com/community/grep\">grep Howto</ulink> - "
 "grep is a powerful command line search tool."
@@ -817,7 +844,7 @@ msgstr ""
 "<ulink url=\"https://help.ubuntu.com/community/grep\">grep Howto</ulink> - "
 "grep은 강력한 명령행 검색 도구입니다."
 
-#: basic-commands/C/basic-commands.xml:695(para)
+#: basic-commands/C/basic-commands.xml:690(para)
 msgid ""
 "<ulink url=\"https://help.ubuntu.com/community/find\">find </ulink> - locate "
 "files on the command line."
@@ -825,7 +852,7 @@ msgstr ""
 "<ulink url=\"https://help.ubuntu.com/community/find\">find </ulink> - 명령행에서 "
 "파일 찾기"
 
-#: basic-commands/C/basic-commands.xml:701(para)
+#: basic-commands/C/basic-commands.xml:696(para)
 msgid ""
 "<ulink url=\"https://help.ubuntu.com/community/CommandlineHowto\"> "
 "CommandlineHowto</ulink> - longer and more complete than this basic guide, "
@@ -834,7 +861,7 @@ msgstr ""
 "<ulink url=\"https://help.ubuntu.com/community/CommandlineHowto\">명령행 "
 "하우투</ulink> - 이 안내서보다 더 많은 내용들을 자세하게 설명한 문서이지만 아직도 완성되지 않은 상태입니다."
 
-#: basic-commands/C/basic-commands.xml:708(para)
+#: basic-commands/C/basic-commands.xml:703(para)
 msgid ""
 "<ulink url=\"https://help.ubuntu.com/community/HowToReadline\"> "
 "HowToReadline</ulink> - information on some more advanced customization for "
@@ -843,23 +870,23 @@ msgstr ""
 "<ulink url=\"https://help.ubuntu.com/community/HowToReadline\">readline "
 "하우투</ulink> - 명령행을 보다 전문적으로 최적화하기 위한 몇 가지 정보"
 
-#: basic-commands/C/basic-commands.xml:715(para)
+#: basic-commands/C/basic-commands.xml:710(para)
 msgid "For more detailed tutorials on the Linux command line, please see:"
 msgstr "리눅스 명령행에 대한 더 자세한 강좌를 원한다면 다음을 참조하세요:"
 
-#: basic-commands/C/basic-commands.xml:721(para)
+#: basic-commands/C/basic-commands.xml:716(para)
 msgid ""
 "<ulink url=\"http://linuxcommand.org/\"/>- basic BASH tutorials, including "
 "BASH scripting"
 msgstr ""
 "<ulink url=\"http://linuxcommand.org/\"/>- BASH 스크립트에 대한 설명을 포함하는 기본 BASH 강좌"
 
-#: basic-commands/C/basic-commands.xml:727(para)
+#: basic-commands/C/basic-commands.xml:722(para)
 msgid ""
 "<ulink url=\"http://linuxsurvival.com/index.php\"/>- Java-based tutorials"
 msgstr "<ulink url=\"http://linuxsurvival.com/index.php\"/>- Java 기반의 강좌"
 
-#: basic-commands/C/basic-commands.xml:733(para)
+#: basic-commands/C/basic-commands.xml:728(para)
 msgid ""
 "<ulink url=\"http://rute.2038bug.com/index.html.gz\"/>- a massive online "
 "book about system administration, almost all from the command line."
@@ -890,7 +917,40 @@ msgstr ""
 "  DasomOLI https://launchpad.net/~dasomoli\n"
 "  Launchpad Translations Administrators https://launchpad.net/~rosetta-"
 "admins\n"
-"  Namhyung Kim https://launchpad.net/~namhyung"
+"  Namhyung Kim https://launchpad.net/~namhyung\n"
+"\n"
+"Launchpad Contributions:\n"
+"  DasomOLI https://launchpad.net/~dasomoli\n"
+"  Launchpad Translations Administrators https://launchpad.net/~rosetta-"
+"admins\n"
+"  Namhyung Kim https://launchpad.net/~namhyung\n"
+"  Seongho Choo https://launchpad.net/~freedancer\n"
+"  Shin Hungjae https://launchpad.net/~fplive\n"
+"  airplanez https://launchpad.net/~airplanez"
+
+#~ msgid "Basic Commands"
+#~ msgstr "기본 명령어"
+
+#~ msgid "Pasting in commands"
+#~ msgstr "명령행에 텍스트 붙여넣기"
+
+#~ msgid ""
+#~ "Often, you will be referred to instructions that require commands to be "
+#~ "pasted into the terminal. You might be wondering why the text you've copied "
+#~ "from a web page using "
+#~ "<keycombo><keycap>Ctrl</keycap><keycap>C</keycap></keycombo> won't paste in "
+#~ "with <keycombo><keycap>Ctrl</keycap><keycap>V</keycap></keycombo>. Surely "
+#~ "you don't have to type in all those nasty commands and filenames? Relax. "
+#~ "Middle Button Click on your mouse (both buttons simultaneously on a two-"
+#~ "button mouse) or Right Click and select "
+#~ "<menuchoice><guimenuitem>Paste</guimenuitem></menuchoice> from the menu."
+#~ msgstr ""
+#~ "때때로 여러분은 지시에 따라 터미널에서 명령을 실행해야 할 필요가 있을 것입니다. 이 때 웹 페이지에서 "
+#~ "<keycombo><keycap>Ctrl</keycap><keycap>C</keycap></keycombo> 키를 이용해 복사한 글들이 "
+#~ "왜 <keycombo><keycap>Ctrl</keycap><keycap>V</keycap></keycombo> 키를 통해 붙여넣기가 "
+#~ "안되는지 궁금해 할 것입니다. 물론 여러분이 이런 괘씸한 명령어들과 파일 이름등을 모두 입력할 필요는 없습니다. 진정하세요. 마우스의 "
+#~ "가운데 버튼을(버튼이 두 개 뿐인 마우스를 사용한다면 두 버튼을 동시에) 클릭하거나 오른쪽 버튼을 누른 후 나오는 메뉴에서 "
+#~ "<menuchoice><guimenuitem>붙여넣기</guimenuitem></menuchoice> 를 선택하면 됩니다."
 
 #~ msgid ""
 #~ "Moves the cursor to the <emphasis><emphasis "

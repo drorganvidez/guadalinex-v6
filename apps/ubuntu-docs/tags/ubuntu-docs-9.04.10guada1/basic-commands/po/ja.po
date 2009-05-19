@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-docs\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2008-10-12 20:18+0100\n"
-"PO-Revision-Date: 2008-10-15 15:20+0000\n"
-"Last-Translator: Kentaro Kazuhama <kazken3@gmail.com>\n"
+"POT-Creation-Date: 2009-03-26 16:34+0000\n"
+"PO-Revision-Date: 2009-03-28 12:31+0000\n"
+"Last-Translator: Y.Nishiwaki <ffiannkks@gmail.com>\n"
 "Language-Team: Japanese <ja@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2008-10-19 12:44+0000\n"
+"X-Launchpad-Export-Date: 2009-04-01 11:06+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: basic-commands/C/basic-commands-C.omf:6(creator) basic-commands/C/basic-commands-C.omf:7(maintainer)
@@ -22,8 +22,8 @@ msgid "ubuntu-doc@lists.ubuntu.com (Ubuntu Documentation Project)"
 msgstr "ubuntu-doc@lists.ubuntu.com (Ubuntuドキュメンテーション・プロジェクト)"
 
 #: basic-commands/C/basic-commands-C.omf:8(title) basic-commands/C/basic-commands.xml:13(title)
-msgid "Basic Commands"
-msgstr "基本コマンド群"
+msgid "Using the Command Line"
+msgstr "コマンドラインを使う"
 
 #: basic-commands/C/basic-commands-C.omf:9(date)
 msgid "2006-09-07"
@@ -138,7 +138,7 @@ msgid ""
 "<application>Terminal</application> and will be shown as: <screen>command to "
 "type</screen>"
 msgstr ""
-"このガイドに載っている全てのコマンドは<application>端末</application>上で使うためのもので、以下のように表示されます。 \n"
+"このガイドに載っている全てのコマンドは<application>端末</application>上で使うためのもので、以下のように表示されます。 \r\n"
 "<screen>command</screen>"
 
 #: basic-commands/C/basic-commands.xml:57(para)
@@ -215,7 +215,7 @@ msgstr ""
 "~</command>は<command>cd "
 "/home/ユーザ名/</command>と等価です。しかしながら、（例えば、<command>sudo</command>を使って）コマンドを管理者(r"
 "oot)として実行する時は、<command>~</command>は<filename "
-"class=\"directory\">/root</filename>を意味します。<command>sudo</command>でコマンドを\n"
+"class=\"directory\">/root</filename>を意味します。<command>sudo</command>でコマンドを\r\n"
 "実行する時は、あなたのホームディレクトリへのフルパスを与える必要があります。"
 
 #: basic-commands/C/basic-commands.xml:129(para)
@@ -409,7 +409,7 @@ msgid ""
 "<application>top</application>, press <keycap>q</keycap>."
 msgstr ""
 "<command>top</command>コマンドは、 "
-"あなたのシステムにおける(CPUやRAMやスワップの使用量、実行中のタスクの総計といった)稼働中のプロセスやシステムリソースに関する情報を表示します。"
+"あなたのシステムにおける(CPUやRAMやスワップの使用量、実行中のタスクの総計といった)稼働中のプロセスやシステムリソースに関する情報を表示します。\r"
 "\n"
 "<application>top</application>を終了するには、<keycap>q</keycap>を押してください。"
 
@@ -434,25 +434,16 @@ msgstr "lsb_release"
 
 #: basic-commands/C/basic-commands.xml:292(para)
 msgid ""
-"The <emphasis role=\"strong\">lsb_release</emphasis> command with the "
-"<emphasis role=\"strong\">-a</emphasis> option prints version information "
-"for the Linux release you're running. For example, typing: "
-"<screen>lsb_release -a</screen> will give you: <screen>\n"
+"The <command>lsb_release</command> command with the <emphasis "
+"role=\"strong\">-a</emphasis> option prints version information for the "
+"Linux release you're running. For example, typing: <screen>lsb_release -"
+"a</screen> will give you: <screen>\n"
 "No LSB modules are available.\n"
 "Distributor ID: Ubuntu\n"
-"Description:    Ubuntu 8.10 \n"
-"Release:        8.10\n"
-"Codename:       intrepid</screen>"
+"Description:    Ubuntu 9.04 \n"
+"Release:        9.04\n"
+"Codename:       jaunty</screen>"
 msgstr ""
-"<emphasis role=\"strong\">lsb_release</emphasis> コマンドに <emphasis "
-"role=\"strong\">-a</emphasis> "
-"オプションを付記すると、運用中のLinuxリリースに関するバージョン情報が表示されます。たとえば、<screen>lsb_release -"
-"a</screen> をタイプすると以下の内容が表示されます: <screen>\n"
-"No LSB modules are available.\n"
-"Distributor ID: Ubuntu\n"
-"Description:    Ubuntu 8.10 \n"
-"Release:        8.10\n"
-"Codename:       intrepid</screen>"
 
 #: basic-commands/C/basic-commands.xml:311(title)
 msgid "Executing Commands with Elevated Privileges"
@@ -659,36 +650,49 @@ msgstr ""
 "gnome</screen>と入力してみてください。<placeholder-1/>"
 
 #: basic-commands/C/basic-commands.xml:468(title)
+msgid "Cutting and pasting"
+msgstr "切り取りと貼り付け"
+
+#: basic-commands/C/basic-commands.xml:469(para)
+msgid ""
+"Often, you will be referred to instructions that require commands to be "
+"pasted into the terminal."
+msgstr ""
+
+#: basic-commands/C/basic-commands.xml:471(para)
+msgid ""
+"You might be wondering why the text you've copied from a web page using "
+"<keycombo><keycap>Ctrl</keycap><keycap>C</keycap></keycombo> won't paste in "
+"with <keycombo><keycap>Ctrl</keycap><keycap>V</keycap></keycombo>, the shell "
+"uses a different combination for paste "
+"<keycombo><keycap>Shift</keycap><keycap>Insert</keycap></keycombo>. This can "
+"also be done using the mouse, by right-clicking in the terminal and clicking "
+"<menuchoice><guimenuitem>Paste</guimenuitem></menuchoice> from the menu."
+msgstr ""
+
+#: basic-commands/C/basic-commands.xml:479(para)
+msgid ""
+"You can also select the required commands in your web browser and then "
+"subsequently click the middle button on your mouse (or simply click buttons "
+"simultaneously on a two-button mouse) in the terminal to paste in the select "
+"command."
+msgstr ""
+
+#: basic-commands/C/basic-commands.xml:483(para)
+msgid ""
+"These actions may mean something entirely different to other terminal "
+"emulators. Consult your emulator's documentation for details."
+msgstr ""
+
+#: basic-commands/C/basic-commands.xml:488(title)
 msgid "Other Useful Things"
 msgstr "その他の便利な機能について"
 
-#: basic-commands/C/basic-commands.xml:471(title)
-msgid "Pasting in commands"
-msgstr "コマンドの貼り付け"
-
-#: basic-commands/C/basic-commands.xml:472(para)
-msgid ""
-"Often, you will be referred to instructions that require commands to be "
-"pasted into the terminal. You might be wondering why the text you've copied "
-"from a web page using "
-"<keycombo><keycap>Ctrl</keycap><keycap>C</keycap></keycombo> won't paste in "
-"with <keycombo><keycap>Ctrl</keycap><keycap>V</keycap></keycombo>. Surely "
-"you don't have to type in all those nasty commands and filenames? Relax. "
-"Middle Button Click on your mouse (both buttons simultaneously on a two-"
-"button mouse) or Right Click and select "
-"<menuchoice><guimenuitem>Paste</guimenuitem></menuchoice> from the menu."
-msgstr ""
-"何かの説明などを読んでいて、コマンドの貼り付けが必要なこともあるでしょう。そんな時きっと、どうして<keycombo><keycap>Ctrl</keyc"
-"ap><keycap>C</keycap></keycombo>でWebページからテキストをコピーできたのに、<keycombo><keycap>Ctrl"
-"</keycap><keycap>V</keycap></keycombo>でプロンプトに貼り付けできないのかと思うはずです。もちろん、その長ったらしいコ"
-"マンドやファイルネームをすべて打ちこむ必要なんてありません、大丈夫。マウスの真ん中ボタン(2ボタンマウスの場合は同時に両方のボタン)を押すか、右クリックし"
-"てメニューから<menuchoice><guimenuitem>貼り付け</guimenuitem></menuchoice>を選択してください。"
-
-#: basic-commands/C/basic-commands.xml:495(title)
+#: basic-commands/C/basic-commands.xml:490(title)
 msgid "Save on typing"
 msgstr "入力を記録"
 
-#: basic-commands/C/basic-commands.xml:504(para)
+#: basic-commands/C/basic-commands.xml:499(para)
 msgid ""
 "<keycap>Up Arrow</keycap> or "
 "<keycombo><keycap>Ctrl</keycap><keycap>p</keycap></keycombo>"
@@ -696,11 +700,11 @@ msgstr ""
 "<keycap>上向き矢印</keycap>または<keycombo><keycap>Ctrl</keycap><keycap>p</keycap></k"
 "eycombo>"
 
-#: basic-commands/C/basic-commands.xml:514(para)
+#: basic-commands/C/basic-commands.xml:509(para)
 msgid "Scrolls through the commands you've entered previously."
 msgstr "過去に入力したコマンドへスクロールします。"
 
-#: basic-commands/C/basic-commands.xml:522(para)
+#: basic-commands/C/basic-commands.xml:517(para)
 msgid ""
 "<keycap>Down Arrow</keycap> or "
 "<keycombo><keycap>Ctrl</keycap><keycap>n</keycap></keycombo>"
@@ -708,46 +712,46 @@ msgstr ""
 "<keycap>下向き矢印</keycap>または<keycombo><keycap>Ctrl</keycap><keycap>n</keycap></k"
 "eycombo>"
 
-#: basic-commands/C/basic-commands.xml:532(para)
+#: basic-commands/C/basic-commands.xml:527(para)
 msgid "Takes you back to a more recent command."
 msgstr "最近入力したコマンドに戻ります。"
 
-#: basic-commands/C/basic-commands.xml:539(keycap)
+#: basic-commands/C/basic-commands.xml:534(keycap)
 msgid "Enter"
 msgstr "Enter キー"
 
-#: basic-commands/C/basic-commands.xml:544(para)
+#: basic-commands/C/basic-commands.xml:539(para)
 msgid "When you have the command you want."
 msgstr "欲しいコマンドがある時"
 
-#: basic-commands/C/basic-commands.xml:550(keycap)
+#: basic-commands/C/basic-commands.xml:545(keycap)
 msgid "Tab"
 msgstr "Tab"
 
-#: basic-commands/C/basic-commands.xml:555(para)
+#: basic-commands/C/basic-commands.xml:550(para)
 msgid ""
 "A very useful feature. It autocompletes any commands or filenames, if "
 "there's only one option, or else gives you a list of options."
 msgstr "非常に便利な機能です。コマンドやファイル名を自動補完したり、オプションのリストを表示します。"
 
-#: basic-commands/C/basic-commands.xml:568(title)
+#: basic-commands/C/basic-commands.xml:563(title)
 msgid "Change the text"
 msgstr "テキストを変更"
 
-#: basic-commands/C/basic-commands.xml:569(para)
+#: basic-commands/C/basic-commands.xml:564(para)
 msgid ""
 "The mouse won't work. Use the <keycap>Left/Right arrow</keycap> keys to move "
 "around the line."
 msgstr "マウスは使えません。行の上に移動するには<keycap>左/右矢印</keycap>キーを使用します。"
 
-#: basic-commands/C/basic-commands.xml:573(para)
+#: basic-commands/C/basic-commands.xml:568(para)
 msgid ""
 "When the cursor is where you want it in the line, typing "
 "<emphasis>inserts</emphasis> text, it doesn't overtype what's already there."
 msgstr ""
 "カーソルが行上の望む位置にあるとき、キーボードから入力することでテキストを上書きせずに<emphasis>挿入</emphasis>することができます。"
 
-#: basic-commands/C/basic-commands.xml:586(para)
+#: basic-commands/C/basic-commands.xml:581(para)
 msgid ""
 "<keycombo><keycap>Ctrl</keycap><keycap>a</keycap></keycombo> or "
 "<keycap>Home</keycap>"
@@ -755,11 +759,11 @@ msgstr ""
 "<keycombo><keycap>Ctrl</keycap><keycap>a</keycap></keycombo> または "
 "<keycap>Home</keycap>"
 
-#: basic-commands/C/basic-commands.xml:596(para)
+#: basic-commands/C/basic-commands.xml:591(para)
 msgid "Moves the cursor to the <emphasis>start</emphasis> of a line."
 msgstr "カーソルを行の先頭に移動します。"
 
-#: basic-commands/C/basic-commands.xml:602(para)
+#: basic-commands/C/basic-commands.xml:597(para)
 msgid ""
 "<keycombo><keycap>Ctrl</keycap><keycap>e</keycap></keycombo> or "
 "<keycap>End</keycap>"
@@ -767,47 +771,47 @@ msgstr ""
 "<keycombo><keycap>Ctrl</keycap><keycap>e</keycap></keycombo> または "
 "<keycap>End</keycap>"
 
-#: basic-commands/C/basic-commands.xml:612(para)
+#: basic-commands/C/basic-commands.xml:607(para)
 msgid "Moves the cursor to the <emphasis> end</emphasis> of a line."
 msgstr "カーソルを行の<emphasis> 最後</emphasis> へ移動します。"
 
-#: basic-commands/C/basic-commands.xml:623(keycap) basic-commands/C/basic-commands.xml:638(keycap) basic-commands/C/basic-commands.xml:652(keycap)
+#: basic-commands/C/basic-commands.xml:618(keycap) basic-commands/C/basic-commands.xml:633(keycap) basic-commands/C/basic-commands.xml:647(keycap)
 msgid "Ctrl"
 msgstr "Ctrl"
 
-#: basic-commands/C/basic-commands.xml:624(keycap)
+#: basic-commands/C/basic-commands.xml:619(keycap)
 msgid "k"
 msgstr "k"
 
-#: basic-commands/C/basic-commands.xml:630(para)
+#: basic-commands/C/basic-commands.xml:625(para)
 msgid "Deletes from the current cursor position to the end of the line."
 msgstr "現在のカーソル位置から行末までの文字を削除します。"
 
-#: basic-commands/C/basic-commands.xml:639(keycap)
+#: basic-commands/C/basic-commands.xml:634(keycap)
 msgid "u"
 msgstr "u"
 
-#: basic-commands/C/basic-commands.xml:645(para)
+#: basic-commands/C/basic-commands.xml:640(para)
 msgid "Deletes the whole of the current line."
 msgstr "現在の行をすべて削除します。"
 
-#: basic-commands/C/basic-commands.xml:653(keycap)
+#: basic-commands/C/basic-commands.xml:648(keycap)
 msgid "w"
 msgstr "w"
 
-#: basic-commands/C/basic-commands.xml:659(para)
+#: basic-commands/C/basic-commands.xml:654(para)
 msgid "Deletes the word before the cursor."
 msgstr "現在のカーソルの前の単語を削除します。"
 
-#: basic-commands/C/basic-commands.xml:669(title)
+#: basic-commands/C/basic-commands.xml:664(title)
 msgid "More Information"
 msgstr "追加情報"
 
-#: basic-commands/C/basic-commands.xml:670(para)
+#: basic-commands/C/basic-commands.xml:665(para)
 msgid "The following online guides are available:"
 msgstr "以下のオンラインガイドが利用できます:"
 
-#: basic-commands/C/basic-commands.xml:673(para)
+#: basic-commands/C/basic-commands.xml:668(para)
 msgid ""
 "<ulink url=\"https://help.ubuntu.com/community/AptGetHowto\"> "
 "AptGetHowto</ulink> - using apt-get to install packages from the command "
@@ -816,7 +820,7 @@ msgstr ""
 "<ulink url=\"https://help.ubuntu.com/community/AptGetHowto\"> "
 "AptGetHowto</ulink> - コマンドラインからapt-getを使ってパッケージをインストールする方法です。"
 
-#: basic-commands/C/basic-commands.xml:680(para)
+#: basic-commands/C/basic-commands.xml:675(para)
 msgid ""
 "<ulink url=\"https://help.ubuntu.com/community/Repositories/CommandLine\"> "
 "Commandline Repository Editing</ulink> - adding the Universe/Multiverse "
@@ -826,7 +830,7 @@ msgstr ""
 "Commandline Repository Editing</ulink> - "
 "コマンドライン上でUniverse/Multiverseリポジトリを追加する方法です。"
 
-#: basic-commands/C/basic-commands.xml:688(para)
+#: basic-commands/C/basic-commands.xml:683(para)
 msgid ""
 "<ulink url=\"https://help.ubuntu.com/community/grep\">grep Howto</ulink> - "
 "grep is a powerful command line search tool."
@@ -834,7 +838,7 @@ msgstr ""
 "<ulink url=\"https://help.ubuntu.com/community/grep\">grep Howto</ulink> - "
 "grepはコマンドライン上のパワフルな検索ツールです。"
 
-#: basic-commands/C/basic-commands.xml:695(para)
+#: basic-commands/C/basic-commands.xml:690(para)
 msgid ""
 "<ulink url=\"https://help.ubuntu.com/community/find\">find </ulink> - locate "
 "files on the command line."
@@ -842,7 +846,7 @@ msgstr ""
 "<ulink url=\"https://help.ubuntu.com/community/find\">find </ulink> - "
 "コマンドライン上でファイルを探すコマンドです。"
 
-#: basic-commands/C/basic-commands.xml:701(para)
+#: basic-commands/C/basic-commands.xml:696(para)
 msgid ""
 "<ulink url=\"https://help.ubuntu.com/community/CommandlineHowto\"> "
 "CommandlineHowto</ulink> - longer and more complete than this basic guide, "
@@ -851,7 +855,7 @@ msgstr ""
 "<ulink url=\"https://help.ubuntu.com/community/CommandlineHowto\"> "
 "CommandlineHowto</ulink> - この基本ガイドよりもさらに長く完全ですが、まだ完成していません。"
 
-#: basic-commands/C/basic-commands.xml:708(para)
+#: basic-commands/C/basic-commands.xml:703(para)
 msgid ""
 "<ulink url=\"https://help.ubuntu.com/community/HowToReadline\"> "
 "HowToReadline</ulink> - information on some more advanced customization for "
@@ -860,23 +864,23 @@ msgstr ""
 "<ulink url=\"https://help.ubuntu.com/community/HowToReadline\"> "
 "HowToReadline</ulink> - コマンドラインの拡張に関する情報です。"
 
-#: basic-commands/C/basic-commands.xml:715(para)
+#: basic-commands/C/basic-commands.xml:710(para)
 msgid "For more detailed tutorials on the Linux command line, please see:"
 msgstr "Linuxのコマンドラインのさらに詳しいチュートリアルを見たいときは以下を参照してください。："
 
-#: basic-commands/C/basic-commands.xml:721(para)
+#: basic-commands/C/basic-commands.xml:716(para)
 msgid ""
 "<ulink url=\"http://linuxcommand.org/\"/>- basic BASH tutorials, including "
 "BASH scripting"
 msgstr ""
 "<ulink url=\"http://linuxcommand.org/\"/>- BASHスクリプトを含む基本BASHチュートリアル。"
 
-#: basic-commands/C/basic-commands.xml:727(para)
+#: basic-commands/C/basic-commands.xml:722(para)
 msgid ""
 "<ulink url=\"http://linuxsurvival.com/index.php\"/>- Java-based tutorials"
 msgstr "<ulink url=\"http://linuxsurvival.com/index.php\"/>- Javaベースチュートリアル。"
 
-#: basic-commands/C/basic-commands.xml:733(para)
+#: basic-commands/C/basic-commands.xml:728(para)
 msgid ""
 "<ulink url=\"http://rute.2038bug.com/index.html.gz\"/>- a massive online "
 "book about system administration, almost all from the command line."
@@ -898,4 +902,5 @@ msgstr ""
 "  Tetsuro Yamaki https://launchpad.net/~hanataro\n"
 "  UBSGW https://launchpad.net/~ubsgwubsgw\n"
 "  Y.Hattori https://launchpad.net/~y-hattori\n"
+"  Y.Nishiwaki https://launchpad.net/~annamoito\n"
 "  afujihara https://launchpad.net/~afujihara"

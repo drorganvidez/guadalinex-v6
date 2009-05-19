@@ -7,23 +7,23 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-docs\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2008-08-03 16:01+0100\n"
-"PO-Revision-Date: 2008-05-30 15:20+0000\n"
-"Last-Translator: Павло Славинський <pavloslav@gmail.com>\n"
+"POT-Creation-Date: 2009-03-26 16:34+0000\n"
+"PO-Revision-Date: 2009-02-11 22:26+0000\n"
+"Last-Translator: Serhey Kusyumoff (Сергій Кусюмов) <sergemine@gmail.com>\n"
 "Language-Team: Ukrainian <uk@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2008-10-19 12:25+0000\n"
+"X-Launchpad-Export-Date: 2009-04-01 10:59+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: config-desktop/C/config-desktop-C.omf:6(creator) config-desktop/C/config-desktop-C.omf:7(maintainer)
 msgid "ubuntu-doc@lists.ubuntu.com (Ubuntu Documentation Project)"
 msgstr "ubuntu-doc@lists.ubuntu.com (Проект Документації Ubuntu)"
 
-#: config-desktop/C/config-desktop-C.omf:8(title)
-msgid "Customising Your Desktop"
-msgstr "Налаштування Вашої Стільниці"
+#: config-desktop/C/config-desktop-C.omf:8(title) config-desktop/C/config-desktop.xml:16(title)
+msgid "Customizing Your Computer"
+msgstr ""
 
 #: config-desktop/C/config-desktop-C.omf:9(date)
 msgid "2006-09-07"
@@ -32,10 +32,6 @@ msgstr "2006-09-07"
 #: config-desktop/C/config-desktop-C.omf:11(description)
 msgid "Placeholder."
 msgstr "Заповнювач"
-
-#: config-desktop/C/config-desktop.xml:16(title)
-msgid "Customising Your Computer"
-msgstr "Налаштування Вашого Комп'ютера"
 
 #: config-desktop/C/config-desktop.xml:3(title)
 msgid "Credits and License"
@@ -47,6 +43,10 @@ msgid ""
 "(https://wiki.ubuntu.com/DocumentationTeam). For a list of contributors, see "
 "the <ulink url=\"../../libs/C/contributors.xml\">contributors page</ulink>"
 msgstr ""
+"Цей документ підтримується командою документації Ubuntu "
+"(https://wiki.ubuntu.com/DocumentationTeam). Для перегляду списку учасників, "
+"перейдіть на <ulink url=\"../../libs/C/contributors.xml\">сторінку "
+"учасників</ulink>"
 
 #: config-desktop/C/config-desktop.xml:5(para)
 msgid ""
@@ -81,10 +81,12 @@ msgid ""
 "A copy of the license is available here: <ulink url=\"/usr/share/ubuntu-"
 "docs/libs/C/ccbysa.xml\">Creative Commons ShareAlike License</ulink>."
 msgstr ""
+"Копія ліцензії доступна тут: <ulink url=\"/usr/share/ubuntu-"
+"docs/libs/C/ccbysa.xml\">Creative Commons ShareAlike License</ulink>."
 
 #: config-desktop/C/config-desktop.xml:14(year)
 msgid "2008"
-msgstr ""
+msgstr "2008"
 
 #: config-desktop/C/config-desktop.xml:15(ulink)
 msgid "Ubuntu Documentation Project"
@@ -156,24 +158,16 @@ msgstr "Щоб встановити та використовувати KDE:"
 
 #: config-desktop/C/config-desktop.xml:66(para)
 msgid ""
-"Use the <ulink type=\"help\" url=\"ghelp:add-"
-"applications#synaptic\">Synaptic Package Manager</ulink> to install the "
-"<application>kubuntu-desktop</application> package."
+"<ulink url=\"apt:kubuntu-desktop\">Install the <application>kubuntu-"
+"desktop</application> package</ulink>."
 msgstr ""
-"Використовуйте <ulink type=\"help\" url=\"ghelp:add-"
-"applications#synaptic\">Менеджер Пакетів Synaptic</ulink> для встановлення "
-"пакету <application>kubuntu-desktop</application> ."
 
 #: config-desktop/C/config-desktop.xml:69(para) config-desktop/C/config-desktop.xml:92(para)
 msgid ""
-"Press "
-"<menuchoice><guimenu>System</guimenu><guimenuitem>Quit...</guimenuitem></menu"
-"choice> and then press <guibutton>Log Out</guibutton> to log out of Ubuntu"
+"Click the <application>User Switcher</application> in the top right hand "
+"corner of the screen and then press <guibutton>Log out</guibutton> to log "
+"out of Ubuntu"
 msgstr ""
-"Натисніть "
-"<menuchoice><guimenu>System</guimenu><guimenuitem>Quit...</guimenuitem></menu"
-"choice> and then press <guibutton>Log Out</guibutton> щоб завершити сеанс "
-"роботи в Ubuntu"
 
 #: config-desktop/C/config-desktop.xml:72(para) config-desktop/C/config-desktop.xml:95(para)
 msgid ""
@@ -218,13 +212,9 @@ msgstr "Для встановлення та використання Xfce:"
 
 #: config-desktop/C/config-desktop.xml:89(para)
 msgid ""
-"Use the <ulink type=\"help\" url=\"ghelp:add-"
-"applications#synaptic\">Synaptic Package Manager</ulink> to install the "
-"<application>xubuntu-desktop</application> package."
+"<ulink url=\"apt:xubuntu-desktop\">Install the <application>xubuntu-"
+"desktop</application> package</ulink>."
 msgstr ""
-"Використовуйте <ulink type=\"help\" url=\"ghelp:add-"
-"applications#synaptic\">Менеджер Пакунків Synaptic</ulink>, щоб встановити "
-"пакунок <application>xubuntu-desktop</application>."
 
 #: config-desktop/C/config-desktop.xml:98(para)
 msgid ""
@@ -264,7 +254,48 @@ msgstr ""
 "  Launchpad Translations Administrators https://launchpad.net/~rosetta-"
 "admins\n"
 "  Olexa https://launchpad.net/~ti98-zhuck\n"
+"  Павло Славинський https://launchpad.net/~pavloslav\n"
+"\n"
+"Launchpad Contributions:\n"
+"  JRand0m https://launchpad.net/~tomoemulo\n"
+"  Joseph Chereshnovsky https://launchpad.net/~joseph007\n"
+"  Olexa https://launchpad.net/~ti98-zhuck\n"
+"  Serhey Kusyumoff (Сергій Кусюмов) https://launchpad.net/~sergemine\n"
 "  Павло Славинський https://launchpad.net/~pavloslav"
+
+#~ msgid "Customising Your Desktop"
+#~ msgstr "Налаштування Вашої Стільниці"
+
+#~ msgid "Customising Your Computer"
+#~ msgstr "Налаштування Вашого Комп'ютера"
+
+#~ msgid ""
+#~ "Use the <ulink type=\"help\" url=\"ghelp:add-"
+#~ "applications#synaptic\">Synaptic Package Manager</ulink> to install the "
+#~ "<application>kubuntu-desktop</application> package."
+#~ msgstr ""
+#~ "Використовуйте <ulink type=\"help\" url=\"ghelp:add-"
+#~ "applications#synaptic\">Менеджер Пакетів Synaptic</ulink> для встановлення "
+#~ "пакету <application>kubuntu-desktop</application> ."
+
+#~ msgid ""
+#~ "Press "
+#~ "<menuchoice><guimenu>System</guimenu><guimenuitem>Quit...</guimenuitem></menu"
+#~ "choice> and then press <guibutton>Log Out</guibutton> to log out of Ubuntu"
+#~ msgstr ""
+#~ "Натисніть "
+#~ "<menuchoice><guimenu>System</guimenu><guimenuitem>Quit...</guimenuitem></menu"
+#~ "choice> and then press <guibutton>Log Out</guibutton> щоб завершити сеанс "
+#~ "роботи в Ubuntu"
+
+#~ msgid ""
+#~ "Use the <ulink type=\"help\" url=\"ghelp:add-"
+#~ "applications#synaptic\">Synaptic Package Manager</ulink> to install the "
+#~ "<application>xubuntu-desktop</application> package."
+#~ msgstr ""
+#~ "Використовуйте <ulink type=\"help\" url=\"ghelp:add-"
+#~ "applications#synaptic\">Менеджер Пакунків Synaptic</ulink>, щоб встановити "
+#~ "пакунок <application>xubuntu-desktop</application>."
 
 #~ msgid ""
 #~ "This document is maintained by the Ubuntu documentation team "

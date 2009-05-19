@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-docs\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2008-10-08 21:13+0100\n"
-"PO-Revision-Date: 2008-10-17 00:09+0000\n"
+"POT-Creation-Date: 2009-03-26 16:34+0000\n"
+"PO-Revision-Date: 2009-03-20 16:13+0000\n"
 "Last-Translator: Gabor Kelemen <kelemeng@gnome.hu>\n"
 "Language-Team: Hungarian <hu@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2008-10-19 12:31+0000\n"
+"X-Launchpad-Export-Date: 2009-04-01 10:36+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: programming/C/programming-C.omf:6(creator) programming/C/programming-C.omf:7(maintainer)
@@ -22,8 +22,8 @@ msgid "ubuntu-doc@lists.ubuntu.com (Ubuntu Documentation Project)"
 msgstr "ubuntu-doc@lists.ubuntu.com (Ubuntu dokumentációs projekt)"
 
 #: programming/C/programming-C.omf:8(title) programming/C/programming.xml:15(title)
-msgid "Programming"
-msgstr "Fejlesztés"
+msgid "Writing Your Own Programs"
+msgstr ""
 
 #: programming/C/programming-C.omf:9(date)
 msgid "2006-09-07"
@@ -121,50 +121,60 @@ msgstr ""
 "Az Ubuntu számos erőforrást is biztosít, így segítve Önt saját programjainak "
 "fejlesztésében és futtatásában. Az alábbi listában néhány ilyet talál."
 
-#: programming/C/programming.xml:24(citetitle) programming/C/programming.xml:27(citetitle)
+#: programming/C/programming.xml:24(citetitle)
 msgid "Dive Into Python"
 msgstr "Dive Into Python"
 
 #: programming/C/programming.xml:25(para)
 msgid ""
-"<citetitle>Dive Into Python</citetitle> is a book for learning how to "
+"<application>Dive Into Python</application> is a book for learning how to "
 "program in Python, aimed at programmers with some previous experience."
 msgstr ""
-"A <citetitle>Dive Into Python</citetitle> könyv a Pythonban való "
+"A <application>Dive Into Python</application> könyv a Pythonban való "
 "programozásról szól, azoknak a programozóknak, akik rendelkeznek némi "
 "programozói tapasztalattal."
 
-#: programming/C/programming.xml:27(ulink)
-msgid "Read <placeholder-1/>"
-msgstr "Olvassa el itt: <placeholder-1/>"
+#: programming/C/programming.xml:28(para)
+msgid ""
+"<ulink url=\"apt:diveintopython\">Install the "
+"<application>diveintopython</application> package</ulink>."
+msgstr ""
+"<ulink url=\"apt:diveintopython\">Telepítse a "
+"<application>diveintopython</application> csomagot</ulink>."
 
-#: programming/C/programming.xml:31(title)
+#: programming/C/programming.xml:31(para)
+msgid ""
+"To access the documentation, visit <ulink "
+"url=\"file:///usr/share/doc/diveintopython/html/toc/index.html\">diveintopyth"
+"on</ulink>."
+msgstr ""
+"A dokumentáció eléréséhez nézze meg a <ulink "
+"url=\"file:///usr/share/doc/diveintopython/html/toc/index.html\">diveintopyth"
+"on</ulink> hivatkozást."
+
+#: programming/C/programming.xml:36(title)
 msgid "PyGTK Tutorial"
 msgstr "PyGTK leírás"
 
-#: programming/C/programming.xml:32(para)
+#: programming/C/programming.xml:37(para)
 msgid ""
-"PyGTK Tutorial is a tutorial on developing with the graphical toolkit often "
-"used for developing Ubuntu applications. It assumes that you have knowledge "
-"of Python but not necessarily GTK."
+"<application>PyGTK Tutorial</application> is a tutorial on developing with "
+"the graphical toolkit often used for developing Ubuntu applications. It "
+"assumes that you have knowledge of Python but not necessarily GTK."
 msgstr ""
-"A PyGTK leírás az Ubuntu alkalmazásokban gyakran használt grafikus "
-"eszközkészlettel való fejlesztésről szól. Feltételezi a Python ismeretét, de "
-"a GTK-ét nem feltétlenül."
+"A <application>PyGTK leírás</application> az Ubuntu alkalmazásokban gyakran "
+"használt grafikus eszközkészlettel való fejlesztésről szól. Feltételezi a "
+"Python ismeretét, de a GTK-ét nem feltétlenül."
 
-#: programming/C/programming.xml:36(para)
+#: programming/C/programming.xml:41(para)
 msgid ""
-"Install the <application>python-gtk2-tutorial</application> package (see "
-"<ulink type=\"help\" url=\"ghelp:add-applications\">Add "
-"Applications</ulink>). You will need to use <application>Synaptic Package "
-"Manager</application> to install this package."
+"<ulink url=\"apt:python-gtk2-tutorial\">Install the <application>python-gtk2-"
+"tutorial</application> package</ulink>."
 msgstr ""
-"Telepítse a <application>python-gtk2-tutorial</application> csomagot (lásd "
-"<ulink type=\"help\" url=\"ghelp:add-applications\">Alkalmazások "
-"hozzáadása</ulink>). A <application>Synaptic csomagkezelő</application> "
-"segítségével tudja ezt megtenni."
+"<ulink url=\"apt:python-gtk2-tutorial\">Telepítse a <application>python-gtk2-"
+"tutorial</application> csomagot</ulink>."
 
-#: programming/C/programming.xml:40(para)
+#: programming/C/programming.xml:44(para)
 msgid ""
 "To access the documentation, visit <ulink url=\"file:///usr/share/doc/python-"
 "gtk2-tutorial/html/index.html\">python-gtk-tutorial</ulink>."
@@ -173,11 +183,11 @@ msgstr ""
 "url=\"file:///usr/share/doc/python-gtk2-tutorial/html/index.html\">python-"
 "gtk-leírást</ulink>."
 
-#: programming/C/programming.xml:46(title)
+#: programming/C/programming.xml:50(title)
 msgid "Devhelp"
 msgstr "Devhelp"
 
-#: programming/C/programming.xml:47(para)
+#: programming/C/programming.xml:51(para)
 msgid ""
 "<application>Devhelp</application> is an application to read and search all "
 "of the documentation that you install."
@@ -185,16 +195,15 @@ msgstr ""
 "A <application>Devhelp</application> alkalmazás a telepített dokumentációk "
 "olvasására és keresésére szolgál."
 
-#: programming/C/programming.xml:51(para)
+#: programming/C/programming.xml:55(para)
 msgid ""
-"Install the <application>devhelp</application> package (see <ulink "
-"type=\"help\" url=\"ghelp:add-applications\">Add Applications</ulink>)."
+"<ulink url=\"apt:devhelp\">Install the <application>devhelp</application> "
+"package</ulink>."
 msgstr ""
-"Telepítse a <application>devhelp</application> csomagot (lásd <ulink "
-"type=\"help\" url=\"ghelp:add-applications\">Alkalmazások "
-"hozzáadása</ulink>)."
+"<ulink url=\"apt:devhelp\">Telepítse a <application>devhelp</application> "
+"csomagot</ulink>."
 
-#: programming/C/programming.xml:54(para)
+#: programming/C/programming.xml:58(para)
 msgid ""
 "Choose "
 "<menuchoice><guimenu>Applications</guimenu><guisubmenu>Programming</guisubmen"
@@ -204,11 +213,11 @@ msgstr ""
 "<menuchoice><guimenu>Alkalmazások</guimenu><guisubmenu>Fejlesztés</guisubmenu"
 "><guimenuitem>Devhelp</guimenuitem></menuchoice> menüpontot."
 
-#: programming/C/programming.xml:61(title)
+#: programming/C/programming.xml:65(title)
 msgid "C and C++"
 msgstr "C és C++"
 
-#: programming/C/programming.xml:62(para)
+#: programming/C/programming.xml:66(para)
 msgid ""
 "Compiling C and C++ programs requires some packages that are not installed "
 "by default."
@@ -216,16 +225,15 @@ msgstr ""
 "C és C++ programok fordításához olyan csomagokra lesz szüksége, amelyek nem "
 "kerülnek alapértelmezésben telepítésre."
 
-#: programming/C/programming.xml:65(para)
+#: programming/C/programming.xml:69(para)
 msgid ""
-"Install the <application>build-essential</application> package (see <ulink "
-"type=\"help\" url=\"ghelp:add-applications\">Add Applications</ulink>)."
+"<ulink url=\"apt:build-essential\">Install the <application>build-"
+"essential</application> package</ulink>."
 msgstr ""
-"Telepítse a <application>build-essential</application> csomagot (lásd <ulink "
-"type=\"help\" url=\"ghelp:add-applications\">Alkalmazások "
-"hozzáadása</ulink>)."
+"<ulink url=\"apt:build-essential\">Telepítse a <application>build-"
+"essential</application> csomagot</ulink>."
 
-#: programming/C/programming.xml:68(para)
+#: programming/C/programming.xml:72(para)
 msgid ""
 "There are many tools available for C and C++ developers. Those wishing to "
 "develop graphical applications will find that choosing a graphical "
@@ -240,11 +248,11 @@ msgstr ""
 "az Ubuntun a <quote>GTK/GNOME</quote> és a  <quote>Qt/KDE</quote>, "
 "mindegyikük saját eszközökkel és dokumentációval rendelkezik."
 
-#: programming/C/programming.xml:70(title)
+#: programming/C/programming.xml:74(title)
 msgid "Anjuta IDE for GNOME"
 msgstr "Anjuta IDE GNOME-hoz"
 
-#: programming/C/programming.xml:71(para)
+#: programming/C/programming.xml:75(para)
 msgid ""
 "<application>Anjuta</application> is an IDE for developing applications in C "
 "and C++ for the <quote>GNOME</quote> platform."
@@ -252,65 +260,31 @@ msgstr ""
 "Az <application>Anjuta</application> egy integrált fejlesztőkörnyezet (IDE) "
 "C és C++ programozási nyelvekhez a <quote>GNOME</quote> platformra."
 
-#: programming/C/programming.xml:74(para)
+#: programming/C/programming.xml:78(para)
 msgid ""
-"Install the <application>anjuta</application> package from the "
-"<quote>Universe</quote> repository (see <ulink type=\"help\" url=\"ghelp:add-"
-"applications\">Add Applications</ulink>)."
+"<ulink url=\"apt:anjuta\">Install the <application>anjuta</application> "
+"package</ulink>."
 msgstr ""
-"Telepítse az <application>anjuta</application> csomagot a "
-"<quote>Universe</quote> tárolóból (lásd <ulink type=\"help\" url=\"ghelp:add-"
-"applications\">Alkalmazások hozzáadása</ulink>)."
+"<ulink url=\"apt:anjuta\">Telepítse az <application>anjuta</application> "
+"csomagot</ulink>."
 
-#: programming/C/programming.xml:77(para)
-msgid ""
-"Press <keycombo><keycap>Alt</keycap><keycap>F2</keycap></keycombo>, type "
-"<quote>anjuta</quote> and press <guibutton>Run</guibutton> to start using "
-"<application>Anjuta</application>."
-msgstr ""
-"Nyomja meg az <keycombo><keycap>Alt</keycap><keycap>F2</keycap></keycombo> "
-"billentyűkombinációt, majd írja be a következőt: <quote>anjuta</quote>, és "
-"kattintson a <guibutton>Futtatás</guibutton> feliratú gombra az "
-"<application>Anjuta</application> alkalmazás elindításához."
-
-#: programming/C/programming.xml:82(title)
-msgid "KDevelop IDE for KDE"
-msgstr "KDevelop IDE KDE-hez"
-
-#: programming/C/programming.xml:83(para)
-msgid ""
-"<application>KDevelop</application> is an IDE for developing applications in "
-"C and C++ for the <quote>KDE</quote> platform."
-msgstr ""
-"A <application>KDevelop</application> egy integrált fejlesztőkörnyezet (IDE) "
-"C és C++ programozási nyelvekhez a <quote>KDE</quote> platformra."
-
-#: programming/C/programming.xml:86(para)
-msgid ""
-"Install the <application>kdevelop</application> package from the "
-"<quote>Universe</quote> repository (see <ulink type=\"help\" url=\"ghelp:add-"
-"applications\">Add Applications</ulink>)."
-msgstr ""
-"Telepítse a <application>kdevelop</application> csomagot a "
-"<quote>Universe</quote> tárolóból (lásd <ulink type=\"help\" url=\"ghelp:add-"
-"applications\">Alkalmazások hozzáadása</ulink>)."
-
-#: programming/C/programming.xml:89(para)
+#: programming/C/programming.xml:81(para)
 msgid ""
 "Press "
-"<menuchoice><guimenu>Applications</guimenu><guisubmenu>Programming</guisubmen"
-"u><guimenuitem>KDevelop</guimenuitem></menuchoice> to start using "
-"<application>KDevelop</application>."
+"<menuchoice><guimenu>Applications</guimenu><guimenuitem>Programming</guimenui"
+"tem><guimenuitem>Anjuta IDE</guimenuitem></menuchoice> to start using "
+"<application>anjuta</application>."
 msgstr ""
-"A <application>KDevelop</application> indításához kattintson az "
-"<menuchoice><guimenu>Alkalmazások</guimenu><guisubmenu>Fejlesztés</guisubmenu"
-"><guimenuitem>KDevelop</guimenuitem></menuchoice> menüpontra."
+"Válassza az "
+"<menuchoice><guimenu>Alkalmazások</guimenu><guimenuitem>Fejlesztés</guimenuit"
+"em><guimenuitem>Anjuta IDE</guimenuitem></menuchoice> menüpontot az "
+"<application>anjuta</application> használatának megkezdéséhez."
 
-#: programming/C/programming.xml:96(title)
+#: programming/C/programming.xml:88(title)
 msgid "Java"
 msgstr "Java"
 
-#: programming/C/programming.xml:98(para)
+#: programming/C/programming.xml:90(para)
 msgid ""
 "For <emphasis>PowerPC</emphasis> machines, see <ulink "
 "url=\"https://help.ubuntu.com/community/Java\">Ubuntu Help Online</ulink>."
@@ -319,7 +293,7 @@ msgstr ""
 "url=\"https://help.ubuntu.com/community/Java\">Ubuntu online súgó</ulink> "
 "tartalmaz információkat."
 
-#: programming/C/programming.xml:100(para)
+#: programming/C/programming.xml:92(para)
 msgid ""
 "Java, developed by Sun Microsystems, is and interpreted language which is "
 "compiled to bytecode. This bytecode can be run on any Java Virtual Machine, "
@@ -332,41 +306,35 @@ msgstr ""
 "Java egy objektumorientált nyelv, a szintaxisa hasonlít a C-hez, de sokkal "
 "biztonságosabb benne a kódolás."
 
-#: programming/C/programming.xml:102(title)
+#: programming/C/programming.xml:94(title)
 msgid "Installation"
 msgstr "Telepítés"
 
-#: programming/C/programming.xml:103(para)
+#: programming/C/programming.xml:95(para)
 msgid ""
 "Ubuntu supports both Java 1.5 and 1.6 in both Sun and Open Source flavors."
 msgstr ""
 "Az Ubuntu egyaránt támogatja a Java 1.5-ös és 1.6-os verzióját, a Sun-os és "
 "a nyílt forrású változatokban is."
 
-#: programming/C/programming.xml:105(title)
+#: programming/C/programming.xml:97(title)
 msgid "JDK 1.5"
 msgstr "JDK 1.5"
 
-#: programming/C/programming.xml:108(para) programming/C/programming.xml:127(para)
+#: programming/C/programming.xml:100(para)
 msgid ""
-"Install <application>sun-java5-jdk</application> from the "
-"<quote>Multiverse</quote> repository (see <ulink type=\"help\" "
-"url=\"ghelp:add-applications\">Add Applications</ulink>). You will need to "
-"use <application>Synaptic Package Manager</application> to install these "
-"packages."
+"<ulink url=\"apt:sun-java5-jdk\">Install the <application>sun-java5-"
+"jdk</application> package</ulink>."
 msgstr ""
-"Telepítse a <application>sun-java5-jdk</application> csomagot a "
-"<quote>Multiverse</quote> tárolóból (lásd <ulink type=\"help\" "
-"url=\"ghelp:add-applications\">Alkalmazások hozzáadása</ulink>). A "
-"<application>Synaptic csomagkezelő</application> segítségével tudja ezt "
-"megtenni."
+"<ulink url=\"apt:sun-java5-jdk\">Telepítse a <application>sun-java5-"
+"jdk</application> csomagot</ulink>."
 
-#: programming/C/programming.xml:112(para) programming/C/programming.xml:131(para)
+#: programming/C/programming.xml:103(para) programming/C/programming.xml:121(para)
 msgid "Read the Java license presented. You must accept it to continue."
 msgstr ""
 "Olvassa el a megjelenő Java licencet. A folytatáshoz el kell fogadnia azt."
 
-#: programming/C/programming.xml:115(para)
+#: programming/C/programming.xml:106(para)
 msgid ""
 "To get your system to use Sun Java instead of the open-source (but less "
 "functional) GIJ that is installed by default, run: <screen>sudo update-"
@@ -378,11 +346,11 @@ msgstr ""
 "alapértelmezett, futtassa ezt a parancsot: <screen>sudo update-alternatives -"
 "-config java</screen> és válassza a <filename>j2re1.5-sun</filename> opciót."
 
-#: programming/C/programming.xml:123(title)
+#: programming/C/programming.xml:114(title)
 msgid "JDK 1.6"
 msgstr "JDK 1.6"
 
-#: programming/C/programming.xml:124(para)
+#: programming/C/programming.xml:115(para)
 msgid ""
 "Java 1.6 is also available, and can be installed by following the above "
 "directions, swapping all instances of 1.5 to 1.6"
@@ -390,7 +358,15 @@ msgstr ""
 "A Java 1.6 szintén elérhető és telepíthető a fenti utasítások alapján, csak "
 "az összes előforduló 1.5 helyett 1.6-ot kell írni."
 
-#: programming/C/programming.xml:134(para)
+#: programming/C/programming.xml:118(para)
+msgid ""
+"<ulink url=\"apt:sun-java6-jdk\">Install the <application>sun-java6-"
+"jdk</application> package</ulink>."
+msgstr ""
+"<ulink url=\"apt:sun-java6-jdk\">Telepítse a <application>sun-java6-"
+"jdk</application> csomagot</ulink>."
+
+#: programming/C/programming.xml:124(para)
 msgid ""
 "To get your system to use Sun Java instead of the open-source (but less "
 "functional) GIJ that is installed by default, run: <screen>sudo update-"
@@ -402,18 +378,18 @@ msgstr ""
 "parancsot: <screen>sudo update-alternatives --config java</screen> majd "
 "válassza ki a következő lehetőséget: <filename>j2re1.6-sun</filename>."
 
-#: programming/C/programming.xml:143(title)
+#: programming/C/programming.xml:133(title)
 msgid "Hello World"
 msgstr "Szia, világ!"
 
-#: programming/C/programming.xml:144(para)
+#: programming/C/programming.xml:134(para)
 msgid ""
-"Enter the following code into a text editior and save it as \"Hello.java\":"
+"Enter the following code into a text editor and save it as \"Hello.java\":"
 msgstr ""
-"Írja be a következő kódot egy szövegszerkesztőbe, majd mentse el Hello.java "
+"Írja be a következő kódot egy szövegszerkesztőbe és mentse el „Hello.java” "
 "néven:"
 
-#: programming/C/programming.xml:145(screen)
+#: programming/C/programming.xml:135(screen)
 #, no-wrap
 msgid ""
 "public class Hello {\n"
@@ -428,23 +404,25 @@ msgstr ""
 "    }\n"
 "}\n"
 
-#: programming/C/programming.xml:151(para)
+#: programming/C/programming.xml:141(para)
 msgid ""
-"Open a terminal and run your code by typing:<screen>javac Hello.java; java "
+"Open a terminal and compile your code by typing:<screen>javac "
+"Hello.java</screen>. You can then run your code by typing:<screen>java "
 "Hello</screen>"
 msgstr ""
-"Nyissa meg a terminált, majd futtassa le a kódját így: <screen>javac "
-"Hello.java; java Hello</screen>"
+"Nyisson egy terminált és fordítsa le a kódot a következő beírásával: "
+"<screen>javac Hello.java</screen>. Ezután futtathatja a kódot a <screen>java "
+"Hello</screen> parancs kiadásával."
 
-#: programming/C/programming.xml:154(title)
+#: programming/C/programming.xml:144(title)
 msgid "Integrated Development Environments"
 msgstr "Integrált fejlesztői környezetek"
 
-#: programming/C/programming.xml:156(title)
+#: programming/C/programming.xml:146(title)
 msgid "Eclipse IDE for Java"
 msgstr "Eclipse IDE Javahoz"
 
-#: programming/C/programming.xml:157(para)
+#: programming/C/programming.xml:147(para)
 msgid ""
 "The <application>Eclipse</application> platform provides a complete, "
 "extensible Java development environment."
@@ -452,17 +430,15 @@ msgstr ""
 "Az <application>Eclipse</application> platform egy teljeskörű és bővíthető "
 "Java fejlesztőkörnyezetet biztosít."
 
-#: programming/C/programming.xml:160(para)
+#: programming/C/programming.xml:150(para)
 msgid ""
-"Install the <application>eclipse</application> package from the "
-"<quote>Universe</quote> repository (see <ulink type=\"help\" url=\"ghelp:add-"
-"applications\">Add Applications</ulink>)."
+"<ulink url=\"apt:eclipse\">Install the <application>eclipse</application> "
+"package</ulink>."
 msgstr ""
-"Telepítse az <application>eclipse</application> csomagot a "
-"<quote>Universe</quote> tárolóból (lásd <ulink type=\"help\" url=\"ghelp:add-"
-"applications\">Alkalmazások hozzáadása</ulink>)."
+"<ulink url=\"apt:eclipse\">Telepítse a <application>eclipse</application> "
+"csomagot</ulink>."
 
-#: programming/C/programming.xml:163(para)
+#: programming/C/programming.xml:153(para)
 msgid ""
 "Press "
 "<menuchoice><guimenuitem>Applications</guimenuitem><guimenuitem>Programming</"
@@ -473,11 +449,11 @@ msgstr ""
 "<menuchoice><guimenuitem>Alkalmazások</guimenuitem><guimenuitem>Fejlesztés</g"
 "uimenuitem><guimenuitem>Eclipse</guimenuitem></menuchoice> menüpontra."
 
-#: programming/C/programming.xml:168(title)
+#: programming/C/programming.xml:158(title)
 msgid "Netbeans"
 msgstr "NetBeans"
 
-#: programming/C/programming.xml:169(para)
+#: programming/C/programming.xml:159(para)
 msgid ""
 "The <application>Netbeans</application> platform provides a complete, "
 "extensible Java development environment."
@@ -485,21 +461,19 @@ msgstr ""
 "A <application>NetBeans</application> platform egy teljes, kiterjeszthető "
 "Java fejlesztői környezetet nyújt."
 
-#: programming/C/programming.xml:172(para)
+#: programming/C/programming.xml:162(para)
 msgid ""
-"Install the <application>Netbeans</application> package from the "
-"<quote>Universe</quote> repository (see <ulink type=\"help\" url=\"ghelp:add-"
-"applications\">Add Applications</ulink>)."
+"<ulink url=\"apt:netbeans\">Install the <application>netbeans</application> "
+"package</ulink>."
 msgstr ""
-"Telepítse a <application>NetBeans</application> csomagot a "
-"<quote>Universe</quote> tárolóból (lásd <ulink type=\"help\" url=\"ghelp:add-"
-"applications\">Alkalmazások hozzáadása</ulink>)."
+"<ulink url=\"apt:netbeans\">Telepítse a <application>netbeans</application> "
+"csomagot</ulink>."
 
-#: programming/C/programming.xml:180(title)
+#: programming/C/programming.xml:170(title)
 msgid "Other programming languages"
 msgstr "Egyéb programozási nyelvek"
 
-#: programming/C/programming.xml:181(para)
+#: programming/C/programming.xml:171(para)
 msgid ""
 "There are many programming tools available in Ubuntu for many different "
 "programming languages. This section provides a short list of some of the "
@@ -509,11 +483,11 @@ msgstr ""
 "nyelvekhez Ubuntun. Ez a rész egy rövid listát nyújt a leggyakrabban "
 "használt nyelvekről."
 
-#: programming/C/programming.xml:184(title)
+#: programming/C/programming.xml:174(title)
 msgid "Mono .NET development environment"
 msgstr "Mono .NET fejlesztőkörnyezet"
 
-#: programming/C/programming.xml:185(para)
+#: programming/C/programming.xml:175(para)
 msgid ""
 "<application>Mono</application> is an implementation of the "
 "<application>.NET</application> stack, which allows you to write cross-"
@@ -528,17 +502,19 @@ msgstr ""
 "Visual Basic .NET és JavaScript). További információt a Monoról a <ulink "
 "url=\"http://www.mono-project.com/\">Mono projekt honlapján</ulink> találhat."
 
-#: programming/C/programming.xml:188(para)
+#: programming/C/programming.xml:178(para)
 msgid ""
-"Install the <application>monodevelop</application> and "
-"<application>monodoc</application> packages from the <quote>Universe</quote> "
-"repository."
+"Install the <ulink "
+"url=\"apt:monodevelop\"><application>monodevelop</application></ulink> and "
+"<ulink url=\"apt:monodoc\"><application>monodoc</application></ulink> "
+"packages."
 msgstr ""
-"Telepítse a <application>monodevelop</application> és "
-"<application>monodoc</application> csomagokat a <quote>Universe</quote> "
-"tárolóból."
+"Telepítse a <ulink "
+"url=\"apt:monodevelop\"><application>monodevelop</application></ulink> és "
+"<ulink url=\"apt:monodoc\"><application>monodoc</application></ulink> "
+"csomagokat."
 
-#: programming/C/programming.xml:191(para)
+#: programming/C/programming.xml:181(para)
 msgid ""
 "Press "
 "<menuchoice><guimenuitem>Applications</guimenuitem><guimenuitem>Programming</"
@@ -550,7 +526,7 @@ msgstr ""
 "<menuchoice><guimenuitem>Alkalmazások</guimenuitem><guimenuitem>Fejlesztés</g"
 "uimenuitem><guimenuitem>MonoDevelop</guimenuitem></menuchoice> menüpontra."
 
-#: programming/C/programming.xml:194(para)
+#: programming/C/programming.xml:184(para)
 msgid ""
 "Press "
 "<menuchoice><guimenuitem>Applications</guimenuitem><guimenuitem>Programming</"
@@ -562,11 +538,11 @@ msgstr ""
 "<menuchoice><guimenuitem>Alkalmazások</guimenuitem><guimenuitem>Fejlesztés</g"
 "uimenuitem><guimenuitem>MonoDoc</guimenuitem></menuchoice> menüpontra."
 
-#: programming/C/programming.xml:200(title)
+#: programming/C/programming.xml:190(title)
 msgid "Gambas graphical BASIC language"
 msgstr "Gambas grafikus BASIC nyelv"
 
-#: programming/C/programming.xml:201(para)
+#: programming/C/programming.xml:191(para)
 msgid ""
 "<application>Gambas</application> is a <application>Visual "
 "Basic</application>-like development environment, which allows you to "
@@ -578,15 +554,15 @@ msgstr ""
 "gyorsan tud grafikus felületű programokat készíteni a könnyen megtanulható "
 "BASIC nyelven."
 
-#: programming/C/programming.xml:204(para)
+#: programming/C/programming.xml:194(para)
 msgid ""
-"Install the <application>gambas</application> package from the "
-"<quote>Universe</quote> repository."
+"<ulink url=\"apt:gambas\">Install the <application>gambas</application> "
+"package</ulink>."
 msgstr ""
-"Telepítse a <application>gambas</application> csomagot a "
-"<quote>Universe</quote> tárolóból."
+"<ulink url=\"apt:gambas\">Telepítse a <application>gambas</application> "
+"csomagot</ulink>."
 
-#: programming/C/programming.xml:207(para)
+#: programming/C/programming.xml:197(para)
 msgid ""
 "Press "
 "<menuchoice><guimenuitem>Applications</guimenuitem><guimenuitem>Programming</"
@@ -598,7 +574,7 @@ msgstr ""
 "<menuchoice><guimenuitem>Alkalmazások</guimenuitem><guimenuitem>Fejlesztés</g"
 "uimenuitem><guimenuitem>Gambas</guimenuitem></menuchoice> menüpontra."
 
-#: programming/C/programming.xml:210(para)
+#: programming/C/programming.xml:200(para)
 msgid ""
 "A set of example applications are provided with "
 "<application>Gambas</application>, which you can use to help you to learn "
@@ -614,137 +590,85 @@ msgstr ""
 "Gambas!</guilabel> ablakban. Ezután válassza ki, hogy melyik példát kívánja "
 "megtekinteni."
 
-#: programming/C/programming.xml:215(title)
+#: programming/C/programming.xml:205(title)
 msgid "Development Tools"
 msgstr "Fejlesztőeszközök"
 
-#: programming/C/programming.xml:216(para)
+#: programming/C/programming.xml:206(para)
 msgid ""
-"There are many development tools available for Ubuntu. A list of some of "
-"these is included below."
+"There are many development tools available for Ubuntu. A selection of these "
+"are described below."
 msgstr ""
-"Számos fejlesztőeszköz érhető el Ubuntura. Néhány ilyen található meg az "
-"alábbi listában."
+"Számos fejlesztőeszköz érhető el Ubuntu alatt. Ezek közül néhányat alább "
+"mutatunk be."
 
-#: programming/C/programming.xml:218(title)
-msgid "Integrated Development Environments (IDEs) and source-code editors"
-msgstr "Integrált fejlesztőkörnyezetek (IDE-k) és forráskódszerkesztők"
+#: programming/C/programming.xml:208(title)
+msgid "Version control systems"
+msgstr "Verziókövető rendszerek"
 
-#: programming/C/programming.xml:220(para)
+#: programming/C/programming.xml:210(title)
+msgid "Bazaar-NG"
+msgstr "Bazaar-NG"
+
+#: programming/C/programming.xml:211(para)
 msgid ""
-"<ulink url=\"http://anjuta.sourceforge.net/\">Anjuta</ulink> is an "
-"Integrated Development Environment (IDE) for C and C++."
+"<application>Bazaar-NG</application> is a decentralised version control "
+"system used for Ubuntu development"
 msgstr ""
-"<ulink url=\"http://anjuta.sourceforge.net/\">Anjuta</ulink>: egy integrált "
-"fejlesztőkörnyezet (IDE) C és C++ nyelvekhez."
+"A <application>Bazaar-NG</application> egy központosítatlan verziókezelő "
+"rendszer, amelyet az Ubuntu fejlesztéséhez használnak."
 
-#: programming/C/programming.xml:222(para)
+#: programming/C/programming.xml:214(para)
 msgid ""
-"<ulink url=\"http://bluefish.openoffice.nl/index.html\">Bluefish</ulink> is "
-"a powerful editor for experienced web designers and programmers."
+"Install the <ulink url=\"apt:bzr\"><application>bzr</application></ulink> "
+"and the <ulink url=\"apt:bzr-gtk\"><application>bzr-"
+"gtk</application></ulink> packages."
 msgstr ""
-"<ulink url=\"http://bluefish.openoffice.nl/index.html\">Bluefish</ulink>: "
-"hatékony szerkesztő tapasztalt webtervezőknek és webprogramozóknak."
+"Telepítse a <ulink url=\"apt:bzr\"><application>bzr</application></ulink> és "
+"a <ulink url=\"apt:bzr-gtk\"><application>bzr-gtk</application></ulink> "
+"csomagokat."
 
-#: programming/C/programming.xml:224(para)
+#: programming/C/programming.xml:217(para)
 msgid ""
-"<ulink url=\"http://www.eclipse.org/\">Eclipse</ulink> is an IDE for Java "
-"and other programming languages. It forms the basis for closed-source "
-"programs such as JBuilder."
+"Press "
+"<menuchoice><guimenu>Applications</guimenu><guisubmenu>Programming</guisubmen"
+"u><guimenuitem>Olive bazaar Branch Manager</guimenuitem></menuchoice> to "
+"start the <application>Bazaar-GTK</application> graphical interface or to "
+"use the command line interface open a terminal and type: <screen>bzr</screen>"
 msgstr ""
-"<ulink url=\"http://www.eclipse.org/\">Eclipse</ulink>: egy IDE Java és "
-"egyéb programozási nyelvekhez. Zárt forrású programok, mint például a "
-"JBuilder alapját képezi."
+"Válassza az "
+"<menuchoice><guimenu>Alkalmazások</guimenu><guisubmenu>Fejlesztés</guisubmenu"
+"><guimenuitem>Olive bazaar Branch Manager</guimenuitem></menuchoice> "
+"menüpontot a <application>Bazaar-GTK</application> grafikus felület "
+"indításához vagy a parancssoros felület használatához nyisson egy terminált "
+"és írja be a <screen>bzr</screen> parancsot."
 
-#: programming/C/programming.xml:226(para)
+#: programming/C/programming.xml:222(title)
+msgid "Other version control systems"
+msgstr "Más verziókezelő rendszerek"
+
+#: programming/C/programming.xml:225(para)
 msgid ""
-"<ulink url=\"http://www.die-offenbachs.de/eric/\">Eric</ulink> is a fully "
-"featured Python and Ruby IDE."
+"<ulink url=\"http://subversion.tigris.org/\">Subversion</ulink> (SVN) is a "
+"version control system intended as a replacement for CVS."
 msgstr ""
-"Az <ulink url=\"http://www.die-offenbachs.de/eric/\">Eric</ulink> egy teljes "
-"értékű Python és Ruby IDE."
+"A <ulink url=\"http://subversion.tigris.org/\">Subversion</ulink> (SVN) "
+"verziókezelőt a CVS helyettesítésére tervezték."
 
 #: programming/C/programming.xml:228(para)
 msgid ""
-"<ulink url=\"http://geany.uvena.de/\">Geany</ulink> is a general-purpose IDE "
-"which can handle manydifferent programming and markup languages."
+"<ulink url=\"http://www.nongnu.org/cvs/\">CVS</ulink> is also available, "
+"however you should give strong consideration to using other version control "
+"systems for new projects."
 msgstr ""
-"A <ulink url=\"http://geany.uvena.de/\">Geany</ulink> egy általános célú "
-"IDE, amely képes számos különböző programozási és jelölőnyelvet kezelni."
+"A <ulink url=\"http://www.nongnu.org/cvs/\">CVS</ulink> is elérhető, de új "
+"projektekhez inkább fontolja meg más verziókezelő rendszerek használatát."
 
-#: programming/C/programming.xml:230(para)
-msgid ""
-"<ulink url=\"http://www.python.org/idle/\">IDLE</ulink> is the Python IDE "
-"built with the Tkinter GUI toolkit."
-msgstr ""
-"<ulink url=\"http://www.python.org/idle/\">IDLE</ulink>: Tkinter GUI "
-"eszközkészlettel készített Python IDE."
-
-#: programming/C/programming.xml:232(para)
-msgid ""
-"<ulink url=\"http://www.kdevelop.org/\">KDevelop</ulink> is a IDE for KDE "
-"which supports many programming languages."
-msgstr ""
-"<ulink url=\"http://www.kdevelop.org/\">KDevelop</ulink>: sok programozási "
-"nyelvet támogató IDE KDE környezethez."
-
-#: programming/C/programming.xml:234(para)
-msgid ""
-"<ulink url=\"http://www.monodevelop.com/Main_Page\">MonoDevelop</ulink> is "
-"an IDE for writing Mono/.NET applications in C# and other languages."
-msgstr ""
-"<ulink url=\"http://www.monodevelop.com/Main_Page\">MonoDevelop</ulink>: "
-"Mono/.NET alkalmazások fejlesztéséhez C# és egyéb programozási nyelveken."
-
-#: programming/C/programming.xml:236(para)
-msgid ""
-"<ulink url=\"http://www.netbeans.org/index.html\">NetBeans</ulink> is a Java "
-"IDE that features support for CVS and a form builder."
-msgstr ""
-"<ulink url=\"http://www.netbeans.org/index.html\">NetBeans</ulink>: CVS "
-"támogatással és felhasználóifelület-tervezővel rendelkező Java IDE."
-
-#: programming/C/programming.xml:238(para)
-msgid ""
-"<ulink url=\"http://quanta.kdewebdev.org/\">Quanta</ulink> is a powerful IDE "
-"for web development and features support for DocBook editing."
-msgstr ""
-"<ulink url=\"http://quanta.kdewebdev.org/\">Quanta</ulink>: egy erőteljes "
-"integrált fejlesztőkörnyezet webes fejlesztésekhez és DocBook szerkesztéshez."
-
-#: programming/C/programming.xml:244(title)
-msgid "Source-code management systems"
-msgstr "Forráskódkezelő rendszerek"
-
-#: programming/C/programming.xml:247(para)
-msgid ""
-"<ulink url=\"http://www.bazaar-ng.org/\">Bazaar-NG</ulink> is a "
-"decentralised version control system used for Ubuntu development."
-msgstr ""
-"<ulink url=\"http://www.bazaar-vcs.org/\">Bazaar</ulink>: az Ubuntu "
-"fejlesztéséhez is használt eloszott verziókövető-rendszer."
-
-#: programming/C/programming.xml:249(para)
-msgid ""
-"<ulink url=\"http://www.nongnu.org/cvs/\">CVS</ulink> is an advanced version "
-"control system used by many open-source projects."
-msgstr ""
-"<ulink url=\"http://www.nongnu.org/cvs/\">CVS</ulink>: egy sok nyílt "
-"forráskódú projekt által használt fejlett verziókövető rendszer."
-
-#: programming/C/programming.xml:251(para)
-msgid ""
-"<ulink url=\"http://subversion.tigris.org/\">Subversion</ulink> (SVN) is a "
-"powerful version control system intended as a replacement for CVS."
-msgstr ""
-"<ulink url=\"http://subversion.tigris.org/\">Subversion</ulink> (SVN): egy "
-"erőteljes verziókövető rendszer, amelyet a CVS leváltására hoztak létre."
-
-#: programming/C/programming.xml:257(title)
+#: programming/C/programming.xml:236(title)
 msgid "Other tools"
 msgstr "Egyéb eszközök"
 
-#: programming/C/programming.xml:259(para)
+#: programming/C/programming.xml:238(para)
 msgid ""
 "<ulink url=\"http://glade.gnome.org/\">Glade</ulink> is a user interface "
 "designer for building GNOME and GTK applications."
@@ -771,7 +695,277 @@ msgstr ""
 "Launchpad Contributions:\n"
 "  Crystal https://launchpad.net/~ebence88\n"
 "  Gabor Kelemen https://launchpad.net/~kelemeng\n"
+"  Szilveszter Farkas https://launchpad.net/~phanatic\n"
+"\n"
+"Launchpad Contributions:\n"
+"  Crystal https://launchpad.net/~ebence88\n"
+"  Gabor Kelemen https://launchpad.net/~kelemeng\n"
+"  NITSCH Zoltán https://launchpad.net/~boritek\n"
 "  Szilveszter Farkas https://launchpad.net/~phanatic"
+
+#~ msgid "Programming"
+#~ msgstr "Fejlesztés"
+
+#~ msgid ""
+#~ "<citetitle>Dive Into Python</citetitle> is a book for learning how to "
+#~ "program in Python, aimed at programmers with some previous experience."
+#~ msgstr ""
+#~ "A <citetitle>Dive Into Python</citetitle> könyv a Pythonban való "
+#~ "programozásról szól, azoknak a programozóknak, akik rendelkeznek némi "
+#~ "programozói tapasztalattal."
+
+#~ msgid "Read <placeholder-1/>"
+#~ msgstr "Olvassa el itt: <placeholder-1/>"
+
+#~ msgid ""
+#~ "PyGTK Tutorial is a tutorial on developing with the graphical toolkit often "
+#~ "used for developing Ubuntu applications. It assumes that you have knowledge "
+#~ "of Python but not necessarily GTK."
+#~ msgstr ""
+#~ "A PyGTK leírás az Ubuntu alkalmazásokban gyakran használt grafikus "
+#~ "eszközkészlettel való fejlesztésről szól. Feltételezi a Python ismeretét, de "
+#~ "a GTK-ét nem feltétlenül."
+
+#~ msgid ""
+#~ "Install the <application>python-gtk2-tutorial</application> package (see "
+#~ "<ulink type=\"help\" url=\"ghelp:add-applications\">Add "
+#~ "Applications</ulink>). You will need to use <application>Synaptic Package "
+#~ "Manager</application> to install this package."
+#~ msgstr ""
+#~ "Telepítse a <application>python-gtk2-tutorial</application> csomagot (lásd "
+#~ "<ulink type=\"help\" url=\"ghelp:add-applications\">Alkalmazások "
+#~ "hozzáadása</ulink>). A <application>Synaptic csomagkezelő</application> "
+#~ "segítségével tudja ezt megtenni."
+
+#~ msgid ""
+#~ "Install the <application>devhelp</application> package (see <ulink "
+#~ "type=\"help\" url=\"ghelp:add-applications\">Add Applications</ulink>)."
+#~ msgstr ""
+#~ "Telepítse a <application>devhelp</application> csomagot (lásd <ulink "
+#~ "type=\"help\" url=\"ghelp:add-applications\">Alkalmazások "
+#~ "hozzáadása</ulink>)."
+
+#~ msgid ""
+#~ "Install the <application>build-essential</application> package (see <ulink "
+#~ "type=\"help\" url=\"ghelp:add-applications\">Add Applications</ulink>)."
+#~ msgstr ""
+#~ "Telepítse a <application>build-essential</application> csomagot (lásd <ulink "
+#~ "type=\"help\" url=\"ghelp:add-applications\">Alkalmazások "
+#~ "hozzáadása</ulink>)."
+
+#~ msgid ""
+#~ "Install the <application>anjuta</application> package from the "
+#~ "<quote>Universe</quote> repository (see <ulink type=\"help\" url=\"ghelp:add-"
+#~ "applications\">Add Applications</ulink>)."
+#~ msgstr ""
+#~ "Telepítse az <application>anjuta</application> csomagot a "
+#~ "<quote>Universe</quote> tárolóból (lásd <ulink type=\"help\" url=\"ghelp:add-"
+#~ "applications\">Alkalmazások hozzáadása</ulink>)."
+
+#~ msgid ""
+#~ "Press <keycombo><keycap>Alt</keycap><keycap>F2</keycap></keycombo>, type "
+#~ "<quote>anjuta</quote> and press <guibutton>Run</guibutton> to start using "
+#~ "<application>Anjuta</application>."
+#~ msgstr ""
+#~ "Nyomja meg az <keycombo><keycap>Alt</keycap><keycap>F2</keycap></keycombo> "
+#~ "billentyűkombinációt, majd írja be a következőt: <quote>anjuta</quote>, és "
+#~ "kattintson a <guibutton>Futtatás</guibutton> feliratú gombra az "
+#~ "<application>Anjuta</application> alkalmazás elindításához."
+
+#~ msgid "KDevelop IDE for KDE"
+#~ msgstr "KDevelop IDE KDE-hez"
+
+#~ msgid ""
+#~ "<application>KDevelop</application> is an IDE for developing applications in "
+#~ "C and C++ for the <quote>KDE</quote> platform."
+#~ msgstr ""
+#~ "A <application>KDevelop</application> egy integrált fejlesztőkörnyezet (IDE) "
+#~ "C és C++ programozási nyelvekhez a <quote>KDE</quote> platformra."
+
+#~ msgid ""
+#~ "Install the <application>kdevelop</application> package from the "
+#~ "<quote>Universe</quote> repository (see <ulink type=\"help\" url=\"ghelp:add-"
+#~ "applications\">Add Applications</ulink>)."
+#~ msgstr ""
+#~ "Telepítse a <application>kdevelop</application> csomagot a "
+#~ "<quote>Universe</quote> tárolóból (lásd <ulink type=\"help\" url=\"ghelp:add-"
+#~ "applications\">Alkalmazások hozzáadása</ulink>)."
+
+#~ msgid ""
+#~ "Press "
+#~ "<menuchoice><guimenu>Applications</guimenu><guisubmenu>Programming</guisubmen"
+#~ "u><guimenuitem>KDevelop</guimenuitem></menuchoice> to start using "
+#~ "<application>KDevelop</application>."
+#~ msgstr ""
+#~ "A <application>KDevelop</application> indításához kattintson az "
+#~ "<menuchoice><guimenu>Alkalmazások</guimenu><guisubmenu>Fejlesztés</guisubmenu"
+#~ "><guimenuitem>KDevelop</guimenuitem></menuchoice> menüpontra."
+
+#~ msgid ""
+#~ "Install <application>sun-java5-jdk</application> from the "
+#~ "<quote>Multiverse</quote> repository (see <ulink type=\"help\" "
+#~ "url=\"ghelp:add-applications\">Add Applications</ulink>). You will need to "
+#~ "use <application>Synaptic Package Manager</application> to install these "
+#~ "packages."
+#~ msgstr ""
+#~ "Telepítse a <application>sun-java5-jdk</application> csomagot a "
+#~ "<quote>Multiverse</quote> tárolóból (lásd <ulink type=\"help\" "
+#~ "url=\"ghelp:add-applications\">Alkalmazások hozzáadása</ulink>). A "
+#~ "<application>Synaptic csomagkezelő</application> segítségével tudja ezt "
+#~ "megtenni."
+
+#~ msgid ""
+#~ "Enter the following code into a text editior and save it as \"Hello.java\":"
+#~ msgstr ""
+#~ "Írja be a következő kódot egy szövegszerkesztőbe, majd mentse el Hello.java "
+#~ "néven:"
+
+#~ msgid ""
+#~ "Open a terminal and run your code by typing:<screen>javac Hello.java; java "
+#~ "Hello</screen>"
+#~ msgstr ""
+#~ "Nyissa meg a terminált, majd futtassa le a kódját így: <screen>javac "
+#~ "Hello.java; java Hello</screen>"
+
+#~ msgid ""
+#~ "Install the <application>eclipse</application> package from the "
+#~ "<quote>Universe</quote> repository (see <ulink type=\"help\" url=\"ghelp:add-"
+#~ "applications\">Add Applications</ulink>)."
+#~ msgstr ""
+#~ "Telepítse az <application>eclipse</application> csomagot a "
+#~ "<quote>Universe</quote> tárolóból (lásd <ulink type=\"help\" url=\"ghelp:add-"
+#~ "applications\">Alkalmazások hozzáadása</ulink>)."
+
+#~ msgid ""
+#~ "Install the <application>Netbeans</application> package from the "
+#~ "<quote>Universe</quote> repository (see <ulink type=\"help\" url=\"ghelp:add-"
+#~ "applications\">Add Applications</ulink>)."
+#~ msgstr ""
+#~ "Telepítse a <application>NetBeans</application> csomagot a "
+#~ "<quote>Universe</quote> tárolóból (lásd <ulink type=\"help\" url=\"ghelp:add-"
+#~ "applications\">Alkalmazások hozzáadása</ulink>)."
+
+#~ msgid ""
+#~ "Install the <application>monodevelop</application> and "
+#~ "<application>monodoc</application> packages from the <quote>Universe</quote> "
+#~ "repository."
+#~ msgstr ""
+#~ "Telepítse a <application>monodevelop</application> és "
+#~ "<application>monodoc</application> csomagokat a <quote>Universe</quote> "
+#~ "tárolóból."
+
+#~ msgid ""
+#~ "Install the <application>gambas</application> package from the "
+#~ "<quote>Universe</quote> repository."
+#~ msgstr ""
+#~ "Telepítse a <application>gambas</application> csomagot a "
+#~ "<quote>Universe</quote> tárolóból."
+
+#~ msgid ""
+#~ "There are many development tools available for Ubuntu. A list of some of "
+#~ "these is included below."
+#~ msgstr ""
+#~ "Számos fejlesztőeszköz érhető el Ubuntura. Néhány ilyen található meg az "
+#~ "alábbi listában."
+
+#~ msgid "Integrated Development Environments (IDEs) and source-code editors"
+#~ msgstr "Integrált fejlesztőkörnyezetek (IDE-k) és forráskódszerkesztők"
+
+#~ msgid ""
+#~ "<ulink url=\"http://anjuta.sourceforge.net/\">Anjuta</ulink> is an "
+#~ "Integrated Development Environment (IDE) for C and C++."
+#~ msgstr ""
+#~ "<ulink url=\"http://anjuta.sourceforge.net/\">Anjuta</ulink>: egy integrált "
+#~ "fejlesztőkörnyezet (IDE) C és C++ nyelvekhez."
+
+#~ msgid ""
+#~ "<ulink url=\"http://bluefish.openoffice.nl/index.html\">Bluefish</ulink> is "
+#~ "a powerful editor for experienced web designers and programmers."
+#~ msgstr ""
+#~ "<ulink url=\"http://bluefish.openoffice.nl/index.html\">Bluefish</ulink>: "
+#~ "hatékony szerkesztő tapasztalt webtervezőknek és webprogramozóknak."
+
+#~ msgid ""
+#~ "<ulink url=\"http://www.eclipse.org/\">Eclipse</ulink> is an IDE for Java "
+#~ "and other programming languages. It forms the basis for closed-source "
+#~ "programs such as JBuilder."
+#~ msgstr ""
+#~ "<ulink url=\"http://www.eclipse.org/\">Eclipse</ulink>: egy IDE Java és "
+#~ "egyéb programozási nyelvekhez. Zárt forrású programok, mint például a "
+#~ "JBuilder alapját képezi."
+
+#~ msgid ""
+#~ "<ulink url=\"http://www.die-offenbachs.de/eric/\">Eric</ulink> is a fully "
+#~ "featured Python and Ruby IDE."
+#~ msgstr ""
+#~ "Az <ulink url=\"http://www.die-offenbachs.de/eric/\">Eric</ulink> egy teljes "
+#~ "értékű Python és Ruby IDE."
+
+#~ msgid ""
+#~ "<ulink url=\"http://geany.uvena.de/\">Geany</ulink> is a general-purpose IDE "
+#~ "which can handle manydifferent programming and markup languages."
+#~ msgstr ""
+#~ "A <ulink url=\"http://geany.uvena.de/\">Geany</ulink> egy általános célú "
+#~ "IDE, amely képes számos különböző programozási és jelölőnyelvet kezelni."
+
+#~ msgid ""
+#~ "<ulink url=\"http://www.python.org/idle/\">IDLE</ulink> is the Python IDE "
+#~ "built with the Tkinter GUI toolkit."
+#~ msgstr ""
+#~ "<ulink url=\"http://www.python.org/idle/\">IDLE</ulink>: Tkinter GUI "
+#~ "eszközkészlettel készített Python IDE."
+
+#~ msgid ""
+#~ "<ulink url=\"http://www.kdevelop.org/\">KDevelop</ulink> is a IDE for KDE "
+#~ "which supports many programming languages."
+#~ msgstr ""
+#~ "<ulink url=\"http://www.kdevelop.org/\">KDevelop</ulink>: sok programozási "
+#~ "nyelvet támogató IDE KDE környezethez."
+
+#~ msgid ""
+#~ "<ulink url=\"http://www.monodevelop.com/Main_Page\">MonoDevelop</ulink> is "
+#~ "an IDE for writing Mono/.NET applications in C# and other languages."
+#~ msgstr ""
+#~ "<ulink url=\"http://www.monodevelop.com/Main_Page\">MonoDevelop</ulink>: "
+#~ "Mono/.NET alkalmazások fejlesztéséhez C# és egyéb programozási nyelveken."
+
+#~ msgid ""
+#~ "<ulink url=\"http://www.netbeans.org/index.html\">NetBeans</ulink> is a Java "
+#~ "IDE that features support for CVS and a form builder."
+#~ msgstr ""
+#~ "<ulink url=\"http://www.netbeans.org/index.html\">NetBeans</ulink>: CVS "
+#~ "támogatással és felhasználóifelület-tervezővel rendelkező Java IDE."
+
+#~ msgid ""
+#~ "<ulink url=\"http://quanta.kdewebdev.org/\">Quanta</ulink> is a powerful IDE "
+#~ "for web development and features support for DocBook editing."
+#~ msgstr ""
+#~ "<ulink url=\"http://quanta.kdewebdev.org/\">Quanta</ulink>: egy erőteljes "
+#~ "integrált fejlesztőkörnyezet webes fejlesztésekhez és DocBook szerkesztéshez."
+
+#~ msgid "Source-code management systems"
+#~ msgstr "Forráskódkezelő rendszerek"
+
+#~ msgid ""
+#~ "<ulink url=\"http://www.bazaar-ng.org/\">Bazaar-NG</ulink> is a "
+#~ "decentralised version control system used for Ubuntu development."
+#~ msgstr ""
+#~ "<ulink url=\"http://www.bazaar-vcs.org/\">Bazaar</ulink>: az Ubuntu "
+#~ "fejlesztéséhez is használt eloszott verziókövető-rendszer."
+
+#~ msgid ""
+#~ "<ulink url=\"http://www.nongnu.org/cvs/\">CVS</ulink> is an advanced version "
+#~ "control system used by many open-source projects."
+#~ msgstr ""
+#~ "<ulink url=\"http://www.nongnu.org/cvs/\">CVS</ulink>: egy sok nyílt "
+#~ "forráskódú projekt által használt fejlett verziókövető rendszer."
+
+#~ msgid ""
+#~ "<ulink url=\"http://subversion.tigris.org/\">Subversion</ulink> (SVN) is a "
+#~ "powerful version control system intended as a replacement for CVS."
+#~ msgstr ""
+#~ "<ulink url=\"http://subversion.tigris.org/\">Subversion</ulink> (SVN): egy "
+#~ "erőteljes verziókövető rendszer, amelyet a CVS leváltására hoztak létre."
 
 #~ msgid ""
 #~ "This document is maintained by the Ubuntu documentation team "

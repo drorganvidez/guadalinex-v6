@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-docs\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2008-08-03 16:01+0100\n"
-"PO-Revision-Date: 2008-10-15 08:16+0000\n"
-"Last-Translator: Tao Wei <Unknown>\n"
+"POT-Creation-Date: 2009-03-26 16:34+0000\n"
+"PO-Revision-Date: 2009-02-04 11:29+0000\n"
+"Last-Translator: ZhangCheng <xxzc@live.cn>\n"
 "Language-Team: Chinese (China) <zh_CN@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2008-10-19 12:28+0000\n"
+"X-Launchpad-Export-Date: 2009-04-01 11:02+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: office/C/office-C.omf:6(creator) office/C/office-C.omf:7(maintainer)
@@ -392,8 +392,8 @@ msgstr ""
 "guimenuitem>HomeBank</guimenuitem></menuchoice>."
 
 #: office/C/office.xml:188(title)
-msgid "Get document templates"
-msgstr "获取文档模板"
+msgid "Getting document templates"
+msgstr "取得文档模板"
 
 #: office/C/office.xml:189(para)
 msgid ""
@@ -402,6 +402,8 @@ msgid ""
 "so it can be useful to have a <emphasis>template</emphasis> of a particular "
 "type of document. Many templates are available from the Internet."
 msgstr ""
+"模板就是预格式化的文档页面，它已经编辑好了内容、标题等等的样式，您可以直接套用而不必再次格式化。许多文档都要求有一定的样式，所以使用<emphasis>模"
+"板</emphasis>对于有特殊类型的文档(比如论文)来讲非常有用。许多模板都可以从互联网上得到。"
 
 #: office/C/office.xml:194(para)
 msgid ""
@@ -459,9 +461,9 @@ msgstr "Scribus"
 
 #: office/C/office.xml:210(para)
 msgid ""
-"Install the <application>scribus-template</application> package for a "
-"selection of templates."
-msgstr "安装<application>scribus-template</application> 可以添加精选的文档模板."
+"<ulink url=\"apt:scribus-template\">Install the <application>scribus-"
+"template</application> package</ulink> for a selection of templates."
+msgstr ""
 
 #: office/C/office.xml:211(para)
 msgid ""
@@ -557,10 +559,84 @@ msgstr ""
 "的格式中的一种。"
 
 #: office/C/office.xml:254(title)
+msgid "How can I create copies of my documents in PDF format?"
+msgstr "我该如何创建我的文档的一个PDF副本？"
+
+#: office/C/office.xml:255(para)
+msgid ""
+"The PDF format is commonly used to distribute documents to other people, and "
+"can be viewed on the vast majority of computers. PDF files cannot be edited, "
+"so your document is protected from alterations."
+msgstr "PDF 格式通常用来将文档发行给他人，可以在大多数计算机中查看。PDF 文件不能编辑，所以您的文档会被保护。"
+
+#: office/C/office.xml:260(para)
+msgid "To output a copy of a document as a PDF file:"
+msgstr "要输出一份您文档的 PDF 副本："
+
+#: office/C/office.xml:265(para)
+msgid ""
+"Open your document and click <guibutton>Print</guibutton> (normally found "
+"under "
+"<menuchoice><guimenu>File</guimenu><guimenuitem>Print</guimenuitem></menuchoi"
+"ce>)."
+msgstr ""
+"打开您的文档然后单击 <guibutton>打印</guibutton> (通常可以在 "
+"<menuchoice><guimenu>文件</guimenu><guimenuitem>打印</guimenuitem></menuchoice> "
+"下找到)。"
+
+#: office/C/office.xml:271(para)
+msgid ""
+"On the <guilabel>General</guilabel> tab, select the printer named "
+"<guilabel>Print to File</guilabel> from the list."
+msgstr ""
+"在 <guilabel>常规</guilabel> 选项卡中,在列表中选择名称为 <guilabel>打印到文件</guilabel> 的打印机。"
+
+#: office/C/office.xml:277(para)
+msgid ""
+"Several options should appear beneath the list of printers. Select "
+"<guilabel>PDF</guilabel> as the <guilabel>Output Format</guilabel> and "
+"choose a filename and location for the PDF file."
+msgstr ""
+"在打印机列表下有一些设置。在 <guilabel>输出格式</guilabel> 中选择 <guilabel>PDF</guilabel> 然后选择 "
+"PDF 文件的路径和文件名。"
+
+#: office/C/office.xml:284(para)
+msgid ""
+"Press <guibutton>Print</guibutton>. A PDF file will be created in the "
+"location that you specified."
+msgstr "点击 <guibutton>打印</guibutton>。 一份 PDF 文件将会在您指定的路径创建。"
+
+#: office/C/office.xml:291(para)
+msgid ""
+"The procedure above will work in almost all programs on Ubuntu. In "
+"OpenOffice, however, the procedure is different:"
+msgstr "以上步骤在 Ubuntu 的大多数程序上都可用。但在 OpenOffice 上步骤有所不同："
+
+#: office/C/office.xml:297(para)
+msgid ""
+"Open your document in OpenOffice and press "
+"<menuchoice><guimenuitem>File</guimenuitem><guimenuitem>Export as "
+"PDF</guimenuitem></menuchoice>."
+msgstr ""
+"在 OpenOffice 打开您的文档然后点击 "
+"<menuchoice><guimenuitem>文件</guimenuitem><guimenuitem>输出成 "
+"PDF</guimenuitem></menuchoice>。"
+
+#: office/C/office.xml:306(para)
+msgid "In the window that appears, click <guibutton>Export</guibutton>."
+msgstr "在出现的窗口中,单击 <guibutton>导出</guibutton> 。"
+
+#: office/C/office.xml:311(para)
+msgid ""
+"Choose a filename and location to save the PDF file and click "
+"<guibutton>Save</guibutton>."
+msgstr "选择一个保存 PDF 文件的路径和文件名然后单击 <guibutton>保存</guibutton>。"
+
+#: office/C/office.xml:320(title)
 msgid "Finding clipart to use in documents"
 msgstr "查找在文档中使用的剪贴画"
 
-#: office/C/office.xml:255(para)
+#: office/C/office.xml:321(para)
 msgid ""
 "Clipart is a picture or drawing used to illustrate a document. Follow the "
 "instructions below to install and use a selection of clipart in "
@@ -569,18 +645,15 @@ msgstr ""
 "剪贴画是用于文档图示的图片或绘画。请按照如下的指示以在 <application>OpenOffice.org</application> "
 "中安装和使用一系列的剪贴画："
 
-#: office/C/office.xml:258(para)
+#: office/C/office.xml:324(para)
 msgid ""
-"Install the <application>openclipart-openoffice.org</application> package "
-"using the <ulink type=\"help\" url=\"ghelp:add-"
-"applications#synaptic\">Synaptic Package Manager</ulink>. The package is "
-"very large, so it could take a long time to download and install it."
+"<ulink url=\"apt:openclipart-openoffice.org\">Install the "
+"<application>openclipart-openoffice.org</application> package</ulink> from "
+"the universe repository. The package is very large, so it could take a long "
+"time to download and install it."
 msgstr ""
-"用<ulink type=\"help\" url=\"ghelp:add-"
-"applications#synaptic\">新立得软件包管理器</ulink>安装软件 <application>openclipart-"
-"openoffice.org</application>。这个软件包非常大，因此将花很长时间下载与安装。"
 
-#: office/C/office.xml:261(para)
+#: office/C/office.xml:327(para)
 msgid ""
 "Open an <application>OpenOffice.org</application> application and press "
 "<menuchoice><guimenuitem>Tools</guimenuitem><guimenuitem>Gallery</guimenuitem"
@@ -590,7 +663,7 @@ msgstr ""
 "<menuchoice><guimenuitem>工具</guimenuitem><guimenuitem>图库</guimenuitem></menuc"
 "hoice>。应该会出现一张可用剪贴画的列表。"
 
-#: office/C/office.xml:264(para)
+#: office/C/office.xml:330(para)
 msgid ""
 "Browse the clipart until you find an item that you would like to use. To "
 "insert the item, either drag it into the document or right-click the item "
@@ -639,7 +712,35 @@ msgstr ""
 "admins\n"
 "  Tao Wei https://launchpad.net/~weitao1979\n"
 "  luojie-dune https://launchpad.net/~luojie-dune\n"
-"  wangstudio https://launchpad.net/~wangstudio0912"
+"  wangstudio https://launchpad.net/~wangstudio0912\n"
+"\n"
+"Launchpad Contributions:\n"
+"  1+1=2 https://launchpad.net/~dbzhang800\n"
+"  Hongqian Xu https://launchpad.net/~hqxu\n"
+"  Ihnus Qcshz https://launchpad.net/~qcshzihnus\n"
+"  Launchpad Translations Administrators https://launchpad.net/~rosetta-"
+"admins\n"
+"  Tao Wei https://launchpad.net/~weitao1979-deactivatedaccount\n"
+"  ZhangCheng https://launchpad.net/~xxzc\n"
+"  luojie-dune https://launchpad.net/~luojie-dune"
+
+#~ msgid "Get document templates"
+#~ msgstr "获取文档模板"
+
+#~ msgid ""
+#~ "Install the <application>scribus-template</application> package for a "
+#~ "selection of templates."
+#~ msgstr "安装<application>scribus-template</application> 可以添加精选的文档模板."
+
+#~ msgid ""
+#~ "Install the <application>openclipart-openoffice.org</application> package "
+#~ "using the <ulink type=\"help\" url=\"ghelp:add-"
+#~ "applications#synaptic\">Synaptic Package Manager</ulink>. The package is "
+#~ "very large, so it could take a long time to download and install it."
+#~ msgstr ""
+#~ "用<ulink type=\"help\" url=\"ghelp:add-"
+#~ "applications#synaptic\">新立得软件包管理器</ulink>安装软件 <application>openclipart-"
+#~ "openoffice.org</application>。这个软件包非常大，因此将花很长时间下载与安装。"
 
 #~ msgid ""
 #~ "A copy of the license is available here: <ulink url=\"/usr/share/ubuntu-"

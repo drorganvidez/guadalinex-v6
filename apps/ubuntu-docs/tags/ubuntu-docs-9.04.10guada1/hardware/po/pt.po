@@ -7,23 +7,23 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-docs\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2008-08-03 16:01+0100\n"
-"PO-Revision-Date: 2008-09-20 11:36+0000\n"
-"Last-Translator: Paulo Dias <paxnubis@gmail.com>\n"
+"POT-Creation-Date: 2009-03-26 16:34+0000\n"
+"PO-Revision-Date: 2009-03-23 12:07+0000\n"
+"Last-Translator: Rui Moreira <Unknown>\n"
 "Language-Team: Portuguese <pt@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2008-10-19 12:51+0000\n"
+"X-Launchpad-Export-Date: 2009-04-01 10:40+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: hardware/C/hardware-C.omf:6(creator) hardware/C/hardware-C.omf:7(maintainer)
 msgid "ubuntu-doc@lists.ubuntu.com (Ubuntu Documentation Project)"
 msgstr "ubuntu-doc@lists.ubuntu.com (Projeto de Documentação do Ubuntu)"
 
-#: hardware/C/hardware-C.omf:8(title)
-msgid "Hardware"
-msgstr "Hardware"
+#: hardware/C/hardware-C.omf:8(title) hardware/C/hardware.xml:20(title)
+msgid "Working with Hardware Devices"
+msgstr ""
 
 #: hardware/C/hardware-C.omf:9(date)
 msgid "2006-09-07"
@@ -32,10 +32,6 @@ msgstr "07-09-2006"
 #: hardware/C/hardware-C.omf:11(description)
 msgid "Placeholder."
 msgstr "Placeholder."
-
-#: hardware/C/hardware.xml:20(title)
-msgid "Working with hardware devices"
-msgstr "Trabalhar com dispositivos de Hardware"
 
 #: hardware/C/hardware.xml:3(title)
 msgid "Credits and License"
@@ -47,6 +43,10 @@ msgid ""
 "(https://wiki.ubuntu.com/DocumentationTeam). For a list of contributors, see "
 "the <ulink url=\"../../libs/C/contributors.xml\">contributors page</ulink>"
 msgstr ""
+"Esta documentação é mantida pela equipa de documentação do Ubuntu "
+"(https://wiki.ubuntu.com/DocumentationTeam). Para a lista de contribuidores, "
+"consulte a <ulink url=\"../../libs/C/contributors.xml\">página de "
+"contribuidores</ulink>"
 
 #: hardware/C/hardware.xml:5(para)
 msgid ""
@@ -81,10 +81,12 @@ msgid ""
 "A copy of the license is available here: <ulink url=\"/usr/share/ubuntu-"
 "docs/libs/C/ccbysa.xml\">Creative Commons ShareAlike License</ulink>."
 msgstr ""
+"Uma cópia da licença está disponível aqui: <ulink url=\"/usr/share/ubuntu-"
+"docs/libs/C/ccbysa.xml\">Creative Commons ShareAlike License</ulink>."
 
 #: hardware/C/hardware.xml:14(year)
 msgid "2008"
-msgstr ""
+msgstr "2008"
 
 #: hardware/C/hardware.xml:15(ulink)
 msgid "Ubuntu Documentation Project"
@@ -175,6 +177,12 @@ msgid ""
 "driver for certain graphics cards may allow you to use more advanced <ulink "
 "type=\"help\" url=\"ghelp:desktop-effects\">visual effects</ulink>."
 msgstr ""
+"Se um <emphasis>controlador restrito</emphasis> estiver disponível para um "
+"determinado dispositivo, pode instalá-lo para que funcione correctamente, ou "
+"para adicionar novas funcionalidades. Por exemplo, se instalar um "
+"controlador restrito para determinadas placas gráficas pode permitir <ulink "
+"type=\"help\" url=\"ghelp:desktop-effects\">efeitos visuais</ulink> mais "
+"avançados."
 
 #: hardware/C/hardware.xml:34(para)
 msgid ""
@@ -209,9 +217,9 @@ msgstr "Usar um controlador restrito para um dispositivo:"
 msgid ""
 "Press "
 "<menuchoice><guimenu>System</guimenu><guimenuitem>Administration</guimenuitem"
-"><guimenuitem>Hardware drivers</guimenuitem></menuchoice>"
+"><guimenuitem>Hardware Drivers</guimenuitem></menuchoice>"
 msgstr ""
-"Clique em "
+"Seleccione "
 "<menuchoice><guimenu>Sistema</guimenu><guimenuitem>Administração</guimenuitem"
 "><guimenuitem>Controladores de Hardware</guimenuitem></menuchoice>"
 
@@ -328,52 +336,43 @@ msgid "file system"
 msgstr "sistema de ficheiros"
 
 #: hardware/C/hardware.xml:113(title)
-msgid "Checking disk capacity"
-msgstr "A verficar capacidade do disco"
-
-#: hardware/C/hardware.xml:117(para)
-msgid ""
-"Press "
-"<menuchoice><guimenu>Places</guimenu><guimenuitem>Computer</guimenuitem></men"
-"uchoice>, right click on the disk you want to check and select "
-"<guilabel>Properties</guilabel>. The free space on the disk will be "
-"displayed on the <guilabel>Basic</guilabel> tab."
-msgstr ""
-"Clique em "
-"<menuchoice><guimenu>Locais</guimenu><guimenuitem>Computador</guimenuitem></m"
-"enuchoice>, Clique com o botão direito do rato no disco que pretende "
-"verificar e escolha <guilabel>Propriedades</guilabel>. O espaço livre no "
-"disco será apresentado no separador <guilabel>Básico</guilabel>."
-
-#: hardware/C/hardware.xml:121(para)
-msgid ""
-"Press "
-"<menuchoice><guimenu>System</guimenu><guisubmenu>Administration</guisubmenu><"
-"guimenuitem>System Monitor</guimenuitem></menuchoice> and select the "
-"<guilabel>File Systems</guilabel> tab. All disks currently connected to the "
-"system should be displayed in the list, along with their free and used "
-"capacities."
-msgstr ""
-"Clique em "
-"<menuchoice><guimenu>Sistema</guimenu><guisubmenu>Administração</guisubmenu><"
-"guimenuitem>Monitor de Sistema</guimenuitem></menuchoice> e escolha o "
-"separador <guilabel>Sistema de Ficheiros</guilabel>. Todos os discos que "
-"estiverem nesse momento ligados ao sistema serão apresentados na lista, "
-"assim como o seu espaço livre e utilizado."
+msgid "Checking how much disk space is available"
+msgstr "A verificar o espaço disponível no disco"
 
 #: hardware/C/hardware.xml:114(para)
 msgid ""
-"To check the amount of free and used space on a disk, do either of the "
-"following: <placeholder-1/>"
+"Click "
+"<menuchoice><guimenu>System</guimenu><guisubmenu>Administration</guisubmenu><"
+"guimenuitem>System Monitor</guimenuitem></menuchoice> and select the "
+"<guilabel>File Systems</guilabel> tab to see how much hard disk space is "
+"available on your computer."
 msgstr ""
-"Para verificar o espaço livre e utilizado de um disco, execute uma das "
-"seguintes opções: <placeholder-1/>"
+"Clique em "
+"<menuchoice><guimenu>Sistema</guimenu><guisubmenu>Administração</guisubmenu><"
+"guimenuitem>Monitor de Sistema</guimenuitem></menuchoice> e seleccione o "
+"separador <guilabel>Sistema de Ficheiros</guilabel> para determinar o espaço "
+"disponível no disco rígido do seu computador."
 
-#: hardware/C/hardware.xml:128(title)
+#: hardware/C/hardware.xml:118(para)
+msgid ""
+"Alternatively, click "
+"<menuchoice><guimenu>Places</guimenu><guimenuitem>Computer</guimenuitem></men"
+"uchoice>, right-click a hard disk, click <guilabel>Properties</guilabel> and "
+"select the <guilabel>Basic</guilabel> tab to see a summary of the disk space "
+"currently available on that disk."
+msgstr ""
+"Ou então, carregue em "
+"<menuchoice><guimenu>Locais</guimenu><guimenuitem>Computador</guimenuitem></m"
+"enuchoice>, clique com o botão direito do rato num disco,  carregue na opção "
+"<guilabel>Propriedades</guilabel> e seleccione o separador "
+"<guilabel>Básico</guilabel> para ver um sumário do espaço actualmente "
+"disponível nesse disco."
+
+#: hardware/C/hardware.xml:126(title)
 msgid "Advanced disk-usage analysis"
 msgstr "Análise avançada de utilização do disco"
 
-#: hardware/C/hardware.xml:129(para)
+#: hardware/C/hardware.xml:127(para)
 msgid ""
 "For a more accurate analysis of your filesystem, press "
 "<menuchoice><guimenu>Applications</guimenu><guimenuitem>Accessories</guimenui"
@@ -385,7 +384,7 @@ msgstr ""
 "><guimenuitem>Analisador de Utilização do Disco</guimenuitem></menuchoice> "
 "para iniciar o <application>Analisador de Utilização do Disco</application>."
 
-#: hardware/C/hardware.xml:133(para)
+#: hardware/C/hardware.xml:131(para)
 msgid ""
 "Press <guibutton>Scan Home</guibutton> to scan your home directory, or press "
 "<guibutton>Scan Filesystem</guibutton> to scan the whole filesystem."
@@ -394,7 +393,7 @@ msgstr ""
 "sua pasta pessoal, ou em <guibutton>Analisar o Sistema de "
 "Ficheiros</guibutton> para analisar todo o sistema de ficheiros."
 
-#: hardware/C/hardware.xml:137(para)
+#: hardware/C/hardware.xml:135(para)
 msgid ""
 "See the <ulink url=\"ghelp:baobab\" type=\"help\">Disk Usage Analyzer "
 "Manual</ulink> for more information."
@@ -402,30 +401,121 @@ msgstr ""
 "Para mais informações, leia o <ulink url=\"ghelp:baobab\" "
 "type=\"help\">Manual do Analisador de Utilização do Disco</ulink>."
 
-#: hardware/C/hardware.xml:145(title)
+#: hardware/C/hardware.xml:143(title)
+msgid "How can I free-up some disk space?"
+msgstr "Como aumentar o espaço disponível no disco?"
+
+#: hardware/C/hardware.xml:144(para)
+msgid "There are several simple ways of making more disk space available:"
+msgstr "Existem diversas formas de aumentar o espaço disponível no disco:"
+
+#: hardware/C/hardware.xml:150(para)
+msgid ""
+"Empty your trash by right-clicking the Trash icon on the bottom panel and "
+"selecting <guilabel>Empty the Trash folder</guilabel>."
+msgstr ""
+"Esvazie o seu Lixo fazendo clique-direito no ícone do lixo no painel "
+"inferior e seleccione <guilabel>Esvaziar o Lixo</guilabel>."
+
+#: hardware/C/hardware.xml:156(para)
+msgid ""
+"<ulink url=\"apt:computer-janitor-gtk\">Install <application>Computer "
+"Janitor</application></ulink> and run it by clicking "
+"<menuchoice><guimenu>System</guimenu><guisubmenu>Administration</guisubmenu><"
+"guisubmenu>System Janitor</guisubmenu></menuchoice>. This will remove unused "
+"or obsolete software packages from your computer. Read the list of packages "
+"carefully before you click <guibutton>Cleanup</guibutton>; packages that you "
+"have manually downloaded and installed may be listed as unused, even though "
+"they are not."
+msgstr ""
+
+#: hardware/C/hardware.xml:166(para)
+msgid ""
+"Remove software packages that you no longer use. See <ulink type=\"help\" "
+"url=\"ghelp:add-applications#gnome-app-install\"> Add/Remove "
+"Applications</ulink> for information on removing packages."
+msgstr ""
+"Remova pacotes de software que já não utiliza. Veja <ulink type=\"help\" "
+"url=\"ghelp:add-applications#gnome-app-install\"> Adicionar/Remover "
+"Aplicações</ulink> para informação sobre remoção de pacotes."
+
+#: hardware/C/hardware.xml:173(para)
+msgid ""
+"Delete files that you no longer need. You can use the Disk Usage Analyzer "
+"(<menuchoice><guimenu>Applications</guimenu><guimenuitem>Accessories</guimenu"
+"item><guimenuitem>Disk Usage Analyzer</guimenuitem></menuchoice>) to find "
+"which files are taking up the most space. Be careful not to delete files "
+"that you still need!"
+msgstr ""
+"Elimine ficheiros de que já não precisa. Pode usar o Analisador de "
+"Utilização do Disco "
+"(<menuchoice><guimenu>Aplicações</guimenu><guimenuitem>Acessórios</guimenuite"
+"m><guimenuitem>Analisador de Utilização do Disco</guimenuitem></menuchoice>) "
+"para verificar quais os ficheiros que ocupam mais espaço. Tenha cuidado para "
+"não eliminar ficheiros que ainda precisa!"
+
+#: hardware/C/hardware.xml:181(para)
+msgid "You can also compress and archive your old, rarely-used documents:"
+msgstr ""
+"Também pode comprimir e arquivar documentos antigos que utiliza com pouca "
+"frequência:"
+
+#: hardware/C/hardware.xml:187(para)
+msgid ""
+"Select the files and folders that you want to compress, right-click one of "
+"them and select <guilabel>Create Archive</guilabel>."
+msgstr ""
+"Seleccione os ficheiros e pastas que pretende comprimir, clique com o botão "
+"direito do rato num deles e escolha <guilabel>Criar Arquivo</guilabel>."
+
+#: hardware/C/hardware.xml:193(para)
+msgid ""
+"Choose a name, location and format for the file (the "
+"<filename>.tar.gz</filename> format is the most commonly used on Ubuntu, "
+"<filename>.zip</filename> is compatible with Windows and "
+"<filename>.tar.lzma</filename> usually offers the best compression)."
+msgstr ""
+"Escolha o nome, a localização e o formato do ficheiro (o formato "
+"<filename>.tar.gz</filename> é o mais comum no Ubuntu; "
+"<filename>.zip</filename> é compatível com o Windows; "
+"<filename>.tar.lzma</filename> tende a oferecer a melhor compressão)."
+
+#: hardware/C/hardware.xml:201(para)
+msgid ""
+"Click <guibutton>Create</guibutton>. An archive file will be created "
+"containing compressed copies of your files."
+msgstr ""
+"Clique em <guibutton>Criar</guibutton>. Um ficheiro de arquivo irá ser "
+"criado contendo as cópias comprimidas dos seus ficheiros."
+
+#: hardware/C/hardware.xml:207(para)
+msgid "Delete the old uncompressed files to free some disk space."
+msgstr ""
+"Apague os ficheiros velhos descomprimidos para libertar algum espaço em "
+"disco."
+
+#: hardware/C/hardware.xml:215(title)
 msgid "Partitioning a device"
 msgstr "A particionar um dispositivo"
 
-#: hardware/C/hardware.xml:146(para)
+#: hardware/C/hardware.xml:216(para)
 msgid ""
 "You can use <application>GNOME Partition Editor</application> to partition "
-"storage devices. Install the <application>gparted</application> package (see "
-"<ulink type=\"help\" url=\"ghelp:add-applications\">Add "
-"Applications</ulink>) and then press "
+"storage devices. <ulink url=\"apt:gparted\">Install the "
+"<application>gparted</application> package </ulink> and then press "
 "<menuchoice><guimenu>System</guimenu><guisubmenu>Administration "
 "</guisubmenu><guimenuitem>Gnome Partition Editor</guimenuitem></menuchoice> "
 "to start the partition editor."
 msgstr ""
-"Pode utilizar o <application>Editor de Partições do GNOME</application> para "
-"criar partições nos seus dispositivos de armazenamento. Instale o pacote "
-"<application>gparted</application> (leia <ulink type=\"help\" "
-"url=\"ghelp:add-applications\">Instalar Aplicações</ulink>). A seguir, "
-"clique em "
-"<menuchoice><guimenu>Sistema</guimenu><guisubmenu>Administração</guisubmenu><"
-"guimenuitem>Editor de Partições do Gnome</guimenuitem></menuchoice> para "
-"iniciar o editor de partições."
+"Pode usar o <application>Editor de Partições do Gnome</application> para "
+"particionar dispositivos de armazenamento. <ulink "
+"url=\"apt:gparted\">Instale o pacote <application>gparted</application> "
+"</ulink> e depois vá a "
+"<menuchoice><guimenu>Sistema</guimenu><guisubmenu>Administração "
+"</guisubmenu><guimenuitem>Editor de Partições</guimenuitem></menuchoice> "
+"para iniciar o Editor de Partições."
 
-#: hardware/C/hardware.xml:151(para)
+#: hardware/C/hardware.xml:221(para)
 msgid ""
 "Be careful when altering disk partitions, as it is possible to lose your "
 "data if you delete or change the wrong partition."
@@ -433,11 +523,11 @@ msgstr ""
 "Tenha cuidado ao alterar partições no disco, uma vez que é possível perder "
 "dados se apagar ou modificar a partição errada."
 
-#: hardware/C/hardware.xml:155(title)
+#: hardware/C/hardware.xml:225(title)
 msgid "Freeing space for a new partition"
 msgstr "A libertar espaço para uma nova partição"
 
-#: hardware/C/hardware.xml:163(para) hardware/C/hardware.xml:248(para)
+#: hardware/C/hardware.xml:233(para) hardware/C/hardware.xml:318(para)
 msgid ""
 "Press <menuchoice><guimenu>System</guimenu><guisubmenu>Administration "
 "</guisubmenu><guimenuitem>Gnome Partition Editor</guimenuitem></menuchoice>."
@@ -446,7 +536,7 @@ msgstr ""
 "<menuchoice><guimenu>Sistema</guimenu><guisubmenu>Administração</guisubmenu><"
 "guimenuitem>Editor de Partições Gnome</guimenuitem></menuchoice>"
 
-#: hardware/C/hardware.xml:168(para) hardware/C/hardware.xml:209(para) hardware/C/hardware.xml:253(para)
+#: hardware/C/hardware.xml:238(para) hardware/C/hardware.xml:279(para) hardware/C/hardware.xml:323(para)
 msgid ""
 "Select the device to partition from the drop-down list at the top-right of "
 "the main window."
@@ -454,7 +544,7 @@ msgstr ""
 "Seleccione o dispositivo a particionar da lista no canto superior direito da "
 "janela principal."
 
-#: hardware/C/hardware.xml:174(para) hardware/C/hardware.xml:259(para)
+#: hardware/C/hardware.xml:244(para) hardware/C/hardware.xml:329(para)
 msgid ""
 "A list of partitions will appear. Select the desired partition and choose "
 "<menuchoice><guimenu>Partition</guimenu><guimenuitem>Unmount</guimenuitem></m"
@@ -464,7 +554,7 @@ msgstr ""
 "<menuchoice><guimenu>Partição</guimenu><guimenuitem>Desmontar</guimenuitem></"
 "menuchoice>."
 
-#: hardware/C/hardware.xml:183(para)
+#: hardware/C/hardware.xml:253(para)
 msgid ""
 "To resize the partition choose <guilabel>Resize/Move</guilabel>. The dialog "
 "<guilabel>Resize/Move</guilabel> will be shown. You can use the "
@@ -482,13 +572,13 @@ msgstr ""
 "Pode também utilizar a barra de deslizamento para ajustar o tamanho da "
 "partição."
 
-#: hardware/C/hardware.xml:195(para)
+#: hardware/C/hardware.xml:265(para)
 msgid "To apply the changes, click <guibutton>Resize/Move</guibutton>."
 msgstr ""
 "Para aplicar as mudanças, clique em "
 "<guibutton>Redimensionar/Mover</guibutton>."
 
-#: hardware/C/hardware.xml:156(para)
+#: hardware/C/hardware.xml:226(para)
 msgid ""
 "To create a new partition inside an already partitioned device, you must "
 "first resize an existing partition. If you already have free space, skip to "
@@ -501,11 +591,11 @@ msgstr ""
 "partition\"/>; se tal não for o caso, siga as instruções abaixo: "
 "<placeholder-1/>"
 
-#: hardware/C/hardware.xml:204(title)
+#: hardware/C/hardware.xml:274(title)
 msgid "Creating a new partition"
 msgstr "A criar uma nova partição"
 
-#: hardware/C/hardware.xml:215(para)
+#: hardware/C/hardware.xml:285(para)
 msgid ""
 "A list of partitions will appear. Select the one called "
 "<guilabel>unallocated</guilabel> and click <guibutton>New</guibutton>."
@@ -514,7 +604,7 @@ msgstr ""
 "<guilabel>espaço não alocado</guilabel> e clique "
 "em<guibutton>Nova</guibutton>."
 
-#: hardware/C/hardware.xml:222(para)
+#: hardware/C/hardware.xml:292(para)
 msgid ""
 "From the <guilabel>Filesystem</guilabel> drop-down list choose the desired "
 "type of filesystem to use and click <guibutton>Add</guibutton>."
@@ -523,21 +613,21 @@ msgstr ""
 "desejado de sistema de ficheiros a usar e clique em "
 "<guibutton>Adicionar</guibutton>."
 
-#: hardware/C/hardware.xml:229(para) hardware/C/hardware.xml:277(para)
+#: hardware/C/hardware.xml:299(para) hardware/C/hardware.xml:347(para)
 msgid "To apply all the changes made, click <guibutton>Apply</guibutton>."
 msgstr ""
 "Para aplicar todas as modificações efectuadas clique em "
 "<guibutton>Aplicar</guibutton>"
 
-#: hardware/C/hardware.xml:205(para)
+#: hardware/C/hardware.xml:275(para)
 msgid "To create a new partition: <placeholder-1/>"
 msgstr "Para criar uma nova partição: <placeholder-1/>"
 
-#: hardware/C/hardware.xml:240(title)
+#: hardware/C/hardware.xml:310(title)
 msgid "Formatting a partition"
 msgstr "A formatar uma partição"
 
-#: hardware/C/hardware.xml:241(para)
+#: hardware/C/hardware.xml:311(para)
 msgid ""
 "You can use <application>GNOME Partition Editor</application> to format disk "
 "partitions (see <xref linkend=\"partitioning-device\"/> for more information "
@@ -548,7 +638,7 @@ msgstr ""
 "de Partições Gnome</application>, leia <xref linkend=\"partitioning-"
 "device\"/>)."
 
-#: hardware/C/hardware.xml:268(para)
+#: hardware/C/hardware.xml:338(para)
 msgid ""
 "Select the partition you want to format and choose "
 "<menuchoice><guimenu>Partition</guimenu><guimenuitem>Format "
@@ -559,11 +649,11 @@ msgstr ""
 "<menuchoice><guimenu>Partição</guimenu><guimenuitem>Formatar "
 "para</guimenuitem></menuchoice>"
 
-#: hardware/C/hardware.xml:244(para)
+#: hardware/C/hardware.xml:314(para)
 msgid "To format a partition, do as follows: <placeholder-1/>"
 msgstr "Para formatar uma partição, faça como segue: <placeholder-1/>"
 
-#: hardware/C/hardware.xml:286(para)
+#: hardware/C/hardware.xml:356(para)
 msgid ""
 "Pressing <guibutton>Apply</guibutton> will cause all of the files on the "
 "partition to be permanently deleted."
@@ -571,11 +661,11 @@ msgstr ""
 "Pressionar <guibutton>Aplicar</guibutton> irá fazer com que todos os "
 "ficheiros na partição sejam eliminados de forma permanente."
 
-#: hardware/C/hardware.xml:294(title)
+#: hardware/C/hardware.xml:364(title)
 msgid "What is formatting?"
 msgstr "O que é formatação?"
 
-#: hardware/C/hardware.xml:295(para)
+#: hardware/C/hardware.xml:365(para)
 msgid ""
 "To format a hard disk, device or partition means to prepare that particular "
 "device to be used for storing data."
@@ -583,7 +673,7 @@ msgstr ""
 "Formatar um disco, dispositivo ou partição significa preparar esse "
 "dispositivo para o armazenamento de dados."
 
-#: hardware/C/hardware.xml:299(para)
+#: hardware/C/hardware.xml:369(para)
 msgid ""
 "The operation of formatting a hard disk or partition is when a specific data-"
 "storage format is applied to that device; this format is the "
@@ -593,7 +683,7 @@ msgstr ""
 "formato específico de armazenamento de dados ao dispositivo; esse formato "
 "específico é o <quote>sistema de ficheiros</quote>."
 
-#: hardware/C/hardware.xml:304(para)
+#: hardware/C/hardware.xml:374(para)
 msgid ""
 "When you buy a disk it is usually not formatted, and cannot yet be used for "
 "storing data. When you format the device, you will notice that the free "
@@ -610,11 +700,11 @@ msgstr ""
 "Para além disso, os fabricantes de discos utilizam diferentes padrões para "
 "medir a capacidade de um disco, o que cria mais uma discrepância."
 
-#: hardware/C/hardware.xml:316(title)
+#: hardware/C/hardware.xml:386(title)
 msgid "What is a filesystem?"
 msgstr "O que é um sistema de ficheiros?"
 
-#: hardware/C/hardware.xml:317(para)
+#: hardware/C/hardware.xml:387(para)
 msgid ""
 "A filesystem is a particular way of storing and organizing files on a "
 "storage device such as a hard disk, and is an important part of an operating "
@@ -626,7 +716,7 @@ msgstr ""
 "de um sistema operativo. Sem um sistema de ficheiros, seria impossível "
 "armazenar e aceder aos ficheiros."
 
-#: hardware/C/hardware.xml:327(para)
+#: hardware/C/hardware.xml:397(para)
 msgid ""
 "ext2 and ext3: these are usually found on GNU/Linux operating systems. "
 "Ubuntu uses <emphasis>ext3</emphasis> as its default filesystem."
@@ -634,7 +724,7 @@ msgstr ""
 "ext2 e ext3: estes são comuns em sistemas operativos GNU/Linux. O Ubuntu usa "
 "<emphasis>ext3</emphasis> como o seu sistema de ficheiros padrão."
 
-#: hardware/C/hardware.xml:334(para)
+#: hardware/C/hardware.xml:404(para)
 msgid ""
 "<acronym>FAT16</acronym> and <acronym>FAT32</acronym>: these are Microsoft "
 "Windows filesystems found on older computers. If you would like to share "
@@ -646,7 +736,7 @@ msgstr ""
 "pretende partilhar dados entre dois computadores, o formato "
 "<emphasis><acronym>FAT32</acronym></emphasis> é uma boa escolha."
 
-#: hardware/C/hardware.xml:342(para)
+#: hardware/C/hardware.xml:412(para)
 msgid ""
 "<acronym>NTFS</acronym>: this is the filesystem type used by more modern "
 "versions of Microsoft Windows."
@@ -654,24 +744,24 @@ msgstr ""
 "<acronym>NTFS</acronym>: este sistema de ficheiros é utilizado pelas versões "
 "mais modernas do Windows da Microsoft."
 
-#: hardware/C/hardware.xml:348(para)
+#: hardware/C/hardware.xml:418(para)
 msgid ""
 "<acronym>HFS+</acronym>: this is the Mac OS X default filesystem type."
 msgstr ""
 "<acronym>HFS+</acronym>: este é o sistema de ficheiros padrão do Mac OS X."
 
-#: hardware/C/hardware.xml:323(para)
+#: hardware/C/hardware.xml:393(para)
 msgid ""
 "There are different types of filesystem. The most common are: <placeholder-"
 "1/>"
 msgstr ""
 "Existem diferentes tipos de ficheiros. O mais comum é:  <placeholder-1/>"
 
-#: hardware/C/hardware.xml:357(title)
+#: hardware/C/hardware.xml:427(title)
 msgid "What is a Partition?"
 msgstr "O que é uma Partição?"
 
-#: hardware/C/hardware.xml:358(para)
+#: hardware/C/hardware.xml:428(para)
 msgid ""
 "A partition is a means of dividing the storage capacity of a device, such as "
 "a hard disk, into several parts which can then be treated as separate "
@@ -682,7 +772,7 @@ msgstr ""
 "como dispositivos de armazenamento separados (<quote>dispositivos "
 "lógicos</quote>)."
 
-#: hardware/C/hardware.xml:363(para)
+#: hardware/C/hardware.xml:433(para)
 msgid ""
 "Each logical device is seen by the operating system as a distinct device, "
 "and thus is treated as an independent disk."
@@ -690,30 +780,30 @@ msgstr ""
 "Cada unidade lógica é visto pelo sistema operativo como um dispositivo "
 "distinto, e assim tratado como um disco independente."
 
-#: hardware/C/hardware.xml:371(para)
+#: hardware/C/hardware.xml:441(para)
 msgid "To retrieve free space"
 msgstr "Para recuperar espaço livre"
 
-#: hardware/C/hardware.xml:376(para)
+#: hardware/C/hardware.xml:446(para)
 msgid "To install different operating systems"
 msgstr "Para instalar diferentes sistemas operativos"
 
-#: hardware/C/hardware.xml:381(para)
+#: hardware/C/hardware.xml:451(para)
 msgid "To better organize data on the hard disk"
 msgstr "Para melhor organizar dados no disco rígido"
 
-#: hardware/C/hardware.xml:367(para)
+#: hardware/C/hardware.xml:437(para)
 msgid ""
 "Partitioning a hard disk can be done for several reasons: <placeholder-1/>"
 msgstr ""
 "O particionamento de um disco rígido pode ser feito por diversas razões: "
 "<placeholder-1/>"
 
-#: hardware/C/hardware.xml:390(title)
+#: hardware/C/hardware.xml:460(title)
 msgid "Mounting and Unmounting Devices"
 msgstr "Montando e Desmontando Dispositivos."
 
-#: hardware/C/hardware.xml:391(para)
+#: hardware/C/hardware.xml:461(para)
 msgid ""
 "When you connect a removable storage device to your computer, it must be "
 "<emphasis>mounted</emphasis> by the operating system so that you are able to "
@@ -723,7 +813,7 @@ msgstr ""
 "este tem que ser <emphasis>montado</emphasis> pelo sistema operativo para "
 "que possa aceder aos ficheiros nele armazenados."
 
-#: hardware/C/hardware.xml:394(para)
+#: hardware/C/hardware.xml:464(para)
 msgid ""
 "To find out how to mount and unmount storage devices, see <ulink "
 "type=\"help\" url=\"ghelp:user-guide#gosnautilus-460\">Using Removable "
@@ -733,7 +823,7 @@ msgstr ""
 "<ulink type=\"help\" url=\"ghelp:user-guide#gosnautilus-460\">Utilizar Media "
 "Removível</ulink>"
 
-#: hardware/C/hardware.xml:398(para)
+#: hardware/C/hardware.xml:468(para)
 msgid ""
 "When you copy files to a storage device, they are not always written to the "
 "device immediately. Instead, they are often stored in a queue so that they "
@@ -750,11 +840,11 @@ msgstr ""
 "Para evitar esta situação, deve sempre <emphasis>desmontar</emphasis> o "
 "dispositivo de armazenamento antes de o desligar."
 
-#: hardware/C/hardware.xml:408(title)
+#: hardware/C/hardware.xml:478(title)
 msgid "Laptops"
 msgstr "Portáteis"
 
-#: hardware/C/hardware.xml:409(para)
+#: hardware/C/hardware.xml:479(para)
 msgid ""
 "This section contains information for people using Ubuntu on a laptop "
 "computer."
@@ -762,33 +852,196 @@ msgstr ""
 "Esta secção contém informação respeitante a pessoas que usam Ubuntu em "
 "portáteis."
 
-#: hardware/C/hardware.xml:411(title)
-msgid "Suspending and hibernating laptops"
-msgstr "Suspensão e Hibernação em portáteis"
+#: hardware/C/hardware.xml:481(title)
+msgid "Power management settings"
+msgstr "Configurações de Gestão de Energia"
 
-#: hardware/C/hardware.xml:412(para)
+#: hardware/C/hardware.xml:482(para)
 msgid ""
-"In order to save battery power, you can put your laptop into one of a number "
-"of power-saving modes when you are not using it. The available modes are "
-"detailed below:"
+"You may wish to change the power management settings of your laptop in order "
+"to help extend its battery life and reduce energy wastage."
 msgstr ""
-"De forma a poupar bateria, pode colocar o portátil num de vários modos de "
-"poupança de bateria, quando não está a fazer uso deste. Os modos disponíveis "
-"estão detalhados abaixo:"
+"Pode, se o desejar, modificar as opções de gestão de energia de forma a "
+"estender a vida da bateria do seu portátil, reduzindo o desperdício de "
+"energia."
 
-#: hardware/C/hardware.xml:414(para)
+#: hardware/C/hardware.xml:485(para)
 msgid ""
-"<emphasis role=\"strong\">Suspending</emphasis> a laptop is like putting the "
-"computer to sleep. The computer will still be turned on and all of your work "
-"will be left open, but the laptop will use much less battery power. You can "
-"wake the computer by pressing a key or clicking the mouse."
+"Press "
+"<menuchoice><guimenu>System</guimenu><guimenuitem>Preferences</guimenuitem><g"
+"uimenuitem>Power Management</guimenuitem></menuchoice>."
 msgstr ""
-"<emphasis role=\"strong\">Suspender</emphasis> um portátil é como "
-"\"adormecer\" um computador. O computador mantém-se ligado e todo o seu "
-"trabalho fica aberto, mas o portátil consome menos energia da bateria. O "
-"computador pode ser \"despertado\" pressionando uma tecla ou clicando o rato."
+"Pressione "
+"<menuchoice><guimenu>Sistema</guimenu><guimenuitem>Preferencias</guimenuitem>"
+"<guimenuitem>Gestão de Energia</guimenuitem></menuchoice>."
 
-#: hardware/C/hardware.xml:415(para)
+#: hardware/C/hardware.xml:488(para)
+msgid "Change the settings as appropriate. Changes are applied instantly."
+msgstr ""
+"Altere as configurações como considerar apropriado. Estas serão aplicadas de "
+"imediato."
+
+#: hardware/C/hardware.xml:492(para)
+msgid ""
+"Displaying a screensaver may use more power than simply letting the screen "
+"go blank. Turning off the screensaver could slightly improve the battery "
+"life of your laptop."
+msgstr ""
+"O uso de protecções de ecrã poderá consumir mais energia do que deixar "
+"apenas o ecrã em branco. Desligando a protecção de ecrã poderá melhorar de "
+"forma significativa o desempenho da bateria do seu portátil."
+
+#: hardware/C/hardware.xml:495(para)
+msgid ""
+"Press "
+"<menuchoice><guimenu>System</guimenu><guimenuitem>Preferences</guimenuitem><g"
+"uimenuitem>Screensaver</guimenuitem></menuchoice>."
+msgstr ""
+"Pressione "
+"<menuchoice><guimenu>Sistema</guimenu><guimenuitem>Preferencias</guimenuitem>"
+"<guimenuitem>Protecção de Ecrã</guimenuitem></menuchoice>."
+
+#: hardware/C/hardware.xml:498(para)
+msgid ""
+"Change the <guilabel>Screensaver theme</guilabel> to <guilabel>Blank "
+"screen</guilabel>. This will simply display a blank screen as a screensaver."
+msgstr ""
+"Mude o <guilabel>Tema de Protecção de Ecrã</guilabel> para <guilabel>Ecrã em "
+"Branco</guilabel>. Assim a protecção de ecrã será um ecrã preto."
+
+#: hardware/C/hardware.xml:502(para)
+msgid ""
+"When your laptop is running on battery, one of the biggest drains on power "
+"is the display. Turning the brightness of the display down could improve "
+"battery life significantly; many laptops allow you to do this by pressing "
+"<keycombo><keycap>Fn</keycap><keycap>F7</keycap></keycombo> several times."
+msgstr ""
+"Quando o seu computador está a funcionar somente a bateria, um dos maiores "
+"consumos que sofre é relativamente ao ecrã. Diminuindo a luminosidade deste "
+"pode melhorar o tempo de vida da bateria; muitos portáteis permitem faz-lo "
+"pressionando  <keycombo><keycap>Fn</keycap><keycap>F7</keycap></keycombo> "
+"várias vezes."
+
+#: hardware/C/hardware.xml:506(title) hardware/C/hardware.xml:777(ulink)
+msgid "Touchpads"
+msgstr "Touchpads"
+
+#: hardware/C/hardware.xml:507(para)
+msgid ""
+"Most laptop computers come with a touchpad, which is used to control the "
+"mouse pointer. There are many ways of changing the way that the touchpad "
+"behaves; the most basic touchpad settings can be configured in the following "
+"way."
+msgstr ""
+"A maioria dos computadores portáteis vem com um touchpad, que serve para "
+"controlar o ponteiro do rato. Existem várias formas de alterar o "
+"comportamento do touchpad; as configurações mais básicas para touchpad podem "
+"ser configuradas da seguinte forma."
+
+#: hardware/C/hardware.xml:509(para)
+msgid ""
+"Press "
+"<menuchoice><guimenu>System</guimenu><guimenuitem>Preferences</guimenuitem><g"
+"uimenuitem>Mouse</guimenuitem></menuchoice>."
+msgstr ""
+"Pressione "
+"<menuchoice><guimenu>Sistema</guimenu><guimenuitem>Preferencias</guimenuitem>"
+"<guimenuitem>Rato</guimenuitem></menuchoice>."
+
+#: hardware/C/hardware.xml:510(para)
+msgid "Select the <guilabel>Touchpad</guilabel> tab."
+msgstr "Escolha o separador <guilabel>Touchpad</guilabel>."
+
+#: hardware/C/hardware.xml:511(para)
+msgid ""
+"Here you can change the touchpad settings to your liking. Changes should "
+"take effect immediately."
+msgstr ""
+"Aqui pode alterar as definições do touchpad  como mais gostar. As alterações "
+"devem fazer-se sentir de imediato."
+
+#: hardware/C/hardware.xml:513(para)
+msgid ""
+"Some touchpads may be detected as normal mouse devices, even though they are "
+"actually touchpads. In this case, the <guilabel>Touchpad</guilabel> tab will "
+"not be available in the mouse preferences."
+msgstr ""
+"Alguns touchpads podem ser detectados como ratos normais, apesar de serem "
+"touchpads. Nesse caso, o separador <guilabel>Touchpad</guilabel> não estará "
+"disponível na janela de preferências do rato."
+
+#: hardware/C/hardware.xml:515(para)
+msgid ""
+"See the <ulink "
+"url=\"https://help.ubuntu.com/community/SynapticsTouchpad\">community "
+"support pages</ulink> for more information on touchpads."
+msgstr ""
+"Veja o <ulink "
+"url=\"https://help.ubuntu.com/community/SynapticsTouchpad\">páginas de "
+"suporte da comunidade</ulink> para mais informação sobre touchpads."
+
+#: hardware/C/hardware.xml:519(title)
+msgid "Finding laptop testing reports"
+msgstr "Encontrar relatórios de testes a portáteis"
+
+#: hardware/C/hardware.xml:520(para)
+msgid ""
+"Many laptops are regularly tested by the Ubuntu community to ensure that "
+"various features work correctly. The results of these tests are available "
+"for you to read, and may offer insight into any problems you might be "
+"experiencing with your laptop."
+msgstr ""
+"Muitos portáteis são regularmente testados por membros da comunidade Ubuntu "
+"para assegurar que as várias funcionalidades trabalham de forma correcta. Os "
+"resultados destes testes são disponibilizados para sua leitura e podem "
+"ajudar na resolução de problemas existentes com o seu computador."
+
+#: hardware/C/hardware.xml:522(para)
+msgid ""
+"See the Laptop Testing <ulink "
+"url=\"https://wiki.ubuntu.com/LaptopTestingTeam\">community support "
+"pages</ulink> for a full listing of available laptop tests."
+msgstr ""
+"Veja a secção de testes a portáteis ulink "
+"url=\"https://wiki.ubuntu.com/LaptopTestingTeam\">páginas de suporte da "
+"comunidade</ulink> para ter acesso a uma listagem completa de testes a "
+"portáteis."
+
+#: hardware/C/hardware.xml:524(para)
+msgid ""
+"You can participate in laptop testing yourself by contacting the <ulink "
+"url=\"https://wiki.ubuntu.com/LaptopTestingTeam\">Laptop Testing "
+"Team</ulink>."
+msgstr ""
+"Pode participar nos testes a portáteis, testando-os, contactando <ulink "
+"url=\"https://wiki.ubuntu.com/LaptopTestingTeam\">Equipa de Testes de "
+"Portáteis</ulink>."
+
+#: hardware/C/hardware.xml:532(title)
+msgid "Suspending and hibernating your computer"
+msgstr "Suspender e Hibernar o computador"
+
+#: hardware/C/hardware.xml:533(para)
+msgid ""
+"In order to save power, you can put your computer into one of a number of "
+"power-saving modes when you are not using it:"
+msgstr ""
+"Para poupar energia, você pode colocar o seu computador num dos diversos "
+"modos de poupança de energia quando não o está a usar:"
+
+#: hardware/C/hardware.xml:538(para)
+msgid ""
+"<emphasis role=\"strong\">Suspending</emphasis> a computer is like putting "
+"the computer to sleep. The computer will still be turned on and all of your "
+"work will be left open, but it will use much less power. You can wake the "
+"computer by pressing a key or clicking the mouse."
+msgstr ""
+"<emphasis role=\"strong\">Hibernar</emphasis> um computador é como pô-lo a "
+"dormir. O computador permanece ligado e todo o seu trabalho se mantém "
+"aberto, mas consumirá muito menos energia. Pode acordar o computador "
+"carregando numa tecla ou clicando no rato."
+
+#: hardware/C/hardware.xml:546(para)
 msgid ""
 "<emphasis role=\"strong\">Hibernating</emphasis> is turning the computer off "
 "completely while saving the current state of the computer (such as keeping "
@@ -803,7 +1056,7 @@ msgstr ""
 "encontrava antes da hibernação. Quando o computador está em hibernação, não "
 "usa corrente eléctrica."
 
-#: hardware/C/hardware.xml:416(para)
+#: hardware/C/hardware.xml:555(para)
 msgid ""
 "<emphasis role=\"strong\">Shutting down</emphasis> is turning the computer "
 "off completely, without saving the current state of the computer. No power "
@@ -813,7 +1066,7 @@ msgstr ""
 "totalmente o seu computador, sem gravar o estado actual. Quando o computador "
 "está desligado, não usa corrente eléctrica."
 
-#: hardware/C/hardware.xml:417(para)
+#: hardware/C/hardware.xml:562(para)
 msgid ""
 "<emphasis role=\"strong\">Resuming</emphasis> is bringing the computer out "
 "of a power saving mode and back into normal operation. You can resume the "
@@ -827,18 +1080,14 @@ msgstr ""
 "do teclado ou clicando no rato. Pode resumir do estado de hibernação "
 "clicando no botão de arranque do funcionamento do computador."
 
-#: hardware/C/hardware.xml:419(para)
+#: hardware/C/hardware.xml:572(para)
 msgid ""
-"You can manually put your computer into a power-saving mode by pressing "
-"<menuchoice><guimenu>System</guimenu><guimenuitem>Quit...</guimenuitem></menu"
-"choice> and then pressing the appropriate button."
+"You can manually put your computer into a power-saving mode by pressing the "
+"<application>User Switcher</application> in the top right hand corner of the "
+"screen and then pressing the appropriate button."
 msgstr ""
-"Pode colocar o seu computador, de forma manual, em modo de poupança "
-"energética pressionando "
-"<menuchoice><guimenu>Sistema</guimenu><guimenuitem>Sair...</guimenuitem></men"
-"uchoice> depois seleccionando o botão apropriado."
 
-#: hardware/C/hardware.xml:421(para)
+#: hardware/C/hardware.xml:579(para)
 msgid ""
 "Some computers may have problems going into certain power saving modes. The "
 "best way of checking if your computer can handle a power-saving mode is to "
@@ -851,201 +1100,179 @@ msgstr ""
 "ver se ele se comporta conforme o esperado. Tenha sempre o cuidado de gravar "
 "os seus documentos antes de suspender ou hibernar."
 
-#: hardware/C/hardware.xml:424(title)
-msgid "Fixing problems with suspending, hibernating and resuming"
-msgstr "Resolver problemas com os modos de suspensão, hibernação e resumo"
+#: hardware/C/hardware.xml:589(title)
+msgid "My computer does not suspend or hibernate correctly"
+msgstr "O meu computador não suspende ou hiberna correctamente"
 
-#: hardware/C/hardware.xml:425(para)
+#: hardware/C/hardware.xml:590(para)
 msgid ""
-"If your computer cannot suspend, hibernate or resume properly, there may be "
-"a number of things that you can try to get it working correctly."
+"Some computers are unable to suspend or hibernate correctly with Ubuntu. If "
+"this is the case for your computer, you may notice some of the following "
+"symptoms:"
 msgstr ""
-"Se o seu computador não puder suspender, hibernar ou resumir de forma "
-"correcta, existem outras coisas que pode tentar, por forma a obter o "
-"funcionamento correcto."
+"Alguns computadores são incapazes de suspender ou hibernar correctamente com "
+"o Ubuntu. Se é este o caso para o seu computador, pode reparar em alguns "
+"destes sintomas:"
 
-#: hardware/C/hardware.xml:427(para)
+#: hardware/C/hardware.xml:597(para)
+msgid "The computer does not turn off after you click to hibernate it."
+msgstr "O computador não se desliga após ter carregado para hibernar."
+
+#: hardware/C/hardware.xml:602(para)
 msgid ""
-"Check the test report for your laptop, if one has been made (see <xref "
-"linkend=\"laptops-testing-reports\"/>)."
+"When you turn the computer on after hibernating it, your previously open "
+"programs are not restored."
 msgstr ""
-"Verifique o relatório de testes, se algum foi criado (ver <xref "
-"linkend=\"laptops-testing-reports\"/>)."
+"Quando liga o computador após o ter hibernado, os seus programas "
+"anteriormente abertos não são restaurados."
 
-#: hardware/C/hardware.xml:428(para)
+#: hardware/C/hardware.xml:608(para)
+msgid "The computer will not wake up after you have suspended it."
+msgstr "O computador não acorda após você o ter suspendido."
+
+#: hardware/C/hardware.xml:613(para)
 msgid ""
-"Ask for assistance through an <ulink "
-"url=\"http://www.ubuntu.com/support/free\">Ubuntu support channel</ulink>."
+"Certain programs or hardware devices stop working correctly after resuming "
+"from hibernation or waking-up from being suspended."
 msgstr ""
-"Pedir assistência através de <ulink "
-"url=\"http://www.ubuntu.com/support/free\">Canal de suporte Ubuntu</ulink>."
+"Alguns programas ou dispositivos deixam de funcionar correctamente após "
+"resumir da hibernação ou acordar da suspensão."
 
-#: hardware/C/hardware.xml:433(title)
-msgid "Power management settings"
-msgstr "Configurações de Gestão de Energia"
-
-#: hardware/C/hardware.xml:434(para)
+#: hardware/C/hardware.xml:619(para)
 msgid ""
-"You may wish to change the power management settings of your laptop in order "
-"to help extend its battery life and reduce energy wastage."
+"If you suffer from any of these problems, you should report a bug to <ulink "
+"url=\"https://bugs.launchpad.net/ubuntu/+filebug\">Launchpad</ulink>. The "
+"problems will hopefully be fixed in a subsequent version of Ubuntu. You may "
+"also like to see if the <link linkend=\"pm-general-method\">General method "
+"for trying to get suspend and hibernate working</link> works for you."
 msgstr ""
-"Pode, se o desejar, modificar as opções de gestão de energia de forma a "
-"estender a vida da bateria do seu portátil, reduzindo o desperdício de "
-"energia."
+"Se estiver a ter algum destes problemas, pode reportar um erro no <ulink "
+"url=\"https://bugs.launchpad.net/ubuntu/+filebug\">Launchpad</ulink>. Os "
+"problemas serão possivelmente resolvidos na versão seguinte do Ubuntu. "
+"Também pode querer ver se o método genérico <link linkend=\"pm-general-"
+"method\">para suspensão e hibernação </link> funciona no seu caso."
 
-#: hardware/C/hardware.xml:437(para)
+#: hardware/C/hardware.xml:626(para)
 msgid ""
-"Press "
-"<menuchoice><guimenu>System</guimenu><guimenuitem>Preferences</guimenuitem><g"
-"uimenuitem>Power Management</guimenuitem></menuchoice>."
+"If your hardware does not work properly after suspending or hibernating your "
+"computer, restart your computer and it should return to normal. If a program "
+"does not work properly, try closing the program and then starting it again."
 msgstr ""
-"Pressione "
-"<menuchoice><guimenu>Sistema</guimenu><guimenuitem>Preferencias</guimenuitem>"
-"<guimenuitem>Gestão de Energia</guimenuitem></menuchoice>."
+"Se o seu hardware não trabalha adequadamente após suspender ou hibernar o "
+"seu computador, reinicie o seu computador e ele deverá voltar ao normal. Se "
+"um programa não trabalhar correctamente, tente fechar o programa e abri-lo "
+"outra vez."
 
-#: hardware/C/hardware.xml:440(para)
-msgid "Change the settings as appropriate. Changes are applied instantly."
-msgstr ""
-"Altere as configurações como considerar apropriado. Estas serão aplicadas de "
-"imediato."
-
-#: hardware/C/hardware.xml:444(para)
+#: hardware/C/hardware.xml:634(para)
 msgid ""
-"Displaying a screensaver may use more power than simply letting the screen "
-"go blank. Turning off the screensaver could slightly improve the battery "
-"life of your laptop."
+"Make sure that you save all of your open documents before testing for "
+"suspend and hibernate problems."
 msgstr ""
-"O uso de protecções de ecrã poderá consumir mais energia do que deixar "
-"apenas o ecrã em branco. Desligando a protecção de ecrã poderá melhorar de "
-"forma significativa o desempenho da bateria do seu portátil."
+"Verifique se guardou todos os documentos abertos antes de testar problemas "
+"de suspensão ou hibernação."
 
-#: hardware/C/hardware.xml:447(para)
+#: hardware/C/hardware.xml:641(title)
+msgid "General method for trying to get suspend and hibernate working"
+msgstr "Método genérico para tentar que a suspensão e hibernação funcionem"
+
+#: hardware/C/hardware.xml:644(para)
 msgid ""
-"Press "
-"<menuchoice><guimenu>System</guimenu><guimenuitem>Preferences</guimenuitem><g"
-"uimenuitem>Screensaver</guimenuitem></menuchoice>."
+"You may be able to get suspend and hibernate working on your computer, but "
+"this can involve a lot of work. The method below should work for many "
+"computers. If it does not work for yours, please seek support using one of "
+"the many help and support channels for Ubuntu."
 msgstr ""
-"Pressione "
-"<menuchoice><guimenu>Sistema</guimenu><guimenuitem>Preferencias</guimenuitem>"
-"<guimenuitem>Protecção de Ecrã</guimenuitem></menuchoice>."
+"Você pode ser capaz de conseguir pôr a suspensão e a hibernação a trabalhar "
+"no seu computador, mas isto pode envolver muito trabalho. O método abaixo "
+"deve trabalhar para muitos computadores. Se não trabalhar no seu, por favor "
+"procure suporte usando um dos muitos canais de ajuda para o Ubuntu."
 
-#: hardware/C/hardware.xml:450(para)
+#: hardware/C/hardware.xml:653(para)
 msgid ""
-"Change the <guilabel>Screensaver theme</guilabel> to <guilabel>Blank "
-"screen</guilabel>. This will simply display a blank screen as a screensaver."
+"Download the <ulink "
+"url=\"http://people.freedesktop.org/~hughsient/quirk/quirk-suspend-"
+"debug.html\"> Quirk Checker script</ulink> to your Home folder."
 msgstr ""
-"Mude o <guilabel>Tema de Protecção de Ecrã</guilabel> para <guilabel>Ecrã em "
-"Branco</guilabel>. Assim a protecção de ecrã será um ecrã preto."
+"Transfira o script <ulink "
+"url=\"http://people.freedesktop.org/~hughsient/quirk/quirk-suspend-"
+"debug.html\">Quirk Checker</ulink> para a sua Pasta Pessoal."
 
-#: hardware/C/hardware.xml:454(para)
+#: hardware/C/hardware.xml:659(para)
 msgid ""
-"When your laptop is running on battery, one of the biggest drains on power "
-"is the display. Turning the brightness of the display down could improve "
-"battery life significantly; many laptops allow you to do this by pressing "
-"<keycombo><keycap>Fn</keycap><keycap>F7</keycap></keycombo> several times."
+"Find the <filename>quirk-checker.sh</filename> file in your Home folder, "
+"right-click it and select <guilabel>Properties</guilabel>. Select the "
+"<guilabel>Permissions</guilabel> tab, check <guilabel>Allow executing file "
+"as program</guilabel> and click <guibutton>Close</guibutton>."
 msgstr ""
-"Quando o seu computador está a funcionar somente a bateria, um dos maiores "
-"consumos que sofre é relativamente ao ecrã. Diminuindo a luminosidade deste "
-"pode melhorar o tempo de vida da bateria; muitos portáteis permitem faz-lo "
-"pressionando  <keycombo><keycap>Fn</keycap><keycap>F7</keycap></keycombo> "
-"várias vezes."
+"Procure o ficheiro <filename>quirk-checker.sh</filename> na sua Pasta "
+"Pessoal, clique com o botão direito do rato em "
+"<guilabel>Propriedades</guilabel>. Seleccione o separador "
+"<guilabel>Permissões</guilabel>, marque a opção <guilabel>Permitir usar o "
+"ficheiro como aplicação</guilabel> e carregue no botão "
+"<guibutton>Fechar</guibutton>."
 
-#: hardware/C/hardware.xml:458(title) hardware/C/hardware.xml:546(ulink)
-msgid "Touchpads"
-msgstr "Touchpads"
-
-#: hardware/C/hardware.xml:459(para)
+#: hardware/C/hardware.xml:667(para)
 msgid ""
-"Most laptop computers come with a touchpad, which is used to control the "
-"mouse pointer. There are many ways of changing the way that the touchpad "
-"behaves; the most basic touchpad settings can be configured in the following "
-"way."
+"Open a Terminal "
+"(<menuchoice><guimenu>Applications</guimenu><guimenuitem>Accessories</guimenu"
+"item><guimenuitem>Terminal</guimenuitem></menuchoice>), type "
+"<userinput>./quirk-checker.sh</userinput> and press <keycap>Enter</keycap>."
 msgstr ""
+"Abra uma consola "
+"(<menuchoice><guimenu>Aplicações</guimenu><guimenuitem>Acessórios</guimenuite"
+"m><guimenuitem>Consola</guimenuitem></menuchoice>), escreva "
+"<userinput>./quirk-checker.sh</userinput> e carregue na tecla "
+"<keycap>Enter</keycap>."
 
-#: hardware/C/hardware.xml:461(para)
+#: hardware/C/hardware.xml:673(para)
 msgid ""
-"Press "
-"<menuchoice><guimenu>System</guimenu><guimenuitem>Preferences</guimenuitem><g"
-"uimenuitem>Mouse</guimenuitem></menuchoice>."
+"Follow the suggestions that the script makes. These may involve editing "
+"important system files, so you should seek support if you are unsure of what "
+"you are doing."
 msgstr ""
-"Pressione "
-"<menuchoice><guimenu>Sistema</guimenu><guimenuitem>Preferencias</guimenuitem>"
-"<guimenuitem>Rato</guimenuitem></menuchoice>."
+"Siga as sugestões do script. Estas podem envolver edição de ficheiros de "
+"sistema importantes, portanto deve procurar ajuda se não estiver certo do "
+"que está a fazer."
 
-#: hardware/C/hardware.xml:462(para)
-msgid "Select the <guilabel>Touchpad</guilabel> tab."
-msgstr "Escolha o separador <guilabel>Touchpad</guilabel>."
-
-#: hardware/C/hardware.xml:463(para)
+#: hardware/C/hardware.xml:682(para)
 msgid ""
-"Here you can change the touchpad settings to your liking. Changes should "
-"take effect immediately."
+"Before making the changes recommended by the Quirk Checker, create back-up "
+"copies of the files that you are going to change."
 msgstr ""
-"Aqui pode alterar as definições do touchpad  como mais gostar. As alterações "
-"devem fazer-se sentir de imediato."
+"Antes de fazer as alterações recomendadas pelo Quirk Checker, crie cópias de "
+"back-up dos ficheiros que vai alterar."
 
-#: hardware/C/hardware.xml:465(para)
+#: hardware/C/hardware.xml:692(title)
 msgid ""
-"Some touchpads may be detected as normal mouse devices, even though they are "
-"actually touchpads. In this case, the <guilabel>Touchpad</guilabel> tab will "
-"not be available in the mouse preferences."
+"Why do I get a strange pattern on the screen when I hibernate my computer?"
 msgstr ""
-"Alguns touchpads podem ser detectados como ratos normais, apesar de serem "
-"touchpads. Nesse caso, o separador <guilabel>Touchpad</guilabel> não estará "
-"disponível na janela de preferências do rato."
+"Porque vejo um padrão estranho no meu ecrã quando hiberno o computador?"
 
-#: hardware/C/hardware.xml:467(para)
+#: hardware/C/hardware.xml:694(para)
 msgid ""
-"See the <ulink "
-"url=\"https://help.ubuntu.com/community/SynapticsTouchpad\">community "
-"support pages</ulink> for more information on touchpads."
+"Your screen may show a black and white pattern just after you click to "
+"hibernate your computer. This is usually nothing to worry about and is just "
+"how the graphics cards of some computers respond to the initial stages of "
+"the hibernation process."
 msgstr ""
-"Veja o <ulink "
-"url=\"https://help.ubuntu.com/community/SynapticsTouchpad\">páginas de "
-"suporte da comunidade</ulink> para mais informação sobre touchpads."
+"O seu ecrã pode mostrar um padrão a preto e branco depois de ter carregado "
+"para hibernar o seu computador. Isto geralmente não é nada com que se tenha "
+"de preocupar e é apenas a forma como algumas placas gráficas respondem aos "
+"estágios iniciais do processo de hibernação."
 
-#: hardware/C/hardware.xml:471(title)
-msgid "Finding laptop testing reports"
-msgstr "Encontrar relatórios de testes a portáteis"
-
-#: hardware/C/hardware.xml:472(para)
+#: hardware/C/hardware.xml:700(para)
 msgid ""
-"Many laptops are regularly tested by the Ubuntu community to ensure that "
-"various features work correctly. The results of these tests are available "
-"for you to read, and may offer insight into any problems you might be "
-"experiencing with your laptop."
+"If the computer displays the pattern for a prolonged period of time without "
+"turning itself off then you may have a problem with hibernation. See <link "
+"linkend=\"pm-suspend-hibernate-fails\">My computer does not suspend or "
+"hibernate correctly</link> for more information."
 msgstr ""
-"Muitos portáteis são regularmente testados por membros da comunidade Ubuntu "
-"para assegurar que as várias funcionalidades trabalham de forma correcta. Os "
-"resultados destes testes são disponibilizados para sua leitura e podem "
-"ajudar na resolução de problemas existentes com o seu computador."
 
-#: hardware/C/hardware.xml:474(para)
-msgid ""
-"See the Laptop Testing <ulink "
-"url=\"https://wiki.ubuntu.com/LaptopTestingTeam\">community support "
-"pages</ulink> for a full listing of available laptop tests."
-msgstr ""
-"Veja a secção de testes a portáteis ulink "
-"url=\"https://wiki.ubuntu.com/LaptopTestingTeam\">páginas de suporte da "
-"comunidade</ulink> para ter acesso a uma listagem completa de testes a "
-"portáteis."
-
-#: hardware/C/hardware.xml:476(para)
-msgid ""
-"You can participate in laptop testing yourself by contacting the <ulink "
-"url=\"https://wiki.ubuntu.com/LaptopTestingTeam\">Laptop Testing "
-"Team</ulink>."
-msgstr ""
-"Pode participar nos testes a portáteis, testando-os, contactando <ulink "
-"url=\"https://wiki.ubuntu.com/LaptopTestingTeam\">Equipa de Testes de "
-"Portáteis</ulink>."
-
-#: hardware/C/hardware.xml:481(title)
+#: hardware/C/hardware.xml:712(title)
 msgid "Mice and keyboards"
 msgstr "Ratos e Teclados"
 
-#: hardware/C/hardware.xml:482(para)
+#: hardware/C/hardware.xml:713(para)
 msgid ""
 "This section provides instructions on using and configuring mice, keyboards "
 "and other input devices to make them more comfortable for you to use."
@@ -1053,11 +1280,11 @@ msgstr ""
 "Esta secção fornece instruções de como utilizar e configurar o rato, teclado "
 "e outros dispositivos periféricos para tornar mais confortável o seu uso."
 
-#: hardware/C/hardware.xml:484(title)
+#: hardware/C/hardware.xml:715(title)
 msgid "Mice and other pointing devices"
 msgstr "Ratos e outros dispositivos de controlo"
 
-#: hardware/C/hardware.xml:485(para)
+#: hardware/C/hardware.xml:716(para)
 msgid ""
 "You can change numerous options related to your mouse, such as how fast the "
 "pointer moves and how clicks are interpreted by the computer."
@@ -1066,22 +1293,22 @@ msgstr ""
 "por exemplo mudar velocidade do movimento do ponteiro e a forma como os "
 "cliques são interpretados pelo computador."
 
-#: hardware/C/hardware.xml:488(ulink)
+#: hardware/C/hardware.xml:719(ulink)
 msgid "Mouse Skills"
 msgstr "Capacidades do Rato"
 
-#: hardware/C/hardware.xml:489(para)
+#: hardware/C/hardware.xml:720(para)
 msgid ""
 "Information on basic mouse skills, such as pointing, clicking and dragging."
 msgstr ""
 "Informação a respeito de movimentos básicos do rato, tais como apontar, "
 "clicar e arrastar"
 
-#: hardware/C/hardware.xml:492(ulink)
+#: hardware/C/hardware.xml:723(ulink)
 msgid "Mouse Preferences"
 msgstr "Preferências de Rato"
 
-#: hardware/C/hardware.xml:493(para)
+#: hardware/C/hardware.xml:724(para)
 msgid ""
 "Instructions on how to change various settings related to your mouse, such "
 "as whether the mouse is left-handed and how fast the pointer moves."
@@ -1090,29 +1317,31 @@ msgstr ""
 "rato, como por exemplo se é para ser usado por destros ou canhotos, ou a "
 "velocidade com que o ponteiro de movimenta."
 
-#: hardware/C/hardware.xml:496(ulink)
+#: hardware/C/hardware.xml:727(ulink)
 msgid "Accessibility - Configuring the Mouse"
 msgstr "Acessibilidade - Configurando o Rato"
 
-#: hardware/C/hardware.xml:497(para)
+#: hardware/C/hardware.xml:728(para)
 msgid ""
 "Information on changing mouse preferences for users of assistive "
 "technologies."
 msgstr ""
+"Informação sobre a mudança de preferências do rato para utilizadores de "
+"tecnologias de acesso universal."
 
-#: hardware/C/hardware.xml:500(ulink)
+#: hardware/C/hardware.xml:731(ulink)
 msgid "Accessibility - Configuring Alternative Pointing Devices"
 msgstr "Acessibilidade - Configurando Dispositivos de Apontador Alternativos"
 
-#: hardware/C/hardware.xml:501(para)
+#: hardware/C/hardware.xml:732(para)
 msgid "Information on using a pointing device other than a mouse."
 msgstr "Informação de como utilizar um dispositivo apontador que não o rato."
 
-#: hardware/C/hardware.xml:507(title)
+#: hardware/C/hardware.xml:738(title)
 msgid "Keyboards"
 msgstr "Teclados"
 
-#: hardware/C/hardware.xml:508(para)
+#: hardware/C/hardware.xml:739(para)
 msgid ""
 "There are many options related to your keyboard which you can change, such "
 "as the keyboard language and keyboard shortcuts."
@@ -1120,29 +1349,29 @@ msgstr ""
 "Existem muitas opções no teclado que podem ser modificadas, tais como a "
 "língua ou atalhos do teclado."
 
-#: hardware/C/hardware.xml:511(ulink)
+#: hardware/C/hardware.xml:742(ulink)
 msgid "Basic Keyboard Skills"
 msgstr "Utilizações Básicas do Teclado"
 
-#: hardware/C/hardware.xml:512(para)
+#: hardware/C/hardware.xml:743(para)
 msgid "Information on basic keyboard usage."
 msgstr "Informação sobre o uso básico do teclado."
 
-#: hardware/C/hardware.xml:515(ulink)
+#: hardware/C/hardware.xml:746(ulink)
 msgid "Keyboard Preferences"
 msgstr "Preferências do Teclado"
 
-#: hardware/C/hardware.xml:516(para)
+#: hardware/C/hardware.xml:747(para)
 msgid ""
 "Change settings related to your keyboard, such as the layout of the keyboard."
 msgstr ""
 "Mude configurações do seu teclado, tais como a sua disposição do teclado."
 
-#: hardware/C/hardware.xml:519(ulink)
+#: hardware/C/hardware.xml:750(ulink)
 msgid "Keyboard Indicator"
 msgstr "Indicador de Teclado"
 
-#: hardware/C/hardware.xml:520(para)
+#: hardware/C/hardware.xml:751(para)
 msgid ""
 "The manual of the Keyboard Indicator, which allows you to change between "
 "different keyboard layouts."
@@ -1150,11 +1379,11 @@ msgstr ""
 "O manual do indicador do teclado, que permite a mudança entre diferentes "
 "disposições do teclado."
 
-#: hardware/C/hardware.xml:523(ulink)
+#: hardware/C/hardware.xml:754(ulink)
 msgid "Accessibility - Configuring the Mouse and Keyboard"
 msgstr "Acessibilidade - Configurando o Rato e Teclado"
 
-#: hardware/C/hardware.xml:524(para)
+#: hardware/C/hardware.xml:755(para)
 msgid ""
 "Information on configuring the mouse and keyboard for users of assistive "
 "technologies."
@@ -1162,20 +1391,20 @@ msgstr ""
 "Informação em como configurar o rato e o teclado para utilizadores de "
 "tecnologias assistivas."
 
-#: hardware/C/hardware.xml:527(ulink)
+#: hardware/C/hardware.xml:758(ulink)
 msgid "Using the Keyboard to Navigate the Desktop"
 msgstr "Usar o Teclado para Navegar no Ambiente de Trabalho"
 
-#: hardware/C/hardware.xml:528(para)
+#: hardware/C/hardware.xml:759(para)
 msgid "A guide on how to navigate the desktop using only a keyboard."
 msgstr ""
 "Um guia de como navegar no ambiente de trabalho utilizando somente o teclado"
 
-#: hardware/C/hardware.xml:531(ulink)
+#: hardware/C/hardware.xml:762(ulink)
 msgid "Keyboard Accessibility Monitor"
 msgstr "Monitor de Acessibilidade do Teclado"
 
-#: hardware/C/hardware.xml:532(para)
+#: hardware/C/hardware.xml:763(para)
 msgid ""
 "The manual of the Keyboard Accessibility Monitor, which shows the status of "
 "any keyboard accessibility features which are turned on."
@@ -1184,11 +1413,11 @@ msgstr ""
 "todas as funcionalidades de acessibilidade de teclado que se encontram "
 "ligadas."
 
-#: hardware/C/hardware.xml:535(ulink)
+#: hardware/C/hardware.xml:766(ulink)
 msgid "Using the Character Palette"
 msgstr "Utilizando o mapa de caracteres"
 
-#: hardware/C/hardware.xml:536(para)
+#: hardware/C/hardware.xml:767(para)
 msgid ""
 "Use the Character Palette to insert letters and symbols which are not on "
 "your keyboard."
@@ -1196,15 +1425,15 @@ msgstr ""
 "Utilize o mapa de caracteres para inserir letras e símbolos que não existam "
 "no seu teclado"
 
-#: hardware/C/hardware.xml:542(title)
+#: hardware/C/hardware.xml:773(title)
 msgid "Touchpads and graphics tablets"
 msgstr "Touchpads e Tablets"
 
-#: hardware/C/hardware.xml:543(para)
+#: hardware/C/hardware.xml:774(para)
 msgid "You can use a touchpad or graphics tablet to move a mouse pointer."
 msgstr "Pode usar um touchpad ou tablet para movimentar o ponteiro do rato."
 
-#: hardware/C/hardware.xml:547(para)
+#: hardware/C/hardware.xml:778(para)
 msgid "Information on changing the settings of a laptop touchpad."
 msgstr ""
 "Informação a respeito da mudança das configurações do touchpad de um portátil"
@@ -1244,7 +1473,151 @@ msgstr ""
 "  Paulo Dias https://launchpad.net/~paxnubis\n"
 "  Susana Pereira https://launchpad.net/~susana\n"
 "  mpsoares https://launchpad.net/~mpsoares13\n"
+"  nglnx https://launchpad.net/~nglnx\n"
+"\n"
+"Launchpad Contributions:\n"
+"  António Lima https://launchpad.net/~amrlima\n"
+"  António Paulo Chaparro https://launchpad.net/~antoniopchaparro\n"
+"  Dark_Webster https://launchpad.net/~pedro-flores-16\n"
+"  João Vitor https://launchpad.net/~j-berdeville\n"
+"  Luis Reis https://launchpad.net/~luis-marafado\n"
+"  Mykas0 https://launchpad.net/~mykas0\n"
+"  NunoSantos https://launchpad.net/~nuno-90-santos\n"
+"  Paulo Dias https://launchpad.net/~paxnubis\n"
+"  Rui Moreira https://launchpad.net/~rui-f-moreira\n"
+"  Susana Pereira https://launchpad.net/~susana\n"
+"  korsairtuga https://launchpad.net/~korsairtuga\n"
+"  mpsoares https://launchpad.net/~mpsoares13\n"
 "  nglnx https://launchpad.net/~nglnx"
+
+#~ msgid "Hardware"
+#~ msgstr "Hardware"
+
+#~ msgid "Working with hardware devices"
+#~ msgstr "Trabalhar com dispositivos de Hardware"
+
+#~ msgid ""
+#~ "Press "
+#~ "<menuchoice><guimenu>System</guimenu><guimenuitem>Administration</guimenuitem"
+#~ "><guimenuitem>Hardware drivers</guimenuitem></menuchoice>"
+#~ msgstr ""
+#~ "Clique em "
+#~ "<menuchoice><guimenu>Sistema</guimenu><guimenuitem>Administração</guimenuitem"
+#~ "><guimenuitem>Controladores de Hardware</guimenuitem></menuchoice>"
+
+#~ msgid "Checking disk capacity"
+#~ msgstr "A verficar capacidade do disco"
+
+#~ msgid ""
+#~ "Press "
+#~ "<menuchoice><guimenu>Places</guimenu><guimenuitem>Computer</guimenuitem></men"
+#~ "uchoice>, right click on the disk you want to check and select "
+#~ "<guilabel>Properties</guilabel>. The free space on the disk will be "
+#~ "displayed on the <guilabel>Basic</guilabel> tab."
+#~ msgstr ""
+#~ "Clique em "
+#~ "<menuchoice><guimenu>Locais</guimenu><guimenuitem>Computador</guimenuitem></m"
+#~ "enuchoice>, Clique com o botão direito do rato no disco que pretende "
+#~ "verificar e escolha <guilabel>Propriedades</guilabel>. O espaço livre no "
+#~ "disco será apresentado no separador <guilabel>Básico</guilabel>."
+
+#~ msgid ""
+#~ "Press "
+#~ "<menuchoice><guimenu>System</guimenu><guisubmenu>Administration</guisubmenu><"
+#~ "guimenuitem>System Monitor</guimenuitem></menuchoice> and select the "
+#~ "<guilabel>File Systems</guilabel> tab. All disks currently connected to the "
+#~ "system should be displayed in the list, along with their free and used "
+#~ "capacities."
+#~ msgstr ""
+#~ "Clique em "
+#~ "<menuchoice><guimenu>Sistema</guimenu><guisubmenu>Administração</guisubmenu><"
+#~ "guimenuitem>Monitor de Sistema</guimenuitem></menuchoice> e escolha o "
+#~ "separador <guilabel>Sistema de Ficheiros</guilabel>. Todos os discos que "
+#~ "estiverem nesse momento ligados ao sistema serão apresentados na lista, "
+#~ "assim como o seu espaço livre e utilizado."
+
+#~ msgid ""
+#~ "To check the amount of free and used space on a disk, do either of the "
+#~ "following: <placeholder-1/>"
+#~ msgstr ""
+#~ "Para verificar o espaço livre e utilizado de um disco, execute uma das "
+#~ "seguintes opções: <placeholder-1/>"
+
+#~ msgid ""
+#~ "You can use <application>GNOME Partition Editor</application> to partition "
+#~ "storage devices. Install the <application>gparted</application> package (see "
+#~ "<ulink type=\"help\" url=\"ghelp:add-applications\">Add "
+#~ "Applications</ulink>) and then press "
+#~ "<menuchoice><guimenu>System</guimenu><guisubmenu>Administration "
+#~ "</guisubmenu><guimenuitem>Gnome Partition Editor</guimenuitem></menuchoice> "
+#~ "to start the partition editor."
+#~ msgstr ""
+#~ "Pode utilizar o <application>Editor de Partições do GNOME</application> para "
+#~ "criar partições nos seus dispositivos de armazenamento. Instale o pacote "
+#~ "<application>gparted</application> (leia <ulink type=\"help\" "
+#~ "url=\"ghelp:add-applications\">Instalar Aplicações</ulink>). A seguir, "
+#~ "clique em "
+#~ "<menuchoice><guimenu>Sistema</guimenu><guisubmenu>Administração</guisubmenu><"
+#~ "guimenuitem>Editor de Partições do Gnome</guimenuitem></menuchoice> para "
+#~ "iniciar o editor de partições."
+
+#~ msgid "Suspending and hibernating laptops"
+#~ msgstr "Suspensão e Hibernação em portáteis"
+
+#~ msgid ""
+#~ "In order to save battery power, you can put your laptop into one of a number "
+#~ "of power-saving modes when you are not using it. The available modes are "
+#~ "detailed below:"
+#~ msgstr ""
+#~ "De forma a poupar bateria, pode colocar o portátil num de vários modos de "
+#~ "poupança de bateria, quando não está a fazer uso deste. Os modos disponíveis "
+#~ "estão detalhados abaixo:"
+
+#~ msgid ""
+#~ "<emphasis role=\"strong\">Suspending</emphasis> a laptop is like putting the "
+#~ "computer to sleep. The computer will still be turned on and all of your work "
+#~ "will be left open, but the laptop will use much less battery power. You can "
+#~ "wake the computer by pressing a key or clicking the mouse."
+#~ msgstr ""
+#~ "<emphasis role=\"strong\">Suspender</emphasis> um portátil é como "
+#~ "\"adormecer\" um computador. O computador mantém-se ligado e todo o seu "
+#~ "trabalho fica aberto, mas o portátil consome menos energia da bateria. O "
+#~ "computador pode ser \"despertado\" pressionando uma tecla ou clicando o rato."
+
+#~ msgid ""
+#~ "You can manually put your computer into a power-saving mode by pressing "
+#~ "<menuchoice><guimenu>System</guimenu><guimenuitem>Quit...</guimenuitem></menu"
+#~ "choice> and then pressing the appropriate button."
+#~ msgstr ""
+#~ "Pode colocar o seu computador, de forma manual, em modo de poupança "
+#~ "energética pressionando "
+#~ "<menuchoice><guimenu>Sistema</guimenu><guimenuitem>Sair...</guimenuitem></men"
+#~ "uchoice> depois seleccionando o botão apropriado."
+
+#~ msgid "Fixing problems with suspending, hibernating and resuming"
+#~ msgstr "Resolver problemas com os modos de suspensão, hibernação e resumo"
+
+#~ msgid ""
+#~ "If your computer cannot suspend, hibernate or resume properly, there may be "
+#~ "a number of things that you can try to get it working correctly."
+#~ msgstr ""
+#~ "Se o seu computador não puder suspender, hibernar ou resumir de forma "
+#~ "correcta, existem outras coisas que pode tentar, por forma a obter o "
+#~ "funcionamento correcto."
+
+#~ msgid ""
+#~ "Check the test report for your laptop, if one has been made (see <xref "
+#~ "linkend=\"laptops-testing-reports\"/>)."
+#~ msgstr ""
+#~ "Verifique o relatório de testes, se algum foi criado (ver <xref "
+#~ "linkend=\"laptops-testing-reports\"/>)."
+
+#~ msgid ""
+#~ "Ask for assistance through an <ulink "
+#~ "url=\"http://www.ubuntu.com/support/free\">Ubuntu support channel</ulink>."
+#~ msgstr ""
+#~ "Pedir assistência através de <ulink "
+#~ "url=\"http://www.ubuntu.com/support/free\">Canal de suporte Ubuntu</ulink>."
 
 #~ msgid ""
 #~ "This document is maintained by the Ubuntu documentation team "

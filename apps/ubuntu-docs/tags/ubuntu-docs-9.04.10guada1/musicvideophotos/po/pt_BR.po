@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-docs\n"
 "Report-Msgid-Bugs-To: Andre Noel <andrenoel@ubuntu.com>\n"
-"POT-Creation-Date: 2008-10-08 21:13+0100\n"
-"PO-Revision-Date: 2008-10-11 20:41+0000\n"
-"Last-Translator: Andre Noel <andrenoel@ubuntu.com>\n"
+"POT-Creation-Date: 2009-03-26 16:34+0000\n"
+"PO-Revision-Date: 2009-03-29 19:17+0000\n"
+"Last-Translator: André Gondim <andregondim@ubuntu.com>\n"
 "Language-Team: Portuguese (Brazil) <pt_BR@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2008-10-19 12:42+0000\n"
+"X-Launchpad-Export-Date: 2009-04-01 10:46+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: musicvideophotos/C/musicvideophotos-C.omf:6(creator)
@@ -25,9 +25,9 @@ msgstr "ubuntu-doc@lists.ubuntu.com (Projeto de Documentação do Ubuntu)"
 msgid "mdke@ubuntu.com (Matthew East)"
 msgstr "mdke@ubuntu.com (Matthew East)"
 
-#: musicvideophotos/C/musicvideophotos-C.omf:8(title)
-msgid "Music, Videos and Photos"
-msgstr "Música, Vídeos e Fotos"
+#: musicvideophotos/C/musicvideophotos-C.omf:8(title) musicvideophotos/C/musicvideophotos.xml:16(title)
+msgid "Music, Video and Photos"
+msgstr "Música, vídeo e fotos"
 
 #: musicvideophotos/C/musicvideophotos-C.omf:9(date)
 msgid "2006-09-07"
@@ -41,9 +41,1116 @@ msgstr ""
 "Tudo sobre a reprodução de música, arquivos de vídeo, CDs, DVDs, assim como "
 "importação, gerenciamento e edição de suas fotos e imagens."
 
-#: musicvideophotos/C/musicvideophotos.xml:18(title)
-msgid "Music, video and photos"
-msgstr "Música, vídeo e fotos"
+#: musicvideophotos/C/video.xml:16(title)
+msgid "Movies, DVDs and videos"
+msgstr "Filmes, DVDs e vídeos"
+
+#: musicvideophotos/C/video.xml:17(para)
+msgid ""
+"You can watch movies and video clips with the <application>Totem Movie "
+"Player</application> "
+"(<menuchoice><guimenu>Applications</guimenu><guimenuitem>Sound &amp; "
+"Video</guimenuitem><guimenuitem>Movie Player</guimenuitem></menuchoice>)."
+msgstr ""
+"Você pode assistir a filmes e clipes de vídeo com o <application>Reprodutor "
+"de filmes</application> "
+"(<menuchoice><guimenu>Aplicativos</guimenu><guimenuitem>Multimídia</guimenuit"
+"em><guimenuitem>Reprodutor de filmes</guimenuitem></menuchoice>)."
+
+#: musicvideophotos/C/video.xml:23(title)
+msgid "Playing DVDs"
+msgstr "Reproduzindo DVDs"
+
+#: musicvideophotos/C/video.xml:24(para)
+msgid ""
+"In order to play DVDs you must install some additional software. "
+"Unfortunately, DVD support cannot be provided by default in Ubuntu due to "
+"legal restrictions in some countries."
+msgstr ""
+"Para reproduzir DVDs você deve instalar algum software adicional. "
+"Infelizmente, o suporte a DVD não pode ser fornecido por padrão no Ubuntu "
+"devido a restrições legais em alguns países."
+
+#: musicvideophotos/C/video.xml:30(para)
+msgid ""
+"Read about <ulink url=\"ghelp:add-applications#restricted-software\"> "
+"restricted formats</ulink> before following the instructions below. There "
+"are some legal issues that you should be aware of."
+msgstr ""
+"Leia sobre os <ulink url=\"ghelp:add-applications#restricted-software\"> "
+"formatos restritos</ulink> antes de seguir as instruções abaixo. Há algumas "
+"considerações legais que você deveria estar ciente."
+
+#: musicvideophotos/C/video.xml:38(para)
+msgid ""
+"Install the <ulink url=\"apt:libdvdnav4\">libdvdnav4</ulink>, <ulink "
+"url=\"apt:libdvdread3\">libdvdread3</ulink>, <ulink url=\"apt:gstreamer0.10-"
+"plugins-bad\">gstreamer0.10-plugins-bad</ulink> and <ulink "
+"url=\"apt:gstreamer0.10-plugins-ugly\">gstreamer0.10-plugins-ugly</ulink> "
+"packages."
+msgstr ""
+"Instalar os pacotes <ulink url=\"apt:libdvdnav4\">libdvdnav4</ulink>, <ulink "
+"url=\"apt:libdvdread3\">libdvdread3</ulink>, <ulink url=\"apt:gstreamer0.10-"
+"plugins-bad\">gstreamer0.10-plugins-bad</ulink> e <ulink "
+"url=\"apt:gstreamer0.10-plugins-ugly\">gstreamer0.10-plugins-ugly</ulink>."
+
+#: musicvideophotos/C/video.xml:47(para)
+msgid ""
+"If you would like to play encrypted DVDs, press "
+"<menuchoice><guimenu>Applications</guimenu><guimenuitem>Accessories</guimenui"
+"tem><guimenuitem>Terminal</guimenuitem></menuchoice> and type the following "
+"into the screen which appears, followed by the <keycap>Enter</keycap> key: "
+"<screen>sudo /usr/share/doc/libdvdread3/install-css.sh</screen>"
+msgstr ""
+"Se você quiser reproduzir DVDs protegidos, pressione "
+"<menuchoice>guimenu>Aplicativos</guimenu><guimenuitem>Acessórios</guimenuitem"
+"><guimenuitem>Terminal</guimenuitem></menuchoice> e digite o seguinte na "
+"tela que aparecer, seguido da tecla <keycap>Enter</keycap>: <screen>sudo "
+"/usr/share/doc/libdvdread3/install-css.sh</screen>"
+
+#: musicvideophotos/C/video.xml:55(para)
+msgid ""
+"Enter your password if prompted. The <application>libdvdcss2</application> "
+"package will be downloaded and installed from a website."
+msgstr ""
+"Digite sua senha, se solicitada. O pacote "
+"<application>libdvdcss2</application> será baixado e instalado de um website."
+
+#: musicvideophotos/C/video.xml:62(para)
+msgid ""
+"Insert a DVD into your drive. It should open automatically in the Movie "
+"Player."
+msgstr ""
+"Insira um DVD no drive. O Reprodutor de filmes deverá abrir automaticamente."
+
+#: musicvideophotos/C/video.xml:70(title)
+msgid "Where have the menus on my DVDs gone?"
+msgstr "Para onde foram os menus nos meus DVDs?"
+
+#: musicvideophotos/C/video.xml:71(para)
+msgid ""
+"DVD menus are not currently supported by the default Movie Player. To be "
+"able to use the menus on a disc, you must install an alternative movie "
+"player such as <ulink url=\"apt:gxine\">gxine</ulink> or <ulink "
+"url=\"apt:vlc\">VLC</ulink>."
+msgstr ""
+"Menus de DVD não são suportados atualmente pelo Reprodutor de filmes padrão. "
+"Para ser capaz de  usar menus em um disco, você deve instalar um reprodutor "
+"de vídeo alternativo como o <ulink url=\"apt:gxine\">gxine</ulink> ou <ulink "
+"url=\"apt:vlc\">VLC</ulink>."
+
+#: musicvideophotos/C/video.xml:77(para)
+msgid ""
+"To make DVDs automatically play in the alternative movie player when "
+"inserted, open <menuchoice><guimenu>Places</guimenu><guimenuitem>Home "
+"Folder</guimenuitem></menuchoice>, click "
+"<menuchoice><guimenu>Edit</guimenu><guimenuitem>Preferences</guimenuitem></me"
+"nuchoice> and then click the <guilabel>Media</guilabel> tab. Select the "
+"alternative player from the <guibutton>DVD Video</guibutton> list."
+msgstr ""
+"Para fazer com que DVDs sejam automaticamente abertos no reprodutor de mídia "
+"alternativo quando inseridos, abra "
+"<menuchoice><guimenu>Locais</guimenu><guimenuitem>Pasta "
+"Pessoal</guimenuitem></menuchoice>, clique em "
+"<menuchoice><guimenu>Editar</guimenu><guimenuitem>Preferências</guimenuitem><"
+"/menuchoice> e então clique na aba <guilabel>Mí dia</guilabel>. Selecione o "
+"reprodutor de mídia alternativo na lista <guibutton>DVD de Vídeo</guibutton>."
+
+#: musicvideophotos/C/video.xml:91(title)
+msgid "How can I get my videos to play?"
+msgstr "Como posso reproduzir meus vídeos?"
+
+#: musicvideophotos/C/video.xml:92(para)
+msgid ""
+"Some video formats, such as Flash, QuickTime, and Windows Media Video, are "
+"proprietary and so support for them cannot be included in Ubuntu by default. "
+"You must install some extra software to allow playback."
+msgstr ""
+"Alguns formatos de vídeo, como Flash, QuickTime e Windows Media Video são "
+"proprietários e, portanto, o suporte a eles não pode ser incluído no Ubuntu "
+"por padrão. Você deverá instalar programas adicionais para permitir a "
+"reprodução."
+
+#: musicvideophotos/C/video.xml:97(para)
+msgid ""
+"In order to play the most common proprietary formats in the Totem movie "
+"player or Firefox web browser, <ulink url=\"apt:ubuntu-restricted-"
+"extras\">install the ubuntu-restricted-extras package</ulink> (see <ulink "
+"url=\"ghelp:add-applications#restricted-software\">Restricted "
+"Software</ulink> for more information)."
+msgstr ""
+"Para tocar os formatos propriétarios mais comuns, o tocador de filmes Totem "
+"ou o navegador de interent Firefox, <ulink url=\"apt:ubuntu-restricted-"
+"extras\">instale o pacote ubuntu-restricted-extras</ulink> (veja <ulink "
+"url=\"ghelp:add-applications#restricted-software\">software restrito</ulink> "
+"para mais informações)."
+
+#: musicvideophotos/C/video.xml:105(title)
+msgid "Video files"
+msgstr "Arquivos de vídeo"
+
+#: musicvideophotos/C/video.xml:107(emphasis)
+msgid "(e.g. QuickTime, Windows Media)"
+msgstr "(ex. QuickTime, Windows Media)"
+
+#: musicvideophotos/C/video.xml:109(para)
+msgid ""
+"If you try to play an unsupported video file, you will be asked if you would "
+"like to <guilabel>search for a suitable codec</guilabel>. Click "
+"<guibutton>Search</guibutton> and, when the <guilabel>Install multimedia "
+"codecs</guilabel> window appears, select one of the codecs displayed in the "
+"list and click <guibutton>Install</guibutton>."
+msgstr ""
+"Se você tentar reproduzir um arquivo de vídeo não suportado, será consultado "
+"sobre <guilabel>buscar um codec adequado</guilabel>. Clique no botão "
+"<guibutton>Buscar</guibutton> e, quando a janela <guilabel>Instalar codecs "
+"multimídia</guilabel> aparecer, selecione um dos codecs exibidos na lista e "
+"clique no botão <guibutton>Instalar</guibutton>."
+
+#: musicvideophotos/C/video.xml:116(para)
+msgid ""
+"If you are asked to <guilabel>confirm installation of restricted "
+"software</guilabel>, the codec required to play your video may have some "
+"<ulink url=\"ghelp:add-applications#restricted-software\">legal "
+"restrictions</ulink> which you should be aware of. If you think that the "
+"restrictions do not apply to you, press <guibutton>Confirm</guibutton> to "
+"continue with the installation."
+msgstr ""
+"Se você for consultado para <guilabel>confirmar a instalação de software "
+"restrito</guilabel>, o codec requerido para reproduzir seu vídeo pode conter "
+"<ulink url=\"ghelp:add-applications#restricted-software\">restrições "
+"legais</ulink> sobre as quais você deveria saber. Se você acredita que as "
+"retrições não se aplicam a você, pressione o botão "
+"<guibutton>Confirmar</guibutton> para continuar a instalação."
+
+#: musicvideophotos/C/video.xml:124(para)
+msgid ""
+"Once installation is complete, the video should begin to play. If not, try "
+"closing and then re-opening the video."
+msgstr ""
+"Assim que a instalação terminar, o vídeo deverá começar a tocar. Se não, "
+"tente fechá-lo e então abri-lo novamente."
+
+#: musicvideophotos/C/video.xml:131(title)
+msgid "Flash videos"
+msgstr "Vídeos em flash"
+
+#: musicvideophotos/C/video.xml:133(emphasis)
+msgid "(e.g. Youtube, iPlayer)"
+msgstr "(ex. Youtube, iPlayer)"
+
+#: musicvideophotos/C/video.xml:135(para)
+msgid ""
+"When you first try to play a Flash video in the Firefox web browser, a bar "
+"will appear at the top of the window saying that <guilabel>additional "
+"plugins are required</guilabel>. Press the <guibutton>Install Missing "
+"Plugins</guibutton> button and follow the instructions on-screen to install "
+"a Flash player."
+msgstr ""
+"Na primeira vez em que você tentar tocar um vídeo em Flash no navegador da "
+"web Firefox, uma barra aparecerá no topo da janela dizendo que "
+"<guilabel>plugins adicionais são necessários</guilabel>. Pressions o botão "
+"<guibutton>Instalar Plugins Necessários</guibutton> e siga as instruções na "
+"tela para instalar um reprodutor de Flash."
+
+#: musicvideophotos/C/video.xml:142(para)
+msgid ""
+"You will be offered the choice of several players. The <guilabel>Adobe Flash "
+"Player</guilabel> is the official plugin, which should offer the best "
+"support for videos. Unfortunately, it is proprietary software and so cannot "
+"be supported directly by Ubuntu. The Swfdec and Gnash players are not "
+"proprietary and so are supported. You may also find them to be more stable "
+"(cause fewer problems) than the official player."
+msgstr ""
+"Serão oferecidos a você diversos reprodutores. O <guilabel>Adobe Flash "
+"Player</guilabel> é o plugin oficial, que deverá oferecer o melhor suporte a "
+"vídeos. Infelizmente, ele é software proprietário e portanto não pode ser "
+"suportado diretamente pelo Ubuntu. Os reprodutores Sfwdec e Gnash não são "
+"proprietários e portante são suportados. Você poderá também constatar que "
+"eles são mais estáveis (causam menos problemas) que o reprodutor oficial."
+
+#: musicvideophotos/C/video.xml:154(title)
+msgid "Streaming video"
+msgstr "Fluxo de vídeo"
+
+#: musicvideophotos/C/video.xml:156(emphasis)
+msgid "(e.g. RealVideo)"
+msgstr "(por exemplo RealVideo)"
+
+#: musicvideophotos/C/video.xml:158(para)
+msgid ""
+"The most reliable way of playing RealVideo-format videos is to install the "
+"official RealPlayer software. See <link linkend=\"video-realplayer\"> "
+"Installing and configuring RealPlayer</link> for full instructions."
+msgstr ""
+"O modo mais confiável de se reproduzir vídeos no formato RealVideo é "
+"instalar o software oficial RealPlayer. Veja <link linkend=\"video-"
+"realplayer\"> Instalando e configurando o RealPlayer</link> para instruções "
+"completas."
+
+#: musicvideophotos/C/video.xml:163(para)
+msgid ""
+"Support for most other types of streaming video can be added by following "
+"the instructions for <link linkend=\"video-playback-file\">video "
+"files</link> or <link linkend=\"video-playback-flash\">Flash videos</link>. "
+"If you are having difficulties getting a video to stream in your web "
+"browser, right-click the video and select <guilabel>Open with \"Movie "
+"Player\"</guilabel> if that option is available."
+msgstr ""
+"O suporte para a maior parte dos outros tipos de vídeo em streaming pode ser "
+"adicionado através das instruções para <link linkend=\"video-playback-"
+"file\">arquivos de vídeo</link> ou <link linkend=\"video-playback-"
+"flash\">vídeos em Flash</link>. Se você estiver com dificuldade para "
+"conseguir receber um vídeo em seu navegador, clique com o botão direito do "
+"mouse no vídeo e selecione <guilabel>Abrir com \"Reprodutor de "
+"Vídeo\"</guilabel> se esta opção estiver disponível."
+
+#: musicvideophotos/C/video.xml:176(title)
+msgid "Videos that are otherwise unsupported"
+msgstr "Vídeos que não são suportados de outra forma"
+
+#: musicvideophotos/C/video.xml:177(para)
+msgid ""
+"If none of the other instructions in this section work with a particular "
+"video, try using a different media player. <ulink "
+"url=\"apt:vlc\">VLC</ulink> and <ulink url=\"apt:mplayer\">MPlayer</ulink> "
+"support a wide range of formats; it is recommended that you try one of these."
+msgstr ""
+"Se nenhuma das outras instruções nesta seção funcionar com um vídeo em "
+"particular, tente usar um reprodutor de mídia diferente. <ulink "
+"url=\"apt:vlc\">VLC</ulink> e <ulink url=\"apt:mplayer\">MPlayer</ulink> "
+"suportam uma vasta gama de formatos; recomenda-se que você experimente um "
+"deles."
+
+#: musicvideophotos/C/video.xml:189(title)
+msgid "Installing and configuring RealPlayer"
+msgstr "Instalando e configurando o RealPlayer"
+
+#: musicvideophotos/C/video.xml:190(para)
+msgid ""
+"RealPlayer is a proprietary application, and so is not installed in the "
+"usual way."
+msgstr ""
+"RealPlayer é uma aplicação proprietária, e portanto não é instalada da forma "
+"usual."
+
+#: musicvideophotos/C/video.xml:196(para)
+msgid ""
+"Download a suitable Linux installer from the <ulink "
+"url=\"http://uk.real.com/player/select/\"> RealPlayer website</ulink> and "
+"save it in your Home folder."
+msgstr ""
+"Baixe um instalador para Linux adequado do <ulink "
+"url=\"http://uk.real.com/player/select/\"> site do RealPlayer</ulink> e "
+"salve-o em sua Pasta Pessoal."
+
+#: musicvideophotos/C/video.xml:203(para)
+msgid ""
+"Open a Terminal "
+"(<menuchoice><guimenu>Applications</guimenu><guimenuitem>Accessories</guimenu"
+"item><guimenuitem>Terminal</guimenuitem></menuchoice>) and type the "
+"following, pressing <keycap>Enter</keycap> at the end of each line and "
+"typing your password when prompted:"
+msgstr ""
+"Abra um Terminal "
+"(<menuchoice><guimenu>Aplicativos</guimenu><guimenuitem>Acessórios</guimenuit"
+"em><guimenuitem>Terminal</guimenuitem></menuchoice>) e digite o seguinte, "
+"pressionando <keycap>Enter</keycap> ao final de cada linha e digitando sua "
+"senha quando ela for requisitada:"
+
+#: musicvideophotos/C/video.xml:208(screen)
+#, no-wrap
+msgid ""
+"\n"
+"sudo chmod a+x RealPlayer*\n"
+"sudo ./RealPlayer*"
+msgstr ""
+"\n"
+"sudo chmod a+x RealPlayer*\n"
+"sudo ./RealPlayer*"
+
+#: musicvideophotos/C/video.xml:213(para)
+msgid ""
+"You should see the text <guilabel>Extracting files for Helix "
+"installation</guilabel> on the screen if the installer has started properly. "
+"When asked a question by the installer, press <keycap>Enter</keycap> to "
+"accept the default."
+msgstr ""
+"Você deve ver o texto <guilabel>Extraindo arquivos para a instalação do "
+"Helix</guilabel> na tela, se o instalador tiver iniciado corretamente. "
+"Quando for pedido pelo instalador, pressione <keycap>Enter</keycap> para "
+"aceitar o padrão."
+
+#: musicvideophotos/C/video.xml:221(para)
+msgid ""
+"When the installer has finished copying files, press "
+"<menuchoice><guimenu>Applications</guimenu><guimenuitem>Sound &amp; "
+"Video</guimenuitem><guimenuitem>RealPlayer 11</guimenuitem></menuchoice> and "
+"follow the instructions on the screen to complete set-up."
+msgstr ""
+"Quando o instalador terminar de copiar os arquivos, pressione "
+"<menuchoice><guimenu>Aplicações</guimenu><guimenuitem>Som &amp; "
+"Vídeo</guimenuitem><guimenuitem>RealPlayer 11</guimenuitem></menuchoice> e "
+"siga as instruções na tela para completar a configuração."
+
+#: musicvideophotos/C/video.xml:228(para)
+msgid ""
+"For more in-depth instructions, see the <ulink "
+"url=\"https://help.ubuntu.com/community/RealPlayerInstallationMethods\"> "
+"community help wiki</ulink>."
+msgstr ""
+"Para instruções mais aprofundadas, veja o <ulink "
+"url=\"https://help.ubuntu.com/community/RealPlayerInstallationMethods\"> "
+"wiki de suporte da comunidade</ulink>."
+
+#: musicvideophotos/C/video.xml:237(title)
+msgid "Recording and editing video"
+msgstr "Gravando e editando vídeo"
+
+#: musicvideophotos/C/video.xml:238(para)
+msgid ""
+"There are numerous video capture and editing programs available for Ubuntu. "
+"Some of the most popular include <ulink url=\"apt:kino\">Kino</ulink>, "
+"<ulink url=\"apt:kdenlive\">Kdenlive</ulink>, and <ulink "
+"url=\"apt:pitivi\">Pitivi</ulink>."
+msgstr ""
+"Há inúmeros programas de captura e edição de vídeo disponíveis para o "
+"Ubuntu. Os mais populares incluem <ulink url=\"apt:kino\">Kino</ulink>, "
+"<ulink url=\"apt:kdenlive\">Kdenlive</ulink>, e <ulink "
+"url=\"apt:pitivi\">Pitivi</ulink>."
+
+#: musicvideophotos/C/troubleshooting.xml:16(title)
+msgid "Solutions to common problems"
+msgstr "Soluções para problemas comuns"
+
+#: musicvideophotos/C/troubleshooting.xml:17(para)
+msgid "This section offers some solutions to commonly asked problems."
+msgstr "Esta seção oferece algumas soluções para problemas perguntados."
+
+#: musicvideophotos/C/troubleshooting.xml:19(para)
+msgid ""
+"Prevent CDs from playing when inserted, see <xref linkend=\"music-cd-"
+"autoplay\"/>"
+msgstr ""
+"Impedir a reprodução de CDs, quando inserido, ver <xref linkend=\"music-cd-"
+"autoplay\"/>"
+
+#: musicvideophotos/C/troubleshooting.xml:20(para)
+msgid ""
+"Song names and covert art are wrong, see <xref linkend=\"music-"
+"missingmetadata\"/>"
+msgstr ""
+"Nomes das músicas e arte de capas estão errados, veja <xref linkend=\"music-"
+"missingmetadata\"/>"
+
+#: musicvideophotos/C/troubleshooting.xml:21(para)
+msgid ""
+"Rhythmbox can't rip MP3, see <xref linkend=\"music-missingmetadata\"/>"
+msgstr ""
+"Rhythmbox não pode ripar MP3, ver <xref linkend=\"music-missingmetadata\"/>"
+
+#: musicvideophotos/C/troubleshooting.xml:22(para)
+msgid ""
+"My MP3 player works in Windows but not in Ubuntu, see <xref linkend=\"music-"
+"portable-mtp\"/>"
+msgstr ""
+"Meu MP3 player funciona no Windows, mas não no Ubuntu, ver <xref "
+"linkend=\"music-portable-mtp\"/>"
+
+#: musicvideophotos/C/troubleshooting.xml:23(para)
+msgid "I cant play videos, see <xref linkend=\"video-dvd\"/>"
+msgstr "Não posso reproduzir vídeos, ver <xref linkend=\"video-dvd\"/>"
+
+#: musicvideophotos/C/troubleshooting.xml:24(para)
+msgid "I can't find menus on dvd, see <xref linkend=\"video-dvdmenus\"/>"
+msgstr ""
+"Não consigo encontrar menus em DVD, ver <xref linkend=\"video-dvdmenus\"/>"
+
+#: musicvideophotos/C/troubleshooting.xml:25(para)
+msgid ""
+"I can't play Quicktime or WMV, see <xref linkend=\"video-playback-file\"/>"
+msgstr ""
+"Eu não posso reproduzir Quicktime ou WMV, ver <xref linkend=\"video-playback-"
+"file\"/>"
+
+#: musicvideophotos/C/troubleshooting.xml:26(para)
+msgid ""
+"I can't play flash video, see <xref linkend=\"video-playback-flash\"/>"
+msgstr ""
+"Eu não posso reproduzir flash video, ver <xref linkend=\"video-playback-"
+"flash\"/>"
+
+#: musicvideophotos/C/troubleshooting.xml:27(para)
+msgid "I can't play Realmedia, see <xref linkend=\"video-realplayer\"/>"
+msgstr ""
+"Eu não posso reproduzir Realmedia, ver <xref linkend=\"video-realplayer\"/>"
+
+#: musicvideophotos/C/troubleshooting.xml:28(para)
+msgid "My microphone isn't working, see <xref linkend=\"music-microphone\"/>"
+msgstr "Meu microfone não funciona, <xref linkend=\"music-microphone\"/>"
+
+#: musicvideophotos/C/photos.xml:16(title)
+msgid "Photos and cameras"
+msgstr "Fotos e câmeras"
+
+#: musicvideophotos/C/photos.xml:17(para)
+msgid ""
+"There are many tools available to help you to work with your digital photo "
+"collection."
+msgstr ""
+"Existem diversas ferramentas disponíveis para ajudá-lo a trabalhar com sua "
+"coleção de fotos digitais."
+
+#: musicvideophotos/C/photos.xml:23(title)
+msgid "Import photos from a digital camera"
+msgstr "Importar fotos de uma câmera digital"
+
+#: musicvideophotos/C/photos.xml:24(para)
+msgid ""
+"Ubuntu automatically detects most digital cameras when you plug them in, and "
+"will offer to import your photos automatically."
+msgstr ""
+"Ubuntu detecta automaticamente a maioria das câmeras digitais quando "
+"conectadas ao computador e lhe permite importar suas fotos automaticamente."
+
+#: musicvideophotos/C/photos.xml:28(para)
+msgid "To import photos from your camera:"
+msgstr "Para importar fotos de sua câmera:"
+
+#: musicvideophotos/C/photos.xml:33(para)
+msgid ""
+"Plug-in and switch on the camera by placing it in review mode. Ubuntu should "
+"ask you if you would like to import the photos that the camera contains."
+msgstr ""
+"Conecte a câmera e alterne-a para o modo de visualização de fotos. O Ubuntu "
+"deve perguntar se você deseja importar as fotos que estão na câmera."
+
+#: musicvideophotos/C/photos.xml:40(para)
+msgid ""
+"Click on <guibutton>Import</guibutton>. You should then see a preview of the "
+"photos."
+msgstr ""
+"Clique em <guibutton>Importar</guibutton>. Você verá a visualização das "
+"fotos."
+
+#: musicvideophotos/C/photos.xml:46(para)
+msgid ""
+"Choose a location to save your photos to, then click on "
+"<guibutton>Import</guibutton>. The photos will be saved to your hard drive."
+msgstr ""
+"Escolha um local para salvar suas fotos, então clique em "
+"<guibutton>Importar</guibutton>. As fotos serão salvas em seu disco rígido."
+
+#: musicvideophotos/C/photos.xml:54(para)
+msgid "If Ubuntu does not ask you if it can import the photos:"
+msgstr "Se o Ubuntu não lhe perguntar se pode importar as fotos:"
+
+#: musicvideophotos/C/photos.xml:59(para)
+msgid ""
+"Open "
+"<menuchoice><guimenu>Applications</guimenu><guimenuitem>Graphics</guimenuitem"
+"><guimenuitem>F-Spot Photo Manager</guimenuitem></menuchoice> and choose "
+"<menuchoice><guimenu>File</guimenu><guimenuitem>Import</guimenuitem></menucho"
+"ice>."
+msgstr ""
+"Abrir "
+"<menuchoice><guimenu>Aplicações</guimenu><guimenuitem>Gráficos</guimenuitem><"
+"guimenuitem>Gerenciador de Fotos F-Spot</guimenuitem></menuchoice> e escolha "
+"<menuchoice><guimenu>Arquivo</guimenu><guimenuitem>Importar</guimenuitem></me"
+"nuchoice>."
+
+#: musicvideophotos/C/photos.xml:68(para)
+msgid ""
+"Select your camera as the <guilabel>Import Source</guilabel> and then click "
+"<guibutton>Import</guibutton> to begin importing your photos."
+msgstr ""
+"Selecione sua câmera em <guilabel>Fonte de importação</guilabel> e clique "
+"<guibutton>Importar</guibutton> para começar a importar suas fotos."
+
+#: musicvideophotos/C/photos.xml:75(para)
+msgid ""
+"If your camera does not appear as an import source, press "
+"<menuchoice><guimenu>Places</guimenu><guimenuitem>Computer</guimenuitem></men"
+"uchoice> and check if your camera is visible there as a removable storage "
+"device. If it is, you can then copy the photos manually using the "
+"<application>File Browser</application>."
+msgstr ""
+"Se sua câmera não aparecer como uma fonte de importação, pressione "
+"<menuchoice><guimenu>Locais</guimenu><guimenuitem>Computador</guimenuitem></m"
+"enuchoice> e verifique se sua câmera está visível como um dispositivo de "
+"armazenamento removível. Se estiver, você pode copiar as fotos manualmente "
+"usando o <application>Navegador de Arquivos</application>."
+
+#: musicvideophotos/C/photos.xml:85(title)
+msgid "Organize your photo collection"
+msgstr "Organize sua coleção de fotos"
+
+#: musicvideophotos/C/photos.xml:86(para)
+msgid ""
+"<application>F-Spot</application> provides a complete solution for managing "
+"your photo collection. To start it, choose "
+"<menuchoice><guimenu>Applications</guimenu><guimenuitem>Graphics</guimenuitem"
+"><guimenuitem>F-Spot Photo Manager</guimenuitem></menuchoice>."
+msgstr ""
+"O <application>F-Spot</application> fornece uma solução completa para "
+"gerenciar suas coleções de fotos. Para iniciá-lo, acesse "
+"<menuchoice><guimenu>Aplicativos</guimenu><guimenuitem>Gráficos</guimenuitem>"
+"<guimenuitem>Gerenciador de fotos F-Spot</guimenuitem></menuchoice>."
+
+#: musicvideophotos/C/photos.xml:89(para)
+msgid ""
+"With <application>F-Spot</application>, you can import photos from your "
+"digital camera or USB stick, tag them with familiar terms, do touch ups, and "
+"edit them in different ways. In addition to this, you can upload photos "
+"easily to your Flickr, PicasaWeb album and other online photo galleries."
+msgstr ""
+"Com o <application>F-Spot</application>, você pode importar fotos de sua "
+"câmera digital ou dispositivo USB, adicionar etiquetas com termos "
+"familiares, melhorá-las e editá-las de várias maneiras. Além disso, você "
+"pode facilmente enviar suas fotos para o Flickr, PicasaWeb e outros álbuns "
+"de fotos on-line."
+
+#: musicvideophotos/C/photos.xml:96(para)
+msgid ""
+"For help with <application>F-Spot Photo Manager</application>, see the "
+"<ulink type=\"help\" url=\"ghelp:f-spot\">F-Spot User Guide</ulink>."
+msgstr ""
+"Para ajuda com o <application>Gerenciador de Fotos F-Spot</application>, "
+"veja o <ulink type=\"help\" url=\"ghelp:f-spot\">Guia de Usuário do F-"
+"Spot</ulink>."
+
+#: musicvideophotos/C/photos.xml:103(title)
+msgid "Watch a slideshow of photos"
+msgstr "Assista uma apresentação de fotos"
+
+#: musicvideophotos/C/photos.xml:104(para)
+msgid ""
+"If you want to show off your photos in all of their glory, why not run a "
+"slideshow of them?"
+msgstr ""
+"Se você quer mostrar suas fotos em toda sua glória, por que não fazer uma "
+"apresentação de slides com ela?"
+
+#: musicvideophotos/C/photos.xml:110(para)
+msgid ""
+"Watch a slideshow using the <ulink type=\"help\" url=\"ghelp:eog#eog-"
+"fullscreen\"> Image Viewer</ulink>"
+msgstr ""
+"Assista a uma apresentação usando o  <ulink type=\"help\" "
+"url=\"ghelp:eog#eog-fullscreen\">Visualizador de Imagens</ulink>"
+
+#: musicvideophotos/C/photos.xml:117(para)
+msgid ""
+"Watch a slideshow using the <ulink type=\"help\" url=\"ghelp:f-spot#enjoying-"
+"fullscreen-mode-and-slideshows\"> F-Spot Photo Manager</ulink>"
+msgstr ""
+"Assistir a uma apresentação de slides usando o <ulink type=\"help\" "
+"url=\"ghelp:f-spot#enjoying-fullscreen-mode-and-slideshows\"> Gerenciador de "
+"Fotos F-Spot</ulink>"
+
+#: musicvideophotos/C/photos.xml:126(title)
+msgid "Setting a Slideshow as Your Screensaver"
+msgstr "Configurando uma Apresentação de Slides como Protetor deTela"
+
+#: musicvideophotos/C/photos.xml:127(para)
+msgid "You can use a slideshow of your photos as you screensaver:"
+msgstr ""
+"Você pode usar uma apresentação de slides de suas fotos como seu protetor de "
+"tela:"
+
+#: musicvideophotos/C/photos.xml:132(para)
+msgid ""
+"Press "
+"<menuchoice><guimenu>System</guimenu><guimenuitem>Preferences</guimenuitem><g"
+"uimenuitem>Screensaver</guimenuitem></menuchoice>"
+msgstr ""
+"Selecione "
+"<menuchoice><guimenu>Sistema</guimenu><guimenuitem>Preferências</guimenuitem>"
+"<guimenuitem>Protetor de Tela</guimenuitem></menuchoice>"
+
+#: musicvideophotos/C/photos.xml:137(para)
+msgid "Select the <guilabel>F-Spot photos</guilabel> screensaver theme"
+msgstr ""
+"Selecione o tema de protetor de tela <guilabel>Fotos do F-Spot</guilabel>"
+
+#: musicvideophotos/C/photos.xml:143(para)
+msgid ""
+"Photos which are tagged as <guilabel>Favorites</guilabel> in <application>F-"
+"Spot Photo Manager</application> will be displayed as your screensaver"
+msgstr ""
+"As fotos que estão marcadas como <guilabel>Favoritas</guilabel> no "
+"<application>Gerenciador de Fotos F-Spot</application> serão exibidas como "
+"seu protetor de tela"
+
+#: musicvideophotos/C/photos.xml:151(para)
+msgid "If you would like to change which tag is used for the slideshow:"
+msgstr ""
+"Se você quiser mudar qual marcador é usado para a apresentação de slides:"
+
+#: musicvideophotos/C/photos.xml:156(para)
+msgid "Open F-Spot"
+msgstr "Abra o F-Spot"
+
+#: musicvideophotos/C/photos.xml:161(para)
+msgid ""
+"Press "
+"<menuchoice><guimenuitem>Edit</guimenuitem><guimenuitem>Preferences</guimenui"
+"tem></menuchoice>"
+msgstr ""
+"Selecione "
+"<menuchoice><guimenuitem>Editar</guimenuitem><guimenuitem>Preferências</guime"
+"nuitem></menuchoice>"
+
+#: musicvideophotos/C/photos.xml:170(para)
+msgid "Under <guilabel>Screensaver</guilabel>, select the desired tag"
+msgstr ""
+"Em <guilabel>Protetor de Tela</guilabel>, selecione o marcador desejado"
+
+#: musicvideophotos/C/photos.xml:175(para)
+msgid "Press <guibutton>Close</guibutton>"
+msgstr "Pressione <guibutton>Fechar</guibutton>"
+
+#: musicvideophotos/C/photos.xml:183(title)
+msgid "Printing photos"
+msgstr "Imprimindo fotos"
+
+#: musicvideophotos/C/photos.xml:184(para)
+msgid "Printing your photos is great way to share them with others."
+msgstr ""
+"Imprimir suas fotos é uma ótima maneira de compartilhá-las com outras "
+"pessoas."
+
+#: musicvideophotos/C/photos.xml:189(para)
+msgid ""
+"Double-click the photo you want to print to open it in the "
+"<application>Image Viewer</application>"
+msgstr ""
+"Dê um clique-duplo sobre a foto que você quer imprimir para abri-la no "
+"<application>Visualizador de Imagens</application>"
+
+#: musicvideophotos/C/photos.xml:195(para)
+msgid ""
+"Press <menuchoice><guimenuitem>File</guimenuitem><guimenuitem>Page "
+"Setup</guimenuitem></menuchoice>"
+msgstr ""
+"Selecione "
+"<menuchoice><guimenuitem>Arquivo</guimenuitem><guimenuitem>Configurar "
+"Página</guimenuitem></menuchoice>"
+
+#: musicvideophotos/C/photos.xml:203(para)
+msgid ""
+"Under <guilabel>Format for</guilabel>, select the printer which you are "
+"going to use"
+msgstr ""
+"Em <guilabel>Formatar para</guilabel>, selecione a impressora que você irá "
+"usar"
+
+#: musicvideophotos/C/photos.xml:209(para)
+msgid ""
+"Under <guilabel>Paper size</guilabel>, select the size of the paper which "
+"you are going to print the photo onto"
+msgstr ""
+"Em <guilabel>Tamanho do papel</guilabel>, selecione o tamanho do papel no "
+"qual você imprimirá sua foto"
+
+#: musicvideophotos/C/photos.xml:215(para)
+msgid ""
+"Under <guilabel>Orientation</guilabel>, choose the orientation of the photo "
+"on the paper"
+msgstr ""
+"Em <guilabel>Orientação</guilabel>, selecione a orientação da foto no papel"
+
+#: musicvideophotos/C/photos.xml:223(para)
+msgid "Press <guibutton>Apply</guibutton>"
+msgstr "Pressione <guibutton>Aplicar</guibutton>"
+
+#: musicvideophotos/C/photos.xml:228(para)
+msgid ""
+"Press "
+"<menuchoice><guimenuitem>File</guimenuitem><guimenuitem>Print</guimenuitem></"
+"menuchoice>"
+msgstr ""
+"Selecione "
+"<menuchoice><guimenuitem>Arquivo</guimenuitem><guimenuitem>Imprimir</guimenui"
+"tem></menuchoice>"
+
+#: musicvideophotos/C/photos.xml:237(para)
+msgid "Change any settings as appropriate (see below)"
+msgstr "Mude qualquer configuração conforme apropriado (veja a seguir)"
+
+#: musicvideophotos/C/photos.xml:242(para)
+msgid "Press <guibutton>Print</guibutton> to print the photo"
+msgstr "Pressione <guibutton>Imprimir</guibutton> para imprimir a foto"
+
+#: musicvideophotos/C/photos.xml:249(title)
+msgid "Printer Settings"
+msgstr "Configuração de Impressora"
+
+#: musicvideophotos/C/photos.xml:250(para)
+msgid ""
+"You can tweak your printing settings to get the best results. All of these "
+"settings can be found in the "
+"<menuchoice><guimenuitem>File</guimenuitem><guimenuitem>Print</guimenuitem></"
+"menuchoice> window."
+msgstr ""
+"Você pode ajustar suas definições de impressão para obter melhores "
+"resultados. Todas estas definições podem ser encontrados no "
+"<menuchoice><guimenuitem>Arquivo</guimenuitem><guimenuitem>Imprimir</guimenui"
+"tem></menuchoice> janela."
+
+#: musicvideophotos/C/photos.xml:259(para)
+msgid ""
+"Make sure that you select your printer from the list on the "
+"<guilabel>General</guilabel> tab to get the full range of settings supported "
+"by your printer."
+msgstr ""
+"Certifique-se de que você selecionou a sua impressora na lista da aba "
+"<guilabel>Geral</guilabel> para obter todas as configurações suportadas por "
+"sua impressora."
+
+#: musicvideophotos/C/photos.xml:265(para)
+msgid ""
+"Different makes of printer will have different printer settings. The "
+"settings below are only provided as a guide for what you may be able to "
+"change with your particular printer."
+msgstr ""
+"Diferentes modelos de impressoras possuirão diferentes configurações de "
+"impressão. As configurações a seguir são disponibilizadas apenas como guia "
+"do que você terá possibilidade de configurar na sua impressora."
+
+#: musicvideophotos/C/photos.xml:273(title)
+msgid "Paper Type"
+msgstr "Tipo de Papel"
+
+#: musicvideophotos/C/photos.xml:274(para)
+msgid ""
+"The paper type that you use has a large impact on the quality of your "
+"printed photo. You should set the paper type to match the paper which you "
+"are using in your printer to prevent poor results. Using a "
+"<emphasis>glossy</emphasis> paper type with only <emphasis>plain</emphasis> "
+"paper loaded into your printer will generally produce poor results, for "
+"example."
+msgstr ""
+"O tipo de papel que você usa exerce um grande impacto na qualidade de sua "
+"foto impressa. Você deve configurar o tipo de papel conforme o papel que "
+"você está usando na sua impressora para prevenir maus resultados. Usando um "
+"papel <emphasis>lustroso</emphasis> com apenas papel "
+"<emphasis>plano</emphasis> na sua impressora, por exemplo, irá resultar em "
+"uma impressão de baixa qualidade."
+
+#: musicvideophotos/C/photos.xml:282(para)
+msgid ""
+"This setting may automatically change the amount of ink which is used, in "
+"order to get the best results and to prevent smudging. How this is handled "
+"will depend on your printer."
+msgstr ""
+"Esta configuração deve mudar automaticamente a quantidade de tinta usada "
+"para obter os melhores resultados e prevenir borrões. O modo como isso é "
+"tratado depende da sua impressora."
+
+#: musicvideophotos/C/photos.xml:290(title)
+msgid "Print Quality"
+msgstr "Qualidade de Impressão"
+
+#: musicvideophotos/C/photos.xml:291(para)
+msgid ""
+"Print quality is generally measured in <emphasis>DPI</emphasis> (dots per "
+"inch). A greater DPI value should result in better print quality."
+msgstr ""
+"A qualidade da impressão é normalmente medida em <emphasis>DPI</emphasis> "
+"(pontos por polegada). Um valor maior de DPI deve resultar em uma impressão "
+"de melhor qualidade."
+
+#: musicvideophotos/C/photos.xml:298(para)
+msgid ""
+"Choose <guilabel>Draft</guilabel> for making quick draft prints which don't "
+"use much ink"
+msgstr ""
+"Escolha <guilabel>Rascunho</guilabel> para impressões rápidas de rascunhos "
+"que não usam muita tinta"
+
+#: musicvideophotos/C/photos.xml:304(para)
+msgid ""
+"Choose <guilabel>Best Quality</guilabel> or <guilabel>Photo</guilabel> for "
+"making high quality prints. Printing will be slower and will use more ink"
+msgstr ""
+"Escolha <guilabel>Melhor Qualidade</guilabel> ou <guilabel>Foto</guilabel> "
+"para impressões em alta qualidade. A impressão será mais lenta e usará mais "
+"tinta"
+
+#: musicvideophotos/C/photos.xml:315(title)
+msgid "Advanced Photo Printing"
+msgstr "Impressão Avançada de Fotos"
+
+#: musicvideophotos/C/photos.xml:316(para)
+msgid ""
+"For advanced photo printing, <ulink url=\"apt:photoprint\">install the "
+"<application>PhotoPrint</application> package</ulink> from the universe "
+"repository. Once installed, press "
+"<menuchoice><guimenu>Applications</guimenu><guimenuitem>Graphics</guimenuitem"
+"><guimenuitem>PhotoPrint</guimenuitem></menuchoice> to start PhotoPrint."
+msgstr ""
+"Para impressão avançada de fotos, <ulink url=\"apt:photoprint\">instale o "
+"pacote <application>PhotoPrint</application></ulink> do repositorio "
+"universe. Uma vez instalado, vá em "
+"<menuchoice><guimenu>Aplicativos</guimenu><guimenuitem>Gráficos</guimenuitem>"
+"<guimenuitem>PhotoPrint</guimenuitem></menuchoice> para iniciar o PhotoPrint."
+
+#: musicvideophotos/C/photos.xml:322(para)
+msgid "PhotoPrint allows you to fine-tune your printing settings."
+msgstr ""
+"O PhotoPrint permite que você faça um ajuste fino das configurações de "
+"impressão."
+
+#: musicvideophotos/C/photos.xml:327(para)
+msgid ""
+"Under <guilabel>Page Size</guilabel>, change the page size to the size of "
+"paper that you want to print onto."
+msgstr ""
+"Em <guilabel>Tamanho da Página</guilabel>, mude o tamanho da página para o "
+"tamanho do papel no qual você deseja imprimir."
+
+#: musicvideophotos/C/photos.xml:333(para)
+msgid ""
+"Under <guilabel>Layout</guilabel>, change the number of columns and rows to "
+"reflect the number of photos that you want to put onto a page"
+msgstr ""
+"Em <guilabel>Layout</guilabel>, modifique o número de colunas e linhas para "
+"ficar de acordo com o número de fotos que você deseja colocar em uma página"
+
+#: musicvideophotos/C/photos.xml:340(para)
+msgid ""
+"To change the amount of spacing between photos, change the "
+"<guilabel>Horizontal</guilabel> and <guilabel>Vertical</guilabel> settings "
+"under <guilabel>Gutters</guilabel>"
+msgstr ""
+"Para mudar o espaçamento entre as fotos, modifique as configurações "
+"<guilabel>Horizontal</guilabel> e <guilabel>Vertical</guilabel> em "
+"<guilabel>Guias</guilabel>"
+
+#: musicvideophotos/C/photos.xml:348(para)
+msgid ""
+"To add a photo to the page, press "
+"<menuchoice><guimenuitem>Image</guimenuitem><guimenuitem>Add "
+"Image</guimenuitem></menuchoice> and select a photo"
+msgstr ""
+"Para adicionar uma foto à página, pressione "
+"<menuchoice><guimenuitem>Imagem</guimenuitem><guimenuitem>Adicionar "
+"Imagem</guimenuitem></menuchoice> e selecione uma foto"
+
+#: musicvideophotos/C/photos.xml:357(para)
+msgid ""
+"To change the advanced printer settings, press "
+"<menuchoice><guimenuitem>File</guimenuitem><guimenuitem>Print "
+"Setup</guimenuitem></menuchoice>"
+msgstr ""
+"Para alterar as configurações avançadas da impressora, selecione "
+"<menuchoice><guimenuitem>Arquivo</guimenuitem><guimenuitem>Configurar "
+"Página</guimenuitem></menuchoice>"
+
+#: musicvideophotos/C/photos.xml:364(para)
+msgid ""
+"You may need to select the correct printer model on the "
+"<guilabel>Output</guilabel> tab"
+msgstr ""
+"Você deve selecionar o modelo correto de impressora na aba "
+"<guilabel>Saída</guilabel>"
+
+#: musicvideophotos/C/photos.xml:370(para)
+msgid ""
+"Press "
+"<menuchoice><guimenuitem>File</guimenuitem><guimenuitem>Print</guimenuitem></"
+"menuchoice> to print your photos"
+msgstr ""
+"Pressione "
+"<menuchoice><guimenuitem>Arquivo</guimenuitem><guimenuitem>Imprimir</guimenui"
+"tem></menuchoice> para imprimir suas fotos"
+
+#: musicvideophotos/C/photos.xml:383(title)
+msgid "Sharing your photos"
+msgstr "Compartilhando suas fotos"
+
+#: musicvideophotos/C/photos.xml:384(para)
+msgid ""
+"If you want to share your collection of photos with others, why not use an "
+"online photo sharing service or burn a CD of your photos? Ubuntu has plenty "
+"of tools to help you share your pictures."
+msgstr ""
+"Se você deseja compartilhar sua coleção de fotos com outras pessoas, por que "
+"não usar um serviço on-line de compartilhamento de fotos ou gravar um CD com "
+"suas fotos? O Ubuntu possui uma série de ferramentas para ajudá-lo a "
+"compartilhar suas imagens."
+
+#: musicvideophotos/C/photos.xml:396(para)
+msgid ""
+"Share your photos over the Internet using a <ulink type=\"help\" "
+"url=\"ghelp:f-spot#sharing-flickr-or-php-gallery\"> photo sharing "
+"service</ulink> or a <ulink type=\"help\" url=\"ghelp:f-spot#website-gallery-"
+"folder\">web gallery</ulink>."
+msgstr ""
+"Compartilhe suas fotos através da Internet utilizando um <ulink "
+"type=\"help\" url=\"ghelp:f-spot#sharing-flickr-or-php-gallery\"> serviço de "
+"compartilhamento de fotos</ulink> ou uma <ulink type=\"help\" url=\"ghelp:f-"
+"spot#website-gallery-folder\">galeria da web</ulink>."
+
+#: musicvideophotos/C/photos.xml:404(para)
+msgid "Burn a CD of your photos using the <xref linkend=\"cdburning\"/>"
+msgstr "Gravar um CD de suas fotos usando o <xref linkend=\"cdburning\"/>"
+
+#: musicvideophotos/C/photos.xml:410(para)
+msgid "Present a <xref linkend=\"photos-slideshow\"/>"
+msgstr "Apresentar um <xref linkend=\"photos-slideshow\"/>"
+
+#: musicvideophotos/C/photos.xml:416(para)
+msgid ""
+"<ulink type=\"help\" url=\"ghelp:f-spot#sharing-e-mail\"> E-mail "
+"copies</ulink> of your photos directly."
+msgstr ""
+"<ulink type=\"help\" url=\"ghelp:f-spot#sharing-e-mail\"> E-mail "
+"cópias</ulink> de suas fotos diretamente."
+
+#: musicvideophotos/C/photos.xml:425(title)
+msgid "Edit and improve photos"
+msgstr "Editar e melhorar fotos"
+
+#: musicvideophotos/C/photos.xml:426(para)
+msgid ""
+"Sometimes, you may need to adjust or touch-up a photo to make it look better "
+"or to remove some flaw. <application>F-Spot</application> includes a few "
+"basic tools for doing this. To access these tools, press the <guibutton>Edit "
+"Photo</guibutton> button and then click on one of the tools at the bottom of "
+"the screen."
+msgstr ""
+"Às vezes você precisa ajustar ou retocar uma foto para que ela tenha uma "
+"aparência melhor ou para remover alguma imperfeição. o <application>F-"
+"Spot</application> inclui algumas ferramentas básicas para isso. Para "
+"acessar essas ferramentas, pressione o botão <guibutton>Editar "
+"Foto</guibutton> e então selecione uma das ferramentas na parte de baixo da "
+"tela."
+
+#: musicvideophotos/C/photos.xml:433(para)
+msgid ""
+"The <application>GIMP Image Editor</application> is much more advanced. It "
+"is installed in Ubuntu by default, and can be started by choosing "
+"<menuchoice><guimenu>Applications</guimenu><guimenuitem>Graphics</guimenuitem"
+"><guimenuitem>GIMP Image Editor</guimenuitem></menuchoice>."
+msgstr ""
+"O <application>Editor de Imagens GIMP</application> é muito mais avançado. "
+"Ele é instalado por padrão no Ubuntu e pode ser iniciado em "
+"<menuchoice><guimenu>Aplicativos</guimenu><guimenuitem>Gráficos</guimenuitem>"
+"<guimenuitem>Editor de Imagens GIMP</guimenuitem></menuchoice>."
+
+#: musicvideophotos/C/photos.xml:438(para)
+msgid ""
+"The GIMP has many professional-level features. It includes tools for "
+"selections, drawing, creating paths, masks, filters, effects, and more."
+msgstr ""
+"O GIMP possui muitos recursos a nível profissional. Ele inclui ferramentas "
+"para seleção, desenho, criação de caminhos, máscaras, filtros, efeitos e "
+"muito mais."
+
+#: musicvideophotos/C/photos.xml:444(title)
+msgid "Rotating photos"
+msgstr "Rotacionando fotos"
+
+#: musicvideophotos/C/photos.xml:445(para)
+msgid ""
+"You may find that you have some photos which are the wrong way up. It is "
+"easy to rotate photos so that they're the right way up again."
+msgstr ""
+"Talvez você descubra que tem algumas fotos que estão na direção errada. É "
+"fácil rotacioná-las de modo que elas fiquem na direção correta novamente."
+
+#: musicvideophotos/C/photos.xml:449(para)
+msgid ""
+"The <ulink type=\"help\" url=\"ghelp:eog#eog-manipulate\"> Image "
+"Viewer</ulink>, F-Spot Photo Manager and the GIMP Image Editor are all "
+"capable of rotating photos."
+msgstr ""
+"O <ulink type=\"help\" url=\"ghelp:eog#eog-manipulate\"> Image "
+"Viewer</ulink>, Gerenciador de Fotos F-Spot e o Editor de Imagens GIMP são "
+"todos capazes de girar fotos."
+
+#: musicvideophotos/C/photos.xml:457(title)
+msgid "Resizing photos"
+msgstr "Redimensionando fotos"
+
+#: musicvideophotos/C/photos.xml:458(para)
+msgid ""
+"You can resize photos which are too big. If you have a photo which has a "
+"large file size, resizing it will also reduce the file size."
+msgstr ""
+"Você pode redimensionar fotos que são grandes demais. Se você tem uma foto "
+"que tem um grande tamanho de arquivo, redimensioná-la também diminuirá o "
+"tamanho do arquivo."
+
+#: musicvideophotos/C/photos.xml:462(para)
+msgid ""
+"The <application>GIMP Image Editor</application> supports several methods of "
+"resizing photos. We will concentrate on the simplest method."
+msgstr ""
+"O <application>Editor de Imagens GIMP</application> suporta vários métodos "
+"de redimensionamento de imagens. Vamos nos concentrar no método mais simples."
+
+#: musicvideophotos/C/photos.xml:469(para)
+msgid "Open the photo you want to resize in the GIMP Image Editor"
+msgstr "Abra a foto que deseja redimensionar no Editor de Imagens GIMP"
+
+#: musicvideophotos/C/photos.xml:474(para)
+msgid ""
+"Press <menuchoice><guimenuitem>Image</guimenuitem><guimenuitem>Scale "
+"Image</guimenuitem></menuchoice>"
+msgstr ""
+"Selecione <menuchoice><guimenuitem>Imagem</guimenuitem><guimenuitem>Escala "
+"de Imagem</guimenuitem></menuchoice>"
+
+#: musicvideophotos/C/photos.xml:483(para)
+msgid ""
+"Adjust the <guilabel>Width</guilabel> or <guilabel>Height</guilabel> as "
+"appropriate. The image will be kept to scale."
+msgstr ""
+"Ajuste a <guilabel>Largura</guilabel> ou a <guilabel>Altura</guilabel> de "
+"modo apropriado. A imagem manterá as proporções."
+
+#: musicvideophotos/C/photos.xml:488(para)
+msgid ""
+"If you want to adjust the width and height independently, press the link "
+"button which connects the <guilabel>Width</guilabel> and "
+"<guilabel>Height</guilabel> boxes, so that it looks like a broken link."
+msgstr ""
+"Se você deseja ajustar a largura e a altura independentementes, pressione o "
+"botão de corrente que conecta as caixas <guilabel>Largura</guilabel> e "
+"<guilabel>Altura</guilabel>, de modo que ele se pareça com uma corrente "
+"quebrada."
+
+#: musicvideophotos/C/photos.xml:496(para)
+msgid ""
+"Under <guilabel>Quality</guilabel>, change the "
+"<guilabel>Interpolation</guilabel> to <guilabel>Cubic (Best)</guilabel>. "
+"This will give you the best quality resized image"
+msgstr ""
+"Em <guilabel>Qualidade</guilabel>, modifique a "
+"<guilabel>Interpolação</guilabel> para <guilabel>Cúbica (Melhor)</guilabel>. "
+"Isso lhe dará a imagem redimensionada de melhor qualidade"
+
+#: musicvideophotos/C/photos.xml:504(para)
+msgid "Press <guilabel>Scale</guilabel> to resize the photo"
+msgstr ""
+"Pressione <guilabel>Redimensionar</guilabel> para redimensionar a foto"
+
+#: musicvideophotos/C/photos.xml:509(para)
+msgid ""
+"Press <menuchoice><guimenuitem>File</guimenuitem><guimenuitem>Save "
+"As</guimenuitem></menuchoice> and choose a new filename for the photo"
+msgstr ""
+"Selecione <menuchoice><guimenuitem>Arquivo</guimenuitem><guimenuitem>Salvar "
+"Como</guimenuitem></menuchoice> e escolher um novo nome de arquivo para a "
+"foto"
+
+#: musicvideophotos/C/photos.xml:518(para)
+msgid "Press <guilabel>Save</guilabel> to save the resized photo"
+msgstr ""
+"Pressione <guilabel>Salvar</guilabel> para salvar sua foto redimensionada"
 
 #: musicvideophotos/C/musicvideophotos.xml:3(title)
 msgid "Credits and License"
@@ -55,6 +1162,9 @@ msgid ""
 "(https://wiki.ubuntu.com/DocumentationTeam). For a list of contributors, see "
 "the <ulink url=\"../../libs/C/contributors.xml\">contributors page</ulink>"
 msgstr ""
+"Este documento é mantido pelo time de documentação do Ubuntu "
+"(https://wiki.ubuntu.com/DocumentationTeam). Para a lista de contribuidores, "
+"veja <ulink url=\"../../libs/C/contributors.xml\">contributors page</ulink>"
 
 #: musicvideophotos/C/musicvideophotos.xml:5(para)
 msgid ""
@@ -89,10 +1199,12 @@ msgid ""
 "A copy of the license is available here: <ulink url=\"/usr/share/ubuntu-"
 "docs/libs/C/ccbysa.xml\">Creative Commons ShareAlike License</ulink>."
 msgstr ""
+"Uma cópia da licença está disponível aqui: <ulink url=\"/usr/share/ubuntu-"
+"docs/libs/C/ccbysa.xml\">Creative Commons ShareAlike License</ulink>."
 
 #: musicvideophotos/C/musicvideophotos.xml:14(year)
 msgid "2008"
-msgstr ""
+msgstr "2008"
 
 #: musicvideophotos/C/musicvideophotos.xml:15(ulink)
 msgid "Ubuntu Documentation Project"
@@ -106,27 +1218,23 @@ msgstr "Canonical Ltd. e membros de <placeholder-1/>"
 msgid "The Ubuntu Documentation Project"
 msgstr "O Projeto de Documentação do Ubuntu"
 
-#: musicvideophotos/C/musicvideophotos.xml:21(para)
+#: musicvideophotos/C/music.xml:16(title)
+msgid "Music"
+msgstr "Música"
+
+#: musicvideophotos/C/music.xml:17(para)
 msgid ""
 "This section describes how to import, organize and use music, videos and "
 "photos with Ubuntu."
 msgstr ""
+"Essa seção descreve como importar, organizar e usar músicas, vídeos e fotos "
+"com o Ubuntu."
 
-#: musicvideophotos/C/musicvideophotos.xml:27(title)
-msgid "Music and audio"
-msgstr "Música e áudio"
+#: musicvideophotos/C/music.xml:20(title)
+msgid "Listen"
+msgstr "Ouvir"
 
-#: musicvideophotos/C/musicvideophotos.xml:28(para)
-msgid ""
-"Whether you want to play, rip, edit or organize your music, Ubuntu has the "
-"tools that you need."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:34(title)
-msgid "Listen to audio files and CDs"
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:35(para)
+#: musicvideophotos/C/music.xml:21(para)
 msgid ""
 "You can use <application>Rhythmbox</application> "
 "(<menuchoice><guimenu>Applications</guimenu><guimenuitem>Sound &amp; "
@@ -137,36 +1245,51 @@ msgid ""
 "Video</guimenuitem><guimenuitem>Movie Player</guimenuitem></menuchoice>) to "
 "listen to music on your computer."
 msgstr ""
+"Você pode usar o <application>Rhythmbox</application> "
+"(<menuchoice><guimenu>Aplicativos</guimenu><guimenuitem>Multimídia</guimenuit"
+"em><guimenuitem>Reprodutor de músicas Rhythmbox</guimenuitem></menuchoice>) "
+"e <application>Reprodutor de filmes</application> "
+"(<menuchoice><guimenu>Aplicativos</guimenu><guimenuitem>Multimídia</guimenuit"
+"em><guimenuitem>Reprodutor de filmes</guimenuitem></menuchoice>) para ouvir "
+"música no seu computador."
 
-#: musicvideophotos/C/musicvideophotos.xml:41(para)
+#: musicvideophotos/C/music.xml:25(para)
 msgid ""
-"Audio files will be opened in Movie Player when double-clicked, but "
-"Rhythmbox is better at handling large music collections."
+"Audio files will be opened in Movie Player when double-clicked but Rhythmbox "
+"is better at handling large music collections."
 msgstr ""
+"Arquivos de áudio serão abertos no Movie Player com o duplo clique, mas o "
+"Rhythmbox é melhor para lidar com grandes coleções musicais."
 
-#: musicvideophotos/C/musicvideophotos.xml:46(para)
+#: musicvideophotos/C/music.xml:28(para)
 msgid ""
-"Rhythmbox is also able to play audio CDs, and should open automatically when "
-"you insert a CD."
+"Rhythmbox is also able to play audio CDs and work with MP3 players. It "
+"should open automatically when you insert a CD."
 msgstr ""
+"Rhythmbox é também capaz de reproduzir CDs de áudio e trabalhar com MP3. "
+"Deve abrir-se automaticamente quando você inserir um CD."
 
-#: musicvideophotos/C/musicvideophotos.xml:50(para)
+#: musicvideophotos/C/music.xml:30(para)
 msgid ""
 "See the <ulink type=\"help\" url=\"ghelp:rhythmbox\"> Rhythmbox "
 "manual</ulink> for more information."
 msgstr ""
+"Veja o <ulink type=\"help\" url=\"ghelp:rhythmbox\">manual do "
+"Rhythmbox</ulink> para mais informações."
 
-#: musicvideophotos/C/musicvideophotos.xml:56(title)
+#: musicvideophotos/C/music.xml:33(title)
 msgid "How can I prevent CDs from playing when I insert them?"
-msgstr ""
+msgstr "Como eu posso evitar que CDs toquem quando eu os insiro?"
 
-#: musicvideophotos/C/musicvideophotos.xml:57(para)
+#: musicvideophotos/C/music.xml:34(para)
 msgid ""
 "Rhythmbox should start playing a CD automatically when you insert it into "
 "your CD drive."
 msgstr ""
+"Rhythmbox deverá começar a reproduzir um CD automaticamente quando você "
+"inseri-lo em seu drive de CD."
 
-#: musicvideophotos/C/musicvideophotos.xml:61(para)
+#: musicvideophotos/C/music.xml:36(para)
 msgid ""
 "To prevent this from happening, open your Home folder by clicking "
 "<menuchoice><guimenu>Places</guimenu><guimenuitem>Home "
@@ -177,25 +1300,40 @@ msgid ""
 "<guilabel>CD Audio</guilabel> option to <guilabel>Do Nothing</guilabel>. "
 "Finally, press <guibutton>Close</guibutton>."
 msgstr ""
+"Para evitar que isso aconteça, abra sua Pasta Pessoal clicando em "
+"<menuchoice>>guimenu>Locais</guimenu><guimenuitem>Pasta "
+"Pessoal</guimenuitem></menuchoice> no painel no topo da tela. Então, clique "
+"em "
+"<menuchoice><guimenuitem>Editar</guimenuitem><guimenuitem>Preferências</guime"
+"nuitem><guimenuitem>Mídia</guimenuitem></menuchoice> e altere a opção "
+"<guilabel>CD de Áudio</guilabel> para <guilabel>Fazer nada</guilabel>. "
+"Finalmente, pressione <guibutton>Fechar</guibutton>."
 
-#: musicvideophotos/C/musicvideophotos.xml:72(para)
+#: musicvideophotos/C/music.xml:45(para)
 msgid ""
 "See the <ulink type=\"help\" url=\"ghelp:user-guide#nautilus-preferences\"> "
 "Nautilus Preferences article</ulink> for more information."
 msgstr ""
+"Veja o <ulink type=\"help\" url=\"ghelp:user-guide#nautilus-"
+"preferences\">artigo Preferências do Nautilus</ulink> para mais informações."
 
-#: musicvideophotos/C/musicvideophotos.xml:79(title)
+#: musicvideophotos/C/music.xml:49(title)
 msgid "Song names/cover art are missing/wrong for some songs"
 msgstr ""
+"Nomes das músicas/arte da capa estão faltando ou estão errados para algumas "
+"músicas."
 
-#: musicvideophotos/C/musicvideophotos.xml:80(para)
+#: musicvideophotos/C/music.xml:50(para)
 msgid ""
 "Music player applications fetch cover art and other information about songs "
 "from the Internet. If song names or cover art are missing, make sure that "
 "you are connected to the Internet."
 msgstr ""
+"Reprodutores de música buscam a arte da capa do álbum e outras informações "
+"sobre a música na Internet. Se os nomes das músicas ou artes das capas "
+"estiverem faltando, certifique-se de que você está conectado à Internet."
 
-#: musicvideophotos/C/musicvideophotos.xml:85(para)
+#: musicvideophotos/C/music.xml:53(para)
 msgid ""
 "Sometimes, your music player may not be able to identify a particular song "
 "or album correctly. If this is the case, you can add the correct information "
@@ -203,86 +1341,159 @@ msgid ""
 "url=\"apt:cowbell\">Cowbell</ulink> or <ulink url=\"apt:easytag-"
 "aac\">EasyTAG</ulink>. Some music players even have their own tag editor."
 msgstr ""
+"Às vezes, o Reprodutor de músicas pode não ser capaz de identificar um "
+"determinado álbum ou música corretamente. Se este for o caso, você pode "
+"adicionar a informação correta manualmente utilizando um editor de tags, "
+"como o <ulink url=\"apt:cowbell\">Cowbell</ulink> ou <ulink "
+"url=\"apt:easytag-aac\">EasyTAG</ulink>. Alguns reprodutores têm o seu "
+"próprio editor de tags."
 
-#: musicvideophotos/C/musicvideophotos.xml:94(emphasis)
+#: musicvideophotos/C/music.xml:59(emphasis)
 msgid "If only the album cover art is missing for an album:"
-msgstr ""
+msgstr "Se apenas a arte da capa estiver faltando para um álbum:"
 
-#: musicvideophotos/C/musicvideophotos.xml:99(para)
+#: musicvideophotos/C/music.xml:62(para)
 msgid ""
 "Find a picture of the album cover on the Internet. <ulink "
 "url=\"http://www.amazon.com/\">Amazon</ulink> and other music retailers "
 "often display pictures of the album cover; right-click it and click "
 "<guibutton>Save Image As</guibutton> to save it to your computer."
 msgstr ""
+"Encontre uma imagem da capa do álbum na Internet. <ulink "
+"url=\"http://www.amazon.com/\">Amazon</ulink> e outros varejistas "
+"frequentemente exibem imagens da capa do álbum; clique com o botão direito "
+"do mouse sobre ela e clique em <guibutton>Salvar Imagem Como</guibutton:> "
+"para salvá-la em seu computador."
 
-#: musicvideophotos/C/musicvideophotos.xml:108(para)
+#: musicvideophotos/C/music.xml:67(para)
 msgid ""
 "Rename the picture to <filename>cover.jpg</filename> and copy it into the "
 "folder which contains the songs from the album."
 msgstr ""
+"Renomeie a imagem para <filename>cover.jpg</filename> e copie-a para a pasta "
+"que contém as músicas do álbum."
 
-#: musicvideophotos/C/musicvideophotos.xml:114(para)
+#: musicvideophotos/C/music.xml:69(para)
 msgid ""
 "Rhythmbox and most other music players should display the correct cover art "
 "when a song from the album is next played."
 msgstr ""
+"Rhythmbox e a maioria dos outros reprodutores de música deverão exibir a "
+"arte da capa corretamente quando uma música do álbum for reproduzida pela "
+"próxima vez."
 
-#: musicvideophotos/C/musicvideophotos.xml:120(para)
+#: musicvideophotos/C/music.xml:72(para)
 msgid ""
 "Rhythmbox and some other music players allow you to drag a picture onto "
 "their cover art display area to change or add cover art for an album."
 msgstr ""
+"Rhythmbox e alguns outros reprodutores de música permitem que você arraste "
+"uma imagem para a área do aplicativo para mudar ou adicionar arte de capa de "
+"um álbum."
 
-#: musicvideophotos/C/musicvideophotos.xml:128(title)
-msgid "Copy music from a CD to your computer"
-msgstr ""
+#: musicvideophotos/C/music.xml:77(title)
+msgid "Extract from a CD"
+msgstr "Extrair do CD"
 
-#: musicvideophotos/C/musicvideophotos.xml:129(para)
+#: musicvideophotos/C/music.xml:78(para)
 msgid ""
-"You can copy music from a CD to your computer so that you do not have to "
+"You can extract music from a CD to your computer so that you do not have to "
 "have the CD in the drive to play songs from it. You can then copy the songs "
-"to a digital audio player, such as an iPod."
+"to a digital audio player, such as an MP3 player."
 msgstr ""
+"Você pode extrair as músicas de um CD para o seu computador e tocá-las mesmo "
+"quando o disco não estiver no drive. Você também pode copiá-las para "
+"tocadores de áudio digital, como reprodutores de MP3."
 
-#: musicvideophotos/C/musicvideophotos.xml:134(para)
+#: musicvideophotos/C/music.xml:82(para)
 msgid ""
-"Applications which perform this task for you are called <emphasis>CD "
-"rippers</emphasis> or <emphasis>extractors</emphasis>. The music is often "
-"<emphasis>compressed</emphasis> when you copy it, so that it takes up less "
-"space on your hard disk. MP3 and WMA files are examples of compressed audio "
-"files."
+"Rhythmbox stores extracted files in the Music folder "
+"(<menuchoice><guimenu>Places</guimenu><guimenuitem>Music</guimenuitem></menuc"
+"hoice>)."
 msgstr ""
+"Rhythmbox salva os arquivos extraídos na pasta Músicas "
+"(<menuchoice><guimenu>Locais</guimenu><guimenuitem>Músicas</guimenuitem></men"
+"uchoice>)."
 
-#: musicvideophotos/C/musicvideophotos.xml:140(para)
+#: musicvideophotos/C/music.xml:85(para)
+msgid "Insert an Audio CD."
+msgstr "Inserir um CD de áudio"
+
+#: musicvideophotos/C/music.xml:86(para)
 msgid ""
-"Rhythmbox can copy CDs to your computer in a range of different formats. See "
-"the <ulink type=\"help\" url=\"ghelp:rhythmbox#cd-import\"> Rhythmbox "
-"manual</ulink> for instructions. Other applications, such as <ulink "
-"type=\"help\" url=\"ghelp:sound-juicer\">Sound Juicer</ulink>, can also be "
-"used to extract songs from CDs."
+"You will be prompted to choose which application to launch, choose "
+"<guilabel>Open Rhythmbox Music Player</guilabel>."
 msgstr ""
+"Você será solicitado a escolher qual a aplicação de lançamento, escolher "
+"<guilabel> \t\r\n"
+"Abrir Rhythmbox Music Player</guilabel>"
 
-#: musicvideophotos/C/musicvideophotos.xml:148(para)
+#: musicvideophotos/C/music.xml:88(para)
+msgid "Click <guibutton>OK</guibutton>."
+msgstr "Clique <guibutton>OK</guibutton>."
+
+#: musicvideophotos/C/music.xml:89(para)
 msgid ""
-"The <filename>Music</filename> folder is a good place to store your music "
-"files when you copy them from a CD; most audio applications look there by "
-"default when searching for your music."
+"In the left hand pane, under <guilabel>Devices</guilabel>, right click the "
+"CD name you want to extract."
 msgstr ""
+"No painel à esquerda, em <guilabel>Dispositivos</guilabel>, clique com o "
+"botão direito do mouse no nome do CD que você deseja extrair."
 
-#: musicvideophotos/C/musicvideophotos.xml:157(title)
-msgid "Copy music to a CD"
+#: musicvideophotos/C/music.xml:91(para)
+msgid "Click <guibutton>Extract to Library</guibutton>."
+msgstr "Clique <guibutton>Extrair para biblioteca</guibutton>."
+
+#: musicvideophotos/C/music.xml:93(para) musicvideophotos/C/music.xml:202(para)
+msgid ""
+"You can change the default file format used by Rhythmbox when copying CDs. "
+"Click "
+"<menuchoice><guimenuitem>Edit</guimenuitem><guimenuitem>Preferences</guimenui"
+"tem><guimenuitem>Music</guimenuitem></menuchoice> and change the "
+"<guilabel>Preferred Format</guilabel> to the format of your choice. In "
+"future, all CDs copied to your computer will be copied in this format."
 msgstr ""
+"Você pode alterar o formato de arquivo padrão usado pelo Rhythmbox ao copiar "
+"CDs. Clique em "
+"<menuchoice><guimenuitem>Editar</guimenuitem><guimenuitem>Preferências</guime"
+"nuitem><guimenuitem>Música</guimenuitem></menuchoice> e mude o "
+"<guilabel>Formato Preferencial</guilabel> para o formato de sua escolha. No "
+"futuro, todos os CDs copiados para o seu computados serão neste formato."
 
-#: musicvideophotos/C/musicvideophotos.xml:158(para)
+#: musicvideophotos/C/music.xml:105(para) musicvideophotos/C/music.xml:215(para)
+msgid ""
+"If an MP3 option is not shown in the <guilabel>Preferred Format </guilabel> "
+"list, <ulink url=\"apt:gstreamer0.10-plugins-ugly-multiverse\">install the "
+"<application>gstreamer0.10-plugins-ugly-multiverse</application> "
+"package</ulink> and restart Rhythmbox. The option <guilabel>CD Quality, MP3 "
+"(.mp3 type) </guilabel> should appear in the <guilabel>Preferred Format "
+"</guilabel> list."
+msgstr ""
+"Se uma opção MP3 não for mostrada na lista de <guilabel>formatos preferidos "
+"</guilabel>,<ulink url=\"apt:gstreamer0.10-plugins-ugly-multiverse\">instale "
+"o pacte <application>gstreamer0.10-plugins-ugly-"
+"multiverse</application></ulink> e reinicie o Rhythmbox. A opção "
+"<guilabel>qualidade CD, MP3 (tipo .mp3) </guilabel> deveria aparecer na "
+"lista de <guilabel>formatos preferidos </guilabel>."
+
+#: musicvideophotos/C/music.xml:116(title)
+msgid "Copy to a CD"
+msgstr "Copiar para um CD"
+
+#: musicvideophotos/C/music.xml:117(para)
 msgid ""
 "You can create your own audio CDs by copying music from your computer onto a "
 "blank disc. CDs that you create in this way should play in any device that "
 "can play standard (manufactured) audio CDs. All that is required is a CD "
 "burner (also called a CD writer). Most computers have one of these."
 msgstr ""
+"Você pode criar seus próprios CDs de áudio ao copiar música a partir do seu "
+"computador para um disco em branco. CDs que você cria desta forma devem "
+"executar em qualquer dispositivo que pode reproduzir o padrão (de fábrica) "
+"de CDs de áudio. Tudo o que é necessário é um gravador de CD. A maioria dos "
+"computadores tem um destes."
 
-#: musicvideophotos/C/musicvideophotos.xml:165(para)
+#: musicvideophotos/C/music.xml:124(para)
 msgid ""
 "To begin creating an audio CD, start Brasero "
 "(<menuchoice><guimenu>Applications</guimenu><guimenuitem>Sound &amp; "
@@ -292,26 +1503,39 @@ msgid ""
 "want to add to the CD and add them to the project. Finally, click "
 "<guibutton>Burn</guibutton> to copy the songs to a CD."
 msgstr ""
+"Para começar a criar um CD de áudio, inicie o Brasero "
+"(<menuchoice><guimenu>Aplicativos</guimenu><guimenuitem>Multimídia</guimenuit"
+"em><guimenuitem>Gravador de Disco Brasero</guimenuitem></menuchoice>) e "
+"selecione <guibutton>Projeto de áudio</guibutton> a partir da tela "
+"principal. Em seguida, selecione as músicas que você deseja adicionar ao CD "
+"e adicione-as ao projeto. Por fim, clique em <guibutton>Gravar</guibutton> "
+"para copiar as músicas para um CD."
 
-#: musicvideophotos/C/musicvideophotos.xml:171(para)
+#: musicvideophotos/C/music.xml:130(para)
 msgid ""
 "You will also need to select the maximum duration of the CD which you "
 "inserted (e.g. 80 minutes), which can be done by clicking on the small CD "
 "icon near the bottom of the window. Brasero will warn you if you have "
 "selected more files than can fit on the disc."
 msgstr ""
+"Você também precisará selecionar a duração máxima do CD que você inseriu "
+"(ex.: 80 minutos), que pode ser feito clicando no pequeno ícone do CD "
+"próximo da barra inferior da janela. O Brasero avisará se inserido mais "
+"arquivos que o disco pode suportar."
 
-#: musicvideophotos/C/musicvideophotos.xml:177(para)
+#: musicvideophotos/C/music.xml:136(para)
 msgid ""
 "See the <ulink type=\"help\" url=\"ghelp:brasero\"> Brasero manual</ulink> "
 "for full instructions."
 msgstr ""
+"Veja o <ulink type=\"help\" url=\"ghelp:brasero\"> manual do Brasero</ulink> "
+"para instruções completas."
 
-#: musicvideophotos/C/musicvideophotos.xml:184(title)
-msgid "Use an iPod or other portable music player"
-msgstr ""
+#: musicvideophotos/C/music.xml:142(title)
+msgid "Portable music players"
+msgstr "Reprodutor de música portátil"
 
-#: musicvideophotos/C/musicvideophotos.xml:185(para)
+#: musicvideophotos/C/music.xml:143(para)
 msgid ""
 "Ubuntu will work with most portable audio players, including iPods. "
 "Normally, all you have to do is plug the player into your computer and then "
@@ -321,8 +1545,19 @@ msgid ""
 "type=\"help\" url=\"ghelp:rhythmbox\">Rhythmbox manual</ulink> for more "
 "information."
 msgstr ""
+"O Ubuntu não funcionará com a maioria dos dispositivos de áudio portáteis, "
+"incluindo iPods. Normalmente, tudo o que você precisa fazer é plugar o "
+"dispositivo no seu computador e então usar o Rhythmbox para copiar músicas "
+"para para/do dispositivo. O dispositivo de áudio deve aparecer na seção  "
+"<guilabel>Dispositivos</guilabel> da lista que aparece abaixo do botão "
+"<guibutton>Tocar</guibutton>. Veja <ulink type=\"help\" "
+"url=\"ghelp:rhythmbox\">manual do Rhythmbox</ulink> para maiores informações."
 
-#: musicvideophotos/C/musicvideophotos.xml:195(para)
+#: musicvideophotos/C/music.xml:154(title)
+msgid "iPod"
+msgstr "iPod"
+
+#: musicvideophotos/C/music.xml:155(para)
 msgid ""
 "If you have a portable music player which can also display photos and "
 "videos, you may prefer to use <ulink url=\"apt:banshee\">Banshee</ulink>, "
@@ -331,20 +1566,98 @@ msgid ""
 "url=\"apt:gpixpod\">GPixPod</ulink> and <ulink "
 "url=\"apt:gtkpod\">gtkpod</ulink> for handling multimedia."
 msgstr ""
+"Se você tem um dispositivo de música portátil que também pode mostrar fotos "
+"e vídeos, você talvez prefira usar o <ulink "
+"url=\"apt:banshee\">Banshee</ulink>, que é um reprodutor de músicas com bom "
+"suporte para tais dispositivos. Donos de iPods podem também querer "
+"experimentar aplicativos especializados, como o <ulink "
+"url=\"apt:gpixpod\">GPixPod</ulink>  e o <ulink "
+"url=\"apt:gtkpod\">gtkpod</ulink> para manipular multimídia."
 
-#: musicvideophotos/C/musicvideophotos.xml:205(title)
-msgid "My portable audio player does not recognize songs copied from Ubuntu"
-msgstr ""
+#: musicvideophotos/C/music.xml:165(title)
+msgid "MTP Media Players"
+msgstr "MTP Media Players"
 
-#: musicvideophotos/C/musicvideophotos.xml:207(para)
+#: musicvideophotos/C/music.xml:166(para)
 msgid ""
-"When you copy music from a CD onto a computer, it must be stored in a "
+"A number of MP3 players, such as those produced by Samsung use Media "
+"Transfer Protocol(MTP). These devices, when used with the correct driver, "
+"often appear in Windows as a media device but can be accessed as a USB "
+"device."
+msgstr ""
+"Um número de reprodutores MP3, tais como os produzidos pela Samsung usa "
+"Media Transfer Protocol(MTP). Estes dispositivos, quando usado com o driver "
+"correto, muitas vezes aparecem no Windows como um dispositivo multimédia, "
+"mas pode ser acessado como um dispositivo USB."
+
+#: musicvideophotos/C/music.xml:170(para)
+msgid "Ubuntu supports these devices but requires two steps:"
+msgstr "Ubuntu suporta estes dispositivos, mas requer dois passos:"
+
+#: musicvideophotos/C/music.xml:172(para)
+msgid ""
+"Install the <ulink "
+"url=\"apt:mtpfs\"><application>mtpfs</application></ulink> and <ulink "
+"url=\"apt:mtpfs\"><application>mtp-tools</application></ulink> packages."
+msgstr ""
+"Instale o <ulink url=\"apt:mtpfs\"><application>mtpfs</application></ulink> "
+"e <ulink url=\"apt:mtpfs\"><application>mtp-tools</application></ulink> "
+"pacotes."
+
+#: musicvideophotos/C/music.xml:174(para)
+msgid ""
+"Open <menuchoice><guimenu>Applications</guimenu><guimenuitem>Sound &amp; "
+"Video</guimenuitem><guimenuitem>Rhythmbox Music "
+"Player</guimenuitem></menuchoice>."
+msgstr ""
+"Abrir <menuchoice><guimenu>Aplicações</guimenu><guimenuitem>Som &amp; "
+"Video</guimenuitem><guimenuitem>Reprodutor de Músicas "
+"Rhythmbox</guimenuitem></menuchoice>."
+
+#: musicvideophotos/C/music.xml:175(para)
+msgid ""
+"Click "
+"<menuchoice><guimenu>Edit</guimenu><guimenuitem>Plugins</guimenuitem></menuch"
+"oice>"
+msgstr ""
+"Clique <menuchoice><guimenu>Editar</guimenu><guimenuitem>Plug-"
+"ins</guimenuitem></menuchoice>"
+
+#: musicvideophotos/C/music.xml:176(para)
+msgid "Tick the <guilabel>Portable Players - MTP</guilabel> plugin."
+msgstr "Assinale o <guilabel>Reprodutor portátil - MTP</guilabel> plugin."
+
+#: musicvideophotos/C/music.xml:177(para)
+msgid "Click <guibutton>Close</guibutton>."
+msgstr "Clique <guibutton>Fechar</guibutton>."
+
+#: musicvideophotos/C/music.xml:179(para)
+msgid ""
+"Your device will now be displayed in the left hand pane under "
+"<guilabel>Devices</guilabel> when connected."
+msgstr ""
+"O dispositivo agora será exibido no painel da esquerda em "
+"<guilabel>Dispositivos</guilabel> quando conectado."
+
+#: musicvideophotos/C/music.xml:184(title)
+msgid "Converting audio files"
+msgstr "Convertendo arquivos de música"
+
+#: musicvideophotos/C/music.xml:185(para)
+msgid ""
+"When you extract music from a CD onto a computer, it must be stored in a "
 "specific <emphasis>audio format</emphasis>. The default format used by "
 "Rhythmbox is Ogg Vorbis (<filename>.ogg</filename> or "
-"<filename>.oga</filename>)."
+"<filename>.oga</filename>). This is explained in <xref linkend=\"music-"
+"extract\"/>."
 msgstr ""
+"Quando você extrai músicas de um CD para um computador, elas serão gravadas "
+"em um <emphasis>formato de áudio</emphasis> específico. O formato padrão "
+"utilizado pelo Rhythmbox é o Ogg Vorbis (<filename>.ogg</filename> ou "
+"<filename>.oga</filename>). Isto é explicado em <xref linkend=\"music-"
+"extract\"/>."
 
-#: musicvideophotos/C/musicvideophotos.xml:213(para)
+#: musicvideophotos/C/music.xml:190(para)
 msgid ""
 "Not all portable audio players are able to play files in the Ogg Vorbis "
 "format; for example, iPods cannot play this format. In order for your player "
@@ -352,45 +1665,38 @@ msgid ""
 "supports. Nearly every player on the market supports the MP3 format, so this "
 "is usually a safe bet."
 msgstr ""
+"Nem todos os dispositivos de áudio portátil são capazes de reproduzir "
+"arquivos no formato Ogg Vorbis; por exemplo, iPods não podem reproduzir este "
+"formato. Para que o seu dispositivo reconheça suas músicas, você precisa "
+"convertê-las para um formato suportado pelos mesmos. Praticamente todo "
+"dispositivo no mercado suporta o formato MP3, logo, geralmente este será uma "
+"escolha segura."
 
-#: musicvideophotos/C/musicvideophotos.xml:220(para)
+#: musicvideophotos/C/music.xml:197(para)
 msgid ""
 "You can convert existing audio files to other formats using <ulink "
 "url=\"apt:soundconverter\">Sound Converter</ulink>. The output format can be "
 "selected in the Sound Converter preferences."
 msgstr ""
+"Você pode converter arquivos de áudio existentes para outros formatos "
+"utilizando o <ulink url=\"apt:soundconverter\">Sound Converter</ulink>. O "
+"formato de destino pode ser selecionado nas opções do Sound Converter."
 
-#: musicvideophotos/C/musicvideophotos.xml:225(para)
-msgid ""
-"You can change the default file format used by Rhythmbox when copying CDs. "
-"Click "
-"<menuchoice><guimenuitem>Edit</guimenuitem><guimenuitem>Preferences</guimenui"
-"tem><guimenuitem>Music</guimenuitem></menuchoice> and change the "
-"<guilabel>Preferred Format</guilabel> to the format of your choice. In "
-"future, all CDs copied to your computer will be copied in this format."
-msgstr ""
+#: musicvideophotos/C/music.xml:226(title)
+msgid "Podcasts and Internet radio stations"
+msgstr "Podcasts e estações de rádio Internet"
 
-#: musicvideophotos/C/musicvideophotos.xml:238(para)
-msgid ""
-"If an MP3 option is not shown in the <guilabel>Preferred Format </guilabel> "
-"list, install the <ulink url=\"apt:gstreamer0.10-plugins-ugly-multiverse\"> "
-"gstreamer0.10-plugins-ugly-multiverse</ulink> package and restart Rhythmbox. "
-"The option <guilabel>CD Quality, MP3 (.mp3 type) </guilabel> should appear "
-"in the <guilabel>Preferred Format </guilabel> list."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:252(title)
-msgid "Listen to podcasts and Internet radio stations"
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:253(para)
+#: musicvideophotos/C/music.xml:227(para)
 msgid ""
 "<emphasis role=\"strong\">Podcasts</emphasis> are pre-recorded shows which "
 "you can download and listen to on your computer or portable audio player. "
 "Thousands of podcasts are available and most can be downloaded for free."
 msgstr ""
+"<emphasis role=\"strong\">Podcasts</emphasis> são shows pré-gravados que "
+"você pode baixar e ouvir no seu computador ou reprodutor de áudio. Milhares "
+"de podcasts são disponibilizados e a maioria pode ser baixada gratuitamente."
 
-#: musicvideophotos/C/musicvideophotos.xml:259(para)
+#: musicvideophotos/C/music.xml:233(para)
 msgid ""
 "You can use Rhythmbox to download and play podcasts; select "
 "<guilabel>Podcasts</guilabel> from the <guilabel>Library</guilabel> section "
@@ -400,8 +1706,15 @@ msgid ""
 "<ulink url=\"apt:gpodder\">gPodder</ulink> or <ulink "
 "url=\"apt:penguintv\">PenguinTV</ulink>."
 msgstr ""
+"Você pode usar o Rhythmbox para baixar e ouvir podcasts; selecione "
+"<guilabel>Podcasts</guilabel> na seção <guilabel>Biblioteca</guilabel> da "
+"janela do Rhythmbox para iniciar. O <ulink type=\"help\" "
+"url=\"ghelp:rhythmbox\">Manual do Rhythmbox</ulink> possui mais informações. "
+"Você pode também, preferir usar um gerenciador de podcasts dedicado, como o "
+"<ulink url=\"apt:gpodder\">gPodder</ulink> ou o <ulink "
+"url=\"apt:penguintv\">PenguinTV</ulink>."
 
-#: musicvideophotos/C/musicvideophotos.xml:268(para)
+#: musicvideophotos/C/music.xml:242(para)
 msgid ""
 "<emphasis role=\"strong\">Internet radio stations</emphasis> are live "
 "<emphasis>audio streams</emphasis>, similar to standard radio but "
@@ -411,27 +1724,41 @@ msgid ""
 "and see the <ulink type=\"help\" url=\"ghelp:rhythmbox\">Rhythmbox "
 "manual</ulink> for more details."
 msgstr ""
+"<emphasis role=\"strong\">Estações de rádio na Internet</emphasis> são "
+"<emphasis>fluxos de áudio ao vivo</emphasis>, semelhantes ao rádio comum mas "
+"transmitidos pela Internet. Você pode usar o Rhythmbox para ouvir rádio da "
+"Internet também; selecione <guilabel>Rádio</guilabel> na seção "
+"<guilabel>Biblioteca</guilabel> da janela do Rhythmbox para iniciar e veja o "
+"<ulink type=\"help\" url=\"ghelp:rhythmbox\">Manual do Rhythmbox</ulink> "
+"para mais detalhes."
 
-#: musicvideophotos/C/musicvideophotos.xml:278(para)
+#: musicvideophotos/C/music.xml:252(para)
 msgid ""
 "<emphasis role=\"strong\">RealAudio streams</emphasis>, as used by some "
 "Internet radio stations, are not supported by Rhythmbox. To listen to this "
 "type of stream, <link linkend=\"video-realplayer\"> install "
 "RealPlayer</link>."
 msgstr ""
+"<emphasis role=\"strong\">Fluxos do RealAudio</emphasis>, usados por algumas "
+"estações de rádio na Internet, não são suportados pelo Rhythmbox. Para ouvir "
+"a esse tipo de fluxo, <link linkend=\"video-realplayer\"> instale o "
+"RealPlayer</link>."
 
-#: musicvideophotos/C/musicvideophotos.xml:287(title)
+#: musicvideophotos/C/music.xml:261(title)
 msgid "Download music from the Internet"
-msgstr ""
+msgstr "Baixar música da internet"
 
-#: musicvideophotos/C/musicvideophotos.xml:288(para)
+#: musicvideophotos/C/music.xml:262(para)
 msgid ""
 "Many websites which allow you to buy music online and download it onto your "
 "computer are designed to work with Microsoft Windows only. As a result, some "
 "services will not work with Ubuntu."
 msgstr ""
+"Muitos sites que permitem comprar músicas online e baixá-las para o seu "
+"computador são projetados para funcionar apenas com o Microsoft Windows. "
+"Assim, alguns serviços não funcionarão no Ubuntu."
 
-#: musicvideophotos/C/musicvideophotos.xml:293(para)
+#: musicvideophotos/C/music.xml:267(para)
 msgid ""
 "Ubuntu is able to play most audio formats, including MP3, WMA and AAC. "
 "However, it does not support the various DRM (Digital Rights Management) "
@@ -440,8 +1767,15 @@ msgid ""
 "Ubuntu. In particular, nearly all music from the iTunes music store is DRM-"
 "restricted and so cannot be played."
 msgstr ""
+"O Ubuntu é capaz de tocar a maioria dos formatos de áudio, incluindo MP3, "
+"WMA e AAC. Entretanto, ele não suporta os vários esquemas de DRM "
+"(Gerenciamento de Direitos Digitais) os quais as lojas algumas vezes usam "
+"para restringir o acesso às suas músicas. Se você baixou arquivos de áudio "
+"que são restritos pelo DRM, é improvável que eles funcionem no Ubuntu. "
+"Particularmente, quase todas as músicas da loja iTunes é restrita por DRM, "
+"então não podem ser tocadas."
 
-#: musicvideophotos/C/musicvideophotos.xml:301(para)
+#: musicvideophotos/C/music.xml:275(para)
 msgid ""
 "Two services which offer unrestricted (DRM-free) music are <ulink "
 "url=\"http://www.jamendo.com\">Jamendo</ulink> and <ulink "
@@ -450,26 +1784,37 @@ msgid ""
 "enabled (see the <ulink type=\"help\" url=\"ghelp:rhythmbox\"> Rhythmbox "
 "manual</ulink> for more information)."
 msgstr ""
+"Dois serviços que oferecem músicas irrestritas (sem DRM) são o <ulink "
+"url=\"http://www.jamendo.com\">Jamendo</ulink> e o <ulink "
+"url=\"\">Magnatune</ulink>. Você pode comprar músicas dessas duas lojas "
+"online, ou diretamente do próprio Rhythmbox se os plugins apropriados "
+"estiverem habilitados (veja o <ulink type=\"help\" url=\"ghelp:rhythmbox\"> "
+"Manual do Rhythmbox</ulink> para mais informações)."
 
-#: musicvideophotos/C/musicvideophotos.xml:310(para)
+#: musicvideophotos/C/music.xml:284(para)
 msgid ""
 "Downloading music from the Internet without the permission of its copyright "
 "holder is considered illegal in many countries. You should check that you "
 "are within your rights to download a music file before saving it onto your "
 "computer."
 msgstr ""
+"Baixar músicas da Internet sem a permissão de seu proprietário é considerado "
+"ilegal em muitos países. Você deve verificar se tem direito de baixar um "
+"arquivo de música antes de salvá-lo em seu computador."
 
-#: musicvideophotos/C/musicvideophotos.xml:320(title)
+#: musicvideophotos/C/music.xml:293(title)
 msgid "Recording sounds"
-msgstr ""
+msgstr "Gravando sons"
 
-#: musicvideophotos/C/musicvideophotos.xml:321(para)
+#: musicvideophotos/C/music.xml:294(para)
 msgid ""
 "You can record sounds onto your computer if you have a microphone or other "
 "recording equipment connected to it."
 msgstr ""
+"Você pode gravar sons no seu computador se você tiver um microfone ou outro "
+"equipamento de gravação conectado."
 
-#: musicvideophotos/C/musicvideophotos.xml:325(para)
+#: musicvideophotos/C/music.xml:298(para)
 msgid ""
 "To start a basic sound recording application, press "
 "<keycombo><keycap>Alt</keycap><keycap>F2</keycap></keycombo>, type "
@@ -478,55 +1823,77 @@ msgid ""
 "sound-recorder\"> Sound Recorder manual</ulink> for instructions on how to "
 "use it."
 msgstr ""
+"Para iniciar um aplicativo de gravação de som básico, pressione "
+"<keycombo><keycap>Alt</keycap><keycap>F2</keycap></keycombo>, digite "
+"<userinput>gnome-sound-recorder</userinput> na caixa de texto e então clique "
+"em <guibutton>Executar</guibutton>. Veja o <ulink type=\"help\" "
+"url=\"ghelp:gnome-sound-recorder\"> manual do Gravador de Som</ulink> para "
+"instruções sobre como utilizá-lo."
 
-#: musicvideophotos/C/musicvideophotos.xml:333(para)
+#: musicvideophotos/C/music.xml:306(para)
 msgid ""
 "For more advanced recording needs, you may like to try a multi-track audio "
 "editor such as <ulink url=\"apt:jokosher\">Jokosher</ulink> or <ulink "
 "url=\"apt:audacity\">Audacity</ulink>."
 msgstr ""
+"Caso necessite de opções avançadas de gravação de áudio, você pode tentar "
+"usar um editor de áudio que trabalhe com várias trilhas, como o <ulink "
+"url=\"apt:jokosher\">Jokosher</ulink> ou <ulink "
+"url=\"apt:audacity\">Audacity</ulink>."
 
-#: musicvideophotos/C/musicvideophotos.xml:339(para)
+#: musicvideophotos/C/music.xml:312(para)
 msgid ""
 "Many other professional-level recording tools are available for Ubuntu. See "
 "the <ulink url=\"http://ubuntustudio.org/\"> Ubuntu Studio website</ulink> "
 "for more information."
 msgstr ""
+"Muitas outras ferramentas de gravação de nível profissional estão "
+"disponíveis para o Ubuntu. Veja o <ulink url=\"http://ubuntustudio.org/\"> "
+"website do Ubuntu Studio</ulink> para mais informações."
 
-#: musicvideophotos/C/musicvideophotos.xml:346(title)
+#: musicvideophotos/C/music.xml:319(title)
 msgid "My microphone does not work or is too quiet"
-msgstr ""
+msgstr "Meu microfone não funciona ou o som está muito baixo"
 
-#: musicvideophotos/C/musicvideophotos.xml:352(emphasis)
+#: musicvideophotos/C/music.xml:325(emphasis)
 msgid "Check that the microphone is connected to the correct socket"
-msgstr ""
+msgstr "Verifique se o microfone está conectado à entrada correta"
 
-#: musicvideophotos/C/musicvideophotos.xml:356(para)
+#: musicvideophotos/C/music.xml:329(para)
 msgid ""
 "Most computers have three or more similar-looking audio sockets, so you "
 "should check that the microphone is plugged into the correct one. It is "
 "usually colored pink and has a microphone icon next to it."
 msgstr ""
+"A maioria dos computadores tem três ou mais entradas similares de áudio, "
+"então você deve verificar se o microfone está conectado na entrada correta. "
+"Ela é em geral cor-de-rosa e tem o ícone de um microfone próximo."
 
-#: musicvideophotos/C/musicvideophotos.xml:362(para)
+#: musicvideophotos/C/music.xml:335(para)
 msgid ""
 "In some rare cases, sockets do not work as labeled. For example, your "
 "microphone socket may act as the <quote>Line Out</quote> socket and vice "
 "versa. If this is the case, use trial and error to find the correct "
 "microphone socket."
 msgstr ""
+"Em alguns casos raros, as entradas não funcionam da forma como estão "
+"marcadas. Por exemplo, sua entrada de microfone pode agir como <quote>Linha "
+"Externa</quote> e vice versa. Se esse for o caso, utilize tentativa e erro "
+"para encontrar a entrada de microfone correta."
 
-#: musicvideophotos/C/musicvideophotos.xml:371(emphasis)
+#: musicvideophotos/C/music.xml:344(emphasis)
 msgid "Check that the microphone is not muted in the settings"
-msgstr ""
+msgstr "Verifique se o microfone está sem som nas configurações."
 
-#: musicvideophotos/C/musicvideophotos.xml:375(para)
+#: musicvideophotos/C/music.xml:348(para)
 msgid ""
 "The microphone input may have been muted or its volume reduced in the system "
 "settings."
 msgstr ""
+"A entrada de microfone pode estar sem som ou com o volume reduzido nas "
+"configurações do sistema."
 
-#: musicvideophotos/C/musicvideophotos.xml:381(para)
+#: musicvideophotos/C/music.xml:354(para)
 msgid ""
 "Right-click the speaker icon on the panel at the top of your screen and "
 "select <guilabel>Open Volume Control</guilabel>. If you do not have a "
@@ -535,17 +1902,25 @@ msgid ""
 "<userinput>gnome-volume-control</userinput> and click "
 "<guibutton>Run</guibutton> instead."
 msgstr ""
+"Clique com o botão direito do mouse no ícone do alto-falante no painel no "
+"topo da tela e selecione <guilabel>Abrir controle de volume</guilabel>. Se "
+"não tiver um ícone de alto-falante no painel, pressione "
+"<keycombo><keycap>Alt</keycap><keycap>F2</keycap></keycombo>, digite "
+"<userinput>gnome-volume-control</userinput> e clique em "
+"<guibutton>Executar</guibutton>."
 
-#: musicvideophotos/C/musicvideophotos.xml:394(para)
+#: musicvideophotos/C/music.xml:367(para)
 msgid ""
-"When the Volume Control opens, click "
-"<menuchoice><guimenuitem>Edit</guimenuitem><guimenuitem>Preferences</guimenui"
-"tem></menuchoice> and make sure that all of the items related to the "
-"microphone settings are checked. Click <guibutton>Close</guibutton> to "
-"return to the volume control."
+"When the Volume Control opens, click <guibutton>Preferences</guibutton> and "
+"make sure that all of the items related to the microphone settings are "
+"checked. Click <guibutton>Close</guibutton> to return to the volume control."
 msgstr ""
+"Quando o controle de volume abrir, clique em "
+"<guibutton>Preferências</guibutton> e certifique-se de que todos os itens "
+"relacionados ao microfone estão marcados. Clique em "
+"<guibutton>Fechar</guibutton> para voltar ao controle de volume."
 
-#: musicvideophotos/C/musicvideophotos.xml:407(para)
+#: musicvideophotos/C/music.xml:377(para)
 msgid ""
 "Under the <guilabel>Playback</guilabel> tab, make sure that all of the "
 "microphone settings are unmuted and that their volume is set high enough. If "
@@ -553,8 +1928,13 @@ msgid ""
 "displayed underneath its volume slider; click that icon to unmute the "
 "microphone."
 msgstr ""
+"Na aba <guilabel>Reprodução</guilabel>, certifique-se de que todas as "
+"configurações do microfone não estão sem som e que o volume está "
+"suficientemente alto. Se um microfone estiver sem som, um ícone de alto-"
+"falante com uma cruz vermelha sobre ele será exibido debaixo de seu controle "
+"deslizante; clique nesse ícone para tirar o microfone do estado sem som."
 
-#: musicvideophotos/C/musicvideophotos.xml:417(para)
+#: musicvideophotos/C/music.xml:387(para)
 msgid ""
 "You may also find it necessary to change other settings to get your "
 "microphone to work properly. For example, the <guilabel>Mic Boost</guilabel> "
@@ -563,937 +1943,53 @@ msgid ""
 "setting under the <guilabel>Options</guilabel> tab can all affect the volume "
 "of your microphone."
 msgstr ""
+"Você talvez sinta a necessidade de mudar outras configurações para fazer com "
+"que seu microfone funcione corretamente. Por exemplo, as opções "
+"<guilabel>Mic Boost</guilabel> e <guilabel>Amplificador externo</guilabel> "
+"na aba <guilabel>Chaves</guilabel> e a opção <guilabel>Seleção de "
+"microfone</guilabel> na aba <guilabel>Opções</guilabel> podem afetar o "
+"volume do seu microfone."
 
-#: musicvideophotos/C/musicvideophotos.xml:432(emphasis)
+#: musicvideophotos/C/music.xml:402(emphasis)
 msgid "Check the volume control on the microphone"
-msgstr ""
+msgstr "Verifique o controle de volume no microfone"
 
-#: musicvideophotos/C/musicvideophotos.xml:436(para)
+#: musicvideophotos/C/music.xml:406(para)
 msgid ""
 "Some microphones have an integrated volume control. Check that the volume "
 "control on your microphone is turned up."
 msgstr ""
+"Alguns microfones possuem um controle de volume integrado. Verifique se o "
+"controle de volume no seu microfone está ativado."
 
-#: musicvideophotos/C/musicvideophotos.xml:443(emphasis)
+#: musicvideophotos/C/music.xml:413(emphasis)
 msgid "Check the volume control in the recording application"
-msgstr ""
+msgstr "Verifique o controle de volume no aplicativo de gravação"
 
-#: musicvideophotos/C/musicvideophotos.xml:447(para)
+#: musicvideophotos/C/music.xml:417(para)
 msgid ""
 "Some applications allow you to change the volume of the microphone from "
 "within the application. Check the volume settings in the application that "
 "you are using."
 msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:459(title)
-msgid "Movies, DVDs and videos"
-msgstr "Filmes, DVDs e vídeos"
-
-#: musicvideophotos/C/musicvideophotos.xml:460(para)
-msgid ""
-"You can watch movies and video clips with the <application>Totem Movie "
-"Player</application> "
-"(<menuchoice><guimenu>Applications</guimenu><guimenuitem>Sound &amp; "
-"Video</guimenuitem><guimenuitem>Movie Player</guimenuitem></menuchoice>)."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:466(title)
-msgid "Playing DVDs"
-msgstr "Reproduzindo DVDs"
-
-#: musicvideophotos/C/musicvideophotos.xml:467(para)
-msgid ""
-"In order to play DVDs you must install some additional software. "
-"Unfortunately, DVD support cannot be provided by default in Ubuntu due to "
-"legal restrictions in some countries."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:473(para)
-msgid ""
-"Read about <ulink url=\"ghelp:add-applications#restricted-software\"> "
-"restricted formats</ulink> before following the instructions below. There "
-"are some legal issues that you should be aware of."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:481(para)
-msgid ""
-"Install the <ulink url=\"apt:libdvdnav4\">libdvdnav4</ulink>, <ulink "
-"url=\"apt:libdvdread3\">libdvdread3</ulink> and <ulink "
-"url=\"apt:gstreamer0.10-plugins-ugly\"> gstreamer0.10-plugins-ugly</ulink> "
-"packages."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:490(para)
-msgid ""
-"If you would like to play encrypted DVDs, press "
-"<menuchoice><guimenu>Applications</guimenu><guimenuitem>Accessories</guimenui"
-"tem><guimenuitem>Terminal</guimenuitem></menuchoice> and type the following "
-"into the screen which appears, followed by the <keycap>Enter</keycap> key: "
-"<screen>sudo /usr/share/doc/libdvdread3/install-css.sh</screen>"
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:498(para)
-msgid ""
-"Enter your password if prompted. The <application>libdvdcss2</application> "
-"package will be downloaded and installed from a website."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:505(para)
-msgid ""
-"Insert a DVD into your drive. It should open automatically in the Movie "
-"Player."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:513(title)
-msgid "Where have the menus on my DVDs gone?"
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:514(para)
-msgid ""
-"DVD menus are not currently supported by the default Movie Player. To be "
-"able to use the menus on a disc, you must install an alternative movie "
-"player such as <ulink url=\"apt:gxine\">gxine</ulink> or <ulink "
-"url=\"apt:vlc\">VLC</ulink>."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:520(para)
-msgid ""
-"To make DVDs automatically play in the alternative movie player when "
-"inserted, open <menuchoice><guimenu>Places</guimenu><guimenuitem>Home "
-"Folder</guimenuitem></menuchoice>, click "
-"<menuchoice><guimenu>Edit</guimenu><guimenuitem>Preferences</guimenuitem></me"
-"nuchoice> and then click the <guilabel>Media</guilabel> tab. Select the "
-"alternative player from the <guibutton>DVD Video</guibutton> list."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:534(title)
-msgid "How can I get my videos to play?"
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:536(para)
-msgid ""
-"Some video formats, such as Flash, QuickTime, and Windows Media Video, are "
-"proprietary and so support for them cannot be included in Ubuntu by default. "
-"You must install some extra software to allow playback."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:541(para)
-msgid ""
-"In order to play the most common proprietary formats in the Totem movie "
-"player or Firefox web browser, install the <ulink url=\"apt:ubuntu-"
-"restricted-extras\"> ubuntu-restricted-extras</ulink> package (see <ulink "
-"url=\"ghelp:add-applications#restricted-software\">Restricted "
-"Software</ulink> for more information)."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:550(title)
-msgid "Video files"
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:552(emphasis)
-msgid "(e.g. QuickTime, Windows Media)"
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:554(para)
-msgid ""
-"If you try to play an unsupported video file, you will be asked if you would "
-"like to <guilabel>search for a suitable codec</guilabel>. Click "
-"<guibutton>Search</guibutton> and, when the <guilabel>Install multimedia "
-"codecs</guilabel> window appears, select one of the codecs displayed in the "
-"list and click <guibutton>Install</guibutton>."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:561(para)
-msgid ""
-"If you are asked to <guilabel>confirm installation of restricted "
-"software</guilabel>, the codec required to play your video may have some "
-"<ulink url=\"ghelp:add-applications#restricted-software\">legal "
-"restrictions</ulink> which you should be aware of. If you think that the "
-"restrictions do not apply to you, press <guibutton>Confirm</guibutton> to "
-"continue with the installation."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:569(para)
-msgid ""
-"Once installation is complete, the video should begin to play. If not, try "
-"closing and then re-opening the video."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:576(title)
-msgid "Flash videos"
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:578(emphasis)
-msgid "(e.g. Youtube, iPlayer)"
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:580(para)
-msgid ""
-"When you first try to play a Flash video in the Firefox web browser, a bar "
-"will appear at the top of the window saying that <guilabel>additional "
-"plugins are required</guilabel>. Press the <guibutton>Install Missing "
-"Plugins</guibutton> button and follow the instructions on-screen to install "
-"a Flash player."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:587(para)
-msgid ""
-"You will be offered the choice of several players. The <guilabel>Adobe Flash "
-"Player</guilabel> is the official plugin, which should offer the best "
-"support for videos. Unfortunately, it is proprietary software and so cannot "
-"be supported directly by Ubuntu. The Swfdec and Gnash players are not "
-"proprietary and so are supported. You may also find them to be more stable "
-"(cause fewer problems) than the official player."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:599(title)
-msgid "Streaming video"
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:601(emphasis)
-msgid "(e.g. RealVideo)"
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:603(para)
-msgid ""
-"The most reliable way of playing RealVideo-format videos is to install the "
-"official RealPlayer software. See <link linkend=\"video-realplayer\"> "
-"Installing and configuring RealPlayer</link> for full instructions."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:608(para)
-msgid ""
-"Support for most other types of streaming video can be added by following "
-"the instructions for <link linkend=\"video-playback-file\">video "
-"files</link> or <link linkend=\"video-playback-flash\">Flash videos</link>. "
-"If you are having difficulties getting a video to stream in your web "
-"browser, right-click the video and select <guilabel>Open with \"Movie "
-"Player\"</guilabel> if that option is available."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:621(title)
-msgid "Videos that are otherwise unsupported"
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:622(para)
-msgid ""
-"If none of the other instructions in this section work with a particular "
-"video, try using a different media player. <ulink "
-"url=\"apt:vlc\">VLC</ulink> and <ulink url=\"apt:mplayer\">MPlayer</ulink> "
-"support a wide range of formats; it is recommended that you try one of these."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:634(title)
-msgid "Installing and configuring RealPlayer"
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:635(para)
-msgid ""
-"RealPlayer is a proprietary application, and so is not installed in the "
-"usual way."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:641(para)
-msgid ""
-"Download a suitable Linux installer from the <ulink "
-"url=\"http://uk.real.com/player/select/\"> RealPlayer website</ulink> and "
-"save it in your Home folder."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:648(para)
-msgid ""
-"Open a Terminal "
-"(<menuchoice><guimenu>Applications</guimenu><guimenuitem>Accessories</guimenu"
-"item><guimenuitem>Terminal</guimenuitem></menuchoice>) and type the "
-"following, pressing <keycap>Enter</keycap> at the end of each line and "
-"typing your password when prompted:"
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:653(screen)
-#, no-wrap
-msgid ""
-"\n"
-"sudo chmod a+x RealPlayer*\n"
-"sudo ./RealPlayer*"
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:658(para)
-msgid ""
-"You should see the text <guilabel>Extracting files for Helix "
-"installation</guilabel> on the screen if the installer has started properly. "
-"When asked a question by the installer, press <keycap>Enter</keycap> to "
-"accept the default."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:666(para)
-msgid ""
-"When the installer has finished copying files, press "
-"<menuchoice><guimenu>Applications</guimenu><guimenuitem>Sound &amp; "
-"Video</guimenuitem><guimenuitem>RealPlayer 11</guimenuitem></menuchoice> and "
-"follow the instructions on the screen to complete set-up."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:673(para)
-msgid ""
-"For more in-depth instructions, see the <ulink "
-"url=\"https://help.ubuntu.com/community/RealPlayerInstallationMethods\"> "
-"community help wiki</ulink>."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:682(title)
-msgid "Recording and editing video"
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:683(para)
-msgid ""
-"There are numerous video capture and editing programs available for Ubuntu. "
-"Some of the most popular include <ulink url=\"apt:kino\">Kino</ulink>, "
-"<ulink url=\"apt:kdenlive\">Kdenlive</ulink>, and <ulink "
-"url=\"apt:pitivi\">Pitivi</ulink>."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:724(title)
-msgid "Photos and cameras"
-msgstr "Fotos e câmeras"
-
-#: musicvideophotos/C/musicvideophotos.xml:725(para)
-msgid ""
-"There are many tools available to help you to work with your digital photo "
-"collection."
-msgstr ""
-"Existem diversas ferramentas disponíveis para ajudá-lo a trabalhar com sua "
-"coleção de fotos digitais."
-
-#: musicvideophotos/C/musicvideophotos.xml:731(title)
-msgid "Import photos from a digital camera"
-msgstr "Importar fotos de uma câmera digital"
-
-#: musicvideophotos/C/musicvideophotos.xml:732(para)
-msgid ""
-"Ubuntu automatically detects most digital cameras when you plug them in, and "
-"will offer to import your photos automatically."
-msgstr ""
-"Ubuntu detecta automaticamente a maioria das câmeras digitais quando "
-"conectadas ao computador e lhe permite importar suas fotos automaticamente."
-
-#: musicvideophotos/C/musicvideophotos.xml:736(para)
-msgid "To import photos from your camera:"
-msgstr "Para importar fotos de sua câmera:"
-
-#: musicvideophotos/C/musicvideophotos.xml:741(para)
-msgid ""
-"Plug-in and switch on the camera by placing it in review mode. Ubuntu should "
-"ask you if you would like to import the photos that the camera contains."
-msgstr ""
-"Conecte a câmera e alterne-a para o modo de visualização de fotos. O Ubuntu "
-"deve perguntar se você deseja importar as fotos que estão na câmera."
-
-#: musicvideophotos/C/musicvideophotos.xml:748(para)
-msgid ""
-"Click on <guibutton>Import</guibutton>. You should then see a preview of the "
-"photos."
-msgstr ""
-"Clique em <guibutton>Importar</guibutton>. Você verá a visualização das "
-"fotos."
-
-#: musicvideophotos/C/musicvideophotos.xml:754(para)
-msgid ""
-"Choose a location to save your photos to, then click on "
-"<guibutton>Import</guibutton>. The photos will be saved to your hard drive."
-msgstr ""
-"Escolha um local para salvar suas fotos, então clique em "
-"<guibutton>Importar</guibutton>. As fotos serão salvas em seu disco rígido."
-
-#: musicvideophotos/C/musicvideophotos.xml:762(para)
-msgid "If Ubuntu does not ask you if it can import the photos:"
-msgstr "Se o Ubuntu não lhe perguntar se pode importar as fotos:"
-
-#: musicvideophotos/C/musicvideophotos.xml:767(para)
-msgid ""
-"Open "
-"<menuchoice><guimenu>Applications</guimenu><guimenuitem>Graphics</guimenuitem"
-"><guimenuitem>F-Spot Photo Manager</guimenuitem></menuchoice> and choose "
-"<menuchoice><guimenu>File</guimenu><guimenuitem>Import</guimenuitem></menucho"
-"ice>."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:776(para)
-msgid ""
-"Select your camera as the <guilabel>Import Source</guilabel> and then click "
-"<guibutton>Import</guibutton> to begin importing your photos."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:783(para)
-msgid ""
-"If your camera does not appear as an import source, press "
-"<menuchoice><guimenu>Places</guimenu><guimenuitem>Computer</guimenuitem></men"
-"uchoice> and check if your camera is visible there as a removable storage "
-"device. If it is, you can then copy the photos manually using the "
-"<application>File Browser</application>."
-msgstr ""
-"Se sua câmera não aparecer como uma fonte de importação, pressione "
-"<menuchoice><guimenu>Locais</guimenu><guimenuitem>Computador</guimenuitem></m"
-"enuchoice> e verifique se sua câmera está visível como um dispositivo de "
-"armazenamento removível. Se estiver, você pode copiar as fotos manualmente "
-"usando o <application>Navegador de Arquivos</application>."
-
-#: musicvideophotos/C/musicvideophotos.xml:793(title)
-msgid "Organize your photo collection"
-msgstr "Organize sua coleção de fotos"
-
-#: musicvideophotos/C/musicvideophotos.xml:794(para)
-msgid ""
-"<application>F-Spot</application> provides a complete solution for managing "
-"your photo collection. To start it, choose "
-"<menuchoice><guimenu>Applications</guimenu><guimenuitem>Graphics</guimenuitem"
-"><guimenuitem>F-Spot Photo Manager</guimenuitem></menuchoice>."
-msgstr ""
-"O <application>F-Spot</application> fornece uma solução completa para "
-"gerenciar suas coleções de fotos. Para iniciá-lo, acesse "
-"<menuchoice><guimenu>Aplicações</guimenu><guimenuitem>Gráficos</guimenuitem><"
-"guimenuitem>Gerenciador de Fotos F-Spot</guimenuitem></menuchoice>."
-
-#: musicvideophotos/C/musicvideophotos.xml:798(para)
-msgid ""
-"With <application>F-Spot</application>, you can import photos from your "
-"digital camera or USB stick, tag them with familiar terms, do touch ups, and "
-"edit them in different ways. In addition to this, you can upload photos "
-"easily to your Flickr, PicasaWeb album and other online photo galleries."
-msgstr ""
-"Com o <application>F-Spot</application>, você pode importar fotos de sua "
-"câmera digital ou dispositivo USB, adicionar etiquetas com termos "
-"familiares, melhorá-las e editá-las de várias maneiras. Além disso, você "
-"pode facilmente enviar suas fotos para o Flickr, PicasaWeb e outros álbuns "
-"de fotos on-line."
-
-#: musicvideophotos/C/musicvideophotos.xml:805(para)
-msgid ""
-"For help with <application>F-Spot Photo Manager</application>, see the "
-"<ulink type=\"help\" url=\"ghelp:f-spot\">F-Spot User Guide</ulink>."
-msgstr ""
-"Para ajuda com o <application>Gerenciador de Fotos F-Spot</application>, "
-"veja o <ulink type=\"help\" url=\"ghelp:f-spot\">Guia de Usuário do F-"
-"Spot</ulink>."
-
-#: musicvideophotos/C/musicvideophotos.xml:812(title)
-msgid "Watch a slideshow of photos"
-msgstr "Assista uma apresentação de fotos"
-
-#: musicvideophotos/C/musicvideophotos.xml:813(para)
-msgid ""
-"If you want to show off your photos in all of their glory, why not run a "
-"slideshow of them?"
-msgstr ""
-"Se você quer mostrar suas fotos em toda sua glória, por que não fazer uma "
-"apresentação de slides com ela?"
-
-#: musicvideophotos/C/musicvideophotos.xml:819(para)
-msgid ""
-"Watch a slideshow using the <ulink type=\"help\" url=\"ghelp:eog#eog-"
-"fullscreen\"> Image Viewer</ulink>"
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:826(para)
-msgid ""
-"Watch a slideshow using the <ulink type=\"help\" url=\"ghelp:f-spot#enjoying-"
-"fullscreen-mode-and-slideshows\"> F-Spot Photo Manager</ulink>"
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:835(title)
-msgid "Setting a Slideshow as Your Screensaver"
-msgstr "Configurando uma Apresentação de Slides como Protetor deTela"
-
-#: musicvideophotos/C/musicvideophotos.xml:836(para)
-msgid "You can use a slideshow of your photos as you screensaver:"
-msgstr ""
-"Você pode usar uma apresentação de slides de suas fotos como seu protetor de "
-"tela:"
-
-#: musicvideophotos/C/musicvideophotos.xml:841(para)
-msgid ""
-"Press "
-"<menuchoice><guimenu>System</guimenu><guimenuitem>Preferences</guimenuitem><g"
-"uimenuitem>Screensaver</guimenuitem></menuchoice>"
-msgstr ""
-"Selecione "
-"<menuchoice><guimenu>Sistema</guimenu><guimenuitem>Preferências</guimenuitem>"
-"<guimenuitem>Protetor de Tela</guimenuitem></menuchoice>"
-
-#: musicvideophotos/C/musicvideophotos.xml:846(para)
-msgid "Select the <guilabel>F-Spot photos</guilabel> screensaver theme"
-msgstr ""
-"Selecione o tema de protetor de tela <guilabel>Fotos do F-Spot</guilabel>"
-
-#: musicvideophotos/C/musicvideophotos.xml:852(para)
-msgid ""
-"Photos which are tagged as <guilabel>Favorites</guilabel> in <application>F-"
-"Spot Photo Manager</application> will be displayed as your screensaver"
-msgstr ""
-"As fotos que estão marcadas como <guilabel>Favoritas</guilabel> no "
-"<application>Gerenciador de Fotos F-Spot</application> serão exibidas como "
-"seu protetor de tela"
-
-#: musicvideophotos/C/musicvideophotos.xml:860(para)
-msgid "If you would like to change which tag is used for the slideshow:"
-msgstr ""
-"Se você quiser mudar qual marcador é usado para a apresentação de slides:"
-
-#: musicvideophotos/C/musicvideophotos.xml:865(para)
-msgid "Open F-Spot"
-msgstr "Abra o F-Spot"
-
-#: musicvideophotos/C/musicvideophotos.xml:870(para)
-msgid ""
-"Press "
-"<menuchoice><guimenuitem>Edit</guimenuitem><guimenuitem>Preferences</guimenui"
-"tem></menuchoice>"
-msgstr ""
-"Selecione "
-"<menuchoice><guimenuitem>Editar</guimenuitem><guimenuitem>Preferências</guime"
-"nuitem></menuchoice>"
-
-#: musicvideophotos/C/musicvideophotos.xml:879(para)
-msgid "Under <guilabel>Screensaver</guilabel>, select the desired tag"
-msgstr ""
-"Em <guilabel>Protetor de Tela</guilabel>, selecione o marcador desejado"
-
-#: musicvideophotos/C/musicvideophotos.xml:884(para)
-msgid "Press <guibutton>Close</guibutton>"
-msgstr "Pressione <guibutton>Fechar</guibutton>"
-
-#: musicvideophotos/C/musicvideophotos.xml:892(title)
-msgid "Printing photos"
-msgstr "Imprimindo fotos"
-
-#: musicvideophotos/C/musicvideophotos.xml:893(para)
-msgid "Printing your photos is great way to share them with others."
-msgstr ""
-"Imprimir suas fotos é uma ótima maneira de compartilhá-las com outras "
-"pessoas."
-
-#: musicvideophotos/C/musicvideophotos.xml:898(para)
-msgid ""
-"Double-click the photo you want to print to open it in the "
-"<application>Image Viewer</application>"
-msgstr ""
-"Dê um clique-duplo sobre a foto que você quer imprimir para abri-la no "
-"<application>Visualizador de Imagens</application>"
-
-#: musicvideophotos/C/musicvideophotos.xml:904(para)
-msgid ""
-"Press <menuchoice><guimenuitem>File</guimenuitem><guimenuitem>Page "
-"Setup</guimenuitem></menuchoice>"
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:912(para)
-msgid ""
-"Under <guilabel>Format for</guilabel>, select the printer which you are "
-"going to use"
-msgstr ""
-"Em <guilabel>Formatar para</guilabel>, selecione a impressora que você irá "
-"usar"
-
-#: musicvideophotos/C/musicvideophotos.xml:918(para)
-msgid ""
-"Under <guilabel>Paper size</guilabel>, select the size of the paper which "
-"you are going to print the photo onto"
-msgstr ""
-"Em <guilabel>Tamanho do papel</guilabel>, selecione o tamanho do papel no "
-"qual você imprimirá sua foto"
-
-#: musicvideophotos/C/musicvideophotos.xml:924(para)
-msgid ""
-"Under <guilabel>Orientation</guilabel>, choose the orientation of the photo "
-"on the paper"
-msgstr ""
-"Em <guilabel>Orientação</guilabel>, selecione a orientação da foto no papel"
-
-#: musicvideophotos/C/musicvideophotos.xml:932(para)
-msgid "Press <guibutton>Apply</guibutton>"
-msgstr "Pressione <guibutton>Aplicar</guibutton>"
-
-#: musicvideophotos/C/musicvideophotos.xml:937(para)
-msgid ""
-"Press "
-"<menuchoice><guimenuitem>File</guimenuitem><guimenuitem>Print</guimenuitem></"
-"menuchoice>"
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:946(para)
-msgid "Change any settings as appropriate (see below)"
-msgstr "Mude qualquer configuração conforme apropriado (veja a seguir)"
-
-#: musicvideophotos/C/musicvideophotos.xml:951(para)
-msgid "Press <guibutton>Print</guibutton> to print the photo"
-msgstr "Pressione <guibutton>Imprimir</guibutton> para imprimir a foto"
-
-#: musicvideophotos/C/musicvideophotos.xml:958(title)
-msgid "Printer Settings"
-msgstr "Configuração de Impressora"
-
-#: musicvideophotos/C/musicvideophotos.xml:959(para)
-msgid ""
-"You can tweak your printing settings to get the best results. All of these "
-"settings can be found in the "
-"<menuchoice><guimenuitem>File</guimenuitem><guimenuitem>Print</guimenuitem></"
-"menuchoice> window."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:968(para)
-msgid ""
-"Make sure that you select your printer from the list on the "
-"<guilabel>General</guilabel> tab to get the full range of settings supported "
-"by your printer."
-msgstr ""
-"Certifique-se de que você selecionou a sua impressora na lista da aba "
-"<guilabel>Geral</guilabel> para obter todas as configurações suportadas por "
-"sua impressora."
-
-#: musicvideophotos/C/musicvideophotos.xml:974(para)
-msgid ""
-"Different makes of printer will have different printer settings. The "
-"settings below are only provided as a guide for what you may be able to "
-"change with your particular printer."
-msgstr ""
-"Diferentes modelos de impressoras possuirão diferentes configurações de "
-"impressão. As configurações a seguir são disponibilizadas apenas como guia "
-"do que você terá possibilidade de configurar na sua impressora."
-
-#: musicvideophotos/C/musicvideophotos.xml:982(title)
-msgid "Paper Type"
-msgstr "Tipo de Papel"
-
-#: musicvideophotos/C/musicvideophotos.xml:983(para)
-msgid ""
-"The paper type that you use has a large impact on the quality of your "
-"printed photo. You should set the paper type to match the paper which you "
-"are using in your printer to prevent poor results. Using a "
-"<emphasis>glossy</emphasis> paper type with only <emphasis>plain</emphasis> "
-"paper loaded into your printer will generally produce poor results, for "
-"example."
-msgstr ""
-"O tipo de papel que você usa exerce um grande impacto na qualidade de sua "
-"foto impressa. Você deve configurar o tipo de papel conforme o papel que "
-"você está usando na sua impressora para prevenir maus resultados. Usando um "
-"papel <emphasis>lustroso</emphasis> com apenas papel "
-"<emphasis>plano</emphasis> na sua impressora, por exemplo, irá resultar em "
-"uma impressão de baixa qualidade."
-
-#: musicvideophotos/C/musicvideophotos.xml:991(para)
-msgid ""
-"This setting may automatically change the amount of ink which is used, in "
-"order to get the best results and to prevent smudging. How this is handled "
-"will depend on your printer."
-msgstr ""
-"Esta configuração deve mudar automaticamente a quantidade de tinta usada "
-"para obter os melhores resultados e prevenir borrões. O modo como isso é "
-"tratado depende da sua impressora."
-
-#: musicvideophotos/C/musicvideophotos.xml:999(title)
-msgid "Print Quality"
-msgstr "Qualidade de Impressão"
-
-#: musicvideophotos/C/musicvideophotos.xml:1000(para)
-msgid ""
-"Print quality is generally measured in <emphasis>DPI</emphasis> (dots per "
-"inch). A greater DPI value should result in better print quality."
-msgstr ""
-"A qualidade da impressão é normalmente medida em <emphasis>DPI</emphasis> "
-"(pontos por polegada). Um valor maior de DPI deve resultar em uma impressão "
-"de melhor qualidade."
-
-#: musicvideophotos/C/musicvideophotos.xml:1007(para)
-msgid ""
-"Choose <guilabel>Draft</guilabel> for making quick draft prints which don't "
-"use much ink"
-msgstr ""
-"Escolha <guilabel>Rascunho</guilabel> para impressões rápidas de rascunhos "
-"que não usam muita tinta"
-
-#: musicvideophotos/C/musicvideophotos.xml:1013(para)
-msgid ""
-"Choose <guilabel>Best Quality</guilabel> or <guilabel>Photo</guilabel> for "
-"making high quality prints. Printing will be slower and will use more ink"
-msgstr ""
-"Escolha <guilabel>Melhor Qualidade</guilabel> ou <guilabel>Foto</guilabel> "
-"para impressões em alta qualidade. A impressão será mais lenta e usará mais "
-"tinta"
-
-#: musicvideophotos/C/musicvideophotos.xml:1024(title)
-msgid "Advanced Photo Printing"
-msgstr "Impressão Avançada de Fotos"
-
-#: musicvideophotos/C/musicvideophotos.xml:1025(para)
-msgid ""
-"For advanced photo printing, install <application>PhotoPrint</application> "
-"(see <ulink type=\"help\" url=\"ghelp:add-applications\"> Adding, Removing "
-"and Updating Applications</ulink>). Once installed, press "
-"<menuchoice><guimenu>Applications</guimenu><guimenuitem>Graphics</guimenuitem"
-"><guimenuitem>PhotoPrint</guimenuitem></menuchoice> to start PhotoPrint."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:1032(para)
-msgid "PhotoPrint allows you to fine-tune your printing settings."
-msgstr ""
-"O PhotoPrint permite que você faça um ajuste fino das configurações de "
-"impressão."
-
-#: musicvideophotos/C/musicvideophotos.xml:1037(para)
-msgid ""
-"Under <guilabel>Page Size</guilabel>, change the page size to the size of "
-"paper that you want to print onto."
-msgstr ""
-"Em <guilabel>Tamanho da Página</guilabel>, mude o tamanho da página para o "
-"tamanho do papel no qual você deseja imprimir."
-
-#: musicvideophotos/C/musicvideophotos.xml:1043(para)
-msgid ""
-"Under <guilabel>Layout</guilabel>, change the number of columns and rows to "
-"reflect the number of photos that you want to put onto a page"
-msgstr ""
-"Em <guilabel>Layout</guilabel>, modifique o número de colunas e linhas para "
-"ficar de acordo com o número de fotos que você deseja colocar em uma página"
-
-#: musicvideophotos/C/musicvideophotos.xml:1050(para)
-msgid ""
-"To change the amount of spacing between photos, change the "
-"<guilabel>Horizontal</guilabel> and <guilabel>Vertical</guilabel> settings "
-"under <guilabel>Gutters</guilabel>"
-msgstr ""
-"Para mudar o espaçamento entre as fotos, modifique as configurações "
-"<guilabel>Horizontal</guilabel> e <guilabel>Vertical</guilabel> em "
-"<guilabel>Guias</guilabel>"
-
-#: musicvideophotos/C/musicvideophotos.xml:1058(para)
-msgid ""
-"To add a photo to the page, press "
-"<menuchoice><guimenuitem>Image</guimenuitem><guimenuitem>Add "
-"Image</guimenuitem></menuchoice> and select a photo"
-msgstr ""
-"Para adicionar uma foto à página, pressione "
-"<menuchoice><guimenuitem>Imagem</guimenuitem><guimenuitem>Adicionar "
-"Imagem</guimenuitem></menuchoice> e selecione uma foto"
-
-#: musicvideophotos/C/musicvideophotos.xml:1067(para)
-msgid ""
-"To change the advanced printer settings, press "
-"<menuchoice><guimenuitem>File</guimenuitem><guimenuitem>Print "
-"Setup</guimenuitem></menuchoice>"
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:1074(para)
-msgid ""
-"You may need to select the correct printer model on the "
-"<guilabel>Output</guilabel> tab"
-msgstr ""
-"Você deve selecionar o modelo correto de impressora na aba "
-"<guilabel>Saída</guilabel>"
-
-#: musicvideophotos/C/musicvideophotos.xml:1080(para)
-msgid ""
-"Press "
-"<menuchoice><guimenuitem>File</guimenuitem><guimenuitem>Print</guimenuitem></"
-"menuchoice> to print your photos"
-msgstr ""
-"Pressione "
-"<menuchoice><guimenuitem>Arquivo</guimenuitem><guimenuitem>Imprimir</guimenui"
-"tem></menuchoice> para imprimir suas fotos"
-
-#: musicvideophotos/C/musicvideophotos.xml:1093(title)
-msgid "Sharing your photos"
-msgstr "Compartilhando suas fotos"
-
-#: musicvideophotos/C/musicvideophotos.xml:1094(para)
-msgid ""
-"If you want to share your collection of photos with others, why not use an "
-"online photo sharing service or burn a CD of your photos? Ubuntu has plenty "
-"of tools to help you share your pictures."
-msgstr ""
-"Se você deseja compartilhar sua coleção de fotos com outras pessoas, por que "
-"não usar um serviço on-line de compartilhamento de fotos ou gravar um CD com "
-"suas fotos? O Ubuntu possui uma série de ferramentas para ajudá-lo a "
-"compartilhar suas imagens."
-
-#: musicvideophotos/C/musicvideophotos.xml:1101(para)
-msgid ""
-"<ulink type=\"help\" url=\"ghelp:musicvideophotos#photos-printing\"> Print "
-"copies</ulink> of your photos."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:1107(para)
-msgid ""
-"Share your photos over the Internet using a <ulink type=\"help\" "
-"url=\"ghelp:f-spot#sharing-flickr-or-php-gallery\"> photo sharing "
-"service</ulink> or a <ulink type=\"help\" url=\"ghelp:f-spot#website-gallery-"
-"folder\">web gallery</ulink>."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:1115(para)
-msgid ""
-"Burn a CD of your photos using the <ulink type=\"help\" "
-"url=\"ghelp:musicvideophotos#cdburning\"> File Browser</ulink> or <ulink "
-"type=\"help\" url=\"ghelp:f-spot#sharing-burn-to-cd\"> F-Spot Photo "
-"Manager</ulink>."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:1124(para)
-msgid ""
-"Present a <ulink type=\"help\" url=\"ghelp:musicvideophotos#photos-"
-"slideshow\"> slideshow</ulink> of your photos."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:1131(para)
-msgid ""
-"<ulink type=\"help\" url=\"ghelp:f-spot#sharing-e-mail\"> E-mail "
-"copies</ulink> of your photos directly."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:1140(title)
-msgid "Edit and improve photos"
-msgstr "Editar e melhorar fotos"
-
-#: musicvideophotos/C/musicvideophotos.xml:1141(para)
-msgid ""
-"Sometimes, you may need to adjust or touch-up a photo to make it look better "
-"or to remove some flaw. <application>F-Spot</application> includes a few "
-"basic tools for doing this. To access these tools, press the <guibutton>Edit "
-"Photo</guibutton> button and then click on one of the tools at the bottom of "
-"the screen."
-msgstr ""
-"Às vezes você precisa ajustar ou retocar uma foto para que ela tenha uma "
-"aparência melhor ou para remover alguma imperfeição. o <application>F-"
-"Spot</application> inclui algumas ferramentas básicas para isso. Para "
-"acessar essas ferramentas, pressione o botão <guibutton>Editar "
-"Foto</guibutton> e então selecione uma das ferramentas na parte de baixo da "
-"tela."
-
-#: musicvideophotos/C/musicvideophotos.xml:1148(para)
-msgid ""
-"The <application>GIMP Image Editor</application> is much more advanced. It "
-"is installed in Ubuntu by default, and can be started by choosing "
-"<menuchoice><guimenu>Applications</guimenu><guimenuitem>Graphics</guimenuitem"
-"><guimenuitem>GIMP Image Editor</guimenuitem></menuchoice>."
-msgstr ""
-"O <application>Editor de Imagens GIMP</application> é muito mais avançado. "
-"Ele é instalado por padrão no Ubuntu e pode ser iniciado em "
-"<menuchoice><guimenu>Aplicações</guimenu><guimenuitem>Gráficos</guimenuitem><"
-"guimenuitem>Editor de Imagens GIMP</guimenuitem></menuchoice>."
-
-#: musicvideophotos/C/musicvideophotos.xml:1153(para)
-msgid ""
-"The GIMP has many professional-level features. It includes tools for "
-"selections, drawing, creating paths, masks, filters, effects, and more."
-msgstr ""
-"O GIMP possui muitos recursos a nível profissional. Ele inclui ferramentas "
-"para seleção, desenho, criação de caminhos, máscaras, filtros, efeitos e "
-"muito mais."
-
-#: musicvideophotos/C/musicvideophotos.xml:1159(title)
-msgid "Rotating photos"
-msgstr "Rotacionando fotos"
-
-#: musicvideophotos/C/musicvideophotos.xml:1160(para)
-msgid ""
-"You may find that you have some photos which are the wrong way up. It is "
-"easy to rotate photos so that they're the right way up again."
-msgstr ""
-"Talvez você descubra que tem algumas fotos que estão na direção errada. É "
-"fácil rotacioná-las de modo que elas fiquem na direção correta novamente."
-
-#: musicvideophotos/C/musicvideophotos.xml:1164(para)
-msgid ""
-"The <ulink type=\"help\" url=\"ghelp:eog#eog-manipulate\"> Image "
-"Viewer</ulink>, F-Spot Photo Manager and the GIMP Image Editor are all "
-"capable of rotating photos."
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:1172(title)
-msgid "Resizing photos"
-msgstr "Redimensionando fotos"
-
-#: musicvideophotos/C/musicvideophotos.xml:1173(para)
-msgid ""
-"You can resize photos which are too big. If you have a photo which has a "
-"large file size, resizing it will also reduce the file size."
-msgstr ""
-"Você pode redimensionar fotos que são grandes demais. Se você tem uma foto "
-"que tem um grande tamanho de arquivo, redimensioná-la também diminuirá o "
-"tamanho do arquivo."
-
-#: musicvideophotos/C/musicvideophotos.xml:1177(para)
-msgid ""
-"The <application>GIMP Image Editor</application> supports several methods of "
-"resizing photos. We will concentrate on the simplest method."
-msgstr ""
-"O <application>Editor de Imagens GIMP</application> suporta vários métodos "
-"de redimensionamento de imagens. Vamos nos concentrar no método mais simples."
-
-#: musicvideophotos/C/musicvideophotos.xml:1184(para)
-msgid "Open the photo you want to resize in the GIMP Image Editor"
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:1189(para)
-msgid ""
-"Press <menuchoice><guimenuitem>Image</guimenuitem><guimenuitem>Scale "
-"Image</guimenuitem></menuchoice>"
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:1198(para)
-msgid ""
-"Adjust the <guilabel>Width</guilabel> or <guilabel>Height</guilabel> as "
-"appropriate. The image will be kept to scale."
-msgstr ""
-"Ajuste a <guilabel>Largura</guilabel> ou a <guilabel>Altura</guilabel> de "
-"modo apropriado. A imagem manterá as proporções."
-
-#: musicvideophotos/C/musicvideophotos.xml:1203(para)
-msgid ""
-"If you want to adjust the width and height independently, press the link "
-"button which connects the <guilabel>Width</guilabel> and "
-"<guilabel>Height</guilabel> boxes, so that it looks like a broken link."
-msgstr ""
-"Se você deseja ajustar a largura e a altura independentementes, pressione o "
-"botão de corrente que conecta as caixas <guilabel>Largura</guilabel> e "
-"<guilabel>Altura</guilabel>, de modo que ele se pareça com uma corrente "
-"quebrada."
-
-#: musicvideophotos/C/musicvideophotos.xml:1211(para)
-msgid ""
-"Under <guilabel>Quality</guilabel>, change the "
-"<guilabel>Interpolation</guilabel> to <guilabel>Cubic (Best)</guilabel>. "
-"This will give you the best quality resized image"
-msgstr ""
-"Em <guilabel>Qualidade</guilabel>, modifique a "
-"<guilabel>Interpolação</guilabel> para <guilabel>Cúbica (Melhor)</guilabel>. "
-"Isso lhe dará a imagem redimensionada de melhor qualidade"
-
-#: musicvideophotos/C/musicvideophotos.xml:1219(para)
-msgid "Press <guilabel>Scale</guilabel> to resize the photo"
-msgstr ""
-"Pressione <guilabel>Redimensionar</guilabel> para redimensionar a foto"
-
-#: musicvideophotos/C/musicvideophotos.xml:1224(para)
-msgid ""
-"Press <menuchoice><guimenuitem>File</guimenuitem><guimenuitem>Save "
-"As</guimenuitem></menuchoice> and choose a new filename for the photo"
-msgstr ""
-
-#: musicvideophotos/C/musicvideophotos.xml:1233(para)
-msgid "Press <guilabel>Save</guilabel> to save the resized photo"
-msgstr ""
-"Pressione <guilabel>Salvar</guilabel> para salvar sua foto redimensionada"
-
-#: musicvideophotos/C/musicvideophotos.xml:1243(title)
+"Alguns aplicativos permitem que você mude o volume do microfone dentro de si "
+"mesmos. Verifique as configurações de volume no aplicativo que você está "
+"utilizando."
+
+#: musicvideophotos/C/cd.xml:16(title)
 msgid "Burning CDs and DVDs"
-msgstr ""
+msgstr "Gravar CDs e DVDs"
 
-#: musicvideophotos/C/musicvideophotos.xml:1244(para)
+#: musicvideophotos/C/cd.xml:17(para)
 msgid ""
 "You can make your own CDs by <emphasis>burning</emphasis> files onto a blank "
 "disc using the <emphasis>CD writer drive</emphasis> of your computer."
 msgstr ""
+"Você pode criar seus próprios CDs pelo <emphasis>queimando</emphasis> "
+"arquivos para um disco em branco utilizando o <emphasis>drive gravador de "
+"CD</emphasis> do seu computador."
 
-#: musicvideophotos/C/musicvideophotos.xml:1248(para)
+#: musicvideophotos/C/cd.xml:21(para)
 msgid ""
 "Use the Brasero Disc Burning software to create data, audio and video CDs, "
 "copy CDs and DVDs and create CDs from disc image files. Click "
@@ -1501,16 +1997,22 @@ msgid ""
 "Video</guimenuitem><guimenuitem>Brasero Disc "
 "Burning</guimenuitem></menuchoice> to start Brasero."
 msgstr ""
+"Use o software Brasero Disc Burning para criar os CD de dados, de áudio e "
+"vídeo, copiar CD e DVD e criar CD a partir de arquivos de imagem de disco. "
+"Clique <menuchoice><guimenu>Aplicações</guimenu><guimenuitem>Som &amp; "
+"Vídeo</guimenuitem><guimenuitem>Brasero Disc "
+"Burning</guimenuitem></menuchoice> para iniciar o Brasero."
 
-#: musicvideophotos/C/musicvideophotos.xml:1253(para)
+#: musicvideophotos/C/cd.xml:26(para)
 msgid ""
-"For help and instructions, open Brasero and click "
-"<menuchoice><guimenuitem>Help</guimenuitem><guimenuitem>Contents</guimenuitem"
-"></menuchoice> to view a full manual."
+"For help and instructions, see the <ulink url=\"ghelp:brasero\">Brasero "
+"manual</ulink>."
 msgstr ""
+"Para ajuda e instruções, veja o <ulink url=\"ghelp:brasero\">manual do "
+"Brasero</ulink>."
 
 #. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2.
-#: musicvideophotos/C/musicvideophotos.xml:0(None)
+#: musicvideophotos/C/cd.xml:0(None)
 msgid "translator-credits"
 msgstr ""
 "Launchpad Contributions:\n"
@@ -1533,7 +2035,35 @@ msgstr ""
 "  Gustavo Silva Castilho de Avellar https://launchpad.net/~gustavoavellar\n"
 "  Jakson Rochelly https://launchpad.net/~jrochelly\n"
 "  Mario Ancelmo C. Silva https://launchpad.net/~marioancelmo\n"
-"  Rafael Sachetto https://launchpad.net/~rsachetto"
+"  Rafael Sachetto https://launchpad.net/~rsachetto\n"
+"\n"
+"Launchpad Contributions:\n"
+"  Alan S Teixeira https://launchpad.net/~alansteixeira\n"
+"  Andre Noel https://launchpad.net/~andrenoel\n"
+"  André Gondim https://launchpad.net/~andregondim\n"
+"  Bruno https://launchpad.net/~jackbauer\n"
+"  Daniel Neis https://launchpad.net/~danielneis\n"
+"  Felipe Bernardo Zorzo https://launchpad.net/~felipe-b-zorzo\n"
+"  Fábio Nogueira https://launchpad.net/~fnogueira\n"
+"  Gerson \"fserve\" Barreiros https://launchpad.net/~fserve\n"
+"  Glauco https://launchpad.net/~glauco-hass\n"
+"  Guilherme Gonçalves https://launchpad.net/~guilherme08\n"
+"  Henrique P. Machado https://launchpad.net/~zehrique\n"
+"  Leon Nardella https://launchpad.net/~leon.nardella\n"
+"  Mario A. C. Silva (Exp4nsion) https://launchpad.net/~marioancelmo\n"
+"  Pablo Michael Silva https://launchpad.net/~pablomis-gmail\n"
+"  Rafael Sachetto https://launchpad.net/~rsachetto\n"
+"  Ricardo Silva https://launchpad.net/~rick2600\n"
+"  Rogênio Belém https://launchpad.net/~rogeniobelem"
+
+#~ msgid "Music and audio"
+#~ msgstr "Música e áudio"
+
+#~ msgid "Music, Videos and Photos"
+#~ msgstr "Música, Vídeos e Fotos"
+
+#~ msgid "Music, video and photos"
+#~ msgstr "Música, vídeo e fotos"
 
 #~ msgid ""
 #~ "As well as online audio broadcasts (podcasts), many video broadcasts are "

@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-docs\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2008-09-28 10:58+0100\n"
-"PO-Revision-Date: 2008-10-15 07:59+0000\n"
-"Last-Translator: Tao Wei <Unknown>\n"
+"POT-Creation-Date: 2009-03-26 16:34+0000\n"
+"PO-Revision-Date: 2009-03-27 06:02+0000\n"
+"Last-Translator: Guanglin Du <dugl@petrochina.com.cn>\n"
 "Language-Team: Chinese (China) <zh_CN@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2008-10-19 12:28+0000\n"
+"X-Launchpad-Export-Date: 2009-04-01 10:41+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: desktop-effects/C/desktop-effects-C.omf:6(creator) desktop-effects/C/desktop-effects-C.omf:7(maintainer)
@@ -72,8 +72,8 @@ msgid ""
 "A copy of the license is available here: <ulink url=\"/usr/share/ubuntu-"
 "docs/libs/C/ccbysa.xml\">Creative Commons ShareAlike License</ulink>."
 msgstr ""
-"许可证的副本位于：<ulink url=\"/usr/share/ubuntu-docs/libs/C/ccbysa.xml\">Creative "
-"Commons ShareAlike License</ulink>."
+"许可证的副本可在此获得：<ulink url=\"/usr/share/ubuntu-docs/libs/C/ccbysa.xml\">Creative "
+"Commons ShareAlike License</ulink>。"
 
 #: desktop-effects/C/desktop-effects.xml:14(year)
 msgid "2008"
@@ -85,7 +85,7 @@ msgstr "Ubuntu 文档项目"
 
 #: desktop-effects/C/desktop-effects.xml:15(holder)
 msgid "Canonical Ltd. and members of the <placeholder-1/>"
-msgstr "Canonical 公司和 <placeholder-1/> 的成员"
+msgstr "Canonical 有限公司和 <placeholder-1/> 的成员"
 
 #: desktop-effects/C/desktop-effects.xml:18(publishername)
 msgid "The Ubuntu Documentation Project"
@@ -93,7 +93,7 @@ msgstr "Ubuntu 文档项目"
 
 #: desktop-effects/C/desktop-effects.xml:20(title)
 msgid "What are visual effects?"
-msgstr "什么是视觉效果"
+msgstr "什么是视觉效果？"
 
 #: desktop-effects/C/desktop-effects.xml:21(para)
 msgid ""
@@ -115,8 +115,8 @@ msgid ""
 "Try <link linkend=\"compiz-configure\">turning them on manually</link> to "
 "check if this is the case."
 msgstr ""
-"如果视觉特效没有工作，可能是你的显卡不支持它们。请试一下 <link linkend=\"compiz-"
-"configure\">手动打开视觉特效</link>。"
+"如果视觉特效没有启用，可能是您的显卡不支持它们。请试一下<link linkend=\"compiz-"
+"configure\">手动打开视觉特效</link>来检查实际情况是否如此。"
 
 #: desktop-effects/C/desktop-effects.xml:38(title)
 msgid "Configuring visual effects"
@@ -143,13 +143,13 @@ msgstr "选择 <guilabel>无</guilabel> 选项以使用没有任何特效的简�
 msgid ""
 "Select <guilabel>Normal</guilabel> to provide a good balance between "
 "attractiveness and performance."
-msgstr "选择 <guilabel>正常</guilabel> 选项将在桌面性能和特效性能进行折衷。"
+msgstr "选择<guilabel>正常</guilabel>选项会提供桌面吸引力与性能之间不错的平衡。"
 
 #: desktop-effects/C/desktop-effects.xml:56(para)
 msgid ""
 "Select <guilabel>Extra</guilabel> to provide an aesthetically pleasing set "
 "of graphics."
-msgstr "选择 <guilabel>扩展</guilabel> 选项将使用你拥有具有美学享受的图形显示效果。"
+msgstr "选择 <guilabel>额外</guilabel> 选项会提供美学享受的系列图形。"
 
 #: desktop-effects/C/desktop-effects.xml:62(para)
 msgid ""
@@ -170,29 +170,237 @@ msgstr ""
 "</guibutton>，否则点击<guibutton>使用以前的设置</guibutton>。如果你在20秒时间内未做任何选择，那么系统会自动回复到以前"
 "的设置。"
 
-#: desktop-effects/C/desktop-effects.xml:77(title)
+#: desktop-effects/C/desktop-effects.xml:76(title)
+msgid "Using keyboard shortcuts with visual effects"
+msgstr "使用视觉效果的快捷键"
+
+#: desktop-effects/C/desktop-effects.xml:77(para)
+msgid ""
+"Ubuntu includes extra <application>Compiz</application> plugins which "
+"provide extra functionality with certain keyboard combinations. Examples of "
+"these plugins are Application Switcher, Expo and Scale."
+msgstr ""
+"Ubuntu包含额外的<application>Compiz</application>插件，在某些键盘的组合下，它提供额外的功能。这些插件的例子是应用切"
+"换器，展览和绽放。"
+
+#: desktop-effects/C/desktop-effects.xml:78(para)
+msgid "These extra plugins are explained in this section."
+msgstr "这一节会对这些额外插件进行说明。"
+
+#: desktop-effects/C/desktop-effects.xml:79(para)
+msgid ""
+"Some commands use the <keycap>Super</keycap> key, which is the Windows key "
+"on many keyboards."
+msgstr "一些命令会使用<keycap>Super</keycap>键，也就是很多键盘上的Windows键。"
+
+#: desktop-effects/C/desktop-effects.xml:81(title)
+msgid "Application Switcher"
+msgstr "应用程序切换器"
+
+#: desktop-effects/C/desktop-effects.xml:82(para)
+msgid ""
+"The Application Switcher provides the same functionality as the traditional "
+"Gnome and KDE Alt+Tab switcher, but uses live window thumbnails to show its "
+"previews. You can use the Application Switcher to switch between windows of "
+"different contexts with different keybindings."
+msgstr ""
+"应用切换器提供和传统的Gnome和KDE的Alt+Tab转换相同的功能，但它提供活动的窗口小图标来预览。通过不同的键组合，你能用应用转换器在不同内容的窗口"
+"之间进行转换。"
+
+#: desktop-effects/C/desktop-effects.xml:85(para)
+msgid ""
+"To flip to the next window, press "
+"<keycombo><keycap>Alt</keycap><keycap>Tab</keycap></keycombo>"
+msgstr ""
+"跳转到下个窗口，按<keycombo><keycap>Alt</keycap><keycap>Tab</keycap></keycombo>"
+
+#: desktop-effects/C/desktop-effects.xml:88(para)
+msgid ""
+"To flip to the previous window, press "
+"<keycombo><keycap>Shift</keycap><keycap>Alt</keycap><keycap>Tab</keycap></key"
+"combo>"
+msgstr ""
+"跳到先前的窗口，按<keycombo><keycap>Shift</keycap><keycap>Alt</keycap><keycap>Tab</key"
+"cap></keycombo>"
+
+#: desktop-effects/C/desktop-effects.xml:91(para)
+msgid ""
+"To flip to the next window in all workspaces, press "
+"<keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap><keycap>Tab</keycap></keyc"
+"ombo>"
+msgstr ""
+"在所有的工作区都跳到下个窗口，按<keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap><keycap>Ta"
+"b</keycap></keycombo>"
+
+#: desktop-effects/C/desktop-effects.xml:94(para)
+msgid ""
+"To flip to the previous window in all workspaces, press "
+"<keycombo><keycap>Shift</keycap><keycap>Ctrl</keycap><keycap>Alt</keycap><key"
+"cap>Tab</keycap></keycombo>"
+msgstr ""
+"在所有的工作区都跳到先前窗口，按<keycombo><keycap>Shift</keycap><keycap>Ctrl</keycap><keycap>"
+"Alt</keycap><keycap>Tab</keycap></keycombo>"
+
+#: desktop-effects/C/desktop-effects.xml:99(title)
+msgid "Desktop Wall"
+msgstr "桌面墙"
+
+#: desktop-effects/C/desktop-effects.xml:100(para)
+msgid ""
+"The Desktop Wall is a lightweight alternative to the Desktop Cube plugin. It "
+"is used to change workspaces, has support for workspace previews and can use "
+"workspaces on the horizonal plane and the vertical plane. The Expo plugin "
+"works well with the Desktop Wall plugin."
+msgstr ""
+"桌面墙是桌面立方体插件的轻量级替代。用来切换工作区，支持工作区预览，可以使用处在水平或垂直平面上的工作区。桌面展示插件可以很好地同桌面墙插件一同使用。"
+
+#: desktop-effects/C/desktop-effects.xml:103(para)
+msgid ""
+"To navigate in the Desktop Wall, press "
+"<keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap></keycombo> with Up, "
+"Down, Left, or Right."
+msgstr ""
+"要浏览桌面背景，按press "
+"<keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap></keycombo>和上，下，左，或右键。"
+
+#: desktop-effects/C/desktop-effects.xml:106(para)
+msgid ""
+"To navigate in the Desktop Wall with a window, press "
+"<keycombo><keycap>Ctrl</keycap><keycap>Shift</keycap><keycap>Alt</keycap></ke"
+"ycombo> with Up, Down, Left, or Right."
+msgstr ""
+"要在一个窗口中浏览桌面北京，按<keycombo><keycap>Ctrl</keycap><keycap>Shift</keycap><keycap>A"
+"lt</keycap></keycombo>和上，下，左，或右键。"
+
+#: desktop-effects/C/desktop-effects.xml:111(title)
+msgid "Enhanced Zoom Desktop"
+msgstr "加强的缩放桌面"
+
+#: desktop-effects/C/desktop-effects.xml:112(para)
+msgid ""
+"The Enhanced Zoom Desktop plugin allows the whole screen to be zoomed in for "
+"improved legibility. It is possible to continue working with other "
+"applications while zoomed in."
+msgstr "加强的缩放桌面允许整个屏幕被放大来提高清晰度。当被放大后，继续使用其它应用工作是可能的。"
+
+#: desktop-effects/C/desktop-effects.xml:115(para)
+msgid ""
+"To center the mouse on the screen, press "
+"<keycombo><keycap>Super</keycap><keycap>C</keycap></keycombo>"
+msgstr ""
+"要使鼠标移于屏幕中央，按 <keycombo><keycap>Super</keycap><keycap>C</keycap></keycombo>"
+
+#: desktop-effects/C/desktop-effects.xml:118(para)
+msgid ""
+"To lock the the zoom area (field of view) so it will not move to follow the "
+"mouse cursor, use "
+"<keycombo><keycap>Super</keycap><keycap>1.</keycap></keycombo>"
+msgstr ""
+"为了锁定缩放区域（视图区）不随鼠标移动，使用<keycombo><keycap>Super</keycap><keycap>1.</keycap></ke"
+"ycombo>"
+
+#: desktop-effects/C/desktop-effects.xml:121(para)
+msgid ""
+"To resize the focused window so that it fills the field of view, press "
+"<keycombo><keycap>Super</keycap><keycap>v.</keycap></keycombo>"
+msgstr ""
+"使用<keycombo><keycap>Super</keycap><keycap>v.</keycap></keycombo> "
+"来使获得焦点的窗口填满视图"
+
+#: desktop-effects/C/desktop-effects.xml:124(para)
+msgid ""
+"To adjust the zoom level so that the window fills the field of view, press "
+"<keycombo><keycap>Super</keycap><keycap>r.</keycap></keycombo>"
+msgstr ""
+"为了调整缩放水平以便使窗口充满视图区，按下<keycombo><keycap>Super</keycap><keycap>r.</keycap></key"
+"combo>"
+
+#: desktop-effects/C/desktop-effects.xml:129(title)
+msgid "Expo"
+msgstr "展示"
+
+#: desktop-effects/C/desktop-effects.xml:130(para)
+msgid ""
+"By default, Expo is activated by moving the mouse cursor to the top-left "
+"corner of the screen, or by pressing "
+"<keycombo><keycap>Super</keycap><keycap>E.</keycap></keycombo> This causes "
+"the viewport to zoom out until all viewports are scaled and visible on-"
+"screen in a grid formation, complete with all open windows."
+msgstr ""
+"默认情况下，按下<keycombo><keycap>Super</keycap><keycap>E.</keycap></keycombo> "
+"或者鼠标移动到屏幕左上角可以激活展示功能。这迫使视窗放大直到所以视窗都被放大并且在有网格的屏幕上是可见的，所有打开的窗口都是完整的。"
+
+#: desktop-effects/C/desktop-effects.xml:133(title)
+msgid "Negative"
+msgstr "负的"
+
+#: desktop-effects/C/desktop-effects.xml:134(para)
+msgid ""
+"The Negative plugin provides immediate, high-contrast windows for the "
+"visually impaired by inverting the colors of individual windows, or all "
+"windows at once."
+msgstr ""
+
+#: desktop-effects/C/desktop-effects.xml:137(para)
+msgid ""
+"To enable or disable Negative on the focused window, "
+"press<keycombo><keycap>Super</keycap><keycap>n.</keycap></keycombo>"
+msgstr ""
+"按下<keycombo><keycap>Super</keycap><keycap>n.</keycap></keycombo>来在当前窗口启用或者禁用导"
+"航（Negative）"
+
+#: desktop-effects/C/desktop-effects.xml:140(para)
+msgid ""
+"To enable or disable Negative on the screen, press "
+"<keycombo><keycap>Super</keycap><keycap>m.</keycap></keycombo>"
+msgstr ""
+"按下<keycombo><keycap>Super</keycap><keycap>n.</keycap></keycombo>来在当前屏幕启用或者禁用导"
+"航（Negative）"
+
+#: desktop-effects/C/desktop-effects.xml:145(title)
+msgid "Viewport Switcher"
+msgstr "视窗切换器"
+
+#: desktop-effects/C/desktop-effects.xml:146(para)
+msgid ""
+"The Viewport Switcher is used to switch <ulink type=\"help\" "
+"url=\"ghelp:user-guide#overview-workspaces\">workspaces</ulink> via "
+"different keystrokes and buttons. You can use it with the middle mouse "
+"button on the desktop and by pressing a keybinding and selecting a workspace "
+"number."
+msgstr ""
+
+#: desktop-effects/C/desktop-effects.xml:150(para)
+msgid "To move to the next workspace, press Button5 (Scroll up)"
+msgstr "移动到下一个工作区，请按5（向上滚动鼠标滚轮）"
+
+#: desktop-effects/C/desktop-effects.xml:153(para)
+msgid "To move to the previous workspace, press Button4 (Scroll down)"
+msgstr "移动到上一个工作区，请按4（向下滚动鼠标滚轮）"
+
+#: desktop-effects/C/desktop-effects.xml:160(title)
 msgid "Enabling extra effects"
 msgstr "启用额外效果"
 
-#: desktop-effects/C/desktop-effects.xml:78(para)
+#: desktop-effects/C/desktop-effects.xml:161(para)
 msgid ""
 "As well as the visual effects which are available by default, many "
 "additional effects are available. These range from effects intended to make "
 "it easier to use your computer, to ones which are just for fun."
-msgstr "在可视效果被默认可用的同时，许多附加的效果也是可用的。这些包括让你使用更容易使用电脑的效果，到只是得到乐趣的效果。"
+msgstr "在可视效果被默认可用的同时，许多附加的效果也是可用的。这些不仅有让你更容易使用电脑的效果，还有只是得到乐趣的效果。"
 
-#: desktop-effects/C/desktop-effects.xml:82(para)
+#: desktop-effects/C/desktop-effects.xml:165(para)
 msgid "To enable additional effects:"
-msgstr "要启用附加桌面效果"
+msgstr "要启用附加桌面效果："
 
-#: desktop-effects/C/desktop-effects.xml:87(para)
+#: desktop-effects/C/desktop-effects.xml:170(para)
 msgid ""
-"Install the <ulink url=\"apt:compizconfig-settings-manager\"> Advanced "
-"Desktop Effects Settings</ulink> application."
+"<ulink url=\"apt:compizconfig-settings-manager\">Install the Advanced "
+"Desktop Effects Settings application</ulink>."
 msgstr ""
-"安装<ulink url=\"apt:compizconfig-settings-manager\"> 高级桌面特效设置</ulink> 程序。"
+"<ulink url=\"apt:compizconfig-settings-manager\">安装高级桌面效果设置应用程序</ulink>。"
 
-#: desktop-effects/C/desktop-effects.xml:93(para)
+#: desktop-effects/C/desktop-effects.xml:176(para)
 msgid ""
 "Click "
 "<menuchoice><guimenu>System</guimenu><guimenuitem>Preferences</guimenuitem><g"
@@ -202,39 +410,39 @@ msgstr ""
 "<menuchoice><guimenu>系统</guimenu><guimenuitem>首选项</guimenuitem><guimenuitem>C"
 "ompizConfig 设置管理器</guimenuitem></menuchoice>。"
 
-#: desktop-effects/C/desktop-effects.xml:98(para)
+#: desktop-effects/C/desktop-effects.xml:181(para)
 msgid "Check the box next to an effect to enable it."
-msgstr "选中某一特效旁边的按钮以使之工作。"
+msgstr "在某一特效旁边的复选框上打勾以启用它。"
 
-#: desktop-effects/C/desktop-effects.xml:103(para)
+#: desktop-effects/C/desktop-effects.xml:186(para)
 msgid "Click on an effect to change its settings."
 msgstr "单击某种特效以改变它的参数设置。"
 
-#: desktop-effects/C/desktop-effects.xml:111(title)
+#: desktop-effects/C/desktop-effects.xml:194(title)
 msgid "Common problems"
 msgstr "常见问题"
 
-#: desktop-effects/C/desktop-effects.xml:112(para)
+#: desktop-effects/C/desktop-effects.xml:195(para)
 msgid ""
 "If you experience problems when using visual effects, it is advisable to "
 "disable them by opening "
 "<menuchoice><guimenu>System</guimenu><guimenuitem>Preferences</guimenuitem><g"
 "uimenuitem>Appearance</guimenuitem><guimenuitem>Visual "
-"Effects</guimenuitem></menuchoice> and selecting <guilabel>No "
-"effects</guilabel>."
+"Effects</guimenuitem></menuchoice> and selecting <guilabel>None</guilabel>."
 msgstr ""
-"如果使用视觉效果时遇到问题，建议您禁用效果：点击<menuchoice><guimenu>系统</guimenu><guimenuitem>偏好</gui"
-"menuitem><guimenuitem>外观</guimenuitem><guimenuitem>视觉效果</guimenuitem></menuch"
-"oice>并选择 <guilabel>不要效果</guilabel>。"
+"如果你在体验特效的时候遇见问题，建议你打开 "
+"<menuchoice><guimenu>系统</guimenu><guimenuitem>首选项</guimenuitem><guimenuitem>外"
+"观</guimenuitem><guimenuitem>可视效果</guimenuitem></menuchoice>，并勾选<guilabel>None"
+"</guilabel>."
 
-#: desktop-effects/C/desktop-effects.xml:119(para)
+#: desktop-effects/C/desktop-effects.xml:202(para)
 msgid ""
 "If you receive an error message saying that <quote>Visual effects could not "
 "be enabled</quote>, it is likely that your graphics driver does not "
 "currently support visual effects."
 msgstr "如果你收到了一条错误的信息说 <quote>可视效果不能被启用</quote>，那就是说你的图形驱动当前可能不支持可视效果。"
 
-#: desktop-effects/C/desktop-effects.xml:124(para)
+#: desktop-effects/C/desktop-effects.xml:207(para)
 msgid ""
 "In this case, you will not be able to use visual effects with your default "
 "graphics driver. However, you may be able to use a <ulink type=\"help\" "
@@ -243,18 +451,18 @@ msgstr ""
 "这种情况，您将无法使用默认的显卡驱动来启用视觉效果。但是，您可以使用<ulink type=\"help\" "
 "url=\"ghelp:hardware#restricted-manager\">受限驱动</ulink>来代替。"
 
-#: desktop-effects/C/desktop-effects.xml:132(para)
+#: desktop-effects/C/desktop-effects.xml:215(para)
 msgid ""
 "If your computer runs slowly, disabling visual effects may improve "
 "performance. Visual effects require more system resources, and so older or "
 "less powerful computers may not be able to cope with the extra load."
 msgstr "如果计算机运行缓慢，禁用视觉效果可改善性能。视觉效果需要更多系统资源，较老或较差的计算机可能无法满足这些额外的负荷。"
 
-#: desktop-effects/C/desktop-effects.xml:142(title)
+#: desktop-effects/C/desktop-effects.xml:225(title)
 msgid "Further information"
 msgstr "更多信息"
 
-#: desktop-effects/C/desktop-effects.xml:145(para)
+#: desktop-effects/C/desktop-effects.xml:228(para)
 msgid ""
 "See the <ulink url=\"http://wiki.compiz-fusion.org/\">Compiz-Fusion "
 "documentation website</ulink> for more information on advanced configuration "
@@ -311,7 +519,39 @@ msgstr ""
 "  Tao Wei https://launchpad.net/~weitao1979\n"
 "  rainofchaos https://launchpad.net/~rainofchaos\n"
 "  stone_unix https://launchpad.net/~gaoghy\n"
-"  太和 https://launchpad.net/~tayhe"
+"  太和 https://launchpad.net/~tayhe\n"
+"\n"
+"Launchpad Contributions:\n"
+"  ChenMing https://launchpad.net/~chenming\n"
+"  DBLobster https://launchpad.net/~db.lobster\n"
+"  Guanglin Du https://launchpad.net/~dugl\n"
+"  J  Qu https://launchpad.net/~quzhengping\n"
+"  Joe Ge https://launchpad.net/~yijun\n"
+"  Launchpad Translations Administrators https://launchpad.net/~rosetta-"
+"admins\n"
+"  Livizy https://launchpad.net/~livizy\n"
+"  Lorz https://launchpad.net/~lorz\n"
+"  Tao Wei https://launchpad.net/~weitao1979-deactivatedaccount\n"
+"  hawkingyy https://launchpad.net/~hawkingyy\n"
+"  lhquark https://launchpad.net/~lhquark\n"
+"  rainofchaos https://launchpad.net/~rainofchaos\n"
+"  stone_unix https://launchpad.net/~gaoghy\n"
+"  zhangmiao https://launchpad.net/~mymzhang"
+
+#~ msgid ""
+#~ "Install the <ulink url=\"apt:compizconfig-settings-manager\"> Advanced "
+#~ "Desktop Effects Settings</ulink> application."
+#~ msgstr ""
+#~ "安装<ulink url=\"apt:compizconfig-settings-manager\"> 高级桌面特效设置</ulink> 程序。"
+
+#~ msgid "Click on an effect to change its settings"
+#~ msgstr "点击一个效果来改变其设置"
+
+#~ msgid "Motion effects and animations"
+#~ msgstr "运动效果和动画"
+
+#~ msgid "Check the box next to an effect to enable it"
+#~ msgstr "请选择效果旁的按钮来使用效果"
 
 #~ msgid "3D desktop capabilities"
 #~ msgstr "三维桌面效果"
@@ -333,9 +573,6 @@ msgstr ""
 #~ msgid ""
 #~ "Select <guilabel>Normal effects</guilabel> to enable basic visual effects."
 #~ msgstr "选定 <guilabel>正常效果</guilabel>来启用基本视觉效果。"
-
-#~ msgid "Click on an effect to change its settings"
-#~ msgstr "点击一个效果来改变其设置"
 
 #~ msgid ""
 #~ "See the <ulink "
@@ -390,9 +627,6 @@ msgstr ""
 #~ "effects."
 #~ msgstr "选定 <guilabel>额外效果</guilabel>来启用更多高级视觉效果。"
 
-#~ msgid "Motion effects and animations"
-#~ msgstr "运动效果和动画"
-
 #~ msgid ""
 #~ "Press "
 #~ "<menuchoice><guimenu>System</guimenu><guimenuitem>Preferences</guimenuitem><g"
@@ -401,6 +635,3 @@ msgstr ""
 #~ "点击 "
 #~ "<menuchoice><guimenu>系统</guimenu><guimenuitem>偏好</guimenuitem><guimenuitem>高级"
 #~ "桌面效果设置</guimenuitem></menuchoice>"
-
-#~ msgid "Check the box next to an effect to enable it"
-#~ msgstr "请选择效果旁的按钮来使用效果"

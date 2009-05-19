@@ -1087,11 +1087,173 @@ UUID=66bcdd2e-8861-4fb0-b7e4-e61c569fe17d /srv  ext3    noatime,relatime,acl 0  
   </sect1>
   <sect1 id="samba-ad-integration" status="review">
     <title>Samba Active Directory Integration</title>
-    
-    <para>
-    TODO
-    </para> 
 
+    <sect2 id="ad-integration-samba-share" status="review">
+      <title>Accessing a Samba Share</title>
+
+      <para>
+      Another, use for Samba is to integrate into an existing Windows network.  Once part of an Active Directory domain,
+      Samba can provide file and print services to AD users.
+      </para> 
+
+      <para>
+      The simplest way to join an AD domain is to use <application>Likewise-open</application>.  For detailed instructions
+      see <xref linkend="likewise-open"/>.
+      </para>
+
+      <para>
+      Once part of the domain, install the following packages:
+      </para>
+
+<screen>
+<command>sudo apt-get install samba smbfs smbclient</command>
+</screen>
+
+      <para>
+      Since the <application>likewise-open</application> and <application>samba</application> packages use separate 
+      <filename>secrets.tdb</filename> files, a symlink will need to be created in <filename role="directory">/var/lib/samba</filename>:
+      </para>
+
+<screen>
+<command>sudo mv /var/lib/samba/secrets.tdb /var/lib/samba/secrets.tdb.orig</command>
+<command>sudo ln -s /etc/samba/secrets.tdb /var/lib/samba</command>
+</screen>
+
+      <para>
+      Next, edit <filename>/etc/samba/smb.conf</filename> changing:
+      </para>
+
+<programlisting>
+   workgroup = EXAMPLE
+   ...
+   security = ads
+   realm = EXAMPLE.COM
+   ...
+   idmap backend = lwopen
+   idmap uid = 50-9999999999
+   idmap gid = 50-9999999999
+</programlisting>
+
+      <para>
+      Restart <application>samba</application> for the new settings to take effect:
+      </para>
+
+<screen>
+<command>sudo /etc/init.d/samba restart</command>
+</screen>
+
+      <para>
+      You should now be able to access any <application>Samba</application> shares from a Windows client.  However, be sure to give
+      the appropriate AD users or groups access to the share directory.  See <xref linkend="samba-fileprint-security"/> for 
+      more details.
+      </para>
+
+    </sect2>
+    <sect2 id="ad-integration-windows-share" status="review">
+      <title>Accessing a Windows Share</title>
+
+      <para>
+      Now that the Samba server is part of the Active Directory domain you can access any Windows server shares:
+      </para>
+
+      <itemizedlist>
+        <listitem>
+
+          <para>
+          To mount a Windows file share enter the following in a terminal prompt:
+          </para>
+<screen>
+<command>mount.cifs //fs01.example.com/share mount_point</command>
+</screen>
+
+          <para>
+          It is also possible to access shares on computers not part of an AD domain, but a username and password 
+          will need to be provided.
+          </para>
+
+        </listitem>
+        <listitem>
+
+          <para>
+          To mount the share during boot place an entry in <filename>/etc/fstab</filename>, for example:
+          </para>
+
+<programlisting>
+//192.168.0.5/share /mnt/windows cifs auto,username=steve,password=secret,rw 0        0
+</programlisting>
+
+        </listitem>
+        <listitem>
+
+          <para>
+          Another way to copy files from a Windows server is to use the <application>smbclient</application> utility.  To 
+          list the files in a Windows share:
+          </para>
+
+<screen>
+<command>smbclient //fs01.example.com/share -k -c "ls"</command>
+</screen>
+
+        </listitem>
+        <listitem>
+
+          <para>
+          To copy a file from the share, enter:
+          </para>
+
+<screen>
+<command>smbclient //fs01.example.com/share -k -c "get file.txt"</command>
+</screen>
+
+          <para>
+          This will copy the <filename>file.txt</filename> into the current directory.
+          </para>
+
+        </listitem>
+        <listitem>
+
+          <para>
+          And to copy a file to the share:
+          </para>
+
+<screen>
+<command>smbclient //fs01.example.com/share -k -c "put /etc/hosts hosts"</command>
+</screen>
+
+          <para>
+          This will copy the the <filename>/etc/hosts</filename> to <filename>//fs01.example.com/share/hosts</filename>.
+          </para>
+
+        </listitem>
+        <listitem>
+
+          <para>
+          The <emphasis>-c</emphasis> option used above allows you to execute the <application>smbclient</application> command
+          all at once.  This is useful for scripting and minor file operations.  To enter the <emphasis>smb: \&gt;</emphasis>
+          prompt, a FTP like prompt where you can execute normal file and directory commands, simply execute:
+          </para>
+
+<screen>
+<command>smbclient //fs01.example.com/share -k</command>
+</screen>
+
+        </listitem>
+      </itemizedlist>
+
+      <note>
+        <para>
+        Replace all instances of <emphasis>fs01.example.com/share</emphasis>, <emphasis>//192.168.0.5/share</emphasis>, 
+        <emphasis>username=steve,password=secret</emphasis>, and <emphasis>file.txt</emphasis> with your server's IP, hostname, 
+        share name, file name, and an actual username and password with rights to the share.
+        </para>
+      </note>
+
+      <para>
+      For more <application>smbclient</application> options see the man page: <command>man smbclient</command>
+      </para>
+
+
+    </sect2>
   </sect1>  
   <sect1 id="likewise-open" status="review">
     <title>Likewise Open</title>

@@ -13,10 +13,10 @@ This file is in the Public Domain.
 /* @import url(screen.css); */
 
 body {
-	font-family:"Helvetica Neue", "Lucida Grande", Helvetica, Arial, Verdana, sans-serif;
 	background: #d3caaa url(img/bg-page.png) repeat-x top;
 	margin: 20px;
 	font-size: 90%;
+	font-family:"Helvetica Neue", "Lucida Grande", Helvetica, Arial, Verdana, sans-serif;
 }
 
 
@@ -24,16 +24,83 @@ body {
 	background: #fff url(img/bg-content.png) repeat-y top;
 	width: 876px;
 	margin: auto;
+	margin-bottom: 50px;
 	position: relative;
+}
+
+#round .sb-inner {
+	background-color: #fff;
+}
+
+#page {
+	clear: both;
+	margin: 0;
+	padding: 10px 30px;
 }
 
 #content {
 	padding: 12px;
 }
 
+img.ubuntulogo {
+	margin: 20px;
+}
+
+img.rounded {
+    padding: 0;
+    margin: 0;
+}
+
+#topcap {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+#bottomcap {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
 #header {
-	background: #af6234 url(img/header.png) no-repeat top;
-	height: 125px;
+	padding-top: 12px;
+}
+
+#header h1 {
+	display: inline;
+}
+
+#header h1 span {
+	display: none;
+}
+
+#logo-floater {
+	width: 225px;
+	float: left;
+	padding: 10px;
+}
+
+#logo-floater h1 {
+	border: none;
+}
+
+#sitename a {
+	position: relative;
+	top: 35px;
+	float: right;
+	font-size: 1.5em;
+	padding-right: 20px;
+	text-decoration: none;
+	color: black;
+}
+
+#sitename span {
+	padding-left: 5px;
+}
+
+.breadcrumbs {
+	padding-bottom: 15px;
 }
 
 ul {
@@ -57,24 +124,39 @@ div.toc {
   padding-right: 1em;
 }
 
-div.toc dt :visited { 
-	color: black; /* Ubuntu visited link color */
+/* Links */
+
+a {
+	color: #D90D19;
 }
 
-div.qandaset dt :visited { 
-	color: black; /* Ubuntu visited link color */
+a:hover {
+	color: #800000;
 }
 
-:link { 
-	color: #6d4c07; /* dark brown */
+/* Headings */
+
+h1, h2, h3, h4, h5, h6
+{
+        margin: 0;
+        padding: 2px 0;
+        font-weight: normal; 
+        color: #5A3320;
+        line-height: 1.2em;
+}	
+
+h1, h2
+{
+        border-bottom: 2px solid #6d4c07; /* ubuntu dark brown */
+	font-size: 1.6em;
 }
+
+h3 {font-size: 1.3em;}
+h4 {font-size: 1.1em;}
+h4, h5, h6 {font-size: 1em;}
 
 a img{
   border: none;
-}
-
-:visited { 
-	color: #6d4c07; /* dark brown */
 }
 
 dl { 
@@ -107,114 +189,19 @@ div.qandaset {
   text-decoration: underline;
 }
 
-
-h1 {font-size:1.8em}
-h2 {font-size:1.3em}
-h3 {font-size:1.3em}
-h4 {font-size:1.1em}
-h5 {font-size:1em}
-h6 {font-size:1em}
-
-h1
-{
-        margin: 1.5em 0 0 0;
-        font-weight: bold;
-        color: #6d4c07; /* ubuntu dark brown */
-        line-height: 1.2em;
-}	
-
-
-h2, h3, h4, h5, h6
-{
-        font-weight: normal; 
-        color: #6d4c07; /* ubuntu dark brown */
-        line-height: 1.2em;
-}	
-
-h2
-{
-	border-bottom: 2px solid #6d4c07;
-}
-
 .screen, .programlisting { 
 	background-color:  #f0eee6; /* light salmon */
 	border: 1pt solid #C1B496; /* dark tan */
-  padding: 5px; 
+	padding: 5px; 
 } 
 
+#footer {
+	margin: 0;
+	font-size: 90%;
+	color: #444;
+}
 
 .revhistory { font-size: 0.9em; }
-
-#sisternav {
-	position:absolute;
-	bottom:0px;
-	right:0px;
-}
-
-#sisternav ul {
-	display:inline;
-	margin:0;
-	padding:10px 10px 0 1px;
-	list-style:none;
-}
-                  
-#sisternav li {
-	display:inline;
-	float:left;
-	background:url(img/tab_off_ns1.png) no-repeat left top;
-	margin:0;
-	padding:0 0 0 5px;
-}
-
-#sisternav a {
-	float:left;
-	font-size:0.8em;
-	display:block;
-	background:url(img/tab_off_ns2.png) no-repeat right top;
-	padding:8px 15px 3px 8px;
-	text-decoration:none;
-	font-weight: bold;
-}
-
-/* Commented Backslash Hack hides rule from IE5-Mac \*/
-#sisternav a {float:none;}
-/* End IE5-Mac hack */
-
-#sisternav li:hover, #sisternav li:hover a {
-	background-position:0% -163px;
-}
-
-#sisternav li:hover a {
-	background-position:100% -163px;
-}
-
-#sisternav #current {
-	background:url(img/tab_on_ns1.png) no-repeat left top;                
-}
-
-#sisternav #current a {
-	background:url(img/tab_on_ns2.png) no-repeat right top;
-	padding-bottom:4px;
-}
-
-#sisternav a , #sisternav #current a { color: #444; }
-#sisternav #current a:hover, #sisternav li a:hover { color: black;}
-
-#footer {
-    clear: both;
-    margin: 0;
-    padding: 0;
-    font-size: 10px;
-}
-
-#footer {
-	padding: 12px 12px 0 12px;
-}
-
-#bottomcap { 
-	height: 20px;
-}
-
 
 #ubuntulinks {
 	text-align: center;

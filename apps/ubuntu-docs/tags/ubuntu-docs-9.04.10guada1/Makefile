@@ -59,7 +59,8 @@ gdeb:
 
 all: clean style index serverguide switching status contributors
 
-	for doc in `cat libs/shipped-docs`; do xsltproc --xinclude -o $(BASE)$$doc/C/index.html $(UBUNTUCHUNKXSL) $$doc/C/$$doc.xml; sed -i $(BASE)$$doc/C/*legal.html -e "s#\.\./libs/C/contributors\.xml#libs/C/contributors\.html#g"; done
+	for doc in `cat libs/shipped-docs`; do xsltproc --xinclude -o $(BASE)$$doc/C/index.html $(UBUNTUCHUNKXSL) $$doc/C/$$doc.xml; done
+	./scripts/fix-urls.sh
 
 index:
 
@@ -118,35 +119,12 @@ contributors: style
 
 	xsltproc --stringparam root.filename "contributors" -o $(BASE)libs/C/ $(UBUNTUCHUNKXSL) libs/C/contributors.xml
 
-index-test: style
+install: style
 
-	xsltproc --xinclude -o $(BASE)index-test/ $(UBUNTUCHUNKXSL) index2.xml
-	sed -i $(BASE)index-test/*.html -e "s#ghelp:add-applications#add-applications.html#g"
+# To build an Ubuntu look n feel version of the installation-guide, download
+# the source package and unpack it to ubuntu/installation-guide. Then amend
+# build/buildone.sh so that the "web" stylesheet refers to the Ubuntu stylesheet
+# in ubuntu/libs. Then use this make target.
 
-#	sed -i $(BASE)index-test/*.html -e "s#ghelp:administrative##g"
-#	sed -i $(BASE)index-test/*.html -e "s#ghelp:users-admin##g"
-#	sed -i $(BASE)index-test/*.html -e "s#ghelp:server##g"
-#	sed -i $(BASE)index-test/*.html -e "s#ghelp:basic-commands##g"
-#	sed -i $(BASE)index-test/*.html -e "s#ghelp:programming##g"
-#	sed -i $(BASE)index-test/*.html -e "s#ghelp:user-guide\#panels##g"
-#	sed -i $(BASE)index-test/*.html -e "s#ghelp:user-guide\#menubar##g"
-#	sed -i $(BASE)index-test/*.html -e "s#ghelp:user-guide\#prefs##g"
-#	sed -i $(BASE)index-test/*.html -e "s#ghelp:desktop-effects##g"
-#	sed -i $(BASE)index-test/*.html -e "s#ghelp:add-applications\#synaptic##g"
-#	sed -i $(BASE)index-test/*.html -e "s#ghelp:hardware\#restricted-manager##g"
-#	sed -i $(BASE)index-test/*.html -e "s#ghelp:user-guide\#nautilus##g"
-#	sed -i $(BASE)index-test/*.html -e "s#ghelp:hardware\#disks##g"
-#
-#	sed -i $(BASE)index-test/*.html -e "s#ghelp:server##g"
-#	sed -i $(BASE)index-test/*.html -e "s#ghelp:server##g"
-#	sed -i $(BASE)index-test/*.html -e "s#ghelp:server##g"
-#	sed -i $(BASE)index-test/*.html -e "s#ghelp:server##g"
-#	sed -i $(BASE)index-test/*.html -e "s#ghelp:server##g"
-#	sed -i $(BASE)index-test/*.html -e "s#ghelp:server##g"
-#	sed -i $(BASE)index-test/*.html -e "s#ghelp:server##g"
-#	sed -i $(BASE)index-test/*.html -e "s#ghelp:server##g"
-#	sed -i $(BASE)index-test/*.html -e "s#ghelp:server##g"
-#	sed -i $(BASE)index-test/*.html -e "s#ghelp:server##g"
-#	sed -i $(BASE)index-test/*.html -e "s#ghelp:server##g"
-#
+	cd installation-guide/build && mkdir -p ../../build/installation-guide && destination='../../build/installation-guide/'  formats='html txt' architectures='amd64 hppa i386 ia64 powerpc sparc' ./buildweb.sh && cd ../../
 

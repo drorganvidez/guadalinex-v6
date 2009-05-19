@@ -44,8 +44,12 @@ for y in `cat libs/shipped-docs`; do
  	sed -i build/$y/C/*.html -e "s#ghelp:internet\#web-plugins-flash#\.\./\.\./internet/C/web-plugins.html\#web-plugins-flash#g"
  	sed -i build/$y/C/*.html -e "s#ghelp:programming\#java#\.\./\.\./programming/C/java.html#g"
  	sed -i build/$y/C/*.html -e "s#ghelp:programming#\.\./\.\./programming/C/index.html#g"
+ 	sed -i build/$y/C/*.html -e "s#ghelp:serverguide#\.\./\.\./serverguide/C/index.html#g"
  	sed -i build/$y/C/*.html -e "s#ghelp:windows#\.\./\.\./windows/C/#g"
-	sed -i build/$y/C/*.html -e "s#/usr/share/ubuntu-docs/common/C/ccbysa\.xml#../../common/C/ccbysa.html#g"
+        sed -i build/$y/C/*.html -e "s#\"legal\.html\"#\"/legal\.html\"#g"
+ 	sed -i build/$y/C/*.html -e "s#man:apt-get#http://manpages\.ubuntu\.com/manpages/intrepid/en/man8/apt-get\.html#g"
+        sed -i build/$y/C/*.html -e "s#x-yelp-toc:\#Man#http://manpages\.ubuntu\.com#g"
+        sed -i build/$y/C/*.html -e "s#x-yelp-toc:\#Info#http://manpages\.ubuntu\.com#g"
 
 ## Gnome links
 
@@ -63,6 +67,7 @@ for y in `cat libs/shipped-docs`; do
  	sed -i build/$y/C/*.html -e "s#ghelp:user-guide\#keyboard-skills#http://library\.gnome\.org/users/user-guide/stable/prefs-mouse\.html#g"
  	sed -i build/$y/C/*.html -e "s#ghelp:user-guide\#nautilus-cdwriter-copy#http://library\.gnome\.org/users/user-guide/stable/nautilus-cdwriter-copy\.html#g"
  	sed -i build/$y/C/*.html -e "s#ghelp:user-guide\#nautilus-cdwriter-writeimage#http://library\.gnome\.org/users/user-guide/stable/nautilus-cdwriter-writeimage\.html#g"
+ 	sed -i build/$y/C/*.html -e "s#ghelp:gnome-access-guide#http://library\.gnome\.org/users/gnome-access-guide/stable/#g"
  	sed -i build/$y/C/*.html -e "s#ghelp:gnome-access-guide\#dtconfig-1#http://library\.gnome\.org/users/gnome-access-guide/stable/dtconfig-1\.html#g"
  	sed -i build/$y/C/*.html -e "s#ghelp:gnome-access-guide\#dtconfig-0#http://library\.gnome\.org/users/gnome-access-guide/stable/dtconfig-0\.html#g"
  	sed -i build/$y/C/*.html -e "s#ghelp:gnome-access-guide\#keynav-0#http://library\.gnome\.org/users/gnome-access-guide/stable/keynav-0\.html#g"
@@ -83,9 +88,16 @@ for y in `cat libs/shipped-docs`; do
  	sed -i build/$y/C/*.html -e "s#ghelp:eog\#eog-fullscreen#http://library\.gnome\.org/users/eog/stable/eog-view\.html\#eog-fullscreen#g"
  	sed -i build/$y/C/*.html -e "s#ghelp:eog\#eog-manipulate#http://library\.gnome\.org/users/eog/stable/eog-manipulate\.html#g"
  	sed -i build/$y/C/*.html -e "s#ghelp:sound-juicer\#extracting#http://library\.gnome\.org/users/sound-juicer/stable/extracting\.html#g"
+ 	sed -i build/$y/C/*.html -e "s#ghelp:sound-juicer#http://library\.gnome\.org/users/sound-juicer/stable/#g"
  	sed -i build/$y/C/*.html -e "s#ghelp:gnome-sound-recorder\#grecord-usage#http://library\.gnome\.org/users/gnome-sound-recorder/stable/grecord-usage\.html#g"
+ 	sed -i build/$y/C/*.html -e "s#ghelp:gnome-sound-recorder#http://library\.gnome\.org/users/gnome-sound-recorder/stable/#g"
  	sed -i build/$y/C/*.html -e "s#file:///usr/share/doc/diveintopython/html/toc/index\.html#http://diveintopython\.org/toc/index\.html#g"
  	sed -i build/$y/C/*.html -e "s#file:///usr/share/doc/python-gtk2-tutorial/html/index\.html#http://www\.pygtk\.org/pygtk2tutorial/#g"
+ 	sed -i build/$y/C/*.html -e "s#ghelp:shares-admin#http://library\.gnome\.org/users/shares-admin/stable/#g"
+ 	sed -i build/$y/C/*.html -e "s#ghelp:rhythmbox#http://library\.gnome\.org/users/rhythmbox/unstable/#g"
+ 	sed -i build/$y/C/*.html -e "s#ghelp:rhythmbox\#cd-burning#http://library\.gnome\.org/users/rhythmbox/unstable/AudioCD\.html\.en\#cd-burning#g"
+ 	sed -i build/$y/C/*.html -e "s#ghelp:rhythmbox\#cd-import#http://library\.gnome\.org/users/rhythmbox/unstable/AudioCD\.html\.en\#cd-import#g"
+ 	sed -i build/$y/C/*.html -e "s#ghelp:brasero#http://library\.gnome\.org/users/brasero/0\.8/#g"
 
 ## Other links
  	sed -i build/$y/C/*.html -e "s#ghelp:synaptic\#synaptic-single#https://help\.ubuntu\.com/community/SynapticHowto#g"

@@ -4,8 +4,14 @@
 <!-- This adds the header -->
 
 <xsl:template name="header.navigation">
+<script xmlns="" src="https://ssl.google-analytics.com/urchin.js"
+type="text/javascript"></script>
+<script xmlns="" type="text/javascript">
+_uacct = "UA-1018242-8";
+urchinTracker();
+</script>
 	<div id="header">
-	<div id="logo-floater"><h1><a href="http://help.ubuntu.com" title="Ubuntu Documentation"><img alt="Ubuntu" id="logo" src="https://help.ubuntu.com/htdocs/ubuntunew/img/logo.png" /></a></h1>
+	<div id="logo-floater"><h1><a href="https://help.ubuntu.com" title="Ubuntu Documentation"><img alt="Ubuntu" id="logo" src="https://help.ubuntu.com/htdocs/ubuntunew/img/logo.png" /></a></h1>
 	</div>
 <form action="https://help.ubuntu.com/search.html" id="cse-search-box">
   <div>
@@ -18,7 +24,7 @@
   </div>
 </form>
 <script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
-	<div id="sitename"><a href="https://help.ubuntu.com/"><img alt="Official Documentation" src="http://doc.ubuntu.com/~mdke/help-about.png" /><span>Official Documentation</span></a></div>
+	<div id="sitename"><a href="https://help.ubuntu.com/"><img alt="Official Documentation" src="https://help.ubuntu.com/htdocs/ubuntunew/img/help-about.png" /><span>Official Documentation</span></a></div>
 	</div>
 </xsl:template>
 
@@ -27,7 +33,9 @@
 <xsl:template name="breadcrumbs">
   <xsl:param name="this.node" select="."/>
   <div class="breadcrumbs">
-	<a href="http://help.ubuntu.com/">Home</a>
+	<a href="https://help.ubuntu.com/">Ubuntu Documentation</a>
+      <xsl:text> &gt; </xsl:text>
+	<a href="https://help.ubuntu.com/8.10">Ubuntu 8.10</a>
       <xsl:text> &gt; </xsl:text>
     <xsl:for-each select="$this.node/ancestor::*">
       <span class="breadcrumb-link">
@@ -58,7 +66,7 @@
 
   <div id="ubuntulinks">
 
-	<p>The material in this document is available under a free license, see <a href="legal.html">Legal</a> for details<br />
+	<p>The material in this document is available under a free license, see <a href="/legal.html">Legal</a> for details<br />
 	For information on contributing or to report a problem, visit the <a href="https://bugs.launchpad.net/ubuntu-doc">Ubuntu Documentation Project</a></p>
 
   </div>
@@ -66,7 +74,7 @@
 </div>
 
 <div id="bottomcap">
-	<img src="../../libs/img/cap-bottom.png" alt=""/>
+	<img src="https://help.ubuntu.com/htdocs/ubuntunew/img/cap-bottom.png" alt=""/>
 </div>
 
 </xsl:template>

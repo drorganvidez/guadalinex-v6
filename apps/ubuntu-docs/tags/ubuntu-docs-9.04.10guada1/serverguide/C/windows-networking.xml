@@ -55,7 +55,7 @@
         
       <para>
       Fortunately, your Ubuntu system may provide all such facilities to Windows clients and share network resources 
-      among them.  One of the principle pieces of software your Ubuntu system includes for Windows networking is the Samba 
+      among them.  One of the principal pieces of software your Ubuntu system includes for Windows networking is the Samba 
       suite of SMB server applications and tools.  
       </para>
         
@@ -91,7 +91,7 @@
 </screen>
     
       <para>
-      That's all there is to it you are now ready to configure Samba to share files.
+      That's all there is to it; you are now ready to configure Samba to share files.
       </para>
 
     </sect2>
@@ -104,7 +104,7 @@
       </para>
       <note>
         <para>
-        All the available options are not included in the default configuration file.  See the <filename>smb.conf</filename>
+        Not all the available options are included in the default configuration file.  See the <filename>smb.conf</filename>
         <application>man</application> page or the 
         <ulink url="http://samba.org/samba/docs/man/Samba-HOWTO-Collection/">Samba HOWTO Collection</ulink> for more details.
         </para>
@@ -283,7 +283,7 @@
 
       <para>
       Before installing and configuring Samba it is best to already have a working <application>CUPS</application> 
-      installation see <xref linkend="cups"/> for details.
+      installation. See <xref linkend="cups"/> for details.
       </para>
 
       <para>
@@ -468,7 +468,7 @@
       <note>
         <para>
         If you choose to map a network drive to the share you can check the <quote>Reconnect at Logon</quote> check 
-        box, which will require you to only enter the username and password once.  At least until the password changes.
+        box, which will require you to only enter the username and password once, at least until the password changes.
         </para>
       </note>
 
@@ -505,7 +505,7 @@
         </para>
 
         <para>
-        When defining groups in the Samba configuration file, <filename>/etc/samba/smb.conf</filename> the recognized syntax 
+        When defining groups in the Samba configuration file, <filename>/etc/samba/smb.conf</filename>, the recognized syntax 
         is to preface the group name with an "@" symbol.  For example, if you wished to define a group named 
         <emphasis role="italic">sysadmin</emphasis> in a certain section of the <filename>/etc/samba/smb.conf</filename>, 
         you would do so by entering the group name as <emphasis role="bold">@sysadmin</emphasis>.
@@ -728,8 +728,8 @@ UUID=66bcdd2e-8861-4fb0-b7e4-e61c569fe17d /srv  ext3    noatime,relatime,acl 0  
     <title>Samba as a Domain Controller</title>
     
     <para>
-    Although cannot act as an Active Directory Primary Domain Controller (PDC) a Samba server can be configured to appear 
-    as a Windows NT4 stype domain controller.  A major advantage of this configuration is the ability to centralize 
+    Although it cannot act as an Active Directory Primary Domain Controller (PDC), a Samba server can be configured to
+    appear as a Windows NT4-style domain controller.  A major advantage of this configuration is the ability to centralize 
     user and machine credentials.  Samba can also use multiple backends to store the user information.
     </para>
 
@@ -776,7 +776,6 @@ UUID=66bcdd2e-8861-4fb0-b7e4-e61c569fe17d /srv  ext3    noatime,relatime,acl 0  
 
 <programlisting>
    domain logons = yes
-   domain master = yes
    logon path = \\%N\%U\profile
    logon drive = H:
    logon home = \\%N\%U
@@ -788,11 +787,6 @@ UUID=66bcdd2e-8861-4fb0-b7e4-e61c569fe17d /srv  ext3    noatime,relatime,acl 0  
             <listitem>
               <para>
               <emphasis>domain logons:</emphasis> provides the netlogon service causing Samba to act as a domain controller.
-              </para>
-            </listitem>
-            <listitem>
-              <para>
-              <emphasis>domain master:</emphasis> configures Samba to be a PDC.
               </para>
             </listitem>
             <listitem>
@@ -859,7 +853,7 @@ UUID=66bcdd2e-8861-4fb0-b7e4-e61c569fe17d /srv  ext3    noatime,relatime,acl 0  
 
           <para>
           When configured as a domain controller a <emphasis>[netlogon]</emphasis> share needs to be configured.  To 
-          enable the share uncomment:
+          enable the share, uncomment:
           </para>
 
 <programlisting>
@@ -936,7 +930,7 @@ UUID=66bcdd2e-8861-4fb0-b7e4-e61c569fe17d /srv  ext3    noatime,relatime,acl 0  
 
           <para>
           You should now be able to join Windows clients to the Domain in the same manner as joining them to an 
-          Active Directory domain running on a Windows server.
+          NT4 domain running on a Windows server.
           </para>
 
         </step>        
@@ -1008,7 +1002,7 @@ UUID=66bcdd2e-8861-4fb0-b7e4-e61c569fe17d /srv  ext3    noatime,relatime,acl 0  
           </para>
 
 <screen>
-<command>sudo chgrp -R admin /var/lib/ldap</command>
+<command>sudo chgrp -R admin /var/lib/samba</command>
 </screen>
 
         </step>

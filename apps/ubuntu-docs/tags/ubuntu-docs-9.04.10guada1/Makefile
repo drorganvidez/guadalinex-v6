@@ -101,6 +101,7 @@ switching:
 serverguide: style
 
 	xsltproc --xinclude -o $(BASE)serverguide/C/index.html $(UBUNTUCHUNKXSL) serverguide/C/serverguide.xml
+	cp -r serverguide/sample $(BASE)serverguide/sample
 	sed -i $(BASE)serverguide/C/*legal.html -e "s#\.\./libs/C/contributors\.xml#libs/C/contributors\.html#g"
 
 serverguide-pdf:

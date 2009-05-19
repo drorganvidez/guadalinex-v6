@@ -71,12 +71,13 @@ icon in the <guilabel>System Notification Area</guilabel>.</para>
 		<title>Wireless troubleshooting</title>
 		<para>While not exhaustive, this section covers some common problems faced with wireless support.</para>
 		<para>There is much more information available from the <ulink url="https://help.ubuntu.com/community/WifiDocs">Community Documentation</ulink>.</para>
-		<note><para>This troubleshooting guide is designed to be carried out in order.</para></note>
+		<note><para>This troubleshooting guide is designed to be carried out in order. If you reach the end of a section
+		and are not directed to another - then try <xref linkend="connecting-wireless"/> and should it fail begin at the start again.</para></note>
 		<sect2 id="troubleshooting-wireless-disabled" status="review">
 			<title>Check that the device is on</title>
 			<orderedlist>
 				<listitem><para>Many wireless network devices can be turned on or off. Check to see if there is a hardware switch, some devices can be switched off from Windows and may need to be turned back on from Windows.</para></listitem>
-				<listitem><para>If it is turned on then see <xref linkend="troubleshooting-device"/>.</para></listitem>
+				<listitem><para>If it is turned on then see <xref linkend="troubleshooting-wireless-device"/>.</para></listitem>
 			</orderedlist>
 		</sect2>
 		<sect2 id="troubleshooting-wireless-device" status="review">
@@ -86,17 +87,28 @@ icon in the <guilabel>System Notification Area</guilabel>.</para>
 			</orderedlist>
 			<para>You should see an output, along with the words "CLAIMED, UNCLAIMED, ENABLED or DISABLED"</para>
 			<orderedlist>				
-				<listitem><para>Claimed - this indicates a driver is loaded but not functioning, see <xref linkend="ndiswrapper"/></para></listitem>
-				<listitem><para>Unclaimed - there is no driver loaded, see <xref linkend="ndiswrapper"/>.</para></listitem>
-				<listitem><para>Enabled - move on to If there is a driver listed then see <xref linkend="troubleshooting-connection" />.</para></listitem>
-				<listitem><para>Disabled - see <xref linkend="troubleshooting-disabled"/>.</para></listitem>
+				<listitem><para>Claimed - this indicates a driver is loaded but not functioning, see <xref linkend="troubleshooting-wireless-ndiswrapper"/></para></listitem>
+				<listitem><para>Unclaimed - there is no driver loaded, see <xref linkend="troubleshooting-wireless-ndiswrapper"/>.</para></listitem>
+				<listitem><para>Enabled - move on to If there is a driver listed then see <xref linkend="troubleshooting-wireless-connection" />.</para></listitem>
+				<listitem><para>Disabled - see <xref linkend="troubleshooting-wireless-disabled"/>.</para></listitem>
+			</orderedlist>
+		</sect2>
+		<sect2 id="troubleshooting-wireless-ndiswrapper" status="review">
+			<title>Using Windows Wireless Drivers</title>
+			<para>Ubuntu supports a system known as NDISWrapper. This allows you to use a Windows wireless device driver under Ubuntu.</para>
+			<orderedlist>
+				<listitem><para>Obtain the Windows Driver for your system and locate the file that ends with <code>.inf</code>.</para></listitem>
+				<listitem><para><ulink url="apt:ndisgtk">Install the <application>ndisgtk</application> package</ulink>.</para></listitem>
+				<listitem><para>Open <application>ndisgtk</application> (&ndisgtk;).</para></listitem>
+				<listitem><para>Select <guilabel>Install new driver</guilabel>.</para></listitem>
+				<listitem><para>Choose the location of your Windows .inf file and click <guibutton>Install</guibutton>.</para></listitem>
+				<listitem><para>Click <guibutton>OK</guibutton>.</para></listitem>
 			</orderedlist>
 		</sect2>
 		<sect2 id="troubleshooting-wireless-connection" status="review">
 			<title>Check for a connection to the router</title>
 			<orderedlist>
 				<listitem><para>Open a <application>Terminal</application> (&terminal;) and type the command: <code>iwconfig</code>.</para></listitem>
-				<listitem><para>If there is an entry that says <code>ESSID=""</code> then see <xref linkend="security-wpa"/>.</para></listitem>
 				<listitem><para>If the ESSID for our router is shown there may be a problem with ACPI support. Boot the kernel with the <code>pci=noacpi</code> option.</para></listitem>
 			</orderedlist>
 		</sect2>	
@@ -104,9 +116,9 @@ icon in the <guilabel>System Notification Area</guilabel>.</para>
 			<title>Check IP assignment</title>
 			<orderedlist>
 				<listitem><para>Open a <application>Terminal</application> (&terminal;) and type the command: <code>ifconfig</code>.</para></listitem>
-				<listitem><para>If there is an IP address shown see <xref linkend="troubleshooting-dns"/>.</para></listitem>
+				<listitem><para>If there is an IP address shown see <xref linkend="troubleshooting-wireless-dns"/>.</para></listitem>
 				<listitem><para>From the <application>Terminal</application> enter the command: <code>sudo dhclient if_name</code> where if_name is the connection listed earlier.</para></listitem>
-				<listitem><para>If you receive a message that says <code>bound to xxx.xxx.xxx.xxx</code> then see <xref linkend="troubleshooting-dns"/></para></listitem>
+				<listitem><para>If you receive a message that says <code>bound to xxx.xxx.xxx.xxx</code> then see <xref linkend="troubleshooting-wireless-dns"/></para></listitem>
 				<listitem><para>If not then reboot the system.</para></listitem>
 			</orderedlist>
 		</sect2>
@@ -114,8 +126,8 @@ icon in the <guilabel>System Notification Area</guilabel>.</para>
 			<title>Check DNS</title>
 			<orderedlist>
 				<listitem><para>Open a <application>Terminal</application> (&terminal;) and type the command: <code>ping -c3 85.190.27.2</code>.</para></listitem>
-				<listitem><para>Now type the command: <code>ping www.ubuntu.com</code>. If you get a response from the both then see <xref linkend="troubleshooting-ipv6"/>.</para></listitem>
-				<listitem><para>Type the command: <code>cat /etc/resolv.conf</code>. If there is no nameserver listed then contact your ISP and find out your primary and secondary domain name servers. Once you have this information see <xref linkend="wireless-connecting"/>.</para></listitem>
+				<listitem><para>Now type the command: <code>ping www.ubuntu.com</code>. If you get a response from the both then see <xref linkend="troubleshooting-wireless-ipv6"/>.</para></listitem>
+				<listitem><para>Type the command: <code>cat /etc/resolv.conf</code>. If there is no nameserver listed then contact your ISP and find out your primary and secondary domain name servers. Once you have this information see <xref linkend="connecting-wireless"/>.</para></listitem>
 			</orderedlist>
 		</sect2>
 		<sect2 id="troubleshooting-wireless-ipv6" status="review">

@@ -7,14 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-docs\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2007-09-14 08:26+0100\n"
-"PO-Revision-Date: 2007-11-13 23:02+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2008-08-03 16:01+0100\n"
+"PO-Revision-Date: 2008-04-23 23:30+0000\n"
+"Last-Translator: Launchpad Translations Administrators "
+"<rosetta@launchpad.net>\n"
 "Language-Team: Slovak <sk@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2008-02-17 10:22+0000\n"
+"X-Launchpad-Export-Date: 2008-10-19 12:51+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: hardware/C/hardware-C.omf:6(creator) hardware/C/hardware-C.omf:7(maintainer)
@@ -27,13 +28,13 @@ msgstr "Hardvér"
 
 #: hardware/C/hardware-C.omf:9(date)
 msgid "2006-09-07"
-msgstr "7.9.2007"
+msgstr "7.9.2006"
 
 #: hardware/C/hardware-C.omf:11(description)
 msgid "Placeholder."
-msgstr "Rezervované miesto"
+msgstr "Rezervované miesto."
 
-#: hardware/C/hardware.xml:22(title)
+#: hardware/C/hardware.xml:20(title)
 msgid "Working with hardware devices"
 msgstr "Práca s hardvérovými zariadeniami"
 
@@ -45,13 +46,8 @@ msgstr "Poďakovania a licencia"
 msgid ""
 "This document is maintained by the Ubuntu documentation team "
 "(https://wiki.ubuntu.com/DocumentationTeam). For a list of contributors, see "
-"the <ulink url=\"../../../common/C/contributors.xml\">contributors "
-"page</ulink>"
+"the <ulink url=\"../../libs/C/contributors.xml\">contributors page</ulink>"
 msgstr ""
-"Tento dokument spravuje dokumentačný tím Ubuntu "
-"(https://wiki.ubuntu.com/DocumentationTeam). Zoznam prispievateľov nájdete "
-"na <ulink url=\"../../../common/C/contributors.xml\">stránke "
-"prispievateľov</ulink>"
 
 #: hardware/C/hardware.xml:5(para)
 msgid ""
@@ -84,24 +80,26 @@ msgstr ""
 #: hardware/C/hardware.xml:11(para)
 msgid ""
 "A copy of the license is available here: <ulink url=\"/usr/share/ubuntu-"
-"docs/common/C/ccbysa.xml\">Creative Commons ShareAlike License</ulink>."
+"docs/libs/C/ccbysa.xml\">Creative Commons ShareAlike License</ulink>."
 msgstr ""
-"Kópia licencie je dostupná tu: <ulink url=\"/usr/share/ubuntu-"
-"docs/common/C/ccbysa.xml\">Creative Commons ShareAlike License</ulink>."
 
 #: hardware/C/hardware.xml:14(year)
-msgid "2004, 2005, 2006"
-msgstr "2004, 2005, 2006"
+msgid "2008"
+msgstr ""
+
+#: hardware/C/hardware.xml:15(ulink)
+msgid "Ubuntu Documentation Project"
+msgstr "Dokumentačný projekt Ubuntu"
 
 #: hardware/C/hardware.xml:15(holder)
-msgid "Canonical Ltd. and members of the Ubuntu Documentation Project"
-msgstr "Canonical Ltd. a členovia Dokumentačného projektu Ubuntu"
+msgid "Canonical Ltd. and members of the <placeholder-1/>"
+msgstr "Canonical Ltd. a členovia <placeholder-1/>"
 
 #: hardware/C/hardware.xml:18(publishername)
 msgid "The Ubuntu Documentation Project"
 msgstr "Dokumentačný projekt Ubuntu"
 
-#: hardware/C/hardware.xml:25(para)
+#: hardware/C/hardware.xml:23(para)
 msgid ""
 "Your computer consists of a number of connected devices, which are "
 "collectively known as computer <emphasis>hardware</emphasis>."
@@ -109,23 +107,23 @@ msgstr ""
 "Váš počítač sa skladá z niekoľkých navzájom prepojených zariadení, ktoré sa "
 "spoločne označujú ako <emphasis>hardvér</emphasis> počítača."
 
-#: hardware/C/hardware.xml:26(para)
+#: hardware/C/hardware.xml:24(para)
 msgid ""
 "Ubuntu normally configures your hardware automatically, but there may be "
-"occasions when you need to make changes to settings relating to hardware "
-"yourself. This section provides information on tools which can be used to "
-"configure your hardware."
+"occasions when you need to make changes to hardware settings yourself. This "
+"section provides information on tools which can be used to configure your "
+"hardware."
 msgstr ""
-"Ubuntu za normálnych okolností váš hardvér nakonfiguroje automaticky, ale "
-"môžu sa vyskytnúť prípady, kedy budete potrebovať vykonať zmenu nastavení "
-"hardvéru sami. Táto sekcia poskytuje informácie o nástrojoch, ktoré môžete "
-"použiť na konfiguráciu hardvéru."
+"Ubuntu bežne konfiguruje váš hardvér automaticky, ale môže sa stať, že "
+"budete musieť vykonať zmeny v nastaveniach hardvéru ručne. Táto sekcia vám "
+"poskytne informácie o nástrojoch, ktoré môžu byť užitočné pri konfigurovaní "
+"vášho hardvéru."
 
-#: hardware/C/hardware.xml:28(title)
+#: hardware/C/hardware.xml:26(title)
 msgid "Restricted drivers"
 msgstr "Neslobodné ovládače"
 
-#: hardware/C/hardware.xml:29(para)
+#: hardware/C/hardware.xml:27(para)
 msgid ""
 "Some devices attached to your computer may need restricted drivers to be "
 "installed in order to work properly."
@@ -133,11 +131,19 @@ msgstr ""
 "Niektoré zariadenia pripojené k vášmu počítaču môžu vyžadovať na správne "
 "fungovanie neslobodné ovládače."
 
-#: hardware/C/hardware.xml:31(title)
+#: hardware/C/hardware.xml:29(title)
 msgid "Why are some drivers restricted?"
 msgstr "Prečo sú niektoré ovládače neslobodné?"
 
-#: hardware/C/hardware.xml:32(para)
+#: hardware/C/hardware.xml:30(emphasis)
+msgid ""
+"Restricted drivers are drivers for your hardware which are not freely "
+"available or open-source."
+msgstr ""
+"Obmedzené ovládače sú ovládače vášho hardvéru, ktoré nie sú voľne dostupné "
+"alebo s otvorenými kódmi."
+
+#: hardware/C/hardware.xml:31(para)
 msgid ""
 "Most of the devices (hardware) attached to your computer should function "
 "properly in Ubuntu. These devices are likely to have "
@@ -149,7 +155,7 @@ msgstr ""
 "<emphasis>slobodné</emphasis> ovládače, čo znamená, že vývojári Ubuntu majú "
 "možnosť ich modifikovať a riešiť problémy, ktoré s nimi môžu nastať."
 
-#: hardware/C/hardware.xml:33(para)
+#: hardware/C/hardware.xml:32(para)
 msgid ""
 "Some hardware does not have unrestricted drivers, usually because the "
 "hardware manufacturer has not released details of their hardware which would "
@@ -161,21 +167,21 @@ msgstr ""
 "ktorých by bolo možné preň vytvoriť ovládač. Tieto zariadenia môžu mať "
 "obmedzenú funkcionalitu alebo nefungovať vôbec."
 
-#: hardware/C/hardware.xml:34(para)
+#: hardware/C/hardware.xml:33(para)
 msgid ""
-"If a <emphasis>restricted driver</emphasis> is availble for a certain "
+"If a <emphasis>restricted driver</emphasis> is available for a certain "
 "device, you can install it in order to allow your device to function "
 "properly, or to add new features. For example, installing a restricted "
 "driver for certain graphics cards may allow you to use more advanced <ulink "
-"type=\"help\" url=\"ghelp:desktop-effects\">desktop effects</ulink>."
+"type=\"help\" url=\"ghelp:desktop-effects\">visual effects</ulink>."
 msgstr ""
-"Ak je dostupný <emphasis>neslobodný ovládač</emphasis> určitého zariadenia, "
-"môžete ho nainštalovať, aby vaše zariadenie správne fungovalo alebo aby sa "
-"sprístupnili jeho ďalšie schopnosti. Napríklad inštalácia neslobodného "
-"ovládača určitých grafických kariet vám môže umožniť používať rozšírené "
-"<ulink type=\"help\" url=\"ghelp:desktop-effects\">efekty prostredia</ulink>."
+"Ak je pre určité zariadenie dostupný <emphasis>neslobodný "
+"ovládač</emphasis>, môžete ho nainštalovať v záujme správneho fungovania "
+"zariadenia alebo pridania nových funkcií. Napríklad inštalácia neslobodného "
+"ovládača grafickej karty vám môže umožniť používať pokročilejšie <ulink "
+"type=\"help\" url=\"ghelp:desktop-effects\">vizuálne efekty</ulink>."
 
-#: hardware/C/hardware.xml:35(para)
+#: hardware/C/hardware.xml:34(para)
 msgid ""
 "Some computers may not have any devices which can use restricted drivers, "
 "either because all of the devices are fully supported by unrestricted "
@@ -186,33 +192,33 @@ msgstr ""
 "slobodnými ovládačmi alebo preto, že žiadne neslobodné ovládače zariadenia "
 "zatiaľ nie sú dostupné."
 
-#: hardware/C/hardware.xml:37(para)
+#: hardware/C/hardware.xml:36(para)
 msgid ""
 "Restricted drivers are often maintained by the hardware manufacturer, and so "
 "cannot be modified by Ubuntu developers if there is a problem."
 msgstr ""
 "Neslobodné ovládače často spravuje výrobca hardvéru, preto ich nemôžu "
-"vývojári Ubuntu zmeniť ak sa s nimi vyskytne problém."
+"vývojári Ubuntu v prípade vyskytnutia sa problému zmeniť."
 
-#: hardware/C/hardware.xml:41(title)
+#: hardware/C/hardware.xml:40(title)
 msgid "Enabling a restricted driver"
 msgstr "Zapnutie neslobodného ovládača"
 
-#: hardware/C/hardware.xml:42(para)
+#: hardware/C/hardware.xml:41(para)
 msgid "To use a restricted driver for a device:"
 msgstr "Použitie neslobodného ovládača zariadenia umožníte nasledovne:"
 
-#: hardware/C/hardware.xml:45(para) hardware/C/hardware.xml:66(para)
+#: hardware/C/hardware.xml:44(para) hardware/C/hardware.xml:65(para)
 msgid ""
 "Press "
 "<menuchoice><guimenu>System</guimenu><guimenuitem>Administration</guimenuitem"
-"><guimenuitem>Restricted Drivers Manager</guimenuitem></menuchoice>"
+"><guimenuitem>Hardware drivers</guimenuitem></menuchoice>"
 msgstr ""
 "Stlačte "
-"<menuchoice><guimenu>Systém</guimenu><guimenuitem>Správa</guimenuitem><guimen"
-"uitem>Správca neslobodných ovládačov</guimenuitem></menuchoice>"
+"<menuchoice><guimenu>Systém</guimenu><guimenuitem>Administrácia</guimenuitem>"
+"<guimenuitem>Ovládače hardvéru</guimenuitem></menuchoice>"
 
-#: hardware/C/hardware.xml:48(para)
+#: hardware/C/hardware.xml:47(para)
 msgid ""
 "Find the driver which you would like to enable and check the box in the "
 "<guilabel>Enabled</guilabel> column, next to its name"
@@ -220,7 +226,7 @@ msgstr ""
 "Nájdite ovládač, ktorý chcete zapnúť a označte pole v stĺpci "
 "<guilabel>Zapnuté</guilabel> vedľa jeho názvu."
 
-#: hardware/C/hardware.xml:51(para)
+#: hardware/C/hardware.xml:50(para)
 msgid ""
 "You will be asked to confirm that you want to enable the driver. Press "
 "<guibutton>Enable Driver</guibutton>"
@@ -228,20 +234,21 @@ msgstr ""
 "Správca si vyžiada potvrdenie, že chcete ovládač naozaj zapnúť. Stlačte "
 "<guibutton>Zapnúť ovládač</guibutton>."
 
-#: hardware/C/hardware.xml:54(para)
-msgid "The restricted driver may have to be downloaded and installed."
-msgstr "Neslobodný ovládač sa stiahne a nainštaluje."
+#: hardware/C/hardware.xml:53(para)
+msgid "The restricted driver may have to be downloaded and installed"
+msgstr ""
+"Je možné, že bude potrebné stiahnuť a nainštalovať neslobodný ovládač"
 
-#: hardware/C/hardware.xml:57(para)
+#: hardware/C/hardware.xml:56(para)
 msgid "You may need to restart your computer to finish enabling the driver"
 msgstr ""
 "Je možné, že zapnutie ovládača bude vyžadovať reštartovanie počítača."
 
-#: hardware/C/hardware.xml:62(title)
+#: hardware/C/hardware.xml:61(title)
 msgid "Disabling a restricted driver"
 msgstr "Vypnutie neslobodného ovládača"
 
-#: hardware/C/hardware.xml:63(para)
+#: hardware/C/hardware.xml:62(para)
 msgid ""
 "If a restricted driver is causing problems, or you would just like to turn "
 "it off, follow the procedure below:"
@@ -249,7 +256,7 @@ msgstr ""
 "Ak neslobodný ovládač spôsobuje problémy alebo ho jednoducho chcete vypnúť, "
 "postupujte nasledovne:"
 
-#: hardware/C/hardware.xml:69(para)
+#: hardware/C/hardware.xml:68(para)
 msgid ""
 "Find the driver which you would like to disable and uncheck the box in the "
 "<guilabel>Enabled</guilabel> column, next to its name"
@@ -257,7 +264,7 @@ msgstr ""
 "Nájdite ovládač, ktorý chcete vypnúť a odznačte pole v stĺpci "
 "<guilabel>Zapnuté</guilabel> vedľa jeho názvu."
 
-#: hardware/C/hardware.xml:72(para)
+#: hardware/C/hardware.xml:71(para)
 msgid ""
 "You will be asked to confirm that you would like to disable the driver. "
 "Press <guibutton>Disable Driver</guibutton>"
@@ -265,211 +272,181 @@ msgstr ""
 "Správca si vyžiada potvrdenie, že chcete ovládač naozaj vypnúť. Stlačte "
 "<guibutton>Vypnúť ovládač</guibutton>."
 
-#: hardware/C/hardware.xml:75(para)
+#: hardware/C/hardware.xml:74(para)
 msgid "You may need to restart your computer to finish disabling the driver"
 msgstr ""
 "Je možné, že vypnutie ovládača bude vyžadovať reštartovanie počítača."
 
-#: hardware/C/hardware.xml:82(title)
+#: hardware/C/hardware.xml:81(title)
 msgid "Disks and partitions"
 msgstr "Disky a oddiely"
 
-#: hardware/C/hardware.xml:83(para)
+#: hardware/C/hardware.xml:82(para)
 msgid ""
 "This section provides instructions on how to handle disks and drives, such "
 "as removable hard disks."
 msgstr ""
-"Táto sekcia poskytuje informácie o tom, ako pracovať s diskami a jednotkami "
-"ako prenosné pevné disky."
+"Táto sekcia poskytuje informácie o tom, ako pracovať s diskami a "
+"zariadeniami, akými sú napríklad prenosné pevné disky."
 
-#: hardware/C/hardware.xml:86(primary)
+#: hardware/C/hardware.xml:85(primary)
 msgid "partition"
 msgstr "oddiel"
 
-#: hardware/C/hardware.xml:87(secondary)
+#: hardware/C/hardware.xml:86(secondary)
 msgid "partitions"
 msgstr "oddiely"
 
-#: hardware/C/hardware.xml:91(primary)
+#: hardware/C/hardware.xml:90(primary)
 msgid "partitioning"
 msgstr "rozdelenie na oddiely"
 
-#: hardware/C/hardware.xml:95(primary)
+#: hardware/C/hardware.xml:94(primary)
 msgid "format"
 msgstr "format"
 
-#: hardware/C/hardware.xml:96(secondary)
+#: hardware/C/hardware.xml:95(secondary)
 msgid "formatting"
 msgstr "formátovanie"
 
-#: hardware/C/hardware.xml:100(primary)
+#: hardware/C/hardware.xml:99(primary)
 msgid "mount"
 msgstr "pripájanie"
 
-#: hardware/C/hardware.xml:104(primary)
+#: hardware/C/hardware.xml:103(primary)
 msgid "unmount"
 msgstr "odpájanie"
 
-#: hardware/C/hardware.xml:105(secondary)
+#: hardware/C/hardware.xml:104(secondary)
 msgid "umount"
 msgstr "umount"
 
-#: hardware/C/hardware.xml:109(primary)
+#: hardware/C/hardware.xml:108(primary)
 msgid "filesystem"
 msgstr "súborový systém"
 
-#: hardware/C/hardware.xml:110(secondary)
+#: hardware/C/hardware.xml:109(secondary)
 msgid "file system"
 msgstr "súborový systém"
 
-#: hardware/C/hardware.xml:114(title)
-msgid "Checking Free and Used Space"
-msgstr "Kontrola voľného a využitého miesta"
+#: hardware/C/hardware.xml:113(title)
+msgid "Checking disk capacity"
+msgstr "Kontroluje sa kapacita disku"
 
-#: hardware/C/hardware.xml:120(para)
+#: hardware/C/hardware.xml:117(para)
 msgid ""
-"Choose "
+"Press "
 "<menuchoice><guimenu>Places</guimenu><guimenuitem>Computer</guimenuitem></men"
-"uchoice>,"
+"uchoice>, right click on the disk you want to check and select "
+"<guilabel>Properties</guilabel>. The free space on the disk will be "
+"displayed on the <guilabel>Basic</guilabel> tab."
 msgstr ""
-"Vyberte "
+"Stlačte "
 "<menuchoice><guimenu>Miesta</guimenu><guimenuitem>Počítač</guimenuitem></menu"
-"choice>,"
+"choice>, kliknite pravým tlačidlom myši na disk, ktorý chcete skontrolovať a "
+"kliknite na <guilabel>Vlastnosti</guilabel>. Voľné miesto na disku sa "
+"zobrazí na karte <guilabel>Základné</guilabel>."
 
-#: hardware/C/hardware.xml:123(para)
-msgid "Select the desired device and right click on it,"
-msgstr "Vyberte požadované zariadenie a kliknite naň pravým tlačidlom,"
-
-#: hardware/C/hardware.xml:127(para)
-msgid "Select <guimenuitem>Properties</guimenuitem>."
-msgstr "Vyberte <guimenuitem>Vlastnosti</guimenuitem>."
-
-#: hardware/C/hardware.xml:115(para)
+#: hardware/C/hardware.xml:121(para)
 msgid ""
-"To check the amount of free and used space on your computer, on your "
-"removable devices and on your file systems, do as follow: <placeholder-1/>"
+"Press "
+"<menuchoice><guimenu>System</guimenu><guisubmenu>Administration</guisubmenu><"
+"guimenuitem>System Monitor</guimenuitem></menuchoice> and select the "
+"<guilabel>File Systems</guilabel> tab. All disks currently connected to the "
+"system should be displayed in the list, along with their free and used "
+"capacities."
 msgstr ""
-"Pri kontrole voľného a využitého miesta na vašom počítači, na prenosných "
-"pevných diskoch a na vašich súborových systémoch, postupujte nasledovne: "
+"Stlačte "
+"<menuchoice><guimenu>Systém</guimenu><guisubmenu>Správa</guisubmenu><guimenui"
+"tem>Monitor systému</guimenuitem></menuchoice> a vyberte kartu "
+"<guilabel>Súborové systémy</guilabel>. Všetky do systému aktuálne pripojené "
+"disky by sa mali zobraziť v zozname spolu s údajom o voľnom a využitom "
+"mieste na nich."
+
+#: hardware/C/hardware.xml:114(para)
+msgid ""
+"To check the amount of free and used space on a disk, do either of the "
+"following: <placeholder-1/>"
+msgstr ""
+"Na skontrolovanie množstva voľného a použitého miesta na disku môžete použiť "
 "<placeholder-1/>"
 
-#: hardware/C/hardware.xml:132(para)
+#: hardware/C/hardware.xml:128(title)
+msgid "Advanced disk-usage analysis"
+msgstr "Pokročilá analýza využitia diskov"
+
+#: hardware/C/hardware.xml:129(para)
 msgid ""
-"You will be present with a two color <emphasis>pie chart</emphasis> "
-"indicating the free and used space on that particular device."
+"For a more accurate analysis of your filesystem, press "
+"<menuchoice><guimenu>Applications</guimenu><guimenuitem>Accessories</guimenui"
+"tem><guimenuitem>Disk Usage Analyzer</guimenuitem></menuchoice> to start the "
+"<application>Disk Usage Analyzer</application>."
 msgstr ""
-"Zobrazí sa vám dvojfarebný <emphasis>koláčový graf</emphasis> predstavujúci "
-"voľné a využité miesto na danom zariadení."
+"Pre presnejšiu analýzu vášho súborového systému stlačte "
+"<menuchoice><guimenu>Aplikácie</guimenu><guimenuitem>Príslušenstvo</guimenuit"
+"em><guimenuitem>Disk Usage Analyzer</guimenuitem></menuchoice> a spustíte "
+"<application>Disk Usage Analyzer</application>."
+
+#: hardware/C/hardware.xml:133(para)
+msgid ""
+"Press <guibutton>Scan Home</guibutton> to scan your home directory, or press "
+"<guibutton>Scan Filesystem</guibutton> to scan the whole filesystem."
+msgstr ""
+"Stlačte <guibutton>Scan Home</guibutton> na skenovanie vášho domáceho "
+"priečinku alebo stlačte <guibutton>Scan Filesystem</guibutton> na skenovanie "
+"celého súborového systému."
 
 #: hardware/C/hardware.xml:137(para)
 msgid ""
-"The blue color indicates the free space, the yellow one indicates the used "
-"space. On the right of this chart there's a small legend with the exactly "
-"free and used space."
+"See the <ulink url=\"ghelp:baobab\" type=\"help\">Disk Usage Analyzer "
+"Manual</ulink> for more information."
 msgstr ""
-"Modrá farba predstavuje voľné miesto, žltá využité miesto. Na pravo od grafu "
-"je malá legenda s presnou hodnotou voľného a využitého miesta."
+"Pre viac informácií pozrite <ulink url=\"ghelp:baobab\" type=\"help\">Disk "
+"Usage Analyzer manuál</ulink>."
 
-#: hardware/C/hardware.xml:145(para)
+#: hardware/C/hardware.xml:145(title)
+msgid "Partitioning a device"
+msgstr "Spraviť partície na zariadení"
+
+#: hardware/C/hardware.xml:146(para)
 msgid ""
-"If you want to know the amount of free and used space of a removable device "
-"like a CD/DVD-ROM or a USB key, first mount that particular device."
-msgstr ""
-"Ak chcete zistiť veľkosť voľného a využitého miesta na vymeniteľnom "
-"zariadení ako CD/DVD-ROM alebo USB kľúč, budete ho musieť najprv pripojiť."
-
-#: hardware/C/hardware.xml:154(title)
-msgid "Advanced Analysis"
-msgstr "Rozšírená analýza"
-
-#: hardware/C/hardware.xml:155(para)
-msgid ""
-"For a more accurate analysis of your filesystem, you can use "
-"<application>Disk Usage Analyzer</application>. To launch <application>Disk "
-"Usage Analyzer</application>, choose "
-"<menuchoice><guimenu>Applications</guimenu><guimenuitem>Accessories</guimenui"
-"tem><guimenuitem>Disk Usage Analyzer</guimenuitem></menuchoice>, or from a "
-"terminal "
-"(<menuchoice><guimenu>Applications</guimenu><guimenuitem>Accessories</guimenu"
-"item><guimenuitem>Terminal</guimenuitem></menuchoice>) type "
-"<command>baobab</command> and hit <keycap>Return</keycap>."
-msgstr ""
-"Pre presnejšiu analýzu vášho súborového systému môžete použiť "
-"<application>Disk Usage Analyzer</application>. Na spustenie "
-"<application>Disk Usage Analyzer</application> vyberte "
-"<menuchoice><guimenu>Aplikácie</guimenu><guimenuitem>Príslušenstvo</guimenuit"
-"em><guimenuitem>Disk Usage Analyzer</guimenuitem></menuchoice> alebo v "
-"termináli zadajte "
-"(<menuchoice><guimenu>Aplikácie</guimenu><guimenuitem>Príslušenstvo</guimenui"
-"tem><guimenuitem>Terminál</guimenuitem></menuchoice>)  "
-"<command>baobab</command> a stlačte kláves <keycap>Enter</keycap>."
-
-#: hardware/C/hardware.xml:162(para)
-msgid ""
-"For analysing the entire filesystem, press <guilabel>Scan "
-"Filesystem</guilabel> form the toolbar, or for analysing only your home "
-"folder, press <guilabel>Scan Home</guilabel>."
-msgstr ""
-"Pre analýzu celého súborového systému vyberte z panelu s nástrojmi položku "
-"<guilabel>Scan Filesystem</guilabel>, alebo pre analýzu iba vášho domovského "
-"priečinku zvoľte <guilabel>Scan Home</guilabel>."
-
-#: hardware/C/hardware.xml:167(para)
-msgid ""
-"For more information about, see <ulink url=\"ghelp:baobab\" "
-"type=\"help\"><application>Disk Usage Analyzer</application></ulink>."
-msgstr ""
-"Pre viac informácií pozrite <ulink url=\"ghelp:baobab\" "
-"type=\"help\"><application>Disk Usage Analyzer</application></ulink>."
-
-#: hardware/C/hardware.xml:175(title)
-msgid "Partitioning a Device"
-msgstr "Tvorba oddielov na zariadení"
-
-#: hardware/C/hardware.xml:176(para)
-msgid ""
-"To partition a disk in Ubuntu, either a hard disk or a removable device, the "
-"program <application>GNOME Partition Editor</application> is needed."
-msgstr ""
-"Na vytvorenie oddielov (či už na pevnom disku alebo vymeniteľnom zariadení) "
-"je v Ubuntu potrebný program <application>Editor partícií</application>."
-
-#: hardware/C/hardware.xml:180(para) hardware/C/hardware.xml:315(para)
-msgid ""
-"To install <application>GNOME Partition Editor</application>, install the "
-"<application>gparted</application> package (see <ulink type=\"help\" "
-"url=\"ghelp:add-applications\">Add Applications</ulink>)."
-msgstr ""
-"Na inštaláciu <application>Editora partícií</application> nainštalujte balík "
-"<application>gparted</application> (viď <ulink type=\"help\" url=\"ghelp:add-"
-"applications\">Pridať aplikácie</ulink>)."
-
-#: hardware/C/hardware.xml:185(para) hardware/C/hardware.xml:320(para)
-msgid ""
-"To launch <application>GNOME Partition Editor</application> choose "
+"You can use <application>GNOME Partition Editor</application> to partition "
+"storage devices. Install the <application>gparted</application> package (see "
+"<ulink type=\"help\" url=\"ghelp:add-applications\">Add "
+"Applications</ulink>) and then press "
 "<menuchoice><guimenu>System</guimenu><guisubmenu>Administration "
-"</guisubmenu><guimenuitem>Gnome Partition Editor</guimenuitem></menuchoice>, "
-"or from a terminal "
-"(<menuchoice><guimenu>Applications</guimenu><guimenuitem>Accessories</guimenu"
-"item><guimenuitem>Terminal</guimenuitem></menuchoice>) type <command>gksudo "
-"gparted</command> and press <keycap>Enter</keycap>."
+"</guisubmenu><guimenuitem>Gnome Partition Editor</guimenuitem></menuchoice> "
+"to start the partition editor."
 msgstr ""
-"Na spustenie <application>Editora partícií</application> vyberte "
-"<menuchoice><guimenu>Systém</guimenu><guisubmenu>Správa</guisubmenu><guimenui"
-"tem>Editor partícií</guimenuitem></menuchoice> alebo z terminálu "
-"(<menuchoice><guimenu>Aplikácie</guimenu><guimenuitem>Príslušenstvo</guimenui"
-"tem><guimenuitem>Terminál</guimenuitem></menuchoice>) zadajte "
-"<command>gksudo gparted</command> a stlačte kláves <keycap>Enter</keycap>."
+"Na vytvorenie oddielov na úložných zariadeniach môžete použiť "
+"<application>Editor partícií</application>. Nainštalujte balík "
+"<application>gparted</application> (pozrite <ulink type=\"help\" "
+"url=\"ghelp:add-applications\">Pridať aplikácie</ulink>) a potom stlačte "
+"<menuchoice><guimenu>Systém</guimenu><guisubmenu>Správa "
+"</guisubmenu><guimenuitem>Editor partícií</guimenuitem></menuchoice> a "
+"spustíte editor partícií."
 
-#: hardware/C/hardware.xml:192(title)
-msgid "Freeing Space in a Partition"
-msgstr "Uvoľnenie miesta na oddieli"
+#: hardware/C/hardware.xml:151(para)
+msgid ""
+"Be careful when altering disk partitions, as it is possible to lose your "
+"data if you delete or change the wrong partition."
+msgstr ""
+"Pri zmenách diskových oddielov buďte opatrní, nakoľko ak zmažete alebo "
+"zmeníte nesprávny oddiel, môžete prísť o vaše údaje."
 
-#: hardware/C/hardware.xml:200(para) hardware/C/hardware.xml:329(para)
-msgid "Launch <application>GNOME Partition Editor</application>."
-msgstr "Spustite <application>Editor partícií</application>."
+#: hardware/C/hardware.xml:155(title)
+msgid "Freeing space for a new partition"
+msgstr "Uvoľnenie miesta pre novú partíciu"
 
-#: hardware/C/hardware.xml:205(para) hardware/C/hardware.xml:246(para) hardware/C/hardware.xml:334(para)
+#: hardware/C/hardware.xml:163(para) hardware/C/hardware.xml:248(para)
+msgid ""
+"Press <menuchoice><guimenu>System</guimenu><guisubmenu>Administration "
+"</guisubmenu><guimenuitem>Gnome Partition Editor</guimenuitem></menuchoice>."
+msgstr ""
+"Stlačte <menuchoice><guimenu>Systém</guimenu><guisubmenu>Administrácia "
+"</guisubmenu><guimenuitem>Správca partícií Gnome</guimenuitem></menuchoice>."
+
+#: hardware/C/hardware.xml:168(para) hardware/C/hardware.xml:209(para) hardware/C/hardware.xml:253(para)
 msgid ""
 "Select the device to partition from the drop-down list at the top-right of "
 "the main window."
@@ -477,62 +454,63 @@ msgstr ""
 "Z rozbaľovacieho zoznamu (vpravo hore hlavného okna) vyberte zariadenie, na "
 "ktorom si prajete vytvoriť oddiel."
 
-#: hardware/C/hardware.xml:211(para) hardware/C/hardware.xml:340(para)
+#: hardware/C/hardware.xml:174(para) hardware/C/hardware.xml:259(para)
 msgid ""
 "A list of partitions will appear. Select the desired partition and choose "
-"<menuchoice><guimenu>Partition</guimenu><guimenuitem>unmount</guimenuitem></m"
+"<menuchoice><guimenu>Partition</guimenu><guimenuitem>Unmount</guimenuitem></m"
 "enuchoice>."
 msgstr ""
-"Objaví sa zoznam oddielov. Vyberte "
-"<menuchoice><guimenu>Oddiel</guimenu><guimenuitem>unmount</guimenuitem></menu"
+"Zobrazí sa zoznam oddielov. Zvoľte vami vybraný oddiel a stlačte "
+"<menuchoice><guimenu>Oddiel</guimenu><guimenuitem>Odpojiť</guimenuitem></menu"
 "choice>."
 
-#: hardware/C/hardware.xml:220(para)
+#: hardware/C/hardware.xml:183(para)
 msgid ""
 "To resize the partition choose <guilabel>Resize/Move</guilabel>. The dialog "
 "<guilabel>Resize/Move</guilabel> will be shown. You can use the "
-"<guilabel>Free Space Following (MiB)</guilabel> spin box to choose how much "
-"space to free after this partition, or <guilabel>Free Space Preceding "
+"<guilabel>Free Space Following (MiB)</guilabel> box to choose how much space "
+"to free after this partition, or <guilabel>Free Space Preceding "
 "(MiB)</guilabel> to free space before this partition. Alternatively you can "
-"use the slider to adjust the partition size.."
+"use the slider to adjust the partition size."
 msgstr ""
-"Na zmenu veľkosti partície zvoľte <guilabel>Resize/Move</guilabel>. Otvorí "
-"sa dialógové okno <guilabel>Zmeniť veľkosť/Presunúť</guilabel>. Môžete "
-"použiť položku <guilabel>Free Space Following (MiB)</guilabel> na vybratie, "
-"koľko miesta má byť uvoľneného za týmto oddielom alebo <guilabel>Free Space "
-"Preceding (MiB)</guilabel> na uvoľnenie miesta za oddielom.. Prípadne môžete "
-"použiť posúvač na nastavenie veľkosti oddielu."
+"Na zmenu veľkosti oddielu zvoľte <guilabel>Zmeniť/presunúť</guilabel>. "
+"Objaví sa dialógové okno <guilabel>Zmeniť/presunúť</guilabel>. Môžete použiť "
+"políčko <guilabel>Nasledujúce voľné miesto (MiB)</guilabel>, ktorým zvolíte, "
+"koľko mista si prajete uvoľniť za oddielom, alebo <guilabel>Predchádzajúce "
+"voľné miesto (MiB)</guilabel> na uvoľnenie miesta pred oddielom. Prípadne na "
+"zmenu veľkosti oddielu môžete použiť posúvač."
 
-#: hardware/C/hardware.xml:232(para)
+#: hardware/C/hardware.xml:195(para)
 msgid "To apply the changes, click <guibutton>Resize/Move</guibutton>."
 msgstr ""
 "Na uplatnenie zmien kliknite na <guibutton>Zmeniť "
 "veľkosť/Presunúť</guibutton>."
 
-#: hardware/C/hardware.xml:193(para)
+#: hardware/C/hardware.xml:156(para)
 msgid ""
-"To create a new partition inside an already partitioned device, first you "
-"have to resize the partition. If you already have free space, skip to <xref "
-"linkend=\"creating-new-partition\"/>. <placeholder-1/>"
+"To create a new partition inside an already partitioned device, you must "
+"first resize an existing partition. If you already have free space, skip to "
+"<xref linkend=\"creating-new-partition\"/>; otherwise, follow the "
+"instructions below: <placeholder-1/>"
 msgstr ""
-"Na vytvorenie nového oddielu vo vnútri už existujúceho rozdeleného "
-"zariadenia je potrebné najprv zmeniť veľkosť oddielu. Ak už máte voľné "
-"miesto, preskočte na <xref linkend=\"creating-new-partition\"/>. "
-"<placeholder-1/>"
+"Na vytvorenie nového oddielu vo vnútri už rozdeleného zariadenia musíte "
+"najprv zmeniť veľkosť jestvujúceho oddielu. Ak už máte voľný priestor, "
+"preskočte na <xref linkend=\"creating-new-partition\"/>, v opačnom prípade "
+"postupujte podľa nižšie uvedených inštrukcií: <placeholder-1/>"
 
-#: hardware/C/hardware.xml:241(title)
-msgid "Creating a New Partition"
-msgstr "Vytvorenie nového oddielu"
+#: hardware/C/hardware.xml:204(title)
+msgid "Creating a new partition"
+msgstr "Vytvára sa nová oblasť"
 
-#: hardware/C/hardware.xml:252(para)
+#: hardware/C/hardware.xml:215(para)
 msgid ""
 "A list of partitions will appear. Select the one called "
 "<guilabel>unallocated</guilabel> and click <guibutton>New</guibutton>."
 msgstr ""
-"Objaví sa zoznam oddielov. Vyberte ten nazvaný ako "
+"Objaví sa zoznam oddielov. Vyberte ten s popiskom "
 "<guilabel>nealokované</guilabel> a kliknite na <guibutton>Nový</guibutton>."
 
-#: hardware/C/hardware.xml:259(para)
+#: hardware/C/hardware.xml:222(para)
 msgid ""
 "From the <guilabel>Filesystem</guilabel> drop-down list choose the desired "
 "type of filesystem to use and click <guibutton>Add</guibutton>."
@@ -541,31 +519,29 @@ msgstr ""
 "požadovaný typ súborového systému a kliknite na "
 "<guibutton>Pridať</guibutton>."
 
-#: hardware/C/hardware.xml:266(para) hardware/C/hardware.xml:358(para)
+#: hardware/C/hardware.xml:229(para) hardware/C/hardware.xml:277(para)
 msgid "To apply all the changes made, click <guibutton>Apply</guibutton>."
 msgstr "Na uplatnenie zmien kliknite na <guibutton>Apply</guibutton>."
 
-#: hardware/C/hardware.xml:242(para)
+#: hardware/C/hardware.xml:205(para)
 msgid "To create a new partition: <placeholder-1/>"
 msgstr "Na vytvorenie nového oddielu: <placeholder-1/>"
 
-#: hardware/C/hardware.xml:276(title) hardware/C/hardware.xml:374(title)
-msgid "Related Topics"
-msgstr "Súvisiace témy"
+#: hardware/C/hardware.xml:240(title)
+msgid "Formatting a partition"
+msgstr "Formátuje sa oblasť"
 
-#: hardware/C/hardware.xml:310(title)
-msgid "Formatting a Partition"
-msgstr "Formátovanie oddielu"
-
-#: hardware/C/hardware.xml:311(para)
+#: hardware/C/hardware.xml:241(para)
 msgid ""
-"To format a partition in Ubuntu, the program <application>GNOME Partition "
-"Editor</application> is needed."
+"You can use <application>GNOME Partition Editor</application> to format disk "
+"partitions (see <xref linkend=\"partitioning-device\"/> for more information "
+"on <application>GNOME Partition Editor</application>)."
 msgstr ""
-"Na formátovanie oddielu je v Ubuntu potrebný <application>Editor "
-"partícií</application>."
+"Na formátovanie diskových oddielov môžete použiť <application>Editor "
+"partícií</application> (pozrite <xref linkend=\"partitioning-device\"/> pre "
+"viac informácií o <application>Editore partícií</application>)."
 
-#: hardware/C/hardware.xml:349(para)
+#: hardware/C/hardware.xml:268(para)
 msgid ""
 "Select the partition you want to format and choose "
 "<menuchoice><guimenu>Partition</guimenu><guimenuitem>Format "
@@ -577,120 +553,126 @@ msgstr ""
 "na</guimenuitem></menuchoice> a zo zoznamu vyberte, na aký typ súborového "
 "systému si prajete oddiel naformátovať."
 
-#: hardware/C/hardware.xml:325(para)
+#: hardware/C/hardware.xml:244(para)
 msgid "To format a partition, do as follows: <placeholder-1/>"
 msgstr "Aby ste formátovali oddiel, spravte nasledovné: <placeholder-1/>"
 
-#: hardware/C/hardware.xml:367(para)
+#: hardware/C/hardware.xml:286(para)
 msgid ""
 "Pressing <guibutton>Apply</guibutton> will cause all of the files on the "
 "partition to be permanently deleted."
 msgstr ""
-"Stlačenie <guibutton>Apply</guibutton> spôsobí, že všetky súbory na oddieli "
-"budú nenávratne zničené."
+"Stlačením <guibutton>Apply</guibutton> spôsobíte nenávratné zničenie "
+"všetkých súborov na danom oddieli."
 
-#: hardware/C/hardware.xml:408(title)
-msgid "What is Formatting?"
-msgstr "Čo je formátovanie?"
+#: hardware/C/hardware.xml:294(title)
+msgid "What is formatting?"
+msgstr "Čo je to formátovanie?"
 
-#: hardware/C/hardware.xml:409(para)
+#: hardware/C/hardware.xml:295(para)
 msgid ""
-"To format a hard disk, a device or a partition means to prepare that "
-"particular device to be used for storing data."
+"To format a hard disk, device or partition means to prepare that particular "
+"device to be used for storing data."
 msgstr ""
-"Formátovanie pevného disku, zariadenia alebo oddielu znamená pripraviť "
-"príslušné zariadenie na pou"
+"Naformátovať pevný disk, zariadenie alebo oddiel znamená pripraviť toto "
+"zariadenie na použitie ako úložisko údajov."
 
-#: hardware/C/hardware.xml:413(para)
+#: hardware/C/hardware.xml:299(para)
 msgid ""
-"The operation of formatting a hard disk or a partition, implies the applying "
-"of a specific format to that device: this format is the filesystem."
+"The operation of formatting a hard disk or partition is when a specific data-"
+"storage format is applied to that device; this format is the "
+"<quote>filesystem</quote>."
 msgstr ""
-"Operácia formátovania pevného disku alebo oddielu znamená, že na dané "
-"zariadenie aplikujete určitý formát, ktorým je súborový systém."
+"Formátovanie pevného disku alebo oddielu prebieha vtedy, keď sa na dané "
+"zariadenie aplikuje na špecifický formát na ukladanie údajov, tento formát "
+"je <quote>súborový systém</quote>."
 
-#: hardware/C/hardware.xml:418(para)
+#: hardware/C/hardware.xml:304(para)
 msgid ""
-"When you buy a disk usually it is not formatted, and you cannot use it for "
-"archiving data. When you format the device, you will notice that the free "
-"space in it is less than the original size. This is due to the fact that "
-"some space has to be used to make the device usable: this space is occupied "
-"by the filesystem."
+"When you buy a disk it is usually not formatted, and cannot yet be used for "
+"storing data. When you format the device, you will notice that the free "
+"space on it is less than the original size. This is due to the fact that "
+"some space has to be used to make the device usable; this space is occupied "
+"by the filesystem. Also, disk manufacturers often use a different standard "
+"to measure disk capacity, which results in a further discrepancy."
 msgstr ""
-"Keď si kúpite disk, obyčajne nie je naformátovaný a nemôžete ho teda priamo "
-"použiť na ukladanie dát. Keď naformátujete zariadenie zistíte, že voľného "
-"miesta je na ňom menej ako čo bola jeho pôvodná veľkosť. Je to spôsobené "
-"tým, že určité miesto musí byť zabrané na to, aby zariadenie bolo "
-"použiteľné: na tomto mieste je uložený súborový systém."
+"Keď si kúpite disk, spravidla nie je naformátovaný a nemôže byť teda použitý "
+"na ukladanie údajov. Pri formátovaní zistíte, že voľné miesto na zariadení "
+"je menšie ako pôvodná veľkosť. Výrobcovia diskov tiež používajú rozdielne "
+"štandardy na meranie kapacity disku, čo vedie k ďalším odlišnostiam."
 
-#: hardware/C/hardware.xml:428(title)
-msgid "What is a Filesystem?"
-msgstr "Čo je súborový systém?"
+#: hardware/C/hardware.xml:316(title)
+msgid "What is a filesystem?"
+msgstr "Čo je to súborový systém?"
 
-#: hardware/C/hardware.xml:429(para)
+#: hardware/C/hardware.xml:317(para)
 msgid ""
-"The filesystem is a mechanism with wich files are archived and organised on "
-"a storing device such as a hard disk, and is an important part of an "
-"operating system. Without a filesystem, accessing and storing files would be "
+"A filesystem is a particular way of storing and organizing files on a "
+"storage device such as a hard disk, and is an important part of an operating "
+"system. Without a filesystem, accessing and storing files would be "
 "impossible."
 msgstr ""
-"Súborový systém je mechanizmus, ktorý určuje, ako sú súbory uložené a "
-"zorganizované na zariadení (napríklad na pevnom disku) a je dôležitou "
-"súčasťou operačného systému. Bez súborového systému nie je možné pristupovať "
-"k súborom a ukladať ich."
+"Súborový systém je osobitný spôsob ukladania a organizovania súborov na "
+"úložné zariadenie (ako napríklad pevné disky) a je dôležitou súčasťou "
+"operačného systému. Bez súborového systému by pristupovanie ku a ukladanie "
+"súborov bolo nemožné."
 
-#: hardware/C/hardware.xml:439(para)
+#: hardware/C/hardware.xml:327(para)
 msgid ""
-"Ext2/Ext3: these are usually found on GNU/Linux operating systems. Ubuntu "
-"uses <emphasis>ext3</emphasis> as its default filesystem."
+"ext2 and ext3: these are usually found on GNU/Linux operating systems. "
+"Ubuntu uses <emphasis>ext3</emphasis> as its default filesystem."
 msgstr ""
-"Ext2/Ext3: je ich spravidla možné nájsť v operačných systémoch GNU/Linux. "
-"Ubuntu ako svoj východzí súborový systém používa <emphasis>ext3</emphasis>."
+"ext2 a ext3: spravidla ich nájdete na operačných systémoch GNU/Linux. Ubuntu "
+"používa <emphasis>ext3</emphasis> ako svoj predvolený súborový systém."
 
-#: hardware/C/hardware.xml:446(para)
+#: hardware/C/hardware.xml:334(para)
 msgid ""
-"<acronym>FAT16</acronym>, <acronym>FAT32</acronym>: these are Microsoft "
-"Windows filesystems found on older computers. If you want to share data "
-"between two computers, you would probably choose the "
-"<emphasis><acronym>FAT32</acronym></emphasis> filesystem."
+"<acronym>FAT16</acronym> and <acronym>FAT32</acronym>: these are Microsoft "
+"Windows filesystems found on older computers. If you would like to share "
+"data between two computers, the "
+"<emphasis><acronym>FAT32</acronym></emphasis> format is a good choice."
 msgstr ""
-"<acronym>FAT16</acronym>, <acronym>FAT32</acronym>: sú súborové systémy "
-"Microsoft Windows, ktoré možno nájsť na starčích počítačoch. Ak chcete "
-"zdieľať údaje medzi dvoma počítačmi, zvolíte si najskôr súborový systém "
-"<emphasis><acronym>FAT32</acronym></emphasis>."
+"<acronym>FAT16</acronym> a <acronym>FAT32</acronym>: sú súborové systémy "
+"Microsoft Windows, ktoré sa nachádzajú na starších počítačoch. Ak chcete "
+"zdieľať údaje medzi tvoma počítačmi, formát "
+"<emphasis><acronym>FAT32</acronym></emphasis> je dobrou voľbou."
 
-#: hardware/C/hardware.xml:454(para)
+#: hardware/C/hardware.xml:342(para)
 msgid ""
-"<acronym>NTFS</acronym>: this is Microsoft Windows new filesystem being used "
-"as the default one in new Windows versions."
+"<acronym>NTFS</acronym>: this is the filesystem type used by more modern "
+"versions of Microsoft Windows."
 msgstr ""
-"<acronym>NTFS</acronym>: je novým súborovým systémom Microsoft Windows a je "
-"použitý ako predvolený v nových verziách Windows."
+"<acronym>NTFS</acronym>: toto je systém súborov používaný na modernejších "
+"verziách Microsoft Windows."
 
-#: hardware/C/hardware.xml:460(para)
-msgid "<acronym>HFS</acronym>: this is Macintosh default filesystem."
-msgstr "<acronym>HFS</acronym>: je súborový systém Macintosh."
+#: hardware/C/hardware.xml:348(para)
+msgid ""
+"<acronym>HFS+</acronym>: this is the Mac OS X default filesystem type."
+msgstr ""
+"<acronym>HFS+</acronym>: toto je predvolený systém súborov na Mac OS X."
 
-#: hardware/C/hardware.xml:435(para)
+#: hardware/C/hardware.xml:323(para)
 msgid ""
 "There are different types of filesystem. The most common are: <placeholder-"
 "1/>"
 msgstr ""
 "Existujú rôzne druhy súborových systémov. Najznámejšími sú: <placeholder-1/>"
 
-#: hardware/C/hardware.xml:469(title)
+#: hardware/C/hardware.xml:357(title)
 msgid "What is a Partition?"
 msgstr "Čo je oddiel?"
 
-#: hardware/C/hardware.xml:470(para)
+#: hardware/C/hardware.xml:358(para)
 msgid ""
-"A partition is a means of dividing a phisical device, such as a hard disk, "
-"into many logical devices."
+"A partition is a means of dividing the storage capacity of a device, such as "
+"a hard disk, into several parts which can then be treated as separate "
+"storage devices (<quote>logical devices</quote>)."
 msgstr ""
-"Oddiel je spôsob, akým sa dá fyzické zariadenie (ako napr. pevný disk) "
-"rozdeliť na veľa logických zariadení."
+"Oddiel je spôsob delenia úložnej kapacity zariadenia (ako napríklad pevný "
+"disk) na niekoľko častí, s ktorými sa potom nakladá ako so samostatnými "
+"úložnými zariadeniami (<quote>logical devices</quote>)."
 
-#: hardware/C/hardware.xml:474(para)
+#: hardware/C/hardware.xml:363(para)
 msgid ""
 "Each logical device is seen by the operating system as a distinct device, "
 "and thus is treated as an independent disk."
@@ -698,67 +680,82 @@ msgstr ""
 "Operačný systém vidí každé logické zariadenie ako osobitné zariadenie a "
 "nakladá s ním ako so samostatným diskom."
 
-#: hardware/C/hardware.xml:482(para)
-msgid "To retrieve free space;"
-msgstr "Získanie voľného miesta;"
+#: hardware/C/hardware.xml:371(para)
+msgid "To retrieve free space"
+msgstr "Na obnovenie voľného miesta"
 
-#: hardware/C/hardware.xml:487(para)
-msgid "To install different operating systems;"
-msgstr "Inštalovanie rôznych operačných systémov;"
+#: hardware/C/hardware.xml:376(para)
+msgid "To install different operating systems"
+msgstr "Na inštalovanie iných operačných systémov"
 
-#: hardware/C/hardware.xml:492(para)
-msgid "To better organize data on the hard disk."
-msgstr "Lepšia organizácia údajov na pevnom disku."
+#: hardware/C/hardware.xml:381(para)
+msgid "To better organize data on the hard disk"
+msgstr "Na lepšie rozloženie dát na disku"
 
-#: hardware/C/hardware.xml:478(para)
+#: hardware/C/hardware.xml:367(para)
 msgid ""
 "Partitioning a hard disk can be done for several reasons: <placeholder-1/>"
 msgstr ""
 "Rozdelenie pevného disku na oddiely má niekoľko dôvodov: <placeholder-1/>"
 
-#: hardware/C/hardware.xml:501(title)
+#: hardware/C/hardware.xml:390(title)
 msgid "Mounting and Unmounting Devices"
 msgstr "Pripojenie a odpojenie zariadení"
 
-#: hardware/C/hardware.xml:502(para)
+#: hardware/C/hardware.xml:391(para)
 msgid ""
-"For information about mounting and unmounting a device, see <ulink "
+"When you connect a removable storage device to your computer, it must be "
+"<emphasis>mounted</emphasis> by the operating system so that you are able to "
+"access the files on the device."
+msgstr ""
+"Ak pripojíte odpojiteľné úložné zariadenie na váš počítač, musí byť "
+"<emphasis>pripojené</emphasis> operačným systémom, aby ste mali prístup k "
+"súborom na tomto zariadení."
+
+#: hardware/C/hardware.xml:394(para)
+msgid ""
+"To find out how to mount and unmount storage devices, see <ulink "
 "type=\"help\" url=\"ghelp:user-guide#gosnautilus-460\">Using Removable "
 "Media</ulink>"
 msgstr ""
-"Pre informácie o pripájaní a odpájaní zariadenia pozrite <ulink "
+"Na zistenie ako pripojiť a odpojiť úložné zariadenie pozrite <ulink "
 "type=\"help\" url=\"ghelp:user-guide#gosnautilus-460\">Používanie "
-"vymeniteľných zariadení</ulink>"
+"vymieňateľných médií</ulink>"
 
-#: hardware/C/hardware.xml:506(para)
+#: hardware/C/hardware.xml:398(para)
 msgid ""
-"Pay attention when removing a device: <emphasis role=\"strong\">always "
-"unmount</emphasis> it to avoid data loss. If you attempt to remove a device "
-"without unmounting it, you will get a message explaining how to properly "
-"unmount a device."
+"When you copy files to a storage device, they are not always written to the "
+"device immediately. Instead, they are often stored in a queue so that they "
+"can all be transferred across to the device at the same time (for reasons of "
+"efficiency). If you disconnect the device before all of the files have been "
+"transferred, then you could lose the files. To prevent this, you must always "
+"<emphasis>unmount</emphasis> a storage device before disconnecting it."
 msgstr ""
-"Pri odstraňovaní zariadení si dávajte pozor: aby ste predišli strate údajov, "
-"<emphasis role=\"strong\">vždy ho odpojte</emphasis>. Ak sa pokúšate "
-"odstrániť zariadenie bez jeho odpojenia, objaví sa správa vysvetľujúca, ako "
-"správne odpojiť zariadenie."
+"Keď nakopírujete súbory na úložné zariadenie, nie sú vždy okamžite zapísané "
+"na toto zariadenie. Naproti tomu sú často uložené v poradovníku, takže je "
+"možné ich všetky premiestniť na zariadenie v tom istom čase (z dôvodu "
+"efektivity). Ak fyzicky vyberiete zariadenie pred prenesením všetkých "
+"údajov, môžete prísť o svoje súbory. Aby ste tomu zabránili, musíte vždy  "
+"<emphasis>odpojiť</emphasis> úložné zariadenie predtým, než ho fyzicky "
+"vyberiete."
 
-#: hardware/C/hardware.xml:535(title)
+#: hardware/C/hardware.xml:408(title)
 msgid "Laptops"
 msgstr "Prenosné počítače"
 
-#: hardware/C/hardware.xml:536(para)
+#: hardware/C/hardware.xml:409(para)
 msgid ""
 "This section contains information for people using Ubuntu on a laptop "
 "computer."
 msgstr ""
-"Táto kapitola obsahuje informácie pre ľudí, ktorí používajú Ubuntu na "
+"Táto sekcia obsahuje informácie pre ľudí, ktorí používajú Ubuntu na "
 "prenosných počítačoch."
 
-#: hardware/C/hardware.xml:538(title)
+#: hardware/C/hardware.xml:411(title)
 msgid "Suspending and hibernating laptops"
 msgstr "Uspanie a hibernácie prenosných počítačov"
 
-#: hardware/C/hardware.xml:539(para)
+#: hardware/C/hardware.xml:412(para)
 msgid ""
 "In order to save battery power, you can put your laptop into one of a number "
 "of power-saving modes when you are not using it. The available modes are "
@@ -768,7 +765,7 @@ msgstr ""
 "nebudete používať, uviesť do jedného z úsporných režimov. Jednotlivé režimy "
 "sú popísané nižšie:"
 
-#: hardware/C/hardware.xml:541(para)
+#: hardware/C/hardware.xml:414(para)
 msgid ""
 "<emphasis role=\"strong\">Suspending</emphasis> a laptop is like putting the "
 "computer to sleep. The computer will still be turned on and all of your work "
@@ -780,31 +777,31 @@ msgstr ""
 "zostane otvorená, ale počítač bude spotrebovávať ďaleko menej energie. "
 "Počítač prebudíte stlačením klávesu alebo kliknutím myši."
 
-#: hardware/C/hardware.xml:542(para)
+#: hardware/C/hardware.xml:415(para)
 msgid ""
 "<emphasis role=\"strong\">Hibernating</emphasis> is turning the computer off "
 "completely while saving the current state of the computer (such as keeping "
 "all of your open documents). When you turn the computer back on after "
 "hibernating, all of your work should be restored as it was before "
-"hibernation. No power is used at all when the computer is hibernating."
+"hibernation. No power is used when the computer is hibernating."
 msgstr ""
-"<emphasis role=\"strong\">Hibernácia</emphasis> je úplné vypnutie počítača, "
-"pričom sa však uloží jeho aktuálny stav (napríklad ponechanie vašich "
-"dokumentov otvorených). Keď znovu zapnete počítač, všetka vaša práca bude "
-"obnovená tak, ako ste ju nechali pred hibernáciou. Keď počítač hibernuje, "
-"nespotrebuváva energiu."
+"<emphasis role=\"strong\">Hibernácia</emphasis> je úplné vypnutie počítača "
+"pri súčasnom uložené aktuálneho stavu počítača (ako napríklad ponechanie "
+"všetkých vašich dokumentov otvorených). Keď po hibernácii počítač opäť "
+"spustíte, všetka vaša práca by sa mala obnoviť ako pred hibernáciou. Počas "
+"hibernácie počítač nespotrebúva energiu."
 
-#: hardware/C/hardware.xml:543(para)
+#: hardware/C/hardware.xml:416(para)
 msgid ""
 "<emphasis role=\"strong\">Shutting down</emphasis> is turning the computer "
 "off completely, without saving the current state of the computer. No power "
-"is used at all when the computer is shut down."
+"is used when the computer is shut down."
 msgstr ""
-"<emphasis role=\"strong\">Vypnutie</emphasis> je úplným vypnutím počítača "
-"bez uloženia jeho aktuálneho stavu. Keď je počítač vypnutý, nespotrebuváva "
+"<emphasis role=\"strong\">Vypnutie</emphasis>je úplné vypnutie počítača bez "
+"uloženia aktuálneho stavu počítača. Počas vypnutia počítač nespotrebúva "
 "energiu."
 
-#: hardware/C/hardware.xml:544(para)
+#: hardware/C/hardware.xml:417(para)
 msgid ""
 "<emphasis role=\"strong\">Resuming</emphasis> is bringing the computer out "
 "of a power saving mode and back into normal operation. You can resume the "
@@ -813,12 +810,12 @@ msgid ""
 "on your computer."
 msgstr ""
 "<emphasis role=\"strong\">Pokračovanie</emphasis> je privedenie počítača do "
-"normálnej prevádzky po úspornom režime. Pokračovať v práci s uspaným "
-"počítačom môžete stlačením niektorého klávesu alebo kliknutím myši. "
-"Pokračovať v práci s hibernovaným počítačom môžete stlačením tlačidla "
-"vypnutia počítača."
+"normálnej prevádzky po tom, čo bol v úspornom režime. Pokračovať v práci s "
+"uspaným počítačom môžete stlačením niektorého klávesu alebo kliknutím myši. "
+"Pokračovať v práci s hibernovaným počítačom môžete stlačením tlačidla na "
+"zapnutie počítača."
 
-#: hardware/C/hardware.xml:546(para)
+#: hardware/C/hardware.xml:419(para)
 msgid ""
 "You can manually put your computer into a power-saving mode by pressing "
 "<menuchoice><guimenu>System</guimenu><guimenuitem>Quit...</guimenuitem></menu"
@@ -826,23 +823,25 @@ msgid ""
 msgstr ""
 "Do úsporného režimu dostanete váš počítač stlačením "
 "<menuchoice><guimenu>Systém</guimenu><guimenuitem>Ukončiť "
-"prácu...</guimenuitem></menuchoice> a stlačením príslušného tlašidla."
+"prácu...</guimenuitem></menuchoice> a stlačením príslušného tlačidla."
 
-#: hardware/C/hardware.xml:548(para)
+#: hardware/C/hardware.xml:421(para)
 msgid ""
 "Some computers may have problems going into certain power saving modes. The "
 "best way of checking if your computer can handle a power-saving mode is to "
-"try to switch into that mode and see if it behaves as you expected."
+"try to switch to that mode and see if it behaves as you expected. Always "
+"make sure you save important documents before suspending or hibernating."
 msgstr ""
-"Niektoré počítače môžu mať s určitými úspornými režimami problémy. Najlepším "
-"spôsobom ako zistiť, či váš počítač zvláda úsporný režim je vyskúšať si "
-"prepnúť sa do príslušného režimu a uvidieť, či sa správa tak ako očakávate."
+"Niektoré počítače môžu problémy s určitými úspornými režimami. Najlepším "
+"spôsobom ako zistiť, či váš počítač zvláda úsporný režim je vyskúšať prepnúť "
+"sa do toho režimu a zistiť, či sa správa očakávateľne. Vždy sa uistite, že "
+"pred uspaním alebo hibernáciou si uložíte dôležité dokumenty."
 
-#: hardware/C/hardware.xml:551(title)
+#: hardware/C/hardware.xml:424(title)
 msgid "Fixing problems with suspending, hibernating and resuming"
 msgstr "Oprava problémov s uspaním, hibernáciou a pokračovaním."
 
-#: hardware/C/hardware.xml:552(para)
+#: hardware/C/hardware.xml:425(para)
 msgid ""
 "If your computer cannot suspend, hibernate or resume properly, there may be "
 "a number of things that you can try to get it working correctly."
@@ -850,28 +849,27 @@ msgstr ""
 "Ak váš počítač nezvláda správne uspanie, hibernáciu alebo pokračovanie, "
 "môžete na opravu týchto problémov vyskúšať niekoľko vecí."
 
-#: hardware/C/hardware.xml:554(para)
+#: hardware/C/hardware.xml:427(para)
 msgid ""
 "Check the test report for your laptop, if one has been made (see <xref "
 "linkend=\"laptops-testing-reports\"/>)."
 msgstr ""
 "Ak boli s vašim prenosným počítačom robené testy, skontrolujte správu o ich "
-"výsledkoch (viď <xref linkend=\"laptops-testing-reports\"/>)."
+"výsledkoch (pozri <xref linkend=\"laptops-testing-reports\"/>)."
 
-#: hardware/C/hardware.xml:555(para)
+#: hardware/C/hardware.xml:428(para)
 msgid ""
 "Ask for assistance through an <ulink "
 "url=\"http://www.ubuntu.com/support/free\">Ubuntu support channel</ulink>."
 msgstr ""
 "Požiadajte o pomoc prostredníctvom <ulink "
-"url=\"http://www.ubuntu.com/support/free\"> bezplatnej podpory "
-"Ubuntu</ulink>."
+"url=\"http://www.ubuntu.com/support/free\">bezplatnej podpory Ubuntu</ulink>."
 
-#: hardware/C/hardware.xml:560(title)
+#: hardware/C/hardware.xml:433(title)
 msgid "Power management settings"
 msgstr "Natavenie správy napájania"
 
-#: hardware/C/hardware.xml:561(para)
+#: hardware/C/hardware.xml:434(para)
 msgid ""
 "You may wish to change the power management settings of your laptop in order "
 "to help extend its battery life and reduce energy wastage."
@@ -879,7 +877,7 @@ msgstr ""
 "Môžete si priať zmeniť nastavenie správy napájania vášho prenosného počítača "
 "tak, aby ste predĺžili životnosť batérie a obmedzili mrhanie energiou."
 
-#: hardware/C/hardware.xml:564(para)
+#: hardware/C/hardware.xml:437(para)
 msgid ""
 "Press "
 "<menuchoice><guimenu>System</guimenu><guimenuitem>Preferences</guimenuitem><g"
@@ -889,11 +887,11 @@ msgstr ""
 "<menuchoice><guimenu>Systém</guimenu><guimenuitem>Predvoľby</guimenuitem><gui"
 "menuitem>Správa napájania</guimenuitem></menuchoice>."
 
-#: hardware/C/hardware.xml:567(para)
+#: hardware/C/hardware.xml:440(para)
 msgid "Change the settings as appropriate. Changes are applied instantly."
-msgstr "Zmeňte príslušné nastavenia. Zmeny sú uplatnené automaticky."
+msgstr "Zmeňte príslušné nastavenia. Zmeny sa uplatnia automaticky."
 
-#: hardware/C/hardware.xml:571(para)
+#: hardware/C/hardware.xml:444(para)
 msgid ""
 "Displaying a screensaver may use more power than simply letting the screen "
 "go blank. Turning off the screensaver could slightly improve the battery "
@@ -901,9 +899,9 @@ msgid ""
 msgstr ""
 "Zobrazovanie šetriča obrazovky môže spotrebúvať viac energie ako jednoducho "
 "nechať zobrazovať prázdnu obrazovku. Vypnutie šetriča obrazovky môže mierne "
-"zvýšiť životnosť batérie váško prenosného počítača."
+"zvýšiť životnosť batérie vášho prenosného počítača."
 
-#: hardware/C/hardware.xml:574(para)
+#: hardware/C/hardware.xml:447(para)
 msgid ""
 "Press "
 "<menuchoice><guimenu>System</guimenu><guimenuitem>Preferences</guimenuitem><g"
@@ -913,7 +911,7 @@ msgstr ""
 "<menuchoice><guimenu>Systém</guimenu><guimenuitem>Predvoľby</guimenuitem><gui"
 "menuitem>Šetrič obrazovky</guimenuitem></menuchoice>."
 
-#: hardware/C/hardware.xml:577(para)
+#: hardware/C/hardware.xml:450(para)
 msgid ""
 "Change the <guilabel>Screensaver theme</guilabel> to <guilabel>Blank "
 "screen</guilabel>. This will simply display a blank screen as a screensaver."
@@ -922,7 +920,7 @@ msgstr ""
 "obrazovka</guilabel>. Tým sa ako šetrič obrazovky bude zobrazovať prázdna "
 "obrazovka."
 
-#: hardware/C/hardware.xml:581(para)
+#: hardware/C/hardware.xml:454(para)
 msgid ""
 "When your laptop is running on battery, one of the biggest drains on power "
 "is the display. Turning the brightness of the display down could improve "
@@ -930,120 +928,59 @@ msgid ""
 "<keycombo><keycap>Fn</keycap><keycap>F7</keycap></keycombo> several times."
 msgstr ""
 "Keď váš prenosný počítač beží na batériu, jedným z najväčších žrútov energie "
-"je monitor. Ubraním svietivosti monitora môže viditeľne zvýšiť životnosť "
+"je monitor. Zníženie svietivosti monitora môže viditeľne zvýšiť životnosť "
 "batérie; veľa prenosných počítačov na tento úkon používa klávesovú skratku "
 "<keycombo><keycap>Fn</keycap><keycap>F7</keycap></keycombo> (opakujte "
 "niekoľkokrát)."
 
-#: hardware/C/hardware.xml:585(title) hardware/C/hardware.xml:686(ulink)
+#: hardware/C/hardware.xml:458(title) hardware/C/hardware.xml:546(ulink)
 msgid "Touchpads"
 msgstr "Touchpady"
 
-#: hardware/C/hardware.xml:586(para)
+#: hardware/C/hardware.xml:459(para)
 msgid ""
 "Most laptop computers come with a touchpad, which is used to control the "
 "mouse pointer. There are many ways of changing the way that the touchpad "
-"behaves; follow the instructions below to install an easy-to-use tool for "
-"changing touchpad settings."
+"behaves; the most basic touchpad settings can be configured in the following "
+"way."
 msgstr ""
-"Väčšina prenosných počítačov má zabudovaný touchpad, ktorý sa používa na "
-"ovládanie kurzora myši. Je mnoho spôsobov, ako zmeniť správanie sa "
-"touchpadu; sledujte nižšie uvedené inštrukcie na inštaláciu jednoduchého "
-"nástroja na úpravu nastavenia touchpadu."
+"Väčšina prenosných počítačov na ovládanie kurzora myši používa touchpad. Je "
+"mnoho spôsobov, ako zmeniť spôsob správania sa touchpadu. Nižšie nájdete, "
+"ako nakonfigurovať najzákladnejšie nastavenia touchpadu."
 
-#: hardware/C/hardware.xml:588(para)
-msgid ""
-"Install the <application>gsynaptics</application> package from the "
-"<quote>Universe</quote> repository (see <ulink type=\"help\" url=\"ghelp:add-"
-"applications\">Add Applications</ulink>)."
-msgstr ""
-"Nainštalujte balík <application>gsynaptics</application> zo zdroja "
-"<quote>Universe</quote> (viď <ulink type=\"help\" url=\"ghelp:add-"
-"applications\">Pridať aplikácie</ulink>)."
-
-#: hardware/C/hardware.xml:589(para)
-msgid ""
-"Press "
-"<menuchoice><guimenu>Applications</guimenu><guimenuitem>Accessories</guimenui"
-"tem><guimenuitem>Terminal</guimenuitem></menuchoice>."
-msgstr ""
-"Stlačte "
-"<menuchoice><guimenu>Aplikácie</guimenu><guimenuitem>Príslušenstvo</guimenuit"
-"em><guimenuitem>Terminál</guimenuitem></menuchoice>."
-
-#: hardware/C/hardware.xml:590(para)
-msgid ""
-"Type the following, entering your administrator password when prompted:"
-msgstr "Zadajte nasledujúci príkaz a po vyzvaní napíšte svoje heslo:"
-
-#: hardware/C/hardware.xml:591(screen)
-#, no-wrap
-msgid ""
-"sudo cp /etc/X11/xorg.conf /etc/X11/xorg.conf.backup\n"
-"sudo gedit /etc/X11/xorg.conf"
-msgstr ""
-"sudo cp /etc/X11/xorg.conf /etc/X11/xorg.conf.backup\n"
-"sudo gedit /etc/X11/xorg.conf"
-
-#: hardware/C/hardware.xml:594(para)
-msgid "Find the section which begins with the following:"
-msgstr "Nájdite odstavec začínajúci takto:"
-
-#: hardware/C/hardware.xml:595(screen)
-#, no-wrap
-msgid ""
-"Section \"InputDevice\"\n"
-"Identifier\t\"Synaptics Touchpad\"\n"
-"Driver\t\t\"synaptics\""
-msgstr ""
-"Section \"InputDevice\"\n"
-"Identifier\t\"Synaptics Touchpad\"\n"
-"Driver\t\t\"synaptics\""
-
-#: hardware/C/hardware.xml:599(para)
-msgid ""
-"Insert the following line into the section, <emphasis>before</emphasis> the "
-"line which reads <quote>EndSection</quote>:"
-msgstr ""
-"<emphasis>Pred</emphasis> riadok, v ktorom je napísané "
-"<quote>EndSection</quote> vložte nasledujúci riadok:"
-
-#: hardware/C/hardware.xml:600(screen)
-#, no-wrap
-msgid "\tOption\t\t\"SHMConfig\"\t\t\"true\""
-msgstr "\tOption\t\t\"SHMConfig\"\t\t\"true\""
-
-#: hardware/C/hardware.xml:602(para)
-msgid ""
-"Save your changes to the file and close all currently running applications, "
-"saving your work as you do so."
-msgstr ""
-"Uložte zmeny do súboru a zatvorte všetky práve bežiace aplikácie a uložte si "
-"vašu prácu."
-
-#: hardware/C/hardware.xml:603(para)
-msgid ""
-"Press "
-"<menuchoice><guimenu>System</guimenu><guimenuitem>Quit...</guimenuitem></menu"
-"choice> and select <guibutton>Log Out</guibutton>, and then log in again."
-msgstr ""
-"Stlačte <menuchoice><guimenu>Systém</guimenu><guimenuitem>Ukončiť "
-"prácu...</guimenuitem></menuchoice> a vyberte <guibutton>Odhlásiť "
-"používateľa</guibutton>, potom sa opäť prihláste."
-
-#: hardware/C/hardware.xml:604(para)
+#: hardware/C/hardware.xml:461(para)
 msgid ""
 "Press "
 "<menuchoice><guimenu>System</guimenu><guimenuitem>Preferences</guimenuitem><g"
-"uimenuitem>Touchpad</guimenuitem></menuchoice> and change the touchpad "
-"settings to your liking. Changes should take effect immediately."
+"uimenuitem>Mouse</guimenuitem></menuchoice>."
 msgstr ""
 "Stlačte "
 "<menuchoice><guimenu>Systém</guimenu><guimenuitem>Predvoľby</guimenuitem><gui"
-"menuitem>Touchpad</guimenuitem></menuchoice> a zmeňte nastavenia podľa "
-"chuti. Zmeny sa ihneď uplatnia."
+"menuitem>Myš</guimenuitem></menuchoice>."
 
-#: hardware/C/hardware.xml:607(para)
+#: hardware/C/hardware.xml:462(para)
+msgid "Select the <guilabel>Touchpad</guilabel> tab."
+msgstr "Zvoľte kartu <guilabel>Touchpad</guilabel>."
+
+#: hardware/C/hardware.xml:463(para)
+msgid ""
+"Here you can change the touchpad settings to your liking. Changes should "
+"take effect immediately."
+msgstr ""
+"Tu si môžete podľa chuti zmeniť nastavenia touchpadu. Zmeny by sa mali "
+"prejaviť okamžite."
+
+#: hardware/C/hardware.xml:465(para)
+msgid ""
+"Some touchpads may be detected as normal mouse devices, even though they are "
+"actually touchpads. In this case, the <guilabel>Touchpad</guilabel> tab will "
+"not be available in the mouse preferences."
+msgstr ""
+"Niektoré touchpady môžu byť rozpoznané ako normálne myši, aj keď sú v "
+"podstate touchpadmi. V takom prípade karta <guilabel>Touchpad</guilabel> "
+"nebude dostupná v nastaveniach myši."
+
+#: hardware/C/hardware.xml:467(para)
 msgid ""
 "See the <ulink "
 "url=\"https://help.ubuntu.com/community/SynapticsTouchpad\">community "
@@ -1053,11 +990,11 @@ msgstr ""
 "url=\"https://help.ubuntu.com/community/SynapticsTouchpad\">stránky "
 "komunitnej podpory</ulink>."
 
-#: hardware/C/hardware.xml:611(title)
+#: hardware/C/hardware.xml:471(title)
 msgid "Finding laptop testing reports"
 msgstr "Hľadanie správ o výsledkoch testov prenosných počítačov"
 
-#: hardware/C/hardware.xml:612(para)
+#: hardware/C/hardware.xml:472(para)
 msgid ""
 "Many laptops are regularly tested by the Ubuntu community to ensure that "
 "various features work correctly. The results of these tests are available "
@@ -1069,17 +1006,17 @@ msgstr ""
 "môžete prečítať a môžete vďaka nim pochopiť problémy, ktoré na svojom "
 "prenosnom počítači zažívate."
 
-#: hardware/C/hardware.xml:614(para)
+#: hardware/C/hardware.xml:474(para)
 msgid ""
 "See the Laptop Testing <ulink "
 "url=\"https://wiki.ubuntu.com/LaptopTestingTeam\">community support "
 "pages</ulink> for a full listing of available laptop tests."
 msgstr ""
-"Pre kompletný zoznam testovaných prenosných počítačov pozrite na  <ulink "
-"url=\"https://wiki.ubuntu.com/LaptopTestingTeam\">stránku komunitnej "
-"podpory</ulink> venovanú testom prenosných počítačov."
+"Kompletný zoznam testovaných prenosných počítačov nájdete na  <ulink "
+"url=\"https://wiki.ubuntu.com/LaptopTestingTeam\">stránke komunitnej "
+"podpory</ulink> venovanej testom prenosných počítačov."
 
-#: hardware/C/hardware.xml:616(para)
+#: hardware/C/hardware.xml:476(para)
 msgid ""
 "You can participate in laptop testing yourself by contacting the <ulink "
 "url=\"https://wiki.ubuntu.com/LaptopTestingTeam\">Laptop Testing "
@@ -1089,46 +1026,46 @@ msgstr ""
 "<ulink url=\"https://wiki.ubuntu.com/LaptopTestingTeam\">Tímom testovania "
 "prenosných počítačov</ulink>."
 
-#: hardware/C/hardware.xml:621(title)
+#: hardware/C/hardware.xml:481(title)
 msgid "Mice and keyboards"
 msgstr "Myši a klávesnice"
 
-#: hardware/C/hardware.xml:622(para)
+#: hardware/C/hardware.xml:482(para)
 msgid ""
 "This section provides instructions on using and configuring mice, keyboards "
 "and other input devices to make them more comfortable for you to use."
 msgstr ""
-"Táto kapitola obsahuje inštrukcie o používaní a nastavení myší, klávesníc a "
+"Táto sekcia obsahuje inštrukcie o používaní a nastavení myší, klávesníc a "
 "iných vstupných zariadení, aby ich používanie bolo pre vás jednoduchšie."
 
-#: hardware/C/hardware.xml:624(title)
+#: hardware/C/hardware.xml:484(title)
 msgid "Mice and other pointing devices"
 msgstr "Myši a iné ukazovacie zariadenia"
 
-#: hardware/C/hardware.xml:625(para)
+#: hardware/C/hardware.xml:485(para)
 msgid ""
 "You can change numerous options related to your mouse, such as how fast the "
 "pointer moves and how clicks are interpreted by the computer."
 msgstr ""
 "Mnoho vecí týkajúcich sa vašej myši môžete zmeniť, napríklad rýchlosť "
-"kurzora alebo interpretovanie kliknutí počítačom."
+"kurzora alebo spôsob, akým si počítač vykladá kliknutia."
 
-#: hardware/C/hardware.xml:628(ulink)
+#: hardware/C/hardware.xml:488(ulink)
 msgid "Mouse Skills"
 msgstr "Zručnosti s myšou"
 
-#: hardware/C/hardware.xml:629(para)
+#: hardware/C/hardware.xml:489(para)
 msgid ""
 "Information on basic mouse skills, such as pointing, clicking and dragging."
 msgstr ""
 "Informácie o základných zručnostiach pri používaní myši, ako ukazovanie, "
 "klikanie a presúvanie."
 
-#: hardware/C/hardware.xml:632(ulink)
+#: hardware/C/hardware.xml:492(ulink)
 msgid "Mouse Preferences"
 msgstr "Nastavenie myši"
 
-#: hardware/C/hardware.xml:633(para)
+#: hardware/C/hardware.xml:493(para)
 msgid ""
 "Instructions on how to change various settings related to your mouse, such "
 "as whether the mouse is left-handed and how fast the pointer moves."
@@ -1136,29 +1073,31 @@ msgstr ""
 "Inštrukcie o tom, ako zmeniť rôzne nastavenia myši ako určenie, či sa jedná "
 "o myš pre ľaváka a rýchlosť pohybu kurzora."
 
-#: hardware/C/hardware.xml:636(ulink)
+#: hardware/C/hardware.xml:496(ulink)
 msgid "Accessibility - Configuring the Mouse"
 msgstr "Prístupnosť - konfigurácia myši"
 
-#: hardware/C/hardware.xml:637(para)
+#: hardware/C/hardware.xml:497(para)
 msgid ""
-"Information on changing mouse preferences for users of assitive technologies."
+"Information on changing mouse preferences for users of assistive "
+"technologies."
 msgstr ""
-"Informácie o zmene nastavení myši pre používateľov pomocných technológií."
+"Informácie o tom, ako zmeniť nastavenie myši pre používateľov asistenčných "
+"technológií."
 
-#: hardware/C/hardware.xml:640(ulink)
+#: hardware/C/hardware.xml:500(ulink)
 msgid "Accessibility - Configuring Alternative Pointing Devices"
 msgstr "Prístupnosť - konfigurácia iných ukazovacích zariadení"
 
-#: hardware/C/hardware.xml:641(para)
+#: hardware/C/hardware.xml:501(para)
 msgid "Information on using a pointing device other than a mouse."
 msgstr "Informácie o používaní iných ukazovacích zariadení ako je myš."
 
-#: hardware/C/hardware.xml:647(title)
+#: hardware/C/hardware.xml:507(title)
 msgid "Keyboards"
 msgstr "Klávesnice"
 
-#: hardware/C/hardware.xml:648(para)
+#: hardware/C/hardware.xml:508(para)
 msgid ""
 "There are many options related to your keyboard which you can change, such "
 "as the keyboard language and keyboard shortcuts."
@@ -1166,61 +1105,61 @@ msgstr ""
 "Je veľa možností súvisiacich s vašou klávesnicou, ktoré môžete meniť, ako "
 "napríklad rozloženie klávesnice a klávesové skratky."
 
-#: hardware/C/hardware.xml:651(ulink)
+#: hardware/C/hardware.xml:511(ulink)
 msgid "Basic Keyboard Skills"
 msgstr "Základné zručnosti pri práci s klávesnicou"
 
-#: hardware/C/hardware.xml:652(para)
+#: hardware/C/hardware.xml:512(para)
 msgid "Information on basic keyboard usage."
 msgstr "Informácie o základnom používaní klávesnice."
 
-#: hardware/C/hardware.xml:655(ulink)
+#: hardware/C/hardware.xml:515(ulink)
 msgid "Keyboard Preferences"
 msgstr "Nastavenie klávesnice"
 
-#: hardware/C/hardware.xml:656(para)
+#: hardware/C/hardware.xml:516(para)
 msgid ""
 "Change settings related to your keyboard, such as the layout of the keyboard."
-msgstr "Zmeňte nastavenia vašej klávesnice, ako napríklad jej rozloženie"
+msgstr "Zmeniť nastavenia vašej klávesnice, ako napríklad jej rozloženie."
 
-#: hardware/C/hardware.xml:659(ulink)
+#: hardware/C/hardware.xml:519(ulink)
 msgid "Keyboard Indicator"
 msgstr "Indikátor klávesnice"
 
-#: hardware/C/hardware.xml:660(para)
+#: hardware/C/hardware.xml:520(para)
 msgid ""
 "The manual of the Keyboard Indicator, which allows you to change between "
 "different keyboard layouts."
 msgstr ""
-"Manuál indikátora klávesnice, ktorý vám umožní meniť medzi rôzne rozloženia "
-"klávesnice."
+"Príručka indikátora klávesnice, ktorý vám umožní prepínať medzi rôznymi "
+"rozloženiami klávesnice."
 
-#: hardware/C/hardware.xml:663(ulink)
+#: hardware/C/hardware.xml:523(ulink)
 msgid "Accessibility - Configuring the Mouse and Keyboard"
 msgstr "Prístupnosť - Konfigurácia myši a klávesnice"
 
-#: hardware/C/hardware.xml:664(para)
+#: hardware/C/hardware.xml:524(para)
 msgid ""
 "Information on configuring the mouse and keyboard for users of assistive "
 "technologies."
 msgstr ""
-"Informácie o konfigurácii myši a klávesnice pre používateľov pomocných "
+"Informácie o konfigurácii myši a klávesnice pre používateľov asistenčných "
 "technológií."
 
-#: hardware/C/hardware.xml:667(ulink)
+#: hardware/C/hardware.xml:527(ulink)
 msgid "Using the Keyboard to Navigate the Desktop"
 msgstr "Používanie klávesnice na navigáciu po pracovnej ploche"
 
-#: hardware/C/hardware.xml:668(para)
+#: hardware/C/hardware.xml:528(para)
 msgid "A guide on how to navigate the desktop using only a keyboard."
 msgstr ""
-"Príručka o navigácii po pracovnej ploche s použitím výlučne klávesnice."
+"Príručka o navigácii po pracovnej ploche výlučne prostredníctvom klávesnice."
 
-#: hardware/C/hardware.xml:671(ulink)
+#: hardware/C/hardware.xml:531(ulink)
 msgid "Keyboard Accessibility Monitor"
 msgstr "Monitor prístupnosti klávesnice"
 
-#: hardware/C/hardware.xml:672(para)
+#: hardware/C/hardware.xml:532(para)
 msgid ""
 "The manual of the Keyboard Accessibility Monitor, which shows the status of "
 "any keyboard accessibility features which are turned on."
@@ -1228,11 +1167,11 @@ msgstr ""
 "Manuál Monitora prístupnosti klávesnice, ktorý ukazuje stav všetkých "
 "zapnutých pomocných funkcií klávesnice."
 
-#: hardware/C/hardware.xml:675(ulink)
+#: hardware/C/hardware.xml:535(ulink)
 msgid "Using the Character Palette"
 msgstr "Používanie palety znakov"
 
-#: hardware/C/hardware.xml:676(para)
+#: hardware/C/hardware.xml:536(para)
 msgid ""
 "Use the Character Palette to insert letters and symbols which are not on "
 "your keyboard."
@@ -1240,15 +1179,15 @@ msgstr ""
 "Použite paletu znakov na vloženie písmen a symbolov, ktoré nie sú na vašej "
 "klávesnici."
 
-#: hardware/C/hardware.xml:682(title)
+#: hardware/C/hardware.xml:542(title)
 msgid "Touchpads and graphics tablets"
 msgstr "Touchpady a tablety"
 
-#: hardware/C/hardware.xml:683(para)
+#: hardware/C/hardware.xml:543(para)
 msgid "You can use a touchpad or graphics tablet to move a mouse pointer."
 msgstr "Na pohyb kurzoru myši môžete použiť touchpad alebo tablet."
 
-#: hardware/C/hardware.xml:687(para)
+#: hardware/C/hardware.xml:547(para)
 msgid "Information on changing the settings of a laptop touchpad."
 msgstr "Informácie o zmene nastavenia touchpadu prenosného počítača."
 
@@ -1263,4 +1202,41 @@ msgstr ""
 "  Launchpad Translations Administrators https://launchpad.net/~rosetta-"
 "admins\n"
 "  Matej Duman https://launchpad.net/~dumi\n"
-"  helix84 https://launchpad.net/~helix84"
+"  helix84 https://launchpad.net/~helix84\n"
+"\n"
+"Launchpad Contributions:\n"
+"  Launchpad Translations Administrators https://launchpad.net/~rosetta-"
+"admins\n"
+"  Matej Duman https://launchpad.net/~dumi\n"
+"  helix84 https://launchpad.net/~helix84\n"
+"  ilmaris https://launchpad.net/~jozef-misik\n"
+"  salwator https://launchpad.net/~salwator-centrum\n"
+"\n"
+"Launchpad Contributions:\n"
+"  Launchpad Translations Administrators https://launchpad.net/~rosetta-"
+"admins\n"
+"  Matej Duman https://launchpad.net/~dumi\n"
+"  helix84 https://launchpad.net/~helix84\n"
+"  ilmaris https://launchpad.net/~jozef-misik\n"
+"  salwator https://launchpad.net/~salwator-centrum"
+
+#~ msgid ""
+#~ "This document is maintained by the Ubuntu documentation team "
+#~ "(https://wiki.ubuntu.com/DocumentationTeam). For a list of contributors, see "
+#~ "the <ulink url=\"../../../common/C/contributors.xml\">contributors "
+#~ "page</ulink>"
+#~ msgstr ""
+#~ "Tento dokument spravuje dokumentačný tím Ubuntu "
+#~ "(https://wiki.ubuntu.com/DocumentationTeam). Zoznam prispievateľov nájdete "
+#~ "na <ulink url=\"../../../common/C/contributors.xml\">stránke "
+#~ "prispievateľov</ulink>"
+
+#~ msgid "2004, 2005, 2006"
+#~ msgstr "2004, 2005, 2006"
+
+#~ msgid ""
+#~ "A copy of the license is available here: <ulink url=\"/usr/share/ubuntu-"
+#~ "docs/common/C/ccbysa.xml\">Creative Commons ShareAlike License</ulink>."
+#~ msgstr ""
+#~ "Kópia licencie je dostupná tu: <ulink url=\"/usr/share/ubuntu-"
+#~ "docs/common/C/ccbysa.xml\">Creative Commons ShareAlike License</ulink>."

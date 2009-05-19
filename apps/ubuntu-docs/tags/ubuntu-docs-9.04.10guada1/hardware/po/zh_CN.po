@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-docs\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2007-09-14 08:26+0100\n"
-"PO-Revision-Date: 2008-01-30 04:11+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2008-08-03 16:01+0100\n"
+"PO-Revision-Date: 2008-10-15 08:15+0000\n"
+"Last-Translator: Tao Wei <Unknown>\n"
 "Language-Team: Simplified Chinese <zh_CN@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2008-02-17 10:22+0000\n"
+"X-Launchpad-Export-Date: 2008-10-19 12:51+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: hardware/C/hardware-C.omf:6(creator) hardware/C/hardware-C.omf:7(maintainer)
@@ -33,7 +33,7 @@ msgstr "2006-09-07"
 msgid "Placeholder."
 msgstr "占位符"
 
-#: hardware/C/hardware.xml:22(title)
+#: hardware/C/hardware.xml:20(title)
 msgid "Working with hardware devices"
 msgstr "应用硬件设备"
 
@@ -45,11 +45,11 @@ msgstr "贡献者与授权许可"
 msgid ""
 "This document is maintained by the Ubuntu documentation team "
 "(https://wiki.ubuntu.com/DocumentationTeam). For a list of contributors, see "
-"the <ulink url=\"../../../common/C/contributors.xml\">contributors "
-"page</ulink>"
+"the <ulink url=\"../../libs/C/contributors.xml\">contributors page</ulink>"
 msgstr ""
-"本文档由 Ubuntu 文档团队（https://wiki.ubuntu.com/DocumentationTeam）维护。贡献者名单详见<ulink "
-"url=\"../../../common/C/contributors.xml\">贡献者页面</ulink>。"
+"此文档由 Ubuntu 文档小组维护 "
+"(https://wiki.ubuntu.com/DocumentationTeam)。贡献者的列表位于<ulink url=\"../../libs/C"
+"/contributors.xml\">贡献者页面</ulink>"
 
 #: hardware/C/hardware.xml:5(para)
 msgid ""
@@ -74,52 +74,63 @@ msgstr "发布本文档是希望它有用，但它并不提供任何担保；甚
 #: hardware/C/hardware.xml:11(para)
 msgid ""
 "A copy of the license is available here: <ulink url=\"/usr/share/ubuntu-"
-"docs/common/C/ccbysa.xml\">Creative Commons ShareAlike License</ulink>."
+"docs/libs/C/ccbysa.xml\">Creative Commons ShareAlike License</ulink>."
 msgstr ""
-"该授权许可的副本可以由这里获得：<ulink url=\"/usr/share/ubuntu-"
-"docs/common/C/ccbysa.xml\">Creative Commons ShareAlike License</ulink>。"
+"许可证的副本位于：<ulink url=\"/usr/share/ubuntu-docs/libs/C/ccbysa.xml\">Creative "
+"Commons ShareAlike License</ulink>."
 
 #: hardware/C/hardware.xml:14(year)
-msgid "2004, 2005, 2006"
-msgstr "2004, 2005, 2006"
+msgid "2008"
+msgstr "2008"
+
+#: hardware/C/hardware.xml:15(ulink)
+msgid "Ubuntu Documentation Project"
+msgstr "Ubuntu 文档项目"
 
 #: hardware/C/hardware.xml:15(holder)
-msgid "Canonical Ltd. and members of the Ubuntu Documentation Project"
-msgstr "Canonical Ltd.（Canonical有限公司）及Ubuntu文档项目成员。"
+msgid "Canonical Ltd. and members of the <placeholder-1/>"
+msgstr "Canonical 公司和 <placeholder-1/> 的成员"
 
 #: hardware/C/hardware.xml:18(publishername)
 msgid "The Ubuntu Documentation Project"
 msgstr "Ubuntu文档项目"
 
-#: hardware/C/hardware.xml:25(para)
+#: hardware/C/hardware.xml:23(para)
 msgid ""
 "Your computer consists of a number of connected devices, which are "
 "collectively known as computer <emphasis>hardware</emphasis>."
 msgstr "你的计算机是由若干被称作计算机<emphasis>硬件</emphasis>的设备组合而成的。"
 
-#: hardware/C/hardware.xml:26(para)
+#: hardware/C/hardware.xml:24(para)
 msgid ""
 "Ubuntu normally configures your hardware automatically, but there may be "
-"occasions when you need to make changes to settings relating to hardware "
-"yourself. This section provides information on tools which can be used to "
-"configure your hardware."
-msgstr "Ubuntu通常会自动配置你的硬件，然而或许在某些情况下，你需要自己对硬件设置进行改动。"
+"occasions when you need to make changes to hardware settings yourself. This "
+"section provides information on tools which can be used to configure your "
+"hardware."
+msgstr ""
+"Ubuntu通常能够自动的配置您的硬件，但是有些特殊的场合您希望能够自己改变硬件的设置，这方面有工具提供信息，这些工具能够用来配置您的硬件。"
 
-#: hardware/C/hardware.xml:28(title)
+#: hardware/C/hardware.xml:26(title)
 msgid "Restricted drivers"
 msgstr "受限制的驱动程序"
 
-#: hardware/C/hardware.xml:29(para)
+#: hardware/C/hardware.xml:27(para)
 msgid ""
 "Some devices attached to your computer may need restricted drivers to be "
 "installed in order to work properly."
 msgstr "你的计算机所连接的某些设备可能需要安装受限驱动才能正常工作"
 
-#: hardware/C/hardware.xml:31(title)
+#: hardware/C/hardware.xml:29(title)
 msgid "Why are some drivers restricted?"
 msgstr "为什么有的驱动程序会受到限制？"
 
-#: hardware/C/hardware.xml:32(para)
+#: hardware/C/hardware.xml:30(emphasis)
+msgid ""
+"Restricted drivers are drivers for your hardware which are not freely "
+"available or open-source."
+msgstr "受限驱动是指您的没有免费得到或者没有开源的硬件驱动。"
+
+#: hardware/C/hardware.xml:31(para)
 msgid ""
 "Most of the devices (hardware) attached to your computer should function "
 "properly in Ubuntu. These devices are likely to have "
@@ -127,7 +138,7 @@ msgid ""
 "be modified by the Ubuntu developers and problems with them can be fixed."
 msgstr "在Ubuntu中你的计算机设备（硬件）可实现完整功能。这些设备可能是不受限的，意味着Ubuntu的开发者可以改进驱动程序并解决其中的问题"
 
-#: hardware/C/hardware.xml:33(para)
+#: hardware/C/hardware.xml:32(para)
 msgid ""
 "Some hardware does not have unrestricted drivers, usually because the "
 "hardware manufacturer has not released details of their hardware which would "
@@ -135,357 +146,333 @@ msgid ""
 "functionality or may not work at all."
 msgstr "有些硬件没有非受限的驱动，通常是因为硬件制造商没有发布硬件细节，也就不能创造相应驱动。这些驱动可能功能有限或不能正常工作。"
 
-#: hardware/C/hardware.xml:34(para)
+#: hardware/C/hardware.xml:33(para)
 msgid ""
-"If a <emphasis>restricted driver</emphasis> is availble for a certain "
+"If a <emphasis>restricted driver</emphasis> is available for a certain "
 "device, you can install it in order to allow your device to function "
 "properly, or to add new features. For example, installing a restricted "
 "driver for certain graphics cards may allow you to use more advanced <ulink "
-"type=\"help\" url=\"ghelp:desktop-effects\">desktop effects</ulink>."
+"type=\"help\" url=\"ghelp:desktop-effects\">visual effects</ulink>."
 msgstr ""
-"如果有一个<emphasis>受限驱动</emphasis>对当前设备有效，你可以安装它以获得设备的完成的功能或者添加新的特特性。例如，对当前显卡安装一个"
-"受限驱动能够允许你使用更高级的的<ulink type=\"help\" url=\"ghelp:desktop-"
-"effects\">桌面效果</ulink>"
+"如果<emphasis>受限驱动</emphasis>对于一个确定的设备可用，您可以安装它以便您的设备正常的发挥功能，或者添加新的特性，比如，给特定的显卡"
+"安装受限驱动能够使您用上更多高级 <ulink type=\"help\" url=\"ghelp:desktop-"
+"effects\">视觉效果</ulink>。"
 
-#: hardware/C/hardware.xml:35(para)
+#: hardware/C/hardware.xml:34(para)
 msgid ""
 "Some computers may not have any devices which can use restricted drivers, "
 "either because all of the devices are fully supported by unrestricted "
 "drivers or because no restricted drivers are yet available for the device."
 msgstr "一些计算机可能所有设备都不使用受限驱动，这可能是因为其中的设备可被不受限驱动完全支持又或者不受限驱动对该设备依然有效。"
 
-#: hardware/C/hardware.xml:37(para)
+#: hardware/C/hardware.xml:36(para)
 msgid ""
 "Restricted drivers are often maintained by the hardware manufacturer, and so "
 "cannot be modified by Ubuntu developers if there is a problem."
 msgstr "受限驱动通常由硬件制造商维护，因此，Ubuntu开发者不能针对其中的问题做出改进。"
 
-#: hardware/C/hardware.xml:41(title)
+#: hardware/C/hardware.xml:40(title)
 msgid "Enabling a restricted driver"
 msgstr "启用受限驱动"
 
-#: hardware/C/hardware.xml:42(para)
+#: hardware/C/hardware.xml:41(para)
 msgid "To use a restricted driver for a device:"
 msgstr "要为设备应用受限驱动："
 
-#: hardware/C/hardware.xml:45(para) hardware/C/hardware.xml:66(para)
+#: hardware/C/hardware.xml:44(para) hardware/C/hardware.xml:65(para)
 msgid ""
 "Press "
 "<menuchoice><guimenu>System</guimenu><guimenuitem>Administration</guimenuitem"
-"><guimenuitem>Restricted Drivers Manager</guimenuitem></menuchoice>"
+"><guimenuitem>Hardware drivers</guimenuitem></menuchoice>"
 msgstr ""
-"打开<menuchoice><guimenu>系统</guimenu><guimenuitem>管理</guimenuitem><guimenuitem>"
-"受限驱动管理器</guimenuitem></menuchoice>"
+"依次点击<menuchoice><guimenu>系统</guimenu><guimenuitem>管理</guimenuitem><guimenuite"
+"m>硬件驱动</guimenuitem></menuchoice>"
 
-#: hardware/C/hardware.xml:48(para)
+#: hardware/C/hardware.xml:47(para)
 msgid ""
 "Find the driver which you would like to enable and check the box in the "
 "<guilabel>Enabled</guilabel> column, next to its name"
 msgstr "找到你要启用的驱动检，在其条目下检查 <guilabel>启用</guilabel>一栏"
 
-#: hardware/C/hardware.xml:51(para)
+#: hardware/C/hardware.xml:50(para)
 msgid ""
 "You will be asked to confirm that you want to enable the driver. Press "
 "<guibutton>Enable Driver</guibutton>"
 msgstr "你也许会被要求作出启用驱动的确认，点击<guibutton>启用</guibutton>"
 
-#: hardware/C/hardware.xml:54(para)
-msgid "The restricted driver may have to be downloaded and installed."
-msgstr "受限驱动可能需要下载和安装。"
+#: hardware/C/hardware.xml:53(para)
+msgid "The restricted driver may have to be downloaded and installed"
+msgstr "受限驱动需要下载并安装。"
 
-#: hardware/C/hardware.xml:57(para)
+#: hardware/C/hardware.xml:56(para)
 msgid "You may need to restart your computer to finish enabling the driver"
 msgstr "你可能要重新启动计算机来完成驱动的启用。"
 
-#: hardware/C/hardware.xml:62(title)
+#: hardware/C/hardware.xml:61(title)
 msgid "Disabling a restricted driver"
 msgstr "禁用受限驱动"
 
-#: hardware/C/hardware.xml:63(para)
+#: hardware/C/hardware.xml:62(para)
 msgid ""
 "If a restricted driver is causing problems, or you would just like to turn "
 "it off, follow the procedure below:"
 msgstr "如果受限驱动导致问题产生，或你想禁用它，请采用如下步骤："
 
-#: hardware/C/hardware.xml:69(para)
+#: hardware/C/hardware.xml:68(para)
 msgid ""
 "Find the driver which you would like to disable and uncheck the box in the "
 "<guilabel>Enabled</guilabel> column, next to its name"
 msgstr "在其条目下找到要禁用的驱动，更改<guilabel>启动</guilabel>栏"
 
-#: hardware/C/hardware.xml:72(para)
+#: hardware/C/hardware.xml:71(para)
 msgid ""
 "You will be asked to confirm that you would like to disable the driver. "
 "Press <guibutton>Disable Driver</guibutton>"
 msgstr "你会被要求对禁用驱动作出确认。点击<guibutton>禁用驱动</guibutton>"
 
-#: hardware/C/hardware.xml:75(para)
+#: hardware/C/hardware.xml:74(para)
 msgid "You may need to restart your computer to finish disabling the driver"
 msgstr "你需要重启电脑来完成禁用驱动。"
 
-#: hardware/C/hardware.xml:82(title)
+#: hardware/C/hardware.xml:81(title)
 msgid "Disks and partitions"
 msgstr "磁盘和分区"
 
-#: hardware/C/hardware.xml:83(para)
+#: hardware/C/hardware.xml:82(para)
 msgid ""
 "This section provides instructions on how to handle disks and drives, such "
 "as removable hard disks."
 msgstr "本节介绍磁盘和驱动器（例如移动硬盘）管理的操作方法。"
 
-#: hardware/C/hardware.xml:86(primary)
+#: hardware/C/hardware.xml:85(primary)
 msgid "partition"
 msgstr "分区"
 
-#: hardware/C/hardware.xml:87(secondary)
+#: hardware/C/hardware.xml:86(secondary)
 msgid "partitions"
 msgstr "分区"
 
-#: hardware/C/hardware.xml:91(primary)
+#: hardware/C/hardware.xml:90(primary)
 msgid "partitioning"
 msgstr "分区"
 
-#: hardware/C/hardware.xml:95(primary)
+#: hardware/C/hardware.xml:94(primary)
 msgid "format"
 msgstr "格式化"
 
-#: hardware/C/hardware.xml:96(secondary)
+#: hardware/C/hardware.xml:95(secondary)
 msgid "formatting"
 msgstr "正在格式化"
 
-#: hardware/C/hardware.xml:100(primary)
+#: hardware/C/hardware.xml:99(primary)
 msgid "mount"
 msgstr "挂载"
 
-#: hardware/C/hardware.xml:104(primary)
+#: hardware/C/hardware.xml:103(primary)
 msgid "unmount"
 msgstr "卸载"
 
-#: hardware/C/hardware.xml:105(secondary)
+#: hardware/C/hardware.xml:104(secondary)
 msgid "umount"
 msgstr "卸载"
 
-#: hardware/C/hardware.xml:109(primary)
+#: hardware/C/hardware.xml:108(primary)
 msgid "filesystem"
 msgstr "文件系统"
 
-#: hardware/C/hardware.xml:110(secondary)
+#: hardware/C/hardware.xml:109(secondary)
 msgid "file system"
 msgstr "文件系统"
 
-#: hardware/C/hardware.xml:114(title)
-msgid "Checking Free and Used Space"
-msgstr "检查空间使用状况"
+#: hardware/C/hardware.xml:113(title)
+msgid "Checking disk capacity"
+msgstr "检查磁盘容量。"
 
-#: hardware/C/hardware.xml:120(para)
+#: hardware/C/hardware.xml:117(para)
 msgid ""
-"Choose "
+"Press "
 "<menuchoice><guimenu>Places</guimenu><guimenuitem>Computer</guimenuitem></men"
-"uchoice>,"
+"uchoice>, right click on the disk you want to check and select "
+"<guilabel>Properties</guilabel>. The free space on the disk will be "
+"displayed on the <guilabel>Basic</guilabel> tab."
 msgstr ""
-"选择<menuchoice><guimenu>位置</guimenu><guimenuitem>计算机</guimenuitem></menuchoice"
-">,"
+"点击<menuchoice><guimenu>位置</guimenu><guimenuitem>计算机</guimenuitem></menuchoice"
+">。右键点击您想检查的的磁盘，并选择<guilabel>Properties</guilabel>.磁盘上的剩余空间能够在<guilabel>Basic<"
+"/guilabel>一栏显示。"
 
-#: hardware/C/hardware.xml:123(para)
-msgid "Select the desired device and right click on it,"
-msgstr "选择对象设备并右键点击"
-
-#: hardware/C/hardware.xml:127(para)
-msgid "Select <guimenuitem>Properties</guimenuitem>."
-msgstr "选择<guimenuitem>属性</guimenuitem>."
-
-#: hardware/C/hardware.xml:115(para)
+#: hardware/C/hardware.xml:121(para)
 msgid ""
-"To check the amount of free and used space on your computer, on your "
-"removable devices and on your file systems, do as follow: <placeholder-1/>"
-msgstr "查看你的计算机器中可移动设备和文件系统的未用和已用空间统计，如下操作: <placeholder-1/>"
+"Press "
+"<menuchoice><guimenu>System</guimenu><guisubmenu>Administration</guisubmenu><"
+"guimenuitem>System Monitor</guimenuitem></menuchoice> and select the "
+"<guilabel>File Systems</guilabel> tab. All disks currently connected to the "
+"system should be displayed in the list, along with their free and used "
+"capacities."
+msgstr ""
+"点击<menuchoice><guimenu>系统</guimenu><guisubmenu>管理</guisubmenu><guimenuitem>系统"
+"监测器</guimenuitem></menuchoice> 并选择 "
+"<guilabel>文件系统</guilabel>一栏，所有当前连到系统的磁盘应该能够在一个列表中显示出来，并单独的显示他们的剩余空间和已用空间。"
 
-#: hardware/C/hardware.xml:132(para)
+#: hardware/C/hardware.xml:114(para)
 msgid ""
-"You will be present with a two color <emphasis>pie chart</emphasis> "
-"indicating the free and used space on that particular device."
-msgstr "双色 <emphasis>饼图</emphasis>将表明特定设备中的未用和已用空间。"
+"To check the amount of free and used space on a disk, do either of the "
+"following: <placeholder-1/>"
+msgstr "要检查一个已用和未用的磁盘空间，请开始下面的步骤：<placeholder-1/>"
+
+#: hardware/C/hardware.xml:128(title)
+msgid "Advanced disk-usage analysis"
+msgstr "高级磁盘使用分析器"
+
+#: hardware/C/hardware.xml:129(para)
+msgid ""
+"For a more accurate analysis of your filesystem, press "
+"<menuchoice><guimenu>Applications</guimenu><guimenuitem>Accessories</guimenui"
+"tem><guimenuitem>Disk Usage Analyzer</guimenuitem></menuchoice> to start the "
+"<application>Disk Usage Analyzer</application>."
+msgstr ""
+"对于您的文件系统更精确的分析，点击<menuchoice><guimenu>应用程序</guimenu><guimenuitem>工具</guimenui"
+"tem><guimenuitem>磁盘使用分析器</guimenuitem></menuchoice> "
+"运行<application>磁盘使用分析器</application>."
+
+#: hardware/C/hardware.xml:133(para)
+msgid ""
+"Press <guibutton>Scan Home</guibutton> to scan your home directory, or press "
+"<guibutton>Scan Filesystem</guibutton> to scan the whole filesystem."
+msgstr ""
+"点击<guibutton>Scan Home</guibutton> 扫描您的HOME文件夹，或者点击<guibutton>Scan "
+"Filesystem</guibutton>扫描整个文件系统。"
 
 #: hardware/C/hardware.xml:137(para)
 msgid ""
-"The blue color indicates the free space, the yellow one indicates the used "
-"space. On the right of this chart there's a small legend with the exactly "
-"free and used space."
-msgstr "蓝色表示未用空间，黄色表示已用空间。在图表右侧有准确的未用和已用空间的简短说明。"
-
-#: hardware/C/hardware.xml:145(para)
-msgid ""
-"If you want to know the amount of free and used space of a removable device "
-"like a CD/DVD-ROM or a USB key, first mount that particular device."
-msgstr "如果你想了解一个可移动设备（比如CD/DVD光驱或USB存储设备）未用和已用空间统计，首先要加载特定设备。"
-
-#: hardware/C/hardware.xml:154(title)
-msgid "Advanced Analysis"
-msgstr "高级分析"
-
-#: hardware/C/hardware.xml:155(para)
-msgid ""
-"For a more accurate analysis of your filesystem, you can use "
-"<application>Disk Usage Analyzer</application>. To launch <application>Disk "
-"Usage Analyzer</application>, choose "
-"<menuchoice><guimenu>Applications</guimenu><guimenuitem>Accessories</guimenui"
-"tem><guimenuitem>Disk Usage Analyzer</guimenuitem></menuchoice>, or from a "
-"terminal "
-"(<menuchoice><guimenu>Applications</guimenu><guimenuitem>Accessories</guimenu"
-"item><guimenuitem>Terminal</guimenuitem></menuchoice>) type "
-"<command>baobab</command> and hit <keycap>Return</keycap>."
+"See the <ulink url=\"ghelp:baobab\" type=\"help\">Disk Usage Analyzer "
+"Manual</ulink> for more information."
 msgstr ""
-"要对你的文件系统做一份更详细的分析，可以使用<application>磁盘使用分析</application>。运行 "
-"<application>磁盘使用分析</application>，使用<menuchoice><guimenu>应用程序</guimenu><guime"
-"nuitem>附件</guimenuitem><guimenuitem>磁盘使用分析</guimenuitem></menuchoice>,或者从终端(<"
-"menuchoice><guimenu>应用程序</guimenu><guimenuitem>附件</guimenuitem><guimenuitem>终"
-"端</guimenuitem></menuchoice>)输入<command>baobab</command>再敲<keycap>回车键</keycap"
-">。"
+"参阅<ulink url=\"ghelp:baobab\" type=\"help\">Disk Usage Analyzer "
+"Manual</ulink>以获得更多信息。"
 
-#: hardware/C/hardware.xml:162(para)
-msgid ""
-"For analysing the entire filesystem, press <guilabel>Scan "
-"Filesystem</guilabel> form the toolbar, or for analysing only your home "
-"folder, press <guilabel>Scan Home</guilabel>."
-msgstr ""
-"要分析整个文件系统，从工具栏点击<guilabel>扫描文件系统</guilabel>，或者仅仅分析自己的主目录，点击<guilabel>扫描主目录</g"
-"uilabel>."
-
-#: hardware/C/hardware.xml:167(para)
-msgid ""
-"For more information about, see <ulink url=\"ghelp:baobab\" "
-"type=\"help\"><application>Disk Usage Analyzer</application></ulink>."
-msgstr ""
-"详情参见 <ulink url=\"ghelp:baobab\" "
-"type=\"help\"><application>磁盘使用分析</application></ulink>."
-
-#: hardware/C/hardware.xml:175(title)
-msgid "Partitioning a Device"
+#: hardware/C/hardware.xml:145(title)
+msgid "Partitioning a device"
 msgstr "设备分区"
 
-#: hardware/C/hardware.xml:176(para)
+#: hardware/C/hardware.xml:146(para)
 msgid ""
-"To partition a disk in Ubuntu, either a hard disk or a removable device, the "
-"program <application>GNOME Partition Editor</application> is needed."
-msgstr ""
-"无论是硬盘还是可移动存储设备，要在Ubuntu内划分磁盘，必须要使用<application>GNOME分区编辑</application>程序。"
-
-#: hardware/C/hardware.xml:180(para) hardware/C/hardware.xml:315(para)
-msgid ""
-"To install <application>GNOME Partition Editor</application>, install the "
-"<application>gparted</application> package (see <ulink type=\"help\" "
-"url=\"ghelp:add-applications\">Add Applications</ulink>)."
-msgstr ""
-"要安装 <application>GNOME分区编辑器</application>。安装 "
-"<application>gparted</application> 软件包 (参见 <ulink type=\"help\" "
-"url=\"ghelp:add-applications\">添加应用程序</ulink>)."
-
-#: hardware/C/hardware.xml:185(para) hardware/C/hardware.xml:320(para)
-msgid ""
-"To launch <application>GNOME Partition Editor</application> choose "
+"You can use <application>GNOME Partition Editor</application> to partition "
+"storage devices. Install the <application>gparted</application> package (see "
+"<ulink type=\"help\" url=\"ghelp:add-applications\">Add "
+"Applications</ulink>) and then press "
 "<menuchoice><guimenu>System</guimenu><guisubmenu>Administration "
-"</guisubmenu><guimenuitem>Gnome Partition Editor</guimenuitem></menuchoice>, "
-"or from a terminal "
-"(<menuchoice><guimenu>Applications</guimenu><guimenuitem>Accessories</guimenu"
-"item><guimenuitem>Terminal</guimenuitem></menuchoice>) type <command>gksudo "
-"gparted</command> and press <keycap>Enter</keycap>."
+"</guisubmenu><guimenuitem>Gnome Partition Editor</guimenuitem></menuchoice> "
+"to start the partition editor."
 msgstr ""
-"启动<application>GNOME分区编辑器</application>的方法是：点击菜单<menuchoice><guimenu>系统</guim"
-"enu><guisubmenu>系统管理</guisubmenu><guimenuitem>Gnome Partion "
-"Editor</guimenuitem></menuchoice>，或者打开一个终端（<menuchoice><guimenu>应用程序</guimenu"
-"><guimenuitem>附件</guimenuitem><guimenuitem>终端</guimenuitem></menuchoice>），输入<"
-"command>gksudo gparted</command>，按下<keycap>回车键</keycap>。"
+"您能够使用<application>GNOME Partition "
+"Editor</application>为存储设备分区，安装<application>gparted</application>应用程序包（参见<ulin"
+"k type=\"help\" url=\"ghelp:add-applications\">Add Applications</ulink>) "
+"并点击<menuchoice><guimenu>System</guimenu><guisubmenu>Administration "
+"</guisubmenu><guimenuitem>Gnome Partition "
+"Editor</guimenuitem></menuchoice>运行分区编辑器。"
 
-#: hardware/C/hardware.xml:192(title)
-msgid "Freeing Space in a Partition"
-msgstr "分区中的自由空间"
+#: hardware/C/hardware.xml:151(para)
+msgid ""
+"Be careful when altering disk partitions, as it is possible to lose your "
+"data if you delete or change the wrong partition."
+msgstr "当要更改磁盘分区时请务必小心！因为您删除或者改变一个错误的分区可能使您丢失数据。"
 
-#: hardware/C/hardware.xml:200(para) hardware/C/hardware.xml:329(para)
-msgid "Launch <application>GNOME Partition Editor</application>."
-msgstr "启动<application>GNOME分区编辑器</application>。"
+#: hardware/C/hardware.xml:155(title)
+msgid "Freeing space for a new partition"
+msgstr "为新分区释放空间。"
 
-#: hardware/C/hardware.xml:205(para) hardware/C/hardware.xml:246(para) hardware/C/hardware.xml:334(para)
+#: hardware/C/hardware.xml:163(para) hardware/C/hardware.xml:248(para)
+msgid ""
+"Press <menuchoice><guimenu>System</guimenu><guisubmenu>Administration "
+"</guisubmenu><guimenuitem>Gnome Partition Editor</guimenuitem></menuchoice>."
+msgstr ""
+"点击<menuchoice><guimenu>系统</guimenu><guisubmenu>管理</guisubmenu><guimenuitem>Gn"
+"ome 分区编辑器</guimenuitem></menuchoice>。"
+
+#: hardware/C/hardware.xml:168(para) hardware/C/hardware.xml:209(para) hardware/C/hardware.xml:253(para)
 msgid ""
 "Select the device to partition from the drop-down list at the top-right of "
 "the main window."
 msgstr "从主窗口的上部右边下拉菜单里选择一个要分区的设备。"
 
-#: hardware/C/hardware.xml:211(para) hardware/C/hardware.xml:340(para)
+#: hardware/C/hardware.xml:174(para) hardware/C/hardware.xml:259(para)
 msgid ""
 "A list of partitions will appear. Select the desired partition and choose "
-"<menuchoice><guimenu>Partition</guimenu><guimenuitem>unmount</guimenuitem></m"
+"<menuchoice><guimenu>Partition</guimenu><guimenuitem>Unmount</guimenuitem></m"
 "enuchoice>."
 msgstr ""
-"分区列表会出现。选择想要的分区然后选择<menuchoice><guimenu>分区</guimenu><guimenuitem>卸载</guimenui"
-"tem></menuchoice>。"
+"将会出现一个分区列表。选择需要的分区并选择<menuchoice><guimenu>Partition</guimenu><guimenuitem>Unm"
+"ount</guimenuitem></menuchoice>。"
 
-#: hardware/C/hardware.xml:220(para)
+#: hardware/C/hardware.xml:183(para)
 msgid ""
 "To resize the partition choose <guilabel>Resize/Move</guilabel>. The dialog "
 "<guilabel>Resize/Move</guilabel> will be shown. You can use the "
-"<guilabel>Free Space Following (MiB)</guilabel> spin box to choose how much "
-"space to free after this partition, or <guilabel>Free Space Preceding "
+"<guilabel>Free Space Following (MiB)</guilabel> box to choose how much space "
+"to free after this partition, or <guilabel>Free Space Preceding "
 "(MiB)</guilabel> to free space before this partition. Alternatively you can "
-"use the slider to adjust the partition size.."
+"use the slider to adjust the partition size."
 msgstr ""
-"如要改变分区大小，选择<guilabel>调整大小/移动</guilabel>。将显示<guilabel>调整大小/移动</guilabel>对话框。你可"
-"以使用<guilabel>后接自由空间 (MiB)</guilabel>编辑框来选择分区还要剩余多少空间，或者<guilabel>前接自由空间 "
-"(MiB)</guilabel> 来在分区前释放空间。你也可以选择使用滑块来调整分区的大小。"
+"要重设分区的大小请选择<guilabel>改变大小/移动</guilabel>，<guilabel>改变大小/移动</guilabel>这个对话将被显示出"
+"来。您能够使用<guilabel>跟随剩余空间 "
+"(MiB)</guilabel>盒子选择分区后有多少未使用的空间，或者使用<guilabel>先前可用空间 (MiB)</guilabel> "
+"选择分区前多少未使用的空间。你也可以使用滑块调整分区大小作为选择。"
 
-#: hardware/C/hardware.xml:232(para)
+#: hardware/C/hardware.xml:195(para)
 msgid "To apply the changes, click <guibutton>Resize/Move</guibutton>."
 msgstr "要使修改生效，单击<guibutton>调整大小/移动</guibutton>。"
 
-#: hardware/C/hardware.xml:193(para)
+#: hardware/C/hardware.xml:156(para)
 msgid ""
-"To create a new partition inside an already partitioned device, first you "
-"have to resize the partition. If you already have free space, skip to <xref "
-"linkend=\"creating-new-partition\"/>. <placeholder-1/>"
+"To create a new partition inside an already partitioned device, you must "
+"first resize an existing partition. If you already have free space, skip to "
+"<xref linkend=\"creating-new-partition\"/>; otherwise, follow the "
+"instructions below: <placeholder-1/>"
 msgstr ""
-"在已分区设备中创建一个新分区，先要重新安排分区大小。如果有未用空间，则直接进行<xref linkend=\"creating-new-"
-"partition\"/>. <placeholder-1/>"
+"要在一个已经分区的设备上创建一个新分区，您必须首先重设一个现存的分区，如果您已经有了未使用的空间，请跳到<xref linkend=\"creating-"
+"new-partition\"/>，否则，请顺着以下说明：<placeholder-1/>"
 
-#: hardware/C/hardware.xml:241(title)
-msgid "Creating a New Partition"
+#: hardware/C/hardware.xml:204(title)
+msgid "Creating a new partition"
 msgstr "创建新分区"
 
-#: hardware/C/hardware.xml:252(para)
+#: hardware/C/hardware.xml:215(para)
 msgid ""
 "A list of partitions will appear. Select the one called "
 "<guilabel>unallocated</guilabel> and click <guibutton>New</guibutton>."
 msgstr ""
 "出现一个分区列表。选择一个名为<guilabel>未指派</guilabel>的内容然后单击<guibutton>新建</guibutton>。"
 
-#: hardware/C/hardware.xml:259(para)
+#: hardware/C/hardware.xml:222(para)
 msgid ""
 "From the <guilabel>Filesystem</guilabel> drop-down list choose the desired "
 "type of filesystem to use and click <guibutton>Add</guibutton>."
 msgstr ""
 "从<guilabel>文件系统</guilabel>的下拉列表中选择所需文件类型并点击<guibutton>添加</guibutton>。"
 
-#: hardware/C/hardware.xml:266(para) hardware/C/hardware.xml:358(para)
+#: hardware/C/hardware.xml:229(para) hardware/C/hardware.xml:277(para)
 msgid "To apply all the changes made, click <guibutton>Apply</guibutton>."
 msgstr "确认变更，点击<guibutton>应用</guibutton>。"
 
-#: hardware/C/hardware.xml:242(para)
+#: hardware/C/hardware.xml:205(para)
 msgid "To create a new partition: <placeholder-1/>"
 msgstr "创建一个新分区: <placeholder-1/>"
 
-#: hardware/C/hardware.xml:276(title) hardware/C/hardware.xml:374(title)
-msgid "Related Topics"
-msgstr "相关主题"
+#: hardware/C/hardware.xml:240(title)
+msgid "Formatting a partition"
+msgstr "格式化一个分区"
 
-#: hardware/C/hardware.xml:310(title)
-msgid "Formatting a Partition"
-msgstr "格式化分区"
-
-#: hardware/C/hardware.xml:311(para)
+#: hardware/C/hardware.xml:241(para)
 msgid ""
-"To format a partition in Ubuntu, the program <application>GNOME Partition "
-"Editor</application> is needed."
-msgstr "在Ubuntu中格式化分区需要使用<application>GNOME分区编辑</application>程序。"
+"You can use <application>GNOME Partition Editor</application> to format disk "
+"partitions (see <xref linkend=\"partitioning-device\"/> for more information "
+"on <application>GNOME Partition Editor</application>)."
+msgstr ""
+"您能够使用<application>GNOME 分区编辑器</application> 来格式化磁盘分区（参见<xref "
+"linkend=\"partitioning-device\"/> 获得更多的信息在 <application>GNOME "
+"分区编辑器</application>)。"
 
-#: hardware/C/hardware.xml:349(para)
+#: hardware/C/hardware.xml:268(para)
 msgid ""
 "Select the partition you want to format and choose "
 "<menuchoice><guimenu>Partition</guimenu><guimenuitem>Format "
@@ -495,169 +482,184 @@ msgstr ""
 "操作要进行格式化的分区并选择<menuchoice><guimenu>分区</guimenu><guimenuitem>格式化为</guimenuitem"
 "></menuchoice> 并在列表中选择要分区的文件系统类型"
 
-#: hardware/C/hardware.xml:325(para)
+#: hardware/C/hardware.xml:244(para)
 msgid "To format a partition, do as follows: <placeholder-1/>"
 msgstr "依照如下操作,进行分区格式化: <placeholder-1/>"
 
-#: hardware/C/hardware.xml:367(para)
+#: hardware/C/hardware.xml:286(para)
 msgid ""
 "Pressing <guibutton>Apply</guibutton> will cause all of the files on the "
 "partition to be permanently deleted."
 msgstr "按<guibutton>运用</guibutton>会使分区里的文件被永久地删除。"
 
-#: hardware/C/hardware.xml:408(title)
-msgid "What is Formatting?"
-msgstr "什么是格式化？"
+#: hardware/C/hardware.xml:294(title)
+msgid "What is formatting?"
+msgstr "什么是格式化"
 
-#: hardware/C/hardware.xml:409(para)
+#: hardware/C/hardware.xml:295(para)
 msgid ""
-"To format a hard disk, a device or a partition means to prepare that "
-"particular device to be used for storing data."
-msgstr "要格式化一个硬盘，一个设备或者分区，意味者安排该设备准备用于存储数据。"
+"To format a hard disk, device or partition means to prepare that particular "
+"device to be used for storing data."
+msgstr "要格式化一个硬盘，设备或者分区意味着准备一个特别的设备用来存储数据"
 
-#: hardware/C/hardware.xml:413(para)
+#: hardware/C/hardware.xml:299(para)
 msgid ""
-"The operation of formatting a hard disk or a partition, implies the applying "
-"of a specific format to that device: this format is the filesystem."
-msgstr "格式化一个硬盘或者一个分区的操作，意味着将一种特定的格式运用到该设备：这个格式就是文件系统。"
+"The operation of formatting a hard disk or partition is when a specific data-"
+"storage format is applied to that device; this format is the "
+"<quote>filesystem</quote>."
+msgstr "格式化一个硬盘或分区是应用一种特定的数据储存格式时的操作；这种格式就是<quote>文件系统</quote>。"
 
-#: hardware/C/hardware.xml:418(para)
+#: hardware/C/hardware.xml:304(para)
 msgid ""
-"When you buy a disk usually it is not formatted, and you cannot use it for "
-"archiving data. When you format the device, you will notice that the free "
-"space in it is less than the original size. This is due to the fact that "
-"some space has to be used to make the device usable: this space is occupied "
-"by the filesystem."
+"When you buy a disk it is usually not formatted, and cannot yet be used for "
+"storing data. When you format the device, you will notice that the free "
+"space on it is less than the original size. This is due to the fact that "
+"some space has to be used to make the device usable; this space is occupied "
+"by the filesystem. Also, disk manufacturers often use a different standard "
+"to measure disk capacity, which results in a further discrepancy."
 msgstr ""
-"当你购买了一个硬盘时，一般来说它没有被格式化，你就还不能用来存储数据。当你格式化该设备时，你可以注意到自由空间比它的原来空间少。这是因为有些空间被用于使这"
-"个设备可以使用：这部分空间被文件系统占用了。"
+"磁盘在你购买回来时通常是没有格式化的，并且不能用来存放数据。当你格式化这个设备后，你将注意到在它上面的可用空间小于原来的大小。这是为了使这个设备可以被使用"
+"而实际上使用了一些空间产生的耗费；这些空间被文件系统占用。同时，磁盘制造商经常使用不同的标准来标称磁盘容量，这个进一步加剧了这个结果（指可用空间小于标称空"
+"间）。"
 
-#: hardware/C/hardware.xml:428(title)
-msgid "What is a Filesystem?"
+#: hardware/C/hardware.xml:316(title)
+msgid "What is a filesystem?"
 msgstr "什么是文件系统？"
 
-#: hardware/C/hardware.xml:429(para)
+#: hardware/C/hardware.xml:317(para)
 msgid ""
-"The filesystem is a mechanism with wich files are archived and organised on "
-"a storing device such as a hard disk, and is an important part of an "
-"operating system. Without a filesystem, accessing and storing files would be "
+"A filesystem is a particular way of storing and organizing files on a "
+"storage device such as a hard disk, and is an important part of an operating "
+"system. Without a filesystem, accessing and storing files would be "
 "impossible."
-msgstr "文件系统就是在一个存储设备如硬盘上存档和组织文件的机制，因而是操作系统的一个重要部分。没有文件系统，就无法存取文件。"
+msgstr "文件系统是一种在存储设备如硬盘上存储和组织文件的方式，它是操作系统的重要部分。如果没有文件系统，访问和存储文件基本是不可能的事。"
 
-#: hardware/C/hardware.xml:439(para)
+#: hardware/C/hardware.xml:327(para)
 msgid ""
-"Ext2/Ext3: these are usually found on GNU/Linux operating systems. Ubuntu "
-"uses <emphasis>ext3</emphasis> as its default filesystem."
+"ext2 and ext3: these are usually found on GNU/Linux operating systems. "
+"Ubuntu uses <emphasis>ext3</emphasis> as its default filesystem."
 msgstr ""
-"Ext2/Ext3:这些是在GNU/Linux系统上常见的。 Ubuntu使用<emphasis>ext3</emphasis>作为默认文件系统。"
+"ext2 和 ext3: 这些通常用于GNU/Linux。Ubuntu把<emphasis>ext3</emphasis>当作默认的文件系统。"
 
-#: hardware/C/hardware.xml:446(para)
+#: hardware/C/hardware.xml:334(para)
 msgid ""
-"<acronym>FAT16</acronym>, <acronym>FAT32</acronym>: these are Microsoft "
-"Windows filesystems found on older computers. If you want to share data "
-"between two computers, you would probably choose the "
-"<emphasis><acronym>FAT32</acronym></emphasis> filesystem."
+"<acronym>FAT16</acronym> and <acronym>FAT32</acronym>: these are Microsoft "
+"Windows filesystems found on older computers. If you would like to share "
+"data between two computers, the "
+"<emphasis><acronym>FAT32</acronym></emphasis> format is a good choice."
 msgstr ""
-"<acronym>FAT16</acronym>, "
-"<acronym>FAT32</acronym>:这些是Windows在比较老的计算机上常见的文件系统。如果你想在两个计算机间共享数据，你很可能选择<em"
-"phasis><acronym>FAT32</acronym></emphasis>文件系统。"
+"<acronym>FAT16</acronym> 和 <acronym>FAT32</acronym>: 可以在老一些的电脑上看到的Microsoft "
+"Windows的文件系统格式。假如你想在两台电脑之间共享文件，<emphasis><acronym>FAT32</acronym></emphasis>格"
+"式是一个很好的选择."
 
-#: hardware/C/hardware.xml:454(para)
+#: hardware/C/hardware.xml:342(para)
 msgid ""
-"<acronym>NTFS</acronym>: this is Microsoft Windows new filesystem being used "
-"as the default one in new Windows versions."
-msgstr ""
-"<acronym>NTFS</acronym>:这是Microsoft WIndows的新文件系统，在新的Windows版本上做为默认格式。"
+"<acronym>NTFS</acronym>: this is the filesystem type used by more modern "
+"versions of Microsoft Windows."
+msgstr "<acronym>NTFS</acronym>: 这是用于更高版本的Microsoft Windows的文件系统格式."
 
-#: hardware/C/hardware.xml:460(para)
-msgid "<acronym>HFS</acronym>: this is Macintosh default filesystem."
-msgstr "<acronym>HFS</acronym>：这是Macintosh的默认文件系统。"
+#: hardware/C/hardware.xml:348(para)
+msgid ""
+"<acronym>HFS+</acronym>: this is the Mac OS X default filesystem type."
+msgstr "<acronym>HFS+</acronym>: 这是Mac OS X默认的文件系统格式。"
 
-#: hardware/C/hardware.xml:435(para)
+#: hardware/C/hardware.xml:323(para)
 msgid ""
 "There are different types of filesystem. The most common are: <placeholder-"
 "1/>"
 msgstr "有好几种不同的文件系统。最常见的有：<placeholder-1/>"
 
-#: hardware/C/hardware.xml:469(title)
+#: hardware/C/hardware.xml:357(title)
 msgid "What is a Partition?"
 msgstr "什么是分区？"
 
-#: hardware/C/hardware.xml:470(para)
+#: hardware/C/hardware.xml:358(para)
 msgid ""
-"A partition is a means of dividing a phisical device, such as a hard disk, "
-"into many logical devices."
-msgstr "一个分区就是一个物理设备，例如硬盘，分割成很多逻辑的设备。"
+"A partition is a means of dividing the storage capacity of a device, such as "
+"a hard disk, into several parts which can then be treated as separate "
+"storage devices (<quote>logical devices</quote>)."
+msgstr ""
+"分区是一种划分设备储存空间的手段，像一个硬盘可以分成几个部分，每一个部分都可以被作为分别的存储设备(<quote>logical "
+"devices</quote>)对待。"
 
-#: hardware/C/hardware.xml:474(para)
+#: hardware/C/hardware.xml:363(para)
 msgid ""
 "Each logical device is seen by the operating system as a distinct device, "
 "and thus is treated as an independent disk."
 msgstr "每一个逻辑设备被操作系统视作一个具体的设备，因此也作为一个独立的磁盘对待。"
 
-#: hardware/C/hardware.xml:482(para)
-msgid "To retrieve free space;"
-msgstr "检查剩余空间"
+#: hardware/C/hardware.xml:371(para)
+msgid "To retrieve free space"
+msgstr "获取空闲的空间"
 
-#: hardware/C/hardware.xml:487(para)
-msgid "To install different operating systems;"
-msgstr "安装不同的操作系统；"
+#: hardware/C/hardware.xml:376(para)
+msgid "To install different operating systems"
+msgstr "安装不同的操作系统"
 
-#: hardware/C/hardware.xml:492(para)
-msgid "To better organize data on the hard disk."
-msgstr "在硬盘上更好地组织数据。"
+#: hardware/C/hardware.xml:381(para)
+msgid "To better organize data on the hard disk"
+msgstr "更好地在硬盘上组织数据"
 
-#: hardware/C/hardware.xml:478(para)
+#: hardware/C/hardware.xml:367(para)
 msgid ""
 "Partitioning a hard disk can be done for several reasons: <placeholder-1/>"
 msgstr "对一个硬盘分区可以有不同的理由：<placeholder-1/>"
 
-#: hardware/C/hardware.xml:501(title)
+#: hardware/C/hardware.xml:390(title)
 msgid "Mounting and Unmounting Devices"
 msgstr "挂载和卸载设备"
 
-#: hardware/C/hardware.xml:502(para)
+#: hardware/C/hardware.xml:391(para)
 msgid ""
-"For information about mounting and unmounting a device, see <ulink "
+"When you connect a removable storage device to your computer, it must be "
+"<emphasis>mounted</emphasis> by the operating system so that you are able to "
+"access the files on the device."
+msgstr ""
+"当你连接一个可移动存储设备到你的计算机时，它必须被操作系统<emphasis>mounted</emphasis>这样你才能够访问这个设备上的文件。"
+
+#: hardware/C/hardware.xml:394(para)
+msgid ""
+"To find out how to mount and unmount storage devices, see <ulink "
 "type=\"help\" url=\"ghelp:user-guide#gosnautilus-460\">Using Removable "
 "Media</ulink>"
 msgstr ""
-"要得到挂载和卸载一个设备的信息，参见<ulink type=\"help\" url=\"ghelp:user-guide#gosnautilus-"
-"460\">使用移动媒体</ulink>"
+"找出怎样挂载和卸载存储设备,看<ulink type=\"help\" url=\"ghelp:user-guide#gosnautilus-"
+"460\">使用可移动的介质"
 
-#: hardware/C/hardware.xml:506(para)
+#: hardware/C/hardware.xml:398(para)
 msgid ""
-"Pay attention when removing a device: <emphasis role=\"strong\">always "
-"unmount</emphasis> it to avoid data loss. If you attempt to remove a device "
-"without unmounting it, you will get a message explaining how to properly "
-"unmount a device."
+"When you copy files to a storage device, they are not always written to the "
+"device immediately. Instead, they are often stored in a queue so that they "
+"can all be transferred across to the device at the same time (for reasons of "
+"efficiency). If you disconnect the device before all of the files have been "
+"transferred, then you could lose the files. To prevent this, you must always "
+"<emphasis>unmount</emphasis> a storage device before disconnecting it."
 msgstr ""
-"卸掉一个设备时要注意：<emphasis "
-"role=\"strong\">一定要卸载</emphasis>该设备以避免数据损坏。如果你不卸载设备就要卸掉设备，你会得到一个关于如何正确地卸载设备的信"
-"息。"
+"当你复制文件到一个存储设备,它们不总是直接写入设备,作为替代,它们通常储存在一个队列所以它们是在同一时间(一个整体)被传送到设备上的(效率原因).如果你在"
+"所有文件传送完之前断开设备,那时你就会丢失文件,为了防止这种情况,你通常必须在拆下存储设备之前卸载存储设备"
 
-#: hardware/C/hardware.xml:535(title)
+#: hardware/C/hardware.xml:408(title)
 msgid "Laptops"
 msgstr "笔记本电脑"
 
-#: hardware/C/hardware.xml:536(para)
+#: hardware/C/hardware.xml:409(para)
 msgid ""
 "This section contains information for people using Ubuntu on a laptop "
 "computer."
 msgstr "本章的信息是关于笔记本电脑上使用Ubuntu。"
 
-#: hardware/C/hardware.xml:538(title)
+#: hardware/C/hardware.xml:411(title)
 msgid "Suspending and hibernating laptops"
 msgstr "笔记本电脑睡眠模式和休眠模式"
 
-#: hardware/C/hardware.xml:539(para)
+#: hardware/C/hardware.xml:412(para)
 msgid ""
 "In order to save battery power, you can put your laptop into one of a number "
 "of power-saving modes when you are not using it. The available modes are "
 "detailed below:"
 msgstr "为了节约电力，你可以在不使用的时候将膝上型机转入到一系列节电模式之一。可以使用的模式如下所列："
 
-#: hardware/C/hardware.xml:541(para)
+#: hardware/C/hardware.xml:414(para)
 msgid ""
 "<emphasis role=\"strong\">Suspending</emphasis> a laptop is like putting the "
 "computer to sleep. The computer will still be turned on and all of your work "
@@ -667,27 +669,26 @@ msgstr ""
 "<emphasis role=\"strong\">挂起</emphasis>一个膝上型机就象让一台计算机睡觉一样 "
 "。计算机仍然是开着的，你的所有工作都开着，但机器使用的电力较少。你可以按一个键或者点一下鼠标将计算机唤醒。"
 
-#: hardware/C/hardware.xml:542(para)
+#: hardware/C/hardware.xml:415(para)
 msgid ""
 "<emphasis role=\"strong\">Hibernating</emphasis> is turning the computer off "
 "completely while saving the current state of the computer (such as keeping "
 "all of your open documents). When you turn the computer back on after "
 "hibernating, all of your work should be restored as it was before "
-"hibernation. No power is used at all when the computer is hibernating."
+"hibernation. No power is used when the computer is hibernating."
 msgstr ""
-"<emphasis "
-"role=\"strong\">休眠</emphasis>是将计算机关闭，同时保存计算机当前的状态（例如保持你的文件打开）。休眠后你打开计算机时，你所有的"
-"动作都会被恢复至你休眠前的状态。计算机休眠时不使用电力。"
+"休眠是完全的关闭电脑,在这期间它保留当前电脑的状态(例如保持所有你打开的文档).当你在休眠后再打开电脑后,你所有的工作将恢复到你休眠之前.当电脑正在休眠的"
+"时候没有使用的能力."
 
-#: hardware/C/hardware.xml:543(para)
+#: hardware/C/hardware.xml:416(para)
 msgid ""
 "<emphasis role=\"strong\">Shutting down</emphasis> is turning the computer "
 "off completely, without saving the current state of the computer. No power "
-"is used at all when the computer is shut down."
+"is used when the computer is shut down."
 msgstr ""
-"<emphasis role=\"strong\">关机</emphasis> 是彻底关闭计算机，不保存计算机当前的状态。计算机关机状态不使用电力。"
+"<emphasis role=\"strong\">关机</emphasis> 是完全关闭电脑, 而不保存当前电脑的状态. 当电脑被关闭时不耗电."
 
-#: hardware/C/hardware.xml:544(para)
+#: hardware/C/hardware.xml:417(para)
 msgid ""
 "<emphasis role=\"strong\">Resuming</emphasis> is bringing the computer out "
 "of a power saving mode and back into normal operation. You can resume the "
@@ -699,7 +700,7 @@ msgstr ""
 "role=\"strong\">恢复</emphasis>是将计算机从节电模式中唤醒至正常操作。你可以按键盘或者单击鼠标将被挂起的计算机唤醒。你可以按电源"
 "键将休眠状态的计算机唤醒。"
 
-#: hardware/C/hardware.xml:546(para)
+#: hardware/C/hardware.xml:419(para)
 msgid ""
 "You can manually put your computer into a power-saving mode by pressing "
 "<menuchoice><guimenu>System</guimenu><guimenuitem>Quit...</guimenuitem></menu"
@@ -708,47 +709,50 @@ msgstr ""
 "你可以手动地将你的计算机切换入节电模式，按<menuchoice><guimenu>系统</guimenu><guimenuitem>退出...</gui"
 "menuitem></menuchoice>然后按合适的按钮。"
 
-#: hardware/C/hardware.xml:548(para)
+#: hardware/C/hardware.xml:421(para)
 msgid ""
 "Some computers may have problems going into certain power saving modes. The "
 "best way of checking if your computer can handle a power-saving mode is to "
-"try to switch into that mode and see if it behaves as you expected."
-msgstr "有些计算机可能切换节电模式时有问题。检查你的计算机能不能处理节电模式的最好办法是试图切换入那个模式，看它是否如希望的动作。"
+"try to switch to that mode and see if it behaves as you expected. Always "
+"make sure you save important documents before suspending or hibernating."
+msgstr ""
+"有些电脑可能确实进入节约功率的方式有问题,最好的检查方式如果你的电脑能够运行节约功率的方式尝试开关方式并且看它是否像你期待的表现那么好.在暂停或者休眠前始"
+"终确定你已经保存重要文档."
 
-#: hardware/C/hardware.xml:551(title)
+#: hardware/C/hardware.xml:424(title)
 msgid "Fixing problems with suspending, hibernating and resuming"
 msgstr "解决挂起、休眠和唤醒的问题"
 
-#: hardware/C/hardware.xml:552(para)
+#: hardware/C/hardware.xml:425(para)
 msgid ""
 "If your computer cannot suspend, hibernate or resume properly, there may be "
 "a number of things that you can try to get it working correctly."
 msgstr "如果你的计算机不能很好地挂起、休眠或者唤醒，那就有一些你需要处理来让他正确地运作。"
 
-#: hardware/C/hardware.xml:554(para)
+#: hardware/C/hardware.xml:427(para)
 msgid ""
 "Check the test report for your laptop, if one has been made (see <xref "
 "linkend=\"laptops-testing-reports\"/>)."
 msgstr "如果你做了检测（见<xref linkend=\"laptops-testing-reports\"/>)，检查你的膝上型机的检测报告。"
 
-#: hardware/C/hardware.xml:555(para)
+#: hardware/C/hardware.xml:428(para)
 msgid ""
 "Ask for assistance through an <ulink "
 "url=\"http://www.ubuntu.com/support/free\">Ubuntu support channel</ulink>."
 msgstr ""
 "通过一个<ulink url=\"http://www.ubuntu.com/support/free\">Ubuntu维护频道</ulink>请求帮助。"
 
-#: hardware/C/hardware.xml:560(title)
+#: hardware/C/hardware.xml:433(title)
 msgid "Power management settings"
 msgstr "电源管理设置"
 
-#: hardware/C/hardware.xml:561(para)
+#: hardware/C/hardware.xml:434(para)
 msgid ""
 "You may wish to change the power management settings of your laptop in order "
 "to help extend its battery life and reduce energy wastage."
 msgstr "你可能希望修改你的膝上型机的电源管理设置以期帮助延长电池的寿命和减少能耗。"
 
-#: hardware/C/hardware.xml:564(para)
+#: hardware/C/hardware.xml:437(para)
 msgid ""
 "Press "
 "<menuchoice><guimenu>System</guimenu><guimenuitem>Preferences</guimenuitem><g"
@@ -757,18 +761,18 @@ msgstr ""
 "点击<menuchoice><guimenu>系统</guimenu><guimenuitem>首选项</guimenuitem><guimenuitem"
 ">电源管理</guimenuitem></menuchoice>。"
 
-#: hardware/C/hardware.xml:567(para)
+#: hardware/C/hardware.xml:440(para)
 msgid "Change the settings as appropriate. Changes are applied instantly."
 msgstr "按合适的要求修改设置。修改立即生效，"
 
-#: hardware/C/hardware.xml:571(para)
+#: hardware/C/hardware.xml:444(para)
 msgid ""
 "Displaying a screensaver may use more power than simply letting the screen "
 "go blank. Turning off the screensaver could slightly improve the battery "
 "life of your laptop."
 msgstr "显示一个屏幕保护可能比直接显示一个空白屏幕用更多的电。关掉屏幕保护屏可以微弱地增加一点你膝上型机的电池寿命。"
 
-#: hardware/C/hardware.xml:574(para)
+#: hardware/C/hardware.xml:447(para)
 msgid ""
 "Press "
 "<menuchoice><guimenu>System</guimenu><guimenuitem>Preferences</guimenuitem><g"
@@ -777,7 +781,7 @@ msgstr ""
 "单击<menuchoice><guimenu>系统</guimenu><guimenuitem>首选项</guimenuitem><guimenuitem"
 ">屏幕保护</guimenuitem></menuchoice>"
 
-#: hardware/C/hardware.xml:577(para)
+#: hardware/C/hardware.xml:450(para)
 msgid ""
 "Change the <guilabel>Screensaver theme</guilabel> to <guilabel>Blank "
 "screen</guilabel>. This will simply display a blank screen as a screensaver."
@@ -785,7 +789,7 @@ msgstr ""
 "修改<guilabel>屏幕保护主题</guilabel>为<guilabel>空白屏幕</guilabel>。这样会简单地显示一个空白屏幕作为屏幕保护器"
 "。"
 
-#: hardware/C/hardware.xml:581(para)
+#: hardware/C/hardware.xml:454(para)
 msgid ""
 "When your laptop is running on battery, one of the biggest drains on power "
 "is the display. Turning the brightness of the display down could improve "
@@ -795,102 +799,45 @@ msgstr ""
 "如果你的膝上型机使用电池，用电最大之一就是显示器的电力。把显示器的亮度关小些可以大大增加电池的寿命；很多膝上型机让你按<keycombo><keycap>"
 "Fn</keycap><keycap>F7</keycap></keycombo>几次就行了。"
 
-#: hardware/C/hardware.xml:585(title) hardware/C/hardware.xml:686(ulink)
+#: hardware/C/hardware.xml:458(title) hardware/C/hardware.xml:546(ulink)
 msgid "Touchpads"
 msgstr "触摸屏"
 
-#: hardware/C/hardware.xml:586(para)
+#: hardware/C/hardware.xml:459(para)
 msgid ""
 "Most laptop computers come with a touchpad, which is used to control the "
 "mouse pointer. There are many ways of changing the way that the touchpad "
-"behaves; follow the instructions below to install an easy-to-use tool for "
-"changing touchpad settings."
-msgstr "大部分膝上型机有触摸屏，他是用来控制鼠标的。有很多方法来修改触摸屏的运转方式；遵照下面的指令安装一个易用的工具来修改触摸屏设置。"
+"behaves; the most basic touchpad settings can be configured in the following "
+"way."
+msgstr "大多数笔记本电脑有一个触摸板，是用来控制鼠标指针的。改变触摸板的运行有很多方法，大多数的触摸板基本设定可以从以下方式配置。"
 
-#: hardware/C/hardware.xml:588(para)
-msgid ""
-"Install the <application>gsynaptics</application> package from the "
-"<quote>Universe</quote> repository (see <ulink type=\"help\" url=\"ghelp:add-"
-"applications\">Add Applications</ulink>)."
-msgstr ""
-"从<quote>Universe</quote>库中安装<application>gsynaptics</application>(参见<ulink "
-"type=\"help\" url=\"ghelp:add-applications\">添加应用程序</ulink>)."
-
-#: hardware/C/hardware.xml:589(para)
-msgid ""
-"Press "
-"<menuchoice><guimenu>Applications</guimenu><guimenuitem>Accessories</guimenui"
-"tem><guimenuitem>Terminal</guimenuitem></menuchoice>."
-msgstr ""
-"单击<menuchoice><guimenu>应用程序</guimenu><guimenuitem>附件</guimenuitem><guimenuite"
-"m>终端</guimenuitem></menuchoice>。"
-
-#: hardware/C/hardware.xml:590(para)
-msgid ""
-"Type the following, entering your administrator password when prompted:"
-msgstr "输入如下指令，在提示时输入你的管理口令："
-
-#: hardware/C/hardware.xml:591(screen)
-#, no-wrap
-msgid ""
-"sudo cp /etc/X11/xorg.conf /etc/X11/xorg.conf.backup\n"
-"sudo gedit /etc/X11/xorg.conf"
-msgstr ""
-"sudo cp /etc/X11/xorg.conf /etc/X11/xorg.conf.backup\n"
-"sudo gedit /etc/X11/xorg.conf"
-
-#: hardware/C/hardware.xml:594(para)
-msgid "Find the section which begins with the following:"
-msgstr "找到如下开始的部分："
-
-#: hardware/C/hardware.xml:595(screen)
-#, no-wrap
-msgid ""
-"Section \"InputDevice\"\n"
-"Identifier\t\"Synaptics Touchpad\"\n"
-"Driver\t\t\"synaptics\""
-msgstr ""
-"小节 \"InputDevice\"\n"
-"识别符\t\"Synaptics Touchpad\"\n"
-"驱动\t\t\"synaptics\""
-
-#: hardware/C/hardware.xml:599(para)
-msgid ""
-"Insert the following line into the section, <emphasis>before</emphasis> the "
-"line which reads <quote>EndSection</quote>:"
-msgstr "在该节中插入如下内容， 在<quote>EndSection</quote>这一行<emphasis>前</emphasis>："
-
-#: hardware/C/hardware.xml:600(screen)
-#, no-wrap
-msgid "\tOption\t\t\"SHMConfig\"\t\t\"true\""
-msgstr "\tOption\t\t\"SHMConfig\"\t\t\"true\""
-
-#: hardware/C/hardware.xml:602(para)
-msgid ""
-"Save your changes to the file and close all currently running applications, "
-"saving your work as you do so."
-msgstr "保存修改至文件，关闭正在运行的程序，保存你的工作。"
-
-#: hardware/C/hardware.xml:603(para)
-msgid ""
-"Press "
-"<menuchoice><guimenu>System</guimenu><guimenuitem>Quit...</guimenuitem></menu"
-"choice> and select <guibutton>Log Out</guibutton>, and then log in again."
-msgstr ""
-"单击<menuchoice><guimenu>系统</guimenu><guimenuitem>退出...</guimenuitem></menuchoi"
-"ce>然后选择 <guibutton>退出登陆</guibutton>，然后重新登陆。"
-
-#: hardware/C/hardware.xml:604(para)
+#: hardware/C/hardware.xml:461(para)
 msgid ""
 "Press "
 "<menuchoice><guimenu>System</guimenu><guimenuitem>Preferences</guimenuitem><g"
-"uimenuitem>Touchpad</guimenuitem></menuchoice> and change the touchpad "
-"settings to your liking. Changes should take effect immediately."
+"uimenuitem>Mouse</guimenuitem></menuchoice>."
 msgstr ""
-"单击<menuchoice><guimenu>系统</guimenu><guimenuitem>首选项</guimenuitem><guimenuitem"
-">触摸板</guimenuitem></menuchoice>"
+"点击<menuchoice><guimenu>系统</guimenu><guimenuitem>首选项</guimenuitem><guimenuitem"
+">鼠标</guimenuitem></menuchoice>."
 
-#: hardware/C/hardware.xml:607(para)
+#: hardware/C/hardware.xml:462(para)
+msgid "Select the <guilabel>Touchpad</guilabel> tab."
+msgstr "选择<guilabel>Touchpad</guilabel> 页。"
+
+#: hardware/C/hardware.xml:463(para)
+msgid ""
+"Here you can change the touchpad settings to your liking. Changes should "
+"take effect immediately."
+msgstr "这里您能够更改您喜欢的触摸板设定，更改应该能够立即生效"
+
+#: hardware/C/hardware.xml:465(para)
+msgid ""
+"Some touchpads may be detected as normal mouse devices, even though they are "
+"actually touchpads. In this case, the <guilabel>Touchpad</guilabel> tab will "
+"not be available in the mouse preferences."
+msgstr "一些触摸板可能当作普通的鼠标设备能被发现,尽管它们是实际的触摸板.在这种情况下,触摸板标签在鼠标参数选择不会被有效的采用"
+
+#: hardware/C/hardware.xml:467(para)
 msgid ""
 "See the <ulink "
 "url=\"https://help.ubuntu.com/community/SynapticsTouchpad\">community "
@@ -900,11 +847,11 @@ msgstr ""
 "url=\"https://help.ubuntu.com/community/SynapticsTouchpad\">community "
 "support pages</ulink> 获得更多有关触摸板的信息。"
 
-#: hardware/C/hardware.xml:611(title)
+#: hardware/C/hardware.xml:471(title)
 msgid "Finding laptop testing reports"
 msgstr "搜索笔记本电脑检测报告"
 
-#: hardware/C/hardware.xml:612(para)
+#: hardware/C/hardware.xml:472(para)
 msgid ""
 "Many laptops are regularly tested by the Ubuntu community to ensure that "
 "various features work correctly. The results of these tests are available "
@@ -912,7 +859,7 @@ msgid ""
 "experiencing with your laptop."
 msgstr "很多笔记本电脑定期由Ubuntu社区检测确保各种特性正常工作。这些报告你可以查阅，由此可以查找你的伲上型机正遭遇的问题。"
 
-#: hardware/C/hardware.xml:614(para)
+#: hardware/C/hardware.xml:474(para)
 msgid ""
 "See the Laptop Testing <ulink "
 "url=\"https://wiki.ubuntu.com/LaptopTestingTeam\">community support "
@@ -921,7 +868,7 @@ msgstr ""
 "查阅笔记本电脑检测<ulink "
 "url=\"https://wiki.ubuntu.com/LaptopTestingTeam\">社区维护页</ulink>所有膝上型机测试报告。"
 
-#: hardware/C/hardware.xml:616(para)
+#: hardware/C/hardware.xml:476(para)
 msgid ""
 "You can participate in laptop testing yourself by contacting the <ulink "
 "url=\"https://wiki.ubuntu.com/LaptopTestingTeam\">Laptop Testing "
@@ -930,146 +877,147 @@ msgstr ""
 "你可以参加笔记本电脑的检测。请联络<ulink "
 "url=\"https://wiki.ubuntu.com/LaptopTestingTeam\">笔记本电脑检测小组</ulink>。"
 
-#: hardware/C/hardware.xml:621(title)
+#: hardware/C/hardware.xml:481(title)
 msgid "Mice and keyboards"
 msgstr "鼠标和键盘"
 
-#: hardware/C/hardware.xml:622(para)
+#: hardware/C/hardware.xml:482(para)
 msgid ""
 "This section provides instructions on using and configuring mice, keyboards "
 "and other input devices to make them more comfortable for you to use."
 msgstr "本节提高使用和配置鼠标，键盘和其他输入设备的操作方法，以使他们用起来更舒适。"
 
-#: hardware/C/hardware.xml:624(title)
+#: hardware/C/hardware.xml:484(title)
 msgid "Mice and other pointing devices"
 msgstr "鼠标和其他指点设备"
 
-#: hardware/C/hardware.xml:625(para)
+#: hardware/C/hardware.xml:485(para)
 msgid ""
 "You can change numerous options related to your mouse, such as how fast the "
 "pointer moves and how clicks are interpreted by the computer."
 msgstr "您可以修改鼠标的相关选项，诸如指针移动多快和计算机如何理解您的点击动作。"
 
-#: hardware/C/hardware.xml:628(ulink)
+#: hardware/C/hardware.xml:488(ulink)
 msgid "Mouse Skills"
 msgstr "鼠标技能"
 
-#: hardware/C/hardware.xml:629(para)
+#: hardware/C/hardware.xml:489(para)
 msgid ""
 "Information on basic mouse skills, such as pointing, clicking and dragging."
 msgstr "基本鼠标技能，诸如指点，单击和拖动。"
 
-#: hardware/C/hardware.xml:632(ulink)
+#: hardware/C/hardware.xml:492(ulink)
 msgid "Mouse Preferences"
 msgstr "鼠标首选项"
 
-#: hardware/C/hardware.xml:633(para)
+#: hardware/C/hardware.xml:493(para)
 msgid ""
 "Instructions on how to change various settings related to your mouse, such "
 "as whether the mouse is left-handed and how fast the pointer moves."
 msgstr "修改你的鼠标各种设置的操作方法，诸如鼠标是否是左手的，和鼠标移动速度等。"
 
-#: hardware/C/hardware.xml:636(ulink)
+#: hardware/C/hardware.xml:496(ulink)
 msgid "Accessibility - Configuring the Mouse"
 msgstr "可用性-配置鼠标"
 
-#: hardware/C/hardware.xml:637(para)
+#: hardware/C/hardware.xml:497(para)
 msgid ""
-"Information on changing mouse preferences for users of assitive technologies."
-msgstr "修改鼠标首选项的信息。"
+"Information on changing mouse preferences for users of assistive "
+"technologies."
+msgstr "关于为需要辅助技术的用户改变鼠标参数设置的信息"
 
-#: hardware/C/hardware.xml:640(ulink)
+#: hardware/C/hardware.xml:500(ulink)
 msgid "Accessibility - Configuring Alternative Pointing Devices"
 msgstr "易用性-配置替代用的指点设备"
 
-#: hardware/C/hardware.xml:641(para)
+#: hardware/C/hardware.xml:501(para)
 msgid "Information on using a pointing device other than a mouse."
 msgstr "使用鼠标以外的指点设备的信息。"
 
-#: hardware/C/hardware.xml:647(title)
+#: hardware/C/hardware.xml:507(title)
 msgid "Keyboards"
 msgstr "键盘"
 
-#: hardware/C/hardware.xml:648(para)
+#: hardware/C/hardware.xml:508(para)
 msgid ""
 "There are many options related to your keyboard which you can change, such "
 "as the keyboard language and keyboard shortcuts."
 msgstr "键盘有很多选项可以修改，诸如键盘语言和键盘快捷键。"
 
-#: hardware/C/hardware.xml:651(ulink)
+#: hardware/C/hardware.xml:511(ulink)
 msgid "Basic Keyboard Skills"
 msgstr "基本键盘技术"
 
-#: hardware/C/hardware.xml:652(para)
+#: hardware/C/hardware.xml:512(para)
 msgid "Information on basic keyboard usage."
 msgstr "基本键盘使用方法的信息"
 
-#: hardware/C/hardware.xml:655(ulink)
+#: hardware/C/hardware.xml:515(ulink)
 msgid "Keyboard Preferences"
 msgstr "键盘首选项"
 
-#: hardware/C/hardware.xml:656(para)
+#: hardware/C/hardware.xml:516(para)
 msgid ""
 "Change settings related to your keyboard, such as the layout of the keyboard."
 msgstr "修改键盘的设置，诸如键盘的布局。"
 
-#: hardware/C/hardware.xml:659(ulink)
+#: hardware/C/hardware.xml:519(ulink)
 msgid "Keyboard Indicator"
 msgstr "键盘指示器"
 
-#: hardware/C/hardware.xml:660(para)
+#: hardware/C/hardware.xml:520(para)
 msgid ""
 "The manual of the Keyboard Indicator, which allows you to change between "
 "different keyboard layouts."
 msgstr "键盘指示器手册，可以指导你在不同的键盘布局之间变换。"
 
-#: hardware/C/hardware.xml:663(ulink)
+#: hardware/C/hardware.xml:523(ulink)
 msgid "Accessibility - Configuring the Mouse and Keyboard"
 msgstr "易用性-配置鼠标和键盘"
 
-#: hardware/C/hardware.xml:664(para)
+#: hardware/C/hardware.xml:524(para)
 msgid ""
 "Information on configuring the mouse and keyboard for users of assistive "
 "technologies."
 msgstr "使用辅助技术配置鼠标和键盘的信息。"
 
-#: hardware/C/hardware.xml:667(ulink)
+#: hardware/C/hardware.xml:527(ulink)
 msgid "Using the Keyboard to Navigate the Desktop"
 msgstr "使用键盘浏览桌面"
 
-#: hardware/C/hardware.xml:668(para)
+#: hardware/C/hardware.xml:528(para)
 msgid "A guide on how to navigate the desktop using only a keyboard."
 msgstr "仅使用键盘浏览的指导。"
 
-#: hardware/C/hardware.xml:671(ulink)
+#: hardware/C/hardware.xml:531(ulink)
 msgid "Keyboard Accessibility Monitor"
 msgstr "键盘易用性监视器"
 
-#: hardware/C/hardware.xml:672(para)
+#: hardware/C/hardware.xml:532(para)
 msgid ""
 "The manual of the Keyboard Accessibility Monitor, which shows the status of "
 "any keyboard accessibility features which are turned on."
 msgstr "键盘易用性监视的手册，可以显示任何键盘在打开时的易用性特性。"
 
-#: hardware/C/hardware.xml:675(ulink)
+#: hardware/C/hardware.xml:535(ulink)
 msgid "Using the Character Palette"
 msgstr "使用字符面板"
 
-#: hardware/C/hardware.xml:676(para)
+#: hardware/C/hardware.xml:536(para)
 msgid ""
 "Use the Character Palette to insert letters and symbols which are not on "
 "your keyboard."
 msgstr "使用字符面板输入你键盘上没有的字母和符号。"
 
-#: hardware/C/hardware.xml:682(title)
+#: hardware/C/hardware.xml:542(title)
 msgid "Touchpads and graphics tablets"
 msgstr "触摸板和图示板"
 
-#: hardware/C/hardware.xml:683(para)
+#: hardware/C/hardware.xml:543(para)
 msgid "You can use a touchpad or graphics tablet to move a mouse pointer."
 msgstr "你可以使用触摸板或者图示板移动鼠标"
 
-#: hardware/C/hardware.xml:687(para)
+#: hardware/C/hardware.xml:547(para)
 msgid "Information on changing the settings of a laptop touchpad."
 msgstr "关于修改膝上机的触摸板的信息。"
 
@@ -1092,4 +1040,61 @@ msgstr ""
 "  kempson https://launchpad.net/~kempson\n"
 "  luojie-dune https://launchpad.net/~luojie-dune\n"
 "  marsteel https://launchpad.net/~magang\n"
+"  stone_unix https://launchpad.net/~gaoghy\n"
+"\n"
+"Launchpad Contributions:\n"
+"  ChenMing https://launchpad.net/~chenming\n"
+"  Dingar https://launchpad.net/~cndingar\n"
+"  Hongqian Xu https://launchpad.net/~hqxu\n"
+"  Johnson Zhu https://launchpad.net/~johnsonzhu888\n"
+"  Kempson Chen https://launchpad.net/~irain\n"
+"  Launchpad Translations Administrators https://launchpad.net/~rosetta-"
+"admins\n"
+"  Leiarix https://launchpad.net/~253305319\n"
+"  Tao Wei https://launchpad.net/~weitao1979\n"
+"  TaoFei https://launchpad.net/~taofei\n"
+"  Yue Liu https://launchpad.net/~redoak\n"
+"  donglixp https://launchpad.net/~donglixp\n"
+"  junglejia https://launchpad.net/~junglejia\n"
+"  luojie-dune https://launchpad.net/~luojie-dune\n"
+"  marsteel https://launchpad.net/~magang\n"
+"  stone_unix https://launchpad.net/~gaoghy\n"
+"\n"
+"Launchpad Contributions:\n"
+"  ChenMing https://launchpad.net/~chenming\n"
+"  Dingar https://launchpad.net/~cndingar\n"
+"  Hongqian Xu https://launchpad.net/~hqxu\n"
+"  Johnson Zhu https://launchpad.net/~johnsonzhu888\n"
+"  Kempson Chen https://launchpad.net/~irain\n"
+"  Launchpad Translations Administrators https://launchpad.net/~rosetta-"
+"admins\n"
+"  Leiarix https://launchpad.net/~253305319\n"
+"  Tao Wei https://launchpad.net/~weitao1979\n"
+"  TaoFei https://launchpad.net/~taofei\n"
+"  Tom Wei https://launchpad.net/~bnmgx9900\n"
+"  Yue Liu https://launchpad.net/~redoak\n"
+"  donglixp https://launchpad.net/~donglixp\n"
+"  grassvalley https://launchpad.net/~mlyppw\n"
+"  junglejia https://launchpad.net/~junglejia\n"
+"  luojie-dune https://launchpad.net/~luojie-dune\n"
+"  marsteel https://launchpad.net/~magang\n"
 "  stone_unix https://launchpad.net/~gaoghy"
+
+#~ msgid ""
+#~ "This document is maintained by the Ubuntu documentation team "
+#~ "(https://wiki.ubuntu.com/DocumentationTeam). For a list of contributors, see "
+#~ "the <ulink url=\"../../../common/C/contributors.xml\">contributors "
+#~ "page</ulink>"
+#~ msgstr ""
+#~ "本文档由 Ubuntu 文档团队（https://wiki.ubuntu.com/DocumentationTeam）维护。贡献者名单详见<ulink "
+#~ "url=\"../../../common/C/contributors.xml\">贡献者页面</ulink>。"
+
+#~ msgid "2004, 2005, 2006"
+#~ msgstr "2004, 2005, 2006"
+
+#~ msgid ""
+#~ "A copy of the license is available here: <ulink url=\"/usr/share/ubuntu-"
+#~ "docs/common/C/ccbysa.xml\">Creative Commons ShareAlike License</ulink>."
+#~ msgstr ""
+#~ "该授权许可的副本可以由这里获得：<ulink url=\"/usr/share/ubuntu-"
+#~ "docs/common/C/ccbysa.xml\">Creative Commons ShareAlike License</ulink>。"

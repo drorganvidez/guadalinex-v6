@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-docs\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2007-09-14 08:25+0100\n"
-"PO-Revision-Date: 2007-11-13 23:15+0000\n"
-"Last-Translator: Yaniv Abir <yanivabir@gmail.com>\n"
+"POT-Creation-Date: 2008-10-08 21:13+0100\n"
+"PO-Revision-Date: 2008-08-13 17:36+0000\n"
+"Last-Translator: Eyal Levin <eyalev@gmail.com>\n"
 "Language-Team: Hebrew <he@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2008-02-17 10:23+0000\n"
+"X-Launchpad-Export-Date: 2008-10-19 12:45+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 "X-Poedit-Language: Hebrew\n"
 
@@ -27,15 +27,16 @@ msgid "Adding and Removing Software"
 msgstr "הוספה והסרה של תוכנות"
 
 #: add-applications/C/add-applications-C.omf:9(date)
-msgid "2006-09-07"
-msgstr "2006-09-07"
+msgid "2008-02-16"
+msgstr "2008-02-16"
 
 #: add-applications/C/add-applications-C.omf:11(description)
-#, fuzzy
-msgid "Placeholder."
-msgstr "תופס המקום"
+msgid ""
+"Instructions on how to install and uninstall software, including information "
+"on package management."
+msgstr "הוראות כיצד להתקין ולהסביר תוכנות, כולל מידע על ניהול חבילות."
 
-#: add-applications/C/add-applications.xml:17(title)
+#: add-applications/C/add-applications.xml:15(title)
 msgid "Adding, Removing and Updating Applications"
 msgstr "הוספה, הסרה ועדכון תוכנות"
 
@@ -47,12 +48,8 @@ msgstr "תודות ורישיון"
 msgid ""
 "This document is maintained by the Ubuntu documentation team "
 "(https://wiki.ubuntu.com/DocumentationTeam). For a list of contributors, see "
-"the <ulink url=\"../../../common/C/contributors.xml\">contributors "
-"page</ulink>"
+"the <ulink url=\"../../libs/C/contributors.xml\">contributors page</ulink>"
 msgstr ""
-"המסמך הזה מתוחזק על ידי צוות התיעוד של אובונטו "
-"(https://wiki.ubuntu.com/DocumentationTeam). לרשימת התורמים, ראה <ulink "
-"url=\"../../../common/C/contributors.xml\">עמוד התורמים</ulink>"
 
 #: add-applications/C/add-applications.xml:5(para)
 msgid ""
@@ -81,33 +78,36 @@ msgstr ""
 #: add-applications/C/add-applications.xml:11(para)
 msgid ""
 "A copy of the license is available here: <ulink url=\"/usr/share/ubuntu-"
-"docs/common/C/ccbysa.xml\">Creative Commons ShareAlike License</ulink>."
+"docs/libs/C/ccbysa.xml\">Creative Commons ShareAlike License</ulink>."
 msgstr ""
-"עותק של רישיון זה זמין כאן: <ulink url=\"/usr/share/ubuntu-"
-"docs/common/C/ccbysa.xml\">Creative Commons ShareAlike License</ulink>."
 
 #: add-applications/C/add-applications.xml:14(year)
-msgid "2004, 2005, 2006"
-msgstr "2004, 2005, 2006"
+msgid "2008"
+msgstr ""
+
+#: add-applications/C/add-applications.xml:15(ulink)
+msgid "Ubuntu Documentation Project"
+msgstr "פרוייקט התיעוד של אובונטו"
 
 #: add-applications/C/add-applications.xml:15(holder)
-msgid "Canonical Ltd. and members of the Ubuntu Documentation Project"
-msgstr "קנוניקל בע\"מ וחברי מייזם התיעוד של אובונטו"
+msgid "Canonical Ltd. and members of the <placeholder-1/>"
+msgstr "קנוניקל בע\"מ וחברי ה<placeholder-1/>"
 
 #: add-applications/C/add-applications.xml:18(publishername)
 msgid "The Ubuntu Documentation Project"
 msgstr "מייזם התיעוד של אובונטו"
 
-#: add-applications/C/add-applications.xml:20(para)
+#: add-applications/C/add-applications.xml:18(para)
 msgid ""
-"In this section you can learn how to use a package manager to add or remove "
-"applications in Ubuntu with a few clicks. You can also learn about more "
-"advanced techniques of managing applications and discover some optional "
-"applications to add to Ubuntu and try."
+"This section discusses how applications are installed, removed and kept up "
+"to date. Also covered are how packages are stored by Ubuntu and made "
+"available for download."
 msgstr ""
-"בחלק זה תוכל ללמוד כיצד להשתמש במנהל החבילות על מנת להוסיף ולהסיר יישומים "
-"באובונטו באמצעות מספר לחיצות עכבר. כמו כן תוכל ללמוד אודות טכניקות מתקדמות "
-"לניהול יישומים, לגלות יישומים נוספים ולנסות אותם."
+
+#: add-applications/C/add-applications.xml:19(para)
+msgid ""
+"It also covers some more advanced techniques for managing applications."
+msgstr ""
 
 #: add-applications/C/add-applications.xml:22(title)
 msgid "What is a package manager?"
@@ -115,94 +115,98 @@ msgstr "מהו מנהל החבילות?"
 
 #: add-applications/C/add-applications.xml:23(para)
 msgid ""
-"A package manager is a program that installs and uninstalls software, and "
-"keeps track of all the components each piece of software needs."
+"A package manager is a program that you can use to install, remove and "
+"upgrade software. Software for Ubuntu is provided in the form of packages, "
+"which are automatically downloaded by the package manager."
 msgstr ""
-"מנהל החבילות הינה תוכנית המתקינה ומסירה תוכנות, ועוקבת אחר עדכונים למרכיבים "
-"השונים בכל תוכנה."
-
-#: add-applications/C/add-applications.xml:24(para)
-msgid ""
-"To add or remove applications in Ubuntu, you need to use a <emphasis>package "
-"manager</emphasis>. It will automatically download the software required "
-"from the Internet and install it."
-msgstr ""
-"על מנת להוסיף או להסיר יישומים באובונטו יש להשתמש ב- <emphasis>מנהל "
-"החבילות</emphasis>. תוכנית זו תוריד תוכנות נדרשות מהאינטרנט באופן אוטומטי "
-"ותתקין אותן."
-
-#: add-applications/C/add-applications.xml:25(para)
-msgid "There are three main package managers you can use in Ubuntu:"
-msgstr "ישנם שלושה מנהלי חבילות שעומדים לרשותך באובונטו:"
-
-#: add-applications/C/add-applications.xml:27(para)
-msgid ""
-"<link linkend=\"gnome-app-install\"><application>Add/Remove "
-"Programs</application></link> - The easiest way to install and uninstall "
-"programs."
-msgstr ""
-"<link linkend=\"gnome-app-install\"><application>הוספה/הסרה של "
-"תוכניות</application></link> - הדרך הפשוטה ביותר להתקנה והסרה של תוכניות."
 
 #: add-applications/C/add-applications.xml:28(para)
 msgid ""
-"<link linkend=\"synaptic\"><application>Synaptic</application></link> - "
-"Advanced control of software and other system components."
+"There are three main package management programs you can use in Ubuntu:"
 msgstr ""
-"<link linkend=\"synaptic\"><application>סינפטיק</application></link> - שליטה "
-"מתקדמת על תוכנה ורכיבי מערכת אחרים."
-
-#: add-applications/C/add-applications.xml:29(para)
-msgid ""
-"<link linkend=\"apt\"><application>Apt</application></link> - If you prefer "
-"using the Terminal."
-msgstr ""
-"<link linkend=\"apt\"><application>Apt</application></link> - אם ברצונך "
-"להשתמש במסוף."
-
-#: add-applications/C/add-applications.xml:32(para)
-msgid ""
-"If you open more than one of these programs at once, they may not work. "
-"Close them all and open just one."
-msgstr ""
-"אם תפתח יותר מאחת מהתוכניות בבת אחת, הן עלולות לא לעבוד. סגור את כולן ופתח "
-"רק אחת מהן."
 
 #: add-applications/C/add-applications.xml:34(para)
 msgid ""
-"You need administrative access to use any of these programs. See <ulink "
-"type=\"help\" url=\"ghelp:administrative\">Administrative Tasks</ulink> for "
-"more details."
+"<link linkend=\"gnome-app-install\">Add/Remove Applications</link> - Quickly "
+"installs and removes popular programs, as well as providing ratings."
 msgstr ""
-"נדרשות הרשאות מנהלתיות על מנת להשתמש בתוכנה כלשהי מהבאות. ראה <ulink "
-"type=\"help\" url=\"ghelp:administrative\">משימות ניהוליות</ulink> למידע "
-"נוסף."
 
-#: add-applications/C/add-applications.xml:38(title)
+#: add-applications/C/add-applications.xml:41(para)
+msgid ""
+"<link linkend=\"synaptic\">Synaptic</link> - Allows more advanced "
+"management, such as installing server applications and choosing different "
+"versions of the same package."
+msgstr ""
+
+#: add-applications/C/add-applications.xml:48(para)
+msgid ""
+"<link linkend=\"apt\">Apt</link> - Allows package management from the "
+"command line."
+msgstr ""
+
+#: add-applications/C/add-applications.xml:56(para)
+msgid ""
+"You can only use one package manager at a time. If you start another package "
+"manager while one is already open, you will receive an error message."
+msgstr ""
+
+#: add-applications/C/add-applications.xml:63(para)
+msgid ""
+"You will require administrative access to install and remove software. This "
+"is because packages sometimes need to change important system files. See "
+"<ulink type=\"help\" url=\"ghelp:administrative\">Administrative "
+"Tasks</ulink> for more information on administrative access."
+msgstr ""
+
+#: add-applications/C/add-applications.xml:71(title)
+msgid "Common package-management terms"
+msgstr ""
+
+#: add-applications/C/add-applications.xml:73(para)
+msgid ""
+"If you are unfamiliar with Ubuntu's package management system, you may like "
+"to take a look at some of the following definitions."
+msgstr ""
+
+#: add-applications/C/add-applications.xml:78(para)
+msgid ""
+"<emphasis role=\"strong\">Packages</emphasis> are files which contain a "
+"program and all of the files required to run it on your computer. When you "
+"install a package, a file is downloaded from a repository and installed by a "
+"package manager."
+msgstr ""
+
+#: add-applications/C/add-applications.xml:85(para)
+msgid ""
+"<emphasis role=\"strong\">Dependencies</emphasis> are packages which must be "
+"installed before certain other packages can be installed. Dependency "
+"packages usually contain some files and programs needed by the other "
+"packages - for example, a word-processing package may depend on a printing "
+"package being installed in order to be able to print documents."
+msgstr ""
+
+#: add-applications/C/add-applications.xml:97(title)
 msgid "Software repositories"
 msgstr "מאגרי תוכנות"
 
-#: add-applications/C/add-applications.xml:39(para)
+#: add-applications/C/add-applications.xml:98(para)
 msgid ""
-"A software repository is a place from which you can download and install "
-"software over the Internet."
-msgstr "ממאגר תוכנה ניתן להוריד ולהתקין תוכנה באמצעות האינטרנט."
+"When you install software on Ubuntu, the package manager automatically "
+"downloads the required software packages from a <emphasis>software "
+"repository</emphasis>, a location on the Internet which stores collections "
+"of packages ready to be downloaded."
+msgstr ""
 
-#: add-applications/C/add-applications.xml:40(para)
+#: add-applications/C/add-applications.xml:104(para)
 msgid ""
 "There are thousands of programs available to install on Ubuntu. These "
-"programs are stored in software archives (<emphasis>repositories</emphasis>) "
-"and are made freely available for installation over the Internet. This makes "
-"it very easy to install new programs in Linux, and it is also very secure, "
-"because each program you install is built specially for Ubuntu and checked "
-"before it is installed."
+"programs are stored in software repositories and are made freely available "
+"for all Ubuntu users. This makes it very easy to install new programs, and "
+"it is also very secure because each program you install is built specially "
+"for Ubuntu and checked before it is allowed into the repositories."
 msgstr ""
-"ישנן אלפי תוכניות זמינות להתקנה באובונטו. תוכניות אלו מאוכסנות בארכיוני "
-"תוכנה (<emphasis>מאגרים</emphasis>) וזמינות להתקנה באמצעות האינטרנט. בכך "
-"התקנת תוכניות חדשות בלינוקס נעשית קלה ביותר, ומאובטחת, מכיוון שכל תוכנה "
-"נבנית במיוחד לאובונטו ונבדקת לפני התקנתה."
 
-#: add-applications/C/add-applications.xml:41(para)
+#: add-applications/C/add-applications.xml:111(para)
 msgid ""
 "To organise the software, Ubuntu repositories are categorised into four "
 "groups: <emphasis>Main</emphasis>, <emphasis>Restricted</emphasis>, "
@@ -221,7 +225,7 @@ msgstr ""
 "<ulinkurl=\"http://www.ubuntu.com/ubuntu/philosophy\">פילוסופיית הקוד "
 "הפתוח</ulink>."
 
-#: add-applications/C/add-applications.xml:42(para)
+#: add-applications/C/add-applications.xml:120(para)
 msgid ""
 "The standard Ubuntu Install CD contains some software from the "
 "<emphasis>Main</emphasis> and <emphasis>Restricted</emphasis> categories."
@@ -229,7 +233,7 @@ msgstr ""
 "דיסק ההתקנה הבסיסי של אובונטו מכיל תוכנות מקטגוריות ה- "
 "<emphasis>Main</emphasis> וה- <emphasis>Restricted</emphasis>."
 
-#: add-applications/C/add-applications.xml:43(para)
+#: add-applications/C/add-applications.xml:124(para)
 msgid ""
 "If your system is connected to the Internet, many more software programs are "
 "made available for installation. For example, the <quote>Universe</quote> "
@@ -240,7 +244,7 @@ msgstr ""
 "מאגרי ה- <quote>Universe</quote> וה- <quote>Multiverse</quote> זמינים להתקנה "
 "רק באמצעות האינטרנט."
 
-#: add-applications/C/add-applications.xml:45(para)
+#: add-applications/C/add-applications.xml:132(para)
 msgid ""
 "The <emphasis>Multiverse</emphasis> repository contains software which has "
 "been classified as <emphasis>non-free</emphasis>. This software may not be "
@@ -253,7 +257,7 @@ msgstr ""
 "מסויימים. בהתקנת חבילה ממאגר זה, עליך לוודא שהחוקים במדינתך מתירים את השימוש "
 "בה. כמו כן, ייתכן ותוכנות אלו לא יכילו עדכוני אבטחה."
 
-#: add-applications/C/add-applications.xml:47(para)
+#: add-applications/C/add-applications.xml:142(para)
 msgid ""
 "You can find more information about the Repositories available <ulink "
 "url=\"http://www.ubuntu.com/ubuntu/components\">on the website</ulink>."
@@ -261,11 +265,11 @@ msgstr ""
 "ניתן למצוא מידע נוסף על מאגרי תוכנה <ulink "
 "url=\"http://www.ubuntu.com/ubuntu/components\">באתר האינטרנט</ulink>."
 
-#: add-applications/C/add-applications.xml:51(title)
+#: add-applications/C/add-applications.xml:148(title)
 msgid "Adding extra repositories"
 msgstr "הוספת מאגרים נוספים"
 
-#: add-applications/C/add-applications.xml:52(para)
+#: add-applications/C/add-applications.xml:149(para)
 msgid ""
 "It is possible to add extra repositories, such as those provided by third "
 "parties or those for older version of Ubuntu."
@@ -273,7 +277,7 @@ msgstr ""
 "ניתן להסיף מאגרים נוספים, כגון אלו המסופקים ע\"י צד שלישי או מגרסאות ישנות "
 "של אובונטו."
 
-#: add-applications/C/add-applications.xml:54(para)
+#: add-applications/C/add-applications.xml:155(para)
 msgid ""
 "Be careful when installing software from third-party repositories. It may "
 "not have been tested with Ubuntu and could cause your system to break."
@@ -281,38 +285,37 @@ msgstr ""
 "היה זהיר בהתקנת תוכנות ממאגרי צד-שלישי. יתכן שתוכנות כאלה לא נבדקו עם "
 "אובונטו והן עלולות לגרום לשבירת המערכת."
 
-#: add-applications/C/add-applications.xml:58(para)
+#: add-applications/C/add-applications.xml:164(para)
 msgid ""
 "Open "
 "<menuchoice><guimenu>System</guimenu><guimenuitem>Administration</guimenuitem"
 "><guimenuitem>Software Sources</guimenuitem></menuchoice> and press "
-"<guilabel>Third-Party Software</guilabel>."
+"<guilabel>Third Party Software</guilabel>."
 msgstr ""
 "פתח "
-"את<menuchoice><guimenu>מערכת</guimenu><guimenuitem>ניהול</guimenuitem><guimen"
-"uitem>מקורות תוכנה </guimenuitem></menuchoice> ולחץ <guilabel>תוכנות צד "
+"<menuchoice><guimenu>מערכת</guimenu><guimenuitem>ניהול</guimenuitem><guimenui"
+"tem>מקורות תוכנה</guimenuitem></menuchoice> ולחץ על <guilabel>תוכנות צד "
 "שלישי</guilabel>."
 
-#: add-applications/C/add-applications.xml:61(para)
+#: add-applications/C/add-applications.xml:170(para)
 msgid "Press <guibutton>Add</guibutton> to add a new repository."
 msgstr "לחץ <guibutton>הוסף</guibutton> להוספת מאגר חדש."
 
-#: add-applications/C/add-applications.xml:64(para)
-#, fuzzy
+#: add-applications/C/add-applications.xml:175(para)
 msgid ""
 "Enter the <guilabel>APT line</guilabel> for the extra repository. This "
 "should be available from the website of the repository or similar, and "
 "should look similar to the following:"
 msgstr ""
 "הכנס את ה- <guilabel>APT line</guilabel> בשביל מאגרים נוספים. אפשרות זו "
-"אמורה להיות זמינה מהמאגר של האתר או דומה לו, ואמור להיות דומה להלן:"
+"אמורה להיות זמינה מהמאגר של האתר או דומה לו, ואמורה להיות דומה לדוגמה שלהלן:"
 
-#: add-applications/C/add-applications.xml:65(screen)
+#: add-applications/C/add-applications.xml:180(screen)
 #, no-wrap
 msgid "deb http://ftp.debian.org etch main"
 msgstr "deb http://ftp.debian.org etch main"
 
-#: add-applications/C/add-applications.xml:67(para)
+#: add-applications/C/add-applications.xml:183(para)
 msgid ""
 "Press <guibutton>Add Source</guibutton> and then click "
 "<guibutton>Close</guibutton> to save your changes."
@@ -320,7 +323,15 @@ msgstr ""
 "לחץ <guibutton>הוסף מקור</guibutton> ואז לחץ <guibutton>סגור</guibutton> "
 "בכדי לשמור את השינויים."
 
-#: add-applications/C/add-applications.xml:69(para)
+#: add-applications/C/add-applications.xml:188(para)
+msgid ""
+"You will be notified that the information about available software is out-of-"
+"date. Press <guibutton>Reload</guibutton>."
+msgstr ""
+"תקבל התרעה שהמידע אודות התוכנות הזמינות לא מעודכן. לחץ <guibutton>טען "
+"מחדש</guibutton>."
+
+#: add-applications/C/add-applications.xml:194(para)
 msgid ""
 "Most software repositories use a GPG key to digitally sign the files they "
 "provide, which makes it easy to check that the files have not been tampered "
@@ -333,45 +344,92 @@ msgstr ""
 "לבדוק זאת, דרוש המפתח הציבורי שמתאים לחתימה. המפתח אמור להיות זמין להורדה "
 "באתר של המאגר."
 
-#: add-applications/C/add-applications.xml:71(para)
+#: add-applications/C/add-applications.xml:204(para)
 msgid ""
 "Once you have downloaded the GPG key, import the key by selecting the "
-"<guilabel>Authenticate</guilabel> tab, and clicking on <guibutton>Import Key "
-"File...</guibutton>, and then selecting the GPG key to be imported."
+"<guilabel>Authentication</guilabel> tab, clicking on <guibutton>Import Key "
+"File</guibutton>, and then selecting the GPG key to be imported."
 msgstr ""
-"לאחר שהורדת את מפתח ה-GPG, ייבא אותו באמצעות בחירה בלשונית "
-"<guilabel>אימות</guilabel>, ואז לחיצה על <guibutton>יבוא קובץ "
-"מפתח...</guibutton>, ואז בחירה במפתח ב-GPG שצריך לייבא."
+"לאחר שהורדת את מפתח ה GPG, ייבא את המפתח באמצעות בחירה בלשונית "
+"<guilabel>אימות</guilabel>, לחיצה על <guibutton>ייבוא קובץ מפתח</guibutton>, "
+"ובחירה במפתח ה GPG לייבוא."
 
-#: add-applications/C/add-applications.xml:73(para)
+#: add-applications/C/add-applications.xml:216(title)
+msgid "Restricted and non-free software"
+msgstr ""
+
+#: add-applications/C/add-applications.xml:217(para)
 msgid ""
-"Click <guibutton>Reload</guibutton> in the package manager to update the "
-"list of available packages."
+"Most of the software available for Ubuntu is free, open-source software. "
+"This software is free for anyone to install and use, and people can modify "
+"the software and redistribute it if they like. Ubuntu is built from this "
+"type of software."
 msgstr ""
-"לחץ <guibutton>טען מחדש</guibutton> במנהל החבילות בכדי לעדכן את רשימת "
-"החבילות הזמינות."
 
-#: add-applications/C/add-applications.xml:78(title)
+#: add-applications/C/add-applications.xml:223(para)
+msgid ""
+"<emphasis role=\"strong\">Non-free software</emphasis> is software which is "
+"not freely redistributable or modifiable. This makes it difficult for the "
+"Ubuntu developers to improve the software and correct problems, so it is "
+"normally recommended that you use <ulink "
+"url=\"http://www.ubuntu.com/ubuntu/philosophy\"> free software</ulink> "
+"instead."
+msgstr ""
+
+#: add-applications/C/add-applications.xml:230(para)
+msgid ""
+"<emphasis role=\"strong\">Restricted software</emphasis> is software which "
+"has restrictions on its use, preventing it from being classed as free "
+"software. Non-free software is a type of restricted software, where the "
+"restrictions are due to the software having a non-free license. Other "
+"reasons for software being classed as restricted include legal issues (use "
+"of some types of software is illegal in some countries) and patent issues "
+"(some software requires a patent license to be used legally)."
+msgstr ""
+
+#: add-applications/C/add-applications.xml:239(para)
+msgid ""
+"In some cases, restricted software is the only option. Such cases include "
+"software for the playback of certain audio and video formats, some fonts and "
+"<ulink type=\"help\" url=\"ghelp:hardware#restricted-manager\">drivers for "
+"some graphics cards</ulink>."
+msgstr ""
+
+#: add-applications/C/add-applications.xml:245(para)
+msgid ""
+"You should be warned by the package manager when you try to install "
+"restricted software. If the restricted software cannot be used legally in "
+"your country then there is little you can do; you should not install the "
+"software. If the software is restricted simply because it is non-free, you "
+"may choose to use it (for example, in the case of graphics card drivers). Be "
+"aware that most restricted software is not supported in Ubuntu, and problems "
+"with such software often cannot be corrected by Ubuntu developers."
+msgstr ""
+
+#: add-applications/C/add-applications.xml:256(para)
+msgid ""
+"Sometimes it is difficult to determine why a particular software package is "
+"restricted. If this is the case, seek advice on the <ulink "
+"url=\"http://ubuntuforums.org/\">Ubuntu Forums</ulink>. If you are still "
+"unable to determine why a package is restricted, err on the side of caution "
+"and do not install it; it may be illegal to use it in your country."
+msgstr ""
+
+#: add-applications/C/add-applications.xml:268(title)
 msgid "Add/Remove Applications"
 msgstr "התקנה/הסרה של ישומים"
 
-#: add-applications/C/add-applications.xml:79(para)
+#: add-applications/C/add-applications.xml:269(para)
 msgid ""
-"With the <guimenuitem>Add/Remove…</guimenuitem> item in the "
+"With the <guimenuitem>Add/Remove</guimenuitem> item in the "
 "<guimenu>Applications</guimenu> menu, you can install programs to do new "
-"things with Ubuntu. You can also remove programs you do not want. You need "
-"administrative access to use <application>Add/Remove Programs</application> "
-"(see <ulink type=\"help\" url=\"ghelp:administrative\">Administrative "
-"Tasks</ulink> for more details)."
+"things with Ubuntu. You can also remove programs which you do not want. You "
+"need administrative access to use <application>Add/Remove "
+"Applications</application> (see <ulink type=\"help\" "
+"url=\"ghelp:administrative\">Administrative Tasks</ulink> for more details)."
 msgstr ""
-"באמצעות פריט <guimenuitem>הוספה/הסרה...</guimenuitem> בתפריט "
-"<guimenu>יישומים</guimenu>, ניתן להתקין תוכניות שיבצעו דברים חדשים עם "
-"אובונטו. ניתן גם להסיר תוכניות אשר לא חפצים בהם. נדרשת הרשאה מנהל בכדי לגשת "
-"ל- <application>הוספה/הסרה של תוכניות</application> (ראה <ulink "
-"type=\"help\" url=\"ghelp:administrative\">משימות ניהוליות</ulink> למידע "
-"נוסף)."
 
-#: add-applications/C/add-applications.xml:80(para)
+#: add-applications/C/add-applications.xml:278(para)
 msgid ""
 "If you know the name of a program you want to install, enter it in the "
 "<guilabel>Search</guilabel> field. Otherwise, begin by choosing a software "
@@ -380,28 +438,26 @@ msgstr ""
 "אם ידוע לך שם התוכנית אותה אתה מעוניין להתקין, רשום אותה בשדה "
 "ה<guilabel>חיפוש</guilabel>. אחרת, התחל בבחירת קטגוריית תוכנה."
 
-#: add-applications/C/add-applications.xml:81(para)
+#: add-applications/C/add-applications.xml:283(para)
 msgid ""
-"Programs that are already installed begin with a check mark next to their "
-"name. Uncheck a program if you want to remove it from your computer."
+"Programs that are already installed have a check mark next to their name. "
+"Uncheck a program if you want to remove it from your computer."
 msgstr ""
-"תוכניות שכבר מותקנות יסומנו בתחילתן בסימן בחירה. הסר את סימן הבחירה אם "
-"ברצונך להסיר את התוכנית מהמחשב."
+"ליד שמן של תוכנות שכבר מותקנות קיים סימן ביקורת. בטל את הסימן אם אתה רוצה "
+"להסיר אותן מהמחשב שלך."
 
-#: add-applications/C/add-applications.xml:82(para)
+#: add-applications/C/add-applications.xml:287(para)
 msgid ""
-"When you click <guibutton>Apply</guibutton> or <guibutton>OK</guibutton>, "
-"any new software will be downloaded from the Internet, and Ubuntu will make "
-"the changes you selected. If you have not activated the online package "
-"archive, you may be asked to insert your Ubuntu CD-ROM to install some "
-"packages."
+"When you click <guibutton>Apply Changes</guibutton>, any new software will "
+"be downloaded from the Internet, and Ubuntu will make any other changes you "
+"selected. If you have not activated the online package archive, you may be "
+"asked to insert your Ubuntu CD-ROM to install some packages."
 msgstr ""
-"בלחיצה על <guibutton>החל</guibutton> או <guibutton>אישור</guibutton>, תוכנות "
-"חדשות יורדו מהאינטרנט ואובונטו יבצע את השינויים שסימנת. במידה ולא הפעלת את "
-"ארכיון החבילות המקוון, ייתכן ותדרש להכניס את תקליטור אובונטו בכדי להתקין "
-"מספר חבילות."
+"בלחיצה על <guibutton>החל שינויים</guibutton>, כל התוכנות החדשות יורדו "
+"מהאינטרנט, ואובונטו תבצע את כל השינויים שנבחרו. אם ארכיון החבילות המקוון לא "
+"הופעל, ייתכן ותצטרך להכניס את הדיסק של אובונטו על מנת להתקין חבילות מסויימות."
 
-#: add-applications/C/add-applications.xml:83(para)
+#: add-applications/C/add-applications.xml:293(para)
 msgid ""
 "Some software cannot be installed or removed using <application>Add/Remove "
 "Applications</application>. If you cannot find the package you are looking "
@@ -413,11 +469,11 @@ msgstr ""
 "החבילות המתקדם <application>Synaptic</application> (ראה <xref "
 "linkend=\"advanced\"/>)."
 
-#: add-applications/C/add-applications.xml:87(title)
+#: add-applications/C/add-applications.xml:302(title)
 msgid "Installing packages without an Internet connection"
 msgstr "התקנת חבילות ללא חיבור אינטרנט"
 
-#: add-applications/C/add-applications.xml:88(para)
+#: add-applications/C/add-applications.xml:303(para)
 msgid ""
 "Other than using tools that download packages automatically, it is also "
 "possible to use a CD to install packages through a package manager while not "
@@ -433,11 +489,11 @@ msgstr ""
 "בנוסף, באמצעות התוכנית <application>APTonCD</application> ניתן לגבות חבילות "
 "על המחשב וליצור תקליטורים המכילים תוכן של מאגרים שונים."
 
-#: add-applications/C/add-applications.xml:90(title)
+#: add-applications/C/add-applications.xml:314(title)
 msgid "Installing packages using the Ubuntu installation CD"
 msgstr "התקנת חבילות באמצעות דיסק ההתקנה של אובונטו"
 
-#: add-applications/C/add-applications.xml:91(para)
+#: add-applications/C/add-applications.xml:315(para)
 msgid ""
 "Some packages from the <emphasis>main</emphasis> and "
 "<emphasis>restricted</emphasis> Ubuntu package repositories can be installed "
@@ -446,103 +502,68 @@ msgid ""
 "<menuchoice><guimenu>System</guimenu><guimenuitem>Administration</guimenuitem"
 "><guimenuitem>Synaptic Package Manager</guimenuitem></menuchoice>. To list "
 "only packages on the Ubuntu installation CD, click on the "
-"<guibutton>Origin</guibutton> button in the lower left corner of "
-"<application>Synaptic Package Manager</application>. The packages are listed "
-"under the <guimenuitem>Ubuntu 7.10_Gutsy Gibbon</guimenuitem> section."
+"<guibutton>Origin</guibutton> button in the lower left corner of the "
+"Synaptic window. The packages should be listed under the <guimenuitem>Ubuntu "
+"8.10_Intrepid_Ibex</guimenuitem> section."
 msgstr ""
-"מספר חבילות ממאגרי החבילות <emphasis>main</emphasis> ו- "
-"<emphasis>restricted</emphasis> ניתנות להתקנה מתקליטור ההתקנה של אובונטו. "
-"פשוט הכנס את תקליטור ההתקנה של אובונטו ופתח "
-"<menuchoice><guimenu>מערכת</guimenu><guimenuitem>ניהול</guimenuitem><guimenui"
-"tem>מנהל החבילות Synaptic</guimenuitem></menuchoice>. בכדי לסמן חבילות "
-"הנמצאות על תקליטור ההתקנה של אובונטו בלבד, לחץ על כפתור "
-"<guibutton>מקור</guibutton> בפינה השמאלית תחתונה של <application>מנהל "
-"החבילות Synaptic</application>. החבילות רשומות תחת הסעיף <guimenuitem>Ubuntu "
-"7.10_Gutsy Gibbon</guimenuitem>."
 
-#: add-applications/C/add-applications.xml:92(para)
+#: add-applications/C/add-applications.xml:325(para)
 msgid ""
 "If the packages are not listed, it may be because the CD is not listed as a "
 "package repository (the CD should be listed as a repository by default). To "
-"add the CD as a package repository:"
+"add the CD as a package repository, follow the instructions in <xref "
+"linkend=\"repository-cds\"/>, below."
 msgstr ""
-"אם החבילות לא מופיעות ברשימה, אולי התקליטור לא מוגדר כמאגר חבילות (התקליטור "
-"צריך להיות מוגדר כך כברירת מחדל). כדי להוסיף את התקליטור כמאגר חבילות:"
+"אם החבילות אינן רשומות, יתכן וזה מכיוון שהתקליטור לא רשום כמאגר (התקליטור "
+"צריך להיות רשום כמאגר כברירת מחדל). להוספת התקליטור למאגר, עקוב אחר ההוראות "
+"ב: <xref linkend=\"repository-cds\"/>, למטה."
 
-#: add-applications/C/add-applications.xml:95(para)
-msgid "Eject the CD."
-msgstr "הוצא את הדיסק."
-
-#: add-applications/C/add-applications.xml:98(para)
-msgid ""
-"Open the <emphasis>Software Sources</emphasis> dialog by selecting "
-"<guimenuitem>Repositories</guimenuitem> from the <guimenu>Settings</guimenu> "
-"menu of <application>Synaptic Package Manager</application>."
-msgstr ""
-
-#: add-applications/C/add-applications.xml:101(para) add-applications/C/add-applications.xml:120(para)
-msgid ""
-"Go to the Third-Party Software tab and click on the <guibutton>Add CD-"
-"ROM</guibutton> button."
-msgstr ""
-"לך ללשונית תוכנת צד-שלישי ולחץ על הכפתור <guibutton>הוסף תקליטור</guibutton>."
-
-#: add-applications/C/add-applications.xml:104(para)
-msgid "Insert the CD."
-msgstr "הכנס את התקליטור."
-
-#: add-applications/C/add-applications.xml:107(para)
-msgid "The packages should then be listed."
-msgstr "החבילה אמורה להיות רשומה"
-
-#: add-applications/C/add-applications.xml:110(title)
+#: add-applications/C/add-applications.xml:334(title)
 msgid "Enabling other CDs that can be used to install packages"
 msgstr "מאפשר תקליטור אחר שניתן להתקין באמצעותו חבילות"
 
-#: add-applications/C/add-applications.xml:111(para)
+#: add-applications/C/add-applications.xml:335(para)
 msgid ""
-"To enable <application>Synaptic</application> to install packages from CDs "
+"To enable Synaptic and other package managers to install software from CDs "
 "which contain packages:"
 msgstr ""
-"בכדי לאפשר ל- <application>Synaptic</application> להתקין חבילות מתקליטורים "
-"שמכילים חבילות:"
 
-#: add-applications/C/add-applications.xml:114(para)
+#: add-applications/C/add-applications.xml:342(para)
 msgid ""
-"Open "
-"<menuchoice><guimenu>System</guimenu><guimenuitem>Administration</guimenuitem"
-"><guimenuitem>Synaptic Package Manager</guimenuitem></menuchoice>."
+"Press "
+"<menuchoice><guimenuitem>System</guimenuitem><guimenuitem>Administration</gui"
+"menuitem><guimenuitem>Software Sources</guimenuitem></menuchoice>."
 msgstr ""
-"פתח את "
-"<menuchoice><guimenu>System</guimenu><guimenuitem>Administration</guimenuitem"
-"><guimenuitem>Synaptic Package Manager</guimenuitem></menuchoice>."
+"לחץ "
+"<menuchoice><guimenuitem>System</guimenuitem><guimenuitem>Administration</gui"
+"menuitem><guimenuitem>Software Sources</guimenuitem></menuchoice> (מערכת - "
+"ניהול - מקורות תוכנה)."
 
-#: add-applications/C/add-applications.xml:117(para)
+#: add-applications/C/add-applications.xml:350(para)
 msgid ""
-"Open the <emphasis>Software Sources</emphasis> tool by selecting "
-"<guimenuitem>Repositories</guimenuitem> from the <guimenu>Settings</guimenu> "
-"menu of <application>Synaptic Package Manager</application>."
+"Go to the <guilabel>Third Party Software</guilabel> tab and click on the "
+"<guibutton>Add CD-ROM</guibutton> button."
 msgstr ""
+"לך ללשונית <guilabel>תוכנות צד שלישי</guilabel> ולחץ על הכפתור "
+"<guibutton>הוסף תקליטור</guibutton>."
 
-#: add-applications/C/add-applications.xml:123(para)
-msgid "Insert the CD which contains the packages."
-msgstr "הכנס את התקליטור שמכיל את החבילות."
+#: add-applications/C/add-applications.xml:356(para)
+msgid "Insert the CD."
+msgstr "הכנס את התקליטור."
 
-#: add-applications/C/add-applications.xml:126(para)
+#: add-applications/C/add-applications.xml:362(para)
 msgid ""
-"The packages should then be listed. To have "
-"<application>Synaptic</application> only list packages from the CD, click "
-"the <guibutton>Origin</guibutton> button on the lower left corner of "
-"<application>Synaptic Package Manager</application>, then find the name of "
-"the CD on the list on the upper left corner of "
-"<application>Synaptic</application>."
+"The packages should then be listed. To have Synaptic only list packages from "
+"the CD, click the <guibutton>Origin</guibutton> button on the lower left "
+"corner of the Synaptic window and then find the name of the CD in the list "
+"in the upper left corner the window."
 msgstr ""
 
-#: add-applications/C/add-applications.xml:129(title)
+#: add-applications/C/add-applications.xml:371(title)
 msgid "Using APTonCD to install packages"
 msgstr "משתמש ב- APTonCD בכדי להתקין חבילות"
 
-#: add-applications/C/add-applications.xml:130(para)
+#: add-applications/C/add-applications.xml:372(para)
 msgid ""
 "<application>APTonCD</application> can be used to create a CD that contains "
 "all the packages you have on your system, or it can create CDs with packages "
@@ -550,19 +571,22 @@ msgid ""
 "<application>Synaptic</application>, find the <emphasis>aptoncd</emphasis> "
 "package and install it."
 msgstr ""
+"באמצעות <application>APTonCD</application> ניתן ליצור תקליטור שמכיל את כל "
+"החבילות הנמצאות במערכת שלך, או ליצור תקליטורים עם חבילות או מאגרים שלמים "
+"לבחירתך. במנהל חבילות כגון <application>Synaptic</application>, מצא את "
+"החבילה <emphasis>aptoncd</emphasis> והתקן אותה."
 
-#: add-applications/C/add-applications.xml:131(para)
+#: add-applications/C/add-applications.xml:379(para)
 msgid ""
-"Further documentation on <application>APTonCD</application> can be found on "
-"it's website, <ulink "
-"url=\"http://aptoncd.sourceforge.net\">aptoncd.sourceforge.net</ulink>"
+"Further documentation on APTonCD can be found on its website, <ulink "
+"url=\"http://aptoncd.sourceforge.net\"> aptoncd.sourceforge.net</ulink>"
 msgstr ""
 
-#: add-applications/C/add-applications.xml:136(title)
+#: add-applications/C/add-applications.xml:388(title)
 msgid "Advanced package management"
-msgstr "מנהל חבילות מתקדם"
+msgstr "ניהול חבילות מתקדם"
 
-#: add-applications/C/add-applications.xml:137(para)
+#: add-applications/C/add-applications.xml:389(para)
 msgid ""
 "Several other package managers exist in Ubuntu. These contain more advanced "
 "features than <application>Add/Remove Applications</application>."
@@ -570,11 +594,11 @@ msgstr ""
 "קיימים מנהלי חבילות נוספים באובונטו. הם מכילים יותר אפשרויות מתקדמות מאשר ב- "
 "<application>הוספה/הסרה של יישומים</application>."
 
-#: add-applications/C/add-applications.xml:139(title)
+#: add-applications/C/add-applications.xml:395(title)
 msgid "Synaptic Package Manager"
 msgstr "מנהל החבילות Synaptic"
 
-#: add-applications/C/add-applications.xml:140(para)
+#: add-applications/C/add-applications.xml:396(para)
 msgid ""
 "<application>Synaptic</application> is an advanced package management "
 "application that can install and remove every package available to your "
@@ -587,82 +611,36 @@ msgstr ""
 "תוכניות</application>, אך מציג מידע רב יותר ונותן לך שליטה מלאה על התוכנות "
 "במחשב שלך."
 
-#: add-applications/C/add-applications.xml:141(para)
+#: add-applications/C/add-applications.xml:403(para)
 msgid ""
-"To launch <application>Synaptic</application>, press "
+"To launch Synaptic, press "
 "<menuchoice><guimenu>System</guimenu><guimenuitem>Administration</guimenuitem"
-"><guimenuitem>Synaptic Package Manager</guimenuitem></menuchoice>. You need "
-"administrative access to use <application>Synaptic</application>. See <ulink "
-"type=\"help\" url=\"ghelp:administrative\">Administrative Tasks</ulink> for "
-"more details."
+"><guimenuitem>Synaptic Package Manager</guimenuitem></menuchoice>. You will "
+"need administrative access to use it; see <ulink type=\"help\" "
+"url=\"ghelp:administrative\"> Administrative Tasks</ulink> for more details."
 msgstr ""
 
-#: add-applications/C/add-applications.xml:143(para)
+#: add-applications/C/add-applications.xml:408(para)
 msgid ""
-"If you know the name of the package you want to install or remove, click the "
-"<guibutton>Search</guibutton> button, and enter the package name or a short "
-"search term. You can also search for packages by description (for example, "
-"you can find all packages mentioning "
-"<quote><wordasword>arcade</wordasword></quote> or "
-"<quote><wordasword>mathematics</wordasword></quote>)."
-msgstr ""
-"אם הינך יודע את החבילה שברצונך להתקין או להסיר, לחץ על כפתור "
-"<guibutton>חיפוש</guibutton>, והכנס את שם החבילה או מילת חיפוש קצרה. כמו כן "
-"ניתן לחפש חבילות על פי תיאור (לדוגמא, ניתן למצוא את כל החבילות המזכירות את "
-"המונח <quote><wordasword>arcade</wordasword></quote> או "
-"<quote><wordasword>mathematics</wordasword></quote>)."
-
-#: add-applications/C/add-applications.xml:144(para)
-msgid ""
-"Use the categories on the left to filter the list of packages. To return to "
-"the list of categories after doing a search, click "
-"<guibutton>Sections</guibutton>."
-msgstr ""
-"בחר בקטגוריות בכדי לסנן את רשימת החבילות. לחזרה לרשימת הקטגוריות לאחר "
-"החיפוש, לחץ <guibutton>Sections</guibutton>."
-
-#: add-applications/C/add-applications.xml:145(para)
-msgid ""
-"To install a package, click the box next to it and choose <guimenuitem>Mark "
-"for installation</guimenuitem>. If you change your mind, choose "
-"<guimenuitem>Unmark</guimenuitem>."
-msgstr ""
-"כדי להתקין חבילה, לחץ על התיבה שלידה ובחר <guimenuitem>סמן "
-"להתקנה</guimenuitem>. אם אתה משנה את דעתך, בחר <guimenuitem>בטל "
-"סימון</guimenuitem>."
-
-#: add-applications/C/add-applications.xml:146(para)
-msgid ""
-"To remove a package that is already installed, choose <guimenuitem>Mark for "
-"Removal</guimenuitem>."
-msgstr ""
-"כדי להסיר חבילה שכבר מותקנת, בחר <guimenuitem>סמן להסרה</guimenuitem>."
-
-#: add-applications/C/add-applications.xml:147(para)
-msgid ""
-"When you have finished, click <guibutton>Apply</guibutton> and Ubuntu will "
-"make the changes you selected. If you do not want to make any changes, close "
-"the window instead."
+"See the <ulink type=\"help\" url=\"ghelp:synaptic#synaptic-single\"> "
+"Synaptic manual</ulink> for more information on managing packages with "
+"Synaptic."
 msgstr ""
 
-#: add-applications/C/add-applications.xml:150(title)
+#: add-applications/C/add-applications.xml:416(title)
 msgid "Command-line package management with APT"
 msgstr "ניהול חבילות דרך שורת הפקודה עם APT"
 
-#: add-applications/C/add-applications.xml:151(para)
+#: add-applications/C/add-applications.xml:417(para)
 msgid ""
 "If you are comfortable using the Terminal, you can use "
 "<application>apt</application> (Advanced Packaging Tool) to install or "
-"remove software. You need administrative access to use "
-"<application>apt</application>. See <ulink type=\"help\" "
-"url=\"ghelp:administrative\">Administrative Tasks</ulink> for more details."
+"remove software. You need administrative access to use apt; see <ulink "
+"type=\"help\" url=\"ghelp:administrative\"> Administrative Tasks</ulink> for "
+"more details."
 msgstr ""
-"אם נוח לך השימוש במסוף, ניתן להשתמש בפקודת <application>apt</application> "
-"(Advanced Packaging Tool) להתקנה או הסרה של תוכנות. נדרשות הרשאות ניהוליות "
-"לשימוש ב- <application>apt</application>. ראה <ulink type=\"help\" "
-"url=\"ghelp:administrative\">משימות ניהול</ulink>למידע נוסף."
 
-#: add-applications/C/add-applications.xml:158(para)
+#: add-applications/C/add-applications.xml:424(para)
 msgid ""
 "To update the local list of packages, enter in a Terminal: <screen>sudo apt-"
 "get update</screen>"
@@ -670,12 +648,12 @@ msgstr ""
 "לעדכון רשימה מקומית של חבילות תוכנה, רשום בטרמינל: <screen>sudo apt-get "
 "update</screen>"
 
-#: add-applications/C/add-applications.xml:162(para)
+#: add-applications/C/add-applications.xml:428(para)
 msgid ""
 "To install all available updates: <screen>sudo apt-get upgrade</screen>"
 msgstr "להתקנת כל העדכונים הזמינים: <screen>sudo apt-get upgrade</screen>"
 
-#: add-applications/C/add-applications.xml:166(para)
+#: add-applications/C/add-applications.xml:432(para)
 msgid ""
 "To search for a package: <screen>apt-cache search "
 "<replaceable>package</replaceable></screen>"
@@ -683,7 +661,7 @@ msgstr ""
 "בכדי לחפש חבילה: <screen>apt-cache search "
 "<replaceable>package</replaceable></screen>"
 
-#: add-applications/C/add-applications.xml:170(para)
+#: add-applications/C/add-applications.xml:436(para)
 msgid ""
 "To install a package: <screen>sudo apt-get install "
 "<replaceable>package</replaceable></screen>"
@@ -691,7 +669,7 @@ msgstr ""
 "בכדי להתקין חבילה: <screen>sudo apt-get install "
 "<replaceable>package</replaceable></screen>"
 
-#: add-applications/C/add-applications.xml:174(para)
+#: add-applications/C/add-applications.xml:440(para)
 msgid ""
 "To remove a package: <screen>sudo apt-get remove "
 "<replaceable>package</replaceable></screen>"
@@ -699,7 +677,14 @@ msgstr ""
 "להסיר חבילה: <screen>sudo apt-get remove "
 "<replaceable>package</replaceable></screen>"
 
-#: add-applications/C/add-applications.xml:178(para)
+#: add-applications/C/add-applications.xml:444(para)
+msgid ""
+"To remove a package and all its dependancies (that are not in use by other "
+"programs): <screen>sudo apt-get autoremove "
+"<replaceable>package</replaceable></screen>"
+msgstr ""
+
+#: add-applications/C/add-applications.xml:449(para)
 msgid ""
 "To list other <application>apt</application> commands and options: "
 "<screen>apt-get help</screen>"
@@ -707,17 +692,18 @@ msgstr ""
 "להצגת רשימת פקודות ואפשרויות של <application>apt</application>: <screen>apt-"
 "get help</screen>"
 
-#: add-applications/C/add-applications.xml:182(para)
+#: add-applications/C/add-applications.xml:453(para)
 msgid ""
 "For more information, see the <ulink url=\"http://www.debian.org/doc/user-"
-"manuals#apt-howto\">Debian <application>apt</application> manual</ulink>."
+"manuals#apt-howto\">Debian apt manual</ulink> and the <ulink url=\"man:apt-"
+"get\">apt-get manual page</ulink>."
 msgstr ""
 
-#: add-applications/C/add-applications.xml:186(title)
+#: add-applications/C/add-applications.xml:462(title)
 msgid "Installing a single package file"
 msgstr "התקנת קובץ חבילה יחיד"
 
-#: add-applications/C/add-applications.xml:187(para)
+#: add-applications/C/add-applications.xml:463(para)
 msgid ""
 "The preferred method of installing programs is via the package managers "
 "described in this chapter. However, although the Ubuntu package archives are "
@@ -729,13 +715,13 @@ msgstr ""
 "למרות שארכיוני החבילות של אובונטו גדולים ביותר, ייתכן ותרצה להתקין חבילות "
 "שאינן זמינות שם. במקרה זה, ניתן גם להוריד ולהקין קבצים מרשת האינטרנט."
 
-#: add-applications/C/add-applications.xml:195(para)
+#: add-applications/C/add-applications.xml:471(para)
 msgid ""
 "It is important to ensure that any files you download come from a safe "
 "source before installing them."
 msgstr "לפני ההתקנה חשוב לוודא שהקבצים להורדה מגיעים ממקור בטוח."
 
-#: add-applications/C/add-applications.xml:199(para)
+#: add-applications/C/add-applications.xml:475(para)
 msgid ""
 "There are many different kinds of Linux package files. Most of these are "
 "associated with the package managers of specific Linux distributions. "
@@ -746,12 +732,18 @@ msgid ""
 "class=\"extension\">.tar</filename> files) and <filename "
 "class=\"extension\">.run</filename> files."
 msgstr ""
+"ישנם פורמטים רבים של חבילות לינוקס. רובם מקושרים עם מנהל חבילות של הפצת "
+"לינוקס מסויימת. לדוגמא, חבילת דביאן (קובצי <filename "
+"class=\"extension\">.deb</filename>), חבילות RPM (קובצי <filename "
+"class=\"extension\">.rpm</filename>), <emphasis>קבצים דחוסים</emphasis>, "
+"(קובצי <filename class=\"extension\">.tar</filename>) וקבצי <filename "
+"class=\"extension\">.run</filename>."
 
-#: add-applications/C/add-applications.xml:211(para)
+#: add-applications/C/add-applications.xml:487(para)
 msgid "This section deals with installing these single files."
 msgstr "חלק זה דן בהתקנת קבצים יחידים אלו."
 
-#: add-applications/C/add-applications.xml:215(para)
+#: add-applications/C/add-applications.xml:491(para)
 msgid ""
 "It is not guaranteed that these files will be compatible with your system "
 "and you will not receive security updates if you install these files. For "
@@ -763,11 +755,11 @@ msgstr ""
 "תתקין קצבים אלו. מסיבות אלו, אם ברצונך להתקין תוכנית, השתמש תמיד בחבילות "
 "אובונטו מקוריות הזמינות במנהל החבילות, במידה וקיימות כאלו."
 
-#: add-applications/C/add-applications.xml:225(title)
-msgid "Install/uninstall <filename class=\"extension\">.deb</filename> files"
-msgstr "התקנה/הסרה של קבצי <filename class=\"extension\">.deb</filename>"
+#: add-applications/C/add-applications.xml:501(title)
+msgid "Installing/uninstalling .deb files"
+msgstr ""
 
-#: add-applications/C/add-applications.xml:226(para)
+#: add-applications/C/add-applications.xml:502(para)
 msgid ""
 "These files are <emphasis>Debian packages</emphasis>. The package files "
 "associated with Ubuntu have the <filename "
@@ -777,92 +769,131 @@ msgid ""
 "class=\"extension\">.deb</filename> file. See <ulink type=\"help\" "
 "url=\"ghelp:administrative\">Administrative Tasks</ulink> for more details."
 msgstr ""
+"קבצים אלה הם <emphasis>חבילות דביאן</emphasis>. קבצי החבילות המזוהים עם "
+"אובונטו הם בעלי הסיומת <filename class=\"extension\">.deb</filename> בגלל "
+"הקשר ההדוק בין אובונטו להפצת הלינוקס דביאן. על מנת להתקין קבצים מסוג זה עליך "
+"להשתמש בהרשאות ניהוליות. ראה <ulink type=\"help\" "
+"url=\"ghelp:administrative\">משימות ניהוליות</ulink> לפרטים נוספים."
 
-#: add-applications/C/add-applications.xml:236(para)
+#: add-applications/C/add-applications.xml:512(para)
 msgid ""
 "To install a <filename class=\"extension\">.deb</filename> file, double-"
 "click on it. If you prefer using the Terminal, enter: <screen>sudo dpkg -i "
 "<replaceable>package_file.deb</replaceable></screen>"
 msgstr ""
+"כדי להתקין קובץ מסוג <filename class=\"extension\">.deb</filename>, לחץ עליו "
+"פעמיים. אם אתה מעדיף להשתמש במסוף, הקלד: <screen>sudo dpkg -i "
+"<replaceable>package_file.deb</replaceable></screen>"
 
-#: add-applications/C/add-applications.xml:240(para)
+#: add-applications/C/add-applications.xml:516(para)
 msgid ""
-"To uninstall a <filename class=\"extension\">.deb</filename> file, deselect "
-"it in your package manager. Or from a Terminal, enter: <screen>sudo dpkg -r "
+"You can use your package manager to uninstall a <filename "
+"class=\"extension\">.deb</filename> file once it has been installed. "
+"Alternatively, enter the following in a Terminal: <screen>sudo dpkg -r "
 "<replaceable>package_name</replaceable></screen>"
 msgstr ""
+"אתה יכול להשתמש במנהל החבילות שלך על מנת להסיר קבצי <filename "
+"class=\"extension\">.deb</filename> לאחר שהותקנו. לחילופין, הכנס את הפקודה "
+"הבאה במסוף: <screen>sudo dpkg -r "
+"<replaceable>package_name</replaceable></screen>"
 
-#: add-applications/C/add-applications.xml:247(title)
-msgid ""
-"Convert <filename class=\"extension\">.rpm</filename> files to <filename "
-"class=\"extension\">.deb</filename> files"
+#: add-applications/C/add-applications.xml:524(title)
+msgid "Converting .rpm files to .deb files"
 msgstr ""
-"המרת קבצי <filename class=\"extension\">.rpm</filename> לקבצי <filename "
-"class=\"extension\">.deb</filename>"
 
-#: add-applications/C/add-applications.xml:250(para)
+#: add-applications/C/add-applications.xml:525(para)
 msgid ""
-"Another type of package files is <emphasis>Red Hat Package "
-"Manager</emphasis> files which have the <filename "
-"class=\"extension\">.rpm</filename> suffix. It is not recommended to install "
-"these on an Ubuntu system. In almost all cases, a native Ubuntu <filename "
+"Another type of package is the <emphasis>Red Hat Package Manager</emphasis> "
+"(RPM) file. These have the <filename class=\"extension\">.rpm</filename> "
+"suffix. It is not recommended to install these on an Ubuntu system. In "
+"almost all cases, a native Ubuntu <filename "
 "class=\"extension\">.deb</filename> package is available. However, if "
 "absolutely necessary, an <filename class=\"extension\">.rpm</filename> file "
 "can be converted to a <filename class=\"extension\">.deb</filename> package "
-"using the program <application>alien</application>. The resulting <filename "
-"class=\"extension\">.deb</filename> file will be installed using dpkg as "
-"indicated above."
+"using the <application>alien</application> application. The resulting "
+"<filename class=\"extension\">.deb</filename> file can be installed as "
+"described above."
 msgstr ""
+"סוג נוסף של חבילות הוא <emphasis>פורמט מנהל החבילות של Red Hat </emphasis> "
+"(RPM) חבילות אלו הם בעלות הסיומת <filename "
+"class=\"extension\">.rpm</filename>. מומלץ שלא להתקין חבילות אלו על מערכת "
+"אובונטו. ברוב המקרים תהיה זמינה גם חבילת אובונטו. (סיומת <filename "
+"class=\"extension\">.deb</filename>) במקרה והדבר הכרחי, ניתן להמיר את חבילת "
+"ה<filename class=\"extension\">.rpm</filename> לחבילת <filename "
+"class=\"extension\">.deb</filename> באמצעות הישום "
+"<application>alien</application> ניתן להתקין את החבילה החדשה מסוג <filename "
+"class=\"extension\">.deb</filename> כפי שתואר לעיל."
 
-#: add-applications/C/add-applications.xml:265(para)
+#: add-applications/C/add-applications.xml:538(para)
+msgid ""
+"To convert an RPM into a <filename class=\"extension\">.deb</filename>:"
+msgstr ""
+"כדי להמיר קובץ RPM לקובץ <filename class=\"extension\">.deb</filename>:"
+
+#: add-applications/C/add-applications.xml:544(para)
 msgid "Install the <application>alien</application> package."
 msgstr "התקן את חבילת <application>alien</application>"
 
-#: add-applications/C/add-applications.xml:268(para)
+#: add-applications/C/add-applications.xml:549(para)
 msgid ""
 "In a Terminal, enter: <screen>sudo alien "
 "<replaceable>package_file.rpm</replaceable></screen>"
 msgstr ""
-"במסוף הכנס: <screen>sudo alien "
+"הכנס במסוף: <screen>sudo alien "
 "<replaceable>package_file.rpm</replaceable></screen>"
 
-#: add-applications/C/add-applications.xml:276(title)
-msgid "Install <emphasis>tarballs</emphasis>"
-msgstr "התקן <emphasis>tarballs</emphasis>"
+#: add-applications/C/add-applications.xml:558(title)
+msgid "Installing <emphasis>tarballs</emphasis>"
+msgstr "התקנת <emphasis>tarballs</emphasis>"
 
-#: add-applications/C/add-applications.xml:277(para)
+#: add-applications/C/add-applications.xml:559(para)
 msgid ""
 "Files with the <filename class=\"extension\">.tar</filename>, <filename "
 "class=\"extension\">.tgz</filename>, <filename "
 "class=\"extension\">.tar.gz</filename> or <filename "
 "class=\"extension\">.tar.bz2</filename> suffix are package files known as "
-"<emphasis>tarballs</emphasis> which are widely used in Linux and Unix."
+"<emphasis>tarballs</emphasis>, and are widely used in Linux and Unix to "
+"package software. Tarballs can also be used to archive and compress other "
+"files."
 msgstr ""
+"קבצים עם סיומת <filename class=\"extension\">.tar</filename>, <filename "
+"class=\"extension\">.tgz</filename>, <filename "
+"class=\"extension\">.tar.gz</filename> או <filename "
+"class=\"extension\">.tar.bz2</filename> הם קבצים דחוסים, (tarballs) ובשימוש "
+"נרחב במערכות לינוקס ויוניקס בחבילות תוכנה. קבצים דחוסים יכולים לשמש גם "
+"לכיווץ סוגי קבצים אחרים."
 
-#: add-applications/C/add-applications.xml:283(para)
+#: add-applications/C/add-applications.xml:568(para)
 msgid ""
 "If there is no native Ubuntu package available in any of the Ubuntu "
 "repositories, you can use the command line to install or uninstall the "
 "tarball file."
 msgstr ""
-"במידה ולא קיימת חבילת תוכנה מקומית במאגרים של אובונטו, ניתן להשתמש בשורת "
+"במידה ולא קיימת חבילת תוכנה מקורית במאגרים של אובונטו, ניתן להשתמש בשורת "
 "הפקודה להתקין או להסיר את קובץ ה- tarball."
 
-#: add-applications/C/add-applications.xml:285(para)
+#: add-applications/C/add-applications.xml:573(para)
 msgid ""
 "The first step will be to uncompress and extract the tarball. If it is a "
 "<emphasis>.tgz</emphasis> or a <emphasis>.tar.gz</emphasis>, in a Terminal "
 "enter: <screen>tar xfvz <replaceable>tarball_name</replaceable></screen>"
 msgstr ""
+"הצעד הראשון יהיה לחלץ ולפרוס את קובץ ה- TAR הדחוס. אם הקובץ הוא בעל סיומת "
+"<emphasis>.tgz</emphasis> או <emphasis>.tar.gz</emphasis>, יש להקליד במסוף "
+"את הפקודה: <screen>tar xfvz "
+"<replaceable>שם_הקובץ_הדחוס</replaceable></screen>"
 
-#: add-applications/C/add-applications.xml:289(para)
+#: add-applications/C/add-applications.xml:579(para)
 msgid ""
 "Then it will be necessary to follow the instructions that come with the "
 "package. These are generally located in the extracted tarball in a file "
 "called <filename>README</filename> or <filename>INSTALL</filename>."
 msgstr ""
+"יש צורך לעקוב אחר הוראות ההדרכה שבאות יחד עם החבילה. ההוראות ממוקמות בדרך "
+"כלל  בקובץ הנקרא  <filename>README</filename> או "
+"<filename>INSTALL</filename>. הנמצא בתוך קובץ ה- TAR הדחוס."
 
-#: add-applications/C/add-applications.xml:295(para)
+#: add-applications/C/add-applications.xml:585(para)
 msgid ""
 "Tarballs often contain the source code of the program, and need to be "
 "<emphasis>compiled</emphasis> in order to be used."
@@ -870,21 +901,18 @@ msgstr ""
 "לעיתים קבצי Tarball מכילים את קוד המקור של התוכנית, ונדרש להדר אותם (To "
 "Compile) בכדי שניתן יהיה להשתמש בהם."
 
-#: add-applications/C/add-applications.xml:298(para)
+#: add-applications/C/add-applications.xml:590(para)
 msgid ""
 "Compiling programs requires some packages that are not installed by default. "
-"You can install these all at once by installing the <application>build-"
-"essential</application> package."
+"You can install most of these all at once by installing the <ulink "
+"url=\"apt:build-essential\">build-essential</ulink> package."
 msgstr ""
-"הידור תוכניות דורש מספר חבילות שלא מותקנות כברירת מחדל. את כל החבילות ניתן "
-"להתקין במקשה אחת באמצעות התקנת החבילה <application>build-"
-"essential</application>."
 
-#: add-applications/C/add-applications.xml:302(title)
-msgid "Install <filename class=\"extension\">.run</filename> packages"
-msgstr "התקן חבילות <filename class=\"extension\">.run</filename>"
+#: add-applications/C/add-applications.xml:600(title)
+msgid "Install .run packages"
+msgstr ""
 
-#: add-applications/C/add-applications.xml:303(para)
+#: add-applications/C/add-applications.xml:601(para)
 msgid ""
 "Sometimes you may need to install software (most often a game) which has "
 "been packaged as a .run file. These files contain the software and a small "
@@ -893,55 +921,59 @@ msgstr ""
 "לעיתים ייתכן ותדרש להתקין תוכנה (לרוב משחק) אשר נארזה כקובץ .run . קבצים אלו "
 "מכילים את התוכנה ותוכנית קטנה להתקנת התוכנה."
 
-#: add-applications/C/add-applications.xml:304(para)
+#: add-applications/C/add-applications.xml:606(para)
 msgid ""
 "Follow the procedure below to install software packaged in a <filename "
 "class=\"extension\">.run</filename> file:"
 msgstr ""
+"עקוב אחר התהליך למטה בכדי להתקין חבילות תוכנה בקובץ <filename "
+"class=\"extension\">.run</filename>:"
 
-#: add-applications/C/add-applications.xml:308(para)
+#: add-applications/C/add-applications.xml:613(para)
 msgid ""
 "Find the <filename class=\"extension\">.run</filename> file in the "
 "<application>File Browser</application>"
 msgstr ""
+"מצא את קובץ ה<filename class=\"extension\">.run</filename> "
+"ב<application>File Browser</application>."
 
-#: add-applications/C/add-applications.xml:309(para)
+#: add-applications/C/add-applications.xml:619(para)
 msgid "Right-click the file and select <guilabel>Properties</guilabel>"
-msgstr ""
+msgstr "לחיצה ימנית על קובת ובחירת <guilabel>Properties</guilabel> (העדפות)."
 
-#: add-applications/C/add-applications.xml:310(para)
+#: add-applications/C/add-applications.xml:624(para)
 msgid ""
 "Under the <guilabel>Permissions</guilabel> tab, make sure that "
 "<guilabel>Allow executing file as program</guilabel> is checked and press "
 "<guibutton>Close</guibutton>"
 msgstr ""
+"תחת אזור ה<guilabel>Permissions</guilabel> (הרשאות), תוודא ש<guilabel>Allow "
+"executing file as program</guilabel> מסומן ולחץ <guibutton>Close</guibutton> "
+"(סגור)"
 
-#: add-applications/C/add-applications.xml:311(para)
+#: add-applications/C/add-applications.xml:631(para)
 msgid ""
-"Double-click the <filename class=\"extension\">.run</filename> file to open "
-"it. A dialog box should appear"
+"Double-click the <filename class=\"extension\">.run</filename> file and "
+"press <guibutton>Run in Terminal</guibutton> to run the installer"
 msgstr ""
-"לחץ פעמיים על קובץ <filename class=\"extension\">.run</filename> לפתיחה. "
-"תיבת דו-שיח אמורה להופיע"
+"לחץ לחיצה כפולה על קובץ ה<filename class=\"extension\">.run</filename> ובחר "
+"<guibutton>Run in Terminal</guibutton> (הרץ בטרמינל) על מנת להפעיל את תוכנית "
+"ההתקנה"
 
-#: add-applications/C/add-applications.xml:312(para)
-msgid "Press <guibutton>Run in Terminal</guibutton> to run the installer"
-msgstr "לחץ <guibutton>הרץ במסוף</guibutton> בכדי להריץ את אשף ההתקנה"
-
-#: add-applications/C/add-applications.xml:313(para)
+#: add-applications/C/add-applications.xml:638(para)
 msgid ""
-"A <application>Terminal</application> window will open. Follow any "
-"instructions on-screen to install the program"
+"A Terminal window will open. Follow any instructions on-screen to install "
+"the program"
 msgstr ""
-"חלון <application>מסוף</application> ייפתח. עקוב אחר ההוראות על המסך בכדי "
-"להתקין את התוכנית"
 
-#: add-applications/C/add-applications.xml:316(para)
+#: add-applications/C/add-applications.xml:646(para)
 msgid ""
 "Once you have started the installer, it may take a while to display an "
 "installation screen. This is normally due to the installer extracting all of "
 "the files from the .run file ready for use."
 msgstr ""
+"אחרי שתוכנית ההתקנה החלה, עלול לקחת זמן מה עד שיוצג מסך תצוגה להתקנה. זה "
+"נורמלי בגלל שתוכנית ההתקנה פורסת תחילה את כל הקבצים מתוך קובץ הrun."
 
 #. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2.
 #: add-applications/C/add-applications.xml:0(None)
@@ -958,4 +990,219 @@ msgstr ""
 "  Eyal Levin https://launchpad.net/~eyalev\n"
 "  Hezy Amiel https://launchpad.net/~hezy\n"
 "  Yaniv Abir https://launchpad.net/~yanivabir\n"
+"  shezif https://launchpad.net/~shezif\n"
+"\n"
+"Launchpad Contributions:\n"
+"  Eli Daian https://launchpad.net/~elidaian\n"
+"  Eyal Levin https://launchpad.net/~eyalev\n"
+"  Hezy Amiel https://launchpad.net/~hezy\n"
+"  Ofir Klinger https://launchpad.net/~klinger-ofir\n"
+"  Shedokan https://launchpad.net/~shedokan\n"
+"  Yaniv Abir https://launchpad.net/~yanivabir\n"
+"  shezif https://launchpad.net/~shezif\n"
+"\n"
+"Launchpad Contributions:\n"
+"  Eli Daian https://launchpad.net/~elidaian\n"
+"  Eyal Levin https://launchpad.net/~eyalev\n"
+"  Hezy Amiel https://launchpad.net/~hezy\n"
+"  Launchpad Translations Administrators https://launchpad.net/~rosetta-"
+"admins\n"
+"  Netanel_h https://launchpad.net/~eets1\n"
+"  Ofir Klinger https://launchpad.net/~klinger-ofir\n"
+"  Yaniv Abir https://launchpad.net/~yanivabir\n"
+"  eyalfisher https://launchpad.net/~eyalf2005\n"
 "  shezif https://launchpad.net/~shezif"
+
+#~ msgid ""
+#~ "You need administrative access to use any of these programs. See <ulink "
+#~ "type=\"help\" url=\"ghelp:administrative\">Administrative Tasks</ulink> for "
+#~ "more details."
+#~ msgstr ""
+#~ "נדרשות הרשאות מנהלתיות על מנת להשתמש בתוכנה כלשהי מהבאות. ראה <ulink "
+#~ "type=\"help\" url=\"ghelp:administrative\">משימות ניהוליות</ulink> למידע "
+#~ "נוסף."
+
+#~ msgid ""
+#~ "<link linkend=\"synaptic\"><application>Synaptic</application></link> - "
+#~ "Advanced control of software and other system components."
+#~ msgstr ""
+#~ "<link linkend=\"synaptic\"><application>סינפטיק</application></link> - שליטה "
+#~ "מתקדמת על תוכנה ורכיבי מערכת אחרים."
+
+#~ msgid ""
+#~ "To add or remove applications in Ubuntu, you need to use a <emphasis>package "
+#~ "manager</emphasis>. It will automatically download the software required "
+#~ "from the Internet and install it."
+#~ msgstr ""
+#~ "על מנת להוסיף או להסיר יישומים באובונטו יש להשתמש ב- <emphasis>מנהל "
+#~ "החבילות</emphasis>. תוכנית זו תוריד תוכנות נדרשות מהאינטרנט באופן אוטומטי "
+#~ "ותתקין אותן."
+
+#~ msgid ""
+#~ "To remove a package that is already installed, choose <guimenuitem>Mark for "
+#~ "Removal</guimenuitem>."
+#~ msgstr ""
+#~ "כדי להסיר חבילה שכבר מותקנת, בחר <guimenuitem>סמן להסרה</guimenuitem>."
+
+#~ msgid ""
+#~ "To enable <application>Synaptic</application> and other package managers to "
+#~ "install software from CDs which contain packages:"
+#~ msgstr ""
+#~ "כדי לאפשר את <application>Synaptic</application> ומנהלי חבילות אחרים כדי "
+#~ "להתקין תוכנה מתקליטורים שמכילים חבילות."
+
+#~ msgid "There are three main package managers you can use in Ubuntu:"
+#~ msgstr "ישנם שלושה מנהלי חבילות שעומדים לרשותך באובונטו:"
+
+#~ msgid ""
+#~ "This document is maintained by the Ubuntu documentation team "
+#~ "(https://wiki.ubuntu.com/DocumentationTeam). For a list of contributors, see "
+#~ "the <ulink url=\"../../../common/C/contributors.xml\">contributors "
+#~ "page</ulink>"
+#~ msgstr ""
+#~ "המסמך הזה מתוחזק על ידי צוות התיעוד של אובונטו "
+#~ "(https://wiki.ubuntu.com/DocumentationTeam). לרשימת התורמים, ראה <ulink "
+#~ "url=\"../../../common/C/contributors.xml\">עמוד התורמים</ulink>"
+
+#~ msgid ""
+#~ "Installing/uninstalling <filename class=\"extension\">.deb</filename> files"
+#~ msgstr "התקנת/הסרת קבצי <filename class=\"extension\">.deb</filename>"
+
+#~ msgid ""
+#~ "A <application>Terminal</application> window will open. Follow any "
+#~ "instructions on-screen to install the program"
+#~ msgstr ""
+#~ "חלון <application>מסוף</application> ייפתח. עקוב אחר ההוראות על המסך בכדי "
+#~ "להתקין את התוכנית"
+
+#~ msgid ""
+#~ "If you open more than one of these programs at once, they may not work. "
+#~ "Close them all and open just one."
+#~ msgstr ""
+#~ "אם תפתח יותר מאחת מהתוכניות בבת אחת, הן עלולות לא לעבוד. סגור את כולן ופתח "
+#~ "רק אחת מהן."
+
+#~ msgid ""
+#~ "There are thousands of programs available to install on Ubuntu. These "
+#~ "programs are stored in software archives (<emphasis>repositories</emphasis>) "
+#~ "and are made freely available for installation over the Internet. This makes "
+#~ "it very easy to install new programs in Linux, and it is also very secure, "
+#~ "because each program you install is built specially for Ubuntu and checked "
+#~ "before it is installed."
+#~ msgstr ""
+#~ "ישנן אלפי תוכניות זמינות להתקנה באובונטו. תוכניות אלו מאוכסנות בארכיוני "
+#~ "תוכנה (<emphasis>מאגרים</emphasis>) וזמינות להתקנה באמצעות האינטרנט. בכך "
+#~ "התקנת תוכניות חדשות בלינוקס נעשית קלה ביותר, ומאובטחת, מכיוון שכל תוכנה "
+#~ "נבנית במיוחד לאובונטו ונבדקת לפני התקנתה."
+
+#~ msgid ""
+#~ "Use the categories on the left to filter the list of packages. To return to "
+#~ "the list of categories after doing a search, click "
+#~ "<guibutton>Sections</guibutton>."
+#~ msgstr ""
+#~ "בחר בקטגוריות בכדי לסנן את רשימת החבילות. לחזרה לרשימת הקטגוריות לאחר "
+#~ "החיפוש, לחץ <guibutton>Sections</guibutton>."
+
+#~ msgid ""
+#~ "To install a package, click the box next to it and choose <guimenuitem>Mark "
+#~ "for installation</guimenuitem>. If you change your mind, choose "
+#~ "<guimenuitem>Unmark</guimenuitem>."
+#~ msgstr ""
+#~ "כדי להתקין חבילה, לחץ על התיבה שלידה ובחר <guimenuitem>סמן "
+#~ "להתקנה</guimenuitem>. אם אתה משנה את דעתך, בחר <guimenuitem>בטל "
+#~ "סימון</guimenuitem>."
+
+#~ msgid ""
+#~ "In this section you can learn how to use a package manager to add or remove "
+#~ "applications in Ubuntu with a few clicks. You can also learn about more "
+#~ "advanced techniques of managing applications and discover some optional "
+#~ "applications which you can add to Ubuntu."
+#~ msgstr ""
+#~ "בחלק הזה ניתן ללמוד איך להשתמש במנהל החבילות כדי להוסיף או להסיר יישומים "
+#~ "באובונטו במספר לחיצות. ניתן גם ללמוד אודות טכניקות מתקדמות יותר של ניהול "
+#~ "יישומים ולגלות עוד כמה יישומים אפשריים שניתן להוסיף לאובונטו."
+
+#~ msgid "2004, 2005, 2006"
+#~ msgstr "2004, 2005, 2006"
+
+#~ msgid ""
+#~ "Further documentation on <application>APTonCD</application> can be found on "
+#~ "its website, <ulink "
+#~ "url=\"http://aptoncd.sourceforge.net\">aptoncd.sourceforge.net</ulink>"
+#~ msgstr ""
+#~ "ניתן למצוא מידע נוסף אודות <application>APTonCD</application> באתר האינטרנט "
+#~ "שלו, <ulink "
+#~ "url=\"http://aptoncd.sourceforge.net\">aptoncd.sourceforge.net</ulink>"
+
+#~ msgid "Install <filename class=\"extension\">.run</filename> packages"
+#~ msgstr "התקן חבילות <filename class=\"extension\">.run</filename>"
+
+#~ msgid ""
+#~ "A copy of the license is available here: <ulink url=\"/usr/share/ubuntu-"
+#~ "docs/common/C/ccbysa.xml\">Creative Commons ShareAlike License</ulink>."
+#~ msgstr ""
+#~ "עותק של רישיון זה זמין כאן: <ulink url=\"/usr/share/ubuntu-"
+#~ "docs/common/C/ccbysa.xml\">Creative Commons ShareAlike License</ulink>."
+
+#~ msgid ""
+#~ "<link linkend=\"apt\"><application>Apt</application></link> - If you prefer "
+#~ "using the Terminal."
+#~ msgstr ""
+#~ "<link linkend=\"apt\"><application>Apt</application></link> - אם ברצונך "
+#~ "להשתמש במסוף."
+
+#~ msgid ""
+#~ "A software repository is a place from which you can download and install "
+#~ "software over the Internet."
+#~ msgstr "ממאגר תוכנה ניתן להוריד ולהתקין תוכנה באמצעות האינטרנט."
+
+#~ msgid ""
+#~ "With the <guimenuitem>Add/Remove</guimenuitem> item in the "
+#~ "<guimenu>Applications</guimenu> menu, you can install programs to do new "
+#~ "things with Ubuntu. You can also remove programs you do not want. You need "
+#~ "administrative access to use <application>Add/Remove "
+#~ "Applications</application> (see <ulink type=\"help\" "
+#~ "url=\"ghelp:administrative\">Administrative Tasks</ulink> for more details)."
+#~ msgstr ""
+#~ "עם פריט ה<guimenuitem>התקנה/הסרה</guimenuitem> בתפריט "
+#~ "ה<guimenu>יישומים</guimenu>, אתה יכול להתקין תוכנות כדי לעשות דברים חדשים "
+#~ "באובונטו. אתה גם יכול להסיר תוכנות שאתה לא רוצה. אתה צריך הרשאות מנהליות כדי "
+#~ "להשתמש ב<guimenuitem>התקנה/הסרה</guimenuitem> (ראה <ulink type=\"help\" "
+#~ "url=\"ghelp:administrative\">משימות מנהלתיות</ulink> לפרטים נוספים)."
+
+#~ msgid ""
+#~ "A package manager is a program that installs and uninstalls software, and "
+#~ "keeps track of all the components each piece of software needs."
+#~ msgstr ""
+#~ "מנהל החבילות הינה תוכנית המתקינה ומסירה תוכנות, ועוקבת אחר עדכונים למרכיבים "
+#~ "השונים בכל תוכנה."
+
+#~ msgid ""
+#~ "<link linkend=\"gnome-app-install\"><application>Add/Remove "
+#~ "Applications</application></link> - The easiest way to install and uninstall "
+#~ "programs."
+#~ msgstr ""
+#~ "<link linkend=\"gnome-app-install\"><application>התקנה/הסרה של "
+#~ "יישומים</application></link> - הדרך הקלה ביותר להתקנת ולהסרת תוכנות."
+
+#~ msgid ""
+#~ "If you know the name of the package you want to install or remove, click the "
+#~ "<guibutton>Search</guibutton> button, and enter the package name or a short "
+#~ "search term. You can also search for packages by description (for example, "
+#~ "you can find all packages mentioning "
+#~ "<quote><wordasword>arcade</wordasword></quote> or "
+#~ "<quote><wordasword>mathematics</wordasword></quote>)."
+#~ msgstr ""
+#~ "אם הינך יודע את החבילה שברצונך להתקין או להסיר, לחץ על כפתור "
+#~ "<guibutton>חיפוש</guibutton>, והכנס את שם החבילה או מילת חיפוש קצרה. כמו כן "
+#~ "ניתן לחפש חבילות על פי תיאור (לדוגמא, ניתן למצוא את כל החבילות המזכירות את "
+#~ "המונח <quote><wordasword>arcade</wordasword></quote> או "
+#~ "<quote><wordasword>mathematics</wordasword></quote>)."
+
+#~ msgid ""
+#~ "When you have finished, click <guibutton>Apply</guibutton> and Ubuntu will "
+#~ "make the changes you selected. If you do not want to make any changes, close "
+#~ "the window instead."
+#~ msgstr ""
+#~ "בסיום לחץ <guibutton>החל</guibutton> ואובונטו יבצע את השינויים שבחרת. אם "
+#~ "אינך מעוניין לבצע שינויים, סגור את החלון."

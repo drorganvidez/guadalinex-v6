@@ -7,6 +7,17 @@
 	<div id="header">
 	<div id="logo-floater"><h1><a href="http://help.ubuntu.com" title="Ubuntu Documentation"><img alt="Ubuntu" id="logo" src="https://help.ubuntu.com/htdocs/ubuntunew/img/logo.png" /></a></h1>
 	</div>
+<form action="https://help.ubuntu.com/search.html" id="cse-search-box">
+  <div>
+
+    <input type="hidden" name="cx" value="003883529982892832976:e2vwumte3fq" />
+    <input type="hidden" name="cof" value="FORID:9" />
+    <input type="hidden" name="ie" value="UTF-8" />
+    <input type="text" name="q" size="27" />
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
 	<div id="sitename"><a href="https://help.ubuntu.com/"><img alt="Official Documentation" src="http://doc.ubuntu.com/~mdke/help-about.png" /><span>Official Documentation</span></a></div>
 	</div>
 </xsl:template>

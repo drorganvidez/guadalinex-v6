@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-docs\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2007-09-14 08:25+0100\n"
-"PO-Revision-Date: 2007-11-08 00:21+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2008-10-08 21:13+0100\n"
+"PO-Revision-Date: 2008-10-18 19:44+0000\n"
+"Last-Translator: Mykas0 <Mykas0@gmail.com>\n"
 "Language-Team: Portuguese <pt@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2008-02-17 10:23+0000\n"
+"X-Launchpad-Export-Date: 2008-10-19 12:46+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: add-applications/C/add-applications-C.omf:6(creator) add-applications/C/add-applications-C.omf:7(maintainer)
@@ -26,14 +26,18 @@ msgid "Adding and Removing Software"
 msgstr "Adicionar e Remover Aplicações"
 
 #: add-applications/C/add-applications-C.omf:9(date)
-msgid "2006-09-07"
-msgstr "2006-09-07"
+msgid "2008-02-16"
+msgstr "16-02-2008"
 
 #: add-applications/C/add-applications-C.omf:11(description)
-msgid "Placeholder."
-msgstr "Espaço reservado."
+msgid ""
+"Instructions on how to install and uninstall software, including information "
+"on package management."
+msgstr ""
+"Instruções sobre como instalar e desinstalar aplicações, incluindo "
+"informação sobre a gestão de pacotes."
 
-#: add-applications/C/add-applications.xml:17(title)
+#: add-applications/C/add-applications.xml:15(title)
 msgid "Adding, Removing and Updating Applications"
 msgstr "Adicionar, Remover e Actualizar Aplicações"
 
@@ -45,13 +49,12 @@ msgstr "Créditos e Licença"
 msgid ""
 "This document is maintained by the Ubuntu documentation team "
 "(https://wiki.ubuntu.com/DocumentationTeam). For a list of contributors, see "
-"the <ulink url=\"../../../common/C/contributors.xml\">contributors "
-"page</ulink>"
+"the <ulink url=\"../../libs/C/contributors.xml\">contributors page</ulink>"
 msgstr ""
-"Este documento é gerido pela equipa de documentação do Ubuntu "
-"(https://wiki.ubuntu.com/DocumentationTeam). Para obter a lista de "
-"contribuidores veja a <ulink "
-"url=\"../../../common/C/contributors.xml\">página de contribuidores</ulink>"
+"Esta documentação é mantida pela equipa de documentação do Ubuntu "
+"(https://wiki.ubuntu.com/DocumentationTeam). Para a lista de contribuidores, "
+"consulte a <ulink url=\"../../libs/C/contributors.xml\">página de "
+"contribuidores</ulink>"
 
 #: add-applications/C/add-applications.xml:5(para)
 msgid ""
@@ -84,34 +87,38 @@ msgstr ""
 #: add-applications/C/add-applications.xml:11(para)
 msgid ""
 "A copy of the license is available here: <ulink url=\"/usr/share/ubuntu-"
-"docs/common/C/ccbysa.xml\">Creative Commons ShareAlike License</ulink>."
+"docs/libs/C/ccbysa.xml\">Creative Commons ShareAlike License</ulink>."
 msgstr ""
 "Uma cópia da licença está disponível aqui: <ulink url=\"/usr/share/ubuntu-"
-"docs/common/C/ccbysa.xml\">Creative Commons ShareAlike License</ulink>."
+"docs/libs/C/ccbysa.xml\">Creative Commons ShareAlike License</ulink>."
 
 #: add-applications/C/add-applications.xml:14(year)
-msgid "2004, 2005, 2006"
-msgstr "2004, 2005, 2006"
+msgid "2008"
+msgstr "2008"
+
+#: add-applications/C/add-applications.xml:15(ulink)
+msgid "Ubuntu Documentation Project"
+msgstr "Projecto de Documentação do Ubuntu"
 
 #: add-applications/C/add-applications.xml:15(holder)
-msgid "Canonical Ltd. and members of the Ubuntu Documentation Project"
-msgstr "Canonical Ltd. e membros do Projecto de Documentação Ubuntu"
+msgid "Canonical Ltd. and members of the <placeholder-1/>"
+msgstr "Canonical Lda. e os membros da <placeholder-1/>"
 
 #: add-applications/C/add-applications.xml:18(publishername)
 msgid "The Ubuntu Documentation Project"
 msgstr "Projecto de Documentação Ubuntu"
 
-#: add-applications/C/add-applications.xml:20(para)
+#: add-applications/C/add-applications.xml:18(para)
 msgid ""
-"In this section you can learn how to use a package manager to add or remove "
-"applications in Ubuntu with a few clicks. You can also learn about more "
-"advanced techniques of managing applications and discover some optional "
-"applications to add to Ubuntu and try."
+"This section discusses how applications are installed, removed and kept up "
+"to date. Also covered are how packages are stored by Ubuntu and made "
+"available for download."
 msgstr ""
-"Nesta secção aprenderá a usar um gestor de pacotes para adicionar ou remover "
-"aplicações no Ubuntu com apenas alguns cliques. Poderá também aprender "
-"técnicas mais avançadas de gerir aplicações e descobrir algumas aplicações "
-"opcionais que pode adicionar ao Ubuntu para experimentar."
+
+#: add-applications/C/add-applications.xml:19(para)
+msgid ""
+"It also covers some more advanced techniques for managing applications."
+msgstr ""
 
 #: add-applications/C/add-applications.xml:22(title)
 msgid "What is a package manager?"
@@ -119,99 +126,98 @@ msgstr "O que é um gestor de pacotes?"
 
 #: add-applications/C/add-applications.xml:23(para)
 msgid ""
-"A package manager is a program that installs and uninstalls software, and "
-"keeps track of all the components each piece of software needs."
+"A package manager is a program that you can use to install, remove and "
+"upgrade software. Software for Ubuntu is provided in the form of packages, "
+"which are automatically downloaded by the package manager."
 msgstr ""
-"Um gestor de pacotes é um programa que instala e desinstala aplicações, e "
-"resolve as dependências de que cada aplicação necessita."
-
-#: add-applications/C/add-applications.xml:24(para)
-msgid ""
-"To add or remove applications in Ubuntu, you need to use a <emphasis>package "
-"manager</emphasis>. It will automatically download the software required "
-"from the Internet and install it."
-msgstr ""
-"Para adicionar ou remover aplicações no Ubuntu, precisa de utilizar o "
-"<emphasis>gestor de pacotes</emphasis>. Este irá descarregar automaticamente "
-"as aplicações necessárias da Internet e instalá-las."
-
-#: add-applications/C/add-applications.xml:25(para)
-msgid "There are three main package managers you can use in Ubuntu:"
-msgstr "Existem três gestores de pacotes principais que pode usar no Ubuntu:"
-
-#: add-applications/C/add-applications.xml:27(para)
-msgid ""
-"<link linkend=\"gnome-app-install\"><application>Add/Remove "
-"Programs</application></link> - The easiest way to install and uninstall "
-"programs."
-msgstr ""
-"<link linkend=\"gnome-app-install\"><application>Adicionar/Remover "
-"Programas</application></link> - A forma mais simples de instalar e remover "
-"programas."
 
 #: add-applications/C/add-applications.xml:28(para)
 msgid ""
-"<link linkend=\"synaptic\"><application>Synaptic</application></link> - "
-"Advanced control of software and other system components."
+"There are three main package management programs you can use in Ubuntu:"
 msgstr ""
-"<link linkend=\"synaptic\"><application>Synaptic</application></link> - "
-"Controlo avançado de software e outros componentes do sistema."
-
-#: add-applications/C/add-applications.xml:29(para)
-msgid ""
-"<link linkend=\"apt\"><application>Apt</application></link> - If you prefer "
-"using the Terminal."
-msgstr ""
-"<link linkend=\"apt\"><application>Apt</application></link> - Se preferir "
-"usar o Terminal."
-
-#: add-applications/C/add-applications.xml:32(para)
-msgid ""
-"If you open more than one of these programs at once, they may not work. "
-"Close them all and open just one."
-msgstr ""
-"Se executar mais que um destes programas ao mesmo tempo, eles poderão não "
-"funcionar. Termine-os a todos e execute apenas um deles."
 
 #: add-applications/C/add-applications.xml:34(para)
 msgid ""
-"You need administrative access to use any of these programs. See <ulink "
-"type=\"help\" url=\"ghelp:administrative\">Administrative Tasks</ulink> for "
-"more details."
+"<link linkend=\"gnome-app-install\">Add/Remove Applications</link> - Quickly "
+"installs and removes popular programs, as well as providing ratings."
 msgstr ""
-"Necessita de acesso administrativo para usar qualquer um destes programas. "
-"Veja <ulink type=\"help\" url=\"ghelp:administrative\">Tarefas "
-"Administrativas</ulink> para mais detalhes."
 
-#: add-applications/C/add-applications.xml:38(title)
+#: add-applications/C/add-applications.xml:41(para)
+msgid ""
+"<link linkend=\"synaptic\">Synaptic</link> - Allows more advanced "
+"management, such as installing server applications and choosing different "
+"versions of the same package."
+msgstr ""
+
+#: add-applications/C/add-applications.xml:48(para)
+msgid ""
+"<link linkend=\"apt\">Apt</link> - Allows package management from the "
+"command line."
+msgstr ""
+
+#: add-applications/C/add-applications.xml:56(para)
+msgid ""
+"You can only use one package manager at a time. If you start another package "
+"manager while one is already open, you will receive an error message."
+msgstr ""
+
+#: add-applications/C/add-applications.xml:63(para)
+msgid ""
+"You will require administrative access to install and remove software. This "
+"is because packages sometimes need to change important system files. See "
+"<ulink type=\"help\" url=\"ghelp:administrative\">Administrative "
+"Tasks</ulink> for more information on administrative access."
+msgstr ""
+
+#: add-applications/C/add-applications.xml:71(title)
+msgid "Common package-management terms"
+msgstr ""
+
+#: add-applications/C/add-applications.xml:73(para)
+msgid ""
+"If you are unfamiliar with Ubuntu's package management system, you may like "
+"to take a look at some of the following definitions."
+msgstr ""
+
+#: add-applications/C/add-applications.xml:78(para)
+msgid ""
+"<emphasis role=\"strong\">Packages</emphasis> are files which contain a "
+"program and all of the files required to run it on your computer. When you "
+"install a package, a file is downloaded from a repository and installed by a "
+"package manager."
+msgstr ""
+
+#: add-applications/C/add-applications.xml:85(para)
+msgid ""
+"<emphasis role=\"strong\">Dependencies</emphasis> are packages which must be "
+"installed before certain other packages can be installed. Dependency "
+"packages usually contain some files and programs needed by the other "
+"packages - for example, a word-processing package may depend on a printing "
+"package being installed in order to be able to print documents."
+msgstr ""
+
+#: add-applications/C/add-applications.xml:97(title)
 msgid "Software repositories"
 msgstr "Repositórios de Software"
 
-#: add-applications/C/add-applications.xml:39(para)
+#: add-applications/C/add-applications.xml:98(para)
 msgid ""
-"A software repository is a place from which you can download and install "
-"software over the Internet."
+"When you install software on Ubuntu, the package manager automatically "
+"downloads the required software packages from a <emphasis>software "
+"repository</emphasis>, a location on the Internet which stores collections "
+"of packages ready to be downloaded."
 msgstr ""
-"Um repositório de software é um local de onde se pode transferir e instalar "
-"software a partir da Internet."
 
-#: add-applications/C/add-applications.xml:40(para)
+#: add-applications/C/add-applications.xml:104(para)
 msgid ""
 "There are thousands of programs available to install on Ubuntu. These "
-"programs are stored in software archives (<emphasis>repositories</emphasis>) "
-"and are made freely available for installation over the Internet. This makes "
-"it very easy to install new programs in Linux, and it is also very secure, "
-"because each program you install is built specially for Ubuntu and checked "
-"before it is installed."
+"programs are stored in software repositories and are made freely available "
+"for all Ubuntu users. This makes it very easy to install new programs, and "
+"it is also very secure because each program you install is built specially "
+"for Ubuntu and checked before it is allowed into the repositories."
 msgstr ""
-"Existem milhares de programas disponíveis para instalação no Ubuntu. Estes "
-"programas são armazenados em (<emphasis>repositórios</emphasis>) de arquivos "
-"de aplicações e estão disponíveis gratuitamente para instalação através da "
-"Internet. Isto torna muito fácil instalar programas em Linux, e é também "
-"muito seguro, uma vez que cada programa instalado é desenvolvido "
-"especialmente para Ubuntu e verificado antes da instalação."
 
-#: add-applications/C/add-applications.xml:41(para)
+#: add-applications/C/add-applications.xml:111(para)
 msgid ""
 "To organise the software, Ubuntu repositories are categorised into four "
 "groups: <emphasis>Main</emphasis>, <emphasis>Restricted</emphasis>, "
@@ -221,18 +227,9 @@ msgid ""
 "program and the level of compliance the program has to the <ulink "
 "url=\"http://www.ubuntu.com/ubuntu/philosophy\">Free Software "
 "Philosophy</ulink>."
-msgstr ""
-"De modo a organizar as aplicações, os repositórios Ubuntu estão "
-"categorizados em quatro grupos:\n"
-"<emphasis>Main</emphasis>, <emphasis>Restricted</emphasis>, "
-"<emphasis>Universe</emphasis>, e <emphasis>Multiverse</emphasis>. A lógica "
-"usada para determinar que aplicação é inserida em que categoria é baseada no "
-"nível de suporte que as equipas de desenvolvimento dão a cada programa e no "
-"nível de conformidade da aplicação para com a <ulink "
-"url=\"http://www.ubuntu.com/ubuntu/philosophy\">Filosofia do Software "
-"Livre</ulink>."
+msgstr "De modo a organizar as aplicações, os repositórios Ubuntu estão"
 
-#: add-applications/C/add-applications.xml:42(para)
+#: add-applications/C/add-applications.xml:120(para)
 msgid ""
 "The standard Ubuntu Install CD contains some software from the "
 "<emphasis>Main</emphasis> and <emphasis>Restricted</emphasis> categories."
@@ -240,7 +237,7 @@ msgstr ""
 "O CD de Instalação-base do Ubuntu contém algum software das categorias "
 "<emphasis>Main</emphasis> e <emphasis>Restricted</emphasis>."
 
-#: add-applications/C/add-applications.xml:43(para)
+#: add-applications/C/add-applications.xml:124(para)
 msgid ""
 "If your system is connected to the Internet, many more software programs are "
 "made available for installation. For example, the <quote>Universe</quote> "
@@ -252,7 +249,7 @@ msgstr ""
 "<quote>Universo</quote> and <quote>Multiverso</quote> estão disponíveis "
 "apenas na Internet."
 
-#: add-applications/C/add-applications.xml:45(para)
+#: add-applications/C/add-applications.xml:132(para)
 msgid ""
 "The <emphasis>Multiverse</emphasis> repository contains software which has "
 "been classified as <emphasis>non-free</emphasis>. This software may not be "
@@ -267,7 +264,7 @@ msgstr ""
 "Adicionalmente, deve ter em conta que estas aplicações podem não ter "
 "actualizações de segurança."
 
-#: add-applications/C/add-applications.xml:47(para)
+#: add-applications/C/add-applications.xml:142(para)
 msgid ""
 "You can find more information about the Repositories available <ulink "
 "url=\"http://www.ubuntu.com/ubuntu/components\">on the website</ulink>."
@@ -275,11 +272,11 @@ msgstr ""
 "Pode encontrar mais informação sobre Repositórios disponível <ulink "
 "url=\"http://www.ubuntu.com/ubuntu/components\">no sítio web</ulink>."
 
-#: add-applications/C/add-applications.xml:51(title)
+#: add-applications/C/add-applications.xml:148(title)
 msgid "Adding extra repositories"
 msgstr "Adicionar repositórios adicionais"
 
-#: add-applications/C/add-applications.xml:52(para)
+#: add-applications/C/add-applications.xml:149(para)
 msgid ""
 "It is possible to add extra repositories, such as those provided by third "
 "parties or those for older version of Ubuntu."
@@ -287,7 +284,7 @@ msgstr ""
 "É possível adicionar repositórios adicionais, como aqueles disponibilizados "
 "por terceiros ou versões antigas no Ubuntu."
 
-#: add-applications/C/add-applications.xml:54(para)
+#: add-applications/C/add-applications.xml:155(para)
 msgid ""
 "Be careful when installing software from third-party repositories. It may "
 "not have been tested with Ubuntu and could cause your system to break."
@@ -295,25 +292,25 @@ msgstr ""
 "Tenha cuidado ao instalar software de repositórios de terceiros. Pode não "
 "ter sido testado com o Ubuntu e danificar o seu sistema."
 
-#: add-applications/C/add-applications.xml:58(para)
+#: add-applications/C/add-applications.xml:164(para)
 msgid ""
 "Open "
 "<menuchoice><guimenu>System</guimenu><guimenuitem>Administration</guimenuitem"
 "><guimenuitem>Software Sources</guimenuitem></menuchoice> and press "
-"<guilabel>Third-Party Software</guilabel>."
+"<guilabel>Third Party Software</guilabel>."
 msgstr ""
 "Abrir "
 "<menuchoice><guimenu>Sistema</guimenu><guimenuitem>Administração</guimenuitem"
-"><guimenuitem>Fontes de Aplicações</guimenuitem></menuchoice> e escolher "
-"<guilabel>Aplicações de Terceiros</guilabel>."
+"><guimenuitem>Fontes de Software</guimenuitem></menuchoice> e pressione "
+"<guilabel>Software de Terceiros</guilabel>."
 
-#: add-applications/C/add-applications.xml:61(para)
+#: add-applications/C/add-applications.xml:170(para)
 msgid "Press <guibutton>Add</guibutton> to add a new repository."
 msgstr ""
 "Clique em <guibutton>Adicionar</guibutton> para adicionar um novo "
 "repositório."
 
-#: add-applications/C/add-applications.xml:64(para)
+#: add-applications/C/add-applications.xml:175(para)
 msgid ""
 "Enter the <guilabel>APT line</guilabel> for the extra repository. This "
 "should be available from the website of the repository or similar, and "
@@ -323,12 +320,12 @@ msgstr ""
 "endereço deve estar disponível no site do repositório e deve ser semelhante "
 "ao seguinte:"
 
-#: add-applications/C/add-applications.xml:65(screen)
+#: add-applications/C/add-applications.xml:180(screen)
 #, no-wrap
 msgid "deb http://ftp.debian.org etch main"
 msgstr "deb http://ftp.debian.org etch main"
 
-#: add-applications/C/add-applications.xml:67(para)
+#: add-applications/C/add-applications.xml:183(para)
 msgid ""
 "Press <guibutton>Add Source</guibutton> and then click "
 "<guibutton>Close</guibutton> to save your changes."
@@ -336,7 +333,15 @@ msgstr ""
 "Pressione <guibutton>Adicionar fonte</guibutton> e clique "
 "<guibutton>Fechar</guibutton> para guardar as suas alterações."
 
-#: add-applications/C/add-applications.xml:69(para)
+#: add-applications/C/add-applications.xml:188(para)
+msgid ""
+"You will be notified that the information about available software is out-of-"
+"date. Press <guibutton>Reload</guibutton>."
+msgstr ""
+"Será informado que a informação sobre o software disponível está "
+"desactualizada. Pressione <guibutton>Reler</guibutton>."
+
+#: add-applications/C/add-applications.xml:194(para)
 msgid ""
 "Most software repositories use a GPG key to digitally sign the files they "
 "provide, which makes it easy to check that the files have not been tampered "
@@ -351,47 +356,93 @@ msgstr ""
 "corresponde às assinaturas. A chave deve estar disponível para download no "
 "sítio da internet do repositório."
 
-#: add-applications/C/add-applications.xml:71(para)
+#: add-applications/C/add-applications.xml:204(para)
 msgid ""
 "Once you have downloaded the GPG key, import the key by selecting the "
-"<guilabel>Authenticate</guilabel> tab, and clicking on <guibutton>Import Key "
-"File...</guibutton>, and then selecting the GPG key to be imported."
+"<guilabel>Authentication</guilabel> tab, clicking on <guibutton>Import Key "
+"File</guibutton>, and then selecting the GPG key to be imported."
 msgstr ""
-"Assim que descarregar a chave GPG, importe a chave selecionando o tab "
-"<guilabel>Autentificar</guilabel>, e clicando em <guibutton>Importar "
-"Ficheiro de Chave...</guibutton>, e depois selecionando a chave GPG a ser "
+"Após descarregar a chave GPG, importe a chave seleccionando a secção "
+"<guilabel>Autentificação</guilabel>, carregando em <guibutton>Importar "
+"Ficheiro Chave</guibutton>, e de seguida seleccione a chave GPG a ser "
 "importada."
 
-#: add-applications/C/add-applications.xml:73(para)
-msgid ""
-"Click <guibutton>Reload</guibutton> in the package manager to update the "
-"list of available packages."
+#: add-applications/C/add-applications.xml:216(title)
+msgid "Restricted and non-free software"
 msgstr ""
-"Clique <guibutton>Actualizar</guibutton> no gestor de pacotes para "
-"actualizar a lista de pacotes disponíveis."
 
-#: add-applications/C/add-applications.xml:78(title)
+#: add-applications/C/add-applications.xml:217(para)
+msgid ""
+"Most of the software available for Ubuntu is free, open-source software. "
+"This software is free for anyone to install and use, and people can modify "
+"the software and redistribute it if they like. Ubuntu is built from this "
+"type of software."
+msgstr ""
+
+#: add-applications/C/add-applications.xml:223(para)
+msgid ""
+"<emphasis role=\"strong\">Non-free software</emphasis> is software which is "
+"not freely redistributable or modifiable. This makes it difficult for the "
+"Ubuntu developers to improve the software and correct problems, so it is "
+"normally recommended that you use <ulink "
+"url=\"http://www.ubuntu.com/ubuntu/philosophy\"> free software</ulink> "
+"instead."
+msgstr ""
+
+#: add-applications/C/add-applications.xml:230(para)
+msgid ""
+"<emphasis role=\"strong\">Restricted software</emphasis> is software which "
+"has restrictions on its use, preventing it from being classed as free "
+"software. Non-free software is a type of restricted software, where the "
+"restrictions are due to the software having a non-free license. Other "
+"reasons for software being classed as restricted include legal issues (use "
+"of some types of software is illegal in some countries) and patent issues "
+"(some software requires a patent license to be used legally)."
+msgstr ""
+
+#: add-applications/C/add-applications.xml:239(para)
+msgid ""
+"In some cases, restricted software is the only option. Such cases include "
+"software for the playback of certain audio and video formats, some fonts and "
+"<ulink type=\"help\" url=\"ghelp:hardware#restricted-manager\">drivers for "
+"some graphics cards</ulink>."
+msgstr ""
+
+#: add-applications/C/add-applications.xml:245(para)
+msgid ""
+"You should be warned by the package manager when you try to install "
+"restricted software. If the restricted software cannot be used legally in "
+"your country then there is little you can do; you should not install the "
+"software. If the software is restricted simply because it is non-free, you "
+"may choose to use it (for example, in the case of graphics card drivers). Be "
+"aware that most restricted software is not supported in Ubuntu, and problems "
+"with such software often cannot be corrected by Ubuntu developers."
+msgstr ""
+
+#: add-applications/C/add-applications.xml:256(para)
+msgid ""
+"Sometimes it is difficult to determine why a particular software package is "
+"restricted. If this is the case, seek advice on the <ulink "
+"url=\"http://ubuntuforums.org/\">Ubuntu Forums</ulink>. If you are still "
+"unable to determine why a package is restricted, err on the side of caution "
+"and do not install it; it may be illegal to use it in your country."
+msgstr ""
+
+#: add-applications/C/add-applications.xml:268(title)
 msgid "Add/Remove Applications"
 msgstr "Adicionar/Remover Aplicações"
 
-#: add-applications/C/add-applications.xml:79(para)
+#: add-applications/C/add-applications.xml:269(para)
 msgid ""
-"With the <guimenuitem>Add/Remove…</guimenuitem> item in the "
+"With the <guimenuitem>Add/Remove</guimenuitem> item in the "
 "<guimenu>Applications</guimenu> menu, you can install programs to do new "
-"things with Ubuntu. You can also remove programs you do not want. You need "
-"administrative access to use <application>Add/Remove Programs</application> "
-"(see <ulink type=\"help\" url=\"ghelp:administrative\">Administrative "
-"Tasks</ulink> for more details)."
+"things with Ubuntu. You can also remove programs which you do not want. You "
+"need administrative access to use <application>Add/Remove "
+"Applications</application> (see <ulink type=\"help\" "
+"url=\"ghelp:administrative\">Administrative Tasks</ulink> for more details)."
 msgstr ""
-"Com o item <guimenuitem>Adicionar/Remover…</guimenuitem> no menu "
-"<guimenu>Aplicações</guimenu> pode instalar programas para realizar novas "
-"actividades com o Ubuntu. Pode também remover programas que não deseja. Você "
-"precisa de acesso administrativo para usar o <application>Adicionar/Remover "
-"Aplicações</application> (veja <ulink type=\"help\" "
-"url=\"ghelp:administrative\">Tarefas Administrativas</ulink> para mais "
-"detalhes)"
 
-#: add-applications/C/add-applications.xml:80(para)
+#: add-applications/C/add-applications.xml:278(para)
 msgid ""
 "If you know the name of a program you want to install, enter it in the "
 "<guilabel>Search</guilabel> field. Otherwise, begin by choosing a software "
@@ -401,29 +452,28 @@ msgstr ""
 "<guilabel>Procurar</guilabel>. Caso contrário, comece por escolher uma "
 "categoria de software à esquerda."
 
-#: add-applications/C/add-applications.xml:81(para)
+#: add-applications/C/add-applications.xml:283(para)
 msgid ""
-"Programs that are already installed begin with a check mark next to their "
-"name. Uncheck a program if you want to remove it from your computer."
+"Programs that are already installed have a check mark next to their name. "
+"Uncheck a program if you want to remove it from your computer."
 msgstr ""
-"Programas que já estão instalados estão marcados ao pé do seu nome. "
-"Desmarque um programa para o remover do seu computador."
+"Programas que já estão instalados têm uma marca ao lado do seu nome. "
+"Desmarque um programa se você quer removê-lo do seu computador."
 
-#: add-applications/C/add-applications.xml:82(para)
+#: add-applications/C/add-applications.xml:287(para)
 msgid ""
-"When you click <guibutton>Apply</guibutton> or <guibutton>OK</guibutton>, "
-"any new software will be downloaded from the Internet, and Ubuntu will make "
-"the changes you selected. If you have not activated the online package "
-"archive, you may be asked to insert your Ubuntu CD-ROM to install some "
-"packages."
+"When you click <guibutton>Apply Changes</guibutton>, any new software will "
+"be downloaded from the Internet, and Ubuntu will make any other changes you "
+"selected. If you have not activated the online package archive, you may be "
+"asked to insert your Ubuntu CD-ROM to install some packages."
 msgstr ""
-"Quando clica <guibutton>Aplicar</guibutton> ou <guibutton>OK</guibutton>, "
-"todo o software novo será transferido a partir da Internet, e o Ubuntu fará "
-"as mudanças que seleccionou. Se não activou o arquivo de pacotes online, "
-"pode ser-lhe pedido para inserir o seu CD-ROM do Ubuntu para instalar alguns "
-"pacotes."
+"Quando carrega em <guibutton>Aplicar Alterações</guibutton>, qualquer "
+"software novo será descarregado pela Internet, e o Ubuntu irá realizar "
+"outras mudanças por si seleccionadas. Caso não tenha o arquivo de pacotes "
+"online activado, poderá ser-lhe pedido para inserir o CD-ROM do Ubuntu para "
+"instalar alguns pacotes."
 
-#: add-applications/C/add-applications.xml:83(para)
+#: add-applications/C/add-applications.xml:293(para)
 msgid ""
 "Some software cannot be installed or removed using <application>Add/Remove "
 "Applications</application>. If you cannot find the package you are looking "
@@ -435,11 +485,11 @@ msgstr ""
 "está a procura, inicie o gestor de pacotes avançados, o "
 "<application>Synaptic</application> (ver <xref linkend=\"advanced\"/>)."
 
-#: add-applications/C/add-applications.xml:87(title)
+#: add-applications/C/add-applications.xml:302(title)
 msgid "Installing packages without an Internet connection"
 msgstr "Instalar pacotes sem uma ligação à Internet"
 
-#: add-applications/C/add-applications.xml:88(para)
+#: add-applications/C/add-applications.xml:303(para)
 msgid ""
 "Other than using tools that download packages automatically, it is also "
 "possible to use a CD to install packages through a package manager while not "
@@ -458,11 +508,11 @@ msgstr ""
 "segurança dos pacotes no seu sistema, e criar CDs com conteúdo de vários "
 "repositórios."
 
-#: add-applications/C/add-applications.xml:90(title)
+#: add-applications/C/add-applications.xml:314(title)
 msgid "Installing packages using the Ubuntu installation CD"
 msgstr "A instalar pacotes utilizando o CD de instalação do Ubuntu"
 
-#: add-applications/C/add-applications.xml:91(para)
+#: add-applications/C/add-applications.xml:315(para)
 msgid ""
 "Some packages from the <emphasis>main</emphasis> and "
 "<emphasis>restricted</emphasis> Ubuntu package repositories can be installed "
@@ -471,120 +521,68 @@ msgid ""
 "<menuchoice><guimenu>System</guimenu><guimenuitem>Administration</guimenuitem"
 "><guimenuitem>Synaptic Package Manager</guimenuitem></menuchoice>. To list "
 "only packages on the Ubuntu installation CD, click on the "
-"<guibutton>Origin</guibutton> button in the lower left corner of "
-"<application>Synaptic Package Manager</application>. The packages are listed "
-"under the <guimenuitem>Ubuntu 7.10_Gutsy Gibbon</guimenuitem> section."
+"<guibutton>Origin</guibutton> button in the lower left corner of the "
+"Synaptic window. The packages should be listed under the <guimenuitem>Ubuntu "
+"8.10_Intrepid_Ibex</guimenuitem> section."
 msgstr ""
-"Alguns pacotes dos repositórios  <emphasis>main</emphasis> e "
-"<emphasis>restricted</emphasis> do Ubuntu podem ser instalador a partir do "
-"CD de instalação do Ubuntu. Apenas insira seu CD de instalação do Ubuntu e "
-"abra "
-"<menuchoice><guimenu>Sistema</guimenu><guimenuitem>Administração</guimenuitem"
-"><guimenuitem>Gestor de Pacotes Synaptic</guimenuitem></menuchoice>. Para "
-"listar apenas os pacotes no CD de instalação do Ubuntu, pressione o botão "
-"<guibutton>Origem</guibutton> no canto inferior esquerdo do "
-"<application>Gestor de Pacotes Synaptic</application>. Os pacotes são "
-"listados na sessão <guimenuitem>Ubuntu 7.10_Gutsy Gibbon</guimenuitem>"
 
-#: add-applications/C/add-applications.xml:92(para)
+#: add-applications/C/add-applications.xml:325(para)
 msgid ""
 "If the packages are not listed, it may be because the CD is not listed as a "
 "package repository (the CD should be listed as a repository by default). To "
-"add the CD as a package repository:"
+"add the CD as a package repository, follow the instructions in <xref "
+"linkend=\"repository-cds\"/>, below."
 msgstr ""
-"Se os pacotes não se encontram listados, poderá ser porque o CD não está "
-"listado como um repositório de pacotes (o CD devia estar listado como um "
-"repositório por padrão). Para adicionar o CD como um repositório de pacotes:"
+"Se os pacotes não estão listados, pode ser porque o CD não está listado como "
+"um repositório de pacotes (o CD deve estar listado como repositório por "
+"omissão). Para adicionar o CD como um repositório de pacotes, siga as "
+"instruções em <xref linkend=\"repository-cds\"/>, abaixo."
 
-#: add-applications/C/add-applications.xml:95(para)
-msgid "Eject the CD."
-msgstr "Ejetar o CD."
-
-#: add-applications/C/add-applications.xml:98(para)
-msgid ""
-"Open the <emphasis>Software Sources</emphasis> dialog by selecting "
-"<guimenuitem>Repositories</guimenuitem> from the <guimenu>Settings</guimenu> "
-"menu of <application>Synaptic Package Manager</application>."
-msgstr ""
-"Abra o diálogo <emphasis>Fontes de Aplicações</emphasis> seleccionando "
-"<guimenuitem>Repositórios</guimenuitem> a partir do menu "
-"<guimenu>Configurações</guimenu> da aplicação <application>Synaptic Package "
-"Manager</application>."
-
-#: add-applications/C/add-applications.xml:101(para) add-applications/C/add-applications.xml:120(para)
-msgid ""
-"Go to the Third-Party Software tab and click on the <guibutton>Add CD-"
-"ROM</guibutton> button."
-msgstr ""
-"Vá até ao separador \\\"Aplicações de Terceiros\\\" e clique no botão "
-"<guibutton>Adicionar CD-ROM</guibutton>."
-
-#: add-applications/C/add-applications.xml:104(para)
-msgid "Insert the CD."
-msgstr "Insira o CD"
-
-#: add-applications/C/add-applications.xml:107(para)
-msgid "The packages should then be listed."
-msgstr "Então os pacotes devem ser listados."
-
-#: add-applications/C/add-applications.xml:110(title)
+#: add-applications/C/add-applications.xml:334(title)
 msgid "Enabling other CDs that can be used to install packages"
 msgstr "Permitir que outros CDs possam ser usados para instalar pacotes"
 
-#: add-applications/C/add-applications.xml:111(para)
+#: add-applications/C/add-applications.xml:335(para)
 msgid ""
-"To enable <application>Synaptic</application> to install packages from CDs "
+"To enable Synaptic and other package managers to install software from CDs "
 "which contain packages:"
 msgstr ""
-"Permitir que a aplicação < application >Synaptic< /application > instale "
-"pacotes a partir de CDs que contêm pacotes:"
 
-#: add-applications/C/add-applications.xml:114(para)
+#: add-applications/C/add-applications.xml:342(para)
 msgid ""
-"Open "
-"<menuchoice><guimenu>System</guimenu><guimenuitem>Administration</guimenuitem"
-"><guimenuitem>Synaptic Package Manager</guimenuitem></menuchoice>."
+"Press "
+"<menuchoice><guimenuitem>System</guimenuitem><guimenuitem>Administration</gui"
+"menuitem><guimenuitem>Software Sources</guimenuitem></menuchoice>."
 msgstr ""
-"Abra "
-"<menuchoice><guimenu>Sistema</guimenu><guimenuitem>Administração</guimenuitem"
-"><guimenuitem>Gestor de Pacotes Synaptic</guimenuitem></menuchoice>."
+"Pressione "
+"<menuchoice><guimenuitem>Sistema</guimenuitem><guimenuitem>Administração</gui"
+"menuitem><guimenuitem>Fontes de Software</guimenuitem></menuchoice>."
 
-#: add-applications/C/add-applications.xml:117(para)
+#: add-applications/C/add-applications.xml:350(para)
 msgid ""
-"Open the <emphasis>Software Sources</emphasis> tool by selecting "
-"<guimenuitem>Repositories</guimenuitem> from the <guimenu>Settings</guimenu> "
-"menu of <application>Synaptic Package Manager</application>."
+"Go to the <guilabel>Third Party Software</guilabel> tab and click on the "
+"<guibutton>Add CD-ROM</guibutton> button."
 msgstr ""
-"Abra a ferramenta <emphasis>Fontes de Aplicações</emphasis> seleccionando "
-"<guimenuitem>Repositórios</guimenuitem> no menu "
-"<guimenu>Configurações</guimenu> do <application>Gestor de Pacotes "
-"Synaptic</application>."
+"Vá à secção <guilabel>Software de Terceiros</guilabel> e carregue em "
+"<guibutton>Adicionar CD-ROM</guibutton>."
 
-#: add-applications/C/add-applications.xml:123(para)
-msgid "Insert the CD which contains the packages."
-msgstr "Insira o CD que contém os pacotes."
+#: add-applications/C/add-applications.xml:356(para)
+msgid "Insert the CD."
+msgstr "Insira o CD."
 
-#: add-applications/C/add-applications.xml:126(para)
+#: add-applications/C/add-applications.xml:362(para)
 msgid ""
-"The packages should then be listed. To have "
-"<application>Synaptic</application> only list packages from the CD, click "
-"the <guibutton>Origin</guibutton> button on the lower left corner of "
-"<application>Synaptic Package Manager</application>, then find the name of "
-"the CD on the list on the upper left corner of "
-"<application>Synaptic</application>."
+"The packages should then be listed. To have Synaptic only list packages from "
+"the CD, click the <guibutton>Origin</guibutton> button on the lower left "
+"corner of the Synaptic window and then find the name of the CD in the list "
+"in the upper left corner the window."
 msgstr ""
-"Os pacotes deverão estar listados. Para que o "
-"<application>Synaptic</application> liste apenas os pacotes do CD, clique no "
-"botão <guibutton>Origem</guibutton> no canto inferior esquerdo do "
-"<application>Gestor de Pacotes Synaptic</application> e então encontre o "
-"nome do CD na lista no canto superior esquerdo do "
-"<application>Synaptic</application>."
 
-#: add-applications/C/add-applications.xml:129(title)
+#: add-applications/C/add-applications.xml:371(title)
 msgid "Using APTonCD to install packages"
 msgstr "Usando APTonCD para instalar pacotes"
 
-#: add-applications/C/add-applications.xml:130(para)
+#: add-applications/C/add-applications.xml:372(para)
 msgid ""
 "<application>APTonCD</application> can be used to create a CD that contains "
 "all the packages you have on your system, or it can create CDs with packages "
@@ -598,21 +596,17 @@ msgstr ""
 "pacotes como o <application>Synaptic</application>, encontre o pacote "
 "<emphasis>aptoncd</emphasis> e instale-o."
 
-#: add-applications/C/add-applications.xml:131(para)
+#: add-applications/C/add-applications.xml:379(para)
 msgid ""
-"Further documentation on <application>APTonCD</application> can be found on "
-"it's website, <ulink "
-"url=\"http://aptoncd.sourceforge.net\">aptoncd.sourceforge.net</ulink>"
+"Further documentation on APTonCD can be found on its website, <ulink "
+"url=\"http://aptoncd.sourceforge.net\"> aptoncd.sourceforge.net</ulink>"
 msgstr ""
-"Mais documentação sobre o <application>APTonCD</application> pode ser "
-"encontrada no site <ulink "
-"url=\"http://aptoncd.sourceforge.net\">aptoncd.sourceforge.net</ulink>"
 
-#: add-applications/C/add-applications.xml:136(title)
+#: add-applications/C/add-applications.xml:388(title)
 msgid "Advanced package management"
-msgstr "Gestor de pacotes avançado"
+msgstr "Gestor avançado de pacotes"
 
-#: add-applications/C/add-applications.xml:137(para)
+#: add-applications/C/add-applications.xml:389(para)
 msgid ""
 "Several other package managers exist in Ubuntu. These contain more advanced "
 "features than <application>Add/Remove Applications</application>."
@@ -621,11 +615,11 @@ msgstr ""
 "funcionalidades mais avançadas que o <application>Adicionar/Remover "
 "Aplicações</application>."
 
-#: add-applications/C/add-applications.xml:139(title)
+#: add-applications/C/add-applications.xml:395(title)
 msgid "Synaptic Package Manager"
 msgstr "Gestor de Pacotes Synaptic"
 
-#: add-applications/C/add-applications.xml:140(para)
+#: add-applications/C/add-applications.xml:396(para)
 msgid ""
 "<application>Synaptic</application> is an advanced package management "
 "application that can install and remove every package available to your "
@@ -639,97 +633,36 @@ msgstr ""
 "Aplicações</application>, mas apresenta muito mais informação e dá-lhe "
 "controlo completo sobre o software no seu computador."
 
-#: add-applications/C/add-applications.xml:141(para)
+#: add-applications/C/add-applications.xml:403(para)
 msgid ""
-"To launch <application>Synaptic</application>, press "
+"To launch Synaptic, press "
 "<menuchoice><guimenu>System</guimenu><guimenuitem>Administration</guimenuitem"
-"><guimenuitem>Synaptic Package Manager</guimenuitem></menuchoice>. You need "
-"administrative access to use <application>Synaptic</application>. See <ulink "
-"type=\"help\" url=\"ghelp:administrative\">Administrative Tasks</ulink> for "
-"more details."
+"><guimenuitem>Synaptic Package Manager</guimenuitem></menuchoice>. You will "
+"need administrative access to use it; see <ulink type=\"help\" "
+"url=\"ghelp:administrative\"> Administrative Tasks</ulink> for more details."
 msgstr ""
-"Para iniciar o <application>Synaptic</application>, carregue em "
-"<menuchoice><guimenu>Sistema</guimenu><guimenuitem>Administração</guimenuitem"
-"><guimenuitem>Gestor de Pacotes Synaptic</guimenuitem></menuchoice>.  "
-"Precisa ter acesso administrativo para usar o "
-"<application>Synaptic</application>. Veja  <ulink type=\"help\" "
-"url=\"ghelp:administrative\">Tarefas Administrativas</ulink> para mais "
-"detalhes."
 
-#: add-applications/C/add-applications.xml:143(para)
+#: add-applications/C/add-applications.xml:408(para)
 msgid ""
-"If you know the name of the package you want to install or remove, click the "
-"<guibutton>Search</guibutton> button, and enter the package name or a short "
-"search term. You can also search for packages by description (for example, "
-"you can find all packages mentioning "
-"<quote><wordasword>arcade</wordasword></quote> or "
-"<quote><wordasword>mathematics</wordasword></quote>)."
+"See the <ulink type=\"help\" url=\"ghelp:synaptic#synaptic-single\"> "
+"Synaptic manual</ulink> for more information on managing packages with "
+"Synaptic."
 msgstr ""
-"Se sabe o nome do pacote que quer instalar ou remover, clique no botão "
-"<guibutton>Procura</guibutton>, e insira o nome do pacote ou um termo curto "
-"de pesquisa. Pode ainda procurar pacotes pela descrição (por exemplo, pode "
-"encontrar todos os pacotes mencionando "
-"<quote><wordasword>arcada</wordasword></quote> ou "
-"<quote><wordasword>matemática</wordasword></quote>)."
 
-#: add-applications/C/add-applications.xml:144(para)
-msgid ""
-"Use the categories on the left to filter the list of packages. To return to "
-"the list of categories after doing a search, click "
-"<guibutton>Sections</guibutton>."
-msgstr ""
-"Use as categorias à esquerda para filtrar a lista de pacotes. Para regressar "
-"à lista de categorias após a pesquisa, clique em "
-"<guibutton>Secções</guibutton>."
-
-#: add-applications/C/add-applications.xml:145(para)
-msgid ""
-"To install a package, click the box next to it and choose <guimenuitem>Mark "
-"for installation</guimenuitem>. If you change your mind, choose "
-"<guimenuitem>Unmark</guimenuitem>."
-msgstr ""
-"Para instalar um pacote, clique na caixa ao seu lado e escolha "
-"<guimenuitem>Marcar para instalação</guimenuitem>. Se mudar de opinião, "
-"escolha <guimenuitem>Desmarcar</guimenuitem>."
-
-#: add-applications/C/add-applications.xml:146(para)
-msgid ""
-"To remove a package that is already installed, choose <guimenuitem>Mark for "
-"Removal</guimenuitem>."
-msgstr ""
-"Para remover um pacote que já está instalado, escolha <guimenuitem>Marcar "
-"para desinstalação</guimenuitem>."
-
-#: add-applications/C/add-applications.xml:147(para)
-msgid ""
-"When you have finished, click <guibutton>Apply</guibutton> and Ubuntu will "
-"make the changes you selected. If you do not want to make any changes, close "
-"the window instead."
-msgstr ""
-"Quando terminar, clique em <guibutton>Aplicar</guibutton> e o Ubuntu fará as "
-"mudanças que você seleccionou. Se não quiser realizar nenhuma das mudanças, "
-"então feche a janela."
-
-#: add-applications/C/add-applications.xml:150(title)
+#: add-applications/C/add-applications.xml:416(title)
 msgid "Command-line package management with APT"
 msgstr "Gestão de pacotes por linha de comandos com o APT"
 
-#: add-applications/C/add-applications.xml:151(para)
+#: add-applications/C/add-applications.xml:417(para)
 msgid ""
 "If you are comfortable using the Terminal, you can use "
 "<application>apt</application> (Advanced Packaging Tool) to install or "
-"remove software. You need administrative access to use "
-"<application>apt</application>. See <ulink type=\"help\" "
-"url=\"ghelp:administrative\">Administrative Tasks</ulink> for more details."
+"remove software. You need administrative access to use apt; see <ulink "
+"type=\"help\" url=\"ghelp:administrative\"> Administrative Tasks</ulink> for "
+"more details."
 msgstr ""
-"Caso se sinta confortável com a utilização do Terminal, pode usar o "
-"<application>apt</application> (Advanced Packaging Tool) para instalar ou "
-"remover software. Necessita de privilégios administrativos para usar o "
-"<application>apt</application>. Veja <ulink type=\"help\" "
-"url=\"ghelp:administrative\">Tarefas Administrativas</ulink> para mais "
-"detalhes."
 
-#: add-applications/C/add-applications.xml:158(para)
+#: add-applications/C/add-applications.xml:424(para)
 msgid ""
 "To update the local list of packages, enter in a Terminal: <screen>sudo apt-"
 "get update</screen>"
@@ -737,14 +670,14 @@ msgstr ""
 "Para actualizar a lista local de pacotes, digite na consola: <screen>sudo "
 "apt-get update</screen>"
 
-#: add-applications/C/add-applications.xml:162(para)
+#: add-applications/C/add-applications.xml:428(para)
 msgid ""
 "To install all available updates: <screen>sudo apt-get upgrade</screen>"
 msgstr ""
 "Para instalar todas as actualizações disponíveis: <screen>sudo apt-get "
 "upgrade</screen>"
 
-#: add-applications/C/add-applications.xml:166(para)
+#: add-applications/C/add-applications.xml:432(para)
 msgid ""
 "To search for a package: <screen>apt-cache search "
 "<replaceable>package</replaceable></screen>"
@@ -752,7 +685,7 @@ msgstr ""
 "Para procurar um pacote: <screen>apt-cache search "
 "<replaceable>pacote</replaceable></screen>"
 
-#: add-applications/C/add-applications.xml:170(para)
+#: add-applications/C/add-applications.xml:436(para)
 msgid ""
 "To install a package: <screen>sudo apt-get install "
 "<replaceable>package</replaceable></screen>"
@@ -760,7 +693,7 @@ msgstr ""
 "Para instalar um pacote: <screen>sudo apt-get install "
 "<replaceable>pacote</replaceable></screen>"
 
-#: add-applications/C/add-applications.xml:174(para)
+#: add-applications/C/add-applications.xml:440(para)
 msgid ""
 "To remove a package: <screen>sudo apt-get remove "
 "<replaceable>package</replaceable></screen>"
@@ -768,7 +701,14 @@ msgstr ""
 "Para remover um pacote: <screen>sudo apt-get remove "
 "<replaceable>pacote</replaceable></screen>"
 
-#: add-applications/C/add-applications.xml:178(para)
+#: add-applications/C/add-applications.xml:444(para)
+msgid ""
+"To remove a package and all its dependancies (that are not in use by other "
+"programs): <screen>sudo apt-get autoremove "
+"<replaceable>package</replaceable></screen>"
+msgstr ""
+
+#: add-applications/C/add-applications.xml:449(para)
 msgid ""
 "To list other <application>apt</application> commands and options: "
 "<screen>apt-get help</screen>"
@@ -776,19 +716,18 @@ msgstr ""
 "Para listar outros comandos e opções do <application>apt</application>: "
 "<screen>apt-get help</screen>"
 
-#: add-applications/C/add-applications.xml:182(para)
+#: add-applications/C/add-applications.xml:453(para)
 msgid ""
 "For more information, see the <ulink url=\"http://www.debian.org/doc/user-"
-"manuals#apt-howto\">Debian <application>apt</application> manual</ulink>."
+"manuals#apt-howto\">Debian apt manual</ulink> and the <ulink url=\"man:apt-"
+"get\">apt-get manual page</ulink>."
 msgstr ""
-"Para mais informações consulte o <ulink url=\"http://www.debian.org/doc/user-"
-"manuals#apt-howto\">Manual <application>apt</application> Debian</ulink>."
 
-#: add-applications/C/add-applications.xml:186(title)
+#: add-applications/C/add-applications.xml:462(title)
 msgid "Installing a single package file"
 msgstr "Instalar um único ficheiro de aplicação"
 
-#: add-applications/C/add-applications.xml:187(para)
+#: add-applications/C/add-applications.xml:463(para)
 msgid ""
 "The preferred method of installing programs is via the package managers "
 "described in this chapter. However, although the Ubuntu package archives are "
@@ -803,7 +742,7 @@ msgstr ""
 "for este o caso, pode também descarregar e instalar ficheiros provenientes "
 "de sítios web."
 
-#: add-applications/C/add-applications.xml:195(para)
+#: add-applications/C/add-applications.xml:471(para)
 msgid ""
 "It is important to ensure that any files you download come from a safe "
 "source before installing them."
@@ -811,7 +750,7 @@ msgstr ""
 "É importante que se assegure que quaisquer ficheiros que descarregue provêm "
 "de uma fonte segura, antes de os instalar."
 
-#: add-applications/C/add-applications.xml:199(para)
+#: add-applications/C/add-applications.xml:475(para)
 msgid ""
 "There are many different kinds of Linux package files. Most of these are "
 "associated with the package managers of specific Linux distributions. "
@@ -831,11 +770,11 @@ msgstr ""
 "(arquivos <filename class=\"extension\">.tar</filename>) e arquivos "
 "<filename class=\"extension\">.run</filename>."
 
-#: add-applications/C/add-applications.xml:211(para)
+#: add-applications/C/add-applications.xml:487(para)
 msgid "This section deals with installing these single files."
 msgstr "Esta secção lida com a instalação destes ficheiros."
 
-#: add-applications/C/add-applications.xml:215(para)
+#: add-applications/C/add-applications.xml:491(para)
 msgid ""
 "It is not guaranteed that these files will be compatible with your system "
 "and you will not receive security updates if you install these files. For "
@@ -848,12 +787,11 @@ msgstr ""
 "razões, se deseja instalar um programa, use sempre um pacote nativo Ubuntu "
 "disponível através do gestor de pacotes, quando disponível."
 
-#: add-applications/C/add-applications.xml:225(title)
-msgid "Install/uninstall <filename class=\"extension\">.deb</filename> files"
+#: add-applications/C/add-applications.xml:501(title)
+msgid "Installing/uninstalling .deb files"
 msgstr ""
-"Instalar/desinstalar arquivos <filename class=\"extension\">.deb</filename>"
 
-#: add-applications/C/add-applications.xml:226(para)
+#: add-applications/C/add-applications.xml:502(para)
 msgid ""
 "These files are <emphasis>Debian packages</emphasis>. The package files "
 "associated with Ubuntu have the <filename "
@@ -872,7 +810,7 @@ msgstr ""
 "url=\"ghelp:administrative\">Tarefas Administrativas</ulink> para mais "
 "detalhes."
 
-#: add-applications/C/add-applications.xml:236(para)
+#: add-applications/C/add-applications.xml:512(para)
 msgid ""
 "To install a <filename class=\"extension\">.deb</filename> file, double-"
 "click on it. If you prefer using the Terminal, enter: <screen>sudo dpkg -i "
@@ -882,54 +820,58 @@ msgstr ""
 "clique duas vezes nele. Se você preferir usar o Terminal, digite: "
 "<screen>sudo dpkg -i <replaceable>aquivo_de_pacote.deb</replaceable></screen>"
 
-#: add-applications/C/add-applications.xml:240(para)
+#: add-applications/C/add-applications.xml:516(para)
 msgid ""
-"To uninstall a <filename class=\"extension\">.deb</filename> file, deselect "
-"it in your package manager. Or from a Terminal, enter: <screen>sudo dpkg -r "
+"You can use your package manager to uninstall a <filename "
+"class=\"extension\">.deb</filename> file once it has been installed. "
+"Alternatively, enter the following in a Terminal: <screen>sudo dpkg -r "
 "<replaceable>package_name</replaceable></screen>"
 msgstr ""
-"Para desinstalar um arquivo <filename class=\"extension\">.deb</filename>, "
-"desmarque-o no seu gestor de pacotes. Ou, num Terminal, digite: <screen>sudo "
-"dpkg -r <replaceable>nome_do_pacote</replaceable></screen>"
+"Você pode usar um gestor de pacotes para desinstalar um ficheiro <filename "
+"class=\"extension\">.deb</filename> quando este foi instalado. "
+"Alternativamente, insira o seguinte num Terminal: <screen>sudo dpkg -r "
+"<replaceable>nome_pacote</replaceable></screen>"
 
-#: add-applications/C/add-applications.xml:247(title)
-msgid ""
-"Convert <filename class=\"extension\">.rpm</filename> files to <filename "
-"class=\"extension\">.deb</filename> files"
+#: add-applications/C/add-applications.xml:524(title)
+msgid "Converting .rpm files to .deb files"
 msgstr ""
-"Converter arquivos <filename class=\"extension\">.rpm</filename> para "
-"arquivos <filename class=\"extension\">.deb</filename>"
 
-#: add-applications/C/add-applications.xml:250(para)
+#: add-applications/C/add-applications.xml:525(para)
 msgid ""
-"Another type of package files is <emphasis>Red Hat Package "
-"Manager</emphasis> files which have the <filename "
-"class=\"extension\">.rpm</filename> suffix. It is not recommended to install "
-"these on an Ubuntu system. In almost all cases, a native Ubuntu <filename "
+"Another type of package is the <emphasis>Red Hat Package Manager</emphasis> "
+"(RPM) file. These have the <filename class=\"extension\">.rpm</filename> "
+"suffix. It is not recommended to install these on an Ubuntu system. In "
+"almost all cases, a native Ubuntu <filename "
 "class=\"extension\">.deb</filename> package is available. However, if "
 "absolutely necessary, an <filename class=\"extension\">.rpm</filename> file "
 "can be converted to a <filename class=\"extension\">.deb</filename> package "
-"using the program <application>alien</application>. The resulting <filename "
-"class=\"extension\">.deb</filename> file will be installed using dpkg as "
-"indicated above."
+"using the <application>alien</application> application. The resulting "
+"<filename class=\"extension\">.deb</filename> file can be installed as "
+"described above."
 msgstr ""
-"Outro tipo de arquivo de pacote é o do <emphasis>Gestor de Pacotes do Red "
-"Hat</emphasis> que tem o sufixo <filename "
-"class=\"extension\">.rpm</filename>. Não é recomendado instalá-los num "
+"Outro tipo de pacote é o ficheiro do <emphasis>Red Hat Package "
+"Manager</emphasis> (RPM). Este tem o sufixo <filename "
+"class=\"extension\">.rpm</filename>. Não se recomenda a sua instalação num "
 "sistema Ubuntu. Na maioria dos casos, um pacote <filename "
-"class=\"extension\">.deb</filename> nativo para o Ubuntu está disponível. "
-"Entretanto, se absolutamente necessário, um arquivo <filename "
-"class=\"extension\">.rpm</filename> pode ser convertido num pacote <filename "
-"class=\"extension\">.deb</filename> usando o programa "
-"<application>alien</application>. O arquivo <filename "
-"class=\"extension\">.deb</filename> resultante será instalado usando o dpkg "
-"como indicado anteriormente."
+"class=\"extension\">.deb</filename> nativo do Ubuntu está disponível. No "
+"entanto, se absolutamente necessário, um ficheiro <filename "
+"class=\"extension\">.rpm</filename> pode ser convertido para um pacote "
+"<filename class=\"extension\">.deb</filename> usando a aplicação "
+"<application>alien</application>. O ficheiro <filename "
+"class=\"extension\">.deb</filename> resultante pode ser instalado conforme "
+"acima descrito."
 
-#: add-applications/C/add-applications.xml:265(para)
+#: add-applications/C/add-applications.xml:538(para)
+msgid ""
+"To convert an RPM into a <filename class=\"extension\">.deb</filename>:"
+msgstr ""
+"Para converter um RPM num <filename class=\"extension\">.deb</filename>:"
+
+#: add-applications/C/add-applications.xml:544(para)
 msgid "Install the <application>alien</application> package."
 msgstr "Instale o pacote <application>alien</application>."
 
-#: add-applications/C/add-applications.xml:268(para)
+#: add-applications/C/add-applications.xml:549(para)
 msgid ""
 "In a Terminal, enter: <screen>sudo alien "
 "<replaceable>package_file.rpm</replaceable></screen>"
@@ -937,25 +879,29 @@ msgstr ""
 "Num Terminal, digite: <screen>sudo alien "
 "<replaceable>arquivo_de_pacote.rpm</replaceable></screen>"
 
-#: add-applications/C/add-applications.xml:276(title)
-msgid "Install <emphasis>tarballs</emphasis>"
+#: add-applications/C/add-applications.xml:558(title)
+msgid "Installing <emphasis>tarballs</emphasis>"
 msgstr "Instalar <emphasis>tarballs</emphasis>"
 
-#: add-applications/C/add-applications.xml:277(para)
+#: add-applications/C/add-applications.xml:559(para)
 msgid ""
 "Files with the <filename class=\"extension\">.tar</filename>, <filename "
 "class=\"extension\">.tgz</filename>, <filename "
 "class=\"extension\">.tar.gz</filename> or <filename "
 "class=\"extension\">.tar.bz2</filename> suffix are package files known as "
-"<emphasis>tarballs</emphasis> which are widely used in Linux and Unix."
+"<emphasis>tarballs</emphasis>, and are widely used in Linux and Unix to "
+"package software. Tarballs can also be used to archive and compress other "
+"files."
 msgstr ""
-"Arquivos com os sufixos <filename class=\"extension\">.tar</filename>, "
-"<filename class=\"extension\">.tgz</filename>, <filename "
+"Ficheiros com o sufixo <filename class=\"extension\">.tar</filename>, "
+"<filename class=\"extension\">.tgz</filename> <filename "
 "class=\"extension\">.tar.gz</filename> ou <filename "
-"class=\"extension\">.tar.bz2</filename> são pacotes conhecidos como "
-"<emphasis>tarballs</emphasis> e são largamente utilizados em Linux e Unix."
+"class=\"extension\">.tar.bz2</filename> são ficheiros de pacotes conhecidos "
+"como <emphasis>tarballs</emphasis>, e são largamente usados em Linux e Unix "
+"para empacotar software. Tarballs também podem ser usados para arquivar e "
+"comprimir outros ficheiros"
 
-#: add-applications/C/add-applications.xml:283(para)
+#: add-applications/C/add-applications.xml:568(para)
 msgid ""
 "If there is no native Ubuntu package available in any of the Ubuntu "
 "repositories, you can use the command line to install or uninstall the "
@@ -965,7 +911,7 @@ msgstr ""
 "repositórios do Ubuntu poderá usar a linha de comandos para instalar ou "
 "desinstalar o ficheiro tarball."
 
-#: add-applications/C/add-applications.xml:285(para)
+#: add-applications/C/add-applications.xml:573(para)
 msgid ""
 "The first step will be to uncompress and extract the tarball. If it is a "
 "<emphasis>.tgz</emphasis> or a <emphasis>.tar.gz</emphasis>, in a Terminal "
@@ -975,7 +921,7 @@ msgstr ""
 "<emphasis>.tgz</emphasis> ou <emphasis>.tar.gz</emphasis>, em um terminal "
 "digite: <screen>tar xfvz <replaceable>nome_do_tarball</replaceable></screen>"
 
-#: add-applications/C/add-applications.xml:289(para)
+#: add-applications/C/add-applications.xml:579(para)
 msgid ""
 "Then it will be necessary to follow the instructions that come with the "
 "package. These are generally located in the extracted tarball in a file "
@@ -985,7 +931,7 @@ msgstr ""
 "estão localizadas normalmente, no tarball extraído, num ficheiro chamado "
 "<filename>README</filename> ou <filename>INSTALL</filename>."
 
-#: add-applications/C/add-applications.xml:295(para)
+#: add-applications/C/add-applications.xml:585(para)
 msgid ""
 "Tarballs often contain the source code of the program, and need to be "
 "<emphasis>compiled</emphasis> in order to be used."
@@ -993,21 +939,18 @@ msgstr ""
 "Os tarballs contêm habitualmente o código-fonte do programa e necessitam de "
 "ser <emphasis>compilados</emphasis> para poderem ser usados."
 
-#: add-applications/C/add-applications.xml:298(para)
+#: add-applications/C/add-applications.xml:590(para)
 msgid ""
 "Compiling programs requires some packages that are not installed by default. "
-"You can install these all at once by installing the <application>build-"
-"essential</application> package."
+"You can install most of these all at once by installing the <ulink "
+"url=\"apt:build-essential\">build-essential</ulink> package."
 msgstr ""
-"A compilação de programas requer alguns pacotes que não estão instalados por "
-"omissão. Pode instalá-los a todos de uma vez instalando o pacote "
-"<application>build-essential</application>."
 
-#: add-applications/C/add-applications.xml:302(title)
-msgid "Install <filename class=\"extension\">.run</filename> packages"
-msgstr "Instalar pacotes <filename class=\"extension\">.run</filename>"
+#: add-applications/C/add-applications.xml:600(title)
+msgid "Install .run packages"
+msgstr ""
 
-#: add-applications/C/add-applications.xml:303(para)
+#: add-applications/C/add-applications.xml:601(para)
 msgid ""
 "Sometimes you may need to install software (most often a game) which has "
 "been packaged as a .run file. These files contain the software and a small "
@@ -1017,7 +960,7 @@ msgstr ""
 "foi empacotado como um arquivo .run. Esses arquivos contêm o programa e um "
 "pequeno programa para instalá-lo."
 
-#: add-applications/C/add-applications.xml:304(para)
+#: add-applications/C/add-applications.xml:606(para)
 msgid ""
 "Follow the procedure below to install software packaged in a <filename "
 "class=\"extension\">.run</filename> file:"
@@ -1025,7 +968,7 @@ msgstr ""
 "Siga os procedimentos abaixo para instalar software empacotado num arquivo "
 "<filename class=\"extension\">.run</filename>:"
 
-#: add-applications/C/add-applications.xml:308(para)
+#: add-applications/C/add-applications.xml:613(para)
 msgid ""
 "Find the <filename class=\"extension\">.run</filename> file in the "
 "<application>File Browser</application>"
@@ -1033,13 +976,13 @@ msgstr ""
 "Procure o arquivo <filename class=\"extension\">.run</filename> no "
 "<application>Navegador de Ficheiros</application>"
 
-#: add-applications/C/add-applications.xml:309(para)
+#: add-applications/C/add-applications.xml:619(para)
 msgid "Right-click the file and select <guilabel>Properties</guilabel>"
 msgstr ""
 "Clique com o botão direito no arquivo e seleccione "
 "<guilabel>Propriedades</guilabel>"
 
-#: add-applications/C/add-applications.xml:310(para)
+#: add-applications/C/add-applications.xml:624(para)
 msgid ""
 "Under the <guilabel>Permissions</guilabel> tab, make sure that "
 "<guilabel>Allow executing file as program</guilabel> is checked and press "
@@ -1049,29 +992,22 @@ msgstr ""
 "<guilabel>Permitir a execução do ficheiro como aplicação</guilabel> está "
 "marcado e pressione <guibutton>Fechar</guibutton>"
 
-#: add-applications/C/add-applications.xml:311(para)
+#: add-applications/C/add-applications.xml:631(para)
 msgid ""
-"Double-click the <filename class=\"extension\">.run</filename> file to open "
-"it. A dialog box should appear"
+"Double-click the <filename class=\"extension\">.run</filename> file and "
+"press <guibutton>Run in Terminal</guibutton> to run the installer"
 msgstr ""
-"Clique duas vezes no arquivo <filename class=\"extension\">.run</filename> "
-"para abri-lo. Uma caixa de diálogo deverá aparecer"
+"Dê um duplo-clique no ficheiro <filename class=\"extension\">.run</filename> "
+"e pressione <guibutton>Correr no Terminal</guibutton> para iniciar o "
+"instalador."
 
-#: add-applications/C/add-applications.xml:312(para)
-msgid "Press <guibutton>Run in Terminal</guibutton> to run the installer"
-msgstr ""
-"Pressione <guibutton>Executar em Terminal</guibutton> para executar o "
-"instalador"
-
-#: add-applications/C/add-applications.xml:313(para)
+#: add-applications/C/add-applications.xml:638(para)
 msgid ""
-"A <application>Terminal</application> window will open. Follow any "
-"instructions on-screen to install the program"
+"A Terminal window will open. Follow any instructions on-screen to install "
+"the program"
 msgstr ""
-"Uma janela de <application>Terminal</application> abrirá. Siga as instruções "
-"no ecrã para instalar o programa"
 
-#: add-applications/C/add-applications.xml:316(para)
+#: add-applications/C/add-applications.xml:646(para)
 msgid ""
 "Once you have started the installer, it may take a while to display an "
 "installation screen. This is normally due to the installer extracting all of "
@@ -1088,10 +1024,18 @@ msgstr ""
 "Launchpad Contributions:\n"
 "  Andre Guedes https://launchpad.net/~crei0\n"
 "  António Lima https://launchpad.net/~amrlima\n"
+"  António Paulo Chaparro https://launchpad.net/~antoniopchaparro\n"
+"  Flávio Martins https://launchpad.net/~xhaker\n"
 "  HelderPereira https://launchpad.net/~pereira-helder\n"
 "  Joel Calado https://launchpad.net/~joelcalado\n"
+"  João Santos https://launchpad.net/~twocool-pt\n"
+"  Marco Paulo Martins Sousa https://launchpad.net/~marcomsousa\n"
 "  Marco Rodrigues https://launchpad.net/~gothicx\n"
-"  Pedro Caldeira Abreu https://launchpad.net/~pedro-caldeira\n"
+"  Mykas0 https://launchpad.net/~mykas0\n"
+"  Paulo Dias https://launchpad.net/~paxnubis\n"
+"  Pedro Caldeira Abreu https://launchpad.net/~pedro-caldeira-"
+"deactivatedaccount\n"
 "  Rafael Mendonça França https://launchpad.net/~faelufs\n"
+"  Rui Araújo https://launchpad.net/~rui-araujo\n"
 "  Susana Pereira https://launchpad.net/~susana\n"
 "  leonorhungria https://launchpad.net/~leonorhungria"

@@ -7,21 +7,21 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-docs\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2007-09-14 08:25+0100\n"
-"PO-Revision-Date: 2007-11-13 23:31+0000\n"
-"Last-Translator: Tommi Tauriainen <t.tauriainen@mbnet.fi>\n"
+"POT-Creation-Date: 2008-10-12 20:18+0100\n"
+"PO-Revision-Date: 2008-10-19 04:03+0000\n"
+"Last-Translator: Eero Salokannel <eero.salokannel@gmail.com>\n"
 "Language-Team: Finnish <fi@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2008-02-17 10:22+0000\n"
+"X-Launchpad-Export-Date: 2008-10-19 12:44+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: basic-commands/C/basic-commands-C.omf:6(creator) basic-commands/C/basic-commands-C.omf:7(maintainer)
 msgid "ubuntu-doc@lists.ubuntu.com (Ubuntu Documentation Project)"
 msgstr "ubuntu-doc@lists.ubuntu.com (Ubuntun dokumentaatioprojekti)"
 
-#: basic-commands/C/basic-commands-C.omf:8(title) basic-commands/C/basic-commands.xml:15(title)
+#: basic-commands/C/basic-commands-C.omf:8(title) basic-commands/C/basic-commands.xml:13(title)
 msgid "Basic Commands"
 msgstr "Tärkeimmät komennot"
 
@@ -33,15 +33,82 @@ msgstr "2006-09-07"
 msgid "Placeholder."
 msgstr "Varalla."
 
-#: basic-commands/C/basic-commands.xml:18(title)
+#: basic-commands/C/basic-commands.xml:3(title)
+msgid "Credits and License"
+msgstr "Tekijät ja lisenssi"
+
+#: basic-commands/C/basic-commands.xml:4(para)
+msgid ""
+"This document is maintained by the Ubuntu documentation team "
+"(https://wiki.ubuntu.com/DocumentationTeam). For a list of contributors, see "
+"the <ulink url=\"../../libs/C/contributors.xml\">contributors page</ulink>"
+msgstr ""
+"Ubuntun dokumentointitiimi (https://wiki.ubuntu.com/DocumentationTeam) "
+"ylläpitää tätä ohjetta. Ohjeen kirjoittamiseen osallistuneet henkilöt "
+"löytyvät <ulink url=\"../../libs/C/contributors.xml\">tekijät-"
+"sivulta</ulink>."
+
+#: basic-commands/C/basic-commands.xml:5(para)
+msgid ""
+"This document is made available under the Creative Commons ShareAlike 2.5 "
+"License (CC-BY-SA)."
+msgstr ""
+"Tämä ohje on käytettävissä Creative Commons ShareAlike 2.5 -lisenssillä (CC-"
+"BY-SA)."
+
+#: basic-commands/C/basic-commands.xml:6(para)
+msgid ""
+"You are free to modify, extend, and improve the Ubuntu documentation source "
+"code under the terms of this license. All derivative works must be released "
+"under this license."
+msgstr ""
+"Saat muokata, laajentaa ja parantaa Ubuntun ohjeiden lähdekoodia tämän "
+"lisenssin ehtojen mukaan. Kaikkien jatkotuotosten tulee olla julkaistu "
+"samalla lisenssillä."
+
+#: basic-commands/C/basic-commands.xml:8(para)
+msgid ""
+"This documentation is distributed in the hope that it will be useful, but "
+"WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY "
+"or FITNESS FOR A PARTICULAR PURPOSE AS DESCRIBED IN THE DISCLAIMER."
+msgstr ""
+"Tämä dokumentaatio jaetaan siinä toivossa, että siitä on hyötyä, mutta ilman "
+"takuuta; edes epäsuoraa takuuta kaupattavuudesta, tai soveltuvuudesta "
+"tiettyyn käyttöön kuten vastuuvapauslausekkeessa kuvaillaan, ei anneta."
+
+#: basic-commands/C/basic-commands.xml:11(para)
+msgid ""
+"A copy of the license is available here: <ulink url=\"/usr/share/ubuntu-"
+"docs/libs/C/ccbysa.xml\">Creative Commons ShareAlike License</ulink>."
+msgstr ""
+"Kopio lisenssistä löytyy sivulta <ulink url=\"/usr/share/ubuntu-"
+"docs/libs/C/ccbysa.xml\">Creative Commons ShareAlike -lisenssi</ulink>."
+
+#: basic-commands/C/basic-commands.xml:14(year)
+msgid "2008"
+msgstr "2008"
+
+#: basic-commands/C/basic-commands.xml:15(ulink)
+msgid "Ubuntu Documentation Project"
+msgstr "Ubuntun dokumentaatioprojekti"
+
+#: basic-commands/C/basic-commands.xml:15(holder)
+msgid "Canonical Ltd. and members of the <placeholder-1/>"
+msgstr "Canonical Ltd. ja seuraavan ryhmän jäsenet: <placeholder-1/>"
+
+#: basic-commands/C/basic-commands.xml:18(publishername)
+msgid "The Ubuntu Documentation Project"
+msgstr "Ubuntun dokumentaatioprojekti"
+
+#: basic-commands/C/basic-commands.xml:17(title)
 msgid "Using this Guide"
 msgstr "Tämän oppaan käyttö"
 
-#: basic-commands/C/basic-commands.xml:28(emphasis)
+#: basic-commands/C/basic-commands.xml:27(emphasis)
 msgid "man intro(1)"
 msgstr "man intro(1)"
 
-#: basic-commands/C/basic-commands.xml:20(emphasis)
+#: basic-commands/C/basic-commands.xml:19(emphasis)
 msgid ""
 "\"Under Linux there are GUIs (graphical user interfaces), where you can "
 "point and click and drag, and hopefully get work done without first reading "
@@ -50,13 +117,14 @@ msgid ""
 "That is faster and more powerful, but requires finding out what the commands "
 "are.\" -- from <placeholder-1/>"
 msgstr ""
-"Linuxia voi käyttää graafisella käyttöliittymällä, jolla toimintoja ohjataan "
-"enimmäkseen hiiren avulla. Siinä työskentely sujuu yleensä vähemmälläkin "
-"ohjeiden lukemisella. Perinteinen Unix-käyttöliittymä on komentorivi, jossa "
-"tietokoneelle kirjoitetaan komentoja näppäimistöllä. Tämä on nopeampaa ja "
-"tehokkaampaa, mutta vaatii käyttäjältä komentojen tuntemusta."
+"\"Linuxia voi käyttää graafisella käyttöliittymällä, jolla toimintoja "
+"ohjataan enimmäkseen hiiren avulla. Siinä työskentely sujuu yleensä "
+"vähemmälläkin ohjeiden lukemisella. Perinteinen Unix-käyttöliittymä on "
+"komentorivi, jossa tietokoneelle kirjoitetaan komentoja näppäimistöllä. Tämä "
+"on nopeampaa ja tehokkaampaa, mutta vaatii käyttäjältä komentojen "
+"tuntemusta.\" -- <placeholder-1/>"
 
-#: basic-commands/C/basic-commands.xml:33(para)
+#: basic-commands/C/basic-commands.xml:32(para)
 msgid ""
 "This guide will make you familiar with basic GNU/Linux shell commands. It is "
 "not intended to be a complete guide to the command line, just an "
@@ -67,7 +135,7 @@ msgstr ""
 "komentorivin käyttöön vaan vain johdanto sen käyttöön Ubuntun graafisten "
 "työkalujen lisäksi."
 
-#: basic-commands/C/basic-commands.xml:43(para)
+#: basic-commands/C/basic-commands.xml:42(para)
 msgid ""
 "All command names, file names or paths to directories will be shown using a "
 "<command>monospace font</command>."
@@ -75,17 +143,17 @@ msgstr ""
 "Komennot, tiedostonimet ja hakemistopolut esitetään käyttäen <command>tätä "
 "kirjasinta</command>."
 
-#: basic-commands/C/basic-commands.xml:50(para)
+#: basic-commands/C/basic-commands.xml:49(para)
 msgid ""
 "All the commands on this guide are to be issued from a command prompt in a "
 "<application>Terminal</application> and will be shown as: <screen>command to "
 "type</screen>"
 msgstr ""
 "Kaikki tämän oppaan komennot annettaan komentokehotteeseen "
-"<pplication>Pääte</application>-sovelluksessa. Esitysmuoto on seuraava: "
+"<application>Pääte</application>-sovelluksessa. Esitysmuoto on seuraava: "
 "<screen>komento</screen>"
 
-#: basic-commands/C/basic-commands.xml:58(para)
+#: basic-commands/C/basic-commands.xml:57(para)
 msgid ""
 "<emphasis role=\"strong\">Note that Linux is case sensitive.</emphasis> "
 "User, user, and USER are all different to Linux."
@@ -94,15 +162,15 @@ msgstr ""
 "merkkikokoriippuvainen.</emphasis> KÄYTTÄJÄ, Käyttäjä ja käyttäjä ovat eri "
 "sanoja Linuxille."
 
-#: basic-commands/C/basic-commands.xml:69(title)
+#: basic-commands/C/basic-commands.xml:68(title)
 msgid "Starting a Terminal"
 msgstr "Päätteen käynnistäminen"
 
-#: basic-commands/C/basic-commands.xml:70(para)
+#: basic-commands/C/basic-commands.xml:69(para)
 msgid "To open a <application>Terminal</application> do as follow:"
 msgstr "Käynnistä <application>Pääte</application> seuraavasti:"
 
-#: basic-commands/C/basic-commands.xml:76(para)
+#: basic-commands/C/basic-commands.xml:75(para)
 msgid ""
 "Choose "
 "<menuchoice><guimenu>Applications</guimenu><guimenuitem>Accessories</guimenui"
@@ -112,7 +180,7 @@ msgstr ""
 "<menuchoice><guimenu>Sovellukset</guimenu><guimenuitem>Apuohjelmat</guimenuit"
 "em><guimenuitem>Pääte</guimenuitem></menuchoice>;"
 
-#: basic-commands/C/basic-commands.xml:81(para)
+#: basic-commands/C/basic-commands.xml:80(para)
 msgid ""
 "Or press <keycombo><keycap>Alt</keycap><keycap>F2</keycap></keycombo> and "
 "type <command>gnome-terminal</command>."
@@ -120,29 +188,29 @@ msgstr ""
 "Tai paina <keycombo><keycap>Alt</keycap><keycap>F2</keycap></keycombo> ja "
 "kirjoita <command>gnome-terminal</command>."
 
-#: basic-commands/C/basic-commands.xml:94(title)
+#: basic-commands/C/basic-commands.xml:93(title)
 msgid "File and Directory Commands"
 msgstr "Komennot tiedostojen ja hakemistojen käsittelyyn"
 
-#: basic-commands/C/basic-commands.xml:97(title)
+#: basic-commands/C/basic-commands.xml:96(title)
 msgid "cd"
 msgstr "cd"
 
-#: basic-commands/C/basic-commands.xml:98(para)
+#: basic-commands/C/basic-commands.xml:97(para)
 msgid ""
 "The <command>cd</command> command changes directories. When you open a "
 "terminal you will be in your home directory. To move around the file system "
-"you will use <command>cd</command>. Examples:"
+"you will use <command>cd</command>."
 msgstr ""
-"Komento <command>cd</command> vaihtaa hakemistoa. Kun käynnistät päätteen, "
-"olet aluksi kotihakemistossasi. Voit siirtyä muualle järjestelmän "
-"hakemistorakentessa käyttämällä <command>cd</command>-komentoa. Esimerkkejä:"
+"Komento <command>cd</command> vaihtaa hakemistoa. Kun avaat päätteen, olet "
+"kotihakemistossasi. Liikkuaksesi tiedostojärjestelmässä käytät komentoa "
+"<command>cd</command>."
 
-#: basic-commands/C/basic-commands.xml:107(para)
+#: basic-commands/C/basic-commands.xml:106(para)
 msgid "To navigate into the root directory, type: <screen>cd /</screen>"
 msgstr "Siirry juurihakemistoon komennolla <screen>cd /</screen>"
 
-#: basic-commands/C/basic-commands.xml:113(para)
+#: basic-commands/C/basic-commands.xml:112(para)
 msgid ""
 "To navigate to your home directory, type: <screen>cd</screen> or <screen>cd "
 "~</screen>"
@@ -150,21 +218,39 @@ msgstr ""
 "Siirry kotihakemistoosi komennolla <screen>cd</screen> tai <screen>cd "
 "~</screen>"
 
-#: basic-commands/C/basic-commands.xml:121(para)
+#: basic-commands/C/basic-commands.xml:118(para)
+msgid ""
+"The <command>~</command> character represents the current user's home "
+"directory. As seen above, <command>cd ~</command> is equivalent to "
+"<command>cd /home/username/</command>. However, when running a command as "
+"root (using <command>sudo</command>, for example), <command>~</command> "
+"points instead to <filename class=\"directory\">/root</filename>. When "
+"running a command with <command>sudo</command>, the full path to your home "
+"directory must be given."
+msgstr ""
+"<command>~</command>-merkki vastaa nykyisen käyttäjän kotihakemistoa. Kuten "
+"ylläolevasta näkyy, komento <command>cd ~</command> on sama asia kuin "
+"<command>cd /home/käyttäjä/</command>. Kuitenkin suoritettaessa ohjelma "
+"pääkäyttäjänä, esimerkiksi komennon <command>sudo</command> avulla, "
+"<command>~</command> viittaakin kansioon <filename "
+"class=\"directory\">/root</filename>. Suoritettaessa ohjelma "
+"<command>sudo</command>-komennon kanssa täytyy antaa kotikansion koko polku."
+
+#: basic-commands/C/basic-commands.xml:129(para)
 msgid "To navigate up one directory level, type: <screen>cd ..</screen>"
 msgstr ""
 "Siirry hakemistohierarkiassa yksi taso ylöspäin komennolla <screen>cd "
 "..</screen>"
 
-#: basic-commands/C/basic-commands.xml:127(para)
+#: basic-commands/C/basic-commands.xml:135(para)
 msgid ""
 "To navigate to the previous directory (or back), type: <screen>cd -</screen>"
 msgstr ""
 "Siirry takaisin edelliseen hakemistoon komennolla <screen>cd -</screen>"
 
-#: basic-commands/C/basic-commands.xml:134(para)
+#: basic-commands/C/basic-commands.xml:142(para)
 msgid ""
-"To navigate through multiple levels of directory at once, specify the full "
+"To navigate through multiple levels of directories at once, specify the full "
 "directory path that you want to go to. For example, type: <screen>cd "
 "/var/www</screen> to go directly to the <filename "
 "class=\"directory\">/www</filename> subdirectory of <filename "
@@ -173,145 +259,147 @@ msgid ""
 "class=\"directory\">Desktop</filename> subdirectory inside your home "
 "directory."
 msgstr ""
-"Voit siirtyä hakemistorakenteessa monien tasojen ohi kerralla kirjoittamalla "
-"täydellisen hakemistopolun. Esimerkiksi komennolla <screen>cd "
-"/var/www</screen> siirryt suoraan <filename "
+"Suunnataksesi useampia hakemistotasoja kerralla, määritä koko "
+"hakemistopolku, jonne haluat mennä. Esimerkiksi, kirjoita: <screen>cd "
+"/var/www</screen>, mennäksesi suoraan <filename "
 "class=\"directory\">/var/</filename>-hakemiston <filename "
-"class=\"directory\">/www</filename>-alihakemistoon. Toisaalta esimerkiksi "
-"komennolla <screen>cd ~/Desktop</screen> siirryt suoraan kotihakemistosi "
-"<filename class=\"directory\">Desktop</filename>-alihakemistoon."
+"class=\"directory\">/www</filename>-alihakemistoon. Toisena esimerkkinä, "
+"kirjoita: <screen>cd ~/Desktop</screen> siirtyäksesi kotikansiosi alla "
+"sijaitsevaan <filename class=\"directory\">Desktop</filename>-alihakemistoon."
 
-#: basic-commands/C/basic-commands.xml:151(title)
+#: basic-commands/C/basic-commands.xml:159(title)
 msgid "pwd"
 msgstr "pwd"
 
-#: basic-commands/C/basic-commands.xml:162(para)
+#: basic-commands/C/basic-commands.xml:169(para)
 msgid ""
 "<application>GNOME Terminal</application> also displays this information in "
-"the title bar of it's window."
+"the title bar of its window."
 msgstr ""
-"Tämä tieto näkyy myös <application>Päätteen</application> otsikkopalkissa."
+"<application>Pääte</application> näyttää tämän tiedon myös ikkunan "
+"otsikkopalkissa."
 
-#: basic-commands/C/basic-commands.xml:152(para)
+#: basic-commands/C/basic-commands.xml:160(para)
 msgid ""
-"<command>pwd</command>: The <command>pwd</command> command will show you "
-"which directory you're located in (<acronym>pwd</acronym> stands for "
-"<quote>print working directory</quote>). For example, typing "
-"<screen>pwd</screen> in the <filename class=\"directory\">Desktop</filename> "
-"directory, will show <computeroutput>~/Desktop</computeroutput>. "
-"<placeholder-1/>"
+"The <command>pwd</command> command outputs which directory you are currently "
+"located in (<acronym>pwd</acronym> stands for <quote>print working "
+"directory</quote>). For example, typing <screen>pwd</screen> in the "
+"<filename class=\"directory\">Desktop</filename> directory, will show "
+"<computeroutput>/home/username/Desktop</computeroutput>. <placeholder-1/>"
 msgstr ""
-"<command>pwd</command> näyttää nykyisen hakemiston (<acronym>pwd</acronym> "
-"tulee sanoista <quote>print working directory</quote>, \"tulosta "
-"työhakemisto\"). Esimerkiksi komento <screen>pwd</screen> tulostaisi "
-"<filename class=\"directory\">Desktop</filename>-hakemistossa "
-"<computeroutput>/home/käyttäjätunnuksesi/Desktop</computeroutput>. "
-"<placeholder-1/>"
+"Komento <command>pwd</command> tulostaa sen hetkisen sijaintihakemistosi "
+"(<acronym>pwd</acronym> tulee sanoista <quote>print working "
+"directory</quote> (=\"tulosta työhakemistosi\"). Esimerkiksi "
+"<screen>pwd</screen> <filename class=\"directory\">Desktop</filename>-"
+"hakemistossa, tulostuu rivi "
+"<computeroutput>/home/username/Desktop</computeroutput>.<placeholder-1/>"
 
-#: basic-commands/C/basic-commands.xml:171(title)
+#: basic-commands/C/basic-commands.xml:178(title)
 msgid "ls"
 msgstr "ls"
 
-#: basic-commands/C/basic-commands.xml:172(para)
+#: basic-commands/C/basic-commands.xml:179(para)
 msgid ""
-"The <command>ls</command> command shows you the files in your current "
-"directory. Used with certain options, you can see sizes of files, when files "
-"where made, and permissions of files. For example, typing <screen>ls "
-"~</screen> will show you the files that are in your home directory."
+"The <command>ls</command> command outputs a list of the files in the current "
+"directory. For example, typing <screen>ls ~</screen> will show you the files "
+"that are in your home directory."
 msgstr ""
-"<command>ls</command>-komento näyttää nykyisen hakemiston tiedostot ja "
-"alihakemistot. Sopivia valitsimia käyttämällä näet tiedostojen koot, milloin "
-"ne on luotu ja minkälaiset oikeudet niille on asetettu. Esimerkiksi komento "
-"<screen>ls ~</screen> näyttäisi kotihakemistossasi olevat tiedostot ja "
-"hakemistot."
+"Komento <command>ls</command> tulostaa listan tiedostoista hakemistossa. "
+"Esimerkiksi <screen>ls ~</screen> tulostaa tiedostot kotikansiostasi."
 
-#: basic-commands/C/basic-commands.xml:183(title)
+#: basic-commands/C/basic-commands.xml:185(para)
+msgid ""
+"Used with the <command>-l</command> options, <command>ls</command> outputs "
+"various other information alongside the filename, such as the current "
+"permissions on the file, and the file's owner."
+msgstr ""
+"Käytettynä <command>-l</command>-valitsimella <command>ls</command> tulostaa "
+"paljon muuta tietoa tiedostonimistä, kuten tiedosto-oikeudet ja tiedoston "
+"omistajan."
+
+#: basic-commands/C/basic-commands.xml:193(title)
 msgid "cp"
 msgstr "cp"
 
-#: basic-commands/C/basic-commands.xml:184(para)
+#: basic-commands/C/basic-commands.xml:194(para)
 msgid ""
-"The <command>cp</command> command makes a copy of a file for you. For "
-"example, type: <screen>cp file foo</screen> to make a exact copy of "
-"<filename>file</filename> and name it <filename>foo</filename>, but the file "
-"<filename>file</filename> will still be there."
+"The <command>cp</command> command makes a copy of a file. For example, type: "
+"<screen>cp foo bar</screen> to make an exact copy of "
+"<filename>foo</filename> and name it <filename>bar</filename>. "
+"<filename>foo</filename> will be unchanged."
 msgstr ""
-"<command>cp</command>-komento kopioi tiedostoja. Esimerkiksi <screen>cop "
-"tiedosto uusi</screen> kopioisi tiedoston <filename>tiedosto</filename> "
-"nimelle <filename>uusi</filename>."
+"Komento <command>cp</command> tekee tiedostosta kopion. Esimerkiksi "
+"<screen>cp foo bar</screen> tekee identtisen kopion <filename>foo</filename>-"
+"tiedostosta ja nimeää sen <filename>bar</filename>-tiedostoksi. "
+"<filename>foo</filename>-tiedostoa ei muuteta."
 
-#: basic-commands/C/basic-commands.xml:194(title)
+#: basic-commands/C/basic-commands.xml:204(title)
 msgid "mv"
 msgstr "mv"
 
-#: basic-commands/C/basic-commands.xml:206(para)
-msgid ""
-"If you are using <command>mv</command> with <command>sudo</command> you will "
-"not be able to use the <emphasis role=\"strong\">~</emphasis> shortcut, but "
-"will have to use the full pathnames to your files. This is because when you "
-"are working as root, <emphasis role=\"strong\">~</emphasis> will refer to "
-"the root account's home directory, not your own."
-msgstr ""
-"Jos käytät <command>mv</command>:tä <command>sudo</command>n kanssa, et voi "
-"käyttää <emphasis role=\"strong\">~</emphasis>-merkkiä viittaamaan "
-"kotihakemistoosi, vaan sinun on käytettävä täydellisiä hakemistopolkuja. "
-"Tämä johtuu siitä, että tällöin toimit pääkäyttäjänä, jolloin <emphasis "
-"role=\"strong\">~</emphasis> viittaa pääkäyttäjän - eikä suinkaan sinun - "
-"kotihakemistoon."
-
-#: basic-commands/C/basic-commands.xml:195(para)
+#: basic-commands/C/basic-commands.xml:205(para)
 msgid ""
 "The <command>mv</command> command moves a file to a different location or "
-"will rename a file. Examples are as follows: <screen>mv file foo</screen> "
-"will rename the file <filename>file</filename> to <filename>foo</filename>. "
+"will rename a file. Examples are as follows: <screen>mv foo bar</screen> "
+"will rename the file <filename>foo</filename> to <filename>bar</filename>. "
 "<screen>mv foo ~/Desktop</screen> will move the file "
 "<filename>foo</filename> to your <filename "
-"class=\"directory\">Desktop</filename> directory but will not rename it. You "
-"must specify a new file name to rename a file. <placeholder-1/>"
+"class=\"directory\">Desktop</filename> directory but will not rename it."
 msgstr ""
-"Komento <command>mv</command> siirtää tiedoston toiseen hakemistoon tai "
-"uudelleennimeää sen. Esimerkiksi <screen>mv tiedosto uusi</screen> "
-"uudelleennimeäisi tiedoston <filename>tiedosto</filename> nimelle "
-"<filename>uusi</filename>. <screen>mv tiedosto ~/Desktop</screen> taas "
-"siirtäisi tiedoston <filename>tiedosto</filename> kotihakemistosi <filename "
-"class=\"directory\">Desktop</filename>-alihakemistoon mutta ei muuttaisi sen "
-"nimeä. <placeholder-1/>"
+"Komento <command>mv</command> siirtää tiedoston eri kohteeseen tai nimeää "
+"sen uudelleen. Esimerkiksi: <screen>mv foo bar</screen> nimeää tiedoston "
+"<filename>foo</filename> tiedostoksi <filename>bar</filename>. <screen>mv "
+"foo ~/Desktop</screen> siirtää tiedoston <filename>foo</filename> <filename "
+"class=\"directory\">Desktop</filename>-kansioosi, mutta ei muuta sitä."
 
-#: basic-commands/C/basic-commands.xml:219(title)
+#: basic-commands/C/basic-commands.xml:218(title)
 msgid "rm"
 msgstr "rm"
 
-#: basic-commands/C/basic-commands.xml:220(para)
+#: basic-commands/C/basic-commands.xml:219(para)
 msgid ""
-"Use the <command>rm</command> command to remove or delete a file in your "
-"directory. It will not work on directories which have files in them."
+"<command>rm</command> is used to delete files. <screen>rm foo</screen> "
+"deletes the file <filename>foo</filename> from the current directory."
 msgstr ""
-"<command>rm</command>-komennolla voi poistaa tiedostoja. Se ei poista "
-"hakemistoja, jotka eivät ole tyhjiä."
+"Komentoa <command>rm</command> käytetään tiedostojen poistamiseen. "
+"<screen>rm foo</screen> poistaa tiedoston <filename>foo</filename> sen "
+"hetkisestä kansiosta."
 
-#: basic-commands/C/basic-commands.xml:228(title)
+#: basic-commands/C/basic-commands.xml:224(para)
+msgid ""
+"By default, <command>rm</command> will not remove directories. To remove a "
+"directory, you must use the <command>-R</command> option. For example, "
+"<screen>rm -R foobar</screen> will remove the directory foobar, <emphasis "
+"role=\"strong\">and all of its contents!</emphasis>"
+msgstr ""
+"Oletuksena <command>rm</command>-komento ei poista kansioita. Poistaaksesi "
+"kansion, sinun täytyy käyttää <command>-R</command>-valitsinta. Esimerkiksi "
+"<screen>rm -R foobar</screen> poistaa kansion foobar <emphasis "
+"role=\"strong\">ja sen sisällön!</emphasis>"
+
+#: basic-commands/C/basic-commands.xml:233(title)
 msgid "mkdir"
 msgstr "mkdir"
 
-#: basic-commands/C/basic-commands.xml:229(para)
+#: basic-commands/C/basic-commands.xml:234(para)
 msgid ""
-"The <command>mkdir</command> command will allow you to create directories. "
-"For example, typing: <screen>mkdir music</screen> will create a music "
-"directory in the current directory."
+"The <command>mkdir</command> command allows you to create directories. For "
+"example, typing: <screen>mkdir music</screen> will create a directory named "
+"<filename class=\"directory\">music</filename> in the current directory."
 msgstr ""
-"<command>mkdir</command> luo uuden hakemiston. Esimerkiksi komento "
-"<screen>mkdir musiikki</screen> loisi uuden musiikki-hakemiston nykyiseen "
-"hakemistoon."
+"Komennolla <command>mkdir</command> tehdään kansioita. Esimerkiksi, "
+"<screen>mkdir music</screen> tekee kansion <filename "
+"class=\"directory\">music</filename> sen hetkiseen kansioon."
 
-#: basic-commands/C/basic-commands.xml:239(title)
+#: basic-commands/C/basic-commands.xml:244(title)
 msgid "System Information Commands"
 msgstr "Järjestelmästä tietoa antavat komennot"
 
-#: basic-commands/C/basic-commands.xml:242(title)
+#: basic-commands/C/basic-commands.xml:247(title)
 msgid "df"
 msgstr "df"
 
-#: basic-commands/C/basic-commands.xml:243(para)
+#: basic-commands/C/basic-commands.xml:248(para)
 msgid ""
 "The <command>df</command> command displays filesystem disk space usage for "
 "all partitions. <screen>df -h</screen> will give information using megabytes "
@@ -322,11 +410,11 @@ msgstr ""
 "on käytössä ja vapaana. Komento  <screen>df -h</screen> näyttää tiedot "
 "käyttäen mega- (M) ja gigatavuja (G) levyn varausyksiköiden sijasta."
 
-#: basic-commands/C/basic-commands.xml:253(title)
+#: basic-commands/C/basic-commands.xml:258(title)
 msgid "free"
 msgstr "free"
 
-#: basic-commands/C/basic-commands.xml:254(para)
+#: basic-commands/C/basic-commands.xml:259(para)
 msgid ""
 "The <command>free</command> command displays the amount of free and used "
 "memory in the system. <screen>free -m</screen> will give the information "
@@ -336,11 +424,11 @@ msgstr ""
 "muistista. <screen>free -m</screen> näyttää tiedot käyttäen megatavuja, mikä "
 "on käytännöllisintä nykykoneilla."
 
-#: basic-commands/C/basic-commands.xml:264(title)
+#: basic-commands/C/basic-commands.xml:269(title)
 msgid "top"
 msgstr "top"
 
-#: basic-commands/C/basic-commands.xml:265(para)
+#: basic-commands/C/basic-commands.xml:270(para)
 msgid ""
 "The <command>top</command> command displays information on your GNU/Linux "
 "system, running processes and system resources, including CPU, RAM &amp; "
@@ -352,11 +440,11 @@ msgstr ""
 "muistin ja levyvälimuistin käytöstä. <application>top</application>-"
 "ohjelmasta poistutaan painamalla <keycap>q</keycap>-näppäintä."
 
-#: basic-commands/C/basic-commands.xml:275(title)
+#: basic-commands/C/basic-commands.xml:280(title)
 msgid "uname"
 msgstr "uname"
 
-#: basic-commands/C/basic-commands.xml:276(para)
+#: basic-commands/C/basic-commands.xml:281(para)
 msgid ""
 "The <command>uname</command> command with the <emphasis role=\"strong\">-"
 "a</emphasis> option, prints all system information, including machine name, "
@@ -368,11 +456,11 @@ msgstr ""
 "kuten tietokoneen ja ytimen nimen, sekä ytimen version. Tämä komento on "
 "hyödyllinen selvitettäessä mikä ydin on parhaillaan käytössä."
 
-#: basic-commands/C/basic-commands.xml:286(title)
+#: basic-commands/C/basic-commands.xml:291(title)
 msgid "lsb_release"
 msgstr "lsb_release"
 
-#: basic-commands/C/basic-commands.xml:287(para)
+#: basic-commands/C/basic-commands.xml:292(para)
 msgid ""
 "The <emphasis role=\"strong\">lsb_release</emphasis> command with the "
 "<emphasis role=\"strong\">-a</emphasis> option prints version information "
@@ -380,37 +468,25 @@ msgid ""
 "<screen>lsb_release -a</screen> will give you: <screen>\n"
 "No LSB modules are available.\n"
 "Distributor ID: Ubuntu\n"
-"Description:    Ubuntu 7.04 \n"
-"Release:        7.04\n"
-"Codename:       feisty</screen>"
+"Description:    Ubuntu 8.10 \n"
+"Release:        8.10\n"
+"Codename:       intrepid</screen>"
 msgstr ""
-"<emphasis role=\"strong\">lsb_release</emphasis>-komento näyttää valitsinta "
-"<emphasis role=\"strong\">-a</emphasis> käytettäessä tietoja käytössä "
-"olevasta Linux-jakeluversiosta. Esimerkiksi <screen>lsb_release -a</screen> "
-"tulostaisi seuraavan: <screen>\n"
+"<emphasis role=\"strong\">lsb_release</emphasis> käsky valinnalla<emphasis "
+"role=\"strong\">-a</emphasis> tulostaa versiotietoja käytetystä Linux "
+"jakelusta. Esimerkki, kirjoittamalla: <screen>lsb_release -a</screen> saat "
+"tekstin: <screen>\n"
 "No LSB modules are available.\n"
 "Distributor ID: Ubuntu\n"
-"Description: Ubuntu 7.10 \n"
-"Release: 7.10\n"
-"Codename: gutsy</screen>"
+"Description: Ubuntu 8.10 \n"
+"Release: 8.10\n"
+"Codename: intrepid</screen>"
 
-#: basic-commands/C/basic-commands.xml:305(title)
-msgid "ifconfig"
-msgstr "ifconfig"
-
-#: basic-commands/C/basic-commands.xml:306(para)
-msgid ""
-"The <command>ifconfig</command> command reports on your system's network "
-"interfaces."
-msgstr ""
-"<command>ifconfig</command>-komento näyttää tietoja järjestelmän "
-"verkkolaitteista."
-
-#: basic-commands/C/basic-commands.xml:314(title)
+#: basic-commands/C/basic-commands.xml:311(title)
 msgid "Executing Commands with Elevated Privileges"
 msgstr "Komentojen suorittaminen pääkäyttäjän oikeuksin"
 
-#: basic-commands/C/basic-commands.xml:315(para)
+#: basic-commands/C/basic-commands.xml:312(para)
 msgid ""
 "The following commands will need to be prefaced with the "
 "<command>sudo</command> command. Please see <ulink "
@@ -422,11 +498,11 @@ msgstr ""
 "artikkelista <ulink "
 "url=\"https://help.ubuntu.com/community/RootSudo\">RootSudo</ulink>."
 
-#: basic-commands/C/basic-commands.xml:324(title)
+#: basic-commands/C/basic-commands.xml:321(title)
 msgid "Adding a New Group"
 msgstr "Uuden ryhmän lisääminen"
 
-#: basic-commands/C/basic-commands.xml:325(para)
+#: basic-commands/C/basic-commands.xml:322(para)
 msgid ""
 "The <command>addgroup</command> command is used to create a new group on the "
 "system. To create a new group, type: <screen>addgroup newgroup</screen> The "
@@ -437,11 +513,11 @@ msgstr ""
 "<screen>addgroup uusi</screen> loisi uuden ryhmän, jonka nimi on <emphasis "
 "role=\"strong\">uusi</emphasis>."
 
-#: basic-commands/C/basic-commands.xml:334(title)
+#: basic-commands/C/basic-commands.xml:331(title)
 msgid "Adding A New User"
 msgstr "Uuden käyttäjän lisääminen"
 
-#: basic-commands/C/basic-commands.xml:335(para)
+#: basic-commands/C/basic-commands.xml:332(para)
 msgid ""
 "The <command>adduser</command> is used to create new users on the system. To "
 "create a new user, type: <screen>adduser newuser</screen> The above command "
@@ -451,7 +527,7 @@ msgstr ""
 "komento <screen>adduser liisa</screen> loisi uuden käyttäjän, jonka "
 "käyttäjänimi on <emphasis role=\"strong\">liisa</emphasis>"
 
-#: basic-commands/C/basic-commands.xml:342(para)
+#: basic-commands/C/basic-commands.xml:339(para)
 msgid ""
 "To assign a password for the new user use the <command>passwd</command> "
 "command: <screen>passwd newuser</screen>"
@@ -459,7 +535,7 @@ msgstr ""
 "Uudelle käyttäjälle asetetaan salasana <command>passwd</command>-komennolla: "
 "<screen>passwd liisa</screen>"
 
-#: basic-commands/C/basic-commands.xml:348(para)
+#: basic-commands/C/basic-commands.xml:345(para)
 msgid ""
 "Finally, to assign the new user to the new group, type: <screen>adduser "
 "newuser newgroup</screen>"
@@ -467,11 +543,11 @@ msgstr ""
 "Lopuksi käyttäjän voi liittää ryhmään komennolla <screen>adduser liisa "
 "uusi</screen>"
 
-#: basic-commands/C/basic-commands.xml:356(title)
+#: basic-commands/C/basic-commands.xml:353(title)
 msgid "Options"
 msgstr "Valitsimet"
 
-#: basic-commands/C/basic-commands.xml:357(para)
+#: basic-commands/C/basic-commands.xml:354(para)
 msgid ""
 "The default behavior for a command may usually be modified by adding a "
 "<emphasis role=\"strong\">-- <emphasis>option</emphasis></emphasis> to the "
@@ -490,7 +566,7 @@ msgstr ""
 "tiedostojen koot näytetään käyttäen mega- ja gigatavuja (eli selkeämmässä "
 "muodossa)."
 
-#: basic-commands/C/basic-commands.xml:368(para)
+#: basic-commands/C/basic-commands.xml:365(para)
 msgid ""
 "Options can be grouped in clusters so <screen>ls -sh</screen> is exactly the "
 "same command as <screen>ls -s -h</screen> Most options have a long version, "
@@ -502,11 +578,11 @@ msgstr ""
 "on myös pidempi versio, jonka alkuun laitetaan kaksi viivaa. Siis myös "
 "<screen>ls --size --human-readable</screen> on sama kuin edelliset komennot."
 
-#: basic-commands/C/basic-commands.xml:379(title)
+#: basic-commands/C/basic-commands.xml:376(title)
 msgid "\"Man\" and getting help"
 msgstr "\"Man\" ja ohjeiden hakeminen"
 
-#: basic-commands/C/basic-commands.xml:380(para)
+#: basic-commands/C/basic-commands.xml:377(para)
 msgid ""
 "<emphasis role=\"strong\"><emphasis>command</emphasis> --help</emphasis> and "
 "<emphasis role=\"strong\">man <emphasis>command</emphasis></emphasis> are "
@@ -516,7 +592,7 @@ msgstr ""
 "<emphasis role=\"strong\">man <emphasis>komento</emphasis></emphasis> ovat "
 "kaksi tärkeintä komentorivityökalua."
 
-#: basic-commands/C/basic-commands.xml:387(para)
+#: basic-commands/C/basic-commands.xml:384(para)
 msgid ""
 "Virtually all commands understand the <emphasis role=\"strong\">-"
 "h</emphasis> (or <emphasis role=\"strong\">--help</emphasis>) option which "
@@ -529,7 +605,7 @@ msgstr ""
 "ohjeet komennon käyttämiseksi. Kokeile esimerkiksi komentoa <screen>man -"
 "h</screen> tai <screen>man --help</screen>."
 
-#: basic-commands/C/basic-commands.xml:397(para)
+#: basic-commands/C/basic-commands.xml:394(para)
 msgid ""
 "Every command and nearly every application in Linux will have a man (manual) "
 "file, so finding them is as simple as typing <command>man command</command> "
@@ -543,7 +619,7 @@ msgstr ""
 "näyttäisi ohjeet <command>mv</command>-komennon käyttöön "
 "(<command>mv</command>:n man-sivun)."
 
-#: basic-commands/C/basic-commands.xml:406(para)
+#: basic-commands/C/basic-commands.xml:403(para)
 msgid ""
 "Move up and down the man file with the arrow keys, and quit back to the "
 "command prompt with <keycap>q</keycap>."
@@ -551,7 +627,7 @@ msgstr ""
 "Man-sivua voi selata nuolinäppäimillä. Takaisin komentokehotteeseen pääsee "
 "painamalla <keycap>q</keycap>:ta."
 
-#: basic-commands/C/basic-commands.xml:411(para)
+#: basic-commands/C/basic-commands.xml:408(para)
 msgid ""
 "<screen>man man</screen> will bring up the manual entry for the "
 "<command>man</command> command, which is a good place to start."
@@ -559,7 +635,7 @@ msgstr ""
 "<screen>man man</screen> näyttää tarkemmat ohjeet <command>man</command>-"
 "komennon käyttöön."
 
-#: basic-commands/C/basic-commands.xml:417(para)
+#: basic-commands/C/basic-commands.xml:414(para)
 msgid ""
 "<screen>man intro</screen> is especially useful - it displays the "
 "\"Introduction to user commands\" which is a well-written, fairly brief "
@@ -568,7 +644,7 @@ msgstr ""
 "<screen>man intro</screen> on erityisen hyödyllinen, sillä se näyttää helpot "
 "ohjeet komentorivin käyttöön."
 
-#: basic-commands/C/basic-commands.xml:422(para)
+#: basic-commands/C/basic-commands.xml:419(para)
 msgid ""
 "There are also <command>info</command> pages, which are generally more in-"
 "depth than <command>man</command> pages. Try <screen>info info</screen> for "
@@ -578,11 +654,11 @@ msgstr ""
 "tarkempia kuin <command>man</command>-sivut. Lisätietoja info-sivuista näet "
 "komennolla <screen>info info</screen>."
 
-#: basic-commands/C/basic-commands.xml:432(title)
+#: basic-commands/C/basic-commands.xml:429(title)
 msgid "Searching for man files"
 msgstr "Man-tiedotoista hakeminen"
 
-#: basic-commands/C/basic-commands.xml:433(para)
+#: basic-commands/C/basic-commands.xml:430(para)
 msgid ""
 "If you aren't sure which command or application you need to use, you can try "
 "searching the man files."
@@ -590,11 +666,11 @@ msgstr ""
 "Jos ei ole varma mitä komentoa tai sovellusta käyttäisi, voi kokeilla hakea "
 "man-tiedostoista."
 
-#: basic-commands/C/basic-commands.xml:446(para)
+#: basic-commands/C/basic-commands.xml:443(para)
 msgid "This is the same as the <command>apropos</command> command."
 msgstr "Tämä on sama kuin <command>apropos</command>-komento."
 
-#: basic-commands/C/basic-commands.xml:439(para)
+#: basic-commands/C/basic-commands.xml:436(para)
 msgid ""
 "<command>man -k foo</command>, will search the man files for "
 "<emphasis>foo</emphasis>. Try <screen>man -k nautilus</screen> to see how "
@@ -604,11 +680,11 @@ msgstr ""
 "<emphasis>komento</emphasis>. Kokeile esimerkiksi komentoa <screen>man -k "
 "nautilus</screen>. <placeholder-1/>"
 
-#: basic-commands/C/basic-commands.xml:459(para)
+#: basic-commands/C/basic-commands.xml:456(para)
 msgid "This is the same as the <command>whatis</command> command."
 msgstr "Tämä tekee saman kuin <command>whatis</command>-komento."
 
-#: basic-commands/C/basic-commands.xml:454(para)
+#: basic-commands/C/basic-commands.xml:451(para)
 msgid ""
 "<command>man -f foo</command>, searches only the titles of your system's man "
 "files. For example, try <screen>man -f gnome</screen><placeholder-1/>"
@@ -617,15 +693,15 @@ msgstr ""
 "komennosta. Kokeile esimerkiksi komentoa <screen>man -f "
 "gnome</screen><placeholder-1/>"
 
-#: basic-commands/C/basic-commands.xml:471(title)
+#: basic-commands/C/basic-commands.xml:468(title)
 msgid "Other Useful Things"
 msgstr "Muuta hyödyllistä"
 
-#: basic-commands/C/basic-commands.xml:474(title)
+#: basic-commands/C/basic-commands.xml:471(title)
 msgid "Pasting in commands"
 msgstr "Komentojen liittäminen"
 
-#: basic-commands/C/basic-commands.xml:475(para)
+#: basic-commands/C/basic-commands.xml:472(para)
 msgid ""
 "Often, you will be referred to instructions that require commands to be "
 "pasted into the terminal. You might be wondering why the text you've copied "
@@ -647,11 +723,11 @@ msgstr ""
 "<menuchoice><guimenuitem>Liitä</guimenuitem></menuchoice> hiiren oikeasta "
 "näppäimestä aukeavasta valikosta."
 
-#: basic-commands/C/basic-commands.xml:498(title)
+#: basic-commands/C/basic-commands.xml:495(title)
 msgid "Save on typing"
 msgstr "Kirjoita vähemmän"
 
-#: basic-commands/C/basic-commands.xml:507(para)
+#: basic-commands/C/basic-commands.xml:504(para)
 msgid ""
 "<keycap>Up Arrow</keycap> or "
 "<keycombo><keycap>Ctrl</keycap><keycap>p</keycap></keycombo>"
@@ -659,11 +735,11 @@ msgstr ""
 "<keycap>Nuoli ylös</keycap> tai "
 "<keycombo><keycap>Ctrl</keycap><keycap>p</keycap></keycombo>"
 
-#: basic-commands/C/basic-commands.xml:517(para)
+#: basic-commands/C/basic-commands.xml:514(para)
 msgid "Scrolls through the commands you've entered previously."
 msgstr "Näyttää aiemmin annettuja komentoja."
 
-#: basic-commands/C/basic-commands.xml:525(para)
+#: basic-commands/C/basic-commands.xml:522(para)
 msgid ""
 "<keycap>Down Arrow</keycap> or "
 "<keycombo><keycap>Ctrl</keycap><keycap>n</keycap></keycombo>"
@@ -671,23 +747,23 @@ msgstr ""
 "<keycap>Nuoli alas</keycap> tai "
 "<keycombo><keycap>Ctrl</keycap><keycap>n</keycap></keycombo>"
 
-#: basic-commands/C/basic-commands.xml:535(para)
+#: basic-commands/C/basic-commands.xml:532(para)
 msgid "Takes you back to a more recent command."
 msgstr "Näyttää viimeaikaisempia komentoja."
 
-#: basic-commands/C/basic-commands.xml:542(keycap)
+#: basic-commands/C/basic-commands.xml:539(keycap)
 msgid "Enter"
 msgstr "Enter"
 
-#: basic-commands/C/basic-commands.xml:547(para)
+#: basic-commands/C/basic-commands.xml:544(para)
 msgid "When you have the command you want."
 msgstr "Painetaan kun komentorivillä on aiottu komento."
 
-#: basic-commands/C/basic-commands.xml:553(keycap)
+#: basic-commands/C/basic-commands.xml:550(keycap)
 msgid "Tab"
 msgstr "Sarkain"
 
-#: basic-commands/C/basic-commands.xml:558(para)
+#: basic-commands/C/basic-commands.xml:555(para)
 msgid ""
 "A very useful feature. It autocompletes any commands or filenames, if "
 "there's only one option, or else gives you a list of options."
@@ -696,11 +772,11 @@ msgstr ""
 "siitä on kirjoitettu vain osa. Jos vaihtoehtoja on useampia, näytetään ne "
 "luettelona."
 
-#: basic-commands/C/basic-commands.xml:571(title)
+#: basic-commands/C/basic-commands.xml:568(title)
 msgid "Change the text"
 msgstr "Tekstin muokkaaminen"
 
-#: basic-commands/C/basic-commands.xml:572(para)
+#: basic-commands/C/basic-commands.xml:569(para)
 msgid ""
 "The mouse won't work. Use the <keycap>Left/Right arrow</keycap> keys to move "
 "around the line."
@@ -708,7 +784,7 @@ msgstr ""
 "Et voi käyttää hiirtä, joten käytä nuolinäppäimiä liikkuttaaksesi "
 "kohdistinta rivillä."
 
-#: basic-commands/C/basic-commands.xml:576(para)
+#: basic-commands/C/basic-commands.xml:573(para)
 msgid ""
 "When the cursor is where you want it in the line, typing "
 "<emphasis>inserts</emphasis> text, it doesn't overtype what's already there."
@@ -716,79 +792,67 @@ msgstr ""
 "Kun kohdistin on haluamassasi paikassa, voit lisätä tekstiä siihen. "
 "Kirjoittamasi teksti ei korvaa alkuperäistä tekstiä."
 
-#: basic-commands/C/basic-commands.xml:591(keycap) basic-commands/C/basic-commands.xml:607(keycap) basic-commands/C/basic-commands.xml:626(keycap) basic-commands/C/basic-commands.xml:642(keycap) basic-commands/C/basic-commands.xml:657(keycap) basic-commands/C/basic-commands.xml:671(keycap)
-msgid "Ctrl"
-msgstr "Ctrl"
+#: basic-commands/C/basic-commands.xml:586(para)
+msgid ""
+"<keycombo><keycap>Ctrl</keycap><keycap>a</keycap></keycombo> or "
+"<keycap>Home</keycap>"
+msgstr ""
+"<keycombo><keycap>Ctrl</keycap><keycap>a</keycap></keycombo> tai "
+"<keycap>Home</keycap>"
 
-#: basic-commands/C/basic-commands.xml:592(keycap)
-msgid "a"
-msgstr "a"
-
-#: basic-commands/C/basic-commands.xml:594(keycap)
-msgid "Home"
-msgstr "Home"
-
-#: basic-commands/C/basic-commands.xml:599(para)
+#: basic-commands/C/basic-commands.xml:596(para)
 msgid "Moves the cursor to the <emphasis>start</emphasis> of a line."
 msgstr "Siirtää kohdistimen rivin alkuun."
 
-#: basic-commands/C/basic-commands.xml:608(keycap)
-msgid "e"
-msgstr "e"
-
-#: basic-commands/C/basic-commands.xml:610(keycap)
-msgid "End"
-msgstr "End"
-
-#: basic-commands/C/basic-commands.xml:615(para)
+#: basic-commands/C/basic-commands.xml:602(para)
 msgid ""
-"Moves the cursor to the <emphasis><emphasis "
-"role=\"strong\">e</emphasis>nd</emphasis> of a line."
-msgstr "Siirtää kohdistimen rivin loppuun."
+"<keycombo><keycap>Ctrl</keycap><keycap>e</keycap></keycombo> or "
+"<keycap>End</keycap>"
+msgstr ""
+"<keycombo><keycap>Ctrl</keycap><keycap>e</keycap></keycombo> or "
+"<keycap>End</keycap>"
 
-#: basic-commands/C/basic-commands.xml:627(keycap)
-msgid "b"
-msgstr "b"
+#: basic-commands/C/basic-commands.xml:612(para)
+msgid "Moves the cursor to the <emphasis> end</emphasis> of a line."
+msgstr "Siirtää kursorin rivin <emphasis>loppuun</emphasis>."
 
-#: basic-commands/C/basic-commands.xml:633(para)
-msgid ""
-"Moves to the <emphasis role=\"strong\">b</emphasis>eginning of the previous "
-"or current word."
-msgstr "Siirtää kohdistimen tämänhetkisen tai edeltävän sanan alkuun."
+#: basic-commands/C/basic-commands.xml:623(keycap) basic-commands/C/basic-commands.xml:638(keycap) basic-commands/C/basic-commands.xml:652(keycap)
+msgid "Ctrl"
+msgstr "Ctrl"
 
-#: basic-commands/C/basic-commands.xml:643(keycap)
+#: basic-commands/C/basic-commands.xml:624(keycap)
 msgid "k"
 msgstr "k"
 
-#: basic-commands/C/basic-commands.xml:649(para)
+#: basic-commands/C/basic-commands.xml:630(para)
 msgid "Deletes from the current cursor position to the end of the line."
 msgstr "Poistaa kohdistimen jälkeisen osan rivistä."
 
-#: basic-commands/C/basic-commands.xml:658(keycap)
+#: basic-commands/C/basic-commands.xml:639(keycap)
 msgid "u"
 msgstr "u"
 
-#: basic-commands/C/basic-commands.xml:664(para)
+#: basic-commands/C/basic-commands.xml:645(para)
 msgid "Deletes the whole of the current line."
 msgstr "Poistaa tämänhetkisen rivin kokonaan."
 
-#: basic-commands/C/basic-commands.xml:672(keycap)
+#: basic-commands/C/basic-commands.xml:653(keycap)
 msgid "w"
 msgstr "w"
 
-#: basic-commands/C/basic-commands.xml:678(para)
+#: basic-commands/C/basic-commands.xml:659(para)
 msgid "Deletes the word before the cursor."
 msgstr "Poistaa kohdistinta edeltävän osan sanasta."
 
-#: basic-commands/C/basic-commands.xml:688(title)
+#: basic-commands/C/basic-commands.xml:669(title)
 msgid "More Information"
 msgstr "Lisätietoja"
 
-#: basic-commands/C/basic-commands.xml:689(para)
+#: basic-commands/C/basic-commands.xml:670(para)
 msgid "The following online guides are available:"
 msgstr "Seuraavat oppaat ovat tarjolla Internetissä:"
 
-#: basic-commands/C/basic-commands.xml:692(para)
+#: basic-commands/C/basic-commands.xml:673(para)
 msgid ""
 "<ulink url=\"https://help.ubuntu.com/community/AptGetHowto\"> "
 "AptGetHowto</ulink> - using apt-get to install packages from the command "
@@ -798,7 +862,7 @@ msgstr ""
 "Ohjeita Linuxin kotikäyttöön</ulink> - sisältää  laajan ja selkeän "
 "komentorivioppaan aloittelevalle ja edistyneemmälle käyttäjälle."
 
-#: basic-commands/C/basic-commands.xml:699(para)
+#: basic-commands/C/basic-commands.xml:680(para)
 msgid ""
 "<ulink url=\"https://help.ubuntu.com/community/Repositories/CommandLine\"> "
 "Commandline Repository Editing</ulink> - adding the Universe/Multiverse "
@@ -808,7 +872,7 @@ msgstr ""
 "Komentorivin perusteet</ulink> - tiivis esitys komentorivin "
 "perusominaisuuksista."
 
-#: basic-commands/C/basic-commands.xml:707(para)
+#: basic-commands/C/basic-commands.xml:688(para)
 msgid ""
 "<ulink url=\"https://help.ubuntu.com/community/grep\">grep Howto</ulink> - "
 "grep is a powerful command line search tool."
@@ -817,7 +881,7 @@ msgstr ""
 "url=\"http://linux.fi/index.php/Komentorivikomennot\">Komentorivikomennot</ul"
 "ink> - luettelo tavallisimmista komennoista kuvauksen kera."
 
-#: basic-commands/C/basic-commands.xml:714(para)
+#: basic-commands/C/basic-commands.xml:695(para)
 msgid ""
 "<ulink url=\"https://help.ubuntu.com/community/find\">find </ulink> - locate "
 "files on the command line."
@@ -826,7 +890,7 @@ msgstr ""
 "CommandlineHowto</ulink> - laajempi kuin tämä perusopas, mutta vielä "
 "keskeneräinen (englanninkielinen)."
 
-#: basic-commands/C/basic-commands.xml:720(para)
+#: basic-commands/C/basic-commands.xml:701(para)
 msgid ""
 "<ulink url=\"https://help.ubuntu.com/community/CommandlineHowto\"> "
 "CommandlineHowto</ulink> - longer and more complete than this basic guide, "
@@ -836,7 +900,7 @@ msgstr ""
 "AptGetHowto</ulink> - ohjelmapakettien asentaminen komentoriviltä apt-getin "
 "avulla (englanninkielinen)"
 
-#: basic-commands/C/basic-commands.xml:727(para)
+#: basic-commands/C/basic-commands.xml:708(para)
 msgid ""
 "<ulink url=\"https://help.ubuntu.com/community/HowToReadline\"> "
 "HowToReadline</ulink> - information on some more advanced customization for "
@@ -845,12 +909,12 @@ msgstr ""
 "<ulink url=\"https://help.ubuntu.com/community/grep\">grep Howto</ulink> - "
 "grep on tehokas komentoriviltä käytettävä hakutyökalu (englanninkielinen)."
 
-#: basic-commands/C/basic-commands.xml:734(para)
+#: basic-commands/C/basic-commands.xml:715(para)
 msgid "For more detailed tutorials on the Linux command line, please see:"
 msgstr ""
 "Seuraavassa on yksityiskohtaisia oppaita Linuxin komentorivikäyttöön:"
 
-#: basic-commands/C/basic-commands.xml:740(para)
+#: basic-commands/C/basic-commands.xml:721(para)
 msgid ""
 "<ulink url=\"http://linuxcommand.org/\"/>- basic BASH tutorials, including "
 "BASH scripting"
@@ -858,14 +922,14 @@ msgstr ""
 "<ulink url=\"http://linuxcommand.org/\"/> - perusoppaita BASH:in "
 "käyttämiseen ja komentosarjojen tekemiseen (englanniksi)."
 
-#: basic-commands/C/basic-commands.xml:746(para)
+#: basic-commands/C/basic-commands.xml:727(para)
 msgid ""
 "<ulink url=\"http://linuxsurvival.com/index.php\"/>- Java-based tutorials"
 msgstr ""
 "<ulink url=\"http://linuxsurvival.com/index.php\"/> - Javalla toteutettuja "
 "oppaita (englanniksi)"
 
-#: basic-commands/C/basic-commands.xml:752(para)
+#: basic-commands/C/basic-commands.xml:733(para)
 msgid ""
 "<ulink url=\"http://rute.2038bug.com/index.html.gz\"/>- a massive online "
 "book about system administration, almost all from the command line."
@@ -891,4 +955,94 @@ msgstr ""
 "  Heikki Mäntysaari https://launchpad.net/~heikkim\n"
 "  Timo Jyrinki https://launchpad.net/~timo-jyrinki\n"
 "  Tommi Tauriainen https://launchpad.net/~t-tauriainen\n"
-"  otto peura https://launchpad.net/~opeura"
+"  otto peura https://launchpad.net/~opeura\n"
+"\n"
+"Launchpad Contributions:\n"
+"  Alpo Turunen https://launchpad.net/~alpo-turunen\n"
+"  Ari Torhamo https://launchpad.net/~ari-torhamo\n"
+"  Heikki Mäntysaari https://launchpad.net/~heikkim\n"
+"  Timo Jyrinki https://launchpad.net/~timo-jyrinki\n"
+"  Tommi Tauriainen https://launchpad.net/~t-tauriainen\n"
+"  Valto Wirkola https://launchpad.net/~valto-wirkola\n"
+"  otto peura https://launchpad.net/~opeura\n"
+"\n"
+"Launchpad Contributions:\n"
+"  Alpo Turunen https://launchpad.net/~alpo-turunen\n"
+"  Ari Torhamo https://launchpad.net/~ari-torhamo\n"
+"  Eero Salokannel https://launchpad.net/~epatic\n"
+"  Heikki Mäntysaari https://launchpad.net/~heikki-mantysaari\n"
+"  Timo Jyrinki https://launchpad.net/~timo-jyrinki\n"
+"  Tommi Tauriainen https://launchpad.net/~t-tauriainen\n"
+"  Valto Wirkola https://launchpad.net/~valto-wirkola"
+
+#~ msgid ""
+#~ "Moves the cursor to the <emphasis><emphasis "
+#~ "role=\"strong\">e</emphasis>nd</emphasis> of a line."
+#~ msgstr "Siirtää kohdistimen rivin loppuun."
+
+#~ msgid "a"
+#~ msgstr "a"
+
+#~ msgid ""
+#~ "The <command>ifconfig</command> command reports on your system's network "
+#~ "interfaces."
+#~ msgstr ""
+#~ "<command>ifconfig</command>-komento näyttää tietoja järjestelmän "
+#~ "verkkolaitteista."
+
+#~ msgid "End"
+#~ msgstr "End"
+
+#~ msgid ""
+#~ "This document is maintained by the Ubuntu documentation team "
+#~ "(https://wiki.ubuntu.com/DocumentationTeam). For a list of contributors, see "
+#~ "the <ulink url=\"../../../common/C/contributors.xml\">contributors "
+#~ "page</ulink>"
+#~ msgstr ""
+#~ "Tätä ohjetta ylläpitää Ubuntun dokumentaatiotiimi "
+#~ "(https://wiki.ubuntu.com/DocumentationTeam). Luettelon tekijöistä löydät "
+#~ "<ulink url=\"../../../common/C/contributors.xml\">contributors-"
+#~ "sivulta</ulink>"
+
+#~ msgid "ifconfig"
+#~ msgstr "ifconfig"
+
+#~ msgid ""
+#~ "The <emphasis role=\"strong\">lsb_release</emphasis> command with the "
+#~ "<emphasis role=\"strong\">-a</emphasis> option prints version information "
+#~ "for the Linux release you're running. For example, typing: "
+#~ "<screen>lsb_release -a</screen> will give you: <screen>\n"
+#~ "No LSB modules are available.\n"
+#~ "Distributor ID: Ubuntu\n"
+#~ "Description:    Ubuntu 8.04 \n"
+#~ "Release:        8.04\n"
+#~ "Codename:       hardy</screen>"
+#~ msgstr ""
+#~ "Komento <emphasis role=\"strong\">lsb_release</emphasis> <emphasis "
+#~ "role=\"strong\">-a</emphasis>-valinnalla tulostaa versiotiedot Linux-"
+#~ "julkaisusta jota käytät. Esimerkiksi,<screen>lsb_release -a</screen> "
+#~ "tulostaa: <screen>\n"
+#~ "No LSB modules are available.\n"
+#~ "Distributor ID: Ubuntu\n"
+#~ "Description:    Ubuntu 8.04 \n"
+#~ "Release:        8.04\n"
+#~ "Codename:       hardy</screen>"
+
+#~ msgid ""
+#~ "A copy of the license is available here: <ulink url=\"/usr/share/ubuntu-"
+#~ "docs/common/C/ccbysa.xml\">Creative Commons ShareAlike License</ulink>."
+#~ msgstr ""
+#~ "Kopio lisenssistä on nähtävillä täällä: <ulink url=\"/usr/share/ubuntu-"
+#~ "docs/common/C/ccbysa.xml\">Creative Commons ShareAlike License</ulink>."
+
+#~ msgid "2004, 2005, 2006"
+#~ msgstr "2004, 2005, 2006"
+
+#~ msgid "b"
+#~ msgstr "b"
+
+#~ msgid "Home"
+#~ msgstr "Home"
+
+#~ msgid "e"
+#~ msgstr "e"

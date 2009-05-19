@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-docs\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2007-09-14 08:25+0100\n"
-"PO-Revision-Date: 2007-11-13 23:14+0000\n"
-"Last-Translator: Gabor Kelemen <kelemengabor@linuxforum.hu>\n"
+"POT-Creation-Date: 2008-10-08 21:13+0100\n"
+"PO-Revision-Date: 2008-10-17 20:32+0000\n"
+"Last-Translator: Gabor Kelemen <kelemeng@gnome.hu>\n"
 "Language-Team: Hungarian <hu@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2008-02-17 10:23+0000\n"
+"X-Launchpad-Export-Date: 2008-10-19 12:46+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: add-applications/C/add-applications-C.omf:6(creator) add-applications/C/add-applications-C.omf:7(maintainer)
@@ -26,14 +26,18 @@ msgid "Adding and Removing Software"
 msgstr "Programok hozzáadása és eltávolítása"
 
 #: add-applications/C/add-applications-C.omf:9(date)
-msgid "2006-09-07"
-msgstr "2006-09-07"
+msgid "2008-02-16"
+msgstr "2008-02-16"
 
 #: add-applications/C/add-applications-C.omf:11(description)
-msgid "Placeholder."
-msgstr "Helykitöltő."
+msgid ""
+"Instructions on how to install and uninstall software, including information "
+"on package management."
+msgstr ""
+"Utasítások szoftverek telepítéséhez és eltávolításához, beleértve "
+"csomagkezeléssel kapcsolatos információkat is."
 
-#: add-applications/C/add-applications.xml:17(title)
+#: add-applications/C/add-applications.xml:15(title)
 msgid "Adding, Removing and Updating Applications"
 msgstr "Alkalmazások hozzáadása, eltávolítása és frissítése"
 
@@ -45,13 +49,12 @@ msgstr "Köszönetnyilvánítás és licenc"
 msgid ""
 "This document is maintained by the Ubuntu documentation team "
 "(https://wiki.ubuntu.com/DocumentationTeam). For a list of contributors, see "
-"the <ulink url=\"../../../common/C/contributors.xml\">contributors "
-"page</ulink>"
+"the <ulink url=\"../../libs/C/contributors.xml\">contributors page</ulink>"
 msgstr ""
-"Ezt a dokumentumot az Ubuntu dokumentációs csapat "
-"(https://wiki.ubuntu.com/DocumentationTeam) tartja karban. A közreműködők "
-"listáját <ulink url=\"../../../common/C/contributors.xml\">a közreműködők "
-"oldalán</ulink> találhatja meg."
+"Ezt a dokumentumot az Ubuntu dokumentációs csapat tartja karban "
+"(https://wiki.ubuntu.com/DocumentationTeam). A közreműködők listája a <ulink "
+"url=\"../../libs/C/contributors.xml\">közreműködők oldalán</ulink> található "
+"meg."
 
 #: add-applications/C/add-applications.xml:5(para)
 msgid ""
@@ -84,34 +87,43 @@ msgstr ""
 #: add-applications/C/add-applications.xml:11(para)
 msgid ""
 "A copy of the license is available here: <ulink url=\"/usr/share/ubuntu-"
-"docs/common/C/ccbysa.xml\">Creative Commons ShareAlike License</ulink>."
+"docs/libs/C/ccbysa.xml\">Creative Commons ShareAlike License</ulink>."
 msgstr ""
 "A licenc másolata elérhető a <ulink url=\"/usr/share/ubuntu-"
-"docs/common/C/ccbysa.xml\">Creative Commons ShareAlike License</ulink> "
-"oldalon."
+"docs/libs/C/ccbysa.xml\">Creative Commons ShareAlike License</ulink> oldalon."
 
 #: add-applications/C/add-applications.xml:14(year)
-msgid "2004, 2005, 2006"
-msgstr "2004, 2005, 2006"
+msgid "2008"
+msgstr "2008"
+
+#: add-applications/C/add-applications.xml:15(ulink)
+msgid "Ubuntu Documentation Project"
+msgstr "Ubuntu dokumentációs projekt"
 
 #: add-applications/C/add-applications.xml:15(holder)
-msgid "Canonical Ltd. and members of the Ubuntu Documentation Project"
-msgstr "Canonical Ltd. és az Ubuntu dokumentációs projekt tagjai"
+msgid "Canonical Ltd. and members of the <placeholder-1/>"
+msgstr "Canonical Ltd. és az <placeholder-1/> tagjai"
 
 #: add-applications/C/add-applications.xml:18(publishername)
 msgid "The Ubuntu Documentation Project"
 msgstr "Az Ubuntu dokumentációs projekt"
 
-#: add-applications/C/add-applications.xml:20(para)
+#: add-applications/C/add-applications.xml:18(para)
 msgid ""
-"In this section you can learn how to use a package manager to add or remove "
-"applications in Ubuntu with a few clicks. You can also learn about more "
-"advanced techniques of managing applications and discover some optional "
-"applications to add to Ubuntu and try."
+"This section discusses how applications are installed, removed and kept up "
+"to date. Also covered are how packages are stored by Ubuntu and made "
+"available for download."
 msgstr ""
-"Ebből a részből megtudhatja, hogyan telepíthet és törölhet alkalmazásokat "
-"néhány kattintással. Emellett ismertetünk néhány bonyolultabb csomagkezelési "
-"módszert, melyekkel további csomagokat fedezhet föl."
+"Ez a szakasz leírja, hogy hogyan lehet programokat telepíteni, törölni és "
+"frissíteni. Leírja továbbá, hogy az Ubuntu hogyan tárolja és teszi "
+"elérhetővé a csomagokat."
+
+#: add-applications/C/add-applications.xml:19(para)
+msgid ""
+"It also covers some more advanced techniques for managing applications."
+msgstr ""
+"A programok kezelésével kapcsolatos néhány haladó technika is ismertetésre "
+"kerül."
 
 #: add-applications/C/add-applications.xml:22(title)
 msgid "What is a package manager?"
@@ -119,102 +131,135 @@ msgstr "Mi az a csomagkezelő?"
 
 #: add-applications/C/add-applications.xml:23(para)
 msgid ""
-"A package manager is a program that installs and uninstalls software, and "
-"keeps track of all the components each piece of software needs."
+"A package manager is a program that you can use to install, remove and "
+"upgrade software. Software for Ubuntu is provided in the form of packages, "
+"which are automatically downloaded by the package manager."
 msgstr ""
-"A csomagkezelő egy olyan rendszer, amellyel úgy telepíthet és törölhet "
-"alkalmazásokat, hogy a működésükhöz szükséges további összetevőket is számon "
-"tartja."
-
-#: add-applications/C/add-applications.xml:24(para)
-msgid ""
-"To add or remove applications in Ubuntu, you need to use a <emphasis>package "
-"manager</emphasis>. It will automatically download the software required "
-"from the Internet and install it."
-msgstr ""
-"Alkalmazások hozzáadásához és eltávolításához egy "
-"<emphasis>csomagkezelőt</emphasis> kell használnia. Ez automatikusan letölti "
-"a szükséges összetevőket az internetről és telepíti azokat."
-
-#: add-applications/C/add-applications.xml:25(para)
-msgid "There are three main package managers you can use in Ubuntu:"
-msgstr "Három ismertebb csomagkezelő közül választhat az Ubuntuban:"
-
-#: add-applications/C/add-applications.xml:27(para)
-msgid ""
-"<link linkend=\"gnome-app-install\"><application>Add/Remove "
-"Programs</application></link> - The easiest way to install and uninstall "
-"programs."
-msgstr ""
-"A <link linkend=\"gnome-app-"
-"install\"><application>Hozzáadás/eltávolítás...</application></link> "
-"használata a legegyszerűbb módja a programok telepítésének vagy "
-"eltávolításának."
+"A csomagkezelő egy más programok telepítéséhez, törléséhez és frissítéséhez "
+"használható program. Az Ubuntuhoz tartozó szoftverek csomagok formájában "
+"érhetők el, amelyeket a csomagkezelő automatikusan letölt."
 
 #: add-applications/C/add-applications.xml:28(para)
 msgid ""
-"<link linkend=\"synaptic\"><application>Synaptic</application></link> - "
-"Advanced control of software and other system components."
-msgstr ""
-"A <link linkend=\"synaptic\"><application>Synaptic "
-"csomagkezelő</application></link> az alkalmazások és rendszerösszetevők "
-"speciális felügyeletét teszi lehetővé ."
-
-#: add-applications/C/add-applications.xml:29(para)
-msgid ""
-"<link linkend=\"apt\"><application>Apt</application></link> - If you prefer "
-"using the Terminal."
-msgstr ""
-"Lehetőség van az <link linkend=\"apt\"><application>apt</application></link> "
-"használatára is, ha a terminál használatát részesíti előnyben."
-
-#: add-applications/C/add-applications.xml:32(para)
-msgid ""
-"If you open more than one of these programs at once, they may not work. "
-"Close them all and open just one."
-msgstr ""
-"Ha több csomagkezelőt nyit meg egyszerre, azok nem fognak működni. Zárja be "
-"mindegyiket és csak egyet nyisson meg."
+"There are three main package management programs you can use in Ubuntu:"
+msgstr "Három fő csomagkezelő program van az Ubuntuban:"
 
 #: add-applications/C/add-applications.xml:34(para)
 msgid ""
-"You need administrative access to use any of these programs. See <ulink "
-"type=\"help\" url=\"ghelp:administrative\">Administrative Tasks</ulink> for "
-"more details."
+"<link linkend=\"gnome-app-install\">Add/Remove Applications</link> - Quickly "
+"installs and removes popular programs, as well as providing ratings."
 msgstr ""
-"A csomagkezelők használatához adminisztrátori jogosultság szükséges. További "
-"információkért nézze meg az <ulink type=\"help\" "
-"url=\"ghelp:administrative\">Adminisztrátori feladatok</ulink> leírást."
+"<link linkend=\"gnome-app-install\">Alkalmazások "
+"hozzáadása/eltávolítása</link> -  gyorsan lehet népszerű programokat "
+"telepíteni, illetve megadja azok értékelését is."
 
-#: add-applications/C/add-applications.xml:38(title)
+#: add-applications/C/add-applications.xml:41(para)
+msgid ""
+"<link linkend=\"synaptic\">Synaptic</link> - Allows more advanced "
+"management, such as installing server applications and choosing different "
+"versions of the same package."
+msgstr ""
+"<link linkend=\"synaptic\">Synaptic</link> - Haladó csomagkezelő, alkalmas "
+"például kiszolgálóprogramok telepítésére  vagy ugyanannak a csomagnak a "
+"különböző verziói közti válogatásra."
+
+#: add-applications/C/add-applications.xml:48(para)
+msgid ""
+"<link linkend=\"apt\">Apt</link> - Allows package management from the "
+"command line."
+msgstr ""
+"<link linkend=\"apt\">Apt</link> - Parancssori csomagkezelést tesz lehetővé."
+
+#: add-applications/C/add-applications.xml:56(para)
+msgid ""
+"You can only use one package manager at a time. If you start another package "
+"manager while one is already open, you will receive an error message."
+msgstr ""
+"Egyszerre csak egy csomagkezelőt használhat. Ha elindít egy csomagkezelőt, "
+"miközben egy másik működik, akkor hibaüzenetet fog kapni."
+
+#: add-applications/C/add-applications.xml:63(para)
+msgid ""
+"You will require administrative access to install and remove software. This "
+"is because packages sometimes need to change important system files. See "
+"<ulink type=\"help\" url=\"ghelp:administrative\">Administrative "
+"Tasks</ulink> for more information on administrative access."
+msgstr ""
+"Programok telepítséhez és törléséhez rendszergazdai jogokkal kell "
+"rendelkeznie. Ez azért szükséges, mert a csomagoknak gyakran fontos "
+"rendszerfájlokat kell módosítaniuk. További információért lásd az <ulink "
+"type=\"help\" url=\"ghelp:administrative\">Adminisztrációs feladatok</ulink> "
+"részt."
+
+#: add-applications/C/add-applications.xml:71(title)
+msgid "Common package-management terms"
+msgstr "A csomagkezeléssel kapcsolatos általános fogalmak"
+
+#: add-applications/C/add-applications.xml:73(para)
+msgid ""
+"If you are unfamiliar with Ubuntu's package management system, you may like "
+"to take a look at some of the following definitions."
+msgstr ""
+"Ha nem ismeri az Ubuntu csomagkezelő rendszerét, akkor érdemes megnézni a "
+"következő definíciókat."
+
+#: add-applications/C/add-applications.xml:78(para)
+msgid ""
+"<emphasis role=\"strong\">Packages</emphasis> are files which contain a "
+"program and all of the files required to run it on your computer. When you "
+"install a package, a file is downloaded from a repository and installed by a "
+"package manager."
+msgstr ""
+"A <emphasis role=\"strong\">csomagok</emphasis> olyan fájlok, melyek egy "
+"programot és a futtatásához szükséges összes fájlt tartalmazzák. Csomag "
+"telepítésekor egy fájl kerül letöltésre a csomagtárolóból, majd a "
+"csomagkezelő telepíti."
+
+#: add-applications/C/add-applications.xml:85(para)
+msgid ""
+"<emphasis role=\"strong\">Dependencies</emphasis> are packages which must be "
+"installed before certain other packages can be installed. Dependency "
+"packages usually contain some files and programs needed by the other "
+"packages - for example, a word-processing package may depend on a printing "
+"package being installed in order to be able to print documents."
+msgstr ""
+"A <emphasis role=\"strong\">függőségek</emphasis> olyan csomagok, melyeket "
+"telepíteni kell valamilyen másik csomag telepítése előtt. Általában olyan "
+"fájlokat tartalmaznak, melyekre egy másik programnak szüksége van - például "
+"egy szövegszerkesztő csomagnak szüksége lehet egy nyomtató csomagra, hogy "
+"tudjon nyomtatni."
+
+#: add-applications/C/add-applications.xml:97(title)
 msgid "Software repositories"
 msgstr "Szoftvertárolók"
 
-#: add-applications/C/add-applications.xml:39(para)
+#: add-applications/C/add-applications.xml:98(para)
 msgid ""
-"A software repository is a place from which you can download and install "
-"software over the Internet."
+"When you install software on Ubuntu, the package manager automatically "
+"downloads the required software packages from a <emphasis>software "
+"repository</emphasis>, a location on the Internet which stores collections "
+"of packages ready to be downloaded."
 msgstr ""
-"A tárolók olyan helyek az Interneten, ahonnan letöltheti és telepítheti az "
-"alkalmazásokat."
+"Mikor egy szoftvert telepít az Ubuntura, akkor a csomagkezelő automatikusan "
+"letölti a szükséges csomagokat egy <emphasis>csomagtárolóból</emphasis>, "
+"azaz egy olyan internetes kiszolgálóról, amely letöltésre kész csomagokat "
+"tartalmaz."
 
-#: add-applications/C/add-applications.xml:40(para)
+#: add-applications/C/add-applications.xml:104(para)
 msgid ""
 "There are thousands of programs available to install on Ubuntu. These "
-"programs are stored in software archives (<emphasis>repositories</emphasis>) "
-"and are made freely available for installation over the Internet. This makes "
-"it very easy to install new programs in Linux, and it is also very secure, "
-"because each program you install is built specially for Ubuntu and checked "
-"before it is installed."
+"programs are stored in software repositories and are made freely available "
+"for all Ubuntu users. This makes it very easy to install new programs, and "
+"it is also very secure because each program you install is built specially "
+"for Ubuntu and checked before it is allowed into the repositories."
 msgstr ""
-"Több ezer program érhető el és telepíthető az Ubuntura. Ezek a programok a "
-"szoftverarchívumokban (<emphasis>tárolók</emphasis>) találhatók meg és a "
-"telepítéshez szabadon elérhetők az interneten. Ezen csomagok segítségével "
-"nagyon könnyű új programokat telepíteni Linuxon, mindezt biztonságosan, "
-"hiszen a telepíhető programcsomagokat kifejezetten az Ubuntuhoz készítették "
-"és telepítés előtt ellenőrzésre kerülnek."
+"Az Ubuntura többezer csomagot lehet telepíteni. Ezek a csomagok "
+"csomagtárolókban vannak, és bármely Ubuntu felhasználó szabadon letöltheti "
+"őket. Ez nagyon könnyűvé teszi új programok telepítését és nagyon "
+"biztonságos, mivel minden, tárolóból telepített programcsomag kifejezetten "
+"az Ubuntuhoz készült, és a tárolóba kerülése előtt ellenőrzésen megy át."
 
-#: add-applications/C/add-applications.xml:41(para)
+#: add-applications/C/add-applications.xml:111(para)
 msgid ""
 "To organise the software, Ubuntu repositories are categorised into four "
 "groups: <emphasis>Main</emphasis>, <emphasis>Restricted</emphasis>, "
@@ -232,7 +277,7 @@ msgstr ""
 "url=\"http://www.ubuntu.com/ubuntu/philosophy\">Szabad szoftveres "
 "irányelveinek</ulink> való megfelelőség foka."
 
-#: add-applications/C/add-applications.xml:42(para)
+#: add-applications/C/add-applications.xml:120(para)
 msgid ""
 "The standard Ubuntu Install CD contains some software from the "
 "<emphasis>Main</emphasis> and <emphasis>Restricted</emphasis> categories."
@@ -240,7 +285,7 @@ msgstr ""
 "A hagyományos Ubuntu telepítő CD a <emphasis>Main</emphasis> és a "
 "<emphasis>Restricted</emphasis> kategóriák bizonyos csomagjait tartalmazza."
 
-#: add-applications/C/add-applications.xml:43(para)
+#: add-applications/C/add-applications.xml:124(para)
 msgid ""
 "If your system is connected to the Internet, many more software programs are "
 "made available for installation. For example, the <quote>Universe</quote> "
@@ -251,7 +296,7 @@ msgstr ""
 "Például a <quote>Universe</quote> és <quote>Multiverse</quote> tárolók csak "
 "az Interneten keresztül érhetők el."
 
-#: add-applications/C/add-applications.xml:45(para)
+#: add-applications/C/add-applications.xml:132(para)
 msgid ""
 "The <emphasis>Multiverse</emphasis> repository contains software which has "
 "been classified as <emphasis>non-free</emphasis>. This software may not be "
@@ -266,7 +311,7 @@ msgstr ""
 "teszik-e a jogszerű használatot. Ezen szoftverekre nem készülnek minden "
 "esetben biztonsági frissítések."
 
-#: add-applications/C/add-applications.xml:47(para)
+#: add-applications/C/add-applications.xml:142(para)
 msgid ""
 "You can find more information about the Repositories available <ulink "
 "url=\"http://www.ubuntu.com/ubuntu/components\">on the website</ulink>."
@@ -275,18 +320,18 @@ msgstr ""
 "url=\"http://www.ubuntu.com/ubuntu/components\">ezen a weboldalon "
 "(angolul)</ulink>."
 
-#: add-applications/C/add-applications.xml:51(title)
+#: add-applications/C/add-applications.xml:148(title)
 msgid "Adding extra repositories"
 msgstr "Kiegészítő tárolók hozzáadása"
 
-#: add-applications/C/add-applications.xml:52(para)
+#: add-applications/C/add-applications.xml:149(para)
 msgid ""
 "It is possible to add extra repositories, such as those provided by third "
 "parties or those for older version of Ubuntu."
 msgstr ""
 "Lehetséges külső gyártók vagy korábbi Ubuntu verziók tárolóinak felvétele."
 
-#: add-applications/C/add-applications.xml:54(para)
+#: add-applications/C/add-applications.xml:155(para)
 msgid ""
 "Be careful when installing software from third-party repositories. It may "
 "not have been tested with Ubuntu and could cause your system to break."
@@ -295,24 +340,24 @@ msgstr ""
 "telepít. Ezek nem voltak tesztelve Ubuntu alatt és akár rendszerösszeomlást "
 "is előidézhetnek."
 
-#: add-applications/C/add-applications.xml:58(para)
+#: add-applications/C/add-applications.xml:164(para)
 msgid ""
 "Open "
 "<menuchoice><guimenu>System</guimenu><guimenuitem>Administration</guimenuitem"
 "><guimenuitem>Software Sources</guimenuitem></menuchoice> and press "
-"<guilabel>Third-Party Software</guilabel>."
+"<guilabel>Third Party Software</guilabel>."
 msgstr ""
-"Nyissa meg a "
+"A "
 "<menuchoice><guimenu>Rendszer</guimenu><guimenuitem>Adminisztráció</guimenuit"
-"em><guimenuitem>Szoftverforrások</guimenuitem></menuchoice> menüpontot és "
-"kattintson a <guilabel>Harmadik fél</guilabel> fülre."
+"em><guimenuitem>Szoftverforrások</guimenuitem></menuchoice> megnyitása után "
+"kattintson a <guilabel>Harmadik fél</guilabel> lapra."
 
-#: add-applications/C/add-applications.xml:61(para)
+#: add-applications/C/add-applications.xml:170(para)
 msgid "Press <guibutton>Add</guibutton> to add a new repository."
 msgstr ""
 "Új tároló felvételéhez nyomja meg a <guibutton>Hozzáadás</guibutton> gombot."
 
-#: add-applications/C/add-applications.xml:64(para)
+#: add-applications/C/add-applications.xml:175(para)
 msgid ""
 "Enter the <guilabel>APT line</guilabel> for the extra repository. This "
 "should be available from the website of the repository or similar, and "
@@ -321,12 +366,12 @@ msgstr ""
 "Írja be az extra tároló <guilabel>APT sorát</guilabel>. Ezt a tároló "
 "weboldaláról érheti el és hasonlónak kell lennie a következőhöz:"
 
-#: add-applications/C/add-applications.xml:65(screen)
+#: add-applications/C/add-applications.xml:180(screen)
 #, no-wrap
 msgid "deb http://ftp.debian.org etch main"
 msgstr "deb http://ftp.debian.org etch main"
 
-#: add-applications/C/add-applications.xml:67(para)
+#: add-applications/C/add-applications.xml:183(para)
 msgid ""
 "Press <guibutton>Add Source</guibutton> and then click "
 "<guibutton>Close</guibutton> to save your changes."
@@ -334,7 +379,15 @@ msgstr ""
 "Kattintson a <guibutton>Forrás hozzáadása</guibutton>, majd a "
 "<guibutton>Bezárás</guibutton> gombra, ezzel elmentve a változtatásokat."
 
-#: add-applications/C/add-applications.xml:69(para)
+#: add-applications/C/add-applications.xml:188(para)
+msgid ""
+"You will be notified that the information about available software is out-of-"
+"date. Press <guibutton>Reload</guibutton>."
+msgstr ""
+"Figyelmeztetést kap, hogy az elérhető szoftverek információi elavultak. "
+"Nyomja meg a <guibutton>Frissítés</guibutton> gombot."
+
+#: add-applications/C/add-applications.xml:194(para)
 msgid ""
 "Most software repositories use a GPG key to digitally sign the files they "
 "provide, which makes it easy to check that the files have not been tampered "
@@ -348,48 +401,108 @@ msgstr ""
 "ellenőrizni, szüksége van az aláírásoknak megfelelő publikus kulcsra. A "
 "kulcsnak letölthetőnek kell lennie a tároló weboldaláról."
 
-#: add-applications/C/add-applications.xml:71(para)
+#: add-applications/C/add-applications.xml:204(para)
 msgid ""
 "Once you have downloaded the GPG key, import the key by selecting the "
-"<guilabel>Authenticate</guilabel> tab, and clicking on <guibutton>Import Key "
-"File...</guibutton>, and then selecting the GPG key to be imported."
+"<guilabel>Authentication</guilabel> tab, clicking on <guibutton>Import Key "
+"File</guibutton>, and then selecting the GPG key to be imported."
 msgstr ""
-"Miután letöltötte a GPG kulcsot, importálja azt a "
-"<guilabel>Hitelesítés</guilabel> fül alatt található <guibutton>Kulcsfájl "
-"importálása ...</guibutton> gomb megnyomásával, majd az importálni kívánt "
-"GPG kulcs kiválasztásával."
+"A GPG-kulcs letöltése után importálja a kulcsot a "
+"<guilabel>Hitelesítés</guilabel> lap kiválasztásával és a "
+"<guibutton>Kulcsfájl importálása</guibutton> gombra kattintással, majd az "
+"importálandó kulcs kiválasztásával."
 
-#: add-applications/C/add-applications.xml:73(para)
+#: add-applications/C/add-applications.xml:216(title)
+msgid "Restricted and non-free software"
+msgstr "Korlátozott és nem szabad szoftver"
+
+#: add-applications/C/add-applications.xml:217(para)
 msgid ""
-"Click <guibutton>Reload</guibutton> in the package manager to update the "
-"list of available packages."
+"Most of the software available for Ubuntu is free, open-source software. "
+"This software is free for anyone to install and use, and people can modify "
+"the software and redistribute it if they like. Ubuntu is built from this "
+"type of software."
 msgstr ""
-"Kattintson a <guibutton>Frissítés</guibutton> gombra a csomagkezelőben az "
-"elérhető csomagok listájának frissítéséhez."
+"A legtöbb szoftver az Ubuntuhoz szabad és nyílt forráskódú. Ezek a programok "
+"bárki által szabadon telepíthetők és használhatók, és bárki módosíthatja, "
+"továbbadhatja őket. Az Ubuntu ilyen szoftverekből áll."
 
-#: add-applications/C/add-applications.xml:78(title)
+#: add-applications/C/add-applications.xml:223(para)
+msgid ""
+"<emphasis role=\"strong\">Non-free software</emphasis> is software which is "
+"not freely redistributable or modifiable. This makes it difficult for the "
+"Ubuntu developers to improve the software and correct problems, so it is "
+"normally recommended that you use <ulink "
+"url=\"http://www.ubuntu.com/ubuntu/philosophy\"> free software</ulink> "
+"instead."
+msgstr ""
+
+#: add-applications/C/add-applications.xml:230(para)
+msgid ""
+"<emphasis role=\"strong\">Restricted software</emphasis> is software which "
+"has restrictions on its use, preventing it from being classed as free "
+"software. Non-free software is a type of restricted software, where the "
+"restrictions are due to the software having a non-free license. Other "
+"reasons for software being classed as restricted include legal issues (use "
+"of some types of software is illegal in some countries) and patent issues "
+"(some software requires a patent license to be used legally)."
+msgstr ""
+"A <emphasis role=\"strong\">korlátozott szoftver</emphasis> olyan szoftver, "
+"amelyet csak korlátozottan lehet használni, így nem tekinthető szabad "
+"szoftvernek. A nem-szabad szoftver az a típusa a korlátozott szoftvernek, "
+"ahol a korlátozások abból adódnak, hogy a program nem-szabad licencelésű. A "
+"korlátozottságnak egyéb okai lehetnek bizonyos jogi kérdések (például olyan "
+"szoftverek, melyek használata bizonyos országokban illegális) vagy "
+"szabadalmi problémák (a szoftver legális használatához szabadalmi licenc "
+"szükséges)."
+
+#: add-applications/C/add-applications.xml:239(para)
+msgid ""
+"In some cases, restricted software is the only option. Such cases include "
+"software for the playback of certain audio and video formats, some fonts and "
+"<ulink type=\"help\" url=\"ghelp:hardware#restricted-manager\">drivers for "
+"some graphics cards</ulink>."
+msgstr ""
+"Néhány esetben csak a korlátozott szoftverek használata jelent megoldást. "
+"Ilyen például bizonyos hang- vagy videófájlok lejátszása, egyes "
+"betűkészletek vagy <ulink type=\"help\" url=\"ghelp:hardware#restricted-"
+"manager\">egyes grafikus kártyák meghajtói</ulink>"
+
+#: add-applications/C/add-applications.xml:245(para)
+msgid ""
+"You should be warned by the package manager when you try to install "
+"restricted software. If the restricted software cannot be used legally in "
+"your country then there is little you can do; you should not install the "
+"software. If the software is restricted simply because it is non-free, you "
+"may choose to use it (for example, in the case of graphics card drivers). Be "
+"aware that most restricted software is not supported in Ubuntu, and problems "
+"with such software often cannot be corrected by Ubuntu developers."
+msgstr ""
+
+#: add-applications/C/add-applications.xml:256(para)
+msgid ""
+"Sometimes it is difficult to determine why a particular software package is "
+"restricted. If this is the case, seek advice on the <ulink "
+"url=\"http://ubuntuforums.org/\">Ubuntu Forums</ulink>. If you are still "
+"unable to determine why a package is restricted, err on the side of caution "
+"and do not install it; it may be illegal to use it in your country."
+msgstr ""
+
+#: add-applications/C/add-applications.xml:268(title)
 msgid "Add/Remove Applications"
 msgstr "Alkalmazások hozzáadása/eltávolítása"
 
-#: add-applications/C/add-applications.xml:79(para)
+#: add-applications/C/add-applications.xml:269(para)
 msgid ""
-"With the <guimenuitem>Add/Remove…</guimenuitem> item in the "
+"With the <guimenuitem>Add/Remove</guimenuitem> item in the "
 "<guimenu>Applications</guimenu> menu, you can install programs to do new "
-"things with Ubuntu. You can also remove programs you do not want. You need "
-"administrative access to use <application>Add/Remove Programs</application> "
-"(see <ulink type=\"help\" url=\"ghelp:administrative\">Administrative "
-"Tasks</ulink> for more details)."
+"things with Ubuntu. You can also remove programs which you do not want. You "
+"need administrative access to use <application>Add/Remove "
+"Applications</application> (see <ulink type=\"help\" "
+"url=\"ghelp:administrative\">Administrative Tasks</ulink> for more details)."
 msgstr ""
-"Az <guimenu>Alkalmazások</guimenu> menü "
-"<guimenuitem>Hozzáadás/Eltávolítás…</guimenuitem> menüpontjával telepíthet "
-"programokat, hogy új feladatokra használhassa az Ubuntut. El is távolíthatja "
-"azon programokat, amelyeket nem szeretne használni. A <application>Programok "
-"hozzáadás/eltávolítása</application> alkalmazás használatához rendszergazdai "
-"jogosultságra van szüksége  (további részletekért tekintse meg az <ulink "
-"type=\"help\" url=\"ghelp:administrative\">Adminisztrációs feladatok</ulink> "
-"témakört)."
 
-#: add-applications/C/add-applications.xml:80(para)
+#: add-applications/C/add-applications.xml:278(para)
 msgid ""
 "If you know the name of a program you want to install, enter it in the "
 "<guilabel>Search</guilabel> field. Otherwise, begin by choosing a software "
@@ -399,29 +512,27 @@ msgstr ""
 "<guilabel>Keresés</guilabel> mezőbe. Ellenkező esetben válasszon a bal "
 "oldali kategóriák közül."
 
-#: add-applications/C/add-applications.xml:81(para)
+#: add-applications/C/add-applications.xml:283(para)
 msgid ""
-"Programs that are already installed begin with a check mark next to their "
-"name. Uncheck a program if you want to remove it from your computer."
+"Programs that are already installed have a check mark next to their name. "
+"Uncheck a program if you want to remove it from your computer."
 msgstr ""
-"Ha a program már telepítve van, a mellette lévő jelölőnégyzet be van "
-"jelölve. Törölje a pipát a program neve mellől, ha el szeretné távolítani a "
-"gépéről."
+"A telepített programok neve mellett egy jelölőnégyzet található. Törölje a "
+"pipát, ha el szeretné távolítani a kijelölt programot a számítógépéről."
 
-#: add-applications/C/add-applications.xml:82(para)
+#: add-applications/C/add-applications.xml:287(para)
 msgid ""
-"When you click <guibutton>Apply</guibutton> or <guibutton>OK</guibutton>, "
-"any new software will be downloaded from the Internet, and Ubuntu will make "
-"the changes you selected. If you have not activated the online package "
-"archive, you may be asked to insert your Ubuntu CD-ROM to install some "
-"packages."
+"When you click <guibutton>Apply Changes</guibutton>, any new software will "
+"be downloaded from the Internet, and Ubuntu will make any other changes you "
+"selected. If you have not activated the online package archive, you may be "
+"asked to insert your Ubuntu CD-ROM to install some packages."
 msgstr ""
-"Miután megnyomta az <guibutton>Alkalmaz</guibutton> vagy az "
-"<guibutton>OK</guibutton> gombot, minden új szoftver letöltődik az "
-"internetről és megtörténnek a kijelölt változtatások. Amennyiben nincsenek "
-"engedélyezve az online tárolók, a rendszer kérni fogja az Ubuntu lemezt."
+"Amikor rákattint a <guibutton>Változtatások alkalmazása</guibutton> gombra, "
+"minden új szoftver letöltésre kerül az internetről, és az Ubuntu végrehajt "
+"minden kijelölt változtatást. Ha még nem aktiválta az online csomagtárolót, "
+"akkor néhány csomag telepítéséhez szükség lehet az Ubuntu CD-ROM-ra."
 
-#: add-applications/C/add-applications.xml:83(para)
+#: add-applications/C/add-applications.xml:293(para)
 msgid ""
 "Some software cannot be installed or removed using <application>Add/Remove "
 "Applications</application>. If you cannot find the package you are looking "
@@ -434,11 +545,11 @@ msgstr ""
 "<application>Synaptic</application> csomagkezelőt (tekintse meg a <xref "
 "linkend=\"advanced\"/> részt)."
 
-#: add-applications/C/add-applications.xml:87(title)
+#: add-applications/C/add-applications.xml:302(title)
 msgid "Installing packages without an Internet connection"
 msgstr "Csomagok telepítés internetkapcsolat nékül"
 
-#: add-applications/C/add-applications.xml:88(para)
+#: add-applications/C/add-applications.xml:303(para)
 msgid ""
 "Other than using tools that download packages automatically, it is also "
 "possible to use a CD to install packages through a package manager while not "
@@ -456,11 +567,11 @@ msgstr ""
 "készíteni a rendszeren telepített csomagokról és különféle tárolók "
 "csomagjaiból összeállított CD-ket készíteni."
 
-#: add-applications/C/add-applications.xml:90(title)
+#: add-applications/C/add-applications.xml:314(title)
 msgid "Installing packages using the Ubuntu installation CD"
 msgstr "Csomagok telepítése az Ubuntu telepítőlemez használatával"
 
-#: add-applications/C/add-applications.xml:91(para)
+#: add-applications/C/add-applications.xml:315(para)
 msgid ""
 "Some packages from the <emphasis>main</emphasis> and "
 "<emphasis>restricted</emphasis> Ubuntu package repositories can be installed "
@@ -469,119 +580,69 @@ msgid ""
 "<menuchoice><guimenu>System</guimenu><guimenuitem>Administration</guimenuitem"
 "><guimenuitem>Synaptic Package Manager</guimenuitem></menuchoice>. To list "
 "only packages on the Ubuntu installation CD, click on the "
-"<guibutton>Origin</guibutton> button in the lower left corner of "
-"<application>Synaptic Package Manager</application>. The packages are listed "
-"under the <guimenuitem>Ubuntu 7.10_Gutsy Gibbon</guimenuitem> section."
+"<guibutton>Origin</guibutton> button in the lower left corner of the "
+"Synaptic window. The packages should be listed under the <guimenuitem>Ubuntu "
+"8.10_Intrepid_Ibex</guimenuitem> section."
 msgstr ""
-"A <emphasis>main</emphasis> és a <emphasis>restricted</emphasis> Ubuntu "
-"csomagtárolók egyes csomagjai telepíthetők az Ubuntu telepítőlemezről. "
-"Egyszerűen helyezze be az Ubuntu telepítőlemezt és válassza a "
-"<menuchoice><guimenu>Rendszer</guimenu><guimenuitem>Adminisztáció</guimenuite"
-"m><guimenuitem>Synaptic csomagkezelő</guimenuitem></menuchoice> menüpontot. "
-"A csak az Ubuntu telepítőlemezen található csomagok felsorolásához nyomja "
-"meg az <guibutton>Eredet</guibutton> gombot a <application>Synaptic "
-"csomagkezelő</application> bal alsó sarkában. A csomagok az "
-"<guimenuitem>Ubuntu 7.10_Gutsy Gibbon</guimenuitem> rész alatt kerülnek "
-"felsorolásra."
 
-#: add-applications/C/add-applications.xml:92(para)
+#: add-applications/C/add-applications.xml:325(para)
 msgid ""
 "If the packages are not listed, it may be because the CD is not listed as a "
 "package repository (the CD should be listed as a repository by default). To "
-"add the CD as a package repository:"
+"add the CD as a package repository, follow the instructions in <xref "
+"linkend=\"repository-cds\"/>, below."
 msgstr ""
-"Ha a csomagok listája nem jelenik meg, akkor valószínűleg a CD sincs "
-"felsorolva csomagtárolóként (a CD felsorolása csomagtárolóként elvileg "
-"alapértelmezett). A CD hozzáadásához csomagtárolóként:"
+"Ha a csomagok nem jelennek meg, akkor valószínűleg a CD nincs megjelölve "
+"csomagforrásként (a CD-nek alapértelmezésben forrásnak kellene lennie). A CD "
+"forrásokhoz adásához kövesse az <xref linkend=\"repository-cds\"/> "
+"utasításait."
 
-#: add-applications/C/add-applications.xml:95(para)
-msgid "Eject the CD."
-msgstr "Vegye ki a CD-t."
-
-#: add-applications/C/add-applications.xml:98(para)
-msgid ""
-"Open the <emphasis>Software Sources</emphasis> dialog by selecting "
-"<guimenuitem>Repositories</guimenuitem> from the <guimenu>Settings</guimenu> "
-"menu of <application>Synaptic Package Manager</application>."
-msgstr ""
-"Nyissa meg a <emphasis>Szoftverforrások</emphasis> ablakot a "
-"<application>Synaptic csomagkezelő</application> "
-"<guimenu>Beállítások</guimenu> menüjének <guimenuitem>Tárolók</guimenuitem> "
-"menüpontjának kiválasztásával."
-
-#: add-applications/C/add-applications.xml:101(para) add-applications/C/add-applications.xml:120(para)
-msgid ""
-"Go to the Third-Party Software tab and click on the <guibutton>Add CD-"
-"ROM</guibutton> button."
-msgstr ""
-"Válassza a Harmadik fél fület és nyomja meg a <guibutton>CD-ROM "
-"hozzáadása...</guibutton> gombot."
-
-#: add-applications/C/add-applications.xml:104(para)
-msgid "Insert the CD."
-msgstr "Tegye be a CD-t."
-
-#: add-applications/C/add-applications.xml:107(para)
-msgid "The packages should then be listed."
-msgstr "A csomagok ezután felsorolásra kerülnek."
-
-#: add-applications/C/add-applications.xml:110(title)
+#: add-applications/C/add-applications.xml:334(title)
 msgid "Enabling other CDs that can be used to install packages"
 msgstr "Más, csomagtelepítésre használható CD-k engedélyezése"
 
-#: add-applications/C/add-applications.xml:111(para)
+#: add-applications/C/add-applications.xml:335(para)
 msgid ""
-"To enable <application>Synaptic</application> to install packages from CDs "
+"To enable Synaptic and other package managers to install software from CDs "
 "which contain packages:"
 msgstr ""
-"A csomagtelepítés engedélyezése a <application>Synapticnak</application> a "
-"csomagokat tartalmazó CD-kről:"
 
-#: add-applications/C/add-applications.xml:114(para)
+#: add-applications/C/add-applications.xml:342(para)
 msgid ""
-"Open "
-"<menuchoice><guimenu>System</guimenu><guimenuitem>Administration</guimenuitem"
-"><guimenuitem>Synaptic Package Manager</guimenuitem></menuchoice>."
+"Press "
+"<menuchoice><guimenuitem>System</guimenuitem><guimenuitem>Administration</gui"
+"menuitem><guimenuitem>Software Sources</guimenuitem></menuchoice>."
 msgstr ""
 "Válassza a "
-"<menuchoice><guimenu>Rendszer</guimenu><guimenuitem>Adminisztráció</guimenuit"
-"em><guimenuitem>Synaptic csomagkezelő</guimenuitem></menuchoice> menüpontot."
+"<menuchoice><guimenuitem>Rendszer</guimenuitem><guimenuitem>Adminisztráció</g"
+"uimenuitem><guimenuitem>Szoftverforrások</guimenuitem></menuchoice> "
+"menüpontot."
 
-#: add-applications/C/add-applications.xml:117(para)
+#: add-applications/C/add-applications.xml:350(para)
 msgid ""
-"Open the <emphasis>Software Sources</emphasis> tool by selecting "
-"<guimenuitem>Repositories</guimenuitem> from the <guimenu>Settings</guimenu> "
-"menu of <application>Synaptic Package Manager</application>."
+"Go to the <guilabel>Third Party Software</guilabel> tab and click on the "
+"<guibutton>Add CD-ROM</guibutton> button."
 msgstr ""
-"Nyissa meg a <emphasis>Szoftverforrások</emphasis> ablakot a "
-"<application>Synaptic csomagkezelő</application> "
-"<guimenu>Beállítások</guimenu> menüjének <guimenuitem>Tárolók</guimenuitem> "
-"menüpontjának kiválasztásával."
+"Nyissa meg a <guilabel>Harmadik fél</guilabel> lapot és kattintson a "
+"<guibutton>CD-ROM hozzáadása</guibutton> gombra."
 
-#: add-applications/C/add-applications.xml:123(para)
-msgid "Insert the CD which contains the packages."
-msgstr "Tegye be a csomagokat tartalmazó CD-t."
+#: add-applications/C/add-applications.xml:356(para)
+msgid "Insert the CD."
+msgstr "Tegye be a CD-t."
 
-#: add-applications/C/add-applications.xml:126(para)
+#: add-applications/C/add-applications.xml:362(para)
 msgid ""
-"The packages should then be listed. To have "
-"<application>Synaptic</application> only list packages from the CD, click "
-"the <guibutton>Origin</guibutton> button on the lower left corner of "
-"<application>Synaptic Package Manager</application>, then find the name of "
-"the CD on the list on the upper left corner of "
-"<application>Synaptic</application>."
+"The packages should then be listed. To have Synaptic only list packages from "
+"the CD, click the <guibutton>Origin</guibutton> button on the lower left "
+"corner of the Synaptic window and then find the name of the CD in the list "
+"in the upper left corner the window."
 msgstr ""
-"A csomagok ezután fel lesznek sorolva. A csak a CD-n található csomagok "
-"felsorolásához nyomja meg az <guibutton>Eredet</guibutton> gombot a "
-"<application>Synaptic csomagkezelő</application> bal alsó sarkában, majd "
-"keresse meg a CD nevét a <application>Synaptic csomagkezelő</application> "
-"bal felső sarkában található listában."
 
-#: add-applications/C/add-applications.xml:129(title)
+#: add-applications/C/add-applications.xml:371(title)
 msgid "Using APTonCD to install packages"
 msgstr "Az APTonCD használata csomagok telepítéséhez"
 
-#: add-applications/C/add-applications.xml:130(para)
+#: add-applications/C/add-applications.xml:372(para)
 msgid ""
 "<application>APTonCD</application> can be used to create a CD that contains "
 "all the packages you have on your system, or it can create CDs with packages "
@@ -595,21 +656,17 @@ msgstr ""
 "<application>Synapticban</application> keresse meg az "
 "<emphasis>aptoncd</emphasis> csomagot és telepítse."
 
-#: add-applications/C/add-applications.xml:131(para)
+#: add-applications/C/add-applications.xml:379(para)
 msgid ""
-"Further documentation on <application>APTonCD</application> can be found on "
-"it's website, <ulink "
-"url=\"http://aptoncd.sourceforge.net\">aptoncd.sourceforge.net</ulink>"
+"Further documentation on APTonCD can be found on its website, <ulink "
+"url=\"http://aptoncd.sourceforge.net\"> aptoncd.sourceforge.net</ulink>"
 msgstr ""
-"Az <application>APTonCD</application> alkalmazásról további dokumentációkat "
-"a weboldalán találhat: <ulink "
-"url=\"http://aptoncd.sourceforge.net\">aptoncd.sourceforge.net</ulink>."
 
-#: add-applications/C/add-applications.xml:136(title)
+#: add-applications/C/add-applications.xml:388(title)
 msgid "Advanced package management"
 msgstr "Haladó csomagkezelés"
 
-#: add-applications/C/add-applications.xml:137(para)
+#: add-applications/C/add-applications.xml:389(para)
 msgid ""
 "Several other package managers exist in Ubuntu. These contain more advanced "
 "features than <application>Add/Remove Applications</application>."
@@ -618,11 +675,11 @@ msgstr ""
 "egyetlen, Ubuntuhoz elérhető csomagkezelő. Más alkalmazások több lehetőséget "
 "adnak bizonyos feladatok elvégzésére."
 
-#: add-applications/C/add-applications.xml:139(title)
+#: add-applications/C/add-applications.xml:395(title)
 msgid "Synaptic Package Manager"
 msgstr "Synaptic csomagkezelő"
 
-#: add-applications/C/add-applications.xml:140(para)
+#: add-applications/C/add-applications.xml:396(para)
 msgid ""
 "<application>Synaptic</application> is an advanced package management "
 "application that can install and remove every package available to your "
@@ -637,97 +694,36 @@ msgstr ""
 "sokkal több információt jelenít meg, ezáltal a számítógépén lévő minden "
 "szoftver fölött teljes felügyeletet biztosít."
 
-#: add-applications/C/add-applications.xml:141(para)
+#: add-applications/C/add-applications.xml:403(para)
 msgid ""
-"To launch <application>Synaptic</application>, press "
+"To launch Synaptic, press "
 "<menuchoice><guimenu>System</guimenu><guimenuitem>Administration</guimenuitem"
-"><guimenuitem>Synaptic Package Manager</guimenuitem></menuchoice>. You need "
-"administrative access to use <application>Synaptic</application>. See <ulink "
-"type=\"help\" url=\"ghelp:administrative\">Administrative Tasks</ulink> for "
-"more details."
+"><guimenuitem>Synaptic Package Manager</guimenuitem></menuchoice>. You will "
+"need administrative access to use it; see <ulink type=\"help\" "
+"url=\"ghelp:administrative\"> Administrative Tasks</ulink> for more details."
 msgstr ""
-"A <application>Synaptic</application> elindításához válassza a "
-"<menuchoice><guimenu>Rendszer</guimenu><guimenuitem>Adminisztráció</guimenuit"
-"em><guimenuitem>Synaptic csomagkezelő</guimenuitem></menuchoice> menüpontot. "
-"A <application>Synaptic</application> használatához rendszergazdai jogokra "
-"van szüksége. Tekintse meg az <ulink type=\"help\" "
-"url=\"ghelp:administrative\">Adminisztrációs feladatok</ulink> részt további "
-"információkért."
 
-#: add-applications/C/add-applications.xml:143(para)
+#: add-applications/C/add-applications.xml:408(para)
 msgid ""
-"If you know the name of the package you want to install or remove, click the "
-"<guibutton>Search</guibutton> button, and enter the package name or a short "
-"search term. You can also search for packages by description (for example, "
-"you can find all packages mentioning "
-"<quote><wordasword>arcade</wordasword></quote> or "
-"<quote><wordasword>mathematics</wordasword></quote>)."
+"See the <ulink type=\"help\" url=\"ghelp:synaptic#synaptic-single\"> "
+"Synaptic manual</ulink> for more information on managing packages with "
+"Synaptic."
 msgstr ""
-"Ha tudja a telepítendő vagy eltávolítandó csomag nevét, kattintson a "
-"<guibutton>Keresés</guibutton> gombra, és gépelje be a csomag nevét, vagy "
-"egy rövid keresési kulcsszót. Csomagokat a leírásukban szereplő kifejezések "
-"alapján is lehet keresni (mint például "
-"<quote><wordasword>játék</wordasword></quote> vagy "
-"<quote><wordasword>matematika</wordasword></quote>)."
 
-#: add-applications/C/add-applications.xml:144(para)
-msgid ""
-"Use the categories on the left to filter the list of packages. To return to "
-"the list of categories after doing a search, click "
-"<guibutton>Sections</guibutton>."
-msgstr ""
-"A baloldalon lévő kategóriák közül választva tematikusan is szűrheti a "
-"csomagokat. Egy keresés befejezése után a <guibutton>Csoportok</guibutton> "
-"gombra kattintva térhet vissza a kategórialistához."
-
-#: add-applications/C/add-applications.xml:145(para)
-msgid ""
-"To install a package, click the box next to it and choose <guimenuitem>Mark "
-"for installation</guimenuitem>. If you change your mind, choose "
-"<guimenuitem>Unmark</guimenuitem>."
-msgstr ""
-"Csomag telepítéséhez kattintson az előtte lévő négyzetre és válassza a "
-"<guimenuitem>Kijelölés telepítésre</guimenuitem> opciót. Ha meggondolta "
-"magát, válassza a <guimenuitem>Kijelölés megszüntetése</guimenuitem> "
-"menüpontot."
-
-#: add-applications/C/add-applications.xml:146(para)
-msgid ""
-"To remove a package that is already installed, choose <guimenuitem>Mark for "
-"Removal</guimenuitem>."
-msgstr ""
-"Egy már telepített csomag eltávolításához használja a <guimenuitem>Kijelölés "
-"eltávolításra</guimenuitem> pontot."
-
-#: add-applications/C/add-applications.xml:147(para)
-msgid ""
-"When you have finished, click <guibutton>Apply</guibutton> and Ubuntu will "
-"make the changes you selected. If you do not want to make any changes, close "
-"the window instead."
-msgstr ""
-"Ha befejezte, nyomja meg az <guibutton>Alkalmazás</guibutton> gombot és az "
-"Ubuntu végrehajtja a kiválasztott változtatásokat. Ha semmilyen változtatást "
-"nem akar végezni, akkor zárja be az ablakot."
-
-#: add-applications/C/add-applications.xml:150(title)
+#: add-applications/C/add-applications.xml:416(title)
 msgid "Command-line package management with APT"
 msgstr "Csomagkezelés parancssorban az APT használatával"
 
-#: add-applications/C/add-applications.xml:151(para)
+#: add-applications/C/add-applications.xml:417(para)
 msgid ""
 "If you are comfortable using the Terminal, you can use "
 "<application>apt</application> (Advanced Packaging Tool) to install or "
-"remove software. You need administrative access to use "
-"<application>apt</application>. See <ulink type=\"help\" "
-"url=\"ghelp:administrative\">Administrative Tasks</ulink> for more details."
+"remove software. You need administrative access to use apt; see <ulink "
+"type=\"help\" url=\"ghelp:administrative\"> Administrative Tasks</ulink> for "
+"more details."
 msgstr ""
-"Ha a terminál használata nem okoz nehézséget, programok telepítéséhez és "
-"törléséhez az <application>apt</application> (Advanced Packaging Tool) "
-"parancsot is használhatja. Az <application>apt</application> használatához "
-"rendszergazdai jogosultság szükséges (lásd: <ulink type=\"help\" "
-"url=\"ghelp:administrative\">Adminisztrációs feladatok</ulink>)."
 
-#: add-applications/C/add-applications.xml:158(para)
+#: add-applications/C/add-applications.xml:424(para)
 msgid ""
 "To update the local list of packages, enter in a Terminal: <screen>sudo apt-"
 "get update</screen>"
@@ -735,14 +731,14 @@ msgstr ""
 "A helyi csomaglista frissítéséhez írja be egy terminálba: <screen>sudo apt-"
 "get update</screen>"
 
-#: add-applications/C/add-applications.xml:162(para)
+#: add-applications/C/add-applications.xml:428(para)
 msgid ""
 "To install all available updates: <screen>sudo apt-get upgrade</screen>"
 msgstr ""
 "Az összes elérhető frissítés telepítése: <screen>sudo apt-get "
 "upgrade</screen>"
 
-#: add-applications/C/add-applications.xml:166(para)
+#: add-applications/C/add-applications.xml:432(para)
 msgid ""
 "To search for a package: <screen>apt-cache search "
 "<replaceable>package</replaceable></screen>"
@@ -750,7 +746,7 @@ msgstr ""
 "Csomag kereséséhez adja ki a következő parancsot: screen>apt-cache search "
 "<replaceable>csomag</replaceable></screen>"
 
-#: add-applications/C/add-applications.xml:170(para)
+#: add-applications/C/add-applications.xml:436(para)
 msgid ""
 "To install a package: <screen>sudo apt-get install "
 "<replaceable>package</replaceable></screen>"
@@ -758,7 +754,7 @@ msgstr ""
 "Csomag telepítéséhez adja ki a következő parancsot:<screen>sudo apt-get "
 "install <replaceable>csomag</replaceable></screen>"
 
-#: add-applications/C/add-applications.xml:174(para)
+#: add-applications/C/add-applications.xml:440(para)
 msgid ""
 "To remove a package: <screen>sudo apt-get remove "
 "<replaceable>package</replaceable></screen>"
@@ -766,7 +762,14 @@ msgstr ""
 "Csomag eltávolításához adja ki a következő parancsot: <screen>sudo apt-get "
 "remove <replaceable>csomag</replaceable></screen>"
 
-#: add-applications/C/add-applications.xml:178(para)
+#: add-applications/C/add-applications.xml:444(para)
+msgid ""
+"To remove a package and all its dependancies (that are not in use by other "
+"programs): <screen>sudo apt-get autoremove "
+"<replaceable>package</replaceable></screen>"
+msgstr ""
+
+#: add-applications/C/add-applications.xml:449(para)
 msgid ""
 "To list other <application>apt</application> commands and options: "
 "<screen>apt-get help</screen>"
@@ -774,20 +777,18 @@ msgstr ""
 "Az egyéb <application>apt</application> parancsok és kapcsolók felsorolása: "
 "<screen>apt-get help</screen>"
 
-#: add-applications/C/add-applications.xml:182(para)
+#: add-applications/C/add-applications.xml:453(para)
 msgid ""
 "For more information, see the <ulink url=\"http://www.debian.org/doc/user-"
-"manuals#apt-howto\">Debian <application>apt</application> manual</ulink>."
+"manuals#apt-howto\">Debian apt manual</ulink> and the <ulink url=\"man:apt-"
+"get\">apt-get manual page</ulink>."
 msgstr ""
-"További információkért tekintse meg a <ulink "
-"url=\"http://www.debian.org/doc/user-manuals#apt-howto\">Debian "
-"<application>apt</application> kézikönyvét (angol)</ulink>."
 
-#: add-applications/C/add-applications.xml:186(title)
+#: add-applications/C/add-applications.xml:462(title)
 msgid "Installing a single package file"
 msgstr "Egyetlen csomagfájl telepítése"
 
-#: add-applications/C/add-applications.xml:187(para)
+#: add-applications/C/add-applications.xml:463(para)
 msgid ""
 "The preferred method of installing programs is via the package managers "
 "described in this chapter. However, although the Ubuntu package archives are "
@@ -801,7 +802,7 @@ msgstr ""
 "csomagtárolókban. Ebben az esetben weboldalakról is tölthet le és telepíthet "
 "csomagokat."
 
-#: add-applications/C/add-applications.xml:195(para)
+#: add-applications/C/add-applications.xml:471(para)
 msgid ""
 "It is important to ensure that any files you download come from a safe "
 "source before installing them."
@@ -809,7 +810,7 @@ msgstr ""
 "Fontos, hogy telepítés előtt győződjön meg arról, hogy a letöltött csomagok "
 "megbízható forrásból származnak."
 
-#: add-applications/C/add-applications.xml:199(para)
+#: add-applications/C/add-applications.xml:475(para)
 msgid ""
 "There are many different kinds of Linux package files. Most of these are "
 "associated with the package managers of specific Linux distributions. "
@@ -828,11 +829,11 @@ msgstr ""
 "csomagok</emphasis> (<filename class=\"extension\">.tar</filename> fájlok) "
 "és a <filename class=\"extension\">.run</filename> fájlok."
 
-#: add-applications/C/add-applications.xml:211(para)
+#: add-applications/C/add-applications.xml:487(para)
 msgid "This section deals with installing these single files."
 msgstr "Ez a szakasz ezen önálló fájlok telepítésével foglalkozik."
 
-#: add-applications/C/add-applications.xml:215(para)
+#: add-applications/C/add-applications.xml:491(para)
 msgid ""
 "It is not guaranteed that these files will be compatible with your system "
 "and you will not receive security updates if you install these files. For "
@@ -845,13 +846,11 @@ msgstr ""
 "ha használni kíván egy programot, mindig a natív Ubuntu csomagot használja "
 "(ha van ilyen), amely a csomagkezelőn keresztül érhető el."
 
-#: add-applications/C/add-applications.xml:225(title)
-msgid "Install/uninstall <filename class=\"extension\">.deb</filename> files"
+#: add-applications/C/add-applications.xml:501(title)
+msgid "Installing/uninstalling .deb files"
 msgstr ""
-"A <filename class=\"extension\">.deb</filename> fájlok "
-"telepítése/eltávolítása"
 
-#: add-applications/C/add-applications.xml:226(para)
+#: add-applications/C/add-applications.xml:502(para)
 msgid ""
 "These files are <emphasis>Debian packages</emphasis>. The package files "
 "associated with Ubuntu have the <filename "
@@ -869,7 +868,7 @@ msgstr ""
 "információkért tekintse meg az <ulink type=\"help\" "
 "url=\"ghelp:administrative\">Adminisztrációs feladatok</ulink> részt."
 
-#: add-applications/C/add-applications.xml:236(para)
+#: add-applications/C/add-applications.xml:512(para)
 msgid ""
 "To install a <filename class=\"extension\">.deb</filename> file, double-"
 "click on it. If you prefer using the Terminal, enter: <screen>sudo dpkg -i "
@@ -880,53 +879,58 @@ msgstr ""
 "ki a <screen>sudo dpkg -i <replaceable>csomagfájl.deb</replaceable></screen> "
 "parancsot."
 
-#: add-applications/C/add-applications.xml:240(para)
+#: add-applications/C/add-applications.xml:516(para)
 msgid ""
-"To uninstall a <filename class=\"extension\">.deb</filename> file, deselect "
-"it in your package manager. Or from a Terminal, enter: <screen>sudo dpkg -r "
+"You can use your package manager to uninstall a <filename "
+"class=\"extension\">.deb</filename> file once it has been installed. "
+"Alternatively, enter the following in a Terminal: <screen>sudo dpkg -r "
 "<replaceable>package_name</replaceable></screen>"
 msgstr ""
-"Egy <filename class=\"extension\">.deb</filename> fájl eltávolításához "
-"törölje annak kijelölését a csomagkezelőben. Vagy terminálból adja ki a "
-"<screen>sudo dpkg -r <replaceable>csomag_neve</replaceable></screen> "
-"parancsot."
+"A csomagkezelő segítségével el is távolíthat egy telepített <filename "
+"class=\"extension\">.deb</filename> fájlt. Ennek alternatívájaként adja ki a "
+"következő parancsot egy terminálban: <screen>sudo dpkg -r "
+"<replaceable>csomagnév</replaceable></screen>"
 
-#: add-applications/C/add-applications.xml:247(title)
-msgid ""
-"Convert <filename class=\"extension\">.rpm</filename> files to <filename "
-"class=\"extension\">.deb</filename> files"
+#: add-applications/C/add-applications.xml:524(title)
+msgid "Converting .rpm files to .deb files"
 msgstr ""
-"<filename class=\"extension\">.rpm</filename> fájlok átalakítása <filename "
-"class=\"extension\">.deb</filename> fájlokká"
 
-#: add-applications/C/add-applications.xml:250(para)
+#: add-applications/C/add-applications.xml:525(para)
 msgid ""
-"Another type of package files is <emphasis>Red Hat Package "
-"Manager</emphasis> files which have the <filename "
-"class=\"extension\">.rpm</filename> suffix. It is not recommended to install "
-"these on an Ubuntu system. In almost all cases, a native Ubuntu <filename "
+"Another type of package is the <emphasis>Red Hat Package Manager</emphasis> "
+"(RPM) file. These have the <filename class=\"extension\">.rpm</filename> "
+"suffix. It is not recommended to install these on an Ubuntu system. In "
+"almost all cases, a native Ubuntu <filename "
 "class=\"extension\">.deb</filename> package is available. However, if "
 "absolutely necessary, an <filename class=\"extension\">.rpm</filename> file "
 "can be converted to a <filename class=\"extension\">.deb</filename> package "
-"using the program <application>alien</application>. The resulting <filename "
-"class=\"extension\">.deb</filename> file will be installed using dpkg as "
-"indicated above."
+"using the <application>alien</application> application. The resulting "
+"<filename class=\"extension\">.deb</filename> file can be installed as "
+"described above."
 msgstr ""
-"Másik csomagtípus a <emphasis>Red Hat csomagkezelő</emphasis> fájl, ami "
-"<filename class=\"extension\">.rpm</filename> kiterjesztéssel rendelkezik. "
-"Ezek telepítése nem ajánlott Ubuntu rendszeren. Majdnem minden esetben "
-"elérhető natív Ubuntu <filename class=\"extension\">.deb</filename> csomag. "
-"Ha mindenképpen szükséges, akkor az <application>alien</application> program "
-"segítségével az <filename class=\"extension\">.rpm</filename> fájlok "
-"<filename class=\"extension\">.deb</filename> csomaggá alakíthatók. A kész "
-"<filename class=\"extension\">.deb</filename> fájl a dpkg segítségével a "
-"fentebb javasolt módon telepíthető."
+"A csomagok másik típusa a <emphasis>Red Hat Package Manager</emphasis> (RPM) "
+"fájl. Ezek kiterjesztése <filename class=\"extension\">.rpm</filename>. Ezek "
+"telepítése nem ajánlott Ubuntu rendszerre. Majdnem minden esetben elérhető "
+"natív Ubuntu <filename class=\"extension\">.deb</filename> csomag. Ha "
+"azonban mindenképp szükséges, az <filename "
+"class=\"extension\">.rpm</filename> fájlok átalakíthatók <filename "
+"class=\"extension\">.deb</filename> csomagokká az "
+"<application>alien</application> alkalmazás segítségével. Az eredményül "
+"kapott <filename class=\"extension\">.deb</filename> fájl a fent leírt módon "
+"telepíthető."
 
-#: add-applications/C/add-applications.xml:265(para)
+#: add-applications/C/add-applications.xml:538(para)
+msgid ""
+"To convert an RPM into a <filename class=\"extension\">.deb</filename>:"
+msgstr ""
+"RPM csomag átalakítása <filename class=\"extension\">.deb</filename> "
+"csomaggá:"
+
+#: add-applications/C/add-applications.xml:544(para)
 msgid "Install the <application>alien</application> package."
 msgstr "Telepítse az <application>alien</application> csomagot."
 
-#: add-applications/C/add-applications.xml:268(para)
+#: add-applications/C/add-applications.xml:549(para)
 msgid ""
 "In a Terminal, enter: <screen>sudo alien "
 "<replaceable>package_file.rpm</replaceable></screen>"
@@ -934,26 +938,29 @@ msgstr ""
 "Egy terminálban adja ki a <screen>sudo alien "
 "<replaceable>csomagfájl.rpm</replaceable></screen> parancsot"
 
-#: add-applications/C/add-applications.xml:276(title)
-msgid "Install <emphasis>tarballs</emphasis>"
-msgstr "<emphasis>Tar csomagok</emphasis> telepítése"
+#: add-applications/C/add-applications.xml:558(title)
+msgid "Installing <emphasis>tarballs</emphasis>"
+msgstr "Tar csomagok (<emphasis>tarball</emphasis>) telepítése"
 
-#: add-applications/C/add-applications.xml:277(para)
+#: add-applications/C/add-applications.xml:559(para)
 msgid ""
 "Files with the <filename class=\"extension\">.tar</filename>, <filename "
 "class=\"extension\">.tgz</filename>, <filename "
 "class=\"extension\">.tar.gz</filename> or <filename "
 "class=\"extension\">.tar.bz2</filename> suffix are package files known as "
-"<emphasis>tarballs</emphasis> which are widely used in Linux and Unix."
+"<emphasis>tarballs</emphasis>, and are widely used in Linux and Unix to "
+"package software. Tarballs can also be used to archive and compress other "
+"files."
 msgstr ""
 "A <filename class=\"extension\">.tar</filename>, <filename "
 "class=\"extension\">.tgz</filename>, <filename "
-"class=\"extension\">.tar.gz</filename>, vagy <filename "
-"class=\"extension\">.tar.bz2</filename> kiterjesztéssel rendelkező fájlok a "
-"<emphasis>tar csomagok</emphasis>, melyek széles körben használatosak Linux "
-"és Unix rendszereken."
+"class=\"extension\">.tar.gz</filename> vagy <filename "
+"class=\"extension\">.tar.bz2</filename> kiterjesztések tar csomagokat "
+"(<emphasis>tarball</emphasis>) jelölnek, ezek Linux és Unix alatt széles "
+"körben használtak szoftverek csomagolására. A tar csomagok más fájlok "
+"archiválására és tömörításére is használatosak."
 
-#: add-applications/C/add-applications.xml:283(para)
+#: add-applications/C/add-applications.xml:568(para)
 msgid ""
 "If there is no native Ubuntu package available in any of the Ubuntu "
 "repositories, you can use the command line to install or uninstall the "
@@ -962,7 +969,7 @@ msgstr ""
 "Ha nincs elérhető Ubuntu csomag egyik tárolóban sem, a tar csomagok "
 "telepítéséhez és eltávolításához használhatja a parancssort."
 
-#: add-applications/C/add-applications.xml:285(para)
+#: add-applications/C/add-applications.xml:573(para)
 msgid ""
 "The first step will be to uncompress and extract the tarball. If it is a "
 "<emphasis>.tgz</emphasis> or a <emphasis>.tar.gz</emphasis>, in a Terminal "
@@ -973,7 +980,7 @@ msgstr ""
 "terminálban adja ki a következő parancsot: <screen>tar xfvz <replaceable>tar-"
 "csomag_neve</replaceable></screen>"
 
-#: add-applications/C/add-applications.xml:289(para)
+#: add-applications/C/add-applications.xml:579(para)
 msgid ""
 "Then it will be necessary to follow the instructions that come with the "
 "package. These are generally located in the extracted tarball in a file "
@@ -983,7 +990,7 @@ msgstr ""
 "kicsomagolt tar csomagban találhatók, egy <filename>README</filename> vagy "
 "<filename>INSTALL</filename> fájlban."
 
-#: add-applications/C/add-applications.xml:295(para)
+#: add-applications/C/add-applications.xml:585(para)
 msgid ""
 "Tarballs often contain the source code of the program, and need to be "
 "<emphasis>compiled</emphasis> in order to be used."
@@ -991,22 +998,18 @@ msgstr ""
 "A tar csomagok legtöbbször a program forráskódját tartalmazzák, így a "
 "használatukhoz <emphasis>fordításra</emphasis> van szükség."
 
-#: add-applications/C/add-applications.xml:298(para)
+#: add-applications/C/add-applications.xml:590(para)
 msgid ""
 "Compiling programs requires some packages that are not installed by default. "
-"You can install these all at once by installing the <application>build-"
-"essential</application> package."
+"You can install most of these all at once by installing the <ulink "
+"url=\"apt:build-essential\">build-essential</ulink> package."
 msgstr ""
-"A programok fordításához néhány olyan csomagra is szükség van, amelyek "
-"nincsenek alapértelmezésben a rendszerre telepítve. Ezeket a "
-"<application>build-essential</application> csomag telepítésével egy lépésben "
-"telepítheti."
 
-#: add-applications/C/add-applications.xml:302(title)
-msgid "Install <filename class=\"extension\">.run</filename> packages"
-msgstr "<filename class=\"extension\">.run</filename> csomagok telepítése"
+#: add-applications/C/add-applications.xml:600(title)
+msgid "Install .run packages"
+msgstr ""
 
-#: add-applications/C/add-applications.xml:303(para)
+#: add-applications/C/add-applications.xml:601(para)
 msgid ""
 "Sometimes you may need to install software (most often a game) which has "
 "been packaged as a .run file. These files contain the software and a small "
@@ -1016,7 +1019,7 @@ msgstr ""
 "telepítenie. Ezek a fájlok tartalmazzák a szoftvert és egy kis programot, "
 "amellyel a szoftvert telepíteni lehet."
 
-#: add-applications/C/add-applications.xml:304(para)
+#: add-applications/C/add-applications.xml:606(para)
 msgid ""
 "Follow the procedure below to install software packaged in a <filename "
 "class=\"extension\">.run</filename> file:"
@@ -1024,7 +1027,7 @@ msgstr ""
 "A <filename class=\"extension\">.run</filename> fájlként csomagolt szoftver "
 "telepítéséhez tegye a következőket:"
 
-#: add-applications/C/add-applications.xml:308(para)
+#: add-applications/C/add-applications.xml:613(para)
 msgid ""
 "Find the <filename class=\"extension\">.run</filename> file in the "
 "<application>File Browser</application>"
@@ -1032,13 +1035,13 @@ msgstr ""
 "Keresse meg a <filename class=\"extension\">.run</filename> fájlt a "
 "<application>Fájlböngészőben</application>"
 
-#: add-applications/C/add-applications.xml:309(para)
+#: add-applications/C/add-applications.xml:619(para)
 msgid "Right-click the file and select <guilabel>Properties</guilabel>"
 msgstr ""
 "Kattintson a fájlra jobb egérgombbal és válassza a "
 "<guilabel>Tulajdonságok</guilabel> menüpontot"
 
-#: add-applications/C/add-applications.xml:310(para)
+#: add-applications/C/add-applications.xml:624(para)
 msgid ""
 "Under the <guilabel>Permissions</guilabel> tab, make sure that "
 "<guilabel>Allow executing file as program</guilabel> is checked and press "
@@ -1049,29 +1052,22 @@ msgstr ""
 "jelölőnégyzet be van jelölve, majd nyomja meg a "
 "<guibutton>Bezárás</guibutton> gombot"
 
-#: add-applications/C/add-applications.xml:311(para)
+#: add-applications/C/add-applications.xml:631(para)
 msgid ""
-"Double-click the <filename class=\"extension\">.run</filename> file to open "
-"it. A dialog box should appear"
+"Double-click the <filename class=\"extension\">.run</filename> file and "
+"press <guibutton>Run in Terminal</guibutton> to run the installer"
 msgstr ""
-"Kattintson kétszer a <filename class=\"extension\">.run</filename> fájlra "
-"annak megnyitásához.  Egy párbeszédablak fog megjelenni."
+"Kattintson duplán a <filename class=\"extension\">.run</filename> fájlra és "
+"válassza a <guibutton>Futtatás terminálban</guibutton> lehetőséget a "
+"telepítő futtatásához."
 
-#: add-applications/C/add-applications.xml:312(para)
-msgid "Press <guibutton>Run in Terminal</guibutton> to run the installer"
-msgstr ""
-"Nyomja meg a <guibutton>Futtatás terminálban</guibutton> gombot a telepítő "
-"elindításához."
-
-#: add-applications/C/add-applications.xml:313(para)
+#: add-applications/C/add-applications.xml:638(para)
 msgid ""
-"A <application>Terminal</application> window will open. Follow any "
-"instructions on-screen to install the program"
+"A Terminal window will open. Follow any instructions on-screen to install "
+"the program"
 msgstr ""
-"Egy <application>terminál</application> ablak fog megnyílni. A program "
-"telepítéséhez kövesse a képernyőn látható utasításokat."
 
-#: add-applications/C/add-applications.xml:316(para)
+#: add-applications/C/add-applications.xml:646(para)
 msgid ""
 "Once you have started the installer, it may take a while to display an "
 "installation screen. This is normally due to the installer extracting all of "
@@ -1099,4 +1095,329 @@ msgstr ""
 "  Gabor Kelemen https://launchpad.net/~kelemeng\n"
 "  J https://launchpad.net/~sorosj\n"
 "  Vass Károly https://launchpad.net/~cvk\n"
-"  ŐRY Máté https://launchpad.net/~orymate"
+"  ŐRY Máté https://launchpad.net/~orymate\n"
+"\n"
+"Launchpad Contributions:\n"
+"  Dora Kovats https://launchpad.net/~dorcssa\n"
+"  Enahma https://launchpad.net/~enahma\n"
+"  Gabor Kelemen https://launchpad.net/~kelemeng\n"
+"  Horváth Antal https://launchpad.net/~kanka9\n"
+"  Horváth Árpád https://launchpad.net/~horvath-arpad-roik\n"
+"  J https://launchpad.net/~sorosj\n"
+"  Vass Károly https://launchpad.net/~cvk\n"
+"  ŐRY Máté https://launchpad.net/~orymate\n"
+"\n"
+"Launchpad Contributions:\n"
+"  Attila Hammer https://launchpad.net/~hammera\n"
+"  Crystal https://launchpad.net/~ebence88\n"
+"  Dora Kovats https://launchpad.net/~dorcssa\n"
+"  Enahma https://launchpad.net/~enahma\n"
+"  Gabor Kelemen https://launchpad.net/~kelemeng\n"
+"  Horváth Árpád https://launchpad.net/~horvath-arpad-roik\n"
+"  J https://launchpad.net/~sorosj\n"
+"  Máté Őry https://launchpad.net/~orymate\n"
+"  Vass Károly https://launchpad.net/~cvk"
+
+#~ msgid ""
+#~ "You need administrative access to use any of these programs. See <ulink "
+#~ "type=\"help\" url=\"ghelp:administrative\">Administrative Tasks</ulink> for "
+#~ "more details."
+#~ msgstr ""
+#~ "A csomagkezelők használatához adminisztrátori jogosultság szükséges. További "
+#~ "információkért nézze meg az <ulink type=\"help\" "
+#~ "url=\"ghelp:administrative\">Adminisztrátori feladatok</ulink> leírást."
+
+#~ msgid ""
+#~ "<link linkend=\"synaptic\"><application>Synaptic</application></link> - "
+#~ "Advanced control of software and other system components."
+#~ msgstr ""
+#~ "A <link linkend=\"synaptic\"><application>Synaptic "
+#~ "csomagkezelő</application></link> az alkalmazások és rendszerösszetevők "
+#~ "speciális felügyeletét teszi lehetővé ."
+
+#~ msgid ""
+#~ "To add or remove applications in Ubuntu, you need to use a <emphasis>package "
+#~ "manager</emphasis>. It will automatically download the software required "
+#~ "from the Internet and install it."
+#~ msgstr ""
+#~ "Alkalmazások hozzáadásához és eltávolításához egy "
+#~ "<emphasis>csomagkezelőt</emphasis> kell használnia. Ez automatikusan letölti "
+#~ "a szükséges összetevőket az internetről és telepíti azokat."
+
+#~ msgid ""
+#~ "To remove a package that is already installed, choose <guimenuitem>Mark for "
+#~ "Removal</guimenuitem>."
+#~ msgstr ""
+#~ "Egy már telepített csomag eltávolításához használja a <guimenuitem>Kijelölés "
+#~ "eltávolításra</guimenuitem> pontot."
+
+#~ msgid ""
+#~ "To enable <application>Synaptic</application> and other package managers to "
+#~ "install software from CDs which contain packages:"
+#~ msgstr ""
+#~ "A csomagokat tartalmazó CD-ről csomagok telepítésének engedélyezése a "
+#~ "<application>Synaptic</application> és más csomagkezelők számára:"
+
+#~ msgid "There are three main package managers you can use in Ubuntu:"
+#~ msgstr "Három ismertebb csomagkezelő közül választhat az Ubuntuban:"
+
+#~ msgid ""
+#~ "This document is maintained by the Ubuntu documentation team "
+#~ "(https://wiki.ubuntu.com/DocumentationTeam). For a list of contributors, see "
+#~ "the <ulink url=\"../../../common/C/contributors.xml\">contributors "
+#~ "page</ulink>"
+#~ msgstr ""
+#~ "Ezt a dokumentumot az Ubuntu dokumentációs csapat "
+#~ "(https://wiki.ubuntu.com/DocumentationTeam) tartja karban. A közreműködők "
+#~ "listáját <ulink url=\"../../../common/C/contributors.xml\">a közreműködők "
+#~ "oldalán</ulink> találhatja meg."
+
+#~ msgid ""
+#~ "Compiling programs requires some packages that are not installed by default. "
+#~ "You can install most of these all at once by installing the "
+#~ "<application>build-essential</application> package."
+#~ msgstr ""
+#~ "A programok lefordítása más csomagokat igényel, amelyek alapértelmezésben "
+#~ "nincsenek telepítve. Ezek legtöbbjét egyszerre telepítheti a  "
+#~ "<application>build-essential</application> csomag telepítésével."
+
+#~ msgid ""
+#~ "Installing/uninstalling <filename class=\"extension\">.deb</filename> files"
+#~ msgstr ""
+#~ "<filename class=\"extension\">.deb</filename> fájlok telepítése/eltávolítása"
+
+#~ msgid ""
+#~ "A <application>Terminal</application> window will open. Follow any "
+#~ "instructions on-screen to install the program"
+#~ msgstr ""
+#~ "Egy <application>terminál</application> ablak fog megnyílni. A program "
+#~ "telepítéséhez kövesse a képernyőn látható utasításokat."
+
+#~ msgid ""
+#~ "To launch <application>Synaptic</application>, press "
+#~ "<menuchoice><guimenu>System</guimenu><guimenuitem>Administration</guimenuitem"
+#~ "><guimenuitem>Synaptic Package Manager</guimenuitem></menuchoice>. You need "
+#~ "administrative access to use <application>Synaptic</application>; see <ulink "
+#~ "type=\"help\" url=\"ghelp:administrative\">Administrative Tasks</ulink> for "
+#~ "more details."
+#~ msgstr ""
+#~ "A <application>Synaptic</application> indításához válassza a "
+#~ "<menuchoice><guimenu>Rendszer</guimenu><guimenuitem>Adminisztráció</guimenuit"
+#~ "em><guimenuitem>Synaptic csomagkezelő</guimenuitem></menuchoice> menüpontot. "
+#~ "A <application>Synaptic</application> használatához adminisztrátori "
+#~ "jogosultság szükséges, részletekért lásd az <ulink type=\"help\" "
+#~ "url=\"ghelp:administrative\">Adminisztrációs feladatok</ulink> szakaszt."
+
+#~ msgid ""
+#~ "If you open more than one of these programs at once, they may not work. "
+#~ "Close them all and open just one."
+#~ msgstr ""
+#~ "Ha több csomagkezelőt nyit meg egyszerre, azok nem fognak működni. Zárja be "
+#~ "mindegyiket és csak egyet nyisson meg."
+
+#~ msgid ""
+#~ "Some packages from the <emphasis>main</emphasis> and "
+#~ "<emphasis>restricted</emphasis> Ubuntu package repositories can be installed "
+#~ "from the Ubuntu installation CD. Simply insert your Ubuntu installation CD "
+#~ "and open "
+#~ "<menuchoice><guimenu>System</guimenu><guimenuitem>Administration</guimenuitem"
+#~ "><guimenuitem>Synaptic Package Manager</guimenuitem></menuchoice>. To list "
+#~ "only packages on the Ubuntu installation CD, click on the "
+#~ "<guibutton>Origin</guibutton> button in the lower left corner of "
+#~ "<application>Synaptic Package Manager</application>. The packages should be "
+#~ "listed under the <guimenuitem>Ubuntu 8.04_Hardy_Heron</guimenuitem> section."
+#~ msgstr ""
+#~ "A <emphasis>main</emphasis> és <emphasis>restricted</emphasis> Ubuntu "
+#~ "csomagtárolók bizonyos csomagjai megtalálhatók az Ubuntu telepítő CD-n. "
+#~ "Egyszerűen helyezze be az Ubuntu telepítő CD-t és nyissa meg a "
+#~ "<menuchoice><guimenu>Rendszer</guimenu><guimenuitem>Adminisztráció</guimenuit"
+#~ "em><guimenuitem>Synaptic csomagkezelőt</guimenuitem></menuchoice>. Az Ubuntu "
+#~ "telepítő CD csomagjainak felsorolásához nyomja meg az "
+#~ "<guibutton>Eredet</guibutton> gombot a <application>Synaptic "
+#~ "csomagkezelő</application> bal alsó sarkában. A csomagok az "
+#~ "<guimenuitem>Ubuntu 8.04_Hardy_Heron</guimenuitem> szakaszban jelennek meg."
+
+#~ msgid ""
+#~ "There are thousands of programs available to install on Ubuntu. These "
+#~ "programs are stored in software archives (<emphasis>repositories</emphasis>) "
+#~ "and are made freely available for installation over the Internet. This makes "
+#~ "it very easy to install new programs in Linux, and it is also very secure, "
+#~ "because each program you install is built specially for Ubuntu and checked "
+#~ "before it is installed."
+#~ msgstr ""
+#~ "Több ezer program érhető el és telepíthető az Ubuntura. Ezek a programok a "
+#~ "szoftverarchívumokban (<emphasis>tárolók</emphasis>) találhatók meg és a "
+#~ "telepítéshez szabadon elérhetők az interneten. Ezen csomagok segítségével "
+#~ "nagyon könnyű új programokat telepíteni Linuxon, mindezt biztonságosan, "
+#~ "hiszen a telepíhető programcsomagokat kifejezetten az Ubuntuhoz készítették "
+#~ "és telepítés előtt ellenőrzésre kerülnek."
+
+#~ msgid ""
+#~ "Use the categories on the left to filter the list of packages. To return to "
+#~ "the list of categories after doing a search, click "
+#~ "<guibutton>Sections</guibutton>."
+#~ msgstr ""
+#~ "A baloldalon lévő kategóriák közül választva tematikusan is szűrheti a "
+#~ "csomagokat. Egy keresés befejezése után a <guibutton>Csoportok</guibutton> "
+#~ "gombra kattintva térhet vissza a kategórialistához."
+
+#~ msgid ""
+#~ "To install a package, click the box next to it and choose <guimenuitem>Mark "
+#~ "for installation</guimenuitem>. If you change your mind, choose "
+#~ "<guimenuitem>Unmark</guimenuitem>."
+#~ msgstr ""
+#~ "Csomag telepítéséhez kattintson az előtte lévő négyzetre és válassza a "
+#~ "<guimenuitem>Kijelölés telepítésre</guimenuitem> opciót. Ha meggondolta "
+#~ "magát, válassza a <guimenuitem>Kijelölés megszüntetése</guimenuitem> "
+#~ "menüpontot."
+
+#~ msgid ""
+#~ "In this section you can learn how to use a package manager to add or remove "
+#~ "applications in Ubuntu with a few clicks. You can also learn about more "
+#~ "advanced techniques of managing applications and discover some optional "
+#~ "applications which you can add to Ubuntu."
+#~ msgstr ""
+#~ "Ez a fejezet bemutatja, hogyan használható a csomagkezelő alkalmazások "
+#~ "Ubuntuhoz adására és eltávolítására néhány kattintással. Megismerheti az "
+#~ "alkalmazások kezelésének fejlettebb módszereit és felfedezhet néhány "
+#~ "további, az Ubuntuhoz adható alkalmazást."
+
+#~ msgid ""
+#~ "The packages should then be listed. To have "
+#~ "<application>Synaptic</application> only list packages from the CD, click "
+#~ "the <guibutton>Origin</guibutton> button on the lower left corner of "
+#~ "<application>Synaptic Package Manager</application>, then find the name of "
+#~ "the CD on the list in the upper left corner of "
+#~ "<application>Synaptic</application>."
+#~ msgstr ""
+#~ "A csomagok ezután megjelennek. Ahhoz, hogy a "
+#~ "<application>Synaptic</application> csak a CD-ről származó csomagokat "
+#~ "jelenítse meg, kattintson az <guibutton>Eredet</guibutton> gombra a "
+#~ "<application>Synaptic csomagkezelő</application> bal alsó sarkában, majd "
+#~ "keresse meg a CD nevét a <application>Synaptic</application> bal felső "
+#~ "sarkában."
+
+#~ msgid "2004, 2005, 2006"
+#~ msgstr "2004, 2005, 2006"
+
+#~ msgid ""
+#~ "Further documentation on <application>APTonCD</application> can be found on "
+#~ "its website, <ulink "
+#~ "url=\"http://aptoncd.sourceforge.net\">aptoncd.sourceforge.net</ulink>"
+#~ msgstr ""
+#~ "Az <application>APTonCD-vel</application> kapcsolatos további információk a "
+#~ "weboldalán találhatók: <ulink "
+#~ "url=\"http://aptoncd.sourceforge.net\">aptoncd.sourceforge.net</ulink>"
+
+#~ msgid "Install <filename class=\"extension\">.run</filename> packages"
+#~ msgstr "<filename class=\"extension\">.run</filename> csomagok telepítése"
+
+#~ msgid ""
+#~ "A copy of the license is available here: <ulink url=\"/usr/share/ubuntu-"
+#~ "docs/common/C/ccbysa.xml\">Creative Commons ShareAlike License</ulink>."
+#~ msgstr ""
+#~ "A licenc másolata elérhető a <ulink url=\"/usr/share/ubuntu-"
+#~ "docs/common/C/ccbysa.xml\">Creative Commons ShareAlike License</ulink> "
+#~ "oldalon."
+
+#~ msgid ""
+#~ "<link linkend=\"apt\"><application>Apt</application></link> - If you prefer "
+#~ "using the Terminal."
+#~ msgstr ""
+#~ "Lehetőség van az <link linkend=\"apt\"><application>apt</application></link> "
+#~ "használatára is, ha a terminál használatát részesíti előnyben."
+
+#~ msgid ""
+#~ "A software repository is a place from which you can download and install "
+#~ "software over the Internet."
+#~ msgstr ""
+#~ "A tárolók olyan helyek az Interneten, ahonnan letöltheti és telepítheti az "
+#~ "alkalmazásokat."
+
+#~ msgid ""
+#~ "With the <guimenuitem>Add/Remove</guimenuitem> item in the "
+#~ "<guimenu>Applications</guimenu> menu, you can install programs to do new "
+#~ "things with Ubuntu. You can also remove programs you do not want. You need "
+#~ "administrative access to use <application>Add/Remove "
+#~ "Applications</application> (see <ulink type=\"help\" "
+#~ "url=\"ghelp:administrative\">Administrative Tasks</ulink> for more details)."
+#~ msgstr ""
+#~ "Az <guimenu>Alkalmazások</guimenu> menü "
+#~ "<guimenuitem>Hozzáadás/eltávolítás</guimenuitem> menüpontjával programokat "
+#~ "telepíthet, így új feladatokat hajthat végre Ubuntu alatt. El is "
+#~ "távolíthatja azokat a programokat, amelyekre nincs szüksége. Az "
+#~ "<application>Alkalmazások telepítése/eltávolítása</application> "
+#~ "használatához adminisztrátori jogra van szüksége (lásd: <ulink type=\"help\" "
+#~ "url=\"ghelp:administrative\">Adminisztrációs feladatok</ulink>)."
+
+#~ msgid ""
+#~ "A package manager is a program that installs and uninstalls software, and "
+#~ "keeps track of all the components each piece of software needs."
+#~ msgstr ""
+#~ "A csomagkezelő egy olyan rendszer, amellyel úgy telepíthet és törölhet "
+#~ "alkalmazásokat, hogy a működésükhöz szükséges további összetevőket is számon "
+#~ "tartja."
+
+#~ msgid ""
+#~ "Converting <filename class=\"extension\">.rpm</filename> files to <filename "
+#~ "class=\"extension\">.deb</filename> files"
+#~ msgstr ""
+#~ "<filename class=\"extension\">.rpm</filename> fájlok átalakítása <filename "
+#~ "class=\"extension\">.deb</filename> fájlokká"
+
+#~ msgid ""
+#~ "For more information, see the <ulink url=\"http://www.debian.org/doc/user-"
+#~ "manuals#apt-howto\">Debian <application>apt</application> manual</ulink> and "
+#~ "the <ulink url=\"man:apt-get\">apt-get manual</ulink>."
+#~ msgstr ""
+#~ "További információkért tekintse meg a <ulink "
+#~ "url=\"http://www.debian.org/doc/user-manuals#apt-howto\">Debian "
+#~ "<application>apt</application> kézikönyvét</ulink> (angol) és az <ulink "
+#~ "url=\"man:apt-get\">apt-get kézikönyvét</ulink>."
+
+#~ msgid ""
+#~ "<link linkend=\"gnome-app-install\"><application>Add/Remove "
+#~ "Applications</application></link> - The easiest way to install and uninstall "
+#~ "programs."
+#~ msgstr ""
+#~ "<link linkend=\"gnome-app-"
+#~ "install\"><application>Hozzáadás/eltávolítás</application></link> - "
+#~ "Programok telepítésének és eltávolításának legegyszerűbb módja."
+
+#~ msgid ""
+#~ "If you are comfortable using the Terminal, you can use "
+#~ "<application>apt</application> (Advanced Packaging Tool) to install or "
+#~ "remove software. You need administrative access to use "
+#~ "<application>apt</application>; see <ulink type=\"help\" "
+#~ "url=\"ghelp:administrative\">Administrative Tasks</ulink> for more details."
+#~ msgstr ""
+#~ "Ha nem okoz gondot a terminál használata, akkor az "
+#~ "<application>apt</application> (Advanced Packaging Tool) segítségével is "
+#~ "telepíthet vagy távolíthat el szoftvert. Az <application>apt</application> "
+#~ "használatához adminisztrátori jogosultság szükséges, részletekért lásd az "
+#~ "<ulink type=\"help\" url=\"ghelp:administrative\">Adminisztrációs "
+#~ "feladatok</ulink> szakaszt."
+
+#~ msgid ""
+#~ "If you know the name of the package you want to install or remove, click the "
+#~ "<guibutton>Search</guibutton> button, and enter the package name or a short "
+#~ "search term. You can also search for packages by description (for example, "
+#~ "you can find all packages mentioning "
+#~ "<quote><wordasword>arcade</wordasword></quote> or "
+#~ "<quote><wordasword>mathematics</wordasword></quote>)."
+#~ msgstr ""
+#~ "Ha tudja a telepítendő vagy eltávolítandó csomag nevét, kattintson a "
+#~ "<guibutton>Keresés</guibutton> gombra, és gépelje be a csomag nevét, vagy "
+#~ "egy rövid keresési kulcsszót. Csomagokat a leírásukban szereplő kifejezések "
+#~ "alapján is lehet keresni (mint például "
+#~ "<quote><wordasword>játék</wordasword></quote> vagy "
+#~ "<quote><wordasword>matematika</wordasword></quote>)."
+
+#~ msgid ""
+#~ "When you have finished, click <guibutton>Apply</guibutton> and Ubuntu will "
+#~ "make the changes you selected. If you do not want to make any changes, close "
+#~ "the window instead."
+#~ msgstr ""
+#~ "Ha befejezte, nyomja meg az <guibutton>Alkalmazás</guibutton> gombot és az "
+#~ "Ubuntu végrehajtja a kiválasztott változtatásokat. Ha semmilyen változtatást "
+#~ "nem akar végezni, akkor zárja be az ablakot."

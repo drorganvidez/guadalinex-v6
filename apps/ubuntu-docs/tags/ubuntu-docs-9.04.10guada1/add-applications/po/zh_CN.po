@@ -7,33 +7,35 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-docs\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2007-09-14 08:25+0100\n"
-"PO-Revision-Date: 2007-11-13 23:18+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2008-10-08 21:13+0100\n"
+"PO-Revision-Date: 2008-10-19 05:04+0000\n"
+"Last-Translator: luojie-dune <Unknown>\n"
 "Language-Team: Chinese (China) <zh_CN@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2008-02-17 10:23+0000\n"
+"X-Launchpad-Export-Date: 2008-10-19 12:46+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: add-applications/C/add-applications-C.omf:6(creator) add-applications/C/add-applications-C.omf:7(maintainer)
 msgid "ubuntu-doc@lists.ubuntu.com (Ubuntu Documentation Project)"
-msgstr "ubuntu-doc@lists.ubuntu.com (Ubuntu 文档项目)"
+msgstr "ubuntu-doc@lists.ubuntu.com（Ubuntu文档项目）"
 
 #: add-applications/C/add-applications-C.omf:8(title)
 msgid "Adding and Removing Software"
 msgstr "添加和删除软件"
 
 #: add-applications/C/add-applications-C.omf:9(date)
-msgid "2006-09-07"
-msgstr "2006-09-07"
+msgid "2008-02-16"
+msgstr "2008-02-16"
 
 #: add-applications/C/add-applications-C.omf:11(description)
-msgid "Placeholder."
-msgstr "占位。"
+msgid ""
+"Instructions on how to install and uninstall software, including information "
+"on package management."
+msgstr "介绍如何安装和卸载软件，包括软件包管理上的信息。"
 
-#: add-applications/C/add-applications.xml:17(title)
+#: add-applications/C/add-applications.xml:15(title)
 msgid "Adding, Removing and Updating Applications"
 msgstr "添加、删除和更新应用程序"
 
@@ -45,11 +47,11 @@ msgstr "荣誉与授权许可"
 msgid ""
 "This document is maintained by the Ubuntu documentation team "
 "(https://wiki.ubuntu.com/DocumentationTeam). For a list of contributors, see "
-"the <ulink url=\"../../../common/C/contributors.xml\">contributors "
-"page</ulink>"
+"the <ulink url=\"../../libs/C/contributors.xml\">contributors page</ulink>"
 msgstr ""
-"本文档由 Ubuntu 文档团队 (https://wiki.ubuntu.com/DocumentationTeam) 维护。参与贡献者的列表请参见 "
-"<ulink url=\"../../../common/C/contributors.xml\">贡献者页面</ulink>"
+"此文档由 Ubuntu 文档小组维护 "
+"(https://wiki.ubuntu.com/DocumentationTeam)。贡献者的列表位于<ulink url=\"../../libs/C"
+"/contributors.xml\">贡献者页面</ulink>"
 
 #: add-applications/C/add-applications.xml:5(para)
 msgid ""
@@ -74,32 +76,38 @@ msgstr "发布本文档是希望它有所用途，但不提供任何担保；甚
 #: add-applications/C/add-applications.xml:11(para)
 msgid ""
 "A copy of the license is available here: <ulink url=\"/usr/share/ubuntu-"
-"docs/common/C/ccbysa.xml\">Creative Commons ShareAlike License</ulink>."
+"docs/libs/C/ccbysa.xml\">Creative Commons ShareAlike License</ulink>."
 msgstr ""
-"该授权许可的副本可以在这里找到：<ulink url=\"/usr/share/ubuntu-"
-"docs/common/C/ccbysa.xml\">Creative Commons ShareAlike License</ulink>。"
+"许可证的副本位于：<ulink url=\"/usr/share/ubuntu-docs/libs/C/ccbysa.xml\">Creative "
+"Commons ShareAlike License</ulink>."
 
 #: add-applications/C/add-applications.xml:14(year)
-msgid "2004, 2005, 2006"
-msgstr "2004, 2005, 2006"
+msgid "2008"
+msgstr "2008"
+
+#: add-applications/C/add-applications.xml:15(ulink)
+msgid "Ubuntu Documentation Project"
+msgstr "Ubuntu 文档工程"
 
 #: add-applications/C/add-applications.xml:15(holder)
-msgid "Canonical Ltd. and members of the Ubuntu Documentation Project"
-msgstr "Canonical Ltd. 及 Ubuntu 文档项目成员"
+msgid "Canonical Ltd. and members of the <placeholder-1/>"
+msgstr "Canonical公司和<placeholder-1/>的成员"
 
 #: add-applications/C/add-applications.xml:18(publishername)
 msgid "The Ubuntu Documentation Project"
 msgstr "Ubuntu 文档项目"
 
-#: add-applications/C/add-applications.xml:20(para)
+#: add-applications/C/add-applications.xml:18(para)
 msgid ""
-"In this section you can learn how to use a package manager to add or remove "
-"applications in Ubuntu with a few clicks. You can also learn about more "
-"advanced techniques of managing applications and discover some optional "
-"applications to add to Ubuntu and try."
-msgstr ""
-"在本节中您可以学到如何使用软件包管理器来通过一些点击在 Ubuntu "
-"中添加和删除应用程序。您还可以学到更多管理应用程序的技巧，以及发现一些可选的应用程序来添加到 Ubuntu 中并试用。"
+"This section discusses how applications are installed, removed and kept up "
+"to date. Also covered are how packages are stored by Ubuntu and made "
+"available for download."
+msgstr "本章节讨论了应用程序如何被安装、删除及更新。还包括了软件包如何被存放及可供下载。"
+
+#: add-applications/C/add-applications.xml:19(para)
+msgid ""
+"It also covers some more advanced techniques for managing applications."
+msgstr "它还涉及一些更先进的技术来管理应用程序。"
 
 #: add-applications/C/add-applications.xml:22(title)
 msgid "What is a package manager?"
@@ -107,86 +115,98 @@ msgstr "什么是软件包管理器？"
 
 #: add-applications/C/add-applications.xml:23(para)
 msgid ""
-"A package manager is a program that installs and uninstalls software, and "
-"keeps track of all the components each piece of software needs."
-msgstr "软件包管理器是一个安装和卸载软件，并跟踪软件的每个部分所需的所有组件的程序。"
-
-#: add-applications/C/add-applications.xml:24(para)
-msgid ""
-"To add or remove applications in Ubuntu, you need to use a <emphasis>package "
-"manager</emphasis>. It will automatically download the software required "
-"from the Internet and install it."
+"A package manager is a program that you can use to install, remove and "
+"upgrade software. Software for Ubuntu is provided in the form of packages, "
+"which are automatically downloaded by the package manager."
 msgstr ""
-"若想在 Ubuntu 中添加和删除应用程序，您需要使用 "
-"<emphasis>软件包管理器</emphasis>。它会自动从因特网上下载所请求的软件并进行安装。"
-
-#: add-applications/C/add-applications.xml:25(para)
-msgid "There are three main package managers you can use in Ubuntu:"
-msgstr "在 Ubuntu 中您可以使用三种主要的软件包管理器："
-
-#: add-applications/C/add-applications.xml:27(para)
-msgid ""
-"<link linkend=\"gnome-app-install\"><application>Add/Remove "
-"Programs</application></link> - The easiest way to install and uninstall "
-"programs."
-msgstr ""
-"<link linkend=\"gnome-app-"
-"install\"><application>添加/删除程序</application></link> - 安装和卸载程序最简单的方法。"
 
 #: add-applications/C/add-applications.xml:28(para)
 msgid ""
-"<link linkend=\"synaptic\"><application>Synaptic</application></link> - "
-"Advanced control of software and other system components."
-msgstr ""
-"<link linkend=\"synaptic\"><application>新立得软件包管理器</application></link> - "
-"对于软件和其它系统组件的高级控制。"
-
-#: add-applications/C/add-applications.xml:29(para)
-msgid ""
-"<link linkend=\"apt\"><application>Apt</application></link> - If you prefer "
-"using the Terminal."
-msgstr ""
-"<link linkend=\"apt\"><application>Apt</application></link> - 如果您偏爱使用终端的话。"
-
-#: add-applications/C/add-applications.xml:32(para)
-msgid ""
-"If you open more than one of these programs at once, they may not work. "
-"Close them all and open just one."
-msgstr "如果你同时打开以上程序中的多个的话，它们可能不会工作。请将它们全部关闭并只打开其中一个。"
+"There are three main package management programs you can use in Ubuntu:"
+msgstr "在Ubuntu中有三个您可以使用的软件包管理程序："
 
 #: add-applications/C/add-applications.xml:34(para)
 msgid ""
-"You need administrative access to use any of these programs. See <ulink "
-"type=\"help\" url=\"ghelp:administrative\">Administrative Tasks</ulink> for "
-"more details."
+"<link linkend=\"gnome-app-install\">Add/Remove Applications</link> - Quickly "
+"installs and removes popular programs, as well as providing ratings."
 msgstr ""
-"要使用这些程序，您需要管理权限。更多信息请参见 <ulink type=\"help\" "
-"url=\"ghelp:administrative\">管理任务</ulink>。"
 
-#: add-applications/C/add-applications.xml:38(title)
+#: add-applications/C/add-applications.xml:41(para)
+msgid ""
+"<link linkend=\"synaptic\">Synaptic</link> - Allows more advanced "
+"management, such as installing server applications and choosing different "
+"versions of the same package."
+msgstr ""
+
+#: add-applications/C/add-applications.xml:48(para)
+msgid ""
+"<link linkend=\"apt\">Apt</link> - Allows package management from the "
+"command line."
+msgstr ""
+
+#: add-applications/C/add-applications.xml:56(para)
+msgid ""
+"You can only use one package manager at a time. If you start another package "
+"manager while one is already open, you will receive an error message."
+msgstr "软件包管理器在同一时间只能使用一个。如果其他的被开启了，会提示错误信息。"
+
+#: add-applications/C/add-applications.xml:63(para)
+msgid ""
+"You will require administrative access to install and remove software. This "
+"is because packages sometimes need to change important system files. See "
+"<ulink type=\"help\" url=\"ghelp:administrative\">Administrative "
+"Tasks</ulink> for more information on administrative access."
+msgstr ""
+
+#: add-applications/C/add-applications.xml:71(title)
+msgid "Common package-management terms"
+msgstr ""
+
+#: add-applications/C/add-applications.xml:73(para)
+msgid ""
+"If you are unfamiliar with Ubuntu's package management system, you may like "
+"to take a look at some of the following definitions."
+msgstr ""
+
+#: add-applications/C/add-applications.xml:78(para)
+msgid ""
+"<emphasis role=\"strong\">Packages</emphasis> are files which contain a "
+"program and all of the files required to run it on your computer. When you "
+"install a package, a file is downloaded from a repository and installed by a "
+"package manager."
+msgstr ""
+
+#: add-applications/C/add-applications.xml:85(para)
+msgid ""
+"<emphasis role=\"strong\">Dependencies</emphasis> are packages which must be "
+"installed before certain other packages can be installed. Dependency "
+"packages usually contain some files and programs needed by the other "
+"packages - for example, a word-processing package may depend on a printing "
+"package being installed in order to be able to print documents."
+msgstr ""
+
+#: add-applications/C/add-applications.xml:97(title)
 msgid "Software repositories"
 msgstr "软件库"
 
-#: add-applications/C/add-applications.xml:39(para)
+#: add-applications/C/add-applications.xml:98(para)
 msgid ""
-"A software repository is a place from which you can download and install "
-"software over the Internet."
-msgstr "您可以通过因特网从软件库下载和安装软件。"
+"When you install software on Ubuntu, the package manager automatically "
+"downloads the required software packages from a <emphasis>software "
+"repository</emphasis>, a location on the Internet which stores collections "
+"of packages ready to be downloaded."
+msgstr ""
 
-#: add-applications/C/add-applications.xml:40(para)
+#: add-applications/C/add-applications.xml:104(para)
 msgid ""
 "There are thousands of programs available to install on Ubuntu. These "
-"programs are stored in software archives (<emphasis>repositories</emphasis>) "
-"and are made freely available for installation over the Internet. This makes "
-"it very easy to install new programs in Linux, and it is also very secure, "
-"because each program you install is built specially for Ubuntu and checked "
-"before it is installed."
+"programs are stored in software repositories and are made freely available "
+"for all Ubuntu users. This makes it very easy to install new programs, and "
+"it is also very secure because each program you install is built specially "
+"for Ubuntu and checked before it is allowed into the repositories."
 msgstr ""
-"Ubuntu 中可以安装数以千计的程序。这些程序都被存储在软件存档 (<emphasis>软件库</emphasis>) "
-"中并可以通过因特网免费获取安装。这就使得在 Linux 中安装程序变得十分简单，同样也非常安全，因为您安装的每个程序都是特别为 Ubuntu "
-"构建的，并且在安装之前都经过检查。"
 
-#: add-applications/C/add-applications.xml:41(para)
+#: add-applications/C/add-applications.xml:111(para)
 msgid ""
 "To organise the software, Ubuntu repositories are categorised into four "
 "groups: <emphasis>Main</emphasis>, <emphasis>Restricted</emphasis>, "
@@ -203,7 +223,7 @@ msgstr ""
 "<emphasis>Multiverse</emphasis>。决定哪个软件进入哪个分类的原理是基于软件的开发团队对于该软件提供的支持的等级，以及该程序遵"
 "从 <ulink url=\"http://www.ubuntu.com/ubuntu/philosophy\">自由软件哲学</ulink> 的程度。"
 
-#: add-applications/C/add-applications.xml:42(para)
+#: add-applications/C/add-applications.xml:120(para)
 msgid ""
 "The standard Ubuntu Install CD contains some software from the "
 "<emphasis>Main</emphasis> and <emphasis>Restricted</emphasis> categories."
@@ -211,7 +231,7 @@ msgstr ""
 "Ubuntu 的标准安装 CD 包含了来自 <emphasis>Main</emphasis> 和 "
 "<emphasis>Restricted</emphasis> 分类的一些软件。"
 
-#: add-applications/C/add-applications.xml:43(para)
+#: add-applications/C/add-applications.xml:124(para)
 msgid ""
 "If your system is connected to the Internet, many more software programs are "
 "made available for installation. For example, the <quote>Universe</quote> "
@@ -221,7 +241,7 @@ msgstr ""
 "如果您的系统已经连接到因特网的话，您还可以安装比这多得多的软件。比如 <quote>Universe</quote> 和 "
 "<quote>Multiverse</quote> 软件库是只能通过因特网访问的。"
 
-#: add-applications/C/add-applications.xml:45(para)
+#: add-applications/C/add-applications.xml:132(para)
 msgid ""
 "The <emphasis>Multiverse</emphasis> repository contains software which has "
 "been classified as <emphasis>non-free</emphasis>. This software may not be "
@@ -233,7 +253,7 @@ msgstr ""
 "<emphasis>非自由的</emphasis>。这些软件在某些法律管辖下可能不被允许。在安装这个软件库中的每个软件包时，您应当确认您的国家的法律允许您"
 "使用它。此外，这些软件可能还不包含安全更新。"
 
-#: add-applications/C/add-applications.xml:47(para)
+#: add-applications/C/add-applications.xml:142(para)
 msgid ""
 "You can find more information about the Repositories available <ulink "
 "url=\"http://www.ubuntu.com/ubuntu/components\">on the website</ulink>."
@@ -241,57 +261,63 @@ msgstr ""
 "您可以在 <ulink url=\"http://www.ubuntu.com/ubuntu/components\">网站上</ulink> "
 "找到有关软件库的更多信息。"
 
-#: add-applications/C/add-applications.xml:51(title)
+#: add-applications/C/add-applications.xml:148(title)
 msgid "Adding extra repositories"
 msgstr "添加额外的软件库"
 
-#: add-applications/C/add-applications.xml:52(para)
+#: add-applications/C/add-applications.xml:149(para)
 msgid ""
 "It is possible to add extra repositories, such as those provided by third "
 "parties or those for older version of Ubuntu."
 msgstr "添加额外的软件库也是可能的，例如那些由第三方提供的或是 Ubuntu 较早版本的软件库。"
 
-#: add-applications/C/add-applications.xml:54(para)
+#: add-applications/C/add-applications.xml:155(para)
 msgid ""
 "Be careful when installing software from third-party repositories. It may "
 "not have been tested with Ubuntu and could cause your system to break."
 msgstr "在安装来自第三方软件库的软件时请小心。它们可能还没有在 Ubuntu 下测试过，并可能会使您的系统瘫痪。"
 
-#: add-applications/C/add-applications.xml:58(para)
+#: add-applications/C/add-applications.xml:164(para)
 msgid ""
 "Open "
 "<menuchoice><guimenu>System</guimenu><guimenuitem>Administration</guimenuitem"
 "><guimenuitem>Software Sources</guimenuitem></menuchoice> and press "
-"<guilabel>Third-Party Software</guilabel>."
+"<guilabel>Third Party Software</guilabel>."
 msgstr ""
 "打开 "
-"<menuchoice><guimenu>系统</guimenu><guimenuitem>系统管理</guimenuitem><guimenuitem>"
-"软件源</guimenuitem></menuchoice> 并按下 <guilabel>第三方软件</guilabel>。"
+"<menuchoice><guimenu>系统</guimenu><guimenuitem>管理</guimenuitem><guimenuitem>软件"
+"源</guimenuitem></menuchoice>并点击<guilabel>第三方软件</guilabel>。"
 
-#: add-applications/C/add-applications.xml:61(para)
+#: add-applications/C/add-applications.xml:170(para)
 msgid "Press <guibutton>Add</guibutton> to add a new repository."
 msgstr "按下 <guibutton>添加</guibutton> 来添加一个新的软件库。"
 
-#: add-applications/C/add-applications.xml:64(para)
+#: add-applications/C/add-applications.xml:175(para)
 msgid ""
 "Enter the <guilabel>APT line</guilabel> for the extra repository. This "
 "should be available from the website of the repository or similar, and "
 "should look similar to the following:"
 msgstr "为额外的软件仓库输入<guilabel>APT 行</guilabel>。它应该可以从该软件仓库的网站上得到，并且看起来和下面这个类似："
 
-#: add-applications/C/add-applications.xml:65(screen)
+#: add-applications/C/add-applications.xml:180(screen)
 #, no-wrap
 msgid "deb http://ftp.debian.org etch main"
 msgstr "deb http://ftp.debian.org etch main"
 
-#: add-applications/C/add-applications.xml:67(para)
+#: add-applications/C/add-applications.xml:183(para)
 msgid ""
 "Press <guibutton>Add Source</guibutton> and then click "
 "<guibutton>Close</guibutton> to save your changes."
 msgstr ""
 "按下 <guibutton>添加源</guibutton> 并随后点击 <guibutton>关闭</guibutton> 来保存您的改动。"
 
-#: add-applications/C/add-applications.xml:69(para)
+#: add-applications/C/add-applications.xml:188(para)
+msgid ""
+"You will be notified that the information about available software is out-of-"
+"date. Press <guibutton>Reload</guibutton>."
+msgstr "您将被通知：关于可用软件的信息已过时。点击<guibutton>刷新</guibutton>。"
+
+#: add-applications/C/add-applications.xml:194(para)
 msgid ""
 "Most software repositories use a GPG key to digitally sign the files they "
 "provide, which makes it easy to check that the files have not been tampered "
@@ -303,64 +329,114 @@ msgstr ""
 "来对它们提供的软件进行数字签名，这使得检测文件自创建后有没有被篡改变得很容易。为使apt能检测签名，您需要该数字签名对应的公匙。该公匙在该软件仓库的网站上"
 "应该可以下载。"
 
-#: add-applications/C/add-applications.xml:71(para)
+#: add-applications/C/add-applications.xml:204(para)
 msgid ""
 "Once you have downloaded the GPG key, import the key by selecting the "
-"<guilabel>Authenticate</guilabel> tab, and clicking on <guibutton>Import Key "
-"File...</guibutton>, and then selecting the GPG key to be imported."
+"<guilabel>Authentication</guilabel> tab, clicking on <guibutton>Import Key "
+"File</guibutton>, and then selecting the GPG key to be imported."
 msgstr ""
-"一旦你下载了该GPG公匙，通过选择<guilabel>授权</guilabel> 标签页，点击 <guibutton>导入 Key "
-"文件...</guibutton>, 然后选择要导入的GPG公匙来导入该公匙。"
+"下载 GPG 密钥后，选择 <guilabel>认证</guilabel> "
+"选项页，点击<guibutton>导入密钥文件</guibutton>，然后选择要导入的 GPG 密钥以完成密钥导入。"
 
-#: add-applications/C/add-applications.xml:73(para)
+#: add-applications/C/add-applications.xml:216(title)
+msgid "Restricted and non-free software"
+msgstr ""
+
+#: add-applications/C/add-applications.xml:217(para)
 msgid ""
-"Click <guibutton>Reload</guibutton> in the package manager to update the "
-"list of available packages."
-msgstr "在软件包管理器中点击 <guibutton>刷新</guibutton> 来更新已有软件包的列表。"
+"Most of the software available for Ubuntu is free, open-source software. "
+"This software is free for anyone to install and use, and people can modify "
+"the software and redistribute it if they like. Ubuntu is built from this "
+"type of software."
+msgstr ""
 
-#: add-applications/C/add-applications.xml:78(title)
+#: add-applications/C/add-applications.xml:223(para)
+msgid ""
+"<emphasis role=\"strong\">Non-free software</emphasis> is software which is "
+"not freely redistributable or modifiable. This makes it difficult for the "
+"Ubuntu developers to improve the software and correct problems, so it is "
+"normally recommended that you use <ulink "
+"url=\"http://www.ubuntu.com/ubuntu/philosophy\"> free software</ulink> "
+"instead."
+msgstr ""
+
+#: add-applications/C/add-applications.xml:230(para)
+msgid ""
+"<emphasis role=\"strong\">Restricted software</emphasis> is software which "
+"has restrictions on its use, preventing it from being classed as free "
+"software. Non-free software is a type of restricted software, where the "
+"restrictions are due to the software having a non-free license. Other "
+"reasons for software being classed as restricted include legal issues (use "
+"of some types of software is illegal in some countries) and patent issues "
+"(some software requires a patent license to be used legally)."
+msgstr ""
+
+#: add-applications/C/add-applications.xml:239(para)
+msgid ""
+"In some cases, restricted software is the only option. Such cases include "
+"software for the playback of certain audio and video formats, some fonts and "
+"<ulink type=\"help\" url=\"ghelp:hardware#restricted-manager\">drivers for "
+"some graphics cards</ulink>."
+msgstr ""
+
+#: add-applications/C/add-applications.xml:245(para)
+msgid ""
+"You should be warned by the package manager when you try to install "
+"restricted software. If the restricted software cannot be used legally in "
+"your country then there is little you can do; you should not install the "
+"software. If the software is restricted simply because it is non-free, you "
+"may choose to use it (for example, in the case of graphics card drivers). Be "
+"aware that most restricted software is not supported in Ubuntu, and problems "
+"with such software often cannot be corrected by Ubuntu developers."
+msgstr ""
+
+#: add-applications/C/add-applications.xml:256(para)
+msgid ""
+"Sometimes it is difficult to determine why a particular software package is "
+"restricted. If this is the case, seek advice on the <ulink "
+"url=\"http://ubuntuforums.org/\">Ubuntu Forums</ulink>. If you are still "
+"unable to determine why a package is restricted, err on the side of caution "
+"and do not install it; it may be illegal to use it in your country."
+msgstr ""
+
+#: add-applications/C/add-applications.xml:268(title)
 msgid "Add/Remove Applications"
 msgstr "添加/删除应用程序"
 
-#: add-applications/C/add-applications.xml:79(para)
+#: add-applications/C/add-applications.xml:269(para)
 msgid ""
-"With the <guimenuitem>Add/Remove…</guimenuitem> item in the "
+"With the <guimenuitem>Add/Remove</guimenuitem> item in the "
 "<guimenu>Applications</guimenu> menu, you can install programs to do new "
-"things with Ubuntu. You can also remove programs you do not want. You need "
-"administrative access to use <application>Add/Remove Programs</application> "
-"(see <ulink type=\"help\" url=\"ghelp:administrative\">Administrative "
-"Tasks</ulink> for more details)."
+"things with Ubuntu. You can also remove programs which you do not want. You "
+"need administrative access to use <application>Add/Remove "
+"Applications</application> (see <ulink type=\"help\" "
+"url=\"ghelp:administrative\">Administrative Tasks</ulink> for more details)."
 msgstr ""
-"使用<guimenu>应用程序</guimenu>菜单中的<guimenuitem>添加/删除…</guimenuitem>菜单项,您可以安装程序来利用U"
-"buntu做新的事情。您也可以删除不需要的程序。您需要管理员权限才能使用<application>添加/删除程序</application>(在<ulin"
-"k type=\"help\" url=\"ghelp:administrative\">管理任务</ulink> 中可以获得更多细节)."
 
-#: add-applications/C/add-applications.xml:80(para)
+#: add-applications/C/add-applications.xml:278(para)
 msgid ""
 "If you know the name of a program you want to install, enter it in the "
 "<guilabel>Search</guilabel> field. Otherwise, begin by choosing a software "
 "category on the left."
 msgstr "如果您知道您想安装的程序的名称，请在 <guilabel>搜索</guilabel> 框中输入它。否则请从选择左边的软件分类开始。"
 
-#: add-applications/C/add-applications.xml:81(para)
+#: add-applications/C/add-applications.xml:283(para)
 msgid ""
-"Programs that are already installed begin with a check mark next to their "
-"name. Uncheck a program if you want to remove it from your computer."
-msgstr "已经安装的程序在它们的名字前有个勾号。若您想从您的计算机中删除一个程序，只需去掉这个勾号。"
+"Programs that are already installed have a check mark next to their name. "
+"Uncheck a program if you want to remove it from your computer."
+msgstr "已经安装的程序在它们的名称旁边有个对勾。如果您要从计算机上删除它就把对勾去除。"
 
-#: add-applications/C/add-applications.xml:82(para)
+#: add-applications/C/add-applications.xml:287(para)
 msgid ""
-"When you click <guibutton>Apply</guibutton> or <guibutton>OK</guibutton>, "
-"any new software will be downloaded from the Internet, and Ubuntu will make "
-"the changes you selected. If you have not activated the online package "
-"archive, you may be asked to insert your Ubuntu CD-ROM to install some "
-"packages."
+"When you click <guibutton>Apply Changes</guibutton>, any new software will "
+"be downloaded from the Internet, and Ubuntu will make any other changes you "
+"selected. If you have not activated the online package archive, you may be "
+"asked to insert your Ubuntu CD-ROM to install some packages."
 msgstr ""
-"当您点击 <guibutton>应用</guibutton> 或 <guibutton>确定</guibutton> "
-"按钮后，新的软件会被从互联网上下载下来，随后 Ubuntu 便会进行您所选择的更改。若您还未激活在线软件库，您可能会被要求插入您的 Ubuntu CD "
-"来安装某些软件包。"
+"当单击 <guibutton>应用变更</guibutton> 按钮时，新的软件包将会从互联网下载，Ubuntu "
+"会根据您的选择执行变更。如果您没有启用互联网上的软件源，系统可能会要求您插入 Ubuntu 安装光盘以读取软件包的安装文件。"
 
-#: add-applications/C/add-applications.xml:83(para)
+#: add-applications/C/add-applications.xml:293(para)
 msgid ""
 "Some software cannot be installed or removed using <application>Add/Remove "
 "Applications</application>. If you cannot find the package you are looking "
@@ -370,11 +446,11 @@ msgstr ""
 "一些软件不能通过<application>添加/删除应用程序</application>来安装或删除。如果你不能找到你要找的软件包，请启动高级软件包管理器"
 "<application>新立得</application> (see <xref linkend=\"advanced\"/>)。"
 
-#: add-applications/C/add-applications.xml:87(title)
+#: add-applications/C/add-applications.xml:302(title)
 msgid "Installing packages without an Internet connection"
 msgstr "离线安装软件包"
 
-#: add-applications/C/add-applications.xml:88(para)
+#: add-applications/C/add-applications.xml:303(para)
 msgid ""
 "Other than using tools that download packages automatically, it is also "
 "possible to use a CD to install packages through a package manager while not "
@@ -387,11 +463,11 @@ msgstr ""
 "除了自动下载安装,您还能使用光盘安装软件包.Ubuntu安装光盘是一种方式,其它包涵软件包的光盘也可以胜任.另外,<application>APTonCD"
 "</application> 是一个自动备份已安装软件包的程序, APTonCD还可以将这些软件包保存在光盘上."
 
-#: add-applications/C/add-applications.xml:90(title)
+#: add-applications/C/add-applications.xml:314(title)
 msgid "Installing packages using the Ubuntu installation CD"
 msgstr "用Ubnutu安装光盘安装软件包"
 
-#: add-applications/C/add-applications.xml:91(para)
+#: add-applications/C/add-applications.xml:315(para)
 msgid ""
 "Some packages from the <emphasis>main</emphasis> and "
 "<emphasis>restricted</emphasis> Ubuntu package repositories can be installed "
@@ -400,102 +476,65 @@ msgid ""
 "<menuchoice><guimenu>System</guimenu><guimenuitem>Administration</guimenuitem"
 "><guimenuitem>Synaptic Package Manager</guimenuitem></menuchoice>. To list "
 "only packages on the Ubuntu installation CD, click on the "
-"<guibutton>Origin</guibutton> button in the lower left corner of "
-"<application>Synaptic Package Manager</application>. The packages are listed "
-"under the <guimenuitem>Ubuntu 7.10_Gutsy Gibbon</guimenuitem> section."
+"<guibutton>Origin</guibutton> button in the lower left corner of the "
+"Synaptic window. The packages should be listed under the <guimenuitem>Ubuntu "
+"8.10_Intrepid_Ibex</guimenuitem> section."
 msgstr ""
-"一些来自<emphasis>main</emphasis>和<emphasis>restricted</emphasis>软件仓库的安装包您可以使用Ubu"
-"ntu安装CD作为安装源。只需插入您的Ubuntu安装CD并打开<menuchoice><guimenu>系统</guimenu><guimenuitem"
-">管理</guimenuitem><guimenuitem>新立得软件包管理器</guimenuitem></menuchoice>。点击<applica"
-"tion>新立得软件包管理器</application>左下角的<guibutton>来源</guibutton>按钮，可以只列出Ubuntu安装CD上的"
-"安装包。安装包在<guimenuitem>Ubuntu 7.10_Gutsy Gibbon</guimenuitem>的部分被列出。"
 
-#: add-applications/C/add-applications.xml:92(para)
+#: add-applications/C/add-applications.xml:325(para)
 msgid ""
 "If the packages are not listed, it may be because the CD is not listed as a "
 "package repository (the CD should be listed as a repository by default). To "
-"add the CD as a package repository:"
-msgstr "如果软件包未被列出，可能是该CD未被作为一个软件仓库(默认情况CD应该作为一个软件仓库被列出)。要把CD添加为一个软件仓库:"
-
-#: add-applications/C/add-applications.xml:95(para)
-msgid "Eject the CD."
-msgstr "弹出CD。"
-
-#: add-applications/C/add-applications.xml:98(para)
-msgid ""
-"Open the <emphasis>Software Sources</emphasis> dialog by selecting "
-"<guimenuitem>Repositories</guimenuitem> from the <guimenu>Settings</guimenu> "
-"menu of <application>Synaptic Package Manager</application>."
+"add the CD as a package repository, follow the instructions in <xref "
+"linkend=\"repository-cds\"/>, below."
 msgstr ""
-"通过选择 "
-"<application>新立得软件包管理器</application><guimenu>设置</guimenu>菜单的<guimenuitem>软件仓库"
-"</guimenuitem>菜单项打开<emphasis>软件源</emphasis>对话框。"
+"如果这些软件包没有被列出来，那有可能是安装光盘没有被标识为一个软件源（缺省情况下，安装光盘应该已经存在于软件源列表中）。要将安装光盘添加为一个软件源，请执"
+"行 <xref linkend=\"repository-cds\"/> 中的如下步骤："
 
-#: add-applications/C/add-applications.xml:101(para) add-applications/C/add-applications.xml:120(para)
-msgid ""
-"Go to the Third-Party Software tab and click on the <guibutton>Add CD-"
-"ROM</guibutton> button."
-msgstr "找到第三方软件标签页并点击<guibutton>添加 CD-ROM</guibutton> 按钮。"
-
-#: add-applications/C/add-applications.xml:104(para)
-msgid "Insert the CD."
-msgstr "插入CD。"
-
-#: add-applications/C/add-applications.xml:107(para)
-msgid "The packages should then be listed."
-msgstr "软件包将被列出。"
-
-#: add-applications/C/add-applications.xml:110(title)
+#: add-applications/C/add-applications.xml:334(title)
 msgid "Enabling other CDs that can be used to install packages"
 msgstr "使其他光盘能用来安装软件包。"
 
-#: add-applications/C/add-applications.xml:111(para)
+#: add-applications/C/add-applications.xml:335(para)
 msgid ""
-"To enable <application>Synaptic</application> to install packages from CDs "
+"To enable Synaptic and other package managers to install software from CDs "
 "which contain packages:"
-msgstr "要使<application>新立得</application>从包含软件包的光盘中安装软件包:"
-
-#: add-applications/C/add-applications.xml:114(para)
-msgid ""
-"Open "
-"<menuchoice><guimenu>System</guimenu><guimenuitem>Administration</guimenuitem"
-"><guimenuitem>Synaptic Package Manager</guimenuitem></menuchoice>."
 msgstr ""
-"打开<menuchoice><guimenu>系统</guimenu><guimenuitem>管理</guimenuitem><guimenuitem>"
-"新立得软件包管理器</guimenuitem></menuchoice>。"
 
-#: add-applications/C/add-applications.xml:117(para)
+#: add-applications/C/add-applications.xml:342(para)
 msgid ""
-"Open the <emphasis>Software Sources</emphasis> tool by selecting "
-"<guimenuitem>Repositories</guimenuitem> from the <guimenu>Settings</guimenu> "
-"menu of <application>Synaptic Package Manager</application>."
+"Press "
+"<menuchoice><guimenuitem>System</guimenuitem><guimenuitem>Administration</gui"
+"menuitem><guimenuitem>Software Sources</guimenuitem></menuchoice>."
 msgstr ""
-"通过选择 "
-"<application>新立得软件包管理器</application><guimenu>设置</guimenu>菜单的<guimenuitem>软件仓库"
-"</guimenuitem>菜单项打开<emphasis>软件源</emphasis>工具。"
+"点击 "
+"<menuchoice><guimenuitem>系统</guimenuitem><guimenuitem>管理</guimenuitem><guimen"
+"uitem>软件源</guimenuitem></menuchoice>。"
 
-#: add-applications/C/add-applications.xml:123(para)
-msgid "Insert the CD which contains the packages."
-msgstr "插入包含软件包的CD。"
-
-#: add-applications/C/add-applications.xml:126(para)
+#: add-applications/C/add-applications.xml:350(para)
 msgid ""
-"The packages should then be listed. To have "
-"<application>Synaptic</application> only list packages from the CD, click "
-"the <guibutton>Origin</guibutton> button on the lower left corner of "
-"<application>Synaptic Package Manager</application>, then find the name of "
-"the CD on the list on the upper left corner of "
-"<application>Synaptic</application>."
+"Go to the <guilabel>Third Party Software</guilabel> tab and click on the "
+"<guibutton>Add CD-ROM</guibutton> button."
 msgstr ""
-"安装包将被列出。要让<application>新立得</application>只列出CD里的安装包，点击<application>新立得包管理器</ap"
-"plication>左下角的<guibutton>来源</guibutton>按钮，然后在<application>新立得</application>的左"
-"上角查找列出在CD中的名字。"
+"指到 <guilabel>第三方软件</guilabel>标签并点击<guibutton>添加 CD-ROM</guibutton>按钮。"
 
-#: add-applications/C/add-applications.xml:129(title)
+#: add-applications/C/add-applications.xml:356(para)
+msgid "Insert the CD."
+msgstr "插入CD。"
+
+#: add-applications/C/add-applications.xml:362(para)
+msgid ""
+"The packages should then be listed. To have Synaptic only list packages from "
+"the CD, click the <guibutton>Origin</guibutton> button on the lower left "
+"corner of the Synaptic window and then find the name of the CD in the list "
+"in the upper left corner the window."
+msgstr ""
+
+#: add-applications/C/add-applications.xml:371(title)
 msgid "Using APTonCD to install packages"
 msgstr "使用 APTonCD 来安装软件包"
 
-#: add-applications/C/add-applications.xml:130(para)
+#: add-applications/C/add-applications.xml:372(para)
 msgid ""
 "<application>APTonCD</application> can be used to create a CD that contains "
 "all the packages you have on your system, or it can create CDs with packages "
@@ -507,31 +546,28 @@ msgstr ""
 "D。在软件包管理器比如<application>新立得</application>中，找到<emphasis>aptoncd</emphasis>软件包并"
 "安装它。"
 
-#: add-applications/C/add-applications.xml:131(para)
+#: add-applications/C/add-applications.xml:379(para)
 msgid ""
-"Further documentation on <application>APTonCD</application> can be found on "
-"it's website, <ulink "
-"url=\"http://aptoncd.sourceforge.net\">aptoncd.sourceforge.net</ulink>"
+"Further documentation on APTonCD can be found on its website, <ulink "
+"url=\"http://aptoncd.sourceforge.net\"> aptoncd.sourceforge.net</ulink>"
 msgstr ""
-"关于<application>APTonCD</application>的更多信息可在它的网站<ulink "
-"url=\"http://aptoncd.sourceforge.net\">aptoncd.sourceforge.net</ulink>找到。"
 
-#: add-applications/C/add-applications.xml:136(title)
+#: add-applications/C/add-applications.xml:388(title)
 msgid "Advanced package management"
 msgstr "高级软件包管理"
 
-#: add-applications/C/add-applications.xml:137(para)
+#: add-applications/C/add-applications.xml:389(para)
 msgid ""
 "Several other package managers exist in Ubuntu. These contain more advanced "
 "features than <application>Add/Remove Applications</application>."
 msgstr ""
 "Ubuntu 中还有一些其它的软件包管理器。这些管理器包含了比 <application>添加/删除应用程序</application> 更多的高级功能。"
 
-#: add-applications/C/add-applications.xml:139(title)
+#: add-applications/C/add-applications.xml:395(title)
 msgid "Synaptic Package Manager"
 msgstr "新立得软件包管理器"
 
-#: add-applications/C/add-applications.xml:140(para)
+#: add-applications/C/add-applications.xml:396(para)
 msgid ""
 "<application>Synaptic</application> is an advanced package management "
 "application that can install and remove every package available to your "
@@ -542,92 +578,47 @@ msgstr ""
 "<application>新立得</application> 是一个高级软件包管理程序，它能够安装或删除您的系统可用的所有软件包。其界面如同 "
 "<application>添加/删除程序</application> 一样是图形化的，但其提供了更多的信息并能使您完全控制您计算机中的软件。"
 
-#: add-applications/C/add-applications.xml:141(para)
+#: add-applications/C/add-applications.xml:403(para)
 msgid ""
-"To launch <application>Synaptic</application>, press "
+"To launch Synaptic, press "
 "<menuchoice><guimenu>System</guimenu><guimenuitem>Administration</guimenuitem"
-"><guimenuitem>Synaptic Package Manager</guimenuitem></menuchoice>. You need "
-"administrative access to use <application>Synaptic</application>. See <ulink "
-"type=\"help\" url=\"ghelp:administrative\">Administrative Tasks</ulink> for "
-"more details."
+"><guimenuitem>Synaptic Package Manager</guimenuitem></menuchoice>. You will "
+"need administrative access to use it; see <ulink type=\"help\" "
+"url=\"ghelp:administrative\"> Administrative Tasks</ulink> for more details."
 msgstr ""
-"要启动<application>新立得</application>，选择 "
-"<menuchoice><guimenu>系统</guimenu><guimenuitem>管理</guimenuitem><guimenuitem>新立"
-"得软件包管理器</guimenuitem></menuchoice>。您需要管理员权限来使用<application>新立得</application>。"
-"在<ulink type=\"help\" url=\"ghelp:administrative\">管理任务</ulink> 中可以获得更多细节."
 
-#: add-applications/C/add-applications.xml:143(para)
+#: add-applications/C/add-applications.xml:408(para)
 msgid ""
-"If you know the name of the package you want to install or remove, click the "
-"<guibutton>Search</guibutton> button, and enter the package name or a short "
-"search term. You can also search for packages by description (for example, "
-"you can find all packages mentioning "
-"<quote><wordasword>arcade</wordasword></quote> or "
-"<quote><wordasword>mathematics</wordasword></quote>)."
+"See the <ulink type=\"help\" url=\"ghelp:synaptic#synaptic-single\"> "
+"Synaptic manual</ulink> for more information on managing packages with "
+"Synaptic."
 msgstr ""
-"如果您知道您想安装或删除的软件包的名称，点击 <guibutton>搜索</guibutton> "
-"按钮，并输入该软件包的名称或一个短搜索项。您也可以搜索软件包的描述信息(例如，您可以搜寻所有提到 "
-"<quote><wordasword>arcade</wordasword></quote> 或是 "
-"<quote><wordasword>mathematics</wordasword></quote> 的软件包)。"
 
-#: add-applications/C/add-applications.xml:144(para)
-msgid ""
-"Use the categories on the left to filter the list of packages. To return to "
-"the list of categories after doing a search, click "
-"<guibutton>Sections</guibutton>."
-msgstr "使用左边的分类来过滤软件包列表。若想在搜索完成后回到分类列表，请点击 <guibutton>组别</guibutton>。"
-
-#: add-applications/C/add-applications.xml:145(para)
-msgid ""
-"To install a package, click the box next to it and choose <guimenuitem>Mark "
-"for installation</guimenuitem>. If you change your mind, choose "
-"<guimenuitem>Unmark</guimenuitem>."
-msgstr ""
-"若想安装一个软件包，请点击其旁边的方框并选择 <guimenuitem>标记以便安装</guimenuitem>。如果您又改变主意了，请选择 "
-"<guimenuitem>取消标记</guimenuitem>。"
-
-#: add-applications/C/add-applications.xml:146(para)
-msgid ""
-"To remove a package that is already installed, choose <guimenuitem>Mark for "
-"Removal</guimenuitem>."
-msgstr "若想删除一个已经安装了的软件包，请选择 <guimenuitem>标记以便删除</guimenuitem>。"
-
-#: add-applications/C/add-applications.xml:147(para)
-msgid ""
-"When you have finished, click <guibutton>Apply</guibutton> and Ubuntu will "
-"make the changes you selected. If you do not want to make any changes, close "
-"the window instead."
-msgstr ""
-"当您完成后，点击<guibutton>应用</guibutton>，Ububu将会应用您选择的改变。如果您不想做出任何改变，关闭窗口即可。"
-
-#: add-applications/C/add-applications.xml:150(title)
+#: add-applications/C/add-applications.xml:416(title)
 msgid "Command-line package management with APT"
 msgstr "使用 APT 进行命令行下的软件包管理"
 
-#: add-applications/C/add-applications.xml:151(para)
+#: add-applications/C/add-applications.xml:417(para)
 msgid ""
 "If you are comfortable using the Terminal, you can use "
 "<application>apt</application> (Advanced Packaging Tool) to install or "
-"remove software. You need administrative access to use "
-"<application>apt</application>. See <ulink type=\"help\" "
-"url=\"ghelp:administrative\">Administrative Tasks</ulink> for more details."
+"remove software. You need administrative access to use apt; see <ulink "
+"type=\"help\" url=\"ghelp:administrative\"> Administrative Tasks</ulink> for "
+"more details."
 msgstr ""
-"如果您习惯使用终端的话，您可以使用 <application>apt</application> (高级打包工具) "
-"来安装或删除软件。您需要管理权限来使用 <application>apt</application>。详情请参见 <ulink "
-"type=\"help\" url=\"ghelp:administrative\">管理任务</ulink>。"
 
-#: add-applications/C/add-applications.xml:158(para)
+#: add-applications/C/add-applications.xml:424(para)
 msgid ""
 "To update the local list of packages, enter in a Terminal: <screen>sudo apt-"
 "get update</screen>"
 msgstr "若想更新本地的软件包列表，请在终端中输入：<screen>sudo apt-get update</screen>"
 
-#: add-applications/C/add-applications.xml:162(para)
+#: add-applications/C/add-applications.xml:428(para)
 msgid ""
 "To install all available updates: <screen>sudo apt-get upgrade</screen>"
 msgstr "若想安装所有可用的更新：<screen>sudo apt-get upgrade</screen>"
 
-#: add-applications/C/add-applications.xml:166(para)
+#: add-applications/C/add-applications.xml:432(para)
 msgid ""
 "To search for a package: <screen>apt-cache search "
 "<replaceable>package</replaceable></screen>"
@@ -635,7 +626,7 @@ msgstr ""
 "若想搜索一个软件包: <screen>apt-cache search "
 "<replaceable>package</replaceable></screen>"
 
-#: add-applications/C/add-applications.xml:170(para)
+#: add-applications/C/add-applications.xml:436(para)
 msgid ""
 "To install a package: <screen>sudo apt-get install "
 "<replaceable>package</replaceable></screen>"
@@ -643,7 +634,7 @@ msgstr ""
 "若想安装一个软件包: <screen>sudo apt-get install "
 "<replaceable>package</replaceable></screen>"
 
-#: add-applications/C/add-applications.xml:174(para)
+#: add-applications/C/add-applications.xml:440(para)
 msgid ""
 "To remove a package: <screen>sudo apt-get remove "
 "<replaceable>package</replaceable></screen>"
@@ -651,26 +642,34 @@ msgstr ""
 "若想删除一个软件包: <screen>sudo apt-get remove "
 "<replaceable>package</replaceable></screen>"
 
-#: add-applications/C/add-applications.xml:178(para)
+#: add-applications/C/add-applications.xml:444(para)
+msgid ""
+"To remove a package and all its dependancies (that are not in use by other "
+"programs): <screen>sudo apt-get autoremove "
+"<replaceable>package</replaceable></screen>"
+msgstr ""
+"要移除一个软件包和它所有的依赖 (不被其它程序所使用的)： <screen>sudo apt-get autoremove "
+"<replaceable>软件包</replaceable></screen>"
+
+#: add-applications/C/add-applications.xml:449(para)
 msgid ""
 "To list other <application>apt</application> commands and options: "
 "<screen>apt-get help</screen>"
 msgstr ""
 "若想列出其它 <application>apt</application> 命令和选项：<screen>apt-get help</screen>"
 
-#: add-applications/C/add-applications.xml:182(para)
+#: add-applications/C/add-applications.xml:453(para)
 msgid ""
 "For more information, see the <ulink url=\"http://www.debian.org/doc/user-"
-"manuals#apt-howto\">Debian <application>apt</application> manual</ulink>."
+"manuals#apt-howto\">Debian apt manual</ulink> and the <ulink url=\"man:apt-"
+"get\">apt-get manual page</ulink>."
 msgstr ""
-"更多信息，请访问 <ulink url=\"http://www.debian.org/doc/user-manuals#apt-"
-"howto\">Debian <application>apt</application> 手册</ulink>."
 
-#: add-applications/C/add-applications.xml:186(title)
+#: add-applications/C/add-applications.xml:462(title)
 msgid "Installing a single package file"
 msgstr "安装单个的软件包文件"
 
-#: add-applications/C/add-applications.xml:187(para)
+#: add-applications/C/add-applications.xml:463(para)
 msgid ""
 "The preferred method of installing programs is via the package managers "
 "described in this chapter. However, although the Ubuntu package archives are "
@@ -681,13 +680,13 @@ msgstr ""
 "安装程序的首选方法是使用本章中所描述的软件包管理器。然而，尽管 Ubuntu "
 "的软件库非常庞大，您仍有可能希望安装软件库中所没有的软件。若是这样的话，您也可以从网站上下载并安装各类文件。"
 
-#: add-applications/C/add-applications.xml:195(para)
+#: add-applications/C/add-applications.xml:471(para)
 msgid ""
 "It is important to ensure that any files you download come from a safe "
 "source before installing them."
 msgstr "在您安装文件之前，确认您所下载的文件来自一个安全的源很重要。"
 
-#: add-applications/C/add-applications.xml:199(para)
+#: add-applications/C/add-applications.xml:475(para)
 msgid ""
 "There are many different kinds of Linux package files. Most of these are "
 "associated with the package managers of specific Linux distributions. "
@@ -705,11 +704,11 @@ msgstr ""
 "class=\"extension\">.tar</filename>文件)和<filename "
 "class=\"extension\">.run</filename>文件。"
 
-#: add-applications/C/add-applications.xml:211(para)
+#: add-applications/C/add-applications.xml:487(para)
 msgid "This section deals with installing these single files."
 msgstr "本部分内容将介绍如何安装这些单个文件。"
 
-#: add-applications/C/add-applications.xml:215(para)
+#: add-applications/C/add-applications.xml:491(para)
 msgid ""
 "It is not guaranteed that these files will be compatible with your system "
 "and you will not receive security updates if you install these files. For "
@@ -720,11 +719,11 @@ msgstr ""
 "无法保证这些文件将与您系统兼容，因此如果您安装这些文件的话，您也将无法得到安全更新。有鉴于此，如果您想安装程序的话，在有 Ubuntu "
 "原生软件包可用的情况下，请尽可能通过软件包管理器来安装 Ubuntu 的原生软件包。"
 
-#: add-applications/C/add-applications.xml:225(title)
-msgid "Install/uninstall <filename class=\"extension\">.deb</filename> files"
-msgstr "安装/删除<filename class=\"extension\">.deb</filename>文件"
+#: add-applications/C/add-applications.xml:501(title)
+msgid "Installing/uninstalling .deb files"
+msgstr ""
 
-#: add-applications/C/add-applications.xml:226(para)
+#: add-applications/C/add-applications.xml:502(para)
 msgid ""
 "These files are <emphasis>Debian packages</emphasis>. The package files "
 "associated with Ubuntu have the <filename "
@@ -739,7 +738,7 @@ msgstr ""
 "后缀。您需要管理员权限来安装一个 <filename class=\"extension\">.deb</filename> 文件。访问 <ulink "
 "type=\"help\" url=\"ghelp:administrative\">管理员任务</ulink>获得更多细节。"
 
-#: add-applications/C/add-applications.xml:236(para)
+#: add-applications/C/add-applications.xml:512(para)
 msgid ""
 "To install a <filename class=\"extension\">.deb</filename> file, double-"
 "click on it. If you prefer using the Terminal, enter: <screen>sudo dpkg -i "
@@ -749,50 +748,52 @@ msgstr ""
 "文件，在它上面双击。如果您喜欢使用终端，输入：<screen>sudo dpkg -i "
 "<replaceable>package_file.deb</replaceable></screen>"
 
-#: add-applications/C/add-applications.xml:240(para)
+#: add-applications/C/add-applications.xml:516(para)
 msgid ""
-"To uninstall a <filename class=\"extension\">.deb</filename> file, deselect "
-"it in your package manager. Or from a Terminal, enter: <screen>sudo dpkg -r "
+"You can use your package manager to uninstall a <filename "
+"class=\"extension\">.deb</filename> file once it has been installed. "
+"Alternatively, enter the following in a Terminal: <screen>sudo dpkg -r "
 "<replaceable>package_name</replaceable></screen>"
 msgstr ""
-"要卸载一个 <filename class=\"extension\">.deb</filename> "
-"文件，在您的软件包管理器中取消选中它。或者在终端中，输入： <screen>sudo dpkg -r "
-"<replaceable>package_name</replaceable></screen>"
+"安装后，您可以使用包管理器来卸载一个<filename "
+"class=\"extension\">.deb</filename>文件。也可在终端输入如下命令：<screen>sudo dpkg -r "
+"<replaceable>包名称</replaceable></screen>"
 
-#: add-applications/C/add-applications.xml:247(title)
-msgid ""
-"Convert <filename class=\"extension\">.rpm</filename> files to <filename "
-"class=\"extension\">.deb</filename> files"
+#: add-applications/C/add-applications.xml:524(title)
+msgid "Converting .rpm files to .deb files"
 msgstr ""
-"转换 <filename class=\"extension\">.rpm</filename> 文件为 <filename "
-"class=\"extension\">.deb</filename> 文件"
 
-#: add-applications/C/add-applications.xml:250(para)
+#: add-applications/C/add-applications.xml:525(para)
 msgid ""
-"Another type of package files is <emphasis>Red Hat Package "
-"Manager</emphasis> files which have the <filename "
-"class=\"extension\">.rpm</filename> suffix. It is not recommended to install "
-"these on an Ubuntu system. In almost all cases, a native Ubuntu <filename "
+"Another type of package is the <emphasis>Red Hat Package Manager</emphasis> "
+"(RPM) file. These have the <filename class=\"extension\">.rpm</filename> "
+"suffix. It is not recommended to install these on an Ubuntu system. In "
+"almost all cases, a native Ubuntu <filename "
 "class=\"extension\">.deb</filename> package is available. However, if "
 "absolutely necessary, an <filename class=\"extension\">.rpm</filename> file "
 "can be converted to a <filename class=\"extension\">.deb</filename> package "
-"using the program <application>alien</application>. The resulting <filename "
-"class=\"extension\">.deb</filename> file will be installed using dpkg as "
-"indicated above."
+"using the <application>alien</application> application. The resulting "
+"<filename class=\"extension\">.deb</filename> file can be installed as "
+"described above."
 msgstr ""
-"另一种类型的安装包文件是<emphasis>Red Hat包管理者</emphasis>文件，带<filename "
-"class=\"extension\">.rpm</filename>后缀。并不推荐在Ubuntu系统里安装这些。在几乎所有情况下，原生的Ubuntua<"
-"filename "
-"class=\"extension\">.deb</filename>包是可用的。但是，如果非常有必要的话，使用程序<application>alien<"
-"/application>可以将<filename class=\"extension\">.rpm</filename>文件转化为<filename "
-"class=\"extension\">.deb</filename>安装包。生成的<filename "
-"class=\"extension\">.deb</filename>文件可以按照上面提到的dpkg来进行安装。"
+"另一种软件包类型就是<emphasis>红帽软件包管理者</emphasis> (RPM)式的文件。他们以<filename "
+"class=\"extension\">.rpm</filename>为后缀。并不推荐将这种形式的软件包安装到Ubuntu系统上。大多数情况下，Ubunt"
+"u的<filename class=\"extension\">.deb</filename>类型的软件包应该已经存在。可是，万一确实需要的话， "
+"<filename "
+"class=\"extension\">.rpm</filename>类型的文件也可以通过<application>alien</application>"
+"程序来将其转换成<filename class=\"extension\">.deb</filename>类型的软件包。得到的<filename "
+"class=\"extension\">.deb</filename>类型的文件以如上所述的方式安装。"
 
-#: add-applications/C/add-applications.xml:265(para)
+#: add-applications/C/add-applications.xml:538(para)
+msgid ""
+"To convert an RPM into a <filename class=\"extension\">.deb</filename>:"
+msgstr "要转换一个 RPM 为<filename class=\"extension\">.deb</filename>："
+
+#: add-applications/C/add-applications.xml:544(para)
 msgid "Install the <application>alien</application> package."
 msgstr "安装 <application>alien</application> 软件包。"
 
-#: add-applications/C/add-applications.xml:268(para)
+#: add-applications/C/add-applications.xml:549(para)
 msgid ""
 "In a Terminal, enter: <screen>sudo alien "
 "<replaceable>package_file.rpm</replaceable></screen>"
@@ -800,32 +801,34 @@ msgstr ""
 "在终端中，输入：<screen>sudo alien "
 "<replaceable>package_file.rpm</replaceable></screen>"
 
-#: add-applications/C/add-applications.xml:276(title)
-msgid "Install <emphasis>tarballs</emphasis>"
-msgstr "安装 <emphasis>tarballs</emphasis>"
+#: add-applications/C/add-applications.xml:558(title)
+msgid "Installing <emphasis>tarballs</emphasis>"
+msgstr "安装<emphasis>tarballs</emphasis>"
 
-#: add-applications/C/add-applications.xml:277(para)
+#: add-applications/C/add-applications.xml:559(para)
 msgid ""
 "Files with the <filename class=\"extension\">.tar</filename>, <filename "
 "class=\"extension\">.tgz</filename>, <filename "
 "class=\"extension\">.tar.gz</filename> or <filename "
 "class=\"extension\">.tar.bz2</filename> suffix are package files known as "
-"<emphasis>tarballs</emphasis> which are widely used in Linux and Unix."
+"<emphasis>tarballs</emphasis>, and are widely used in Linux and Unix to "
+"package software. Tarballs can also be used to archive and compress other "
+"files."
 msgstr ""
-"后缀名名为<filename class=\"extension\">.tar</filename>, <filename "
+"带有 <filename class=\"extension\">.tar</filename>, <filename "
 "class=\"extension\">.tgz</filename>, <filename "
 "class=\"extension\">.tar.gz</filename> or <filename "
-"class=\"extension\">.tar.bz2</filename> "
-"的软件包文件被称为<emphasis>tarballs</emphasis>文件，在Linux 和 Unix中被广泛使用。"
+"class=\"extension\">.tar.bz2</filename>扩展名的文件是<emphasis>压缩包</emphasis>，在 "
+"Linux 和 Unix 软件包中得到广泛应用。 压缩包可以用来归档和压缩其它文件。"
 
-#: add-applications/C/add-applications.xml:283(para)
+#: add-applications/C/add-applications.xml:568(para)
 msgid ""
 "If there is no native Ubuntu package available in any of the Ubuntu "
 "repositories, you can use the command line to install or uninstall the "
 "tarball file."
 msgstr "如果在任何 Ubuntu 软件库中都没有原生 Ubuntu 软件包可用的话，您可以通过命令行来安装或卸载 tarball 文件。"
 
-#: add-applications/C/add-applications.xml:285(para)
+#: add-applications/C/add-applications.xml:573(para)
 msgid ""
 "The first step will be to uncompress and extract the tarball. If it is a "
 "<emphasis>.tgz</emphasis> or a <emphasis>.tar.gz</emphasis>, in a Terminal "
@@ -835,7 +838,7 @@ msgstr ""
 "<emphasis>.tar.gz</emphasis>文件，在终端输入：<screen>tar xfvz "
 "<replaceable>tarball_name</replaceable></screen>"
 
-#: add-applications/C/add-applications.xml:289(para)
+#: add-applications/C/add-applications.xml:579(para)
 msgid ""
 "Then it will be necessary to follow the instructions that come with the "
 "package. These are generally located in the extracted tarball in a file "
@@ -844,39 +847,37 @@ msgstr ""
 "然后有必要沿着安装包自带的指令进行。一般在解压tarball后的<filename>README</filename>文件或者<filename>INST"
 "ALL</filename>文件中。"
 
-#: add-applications/C/add-applications.xml:295(para)
+#: add-applications/C/add-applications.xml:585(para)
 msgid ""
 "Tarballs often contain the source code of the program, and need to be "
 "<emphasis>compiled</emphasis> in order to be used."
 msgstr "tarball 通常包含了程序的源代码，因此需要被 <emphasis>编译</emphasis> 过才能使用。"
 
-#: add-applications/C/add-applications.xml:298(para)
+#: add-applications/C/add-applications.xml:590(para)
 msgid ""
 "Compiling programs requires some packages that are not installed by default. "
-"You can install these all at once by installing the <application>build-"
-"essential</application> package."
+"You can install most of these all at once by installing the <ulink "
+"url=\"apt:build-essential\">build-essential</ulink> package."
 msgstr ""
-"编译程序需要一些没有被默认安装的软件包。您可以通过安装 <application>build-essential</application> "
-"软件包来一次性安装这些软件包。"
 
-#: add-applications/C/add-applications.xml:302(title)
-msgid "Install <filename class=\"extension\">.run</filename> packages"
-msgstr "安装<filename class=\"extension\">.run</filename>软件包"
+#: add-applications/C/add-applications.xml:600(title)
+msgid "Install .run packages"
+msgstr ""
 
-#: add-applications/C/add-applications.xml:303(para)
+#: add-applications/C/add-applications.xml:601(para)
 msgid ""
 "Sometimes you may need to install software (most often a game) which has "
 "been packaged as a .run file. These files contain the software and a small "
 "program to install the software."
 msgstr "有时您需要安装被打包成.run的软件(通常是游戏)。这些软件包包含软件和一个小的程序来安装软件。"
 
-#: add-applications/C/add-applications.xml:304(para)
+#: add-applications/C/add-applications.xml:606(para)
 msgid ""
 "Follow the procedure below to install software packaged in a <filename "
 "class=\"extension\">.run</filename> file:"
 msgstr "按照下面的流程来从<filename class=\"extension\">.run</filename>文件安装软件:"
 
-#: add-applications/C/add-applications.xml:308(para)
+#: add-applications/C/add-applications.xml:613(para)
 msgid ""
 "Find the <filename class=\"extension\">.run</filename> file in the "
 "<application>File Browser</application>"
@@ -884,11 +885,11 @@ msgstr ""
 "在<application>文件浏览器</application>中寻找<filename "
 "class=\"extension\">.run</filename>文件"
 
-#: add-applications/C/add-applications.xml:309(para)
+#: add-applications/C/add-applications.xml:619(para)
 msgid "Right-click the file and select <guilabel>Properties</guilabel>"
 msgstr "右键点击文件选择<guilabel>属性</guilabel>"
 
-#: add-applications/C/add-applications.xml:310(para)
+#: add-applications/C/add-applications.xml:624(para)
 msgid ""
 "Under the <guilabel>Permissions</guilabel> tab, make sure that "
 "<guilabel>Allow executing file as program</guilabel> is checked and press "
@@ -897,23 +898,21 @@ msgstr ""
 "在<guilabel>权限</guilabel>标签下，确保<guilabel>允许以程序来执行文件</guilabel>被选中并按<guibutton>"
 "关闭</guibutton>"
 
-#: add-applications/C/add-applications.xml:311(para)
+#: add-applications/C/add-applications.xml:631(para)
 msgid ""
-"Double-click the <filename class=\"extension\">.run</filename> file to open "
-"it. A dialog box should appear"
-msgstr "双击<filename class=\"extension\">.run</filename>文件来打开它。将会出现一个对话框"
+"Double-click the <filename class=\"extension\">.run</filename> file and "
+"press <guibutton>Run in Terminal</guibutton> to run the installer"
+msgstr ""
+"双击 <filename class=\"extension\">.run</filename> "
+"文件并点击<guibutton>在终端运行</guibutton>来运行安装程序"
 
-#: add-applications/C/add-applications.xml:312(para)
-msgid "Press <guibutton>Run in Terminal</guibutton> to run the installer"
-msgstr "点击<guibutton>在终端运行</guibutton>来运行安装程序"
-
-#: add-applications/C/add-applications.xml:313(para)
+#: add-applications/C/add-applications.xml:638(para)
 msgid ""
-"A <application>Terminal</application> window will open. Follow any "
-"instructions on-screen to install the program"
-msgstr "一个<application>终端</application>窗口将会打开。按照屏幕上的安装指令来安装这个程序"
+"A Terminal window will open. Follow any instructions on-screen to install "
+"the program"
+msgstr ""
 
-#: add-applications/C/add-applications.xml:316(para)
+#: add-applications/C/add-applications.xml:646(para)
 msgid ""
 "Once you have started the installer, it may take a while to display an "
 "installation screen. This is normally due to the installer extracting all of "
@@ -937,4 +936,286 @@ msgstr ""
 "  Launchpad Translations Administrators https://launchpad.net/~rosetta-"
 "admins\n"
 "  Wentao Tang https://launchpad.net/~wisetang\n"
-"  luojie-dune https://launchpad.net/~luojie-dune"
+"  luojie-dune https://launchpad.net/~luojie-dune\n"
+"\n"
+"Launchpad Contributions:\n"
+"  1+1=2 https://launchpad.net/~dbzhang800\n"
+"  Hugh https://launchpad.net/~hugh-shang\n"
+"  Ihnus Qcshz https://launchpad.net/~qcshzihnus\n"
+"  Launchpad Translations Administrators https://launchpad.net/~rosetta-"
+"admins\n"
+"  Tao Wei https://launchpad.net/~weitao1979\n"
+"  Wentao Tang https://launchpad.net/~wisetang\n"
+"  Yiding He https://launchpad.net/~yiding-he\n"
+"  cycloudyang https://launchpad.net/~cycloudyang\n"
+"  luojie-dune https://launchpad.net/~luojie-dune\n"
+"  rainofchaos https://launchpad.net/~rainofchaos\n"
+"  stone_unix https://launchpad.net/~gaoghy\n"
+"\n"
+"Launchpad Contributions:\n"
+"  1+1=2 https://launchpad.net/~dbzhang800\n"
+"  Dick Chen https://launchpad.net/~ssoureleotommy\n"
+"  Hugh https://launchpad.net/~hugh-shang\n"
+"  Ihnus Qcshz https://launchpad.net/~qcshzihnus\n"
+"  Launchpad Translations Administrators https://launchpad.net/~rosetta-"
+"admins\n"
+"  Tao Wei https://launchpad.net/~weitao1979\n"
+"  Unicser https://launchpad.net/~unicser\n"
+"  Wentao Tang https://launchpad.net/~wisetang\n"
+"  Yiding He https://launchpad.net/~yiding-he\n"
+"  cycloudyang https://launchpad.net/~cycloudyang\n"
+"  ho121 https://launchpad.net/~zhang\n"
+"  luojie-dune https://launchpad.net/~luojie-dune\n"
+"  rainofchaos https://launchpad.net/~rainofchaos\n"
+"  stone_unix https://launchpad.net/~gaoghy"
+
+#~ msgid ""
+#~ "You need administrative access to use any of these programs. See <ulink "
+#~ "type=\"help\" url=\"ghelp:administrative\">Administrative Tasks</ulink> for "
+#~ "more details."
+#~ msgstr ""
+#~ "要使用这些程序，您需要管理权限。更多信息请参见 <ulink type=\"help\" "
+#~ "url=\"ghelp:administrative\">管理任务</ulink>。"
+
+#~ msgid ""
+#~ "<link linkend=\"synaptic\"><application>Synaptic</application></link> - "
+#~ "Advanced control of software and other system components."
+#~ msgstr ""
+#~ "<link linkend=\"synaptic\"><application>新立得软件包管理器</application></link> - "
+#~ "对于软件和其它系统组件的高级控制。"
+
+#~ msgid ""
+#~ "To add or remove applications in Ubuntu, you need to use a <emphasis>package "
+#~ "manager</emphasis>. It will automatically download the software required "
+#~ "from the Internet and install it."
+#~ msgstr ""
+#~ "若想在 Ubuntu 中添加和删除应用程序，您需要使用 "
+#~ "<emphasis>软件包管理器</emphasis>。它会自动从因特网上下载所请求的软件并进行安装。"
+
+#~ msgid ""
+#~ "To remove a package that is already installed, choose <guimenuitem>Mark for "
+#~ "Removal</guimenuitem>."
+#~ msgstr "若想删除一个已经安装了的软件包，请选择 <guimenuitem>标记以便删除</guimenuitem>。"
+
+#~ msgid ""
+#~ "To enable <application>Synaptic</application> and other package managers to "
+#~ "install software from CDs which contain packages:"
+#~ msgstr "使用 <application>新立得软件包管理器</application> 和其他软件包管理软件，从安装光盘安装如下软件包："
+
+#~ msgid "There are three main package managers you can use in Ubuntu:"
+#~ msgstr "在 Ubuntu 中您可以使用三种主要的软件包管理器："
+
+#~ msgid ""
+#~ "This document is maintained by the Ubuntu documentation team "
+#~ "(https://wiki.ubuntu.com/DocumentationTeam). For a list of contributors, see "
+#~ "the <ulink url=\"../../../common/C/contributors.xml\">contributors "
+#~ "page</ulink>"
+#~ msgstr ""
+#~ "本文档由 Ubuntu 文档团队 (https://wiki.ubuntu.com/DocumentationTeam) 维护。参与贡献者的列表请参见 "
+#~ "<ulink url=\"../../../common/C/contributors.xml\">贡献者页面</ulink>"
+
+#~ msgid ""
+#~ "Compiling programs requires some packages that are not installed by default. "
+#~ "You can install most of these all at once by installing the "
+#~ "<application>build-essential</application> package."
+#~ msgstr ""
+#~ "编译程序要求一些未被默认安装的包。您可以安装<application>build-essential</application>包来解决大多数问题。"
+
+#~ msgid ""
+#~ "Installing/uninstalling <filename class=\"extension\">.deb</filename> files"
+#~ msgstr "安装/卸载<filename class=\"extension\">.deb</filename> 文件"
+
+#~ msgid ""
+#~ "A <application>Terminal</application> window will open. Follow any "
+#~ "instructions on-screen to install the program"
+#~ msgstr "一个<application>终端</application>窗口将会打开。按照屏幕上的安装指令来安装这个程序"
+
+#~ msgid ""
+#~ "To launch <application>Synaptic</application>, press "
+#~ "<menuchoice><guimenu>System</guimenu><guimenuitem>Administration</guimenuitem"
+#~ "><guimenuitem>Synaptic Package Manager</guimenuitem></menuchoice>. You need "
+#~ "administrative access to use <application>Synaptic</application>; see <ulink "
+#~ "type=\"help\" url=\"ghelp:administrative\">Administrative Tasks</ulink> for "
+#~ "more details."
+#~ msgstr ""
+#~ "要启动 "
+#~ "<application>新立得</application>，点击<menuchoice><guimenu>系统</guimenu><guimenuite"
+#~ "m>管理</guimenuitem><guimenuitem>新立得包管理器</guimenuitem></menuchoice>。您需要有管理权限才能运"
+#~ "行<application>新立得</application>；参见<ulink type=\"help\" "
+#~ "url=\"ghelp:administrative\">管理任务</ulink>来获取更多信息。"
+
+#~ msgid ""
+#~ "If you open more than one of these programs at once, they may not work. "
+#~ "Close them all and open just one."
+#~ msgstr "如果你同时打开以上程序中的多个的话，它们可能不会工作。请将它们全部关闭并只打开其中一个。"
+
+#~ msgid ""
+#~ "Some packages from the <emphasis>main</emphasis> and "
+#~ "<emphasis>restricted</emphasis> Ubuntu package repositories can be installed "
+#~ "from the Ubuntu installation CD. Simply insert your Ubuntu installation CD "
+#~ "and open "
+#~ "<menuchoice><guimenu>System</guimenu><guimenuitem>Administration</guimenuitem"
+#~ "><guimenuitem>Synaptic Package Manager</guimenuitem></menuchoice>. To list "
+#~ "only packages on the Ubuntu installation CD, click on the "
+#~ "<guibutton>Origin</guibutton> button in the lower left corner of "
+#~ "<application>Synaptic Package Manager</application>. The packages should be "
+#~ "listed under the <guimenuitem>Ubuntu 8.04_Hardy_Heron</guimenuitem> section."
+#~ msgstr ""
+#~ "<emphasis>主要</emphasis>和<emphasis>受限</emphasis> "
+#~ "的Ubuntu安装包仓库中的某些安装包可以通过Ubuntu安装光盘来安装。只需插入您的Ubuntu安装光盘，然后打开<menuchoice><guimen"
+#~ "u>系统</guimenu><guimenuitem>管理</guimenuitem><guimenuitem>新立得</guimenuitem></me"
+#~ "nuchoice>.。如需只列出Ubuntu安装光盘中的安装包，请点击<application>新立得</application>窗口左下角的<guibu"
+#~ "tton>原始</guibutton>按钮。<guimenuitem>Ubuntu 8.04_Hardy_Heron</guimenuitem> "
+#~ "区中会列出这些安装包。"
+
+#~ msgid ""
+#~ "There are thousands of programs available to install on Ubuntu. These "
+#~ "programs are stored in software archives (<emphasis>repositories</emphasis>) "
+#~ "and are made freely available for installation over the Internet. This makes "
+#~ "it very easy to install new programs in Linux, and it is also very secure, "
+#~ "because each program you install is built specially for Ubuntu and checked "
+#~ "before it is installed."
+#~ msgstr ""
+#~ "Ubuntu 中可以安装数以千计的程序。这些程序都被存储在软件存档 (<emphasis>软件库</emphasis>) "
+#~ "中并可以通过因特网免费获取安装。这就使得在 Linux 中安装程序变得十分简单，同样也非常安全，因为您安装的每个程序都是特别为 Ubuntu "
+#~ "构建的，并且在安装之前都经过检查。"
+
+#~ msgid ""
+#~ "Use the categories on the left to filter the list of packages. To return to "
+#~ "the list of categories after doing a search, click "
+#~ "<guibutton>Sections</guibutton>."
+#~ msgstr "使用左边的分类来过滤软件包列表。若想在搜索完成后回到分类列表，请点击 <guibutton>组别</guibutton>。"
+
+#~ msgid ""
+#~ "To install a package, click the box next to it and choose <guimenuitem>Mark "
+#~ "for installation</guimenuitem>. If you change your mind, choose "
+#~ "<guimenuitem>Unmark</guimenuitem>."
+#~ msgstr ""
+#~ "若想安装一个软件包，请点击其旁边的方框并选择 <guimenuitem>标记以便安装</guimenuitem>。如果您又改变主意了，请选择 "
+#~ "<guimenuitem>取消标记</guimenuitem>。"
+
+#~ msgid ""
+#~ "In this section you can learn how to use a package manager to add or remove "
+#~ "applications in Ubuntu with a few clicks. You can also learn about more "
+#~ "advanced techniques of managing applications and discover some optional "
+#~ "applications which you can add to Ubuntu."
+#~ msgstr ""
+#~ "在本节您将学习如何轻点鼠标来就可以在Ubuntu "
+#~ "中使用软件包管理器来添加或删除应用程序。您还可以学到管理应用程序的更多高级技能及发现您可以添加到Ubuntu的备选应用程序。"
+
+#~ msgid ""
+#~ "The packages should then be listed. To have "
+#~ "<application>Synaptic</application> only list packages from the CD, click "
+#~ "the <guibutton>Origin</guibutton> button on the lower left corner of "
+#~ "<application>Synaptic Package Manager</application>, then find the name of "
+#~ "the CD on the list in the upper left corner of "
+#~ "<application>Synaptic</application>."
+#~ msgstr ""
+#~ "接下来，软件包应该会被列出来。要让<application>Synaptic</application>只列出CD中的软件包，点击<application"
+#~ ">Synaptic软件包管理器</application>左下角的<guibutton>原始</guibutton>按钮，然后在<application>"
+#~ "Synaptic</application>左上角的列表中找到CD的名字。"
+
+#~ msgid "2004, 2005, 2006"
+#~ msgstr "2004, 2005, 2006"
+
+#~ msgid ""
+#~ "Further documentation on <application>APTonCD</application> can be found on "
+#~ "its website, <ulink "
+#~ "url=\"http://aptoncd.sourceforge.net\">aptoncd.sourceforge.net</ulink>"
+#~ msgstr ""
+#~ "关于<application>APTonCD</application>的更多文档可以在它的网站找到：<ulink "
+#~ "url=\"http://aptoncd.sourceforge.net\">aptoncd.sourceforge.net</ulink>"
+
+#~ msgid "Install <filename class=\"extension\">.run</filename> packages"
+#~ msgstr "安装<filename class=\"extension\">.run</filename>软件包"
+
+#~ msgid ""
+#~ "A copy of the license is available here: <ulink url=\"/usr/share/ubuntu-"
+#~ "docs/common/C/ccbysa.xml\">Creative Commons ShareAlike License</ulink>."
+#~ msgstr ""
+#~ "该授权许可的副本可以在这里找到：<ulink url=\"/usr/share/ubuntu-"
+#~ "docs/common/C/ccbysa.xml\">Creative Commons ShareAlike License</ulink>。"
+
+#~ msgid ""
+#~ "<link linkend=\"apt\"><application>Apt</application></link> - If you prefer "
+#~ "using the Terminal."
+#~ msgstr ""
+#~ "<link linkend=\"apt\"><application>Apt</application></link> - 如果您偏爱使用终端的话。"
+
+#~ msgid ""
+#~ "A software repository is a place from which you can download and install "
+#~ "software over the Internet."
+#~ msgstr "您可以通过因特网从软件库下载和安装软件。"
+
+#~ msgid ""
+#~ "With the <guimenuitem>Add/Remove</guimenuitem> item in the "
+#~ "<guimenu>Applications</guimenu> menu, you can install programs to do new "
+#~ "things with Ubuntu. You can also remove programs you do not want. You need "
+#~ "administrative access to use <application>Add/Remove "
+#~ "Applications</application> (see <ulink type=\"help\" "
+#~ "url=\"ghelp:administrative\">Administrative Tasks</ulink> for more details)."
+#~ msgstr ""
+#~ "通过<guimenu>应用程序</guimenu>中的 "
+#~ "<guimenuitem>添加/删除</guimenuitem>可以安装新的软件，也可以按照要求删除软件。 使用 <application>添加/删除 "
+#~ "应用程序</application> 需要具有管理员权限。 (查看 <ulink type=\"help\" "
+#~ "url=\"ghelp:administrative\">管理任务</ulink> 以获得更多信息)。"
+
+#~ msgid ""
+#~ "A package manager is a program that installs and uninstalls software, and "
+#~ "keeps track of all the components each piece of software needs."
+#~ msgstr "软件包管理器是一个安装和卸载软件，并跟踪软件的每个部分所需的所有组件的程序。"
+
+#~ msgid ""
+#~ "Converting <filename class=\"extension\">.rpm</filename> files to <filename "
+#~ "class=\"extension\">.deb</filename> files"
+#~ msgstr ""
+#~ "转换<filename class=\"extension\">.rpm</filename> 文件为<filename "
+#~ "class=\"extension\">.deb</filename>文件"
+
+#~ msgid ""
+#~ "For more information, see the <ulink url=\"http://www.debian.org/doc/user-"
+#~ "manuals#apt-howto\">Debian <application>apt</application> manual</ulink> and "
+#~ "the <ulink url=\"man:apt-get\">apt-get manual</ulink>."
+#~ msgstr ""
+#~ "更多信息，参见<ulink url=\"http://www.debian.org/doc/user-manuals#apt-"
+#~ "howto\">Debian <application>apt</application> 手册</ulink>和<ulink "
+#~ "url=\"man:apt-get\">apt-get 手册</ulink>。"
+
+#~ msgid ""
+#~ "<link linkend=\"gnome-app-install\"><application>Add/Remove "
+#~ "Applications</application></link> - The easiest way to install and uninstall "
+#~ "programs."
+#~ msgstr ""
+#~ "<link linkend=\"gnome-app-"
+#~ "install\"><application>添加/删除程序</application></link> - 安装和卸载程序的最简便的方法。"
+
+#~ msgid ""
+#~ "If you are comfortable using the Terminal, you can use "
+#~ "<application>apt</application> (Advanced Packaging Tool) to install or "
+#~ "remove software. You need administrative access to use "
+#~ "<application>apt</application>; see <ulink type=\"help\" "
+#~ "url=\"ghelp:administrative\">Administrative Tasks</ulink> for more details."
+#~ msgstr ""
+#~ "如果您熟悉终端，您可以使用<application>apt</application>(高级打包工具)来安装或删除软件。您需要管理权限来使用<applic"
+#~ "ation>apt</application>；参见<ulink type=\"help\" "
+#~ "url=\"ghelp:administrative\">管理任务</ulink>来获取更多信息。"
+
+#~ msgid ""
+#~ "If you know the name of the package you want to install or remove, click the "
+#~ "<guibutton>Search</guibutton> button, and enter the package name or a short "
+#~ "search term. You can also search for packages by description (for example, "
+#~ "you can find all packages mentioning "
+#~ "<quote><wordasword>arcade</wordasword></quote> or "
+#~ "<quote><wordasword>mathematics</wordasword></quote>)."
+#~ msgstr ""
+#~ "如果您知道您想安装或删除的软件包的名称，点击 <guibutton>搜索</guibutton> "
+#~ "按钮，并输入该软件包的名称或一个短搜索项。您也可以搜索软件包的描述信息(例如，您可以搜寻所有提到 "
+#~ "<quote><wordasword>arcade</wordasword></quote> 或是 "
+#~ "<quote><wordasword>mathematics</wordasword></quote> 的软件包)。"
+
+#~ msgid ""
+#~ "When you have finished, click <guibutton>Apply</guibutton> and Ubuntu will "
+#~ "make the changes you selected. If you do not want to make any changes, close "
+#~ "the window instead."
+#~ msgstr ""
+#~ "当您完成后，点击<guibutton>应用</guibutton>，Ububu将会应用您选择的改变。如果您不想做出任何改变，关闭窗口即可。"

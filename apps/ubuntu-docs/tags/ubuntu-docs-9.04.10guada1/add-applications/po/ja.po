@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-docs\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2007-09-14 08:25+0100\n"
-"PO-Revision-Date: 2008-01-24 17:20+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2008-10-08 21:13+0100\n"
+"PO-Revision-Date: 2008-10-17 13:46+0000\n"
+"Last-Translator: Kentaro Kazuhama <kazken3@gmail.com>\n"
 "Language-Team: Japanese <ja@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2008-02-17 10:23+0000\n"
+"X-Launchpad-Export-Date: 2008-10-19 12:45+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: add-applications/C/add-applications-C.omf:6(creator) add-applications/C/add-applications-C.omf:7(maintainer)
@@ -26,14 +26,16 @@ msgid "Adding and Removing Software"
 msgstr "ソフトウエアの追加と削除"
 
 #: add-applications/C/add-applications-C.omf:9(date)
-msgid "2006-09-07"
-msgstr "2006-09-07"
+msgid "2008-02-16"
+msgstr "2008-02-16"
 
 #: add-applications/C/add-applications-C.omf:11(description)
-msgid "Placeholder."
-msgstr "プレースホルダ"
+msgid ""
+"Instructions on how to install and uninstall software, including information "
+"on package management."
+msgstr "パッケージ管理の方法を含む、ソフトウェアのインストール方法やアンインストール方法を解説します。"
 
-#: add-applications/C/add-applications.xml:17(title)
+#: add-applications/C/add-applications.xml:15(title)
 msgid "Adding, Removing and Updating Applications"
 msgstr "アプリケーションの追加/削除/アップデート"
 
@@ -45,12 +47,11 @@ msgstr "著作権およびライセンス"
 msgid ""
 "This document is maintained by the Ubuntu documentation team "
 "(https://wiki.ubuntu.com/DocumentationTeam). For a list of contributors, see "
-"the <ulink url=\"../../../common/C/contributors.xml\">contributors "
-"page</ulink>"
+"the <ulink url=\"../../libs/C/contributors.xml\">contributors page</ulink>"
 msgstr ""
-"このドキュメントはUbuntuドキュメンテーション・チーム(https://wiki.ubuntu.com/DocumentationTeam)が保守して"
-"います。貢献者の一覧は、<ulink url=\"../../../common/C/contributors.xml\">contributors "
-"page</ulink>を参照してください。"
+"このドキュメントはUbuntu documentation team "
+"(https://wiki.ubuntu.com/DocumentationTeam)によってメンテナンスされています。貢献者のリストは<ulink "
+"url=\"../../libs/C/contributors.xml\">contributors page</ulink>を見てください"
 
 #: add-applications/C/add-applications.xml:5(para)
 msgid ""
@@ -80,32 +81,38 @@ msgstr ""
 #: add-applications/C/add-applications.xml:11(para)
 msgid ""
 "A copy of the license is available here: <ulink url=\"/usr/share/ubuntu-"
-"docs/common/C/ccbysa.xml\">Creative Commons ShareAlike License</ulink>."
+"docs/libs/C/ccbysa.xml\">Creative Commons ShareAlike License</ulink>."
 msgstr ""
-"このライセンスのコピーは以下で参照可能です: <ulink url=\"/usr/share/ubuntu-"
-"docs/common/C/ccbysa.xml\">Creative Commons ShareAlike License</ulink>。"
+"ライセンスは次のリンクで参照できます: <ulink url=\"/usr/share/ubuntu-"
+"docs/libs/C/ccbysa.xml\">Creative Commons ShareAlike License</ulink>。"
 
 #: add-applications/C/add-applications.xml:14(year)
-msgid "2004, 2005, 2006"
-msgstr "2004, 2005, 2006"
+msgid "2008"
+msgstr "2008"
+
+#: add-applications/C/add-applications.xml:15(ulink)
+msgid "Ubuntu Documentation Project"
+msgstr "Ubuntuドキュメンテーション・プロジェクト"
 
 #: add-applications/C/add-applications.xml:15(holder)
-msgid "Canonical Ltd. and members of the Ubuntu Documentation Project"
-msgstr "Canonical Ltd.とUbuntu Documentation Project 一同"
+msgid "Canonical Ltd. and members of the <placeholder-1/>"
+msgstr "Canonical Ltd.と<placeholder-1/>一同"
 
 #: add-applications/C/add-applications.xml:18(publishername)
 msgid "The Ubuntu Documentation Project"
 msgstr "The Ubuntu Documentation Project"
 
-#: add-applications/C/add-applications.xml:20(para)
+#: add-applications/C/add-applications.xml:18(para)
 msgid ""
-"In this section you can learn how to use a package manager to add or remove "
-"applications in Ubuntu with a few clicks. You can also learn about more "
-"advanced techniques of managing applications and discover some optional "
-"applications to add to Ubuntu and try."
+"This section discusses how applications are installed, removed and kept up "
+"to date. Also covered are how packages are stored by Ubuntu and made "
+"available for download."
 msgstr ""
-"このセクションでは、数回クリックするだけでUbuntuにアプリケーションを追加/削除することのできる、パッケージマネージャの使い方を学ぶことができます。よ"
-"り高度なアプリケーション管理の技術や、Ubuntuに追加するオプションのアプリケーションを発見し、試す方法を学ぶこともできます。"
+
+#: add-applications/C/add-applications.xml:19(para)
+msgid ""
+"It also covers some more advanced techniques for managing applications."
+msgstr "また、アプリケーション管理のためのより高度なテクニックも取り上げています。"
 
 #: add-applications/C/add-applications.xml:22(title)
 msgid "What is a package manager?"
@@ -113,88 +120,114 @@ msgstr "パッケージマネージャとは何ですか?"
 
 #: add-applications/C/add-applications.xml:23(para)
 msgid ""
-"A package manager is a program that installs and uninstalls software, and "
-"keeps track of all the components each piece of software needs."
+"A package manager is a program that you can use to install, remove and "
+"upgrade software. Software for Ubuntu is provided in the form of packages, "
+"which are automatically downloaded by the package manager."
 msgstr ""
-"パッケージマネージャはプログラムをインストールしたりアンインストールするソフトウェアで、それぞれのソフトウェアに必要な全てのコンポーネントを追跡します。"
-
-#: add-applications/C/add-applications.xml:24(para)
-msgid ""
-"To add or remove applications in Ubuntu, you need to use a <emphasis>package "
-"manager</emphasis>. It will automatically download the software required "
-"from the Internet and install it."
-msgstr ""
-"Ubuntuでアプリケーションを追加したり削除するなら、<emphasis>パッケージマネージャ</emphasis>を使う必要があります。それを使うと、"
-"自動的に必要なソフトウェアをインターネットからダウンロードしてインストールすることができます。"
-
-#: add-applications/C/add-applications.xml:25(para)
-msgid "There are three main package managers you can use in Ubuntu:"
-msgstr "Ubuntuで使用できる主なパッケージマネージャが3つあります:"
-
-#: add-applications/C/add-applications.xml:27(para)
-msgid ""
-"<link linkend=\"gnome-app-install\"><application>Add/Remove "
-"Programs</application></link> - The easiest way to install and uninstall "
-"programs."
-msgstr ""
-"<link linkend=\"gnome-app-"
-"install\"><application>アプリケーションの追加と削除</application></link> - "
-"プログラムをインストールしたりアンインストールする最も簡単な方法です。"
+"パッケージ・マネージャは、インストール・削除・アップグレードとして利用できるプログラムです。Ubuntuのソフトウェアはパッケージ・マネージャによって自動"
+"的にダウンロードされたパッケージから提供されます。"
 
 #: add-applications/C/add-applications.xml:28(para)
 msgid ""
-"<link linkend=\"synaptic\"><application>Synaptic</application></link> - "
-"Advanced control of software and other system components."
-msgstr ""
-"<link linkend=\"synaptic\"><application>Synaptic</application></link> - "
-"ソフトウエアと他のシステムコンポーネントを詳細にコントロールできます。"
-
-#: add-applications/C/add-applications.xml:29(para)
-msgid ""
-"<link linkend=\"apt\"><application>Apt</application></link> - If you prefer "
-"using the Terminal."
-msgstr ""
-"<link linkend=\"apt\"><application>Apt</application></link> - "
-"ターミナルを使いたいのであれば。"
-
-#: add-applications/C/add-applications.xml:32(para)
-msgid ""
-"If you open more than one of these programs at once, they may not work. "
-"Close them all and open just one."
-msgstr "もしこれらのプログラムを同時に1つ以上開くと、動作しないかもしれません。全て閉じた上で、1つだけ開いてください。"
+"There are three main package management programs you can use in Ubuntu:"
+msgstr "3つの主なパッケージ管理プログラムがUbuntuにおいて使うことができます:"
 
 #: add-applications/C/add-applications.xml:34(para)
 msgid ""
-"You need administrative access to use any of these programs. See <ulink "
-"type=\"help\" url=\"ghelp:administrative\">Administrative Tasks</ulink> for "
-"more details."
+"<link linkend=\"gnome-app-install\">Add/Remove Applications</link> - Quickly "
+"installs and removes popular programs, as well as providing ratings."
 msgstr ""
-"これらのプログラムを使用するには、管理者権限でのアクセスが必要です。詳細は<ulink type=\"help\" "
-"url=\"ghelp:administrative\">管理者権限でのタスク</ulink>を参照してください。"
+"<link linkend=\"gnome-app-install\">アプリケーションの追加と削除</link> - "
+"人気のあるプログラムを素早くインストールや削除をだけでなく、プログラムの格付けを提供します。"
 
-#: add-applications/C/add-applications.xml:38(title)
+#: add-applications/C/add-applications.xml:41(para)
+msgid ""
+"<link linkend=\"synaptic\">Synaptic</link> - Allows more advanced "
+"management, such as installing server applications and choosing different "
+"versions of the same package."
+msgstr ""
+"<link linkend=\"synaptic\">Synaptic</link> - "
+"同じパッケージのバージョン違いを選び、サーバのアプリケーションをインストールするような、より進化した管理を可能にします。"
+
+#: add-applications/C/add-applications.xml:48(para)
+msgid ""
+"<link linkend=\"apt\">Apt</link> - Allows package management from the "
+"command line."
+msgstr "<link linkend=\"apt\">Apt</link> - コマンドラインからのパッケージ管理を可能にします。"
+
+#: add-applications/C/add-applications.xml:56(para)
+msgid ""
+"You can only use one package manager at a time. If you start another package "
+"manager while one is already open, you will receive an error message."
+msgstr ""
+"一度に一つだけパッケージ・マネージャを使うことができます。すでに1つのパッケージ・マネージャが開いている間に他のパッケージ・マネージャを起動した場合、エラ"
+"ーメッセージが表示されます。"
+
+#: add-applications/C/add-applications.xml:63(para)
+msgid ""
+"You will require administrative access to install and remove software. This "
+"is because packages sometimes need to change important system files. See "
+"<ulink type=\"help\" url=\"ghelp:administrative\">Administrative "
+"Tasks</ulink> for more information on administrative access."
+msgstr ""
+"ソフトウェアのインストールと削除を実行にするには、管理権限での利用が必要になります。これは、パッケージが時に重要なシステムファイルを変更する必要があるため"
+"です。より多くの管理権限における利用については<ulink type=\"help\" "
+"url=\"ghelp:administrative\">管理者権限でのタスク</ulink>を見てください。"
+
+#: add-applications/C/add-applications.xml:71(title)
+msgid "Common package-management terms"
+msgstr "一般的なパッケージ管理条件"
+
+#: add-applications/C/add-applications.xml:73(para)
+msgid ""
+"If you are unfamiliar with Ubuntu's package management system, you may like "
+"to take a look at some of the following definitions."
+msgstr "Ubuntuのパッケージ管理システムになれていない場合、以下の定義のいくつかを見たほうがよいでしょう。"
+
+#: add-applications/C/add-applications.xml:78(para)
+msgid ""
+"<emphasis role=\"strong\">Packages</emphasis> are files which contain a "
+"program and all of the files required to run it on your computer. When you "
+"install a package, a file is downloaded from a repository and installed by a "
+"package manager."
+msgstr ""
+"<emphasis "
+"role=\"strong\">パッケージ</emphasis>はプログラムとコンピュータ上で実行するに必要なファイルのすべてを含んだファイルです。パッケ"
+"ージをインストールしたときファイルはレポジトリからダウンロードされ、パッケージ・マネージャによってインストールされます。"
+
+#: add-applications/C/add-applications.xml:85(para)
+msgid ""
+"<emphasis role=\"strong\">Dependencies</emphasis> are packages which must be "
+"installed before certain other packages can be installed. Dependency "
+"packages usually contain some files and programs needed by the other "
+"packages - for example, a word-processing package may depend on a printing "
+"package being installed in order to be able to print documents."
+msgstr ""
+
+#: add-applications/C/add-applications.xml:97(title)
 msgid "Software repositories"
 msgstr "ソフトウェアリポジトリ"
 
-#: add-applications/C/add-applications.xml:39(para)
+#: add-applications/C/add-applications.xml:98(para)
 msgid ""
-"A software repository is a place from which you can download and install "
-"software over the Internet."
-msgstr "ソフトウェアリポジトリとは、インターネットを介してソフトウエアをダウンロードしたりインストールしたりできる場所のことです。"
+"When you install software on Ubuntu, the package manager automatically "
+"downloads the required software packages from a <emphasis>software "
+"repository</emphasis>, a location on the Internet which stores collections "
+"of packages ready to be downloaded."
+msgstr ""
+"Ubuntu上にソフトウェアをインストールしたとき、パッケージ・マネージャはいつでもダウンロードできるパッケージのコレクションを保存しているインターネット"
+"上にある<emphasis>ソフトウェア・レポジトリ</emphasis>から、必要なソフトウェアパッケージを自動的にダウンロードします。"
 
-#: add-applications/C/add-applications.xml:40(para)
+#: add-applications/C/add-applications.xml:104(para)
 msgid ""
 "There are thousands of programs available to install on Ubuntu. These "
-"programs are stored in software archives (<emphasis>repositories</emphasis>) "
-"and are made freely available for installation over the Internet. This makes "
-"it very easy to install new programs in Linux, and it is also very secure, "
-"because each program you install is built specially for Ubuntu and checked "
-"before it is installed."
+"programs are stored in software repositories and are made freely available "
+"for all Ubuntu users. This makes it very easy to install new programs, and "
+"it is also very secure because each program you install is built specially "
+"for Ubuntu and checked before it is allowed into the repositories."
 msgstr ""
-"Ubuntuには何千もの利用可能なアプリケーションがあります。(<emphasis>リポジトリ</emphasis>)というソフトウェアアーカイブに蓄積さ"
-"れいていて、インターネットを通して自由にインストールすることができます。"
 
-#: add-applications/C/add-applications.xml:41(para)
+#: add-applications/C/add-applications.xml:111(para)
 msgid ""
 "To organise the software, Ubuntu repositories are categorised into four "
 "groups: <emphasis>Main</emphasis>, <emphasis>Restricted</emphasis>, "
@@ -212,7 +245,7 @@ msgstr ""
 "url=\"http://www.ubuntu.com/ubuntu/philosophy\">Free Software "
 "Philosophy</ulink>(英語)がどの程度かを元にしています。"
 
-#: add-applications/C/add-applications.xml:42(para)
+#: add-applications/C/add-applications.xml:120(para)
 msgid ""
 "The standard Ubuntu Install CD contains some software from the "
 "<emphasis>Main</emphasis> and <emphasis>Restricted</emphasis> categories."
@@ -220,7 +253,7 @@ msgstr ""
 "標準のUbuntuインストールCDは、<emphasis>Main</emphasis>と<emphasis>Restricted</emphasis>カ"
 "テゴリのソフトウェアを含んでいます。"
 
-#: add-applications/C/add-applications.xml:43(para)
+#: add-applications/C/add-applications.xml:124(para)
 msgid ""
 "If your system is connected to the Internet, many more software programs are "
 "made available for installation. For example, the <quote>Universe</quote> "
@@ -230,7 +263,7 @@ msgstr ""
 "あなたのマシンがインターネットに接続しているのであれば、より多くのソフトウェアをインストールすることが可能です。例えば、<quote>Universe</"
 "quote>や<quote>Multiverse</quote>リポジトリはインターネット経由でのみ利用可能です。"
 
-#: add-applications/C/add-applications.xml:45(para)
+#: add-applications/C/add-applications.xml:132(para)
 msgid ""
 "The <emphasis>Multiverse</emphasis> repository contains software which has "
 "been classified as <emphasis>non-free</emphasis>. This software may not be "
@@ -243,7 +276,7 @@ msgstr ""
 "トリからインストールする時、あなたは自分の国でそのソフトウェアの使用が認められているかを確認する必要があります。さらに、これらのソフトウェアは、セキュリテ"
 "ィーアップデートを含んでいない可能性もあります。"
 
-#: add-applications/C/add-applications.xml:47(para)
+#: add-applications/C/add-applications.xml:142(para)
 msgid ""
 "You can find more information about the Repositories available <ulink "
 "url=\"http://www.ubuntu.com/ubuntu/components\">on the website</ulink>."
@@ -251,17 +284,17 @@ msgstr ""
 "リポジトリに関する詳細な情報は<ulink "
 "url=\"http://www.ubuntu.com/ubuntu/components\">Webサイト</ulink>で探すことができます。"
 
-#: add-applications/C/add-applications.xml:51(title)
+#: add-applications/C/add-applications.xml:148(title)
 msgid "Adding extra repositories"
 msgstr "追加リポジトリを追加"
 
-#: add-applications/C/add-applications.xml:52(para)
+#: add-applications/C/add-applications.xml:149(para)
 msgid ""
 "It is possible to add extra repositories, such as those provided by third "
 "parties or those for older version of Ubuntu."
 msgstr "サードパーティーによって提供されているものや、Ubuntuの古いバージョンのような、追加リポジトリを追加することができます。"
 
-#: add-applications/C/add-applications.xml:54(para)
+#: add-applications/C/add-applications.xml:155(para)
 msgid ""
 "Be careful when installing software from third-party repositories. It may "
 "not have been tested with Ubuntu and could cause your system to break."
@@ -269,22 +302,22 @@ msgstr ""
 "サードパーティのリポジトリからソフトウェアをインストールする際には注意してください。Ubuntuでテストされておらず、システムを破壊してしまう可能性があり"
 "ます。"
 
-#: add-applications/C/add-applications.xml:58(para)
+#: add-applications/C/add-applications.xml:164(para)
 msgid ""
 "Open "
 "<menuchoice><guimenu>System</guimenu><guimenuitem>Administration</guimenuitem"
 "><guimenuitem>Software Sources</guimenuitem></menuchoice> and press "
-"<guilabel>Third-Party Software</guilabel>."
+"<guilabel>Third Party Software</guilabel>."
 msgstr ""
 "<menuchoice><guimenu>システム</guimenu><guimenuitem>システム管理</guimenuitem><guimenui"
 "tem>ソフトウェア・ソース</guimenuitem></menuchoice>を開き、<guilabel>サードパーティのソフトウェア</guilab"
-"el>をクリックしてください。"
+"el>を押します。"
 
-#: add-applications/C/add-applications.xml:61(para)
+#: add-applications/C/add-applications.xml:170(para)
 msgid "Press <guibutton>Add</guibutton> to add a new repository."
 msgstr "<guibutton>追加</guibutton>を押して新規リポジトリを追加してください。"
 
-#: add-applications/C/add-applications.xml:64(para)
+#: add-applications/C/add-applications.xml:175(para)
 msgid ""
 "Enter the <guilabel>APT line</guilabel> for the extra repository. This "
 "should be available from the website of the repository or similar, and "
@@ -293,12 +326,12 @@ msgstr ""
 "Extra リポジトリの<guilabel>APT "
 "line</guilabel>を入力します。これはリポジトリのウェブサイトなどから利用でき、次のように記述します。"
 
-#: add-applications/C/add-applications.xml:65(screen)
+#: add-applications/C/add-applications.xml:180(screen)
 #, no-wrap
 msgid "deb http://ftp.debian.org etch main"
 msgstr "deb http://ftp.debian.org etch main"
 
-#: add-applications/C/add-applications.xml:67(para)
+#: add-applications/C/add-applications.xml:183(para)
 msgid ""
 "Press <guibutton>Add Source</guibutton> and then click "
 "<guibutton>Close</guibutton> to save your changes."
@@ -306,7 +339,13 @@ msgstr ""
 "<guibutton>ソースの追加</guibutton>を押して、<guibutton>閉じる</guibutton> "
 "をクリックして変更点を保存してください。"
 
-#: add-applications/C/add-applications.xml:69(para)
+#: add-applications/C/add-applications.xml:188(para)
+msgid ""
+"You will be notified that the information about available software is out-of-"
+"date. Press <guibutton>Reload</guibutton>."
+msgstr "利用可能なソフトウェアに関する情報が古いことが通知されます。<guibutton>再読込</guibutton>を押してください。"
+
+#: add-applications/C/add-applications.xml:194(para)
 msgid ""
 "Most software repositories use a GPG key to digitally sign the files they "
 "provide, which makes it easy to check that the files have not been tampered "
@@ -318,41 +357,91 @@ msgstr ""
 "成されて以後に（不正に）改変されたことがなかったどうかを簡単にチェックできるからです。これをチェックした上でaptを使用するためには、その署名と対になった"
 "公開鍵が必要です.公開鍵はリポジトリのウェブサイトでダウンロードできるはずです。"
 
-#: add-applications/C/add-applications.xml:71(para)
+#: add-applications/C/add-applications.xml:204(para)
 msgid ""
 "Once you have downloaded the GPG key, import the key by selecting the "
-"<guilabel>Authenticate</guilabel> tab, and clicking on <guibutton>Import Key "
-"File...</guibutton>, and then selecting the GPG key to be imported."
+"<guilabel>Authentication</guilabel> tab, clicking on <guibutton>Import Key "
+"File</guibutton>, and then selecting the GPG key to be imported."
 msgstr ""
-"GPGキーのダウンロードが完了したら、<guilabel>認証</guilabel>タブを選んで<guibutton>鍵ファイルのインポート...</gu"
-"ibutton>をクリック、そしてインポートするGPGキー・ファイルを選択してインポートします。"
+"GPG 鍵をダウンロードしたら, <guilabel>認証</guilabel>タブを選択, "
+"<guibutton>鍵ファイルのインポート</guibutton>をクリックし, インポートする GPG 鍵を選択してください。"
 
-#: add-applications/C/add-applications.xml:73(para)
+#: add-applications/C/add-applications.xml:216(title)
+msgid "Restricted and non-free software"
+msgstr "制限されたフリーでないソフトウェア"
+
+#: add-applications/C/add-applications.xml:217(para)
 msgid ""
-"Click <guibutton>Reload</guibutton> in the package manager to update the "
-"list of available packages."
+"Most of the software available for Ubuntu is free, open-source software. "
+"This software is free for anyone to install and use, and people can modify "
+"the software and redistribute it if they like. Ubuntu is built from this "
+"type of software."
 msgstr ""
-"パッケージマネージャで<guibutton>リロード</guibutton>をクリックして、利用可能なパッケージのリストを更新してください。"
 
-#: add-applications/C/add-applications.xml:78(title)
+#: add-applications/C/add-applications.xml:223(para)
+msgid ""
+"<emphasis role=\"strong\">Non-free software</emphasis> is software which is "
+"not freely redistributable or modifiable. This makes it difficult for the "
+"Ubuntu developers to improve the software and correct problems, so it is "
+"normally recommended that you use <ulink "
+"url=\"http://www.ubuntu.com/ubuntu/philosophy\"> free software</ulink> "
+"instead."
+msgstr ""
+
+#: add-applications/C/add-applications.xml:230(para)
+msgid ""
+"<emphasis role=\"strong\">Restricted software</emphasis> is software which "
+"has restrictions on its use, preventing it from being classed as free "
+"software. Non-free software is a type of restricted software, where the "
+"restrictions are due to the software having a non-free license. Other "
+"reasons for software being classed as restricted include legal issues (use "
+"of some types of software is illegal in some countries) and patent issues "
+"(some software requires a patent license to be used legally)."
+msgstr ""
+
+#: add-applications/C/add-applications.xml:239(para)
+msgid ""
+"In some cases, restricted software is the only option. Such cases include "
+"software for the playback of certain audio and video formats, some fonts and "
+"<ulink type=\"help\" url=\"ghelp:hardware#restricted-manager\">drivers for "
+"some graphics cards</ulink>."
+msgstr ""
+
+#: add-applications/C/add-applications.xml:245(para)
+msgid ""
+"You should be warned by the package manager when you try to install "
+"restricted software. If the restricted software cannot be used legally in "
+"your country then there is little you can do; you should not install the "
+"software. If the software is restricted simply because it is non-free, you "
+"may choose to use it (for example, in the case of graphics card drivers). Be "
+"aware that most restricted software is not supported in Ubuntu, and problems "
+"with such software often cannot be corrected by Ubuntu developers."
+msgstr ""
+
+#: add-applications/C/add-applications.xml:256(para)
+msgid ""
+"Sometimes it is difficult to determine why a particular software package is "
+"restricted. If this is the case, seek advice on the <ulink "
+"url=\"http://ubuntuforums.org/\">Ubuntu Forums</ulink>. If you are still "
+"unable to determine why a package is restricted, err on the side of caution "
+"and do not install it; it may be illegal to use it in your country."
+msgstr ""
+
+#: add-applications/C/add-applications.xml:268(title)
 msgid "Add/Remove Applications"
 msgstr "アプリケーションの追加と削除"
 
-#: add-applications/C/add-applications.xml:79(para)
+#: add-applications/C/add-applications.xml:269(para)
 msgid ""
-"With the <guimenuitem>Add/Remove…</guimenuitem> item in the "
+"With the <guimenuitem>Add/Remove</guimenuitem> item in the "
 "<guimenu>Applications</guimenu> menu, you can install programs to do new "
-"things with Ubuntu. You can also remove programs you do not want. You need "
-"administrative access to use <application>Add/Remove Programs</application> "
-"(see <ulink type=\"help\" url=\"ghelp:administrative\">Administrative "
-"Tasks</ulink> for more details)."
+"things with Ubuntu. You can also remove programs which you do not want. You "
+"need administrative access to use <application>Add/Remove "
+"Applications</application> (see <ulink type=\"help\" "
+"url=\"ghelp:administrative\">Administrative Tasks</ulink> for more details)."
 msgstr ""
-"<guimenu>アプリケーション</guimenu>メニューのなかの<guimenuitem>追加と削除…</guimenuitem>を使ってUbunt"
-"uに新しいプログラムを追加し、または必要ないプログラムを削除することも可能です。<application>アプリケーションの追加と削除</applicat"
-"ion>を使用するには、あなたが管理権限を持っている必要があります (管理権限についての詳細は<ulink type=\"help\" "
-"url=\"ghelp:administrative\">管理者作業</ulink>をご覧ください)。"
 
-#: add-applications/C/add-applications.xml:80(para)
+#: add-applications/C/add-applications.xml:278(para)
 msgid ""
 "If you know the name of a program you want to install, enter it in the "
 "<guilabel>Search</guilabel> field. Otherwise, begin by choosing a software "
@@ -361,26 +450,26 @@ msgstr ""
 "もしインストールしたいプログラム名が分かっているのであれば、<guilabel>検索</guilabel> "
 "フィールドに入力するか、左にあるソフトウェアカテゴリーの選択から始めてください。"
 
-#: add-applications/C/add-applications.xml:81(para)
+#: add-applications/C/add-applications.xml:283(para)
 msgid ""
-"Programs that are already installed begin with a check mark next to their "
-"name. Uncheck a program if you want to remove it from your computer."
+"Programs that are already installed have a check mark next to their name. "
+"Uncheck a program if you want to remove it from your computer."
 msgstr ""
-"すでにインストールされているプログラムはプログラム名のそばにチェックマークがあります。もしそのソフトを削除したいならチェックを解除してください。"
+"既にインストールされているソフトウェアについては、名前の隣にあるチェックボックスにチェックが入っています。もしそのソフトウェアを削除したい場合は、チェック"
+"を外してください。"
 
-#: add-applications/C/add-applications.xml:82(para)
+#: add-applications/C/add-applications.xml:287(para)
 msgid ""
-"When you click <guibutton>Apply</guibutton> or <guibutton>OK</guibutton>, "
-"any new software will be downloaded from the Internet, and Ubuntu will make "
-"the changes you selected. If you have not activated the online package "
-"archive, you may be asked to insert your Ubuntu CD-ROM to install some "
-"packages."
+"When you click <guibutton>Apply Changes</guibutton>, any new software will "
+"be downloaded from the Internet, and Ubuntu will make any other changes you "
+"selected. If you have not activated the online package archive, you may be "
+"asked to insert your Ubuntu CD-ROM to install some packages."
 msgstr ""
-"<guibutton>適用</guibutton> または <guibutton>OK</guibutton> をクリックすると, "
-"インターネットからソフトをダウンロードし、選択した変更を行います。オンラインのパッケージアーカイブからのインストールを認めていない場合は、パッケージをイン"
-"ストールする際にUbuntu CD-ROMを挿入するよう指示される可能性があります。"
+"<guibutton>変更の適用</guibutton>をクリックすると、インストールのために新しいソフトウェアがインターネットからダウンロードされたり、"
+"ソフトウェアの削除などその他の変更が行われます。オンライン上のリポジトリを有効にしていない場合は、パッケージをインストールするためにUbuntuのCD-"
+"ROMを挿入するよう要求されるでしょう。"
 
-#: add-applications/C/add-applications.xml:83(para)
+#: add-applications/C/add-applications.xml:293(para)
 msgid ""
 "Some software cannot be installed or removed using <application>Add/Remove "
 "Applications</application>. If you cannot find the package you are looking "
@@ -392,11 +481,11 @@ msgstr ""
 "パッケージ・マネージャ</application>を起動してください（詳しくは<xref "
 "linkend=\"advanced\"/>を参照してください）。"
 
-#: add-applications/C/add-applications.xml:87(title)
+#: add-applications/C/add-applications.xml:302(title)
 msgid "Installing packages without an Internet connection"
 msgstr "インターネットに接続せずにパッケージをインストールするには"
 
-#: add-applications/C/add-applications.xml:88(para)
+#: add-applications/C/add-applications.xml:303(para)
 msgid ""
 "Other than using tools that download packages automatically, it is also "
 "possible to use a CD to install packages through a package manager while not "
@@ -411,11 +500,11 @@ msgstr ""
 "application>APTonCD</application>は、あなたのシステムに既にインストール済みのパッケージを自動的にバックアップすることがで"
 "き、またさまざまなリポジトリの内容を含むCDを作成することができます。"
 
-#: add-applications/C/add-applications.xml:90(title)
+#: add-applications/C/add-applications.xml:314(title)
 msgid "Installing packages using the Ubuntu installation CD"
 msgstr "UbuntuインストールCDを用いてパッケージをインストールするには"
 
-#: add-applications/C/add-applications.xml:91(para)
+#: add-applications/C/add-applications.xml:315(para)
 msgid ""
 "Some packages from the <emphasis>main</emphasis> and "
 "<emphasis>restricted</emphasis> Ubuntu package repositories can be installed "
@@ -424,110 +513,66 @@ msgid ""
 "<menuchoice><guimenu>System</guimenu><guimenuitem>Administration</guimenuitem"
 "><guimenuitem>Synaptic Package Manager</guimenuitem></menuchoice>. To list "
 "only packages on the Ubuntu installation CD, click on the "
-"<guibutton>Origin</guibutton> button in the lower left corner of "
-"<application>Synaptic Package Manager</application>. The packages are listed "
-"under the <guimenuitem>Ubuntu 7.10_Gutsy Gibbon</guimenuitem> section."
+"<guibutton>Origin</guibutton> button in the lower left corner of the "
+"Synaptic window. The packages should be listed under the <guimenuitem>Ubuntu "
+"8.10_Intrepid_Ibex</guimenuitem> section."
 msgstr ""
-"<emphasis>main</emphasis>及び<emphasis>restricted</emphasis> "
-"UbuntuパッケージレポジトリにあるパッケージのいくつかはUbuntuインストールCDからインストールできます。UbuntuインストールCDをドライブに"
-"挿入して<menuchoice><guimenu>システム</guimenu><guimenuitem>システム管理</guimenuitem><guim"
-"enuitem>Synaptic "
-"パッケージ・マネージャ</guimenuitem></menuchoice>を開くだけです。UbuntuインストールCD内にあるパッケージだけを表示するた"
-"めには、<application>Synaptic "
-"パッケージ・マネージャ</application>ウィンドウの左下隅にある<guibutton>原点</guibutton>ボタンをクリックします。すると"
-"<guimenuitem>Ubuntu 7.10_Gutsy Gibbon</guimenuitem>セクションの下にパッケージ名が列挙されます。"
 
-#: add-applications/C/add-applications.xml:92(para)
+#: add-applications/C/add-applications.xml:325(para)
 msgid ""
 "If the packages are not listed, it may be because the CD is not listed as a "
 "package repository (the CD should be listed as a repository by default). To "
-"add the CD as a package repository:"
+"add the CD as a package repository, follow the instructions in <xref "
+"linkend=\"repository-cds\"/>, below."
 msgstr ""
-"もしパッケージ名が表示されなかった場合、CDがパッケージリポジトリとして認識されていないのかもしれません（CDは既定ではリポジトリの一つになってるはずです"
-"）。CDをパッケージリポジトリとして追加するには:"
+"パッケージ一覧が表示されない場合、そのCDがパッケージリポジトリとして登録されていない可能性があります（初期状態だと、インストールCDはリポジトリとして登"
+"録されているはずです）。CDをパッケージリポジトリとして登録するには、下記の<xref linkend=\"repository-"
+"cds\"/>を参照してください。"
 
-#: add-applications/C/add-applications.xml:95(para)
-msgid "Eject the CD."
-msgstr "CDを取り出してください"
-
-#: add-applications/C/add-applications.xml:98(para)
-msgid ""
-"Open the <emphasis>Software Sources</emphasis> dialog by selecting "
-"<guimenuitem>Repositories</guimenuitem> from the <guimenu>Settings</guimenu> "
-"menu of <application>Synaptic Package Manager</application>."
-msgstr ""
-"<application>Synaptic "
-"パッケージ・マネージャ</application>の<guimenu>設定</guimenu>メニューから<guimenuitem>リポジトリ</guim"
-"enuitem>を選択して<emphasis>ソフトウェア・ソース</emphasis>ダイアログボックスを開きます。"
-
-#: add-applications/C/add-applications.xml:101(para) add-applications/C/add-applications.xml:120(para)
-msgid ""
-"Go to the Third-Party Software tab and click on the <guibutton>Add CD-"
-"ROM</guibutton> button."
-msgstr "サードパーティ・タブを選んでから<guibutton>CD-ROMを追加</guibutton>ボタンをクリックします。"
-
-#: add-applications/C/add-applications.xml:104(para)
-msgid "Insert the CD."
-msgstr "CDを挿入してください"
-
-#: add-applications/C/add-applications.xml:107(para)
-msgid "The packages should then be listed."
-msgstr "今度はパッケージ名が列挙されるはずです"
-
-#: add-applications/C/add-applications.xml:110(title)
+#: add-applications/C/add-applications.xml:334(title)
 msgid "Enabling other CDs that can be used to install packages"
 msgstr "その他のCDでパッケージをインストールできるようにするには"
 
-#: add-applications/C/add-applications.xml:111(para)
+#: add-applications/C/add-applications.xml:335(para)
 msgid ""
-"To enable <application>Synaptic</application> to install packages from CDs "
+"To enable Synaptic and other package managers to install software from CDs "
 "which contain packages:"
 msgstr ""
-"ソフトウェアパッケージを含んだCDからパッケージをインストールできるように<application>Synaptic</application>を設定する"
-"には"
 
-#: add-applications/C/add-applications.xml:114(para)
+#: add-applications/C/add-applications.xml:342(para)
 msgid ""
-"Open "
-"<menuchoice><guimenu>System</guimenu><guimenuitem>Administration</guimenuitem"
-"><guimenuitem>Synaptic Package Manager</guimenuitem></menuchoice>."
+"Press "
+"<menuchoice><guimenuitem>System</guimenuitem><guimenuitem>Administration</gui"
+"menuitem><guimenuitem>Software Sources</guimenuitem></menuchoice>."
 msgstr ""
-"<menuchoice><guimenu>システム</guimenu><guimenuitem>システム管理</guimenuitem><guimenui"
-"tem>Synaptic パッケージ・マネージャ</guimenuitem></menuchoice>を開いてください"
+"<menuchoice><guimenuitem>システム</guimenuitem><guimenuitem>システム管理</guimenuitem><"
+"guimenuitem>ソフトウェアソース</guimenuitem></menuchoice> をクリック"
 
-#: add-applications/C/add-applications.xml:117(para)
+#: add-applications/C/add-applications.xml:350(para)
 msgid ""
-"Open the <emphasis>Software Sources</emphasis> tool by selecting "
-"<guimenuitem>Repositories</guimenuitem> from the <guimenu>Settings</guimenu> "
-"menu of <application>Synaptic Package Manager</application>."
+"Go to the <guilabel>Third Party Software</guilabel> tab and click on the "
+"<guibutton>Add CD-ROM</guibutton> button."
 msgstr ""
-"<application>Synaptic "
-"パッケージ・マネージャ</application>の<guimenu>設定</guimenu>から<guimenuitem>リポジトリ</guimenui"
-"tem>を選択してmphasis>ソフトウェア・ソース</emphasis>ツールを開ます"
+"<guilabel>サードパーティーのソフトウェア</guilabel>タブを選択し、<guibutton>CD-"
+"ROMを追加</guibutton>ボタンをクリックします。"
 
-#: add-applications/C/add-applications.xml:123(para)
-msgid "Insert the CD which contains the packages."
-msgstr "パッケージを含んだCDをドライブに挿入します"
+#: add-applications/C/add-applications.xml:356(para)
+msgid "Insert the CD."
+msgstr "CDを挿入してください"
 
-#: add-applications/C/add-applications.xml:126(para)
+#: add-applications/C/add-applications.xml:362(para)
 msgid ""
-"The packages should then be listed. To have "
-"<application>Synaptic</application> only list packages from the CD, click "
-"the <guibutton>Origin</guibutton> button on the lower left corner of "
-"<application>Synaptic Package Manager</application>, then find the name of "
-"the CD on the list on the upper left corner of "
-"<application>Synaptic</application>."
+"The packages should then be listed. To have Synaptic only list packages from "
+"the CD, click the <guibutton>Origin</guibutton> button on the lower left "
+"corner of the Synaptic window and then find the name of the CD in the list "
+"in the upper left corner the window."
 msgstr ""
-"するとパッケージ名が列挙されるはずです。<application>Synaptic</application>でCD内のパッケージだけを扱うには、<app"
-"lication>Synaptic "
-"パッケージ・マネージャ</application>の左下隅にある<guibutton>原点</guibutton>ボタンをクリックし、<applicati"
-"on>Synaptic</application>の左上隅にあるリストからCDの名前を見つけ出します。"
 
-#: add-applications/C/add-applications.xml:129(title)
+#: add-applications/C/add-applications.xml:371(title)
 msgid "Using APTonCD to install packages"
 msgstr "APTonCDを使ったパッケージのインストール"
 
-#: add-applications/C/add-applications.xml:130(para)
+#: add-applications/C/add-applications.xml:372(para)
 msgid ""
 "<application>APTonCD</application> can be used to create a CD that contains "
 "all the packages you have on your system, or it can create CDs with packages "
@@ -540,21 +585,17 @@ msgstr ""
 ">などのパッケージマネージャにおいては<emphasis>aptoncd</emphasis>パッケージとして表示され、パッケージマネージャを通じてそれを"
 "インストールすることができます。"
 
-#: add-applications/C/add-applications.xml:131(para)
+#: add-applications/C/add-applications.xml:379(para)
 msgid ""
-"Further documentation on <application>APTonCD</application> can be found on "
-"it's website, <ulink "
-"url=\"http://aptoncd.sourceforge.net\">aptoncd.sourceforge.net</ulink>"
+"Further documentation on APTonCD can be found on its website, <ulink "
+"url=\"http://aptoncd.sourceforge.net\"> aptoncd.sourceforge.net</ulink>"
 msgstr ""
-"<application>APTonCD</application>についての詳細なドキュメントは、そのウェブサイト（<ulink "
-"url=\"http://aptoncd.sourceforge.net\">aptoncd.sourceforge.net</ulink>）で見ることが"
-"できます。"
 
-#: add-applications/C/add-applications.xml:136(title)
+#: add-applications/C/add-applications.xml:388(title)
 msgid "Advanced package management"
 msgstr "高度なパッケージ管理"
 
-#: add-applications/C/add-applications.xml:137(para)
+#: add-applications/C/add-applications.xml:389(para)
 msgid ""
 "Several other package managers exist in Ubuntu. These contain more advanced "
 "features than <application>Add/Remove Applications</application>."
@@ -562,11 +603,11 @@ msgstr ""
 "Ubuntuには、他にいくつかのパッケージマネージャがあり、<application>アプリケーションの追加と削除</application>よりも高度な"
 "機能を持っています。"
 
-#: add-applications/C/add-applications.xml:139(title)
+#: add-applications/C/add-applications.xml:395(title)
 msgid "Synaptic Package Manager"
 msgstr "Synaptic パッケージマネージャ"
 
-#: add-applications/C/add-applications.xml:140(para)
+#: add-applications/C/add-applications.xml:396(para)
 msgid ""
 "<application>Synaptic</application> is an advanced package management "
 "application that can install and remove every package available to your "
@@ -579,99 +620,48 @@ msgstr ""
 "ンです。インターフェースは<application>アプリケーションの追加と削除</application>のようにグラフィカルですが, "
 "より多くの情報の表示とあなたのコンピュータにあるソフトウェアの完全な管理を可能にします。"
 
-#: add-applications/C/add-applications.xml:141(para)
+#: add-applications/C/add-applications.xml:403(para)
 msgid ""
-"To launch <application>Synaptic</application>, press "
+"To launch Synaptic, press "
 "<menuchoice><guimenu>System</guimenu><guimenuitem>Administration</guimenuitem"
-"><guimenuitem>Synaptic Package Manager</guimenuitem></menuchoice>. You need "
-"administrative access to use <application>Synaptic</application>. See <ulink "
-"type=\"help\" url=\"ghelp:administrative\">Administrative Tasks</ulink> for "
-"more details."
+"><guimenuitem>Synaptic Package Manager</guimenuitem></menuchoice>. You will "
+"need administrative access to use it; see <ulink type=\"help\" "
+"url=\"ghelp:administrative\"> Administrative Tasks</ulink> for more details."
 msgstr ""
-"application>Synaptic</application>を起動するには、<menuchoice><guimenu>システム</guimenu>"
-"<guimenuitem>システム管理</guimenuitem><guimenuitem>Synaptic "
-"パッケージ・マネージャ</guimenuitem></menuchoice>をクリックしてください。<application>Synaptic</appl"
-"ication>を使用するには管理権限が必要です。管理権限についての詳細は<ulink type=\"help\" "
-"url=\"ghelp:administrative\">管理者の作業</ulink>をご覧ください。"
 
-#: add-applications/C/add-applications.xml:143(para)
+#: add-applications/C/add-applications.xml:408(para)
 msgid ""
-"If you know the name of the package you want to install or remove, click the "
-"<guibutton>Search</guibutton> button, and enter the package name or a short "
-"search term. You can also search for packages by description (for example, "
-"you can find all packages mentioning "
-"<quote><wordasword>arcade</wordasword></quote> or "
-"<quote><wordasword>mathematics</wordasword></quote>)."
+"See the <ulink type=\"help\" url=\"ghelp:synaptic#synaptic-single\"> "
+"Synaptic manual</ulink> for more information on managing packages with "
+"Synaptic."
 msgstr ""
-"もしインストールまたはアンインストールしたいパッケージの名前がわかっているのなら、<guibutton>検索</guibutton>ボタンをクリックして、"
-"パッケージ名を入力してください。また、パッケージの解説から検索することも可能です。(たとえば、<quote><wordasword>ゲーム</wordas"
-"word></quote>や<quote><wordasword>数学</wordasword></quote>といった文字が説明に含まれるパッケージを検"
-"索することができます。)"
 
-#: add-applications/C/add-applications.xml:144(para)
-msgid ""
-"Use the categories on the left to filter the list of packages. To return to "
-"the list of categories after doing a search, click "
-"<guibutton>Sections</guibutton>."
-msgstr ""
-"パッケージを左側のカテゴリから絞りこむこともできます。検索を行った後でカテゴリのリストに戻るには "
-"<guibutton>セクション</guibutton> をクリックしてください。"
-
-#: add-applications/C/add-applications.xml:145(para)
-msgid ""
-"To install a package, click the box next to it and choose <guimenuitem>Mark "
-"for installation</guimenuitem>. If you change your mind, choose "
-"<guimenuitem>Unmark</guimenuitem>."
-msgstr ""
-"パッケージをインストールするには、パッケージの右側にあるボックスを右クリックし<guimenuitem>インストール指定</guimenuitem>を選択"
-"してください。後で気が変わった場合は、<guimenuitem>マークを外す</guimenuitem>を選択してください。"
-
-#: add-applications/C/add-applications.xml:146(para)
-msgid ""
-"To remove a package that is already installed, choose <guimenuitem>Mark for "
-"Removal</guimenuitem>."
-msgstr ""
-"すでにインストールされているパッケージを削除するには、<guimenuitem>削除をマーク</guimenuitem>を選択してください。"
-
-#: add-applications/C/add-applications.xml:147(para)
-msgid ""
-"When you have finished, click <guibutton>Apply</guibutton> and Ubuntu will "
-"make the changes you selected. If you do not want to make any changes, close "
-"the window instead."
-msgstr ""
-"パッケージのインストールが完了したら<guibutton>適用</guibutton>をクリックすればUbuntuはあなたの選択どおりに必要な変更を行いま"
-"す。もしあなたがいかなる変更も望まないのなら<guibutton>適用</guibutton>をクリックしないでウィンドウを閉じてください。"
-
-#: add-applications/C/add-applications.xml:150(title)
+#: add-applications/C/add-applications.xml:416(title)
 msgid "Command-line package management with APT"
 msgstr "APTによるコマンドラインパッケージ管理"
 
-#: add-applications/C/add-applications.xml:151(para)
+#: add-applications/C/add-applications.xml:417(para)
 msgid ""
 "If you are comfortable using the Terminal, you can use "
 "<application>apt</application> (Advanced Packaging Tool) to install or "
-"remove software. You need administrative access to use "
-"<application>apt</application>. See <ulink type=\"help\" "
-"url=\"ghelp:administrative\">Administrative Tasks</ulink> for more details."
+"remove software. You need administrative access to use apt; see <ulink "
+"type=\"help\" url=\"ghelp:administrative\"> Administrative Tasks</ulink> for "
+"more details."
 msgstr ""
-"ターミナルを使う方が快適なら、<application>apt</application> (Advanced Packaging "
-"Tool)をインストールまたはアンインストールに使用することができます。<application>apt</application> "
-"を使用するには管理者権限が必要です。詳細は <ulink type=\"help\" "
-"url=\"ghelp:administrative\">管理タスク</ulink> を参照してください。"
 
-#: add-applications/C/add-applications.xml:158(para)
+#: add-applications/C/add-applications.xml:424(para)
 msgid ""
 "To update the local list of packages, enter in a Terminal: <screen>sudo apt-"
 "get update</screen>"
 msgstr ""
 "ローカルにあるパッケージリストを更新するには、ターミナルで以下を入力します: <screen>sudo apt-get update</screen>"
 
-#: add-applications/C/add-applications.xml:162(para)
+#: add-applications/C/add-applications.xml:428(para)
 msgid ""
 "To install all available updates: <screen>sudo apt-get upgrade</screen>"
 msgstr "全ての利用可能なアップデートをインストールする: <screen>sudo apt-get upgrade</screen>"
 
-#: add-applications/C/add-applications.xml:166(para)
+#: add-applications/C/add-applications.xml:432(para)
 msgid ""
 "To search for a package: <screen>apt-cache search "
 "<replaceable>package</replaceable></screen>"
@@ -679,7 +669,7 @@ msgstr ""
 "パッケージを検索するには: <screen>apt-cache search "
 "<replaceable>package</replaceable></screen>"
 
-#: add-applications/C/add-applications.xml:170(para)
+#: add-applications/C/add-applications.xml:436(para)
 msgid ""
 "To install a package: <screen>sudo apt-get install "
 "<replaceable>package</replaceable></screen>"
@@ -687,7 +677,7 @@ msgstr ""
 "パッケージをインストールするには: <screen>sudo apt-get install "
 "<replaceable>package</replaceable></screen>"
 
-#: add-applications/C/add-applications.xml:174(para)
+#: add-applications/C/add-applications.xml:440(para)
 msgid ""
 "To remove a package: <screen>sudo apt-get remove "
 "<replaceable>package</replaceable></screen>"
@@ -695,7 +685,14 @@ msgstr ""
 "パッケージを削除するには: <screen>sudo apt-get remove "
 "<replaceable>package</replaceable></screen>"
 
-#: add-applications/C/add-applications.xml:178(para)
+#: add-applications/C/add-applications.xml:444(para)
+msgid ""
+"To remove a package and all its dependancies (that are not in use by other "
+"programs): <screen>sudo apt-get autoremove "
+"<replaceable>package</replaceable></screen>"
+msgstr ""
+
+#: add-applications/C/add-applications.xml:449(para)
 msgid ""
 "To list other <application>apt</application> commands and options: "
 "<screen>apt-get help</screen>"
@@ -703,19 +700,18 @@ msgstr ""
 "そのほかの<application>apt</application>コマンドやオプションを表示する: <screen>apt-get "
 "help</screen>"
 
-#: add-applications/C/add-applications.xml:182(para)
+#: add-applications/C/add-applications.xml:453(para)
 msgid ""
 "For more information, see the <ulink url=\"http://www.debian.org/doc/user-"
-"manuals#apt-howto\">Debian <application>apt</application> manual</ulink>."
+"manuals#apt-howto\">Debian apt manual</ulink> and the <ulink url=\"man:apt-"
+"get\">apt-get manual page</ulink>."
 msgstr ""
-"さらに詳しい情報については<ulink url=\"http://www.debian.org/doc/user-manuals#apt-"
-"howto\">Debian <application>apt</application> manual</ulink>をご覧ください。"
 
-#: add-applications/C/add-applications.xml:186(title)
+#: add-applications/C/add-applications.xml:462(title)
 msgid "Installing a single package file"
 msgstr "単体のパッケージファイルをインストール"
 
-#: add-applications/C/add-applications.xml:187(para)
+#: add-applications/C/add-applications.xml:463(para)
 msgid ""
 "The preferred method of installing programs is via the package managers "
 "described in this chapter. However, although the Ubuntu package archives are "
@@ -727,13 +723,13 @@ msgstr ""
 "ッケージがありますが、Ubuntuアーカイブにないパッケージをインストールしようと思えば、それも可能です。もしそうする場合は、WEBサイトからインストール"
 "するファイルをダウンロードする必要があります。"
 
-#: add-applications/C/add-applications.xml:195(para)
+#: add-applications/C/add-applications.xml:471(para)
 msgid ""
 "It is important to ensure that any files you download come from a safe "
 "source before installing them."
 msgstr "インストールする前に、ダウンロードしたあらゆるファイルの出どころが安全であることを確認することが重要です。"
 
-#: add-applications/C/add-applications.xml:199(para)
+#: add-applications/C/add-applications.xml:475(para)
 msgid ""
 "There are many different kinds of Linux package files. Most of these are "
 "associated with the package managers of specific Linux distributions. "
@@ -752,11 +748,11 @@ msgstr ""
 "class=\"extension\">.tar</filename> files)または<filename "
 "class=\"extension\">.run</filename>ファイルなどです。"
 
-#: add-applications/C/add-applications.xml:211(para)
+#: add-applications/C/add-applications.xml:487(para)
 msgid "This section deals with installing these single files."
 msgstr "このセクションではこうしたファイル単体のインストールを扱います。"
 
-#: add-applications/C/add-applications.xml:215(para)
+#: add-applications/C/add-applications.xml:491(para)
 msgid ""
 "It is not guaranteed that these files will be compatible with your system "
 "and you will not receive security updates if you install these files. For "
@@ -768,11 +764,11 @@ msgstr ""
 "プログラムをインストールしようとするならば、パッケージマネージャで用意されているアプリケーションのネイティブなUbuntuパッケージを、利用可能ならば、常"
 "に使うようにしてください。"
 
-#: add-applications/C/add-applications.xml:225(title)
-msgid "Install/uninstall <filename class=\"extension\">.deb</filename> files"
-msgstr "<filename class=\"extension\">.deb</filename>ファイルのインストール/アンインストール"
+#: add-applications/C/add-applications.xml:501(title)
+msgid "Installing/uninstalling .deb files"
+msgstr ""
 
-#: add-applications/C/add-applications.xml:226(para)
+#: add-applications/C/add-applications.xml:502(para)
 msgid ""
 "These files are <emphasis>Debian packages</emphasis>. The package files "
 "associated with Ubuntu have the <filename "
@@ -789,7 +785,7 @@ msgstr ""
 "class=\"extension\">.deb</filename>ファイルをインストールするには管理者特権が必要です。詳しくは<ulink "
 "type=\"help\" url=\"ghelp:administrative\">管理の作業</ulink>をご覧ください。"
 
-#: add-applications/C/add-applications.xml:236(para)
+#: add-applications/C/add-applications.xml:512(para)
 msgid ""
 "To install a <filename class=\"extension\">.deb</filename> file, double-"
 "click on it. If you prefer using the Terminal, enter: <screen>sudo dpkg -i "
@@ -800,53 +796,55 @@ msgstr ""
 "なたが端末を使う方が好きなら、次のように入力します: <screen>sudo dpkg -i "
 "<replaceable>package_file.deb</replaceable></screen>"
 
-#: add-applications/C/add-applications.xml:240(para)
+#: add-applications/C/add-applications.xml:516(para)
 msgid ""
-"To uninstall a <filename class=\"extension\">.deb</filename> file, deselect "
-"it in your package manager. Or from a Terminal, enter: <screen>sudo dpkg -r "
+"You can use your package manager to uninstall a <filename "
+"class=\"extension\">.deb</filename> file once it has been installed. "
+"Alternatively, enter the following in a Terminal: <screen>sudo dpkg -r "
 "<replaceable>package_name</replaceable></screen>"
 msgstr ""
-"<filename "
-"class=\"extension\">.deb</filename>をアンインストールするには、パッケージマネージャを使ってパッケージをアンインストール"
-"します。または端末から次のように入力します: <screen>sudo dpkg -r "
-"<replaceable>package_name</replaceable></screen>"
+"一度インストールした<filename "
+"class=\"extension\">.deb</filename>ファイルについては、パッケージマネージャを使って削除することが可能です。また、端末で"
+"下記のコマンドを入力することでも削除できます：<screen>sudo dpkg -r "
+"<replaceable>パッケージ名</replaceable></screen>"
 
-#: add-applications/C/add-applications.xml:247(title)
-msgid ""
-"Convert <filename class=\"extension\">.rpm</filename> files to <filename "
-"class=\"extension\">.deb</filename> files"
+#: add-applications/C/add-applications.xml:524(title)
+msgid "Converting .rpm files to .deb files"
 msgstr ""
-"<filename class=\"extension\">.rpm</filename>ファイルを<filename "
-"class=\"extension\">.deb</filename>ファイルに変換するには"
 
-#: add-applications/C/add-applications.xml:250(para)
+#: add-applications/C/add-applications.xml:525(para)
 msgid ""
-"Another type of package files is <emphasis>Red Hat Package "
-"Manager</emphasis> files which have the <filename "
-"class=\"extension\">.rpm</filename> suffix. It is not recommended to install "
-"these on an Ubuntu system. In almost all cases, a native Ubuntu <filename "
+"Another type of package is the <emphasis>Red Hat Package Manager</emphasis> "
+"(RPM) file. These have the <filename class=\"extension\">.rpm</filename> "
+"suffix. It is not recommended to install these on an Ubuntu system. In "
+"almost all cases, a native Ubuntu <filename "
 "class=\"extension\">.deb</filename> package is available. However, if "
 "absolutely necessary, an <filename class=\"extension\">.rpm</filename> file "
 "can be converted to a <filename class=\"extension\">.deb</filename> package "
-"using the program <application>alien</application>. The resulting <filename "
-"class=\"extension\">.deb</filename> file will be installed using dpkg as "
-"indicated above."
+"using the <application>alien</application> application. The resulting "
+"<filename class=\"extension\">.deb</filename> file can be installed as "
+"described above."
 msgstr ""
-"もうひとつのパッケージ形式は、<filename "
-"class=\"extension\">.rpm</filename>という拡張子を持つ<emphasis>Red Hat Package "
-"Manager</emphasis>ファイルです。Ubuntuのシステムにこの形式のパッケージファイルをインストールすることは推奨されません。何らかのアプ"
-"リケーションをインストールしたいとあなたが考えるとき、ほとんどの場合はUbuntu向けの<filename "
-"class=\"extension\">.deb</filename>パッケージが利用できます。どうしても<filename "
-"class=\"extension\">.rpm</filename>ファイルをインストールしなければならないときは、<application>alien"
-"</application>を使って<filename "
-"class=\"extension\">.deb</filename>パッケージに変換することは可能です。変換して生成された<filename "
-"class=\"extension\">.deb</filename>ファイルは、上で示したdpkgを用いてインストールします。"
+"もう一つのパッケージファイル形式として、<emphasis>Red Hat Package Manager</emphasis> "
+"が存在します。このファイルは<filename "
+"class=\"extension\">.rpm</filename>という拡張子を持っています。これをUbuntuにインストールすることは推奨されていま"
+"せん。多くの場合、同じ機能を提供するUbuntu用の<filename "
+"class=\"extension\">.deb</filename>ファイルが存在するからです。ただ、どうしてもその<filename "
+"class=\"extension\">.rpm</filename>ファイルをインストールしなくてはいけない場合、<application>alien<"
+"/application>というアプリケーションを使うことで、<filename "
+"class=\"extension\">.deb</filename>形式に変換することが可能です。変換された<filename "
+"class=\"extension\">.deb</filename>ファイルについては、上で述べたのと同じ方法でインストールできます。"
 
-#: add-applications/C/add-applications.xml:265(para)
+#: add-applications/C/add-applications.xml:538(para)
+msgid ""
+"To convert an RPM into a <filename class=\"extension\">.deb</filename>:"
+msgstr "RPMを<filename class=\"extension\">.deb</filename>に変換するには："
+
+#: add-applications/C/add-applications.xml:544(para)
 msgid "Install the <application>alien</application> package."
 msgstr "<application>alien</application>パッケージをインストールします。"
 
-#: add-applications/C/add-applications.xml:268(para)
+#: add-applications/C/add-applications.xml:549(para)
 msgid ""
 "In a Terminal, enter: <screen>sudo alien "
 "<replaceable>package_file.rpm</replaceable></screen>"
@@ -854,25 +852,28 @@ msgstr ""
 "端末に次のように入力します: <screen>sudo alien "
 "<replaceable>package_file.rpm</replaceable></screen>"
 
-#: add-applications/C/add-applications.xml:276(title)
-msgid "Install <emphasis>tarballs</emphasis>"
-msgstr "<emphasis>tarボール</emphasis>のインストール"
+#: add-applications/C/add-applications.xml:558(title)
+msgid "Installing <emphasis>tarballs</emphasis>"
+msgstr "<emphasis>tarball</emphasis>のインストール"
 
-#: add-applications/C/add-applications.xml:277(para)
+#: add-applications/C/add-applications.xml:559(para)
 msgid ""
 "Files with the <filename class=\"extension\">.tar</filename>, <filename "
 "class=\"extension\">.tgz</filename>, <filename "
 "class=\"extension\">.tar.gz</filename> or <filename "
 "class=\"extension\">.tar.bz2</filename> suffix are package files known as "
-"<emphasis>tarballs</emphasis> which are widely used in Linux and Unix."
+"<emphasis>tarballs</emphasis>, and are widely used in Linux and Unix to "
+"package software. Tarballs can also be used to archive and compress other "
+"files."
 msgstr ""
-"<filename class=\"extension\">.tar</filename>、<filename "
-"class=\"extension\">.tgz</filename>,、<filename "
+"<filename class=\"extension\">.tar</filename>や<filename "
+"class=\"extension\">.tgz</filename>、<filename "
 "class=\"extension\">.tar.gz</filename>、<filename "
-"class=\"extension\">.tar.bz2</filename>の拡張子が付くファイルは、LinuxやUnixでひろく用いられている<emp"
-"hasis>tarballs</emphasis>と呼ばれるパッケージファイルです。"
+"class=\"extension\">.tar.bz2</filename>といった拡張子の付いたファイルは、<emphasis>tarball</em"
+"phasis>と呼ばれるパッケージファイルであり、LinuxやUnixで幅広く使われています。このtarballは、様々なファイルを圧縮・アーカイブ化する"
+"ためにも使われます。"
 
-#: add-applications/C/add-applications.xml:283(para)
+#: add-applications/C/add-applications.xml:568(para)
 msgid ""
 "If there is no native Ubuntu package available in any of the Ubuntu "
 "repositories, you can use the command line to install or uninstall the "
@@ -881,7 +882,7 @@ msgstr ""
 "もし利用可能なUbuntuネイティブのパッケージがどのリポジトリにも無い場合は、tarballファイルをコマンドラインからインストールまたはアンインストー"
 "ルすることが可能です。"
 
-#: add-applications/C/add-applications.xml:285(para)
+#: add-applications/C/add-applications.xml:573(para)
 msgid ""
 "The first step will be to uncompress and extract the tarball. If it is a "
 "<emphasis>.tgz</emphasis> or a <emphasis>.tar.gz</emphasis>, in a Terminal "
@@ -891,7 +892,7 @@ msgstr ""
 "ar.gz</emphasis>なら、端末から次のように入力します: <screen>tar xfvz "
 "<replaceable>tarball_name</replaceable></screen>"
 
-#: add-applications/C/add-applications.xml:289(para)
+#: add-applications/C/add-applications.xml:579(para)
 msgid ""
 "Then it will be necessary to follow the instructions that come with the "
 "package. These are generally located in the extracted tarball in a file "
@@ -901,7 +902,7 @@ msgstr ""
 "から展開されたファイルの中の、<filename>README</filename> または "
 "<filename>INSTALL</filename>というファイルです。"
 
-#: add-applications/C/add-applications.xml:295(para)
+#: add-applications/C/add-applications.xml:585(para)
 msgid ""
 "Tarballs often contain the source code of the program, and need to be "
 "<emphasis>compiled</emphasis> in order to be used."
@@ -909,20 +910,18 @@ msgstr ""
 "Tarballには、たいがいプログラムのソースコードが含まれており、使用するためには<emphasis>コンパイル</emphasis>する必要があります"
 "。"
 
-#: add-applications/C/add-applications.xml:298(para)
+#: add-applications/C/add-applications.xml:590(para)
 msgid ""
 "Compiling programs requires some packages that are not installed by default. "
-"You can install these all at once by installing the <application>build-"
-"essential</application> package."
+"You can install most of these all at once by installing the <ulink "
+"url=\"apt:build-essential\">build-essential</ulink> package."
 msgstr ""
-"プログラムをコンパイルするには、標準でインストールされないいくつかのパッケージが必要です。<application>build-"
-"essential</application>パッケージをインストールすることで、全てを一度にインストールすることができます。"
 
-#: add-applications/C/add-applications.xml:302(title)
-msgid "Install <filename class=\"extension\">.run</filename> packages"
-msgstr "<filename class=\"extension\">.run</filename>パッケージをインストール"
+#: add-applications/C/add-applications.xml:600(title)
+msgid "Install .run packages"
+msgstr ""
 
-#: add-applications/C/add-applications.xml:303(para)
+#: add-applications/C/add-applications.xml:601(para)
 msgid ""
 "Sometimes you may need to install software (most often a game) which has "
 "been packaged as a .run file. These files contain the software and a small "
@@ -931,7 +930,7 @@ msgstr ""
 "ときには .runファイルとしてパッケージされたソフトウェア（よくあるのはゲーム）をインストールしたい場合があるかもしれません。そのような "
 ".runファイルには、ソフトウェアとそのソフトウェアをインストールするためのプログラムとが含まれています。"
 
-#: add-applications/C/add-applications.xml:304(para)
+#: add-applications/C/add-applications.xml:606(para)
 msgid ""
 "Follow the procedure below to install software packaged in a <filename "
 "class=\"extension\">.run</filename> file:"
@@ -939,7 +938,7 @@ msgstr ""
 "<filename "
 "class=\"extension\">.run</filename>でパッケージされたソフトウェアをインストールするには下の手順にしたがってください。"
 
-#: add-applications/C/add-applications.xml:308(para)
+#: add-applications/C/add-applications.xml:613(para)
 msgid ""
 "Find the <filename class=\"extension\">.run</filename> file in the "
 "<application>File Browser</application>"
@@ -947,11 +946,11 @@ msgstr ""
 "<application>ファイル・ブラウザ</application>で<filename "
 "class=\"extension\">.run</filename>ファイルを見つけてください。"
 
-#: add-applications/C/add-applications.xml:309(para)
+#: add-applications/C/add-applications.xml:619(para)
 msgid "Right-click the file and select <guilabel>Properties</guilabel>"
 msgstr "見つかった .runファイルを右クリックして<guilabel>プロパティ</guilabel>を選択してください"
 
-#: add-applications/C/add-applications.xml:310(para)
+#: add-applications/C/add-applications.xml:624(para)
 msgid ""
 "Under the <guilabel>Permissions</guilabel> tab, make sure that "
 "<guilabel>Allow executing file as program</guilabel> is checked and press "
@@ -960,27 +959,22 @@ msgstr ""
 "<guilabel>アクセス権</guilabel>タブの中の<guilabel>プログラムとして実行できる</guilabel>にチェックマークがついて"
 "いることを確認して、<guibutton>閉じる</guibutton>をクリックします。"
 
-#: add-applications/C/add-applications.xml:311(para)
+#: add-applications/C/add-applications.xml:631(para)
 msgid ""
-"Double-click the <filename class=\"extension\">.run</filename> file to open "
-"it. A dialog box should appear"
+"Double-click the <filename class=\"extension\">.run</filename> file and "
+"press <guibutton>Run in Terminal</guibutton> to run the installer"
 msgstr ""
 "<filename "
-"class=\"extension\">.run</filename>ファイルをダブルクリックするとダイアログボックスが現れるはずです。"
+"class=\"extension\">.run</filename>ファイルをダブルクリックし、インストーラを実行するために<guibutton>端末内"
+"で実行する</guibutton>ボタンを押します。"
 
-#: add-applications/C/add-applications.xml:312(para)
-msgid "Press <guibutton>Run in Terminal</guibutton> to run the installer"
-msgstr "インストーラを実行するには<guibutton>端末内で起動する</guibutton>をクリックしてください。"
-
-#: add-applications/C/add-applications.xml:313(para)
+#: add-applications/C/add-applications.xml:638(para)
 msgid ""
-"A <application>Terminal</application> window will open. Follow any "
-"instructions on-screen to install the program"
+"A Terminal window will open. Follow any instructions on-screen to install "
+"the program"
 msgstr ""
-"<application>端末</application>ウィンドウが開きますので、画面上（端末上）に表示される指示に従ってプログラムをインストールしてく"
-"ださい。"
 
-#: add-applications/C/add-applications.xml:316(para)
+#: add-applications/C/add-applications.xml:646(para)
 msgid ""
 "Once you have started the installer, it may take a while to display an "
 "installation screen. This is normally due to the installer extracting all of "
@@ -1004,4 +998,295 @@ msgstr ""
 "  Kanetaka Suto https://launchpad.net/~kanetaka\n"
 "  Launchpad Translations Administrators https://launchpad.net/~rosetta-"
 "admins\n"
-"  Shushi Kurose https://launchpad.net/~kurokuro"
+"  Shushi Kurose https://launchpad.net/~kurokuro\n"
+"\n"
+"Launchpad Contributions:\n"
+"  CMasami https://launchpad.net/~cmasami\n"
+"  Daisuke Suzuki https://launchpad.net/~dskszk\n"
+"  Jun Sumida https://launchpad.net/~sekitoh-rh\n"
+"  Kanetaka Suto https://launchpad.net/~kanetaka\n"
+"  Launchpad Translations Administrators https://launchpad.net/~rosetta-"
+"admins\n"
+"  Mitsuya Shibata https://launchpad.net/~cosmos-door\n"
+"  Shushi Kurose https://launchpad.net/~kurokuro\n"
+"  Tom https://launchpad.net/~holizz\n"
+"  Yuji Kaneko https://launchpad.net/~yujikaneko\n"
+"  afujihara https://launchpad.net/~afujihara\n"
+"\n"
+"Launchpad Contributions:\n"
+"  CMasami https://launchpad.net/~cmasami\n"
+"  Jun Sumida https://launchpad.net/~sekitoh-rh\n"
+"  Kanetaka Suto https://launchpad.net/~kanetaka\n"
+"  Kentaro Kazuhama https://launchpad.net/~kazken3\n"
+"  Launchpad Translations Administrators https://launchpad.net/~rosetta-"
+"admins\n"
+"  Mitsuya Shibata https://launchpad.net/~cosmos-door\n"
+"  Shushi Kurose https://launchpad.net/~kurokuro\n"
+"  Yuji Kaneko https://launchpad.net/~yujikaneko"
+
+#~ msgid ""
+#~ "You need administrative access to use any of these programs. See <ulink "
+#~ "type=\"help\" url=\"ghelp:administrative\">Administrative Tasks</ulink> for "
+#~ "more details."
+#~ msgstr ""
+#~ "これらのプログラムを使用するには、管理者権限でのアクセスが必要です。詳細は<ulink type=\"help\" "
+#~ "url=\"ghelp:administrative\">管理者権限でのタスク</ulink>を参照してください。"
+
+#~ msgid ""
+#~ "<link linkend=\"synaptic\"><application>Synaptic</application></link> - "
+#~ "Advanced control of software and other system components."
+#~ msgstr ""
+#~ "<link linkend=\"synaptic\"><application>Synaptic</application></link> - "
+#~ "ソフトウエアと他のシステムコンポーネントを詳細にコントロールできます。"
+
+#~ msgid ""
+#~ "To add or remove applications in Ubuntu, you need to use a <emphasis>package "
+#~ "manager</emphasis>. It will automatically download the software required "
+#~ "from the Internet and install it."
+#~ msgstr ""
+#~ "Ubuntuでアプリケーションを追加したり削除するなら、<emphasis>パッケージマネージャ</emphasis>を使う必要があります。それを使うと、"
+#~ "自動的に必要なソフトウェアをインターネットからダウンロードしてインストールすることができます。"
+
+#~ msgid ""
+#~ "To remove a package that is already installed, choose <guimenuitem>Mark for "
+#~ "Removal</guimenuitem>."
+#~ msgstr ""
+#~ "すでにインストールされているパッケージを削除するには、<guimenuitem>削除をマーク</guimenuitem>を選択してください。"
+
+#~ msgid ""
+#~ "To enable <application>Synaptic</application> and other package managers to "
+#~ "install software from CDs which contain packages:"
+#~ msgstr ""
+#~ "<application>Synaptic</application>やその他のパッケージ管理ツールで、CDからソフトウェアをインストールできるようにする"
+#~ "ためには、以下の手順を実行します："
+
+#~ msgid "There are three main package managers you can use in Ubuntu:"
+#~ msgstr "Ubuntuで使用できる主なパッケージマネージャが3つあります:"
+
+#~ msgid ""
+#~ "This document is maintained by the Ubuntu documentation team "
+#~ "(https://wiki.ubuntu.com/DocumentationTeam). For a list of contributors, see "
+#~ "the <ulink url=\"../../../common/C/contributors.xml\">contributors "
+#~ "page</ulink>"
+#~ msgstr ""
+#~ "このドキュメントはUbuntuドキュメンテーション・チーム(https://wiki.ubuntu.com/DocumentationTeam)が保守して"
+#~ "います。貢献者の一覧は、<ulink url=\"../../../common/C/contributors.xml\">contributors "
+#~ "page</ulink>を参照してください。"
+
+#~ msgid ""
+#~ "Compiling programs requires some packages that are not installed by default. "
+#~ "You can install most of these all at once by installing the "
+#~ "<application>build-essential</application> package."
+#~ msgstr ""
+#~ "プログラムをコンパイルするためには、標準ではインストールされていないいくつかのパッケージをインストールする必要があります。<application>bui"
+#~ "ld-essential</application>パッケージをインストールすれば、必要なパッケージのほとんどが同時にインストールされるでしょう。"
+
+#~ msgid ""
+#~ "Installing/uninstalling <filename class=\"extension\">.deb</filename> files"
+#~ msgstr "<filename class=\"extension\">.deb</filename>ファイルのインストール/アンインストール"
+
+#~ msgid ""
+#~ "A <application>Terminal</application> window will open. Follow any "
+#~ "instructions on-screen to install the program"
+#~ msgstr ""
+#~ "<application>端末</application>ウィンドウが開きますので、画面上（端末上）に表示される指示に従ってプログラムをインストールしてく"
+#~ "ださい。"
+
+#~ msgid ""
+#~ "To launch <application>Synaptic</application>, press "
+#~ "<menuchoice><guimenu>System</guimenu><guimenuitem>Administration</guimenuitem"
+#~ "><guimenuitem>Synaptic Package Manager</guimenuitem></menuchoice>. You need "
+#~ "administrative access to use <application>Synaptic</application>; see <ulink "
+#~ "type=\"help\" url=\"ghelp:administrative\">Administrative Tasks</ulink> for "
+#~ "more details."
+#~ msgstr ""
+#~ "<application>Synaptic</application> "
+#~ "を実行するには、<menuchoice><guimenu>システム</guimenu><guimenuitem>システム設定</guimenuitem><"
+#~ "guimenuitem>Synaptic パッケージ・マネージャPackage Manager</guimenuitem></menuchoice> "
+#~ "を選択します。<application>apt</application> を使用するには管理者権限が必要です。詳しくは <ulink "
+#~ "type=\"help\" url=\"ghelp:administrative\">管理タスク</ulink> を参照してください。"
+
+#~ msgid ""
+#~ "If you open more than one of these programs at once, they may not work. "
+#~ "Close them all and open just one."
+#~ msgstr "もしこれらのプログラムを同時に1つ以上開くと、動作しないかもしれません。全て閉じた上で、1つだけ開いてください。"
+
+#~ msgid ""
+#~ "Some packages from the <emphasis>main</emphasis> and "
+#~ "<emphasis>restricted</emphasis> Ubuntu package repositories can be installed "
+#~ "from the Ubuntu installation CD. Simply insert your Ubuntu installation CD "
+#~ "and open "
+#~ "<menuchoice><guimenu>System</guimenu><guimenuitem>Administration</guimenuitem"
+#~ "><guimenuitem>Synaptic Package Manager</guimenuitem></menuchoice>. To list "
+#~ "only packages on the Ubuntu installation CD, click on the "
+#~ "<guibutton>Origin</guibutton> button in the lower left corner of "
+#~ "<application>Synaptic Package Manager</application>. The packages should be "
+#~ "listed under the <guimenuitem>Ubuntu 8.04_Hardy_Heron</guimenuitem> section."
+#~ msgstr ""
+#~ "<emphasis>Main</emphasis>と<emphasis>Restricted</emphasis>に属するパッケージについては、Ubunt"
+#~ "uのインストールCDを使ってインストールすることが可能です。UbuntuのインストールCDをCDドライブに挿入し、<menuchoice><guimenu"
+#~ ">システム</guimenu><guimenuitem>システム管理</guimenuitem><guimenuitem>Synaptic "
+#~ "パッケージ・マネージャ</guimenuitem></menuchoice>を起動してください。インストールCD上のパッケージのみを表示させるために、<a"
+#~ "pplication>Synaptic "
+#~ "パッケージ・マネージャ</application>の左下にある<guibutton>原点</guibutton>ボタンを押し、<guimenuitem>U"
+#~ "buntu 8.04_Hardy_Heron</guimenuitem>を選択します。"
+
+#~ msgid ""
+#~ "There are thousands of programs available to install on Ubuntu. These "
+#~ "programs are stored in software archives (<emphasis>repositories</emphasis>) "
+#~ "and are made freely available for installation over the Internet. This makes "
+#~ "it very easy to install new programs in Linux, and it is also very secure, "
+#~ "because each program you install is built specially for Ubuntu and checked "
+#~ "before it is installed."
+#~ msgstr ""
+#~ "Ubuntuには何千もの利用可能なアプリケーションがあります。(<emphasis>リポジトリ</emphasis>)というソフトウェアアーカイブに蓄積さ"
+#~ "れいていて、インターネットを通して自由にインストールすることができます。"
+
+#~ msgid ""
+#~ "Use the categories on the left to filter the list of packages. To return to "
+#~ "the list of categories after doing a search, click "
+#~ "<guibutton>Sections</guibutton>."
+#~ msgstr ""
+#~ "パッケージを左側のカテゴリから絞りこむこともできます。検索を行った後でカテゴリのリストに戻るには "
+#~ "<guibutton>セクション</guibutton> をクリックしてください。"
+
+#~ msgid ""
+#~ "To install a package, click the box next to it and choose <guimenuitem>Mark "
+#~ "for installation</guimenuitem>. If you change your mind, choose "
+#~ "<guimenuitem>Unmark</guimenuitem>."
+#~ msgstr ""
+#~ "パッケージをインストールするには、パッケージの右側にあるボックスを右クリックし<guimenuitem>インストール指定</guimenuitem>を選択"
+#~ "してください。後で気が変わった場合は、<guimenuitem>マークを外す</guimenuitem>を選択してください。"
+
+#~ msgid ""
+#~ "In this section you can learn how to use a package manager to add or remove "
+#~ "applications in Ubuntu with a few clicks. You can also learn about more "
+#~ "advanced techniques of managing applications and discover some optional "
+#~ "applications which you can add to Ubuntu."
+#~ msgstr ""
+#~ "このセクションでは、数回クリックするだけでUbuntuにアプリケーションを追加/削除することのできる、パッケージマネージャの使い方を学ぶことができます。よ"
+#~ "り高度なアプリケーション管理の技術や、Ubuntu にインストールできる任意のアプリケーションを見つける方法も学べます。"
+
+#~ msgid ""
+#~ "The packages should then be listed. To have "
+#~ "<application>Synaptic</application> only list packages from the CD, click "
+#~ "the <guibutton>Origin</guibutton> button on the lower left corner of "
+#~ "<application>Synaptic Package Manager</application>, then find the name of "
+#~ "the CD on the list in the upper left corner of "
+#~ "<application>Synaptic</application>."
+#~ msgstr ""
+#~ "パッケージがリスト化されるはずです。<application>Synaptic</application> が CD "
+#~ "からパッケージのみをリスト化するためには、<application>Synaptic パッケージ・マネージャ</application> の左下の "
+#~ "<guibutton>原点</guibutton> ボタンをクリックします。すると "
+#~ "<application>Synaptic</application> の右上に CD の名前が現れます。"
+
+#~ msgid "2004, 2005, 2006"
+#~ msgstr "2004, 2005, 2006"
+
+#~ msgid ""
+#~ "Further documentation on <application>APTonCD</application> can be found on "
+#~ "its website, <ulink "
+#~ "url=\"http://aptoncd.sourceforge.net\">aptoncd.sourceforge.net</ulink>"
+#~ msgstr ""
+#~ "更なるドキュメントは、<ulink "
+#~ "url=\"http://aptoncd.sourceforge.net\">aptoncd.sourceforge.net</ulink> の "
+#~ "<application>APTonCD</application> にあります。"
+
+#~ msgid "Install <filename class=\"extension\">.run</filename> packages"
+#~ msgstr "<filename class=\"extension\">.run</filename>パッケージをインストール"
+
+#~ msgid ""
+#~ "A copy of the license is available here: <ulink url=\"/usr/share/ubuntu-"
+#~ "docs/common/C/ccbysa.xml\">Creative Commons ShareAlike License</ulink>."
+#~ msgstr ""
+#~ "このライセンスのコピーは以下で参照可能です: <ulink url=\"/usr/share/ubuntu-"
+#~ "docs/common/C/ccbysa.xml\">Creative Commons ShareAlike License</ulink>。"
+
+#~ msgid ""
+#~ "<link linkend=\"apt\"><application>Apt</application></link> - If you prefer "
+#~ "using the Terminal."
+#~ msgstr ""
+#~ "<link linkend=\"apt\"><application>Apt</application></link> - "
+#~ "ターミナルを使いたいのであれば。"
+
+#~ msgid ""
+#~ "A software repository is a place from which you can download and install "
+#~ "software over the Internet."
+#~ msgstr "ソフトウェアリポジトリとは、インターネットを介してソフトウエアをダウンロードしたりインストールしたりできる場所のことです。"
+
+#~ msgid ""
+#~ "With the <guimenuitem>Add/Remove</guimenuitem> item in the "
+#~ "<guimenu>Applications</guimenu> menu, you can install programs to do new "
+#~ "things with Ubuntu. You can also remove programs you do not want. You need "
+#~ "administrative access to use <application>Add/Remove "
+#~ "Applications</application> (see <ulink type=\"help\" "
+#~ "url=\"ghelp:administrative\">Administrative Tasks</ulink> for more details)."
+#~ msgstr ""
+#~ "<guimenuitem>アプリケーション</guimenuitem>メニューの<guimenuitem>追加と削除</guimenuitem>で、Ubu"
+#~ "ntu に新しいプログラムをインストールできます。 "
+#~ "必要のないプログラムを削除することもできます。<application>アプリケーションの追加と削除</application>を使用するには管理者権限が"
+#~ "必要です（詳しくは<ulink type=\"help\" "
+#~ "url=\"ghelp:administrative\">管理タスク</ulink>を参照してください）。"
+
+#~ msgid ""
+#~ "A package manager is a program that installs and uninstalls software, and "
+#~ "keeps track of all the components each piece of software needs."
+#~ msgstr ""
+#~ "パッケージマネージャはプログラムをインストールしたりアンインストールするソフトウェアで、それぞれのソフトウェアに必要な全てのコンポーネントを追跡します。"
+
+#~ msgid ""
+#~ "Converting <filename class=\"extension\">.rpm</filename> files to <filename "
+#~ "class=\"extension\">.deb</filename> files"
+#~ msgstr ""
+#~ "<filename class=\"extension\">.rpm</filename>ファイルを<filename "
+#~ "class=\"extension\">.deb</filename>に変換する"
+
+#~ msgid ""
+#~ "For more information, see the <ulink url=\"http://www.debian.org/doc/user-"
+#~ "manuals#apt-howto\">Debian <application>apt</application> manual</ulink> and "
+#~ "the <ulink url=\"man:apt-get\">apt-get manual</ulink>."
+#~ msgstr ""
+#~ "更なる情報は <ulink url=\"http://www.debian.org/doc/user-manuals#apt-"
+#~ "howto\">Debian <application>apt</application> manual</ulink> and the <ulink "
+#~ "url=\"man:apt-get\">apt-get manual</ulink> を参照してください。"
+
+#~ msgid ""
+#~ "<link linkend=\"gnome-app-install\"><application>Add/Remove "
+#~ "Applications</application></link> - The easiest way to install and uninstall "
+#~ "programs."
+#~ msgstr ""
+#~ "<link linkend=\"gnome-app-"
+#~ "install\"><application>アプリケーションの追加と削除</application></link> - "
+#~ "プログラムをインストールやアンインストールする最も簡単な方法を提供します。"
+
+#~ msgid ""
+#~ "If you are comfortable using the Terminal, you can use "
+#~ "<application>apt</application> (Advanced Packaging Tool) to install or "
+#~ "remove software. You need administrative access to use "
+#~ "<application>apt</application>; see <ulink type=\"help\" "
+#~ "url=\"ghelp:administrative\">Administrative Tasks</ulink> for more details."
+#~ msgstr ""
+#~ "端末を使う方が好みの場合、<application>apt</application>(Advanced Packaging Tool)  "
+#~ "でインストールやアンインストールが出来ます。<application>apt</application> を使用するには管理者権限が必要です。詳しくは "
+#~ "<ulink type=\"help\" url=\"ghelp:administrative\">管理タスク</ulink> を参照してください。"
+
+#~ msgid ""
+#~ "If you know the name of the package you want to install or remove, click the "
+#~ "<guibutton>Search</guibutton> button, and enter the package name or a short "
+#~ "search term. You can also search for packages by description (for example, "
+#~ "you can find all packages mentioning "
+#~ "<quote><wordasword>arcade</wordasword></quote> or "
+#~ "<quote><wordasword>mathematics</wordasword></quote>)."
+#~ msgstr ""
+#~ "もしインストールまたはアンインストールしたいパッケージの名前がわかっているのなら、<guibutton>検索</guibutton>ボタンをクリックして、"
+#~ "パッケージ名を入力してください。また、パッケージの解説から検索することも可能です。(たとえば、<quote><wordasword>ゲーム</wordas"
+#~ "word></quote>や<quote><wordasword>数学</wordasword></quote>といった文字が説明に含まれるパッケージを検"
+#~ "索することができます。)"
+
+#~ msgid ""
+#~ "When you have finished, click <guibutton>Apply</guibutton> and Ubuntu will "
+#~ "make the changes you selected. If you do not want to make any changes, close "
+#~ "the window instead."
+#~ msgstr ""
+#~ "パッケージのインストールが完了したら<guibutton>適用</guibutton>をクリックすればUbuntuはあなたの選択どおりに必要な変更を行いま"
+#~ "す。もしあなたがいかなる変更も望まないのなら<guibutton>適用</guibutton>をクリックしないでウィンドウを閉じてください。"

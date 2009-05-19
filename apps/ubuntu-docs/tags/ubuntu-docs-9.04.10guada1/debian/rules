@@ -31,7 +31,7 @@ common-binary-post-install-indep::
 		/usr/share/ubuntu-artwork/home/locales-ubuntu \
 		../index.html
 
-# Install the documents; skip documents which are less than 40% translated
+# Install the documents; skip documents which are less than 75% translated
 
 	set -x; for doc in `cat libs/shipped-docs`; do \
 		scripts/translate.sh -d $$doc ; \
@@ -39,8 +39,8 @@ common-binary-post-install-indep::
 			for lang in `ls $$doc/`; do \
 				if [ -e $$doc/po/$$lang.po ]; then \
 					translated=`LANG=C msgfmt -o /dev/null --statistics $$doc/po/$$lang.po 2>&1| cut -f1 -d\ `; \
-					if [ "`echo "$$translated./$$numstrings > 0.4" | bc -l`" = "0" ]; then \
-						echo "$$doc $$lang is less than 40% translated, skipping"; \
+					if [ "`echo "$$translated./$$numstrings > 0.75" | bc -l`" = "0" ]; then \
+						echo "$$doc $$lang is less than 75% translated, skipping"; \
 						continue; \
 					fi; \
 				fi; \

@@ -878,12 +878,12 @@ swap 4000
           <title>OpenSSH</title>
 
           <para>
-          Another convenient tool that we want to have on our appliance is OpenSSH, as it will allows our admins to access 
-          the appliance remotely. However, pushing in the wild an appliance with a pre-installed OpenSSH server is a big security
-          risk as all these server will share the same secret key, making it very easy for hackers to target our appliance with all
-          the tools they need to crack it open in a breeze. As for the user password, we will instead rely on a script that will
-          install OpenSSH the first time a user logs in so that the key generated will be different for each appliance. For this
-          we'll use a <emphasis>--firstboot</emphasis> script, as it does not need any user interaction.
+          Another convenient tool that we want to have on our appliance is OpenSSH, as it will provide our admins to access 
+          to access the appliance remotely. However, pushing in the wild an appliance with a pre-installed OpenSSH server 
+          is a big security risk as all these server will share the same secret key, making it very easy for hackers to target 
+          our appliance with all the tools they need to crack it open in a breeze. As for the user password, we will instead 
+          rely on a script that will install OpenSSH the first time a user logs in so that the key generated will be different 
+          for each appliance. For this we'll use a <emphasis>--firstboot</emphasis> script, as it does not need any user interaction. 
           </para>
 
         </sect4>
@@ -1178,4 +1178,295 @@ echo "browser to http://serverip/limesurvey/admin"
       </itemizedlist>
     </sect2>
   </sect1>
+  <sect1 id="eucalyptus" status="review">
+    <title>Eucalyptus</title>
+
+    <sect2 id="eucalyptus-overview" status="review">
+      <title>Overview</title>
+
+      <para>
+      <emphasis>Eucalyptus</emphasis> is an open-source software infrastructure for implementing "cloud computing" on clusters. 
+      <emphasis>Eucalyptus</emphasis> allows you to create your own cloud computing environment in order to maximize computing 
+      resources.
+      </para>
+
+      <para>
+      This section will cover setting up a Cloud Computing environment using <emphasis>Eucalyptus</emphasis> with KVM.
+      For more information on KVM see <xref linkend="libvirt"/>.
+      </para>
+
+      <para>
+      The Cloud Computing environment will consist of three machines:
+      </para>
+
+      <itemizedlist>
+        <listitem>
+          <para>
+          <emphasis>One Node Controller:</emphasis> contains one <emphasis>Cloud Controller</emphasis>, a Java based Web 
+          configuration interface, and a <emphasis>Cluster Controller</emphasis>, which determines where virtual machines
+          will be housed.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+          <emphasis>Two Compute Nodes:</emphasis> runs the <emphasis>Node Controller</emphasis> component of Eucalyptus, which
+          allows the machine to be part of the cloud.
+          </para>
+        </listitem>
+      </itemizedlist>
+
+      <para>
+      The simple <emphasis>System</emphasis> networking option will be used.  This network method allows <emphasis>instances</emphasis>,
+      also known as virtual machines, to obtain IP addresses from the local LAN.  Each node will be configured for <emphasis>bridge</emphasis>
+      networking.  For more details see <xref linkend="bridging"/>. 
+      </para>
+
+    </sect2>
+    <sect2 id="eucalyptus-configuration" status="review">
+      <title>Configuration</title>
+
+      <para>
+      First, on the <emphasis>Node Controller</emphasis> install the appropriate packages.  In a terminal prompt
+      enter:
+      </para>
+
+<screen>
+<command>sudo apt-get install eucalyptus-cloud eucalyptus-cc eucalyptus-nc</command>
+</screen>
+
+      <para>
+      Once the installation is complete, and it may take a while, in a browser go to <emphasis>https://nodecontroller:8443</emphasis> 
+      and login to the administration interface using the default username and password of <emphasis>admin</emphasis>.  You will 
+      then be prompted to change the password, configure an email address for the admin user, and set the storage URL.
+      </para>
+
+      <para>
+      In the web interface's <emphasis>"Configuration"</emphasis> tab, add a cluster under the <emphasis>"Clusters</emphasis> heading.
+      This will determine where the virtual machines are run.  Once the form is filled out click the <emphasis>"Add Cluster"</emphasis>
+      button.
+      </para>
+
+      <para>
+      Next, create a password for the <emphasis>eucalyptus</emphasis> user.  This is needed to allow <emphasis>SSH</emphasis> 
+      access for the user:
+      </para>
+
+<screen>
+<command>sudo passwd eucalyptus</command>
+</screen>
+
+      <para>
+      On each of the <emphasis>Cluster Nodes</emphasis> install the <application>eucalyptus-nc</application> package, 
+      and set a password for the <emphasis>eucalyptus</emphasis> user:
+      </para>
+
+<screen>
+<command>sudo apt-get install eucalyptus-nc</command>
+<command>sudo passwd eucalyptus</command>
+</screen>
+
+      <para>
+      Now, back on the <emphasis>Node Controller</emphasis>, add the nodes to the cluster:
+      </para>
+
+<screen>
+<command>sudo euca_conf -nodes nodecontroller node01 node02</command>
+</screen>
+
+      <note>
+        <para>
+        Be sure to replace <emphasis>nodecontroller</emphasis>, <emphasis>node01</emphasis>, and <emphasis>node02</emphasis> 
+        with actual hostnames.
+        </para>
+      </note>
+
+      <para>
+      You will then be prompted to confirm authenticity of the host's OpenSSH RSA key fingerprint.
+      </para>
+
+      <para>
+      The <filename>/etc/eucalyptus/eucalyptus.conf</filename> configuration file will need editing to use the bridge 
+      interface:
+      </para>
+
+<programlisting>
+VNET_INTERFACE="br0"
+...
+VNET_BRIDGE="br0"
+</programlisting>
+
+      <para>
+      Finally, restart <application>eucalyptus-cloud</application>:
+      </para>
+
+<screen>
+<command>sudo /etc/init.d/eucalyptus-cloud restart</command>
+</screen>
+
+      <para>
+      <application>Eucalyptus</application> is now ready to host images on the cloud.
+      </para>
+
+    </sect2>
+    <sect2 id="eucalyptus-instances" status="review">
+      <title>Instances</title>
+
+      <para>
+      Before running <emphasis>Intances</emphasis> a kernel, root disk, and an optional ramdisk must be uploaded.
+      The image can be uploaded using the <application>ec2-ami-tools</application> and <application>ec2-api-tools</application>.
+      </para>
+
+      <para>
+      Install the packages from a terminal by entering:
+      </para>
+
+<screen>
+<command>sudo apt-get install ec2-ami-tools ec2-api-tools</command>
+</screen>
+
+      <para>
+      Next, download the certificates from the <emphasis>Node Controller</emphasis> by going to 
+      <emphasis>https://nodecontroller:8443/#credentials</emphasis>, and clicking on the <emphasis>"Download Certificate"</emphasis> button.
+      </para>
+
+      <para>
+      Create a directory and unzip the file, for example:
+      </para>
+
+<screen>
+<command>mkdir .euca</command>
+<command>unzip -d .euca/ euca2-admin-x509.zip</command>
+</screen>
+
+      <para>
+      Now edit <filename>.euca/eucarc</filename> changing the <emphasis>EUCA_KEY_DIR</emphasis> option and the 
+      <emphasis>ec2-upload-bundle</emphasis> alias:
+      </para>
+
+<programlisting>
+EUCA_KEY_DIR=~/.euca
+export S3_URL=http://192.168.0.1:8773/services/Walrus
+export EC2_URL=http://192.168.0.1:8773/services/Eucalyptus
+export EC2_PRIVATE_KEY=${EUCA_KEY_DIR}/euca2-admin-7a312f7c-pk.pem
+export EC2_CERT=${EUCA_KEY_DIR}/euca2-admin-7a312f7c-cert.pem
+export EUCALYPTUS_CERT=${EUCA_KEY_DIR}/cloud-cert.pem
+export EC2_ACCESS_KEY='ISMvKXpXpadDiUoOSoAfww'
+export EC2_SECRET_KEY='iVhxmSCwREvXKZmWd87-RJgKDbjA_clppP-I1A'
+alias ec2-bundle-image="ec2-bundle-image --cert ${EC2_CERT} --privatekey ${EC2_PRIVATE_KEY} --user 000100729354 --ec2cert ${EUCALYPTUS_CERT}"
+alias ec2-upload-bundle="ec2-upload-bundle -a ${EC2_ACCESS_KEY} -s ${EC2_SECRET_KEY} --url ${S3_URL}"
+</programlisting>
+
+      <para>
+      <application>ec2-upload-bundle</application> does not have a <emphasis>--ec2cert</emphasis> option.
+      </para>
+
+      <para>
+      Using <application>source</application> add the options to your environment:
+      </para>
+
+<screen>
+<command>source .euca/eucarc</command>
+</screen>
+
+      <note>
+        <para>
+        You can set the options at login by adding the above command to your <filename>~/.bashrc</filename> file.
+        </para>
+      </note>
+
+      <para>
+      Now that the <emphasis>ec2</emphasis> variables are configured, upload a kernel to the cloud:
+      </para>
+
+<screen>
+<command>ec2-bundle-image -i /boot/vmlinuz-2.6.28-11-server --kernel true</command>
+<command>ec2-upload-bundle -b kernel-bucket -m /tmp/vmlinuz-2.6.28-11-server.manifest.xml</command>
+<command>ec2-register kernel-bucket/vmlinuz-2.6.28-11-server.manifest.xml</command>
+</screen>
+
+      <para>
+      An image file is the next thing to upload.  In this example an Ubuntu image created with <application>vmbuilder</application> is used.
+      For more information on <application>vmbuilder</application> see <xref linkend="jeos-and-vmbuilder"/>.
+      </para>
+
+<screen>
+<command>ec2-bundle-image -i test_instance.qcow2</command>
+<command>ec2-upload-bundle -b image-bucket -m /tmp/test_instance.qcow2.manifest.xml</command>
+<command>ec2-register image-bucket/test_instance.qcow2.manifest.xml</command>
+</screen>
+
+      <para>
+      Optionally you can upload a <emphasis>ramdisk</emphasis> to use with a kernel:
+      </para>
+
+<screen>
+<command>ec2-bundle-image -i /boot/initrd.img-2.6.28-11-server --ramdisk true</command>
+<command>ec2-upload-bundle -b ram-bucket -m /tmp/initrd.img-2.6.28-11-server.manifest.xml</command>
+<command>ec2-register ram-bucket/initrd.img-2.6.28-11-server.manifest.xml</command>
+</screen>
+
+      <note>
+        <para>
+        The kernel and ramdisk uploaded are ones installed on the <emphasis>Node Controller</emphasis> system.  Adjust the path names to 
+        the kernel and ramdisk version installed on your system.
+        </para>
+      </note>
+
+      <para>
+      Now set the default kernel and ramdisks.  In the web interface, <emphasis>https://nodecontroller:8443/#conf</emphasis>, add the ID
+      for the kernel and ramdisk in the <emphasis>"Cloud configuration"</emphasis> section and click the <emphasis>"Save Configuration"</emphasis>
+      button.  The ID for images, kernels, and ramdisks can be found in the <emphasis>Images</emphasis> tab, or alternatively by using the
+      <application>ec2-describe-images</application> utility.
+      </para>
+
+      <para>
+      Finally, start a new instance, be sure to change the image ID to one you have uploaded:
+      </para>
+
+<screen>
+<command>ec2-run-instances emi-FFD11190 --addressing private</command>
+</screen>
+
+      <para>
+      You can now access the instance through SSH if you have installed <application>openssh-server</application> in the image.  If the 
+      image is configured for DHCP you may need to check <filename>/var/lib/dhcp3/dhcpd.leases</filename> to determine which address the
+      instance received.
+      </para>
+
+      <para>
+      The <application>ec2-describe-instances</application> will display instance details:
+      </para>
+
+<screen>
+<command>ec2-describe-instances</command>
+<computeroutput>RESERVATION	r-354107EA	admin	default
+INSTANCE	i-45E108DD	emi-FFD11190	0.0.0.0	0.0.0.0	running		0		m1.small	2009-03-21T20:00:41+0000		eki-F6FB154B	eri-C4D7146A</computeroutput>
+</screen>
+      
+    </sect2>
+    <sect2 id="eucalyptus-references" status="review">
+      <title>References</title>
+
+      <itemizedlist>
+        <listitem>
+          <para>
+          See the <ulink url="http://eucalyptus.cs.ucsb.edu/">Eucalyptus website</ulink> for more information.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+          Also, see the <ulink url="http://developer.amazonwebservices.com/connect/entry.jspa?externalID=351">API Tools</ulink> 
+          and <ulink url="http://developer.amazonwebservices.com/connect/entry.jspa?externalID=368">AMI Tools</ulink> sites.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+          You might also find help in the <emphasis>#ubuntu-virt</emphasis>, <emphasis>#eucalyptus</emphasis>, and 
+          <emphasis>#ubuntu-server</emphasis> IRC channels on <ulink url="http://freenode.net">Freenode</ulink>.
+          </para>
+        </listitem>
+      </itemizedlist>
+      
+    </sect2>
+  </sect1>  
 </chapter>

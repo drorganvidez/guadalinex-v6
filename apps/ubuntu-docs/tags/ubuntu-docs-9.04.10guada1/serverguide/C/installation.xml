@@ -857,6 +857,308 @@ unused devices: &lt;none&gt;</computeroutput>
             </listitem>
           </itemizedlist>
         </sect3>
-      </sect2>       
+      </sect2>  
+      <sect2 id="lvm" status="review">
+        <title>Logical Volume Manager (LVM)</title>
+
+        <para>
+        Logical Volume Manger, or <emphasis>LVM</emphasis>, allows administrators to create <emphasis>logical</emphasis> volumes out of
+        one or multiple physical hard disks.  LVM volumes can be created on both software RAID partitions and standard partitions 
+        residing on a single disk.  Volumes can also be extended, giving greater flexibility to systems as requirements change.
+        </para>
+
+        <sect3 id="lvm-overview" status="review">
+          <title>Overview</title>
+
+          <para>
+          A side effect of LVM's power and flexibility is a greater degree of complication.  Before diving into the LVM installation process,
+          it is best to get familiar with some terms.
+          </para>
+
+          <itemizedlist>
+            <listitem>
+              <para>
+              <emphasis>Volume Group (VG):</emphasis> contains one or several Logical Volumes (LV). 
+              </para>
+            </listitem>
+            <listitem>
+              <para>
+              <emphasis>Logical Volume (LV):</emphasis> is similar to a partition in a non-LVM system.  Multiple Physical Volumes (PV) 
+              can make up one LV, on top of which resides the actual EXT3, XFS, JFS, etc filesystem.
+              </para>
+            </listitem>
+            <listitem>
+              <para>
+              <emphasis>Physical Volume (PV):</emphasis> physical hard disk or software RAID partition.  The Volume Group can be extended
+              by adding more PVs.
+              </para>
+            </listitem>
+          </itemizedlist>
+
+        </sect3>
+        <sect3 id="lvm-installation" status="review">
+          <title>Installation</title>
+
+          <para>
+          As an example this section covers installing Ubuntu Server Edition with <filename role="directory">/srv</filename> mounted
+          on a LVM volume.  During the initial install only one Physical Volume (PV) will be part of the Volume Group (VG).  Another
+          PV will be added after install to demonstrate how a VG can be extended.
+          </para>
+
+          <para>
+          There are several installation options for LVM, <emphasis>"Guided - use the entire disk and setup LVM"</emphasis>, 
+          <emphasis>"Guided - use entire and setup encrypted LVM"</emphasis>, or <emphasis>Manually</emphasis> setup the partitions
+          and configure LVM.  At this time the only way to configure a system with both LVM and standard partitions, during installation,
+          is to use the Manual approach.
+          </para>
+
+          <procedure>
+            <step>
+
+              <para>
+              Follow the installation steps until you get to the <emphasis>Partition disks</emphasis> step, then:
+              </para>
+
+            </step>
+            <step>
+ 
+              <para>
+              At the <emphasis>"Partition Disks</emphasis> screen choose <emphasis>"Manual"</emphasis>.
+              </para>
+
+            </step>
+            <step>
+ 
+              <para>
+              Select the hard disk and on the next screen choose "yes" to <emphasis>"Create a new empty partition table on this device"</emphasis>.
+              </para>
+
+            </step>
+            <step>
+ 
+              <para>
+              Next, create standard <emphasis>/boot</emphasis>, <emphasis>swap</emphasis>, and <emphasis>/</emphasis> partitions with whichever
+              filesystem you prefer.
+              </para>
+
+            </step>
+            <step>
+ 
+              <para>
+              For the LVM <emphasis>/srv</emphasis>, create a new <emphasis>Logical</emphasis> partition.  Then change <emphasis>"Use as"</emphasis>
+              to <emphasis>"physical volume for LVM"</emphasis> then <emphasis>"Done setting up the partition"</emphasis>.
+              </para>
+
+            </step>
+            <step>
+ 
+              <para>
+              Now select <emphasis>"Configure the Logical Volume Manager"</emphasis> at the top, and choose <emphasis>"Yes"</emphasis> to write 
+              the changes to disk.
+              </para>
+
+            </step>
+            <step>
+ 
+              <para>
+              For the <emphasis>"LVM configuration action"</emphasis> on the next screen, choose <emphasis>"Create volume group"</emphasis>.  Enter
+              a name for the VG such as <emphasis>vg01</emphasis>, or something more descriptive. After entering a name, select the partition 
+              configured for LVM, and choose <emphasis>"Continue"</emphasis>.
+              </para>
+
+            </step>
+            <step>
+ 
+              <para>
+              Back at the <emphasis>"LVM configuration action"</emphasis> screen, select <emphasis>"Create logical volume"</emphasis>.  Select 
+              the newly created Logical Volume, and enter a name for the new LV, for example <emphasis>srv</emphasis> since that is the intended
+              mount point.  Then choose a size, which may be the full partition because it can always be extended later. Choose 
+              <emphasis>"Finish"</emphasis> and you should be back at the main <emphasis>"Partition Disks"</emphasis> screen.    
+              </para>
+
+            </step>
+            <step>
+ 
+              <para>
+              Now add a filesystem to the new LVM.  Select the partition under <emphasis>"LVM VG vg01, LV srv"</emphasis>, or whatever name
+              you have chosen, the choose <emphasis>Use as</emphasis>.  Setup a file system as normal selecting <emphasis>/srv</emphasis> as
+              the mount point.  Once done, select <emphasis>"Done setting up the partition"</emphasis>.
+              </para>
+
+            </step>
+            <step>
+ 
+              <para>
+              Finally, select <emphasis>"Finish partitioning and write changes to disk"</emphasis>.  Then confirm the changes and continue
+              with the rest of the installation.
+              </para>
+
+            </step>
+          </procedure>
+
+          <para>
+          There are some useful utilities to view information about LVM: 
+          </para>
+
+          <itemizedlist>
+            <listitem><para><emphasis>vgdisplay:</emphasis> shows information about Volume Groups.</para></listitem>
+            <listitem><para><emphasis>lvdisplay:</emphasis> has information about Logical Volumes.</para></listitem>
+            <listitem><para><emphasis>pvdisplay:</emphasis> similarly displays information about Physical Volumes.</para></listitem>
+          </itemizedlist>
+
+        </sect3>
+        <sect3 id="lvm-extending" status="review">
+          <title>Extending Volume Groups</title>
+
+          <para>
+          Continuing the <emphasis>/srv</emphasis> as an LVM volume example, this section covers adding a second Physical Volume (PV) to 
+          <filename role="directory">/srv</filename> and expanding the filesystem.  This example assumes a second hard disk has been added
+          to the system and will be added to the <emphasis>vg01</emphasis> volume group.
+          </para>
+
+          <procedure>
+            <step>
+ 
+              <para>
+              First, create a partition on the new disk using the <application>fdisk</application> utility.  For example,
+              from a terminal enter:
+              </para>
+
+<screen>
+<command>sudo fdisk /dev/sdb</command>
+<computeroutput>Device contains neither a valid DOS partition table, nor Sun, SGI or OSF disklabel
+Building a new DOS disklabel with disk identifier 0x7b741e03.
+Changes will remain in memory only, until you decide to write them.
+After that, of course, the previous content won't be recoverable.
+
+Warning: invalid flag 0x0000 of partition table 4 will be corrected by w(rite)
+
+Command (m for help): <userinput>n</userinput>
+Command action
+   e   extended
+   p   primary partition (1-4)
+<userinput>p</userinput>
+Partition number (1-4): <userinput>1</userinput>
+First cylinder (1-391, default 1): 
+Using default value 1
+Last cylinder, +cylinders or +size{K,M,G} (1-391, default 391): 
+Using default value 391
+Command (m for help): <userinput>w</userinput>
+The partition table has been altered!
+
+Calling ioctl() to re-read partition table.
+Syncing disks.</computeroutput>
+</screen>
+
+              <para>
+              The above output creates a single partition covering the entire disk.  Your output will vary depending on your hard disk.
+              </para>
+
+              <para>
+              A quick <application>fdisk</application> reference:
+              </para>
+
+              <itemizedlist>
+                <listitem><para><emphasis>n:</emphasis> creates a new partition.</para></listitem>
+                <listitem><para><emphasis>p:</emphasis> prints the partition table.</para></listitem>
+                <listitem><para><emphasis>w:</emphasis> writes the changes to disk, and exits fdisk.</para></listitem>
+                <listitem><para><emphasis>q:</emphasis> quits fdisk without writing the changes to disk.</para></listitem>
+              </itemizedlist>
+
+              <note>
+                <para>
+                Adjust <filename>/dev/sdb</filename> according to your system.  Also, the <application>cfdisk</application>,
+                menu driven, partition utility can be used instead of <application>fdisk</application>.
+                </para>
+              </note>
+
+            </step>
+            <step>
+ 
+              <para>
+              Next, create a Physical Volume (PV) on the new partition:
+              </para>
+
+<screen>
+<command>sudo pvcreate /dev/sdb1</command>
+</screen>
+
+            </step>
+            <step>
+ 
+              <para>
+              Now extend the Volume Group (VG):
+              </para>
+
+<screen>
+<command>sudo vgextend vg01 /dev/sdb1</command>
+</screen>
+
+            </step>
+            <step>
+ 
+              <para>
+              The Logical Volume (LV) can now be extended:
+              </para>
+
+<screen>
+<command>sudo lvextend /dev/vg01/srv -L3221M</command>
+</screen>
+
+              <para>
+              The <emphasis>-L</emphasis> option allows the LV to be extended using Meg, Gig, Tera, etc bytes.  Just be sure the 
+              hard disk has enough space for the value you choose.  The <application>fdisk</application> <emphasis>q</emphasis> 
+              option will display the exact size of a drive.
+              </para>
+
+            </step>
+            <step>
+ 
+              <para>
+              Finally, resize the filesystem:
+              </para>
+
+<screen>
+<command>sudo resize2fs /dev/vg01/srv</command>
+</screen>
+
+              <para>
+              The above command is for an <application>EXT3</application> or <application>EXT4</application> filesystem.  If you are 
+              using another filesystem there may be other resize utilities available.
+              </para>
+
+            </step>
+          </procedure>
+
+          <para>
+          You should now see the expanded space in <filename>/srv</filename>: <command>df -h</command>.
+          </para>
+
+        </sect3>
+        <sect3 id="lvm-resources" status="review">
+          <title>Resources</title>
+
+          <itemizedlist>
+            <listitem>
+              <para>
+              See the <ulink url="http://tldp.org/HOWTO/LVM-HOWTO/index.html">LVM HOWTO</ulink> for more information.
+              </para>
+            </listitem>
+            <listitem>
+              <para>
+              Another good article is 
+              <ulink url="http://www.linuxdevcenter.com/pub/a/linux/2006/04/27/managing-disk-space-with-lvm.html">Managing Disk Space with LVM</ulink>
+              on O'Reilly's linuxdevcenter.com site.
+              </para>
+            </listitem>
+            <listitem>
+              <para>
+              For more information on <application>fdisk</application> see the
+              <ulink url="http://manpages.ubuntu.com/manpages/jaunty/en/man8/fdisk.8.html">fdisk man page</ulink>.
+              </para>
+            </listitem>
+          </itemizedlist>
+        </sect3>
+      </sect2>     
     </sect1>
 </chapter>

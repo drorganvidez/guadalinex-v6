@@ -162,14 +162,15 @@ zone "example.com" {
 ;
 $TTL    604800
 @       IN      SOA     ns.example.com. root.example.com. (
-                              1         ; Serial
+                              2         ; Serial
                          604800         ; Refresh
                           86400         ; Retry
                         2419200         ; Expire
                          604800 )       ; Negative Cache TTL
 ;
 @       IN      NS      ns.example.com.
-@       IN      A       192.168.1.10
+@       IN      A       127.0.0.1
+@       IN      AAAA    ::1
 ns      IN      A       192.168.1.10
 </programlisting>
 	       <para>
@@ -357,25 +358,6 @@ nameserver	192.168.1.11
 	      </para>
 	    </note>
 	  </sect3>
-	  <sect3 id="dns-testing-ping" status="review">
-	    <title>ping</title>
-	    <para>
-	    Once a host has been configured to use the new nameserver one of the simplest tests is the 
- 	    <application>ping</application> utility.  From a terminal prompt enter:
-	    </para>
-<screen>
-<command>ping example.com</command>
-</screen>
-	    <para>
-	    This tests if the nameserver can resolve the name <emphasis>example.com</emphasis> to an IP Address.
-	    The command output should resemble:
-	    </para>
-<programlisting>
-PING example.com (192.168.1.10) 56(84) bytes of data.
-64 bytes from ns (192.168.1.10): icmp_seq=1 ttl=64 time=0.800 ms
-64 bytes from ns (192.168.1.10): icmp_seq=2 ttl=64 time=0.813 ms
-</programlisting>
-	  </sect3>
 	  <sect3 id="dns-testing-dig" status="review">
 	    <title>dig</title>
 	    <para>
@@ -421,6 +403,27 @@ PING example.com (192.168.1.10) 56(84) bytes of data.
 </programlisting>
 	      </listitem> 
 	    </itemizedlist>
+	  </sect3>
+	  <sect3 id="dns-testing-ping" status="review">
+	    <title>ping</title>
+
+	    <para>
+            Now to demonstrate how applications make use of DNS to resolve a host name use the
+ 	    <application>ping</application> utility to send an ICMP echo request.  From a terminal prompt enter:
+	    </para>
+
+<screen>
+<command>ping example.com</command>
+</screen>
+	    <para>
+	    This tests if the nameserver can resolve the name <emphasis>ns.example.com</emphasis> to an IP Address.
+	    The command output should resemble:
+	    </para>
+<programlisting>
+PING ns.example.com (192.168.1.10) 56(84) bytes of data.
+64 bytes from 192.168.1.10: icmp_seq=1 ttl=64 time=0.800 ms
+64 bytes from 192.168.1.10: icmp_seq=2 ttl=64 time=0.813 ms
+</programlisting>
 	  </sect3>
 	  <sect3 id="dns-testing-configuration" status="review">
 	    <title>named-checkzone</title>

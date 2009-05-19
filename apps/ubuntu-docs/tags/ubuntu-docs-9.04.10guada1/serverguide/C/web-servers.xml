@@ -817,4 +817,203 @@ DocumentRoot /path/to/rails/application/public
     </para>
     </sect2>
   </sect1>
+
+	<sect1 id="tomcat" status="review">
+		<title>Apache Tomcat</title>
+		<para>Apache Tomcat is a web container that allows you to serve Java Servlets
+		and JSP (Java Server Pages) web applications.</para>
+		<para>The <application>Tomcat 6.0</application> packages in Ubuntu support
+		two different ways of running Tomcat. You can install them as a classic
+		unique system-wide instance, that will be started at boot time and will run
+		as the tomcat6 unpriviledged user. But you can also deploy private
+		instances that will run with your own user rights, and that you should
+		start and stop by yourself. This second way is particularly useful in a
+		development server context where multiple users need to test on their own
+		private Tomcat instances.</para>
+
+		<sect2 id="tomcat-installation" status="review">
+			<title>System-wide installation</title>
+			<para>To install the <application>Tomcat</application> server,
+			you can enter the following command in the terminal prompt:</para>
+<screen>
+<command>sudo apt-get install tomcat6</command>
+</screen>
+			<para>This will install a Tomcat server with just a default ROOT webapp
+			that displays a minimal "It works" page by default.</para>
+		</sect2>
+
+    <sect2 id="tomcat-configuration" status="review">
+	    <title>Configuration</title>    
+  	  <para>Tomcat configuration files can be found in
+			<filename>/etc/tomcat6</filename>. Only a few common configuration tweaks
+			will be described here, please see
+			<ulink url="http://tomcat.apache.org/tomcat-6.0-doc/index.html">Tomcat
+			6.0 documentation</ulink> for more.</para>
+			<sect3 id="tomcat-configuration-ports" status="review">
+				<title>Changing default ports</title>
+				<para>By default Tomcat 6.0 runs a HTTP connector on port 8080 and an
+				AJP connector on port 8009. You might want to change those default
+				ports to avoid conflict with another server on the system. This is
+				done by changing the following lines in
+				<filename>/etc/tomcat6/server.xml</filename>:</para>
+<programlisting>
+&lt;Connector port="8080" protocol="HTTP/1.1" 
+               connectionTimeout="20000" 
+               redirectPort="8443" /&gt;
+...
+&lt;Connector port="8009" protocol="AJP/1.3" redirectPort="8443" /&gt;
+</programlisting>
+			</sect3>
+			<sect3 id="tomcat-configuration-jvm" status="review">
+				<title>Changing JVM used</title>
+				<para>By default Tomcat will run preferably with OpenJDK-6, then try
+				Sun's JVM, then try some other JVMs. If you have various JVMs
+				installed, you can set which should be used by setting JAVA_HOME in
+				<filename>/etc/default/tomcat6</filename>:</para>
+<programlisting>
+JAVA_HOME=/usr/lib/jvm/java-6-sun
+</programlisting>
+			</sect3>
+			<sect3 id="tomcat-configuration-users" status="review">
+				<title>Declaring users and roles</title>
+				<para>Usernames, passwords and roles (groups) can be defined centrally
+				in a Servlet container. In Tomcat 6.0 this is done in the
+				<filename>/etc/tomcat6/tomcat-users.xml</filename> file:</para>
+<programlisting>
+&lt;role rolename="admin"/&gt;
+&lt;user username="tomcat" password="s3cret" roles="admin"/&gt;
+</programlisting>
+			</sect3>
+    </sect2>
+
+		<sect2 id="tomcat-webapps" status="review">
+			<title>Using Tomcat standard webapps</title>
+			<para>Tomcat is shipped with webapps that you can install
+			for documentation, administration or demo purposes.</para>
+			<sect3 id="tomcat-installation-docs" status="review">
+				<title>Tomcat documentation</title>
+				<para>The <application>tomcat6-docs</application> package contains
+				Tomcat 6.0 documentation, packaged as a webapp that you can access by
+				default at http://yourserver:8080/docs. You can install it by entering
+				the following command in the terminal prompt:</para>
+<screen>
+<command>sudo apt-get install tomcat6-docs</command>
+</screen>
+			</sect3>
+			<sect3 id="tomcat-installation-admin" status="review">
+				<title>Tomcat administration webapps</title>
+				<para>The <application>tomcat6-admin</application> package contains
+				two webapps that can be used to administer the Tomcat server using a
+				web interface. You can install them by entering the
+				following command in the terminal prompt:</para>
+<screen>
+<command>sudo apt-get install tomcat6-admin</command>
+</screen>
+				<para>The first one is the <emphasis>manager</emphasis> webapp, which
+				you can access by default at http://yourserver:8080/manager/html. It is
+				primarily used to get server status and restart webapps.</para>
+				<note><para>Access to the <emphasis>manager</emphasis> application is
+				protected by default: you need to define a user with the role "manager"
+				in <filename>/etc/tomcat6/tomcat-users.xml</filename>
+				before you can access it.</para></note>
+				<para>The second one is the <emphasis>host-manager</emphasis> webapp,
+				which you can access by default at
+				http://yourserver:8080/host-manager/html.
+				It can be used to create virtual hosts dynamically.</para>
+				<note><para>Access to the <emphasis>host-manager</emphasis> application is
+				also protected by default: you
+				need to define a user with the role "admin" in
+				<filename>/etc/tomcat6/tomcat-users.xml</filename>
+				before you can access it.</para></note>
+				<para>For security reasons, the tomcat6 user cannot write to the
+				<filename>/etc/tomcat6</filename> directory by default. Some features
+				in these admin webapps (application deployment, virtual host creation)
+				need write access to that directory. If you want to use these
+				features execute the following, to give users in the tomcat6 group the necessary
+				rights:</para>
+<screen>
+<command>sudo chgrp -R tomcat6 /etc/tomcat6</command>
+<command>sudo chmod -R g+w /etc/tomcat6</command> 
+</screen>
+
+			</sect3>
+			<sect3 id="tomcat-installation-examples" status="review">
+				<title>Tomcat examples webapps</title>
+				<para>The <application>tomcat6-examples</application> package contains
+				two webapps that can be used to test or demonstrate Servlets and JSP
+				features, which you can access them by default at
+				http://yourserver:8080/examples. You can install them by entering the
+				following command in the terminal prompt:</para>
+<screen>
+<command>sudo apt-get install tomcat6-examples</command>
+</screen>
+			</sect3>
+    </sect2>
+
+		<sect2 id="tomcat-user" status="review">
+			<title>Using private instances</title>    
+			<para>Tomcat is heavily used in development and testing scenarios
+			where using a single system-wide instance doesn't meet the requirements
+			of multiple users on a single system. The Tomcat 6.0 packages in
+			Ubuntu come with tools to help deploy your own user-oriented instances,
+			allowing every user on a system to run (without root rights) separate
+			private instances while still using the system-installed
+			libraries.</para>
+			<note><para>It is possible to run the system-wide instance and the private
+			instances in parallel, as long as they do not use the same TCP
+			ports.</para></note>
+			<sect3 id="tomcat-user-install" status="review">
+				<title>Installing private instance support</title>
+				<para>You can install everything necessary to run private instances
+				by entering the following command in the terminal prompt:</para>
+<screen>
+<command>sudo apt-get install tomcat6-user</command>
+</screen>
+			</sect3>
+			<sect3 id="tomcat-user-create" status="review">
+				<title>Creating a private instance</title>
+				<para>You can create a private instance directory by entering the
+				following command in the terminal prompt:</para>
+<screen>
+<command>tomcat6-instance-create my-instance</command>
+</screen>
+				<para>This will create a new <filename>my-instance</filename> directory
+				with all the necessary subdirectories and scripts.
+				You can for example install your common libraries in the
+				<filename>lib/</filename> subdirectory and deploy your webapps in the
+				<filename>webapps/</filename> subdirectory. No webapps are deployed
+				by default.</para>
+			</sect3>
+			<sect3 id="tomcat-user-config" status="review">
+				<title>Configuring your private instance</title>
+				<para>You will find the classic Tomcat configuration files for your
+				private instance in the <filename>conf/</filename>
+				subdirectory. You should for
+				example certainly edit the <filename>conf/server.xml</filename> file
+				to change the default ports used by your private Tomcat instance to
+				avoid conflict with other instances that might be running.</para>
+			</sect3>
+			<sect3 id="tomcat-user-start" status="review">
+				<title>Starting/stopping your private instance</title>
+				<para>You can start your private instance by entering the following
+				command in the terminal prompt (supposing  your instance is located
+				in the <filename>my-instance</filename> directory):</para>
+<screen>
+<command>my-instance/bin/startup.sh</command>
+</screen>
+				<note><para>You should check the <filename>logs/</filename> subdirectory for
+				any error. If you have a <emphasis>java.net.BindException: Address
+				already in use&lt;null&gt;:8080</emphasis> error, it means that the
+				port you're using is already taken and that you should change it.
+				</para></note>
+				<para>You can stop your instance by entering the following
+        command in the terminal prompt (supposing  your instance is located
+        in the <filename>my-instance</filename> directory):</para>
+<screen>
+<command>my-instance/bin/shutdown.sh</command>
+</screen>
+			</sect3>
+		</sect2>
+
+	</sect1>
 </chapter>

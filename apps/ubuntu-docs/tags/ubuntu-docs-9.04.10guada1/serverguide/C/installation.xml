@@ -650,7 +650,17 @@ bind9
           </para>
 
           <para>
-          Edit the <filename>/etc/initramfs-tools/conf.d/mdadm</filename> file adding:
+          The <application>dpkg-reconfigure</application> utility can be used to change the file, and during the process you will also
+          be queried about other settings related to the array.  Such as monitoring,  email alerts, etc.  To reconfigure 
+          <application>mdadm</application> enter the following:  
+          </para>
+
+<screen>
+<command>sudo dpkg-reconfigure mdadm</command>
+</screen>
+
+          <para>
+          The <filename>/etc/initramfs-tools/conf.d/mdadm</filename> file should now have the following option set:
           </para>
 
 <programlisting>
@@ -661,7 +671,7 @@ BOOT_DEGRADED=true
             <para>
             The configuration file can be overridden by using a Kernel argument.
             </para>
-          </note>
+          </note>          
 
         </sect3>
         <sect3 id="raid-maintenance">

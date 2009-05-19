@@ -357,4 +357,420 @@ bind9
 	</warning>
       </sect2>
     </sect1>
+    <sect1 id="advanced-installation" status="review">
+      <title>Advanced Installation</title>
+ 
+      <sect2 id="software-raid" status="review">
+        <title>Software RAID</title>
+
+        <para>
+        RAID is a method of configuring multiple hard drives to act as one, reducing the 
+        probability of catastrophic data loss in case of drive failure. RAID is implemented in either software 
+        (where the operating system knows about both drives and actively maintains both of them) or hardware 
+        (where a special controller makes the OS think there's only one drive and maintains the drives 'invisibly').
+        </para>
+
+        <para>
+        The RAID software included with current versions of Linux (and Ubuntu) is based on the <application>'mdadm'</application>
+        driver and works very well, better even than many so-called 'hardware' RAID controllers. 
+        </para>
+
+        <sect3 id="raid-partitioning" status="review">
+          <title>Partitioning</title>
+
+          <para>
+          Follow the installation steps until you get to the <emphasis>Partition disks</emphasis> step, then:
+          </para>
+
+          <procedure>
+            <step>
+ 
+              <para>
+              Select <emphasis>Manual</emphasis> as the partition method.
+              </para>
+
+            </step>
+            <step>
+ 
+              <para>
+              Select the first hard drive, and agree to <emphasis>"Create a new empty partition table on this device?"</emphasis>.
+              </para>
+
+              <para>
+              Repeat this step for each drive you wish to be part of the RAID array.
+              </para>
+
+            </step>
+            <step>
+ 
+              <para>
+              Select the <emphasis>"FREE SPACE"</emphasis> on the first drive then select <emphasis>"Create a new partition"</emphasis>. 
+              </para>
+
+            </step>
+            <step>
+ 
+              <para>
+              Next, select the <emphasis>Size</emphasis> of the partition, then choose <emphasis>Primary</emphasis>,
+              then <emphasis>Beginnning</emphasis>. 
+              </para>
+
+            </step>
+            <step>
+ 
+              <para>
+              Select the <emphasis>"Use as:"</emphasis> line at the top.  By default this is 
+              <emphasis role="italic">"Ext3 journaling file system"</emphasis>, change that to <emphasis>"physical volume for RAID"</emphasis>. 
+              </para>
+
+            </step>
+            <step>
+ 
+              <para>
+              Choose <emphasis>"bootable flag"</emphasis> setting it to <emphasis>"on"</emphasis>.  Then select the 
+              <emphasis>"Done setting up the partition"</emphasis> option.
+              </para>
+
+            </step>
+            <step>
+ 
+              <para>
+              Repeat steps three through six for the other disks and partitions. 
+              </para>
+
+            </step>
+          </procedure>
+
+        </sect3>
+        <sect3 id="raid-configuration" status="review">
+          <title>RAID Configuration</title>
+
+          <para>
+          With the partitions setup the array is ready to be configured:
+          </para>
+
+          <procedure>
+            <step>
+ 
+              <para>
+              Back in the main "Partition Disks" page, select <emphasis>"Configure Software RAID"</emphasis> at the top.
+              </para>
+
+            </step>
+            <step>
+ 
+              <para>
+              Select <emphasis>"yes"</emphasis> to write the changes to disk.
+              </para>
+
+            </step>
+            <step>
+ 
+              <para>
+              Choose <emphasis>"Create new MD drive"</emphasis>.
+              </para>
+
+            </step>
+            <step>
+ 
+              <para>
+              Select <emphasis>"RAID1"</emphasis>, or the type of RAID you want (RAID0 RAID1 RAID5).
+              </para>
+
+              <note>
+                <para>
+                In order to use <emphasis>RAID5</emphasis> you need at least <emphasis>three</emphasis> drives.  Using RAID0 or RAID1
+                only <emphasis>two</emphasis> drives are required.
+                </para>
+              </note>
+
+            </step>
+            <step>
+ 
+              <para>
+              Enter the number of active devices <emphasis>"2"</emphasis>, or the amount of hard drives you have, for the array.  Then 
+              select <emphasis>"Continue"</emphasis>.
+              </para>
+
+            </step>
+            <step>
+ 
+              <para>
+              Next, enter the number of spare devices <emphasis>"0"</emphasis> by default, then choose <emphasis>"Continue"</emphasis>.
+              </para>
+
+            </step>
+            <step>
+ 
+              <para>
+              Choose which partitions to use. Generally they will be sda1, sdb1, sdc1, etc. The numbers will usually match and the different 
+              letters correspond to different hard drives.
+              </para>
+
+              <para>
+              Select <emphasis>"Continue"</emphasis> to go to the next step.
+              </para>
+
+            </step>
+            <step>
+ 
+              <para>
+              Repeat steps <emphasis>three</emphasis> through <emphasis>seven</emphasis> with each pair of partitions you have created 
+              (you may only have one pair).
+              </para>
+
+            </step>
+            <step>
+ 
+              <para>
+              Once done select <emphasis>"Finish"</emphasis>.
+              </para>
+
+            </step>
+
+          </procedure>
+
+        </sect3>
+        <sect3 id="raid-formatting" status="review">
+          <title>Formatting</title>
+
+          <para>
+          There should now be a list of hard drives and RAID devices. The next step is to format and set the mount point for the RAID devices.
+          Treat the RAID device as a local hard drive, format and mount accordingly.
+          </para>
+
+          <procedure>
+            <step>
+ 
+              <para>
+              Select first RAID device partition. 
+              </para>
+
+            </step>
+            <step>
+ 
+              <para>
+              Choose <emphasis>"Use as:"</emphasis>.  Then select <emphasis>"Ext3 journaling file system"</emphasis>, or whichever filesystem you 
+              prefer. 
+              </para>
+
+            </step>
+            <step>
+ 
+              <para>
+              If you selected Ext3, then select your mount point.  You can also create multiple partitions on one RAID device or use multiple RAID
+              devices for different partitions.  As an example, if you only have one partition for choose <emphasis>"/"</emphasis> as the mount point.
+              </para>
+
+            </step>
+            <step>
+ 
+              <para>
+              Repeat for any additional RAID devices. 
+              </para>
+
+            </step>
+            <step>
+ 
+              <para>
+              Finally, select <emphasis>"Finish partitioning and write changes to disk"</emphasis>.
+              </para>
+
+            </step>
+          </procedure>
+
+          <para>
+          After confirming the partition configuration the installation process will continue normally.
+          </para>
+
+        </sect3>
+        <sect3 id="raid-degraded" status="review">
+          <title>Degraded RAID</title>
+
+          <para>
+          At some point in the life of the computer a disk failure event may occur.  When this happens, using Software RAID, the operating
+          system will place the array into what is known as a <emphasis>degraded</emphasis> state.
+          </para>
+
+          <para>
+          By default Ubuntu Server Edition will not boot using to a degraded RAID device, due to the chance of data corruption
+          This may or may not be the desired behavior you want, especially if the machine is in a remote location.
+          </para>
+
+          <para>
+          One way to boot to a degraded RAID array is to use Kernel arguments:
+          </para>
+
+          <itemizedlist>
+            <listitem>
+              <para>
+              When the server is booting press <emphasis>ESC</emphasis> to open the <application>Grub</application> menu.
+              </para>
+            </listitem>
+            <listitem>
+              <para>
+              Press <emphasis>"e"</emphasis> to edit your Kernel command options.
+              </para>
+            </listitem>
+            <listitem>
+              <para>
+              Press the <emphasis>DOWN</emphasis> arrow to highlight the kernel line.
+              </para>
+            </listitem>
+            <listitem>
+              <para>
+              Press the <emphasis>"e"</emphasis> key again to edit the kernel line.
+              </para>
+            </listitem>
+            <listitem>
+              <para>
+              Add <emphasis>"bootdegraded=true"</emphasis> (without the quotes) to the end of the line.
+              </para>
+            </listitem>
+            <listitem>
+              <para>
+              Press <emphasis>"ENTER"</emphasis>.
+              </para>
+            </listitem>
+            <listitem>
+              <para>
+              Finally, press <emphasis>"b"</emphasis> to boot the system.
+              </para>
+            </listitem>
+          </itemizedlist>
+
+          <para>
+          Once the system has booted you can either repair the array see <xref linkend="raid-maintenance"/> for details, or copy 
+          important data to another machine due to major hardware failure.
+          </para>
+
+          <para>
+          Another way to boot from a degraded array is to use the <filename>/etc/initramfs-tools/conf.d/mdadm</filename> configuration
+          file.  Using the configuration file has the advantage of being able to pre-configure the system's behavior.
+          </para>
+
+          <para>
+          Edit the <filename>/etc/initramfs-tools/conf.d/mdadm</filename> file adding:
+          </para>
+
+<programlisting>
+BOOT_DEGRADED=true
+</programlisting>
+
+          <note>
+            <para>
+            The configuration file can be overridden by using a Kernel argument.
+            </para>
+          </note>
+
+        </sect3>
+        <sect3 id="raid-maintenance">
+          <title>RAID Maintenance</title>
+
+          <para>
+          The <application>mdadm</application> utility can be used to view the status of an array, add disks to an array, remove 
+          disks, etc:
+          </para>
+
+          <itemizedlist>
+            <listitem>
+              <para>
+              To view the status of an array, from a terminal prompt enter:
+              </para>
+<screen>
+<command>sudo mdadm -D /dev/md0</command>
+</screen>
+            
+              <para>
+              The <emphasis>-D</emphasis> tells <application>mdadm</application> to display <emphasis>detailed</emphasis> information
+              about the <filename>/dev/md0</filename> device.  Replace <filename>/dev/md0</filename> with the appropriate RAID device.
+              </para>
+            </listitem>
+            <listitem>
+              <para>
+              To view the status of a disk in an array:
+              </para>
+<screen>
+<command>sudo mdadm -E /dev/sda1</command>
+</screen>
+              <para>
+              The output if very similar to the <command>mdadm -D</command> command, adjust <filename>/dev/sda1</filename> for each disk.
+              </para>
+            </listitem>
+            <listitem>
+              <para>
+              If a disk fails and needs to be removed from an array enter:
+              </para>
+<screen>
+<command>sudo mdadm --remove /dev/md0 /dev/sda1</command>
+</screen>
+              <para>
+              Change <filename>/dev/md0</filename> and <filename>/dev/sda1</filename> to the appropriate RAID device and disk.
+              </para>
+            </listitem>
+            <listitem>
+              <para>
+              Similarly, to add a new disk:
+              </para>
+<screen>
+<command>sudo mdadm --add /dev/md0 /dev/sda1</command>
+</screen>
+            </listitem>
+          </itemizedlist>
+
+          <para>
+          Sometimes a disk can change to a <emphasis>faulty</emphasis> state even though there is nothing physically wrong with the drive. 
+          It is usually worthwhile to remove the drive from the array then re-add it.  This will cause the drive to re-sync with the array.
+          If the drive will not sync with the array, it is a good indication of hardware failure.
+          </para>
+
+          <para>
+          The <filename>/proc/mdstat</filename> file also contains useful information about the system's RAID devices:
+          </para>
+
+<screen>
+<command>cat /proc/mdstat</command>
+<computeroutput>Personalities : [linear] [multipath] [raid0] [raid1] [raid6] [raid5] [raid4] [raid10] 
+md0 : active raid1 sda1[0] sdb1[1]
+      10016384 blocks [2/2] [UU]
+      
+unused devices: &lt;none&gt;</computeroutput>
+</screen>
+
+          <para>
+          The following command is great for watching the status of a syncing drive:
+          </para>
+
+<screen>
+<command>watch -n1 cat /proc/mdstat</command>
+</screen>
+
+          <para>
+          Press <emphasis>Ctrl+c</emphasis> to stop the <application>watch</application> command.
+          </para>
+
+        </sect3>
+        <sect3 id="raid-resources" status="review">
+          <title>Resources</title>
+
+          <para>
+          The topic of RAID arrays is a complex one due to the plethora of ways RAID can be configured.  Please see the following links for 
+          more information:
+          </para>
+
+          <itemizedlist>
+            <listitem>
+              <para>
+              <ulink url="http://www.faqs.org/docs/Linux-HOWTO/Software-RAID-HOWTO.html">Software RAID HOWTO</ulink>
+              </para>
+            </listitem>
+            <listitem>
+              <para>
+              <ulink url="http://oreilly.com/catalog/9781565927308/">Managing RAID on Linux</ulink>
+              </para>
+            </listitem>
+          </itemizedlist>
+        </sect3>
+      </sect2>       
+    </sect1>
 </chapter>

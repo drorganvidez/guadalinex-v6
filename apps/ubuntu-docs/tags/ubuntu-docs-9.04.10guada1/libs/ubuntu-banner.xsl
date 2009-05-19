@@ -15,6 +15,7 @@ urchinTracker();
 	</div>
 
 <!-- Provide a search box for clients with and without javascript -->
+
 <noscript>
  <form action="http://www.google.com/cse" id="cse-search-box">
    <div>
@@ -25,6 +26,7 @@ urchinTracker();
    </div>
  </form>
 </noscript>
+
 <script>
  document.write('<form action="https://help.ubuntu.com/search.html" id="cse-search-box">');
  document.write('  <div>');

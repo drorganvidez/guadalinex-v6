@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE book PUBLIC "-//OASIS//DTD Docbook XML V.4.3//EN"
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD Docbook XML V.4.3//EN"
 	  "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
 	  <!ENTITY % globalent SYSTEM "../../libs/global.ent">
 	  %globalent;
@@ -12,14 +12,95 @@
 	  ]>
 	  <?db.chunk.max_depth 4?>
 <?yelp:chunk-depth 4?>
-<book lang="&language;" id="connecting">
-	<title>Connecting to the Internet</title>
-	<xi:include href="basics.xml"
-			xmlns:xi="http://www.w3.org/2001/XInclude"/>
-	<xi:include href="wireless.xml"
-		    xmlns:xi="http://www.w3.org/2001/XInclude"/>
-	<xi:include href="adsl.xml"
-		    xmlns:xi="http://www.w3.org/2001/XInclude"/>
-	<xi:include href="modem.xml"
-		    xmlns:xi="http://www.w3.org/2001/XInclude"/>
-</book>
+<chapter id="connecting" status="review">
+	<title>Connecting</title>
+	<para>NetworkManager manages wired, wireless, mobile broadband, vpn and dsl connections. It does not
+	currently support dialup modem connections but there is help available in <xref linkend="modem"/>.</para>
+	
+	<sect1 id="connecting-wired" status="review">
+		<title>Wired (LAN)</title>
+		<para>Wired network connections are selected as default when connected.</para>
+		<orderedlist>
+			<listitem><para>Click the NetworkManager icon in the system notification area.</para></listitem>
+			<listitem><para>Under <guilabel>Wired Network</guilabel> click the <guilabel>Radio Button</guilabel> 
+			next to the network you want to connect to.</para></listitem>
+		</orderedlist>
+	</sect1>
+
+	<sect1 id="connecting-wireless" status="review">
+		<title>Wireless</title>
+		<para>Wired network connections are selected as default when connected.</para>
+		<orderedlist>
+			<listitem><para>Click the <guiicon>NetworkManager</guiicon> icon in the system notification area.</para></listitem>
+			<listitem><para>Under <guilabel>Wireless Network</guilabel> click the radio button next to the
+			network you want to connect to.</para></listitem>
+		</orderedlist>
+		<para>If you have selected the network previously, the previous supplied details are used to connect.</para>
+		<para>New connections, will present a dialog box and in most circumstances will detect
+		the required security type.</para>
+		<sect2 id="connecting-wireless-wep" status="review">
+			<title>WEP Security</title>
+			<orderedlist>
+				<listitem><para>Select the WEP type from the <guilabel>Wireless Security</guilabel> drop down.</para></listitem>
+				<listitem><para>Enter the <guilabel>Username</guilabel> and <guilabel>Password</guilabel>. Ticking the <guilabel>Show Password</guilabel> will display the key.</para></listitem>
+				<listitem><para>Click the <guibutton>Connect</guibutton>.</para></listitem>
+			</orderedlist>
+		</sect2>
+		<sect2 id="connecting-wireless-leap" status="review">
+			<title>LEAP Security</title>
+			<orderedlist>
+				<listitem><para>Select LEAP from the <guilabel>Wireless Security</guilabel> drop down.</para></listitem>
+				<listitem><para>Enter the key or passphrase. Ticking the <guilabel>Show Key</guilabel> will display the key.</para></listitem>
+				<listitem><para>Select the <guilabel>WEP index</guilabel> drop down, the default is "1".</para></listitem>
+				<listitem><para>Select the authentication type from the <guilabel>Authentication</guilabel>.</para></listitem>
+				<listitem><para>Click the <guibutton>Connect</guibutton>.</para></listitem>
+			</orderedlist>
+		</sect2>
+		<sect2 id="connecting-wireless-dynamic" status="review">
+			<title>802.1x</title>
+			<orderedlist>
+				<listitem><para>Select Dynamic WEP from the <guilabel>Wireless Security</guilabel> drop down.</para></listitem>
+				<listitem><para>Select the <guilabel>Authentication</guilabel> drop down.</para></listitem>
+				<listitem><para>Choose a User Ceritificate by clicking the <guibutton>User Ceritificate</guibutton> browse button. Navigate to the certificate and click <guibutton>Open</guibutton>.</para></listitem>
+				<listitem><para>Choose a CA Ceritificate by clicking the <guibutton>CA Ceritificate</guibutton> browse button. Navigate to the certificate and click <guibutton>Open</guibutton>.</para></listitem>
+				<listitem><para>Choose a Private Key by clicking the <guibutton>Private Key</guibutton> browse button. Navigate to the certificate and click <guibutton>Open</guibutton>.</para></listitem>
+				<listitem><para>Enter the private key password. Ticking the <guilabel>Show Key</guilabel> will display the key.</para></listitem>
+				<listitem><para>Click the <guibutton>Connect</guibutton>.</para></listitem>
+			</orderedlist>
+		</sect2>
+		<sect2 id="connecting-wireless-wpa" status="review">
+			<title>WPA and WPA2 Personal Security</title>
+			<orderedlist>
+				<listitem><para>Select the WEP type from the <guilabel>Wireless Security</guilabel> drop down.</para></listitem>
+				<listitem><para>Enter the password. Ticking the <guilabel>Show Password</guilabel> will display the key.</para></listitem>
+				<listitem><para>Click the <guibutton>Connect</guibutton>.</para></listitem>
+			</orderedlist>
+		</sect2>
+	</sect1>
+
+	<sect1 id="connecting-mobile" status="review">
+		<title>Mobile Broadband</title>
+		<orderedlist>
+			<listitem><para>Right click the <guiicon>NetworkManager</guiicon> icon and click <guilabel>Edit connections...</guilabel></para></listitem>
+			<listitem><para>Click <guilabel>Mobile Broadband</guilabel>.</para></listitem>
+			<listitem><para>Click <guibutton>Add</guibutton>.</para></listitem>
+		</orderedlist>
+	</sect1>
+
+	<sect1 id="connecting-vpn" status="review">
+		<title>Virtual Private Networks</title>
+		<orderedlist>
+			<listitem><para>Left click the <guiicon>NetworkManager</guiicon> icon and click <guilabel>Configure VPN...</guilabel> from the <guilabel>VPN Connections</guilabel> option.</para></listitem>
+			<listitem><para>Click <guibutton>Add</guibutton>.</para></listitem>
+		</orderedlist>
+	</sect1>
+
+	<sect1 id="connecting-dsl" status="review">
+		<title>DSL</title>
+		<orderedlist>
+			<listitem><para>Right click the <guiicon>NetworkManager</guiicon> icon and click <guilabel>Edit connections...</guilabel></para></listitem>
+			<listitem><para>Click <guilabel>DSL</guilabel>.</para></listitem>
+			<listitem><para>Click <guibutton>Add</guibutton>.</para></listitem>
+		</orderedlist>
+	</sect1>
+</chapter>

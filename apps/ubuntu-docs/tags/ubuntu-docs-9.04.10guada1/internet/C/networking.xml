@@ -18,12 +18,15 @@
 	<sect1 id="networking-browsenetcomps" status="review">
 		<title>View other computers on the network</title>
                 <para>To view computers on the network, open &network-servers;.</para>
-		<para>You may need to enter a username, password, and domain. You should obtain these from your network administrator if possible. The username and password will normally be the username and password for a user of the computer on which you are trying to connect. The domain can often be left blank.</para>
+		<para>You may need to enter a username, password, and domain. You should obtain these from your network 
+		administrator where necessary. The username and password will normally be the username and password for 
+		a user of the computer on which you are trying to connect.</para>
+		<para>The domain can often be left blank.</para>
 		<para>See <ulink type='help' url='ghelp:user-guide#nautilus-accessnetwork'>Navigating Remote Servers</ulink> for more information.</para>
     </sect1>
-        
+<!-- REMOVED UNTIL SOMEONE MAKES A DECISION ON GNOME-NETWORK-TOOLS INCLUSION
     <sect1 id="networking-changecompname" status="review">
- 	 	<title>Change the name of your computer</title>
+ 	 	<title>Change computer name</title>
        	<para>When connected to a network, your computer can be referred to by its <emphasis>host name</emphasis>. It is possible to change the host name of your computer.</para>
 <important><para>You must be a member of the <emphasis>admin</emphasis> group in order to change the computer host name.</para></important>
     	<procedure>
@@ -42,12 +45,12 @@
         </procedure>
         <para>Restart the computer for the change to take effect.</para>
 	</sect1>
-        
+-->        
 	<sect1 id="networking-shares" status="review">
 		<title>Share files and folders with other computers</title>
 		<para>You can share files and folders with other people on your network through <application>Shared Folders</application> or <application>Nautilus</application>.</para>
-	<sect2 id="networking-shares-sharesadmin" status="review">
-		<title>Sharing folders via the Shared Folders application</title>
+		<sect2 id="networking-shares-sharesadmin" status="review">
+			<title>Sharing folders via the Shared Folders application</title>
 			<para>To share folders using the <application>Shared Folders</application> application:</para>
 			<procedure>
 				<step>
@@ -85,69 +88,69 @@
 				</step>
 			</procedure>
 			<para>See the <ulink type='help' url='ghelp:shares-admin'>Shared Folders Administration Tool manual</ulink> for more information on managing network shares.</para>
-			</sect2>
-			<sect2 id="networking-shares-nautilus" status="review">	
-				<title>Sharing folders via Nautilus</title>	
-			<para>To share folders using <application>Nautilus</application>:</para>
-			<procedure>
-			<step>
-				<para>Press &computer; to open a <application>File Browser</application> window.</para>
-			</step>
-			<step>
-				<para>Right click the folder you wish to share and select <guimenuitem>Sharing Options</guimenuitem> on the popup menu.</para>
-			</step>
-			<step>
-				<para>Select <guilabel>Share this folder</guilabel> from the popup menu. You may change the <guilabel> Share name</guilabel> field if you want to use a different share name.</para>
-			</step>
-			<step>
-				<para>You may receive a message which says <guilabel>Sharing services are not installed</guilabel>. If this happens, ensure that the two checkboxes in the message box are checked and press <guibutton>Install services</guibutton>. Sharing service support will then be downloaded and installed; this may take a while.</para>
-			</step>
-			<step>
-				<para>Select <guilabel>Allow other people to write in this folder</guilabel> if you wish to allow others to add, change, and remove files in this folder. If you leave this box unchecked, other people will only be able to view files in this folder. You may also fill in the <guilabel>Comment</guilabel> field.</para>
-			</step>
-			<step>
-				<para>Select <guilabel>Guest access (for people without a user account)</guilabel> if you wish to allow guest users to access your files.</para>
-			</step>
-			<step>
-				<para>Press <guibutton>Create share</guibutton> to make the shared folder available.</para>
-			</step>
-			<step>
-				<para>You may receive a message stating that Nautilus needs to add some permissions to the folder in order to share it. If this happens, press <guibutton>Add the permissions automatically</guibutton>.</para>
-			</step>	
-			<step>
-				<para>Other people on the same network (LAN) as you should now be able to access the folder.</para>
-			</step>	
- 			</procedure>
-		<note><para>You may receive a message which says <guilabel>You do not have permission to create a usershare</guilabel>. If this happens, contact your system administrator or configure the <application>Folder sharing service (samba)</application>.</para></note>
- 			<para>See the <ulink type='help' url='ghelp:shares-admin'>Shared Folders Administration Tool manual</ulink> for more information on managing network shares.</para>
+		</sect2>
+		<sect2 id="networking-shares-nautilus" status="review">	
+			<title>Sharing folders via Nautilus</title>	
+		<para>To share folders using <application>Nautilus</application>:</para>
+		<procedure>
+		<step>
+			<para>Press &computer; to open a <application>File Browser</application> window.</para>
+		</step>
+		<step>
+			<para>Right click the folder you wish to share and select <guimenuitem>Sharing Options</guimenuitem> on the popup menu.</para>
+		</step>
+		<step>
+			<para>Select <guilabel>Share this folder</guilabel> from the popup menu. You may change the <guilabel> Share name</guilabel> field if you want to use a different share name.</para>
+		</step>
+		<step>
+			<para>You may receive a message which says <guilabel>Sharing services are not installed</guilabel>. If this happens, ensure that the two checkboxes in the message box are checked and press <guibutton>Install services</guibutton>. Sharing service support will then be downloaded and installed; this may take a while.</para>
+		</step>
+		<step>
+			<para>Select <guilabel>Allow other people to write in this folder</guilabel> if you wish to allow others to add, change, and remove files in this folder. If you leave this box unchecked, other people will only be able to view files in this folder. You may also fill in the <guilabel>Comment</guilabel> field.</para>
+		</step>
+		<step>
+			<para>Select <guilabel>Guest access (for people without a user account)</guilabel> if you wish to allow guest users to access your files.</para>
+		</step>
+		<step>
+			<para>Press <guibutton>Create share</guibutton> to make the shared folder available.</para>
+		</step>
+		<step>
+			<para>You may receive a message stating that Nautilus needs to add some permissions to the folder in order to share it. If this happens, press <guibutton>Add the permissions automatically</guibutton>.</para>
+		</step>	
+		<step>
+			<para>Other people on the same network (LAN) as you should now be able to access the folder.</para>
+		</step>	
+		</procedure>
+	<note><para>You may receive a message which says <guilabel>You do not have permission to create a usershare</guilabel>. If this happens, contact your system administrator or configure the <application>Folder sharing service (samba)</application>.</para></note>
+		<para>See the <ulink type='help' url='ghelp:shares-admin'>Shared Folders Administration Tool manual</ulink> for more information on managing network shares.</para>
 
-			</sect2>	
-			<sect2 id="networking-shares-windows" status="review">
-				<title>Accessing shared folders via Windows</title>
-				<para>If you would like to access a shared folder hosted on an Ubuntu computer by using computers running Windows, you may have to perform some additional steps:</para>
-				<procedure>
-					<step>
-						<para>Press &terminal; to open a Terminal.</para>
-					</step>
-					<step>
-						<para>Type <command>sudo smbpasswd -a username</command>, replacing <quote>username</quote> with your own username. Press <keycap>Enter</keycap> to run the command.</para>
-						<note>
-							<para>You can find out what your username is by typing <command>whoami</command> into the Terminal and then pressing <keycap>Enter</keycap>.</para>
-						</note>
-					</step>
-					<step>
-						<para>Enter your password when prompted with <quote>[sudo] password for username:</quote> and press <keycap>Enter</keycap> again.</para>
-					</step>
-					<step>
-						<para>When prompted with <quote>New SMB password:</quote>, enter the password that you would like to use to access the shared folder and then press <keycap>Enter</keycap>. You can leave the password blank, which will allow anyone to access the shared folder.</para>
-					</step>
-					<step>
-						<para>When prompted with <quote>Retype new SMB password:</quote>, enter the password that you just entered and then press <keycap>Enter</keycap>.</para>
-					</step>
-					<step>
-						<para>You should now be able to connect to the shared folders on the Ubuntu computer.</para>
-					</step>
-				</procedure>
+		</sect2>	
+		<sect2 id="networking-shares-windows" status="review">
+			<title>Accessing shared folders via Windows</title>
+			<para>If you would like to access a shared folder hosted on an Ubuntu computer by using computers running Windows, you may have to perform some additional steps:</para>
+			<procedure>
+				<step>
+					<para>Press &terminal; to open a Terminal.</para>
+				</step>
+				<step>
+					<para>Type <command>sudo smbpasswd -a username</command>, replacing <quote>username</quote> with your own username. Press <keycap>Enter</keycap> to run the command.</para>
+					<note>
+						<para>You can find out what your username is by typing <command>whoami</command> into the Terminal and then pressing <keycap>Enter</keycap>.</para>
+					</note>
+				</step>
+				<step>
+					<para>Enter your password when prompted with <quote>[sudo] password for username:</quote> and press <keycap>Enter</keycap> again.</para>
+				</step>
+				<step>
+					<para>When prompted with <quote>New SMB password:</quote>, enter the password that you would like to use to access the shared folder and then press <keycap>Enter</keycap>. You can leave the password blank, which will allow anyone to access the shared folder.</para>
+				</step>
+				<step>
+					<para>When prompted with <quote>Retype new SMB password:</quote>, enter the password that you just entered and then press <keycap>Enter</keycap>.</para>
+				</step>
+				<step>
+					<para>You should now be able to connect to the shared folders on the Ubuntu computer.</para>
+				</step>
+			</procedure>
 		</sect2>
 		
 		<sect2 id="networking-shares-troubleshooting" status="review">
@@ -187,6 +190,7 @@
 				<para>More information can be found on the Ubuntu <ulink url='https://help.ubuntu.com/community/SettingUpSamba'>community help pages</ulink>.</para>
 			</sect2>
         </sect1>
+<!-- SECTION REMOVED TO CONSOLIDATE WITH A SINGLE TROUBLESHOOTING SECTION AND TO REMOVE REFERENCE TO FLAMING NETWORK	
 	<sect1 id="network-troubleshooting" status="review">
 		<title>Tools to help with network connection problems</title>
 		<para>If you have a network connection which is not working properly, you can use a few tools to help diagnose the problem.</para>
@@ -247,6 +251,6 @@
 			<para>If you get an error message which says <emphasis>The address &apos;91.189.94.249&apos; cannot be found</emphasis>, then there is no connection.</para>
 			<para>If the address is found then try the next stage.</para>
 		</sect2>
-		
 	</sect1>        
+-->
 </chapter>

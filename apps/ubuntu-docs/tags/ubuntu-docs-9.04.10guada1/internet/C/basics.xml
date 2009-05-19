@@ -15,86 +15,53 @@
 <chapter id="basics" status="review">
 	<title>Networking Basics</title>
 
-	<sect1 id="networking-enable" status="review">
-		<title>Connect to a network</title>
-		<para>If you change the settings of your network connection or connect to a different network than usual, you may have to enable the connection yourself.</para>
-
-		<sect2 id="networking-enable-nm" status="review">
-			<title>Use Network Manager to connect to a network</title>
-			<para>If your network connection is managed by <application>Network Manager</application> the connection should be enabled automatically.</para>
-			<para>If the connection is not enabled automatically:</para>
-			<orderedlist>
-				<listitem><para>Find the Network Manager icon in the notification area. It should look like a small signal strength indicator or a computer monitor and will probably be close to the clock</para></listitem>
-				<listitem><para>Right-click the icon and ensure that <guilabel>Enable Networking</guilabel> is selected in the popup menu.</para></listitem>
-				<listitem><para>If you have a wireless network connection, make sure that <guilabel>Enable Wireless</guilabel> is selected.</para></listitem>
-				<listitem><para>Left-click the Network Manager icon and then click on the network you want to connect to</para></listitem>
-				<listitem><para>After a short period you should receive a message which says <guilabel>Connection Established</guilabel></para></listitem>
-				<listitem><para>You should now be connected to a network.</para></listitem>
-			</orderedlist>
-			<para>If you are not connected to a network after following the procedure above:</para>
-			<orderedlist>
-				<listitem><para>Left-click the Network Manager icon again and press <guibutton>Manual configuration...</guibutton></para></listitem>
-				<listitem><para>Select the <guilabel>Connections</guilabel> tab</para></listitem>
-				<listitem><para>Tick the box next to your network connection to enable the connection</para></listitem>
-				<listitem><para>The connection process make take a short while</para></listitem>
-				<listitem><para>Press <guibutton>Close</guibutton></para></listitem>
-			</orderedlist>
-		</sect2>
+	<sect1 id="basics-connecting" status="review">
+		<title>Connecting</title>
+		<para>INTRO</para>
 		
-		<sect2 id="networking-enable-ifup" status="review">
-			<title>Use the ifup command to connect to a network</title>
-			<para><application>Ifup</application> is a command-line tool for enabling network connections.</para>
-			<para>To enable a network connection:</para>
-			<orderedlist>
-				<listitem><para>Press &terminal; to open a terminal.</para></listitem>
-				<listitem><para>Type <command>sudo ifdown eth1</command> in the terminal and press <keycap>Enter</keycap>. Replace <emphasis>eth1</emphasis> with the name of your network interface if it is different.</para></listitem>
-				<listitem><para>Enter your password if prompted.</para></listitem>
-				<listitem><para>Type <command>sudo ifup eth1</command> in the terminal and press <keycap>Enter</keycap>, again replacing <emphasis>eth1</emphasis> with the name of your network interface.</para></listitem>
-				<listitem>
-					<para>If you have connected successfully, you should see a message similar to the following:</para>
-					<screen>DHCPACK from 192.168.2.1
-bound to 192.168.2.4 -- renewal in 536349522 seconds.</screen>
-				</listitem>
-			</orderedlist>
+		<sect2 id="basics-connecting-wired" status="review">
+			<title>Wired (LAN)</title>
+			<para>HOWTO</para>
+		</sect2>
+
+		<sect2 id="basics-connecting-wireless" status="review">
+			<title>Wireless</title>
+			<para>HOWTO</para>
+		</sect2>
+
+		<sect2 id="basics-connecting-mobile" status="review">
+			<title>Mobile Broadband</title>
+			<para>HOWTO</para>
+		</sect2>
+
+		<sect2 id="basics-connecting-vpn" status="review">
+			<title>Virtual Private Networks</title>
+			<para>HOWTO</para>
+		</sect2>
+
+		<sect2 id="basics-connecting-dsl" status="review">
+			<title>DSL</title>
+			<para>HOWTO</para>
 		</sect2>
 	</sect1>
 		
-	<sect1 id="networking-disable" status="review">
-		<title>Disable a network connection</title>
-		<para>Sometimes you may want to disable a network connection. There are several different ways of achieving this.</para>
+	<sect1 id="basics-disconnecting" status="review">
+		<title>Disconnecting</title>
+		<para>INTRO</para>
 		
-		<sect2 id="networking-disable-nm" status="review">
-			<title>Disconnecting using Network Manager</title>
-			<para>It is likely that <application>Network Manager</application> is running your network connections. If so, you must disconnect from the network by disabling your network connection in Network Manager:</para>
-			<orderedlist>
-				<listitem><para>Find the Network Manager icon in the notification area. It should look like a small signal strength indicator or a computer monitor and will probably be close to the clock.</para></listitem>
-				<listitem><para>Right-click the icon and uncheck <guilabel>Enable Networking</guilabel>.</para></listitem>
-				<listitem><para>You should be disconnected from the network.</para></listitem>
-			</orderedlist>
+		<sect2 id="basics-disconnecting-networking" status="review">
+			<title>Networking</title>
+			<para>HOWTO</para>
 		</sect2>
 		
-		<sect2 id="networking-disable-networksettings" status="review">
-			<title>Disconnecting using Network Settings</title>
-			<para>If Network Manager is not running, use the <application>Network Settings</application> tool to disconnect your network connection:</para>
-			<orderedlist>
-				<listitem><para>Press &networking;.</para></listitem>
-				<listitem><para>Press <guilabel>Unlock</guilabel>. Enter your administrative password and press the <guibutton>Authenticate</guibutton> button.</para></listitem>
-				<listitem><para>Select the <guilabel>Connections</guilabel> tab.</para></listitem>
-				<listitem><para>Uncheck your network connection to disconnect it.</para></listitem>
-				<listitem><para>Press the <guibutton>Close</guibutton> button.</para></listitem>
-			</orderedlist>
+		<sect2 id="basics-disconnecting-wireless" status="review">
+			<title>Wireless</title>
+			<para>HOWTO</para>
 		</sect2>
-		
-		<sect2 id="networking-disable-ifdown" status="review">
-			<title>Disconnecting using the ifdown command</title>
-			<para><application>Ifdown</application> is a command-line tool for disabling network connections.</para>
-			<para>To disable a network connection using ifdown:</para>
-			<orderedlist>
-				<listitem><para>Press &terminal; to open a terminal.</para></listitem>
-				<listitem><para>Type <command>sudo ifdown eth1</command> in the terminal and press <keycap>Enter</keycap>. Replace <emphasis>eth1</emphasis> with the name of your network interface if it is different.</para></listitem>
-				<listitem><para>Enter your password if prompted.</para></listitem>
-				<listitem><para>Your network connection should be disconnected.</para></listitem>
-			</orderedlist>
-		</sect2>
+	</sect1>
+	
+	<sect1 id="basics-information" status="review">
+		<title>Information</title>
+		<para>INTRO</para>
 	</sect1>
 </chapter>

@@ -112,7 +112,10 @@
       There are several options available when using <application>virt-install</application>.  For example:
       </para>
 <screen>
-<command>sudo virt-install -n web_devel -r 256 -f web_devel.img -s 4 -c jeos.iso --accelerate --connect=qemu:///system --vnc --noautoconsole</command>
+<command>sudo virt-install -n web_devel -r 256 -f web_devel.img \
+-s 4 -c jeos.iso --accelerate \
+--connect=qemu:///system --vnc \
+--noautoconsole -v</command>
 </screen>
       <itemizedlist>
         <listitem>
@@ -155,6 +158,11 @@
         <listitem>
           <para>
           <emphasis>--noautoconsole:</emphasis> will not automatically connect to the virtual machine's console. 
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+          <emphasis>-v:</emphasis> creates a fully virtualized guest. 
           </para>
         </listitem>
       </itemizedlist>
@@ -337,7 +345,7 @@
       Once a virtual machine is installed and running you can connect to the virtual machine's console by using:
       </para>
 <screen>
-<command>virt-viewer qemu:///system web_devel</command>
+<command>virt-viewer -c qemu:///system web_devel</command>
 </screen>
       <para>
       Similar to <application>virt-manager</application>, <application>virt-viewer</application> can connect to a remote host using 

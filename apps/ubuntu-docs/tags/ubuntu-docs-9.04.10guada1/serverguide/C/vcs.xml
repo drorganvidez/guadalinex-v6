@@ -242,14 +242,25 @@ syntax of the command, entered at a terminal prompt, is as follows:</para>
         <command>www-data</command>.
         </para>
         </note>
-  <para>Next, you must create the <filename>/etc/subversion/passwd</filename> 
-  file. This file contains user authentication details. To add an entry, i.e. 
-  to add a user, you can run the following command from a terminal prompt:</para>
-	<para>
+
+        <para>
+        Next, you must create the <filename>/etc/subversion/passwd</filename> file that will contain user authentication details. 
+        To create a file issue the following command at a command prompt (which will create the file and add the first user):
+        </para>
+
 <screen>
 <command>sudo htpasswd -c /etc/subversion/passwd user_name</command>
 </screen>
+
+        <para>
+        To add additional users omit the <emphasis>"-c"</emphasis> option as this option replaces the old file. Instead use this form:
         </para>
+
+<screen>
+<command>sudo htpasswd /etc/subversion/password user_name</command>
+</screen>
+
+
 	<para>This command will prompt you to enter the password. Once you enter the password, the user is added. Now, to access the repository you can run the following command:</para>
         <screen><command>svn co http://servername/svn</command></screen>
 	<warning>

@@ -280,26 +280,111 @@ as a normal user with the following command at a terminal prompt:
         <para>To exit Aptitude, simply press the <keycap>q</keycap> key and confirm you wish to exit. Many other functions are available from the Aptitude menu by pressing the <keycap>F10</keycap> key.
         </para>
   </sect1>
-	<sect1 id="configuration" status="review">
-		<title>Configuration</title>
-          <para>
-          Configuration of the <emphasis>Advanced Packaging Tool</emphasis> (APT) system repositories is stored in the /etc/apt/sources.list configuration file. An example of this file is referenced here, along with information on adding or removing repository references from the file.
-          </para>
-          <para>
-          <ulink url="../sample/sources.list">Here</ulink> is a simple example of a typical <filename>/etc/apt/sources.list</filename> file.
-          </para>
-          <para>
-          You may edit the file to enable repositories or disable them.  For example, to disable the requirement of inserting the Ubuntu CD-ROM whenever package operations occur, simply comment out the appropriate line for the CD-ROM, which appears at the top of the file:
-          </para>
-          <para>
+
+  <sect1 id="automatic-updates" status="review">
+    <title>Automatic Updates</title>
+
+    <para>
+    The <application>unattended-upgrades</application> package can be used to automatically install updated packages, and can be configured to
+    update all packages or just install security updates.  First, install the package by entering the following in a terminal:
+    </para>
+
+<screen>
+<command>sudo apt-get install unattended-upgrades</command>
+</screen>
+
+    <para>
+    To configure <application>unattended-upgrades</application>, edit <filename>/etc/apt/apt.conf.d/50unattended-upgrades</filename> and adjust the 
+    following to fit your needs:
+    </para>
+
+<programlisting>
+Unattended-Upgrade::Allowed-Origins {
+        "Ubuntu &distro-short-codename;-security";
+//      "Ubuntu &distro-short-codename;-updates";
+};
+</programlisting>
+
+    <para>
+    Certain packages can also be <emphasis>blacklisted</emphasis> and therefore will not be automatically updated.  To blacklist a package, add it to the 
+    list:
+    </para>
+
+<programlisting>
+Unattended-Upgrade::Package-Blacklist {
+//      "vim";
+//      "libc6";
+//      "libc6-dev";
+//      "libc6-i686";
+};
+</programlisting>
+
+    <note>
+      <para>
+      The double <emphasis><quote>//</quote></emphasis> serve as comments, so whatever follows "//" will not be evaluated.
+     </para>
+    </note>
+
+    <para>
+    The results of <application>unattended-upgrades</application> will be logged to <filename>/var/log/unattended-upgrades</filename>.
+    </para>
+
+    <sect2 id="update-notifications" status="review">
+      <title>Notifications</title>
+
+        <para>
+        Configuring <emphasis>Unattended-Upgrade::Mail</emphasis> in <filename>/etc/apt/apt.conf.d/50unattended-upgrades</filename> will enable 
+        <application>unattended-upgrades</application> to email an administrator detailing any packages that need upgrading or have problems.
+        </para>
+
+        <para>
+        Another useful package is <application>apticron</application>.  <application>apticron</application> will configure a 
+        <application>cron</application> job to email an administrator information about any packages on the system that need updated as well
+        as a summary of changes in each package.
+        </para>
+
+        <para>
+        To install the <application>apticron</application> package, in a terminal enter:
+        </para>
+
+<screen>
+<command>sudo apt-get install apticron</command>
+</screen>
+
+        <para>
+        Once the package is installed edit <filename>/etc/apticron/apticron.conf</filename>, to set the email address and other options:
+        </para>
+
+<programlisting>
+EMAIL="root@example.com"
+</programlisting>
+
+    </sect2>  
+  </sect1>          
+  <sect1 id="configuration" status="review">
+    <title>Configuration</title>
+    
+    <para>
+    Configuration of the <emphasis>Advanced Packaging Tool</emphasis> (APT) system repositories is stored in the /etc/apt/sources.list       
+    configuration file. An example of this file is referenced here, along with information on adding or removing repository references from the
+    file.
+    </para>
+
+    <para>
+    <ulink url="../sample/sources.list">Here</ulink> is a simple example of a typical <filename>/etc/apt/sources.list</filename> file.
+    </para>
+
+    <para>
+    You may edit the file to enable repositories or disable them.  For example, to disable the requirement of inserting the Ubuntu CD-ROM 
+    whenever package operations occur, simply comment out the appropriate line for the CD-ROM, which appears at the top of the file:
+    </para>
+
 <screen>
 # no more prompting for CD-ROM please
 # deb cdrom:[&distro-apt-cd-name; - Release i386 (20070419.1)]/ &distro-short-codename; main restricted
 </screen>
-          </para>
-          
-    </sect1>
-	<sect1 id="extra-repositories" status="review">
+
+  <sect2 id="extra-repositories" status="review">
 		<title>Extra Repositories</title>
           <para>
           In addition to the officially supported package repositories available for Ubuntu, there exist additional community-maintained repositories which add thousands more potential packages for installation.  Two of the most popular are the <emphasis>Universe</emphasis> and <emphasis>Multiverse</emphasis> repositories. These repositories are not officially supported by Ubuntu, but because they are maintained by the community they generally provide packages which are safe for use with your Ubuntu computer. 
@@ -340,11 +425,12 @@ deb http://security.ubuntu.com/ubuntu &distro-short-codename;-security multivers
 deb-src http://security.ubuntu.com/ubuntu &distro-short-codename;-security multiverse
 </programlisting>
           </para>
-          <sect2 id="extra-repositories-references" status="review">
+          <sect3 id="extra-repositories-references" status="review">
                 <title>References</title>
                 <para>
                 <ulink url="https://help.ubuntu.com/community/Repositories/Ubuntu">Adding Repositories HOWTO (Ubuntu Wiki)</ulink>
                 </para>
-          </sect2>
-    </sect1>
+          </sect3>
+    </sect2>
+  </sect1>
 	</chapter>

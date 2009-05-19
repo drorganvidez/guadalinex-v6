@@ -203,9 +203,9 @@
                   </listitem>
                   <listitem>
                     <para>
-                    <emphasis>Install security updates Automatically</emphasis>: will configure a 
-                    <application>cron</application> job to install security updates without the intervention
-                    of an administrator.
+                    <emphasis>Install security updates Automatically</emphasis>: will install the 
+                    <application>unattended-upgrades</application> package, which will install security updates without the intervention
+                    of an administrator.  For more details see <xref linkend="automatic-updates"/>.
                     </para>
                   </listitem>
                   <listitem>
@@ -252,11 +252,6 @@
 	    are grouped by the type of service they provide. 
 	    </para>
 	    <itemizedlist>
-	      <listitem>
-	        <para>
-		Basic Ubuntu server: Installs some additional utilities and documentation.
-	        </para>
-	      </listitem>
 	      <listitem>
 	        <para>
 		DNS server: Selects the BIND DNS server and its documentation.

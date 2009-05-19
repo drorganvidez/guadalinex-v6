@@ -155,12 +155,8 @@
                  For example, edit the <filename>/etc/samba/smb.conf</filename> file and add
                  the values:
                  </para>
-                 <para>
-                 <emphasis role="bold">realm = DOMAIN_NAME</emphasis>
-                 </para>
-                 <para>
-                 <emphasis role="bold">security = ADS</emphasis>
-                 </para>
+<programlisting>realm = DOMAIN_NAME
+security = ADS</programlisting>
                  <para>
                  to the file, and save the file.  
                  </para>
@@ -218,9 +214,7 @@
               <emphasis role="italic">richard</emphasis>, then you could edit the <filename>/etc/samba/smb.conf</filename> file, and add the following entries under 
               the <emphasis role="italic">[sourcedocs]</emphasis> entry:
             </para>
-               <para>
-                  <emphasis role="bold">read list = @planning</emphasis>
-               </para>
+<programlisting>read list = @planning</programlisting>
                <para>
                   <emphasis role="bold">write list = @authors, richard</emphasis>
                </para>
@@ -233,9 +227,7 @@
             <emphasis role="italic">melissa</emphasis> administrative permissions to the example <emphasis role="italic">sourcedocs</emphasis>
             share, you would edit the <filename>/etc/samba/smb.conf</filename> file, and add the following line under the <emphasis role="italic">[sourcedocs]</emphasis> entry:
             </para>
-               <para>
-                  <emphasis role="bold">admin users = melissa</emphasis>
-               </para>
+<programlisting>admin users = melissa</programlisting>
              <para>
              Save the <filename>/etc/samba/smb.conf</filename> for the changes to take effect.
              </para>
@@ -303,20 +295,20 @@
               <para>
               The <application>smbpasswd</application> application will then prompt you to enter a password for the user:
               </para>
-                 <para>
-                    <computeroutput>
-                    New SMB password:
-                    </computeroutput>
-                 </para>
+<screen>
+<computeroutput>
+New SMB password:
+</computeroutput>
+</screen>
               <para>
               Enter the password you wish to set for the user, and the <application>smbpasswd</application> application will
               ask you to confirm the password:
               </para>
-                    <para>
-                    <computeroutput>
-                    Retype new SMB password:
-                    </computeroutput>
-                     </para>
+<screen>
+<computeroutput>
+Retype new SMB password:
+</computeroutput>
+</screen>
                <para>
                Confirm the password, and <application>smbpasswd</application> will add the entry for the user to the SAMBA password file.
                </para>
@@ -348,9 +340,7 @@
               <emphasis role="italic">LEVELONE</emphasis>, then the <filename>/etc/samba/smb.conf</filename> could be edited, and the following value changed
               accordingly:
             </para>
-               <para>
-               <emphasis role="bold">workgroup = LEVELONE</emphasis>
-               </para>
+<programlisting>workgroup = LEVELONE</programlisting>
             <para>
             Save the file and restart the SAMBA daemons to affect the change.
             </para>
@@ -369,11 +359,7 @@
             <emphasis role="italic">browseable</emphasis> directive, which takes a Boolean argument, under the
             <emphasis role="italic">[global]</emphasis> heading in the <filename>/etc/samba/smb.conf</filename>.  That is, if you edit the file and add the line:
             </para>
-            <para>
-            <emphasis role="bold">
-            browseable = true
-            </emphasis>
-            </para>
+<programlisting>browseable = true</programlisting>
             <para>
             under the <emphasis role="italic">[global]</emphasis> section of <filename>/etc/samba/smb.conf</filename>, then all shares provided by
             your Ubuntu system via SAMBA will be browseable by all authorized clients, unless a specific share contains a 

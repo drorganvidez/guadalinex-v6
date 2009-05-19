@@ -13,16 +13,32 @@ urchinTracker();
 	<div id="header">
 	<div id="logo-floater"><h1><a href="https://help.ubuntu.com" title="Ubuntu Documentation"><img alt="Ubuntu" id="logo" src="https://help.ubuntu.com/htdocs/ubuntunew/img/logo.png" /></a></h1>
 	</div>
-<noscript><form action="http://www.google.com/cse" id="cse-search-box"></noscript>
-<script>document.write('<form action="https://help.ubuntu.com/search.html" id="cse-search-box"><input type="hidden" name="cof" value="FORID:9" />');</script>
-  <div>
 
-    <input type="hidden" name="cx" value="003883529982892832976:e2vwumte3fq" />
-    <input type="hidden" name="ie" value="UTF-8" />
-    <input type="text" name="q" size="27" />
-    <input type="submit" name="sa" value="Search" />
-  </div>
-</form>
+<!-- Provide a search box for clients with and without javascript -->
+<noscript>
+ <form action="http://www.google.com/cse" id="cse-search-box">
+   <div>
+     <input type="hidden" name="cx" value="003883529982892832976:e2vwumte3fq" />
+     <input type="hidden" name="ie" value="UTF-8" />
+     <input type="text" name="q" size="27" />
+     <input type="submit" name="sa" value="Search" />
+   </div>
+ </form>
+</noscript>
+<script>
+ document.write('<form action="https://help.ubuntu.com/search.html" id="cse-search-box">');
+ document.write('  <div>');
+ document.write('    <input type="hidden" name="cof" value="FORID:9" />');
+ document.write('    <input type="hidden" name="cx" value="003883529982892832976:e2vwumte3fq" />');
+ document.write('    <input type="hidden" name="ie" value="UTF-8" />');
+ document.write('    <input type="text" name="q" size="27" />');
+ document.write('    <input type="submit" name="sa" value="Search" />');
+ document.write('  </div>');
+ document.write('</form>');
+</script>
+
+<!-- Site Banner -->
+
 	<div id="sitename"><a href="https://help.ubuntu.com/"><img alt="Official Documentation" src="https://help.ubuntu.com/htdocs/ubuntunew/img/help-about.png" /><span>Official Documentation</span></a></div>
 	</div>
 </xsl:template>

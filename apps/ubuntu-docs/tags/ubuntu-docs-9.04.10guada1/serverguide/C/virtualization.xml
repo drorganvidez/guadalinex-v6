@@ -1461,7 +1461,7 @@ INSTANCE	i-45E108DD	emi-FFD11190	0.0.0.0	0.0.0.0	running		0		m1.small	2009-03-21
         </listitem>
         <listitem>
           <para>
-          You might also find help in the <emphasis>#ubuntu-virt</emphasis>, <emphasis>#eucalyptus</emphasis>, and 
+          You can also find help in the <emphasis>#ubuntu-virt</emphasis>, <emphasis>#eucalyptus</emphasis>, and 
           <emphasis>#ubuntu-server</emphasis> IRC channels on <ulink url="http://freenode.net">Freenode</ulink>.
           </para>
         </listitem>
@@ -1469,4 +1469,188 @@ INSTANCE	i-45E108DD	emi-FFD11190	0.0.0.0	0.0.0.0	running		0		m1.small	2009-03-21
       
     </sect2>
   </sect1>  
+<sect1 id="opennebula" status="review">
+    <title>OpenNebula</title>
+
+    <para>
+    <application>OpenNebula</application> allows virtual machines to be placed and re-placed dynamically on a pool of physical resources.
+    This allows a virtual machine to be hosted from any location available.  
+    </para>
+
+    <para>
+    This section will detail configuring an OpenNebula cluster using three machines: one <emphasis>Front-End</emphasis> host, and two 
+    <emphasis>Cluster Nodes</emphasis> used to run the virtual machines. The Cluster Nodes will also need a bridge configured to allow the 
+    virtual machines access to the local network.  For details see <xref linkend="bridging"/>.
+    </para>
+
+    <sect2 id="opennebula-installation" status="review">
+      <title>Installation</title>
+
+      <para>
+      First, from a terminal on the Front-End enter:
+      </para>
+
+<screen>
+<command>sudo apt-get install opennebula</command>
+</screen>
+  
+      <para>
+      On each Cluster Node install:
+      </para>
+
+<screen>
+<command>sudo apt-get install opennebula-node</command>
+</screen>
+
+      <para>
+      In order to copy SSH keys, the <emphasis>oneadmin</emphasis> user will need to have a password.  On each machine execute:
+      </para>
+
+<screen>
+<command>sudo passwd oneadmin</command>
+</screen>
+
+      <para>
+      Next, copy the <emphasis>oneadmin</emphasis> user's SSH key to the Cluster Nodes, and to the Front-End's <filename>authorized_keys</filename> file:
+      </para>
+
+<screen>
+<command>sudo scp /var/lib/one/.ssh/id_rsa.pub oneadmin@node01:/var/lib/one/.ssh/authorized_keys</command>
+<command>sudo scp /var/lib/one/.ssh/id_rsa.pub oneadmin@node02:/var/lib/one/.ssh/authorized_keys</command>
+<command>sudo sh -c "cat /var/lib/one/.ssh/id_rsa.pub >> /var/lib/one/.ssh/authorized_keys"</command>
+</screen>  
+
+      <para>
+      The SSH key for the Cluster Nodes needs to be added to the <filename>/etc/ssh/ssh_known_hosts</filename> file on the Front-End host.  To accomplish
+      this <application>ssh</application> to each Cluster Node as a user other than <emphasis>oneadmin</emphasis>.  Then exit from the SSH session, and 
+      execute the following to copy the SSH key from <filename>~/.ssh/known_hosts</filename> to <filename>/etc/ssh/ssh_known_hosts</filename>:
+      </para>
+
+<screen>
+<command>sudo sh -c "ssh-keygen -f .ssh/known_hosts -F node01 1>> /etc/ssh/ssh_known_hosts"</command>
+<command>sudo sh -c "ssh-keygen -f .ssh/known_hosts -F node02 1>> /etc/ssh/ssh_known_hosts"</command>
+</screen>
+
+      <note>
+        <para>
+        Replace <emphasis>node01</emphasis> and <emphasis>node02</emphasis> with the appropriate host names.
+        </para>
+      </note>
+
+      <para>
+      This allows the <emphasis>oneadmin</emphasis> to use <application>scp</application>, without a password or manual intervention, to deploy an
+      image to the Cluster Nodes.
+      </para>
+
+      <para>
+      On the Front-End create a directory to store the VM images, giving the <emphasis>oneadmin</emphasis> user access to the directory:
+      </para>
+
+<screen>
+<command>sudo mkdir /var/lib/one/images</command>
+<command>sudo chown oneadmin /var/lib/one/images/</command>
+</screen>
+
+      <para>
+      Finally, copy a virtual machine disk file into <filename>/var/lib/one/images</filename>.  You can create an Ubuntu virtual machine
+      using <application>vmbuilder</application>, see <xref linkend="jeos-and-vmbuilder"/> for details.
+      </para>
+
+    </sect2>
+    <sect2 id="opennebula-configuration" status="review">
+      <title>Configuration</title>
+    
+      <para>
+      The <emphasis>OpenNebula Cluster</emphasis> is now ready to be configured, and virtual machines added to the cluster.
+      </para>
+
+      <para>
+      From a terminal prompt enter:
+      </para>
+
+<screen>
+<command>onehost create node01 im_kvm vmm_kvm tm_ssh</command>
+<command>onehost create node02 im_kvm vmm_kvm tm_ssh</command>
+</screen>
+
+      <para>
+      Next, create a <emphasis>Virtual Network</emphasis> template file named <filename>vnet01.template</filename>:
+      </para>
+
+<programlisting>
+NAME            = "LAN"
+TYPE            = RANGED
+BRIDGE          = br0
+NETWORK_SIZE    = C
+NETWORK_ADDRESS = 192.168.0.0
+</programlisting>
+
+      <note>
+        <para>
+        Be sure to change <emphasis>192.168.0.0</emphasis> to your local network.
+        </para>
+      </note>
+
+      <para>
+      Using the <application>onevnet</application> utility, add the virtual network to OpenNebula:
+      </para>
+
+<screen>
+<command>onevnet create vnet01.template</command>
+</screen>
+
+      <para>
+      Now create a <emphasis>VM Template</emphasis> file named <filename>vm01.template</filename>:
+      </para>
+
+<programlisting>
+NAME   = vm01
+CPU    = 0.5
+MEMORY = 512
+
+OS      = [
+  KERNEL = /vmlinuz,
+  BOOT   = hd ]
+
+DISK   = [
+  source   = "/var/lib/one/images/vm01.qcow2",
+  target   = "hda",
+  readonly = "no" ]
+
+NIC    = [ NETWORK="LAN" ]
+</programlisting>
+
+      <para>
+      Start the virtual machine using <application>onevm</application>:
+      </para>
+
+<screen>
+<command>onevm submit vm01.template</command>
+</screen>
+
+      <para>
+      Use the <application>onevm list</application> option to view information about virtual machines.  Also, the <application>onevm show vm01</application> 
+      option will display more details about a specific virtual machine.
+      </para>
+
+    </sect2>
+    <sect2 id="opennebula-references" status="review">
+      <title>References</title>
+
+      <itemizedlist>
+        <listitem>
+          <para>
+          See the <ulink url="http://www.opennebula.org/doku.php?id=start">OpenNebula website</ulink> for more information.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+          You can also find help in the <emphasis>#ubuntu-virt</emphasis> and 
+          <emphasis>#ubuntu-server</emphasis> IRC channels on <ulink url="http://freenode.net">Freenode</ulink>.
+          </para>
+        </listitem>
+      </itemizedlist>
+
+    </sect2>
+  </sect1>
 </chapter>

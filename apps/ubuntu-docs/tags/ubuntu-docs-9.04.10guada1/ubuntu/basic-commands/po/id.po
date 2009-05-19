@@ -1,0 +1,901 @@
+# translation of basic-commands-id.po to Indonesian
+# Indonesian translation for ubuntu-docs
+# Copyright (c) (c) 2006 Canonical Ltd, and Rosetta Contributors 2006
+# This file is distributed under the same license as the ubuntu-docs package.
+#
+# Andy Apdhani <imtheface@gmail.com>, 2006.
+# Andhika Padmawan <andhika.padmawan@gmail.com>, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: basic-commands-id\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2007-09-14 08:25+0100\n"
+"PO-Revision-Date: 2007-11-14 10:54+0000\n"
+"Last-Translator: Andhika Padmawan <andhika.padmawan@gmail.com>\n"
+"Language-Team: Indonesian <l10n@ubuntu-id.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2008-02-17 10:22+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+#: basic-commands/C/basic-commands-C.omf:6(creator) basic-commands/C/basic-commands-C.omf:7(maintainer)
+msgid "ubuntu-doc@lists.ubuntu.com (Ubuntu Documentation Project)"
+msgstr "ubuntu-doc@lists.ubuntu.com (Proyek Dokumentasi Ubuntu)"
+
+#: basic-commands/C/basic-commands-C.omf:8(title) basic-commands/C/basic-commands.xml:15(title)
+msgid "Basic Commands"
+msgstr "Perintah Dasar"
+
+#: basic-commands/C/basic-commands-C.omf:9(date)
+msgid "2006-09-07"
+msgstr "2006-09-07"
+
+#: basic-commands/C/basic-commands-C.omf:11(description)
+msgid "Placeholder."
+msgstr "Wadah."
+
+#: basic-commands/C/basic-commands.xml:18(title)
+msgid "Using this Guide"
+msgstr "Menggunakan Petunjuk ini"
+
+#: basic-commands/C/basic-commands.xml:28(emphasis)
+msgid "man intro(1)"
+msgstr "man intro(1)"
+
+#: basic-commands/C/basic-commands.xml:20(emphasis)
+msgid ""
+"\"Under Linux there are GUIs (graphical user interfaces), where you can "
+"point and click and drag, and hopefully get work done without first reading "
+"lots of documentation. The traditional Unix environment is a CLI (command "
+"line interface), where you type commands to tell the computer what to do. "
+"That is faster and more powerful, but requires finding out what the commands "
+"are.\" -- from <placeholder-1/>"
+msgstr ""
+"\"Linux menyediakan antarmuka grafis (GUI) yang dapat membantu Anda "
+"menyelesaikan pekerjaan dengan cara menunjuk, mengklik, dan menggeser tanpa "
+"perlu membaca banyak dokumentasi. Sedangkan lingkungan asli UNIX adalah "
+"antarmuka berbasis teks (CLI), dimana anda harus mengetikkan perintah-"
+"perintah untuk menyelesaikan pekerjaan anda. Cara ini lebih cepat dan "
+"fleksibel, namun anda perlu mengetahui terlebih dahulu perintah-perintah "
+"tersebut.\" -- dari <placeholder-1/>"
+
+#: basic-commands/C/basic-commands.xml:33(para)
+msgid ""
+"This guide will make you familiar with basic GNU/Linux shell commands. It is "
+"not intended to be a complete guide to the command line, just an "
+"introduction to complement Ubuntu's graphical tools."
+msgstr ""
+"Panduan ini akan membantu anda terbiasa dengan perintah dasar shell "
+"GNU/Linux. Tidak diperuntukkan sebagai panduan lengkap, hanya perkenalan "
+"sebagai pelengkap perangkat grafis Ubuntu."
+
+#: basic-commands/C/basic-commands.xml:43(para)
+msgid ""
+"All command names, file names or paths to directories will be shown using a "
+"<command>monospace font</command>."
+msgstr ""
+"Semua perintah, nama berkas atau bagian dalam direktori akan ditampilkan "
+"menggunakan <command>huruf monospace</command>."
+
+#: basic-commands/C/basic-commands.xml:50(para)
+msgid ""
+"All the commands on this guide are to be issued from a command prompt in a "
+"<application>Terminal</application> and will be shown as: <screen>command to "
+"type</screen>"
+msgstr ""
+"Semua perintah di petunjuk ini dipanggil dari baris perintah di dalam "
+"<application>Terminal</application> dan akan terlihat sebagai: "
+"<screen>perintah diketik </screen>"
+
+#: basic-commands/C/basic-commands.xml:58(para)
+msgid ""
+"<emphasis role=\"strong\">Note that Linux is case sensitive.</emphasis> "
+"User, user, and USER are all different to Linux."
+msgstr ""
+"<emphasis role=\"strong\">Perhatikan bahwa Linux sensiftif terhadap format "
+"huruf.</emphasis> Pengguna, pengguna, dan PENGGUNA dianggap berbeda oleh "
+"Linux."
+
+#: basic-commands/C/basic-commands.xml:69(title)
+msgid "Starting a Terminal"
+msgstr "Menjalankan Terminal"
+
+#: basic-commands/C/basic-commands.xml:70(para)
+msgid "To open a <application>Terminal</application> do as follow:"
+msgstr ""
+"Untuk menjalankan <application>Terminal</application> lakukan perintah "
+"berikut:"
+
+#: basic-commands/C/basic-commands.xml:76(para)
+msgid ""
+"Choose "
+"<menuchoice><guimenu>Applications</guimenu><guimenuitem>Accessories</guimenui"
+"tem><guimenuitem>Terminal</guimenuitem></menuchoice>;"
+msgstr ""
+"Pilih "
+"<menuchoice><guimenu>Aplikasi</guimenu><guimenuitem>Aksesori</guimenuitem><gu"
+"imenuitem>Terminal</guimenuitem></menuchoice>;"
+
+#: basic-commands/C/basic-commands.xml:81(para)
+msgid ""
+"Or press <keycombo><keycap>Alt</keycap><keycap>F2</keycap></keycombo> and "
+"type <command>gnome-terminal</command>."
+msgstr ""
+"Atau tekan <keycombo><keycap>Alt</keycap><keycap>F2</keycap></keycombo> dan "
+"masukkan <command>gnome-terminal</command>."
+
+#: basic-commands/C/basic-commands.xml:94(title)
+msgid "File and Directory Commands"
+msgstr "Perintah Berkas dan Direktori"
+
+#: basic-commands/C/basic-commands.xml:97(title)
+msgid "cd"
+msgstr "cd"
+
+#: basic-commands/C/basic-commands.xml:98(para)
+msgid ""
+"The <command>cd</command> command changes directories. When you open a "
+"terminal you will be in your home directory. To move around the file system "
+"you will use <command>cd</command>. Examples:"
+msgstr ""
+"Perintah <command>cd</command> mengubah direktori. Saat anda membuka "
+"terminal, anda akan berada di direktori home. untuk berpindah direktori "
+"dalam berkas sistem anda menggunakan perintah <command>cd</command>. Contoh:"
+
+#: basic-commands/C/basic-commands.xml:107(para)
+msgid "To navigate into the root directory, type: <screen>cd /</screen>"
+msgstr "Untuk pindah ke direktori root, ketik: <screen>cd /</screen>"
+
+#: basic-commands/C/basic-commands.xml:113(para)
+msgid ""
+"To navigate to your home directory, type: <screen>cd</screen> or <screen>cd "
+"~</screen>"
+msgstr ""
+"Untuk pindah ke direktori home, ketik: <screen>cd</screen> atau <screen>cd "
+"~</screen>"
+
+#: basic-commands/C/basic-commands.xml:121(para)
+msgid "To navigate up one directory level, type: <screen>cd ..</screen>"
+msgstr "Untuk naik satu tingkat, ketik: <screen>cd ..</screen>"
+
+#: basic-commands/C/basic-commands.xml:127(para)
+msgid ""
+"To navigate to the previous directory (or back), type: <screen>cd -</screen>"
+msgstr ""
+"Untuk pindah ke direktori sebelumnya (atau kembali), ketik:  <screen>cd -"
+"</screen>"
+
+#: basic-commands/C/basic-commands.xml:134(para)
+msgid ""
+"To navigate through multiple levels of directory at once, specify the full "
+"directory path that you want to go to. For example, type: <screen>cd "
+"/var/www</screen> to go directly to the <filename "
+"class=\"directory\">/www</filename> subdirectory of <filename "
+"class=\"directory\">/var/</filename>. As another example, type: <screen>cd "
+"~/Desktop</screen> to move you to the <filename "
+"class=\"directory\">Desktop</filename> subdirectory inside your home "
+"directory."
+msgstr ""
+"Untuk pindah ke berbagai level direktori sekaligus, tentukan alamat penuh "
+"direktori yang akan dituju. Misalnya, ketik: <screen>cd /var/www</screen> "
+"untuk langsung pindah ke subdirektori <filename "
+"class=\"directory\">/www</filename> dari <filename "
+"class=\"directory\">/var/</filename>. Contoh yang lain, ketik: <screen>cd "
+"~/Desktop</screen> untuk pindah ke subdirektori <filename "
+"class=\"directory\">Desktop</filename> di dalam direktori home anda."
+
+#: basic-commands/C/basic-commands.xml:151(title)
+msgid "pwd"
+msgstr "pwd"
+
+#: basic-commands/C/basic-commands.xml:162(para)
+msgid ""
+"<application>GNOME Terminal</application> also displays this information in "
+"the title bar of it's window."
+msgstr ""
+"<application>GNOME Terminal</application> juga menampilkan informasi ini di "
+"batang judul pada window."
+
+#: basic-commands/C/basic-commands.xml:152(para)
+msgid ""
+"<command>pwd</command>: The <command>pwd</command> command will show you "
+"which directory you're located in (<acronym>pwd</acronym> stands for "
+"<quote>print working directory</quote>). For example, typing "
+"<screen>pwd</screen> in the <filename class=\"directory\">Desktop</filename> "
+"directory, will show <computeroutput>~/Desktop</computeroutput>. "
+"<placeholder-1/>"
+msgstr ""
+"<command>pwd</command>: Perintah <command>pwd</command> akan menunjukkan "
+"anda direktori tempat anda saat ini berada (<acronym>pwd</acronym> adalah "
+"singkatan dari <quote>print working direktory</quote>). Misalnya, dengan "
+"mengetikkan <screen>pwd</screen> di direktori <filename "
+"class=\"directory\">Desktop</filename> akan menampilkan "
+"<computeroutput>~/Desktop</computeroutput>. <placeholder-1/>"
+
+#: basic-commands/C/basic-commands.xml:171(title)
+msgid "ls"
+msgstr "ls"
+
+#: basic-commands/C/basic-commands.xml:172(para)
+msgid ""
+"The <command>ls</command> command shows you the files in your current "
+"directory. Used with certain options, you can see sizes of files, when files "
+"where made, and permissions of files. For example, typing <screen>ls "
+"~</screen> will show you the files that are in your home directory."
+msgstr ""
+"Perintah <command>ls</command> akan menampilkan kepada anda berkas yang ada "
+"di direktori anda saat ini. Bila digunakan dengan opsi khusus, anda dapat "
+"melihat ukuran berkas, kapan berkas dibuat, dan hak akses berkas. Misalnya, "
+"dengan mengetikkan <screen>ls ~</screen> maka berkas di dalam direktori home "
+"akan ditampilkan."
+
+#: basic-commands/C/basic-commands.xml:183(title)
+msgid "cp"
+msgstr "cp"
+
+#: basic-commands/C/basic-commands.xml:184(para)
+msgid ""
+"The <command>cp</command> command makes a copy of a file for you. For "
+"example, type: <screen>cp file foo</screen> to make a exact copy of "
+"<filename>file</filename> and name it <filename>foo</filename>, but the file "
+"<filename>file</filename> will still be there."
+msgstr ""
+"Perintah <command>cp</command> membuat salinan berkas untuk anda. Misalnya, "
+"ketik: <screen>cp file foo</screen> untuk membuat salinan identik dari "
+"<filename>file</filename> dan menamainya <filename>foo</filename>, tapi "
+"berkas <filename>file</filename> masih tetap ada disana."
+
+#: basic-commands/C/basic-commands.xml:194(title)
+msgid "mv"
+msgstr "mv"
+
+#: basic-commands/C/basic-commands.xml:206(para)
+msgid ""
+"If you are using <command>mv</command> with <command>sudo</command> you will "
+"not be able to use the <emphasis role=\"strong\">~</emphasis> shortcut, but "
+"will have to use the full pathnames to your files. This is because when you "
+"are working as root, <emphasis role=\"strong\">~</emphasis> will refer to "
+"the root account's home directory, not your own."
+msgstr ""
+"Jika anda menggunakan <command>mv</command> dengan <command>sudo</command> "
+"maka anda tidak dapat menggunakan jalan pintas <emphasis "
+"role=\"strong\">~</emphasis>, tapi harus menggunakan alamat penuh ke berkas "
+"anda. Hal ini karena jika anda bekerja sebagai root, <emphasis "
+"role=\"strong\">~</emphasis> akan merujuk pada direktori home milik akun "
+"root, bukan anda."
+
+#: basic-commands/C/basic-commands.xml:195(para)
+msgid ""
+"The <command>mv</command> command moves a file to a different location or "
+"will rename a file. Examples are as follows: <screen>mv file foo</screen> "
+"will rename the file <filename>file</filename> to <filename>foo</filename>. "
+"<screen>mv foo ~/Desktop</screen> will move the file "
+"<filename>foo</filename> to your <filename "
+"class=\"directory\">Desktop</filename> directory but will not rename it. You "
+"must specify a new file name to rename a file. <placeholder-1/>"
+msgstr ""
+"Perintah <command>mv</command> memindahkan berkas ke lokasi berbeda atau "
+"menamai ulang berkas. Misalnya seperti ini: <screen>mv file foo</screen> "
+"akan menamai ulang berkas <filename>file</filename> menjadi "
+"<filename>foo</filename>. <screen>mv foo ~/Desktop</screen> akan memindahkan "
+"berkas <filename>foo</filename> ke direktori <filename "
+"class=\"directory\">Desktop</filename> tapi tidak menamai ulang berkasnya. "
+"Anda harus menentukan nama berkas baru ketika menamai ulang berkas. "
+"<placeholder-1/>"
+
+#: basic-commands/C/basic-commands.xml:219(title)
+msgid "rm"
+msgstr "rm"
+
+#: basic-commands/C/basic-commands.xml:220(para)
+msgid ""
+"Use the <command>rm</command> command to remove or delete a file in your "
+"directory. It will not work on directories which have files in them."
+msgstr ""
+"Gunakan perintah <command>rm</command> untuk menghapus atau membuang berkas "
+"di direktori anda. Perintah tidak akan bekerja pada direktori yang mempunyai "
+"berkas di dalamnya."
+
+#: basic-commands/C/basic-commands.xml:228(title)
+msgid "mkdir"
+msgstr "mkdir"
+
+#: basic-commands/C/basic-commands.xml:229(para)
+msgid ""
+"The <command>mkdir</command> command will allow you to create directories. "
+"For example, typing: <screen>mkdir music</screen> will create a music "
+"directory in the current directory."
+msgstr ""
+"Perintah <command>mkdir</command> akan menginjinkan anda untuk membuat "
+"direktori. Sebagai contoh masukkan: <screen>mkdir musik</screen> akan "
+"membuat direktori musik dalam direktori yang ada."
+
+#: basic-commands/C/basic-commands.xml:239(title)
+msgid "System Information Commands"
+msgstr "Perintah Informasi Sistem"
+
+#: basic-commands/C/basic-commands.xml:242(title)
+msgid "df"
+msgstr "df"
+
+#: basic-commands/C/basic-commands.xml:243(para)
+msgid ""
+"The <command>df</command> command displays filesystem disk space usage for "
+"all partitions. <screen>df -h</screen> will give information using megabytes "
+"(M) and gigabytes (G) instead of blocks (<emphasis role=\"strong\">-"
+"h</emphasis> means \"human-readable\")."
+msgstr ""
+"Perintah <command>df</command> menampilkan penggunaan ruang sistem berkas di "
+"cakram untuk semua partisi. <screen>df -h</screen> akan memberikan informasi "
+"menggunakan megabita (M) dan gigabita (G) ketimbang dalam blok (<emphasis "
+"role=\"strong\">-h</emphasis> berarti \"human-readable\")."
+
+#: basic-commands/C/basic-commands.xml:253(title)
+msgid "free"
+msgstr "free"
+
+#: basic-commands/C/basic-commands.xml:254(para)
+msgid ""
+"The <command>free</command> command displays the amount of free and used "
+"memory in the system. <screen>free -m</screen> will give the information "
+"using megabytes, which is probably most useful for current computers."
+msgstr ""
+"Perintah <command>free</command> menampilkan jumlah memori yang bebas dan "
+"terpakai di sistem. <screen>free -m</screen> akan memberikan informasi "
+"menggunakan megabita, yang mungkin paling berguna untuk komputer masa kini."
+
+#: basic-commands/C/basic-commands.xml:264(title)
+msgid "top"
+msgstr "top"
+
+#: basic-commands/C/basic-commands.xml:265(para)
+msgid ""
+"The <command>top</command> command displays information on your GNU/Linux "
+"system, running processes and system resources, including CPU, RAM &amp; "
+"swap usage and total number of tasks being run. To exit "
+"<application>top</application>, press <keycap>q</keycap>."
+msgstr ""
+"Perintah <command>top</command> menampilkan informasi sistem GNU/Linux anda, "
+"proses yang berjalan dan sumber daya sistem, meliputi penggunaan CPU, RAM "
+"&amp; swap serta tugas yang dijalankan. Untuk keluar dari "
+"<application>top</application>, tekan <keycap>q</keycap>."
+
+#: basic-commands/C/basic-commands.xml:275(title)
+msgid "uname"
+msgstr "uname"
+
+#: basic-commands/C/basic-commands.xml:276(para)
+msgid ""
+"The <command>uname</command> command with the <emphasis role=\"strong\">-"
+"a</emphasis> option, prints all system information, including machine name, "
+"kernel name &amp; version, and a few other details. Most useful for checking "
+"which kernel you're using."
+msgstr ""
+"Perintah <command>uname</command> dengan opsi <emphasis role=\"strong\">-"
+"a</emphasis> akan mencetak seluruh informasi sistem, termasuk nama mesin, "
+"nama kernel &amp; versi, serta sedikit detail lainnya. Paling berguna untuk "
+"memeriksa kernel apa yang anda gunakan."
+
+#: basic-commands/C/basic-commands.xml:286(title)
+msgid "lsb_release"
+msgstr "lsb_release"
+
+#: basic-commands/C/basic-commands.xml:287(para)
+msgid ""
+"The <emphasis role=\"strong\">lsb_release</emphasis> command with the "
+"<emphasis role=\"strong\">-a</emphasis> option prints version information "
+"for the Linux release you're running. For example, typing: "
+"<screen>lsb_release -a</screen> will give you: <screen>\n"
+"No LSB modules are available.\n"
+"Distributor ID: Ubuntu\n"
+"Description:    Ubuntu 7.04 \n"
+"Release:        7.04\n"
+"Codename:       feisty</screen>"
+msgstr ""
+"Perintah <emphasis role=\"strong\">lsb_release</emphasis> dengan opsi "
+"<emphasis role=\"strong\">-a</emphasis> akan menampilkan informasi versi "
+"untuk rilis Linux yang anda jalankan. Misalnya, mengetik: "
+"<screen>lsb_release -a</screen> akan memberikan anda: <screen>\n"
+"No LSB modules are available.\n"
+"Distributor ID: Ubuntu\n"
+"Description:    Ubuntu 7.04 \n"
+"Release:        7.04\n"
+"Codename:       feisty</screen>"
+
+#: basic-commands/C/basic-commands.xml:305(title)
+msgid "ifconfig"
+msgstr "ifconfig"
+
+#: basic-commands/C/basic-commands.xml:306(para)
+msgid ""
+"The <command>ifconfig</command> command reports on your system's network "
+"interfaces."
+msgstr ""
+"Perintah <command>ifconfig</command> melaporkan antarmuka jaringan di sistem "
+"anda."
+
+#: basic-commands/C/basic-commands.xml:314(title)
+msgid "Executing Commands with Elevated Privileges"
+msgstr "Eksekusi Perintah dengan Hak Akses Lebih Tinggi"
+
+#: basic-commands/C/basic-commands.xml:315(para)
+msgid ""
+"The following commands will need to be prefaced with the "
+"<command>sudo</command> command. Please see <ulink "
+"url=\"https://help.ubuntu.com/community/RootSudo\">RootSudo</ulink> for "
+"information on using <command>sudo</command>."
+msgstr ""
+"Perintah berikut harus dijalankan dengan perintah <command>sudo</command>. "
+"Silakan lihat <ulink "
+"url=\"https://help.ubuntu.com/community/RootSudo\">RootSudo</ulink> untuk "
+"informasi mengenai <command>sudo</command>."
+
+#: basic-commands/C/basic-commands.xml:324(title)
+msgid "Adding a New Group"
+msgstr "Menambahkan Grup Baru"
+
+#: basic-commands/C/basic-commands.xml:325(para)
+msgid ""
+"The <command>addgroup</command> command is used to create a new group on the "
+"system. To create a new group, type: <screen>addgroup newgroup</screen> The "
+"above command will create a new group called <emphasis "
+"role=\"strong\">newgroup</emphasis>."
+msgstr ""
+"Perintah <command>addgroup</command> digunakan untuk membuat grup baru di "
+"sistem. Untuk membuat grup baru, ketikkan: <screen>addgroup "
+"grupbaru</screen> Perintah diatas akan membuat grup baru yang bernama "
+"<emphasis role=\"strong\">grupbaru</emphasis>."
+
+#: basic-commands/C/basic-commands.xml:334(title)
+msgid "Adding A New User"
+msgstr "Menambah Pengguna Baru"
+
+#: basic-commands/C/basic-commands.xml:335(para)
+msgid ""
+"The <command>adduser</command> is used to create new users on the system. To "
+"create a new user, type: <screen>adduser newuser</screen> The above command "
+"will create a new user called <emphasis role=\"strong\">newuser</emphasis>."
+msgstr ""
+"Perintah <command>adduser</command> digunakan untuk membuat pengguna baru di "
+"sistem. Untuk membuat pengguna baru, ketikkan: <screen>adduser "
+"penggunabaru</screen> Perintah diatas akan membuat pengguna baru yang "
+"bernama <emphasis role=\"strong\">penggunabaru</emphasis>."
+
+#: basic-commands/C/basic-commands.xml:342(para)
+msgid ""
+"To assign a password for the new user use the <command>passwd</command> "
+"command: <screen>passwd newuser</screen>"
+msgstr ""
+"Untuk menambah sandi bagi pengguna baru gunakan perintah "
+"<command>passwd</command>: <screen>passwd penggunabaru</screen>"
+
+#: basic-commands/C/basic-commands.xml:348(para)
+msgid ""
+"Finally, to assign the new user to the new group, type: <screen>adduser "
+"newuser newgroup</screen>"
+msgstr ""
+"Terakhir, untuk menambah pengguna baru di dalam grup baru, ketikkan: "
+"<screen>adduser penggunabaru grupbaru</screen>"
+
+#: basic-commands/C/basic-commands.xml:356(title)
+msgid "Options"
+msgstr "Opsi"
+
+#: basic-commands/C/basic-commands.xml:357(para)
+msgid ""
+"The default behavior for a command may usually be modified by adding a "
+"<emphasis role=\"strong\">-- <emphasis>option</emphasis></emphasis> to the "
+"command. The <link linkend=\"ls\"><command>ls</command></link> command, for "
+"example, has a <emphasis role=\"strong\">-s</emphasis> option so that "
+"<command>ls -s</command> will include file sizes in the listing. There is "
+"also a <emphasis role=\"strong\">-h</emphasis> option to get those sizes in "
+"a \"human readable\" format."
+msgstr ""
+"Kebiasan standar untuk perintah biasanya dengan memodifikasinya atau "
+"menambah <emphasis role=\"strong\">-- <emphasis>opsi</emphasis></emphasis> "
+"di perintah. Perintah <link linkend=\"ls\"><command>ls</command></link>, "
+"misalnya, memiliki opsi <emphasis role=\"strong\">-s</emphasis> sehingga "
+"<command>ls -s</command> akan mengikutsertakan ukuran berkas di daftar. Ada "
+"pula opsi <emphasis role=\"strong\">-h</emphasis> untuk mengetahui ukuran "
+"berkas dalam format \"terbaca manusia\"."
+
+#: basic-commands/C/basic-commands.xml:368(para)
+msgid ""
+"Options can be grouped in clusters so <screen>ls -sh</screen> is exactly the "
+"same command as <screen>ls -s -h</screen> Most options have a long version, "
+"prefixed with two dashes instead of one, so even <screen>ls --size --human-"
+"readable</screen> is the same command."
+msgstr ""
+"Opsi dapat dikelompokkan dalam gugus sehingga <screen>ls -sh</screen> sama "
+"persis dengan perintah <screen>ls -s -h</screen> Kebanyakan opsi memiliki "
+"versi panjang, prefiks dengan dua dash ketimbang satu, jadi <screen>ls --"
+"size --human-readable</screen> sebenarnya adalah perintah yang sama."
+
+#: basic-commands/C/basic-commands.xml:379(title)
+msgid "\"Man\" and getting help"
+msgstr "\"Man\" untuk mendapatkan bantuan"
+
+#: basic-commands/C/basic-commands.xml:380(para)
+msgid ""
+"<emphasis role=\"strong\"><emphasis>command</emphasis> --help</emphasis> and "
+"<emphasis role=\"strong\">man <emphasis>command</emphasis></emphasis> are "
+"the two most important tools at the command line."
+msgstr ""
+"<emphasis role=\"strong\"><emphasis>perintah</emphasis> --help</emphasis> "
+"dan <emphasis>perintah<emphasis role=\"strong\">man </emphasis></emphasis> "
+"merupakan dua alat paling penting di baris perintah."
+
+#: basic-commands/C/basic-commands.xml:387(para)
+msgid ""
+"Virtually all commands understand the <emphasis role=\"strong\">-"
+"h</emphasis> (or <emphasis role=\"strong\">--help</emphasis>) option which "
+"will produce a short usage description of the command and it's options, then "
+"exit back to the command prompt. Type <screen>man -h</screen> or <screen>man "
+"--help</screen> to see this in action."
+msgstr ""
+"Sejatinya semua perintah mengerti opsi <emphasis role=\"strong\">-"
+"h</emphasis> (atau <emphasis role=\"strong\">--help</emphasis>) yang akan "
+"menghasilkan deskripsi singkat tentang penggunaan perintah dan opsinya, lalu "
+"keluar kembali ke baris perintah siap ketik. Ketik <screen>man -h</screen> "
+"atau <screen>man --help</screen> untuk melihat hal ini dalam aksi."
+
+#: basic-commands/C/basic-commands.xml:397(para)
+msgid ""
+"Every command and nearly every application in Linux will have a man (manual) "
+"file, so finding them is as simple as typing <command>man command</command> "
+"to bring up a longer manual entry for the specified command. For example, "
+"<screen>man mv</screen> will bring up the <command>mv</command> (move) "
+"manual."
+msgstr ""
+"Semua perintah dan hampir semua aplikasi di Linux akan memiliki sebuah "
+"berkas man (manual), jadi untuk menemukannya cukup mengetik <command>man "
+"perintah</command> untuk melihat entri manual yang lebih panjang mengenai "
+"perintah spesifik. Misalnya, <screen>man mv</screen> akan menghadirkan "
+"manual <command>mv</command> (pindah)."
+
+#: basic-commands/C/basic-commands.xml:406(para)
+msgid ""
+"Move up and down the man file with the arrow keys, and quit back to the "
+"command prompt with <keycap>q</keycap>."
+msgstr ""
+"Gunakan tanda panah untuk bergerak ke atas dan ke bawah, lalu untuk kembali "
+"ke baris perintah gunakan <keycap>q</keycap>."
+
+#: basic-commands/C/basic-commands.xml:411(para)
+msgid ""
+"<screen>man man</screen> will bring up the manual entry for the "
+"<command>man</command> command, which is a good place to start."
+msgstr ""
+"<screen>man man</screen> yang akan menghadirkan entri manual untuk perintah "
+"<command>man</command> merupakan tempat yang bagus untuk memulai."
+
+#: basic-commands/C/basic-commands.xml:417(para)
+msgid ""
+"<screen>man intro</screen> is especially useful - it displays the "
+"\"Introduction to user commands\" which is a well-written, fairly brief "
+"introduction to the Linux command line."
+msgstr ""
+"<screen>man intro</screen> sangat berguna - karena menampilkan \"Pengenalan "
+"perintah pengguna\" yang ditulis dengan baik, pengenalan yang jelas tentang "
+"baris perintah Linux."
+
+#: basic-commands/C/basic-commands.xml:422(para)
+msgid ""
+"There are also <command>info</command> pages, which are generally more in-"
+"depth than <command>man</command> pages. Try <screen>info info</screen> for "
+"the introduction to info pages."
+msgstr ""
+"Ada pula halaman <command>info</command>, yang secara umum lebih mendalam "
+"jika dibandingkan dengan halaman <command>man</command>. Coba <screen>info "
+"info</screen> untuk pengenalan tentang halaman info."
+
+#: basic-commands/C/basic-commands.xml:432(title)
+msgid "Searching for man files"
+msgstr "Mencari halaman man"
+
+#: basic-commands/C/basic-commands.xml:433(para)
+msgid ""
+"If you aren't sure which command or application you need to use, you can try "
+"searching the man files."
+msgstr ""
+"Jika anda tidak yakin perintah atau aplikasi manakah yang anda perlukan, "
+"anda dapat mencari di berkas man."
+
+#: basic-commands/C/basic-commands.xml:446(para)
+msgid "This is the same as the <command>apropos</command> command."
+msgstr "Ini sama dengan perintah <command>apropos</command>."
+
+#: basic-commands/C/basic-commands.xml:439(para)
+msgid ""
+"<command>man -k foo</command>, will search the man files for "
+"<emphasis>foo</emphasis>. Try <screen>man -k nautilus</screen> to see how "
+"this works. <placeholder-1/>"
+msgstr ""
+"<command>man -k foo</command>, akan mencari berkas man untuk "
+"<emphasis>foo</emphasis>. Coba <screen>man -k nautilus</screen> untuk "
+"melihat cara kerjanya. <placeholder-1/>"
+
+#: basic-commands/C/basic-commands.xml:459(para)
+msgid "This is the same as the <command>whatis</command> command."
+msgstr "Ini sama dengan perintah <command>whatis</command>."
+
+#: basic-commands/C/basic-commands.xml:454(para)
+msgid ""
+"<command>man -f foo</command>, searches only the titles of your system's man "
+"files. For example, try <screen>man -f gnome</screen><placeholder-1/>"
+msgstr ""
+"<command>man -f foo</command>, hanya mencari judul dari berkas man dalam "
+"sistem anda. Misalnya, coba <screen>man -f gnome</screen><placeholder-1/>"
+
+#: basic-commands/C/basic-commands.xml:471(title)
+msgid "Other Useful Things"
+msgstr "Hal Berguna Lainnya"
+
+#: basic-commands/C/basic-commands.xml:474(title)
+msgid "Pasting in commands"
+msgstr "Menyalin di perintah"
+
+#: basic-commands/C/basic-commands.xml:475(para)
+msgid ""
+"Often, you will be referred to instructions that require commands to be "
+"pasted into the terminal. You might be wondering why the text you've copied "
+"from a web page using "
+"<keycombo><keycap>Ctrl</keycap><keycap>C</keycap></keycombo> won't paste in "
+"with <keycombo><keycap>Ctrl</keycap><keycap>V</keycap></keycombo>. Surely "
+"you don't have to type in all those nasty commands and filenames? Relax. "
+"Middle Button Click on your mouse (both buttons simultaneously on a two-"
+"button mouse) or Right Click and select "
+"<menuchoice><guimenuitem>Paste</guimenuitem></menuchoice> from the menu."
+msgstr ""
+"Seringkali, anda akan dihadapkan dengan instruksi yang membutuhkan perintah "
+"untuk disalin di terminal. Anda mungkin bertanya-tanya kenapa teks yang "
+"disalin dari halaman web menggunakan "
+"<keycombo><keycap>Ctrl</keycap><keycap>C</keycap></keycombo> tidak mau "
+"direkatkan menggunakan "
+"<keycombo><keycap>Ctrl</keycap><keycap>V</keycap></keycombo>. Tentu saja "
+"anda tidak perlu mengetik semua perintah dan berkas nama yang rumit kan? "
+"Tenang. Klik Tombol Tengah tetikus anda (dua tombol secara bersamaan di "
+"tetikus dua tombol) atau Klik Kanan dan pilih "
+"<menuchoice><guimenuitem>Paste</guimenuitem></menuchoice> dari menu."
+
+#: basic-commands/C/basic-commands.xml:498(title)
+msgid "Save on typing"
+msgstr "Menyimpan ketika mengetik"
+
+#: basic-commands/C/basic-commands.xml:507(para)
+msgid ""
+"<keycap>Up Arrow</keycap> or "
+"<keycombo><keycap>Ctrl</keycap><keycap>p</keycap></keycombo>"
+msgstr ""
+"<keycap>Panah Atas</keycap> atau "
+"<keycombo><keycap>Ctrl</keycap><keycap>p</keycap></keycombo>"
+
+#: basic-commands/C/basic-commands.xml:517(para)
+msgid "Scrolls through the commands you've entered previously."
+msgstr "Menggulung perintah yang telah anda masukkan sebelumnya."
+
+#: basic-commands/C/basic-commands.xml:525(para)
+msgid ""
+"<keycap>Down Arrow</keycap> or "
+"<keycombo><keycap>Ctrl</keycap><keycap>n</keycap></keycombo>"
+msgstr ""
+"<keycap>Panah Bawah</keycap> atau "
+"<keycombo><keycap>Ctrl</keycap><keycap>n</keycap></keycombo>"
+
+#: basic-commands/C/basic-commands.xml:535(para)
+msgid "Takes you back to a more recent command."
+msgstr "Membawa anda kembali ke perintah yang lebih baru."
+
+#: basic-commands/C/basic-commands.xml:542(keycap)
+msgid "Enter"
+msgstr "Enter"
+
+#: basic-commands/C/basic-commands.xml:547(para)
+msgid "When you have the command you want."
+msgstr "Ketika anda menemukan perintah yang anda inginkan."
+
+#: basic-commands/C/basic-commands.xml:553(keycap)
+msgid "Tab"
+msgstr "Tab"
+
+#: basic-commands/C/basic-commands.xml:558(para)
+msgid ""
+"A very useful feature. It autocompletes any commands or filenames, if "
+"there's only one option, or else gives you a list of options."
+msgstr ""
+"Fitur yang sangat berguna. Fitur ini menyelesaikan secara otomatis perintah "
+"atau nama berkas apa saja, jika hanya ada satu opsi, atau memberi anda "
+"beragam daftar opsi."
+
+#: basic-commands/C/basic-commands.xml:571(title)
+msgid "Change the text"
+msgstr "Mengganti teks"
+
+#: basic-commands/C/basic-commands.xml:572(para)
+msgid ""
+"The mouse won't work. Use the <keycap>Left/Right arrow</keycap> keys to move "
+"around the line."
+msgstr ""
+"Tetikus tidak akan bekerja. Gunakan tombol <keycap>panah Kiri/Kanan</keycap> "
+"untuk berpindah di dalam baris."
+
+#: basic-commands/C/basic-commands.xml:576(para)
+msgid ""
+"When the cursor is where you want it in the line, typing "
+"<emphasis>inserts</emphasis> text, it doesn't overtype what's already there."
+msgstr ""
+"Ketika kursor telah berada di tempat yang anda inginkan dalam baris, ketik "
+"teks <emphasis>insert</emphasis>, maka kursor tidak akan menindih apa yang "
+"telah ada disana."
+
+#: basic-commands/C/basic-commands.xml:591(keycap) basic-commands/C/basic-commands.xml:607(keycap) basic-commands/C/basic-commands.xml:626(keycap) basic-commands/C/basic-commands.xml:642(keycap) basic-commands/C/basic-commands.xml:657(keycap) basic-commands/C/basic-commands.xml:671(keycap)
+msgid "Ctrl"
+msgstr "Ctrl"
+
+#: basic-commands/C/basic-commands.xml:592(keycap)
+msgid "a"
+msgstr "a"
+
+#: basic-commands/C/basic-commands.xml:594(keycap)
+msgid "Home"
+msgstr "Home"
+
+#: basic-commands/C/basic-commands.xml:599(para)
+msgid "Moves the cursor to the <emphasis>start</emphasis> of a line."
+msgstr "Memindahkan kursor ke <emphasis>awal</emphasis> baris."
+
+#: basic-commands/C/basic-commands.xml:608(keycap)
+msgid "e"
+msgstr "e"
+
+#: basic-commands/C/basic-commands.xml:610(keycap)
+msgid "End"
+msgstr "End"
+
+#: basic-commands/C/basic-commands.xml:615(para)
+msgid ""
+"Moves the cursor to the <emphasis><emphasis "
+"role=\"strong\">e</emphasis>nd</emphasis> of a line."
+msgstr ""
+"Memindahkan kursor ke <emphasis><emphasis "
+"role=\"strong\">e</emphasis>nd</emphasis> (akhir) baris."
+
+#: basic-commands/C/basic-commands.xml:627(keycap)
+msgid "b"
+msgstr "b"
+
+#: basic-commands/C/basic-commands.xml:633(para)
+msgid ""
+"Moves to the <emphasis role=\"strong\">b</emphasis>eginning of the previous "
+"or current word."
+msgstr ""
+"Memindahkan kursor ke <emphasis role=\"strong\">b</emphasis>eginning (awal) "
+"dari kata yang sekarang atau sebelumnya."
+
+#: basic-commands/C/basic-commands.xml:643(keycap)
+msgid "k"
+msgstr "k"
+
+#: basic-commands/C/basic-commands.xml:649(para)
+msgid "Deletes from the current cursor position to the end of the line."
+msgstr "Menghapus dari letak kursor sekarang sampai akhir baris."
+
+#: basic-commands/C/basic-commands.xml:658(keycap)
+msgid "u"
+msgstr "u"
+
+#: basic-commands/C/basic-commands.xml:664(para)
+msgid "Deletes the whole of the current line."
+msgstr "Menghapus seluruh baris."
+
+#: basic-commands/C/basic-commands.xml:672(keycap)
+msgid "w"
+msgstr "w"
+
+#: basic-commands/C/basic-commands.xml:678(para)
+msgid "Deletes the word before the cursor."
+msgstr "Menghapus kata sebelum kursor."
+
+#: basic-commands/C/basic-commands.xml:688(title)
+msgid "More Information"
+msgstr "Informasi lebih lanjut"
+
+#: basic-commands/C/basic-commands.xml:689(para)
+msgid "The following online guides are available:"
+msgstr "Panduan online berikut juga tersedia:"
+
+#: basic-commands/C/basic-commands.xml:692(para)
+msgid ""
+"<ulink url=\"https://help.ubuntu.com/community/AptGetHowto\"> "
+"AptGetHowto</ulink> - using apt-get to install packages from the command "
+"line."
+msgstr ""
+"<ulink url=\"https://help.ubuntu.com/community/AptGetHowto\"> "
+"AptGetHowto</ulink> - menggunakan apt-get untuk menginstal paket dari baris "
+"perintah."
+
+#: basic-commands/C/basic-commands.xml:699(para)
+msgid ""
+"<ulink url=\"https://help.ubuntu.com/community/Repositories/CommandLine\"> "
+"Commandline Repository Editing</ulink> - adding the Universe/Multiverse "
+"repositories through the command line."
+msgstr ""
+"<ulink url=\"https://help.ubuntu.com/community/Repositories/CommandLine\"> "
+"Commandline Repository Editing</ulink> - menambah gudang Universe/Multiverse "
+"menggunakan baris perintah."
+
+#: basic-commands/C/basic-commands.xml:707(para)
+msgid ""
+"<ulink url=\"https://help.ubuntu.com/community/grep\">grep Howto</ulink> - "
+"grep is a powerful command line search tool."
+msgstr ""
+"<ulink url=\"https://help.ubuntu.com/community/grep\">grep Howto</ulink> - "
+"grep adalah alat pencari baris perintah yang hebat."
+
+#: basic-commands/C/basic-commands.xml:714(para)
+msgid ""
+"<ulink url=\"https://help.ubuntu.com/community/find\">find </ulink> - locate "
+"files on the command line."
+msgstr ""
+"<ulink url=\"https://help.ubuntu.com/community/find\">find </ulink> - "
+"menemukan berkas di baris perintah."
+
+#: basic-commands/C/basic-commands.xml:720(para)
+msgid ""
+"<ulink url=\"https://help.ubuntu.com/community/CommandlineHowto\"> "
+"CommandlineHowto</ulink> - longer and more complete than this basic guide, "
+"but still unfinished."
+msgstr ""
+"<ulink url=\"https://help.ubuntu.com/community/CommandlineHowto\"> "
+"CommandlineHowto</ulink> - panduan yang lebih panjang dan lengkap dari "
+"panduan dasar ini, tapi masih belum selesai."
+
+#: basic-commands/C/basic-commands.xml:727(para)
+msgid ""
+"<ulink url=\"https://help.ubuntu.com/community/HowToReadline\"> "
+"HowToReadline</ulink> - information on some more advanced customization for "
+"the command line."
+msgstr ""
+"<ulink url=\"https://help.ubuntu.com/community/HowToReadline\"> "
+"HowToReadline</ulink> - informasi tentang kustomisasi lebih lanjut untuk "
+"baris perintah."
+
+#: basic-commands/C/basic-commands.xml:734(para)
+msgid "For more detailed tutorials on the Linux command line, please see:"
+msgstr ""
+"Untuk tutorial yang lebih mendetail tentang baris perintah, silakan lihat:"
+
+#: basic-commands/C/basic-commands.xml:740(para)
+msgid ""
+"<ulink url=\"http://linuxcommand.org/\"/>- basic BASH tutorials, including "
+"BASH scripting"
+msgstr ""
+"<ulink url=\"http://linuxcommand.org/\"/>- tutorial BASH dasar, meliputi "
+"skrip BASH"
+
+#: basic-commands/C/basic-commands.xml:746(para)
+msgid ""
+"<ulink url=\"http://linuxsurvival.com/index.php\"/>- Java-based tutorials"
+msgstr ""
+"<ulink url=\"http://linuxsurvival.com/index.php\"/>- tutorial berbasis Java"
+
+#: basic-commands/C/basic-commands.xml:752(para)
+msgid ""
+"<ulink url=\"http://rute.2038bug.com/index.html.gz\"/>- a massive online "
+"book about system administration, almost all from the command line."
+msgstr ""
+"<ulink url=\"http://rute.2038bug.com/index.html.gz\"/>- buku online masif "
+"mengenai administrasi sistem, hampir semua dari baris perintah."
+
+#. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2.
+#: basic-commands/C/basic-commands.xml:0(None)
+msgid "translator-credits"
+msgstr ""
+"Andy Apdhani <imtheface@gmail.com>, 2006.\n"
+"\n"
+"Launchpad Contributions:\n"
+"  Andi Darmawan https://launchpad.net/~belutz\n"
+"  Andy Apdhani https://launchpad.net/~imtheface\n"
+"  Mahyuddin Susanto https://launchpad.net/~udienz\n"
+"  padmawan https://launchpad.net/~andhika-padmawan"

@@ -1,0 +1,941 @@
+# French translation for ubuntu-docs
+# Copyright (c) 2007 Rosetta Contributors and Canonical Ltd 2007
+# This file is distributed under the same license as the ubuntu-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2007.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ubuntu-docs\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2007-09-14 08:25+0100\n"
+"PO-Revision-Date: 2007-11-13 23:32+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: French <fr@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2008-02-17 10:22+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+#: basic-commands/C/basic-commands-C.omf:6(creator) basic-commands/C/basic-commands-C.omf:7(maintainer)
+msgid "ubuntu-doc@lists.ubuntu.com (Ubuntu Documentation Project)"
+msgstr "ubuntu-doc@lists.ubuntu.com (Projet de documentation d'Ubuntu)"
+
+#: basic-commands/C/basic-commands-C.omf:8(title) basic-commands/C/basic-commands.xml:15(title)
+msgid "Basic Commands"
+msgstr "Commandes de base"
+
+#: basic-commands/C/basic-commands-C.omf:9(date)
+msgid "2006-09-07"
+msgstr "07/09/2006"
+
+#: basic-commands/C/basic-commands-C.omf:11(description)
+msgid "Placeholder."
+msgstr "Emplacement."
+
+#: basic-commands/C/basic-commands.xml:18(title)
+msgid "Using this Guide"
+msgstr "Utilisation de ce guide"
+
+#: basic-commands/C/basic-commands.xml:28(emphasis)
+msgid "man intro(1)"
+msgstr "man intro(1)"
+
+#: basic-commands/C/basic-commands.xml:20(emphasis)
+msgid ""
+"\"Under Linux there are GUIs (graphical user interfaces), where you can "
+"point and click and drag, and hopefully get work done without first reading "
+"lots of documentation. The traditional Unix environment is a CLI (command "
+"line interface), where you type commands to tell the computer what to do. "
+"That is faster and more powerful, but requires finding out what the commands "
+"are.\" -- from <placeholder-1/>"
+msgstr ""
+"« Sous Linux, il existe des interfaces utilisateur graphiques, où vous "
+"pouvez pointer, cliquer et déplacer des composants et obtenir un résultat "
+"sans avoir à lire beaucoup de documentation. L’environnement traditionnel "
+"d’Unix est plutôt orienté vers la ligne de commande, où vous tapez les "
+"commandes pour les actions désirées. C’est plus rapide et plus puissant, "
+"mais nécessite de bien connaître les commandes. » -- extrait de <placeholder-"
+"1/>"
+
+#: basic-commands/C/basic-commands.xml:33(para)
+msgid ""
+"This guide will make you familiar with basic GNU/Linux shell commands. It is "
+"not intended to be a complete guide to the command line, just an "
+"introduction to complement Ubuntu's graphical tools."
+msgstr ""
+"Ce guide va vous apprendre les bases des commandes shell sous GNU/Linux. "
+"Ceci n'est un pas un guide complet pour utiliser la ligne de commande, il "
+"s'agit juste d'une introduction aux outils graphiques d'Ubuntu."
+
+#: basic-commands/C/basic-commands.xml:43(para)
+msgid ""
+"All command names, file names or paths to directories will be shown using a "
+"<command>monospace font</command>."
+msgstr ""
+"Tous les noms de commandes, de fichiers ou de répertoires seront signalés "
+"par l'utilisation d'une <command>police à largeur de caractère "
+"fixe</command>."
+
+#: basic-commands/C/basic-commands.xml:50(para)
+msgid ""
+"All the commands on this guide are to be issued from a command prompt in a "
+"<application>Terminal</application> and will be shown as: <screen>command to "
+"type</screen>"
+msgstr ""
+"Toutes les commandes de ce manuel sont à saisir à l'invite de commande dans "
+"un <application>Terminal</application> et seront représentées ainsi : "
+"<screen>commande à saisir</screen>"
+
+#: basic-commands/C/basic-commands.xml:58(para)
+msgid ""
+"<emphasis role=\"strong\">Note that Linux is case sensitive.</emphasis> "
+"User, user, and USER are all different to Linux."
+msgstr ""
+"<emphasis role=\"strong\">Attention, Linux est sensible à la "
+"casse.</emphasis> Utilisateur, utilisateur et UTILISATEUR sont des choses "
+"différentes pour Linux."
+
+#: basic-commands/C/basic-commands.xml:69(title)
+msgid "Starting a Terminal"
+msgstr "Lancement d'un terminal"
+
+#: basic-commands/C/basic-commands.xml:70(para)
+msgid "To open a <application>Terminal</application> do as follow:"
+msgstr ""
+"Pour ouvrir un <application>Terminal</application> faites comme suit :"
+
+#: basic-commands/C/basic-commands.xml:76(para)
+msgid ""
+"Choose "
+"<menuchoice><guimenu>Applications</guimenu><guimenuitem>Accessories</guimenui"
+"tem><guimenuitem>Terminal</guimenuitem></menuchoice>;"
+msgstr ""
+"Sélectionnez "
+"<menuchoice><guimenu>Applications</guimenu><guimenuitem>Accessoires</guimenui"
+"tem><guimenuitem>Terminal</guimenuitem></menuchoice> ;"
+
+#: basic-commands/C/basic-commands.xml:81(para)
+msgid ""
+"Or press <keycombo><keycap>Alt</keycap><keycap>F2</keycap></keycombo> and "
+"type <command>gnome-terminal</command>."
+msgstr ""
+"Ou pressez <keycombo><keycap>Alt</keycap><keycap>F2</keycap></keycombo> et "
+"tapez <command>gnome-terminal</command>."
+
+#: basic-commands/C/basic-commands.xml:94(title)
+msgid "File and Directory Commands"
+msgstr "Commandes concernant les fichiers et dossiers"
+
+#: basic-commands/C/basic-commands.xml:97(title)
+msgid "cd"
+msgstr "cd"
+
+#: basic-commands/C/basic-commands.xml:98(para)
+msgid ""
+"The <command>cd</command> command changes directories. When you open a "
+"terminal you will be in your home directory. To move around the file system "
+"you will use <command>cd</command>. Examples:"
+msgstr ""
+"La commande <command>cd</command> change de répertoire. Lorsque vous ouvrez "
+"un terminal, vous vous retrouvez dans votre répertoire personnel. Pour vous "
+"déplacer dans le système de fichiers, utilisez la commande "
+"<command>cd</command>. Exemples :"
+
+#: basic-commands/C/basic-commands.xml:107(para)
+msgid "To navigate into the root directory, type: <screen>cd /</screen>"
+msgstr "Pour accéder au dossier racine, tapez : <screen>cd /</screen>"
+
+#: basic-commands/C/basic-commands.xml:113(para)
+msgid ""
+"To navigate to your home directory, type: <screen>cd</screen> or <screen>cd "
+"~</screen>"
+msgstr ""
+"Pour accéder à votre dossier personnel, tapez : <screen>cd</screen> ou "
+"<screen>cd ~</screen>"
+
+#: basic-commands/C/basic-commands.xml:121(para)
+msgid "To navigate up one directory level, type: <screen>cd ..</screen>"
+msgstr ""
+"Pour remonter d'un niveau de répertoire, tapez : <screen>cd ..</screen>"
+
+#: basic-commands/C/basic-commands.xml:127(para)
+msgid ""
+"To navigate to the previous directory (or back), type: <screen>cd -</screen>"
+msgstr ""
+"Pour revenir au répertoire précédent (ou en arrière), tapez : <screen>cd -"
+"</screen>"
+
+#: basic-commands/C/basic-commands.xml:134(para)
+msgid ""
+"To navigate through multiple levels of directory at once, specify the full "
+"directory path that you want to go to. For example, type: <screen>cd "
+"/var/www</screen> to go directly to the <filename "
+"class=\"directory\">/www</filename> subdirectory of <filename "
+"class=\"directory\">/var/</filename>. As another example, type: <screen>cd "
+"~/Desktop</screen> to move you to the <filename "
+"class=\"directory\">Desktop</filename> subdirectory inside your home "
+"directory."
+msgstr ""
+"Pour naviguer à travers plusieurs niveaux de répertoires en un coup, "
+"spécifiez le chemin complet auquel vous voulez parvenir. Par exemple, tapez  "
+"<screen>cd /var/www</screen> pour aller directement au sous-répertoire "
+"<filename class=\"directory\">/www</filename> du répertoire <filename "
+"class=\"directory\">/var/</filename>. Comme autre exemple, tapez <screen>cd "
+"~/Desktop</screen> pour vous déplacer vers le sous-répertoire <filename "
+"class=\"directory\">Desktop</filename> qui se trouve dans votre dossier "
+"personnel, et qui correspond à votre bureau."
+
+#: basic-commands/C/basic-commands.xml:151(title)
+msgid "pwd"
+msgstr "pwd"
+
+#: basic-commands/C/basic-commands.xml:162(para)
+msgid ""
+"<application>GNOME Terminal</application> also displays this information in "
+"the title bar of it's window."
+msgstr ""
+"Le <application>Terminal GNOME</application> affiche également cette "
+"information dans sa barre de titre."
+
+#: basic-commands/C/basic-commands.xml:152(para)
+msgid ""
+"<command>pwd</command>: The <command>pwd</command> command will show you "
+"which directory you're located in (<acronym>pwd</acronym> stands for "
+"<quote>print working directory</quote>). For example, typing "
+"<screen>pwd</screen> in the <filename class=\"directory\">Desktop</filename> "
+"directory, will show <computeroutput>~/Desktop</computeroutput>. "
+"<placeholder-1/>"
+msgstr ""
+"<command>pwd</command> : La commande <command>pwd</command> vous renverra le "
+"répertoire dans lequel vous vous trouvez. (<acronym>pwd</acronym> signifie "
+"<quote>print working directory</quote>). Par exemple, taper "
+"<screen>pwd</screen> dans le répertoire <filename "
+"class=\"directory\">Desktop</filename> vous renverra "
+"<computeroutput>~/Desktop</computeroutput>. <placeholder-1/>"
+
+#: basic-commands/C/basic-commands.xml:171(title)
+msgid "ls"
+msgstr "ls"
+
+#: basic-commands/C/basic-commands.xml:172(para)
+msgid ""
+"The <command>ls</command> command shows you the files in your current "
+"directory. Used with certain options, you can see sizes of files, when files "
+"where made, and permissions of files. For example, typing <screen>ls "
+"~</screen> will show you the files that are in your home directory."
+msgstr ""
+"La commande <command>ls</command> affiche les fichiers présents dans le "
+"répertoire courant. Utilisée avec certaines options, vous pouvez voir la "
+"taille de ces fichiers, leur date de création ainsi que leur permissions. "
+"Par exemple, en tapant <screen>ls ~</screen>, vous afficherez les fichiers "
+"présents dans votre dossier personnel."
+
+#: basic-commands/C/basic-commands.xml:183(title)
+msgid "cp"
+msgstr "cp"
+
+#: basic-commands/C/basic-commands.xml:184(para)
+msgid ""
+"The <command>cp</command> command makes a copy of a file for you. For "
+"example, type: <screen>cp file foo</screen> to make a exact copy of "
+"<filename>file</filename> and name it <filename>foo</filename>, but the file "
+"<filename>file</filename> will still be there."
+msgstr ""
+"La commande <command>cp</command> crée une copie du fichier pour vous. Par "
+"exemple, tapez <screen>cp fichier fichier2</screen> pour faire une copie "
+"conforme de <filename>fichier</filename> et la nommer "
+"<filename>fichier2</filename> ; le fichier <filename>fichier</filename> sera "
+"toujours présent."
+
+#: basic-commands/C/basic-commands.xml:194(title)
+msgid "mv"
+msgstr "mv"
+
+#: basic-commands/C/basic-commands.xml:206(para)
+msgid ""
+"If you are using <command>mv</command> with <command>sudo</command> you will "
+"not be able to use the <emphasis role=\"strong\">~</emphasis> shortcut, but "
+"will have to use the full pathnames to your files. This is because when you "
+"are working as root, <emphasis role=\"strong\">~</emphasis> will refer to "
+"the root account's home directory, not your own."
+msgstr ""
+"Si vous utilisez la commande <command>mv</command> avec "
+"<command>sudo</command> vous ne serez pas en mesure d'utiliser le raccourci "
+"<emphasis role=\"strong\">~</emphasis>, mais devrez utiliser le nom complet "
+"du chemin vers vos fichiers. Ceci est dû au fait que vous travaillez en tant "
+"que root (administrateur) et <emphasis role=\"strong\">~</emphasis> va se "
+"référer au dossier personnel du compte root et non au vôtre."
+
+#: basic-commands/C/basic-commands.xml:195(para)
+msgid ""
+"The <command>mv</command> command moves a file to a different location or "
+"will rename a file. Examples are as follows: <screen>mv file foo</screen> "
+"will rename the file <filename>file</filename> to <filename>foo</filename>. "
+"<screen>mv foo ~/Desktop</screen> will move the file "
+"<filename>foo</filename> to your <filename "
+"class=\"directory\">Desktop</filename> directory but will not rename it. You "
+"must specify a new file name to rename a file. <placeholder-1/>"
+msgstr ""
+"La commande <command>mv</command> déplace un fichier vers un autre "
+"répertoire ou renomme un fichier. Par exemple, <screen>mv fichier "
+"fichier2</screen> renommera le fichier <filename>fichier</filename> en "
+"<filename>fichier2</filename>. <screen>mv fichier2 ~/Desktop</screen> "
+"déplacera le fichier <filename>fichier2</filename> vers votre répertoire "
+"<filename class=\"directory\">Desktop</filename> (bureau) mais ne va pas le "
+"renommer. Vous devez spécifier le nouveau nom de fichier si vous souhaitez "
+"en plus le renommer.<placeholder-1/>"
+
+#: basic-commands/C/basic-commands.xml:219(title)
+msgid "rm"
+msgstr "rm"
+
+#: basic-commands/C/basic-commands.xml:220(para)
+msgid ""
+"Use the <command>rm</command> command to remove or delete a file in your "
+"directory. It will not work on directories which have files in them."
+msgstr ""
+"Utilisez la commande <command>rm</command> pour supprimer un fichier dans "
+"votre répertoire. Ceci ne fonctionnera pas en supprimant un répertoire "
+"contenant des fichiers."
+
+#: basic-commands/C/basic-commands.xml:228(title)
+msgid "mkdir"
+msgstr "mkdir"
+
+#: basic-commands/C/basic-commands.xml:229(para)
+msgid ""
+"The <command>mkdir</command> command will allow you to create directories. "
+"For example, typing: <screen>mkdir music</screen> will create a music "
+"directory in the current directory."
+msgstr ""
+"La commande <command>mkdir</command> vous permettra de créer des "
+"répertoires. Par exemple, taper : <screen>mkdir musique</screen> créera un "
+"répertoire <filename class=\"directory\">musique</filename> dans le "
+"répertoire courant."
+
+#: basic-commands/C/basic-commands.xml:239(title)
+msgid "System Information Commands"
+msgstr "Commandes pour les informations système"
+
+#: basic-commands/C/basic-commands.xml:242(title)
+msgid "df"
+msgstr "df"
+
+#: basic-commands/C/basic-commands.xml:243(para)
+msgid ""
+"The <command>df</command> command displays filesystem disk space usage for "
+"all partitions. <screen>df -h</screen> will give information using megabytes "
+"(M) and gigabytes (G) instead of blocks (<emphasis role=\"strong\">-"
+"h</emphasis> means \"human-readable\")."
+msgstr ""
+"La commande <command>df</command> affiche l'usage de l'espace disque de "
+"toutes les partitions du système de fichiers. <screen>df -h</screen> vous "
+"donnera les informations en mibioctets (Mio) et en gibioctets (Gio) au lieu "
+"de blocks (<emphasis role=\"strong\">-h</emphasis> signifie « human-"
+"readable », soit « lisible par des humains »). L'option avec majuscule "
+"<emphasis role=\"strong\">-H</emphasis> affichera les mêmes informations, "
+"mais en utilisant des puissances de 1000 (Mo, Go)."
+
+#: basic-commands/C/basic-commands.xml:253(title)
+msgid "free"
+msgstr "free"
+
+#: basic-commands/C/basic-commands.xml:254(para)
+msgid ""
+"The <command>free</command> command displays the amount of free and used "
+"memory in the system. <screen>free -m</screen> will give the information "
+"using megabytes, which is probably most useful for current computers."
+msgstr ""
+"La commande <command>free</command> affiche la mémoire libre et utilisée "
+"dans le système. <screen>free -m</screen> donnera le résultat en mégaoctets, "
+"ce qui est probablement plus utile pour les ordinateurs actuels."
+
+#: basic-commands/C/basic-commands.xml:264(title)
+msgid "top"
+msgstr "top"
+
+#: basic-commands/C/basic-commands.xml:265(para)
+msgid ""
+"The <command>top</command> command displays information on your GNU/Linux "
+"system, running processes and system resources, including CPU, RAM &amp; "
+"swap usage and total number of tasks being run. To exit "
+"<application>top</application>, press <keycap>q</keycap>."
+msgstr ""
+"La commande <command>top</command> affiche les informations de votre système "
+"GNU/Linux, les processus en cours et les ressources du système, y compris "
+"l'utilisation processeur, la RAM et l'usage de la swap ainsi que le total "
+"des tâches en cours. Pour quitter <application>top</application>, appuyer "
+"sur <keycap>q</keycap>."
+
+#: basic-commands/C/basic-commands.xml:275(title)
+msgid "uname"
+msgstr "uname"
+
+#: basic-commands/C/basic-commands.xml:276(para)
+msgid ""
+"The <command>uname</command> command with the <emphasis role=\"strong\">-"
+"a</emphasis> option, prints all system information, including machine name, "
+"kernel name &amp; version, and a few other details. Most useful for checking "
+"which kernel you're using."
+msgstr ""
+"La commande <command>uname</command> avec l'option <emphasis "
+"role=\"strong\">-a</emphasis> affiche toutes les informations système telles "
+"que le nom de la machine, du noyau, sa version et quelques autres détails. "
+"Le plus utile pour savoir sous quel noyau vous êtes."
+
+#: basic-commands/C/basic-commands.xml:286(title)
+msgid "lsb_release"
+msgstr "lsb_release"
+
+#: basic-commands/C/basic-commands.xml:287(para)
+msgid ""
+"The <emphasis role=\"strong\">lsb_release</emphasis> command with the "
+"<emphasis role=\"strong\">-a</emphasis> option prints version information "
+"for the Linux release you're running. For example, typing: "
+"<screen>lsb_release -a</screen> will give you: <screen>\n"
+"No LSB modules are available.\n"
+"Distributor ID: Ubuntu\n"
+"Description:    Ubuntu 7.04 \n"
+"Release:        7.04\n"
+"Codename:       feisty</screen>"
+msgstr ""
+"La commande <emphasis role=\"strong\">lsb_release</emphasis> avec l'option "
+"<emphasis role=\"strong\">-a</emphasis> affiche les informations sur la "
+"version de Linux que vous utilisez. Par exemple, taper <screen>lsb_release -"
+"a</screen> vous donnera <screen>\n"
+"No LSB modules are available.\n"
+"Distributor ID: Ubuntu\n"
+"Description Ubuntu 7.04\n"
+"Release: 7.04\n"
+"Codename: feisty</screen>"
+
+#: basic-commands/C/basic-commands.xml:305(title)
+msgid "ifconfig"
+msgstr "ifconfig"
+
+#: basic-commands/C/basic-commands.xml:306(para)
+msgid ""
+"The <command>ifconfig</command> command reports on your system's network "
+"interfaces."
+msgstr ""
+"La commande <command>ifconfig</command> vous informe sur les interfaces "
+"réseau de votre système."
+
+#: basic-commands/C/basic-commands.xml:314(title)
+msgid "Executing Commands with Elevated Privileges"
+msgstr "Exécuter des commandes avec des permissions élevées"
+
+#: basic-commands/C/basic-commands.xml:315(para)
+msgid ""
+"The following commands will need to be prefaced with the "
+"<command>sudo</command> command. Please see <ulink "
+"url=\"https://help.ubuntu.com/community/RootSudo\">RootSudo</ulink> for "
+"information on using <command>sudo</command>."
+msgstr ""
+"Les commandes suivantes nécessitent d'être précédées de la commande "
+"<command>sudo</command>. Veuillez vous référez à la <ulink "
+"url=\"http://doc.ubuntu-fr.org/sudo\"> Documentation sur Sudo (wiki "
+"francophone)</ulink> pour plus d'informations sur l'utilisation de la "
+"commande <command>sudo</command>."
+
+#: basic-commands/C/basic-commands.xml:324(title)
+msgid "Adding a New Group"
+msgstr "Ajouter un nouveau groupe"
+
+#: basic-commands/C/basic-commands.xml:325(para)
+msgid ""
+"The <command>addgroup</command> command is used to create a new group on the "
+"system. To create a new group, type: <screen>addgroup newgroup</screen> The "
+"above command will create a new group called <emphasis "
+"role=\"strong\">newgroup</emphasis>."
+msgstr ""
+"La commande <command>addgroup</command> est utilisée pour créer un nouveau "
+"groupe sur le système. Pour créer un nouveau groupe, tapez <screen>addgroup "
+"nouveaugroupe</screen>. La commande précédente créera un groupe appelé "
+"<emphasis role=\"strong\">nouveaugroupe</emphasis>."
+
+#: basic-commands/C/basic-commands.xml:334(title)
+msgid "Adding A New User"
+msgstr "Ajouter un nouvel utilisateur"
+
+#: basic-commands/C/basic-commands.xml:335(para)
+msgid ""
+"The <command>adduser</command> is used to create new users on the system. To "
+"create a new user, type: <screen>adduser newuser</screen> The above command "
+"will create a new user called <emphasis role=\"strong\">newuser</emphasis>."
+msgstr ""
+"La commande <command>adduser</command> est utilisée pour créer de nouveaux "
+"utilisateurs sur le système. Pour créer un nouvel utilisateur, tapez "
+"<screen>adduser nouvelutilisateur</screen>. La commande précédente créera un "
+"nouvel utilisateur appelé <emphasis "
+"role=\"strong\">nouvelutilisateur</emphasis>."
+
+#: basic-commands/C/basic-commands.xml:342(para)
+msgid ""
+"To assign a password for the new user use the <command>passwd</command> "
+"command: <screen>passwd newuser</screen>"
+msgstr ""
+"Pour donner un mot de passe au nouvel utilisateur, utilisez la commande "
+"<command>passwd</command> : <screen>passwd nouvelutilisateur</screen>"
+
+#: basic-commands/C/basic-commands.xml:348(para)
+msgid ""
+"Finally, to assign the new user to the new group, type: <screen>adduser "
+"newuser newgroup</screen>"
+msgstr ""
+"Enfin, pour affecter le nouvel utilisateur au nouveau groupe, tapez : "
+"<screen>adduser nouvelutilisateur nouveaugroupe</screen>"
+
+#: basic-commands/C/basic-commands.xml:356(title)
+msgid "Options"
+msgstr "Options"
+
+#: basic-commands/C/basic-commands.xml:357(para)
+msgid ""
+"The default behavior for a command may usually be modified by adding a "
+"<emphasis role=\"strong\">-- <emphasis>option</emphasis></emphasis> to the "
+"command. The <link linkend=\"ls\"><command>ls</command></link> command, for "
+"example, has a <emphasis role=\"strong\">-s</emphasis> option so that "
+"<command>ls -s</command> will include file sizes in the listing. There is "
+"also a <emphasis role=\"strong\">-h</emphasis> option to get those sizes in "
+"a \"human readable\" format."
+msgstr ""
+"Le comportement par défaut d'une commande pourra habituellement être modifié "
+"en ajoutant une <emphasis role=\"strong\">--"
+"<emphasis>option</emphasis></emphasis> à cette commande. La commande <link "
+"linkend=\"ls\"><command>ls</command></link> par exemple, possède une option "
+"<emphasis role=\"strong\">-s</emphasis> qui fera que <command>ls -"
+"s</command> ajoutera la taille des fichiers dans la liste, ou encore "
+"l'option <emphasis role=\"strong\">-h</emphasis> pour obtenir ces tailles "
+"dans dans un format « lisible par des humains »."
+
+#: basic-commands/C/basic-commands.xml:368(para)
+msgid ""
+"Options can be grouped in clusters so <screen>ls -sh</screen> is exactly the "
+"same command as <screen>ls -s -h</screen> Most options have a long version, "
+"prefixed with two dashes instead of one, so even <screen>ls --size --human-"
+"readable</screen> is the same command."
+msgstr ""
+"Les options peuvent être groupées en blocs, ce qui signifie que <screen>ls -"
+"sh</screen> est identique à <screen>ls -s -h</screen>. La plupart des "
+"options ont une version longue, précédées de deux tirets (--) à la place "
+"d'un seul (-) donc <screen>ls --size --human-readable</screen> est la même "
+"commande que les deux précédentes."
+
+#: basic-commands/C/basic-commands.xml:379(title)
+msgid "\"Man\" and getting help"
+msgstr "« Man » et obtenir de l'aide"
+
+#: basic-commands/C/basic-commands.xml:380(para)
+msgid ""
+"<emphasis role=\"strong\"><emphasis>command</emphasis> --help</emphasis> and "
+"<emphasis role=\"strong\">man <emphasis>command</emphasis></emphasis> are "
+"the two most important tools at the command line."
+msgstr ""
+"<emphasis role=\"strong\"><emphasis>commande</emphasis> --help</emphasis> et "
+"<emphasis role=\"strong\">man <emphasis>commande</emphasis></emphasis> sont "
+"les deux outils les plus importants dans la ligne de commande."
+
+#: basic-commands/C/basic-commands.xml:387(para)
+msgid ""
+"Virtually all commands understand the <emphasis role=\"strong\">-"
+"h</emphasis> (or <emphasis role=\"strong\">--help</emphasis>) option which "
+"will produce a short usage description of the command and it's options, then "
+"exit back to the command prompt. Type <screen>man -h</screen> or <screen>man "
+"--help</screen> to see this in action."
+msgstr ""
+"Toutes les commandes comprenant l'option <emphasis role=\"strong\">-"
+"h</emphasis> (ou <emphasis role=\"strong\">--help</emphasis>) provoqueront "
+"une courte description de la commande et de ses options, et quitteront "
+"ensuite pour revenir au terminal. Tapez <screen>man -h</screen> ou "
+"<screen>man --help</screen> pour voir ce comportement en action."
+
+#: basic-commands/C/basic-commands.xml:397(para)
+msgid ""
+"Every command and nearly every application in Linux will have a man (manual) "
+"file, so finding them is as simple as typing <command>man command</command> "
+"to bring up a longer manual entry for the specified command. For example, "
+"<screen>man mv</screen> will bring up the <command>mv</command> (move) "
+"manual."
+msgstr ""
+"Toutes les commandes et presque toutes les applications sous Linux ont un "
+"fichier de manuel (man). Pour y avoir accès, il suffit de taper <command>man "
+"commande</command> pour une explication complète de la commande spécifiée. "
+"Par exemple : <screen>man mv</screen> vous renverra l'aide sur la commande "
+"<command>mv</command> (move)."
+
+#: basic-commands/C/basic-commands.xml:406(para)
+msgid ""
+"Move up and down the man file with the arrow keys, and quit back to the "
+"command prompt with <keycap>q</keycap>."
+msgstr ""
+"Parcourez le fichier d'aide avec les flèches, et quittez avec la touche "
+"<keycap>q</keycap> pour revenir au terminal."
+
+#: basic-commands/C/basic-commands.xml:411(para)
+msgid ""
+"<screen>man man</screen> will bring up the manual entry for the "
+"<command>man</command> command, which is a good place to start."
+msgstr ""
+"<screen>man man</screen> affiche les entrées de manuel pour la commande "
+"<command>man</command>, ce qui est un bon départ."
+
+#: basic-commands/C/basic-commands.xml:417(para)
+msgid ""
+"<screen>man intro</screen> is especially useful - it displays the "
+"\"Introduction to user commands\" which is a well-written, fairly brief "
+"introduction to the Linux command line."
+msgstr ""
+"<screen>man intro</screen> est particulièrement utile — elle affiche "
+"« l'introduction aux commandes utilisateur » qui est une introduction bien "
+"écrite et assez brève à la ligne de commande de Linux."
+
+#: basic-commands/C/basic-commands.xml:422(para)
+msgid ""
+"There are also <command>info</command> pages, which are generally more in-"
+"depth than <command>man</command> pages. Try <screen>info info</screen> for "
+"the introduction to info pages."
+msgstr ""
+"Il y a aussi les pages <command>info</command>, qui donnent généralement "
+"plus de détails que les pages <command>man</command>. Essayez <screen>info "
+"info</screen> pour l'introduction aux pages info."
+
+#: basic-commands/C/basic-commands.xml:432(title)
+msgid "Searching for man files"
+msgstr "Recherche de pages de man"
+
+#: basic-commands/C/basic-commands.xml:433(para)
+msgid ""
+"If you aren't sure which command or application you need to use, you can try "
+"searching the man files."
+msgstr ""
+"Si vous n'êtes pas sûr de la commande ou de l'application dont vous avez "
+"besoin, vous pouvez essayer de faire une recherche dans les pages de man."
+
+#: basic-commands/C/basic-commands.xml:446(para)
+msgid "This is the same as the <command>apropos</command> command."
+msgstr "Ceci est identique à la commande <command>apropos</command>."
+
+#: basic-commands/C/basic-commands.xml:439(para)
+msgid ""
+"<command>man -k foo</command>, will search the man files for "
+"<emphasis>foo</emphasis>. Try <screen>man -k nautilus</screen> to see how "
+"this works. <placeholder-1/>"
+msgstr ""
+"<command>man -k toto</command> cherchera le fichier d'aide pour le programme "
+"<emphasis>toto</emphasis>. Essayez <screen>man -k nautilus</screen> pour "
+"voir comment cela fonctionne. <placeholder-1/>"
+
+#: basic-commands/C/basic-commands.xml:459(para)
+msgid "This is the same as the <command>whatis</command> command."
+msgstr "Ceci est identique à la commande <command>whatis</command>."
+
+#: basic-commands/C/basic-commands.xml:454(para)
+msgid ""
+"<command>man -f foo</command>, searches only the titles of your system's man "
+"files. For example, try <screen>man -f gnome</screen><placeholder-1/>"
+msgstr ""
+"<command>man -f toto</command> recherche uniquement les titres des fichiers "
+"de manuel de votre système. Par exemple, essayez <screen>man -f "
+"gnome</screen><placeholder-1/>"
+
+#: basic-commands/C/basic-commands.xml:471(title)
+msgid "Other Useful Things"
+msgstr "Autres choses utiles"
+
+#: basic-commands/C/basic-commands.xml:474(title)
+msgid "Pasting in commands"
+msgstr "Coller dans la ligne de commande"
+
+#: basic-commands/C/basic-commands.xml:475(para)
+msgid ""
+"Often, you will be referred to instructions that require commands to be "
+"pasted into the terminal. You might be wondering why the text you've copied "
+"from a web page using "
+"<keycombo><keycap>Ctrl</keycap><keycap>C</keycap></keycombo> won't paste in "
+"with <keycombo><keycap>Ctrl</keycap><keycap>V</keycap></keycombo>. Surely "
+"you don't have to type in all those nasty commands and filenames? Relax. "
+"Middle Button Click on your mouse (both buttons simultaneously on a two-"
+"button mouse) or Right Click and select "
+"<menuchoice><guimenuitem>Paste</guimenuitem></menuchoice> from the menu."
+msgstr ""
+"Souvent, vous suivrez des instructions qui demandent de coller des commandes "
+"dans la console. Vous vous demanderez sûrement pourquoi le texte que vous "
+"avez copié d'une page internet utilisant "
+"<keycombo><keycap>Ctrl</keycap><keycap>C</keycap></keycombo> ne se colle pas "
+"avec <keycombo><keycap>Ctrl</keycap><keycap>V</keycap></keycombo> dans la "
+"console. Vous n'allez quand même pas devoir taper toutes ces commandes et "
+"noms de fichiers compliqués ? Pas d'inquiétude, cliquez sur le bouton du "
+"milieu de la souris (les deux boutons simultanément sur une souris à deux "
+"boutons) ou faites un clic droit et sélectionnez "
+"<menuchoice><guimenuitem>coller</guimenuitem></menuchoice> dans le menu."
+
+#: basic-commands/C/basic-commands.xml:498(title)
+msgid "Save on typing"
+msgstr "Minimiser la frappe"
+
+#: basic-commands/C/basic-commands.xml:507(para)
+msgid ""
+"<keycap>Up Arrow</keycap> or "
+"<keycombo><keycap>Ctrl</keycap><keycap>p</keycap></keycombo>"
+msgstr ""
+"<keycap>Flêche vers le haut</keycap> ou "
+"<keycombo><keycap>Ctrl</keycap><keycap>p</keycap></keycombo>"
+
+#: basic-commands/C/basic-commands.xml:517(para)
+msgid "Scrolls through the commands you've entered previously."
+msgstr "Fait défiler les commandes que vous avez précédemment entrées."
+
+#: basic-commands/C/basic-commands.xml:525(para)
+msgid ""
+"<keycap>Down Arrow</keycap> or "
+"<keycombo><keycap>Ctrl</keycap><keycap>n</keycap></keycombo>"
+msgstr ""
+"<keycap>Flêche vers le bas</keycap> ou "
+"<keycombo><keycap>Ctrl</keycap><keycap>n</keycap></keycombo>"
+
+#: basic-commands/C/basic-commands.xml:535(para)
+msgid "Takes you back to a more recent command."
+msgstr "Vous ramène à une commande plus récente."
+
+#: basic-commands/C/basic-commands.xml:542(keycap)
+msgid "Enter"
+msgstr "Entrée"
+
+#: basic-commands/C/basic-commands.xml:547(para)
+msgid "When you have the command you want."
+msgstr "Lorsque la commande désirée est affichée."
+
+#: basic-commands/C/basic-commands.xml:553(keycap)
+msgid "Tab"
+msgstr "Tab"
+
+#: basic-commands/C/basic-commands.xml:558(para)
+msgid ""
+"A very useful feature. It autocompletes any commands or filenames, if "
+"there's only one option, or else gives you a list of options."
+msgstr ""
+"Un fonctionnalité très pratique. Cela complète automatiquement n'importe "
+"quelle commande ou nom de fichier si il n'y a qu'une seule possibilité, ou "
+"cela affiche une liste de possibilités."
+
+#: basic-commands/C/basic-commands.xml:571(title)
+msgid "Change the text"
+msgstr "Modifier le texte"
+
+#: basic-commands/C/basic-commands.xml:572(para)
+msgid ""
+"The mouse won't work. Use the <keycap>Left/Right arrow</keycap> keys to move "
+"around the line."
+msgstr ""
+"La souris ne fonctionnera pas. Utilisez les touches <keycap>Gauche</keycap> "
+"ou <keycap>Droite</keycap> pour vous déplacer sur la ligne."
+
+#: basic-commands/C/basic-commands.xml:576(para)
+msgid ""
+"When the cursor is where you want it in the line, typing "
+"<emphasis>inserts</emphasis> text, it doesn't overtype what's already there."
+msgstr ""
+"Quand le curseur sera sur la position que vous souhaitez, tout texte que "
+"vous tapez sera <emphasis>inséré</emphasis>, cela n'effacera pas la suite."
+
+#: basic-commands/C/basic-commands.xml:591(keycap) basic-commands/C/basic-commands.xml:607(keycap) basic-commands/C/basic-commands.xml:626(keycap) basic-commands/C/basic-commands.xml:642(keycap) basic-commands/C/basic-commands.xml:657(keycap) basic-commands/C/basic-commands.xml:671(keycap)
+msgid "Ctrl"
+msgstr "Ctrl"
+
+#: basic-commands/C/basic-commands.xml:592(keycap)
+msgid "a"
+msgstr "a"
+
+#: basic-commands/C/basic-commands.xml:594(keycap)
+msgid "Home"
+msgstr "Dossier Personnel"
+
+#: basic-commands/C/basic-commands.xml:599(para)
+msgid "Moves the cursor to the <emphasis>start</emphasis> of a line."
+msgstr "Place le curseur en <emphasis>début</emphasis> de ligne."
+
+#: basic-commands/C/basic-commands.xml:608(keycap)
+msgid "e"
+msgstr "e"
+
+#: basic-commands/C/basic-commands.xml:610(keycap)
+msgid "End"
+msgstr "Fin"
+
+#: basic-commands/C/basic-commands.xml:615(para)
+msgid ""
+"Moves the cursor to the <emphasis><emphasis "
+"role=\"strong\">e</emphasis>nd</emphasis> of a line."
+msgstr ""
+"Déplace le curseur à la <emphasis><emphasis "
+"role=\"strong\">f</emphasis>in</emphasis> de la ligne."
+
+#: basic-commands/C/basic-commands.xml:627(keycap)
+msgid "b"
+msgstr "b"
+
+#: basic-commands/C/basic-commands.xml:633(para)
+msgid ""
+"Moves to the <emphasis role=\"strong\">b</emphasis>eginning of the previous "
+"or current word."
+msgstr ""
+"Place le curseur au dé<emphasis role=\"strong\">b</emphasis>ut du mot "
+"courant ou précédent."
+
+#: basic-commands/C/basic-commands.xml:643(keycap)
+msgid "k"
+msgstr "k"
+
+#: basic-commands/C/basic-commands.xml:649(para)
+msgid "Deletes from the current cursor position to the end of the line."
+msgstr ""
+"Efface la ligne depuis la position courante du curseur jusqu'à la fin."
+
+#: basic-commands/C/basic-commands.xml:658(keycap)
+msgid "u"
+msgstr "u"
+
+#: basic-commands/C/basic-commands.xml:664(para)
+msgid "Deletes the whole of the current line."
+msgstr "Efface complètement la ligne"
+
+#: basic-commands/C/basic-commands.xml:672(keycap)
+msgid "w"
+msgstr "w"
+
+#: basic-commands/C/basic-commands.xml:678(para)
+msgid "Deletes the word before the cursor."
+msgstr "Efface le mot situé avant le curseur."
+
+#: basic-commands/C/basic-commands.xml:688(title)
+msgid "More Information"
+msgstr "Plus d'informations"
+
+#: basic-commands/C/basic-commands.xml:689(para)
+msgid "The following online guides are available:"
+msgstr "Les guides suvants sont disponibles en ligne :"
+
+#: basic-commands/C/basic-commands.xml:692(para)
+msgid ""
+"<ulink url=\"https://help.ubuntu.com/community/AptGetHowto\"> "
+"AptGetHowto</ulink> - using apt-get to install packages from the command "
+"line."
+msgstr ""
+"<ulink url=\"http://doc.ubuntu-fr.org/apt\">La gestion des paquets avec "
+"apt</ulink> - utilisation de apt-get pour installer les paquets en ligne de "
+"commande."
+
+#: basic-commands/C/basic-commands.xml:699(para)
+msgid ""
+"<ulink url=\"https://help.ubuntu.com/community/Repositories/CommandLine\"> "
+"Commandline Repository Editing</ulink> - adding the Universe/Multiverse "
+"repositories through the command line."
+msgstr ""
+"<ulink url=\"https://help.ubuntu.com/community/Repositories/CommandLine\"> "
+"Commandline Repository Editing</ulink> (en anglais) - ajouter les dépôts "
+"Universe/Multiverse en ligne de commande. Pour gérer les dépôts voyez la "
+"page <ulink url=\"http://doc.ubuntu-fr.org/depots\">du wiki "
+"francophone</ulink>"
+
+#: basic-commands/C/basic-commands.xml:707(para)
+msgid ""
+"<ulink url=\"https://help.ubuntu.com/community/grep\">grep Howto</ulink> - "
+"grep is a powerful command line search tool."
+msgstr ""
+"<ulink url=\"https://help.ubuntu.com/community/grep\">grep Howto</ulink> (en "
+"anglais) - grep est un puissant outil de recherche en ligne de commande."
+
+#: basic-commands/C/basic-commands.xml:714(para)
+msgid ""
+"<ulink url=\"https://help.ubuntu.com/community/find\">find </ulink> - locate "
+"files on the command line."
+msgstr ""
+"<ulink url=\"https://help.ubuntu.com/community/find\">find </ulink> (en "
+"anglais) - localiser des fichiers en ligne de commande."
+
+#: basic-commands/C/basic-commands.xml:720(para)
+msgid ""
+"<ulink url=\"https://help.ubuntu.com/community/CommandlineHowto\"> "
+"CommandlineHowto</ulink> - longer and more complete than this basic guide, "
+"but still unfinished."
+msgstr ""
+"<ulink url=\"http://doc.ubuntu-fr.org/console/ligne_de_commande\">La ligne "
+"de commande</ulink> - des choses en plus par rapport à ce guide, mais cela "
+"reste incomplet."
+
+#: basic-commands/C/basic-commands.xml:727(para)
+msgid ""
+"<ulink url=\"https://help.ubuntu.com/community/HowToReadline\"> "
+"HowToReadline</ulink> - information on some more advanced customization for "
+"the command line."
+msgstr ""
+"<ulink url=\"https://help.ubuntu.com/community/HowToReadline\"> "
+"HowToReadline</ulink> (en anglais) - des informations pour une "
+"personnalisation avancée de la ligne de commande."
+
+#: basic-commands/C/basic-commands.xml:734(para)
+msgid "For more detailed tutorials on the Linux command line, please see:"
+msgstr ""
+"Pour des tutoriaux plus détaillés sur la ligne de commande Linux, voyez :"
+
+#: basic-commands/C/basic-commands.xml:740(para)
+msgid ""
+"<ulink url=\"http://linuxcommand.org/\"/>- basic BASH tutorials, including "
+"BASH scripting"
+msgstr ""
+"<ulink url=\"http://linuxcommand.org/\"/> (en anglais) - tutoriaux BASH de "
+"base, y compris les scripts BASH"
+
+#: basic-commands/C/basic-commands.xml:746(para)
+msgid ""
+"<ulink url=\"http://linuxsurvival.com/index.php\"/>- Java-based tutorials"
+msgstr ""
+"<ulink url=\"http://linuxsurvival.com/index.php\"/>(en anglais) - Tutoriaux "
+"basés sur Java"
+
+#: basic-commands/C/basic-commands.xml:752(para)
+msgid ""
+"<ulink url=\"http://rute.2038bug.com/index.html.gz\"/>- a massive online "
+"book about system administration, almost all from the command line."
+msgstr ""
+"<ulink url=\"http://rute.2038bug.com/index.html.gz\"/> (en anglais) - un "
+"énorme livre en ligne sur l'administration système, principalement en ligne "
+"de commande."
+
+#. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2.
+#: basic-commands/C/basic-commands.xml:0(None)
+msgid "translator-credits"
+msgstr ""
+"Launchpad Contributions:\n"
+"  Beber https://launchpad.net/~bertrand-goareguer\n"
+"  Bruno Patri https://launchpad.net/~bruno-patri\n"
+"  Dimitri Torterat https://launchpad.net/~diti\n"
+"  Doyen Philippe https://launchpad.net/~dyphil\n"
+"  Fabien Lusseau https://launchpad.net/~fabien-beosfrance\n"
+"  Fred Senis https://launchpad.net/~fredsenis\n"
+"  Lionel Duval https://launchpad.net/~fennec\n"
+"  Nicolas DERIVE https://launchpad.net/~kalon33\n"
+"  Rozkannou https://launchpad.net/~jamelot\n"
+"  Stéphane V https://launchpad.net/~stephane-vergeylen\n"
+"  Vincent Legout https://launchpad.net/~bixente\n"
+"  amine Say https://launchpad.net/~aminesay\n"
+"  guillaume https://launchpad.net/~pourmonpoussin\n"
+"  jloup78 https://launchpad.net/~jean-loup-gregoire\n"
+"\n"
+"Launchpad Contributions:\n"
+"  Beber https://launchpad.net/~bertrand-goareguer\n"
+"  Bruno Patri https://launchpad.net/~bruno-patri\n"
+"  Dimitri Torterat https://launchpad.net/~diti\n"
+"  Doyen Philippe https://launchpad.net/~dyphil\n"
+"  Fabien Lusseau https://launchpad.net/~fabien-beosfrance\n"
+"  Fred Senis https://launchpad.net/~fredsenis\n"
+"  Launchpad Translations Administrators https://launchpad.net/~rosetta-"
+"admins\n"
+"  Lionel Duval https://launchpad.net/~fennec\n"
+"  Nicolas DERIVE https://launchpad.net/~kalon33\n"
+"  Rozkannou https://launchpad.net/~jamelot\n"
+"  Vincent Legout https://launchpad.net/~bixente\n"
+"  amine Say https://launchpad.net/~aminesay\n"
+"  jloup78 https://launchpad.net/~jean-loup-gregoire"

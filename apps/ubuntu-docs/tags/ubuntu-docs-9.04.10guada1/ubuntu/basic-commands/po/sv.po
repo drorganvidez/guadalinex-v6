@@ -1,0 +1,902 @@
+# Swedish translation for ubuntu-docs
+# Copyright (c) 2007 Rosetta Contributors and Canonical Ltd 2007
+# This file is distributed under the same license as the ubuntu-docs package.
+# Daniel Nylander <po@danielnylander.se>, 2007.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ubuntu-docs\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2007-09-14 08:25+0100\n"
+"PO-Revision-Date: 2007-11-13 23:31+0000\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
+"Language-Team: Swedish <sv@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2008-02-17 10:22+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+#: basic-commands/C/basic-commands-C.omf:6(creator) basic-commands/C/basic-commands-C.omf:7(maintainer)
+msgid "ubuntu-doc@lists.ubuntu.com (Ubuntu Documentation Project)"
+msgstr "ubuntu-doc@lists.ubuntu.com (Ubuntus dokumentationsprojekt)"
+
+#: basic-commands/C/basic-commands-C.omf:8(title) basic-commands/C/basic-commands.xml:15(title)
+msgid "Basic Commands"
+msgstr "Grundläggande kommandon"
+
+#: basic-commands/C/basic-commands-C.omf:9(date)
+msgid "2006-09-07"
+msgstr "2006-09-07"
+
+#: basic-commands/C/basic-commands-C.omf:11(description)
+msgid "Placeholder."
+msgstr "Platshållare."
+
+#: basic-commands/C/basic-commands.xml:18(title)
+msgid "Using this Guide"
+msgstr "Användning av guiden"
+
+#: basic-commands/C/basic-commands.xml:28(emphasis)
+msgid "man intro(1)"
+msgstr "man intro(1)"
+
+#: basic-commands/C/basic-commands.xml:20(emphasis)
+msgid ""
+"\"Under Linux there are GUIs (graphical user interfaces), where you can "
+"point and click and drag, and hopefully get work done without first reading "
+"lots of documentation. The traditional Unix environment is a CLI (command "
+"line interface), where you type commands to tell the computer what to do. "
+"That is faster and more powerful, but requires finding out what the commands "
+"are.\" -- from <placeholder-1/>"
+msgstr ""
+"\"Under Linux finns det grafiska användargränssnitt där du kan peka, klicka "
+"och dra, och förhoppningsvis utföra arbete utan att först behöva läsa en "
+"massa dokumentation. Den traditionella Unix-miljön är kommandoraden (cli, "
+"command line interface), där du kan skriva in kommandon för att berätta för "
+"datorn vad som skall göras. Det är snabbare och effektivare, men kräver att "
+"man vet vad kommandona heter och gör.\" -- från <placeholder-1/>"
+
+#: basic-commands/C/basic-commands.xml:33(para)
+msgid ""
+"This guide will make you familiar with basic GNU/Linux shell commands. It is "
+"not intended to be a complete guide to the command line, just an "
+"introduction to complement Ubuntu's graphical tools."
+msgstr ""
+"Den här guiden kommer att hjälpa dig med de grundläggande skalkommandona i "
+"GNU/Linux. Den är inte tänkt att vara en komplett guide till kommandoraden "
+"utan bara en introduktion för att komplettera Ubuntus grafiska verktyg."
+
+#: basic-commands/C/basic-commands.xml:43(para)
+msgid ""
+"All command names, file names or paths to directories will be shown using a "
+"<command>monospace font</command>."
+msgstr ""
+"Alla kommandonamn, filnamn eller sökvägar till kataloger kommer att visas "
+"med ett <command>typsnitt med fast breddsteg</command>."
+
+#: basic-commands/C/basic-commands.xml:50(para)
+msgid ""
+"All the commands on this guide are to be issued from a command prompt in a "
+"<application>Terminal</application> and will be shown as: <screen>command to "
+"type</screen>"
+msgstr ""
+"Alla kommandon i den här guiden ska köras från en kommandoprompt i en "
+"<application>terminal</application> och kommer att visas som: "
+"<screen>kommando att skriva</screen>"
+
+#: basic-commands/C/basic-commands.xml:58(para)
+msgid ""
+"<emphasis role=\"strong\">Note that Linux is case sensitive.</emphasis> "
+"User, user, and USER are all different to Linux."
+msgstr ""
+"<emphasis role=\"strong\">Observera att Linux skiljer på små och stora "
+"bokstäver.</emphasis> Användare, användare, och ANVÄNDARE tolkas alla olika "
+"i Linux."
+
+#: basic-commands/C/basic-commands.xml:69(title)
+msgid "Starting a Terminal"
+msgstr "Starta en terminal"
+
+#: basic-commands/C/basic-commands.xml:70(para)
+msgid "To open a <application>Terminal</application> do as follow:"
+msgstr ""
+"Öppna en <application>terminal</application> genom att göra följande:"
+
+#: basic-commands/C/basic-commands.xml:76(para)
+msgid ""
+"Choose "
+"<menuchoice><guimenu>Applications</guimenu><guimenuitem>Accessories</guimenui"
+"tem><guimenuitem>Terminal</guimenuitem></menuchoice>;"
+msgstr ""
+"Välj "
+"<menuchoice><guimenu>Program</guimenu><guimenuitem>Tillbehör</guimenuitem><gu"
+"imenuitem>Terminal</guimenuitem></menuchoice>;"
+
+#: basic-commands/C/basic-commands.xml:81(para)
+msgid ""
+"Or press <keycombo><keycap>Alt</keycap><keycap>F2</keycap></keycombo> and "
+"type <command>gnome-terminal</command>."
+msgstr ""
+"Eller tryck på <keycombo><keycap>Alt</keycap><keycap>F2</keycap></keycombo> "
+"och ange <command>gnome-terminal</command>."
+
+#: basic-commands/C/basic-commands.xml:94(title)
+msgid "File and Directory Commands"
+msgstr "Kommandon för filer och kataloger"
+
+#: basic-commands/C/basic-commands.xml:97(title)
+msgid "cd"
+msgstr "cd"
+
+#: basic-commands/C/basic-commands.xml:98(para)
+msgid ""
+"The <command>cd</command> command changes directories. When you open a "
+"terminal you will be in your home directory. To move around the file system "
+"you will use <command>cd</command>. Examples:"
+msgstr ""
+"Kommandot <command>cd</command> låter dig byta mellan kataloger. När du "
+"öppnar en terminal kommer du att befinna dig i din hemkatalog. För att "
+"flytta runt i filsystemet måste du använda <command>cd</command>. Exempel:"
+
+#: basic-commands/C/basic-commands.xml:107(para)
+msgid "To navigate into the root directory, type: <screen>cd /</screen>"
+msgstr "Skriv <screen>cd /</screen> för att navigera till rotkatalogen"
+
+#: basic-commands/C/basic-commands.xml:113(para)
+msgid ""
+"To navigate to your home directory, type: <screen>cd</screen> or <screen>cd "
+"~</screen>"
+msgstr ""
+"Skriv <screen>cd</screen> eller <screen>cd ~</screen> för att navigera till "
+"din hemkatalog"
+
+#: basic-commands/C/basic-commands.xml:121(para)
+msgid "To navigate up one directory level, type: <screen>cd ..</screen>"
+msgstr "Skriv <screen>cd ..</screen> för att navigera en katalognivå uppåt"
+
+#: basic-commands/C/basic-commands.xml:127(para)
+msgid ""
+"To navigate to the previous directory (or back), type: <screen>cd -</screen>"
+msgstr ""
+"Skriv <screen>cd -</screen> för att navigera till föregående katalog (eller "
+"bakåt)"
+
+#: basic-commands/C/basic-commands.xml:134(para)
+msgid ""
+"To navigate through multiple levels of directory at once, specify the full "
+"directory path that you want to go to. For example, type: <screen>cd "
+"/var/www</screen> to go directly to the <filename "
+"class=\"directory\">/www</filename> subdirectory of <filename "
+"class=\"directory\">/var/</filename>. As another example, type: <screen>cd "
+"~/Desktop</screen> to move you to the <filename "
+"class=\"directory\">Desktop</filename> subdirectory inside your home "
+"directory."
+msgstr ""
+"Ange den fullständiga katalogsökvägen som du vill gå till för att navigera "
+"genom flera nivåer av kataloger på en gång. Skriv till exempel: <screen>cd "
+"/var/www</screen> för att gå direkt till underkatalogen <filename "
+"class=\"directory\">/www</filename> av <filename "
+"class=\"directory\">/var/</filename>. Ett annat exempel är: <screen>cd "
+"~/Desktop</screen> för att flytta dig till underkatalogen <filename "
+"class=\"directory\">Desktop</filename> inne i din hemkatalog."
+
+#: basic-commands/C/basic-commands.xml:151(title)
+msgid "pwd"
+msgstr "pwd"
+
+#: basic-commands/C/basic-commands.xml:162(para)
+msgid ""
+"<application>GNOME Terminal</application> also displays this information in "
+"the title bar of it's window."
+msgstr ""
+"<application>GNOME-terminalen</application> visar även den här informationen "
+"i titellisten för dess fönster."
+
+#: basic-commands/C/basic-commands.xml:152(para)
+msgid ""
+"<command>pwd</command>: The <command>pwd</command> command will show you "
+"which directory you're located in (<acronym>pwd</acronym> stands for "
+"<quote>print working directory</quote>). For example, typing "
+"<screen>pwd</screen> in the <filename class=\"directory\">Desktop</filename> "
+"directory, will show <computeroutput>~/Desktop</computeroutput>. "
+"<placeholder-1/>"
+msgstr ""
+"<command>pwd</command>: Kommandot <command>pwd</command> kommer att visa dig "
+"vilken katalog som du står i (<acronym>pwd</acronym> betyder <quote>print "
+"working directory</quote>, vilket betyder <quote>skriv ut "
+"arbetskatalog</quote> på svenska). Skriv till exempel <screen>pwd</screen> i "
+"katalogen <filename class=\"directory\">Desktop</filename> och "
+"<computeroutput>~/Desktop</computeroutput> kommer att skrivas ut. "
+"<placeholder-1/>"
+
+#: basic-commands/C/basic-commands.xml:171(title)
+msgid "ls"
+msgstr "ls"
+
+#: basic-commands/C/basic-commands.xml:172(para)
+msgid ""
+"The <command>ls</command> command shows you the files in your current "
+"directory. Used with certain options, you can see sizes of files, when files "
+"where made, and permissions of files. For example, typing <screen>ls "
+"~</screen> will show you the files that are in your home directory."
+msgstr ""
+"Kommandot <command>ls</command> visar dig filerna i din aktuella katalog. "
+"Använd det tillsammans med vissa flaggor för att se filstorlekar, när filer "
+"skapades samt rättigheter för filer. Ange till exempel <screen>ls ~</screen> "
+"för att visa dig filerna som finns i din hemkatalog."
+
+#: basic-commands/C/basic-commands.xml:183(title)
+msgid "cp"
+msgstr "cp"
+
+#: basic-commands/C/basic-commands.xml:184(para)
+msgid ""
+"The <command>cp</command> command makes a copy of a file for you. For "
+"example, type: <screen>cp file foo</screen> to make a exact copy of "
+"<filename>file</filename> and name it <filename>foo</filename>, but the file "
+"<filename>file</filename> will still be there."
+msgstr ""
+"Kommandot <command>cp</command> skapar en kopia av en fil åt dig. Skriv till "
+"exempel: <screen>cp fil foo</screen> för att göra en exakt kopia av "
+"<filename>fil</filename> och ge kopian namnet <filename>foo</filename>, men "
+"filen <filename>fil</filename> kommer fortfarande att finnas kvar."
+
+#: basic-commands/C/basic-commands.xml:194(title)
+msgid "mv"
+msgstr "mv"
+
+#: basic-commands/C/basic-commands.xml:206(para)
+msgid ""
+"If you are using <command>mv</command> with <command>sudo</command> you will "
+"not be able to use the <emphasis role=\"strong\">~</emphasis> shortcut, but "
+"will have to use the full pathnames to your files. This is because when you "
+"are working as root, <emphasis role=\"strong\">~</emphasis> will refer to "
+"the root account's home directory, not your own."
+msgstr ""
+"Om du använder <command>mv</command> med <command>sudo</command> kommer du "
+"inte kunna använda genvägen <emphasis role=\"strong\">~</emphasis> utan "
+"måste använda de fullständiga sökvägsnamnen till dina filer. Detta är på "
+"grund av att när du arbetar som root kommer <emphasis "
+"role=\"strong\">~</emphasis> att referera till root-kontots hemkatalog, inte "
+"till din hemkatalog."
+
+#: basic-commands/C/basic-commands.xml:195(para)
+msgid ""
+"The <command>mv</command> command moves a file to a different location or "
+"will rename a file. Examples are as follows: <screen>mv file foo</screen> "
+"will rename the file <filename>file</filename> to <filename>foo</filename>. "
+"<screen>mv foo ~/Desktop</screen> will move the file "
+"<filename>foo</filename> to your <filename "
+"class=\"directory\">Desktop</filename> directory but will not rename it. You "
+"must specify a new file name to rename a file. <placeholder-1/>"
+msgstr ""
+"Kommandot <command>mv</command> flyttar en fil till en annan plats eller "
+"byter namn på en fil. Här är några exempel: <screen>mv fil foo</screen> "
+"kommer att byta namn på filen <filename>fil</filename> till "
+"<filename>foo</filename>. <screen>mv foo ~/Desktop</screen> kommer att "
+"flytta filen <filename>foo</filename> till katalogen <filename "
+"class=\"directory\">Desktop</filename> i din hemkatalog men kommer inte att "
+"byta namn på den. Du måste ange ett nytt filnamn för att byta namn på en "
+"fil. <placeholder-1/>"
+
+#: basic-commands/C/basic-commands.xml:219(title)
+msgid "rm"
+msgstr "rm"
+
+#: basic-commands/C/basic-commands.xml:220(para)
+msgid ""
+"Use the <command>rm</command> command to remove or delete a file in your "
+"directory. It will not work on directories which have files in them."
+msgstr ""
+"Använd kommandot <command>rm</command> för att ta bort eller radera en fil i "
+"din katalog. Det kommer inte att fungera på kataloger som innehåller filer."
+
+#: basic-commands/C/basic-commands.xml:228(title)
+msgid "mkdir"
+msgstr "mkdir"
+
+#: basic-commands/C/basic-commands.xml:229(para)
+msgid ""
+"The <command>mkdir</command> command will allow you to create directories. "
+"For example, typing: <screen>mkdir music</screen> will create a music "
+"directory in the current directory."
+msgstr ""
+"Kommandot <command>mkdir</command> låter dig skapa kataloger. Ange till "
+"exempel: <screen>mkdir musik</screen> för att skapa en musikkatalog i den "
+"aktuella katalogen."
+
+#: basic-commands/C/basic-commands.xml:239(title)
+msgid "System Information Commands"
+msgstr "Kommandon för systeminformation"
+
+#: basic-commands/C/basic-commands.xml:242(title)
+msgid "df"
+msgstr "df"
+
+#: basic-commands/C/basic-commands.xml:243(para)
+msgid ""
+"The <command>df</command> command displays filesystem disk space usage for "
+"all partitions. <screen>df -h</screen> will give information using megabytes "
+"(M) and gigabytes (G) instead of blocks (<emphasis role=\"strong\">-"
+"h</emphasis> means \"human-readable\")."
+msgstr ""
+"Kommandot <command>df</command> visar användning av diskutrymmet på ett "
+"filsystem för alla partitioner. <screen>df -h</screen> kommer att ange "
+"informationen i megabyte (M) och gigabyte (G) istället för i block "
+"(<emphasis role=\"strong\">-h</emphasis> betyder mänskligt läsbar (human-"
+"readable))."
+
+#: basic-commands/C/basic-commands.xml:253(title)
+msgid "free"
+msgstr "free"
+
+#: basic-commands/C/basic-commands.xml:254(para)
+msgid ""
+"The <command>free</command> command displays the amount of free and used "
+"memory in the system. <screen>free -m</screen> will give the information "
+"using megabytes, which is probably most useful for current computers."
+msgstr ""
+"Kommandot <command>free</command> visar mängden ledigt och använt minne i "
+"systemet. <screen>free -m</screen> anger informationen i megabyte, som "
+"antagligen är mest användbart för dagens datorer."
+
+#: basic-commands/C/basic-commands.xml:264(title)
+msgid "top"
+msgstr "top"
+
+#: basic-commands/C/basic-commands.xml:265(para)
+msgid ""
+"The <command>top</command> command displays information on your GNU/Linux "
+"system, running processes and system resources, including CPU, RAM &amp; "
+"swap usage and total number of tasks being run. To exit "
+"<application>top</application>, press <keycap>q</keycap>."
+msgstr ""
+"Kommandot <command>top</command> visar displays information om ditt Linux-"
+"system, körande processer och systemresurser, inklusive processor, "
+"användning av minne och växlingsutrymme samt det totala antalet uppgifter "
+"som körs. För att avsluta <application>top</application>, tryck på "
+"<keycap>q</keycap>."
+
+#: basic-commands/C/basic-commands.xml:275(title)
+msgid "uname"
+msgstr "uname"
+
+#: basic-commands/C/basic-commands.xml:276(para)
+msgid ""
+"The <command>uname</command> command with the <emphasis role=\"strong\">-"
+"a</emphasis> option, prints all system information, including machine name, "
+"kernel name &amp; version, and a few other details. Most useful for checking "
+"which kernel you're using."
+msgstr ""
+"Kommandot <command>uname</command> med flaggan <emphasis role=\"strong\">-"
+"a</emphasis> skriver ut all systeminformation, inklusive maskinnamn, kärnans "
+"namn och version samt en del andra detaljer. Mest användbar för att "
+"kontrollera vilken kärna som du använder."
+
+#: basic-commands/C/basic-commands.xml:286(title)
+msgid "lsb_release"
+msgstr "lsb_release"
+
+#: basic-commands/C/basic-commands.xml:287(para)
+msgid ""
+"The <emphasis role=\"strong\">lsb_release</emphasis> command with the "
+"<emphasis role=\"strong\">-a</emphasis> option prints version information "
+"for the Linux release you're running. For example, typing: "
+"<screen>lsb_release -a</screen> will give you: <screen>\n"
+"No LSB modules are available.\n"
+"Distributor ID: Ubuntu\n"
+"Description:    Ubuntu 7.04 \n"
+"Release:        7.04\n"
+"Codename:       feisty</screen>"
+msgstr ""
+"Kommandot <emphasis role=\"strong\">lsb_release</emphasis> med flaggan "
+"<emphasis role=\"strong\">-a</emphasis> skriver ut versionsinformation för "
+"den Linux-utgåva som du kör. Till exempel ger <screen>lsb_release -"
+"a</screen> dig följande: <screen>\n"
+"No LSB modules are available.\n"
+"Distributor ID: Ubuntu\n"
+"Description:    Ubuntu 7.10\n"
+"Release:        7.10\n"
+"Codename:       gutsy</screen>"
+
+#: basic-commands/C/basic-commands.xml:305(title)
+msgid "ifconfig"
+msgstr "ifconfig"
+
+#: basic-commands/C/basic-commands.xml:306(para)
+msgid ""
+"The <command>ifconfig</command> command reports on your system's network "
+"interfaces."
+msgstr ""
+"Kommandot <command>ifconfig</command> ger en rapport om nätverksgränssnitten "
+"i ditt system."
+
+#: basic-commands/C/basic-commands.xml:314(title)
+msgid "Executing Commands with Elevated Privileges"
+msgstr "Kör kommandon med utökade privilegier"
+
+#: basic-commands/C/basic-commands.xml:315(para)
+msgid ""
+"The following commands will need to be prefaced with the "
+"<command>sudo</command> command. Please see <ulink "
+"url=\"https://help.ubuntu.com/community/RootSudo\">RootSudo</ulink> for "
+"information on using <command>sudo</command>."
+msgstr ""
+"Följande kommandon behöver inledas med kommandot <command>sudo</command>. Se "
+"<ulink url=\"https://help.ubuntu.com/community/RootSudo\">RootSudo</ulink> "
+"för information om hur man använder <command>sudo</command>."
+
+#: basic-commands/C/basic-commands.xml:324(title)
+msgid "Adding a New Group"
+msgstr "Lägg till en ny grupp"
+
+#: basic-commands/C/basic-commands.xml:325(para)
+msgid ""
+"The <command>addgroup</command> command is used to create a new group on the "
+"system. To create a new group, type: <screen>addgroup newgroup</screen> The "
+"above command will create a new group called <emphasis "
+"role=\"strong\">newgroup</emphasis>."
+msgstr ""
+"Kommandot <command>addgroup</command> används för att skapa en ny grupp på "
+"systemet. Ange följande för att skapa en ny grupp: <screen>addgroup "
+"nygrupp</screen>. Ovanstående kommando kommer att skapa en ny grupp med "
+"namnet <emphasis role=\"strong\">nygrupp</emphasis>."
+
+#: basic-commands/C/basic-commands.xml:334(title)
+msgid "Adding A New User"
+msgstr "Lägg till en ny användare"
+
+#: basic-commands/C/basic-commands.xml:335(para)
+msgid ""
+"The <command>adduser</command> is used to create new users on the system. To "
+"create a new user, type: <screen>adduser newuser</screen> The above command "
+"will create a new user called <emphasis role=\"strong\">newuser</emphasis>."
+msgstr ""
+"Kommandot <command>adduser</command> används för att skapa nya användare på "
+"systemet. Skriv <screen>adduser nyanvändare</screen> för att skapa en ny "
+"användare. Ovanstående kommando kommer att skapa en ny användare med namnet "
+"<emphasis role=\"strong\">nyanvändare</emphasis> (endast som exempel, åäö "
+"får inte användas i namnet)."
+
+#: basic-commands/C/basic-commands.xml:342(para)
+msgid ""
+"To assign a password for the new user use the <command>passwd</command> "
+"command: <screen>passwd newuser</screen>"
+msgstr ""
+"Använd kommandot <command>passwd</command> för att tilldela ett lösenord för "
+"den nya användaren: <screen>passwd nyanvändare</screen>"
+
+#: basic-commands/C/basic-commands.xml:348(para)
+msgid ""
+"Finally, to assign the new user to the new group, type: <screen>adduser "
+"newuser newgroup</screen>"
+msgstr ""
+"Och till slut, tilldela den nya användaren till den nya gruppen, skriv in: "
+"<screen>adduser nyanvändare nygrupp</screen>"
+
+#: basic-commands/C/basic-commands.xml:356(title)
+msgid "Options"
+msgstr "Flaggor"
+
+#: basic-commands/C/basic-commands.xml:357(para)
+msgid ""
+"The default behavior for a command may usually be modified by adding a "
+"<emphasis role=\"strong\">-- <emphasis>option</emphasis></emphasis> to the "
+"command. The <link linkend=\"ls\"><command>ls</command></link> command, for "
+"example, has a <emphasis role=\"strong\">-s</emphasis> option so that "
+"<command>ls -s</command> will include file sizes in the listing. There is "
+"also a <emphasis role=\"strong\">-h</emphasis> option to get those sizes in "
+"a \"human readable\" format."
+msgstr ""
+"Standardbeteendet för ett kommando kan oftast ändras genom att lägga till en "
+"<emphasis role=\"strong\">-- <emphasis>flagga</emphasis></emphasis> till "
+"kommandot. Kommandot <link linkend=\"ls\"><command>ls</command></link>, till "
+"exempel, har flaggan <emphasis role=\"strong\">-s</emphasis> så att "
+"<command>ls -s</command> kommer att inkludera filstorlekar i listningen. Det "
+"finns även flaggan <emphasis role=\"strong\">-h</emphasis> för att få dessa "
+"storlekar i ett \"mänskligt läsbart\"-format."
+
+#: basic-commands/C/basic-commands.xml:368(para)
+msgid ""
+"Options can be grouped in clusters so <screen>ls -sh</screen> is exactly the "
+"same command as <screen>ls -s -h</screen> Most options have a long version, "
+"prefixed with two dashes instead of one, so even <screen>ls --size --human-"
+"readable</screen> is the same command."
+msgstr ""
+"Flaggor kan grupperas så att <screen>ls -sh</screen> är exakt det samma "
+"kommando som <screen>ls -s -h</screen>. De flesta flaggor har en lång "
+"version, som inleds med två bindestreck istället för ett, så att även "
+"<screen>ls --size --human-readable</screen> är samma kommando."
+
+#: basic-commands/C/basic-commands.xml:379(title)
+msgid "\"Man\" and getting help"
+msgstr "\"Man\" och få hjälp"
+
+#: basic-commands/C/basic-commands.xml:380(para)
+msgid ""
+"<emphasis role=\"strong\"><emphasis>command</emphasis> --help</emphasis> and "
+"<emphasis role=\"strong\">man <emphasis>command</emphasis></emphasis> are "
+"the two most important tools at the command line."
+msgstr ""
+"<emphasis role=\"strong\"><emphasis>kommando</emphasis> --help</emphasis> "
+"och <emphasis role=\"strong\">man <emphasis>kommando</emphasis></emphasis> "
+"är de två viktigaste verktygen på kommandoraden."
+
+#: basic-commands/C/basic-commands.xml:387(para)
+msgid ""
+"Virtually all commands understand the <emphasis role=\"strong\">-"
+"h</emphasis> (or <emphasis role=\"strong\">--help</emphasis>) option which "
+"will produce a short usage description of the command and it's options, then "
+"exit back to the command prompt. Type <screen>man -h</screen> or <screen>man "
+"--help</screen> to see this in action."
+msgstr ""
+"I stort sett alla kommandon förstår flaggan <emphasis role=\"strong\">-"
+"h</emphasis> (eller <emphasis role=\"strong\">--help</emphasis>) som kommer "
+"att skriva ut en kort användningsbeskrivning av kommandot samt dess flaggor "
+"och sedan avslutas och gå tillbaka till kommandoprompten. Skriv <screen>man -"
+"h</screen> eller <screen>man --help</screen> för att se hur det fungerar."
+
+#: basic-commands/C/basic-commands.xml:397(para)
+msgid ""
+"Every command and nearly every application in Linux will have a man (manual) "
+"file, so finding them is as simple as typing <command>man command</command> "
+"to bring up a longer manual entry for the specified command. For example, "
+"<screen>man mv</screen> will bring up the <command>mv</command> (move) "
+"manual."
+msgstr ""
+"Alla kommandon och nästa alla program i Linux har en man-sida (manual) så de "
+"är lika lätta att hitta som att ange <command>man kommando</command> för att "
+"ta fram en längre manualpost för det angivna kommandot. Till exempel så "
+"kommer <screen>man mv</screen> att visa manualsidan för "
+"<command>mv</command> (move)."
+
+#: basic-commands/C/basic-commands.xml:406(para)
+msgid ""
+"Move up and down the man file with the arrow keys, and quit back to the "
+"command prompt with <keycap>q</keycap>."
+msgstr ""
+"Flytta upp och ned i manualfilen med piltangenterna och gå tillbaka till "
+"kommandoprompten med <keycap>q</keycap>."
+
+#: basic-commands/C/basic-commands.xml:411(para)
+msgid ""
+"<screen>man man</screen> will bring up the manual entry for the "
+"<command>man</command> command, which is a good place to start."
+msgstr ""
+"<screen>man man</screen> kommer att visa manualposten för kommandot "
+"<command>man</command>, vilket är en bra plats att börja på."
+
+#: basic-commands/C/basic-commands.xml:417(para)
+msgid ""
+"<screen>man intro</screen> is especially useful - it displays the "
+"\"Introduction to user commands\" which is a well-written, fairly brief "
+"introduction to the Linux command line."
+msgstr ""
+"<screen>man intro</screen> är speciellt användbar - den visar \"Introduction "
+"to user commands\" som är en välskriven, ganska kort introduktion till "
+"kommandoraden i Linux."
+
+#: basic-commands/C/basic-commands.xml:422(para)
+msgid ""
+"There are also <command>info</command> pages, which are generally more in-"
+"depth than <command>man</command> pages. Try <screen>info info</screen> for "
+"the introduction to info pages."
+msgstr ""
+"Det finns även <command>info</command>-sidor som allmänt sett är mer "
+"ingående än <command>man</command>-sidor. Prova <screen>info info</screen> "
+"för att se en introduktion till infosidor."
+
+#: basic-commands/C/basic-commands.xml:432(title)
+msgid "Searching for man files"
+msgstr "Sökning efter manualsidor"
+
+#: basic-commands/C/basic-commands.xml:433(para)
+msgid ""
+"If you aren't sure which command or application you need to use, you can try "
+"searching the man files."
+msgstr ""
+"Om du inte är säker på vilket kommando eller program som du behöver använda "
+"kan du prova att söka i manualsidorna."
+
+#: basic-commands/C/basic-commands.xml:446(para)
+msgid "This is the same as the <command>apropos</command> command."
+msgstr "Det här är samma som kommandot <command>apropos</command>."
+
+#: basic-commands/C/basic-commands.xml:439(para)
+msgid ""
+"<command>man -k foo</command>, will search the man files for "
+"<emphasis>foo</emphasis>. Try <screen>man -k nautilus</screen> to see how "
+"this works. <placeholder-1/>"
+msgstr ""
+"<command>man -k foo</command> kommer att söka i manualfilerna efter "
+"<emphasis>foo</emphasis>. Prova <screen>man -k nautilus</screen> för att se "
+"hur det fungerar. <placeholder-1/>"
+
+#: basic-commands/C/basic-commands.xml:459(para)
+msgid "This is the same as the <command>whatis</command> command."
+msgstr "Det här är samma som kommandot <command>whatis</command>."
+
+#: basic-commands/C/basic-commands.xml:454(para)
+msgid ""
+"<command>man -f foo</command>, searches only the titles of your system's man "
+"files. For example, try <screen>man -f gnome</screen><placeholder-1/>"
+msgstr ""
+"<command>man -f foo</command> söker endast i titlarna på manualsidorna på "
+"ditt system. Prova till exempel <screen>man -f gnome</screen><placeholder-1/>"
+
+#: basic-commands/C/basic-commands.xml:471(title)
+msgid "Other Useful Things"
+msgstr "Andra användbara ting"
+
+#: basic-commands/C/basic-commands.xml:474(title)
+msgid "Pasting in commands"
+msgstr "Klistra in kommandon"
+
+#: basic-commands/C/basic-commands.xml:475(para)
+msgid ""
+"Often, you will be referred to instructions that require commands to be "
+"pasted into the terminal. You might be wondering why the text you've copied "
+"from a web page using "
+"<keycombo><keycap>Ctrl</keycap><keycap>C</keycap></keycombo> won't paste in "
+"with <keycombo><keycap>Ctrl</keycap><keycap>V</keycap></keycombo>. Surely "
+"you don't have to type in all those nasty commands and filenames? Relax. "
+"Middle Button Click on your mouse (both buttons simultaneously on a two-"
+"button mouse) or Right Click and select "
+"<menuchoice><guimenuitem>Paste</guimenuitem></menuchoice> from the menu."
+msgstr ""
+"Ofta blir du refererad till instruktioner som kräver att kommandon klistras "
+"in i terminalen. Du kanske undrar varför texten som du har kopierat från en "
+"webbsida med <keycombo><keycap>Ctrl</keycap><keycap>C</keycap></keycombo> "
+"inte kan klistras in med "
+"<keycombo><keycap>Ctrl</keycap><keycap>V</keycap></keycombo>. Måste du "
+"verkligen skriva in alla dessa skumma kommandon och filnamn? Lugn. Klicka "
+"med mittenknappen på din mus (båda knapparna samtidigt på en tvåknapparsmus) "
+"eller högerklicka och välj <menuchoice><guimenuitem>Klistra "
+"in</guimenuitem></menuchoice> från menyn."
+
+#: basic-commands/C/basic-commands.xml:498(title)
+msgid "Save on typing"
+msgstr "Spara tid"
+
+#: basic-commands/C/basic-commands.xml:507(para)
+msgid ""
+"<keycap>Up Arrow</keycap> or "
+"<keycombo><keycap>Ctrl</keycap><keycap>p</keycap></keycombo>"
+msgstr ""
+"<keycap>Uppåtpil</keycap> eller "
+"<keycombo><keycap>Ctrl</keycap><keycap>p</keycap></keycombo>"
+
+#: basic-commands/C/basic-commands.xml:517(para)
+msgid "Scrolls through the commands you've entered previously."
+msgstr "Rullar genom de kommandon som du tidigare använt."
+
+#: basic-commands/C/basic-commands.xml:525(para)
+msgid ""
+"<keycap>Down Arrow</keycap> or "
+"<keycombo><keycap>Ctrl</keycap><keycap>n</keycap></keycombo>"
+msgstr ""
+"<keycap>Nedåtpil</keycap> eller "
+"<keycombo><keycap>Ctrl</keycap><keycap>n</keycap></keycombo>"
+
+#: basic-commands/C/basic-commands.xml:535(para)
+msgid "Takes you back to a more recent command."
+msgstr "Tar dig tillbaka till ett tidigare kommando."
+
+#: basic-commands/C/basic-commands.xml:542(keycap)
+msgid "Enter"
+msgstr "Enter"
+
+#: basic-commands/C/basic-commands.xml:547(para)
+msgid "When you have the command you want."
+msgstr "När du har fått kommandot som du vill använda."
+
+#: basic-commands/C/basic-commands.xml:553(keycap)
+msgid "Tab"
+msgstr "Tabb"
+
+#: basic-commands/C/basic-commands.xml:558(para)
+msgid ""
+"A very useful feature. It autocompletes any commands or filenames, if "
+"there's only one option, or else gives you a list of options."
+msgstr ""
+"En mycket användbar funktion. Den kompletterar automatiskt alla kommandon "
+"eller filnamn, om det endast finns ett alternativ, eller ger dig en lista "
+"över alternativ."
+
+#: basic-commands/C/basic-commands.xml:571(title)
+msgid "Change the text"
+msgstr "Ändra texten"
+
+#: basic-commands/C/basic-commands.xml:572(para)
+msgid ""
+"The mouse won't work. Use the <keycap>Left/Right arrow</keycap> keys to move "
+"around the line."
+msgstr ""
+"Musen fungerar inte. Använd tangenterna <keycap>vänster/högerpil</keycap> "
+"för att förflytta dig på raden."
+
+#: basic-commands/C/basic-commands.xml:576(para)
+msgid ""
+"When the cursor is where you want it in the line, typing "
+"<emphasis>inserts</emphasis> text, it doesn't overtype what's already there."
+msgstr ""
+"När markören är där du vill att den ska vara på raden kan du <emphasis>mata "
+"in</emphasis> text, den skriver inte över vad som redan finns där."
+
+#: basic-commands/C/basic-commands.xml:591(keycap) basic-commands/C/basic-commands.xml:607(keycap) basic-commands/C/basic-commands.xml:626(keycap) basic-commands/C/basic-commands.xml:642(keycap) basic-commands/C/basic-commands.xml:657(keycap) basic-commands/C/basic-commands.xml:671(keycap)
+msgid "Ctrl"
+msgstr "Ctrl"
+
+#: basic-commands/C/basic-commands.xml:592(keycap)
+msgid "a"
+msgstr "a"
+
+#: basic-commands/C/basic-commands.xml:594(keycap)
+msgid "Home"
+msgstr "Home"
+
+#: basic-commands/C/basic-commands.xml:599(para)
+msgid "Moves the cursor to the <emphasis>start</emphasis> of a line."
+msgstr "Flyttar markören till <emphasis>början</emphasis> av en rad."
+
+#: basic-commands/C/basic-commands.xml:608(keycap)
+msgid "e"
+msgstr "e"
+
+#: basic-commands/C/basic-commands.xml:610(keycap)
+msgid "End"
+msgstr "End"
+
+#: basic-commands/C/basic-commands.xml:615(para)
+msgid ""
+"Moves the cursor to the <emphasis><emphasis "
+"role=\"strong\">e</emphasis>nd</emphasis> of a line."
+msgstr ""
+"Flyttar markören till <emphasis>slut<emphasis "
+"role=\"strong\">e</emphasis>t</emphasis> av en rad."
+
+#: basic-commands/C/basic-commands.xml:627(keycap)
+msgid "b"
+msgstr "b"
+
+#: basic-commands/C/basic-commands.xml:633(para)
+msgid ""
+"Moves to the <emphasis role=\"strong\">b</emphasis>eginning of the previous "
+"or current word."
+msgstr ""
+"Flyttar till <emphasis role=\"strong\">b</emphasis>örjan av föregående eller "
+"aktuellt ord."
+
+#: basic-commands/C/basic-commands.xml:643(keycap)
+msgid "k"
+msgstr "k"
+
+#: basic-commands/C/basic-commands.xml:649(para)
+msgid "Deletes from the current cursor position to the end of the line."
+msgstr "Tar bort från den aktuella markörpositionen till slutet av raden."
+
+#: basic-commands/C/basic-commands.xml:658(keycap)
+msgid "u"
+msgstr "u"
+
+#: basic-commands/C/basic-commands.xml:664(para)
+msgid "Deletes the whole of the current line."
+msgstr "Tar bort hela den aktuella raden."
+
+#: basic-commands/C/basic-commands.xml:672(keycap)
+msgid "w"
+msgstr "w"
+
+#: basic-commands/C/basic-commands.xml:678(para)
+msgid "Deletes the word before the cursor."
+msgstr "Tar bort ordet före markören."
+
+#: basic-commands/C/basic-commands.xml:688(title)
+msgid "More Information"
+msgstr "Mer information"
+
+#: basic-commands/C/basic-commands.xml:689(para)
+msgid "The following online guides are available:"
+msgstr "Följande guider finns tillgängliga:"
+
+#: basic-commands/C/basic-commands.xml:692(para)
+msgid ""
+"<ulink url=\"https://help.ubuntu.com/community/AptGetHowto\"> "
+"AptGetHowto</ulink> - using apt-get to install packages from the command "
+"line."
+msgstr ""
+"<ulink url=\"https://help.ubuntu.com/community/AptGetHowto\"> "
+"AptGetHowto</ulink> - använd apt-get för att installera paket från "
+"kommandoraden."
+
+#: basic-commands/C/basic-commands.xml:699(para)
+msgid ""
+"<ulink url=\"https://help.ubuntu.com/community/Repositories/CommandLine\"> "
+"Commandline Repository Editing</ulink> - adding the Universe/Multiverse "
+"repositories through the command line."
+msgstr ""
+"<ulink url=\"https://help.ubuntu.com/community/Repositories/CommandLine\"> "
+"Commandline Repository Editing</ulink> - lägg till förråden universe och "
+"multiverse via kommandoraden."
+
+#: basic-commands/C/basic-commands.xml:707(para)
+msgid ""
+"<ulink url=\"https://help.ubuntu.com/community/grep\">grep Howto</ulink> - "
+"grep is a powerful command line search tool."
+msgstr ""
+"<ulink url=\"https://help.ubuntu.com/community/grep\">grep Howto</ulink> - "
+"grep är ett kraftfullt sökverktyg för kommandoraden."
+
+#: basic-commands/C/basic-commands.xml:714(para)
+msgid ""
+"<ulink url=\"https://help.ubuntu.com/community/find\">find </ulink> - locate "
+"files on the command line."
+msgstr ""
+"<ulink url=\"https://help.ubuntu.com/community/find\">find </ulink> - leta "
+"efter filer via kommandoraden."
+
+#: basic-commands/C/basic-commands.xml:720(para)
+msgid ""
+"<ulink url=\"https://help.ubuntu.com/community/CommandlineHowto\"> "
+"CommandlineHowto</ulink> - longer and more complete than this basic guide, "
+"but still unfinished."
+msgstr ""
+"<ulink url=\"https://help.ubuntu.com/community/CommandlineHowto\"> "
+"CommandlineHowto</ulink> - längre och mer komplett än den grundläggande "
+"guiden, dock inte helt färdig ännu."
+
+#: basic-commands/C/basic-commands.xml:727(para)
+msgid ""
+"<ulink url=\"https://help.ubuntu.com/community/HowToReadline\"> "
+"HowToReadline</ulink> - information on some more advanced customization for "
+"the command line."
+msgstr ""
+"<ulink url=\"https://help.ubuntu.com/community/HowToReadline\"> "
+"HowToReadline</ulink> - information om mer avancerad anpassning för "
+"kommandoraden."
+
+#: basic-commands/C/basic-commands.xml:734(para)
+msgid "For more detailed tutorials on the Linux command line, please see:"
+msgstr ""
+"Se följande webbplatser för mer detaljerade handledningar om Linuxkommandon:"
+
+#: basic-commands/C/basic-commands.xml:740(para)
+msgid ""
+"<ulink url=\"http://linuxcommand.org/\"/>- basic BASH tutorials, including "
+"BASH scripting"
+msgstr ""
+"<ulink url=\"http://linuxcommand.org/\"/>- grundläggande BASH-handledningar, "
+"innefattar även BASH-skript"
+
+#: basic-commands/C/basic-commands.xml:746(para)
+msgid ""
+"<ulink url=\"http://linuxsurvival.com/index.php\"/>- Java-based tutorials"
+msgstr ""
+"<ulink url=\"http://linuxsurvival.com/index.php\"/>- Javabaserade "
+"handledningar"
+
+#: basic-commands/C/basic-commands.xml:752(para)
+msgid ""
+"<ulink url=\"http://rute.2038bug.com/index.html.gz\"/>- a massive online "
+"book about system administration, almost all from the command line."
+msgstr ""
+"<ulink url=\"http://rute.2038bug.com/index.html.gz\"/>- en stor onlinebok om "
+"systemadministration, nästan allt från kommandoraden."
+
+#. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2.
+#: basic-commands/C/basic-commands.xml:0(None)
+msgid "translator-credits"
+msgstr ""
+"Launchpad Contributions:\n"
+"  Daniel Nylander https://launchpad.net/~yeager\n"
+"  HenrikAn https://launchpad.net/~henrik-reg-1\n"
+"  Leonard Broman https://launchpad.net/~firepiper\n"
+"  Magnus Lundborg https://launchpad.net/~lundborg-magnus\n"
+"  Magnus Malmsten https://launchpad.net/~magnus-malmsten\n"
+"  rancor https://launchpad.net/~therancor\n"
+"\n"
+"Launchpad Contributions:\n"
+"  Daniel Nylander https://launchpad.net/~yeager\n"
+"  HenrikAn https://launchpad.net/~henrik-reg-1\n"
+"  Leonard Broman https://launchpad.net/~firepiper"

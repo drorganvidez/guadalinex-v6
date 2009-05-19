@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" 
+	"http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY % globalent SYSTEM "../../../libs/global.ent">
+%globalent;
+<!ENTITY % cdo-C SYSTEM "../../../libs/cdo-C.ent">
+%cdo-C;
+<!ENTITY % gnome-menus-C SYSTEM "../../../ubuntu/libs/gnome-menus-C.ent">
+%gnome-menus-C;
+<!ENTITY % xinclude SYSTEM "../../../libs/xinclude.mod">
+%xinclude;
+<!ENTITY language "en">
+<!ENTITY ubuntu '<phrase>Ubuntu</phrase>'>
+]>
+	<article id="administrative" status="complete">
+	<articleinfo>
+			<title>Administrative Tasks</title>
+    	&legalnotice;
+	</articleinfo>
+			<para>For security reasons, administrative tasks in Ubuntu can only be performed by users with special administrative privileges.</para>
+			<para>Administrative access can be given to individual users, who can use the <ulink type='help' url='man:sudo'>sudo</ulink> command to perform administrative tasks. The first user account you created on your system during installation will, by default, be able to perform administrative tasks.</para>
+			<para>When you run an application that requires administrative privileges, you will be asked to enter your user password. This ensures that rogue applications cannot damage your system, and serves as a reminder that you are about to perform administrative actions which require you to be careful!</para>
+			<para>All of the default graphical configuration tools in Ubuntu already use sudo, so they will prompt you for your password if needed.</para>
+			<para>Each time you type your password, the system remembers it for 15 minutes so that you do not have to type it again.</para>
+			<para>For more information on the <application>sudo</application> program and the absence of a root user in Ubuntu, read the <ulink url="&wiki-RootSudo;">sudo page</ulink> on the Ubuntu wiki.</para>
+			
+			<sect1 id="sudoers" status="complete">
+				<title>Giving administrative access to a user</title>
+				<para>You can restrict and enable administrative (sudo) access to users with the <ulink type='help' url='ghelp:users-admin'>Users and Groups application</ulink>:</para>
+				<procedure>
+					<step>
+						<para>Press &users-groups;</para>
+					</step>
+					<step>
+						<para>Press <guibutton>Unlock</guibutton> and enter your password</para>
+					</step>
+					<step>
+						<para>Select the user who is to be given administrative access and press <guibutton>Properties</guibutton></para>
+					</step>
+					<step>
+						<para>Select the <guilabel>User Privileges</guilabel> tab</para>
+					</step>
+					<step>
+						<para>Check the box next to <guilabel>Administer the system</guilabel> and press <guibutton>OK</guibutton></para>
+					</step>
+				</procedure>
+			</sect1>
+			
+			<sect1 id="terminal" status="complete">
+				<title>Using sudo at the command line</title>
+				<para>To use sudo whilst using the command line (&terminal;), simply type <userinput>sudo</userinput> before the command you wish to run. Sudo will then prompt you for your password.</para>
+				<para>Sudo will remember your password for a set amount of time; by default this is 15 minutes, but can be changed. This feature was designed to allow users to perform multiple administrative tasks without being asked for a password each time.</para>
+				<para>To use a <emphasis>root</emphasis> terminal, type <command>sudo -i</command> at the command line.</para>
+				<para>To show a graphical password prompt, type <command>gksudo</command> at the command line, followed by the command you wish to run.</para>
+				   <caution>
+					<para>Be careful when using sudo; you might damage your system if you type the wrong command! As a general rule, only use sudo when absolutely necessary.</para>
+				   </caution>	
+			</sect1>
+</article>

@@ -1,0 +1,838 @@
+# Japanese translation for ubuntu-docs
+# Copyright (c) (c) 2006 Canonical Ltd, and Rosetta Contributors 2006
+# This file is distributed under the same license as the ubuntu-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2006.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ubuntu-docs\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2007-09-14 08:25+0100\n"
+"PO-Revision-Date: 2008-01-25 15:21+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Japanese <ja@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2008-02-17 10:22+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+#: basic-commands/C/basic-commands-C.omf:6(creator) basic-commands/C/basic-commands-C.omf:7(maintainer)
+msgid "ubuntu-doc@lists.ubuntu.com (Ubuntu Documentation Project)"
+msgstr "ubuntu-doc@lists.ubuntu.com (Ubuntuドキュメンテーション・プロジェクト)"
+
+#: basic-commands/C/basic-commands-C.omf:8(title) basic-commands/C/basic-commands.xml:15(title)
+msgid "Basic Commands"
+msgstr "基本コマンド群"
+
+#: basic-commands/C/basic-commands-C.omf:9(date)
+msgid "2006-09-07"
+msgstr "2006年9月7日"
+
+#: basic-commands/C/basic-commands-C.omf:11(description)
+msgid "Placeholder."
+msgstr "プレースホルダ"
+
+#: basic-commands/C/basic-commands.xml:18(title)
+msgid "Using this Guide"
+msgstr "このガイドの使い方について"
+
+#: basic-commands/C/basic-commands.xml:28(emphasis)
+msgid "man intro(1)"
+msgstr "manとは"
+
+#: basic-commands/C/basic-commands.xml:20(emphasis)
+msgid ""
+"\"Under Linux there are GUIs (graphical user interfaces), where you can "
+"point and click and drag, and hopefully get work done without first reading "
+"lots of documentation. The traditional Unix environment is a CLI (command "
+"line interface), where you type commands to tell the computer what to do. "
+"That is faster and more powerful, but requires finding out what the commands "
+"are.\" -- from <placeholder-1/>"
+msgstr ""
+"「LinuxにはGUI（グラフィカル・ユーザ・インターフェース)があり、ユーザーは操作方法を読むことなく、画面を見ながら直感的に操作できます。一方、昔から"
+"あるUNIX環境は動作が速く、高性能ですが、CLI(コマンド・ライン・インターフェース)なため、最適なコマンドを探してタイプする必要があります。」<pla"
+"ceholder-1/>より。"
+
+#: basic-commands/C/basic-commands.xml:33(para)
+msgid ""
+"This guide will make you familiar with basic GNU/Linux shell commands. It is "
+"not intended to be a complete guide to the command line, just an "
+"introduction to complement Ubuntu's graphical tools."
+msgstr ""
+"このガイドは、Linuxの基本的なシェルコマンドに親しんでもらうためにあるので、ここではコマンドラインについて全面的に解説するのではなく、UbuntuのG"
+"UIアプリケーションを補う方法を示すに止まります。"
+
+#: basic-commands/C/basic-commands.xml:43(para)
+msgid ""
+"All command names, file names or paths to directories will be shown using a "
+"<command>monospace font</command>."
+msgstr "コマンド名、ファイル名またはファイルパスは、すべて<command>monospace font</command>で表示されます。"
+
+#: basic-commands/C/basic-commands.xml:50(para)
+msgid ""
+"All the commands on this guide are to be issued from a command prompt in a "
+"<application>Terminal</application> and will be shown as: <screen>command to "
+"type</screen>"
+msgstr ""
+"このガイドに載っている全てのコマンドは<application>端末</application>上で使うためのもので、以下のように表示されます。 \n"
+"<screen>command</screen>"
+
+#: basic-commands/C/basic-commands.xml:58(para)
+msgid ""
+"<emphasis role=\"strong\">Note that Linux is case sensitive.</emphasis> "
+"User, user, and USER are all different to Linux."
+msgstr ""
+"<emphasis role=\"strong\">Linuxでは大文字小文字の区別をすることに注意してください。</emphasis> "
+"User、user、USER は全て異なります。"
+
+#: basic-commands/C/basic-commands.xml:69(title)
+msgid "Starting a Terminal"
+msgstr "ターミナルを起動するには"
+
+#: basic-commands/C/basic-commands.xml:70(para)
+msgid "To open a <application>Terminal</application> do as follow:"
+msgstr "<application>ターミナル</application>を開くには次のようにしてください。"
+
+#: basic-commands/C/basic-commands.xml:76(para)
+msgid ""
+"Choose "
+"<menuchoice><guimenu>Applications</guimenu><guimenuitem>Accessories</guimenui"
+"tem><guimenuitem>Terminal</guimenuitem></menuchoice>;"
+msgstr ""
+"<menuchoice><guimenu>アプリケーション</guimenu><guimenuitem>アクセサリ</guimenuitem><guime"
+"nuitem>端末</guimenuitem></menuchoice>をクリックしてください。"
+
+#: basic-commands/C/basic-commands.xml:81(para)
+msgid ""
+"Or press <keycombo><keycap>Alt</keycap><keycap>F2</keycap></keycombo> and "
+"type <command>gnome-terminal</command>."
+msgstr ""
+"もしくは、<keycombo><keycap>Alt</keycap><keycap>F2</keycap></keycombo>を押して、<comman"
+"d>gnome-terminal</command>とタイプしてください。"
+
+#: basic-commands/C/basic-commands.xml:94(title)
+msgid "File and Directory Commands"
+msgstr "ファイルやディレクトリに関するコマンド"
+
+#: basic-commands/C/basic-commands.xml:97(title)
+msgid "cd"
+msgstr "cd"
+
+#: basic-commands/C/basic-commands.xml:98(para)
+msgid ""
+"The <command>cd</command> command changes directories. When you open a "
+"terminal you will be in your home directory. To move around the file system "
+"you will use <command>cd</command>. Examples:"
+msgstr ""
+"<command>cd</command>コマンドは、ディレクトリを変更します。端末を開いたとき、初期位置としてホームディレクトリにいます。ファイルシステ"
+"ム中を移動するためには<command>cd</command>を使用します。入力例:"
+
+#: basic-commands/C/basic-commands.xml:107(para)
+msgid "To navigate into the root directory, type: <screen>cd /</screen>"
+msgstr "rootディレクトリへ移動する: <screen>cd /</screen>"
+
+#: basic-commands/C/basic-commands.xml:113(para)
+msgid ""
+"To navigate to your home directory, type: <screen>cd</screen> or <screen>cd "
+"~</screen>"
+msgstr "自分のホームディレクトリへ移動する: <screen>cd</screen> or <screen>cd ~</screen>"
+
+#: basic-commands/C/basic-commands.xml:121(para)
+msgid "To navigate up one directory level, type: <screen>cd ..</screen>"
+msgstr "一つ上のディレクトリ（ディレクトリ階層）へ移動する: <screen>cd ..</screen>"
+
+#: basic-commands/C/basic-commands.xml:127(para)
+msgid ""
+"To navigate to the previous directory (or back), type: <screen>cd -</screen>"
+msgstr "一つ前のディレクトリへ移動する: <screen>cd -</screen>"
+
+#: basic-commands/C/basic-commands.xml:134(para)
+msgid ""
+"To navigate through multiple levels of directory at once, specify the full "
+"directory path that you want to go to. For example, type: <screen>cd "
+"/var/www</screen> to go directly to the <filename "
+"class=\"directory\">/www</filename> subdirectory of <filename "
+"class=\"directory\">/var/</filename>. As another example, type: <screen>cd "
+"~/Desktop</screen> to move you to the <filename "
+"class=\"directory\">Desktop</filename> subdirectory inside your home "
+"directory."
+msgstr ""
+"複数にわたるディレクトリ階層を一回の操作で移動するには、移動したいディレクトリのフルパス（full directory path）を指定します。入力例 "
+"1: <screen>cd /var/www</screen>（<filename "
+"class=\"directory\">/var/</filename>のサブディレクトリ<filename "
+"class=\"directory\">/www</filename>へ直接移動する）。 入力例 2: <screen>cd "
+"~/Desktop</screen>（あなたのホームディレクトリにある<filename "
+"class=\"directory\">Desktop</filename>サブディレクトリへ移動する）。"
+
+#: basic-commands/C/basic-commands.xml:151(title)
+msgid "pwd"
+msgstr "pwd"
+
+#: basic-commands/C/basic-commands.xml:162(para)
+msgid ""
+"<application>GNOME Terminal</application> also displays this information in "
+"the title bar of it's window."
+msgstr ""
+"<application>GNOMEターミナルl</application>ウィンドウのタイトルバーにもこの情報（フルパス）が表示されます。"
+
+#: basic-commands/C/basic-commands.xml:152(para)
+msgid ""
+"<command>pwd</command>: The <command>pwd</command> command will show you "
+"which directory you're located in (<acronym>pwd</acronym> stands for "
+"<quote>print working directory</quote>). For example, typing "
+"<screen>pwd</screen> in the <filename class=\"directory\">Desktop</filename> "
+"directory, will show <computeroutput>~/Desktop</computeroutput>. "
+"<placeholder-1/>"
+msgstr ""
+"<command>pwd</command>: "
+"<command>pwd</command>:コマンドは、今自分がいるディレクトリを表示します。（<acronym>pwd</acronym>は<quot"
+"e>print working directory</quote>という意味です）。たとえば<filename "
+"class=\"directory\">Desktop</filename>ディレクトリで<screen>pwd</screen>とタイピングすると<co"
+"mputeroutput>~/Desktop</computeroutput>と表示されます。<placeholder-1/>"
+
+#: basic-commands/C/basic-commands.xml:171(title)
+msgid "ls"
+msgstr "ls"
+
+#: basic-commands/C/basic-commands.xml:172(para)
+msgid ""
+"The <command>ls</command> command shows you the files in your current "
+"directory. Used with certain options, you can see sizes of files, when files "
+"where made, and permissions of files. For example, typing <screen>ls "
+"~</screen> will show you the files that are in your home directory."
+msgstr ""
+"<command>ls</command>コマンドは、カレントディレクトリ内のファイルを表示します。いくつかオプションを指定すれば、ファイルサイズや作成日"
+"時、パーミッションを見ることができます。例として、<screen>ls "
+"~</screen>とタイプすると、ホームディレクトリ内にあるファイルが表示されるはずです。"
+
+#: basic-commands/C/basic-commands.xml:183(title)
+msgid "cp"
+msgstr "cp"
+
+#: basic-commands/C/basic-commands.xml:184(para)
+msgid ""
+"The <command>cp</command> command makes a copy of a file for you. For "
+"example, type: <screen>cp file foo</screen> to make a exact copy of "
+"<filename>file</filename> and name it <filename>foo</filename>, but the file "
+"<filename>file</filename> will still be there."
+msgstr ""
+"<command>cp</command>コマンドは、ファイルのコピーを作成します。例えば、<screen>cp file "
+"foo</screen>のようにタイプすると、<filename>file</filename>と全く同じ内容のファイルを<filename>foo</f"
+"ilename>という名前で新規に作成します。<filename>file</filename>ファイルは、消去されることなく元の場所に存在します。"
+
+#: basic-commands/C/basic-commands.xml:194(title)
+msgid "mv"
+msgstr "mv"
+
+#: basic-commands/C/basic-commands.xml:206(para)
+msgid ""
+"If you are using <command>mv</command> with <command>sudo</command> you will "
+"not be able to use the <emphasis role=\"strong\">~</emphasis> shortcut, but "
+"will have to use the full pathnames to your files. This is because when you "
+"are working as root, <emphasis role=\"strong\">~</emphasis> will refer to "
+"the root account's home directory, not your own."
+msgstr ""
+"<command>sudo</command>と<command>mv</command>を併用する場合、<emphasis "
+"role=\"strong\">~</emphasis>ショートカットを使えなくなり、代わりにファイルへのフルパス(full "
+"pathnames)を使用しなくてはなりません。というのも、<emphasis "
+"role=\"strong\">~</emphasis>ショートカットは、rootとして作業する時、(自分の\"ユーザー\"アカウントの)ホームディレクト"
+"リではなく、当然rootアカウントのホームディレクトリを示すからです。"
+
+#: basic-commands/C/basic-commands.xml:195(para)
+msgid ""
+"The <command>mv</command> command moves a file to a different location or "
+"will rename a file. Examples are as follows: <screen>mv file foo</screen> "
+"will rename the file <filename>file</filename> to <filename>foo</filename>. "
+"<screen>mv foo ~/Desktop</screen> will move the file "
+"<filename>foo</filename> to your <filename "
+"class=\"directory\">Desktop</filename> directory but will not rename it. You "
+"must specify a new file name to rename a file. <placeholder-1/>"
+msgstr ""
+"<command>mv</command>コマンドは、ファイルを移動、またはリネームするのに使用します。例：<screen>mv file "
+"foo</screen>とタイプすると、<filename>file</filename>というファイルを<filename>foo</filename>"
+"という名前にリネームします。<screen>mv foo "
+"~/Desktop</screen>では、<filename>foo</filename>というファイルを<filename "
+"class=\"directory\">Desktop</filename>ディレクトリに移動しますが、リネームはしません。移動時にリネームするには<sc"
+"reen>mv foo ~/Desktop/hello</screen>のように新たな名前を指定する必要があります。<placeholder-1/>"
+
+#: basic-commands/C/basic-commands.xml:219(title)
+msgid "rm"
+msgstr "rm"
+
+#: basic-commands/C/basic-commands.xml:220(para)
+msgid ""
+"Use the <command>rm</command> command to remove or delete a file in your "
+"directory. It will not work on directories which have files in them."
+msgstr "<command>rm</command>コマンドは、ファイルを削除するためのコマンドです。"
+
+#: basic-commands/C/basic-commands.xml:228(title)
+msgid "mkdir"
+msgstr "mkdir"
+
+#: basic-commands/C/basic-commands.xml:229(para)
+msgid ""
+"The <command>mkdir</command> command will allow you to create directories. "
+"For example, typing: <screen>mkdir music</screen> will create a music "
+"directory in the current directory."
+msgstr ""
+"<command>mkdir</command>コマンドは、ディレクトリを新規作成するコマンドです。例えば<screen>mkdir "
+"music</screen>のように入力すると、 カレントディレクトリにmusicというディレクトリを作成します。"
+
+#: basic-commands/C/basic-commands.xml:239(title)
+msgid "System Information Commands"
+msgstr "システムの情報に関するコマンド群"
+
+#: basic-commands/C/basic-commands.xml:242(title)
+msgid "df"
+msgstr "df"
+
+#: basic-commands/C/basic-commands.xml:243(para)
+msgid ""
+"The <command>df</command> command displays filesystem disk space usage for "
+"all partitions. <screen>df -h</screen> will give information using megabytes "
+"(M) and gigabytes (G) instead of blocks (<emphasis role=\"strong\">-"
+"h</emphasis> means \"human-readable\")."
+msgstr ""
+"<command>df</command>コマンドは、すべてのパーティションにおけるディスク使用状況とファイルシステムの情報を表示しますが、そのままではブ"
+"ロック単位の表記になってしまうので、一般的には<screen>df -"
+"h</screen>とタイプし、メガバイト(M)やギガバイト(G)といった人が理解しやすい状態で表示させます。(<emphasis "
+"role=\"strong\">-h</emphasis>は「人間が読みやすいかたち(=human-readable)」という意味です。)"
+
+#: basic-commands/C/basic-commands.xml:253(title)
+msgid "free"
+msgstr "free"
+
+#: basic-commands/C/basic-commands.xml:254(para)
+msgid ""
+"The <command>free</command> command displays the amount of free and used "
+"memory in the system. <screen>free -m</screen> will give the information "
+"using megabytes, which is probably most useful for current computers."
+msgstr ""
+"<command>free</command>コマンドは、メモリの空き容量と使用済み容量を表示します。<screen>free -"
+"m</screen>とタイプするとメガバイト単位で表示されます。(最近のコンピュータでは、おそらく、このオプションを付けることが適切でしょう。)"
+
+#: basic-commands/C/basic-commands.xml:264(title)
+msgid "top"
+msgstr "top"
+
+#: basic-commands/C/basic-commands.xml:265(para)
+msgid ""
+"The <command>top</command> command displays information on your GNU/Linux "
+"system, running processes and system resources, including CPU, RAM &amp; "
+"swap usage and total number of tasks being run. To exit "
+"<application>top</application>, press <keycap>q</keycap>."
+msgstr ""
+"<command>top</command>コマンドは、 "
+"あなたのシステムにおける(CPUやRAMやスワップの使用量、実行中のタスクの総計といった)稼働中のプロセスやシステムリソースに関する情報を表示します。"
+"\n"
+"<application>top</application>を終了するには、<keycap>q</keycap>を押してください。"
+
+#: basic-commands/C/basic-commands.xml:275(title)
+msgid "uname"
+msgstr "uname"
+
+#: basic-commands/C/basic-commands.xml:276(para)
+msgid ""
+"The <command>uname</command> command with the <emphasis role=\"strong\">-"
+"a</emphasis> option, prints all system information, including machine name, "
+"kernel name &amp; version, and a few other details. Most useful for checking "
+"which kernel you're using."
+msgstr ""
+"<command>uname</command>コマンドに<emphasis role=\"strong\">-"
+"a</emphasis>オプションを付加して実行すると、（コンピューター名やカーネルの名称とバージョン、その他の詳細情報といった）すべてのシステム情報が表"
+"示されます。これは使用中のカーネルのバージョンを調べるのに一番楽な方法でもあります。"
+
+#: basic-commands/C/basic-commands.xml:286(title)
+msgid "lsb_release"
+msgstr "lsb_release"
+
+#: basic-commands/C/basic-commands.xml:287(para)
+msgid ""
+"The <emphasis role=\"strong\">lsb_release</emphasis> command with the "
+"<emphasis role=\"strong\">-a</emphasis> option prints version information "
+"for the Linux release you're running. For example, typing: "
+"<screen>lsb_release -a</screen> will give you: <screen>\n"
+"No LSB modules are available.\n"
+"Distributor ID: Ubuntu\n"
+"Description:    Ubuntu 7.04 \n"
+"Release:        7.04\n"
+"Codename:       feisty</screen>"
+msgstr ""
+"<emphasis role=\"strong\">lsb_release</emphasis>コマンドを<emphasis "
+"role=\"strong\">-"
+"a</emphasis>オプションを付加して実行すると、稼働中の自分のLinuxについての情報が表示されます。例として、<screen>lsb_relea"
+"se -a</screen>と入力すると以下のよう表示されます。\n"
+"<screen>\n"
+"No LSB modules are available.\n"
+"Distributor ID: Ubuntu\n"
+"Description:    Ubuntu 7.04 \n"
+"Release:        7.04\n"
+"Codename:       feisty\n"
+"</screen>"
+
+#: basic-commands/C/basic-commands.xml:305(title)
+msgid "ifconfig"
+msgstr "ifconfig"
+
+#: basic-commands/C/basic-commands.xml:306(para)
+msgid ""
+"The <command>ifconfig</command> command reports on your system's network "
+"interfaces."
+msgstr ""
+"<command>ifconfig</command>コマンドは、あなたのシステム上のネットワークインターフェイスに関する情報を表示します。"
+
+#: basic-commands/C/basic-commands.xml:314(title)
+msgid "Executing Commands with Elevated Privileges"
+msgstr "管理者権限を伴うコマンドの実行"
+
+#: basic-commands/C/basic-commands.xml:315(para)
+msgid ""
+"The following commands will need to be prefaced with the "
+"<command>sudo</command> command. Please see <ulink "
+"url=\"https://help.ubuntu.com/community/RootSudo\">RootSudo</ulink> for "
+"information on using <command>sudo</command>."
+msgstr ""
+"これから紹介するコマンドを使用する際には、実行したいコマンドの前に<command>sudo</command>コマンドを付加する必要があります。<com"
+"mand>sudo</command>の使用方法に関する情報は<ulink "
+"url=\"https://help.ubuntu.com/community/RootSudo\">RootSudo</ulink>(英語)をご覧くださ"
+"い。"
+
+#: basic-commands/C/basic-commands.xml:324(title)
+msgid "Adding a New Group"
+msgstr "グループの追加"
+
+#: basic-commands/C/basic-commands.xml:325(para)
+msgid ""
+"The <command>addgroup</command> command is used to create a new group on the "
+"system. To create a new group, type: <screen>addgroup newgroup</screen> The "
+"above command will create a new group called <emphasis "
+"role=\"strong\">newgroup</emphasis>."
+msgstr ""
+"<command>addgroup</command>コマンドは、グループ(group)を新規に作成する時に使います。新しいグループを作成するには、 "
+"<screen>addgroup newgroup</screen>と入力してください。 <emphasis "
+"role=\"strong\">newgroup</emphasis>という名前の新しいグループを作成されます。"
+
+#: basic-commands/C/basic-commands.xml:334(title)
+msgid "Adding A New User"
+msgstr "新規ユーザを追加"
+
+#: basic-commands/C/basic-commands.xml:335(para)
+msgid ""
+"The <command>adduser</command> is used to create new users on the system. To "
+"create a new user, type: <screen>adduser newuser</screen> The above command "
+"will create a new user called <emphasis role=\"strong\">newuser</emphasis>."
+msgstr ""
+"<command>adduser</command>は、新規ユーザをシステム上に追加するのに使います。新規ユーザを作成するには、<screen>addus"
+"er newuser</screen>と入力してください。 <emphasis "
+"role=\"strong\">newuser</emphasis>という名前のユーザが作成されます。"
+
+#: basic-commands/C/basic-commands.xml:342(para)
+msgid ""
+"To assign a password for the new user use the <command>passwd</command> "
+"command: <screen>passwd newuser</screen>"
+msgstr ""
+"新規ユーザにパスワードを指定するには、<command>passwd</command>コマンドを以下のように使用します。: "
+"<screen>passwd newuser</screen>"
+
+#: basic-commands/C/basic-commands.xml:348(para)
+msgid ""
+"Finally, to assign the new user to the new group, type: <screen>adduser "
+"newuser newgroup</screen>"
+msgstr ""
+"最後に、新規ユーザ作成と新規グループへの割り当てを同時に行うには、<screen>adduser newuser "
+"newgroup</screen>のように入力します。"
+
+#: basic-commands/C/basic-commands.xml:356(title)
+msgid "Options"
+msgstr "オプション"
+
+#: basic-commands/C/basic-commands.xml:357(para)
+msgid ""
+"The default behavior for a command may usually be modified by adding a "
+"<emphasis role=\"strong\">-- <emphasis>option</emphasis></emphasis> to the "
+"command. The <link linkend=\"ls\"><command>ls</command></link> command, for "
+"example, has a <emphasis role=\"strong\">-s</emphasis> option so that "
+"<command>ls -s</command> will include file sizes in the listing. There is "
+"also a <emphasis role=\"strong\">-h</emphasis> option to get those sizes in "
+"a \"human readable\" format."
+msgstr ""
+"コマンドに割り当てられている既定の動作は<emphasis role=\"strong\">-- "
+"<emphasis>オプション</emphasis></emphasis>をコマンドに追加することで変更可能です。例えば、<link "
+"linkend=\"ls\"><command>ls</command></link> コマンドは<emphasis role=\"strong\">-"
+"s</emphasis>オプションを追加(<command>ls -"
+"s</command>)することで、表示内容にファイルサイズを追加します。さらに<emphasis role=\"strong\">-"
+"h</emphasis>オプションを追加することで、人間が読みやすい(=human readable)フォーマットで表示することができます。"
+
+#: basic-commands/C/basic-commands.xml:368(para)
+msgid ""
+"Options can be grouped in clusters so <screen>ls -sh</screen> is exactly the "
+"same command as <screen>ls -s -h</screen> Most options have a long version, "
+"prefixed with two dashes instead of one, so even <screen>ls --size --human-"
+"readable</screen> is the same command."
+msgstr ""
+"複数のオプションを<screen>ls -sh</screen>のようにまとめて表現することもできます。これは、<screen>ls -s -"
+"h</screen>と全く同じ意味になります。大半のオプションにはロングバージョンがあり短縮版と区別するために、ハイフン(-"
+")が2つ付いたものになっています。さきの表現を用いれば、<screen>ls --size --human-"
+"readable</screen>のようになります。"
+
+#: basic-commands/C/basic-commands.xml:379(title)
+msgid "\"Man\" and getting help"
+msgstr "\"Man\"とヘルプ"
+
+#: basic-commands/C/basic-commands.xml:380(para)
+msgid ""
+"<emphasis role=\"strong\"><emphasis>command</emphasis> --help</emphasis> and "
+"<emphasis role=\"strong\">man <emphasis>command</emphasis></emphasis> are "
+"the two most important tools at the command line."
+msgstr ""
+"<emphasis role=\"strong\"><emphasis>コマンド名</emphasis> --"
+"help</emphasis>と<emphasis "
+"role=\"strong\">man<emphasis>コマンド名</emphasis></emphasis>の二つは、コマンドラインを使用する際に最も"
+"重要なツールです。"
+
+#: basic-commands/C/basic-commands.xml:387(para)
+msgid ""
+"Virtually all commands understand the <emphasis role=\"strong\">-"
+"h</emphasis> (or <emphasis role=\"strong\">--help</emphasis>) option which "
+"will produce a short usage description of the command and it's options, then "
+"exit back to the command prompt. Type <screen>man -h</screen> or <screen>man "
+"--help</screen> to see this in action."
+msgstr ""
+"ほぼすべてのコマンドで、そのコマンドとオプションの簡略な説明を表示する<emphasis role=\"strong\">-"
+"h</emphasis>（<emphasis role=\"strong\">--"
+"help</emphasis>）を使うことができます。このオプションが実際にどう動作するかを確認するには、<screen>man -"
+"h</screen>または<screen>man --help</screen>と入力してください。"
+
+#: basic-commands/C/basic-commands.xml:397(para)
+msgid ""
+"Every command and nearly every application in Linux will have a man (manual) "
+"file, so finding them is as simple as typing <command>man command</command> "
+"to bring up a longer manual entry for the specified command. For example, "
+"<screen>man mv</screen> will bring up the <command>mv</command> (move) "
+"manual."
+msgstr ""
+"Linux上の全てのコマンドとほとんどのアプリケーションは、manファイル(マニュアル)を持っています。特定のコマンドについて詳細な説明を表示したいなら<"
+"command>man コマンド名</command>とするだけでOKです。例えば、<screen>man "
+"mv</screen>で<command>mv</command>(move)コマンドのマニュアルが表示されます。"
+
+#: basic-commands/C/basic-commands.xml:406(para)
+msgid ""
+"Move up and down the man file with the arrow keys, and quit back to the "
+"command prompt with <keycap>q</keycap>."
+msgstr "矢印キーでmanファイルを上下に動かし、<keycap>q</keycap>を押すとmanを終了してコマンドプロンプトに戻ります。"
+
+#: basic-commands/C/basic-commands.xml:411(para)
+msgid ""
+"<screen>man man</screen> will bring up the manual entry for the "
+"<command>man</command> command, which is a good place to start."
+msgstr ""
+"<screen>man "
+"man</screen>とタイピングすると、<command>man</command>コマンドに関するマニュアルエントリを表示します（manを知る手始め"
+"としてちょうど良いでしょう）。"
+
+#: basic-commands/C/basic-commands.xml:417(para)
+msgid ""
+"<screen>man intro</screen> is especially useful - it displays the "
+"\"Introduction to user commands\" which is a well-written, fairly brief "
+"introduction to the Linux command line."
+msgstr ""
+"<screen>man intro</screen>は特に便利で、簡潔で内容のある\"Introduction to user "
+"commands\"(ユーザコマンドについての案内)を表示してくれます。"
+
+#: basic-commands/C/basic-commands.xml:422(para)
+msgid ""
+"There are also <command>info</command> pages, which are generally more in-"
+"depth than <command>man</command> pages. Try <screen>info info</screen> for "
+"the introduction to info pages."
+msgstr ""
+"<command>info</command>ページというものもあり、一般的に<command>man</command>ページよりも掘り下げた内容になっ"
+"ています。infoページについての概要を知りたい方は<screen>info info</screen>とタイプしてみてください。"
+
+#: basic-commands/C/basic-commands.xml:432(title)
+msgid "Searching for man files"
+msgstr "manファイルを検索"
+
+#: basic-commands/C/basic-commands.xml:433(para)
+msgid ""
+"If you aren't sure which command or application you need to use, you can try "
+"searching the man files."
+msgstr ""
+"もしあなたがあなたのやりたいことに対し、何とコマンド名やアプリケーション名を入力すれば良いかわからないときは、manファイルを検索してみてください。"
+
+#: basic-commands/C/basic-commands.xml:446(para)
+msgid "This is the same as the <command>apropos</command> command."
+msgstr "これは<command>apropos</command>コマンドと同じものです。"
+
+#: basic-commands/C/basic-commands.xml:439(para)
+msgid ""
+"<command>man -k foo</command>, will search the man files for "
+"<emphasis>foo</emphasis>. Try <screen>man -k nautilus</screen> to see how "
+"this works. <placeholder-1/>"
+msgstr ""
+"<command>man -k "
+"foo</command>と入力すると、<emphasis>foo</emphasis>に関するmanファイルを検索します。どのように機能するか知りたい場"
+"合は、とりあえず<screen>man -k nautilus</screen>と入力してみてください。<placeholder-1/>"
+
+#: basic-commands/C/basic-commands.xml:459(para)
+msgid "This is the same as the <command>whatis</command> command."
+msgstr "これは<command>whatis</command>コマンドと同じ機能です。"
+
+#: basic-commands/C/basic-commands.xml:454(para)
+msgid ""
+"<command>man -f foo</command>, searches only the titles of your system's man "
+"files. For example, try <screen>man -f gnome</screen><placeholder-1/>"
+msgstr ""
+"<command>man -f foo</command>は、システム上のmanファイルのタイトルだけを検索します。たとえば<screen>man -f "
+"gnome</screen>と入力してみてください。<placeholder-1/>"
+
+#: basic-commands/C/basic-commands.xml:471(title)
+msgid "Other Useful Things"
+msgstr "その他の便利な機能について"
+
+#: basic-commands/C/basic-commands.xml:474(title)
+msgid "Pasting in commands"
+msgstr "コマンドの貼り付け"
+
+#: basic-commands/C/basic-commands.xml:475(para)
+msgid ""
+"Often, you will be referred to instructions that require commands to be "
+"pasted into the terminal. You might be wondering why the text you've copied "
+"from a web page using "
+"<keycombo><keycap>Ctrl</keycap><keycap>C</keycap></keycombo> won't paste in "
+"with <keycombo><keycap>Ctrl</keycap><keycap>V</keycap></keycombo>. Surely "
+"you don't have to type in all those nasty commands and filenames? Relax. "
+"Middle Button Click on your mouse (both buttons simultaneously on a two-"
+"button mouse) or Right Click and select "
+"<menuchoice><guimenuitem>Paste</guimenuitem></menuchoice> from the menu."
+msgstr ""
+"何かの説明などを読んでいて、コマンドの貼り付けが必要なこともあるでしょう。そんな時きっと、どうして<keycombo><keycap>Ctrl</keyc"
+"ap><keycap>C</keycap></keycombo>でWebページからテキストをコピーできたのに、<keycombo><keycap>Ctrl"
+"</keycap><keycap>V</keycap></keycombo>でプロンプトに貼り付けできないのかと思うはずです。もちろん、その長ったらしいコ"
+"マンドやファイルネームをすべて打ちこむ必要なんてありません、大丈夫。マウスの真ん中ボタン(2ボタンマウスの場合は同時に両方のボタン)を押すか、右クリックし"
+"てメニューから<menuchoice><guimenuitem>貼り付け</guimenuitem></menuchoice>を選択してください。"
+
+#: basic-commands/C/basic-commands.xml:498(title)
+msgid "Save on typing"
+msgstr "入力を記録"
+
+#: basic-commands/C/basic-commands.xml:507(para)
+msgid ""
+"<keycap>Up Arrow</keycap> or "
+"<keycombo><keycap>Ctrl</keycap><keycap>p</keycap></keycombo>"
+msgstr ""
+"<keycap>上向き矢印</keycap>または<keycombo><keycap>Ctrl</keycap><keycap>p</keycap></k"
+"eycombo>"
+
+#: basic-commands/C/basic-commands.xml:517(para)
+msgid "Scrolls through the commands you've entered previously."
+msgstr "過去に入力したコマンドへスクロールします。"
+
+#: basic-commands/C/basic-commands.xml:525(para)
+msgid ""
+"<keycap>Down Arrow</keycap> or "
+"<keycombo><keycap>Ctrl</keycap><keycap>n</keycap></keycombo>"
+msgstr ""
+"<keycap>下向き矢印</keycap>または<keycombo><keycap>Ctrl</keycap><keycap>n</keycap></k"
+"eycombo>"
+
+#: basic-commands/C/basic-commands.xml:535(para)
+msgid "Takes you back to a more recent command."
+msgstr "最近入力したコマンドに戻ります。"
+
+#: basic-commands/C/basic-commands.xml:542(keycap)
+msgid "Enter"
+msgstr "Enter キー"
+
+#: basic-commands/C/basic-commands.xml:547(para)
+msgid "When you have the command you want."
+msgstr "欲しいコマンドがある時"
+
+#: basic-commands/C/basic-commands.xml:553(keycap)
+msgid "Tab"
+msgstr "Tab"
+
+#: basic-commands/C/basic-commands.xml:558(para)
+msgid ""
+"A very useful feature. It autocompletes any commands or filenames, if "
+"there's only one option, or else gives you a list of options."
+msgstr "非常に便利な機能です。コマンドやファイル名を自動補完したり、オプションのリストを表示します。"
+
+#: basic-commands/C/basic-commands.xml:571(title)
+msgid "Change the text"
+msgstr "テキストを変更"
+
+#: basic-commands/C/basic-commands.xml:572(para)
+msgid ""
+"The mouse won't work. Use the <keycap>Left/Right arrow</keycap> keys to move "
+"around the line."
+msgstr "マウスは使えません。行の上に移動するには<keycap>左/右矢印</keycap>キーを使用します。"
+
+#: basic-commands/C/basic-commands.xml:576(para)
+msgid ""
+"When the cursor is where you want it in the line, typing "
+"<emphasis>inserts</emphasis> text, it doesn't overtype what's already there."
+msgstr ""
+"カーソルが行上の望む位置にあるとき、キーボードから入力することでテキストを上書きせずに<emphasis>挿入</emphasis>することができます。"
+
+#: basic-commands/C/basic-commands.xml:591(keycap) basic-commands/C/basic-commands.xml:607(keycap) basic-commands/C/basic-commands.xml:626(keycap) basic-commands/C/basic-commands.xml:642(keycap) basic-commands/C/basic-commands.xml:657(keycap) basic-commands/C/basic-commands.xml:671(keycap)
+msgid "Ctrl"
+msgstr "Ctrl"
+
+#: basic-commands/C/basic-commands.xml:592(keycap)
+msgid "a"
+msgstr "a"
+
+#: basic-commands/C/basic-commands.xml:594(keycap)
+msgid "Home"
+msgstr "Home"
+
+#: basic-commands/C/basic-commands.xml:599(para)
+msgid "Moves the cursor to the <emphasis>start</emphasis> of a line."
+msgstr "カーソルを行の先頭に移動します。"
+
+#: basic-commands/C/basic-commands.xml:608(keycap)
+msgid "e"
+msgstr "e"
+
+#: basic-commands/C/basic-commands.xml:610(keycap)
+msgid "End"
+msgstr "End"
+
+#: basic-commands/C/basic-commands.xml:615(para)
+msgid ""
+"Moves the cursor to the <emphasis><emphasis "
+"role=\"strong\">e</emphasis>nd</emphasis> of a line."
+msgstr ""
+"カーソルを行の<emphasis><emphasis role=\"strong\">最</emphasis>後</emphasis>の位置に移動します。"
+
+#: basic-commands/C/basic-commands.xml:627(keycap)
+msgid "b"
+msgstr "b"
+
+#: basic-commands/C/basic-commands.xml:633(para)
+msgid ""
+"Moves to the <emphasis role=\"strong\">b</emphasis>eginning of the previous "
+"or current word."
+msgstr "カーソルをひとつ前もしくは現在の単語の<emphasis>先頭</emphasis>に移動します。"
+
+#: basic-commands/C/basic-commands.xml:643(keycap)
+msgid "k"
+msgstr "k"
+
+#: basic-commands/C/basic-commands.xml:649(para)
+msgid "Deletes from the current cursor position to the end of the line."
+msgstr "現在のカーソル位置から行末までの文字を削除します。"
+
+#: basic-commands/C/basic-commands.xml:658(keycap)
+msgid "u"
+msgstr "u"
+
+#: basic-commands/C/basic-commands.xml:664(para)
+msgid "Deletes the whole of the current line."
+msgstr "現在の行をすべて削除します。"
+
+#: basic-commands/C/basic-commands.xml:672(keycap)
+msgid "w"
+msgstr "w"
+
+#: basic-commands/C/basic-commands.xml:678(para)
+msgid "Deletes the word before the cursor."
+msgstr "現在のカーソルの前の単語を削除します。"
+
+#: basic-commands/C/basic-commands.xml:688(title)
+msgid "More Information"
+msgstr "追加情報"
+
+#: basic-commands/C/basic-commands.xml:689(para)
+msgid "The following online guides are available:"
+msgstr "以下のオンラインガイドが利用できます:"
+
+#: basic-commands/C/basic-commands.xml:692(para)
+msgid ""
+"<ulink url=\"https://help.ubuntu.com/community/AptGetHowto\"> "
+"AptGetHowto</ulink> - using apt-get to install packages from the command "
+"line."
+msgstr ""
+"<ulink url=\"https://help.ubuntu.com/community/AptGetHowto\"> "
+"AptGetHowto</ulink> - コマンドラインからapt-getを使ってパッケージをインストールする方法です。"
+
+#: basic-commands/C/basic-commands.xml:699(para)
+msgid ""
+"<ulink url=\"https://help.ubuntu.com/community/Repositories/CommandLine\"> "
+"Commandline Repository Editing</ulink> - adding the Universe/Multiverse "
+"repositories through the command line."
+msgstr ""
+"<ulink url=\"https://help.ubuntu.com/community/Repositories/CommandLine\"> "
+"Commandline Repository Editing</ulink> - "
+"コマンドライン上でUniverse/Multiverseリポジトリを追加する方法です。"
+
+#: basic-commands/C/basic-commands.xml:707(para)
+msgid ""
+"<ulink url=\"https://help.ubuntu.com/community/grep\">grep Howto</ulink> - "
+"grep is a powerful command line search tool."
+msgstr ""
+"<ulink url=\"https://help.ubuntu.com/community/grep\">grep Howto</ulink> - "
+"grepはコマンドライン上のパワフルな検索ツールです。"
+
+#: basic-commands/C/basic-commands.xml:714(para)
+msgid ""
+"<ulink url=\"https://help.ubuntu.com/community/find\">find </ulink> - locate "
+"files on the command line."
+msgstr ""
+"<ulink url=\"https://help.ubuntu.com/community/find\">find </ulink> - "
+"コマンドライン上でファイルを探すコマンドです。"
+
+#: basic-commands/C/basic-commands.xml:720(para)
+msgid ""
+"<ulink url=\"https://help.ubuntu.com/community/CommandlineHowto\"> "
+"CommandlineHowto</ulink> - longer and more complete than this basic guide, "
+"but still unfinished."
+msgstr ""
+"<ulink url=\"https://help.ubuntu.com/community/CommandlineHowto\"> "
+"CommandlineHowto</ulink> - この基本ガイドよりもさらに長く完全ですが、まだ完成していません。"
+
+#: basic-commands/C/basic-commands.xml:727(para)
+msgid ""
+"<ulink url=\"https://help.ubuntu.com/community/HowToReadline\"> "
+"HowToReadline</ulink> - information on some more advanced customization for "
+"the command line."
+msgstr ""
+"<ulink url=\"https://help.ubuntu.com/community/HowToReadline\"> "
+"HowToReadline</ulink> - コマンドラインの拡張に関する情報です。"
+
+#: basic-commands/C/basic-commands.xml:734(para)
+msgid "For more detailed tutorials on the Linux command line, please see:"
+msgstr "Linuxのコマンドラインのさらに詳しいチュートリアルを見たいときは以下を参照してください。："
+
+#: basic-commands/C/basic-commands.xml:740(para)
+msgid ""
+"<ulink url=\"http://linuxcommand.org/\"/>- basic BASH tutorials, including "
+"BASH scripting"
+msgstr ""
+"<ulink url=\"http://linuxcommand.org/\"/>- BASHスクリプトを含む基本BASHチュートリアル。"
+
+#: basic-commands/C/basic-commands.xml:746(para)
+msgid ""
+"<ulink url=\"http://linuxsurvival.com/index.php\"/>- Java-based tutorials"
+msgstr "<ulink url=\"http://linuxsurvival.com/index.php\"/>- Javaベースチュートリアル。"
+
+#: basic-commands/C/basic-commands.xml:752(para)
+msgid ""
+"<ulink url=\"http://rute.2038bug.com/index.html.gz\"/>- a massive online "
+"book about system administration, almost all from the command line."
+msgstr ""
+"<ulink url=\"http://rute.2038bug.com/index.html.gz\"/>- "
+"ほぼ全てコマンドラインによる、システム管理のための巨大オンラインブック。"
+
+#. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2.
+#: basic-commands/C/basic-commands.xml:0(None)
+msgid "translator-credits"
+msgstr ""
+"Launchpad Contributions:\n"
+"  CMasami https://launchpad.net/~cmasami\n"
+"  Jun Sumida https://launchpad.net/~sekitoh-rh\n"
+"  Shushi Kurose https://launchpad.net/~kurokuro\n"
+"  Tetsuro Yamaki https://launchpad.net/~hanataro\n"
+"  UBSGW https://launchpad.net/~ubsgwubsgw\n"
+"  Y.Hattori https://launchpad.net/~y-hattori"

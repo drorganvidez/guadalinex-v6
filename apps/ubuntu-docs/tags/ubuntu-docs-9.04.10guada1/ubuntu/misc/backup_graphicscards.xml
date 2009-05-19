@@ -1,0 +1,45 @@
+<!--This contains the text of the graphics-cards section from the desktop guide, which needs to be moved to an appropriate place -->
+
+		<sect1 id="graphics-cards" status="complete">
+			<title>3D Graphic Cards</title>
+				<sect2 id="video-acceleration-introduction" status="review">
+					<title>Introduction to 3D Video Acceleration</title>
+					<para>Most video hardware should work automatically with Ubuntu. With some types of video hardware, 3D acceleration (which is needed by some games) is not supported automatically, but you may be able to fix this yourself.</para>
+					<para>To find out whether 3D acceleration is working, enter in a terminal:</para>
+					<screen>glxinfo | grep rendering</screen>
+					<para>If 3D acceleration is working, the result will be:
+					<screen>direct rendering: Yes</screen>
+					If not, follow these instructions to activate 3D acceleration.</para>
+				</sect2>
+        	       	 <sect2 id="nvidia" status="complete">
+        		        <title>3D Nvidia Video Card Driver</title>
+					<para>No Nvidia Video cards have 3D acceleration enabled automatically with Ubuntu, because the manufacturer does not release open source drivers. However, it is possible to activate 3D acceleration. The process depends on which type of video card you have.</para>
+					<itemizedlist>
+						<listitem>
+							<para>If you have an older TNT, TNT2, TNT Ultra, GeForce1 or GeForce2 card, install the <application> nvidia-glx-legacy</application> and <application>nvidia-settings</application> packages from the <quote>Restricted</quote> repository (see <xref linkend="add-applications"/>).</para>
+						</listitem>
+						<listitem>
+				<para>If you have a newer card, install the <application>nvidia-glx</application> package from the <quote>Restricted</quote> repository (see <xref linkend="add-applications"/>).
+				</para>
+						</listitem>
+					</itemizedlist>
+				<para>To set up the new driver, enter in a terminal:</para>
+                                <screen>
+sudo nvidia-glx-config enable </screen>
+				<para>You can adjust the settings of the new drivers by running <application>nvidia-settings</application> (see <ulink type="help" url="ghelp:user-guide#tools-run-app">the run application manual</ulink> for help on how to run an application without using the menu). If you wish, add a menu entry for this program (see <ulink type="help" url="ghelp:user-guide#menu-editor">the menu editor manual</ulink> for help on how to add menu entries).</para>
+            </sect2>
+            <sect2 id="installatidriver" status="complete">
+                <title>3D ATI Video Card Driver</title>
+				<para>Many ATI video cards work well with Ubuntu automatically. To check that 3D acceleration works with your card, see <xref linkend="video-acceleration-introduction"/>.</para>
+				<para>If it doesn&#8217;t work:</para>
+				<procedure>
+					<step><para>Install the <application>xorg-driver-fglrx</application> package from the <quote>Restricted</quote> repository (see <xref linkend="add-applications"/>).</para></step> 
+					<step>
+					<para>To set up the new driver, enter in a terminal:</para>
+				<screen>sudo dpkg-reconfigure xserver-xorg</screen>
+				<para>Agree to automatic detection of your video, and choose the driver <guibutton>fglrx</guibutton> when asked.</para>
+					</step>
+				</procedure>
+				<para>Restart the computer for the changes to take effect.</para>
+	    </sect2>
+	    </sect1>

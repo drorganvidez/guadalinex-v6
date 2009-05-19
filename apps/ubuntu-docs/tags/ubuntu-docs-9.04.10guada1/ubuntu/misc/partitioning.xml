@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
+	"http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % globalent SYSTEM "../../libs/global.ent">
+%globalent;
+<!ENTITY % cdo-C SYSTEM "../../libs/cdo-C.ent">
+%cdo-C;
+<!ENTITY % gnome-menus-C SYSTEM "../libs/gnome-menus-C.ent">
+%gnome-menus-C;
+<!ENTITY language "en">
+<!ENTITY ubuntu '<phrase>Ubuntu</phrase>'>
+]>
+<article>
+  <articleinfo>
+    <title>Partitioning a Disk</title>
+  </articleinfo>
+<!-- Maybe write a little more here... -->
+  <sect1 id="introduction" status="draft">
+    <title>Introduction</title>
+    <para>
+      This guide is intended to help you during the process of
+      partitionig a hard disk, for a new installation or simply for
+      freeing space on your hard disk.
+    </para>
+    <para>
+      It is shown how to create new partitions and how to utilize the
+      ones existing.
+    </para>
+  </sect1>
+
+<!-- Write about primary partition, extended and logic, names of -->
+<!-- partitions like hda, sda, hdb, maybe something about LVM too -->
+  <sect1 id="basic-notions" status="draft">
+    <title>Basic Notions</title>
+    <para>
+    </para>
+  </sect1>
+
+
+<!-- Write about what we are going to use and how to install and run it -->
+  <sect1 id="getting-start" status="draft">
+    <title>Getting Started</title>
+    <para>
+      For this purpose, the <application>GParted</application>
+      application will be used throughout this guide.
+    </para>
+      <itemizedlist>
+	<listitem>
+	  <para>
+	    Install the <application>gparted</application> package
+	    (see (see <ulink type="help" url="ghelp:add-applications">Add
+	      Applications</ulink>);
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    To start <application>GParted</application>, choose 
+	    <menuchoice>
+	      <guimenu>System</guimenu>
+	      <guisubmenu>Administration</guisubmenu>
+	      <guimenuitem>GNOME Partition Editor</guimenuitem>
+	    </menuchoice>.
+	  </para>
+	</listitem>
+      </itemizedlist>
+  </sect1>
+
+
+<!-- Write something about NTFS, FAT, EXT, etc... -->
+  <sect1 id="filesystem-types" status="draft">
+    <title>Filesystem Types</title>
+    <para>
+    </para>
+  </sect1>
+
+
+
+</article>

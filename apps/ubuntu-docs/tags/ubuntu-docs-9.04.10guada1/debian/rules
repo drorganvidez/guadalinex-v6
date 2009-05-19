@@ -1,0 +1,102 @@
+#!/usr/bin/make -f
+
+include /usr/share/cdbs/1/rules/debhelper.mk
+include /usr/share/cdbs/1/class/makefile.mk
+
+DEB_DH_INSTALL_ARGS = -X.svn
+DEB_DH_BUILDDEB_ARGS := -- -Z bzip2
+
+DEB_SRCDIR = ubuntu
+
+DEB_MAKE_BUILD_TARGET = gdeb
+
+$(patsubst %,binary-install/%,$(DEB_PACKAGES)) :: binary-install/%:
+	dh_scrollkeeper -p$(cdbs_curpkg) $(DEB_DH_SCROLLKEEPER_ARGS)
+
+install755=install -m755 -oroot -groot
+preptrans=prepare-firefox-startpage-translations
+preptransdir=debian/ubuntu-docs/usr/share/ubuntu-docs/common
+
+clean::
+	@grep -E ^"\*" debian/README.Debian | sed 's/^\*\ //' | xargs rm -rf
+	@echo "---"
+
+common-binary-post-install-indep::
+	mv debian/ubuntu-docs/usr/share/ubuntu-artwork/home/index.html debian/ubuntu-docs/usr/share/ubuntu-artwork/home/firefox-index.html
+	$(install755) -d $(preptransdir)
+	$(install755) debian/$(preptrans) $(preptransdir)
+	$(preptransdir)/$(preptrans) \
+		ubuntu/browser-startpage \
+		debian/ubuntu-docs \
+		/usr/share/ubuntu-artwork/home/locales-ubuntu \
+		../index.html
+
+# Install the documents; skip documents which are less than 40% translated
+
+	set -x; for doc in `cat ubuntu/libs/shipped-docs`; do \
+		numstrings=`LANG=C msgfmt --statistics ubuntu/$$doc/po/$$doc.pot 2>&1 | sed -r 's/^.* ([[:digit:]]+) untranslated.*$$/\1/'`; \
+			for lang in `ls ubuntu/$$doc/`; do \
+				if [ -e ubuntu/$$doc/po/$$lang.po ]; then \
+					translated=`LANG=C msgfmt -o /dev/null --statistics ubuntu/$$doc/po/$$lang.po 2>&1| cut -f1 -d\ `; \
+					if [ "`echo "$$translated./$$numstrings > 0.4" | bc -l`" = "0" ]; then \
+						echo "$$doc $$lang is less than 40% translated, skipping"; \
+						continue; \
+					fi; \
+				fi; \
+				if [ -e ubuntu/$$doc/$$lang/$$doc.xml ]; then \
+					mkdir -p debian/ubuntu-docs/usr/share/gnome/help/$$doc/$$lang/; \
+					cp ubuntu/$$doc/$$lang/*xml debian/ubuntu-docs/usr/share/gnome/help/$$doc/$$lang/; \
+				fi; \
+				if [ -e ubuntu/$$doc/$$lang/*.omf ]; then \
+					mkdir -p debian/ubuntu-docs/usr/share/omf/$$doc; \
+					cp ubuntu/$$doc/$$lang/*omf debian/ubuntu-docs/usr/share/omf/$$doc/; \
+				fi; \
+			done; \
+		done; \
+
+# Server material is done slightly differently
+
+	set -x;	for doc in serverguide; do \
+	       numstrings=`LANG=C msgfmt --statistics generic/serverguide/po/*.pot 2>&1 | sed -r 's/^.* ([[:digit:]]+) untranslated.*$$/\1/'`; \
+			for lang in `ls generic/$$doc/`; do \
+				if [ -e generic/serverguide/po/$$lang.po ]; then \
+					translated=`LANG=C msgfmt -o /dev/null --statistics generic/serverguide/po/$$lang.po 2>&1| cut -f1 -d\ `; \
+					if [ "`echo "$$translated./$$numstrings > 0.40" | bc -l`" = "0" ]; then \
+						echo "$$doc $$lang is less than 40% translated, skipping"; \
+						continue; \
+					fi; \
+				fi; \
+				if [ -e generic/$$doc/$$lang/$$doc.xml ]; then \
+				mkdir -p debian/ubuntu-docs/usr/share/gnome/help/$$doc/$$lang; \
+				cp -r generic/$$doc/$$lang/*xml debian/ubuntu-docs/usr/share/gnome/help/$$doc/$$lang/; \
+				fi; \
+				if [ -e generic/$$doc/$$lang/*.omf ]; then \
+					mkdir -p debian/ubuntu-docs/usr/share/omf/$$doc; \
+					cp generic/$$doc/$$lang/*omf debian/ubuntu-docs/usr/share/omf/$$doc/; \
+				fi; \
+			done; \
+		done; \
+
+# Common documents
+
+		cp -r common debian/ubuntu-docs/usr/share/ubuntu-docs/ 
+
+# Scrollkeeper loving
+
+	dh_scrollkeeper 
+
+build/ubuntu-serverguide::
+	cd ubuntu; $(MAKE) serverguide; $(MAKE) contributors
+
+install/ubuntu-serverguide::
+	mkdir -p debian/ubuntu-serverguide/usr/share/ubuntu-serverguide/html/C
+	mkdir -p debian/ubuntu-serverguide/usr/share/ubuntu-serverguide/common/C
+	cp -R build/ubuntu/common/ debian/ubuntu-serverguide/usr/share/ubuntu-serverguide/
+	cp -R build/ubuntu/images/ debian/ubuntu-serverguide/usr/share/ubuntu-serverguide/
+	cp -R generic/serverguide/sample/ debian/ubuntu-serverguide/usr/share/ubuntu-serverguide/html/
+	cp ubuntu/libs/ubuntu-book.css debian/ubuntu-serverguide/usr/share/ubuntu-serverguide/common/
+	cp -R build/ubuntu/serverguide/* debian/ubuntu-serverguide/usr/share/ubuntu-serverguide/html/
+	cp -R build/ubuntu/common/C/contributors.html debian/ubuntu-serverguide/usr/share/ubuntu-serverguide/common/C/
+
+binary-fixup/ubuntu-docs::
+	(cd debian/ubuntu-docs; ../../symlink-dupes)

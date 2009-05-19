@@ -1,0 +1,888 @@
+# Macedonian translation for ubuntu-docs
+# Copyright (c) 2006 Rosetta Contributors and Canonical Ltd 2006
+# This file is distributed under the same license as the ubuntu-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2006.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ubuntu-docs\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2007-09-14 08:25+0100\n"
+"PO-Revision-Date: 2007-11-13 23:33+0000\n"
+"Last-Translator: Андон Сикавица <sikavica@gmail.com>\n"
+"Language-Team: Macedonian <mk@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2008-02-17 10:22+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+#: basic-commands/C/basic-commands-C.omf:6(creator) basic-commands/C/basic-commands-C.omf:7(maintainer)
+msgid "ubuntu-doc@lists.ubuntu.com (Ubuntu Documentation Project)"
+msgstr "ubuntu-doc@lists.ubuntu.com (Проект за документација на Ubuntu)"
+
+#: basic-commands/C/basic-commands-C.omf:8(title) basic-commands/C/basic-commands.xml:15(title)
+msgid "Basic Commands"
+msgstr "Основни команди"
+
+#: basic-commands/C/basic-commands-C.omf:9(date)
+msgid "2006-09-07"
+msgstr "2006-09-07"
+
+#: basic-commands/C/basic-commands-C.omf:11(description)
+msgid "Placeholder."
+msgstr "Резервирано место."
+
+#: basic-commands/C/basic-commands.xml:18(title)
+msgid "Using this Guide"
+msgstr "Користење на овој водич"
+
+#: basic-commands/C/basic-commands.xml:28(emphasis)
+msgid "man intro(1)"
+msgstr "man intro(1)"
+
+#: basic-commands/C/basic-commands.xml:20(emphasis)
+msgid ""
+"\"Under Linux there are GUIs (graphical user interfaces), where you can "
+"point and click and drag, and hopefully get work done without first reading "
+"lots of documentation. The traditional Unix environment is a CLI (command "
+"line interface), where you type commands to tell the computer what to do. "
+"That is faster and more powerful, but requires finding out what the commands "
+"are.\" -- from <placeholder-1/>"
+msgstr ""
+"„Во Linux постојат графички кориснички интерфејси, во кои можете да кликате, "
+"покажувате, превлечувате и со голема веројатност да ја завршите посакуваната "
+"задача без да читате голема документација. Традиционалната Unix околина "
+"претставува интерфејс со командна линија (терминал) во кој можете да "
+"внесувате команди со кој ќе му кажувате на компјутерот што да прави. Овој "
+"начин е побрз и помоќен, но побарува да знаете кои се командите за "
+"извршување на задачите.“ -- од <placeholder-1/>"
+
+#: basic-commands/C/basic-commands.xml:33(para)
+msgid ""
+"This guide will make you familiar with basic GNU/Linux shell commands. It is "
+"not intended to be a complete guide to the command line, just an "
+"introduction to complement Ubuntu's graphical tools."
+msgstr ""
+"Овој водич ќе ве запознае со основните GNU/Linux конзолни команди. Тој не "
+"претставува комплетен водич за користење на командната линија, туку само "
+"вовед кој ќе ги надополнува графичките алатки во Ubuntu."
+
+#: basic-commands/C/basic-commands.xml:43(para)
+msgid ""
+"All command names, file names or paths to directories will be shown using a "
+"<command>monospace font</command>."
+msgstr ""
+"Сите имиња на команди, датотеки, директориуми или патеки ќе бидат прикажани "
+"со <command>monospace фонт</command>."
+
+#: basic-commands/C/basic-commands.xml:50(para)
+msgid ""
+"All the commands on this guide are to be issued from a command prompt in a "
+"<application>Terminal</application> and will be shown as: <screen>command to "
+"type</screen>"
+msgstr ""
+"Сите команди во овој водич треба да се извршат во командна линија со помош "
+"на <application>Терминал</application> и ќе бидат прикажани како: "
+"<screen>команда која треба да се внесе</screen"
+
+#: basic-commands/C/basic-commands.xml:58(para)
+msgid ""
+"<emphasis role=\"strong\">Note that Linux is case sensitive.</emphasis> "
+"User, user, and USER are all different to Linux."
+msgstr ""
+"<emphasis role=\"strong\">Обрнете внимание на тоа дека Linux прави ралика "
+"помеѓу големи и мали букви.</emphasis> Корисник, корисник и КОРИСНИК се "
+"третираат различно во Linux."
+
+#: basic-commands/C/basic-commands.xml:69(title)
+msgid "Starting a Terminal"
+msgstr "Стартување на терминал"
+
+#: basic-commands/C/basic-commands.xml:70(para)
+msgid "To open a <application>Terminal</application> do as follow:"
+msgstr ""
+"За да отворите <application>Терминал</application> направете го следното:"
+
+#: basic-commands/C/basic-commands.xml:76(para)
+msgid ""
+"Choose "
+"<menuchoice><guimenu>Applications</guimenu><guimenuitem>Accessories</guimenui"
+"tem><guimenuitem>Terminal</guimenuitem></menuchoice>;"
+msgstr ""
+"Изберете "
+"<menuchoice><guimenu>Апликации</guimenu><guimenuitem>Услужни</guimenuitem><gu"
+"imenuitem>Терминал</guimenuitem></menuchoice>;"
+
+#: basic-commands/C/basic-commands.xml:81(para)
+msgid ""
+"Or press <keycombo><keycap>Alt</keycap><keycap>F2</keycap></keycombo> and "
+"type <command>gnome-terminal</command>."
+msgstr ""
+"Или притиснете на "
+"<keycombo><keycap>Alt</keycap><keycap>F2</keycap></keycombo> и внесете "
+"<command>gnome-terminal</command>."
+
+#: basic-commands/C/basic-commands.xml:94(title)
+msgid "File and Directory Commands"
+msgstr "Команди за датотеки и директориуми"
+
+#: basic-commands/C/basic-commands.xml:97(title)
+msgid "cd"
+msgstr "cd"
+
+#: basic-commands/C/basic-commands.xml:98(para)
+msgid ""
+"The <command>cd</command> command changes directories. When you open a "
+"terminal you will be in your home directory. To move around the file system "
+"you will use <command>cd</command>. Examples:"
+msgstr ""
+"Командата <command>cd</command> менува директоиуми. Кога ќе отворите "
+"терминал, ќе се најдете во домашниот директориум. За да се движите низ "
+"датотечниот систем ќе ја користите командата <command>cd</command>. На "
+"пример:"
+
+#: basic-commands/C/basic-commands.xml:107(para)
+msgid "To navigate into the root directory, type: <screen>cd /</screen>"
+msgstr ""
+"За навигација до почетниот (root) директориум, внесете: <screen>cd /</screen>"
+
+#: basic-commands/C/basic-commands.xml:113(para)
+msgid ""
+"To navigate to your home directory, type: <screen>cd</screen> or <screen>cd "
+"~</screen>"
+msgstr ""
+"За навигација до домашниот директориум, внесете: <screen>cd</screen> или "
+"<screen>cd ~</screen>"
+
+#: basic-commands/C/basic-commands.xml:121(para)
+msgid "To navigate up one directory level, type: <screen>cd ..</screen>"
+msgstr ""
+"За навигација до едно директориумско ниво погоре, внесете: <screen>cd "
+"..</screen>"
+
+#: basic-commands/C/basic-commands.xml:127(para)
+msgid ""
+"To navigate to the previous directory (or back), type: <screen>cd -</screen>"
+msgstr ""
+"За навигација кон претходниот директориум (или наназад), внесете: <screen>cd "
+"-</screen>"
+
+#: basic-commands/C/basic-commands.xml:134(para)
+msgid ""
+"To navigate through multiple levels of directory at once, specify the full "
+"directory path that you want to go to. For example, type: <screen>cd "
+"/var/www</screen> to go directly to the <filename "
+"class=\"directory\">/www</filename> subdirectory of <filename "
+"class=\"directory\">/var/</filename>. As another example, type: <screen>cd "
+"~/Desktop</screen> to move you to the <filename "
+"class=\"directory\">Desktop</filename> subdirectory inside your home "
+"directory."
+msgstr ""
+"За навигација низ повеќе нивоа од директориуми одеднаш, специфицирајте ја "
+"целосната директориумска патека. На пример, внесете: <screen>cd "
+"/var/www</screen> за да одите директно во <filename "
+"class=\"directory\">/www</filename> поддиректориумот од <filename "
+"class=\"directory\">/var/</filename>. Друг пример, внесете: <screen>cd "
+"~/Desktop</screen> tза да дојдете до <filename "
+"class=\"directory\">Desktop</filename> поддиректориумот кој се наоѓа во "
+"вашиот домашен директориум"
+
+#: basic-commands/C/basic-commands.xml:151(title)
+msgid "pwd"
+msgstr "pwd"
+
+#: basic-commands/C/basic-commands.xml:162(para)
+msgid ""
+"<application>GNOME Terminal</application> also displays this information in "
+"the title bar of it's window."
+msgstr ""
+"<application>GNOME Терминал</application> ги прикажува овие информации во "
+"насловната лента на неговиот прозорец."
+
+#: basic-commands/C/basic-commands.xml:152(para)
+msgid ""
+"<command>pwd</command>: The <command>pwd</command> command will show you "
+"which directory you're located in (<acronym>pwd</acronym> stands for "
+"<quote>print working directory</quote>). For example, typing "
+"<screen>pwd</screen> in the <filename class=\"directory\">Desktop</filename> "
+"directory, will show <computeroutput>~/Desktop</computeroutput>. "
+"<placeholder-1/>"
+msgstr ""
+"<command>pwd</command>: Командата <command>pwd</command> ќе ви прикаже во "
+"кој директориум се наоѓате (<acronym>pwd</acronym> е кратенка <quote>print "
+"working directory (печати работен директорим)</quote>). На пример, со "
+"извршувње на <screen>pwd</screen> во <filename "
+"class=\"directory\">Desktop</filename> директориум, ќе ви се прикаже "
+"<computeroutput>~/Desktop</computeroutput>. <placeholder-1/>"
+
+#: basic-commands/C/basic-commands.xml:171(title)
+msgid "ls"
+msgstr "ls"
+
+#: basic-commands/C/basic-commands.xml:172(para)
+msgid ""
+"The <command>ls</command> command shows you the files in your current "
+"directory. Used with certain options, you can see sizes of files, when files "
+"where made, and permissions of files. For example, typing <screen>ls "
+"~</screen> will show you the files that are in your home directory."
+msgstr ""
+"Командата <command>ls</command> ги прикажува датотеките во моменталниот "
+"директориум. Ако се користи со одредени опции, може да ја видите големината "
+"на датотеките, кога се тие креирани и дозволите кои ги имате врз самите "
+"датотеки. На пример, со извршување на <screen>ls ~</screen> ќе се прикажат "
+"датотеките што ги содржи домашниот директориум."
+
+#: basic-commands/C/basic-commands.xml:183(title)
+msgid "cp"
+msgstr "cp"
+
+#: basic-commands/C/basic-commands.xml:184(para)
+msgid ""
+"The <command>cp</command> command makes a copy of a file for you. For "
+"example, type: <screen>cp file foo</screen> to make a exact copy of "
+"<filename>file</filename> and name it <filename>foo</filename>, but the file "
+"<filename>file</filename> will still be there."
+msgstr ""
+"Командата <command>cp</command> прави копија на датотека за вас. На пример, "
+"со внесување на: <screen>cp file foo</screen> ќе се направи идентична копија "
+"на <filename>file</filename> и ќе се именува како <filename>foo</filename>, "
+"при што <filename>file</filename> ќе си остане каде што си е."
+
+#: basic-commands/C/basic-commands.xml:194(title)
+msgid "mv"
+msgstr "mv"
+
+#: basic-commands/C/basic-commands.xml:206(para)
+msgid ""
+"If you are using <command>mv</command> with <command>sudo</command> you will "
+"not be able to use the <emphasis role=\"strong\">~</emphasis> shortcut, but "
+"will have to use the full pathnames to your files. This is because when you "
+"are working as root, <emphasis role=\"strong\">~</emphasis> will refer to "
+"the root account's home directory, not your own."
+msgstr ""
+"Ако ја користите <command>mv</command> со <command>sudo</command> нема да "
+"може да ја користите кратенката <emphasis role=\"strong\">~</emphasis>, туку "
+"ќе мора да ја користите целосната патека до вашите датотеки. Причината за "
+"ова е тоа што кога работите како root, кратенката <emphasis "
+"role=\"strong\">~</emphasis> ќе се однесува на домашниот директориум на root "
+"корисникот, а не на вашиот."
+
+#: basic-commands/C/basic-commands.xml:195(para)
+msgid ""
+"The <command>mv</command> command moves a file to a different location or "
+"will rename a file. Examples are as follows: <screen>mv file foo</screen> "
+"will rename the file <filename>file</filename> to <filename>foo</filename>. "
+"<screen>mv foo ~/Desktop</screen> will move the file "
+"<filename>foo</filename> to your <filename "
+"class=\"directory\">Desktop</filename> directory but will not rename it. You "
+"must specify a new file name to rename a file. <placeholder-1/>"
+msgstr ""
+"Командата <command>mv</command> преместува датотека на друга локација или "
+"пак ја преименува. Примери: <screen>mv file foo</screen> ќе ја преименува "
+"датотеката <filename>file</filename> во <filename>foo</filename>. <screen>mv "
+"foo ~/Desktop</screen> ќе ја префрли датотеката <filename>foo</filename> во "
+"вашиот <filename class=\"directory\">Desktop</filename> директориум, но нема "
+"да ја преименува. Мора да специфицирате ново име на датотеката за да "
+"преименувате датотека. <placeholder-1/>"
+
+#: basic-commands/C/basic-commands.xml:219(title)
+msgid "rm"
+msgstr "rm"
+
+#: basic-commands/C/basic-commands.xml:220(para)
+msgid ""
+"Use the <command>rm</command> command to remove or delete a file in your "
+"directory. It will not work on directories which have files in them."
+msgstr ""
+"Користете ја командата <command>rm</command> за да одстраните или избришете "
+"датотеки во вашиот директориум. Нема да функционира на директориуми кои "
+"немаат датотеки во нив."
+
+#: basic-commands/C/basic-commands.xml:228(title)
+msgid "mkdir"
+msgstr "mkdir"
+
+#: basic-commands/C/basic-commands.xml:229(para)
+msgid ""
+"The <command>mkdir</command> command will allow you to create directories. "
+"For example, typing: <screen>mkdir music</screen> will create a music "
+"directory in the current directory."
+msgstr ""
+"Командата <command>mkdir</command> ќе ви овозможи да креирате директориуми. "
+"На пример, со куцање на: <screen>mkdir music</screen> ќе креирате "
+"директориум music во моменталниот директориум."
+
+#: basic-commands/C/basic-commands.xml:239(title)
+msgid "System Information Commands"
+msgstr "Команди за информации за системот"
+
+#: basic-commands/C/basic-commands.xml:242(title)
+msgid "df"
+msgstr "df"
+
+#: basic-commands/C/basic-commands.xml:243(para)
+msgid ""
+"The <command>df</command> command displays filesystem disk space usage for "
+"all partitions. <screen>df -h</screen> will give information using megabytes "
+"(M) and gigabytes (G) instead of blocks (<emphasis role=\"strong\">-"
+"h</emphasis> means \"human-readable\")."
+msgstr ""
+"Командата <command>df</command> ја прикажува искористеноста на просторот за "
+"сите партиции. <screen>df -h</screen> ќе ја прикаже информацијата во "
+"мегабајти (M) и гигабајти (G) наместо во блокови (<emphasis role=\"strong\">-"
+"h</emphasis> доаѓа од „human-readable“ што во превод значи „човечки "
+"разбирливо“)."
+
+#: basic-commands/C/basic-commands.xml:253(title)
+msgid "free"
+msgstr "free"
+
+#: basic-commands/C/basic-commands.xml:254(para)
+msgid ""
+"The <command>free</command> command displays the amount of free and used "
+"memory in the system. <screen>free -m</screen> will give the information "
+"using megabytes, which is probably most useful for current computers."
+msgstr ""
+"Командата <command>free</command> ја прикажува количината на слобона и "
+"искористена меморија во системот. <screen>free -m</screen> ќе ја прикаже "
+"соодветната информација во мегабајти, што најверојатно е најкорсно за "
+"повеќето компјутери."
+
+#: basic-commands/C/basic-commands.xml:264(title)
+msgid "top"
+msgstr "top"
+
+#: basic-commands/C/basic-commands.xml:265(para)
+msgid ""
+"The <command>top</command> command displays information on your GNU/Linux "
+"system, running processes and system resources, including CPU, RAM &amp; "
+"swap usage and total number of tasks being run. To exit "
+"<application>top</application>, press <keycap>q</keycap>."
+msgstr ""
+"Kомандата <command>top</command> прикажува информации за вашиот GNU/Linux "
+"систем, процесите кои се извршуваат и системските ресурси, вклучувајќи ги "
+"процесорот, меморијата и вкупниот број на задачи што се извршуваат. За излез "
+"од <application>top</application>, притиснете <keycap>q</keycap>."
+
+#: basic-commands/C/basic-commands.xml:275(title)
+msgid "uname"
+msgstr "uname"
+
+#: basic-commands/C/basic-commands.xml:276(para)
+msgid ""
+"The <command>uname</command> command with the <emphasis role=\"strong\">-"
+"a</emphasis> option, prints all system information, including machine name, "
+"kernel name &amp; version, and a few other details. Most useful for checking "
+"which kernel you're using."
+msgstr ""
+"Командата <command>uname</command> заедно со опцијата <emphasis "
+"role=\"strong\">-a</emphasis> ги печати систе системски информации, "
+"вклучувајќи ги името на машината, името и верзијата на кернелот, како и "
+"други детали. Најкорисна е за проверка на кернелот кој го користите."
+
+#: basic-commands/C/basic-commands.xml:286(title)
+msgid "lsb_release"
+msgstr "lsb_release"
+
+#: basic-commands/C/basic-commands.xml:287(para)
+msgid ""
+"The <emphasis role=\"strong\">lsb_release</emphasis> command with the "
+"<emphasis role=\"strong\">-a</emphasis> option prints version information "
+"for the Linux release you're running. For example, typing: "
+"<screen>lsb_release -a</screen> will give you: <screen>\n"
+"No LSB modules are available.\n"
+"Distributor ID: Ubuntu\n"
+"Description:    Ubuntu 7.04 \n"
+"Release:        7.04\n"
+"Codename:       feisty</screen>"
+msgstr ""
+"Командата <emphasis role=\"strong\">lsb_release</emphasis> заедно со "
+"опцијата <emphasis role=\"strong\">-a</emphasis> ја печати информацијата за "
+"верзијата на Linux која моментално се извршува. На пример, со куцање на: "
+"<screen>lsb_release -a</screen> ќе добиете: <screen>\n"
+"No LSB modules are available.\n"
+"Distributor ID: Ubuntu\n"
+"Description:    Ubuntu 7.04 \n"
+"Release:        7.04\n"
+"Codename:       feisty</screen>"
+
+#: basic-commands/C/basic-commands.xml:305(title)
+msgid "ifconfig"
+msgstr "ifconfig"
+
+#: basic-commands/C/basic-commands.xml:306(para)
+msgid ""
+"The <command>ifconfig</command> command reports on your system's network "
+"interfaces."
+msgstr ""
+"Командата <command>ifconfig</command> дава извештај за мрежните интерфејси "
+"во системот."
+
+#: basic-commands/C/basic-commands.xml:314(title)
+msgid "Executing Commands with Elevated Privileges"
+msgstr "Извршување на команди со возвишени привилегии"
+
+#: basic-commands/C/basic-commands.xml:315(para)
+msgid ""
+"The following commands will need to be prefaced with the "
+"<command>sudo</command> command. Please see <ulink "
+"url=\"https://help.ubuntu.com/community/RootSudo\">RootSudo</ulink> for "
+"information on using <command>sudo</command>."
+msgstr ""
+"Наредните команди треба да бидат извршени со <command>sudo</command> "
+"командата пред нив. Видете <ulink "
+"url=\"https://help.ubuntu.com/community/RootSudo\">RootSudo</ulink> за "
+"повеќе информации околу користење на <command>sudo</command>."
+
+#: basic-commands/C/basic-commands.xml:324(title)
+msgid "Adding a New Group"
+msgstr "Додавање на нова група"
+
+#: basic-commands/C/basic-commands.xml:325(para)
+msgid ""
+"The <command>addgroup</command> command is used to create a new group on the "
+"system. To create a new group, type: <screen>addgroup newgroup</screen> The "
+"above command will create a new group called <emphasis "
+"role=\"strong\">newgroup</emphasis>."
+msgstr ""
+"Командата <command>addgroup</command> се користи за креирање на нова гурпа "
+"во системот. За креирање на нова група, внесете: <screen>addgroup "
+"newgroup</screen> Горната команда ќе крира нова гупа именувана како "
+"<emphasis role=\"strong\">newgroup</emphasis>."
+
+#: basic-commands/C/basic-commands.xml:334(title)
+msgid "Adding A New User"
+msgstr "Додавање на нов корисник"
+
+#: basic-commands/C/basic-commands.xml:335(para)
+msgid ""
+"The <command>adduser</command> is used to create new users on the system. To "
+"create a new user, type: <screen>adduser newuser</screen> The above command "
+"will create a new user called <emphasis role=\"strong\">newuser</emphasis>."
+msgstr ""
+"Командата <command>adduser</command> се користи за креирање на нови "
+"корисници на системот. За креирање на нов корисник, внесете: <screen>adduser "
+"newuser</screen> Горната команда ќе креира нов корисник именуван како "
+"<emphasis role=\"strong\">newuser</emphasis>."
+
+#: basic-commands/C/basic-commands.xml:342(para)
+msgid ""
+"To assign a password for the new user use the <command>passwd</command> "
+"command: <screen>passwd newuser</screen>"
+msgstr ""
+"За доделување на лозинка за новиот корисник, користете ја командата "
+"<command>passwd</command>: <screen>passwd новкорисник</screen>"
+
+#: basic-commands/C/basic-commands.xml:348(para)
+msgid ""
+"Finally, to assign the new user to the new group, type: <screen>adduser "
+"newuser newgroup</screen>"
+msgstr ""
+"Конечно, за доделување на група за новитот корисник, внесете: "
+"<screen>adduser новкорисник новагрупа</screen>"
+
+#: basic-commands/C/basic-commands.xml:356(title)
+msgid "Options"
+msgstr "Опции"
+
+#: basic-commands/C/basic-commands.xml:357(para)
+msgid ""
+"The default behavior for a command may usually be modified by adding a "
+"<emphasis role=\"strong\">-- <emphasis>option</emphasis></emphasis> to the "
+"command. The <link linkend=\"ls\"><command>ls</command></link> command, for "
+"example, has a <emphasis role=\"strong\">-s</emphasis> option so that "
+"<command>ls -s</command> will include file sizes in the listing. There is "
+"also a <emphasis role=\"strong\">-h</emphasis> option to get those sizes in "
+"a \"human readable\" format."
+msgstr ""
+"Стандардното однесување на команда може да биде модификувано со додавање на "
+"<emphasis role=\"strong\">-- <emphasis>опција</emphasis></emphasis> за "
+"командата. Командата <link linkend=\"ls\"><command>ls</command></link>  на "
+"пример, ја содржи <emphasis role=\"strong\">-s</emphasis> опцијата "
+"<command>ls -s</command> која ќе ја вклучи големината на датотеките кои се "
+"листаат. Исто така, постои и <emphasis role=\"strong\">-h</emphasis> "
+"опцијата која ќе ги прикаже големините во лесно разбирлив формат."
+
+#: basic-commands/C/basic-commands.xml:368(para)
+msgid ""
+"Options can be grouped in clusters so <screen>ls -sh</screen> is exactly the "
+"same command as <screen>ls -s -h</screen> Most options have a long version, "
+"prefixed with two dashes instead of one, so even <screen>ls --size --human-"
+"readable</screen> is the same command."
+msgstr ""
+"Опциите можат да бидат групирани во кластери како <screen>ls -sh</screen> "
+"што е исто со <screen>ls -s -h</screen> Повеќето опции имаат и долга "
+"верзија, која се користи со помош на префикс од две цртички, наместо една, "
+"па така <screen>ls --size --human-readable</screen> претставува иста команда "
+"како претходната."
+
+#: basic-commands/C/basic-commands.xml:379(title)
+msgid "\"Man\" and getting help"
+msgstr "\"Man\" и добивање помош"
+
+#: basic-commands/C/basic-commands.xml:380(para)
+msgid ""
+"<emphasis role=\"strong\"><emphasis>command</emphasis> --help</emphasis> and "
+"<emphasis role=\"strong\">man <emphasis>command</emphasis></emphasis> are "
+"the two most important tools at the command line."
+msgstr ""
+"<emphasis role=\"strong\"><emphasis>команда</emphasis> --help</emphasis> и "
+"<emphasis role=\"strong\">man <emphasis>команда</emphasis></emphasis> се "
+"двете најважни алатки во командната линија."
+
+#: basic-commands/C/basic-commands.xml:387(para)
+msgid ""
+"Virtually all commands understand the <emphasis role=\"strong\">-"
+"h</emphasis> (or <emphasis role=\"strong\">--help</emphasis>) option which "
+"will produce a short usage description of the command and it's options, then "
+"exit back to the command prompt. Type <screen>man -h</screen> or <screen>man "
+"--help</screen> to see this in action."
+msgstr ""
+"Скоро сите команди ја разбираат опцијата <emphasis role=\"strong\">-"
+"h</emphasis> (или <emphasis role=\"strong\">--help</emphasis>) која дава "
+"краток опис за користење на командата и нејзините опции, и на крај се враќа "
+"во командна линија. Внесете <screen>man -h</screen> или <screen>man --"
+"help</screen> за да ја видите оваа употреба."
+
+#: basic-commands/C/basic-commands.xml:397(para)
+msgid ""
+"Every command and nearly every application in Linux will have a man (manual) "
+"file, so finding them is as simple as typing <command>man command</command> "
+"to bring up a longer manual entry for the specified command. For example, "
+"<screen>man mv</screen> will bring up the <command>mv</command> (move) "
+"manual."
+msgstr ""
+"Секоја команда и скоро секоја апликација во Linux има man (manual - "
+"упатство) датотека. Пронаоѓањето е едноставно, само искуцајте <command>man "
+"команда</command> за да ви се прикаже поголемо упатство за специфицираната "
+"команда. На пример, <screen>man mv</screen> ќе го прикаже упатството за "
+"<command>mv</command>."
+
+#: basic-commands/C/basic-commands.xml:406(para)
+msgid ""
+"Move up and down the man file with the arrow keys, and quit back to the "
+"command prompt with <keycap>q</keycap>."
+msgstr ""
+"Движете се горе/доле со помош на стрелките на тастатурата, а за враќање во "
+"командна линија притиснете <keycap>q</keycap>."
+
+#: basic-commands/C/basic-commands.xml:411(para)
+msgid ""
+"<screen>man man</screen> will bring up the manual entry for the "
+"<command>man</command> command, which is a good place to start."
+msgstr ""
+"<screen>man man</screen> ќе го прикаже упатството за самта команда "
+"<command>man</command> и претставува добро место почетно место за добивање "
+"на помош."
+
+#: basic-commands/C/basic-commands.xml:417(para)
+msgid ""
+"<screen>man intro</screen> is especially useful - it displays the "
+"\"Introduction to user commands\" which is a well-written, fairly brief "
+"introduction to the Linux command line."
+msgstr ""
+"<screen>man intro</screen> е особено корисно. Прикажува „вовед во кориснички "
+"команди“ и е прилично добро напишан вовед во Linux командната линија."
+
+#: basic-commands/C/basic-commands.xml:422(para)
+msgid ""
+"There are also <command>info</command> pages, which are generally more in-"
+"depth than <command>man</command> pages. Try <screen>info info</screen> for "
+"the introduction to info pages."
+msgstr ""
+"Исто така, постојат и <command>info</command> страници, кои вообичаено се "
+"поголеми од <command>man</command> страниците. Пробајте <screen>info "
+"info</screen> за вовед во info страниците."
+
+#: basic-commands/C/basic-commands.xml:432(title)
+msgid "Searching for man files"
+msgstr "Пребарување на man датотеки"
+
+#: basic-commands/C/basic-commands.xml:433(para)
+msgid ""
+"If you aren't sure which command or application you need to use, you can try "
+"searching the man files."
+msgstr ""
+"Ако не сте сигурни која команда или апликација ви е потребна за користење, "
+"може да се обидете да ги пребаувате man датотеките."
+
+#: basic-commands/C/basic-commands.xml:446(para)
+msgid "This is the same as the <command>apropos</command> command."
+msgstr "Ова е исто со командата <command>apropos</command>."
+
+#: basic-commands/C/basic-commands.xml:439(para)
+msgid ""
+"<command>man -k foo</command>, will search the man files for "
+"<emphasis>foo</emphasis>. Try <screen>man -k nautilus</screen> to see how "
+"this works. <placeholder-1/>"
+msgstr ""
+"<command>man -k foo</command> ќе ги пребара man датотеките за "
+"<emphasis>foo</emphasis>. Пробајте <screen>man -k nautilus</screen> за да "
+"видите како работи. <placeholder-1/>"
+
+#: basic-commands/C/basic-commands.xml:459(para)
+msgid "This is the same as the <command>whatis</command> command."
+msgstr "Ова е исто со командата <command>whatis</command>."
+
+#: basic-commands/C/basic-commands.xml:454(para)
+msgid ""
+"<command>man -f foo</command>, searches only the titles of your system's man "
+"files. For example, try <screen>man -f gnome</screen><placeholder-1/>"
+msgstr ""
+"<command>man -f foo</command> пребарува наслови само во системските man "
+"датотеки. На пример, пробајте <screen>man -f gnome</screen><placeholder-1/>"
+
+#: basic-commands/C/basic-commands.xml:471(title)
+msgid "Other Useful Things"
+msgstr "Други корисни работи"
+
+#: basic-commands/C/basic-commands.xml:474(title)
+msgid "Pasting in commands"
+msgstr "Вметнување во команди"
+
+#: basic-commands/C/basic-commands.xml:475(para)
+msgid ""
+"Often, you will be referred to instructions that require commands to be "
+"pasted into the terminal. You might be wondering why the text you've copied "
+"from a web page using "
+"<keycombo><keycap>Ctrl</keycap><keycap>C</keycap></keycombo> won't paste in "
+"with <keycombo><keycap>Ctrl</keycap><keycap>V</keycap></keycombo>. Surely "
+"you don't have to type in all those nasty commands and filenames? Relax. "
+"Middle Button Click on your mouse (both buttons simultaneously on a two-"
+"button mouse) or Right Click and select "
+"<menuchoice><guimenuitem>Paste</guimenuitem></menuchoice> from the menu."
+msgstr ""
+
+#: basic-commands/C/basic-commands.xml:498(title)
+msgid "Save on typing"
+msgstr "Заштедете на куцање"
+
+#: basic-commands/C/basic-commands.xml:507(para)
+msgid ""
+"<keycap>Up Arrow</keycap> or "
+"<keycombo><keycap>Ctrl</keycap><keycap>p</keycap></keycombo>"
+msgstr ""
+
+#: basic-commands/C/basic-commands.xml:517(para)
+msgid "Scrolls through the commands you've entered previously."
+msgstr "Шета низ командите кои ги имате претходно внесено."
+
+#: basic-commands/C/basic-commands.xml:525(para)
+msgid ""
+"<keycap>Down Arrow</keycap> or "
+"<keycombo><keycap>Ctrl</keycap><keycap>n</keycap></keycombo>"
+msgstr ""
+
+#: basic-commands/C/basic-commands.xml:535(para)
+msgid "Takes you back to a more recent command."
+msgstr "Ве враќа на најскорешната команда."
+
+#: basic-commands/C/basic-commands.xml:542(keycap)
+msgid "Enter"
+msgstr "Enter"
+
+#: basic-commands/C/basic-commands.xml:547(para)
+msgid "When you have the command you want."
+msgstr "Кога ја имате командата што ја сакате."
+
+#: basic-commands/C/basic-commands.xml:553(keycap)
+msgid "Tab"
+msgstr ""
+
+#: basic-commands/C/basic-commands.xml:558(para)
+msgid ""
+"A very useful feature. It autocompletes any commands or filenames, if "
+"there's only one option, or else gives you a list of options."
+msgstr ""
+"Многу корисна особина. Автоматски ги комплетира сите команди или имања на "
+"датотеки, во случај да посоти една можност, или пак доколку постојат повеќе "
+"можности, ги ислистува."
+
+#: basic-commands/C/basic-commands.xml:571(title)
+msgid "Change the text"
+msgstr "Менување на текст"
+
+#: basic-commands/C/basic-commands.xml:572(para)
+msgid ""
+"The mouse won't work. Use the <keycap>Left/Right arrow</keycap> keys to move "
+"around the line."
+msgstr ""
+
+#: basic-commands/C/basic-commands.xml:576(para)
+msgid ""
+"When the cursor is where you want it in the line, typing "
+"<emphasis>inserts</emphasis> text, it doesn't overtype what's already there."
+msgstr ""
+"Кога покажувачот се наоѓа онаму каде што сакате во линијата, куцањето "
+"<emphasis>внесува</emphasis> текст, а не пишува преку веќе постоечкиот."
+
+#: basic-commands/C/basic-commands.xml:591(keycap) basic-commands/C/basic-commands.xml:607(keycap) basic-commands/C/basic-commands.xml:626(keycap) basic-commands/C/basic-commands.xml:642(keycap) basic-commands/C/basic-commands.xml:657(keycap) basic-commands/C/basic-commands.xml:671(keycap)
+msgid "Ctrl"
+msgstr "Ctrl"
+
+#: basic-commands/C/basic-commands.xml:592(keycap)
+msgid "a"
+msgstr "a"
+
+#: basic-commands/C/basic-commands.xml:594(keycap)
+msgid "Home"
+msgstr "Дома"
+
+#: basic-commands/C/basic-commands.xml:599(para)
+msgid "Moves the cursor to the <emphasis>start</emphasis> of a line."
+msgstr ""
+"Го преместува курсорот на <emphasis>почетокот</emphasis> од линијата."
+
+#: basic-commands/C/basic-commands.xml:608(keycap)
+msgid "e"
+msgstr "e"
+
+#: basic-commands/C/basic-commands.xml:610(keycap)
+msgid "End"
+msgstr "End"
+
+#: basic-commands/C/basic-commands.xml:615(para)
+msgid ""
+"Moves the cursor to the <emphasis><emphasis "
+"role=\"strong\">e</emphasis>nd</emphasis> of a line."
+msgstr ""
+"Го движи покажувачот на крајот (<emphasis><emphasis "
+"role=\"strong\">e</emphasis>nd</emphasis>) од линијата."
+
+#: basic-commands/C/basic-commands.xml:627(keycap)
+msgid "b"
+msgstr "b"
+
+#: basic-commands/C/basic-commands.xml:633(para)
+msgid ""
+"Moves to the <emphasis role=\"strong\">b</emphasis>eginning of the previous "
+"or current word."
+msgstr ""
+"Се поместува на <emphasis role=\"strong\">почетокот</emphasis> од "
+"претходниот или моменталниот збор."
+
+#: basic-commands/C/basic-commands.xml:643(keycap)
+msgid "k"
+msgstr "k"
+
+#: basic-commands/C/basic-commands.xml:649(para)
+msgid "Deletes from the current cursor position to the end of the line."
+msgstr "Брише од моменталната позиција на курсорот до крајот на линијата."
+
+#: basic-commands/C/basic-commands.xml:658(keycap)
+msgid "u"
+msgstr "u"
+
+#: basic-commands/C/basic-commands.xml:664(para)
+msgid "Deletes the whole of the current line."
+msgstr "Ја брише целата моментална линија"
+
+#: basic-commands/C/basic-commands.xml:672(keycap)
+msgid "w"
+msgstr "w"
+
+#: basic-commands/C/basic-commands.xml:678(para)
+msgid "Deletes the word before the cursor."
+msgstr "Го брише зборот пред курсорот."
+
+#: basic-commands/C/basic-commands.xml:688(title)
+msgid "More Information"
+msgstr "Повеќе информации"
+
+#: basic-commands/C/basic-commands.xml:689(para)
+msgid "The following online guides are available:"
+msgstr "Наредните упатства се достапни преку Интернет (на англиски):"
+
+#: basic-commands/C/basic-commands.xml:692(para)
+msgid ""
+"<ulink url=\"https://help.ubuntu.com/community/AptGetHowto\"> "
+"AptGetHowto</ulink> - using apt-get to install packages from the command "
+"line."
+msgstr ""
+"<ulink url=\"https://help.ubuntu.com/community/AptGetHowto\"> "
+"AptGetHowto</ulink> - користење на apt-get за инсталирање на пакети преку "
+"командна линија."
+
+#: basic-commands/C/basic-commands.xml:699(para)
+msgid ""
+"<ulink url=\"https://help.ubuntu.com/community/Repositories/CommandLine\"> "
+"Commandline Repository Editing</ulink> - adding the Universe/Multiverse "
+"repositories through the command line."
+msgstr ""
+"<ulink url=\"https://help.ubuntu.com/community/Repositories/CommandLine\"> "
+"Commandline Repository Editing</ulink> - додавање на Universe/Multiverse "
+"репозиториумите преку командна линија."
+
+#: basic-commands/C/basic-commands.xml:707(para)
+msgid ""
+"<ulink url=\"https://help.ubuntu.com/community/grep\">grep Howto</ulink> - "
+"grep is a powerful command line search tool."
+msgstr ""
+"<ulink url=\"https://help.ubuntu.com/community/grep\">grep Howto</ulink> - "
+"grep претставува моќна конзолна пребарувачка алатка."
+
+#: basic-commands/C/basic-commands.xml:714(para)
+msgid ""
+"<ulink url=\"https://help.ubuntu.com/community/find\">find </ulink> - locate "
+"files on the command line."
+msgstr ""
+"<ulink url=\"https://help.ubuntu.com/community/find\">find </ulink> - "
+"пронајдете датотеки преку командна линија."
+
+#: basic-commands/C/basic-commands.xml:720(para)
+msgid ""
+"<ulink url=\"https://help.ubuntu.com/community/CommandlineHowto\"> "
+"CommandlineHowto</ulink> - longer and more complete than this basic guide, "
+"but still unfinished."
+msgstr ""
+"<ulink url=\"https://help.ubuntu.com/community/CommandlineHowto\"> "
+"CommandlineHowto</ulink> - подолго и покомплетно уптство отколку ова, но "
+"сеуште незавршено."
+
+#: basic-commands/C/basic-commands.xml:727(para)
+msgid ""
+"<ulink url=\"https://help.ubuntu.com/community/HowToReadline\"> "
+"HowToReadline</ulink> - information on some more advanced customization for "
+"the command line."
+msgstr ""
+"<ulink url=\"https://help.ubuntu.com/community/HowToReadline\"> "
+"HowToReadline</ulink> - информации за некои понапредни уредувања преку "
+"командна линија."
+
+#: basic-commands/C/basic-commands.xml:734(para)
+msgid "For more detailed tutorials on the Linux command line, please see:"
+msgstr "За подетални упатства за Linux командната линија, видете:"
+
+#: basic-commands/C/basic-commands.xml:740(para)
+msgid ""
+"<ulink url=\"http://linuxcommand.org/\"/>- basic BASH tutorials, including "
+"BASH scripting"
+msgstr ""
+"<ulink url=\"http://linuxcommand.org/\"/>- основни BASH упатсва, вклучувајќи "
+"и BASH скрипти"
+
+#: basic-commands/C/basic-commands.xml:746(para)
+msgid ""
+"<ulink url=\"http://linuxsurvival.com/index.php\"/>- Java-based tutorials"
+msgstr ""
+"<ulink url=\"http://linuxsurvival.com/index.php\"/>- Java-базирани упатства"
+
+#: basic-commands/C/basic-commands.xml:752(para)
+msgid ""
+"<ulink url=\"http://rute.2038bug.com/index.html.gz\"/>- a massive online "
+"book about system administration, almost all from the command line."
+msgstr ""
+"<ulink url=\"http://rute.2038bug.com/index.html.gz\"/>- масивна книга за "
+"администрација на системот, скоро целосна администрација преку командна "
+"линија."
+
+#. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2.
+#: basic-commands/C/basic-commands.xml:0(None)
+msgid "translator-credits"
+msgstr ""
+"Launchpad Contributions:\n"
+"  Андон Сикавица https://launchpad.net/~andon-sikavica\n"
+"\n"
+"Launchpad Contributions:\n"
+"  Андон Сикавица https://launchpad.net/~andon-sikavica"

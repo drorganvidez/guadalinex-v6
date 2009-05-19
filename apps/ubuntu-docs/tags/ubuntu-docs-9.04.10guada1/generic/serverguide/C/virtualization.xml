@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" 
+	"http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY % globalent SYSTEM "../../../libs/global.ent">
+%globalent;
+<!ENTITY % genericent SYSTEM "../../libs/generic.ent">
+%genericent;
+<!ENTITY % cdo-C SYSTEM "../../../libs/cdo-C.ent">
+%cdo-C;
+<!ENTITY % gnome-menus-C SYSTEM "../../../ubuntu/libs/gnome-menus-C.ent">
+%gnome-menus-C;
+<!ENTITY % xinclude SYSTEM "../../../libs/xinclude.mod">
+%xinclude;
+<!ENTITY language "&EnglishAmerican;">
+]>
+<chapter id="virtualization" status="review">
+  <title>Virtualization</title>
+  <para>
+  Virtualization is being adopted in many different environments and situations. If you are a developer, 
+  virtualization can provide you with a contained environment where you can safely do almost any sort of 
+  development safe from messing up your main working environment. If you are a systems administrator, you 
+  can use virtualization to more easily separate your services and move them around based on demand.
+  </para>
+  <para>
+  The default virtualization technology supported in Ubuntu is <application>KVM</application>, a technology 
+  that takes advantage of virtualization extensions built into Intel and AMD hardware.  
+  For hardware without virtualization extensions <application>Xen</application> and 
+  <application>Qemu</application> are popular solutions.
+  </para>
+  <sect1 id='libvirt' status='review'>
+    <title>libvirt</title>
+    <para>
+    The <application>libvirt</application> library is used to interface with different
+    virtualization technologies.  
+    Before getting started with <application>libvirt</application> it is best to make sure your hardware supports the necessary 
+    virtualization extensions for <application>KVM</application>.  Enter the following from a terminal prompt:
+    </para>
+<screen> <command>egrep '(vmx|svm)' /proc/cpuinfo</command>
+</screen>
+    <para>
+    If nothing is printed, it means that your cpu does <emphasis>not</emphasis> support hardware virtualization.
+    </para>
+    <note>
+      <para>
+      On most computer whose processor supports virtualization, it is
+      necessary to activate an option in the bios to enable it. The method
+      described above does not show the status of it's activation.
+      </para>
+    </note>
+    <sect2 id="libvirt-network" status="review">
+      <title>Virtual Networking</title>
+      <para>
+      There are a few different ways to allow a virtual machine access to the external network.  The default virtual network configuration is 
+      <emphasis>usermode</emphasis> networking, which uses the SLIRP protocol and traffic is NATed through the host interface to the outside network.
+      </para>
+      <para>
+      To enable external hosts to directly access services on virtual machines a <emphasis>bridge</emphasis> needs to be configured.  This allows
+      the virtual interfaces to connect to the outside network through the physical interface, making them appear as normal hosts to the rest 
+      of the network. To setup a bridge interface edit <filename>/etc/network/interfaces</filename> and either 
+      comment or replace the existing config with:
+      </para>
+<programlisting>
+auto lo
+iface lo inet loopback
+
+auto br0
+iface br0 inet static
+        address 192.168.0.10
+        network 192.168.0.0
+        netmask 255.255.255.0
+        broadcast 192.168.0.255
+        gateway 192.168.0.1
+        bridge_ports eth0
+        bridge_fd 9
+        bridge_hello 2
+        bridge_maxage 12
+        bridge_stp off
+</programlisting>
+      <note>
+        <para>
+        Enter the appropriate values for your physical interface and network.
+        </para>
+      </note>
+      <para>
+      Now restart networking and your virtual machines that are managed by <application>libvirt</application> will appear on the network the same as 
+      physical hosts:
+      </para>
+<screen>
+<command>sudo /etc/init.d/networking restart</command>
+</screen>
+    <para>
+    If setting up a bridge interface using Ubuntu Desktop Edition, or if <application>dhcdbd</application> is installed,  the 
+    <application>dhcdbd</application> daemon will need to be stopped and disabled.  
+    </para>
+    <para>
+    After configuring the bridge in <filename>/etc/network/interfaces</filename>, shutdown <application>dhcdbd</application> by:
+    </para>
+<screen>
+<command>sudo /etc/init.d/dhcdbd stop</command>
+</screen>
+    <para>
+    Now to disable it from starting on boot enter:
+    </para>
+<screen>
+<command>sudo update-rc.d -f dhcdbd remove</command>
+</screen>
+    </sect2>
+    <sect2 id='libvirt-installation' status='review'>
+      <title>Installation</title>
+      <para>
+      To install the necessary packages, from a terminal prompt enter:
+      </para>
+<screen>
+<command>sudo apt-get install kvm libvirt-bin</command>
+</screen>
+      <para>
+      After installing <application>libvirt-bin</application>, the user used to manage virtual machines will need to be added to 
+      the <emphasis>libvirtd</emphasis> group.  Doing so will grant the user access to the advanced networking options.  
+      </para>
+      <para>
+      In a terminal enter:
+      </para>
+<screen>
+<command>sudo adduser $USERNAME libvirtd</command>
+</screen>
+      <note>
+	<para>
+	If the user chosen is the current user, you will need to log out and back in for the new group membership to take effect.
+	</para>
+      </note>
+      <para>
+      You are now ready to install a <emphasis>Guest</emphasis> operating system.  Installing a virtual machine follows the same
+      process as installing the operating system directly on the hardware.  You either need a way to automate the installation, or 
+      a keyboard and monitor will need to be attached to the physical machine.  
+      </para>
+      <para>
+      In the case of virtual machines a Graphical User Interface (GUI) is analogous to using a physical keyboard and mouse.  Instead of installing
+      a GUI the <application>virt-viewer</application> application can be used to connect to a virtual machine's console using <application>VNC</application>.  
+      See <xref linkend="libvirt-virt-viewer"/> for more information.
+      </para>
+      <para>
+      There are several ways to automate the Ubuntu installation process, for example using 
+      preseeds, kickstart, etc.  Refer to the <ulink url="https://help.ubuntu.com/&distro-rev;/installation-guide/">Ubuntu Installation Guide</ulink> for details.
+      </para>
+      <para>
+      Yet another way to install an Ubuntu virtual machine is to use <application>ubuntu-vm-builder</application>.  <application>ubuntu-vm-builder</application> 
+      allows you to setup advanced partitions, execute custom post-install scripts, etc.  For details see <xref linkend="ubuntu-vm-builder"/>
+      </para>
+    </sect2>
+    <sect2 id='libvirt-virt-install' status='review'>
+      <title>virt-install</title>
+      <para>
+      <application>virt-install</application> is part of the <application>python-virtinst</application> package.  To install it, from a terminal prompt enter:
+      </para>
+<screen>
+<command>sudo apt-get install python-virtinst</command>
+</screen>
+      <para>
+      There are several options available when using <application>virt-install</application>.  For example:
+      </para>
+<screen>
+<command>sudo virt-install -n web_devel -r 256 -f web_devel.img -s 4 -c jeos.iso --accelerate --vnc --noautoconsole</command>
+</screen>
+      <itemizedlist>
+        <listitem>
+          <para>
+          <emphasis>-n web_devel:</emphasis> the name of the new virtual machine will be <emphasis>web_devel</emphasis> in this example.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+          <emphasis>-r 256:</emphasis> specifies the amount of memory the virtual machine will use.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+          <emphasis>-f web_devel.img:</emphasis> indicates the path to the virtual disk which can be a file, partition, or logical volume.
+          In this example a file named <filename>web_devel.img</filename>.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+          <emphasis>-s 4:</emphasis> the size of the virtual disk.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+          <emphasis>-c jeos.iso:</emphasis> file to be used as a virtual CDROM.  The file can be either an ISO file or the path to the
+          host's CDROM device.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+          <emphasis>--accelerate:</emphasis> enables the kernel's acceleration technologies. 
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+          <emphasis>--vnc:</emphasis> exports the guest's virtual console using VNC. 
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+          <emphasis>--noautoconsole:</emphasis> will not automatically connect to the virtual machine's console. 
+          </para>
+        </listitem>
+      </itemizedlist>
+      <para>
+      After launching <application>virt-install</application> you can connect to the virtual machine's console either locally
+      using a GUI or with the <application>virt-viewer</application> utility.
+      </para>
+    </sect2>
+    <sect2 id="libvirt-virt-clone" status="review">
+      <title>virt-clone</title>
+      <para>
+      The <application>virt-clone</application> application can be used to copy one virtual machine to another.  For example:
+      </para>
+<screen>
+<command>sudo virt-clone -o web_devel -n database_devel -f /path/to/database_devel.img --connect=qemu:///system</command> 
+</screen>
+      <itemizedlist>
+        <listitem>
+          <para>
+          <emphasis>-o:</emphasis> original virtual machine.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+          <emphasis>-n:</emphasis> name of the new virtual machine.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+          <emphasis>-f:</emphasis> path to the file, logical volume, or partition to be used by the new virtual machine.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+          <emphasis>--connect:</emphasis> specifies which hypervisor to connect to.
+          </para>
+        </listitem>
+      </itemizedlist>
+      <para>
+      Also, use <emphasis>-d</emphasis> or <emphasis>--debug</emphasis> option to help troubleshoot problems with 
+      <application>virt-clone</application>.
+      </para>
+      <note>
+        <para>
+	Replace <emphasis>web_devel</emphasis> and <emphasis>database_devel</emphasis> with appropriate virtual machine names.
+        </para>
+      </note>
+    </sect2>
+    <sect2 id="libvirt-management" status="review">
+      <title>Virtual Machine Management</title>
+      <sect3 id="virsh" status="review">
+        <title>virsh</title>
+        <para>
+        There are several utilities available to manage virtual machines and <application>libvirt</application>.  
+        The <application>virsh</application> utility can be used from the command line.  Some examples: 
+        </para>
+        <itemizedlist>
+          <listitem>
+            <para>
+    	    To list running virtual machines:
+            </para>
+<screen>
+<command>virsh -c qemu:///system list</command>
+</screen>
+          </listitem>
+          <listitem>
+            <para>
+  	    To start a virtual machine:
+            </para>
+<screen>
+<command>virsh -c qemu:///system start web_devel</command>
+</screen>
+          </listitem>
+          <listitem>
+            <para>
+  	    Similarly, to start a virtual machine at boot:
+            </para>
+<screen>
+<command>virsh -c qemu:///system autostart web_devel</command>
+</screen>
+          </listitem>
+          <listitem>
+            <para>
+ 	    Reboot a virtual machine with:
+            </para>
+<screen>
+<command>virsh -c qemu:///system reboot web_devel</command>
+</screen>
+          </listitem>
+          <listitem>
+            <para>
+  	    The <emphasis>state</emphasis> of virtual machines can be saved to a file in order to be restored later.  The
+            following will save the virtual machine state into a file named according to the date:
+            </para>
+<screen>
+<command>virsh -c qemu:///system save web_devel web_devel-022708.state</command>
+</screen>
+            <para>
+            Once saved the virtual machine will no longer be running.
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+	    A saved virtual machine can be restored using:
+            </para>
+<screen>
+<command>virsh -c qemu:///system restore web_devel-022708.state</command>
+</screen>
+          </listitem>
+          <listitem>
+            <para>
+	    To shutdown a virtual machine do:
+            </para>
+<screen>
+<command>virsh -c qemu:///system shutdown web_devel</command>
+</screen>
+          </listitem>
+          <listitem>
+            <para>
+	    A CDROM device can be mounted in a virtual machine by entering:
+            </para>
+<screen>
+<command>virsh -c qemu:///system attach-disk web_devel /dev/cdrom /media/cdrom</command>
+</screen>
+          </listitem>
+        </itemizedlist>
+        <note>
+          <para>
+          In the above examples replace <emphasis>web_devel</emphasis> with the appropriate virtual machine name, and 
+  	  <filename>web_devel-022708.state</filename> with a descriptive file name.
+          </para>
+        </note>
+      </sect3>
+      <sect3 id="virt-manager" status="review">
+        <title>Virtual Machine Manager</title>
+        <para>
+        The <application>virt-manager</application> package contains a graphical utility to manage local and remote virtual machines.
+        To install virt-manager enter:
+        </para>
+<screen>
+<command>sudo apt-get install virt-manager</command>
+</screen>
+        <para>
+        Since <application>virt-manager</application> requires a Graphical User Interface (GUI) environment it is recommended to be 
+	installed on a workstation or test machine instead of a production server.  To connect to the local 
+        <application>libvirt</application> service enter:
+        </para>
+<screen>
+<command>virt-manager -c qemu:///system</command>
+</screen>
+        <para>
+	You can connect to the <application>libvirt</application> service running on another host by entering the following in a terminal prompt:
+        </para>
+<screen>
+<command>virt-manager -c qemu+ssh://virtnode1.mydomain.com/system</command>
+</screen>
+        <note>
+          <para>
+          The above example assumes that <application>SSH</application> connectivity between the management system and virtnode1.mydomain.com 
+          has already been configured, and uses SSH keys for authentication.  SSH <emphasis>keys</emphasis> are needed because 
+          <application>libvirt</application> sends the password prompt to another process.  For details on configuring 
+	  <application>SSH</application> see <xref linkend="openssh-server"/>
+          </para>
+        </note>
+      </sect3>
+    </sect2>
+    <sect2 id="libvirt-virt-viewer" status="review">
+      <title>Virtual Machine Viewer</title> 
+      <para>
+      The <application>virt-viewer</application> application allows you to connect to a virtual machine's console.  
+      <application>virt-viewer</application> does require a Graphical User Interface (GUI) to interface with the virtual machine. 
+      </para>
+      <para>  
+      To install <application>virt-viewer</application> from a terminal enter:
+      </para>
+<screen>
+<command>sudo apt-get install virt-viewer</command>
+</screen>
+      <para>
+      Once a virtual machine is installed and running you can connect to the virtual machine's console by using:
+      </para>
+<screen>
+<command>virt-viewer qemu:///system web_devel</command>
+</screen>
+      <para>
+      Similar to <application>virt-manager</application>, <application>virt-viewer</application> can connect to a remote host using 
+      <emphasis>SSH</emphasis> with key authentication, as well:
+      </para>
+<screen>
+<command>virt-viewer -c qemu+ssh://virtnode1.mydomain.com/system web_devel</command>
+</screen>
+      <para>
+      Be sure to replace <emphasis role="italic">web_devel</emphasis> with the appropriate virtual machine name.
+      </para>
+      <para>
+      If configured to use a <emphasis>bridged</emphasis> network interface you can also setup <application>SSH</application> access
+      to the virtual machine.  See <xref linkend="openssh-server"/> and <xref linkend="libvirt-network"/> for more details.
+      </para>
+    </sect2>
+    <sect2 id="libvirt-resources" status="review">
+      <title>Resources</title> 
+      <itemizedlist>
+        <listitem>
+          <para>
+     	  See the <ulink url="http://kvm.qumranet.com/kvmwiki">KVM</ulink> home page for more details.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+     	  For more information on <application>libvirt</application> see the <ulink url="http://libvirt.org/">libvirt home page</ulink> 
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+     	  The <ulink url="http://virt-manager.et.redhat.com/">Virtual Machine Manager</ulink> site has more information on 
+          <application>virt-manager</application> development.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+          Also, stop by the <emphasis>#ubuntu-virt</emphasis> IRC channel on <ulink url="http://freenode.net/">freenode</ulink> to 
+          discuss virtualization technology in Ubuntu.
+          </para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+  </sect1>
+  <sect1 id="ubuntu-vm-builder" status="review">
+    <title>ubuntu-vm-builder</title>
+    <para>
+    Originally developed to create the <emphasis>JeOS</emphasis> variant of Ubuntu Server Edition, <application>ubuntu-vm-builder</application>
+    can be used to create customized virtual machines.
+    </para>
+    <para>
+    <application>ubuntu-vm-builder</application> provides a method to quickly create a clean testing environment, a way to automate the 
+    virtual machine installation process, and for software developers, the ability to integrate the creation of a virtual machine into 
+    the build process of an application.  If using a local mirror the virtual machine creation process can take less than two minutes 
+    from start to finish.
+    </para>
+    <para>
+    To create a custom virtual machine, enter the following:
+    </para>
+<screen>
+<command>sudo ubuntu-vm-builder kvm &distro-short-codename; --addpkg vim</command>
+</screen>
+    <para>
+    The above command will create a KVM image adding the <application>vim</application> package to the virtual machine.
+    The default virtual machine image is <application>KVM</application>, but vmw6, vmserver, vbox, and qemu image options are also available.
+    </para>
+    <para>
+    By adding additional <emphasis>--adpkg</emphasis> options any number of applications can be included in the image.  For example:
+    </para>
+<screen>
+<command>sudo ubuntu-vm-builder kvm  &distro-short-codename; --addpkg vim --addpkg screen --mem 256</command>
+</screen>
+    <para>
+    Also notice that the <emphasis>--mem 256</emphasis> option increases the virtual machines memory from the default 128M.
+    </para>
+    <para>
+    At the end of the image creation you will be prompted to confirm the additional package installation.
+    After the image creation process has finished a directory named <filename role="directory">ubuntu-vm-&distro-short-codename;-i386</filename> 
+    or <filename role="directory">ubuntu-vm-&distro-short-codename;-amd64</filename> is created, and inside is the virtual machine image 
+    file named <filename>root.qcow2</filename> and a shell script, used to start the virtual machine, named according to the image type.
+    </para>
+    <para>
+    Refer to the <application>ubuntu-vm-builder</application> man page for more customization options.
+    </para>
+    <sect2 id="ubuntu-vm-builder-libvirt" status="review">
+      <title>Using ubuntu-vm-builder with libvirt</title>
+      <para>
+      Combining <application>ubuntu-vm-builder</application> with <application>libvirt</application> provides a great environment for virtual machine 
+      creation and management. 
+      </para>
+      <para>
+      Use the <emphasis>--libvirt &lt;uri&gt;</emphasis> option to automatically add the newly created virtual machine to a libvirt domain.
+      For example:
+      </para>
+<screen>
+<command>sudo ubuntu-vm-builder kvm &distro-short-codename; --addpkg vim --mem 256 --libvirt qemu:///system</command>
+</screen>
+      <para>
+      Once the process has finished use <application>virsh</application> to start the virtual machine:
+      </para>
+<screen>
+<command>virsh -c qemu:///system start ubuntu</command>
+</screen>
+      <para>
+      The default virtual machine name is <emphasis>ubuntu</emphasis> use the <emphasis>--hostname</emphasis> option to change it.  See 
+      <xref linkend="virsh"/> for more details.
+      </para>
+    </sect2>
+  </sect1>
+</chapter>

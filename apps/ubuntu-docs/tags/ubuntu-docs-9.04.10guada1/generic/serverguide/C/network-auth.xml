@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" 
+	"http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY % globalent SYSTEM "../../../libs/global.ent">
+%globalent;
+<!ENTITY % genericent SYSTEM "../../libs/generic.ent">
+%genericent;
+<!ENTITY % cdo-C SYSTEM "../../../libs/cdo-C.ent">
+%cdo-C;
+<!ENTITY % gnome-menus-C SYSTEM "../../../ubuntu/libs/gnome-menus-C.ent">
+%gnome-menus-C;
+<!ENTITY % xinclude SYSTEM "../../../libs/xinclude.mod">
+%xinclude;
+<!ENTITY language "&EnglishAmerican;">
+]>
+<chapter id="network-authentication" status="complete">
+	<title>Network Authentication</title>
+
+         <para>
+         This section explains various Network Authentication protocols.
+         </para>
+	<sect1 id="openldap-server" status="complete">
+		<title>OpenLDAP Server</title>
+         <para>
+	 LDAP is an acronym for Lightweight Directory Access Protocol, it is a simplified
+         version of the X.500 protocol. The directory setup in this section will 
+	 be used for authentication. Nevertheless, LDAP can be
+         used in numerous ways: authentication, shared directory (for mail
+         clients), address book, etc.
+         </para>
+
+         <para>
+         To describe LDAP quickly,  all information is stored in a tree structure. With 
+	 <application>OpenLDAP</application> you have freedom to determine 
+	 the directory arborescence (the Directory Information Tree: the DIT) yourself.
+	 We will begin with a basic tree containing two nodes below the root:
+         </para>
+
+	 <itemizedlist>
+           <listitem>
+               <para>"People" node where your users will be stored</para>
+           </listitem>
+           <listitem>
+               <para>"Groups" node where your groups will be stored</para>
+           </listitem>
+         </itemizedlist>
+
+	 <para>
+         Before beginning, you should determine what the root of your LDAP directory
+	 will be. By default, your tree will be determined by your Fully Qualified 
+	 Domain Name (FQDN). If your domain is example.com (which we will use in this 
+         example), your root node will be dc=example,dc=com. 
+        </para>
+
+	<sect2 id="openldap-server-installation" status="complete">
+		<title>Installation</title>
+
+   	<para>
+	First, install the <application>OpenLDAP</application> server daemon 
+	<application>slapd</application> and <application>ldap-utils</application>, 
+	a package containing LDAP management utilities:
+	</para>
+<screen>
+<command>sudo apt-get install slapd ldap-utils</command>
+</screen>
+	
+	<para>
+	The installation process will prompt you for the LDAP directory admin 
+	password and confirmation.
+	</para>
+
+	<para>
+	After installing <application>slapd</application> the directory can be
+	configured using <application>dpkg-reconfigure</application>:
+	</para>
+<screen>
+<command>sudo dpkg-reconfigure slapd</command>
+</screen>
+
+	<para>
+	You will then be taken through a menu based configuration dialog allowing
+	you to configure various <application>slapd</application> options.  For 
+	the most part the defaults work well, but if your <emphasis>root</emphasis>
+	node differs from the server's FQDN be sure to enter the correct name.
+	</para>
+	
+	</sect2>
+	<sect2 id="openldap-server-populate" status="complete">
+		<title>Populating LDAP</title>
+
+	<para>
+	The directory has been created during installation and reconfiguration, and now it 
+	is time to populate it. It will be populated with a "classical" scheme that will
+	be compatible with address book applications and with Unix Posix accounts.  Posix
+	accounts will allow authentication to various applications, such as web 
+	applications, email Mail Transfer Agent (MTA) applications, etc.
+	</para>
+	
+	<note>
+	  <para>
+	  For external applications to authenticate using LDAP they will each need to be 
+	  specifically configured to do so.  Refer to the individual application 
+	  documentation for details.	 
+	  </para>
+	</note>
+
+	<para>
+	LDAP directories can be populated with LDIF (Ldap Directory
+	Interchange Format) files. Copy the following example LDIF file, naming it
+	<filename>example.com.ldif</filename>, somewhere on your system:
+	</para>
+
+<programlisting>
+dn: ou=people,dc=example,dc=com
+objectClass: organizationalUnit
+ou: people
+
+dn: ou=groups,dc=example,dc=com
+objectClass: organizationalUnit
+ou: groups
+
+dn: uid=john,ou=people,dc=example,dc=com
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uid: john
+sn: Doe
+givenName: John
+cn: John Doe
+displayName: John Doe
+uidNumber: 1000
+gidNumber: 10000
+userPassword: password
+gecos: John Doe
+loginShell: /bin/bash
+homeDirectory: /home/john
+shadowExpire: -1
+shadowFlag: 0
+shadowWarning: 7
+shadowMin: 8
+shadowMax: 999999
+shadowLastChange: 10877
+mail: john.doe@example.com
+postalCode: 31000
+l: Toulouse
+o: Example
+mobile: +33 (0)6 xx xx xx xx
+homePhone: +33 (0)5 xx xx xx xx
+title: System Administrator
+postalAddress: 
+initials: JD
+
+dn: cn=example,ou=groups,dc=example,dc=com
+objectClass: posixGroup
+cn: example
+gidNumber: 10000
+</programlisting>
+
+	<para>
+	In this example the directory structure, a user, and a 
+	group have been setup. In other examples you might see the 
+	<emphasis>objectClass: top</emphasis> added in every entry, but that is the 
+	default behaviour so you do not have to add it explicitly.
+	</para>
+
+	<para>
+	Now, to add your entries to the LDAP directory:
+	</para>
+
+	<itemizedlist>
+	    <listitem>
+	      <para>
+	      Stop <application>slapd</application>: 
+	      </para>
+<screen>
+<command>sudo /etc/init.d/slapd stop</command>
+</screen>
+            </listitem>
+            <listitem>
+    	      <para>
+	      Add the content:
+	      </para>
+<screen>
+<command>sudo slapadd -l example.com.ldif</command>
+</screen>
+             </listitem>
+             <listitem>
+    	       <para>
+	       Start LDAP daemon:
+	       </para>
+<screen>
+<command>sudo /etc/init.d/slapd start</command>
+</screen>
+             </listitem>
+	</itemizedlist>
+
+	<para>
+	We can check that the content has been correctly added with the
+	tools from the <application>ldap-utils</application> package. In order to
+  	execute a search of the LDAP directory:
+	</para>
+
+<screen>
+<command>ldapsearch -xLLL -b "dc=example,dc=com" uid=john sn givenName cn</command>
+<computeroutput>
+dn: uid=john,ou=people,dc=example,dc=com
+cn: John Doe
+sn: Doe
+givenName: John
+</computeroutput>
+</screen>
+
+	<para>
+	Just a quick explanation:
+	</para>
+
+	<itemizedlist>
+	    <listitem>
+                <para>
+		<emphasis>-x:</emphasis> will not use SASL authentication 
+		method, which is the default.
+		</para>
+            </listitem>
+            <listitem>
+                <para>
+		<emphasis>-LLL:</emphasis> disable printing LDIF schema information.
+		</para>
+            </listitem>
+        </itemizedlist>
+	
+	</sect2>
+
+	<sect2 id="openldap-server-acl" status="complete">
+              <title>Setting up ACL</title>
+
+	<para>
+	Authentication requires access to the password field, that should be not
+	accessible by default. Another issue is that during password change
+	using <command>passwd</command>, <emphasis>shadowLastChange</emphasis> needs 
+	to be accessible by authenticated users.  The following code, from 
+	<application>/etc/ldap/slapd.conf</application>, shows the default ACL 
+	setting that permits the <emphasis>admin</emphasis> user and authenticated 
+	users access to shadowLastChange:
+	</para>
+
+<programlisting>
+access to attrs=userPassword,shadowLastChange
+        by dn="cn=admin,dc=example,dc=com" write
+        by anonymous auth
+        by self write
+        by * none
+</programlisting>
+
+	</sect2>
+
+	<sect2 id="openldap-server-replication" status="complete">
+		<title>LDAP replication</title>
+
+	<para>
+	LDAP service often quickly becomes a highly critical service in an
+	information system: multiple systems depend on LDAP for authentication, 
+	authorization, mail, etc. It is a good idea to setup a 
+	redundant system. 
+	</para>
+	
+	<para>
+	Replication is achieved using the <emphasis>Syncrepl</emphasis> engine. Syncrepl allows the
+	directory to be synced using either a <emphasis>push</emphasis> or <emphasis>pull</emphasis> based
+	system.  In a push based configuration a <quote>primary</quote> server will push directory updates
+	to <quote>secondary</quote> servers, while a pull based approach allows replication servers to sync on
+	a time based interval.
+	</para>
+
+	<para>
+	The following is an example of <emphasis>push</emphasis> configuration.  First you need to setup the
+	<application>slapd</application> provider by uncommenting the following line in 
+	<filename>/etc/ldap/slapd.conf</filename>:
+	</para>
+
+<programlisting>
+rootdn          "cn=admin,dc=example,dc=com"
+</programlisting>
+
+	<para>
+	Below the <emphasis>rootdn</emphasis> line add:
+	</para>
+	
+<programlisting>
+moduleload  syncprov.la
+overlay syncprov
+syncprov-checkpoint 100 10
+syncprov-sessionlog 100
+</programlisting>
+
+	<para>
+	Now restart <application>slapd</application>:
+	</para>
+<screen>
+<command>sudo /etc/init.d/slapd restart</command>
+</screen>
+
+	<para>
+	On separate <application>OpenLDAP</application> server configure the <application>slapd</application> consumer
+	by again uncommenting the <emphasis>rootdn</emphasis> line in <filename>/etc/ldap/slapd.conf</filename>:
+	</para>
+
+<programlisting>
+rootdn          "cn=admin,dc=example,dc=com"
+</programlisting>
+
+	<para>
+	Then add the following below the rootdn entry:
+	</para>
+
+<programlisting>
+syncrepl rid=123
+	 provider=ldap://ldap01.example.com:389
+	 type=refreshAndPersist
+         searchbase="dc=example,dc=com"
+         filter="(objectClass=*)"
+         scope=sub
+         schemachecking=off
+         bindmethod=simple
+         binddn="uid=john,ou=people,dc=example,dc=com"
+         credentials=password
+</programlisting>
+
+	<note>
+	  <para>
+	  This example uses the <emphasis>john</emphasis> user we created above to authenticate the sync process.  Be sure
+	  to use an account with sufficient priviliges.  Also, replace <emphasis role="italic">ldap://ldap01.example.com:389</emphasis>
+	  with the appropriate host name.
+	  </para>
+	</note>
+
+	<para>
+	Now restart the consumer <application>slapd</application> deamon:
+	</para>
+<screen>
+<command>sudo /etc/init.d/slapd restart</command>
+</screen>
+
+	<para>
+	If all goes well you should be able to execute the <application>ldapsearch</application> example from 
+	above on the server with the replicated directory.
+	</para>
+<screen>
+<command>ldapsearch -xLLL -b "dc=example,dc=com" uid=john sn givenName cn</command>
+</screen>
+
+	<para>
+	The <application>slapd</application> daemon will send log information to <filename>/var/log/syslog</filename>
+	by default.  So if all does <emphasis>not</emphasis> go well check there for errors and other troubleshooting information.
+	</para>
+		
+	</sect2>
+	<sect2 id="openldap-server-resources" status="review">
+	  <title>Resources</title>
+	  <itemizedlist>
+	    <listitem>
+              <para>
+	      For more information see <ulink url="http://www.openldap.org/">OpenLDAP Home Page</ulink>
+	      </para>
+	    </listitem>
+	    <listitem>
+              <para>
+	      Though starting to show it's age, a great source for in depth LDAP information is 
+	      O'Reilly's <ulink url="http://www.oreilly.com/catalog/ldapsa/">LDAP System Administration</ulink>
+	      </para>
+	    </listitem>
+	  </itemizedlist>
+	 
+	</sect2>
+  </sect1>
+</chapter>

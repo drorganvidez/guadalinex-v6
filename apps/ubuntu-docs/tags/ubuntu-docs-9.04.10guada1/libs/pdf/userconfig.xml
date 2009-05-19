@@ -1,0 +1,110 @@
+<!--<!DOCTYPE configuration SYSTEM "config.dtd">-->
+<!-- 
+     this file contains templates which allow an user easy 
+     configuration of Fop. Actually normally you don't need this configuration 
+     file, but if you need to change configuration, you should
+     always use this file and *not* config.xml. 
+     Usage: java org.apache.fop.apps.Fop -c userconfig.xml -fo fo-file -pdf pdf-file
+-->
+
+
+<configuration>
+
+<!--  
+baseDir: normally the base directory is the directory where the fo file is 
+         located. if you want to specify your own, uncomment this entry.
+         This value can also be a URL. Actually, the value is converted to 
+         a URL.
+-->
+<!-- 
+  <entry>
+    <key>baseDir</key>
+    <value></value>
+  </entry>
+-->
+
+<!--  
+fontBaseDir: Similar to baseDir, except that this value is used for fonts. If
+         it isn't specified, the value from baseDir is used.
+-->
+<!-- 
+  <entry>
+    <key>fontBaseDir</key>
+    <value></value>
+  </entry>
+-->
+
+<!--
+************************************************************************
+                        HYPHENATION 
+************************************************************************
+-->
+  
+<!--
+   hyphenation directory 
+   if you want to specify your own directory with hyphenation pattern
+   then uncomment the next entry and add the directory name
+-->
+
+<!--
+  <entry>
+    <key>hyphenation-dir</key>
+    <value>/java/xml-fop/hyph</value>
+  </entry>
+-->
+
+<!--
+************************************************************************
+  Add fonts here
+************************************************************************
+-->
+
+<fonts>
+
+ <font metrics-file="../libs/pdf/fonts/FreeSerif-ttf.xml" kerning="yes" embed-file="/usr/share/fonts/truetype/freefont/FreeSerif.ttf">
+    <font-triplet name="serif" style="normal" weight="normal"/>
+ </font>
+ <font metrics-file="../libs/pdf/fonts/FreeSerifBold-ttf.xml" kerning="yes" embed-file="/usr/share/fonts/truetype/freefont/FreeSerifBold.ttf">
+    <font-triplet name="serif" style="normal" weight="bold"/>
+ </font>
+ <font metrics-file="../libs/pdf/fonts/FreeSerifItalic-ttf.xml" kerning="yes" embed-file="/usr/share/fonts/truetype/freefont/FreeSerifItalic.ttf">
+    <font-triplet name="serif" style="italic" weight="normal"/>
+ </font>
+ <font metrics-file="../libs/pdf/fonts/FreeSerifBoldItalic-ttf.xml" kerning="yes" embed-file="/usr/share/fonts/truetype/freefont/FreeSerifBoldItalic.ttf">
+    <font-triplet name="serif" style="italic" weight="bold"/>
+ </font>
+ <font metrics-file="../libs/pdf/fonts/FreeMono-ttf.xml" kerning="yes" embed-file="/usr/share/fonts/truetype/freefont/FreeMono.ttf">
+    <font-triplet name="monospace" style="normal" weight="normal"/>
+ </font>
+ <font metrics-file="../libs/pdf/fonts/FreeMonoBold-ttf.xml" kerning="yes" embed-file="/usr/share/fonts/truetype/freefont/FreeMonoBold.ttf">
+    <font-triplet name="monospace" style="normal" weight="bold"/>
+ </font>
+ <font metrics-file="../libs/pdf/fonts/FreeMonoOblique-ttf.xml" kerning="yes" embed-file="/usr/share/fonts/truetype/freefont/FreeMonoOblique.ttf">
+    <font-triplet name="monospace" style="italic" weight="normal"/>
+ </font>
+ <font metrics-file="../libs/pdf/fonts/FreeMonoBoldOblique-ttf.xml" kerning="yes" embed-file="/usr/share/fonts/truetype/freefont/FreeMonoBoldOblique.ttf">
+    <font-triplet name="monospace" style="italic" weight="bold"/>
+ </font>
+
+ <font metrics-file="../libs/pdf/fonts/DejaVuSerif-ttf.xml" kerning="yes" embed-file="/usr/share/fonts/truetype/freefont/DejaVuSerif.ttf">
+    <font-triplet name="dejavuserif" style="normal" weight="normal"/>
+ </font>
+ <font metrics-file="../libs/pdf/fonts/DejaVuSerifBold-ttf.xml" kerning="yes" embed-file="/usr/share/fonts/truetype/freefont/DejaVuSerif.ttf">
+    <font-triplet name="dejavuserif" style="normal" weight="bold"/>
+ </font>
+ <font metrics-file="../libs/pdf/fonts/DejaVuSerifOblique-ttf.xml" kerning="yes" embed-file="/usr/share/fonts/truetype/freefont/DejaVuSerif.ttf">
+    <font-triplet name="dejavuserif" style="italic" weight="normal"/>
+ </font>
+ <font metrics-file="../libs/pdf/fonts/DejaVuSerifBoldOblique-ttf.xml" kerning="yes" embed-file="/usr/share/fonts/truetype/freefont/DejaVuSerif.ttf">
+    <font-triplet name="dejavuserif" style="italic" weight="bold"/>
+ </font>
+
+
+
+</fonts>
+
+
+</configuration>
+
+
+

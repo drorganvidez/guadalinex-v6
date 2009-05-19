@@ -1,0 +1,17 @@
+#! /bin/sh
+set -e
+
+#DEBHELPER#
+
+case "$1" in
+  configure)
+    update-alternatives \
+      --install /usr/share/ubuntu-artwork/home/index.html \
+      firefox-homepage /usr/share/ubuntu-artwork/home/firefox-index.html 40 \
+      --slave /usr/share/ubuntu-artwork/home/locales \
+      firefox-homepage-locales /usr/share/ubuntu-artwork/home/locales-ubuntu
+
+  ;;
+esac
+
+exit 0

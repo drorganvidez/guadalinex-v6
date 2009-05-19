@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" 
+	"http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY % globalent SYSTEM "../../../libs/global.ent">
+%globalent;
+<!ENTITY % cdo-C SYSTEM "../../../libs/cdo-C.ent">
+%cdo-C;
+<!ENTITY % gnome-menus-C SYSTEM "../../../ubuntu/libs/gnome-menus-C.ent">
+%gnome-menus-C;
+<!ENTITY % xinclude SYSTEM "../../../libs/xinclude.mod">
+%xinclude;
+<!ENTITY language "en">
+<!ENTITY ubuntu '<phrase>Ubuntu</phrase>'>
+]>
+
+<?db.chunk.max_depth 2?>
+<?yelp:chunk-depth 2?>
+
+	<article id="music-video-photos" status="review">
+	<articleinfo>
+	<title>Music, video and photos</title>
+    	&legalnotice;
+	</articleinfo>
+			<para>This section describes how to import, organize and use music, video and photos with Ubuntu.</para>
+				
+	<sect1 id="music" status="review">
+		<title>Music and audio</title>
+		<para>Whether you want to play, rip, edit or organize your music, Ubuntu has the tools you need.</para>
+		
+		<sect2 id="music-play" status="writing">
+			<title>Play and organize music</title>
+			<para>To play and organize your music, Ubuntu comes with <application>Rhythmbox Music Player</application>. To start <application>Rhythmbox</application>, choose &rhythmbox;.</para>
+			<para>When you first use <application>Rhythmbox</application>, it will scan your home folder for any supported music files you have and will make them available to be played automatically.</para>
+			<para><application>Rhythmbox</application> supports many useful features, some of which are turned off by default. For example, it can show the album cover of the song currently being played, or share music with others.</para>
+			<para>To access these optional features, press <menuchoice><guimenuitem>Edit</guimenuitem><guimenuitem>Plugins...</guimenuitem></menuchoice> and select the features which you would like to use by ticking them.</para>
+			<para>See the <ulink type='help' url='ghelp:rhythmbox'>Rhythmbox manual</ulink> for more information.</para>
+		</sect2>
+		
+		<sect2 id="music-audiocds-playing" status="complete">
+			<title>Playing audio CDs</title>
+			<para>When you insert an audio CD, the <application>Sound Juicer</application> CD player and ripper opens automatically. If you are connected to the Internet, <application>Sound Juicer</application> will display the CD artist, album and track names.</para>
+			<para>To play the CD, click the <guibutton>Play</guibutton> button or press <keycombo><keycap>Ctrl</keycap><keycap>P</keycap></keycombo>. To play a particular track, double-click on the track or select the track and click <guibutton>Play</guibutton>.</para>
+			<para>As an alternative to <application>Sound Juicer</application>, the <application>Rhythmbox Music Player</application> is also able to play CDs. Simply insert a CD, ignore or close <application>Sound Juicer</application>, start <application>Rhythmbox</application> and double-click the audio CD item in the <guilabel>Devices</guilabel> list.</para>
+		</sect2>
+		
+		<sect2 id="music-audiocds-ripping" status="review">
+			<title>Ripping audio CDs</title>
+			<para>If you would like to keep a copy of an audio CD on your computer without needing to insert the CD to listen to it, it is possible to <emphasis>rip</emphasis> or <emphasis>extract</emphasis> the music onto your computer.</para>
+			<para><application>Sound Juicer CD Extractor</application> is able to rip CDs. To start <application>Sound Juicer</application> manually, choose &soundjuicer;. Alternatively, it should start automatically when you insert a CD.</para>
+			<para>Follow the instructions in the Sound Juicer manual on <ulink type='help' url='ghelp:sound-juicer#extracting'>how to rip audio CDs</ulink>.</para>
+		</sect2>
+		
+		<sect2 id="music-apps" status="review">
+			<title>Other audio-related tasks</title>
+			<para>Ubuntu provides a wide range of tools for all of your audio playing, editing and recording needs.</para>
+			<itemizedlist>
+				<listitem>
+					<para><emphasis role='strong'>Change the track details of music</emphasis></para>
+					<para>If you have music files which have incorrect or incomplete information about the artist or album which they are from, install <application>Cowbell Music Organizer</application>. Cowbell allows you to edit track details, and can automatically correct track information for many CDs.</para>
+				</listitem>
+				<listitem>
+					<para><emphasis role='strong'>Use a different music player</emphasis></para>
+					<para>Many alternative music players are available apart from the default Rhythmbox Music Player. These include Amarok, Banshee Music Player, Beep Media Player, Exaile! and Muine Music Player. Each player has its own strengths and weaknesses, and which one you use will probably depend on personal preference.</para>
+				</listitem>
+				<listitem>
+					<para><emphasis role='strong'>Listen to Podcasts</emphasis></para>
+					<para>Podcasts are a way of listening to music and radio shows broadcast on the Internet. Thousands of different shows are available, such as <ulink url='http://www.bbc.co.uk/radio/waystolisten/podcasts/'>BBC Radio</ulink>, <ulink url='http://www.lugradio.org/'>LugRadio</ulink> and <ulink url='http://www.thenakedscientists.com'>The Naked Scientists</ulink>. The Rhythmbox Music Player is able to play podcasts. See the <ulink type='help' url='ghelp:rhythmbox#podcast'>Rhythmbox manual</ulink> for more information.</para>
+				</listitem>
+				<listitem>
+					<para><emphasis role='strong'>Record sounds and music</emphasis></para>
+					<para>If you have appropriate audio hardware (such as a microphone), you can record sounds onto your computer.  Choose &gnome-sound-recorder; to start the Sound Recorder. Alternatively, press <keycombo><keycap>Alt</keycap><keycap>F2</keycap></keycombo>, type <quote>gnome-sound-recorder</quote> and press <guibutton>Run</guibutton>. See the <ulink type='help' url='ghelp:gnome-sound-recorder#grecord-usage'>Sound Recorder manual</ulink> for further instructions.</para>
+				</listitem>
+				<listitem>
+					<para><emphasis role='strong'>Edit sounds and music</emphasis></para>
+					<para>To edit audio, install <ulink url='http://www.jokosher.org/'>Jokosher</ulink> or <ulink url='http://audacity.sourceforge.net/'>Audacity</ulink>. Jokosher is able to record audio as well as edit it, and Audacity provides many powerful sound-editing features.</para>
+				</listitem>
+				<listitem>
+					<para><emphasis role='strong'>Install a full suite of multimedia editing applications</emphasis></para>
+					<para>If you would like to turn your computer into a multimedia production suite, why not consider installing <ulink url='http://ubuntustudio.org/'>Ubuntu Studio</ulink>? It provides a large selection of applications for creating audio, video and graphics.</para>
+				</listitem>
+			</itemizedlist>
+		</sect2>
+		
+		<sect2 id="music-audiostreams" status="complete">
+			<title>Listen to online audio streams</title>
+			<para>You can listen to <emphasis>streaming audio</emphasis> from the Internet. This can be thought of as an online radio service, as it is usually broadcast live.</para>
+			<para><application>Rhythmbox</application> is able to play most streaming audio, such as online radio shows. However, some services require a special player to be used.</para>
+			<itemizedlist>
+				<listitem>
+				<para>Install the <application>Last-Exit</application> player to listen to the <ulink url='http://www.last.fm'>Last.fm</ulink> service.</para>
+				</listitem>
+				<listitem>
+				<para>Install <application>RealPlayer 10</application> to watch and listen to streams in the <emphasis>Real Media</emphasis> formats. <application>RealPlayer</application> is available from the <emphasis>Commercial</emphasis> repository.</para>
+				</listitem>
+			</itemizedlist>
+			<para>See <ulink type="help" url="ghelp:add-applications">Add Applications</ulink> for help on installing new software.</para>
+		</sect2>
+	</sect1>
+	
+	<sect1 id="music-dap" status="complete">
+		<title>Use a portable audio player</title>
+		<para>Ubuntu supports many portable audio players, including the iPod.</para>
+		
+		<sect2 id="music-dap-ipod" status="complete">
+			<title>Using an iPod</title>
+			<para>You can play music directly off an iPod with <application>Rhythmbox Music Player</application>. Plug the iPod into the computer, and open <application>Rhythmbox</application>.</para>
+			<para>To transfer music files to and from an iPod, you can use <application>gtkpod</application>:</para>
+			<procedure>
+				<step>
+					<para>Install the <application>gtkpod</application> package from the <quote>Universe</quote> repository (see <ulink type="help" url="ghelp:add-applications">Add Applications</ulink>).
+					</para>
+				</step>
+				<step>
+					<para>To run
+					<application>gtkpod</application>,
+					choose &gtkpod;.
+					</para>
+				</step>
+			</procedure>
+			<para>See the <ulink url='https://help.ubuntu.com/community/IPodHowto'>Community Help pages</ulink> for more information on using an iPod with Ubuntu.</para>
+		</sect2>
+		
+		<sect2 id="music-dap-other" status="complete">
+			<title>Using other audio players</title>
+			<para>Ubuntu supports many other audio players. Most of these work simply by plugging them in to your computer and copying music onto them.</para>
+			<para>Users of <emphasis>Creative Nomad Jukebox</emphasis> audio players may need to install the <application>gnomad2</application> package from the <quote>Universe</quote> repository to be able to use their device (see <ulink type="help" url="ghelp:add-applications">Add Applications</ulink>).</para>
+		</sect2>
+	</sect1>
+	
+	
+	<sect1 id="video" status="complete">
+		<title>Movies, DVDs and videos</title>
+		<para>You can watch movies and video clips in Ubuntu by using the <application>Totem Movie Player</application>.</para>
+		<para>Start <application>Totem</application> by clicking &totem;.</para>
+		
+		<sect2 id="video-dvd" status="review">
+			<title>Playing DVDs</title>
+			<para>In order to play DVDs, you must install some additional software. Unfortunately, DVD support cannot be provided by default in Ubuntu due to legal and technical restrictions.</para>
+			<caution>
+				<para>Many commercial DVDs are <emphasis>encrypted</emphasis> and so require the use of <emphasis>decryption</emphasis> software in order to play them. In some countries, the use of such decryption software is not permitted by law. Verify that you are within your rights in using it.</para>
+			</caution>
+			<procedure>
+				<step>
+					<para>Install the following packages (see <ulink type="help" url="ghelp:add-applications">Add Applications</ulink>):</para>
+					<itemizedlist>
+						<listitem><para><application>libdvdnav4</application></para></listitem>
+						<listitem><para><application>libdvdread3</application></para></listitem>
+					</itemizedlist>
+				</step>
+				<step>
+					<para>If you would like to play encrypted DVDs (see the legal note above), press &terminal; and type the following into the screen which appears, followed by the <keycap>Return</keycap> key:<screen>sudo /usr/share/doc/libdvdread3/install-css.sh</screen></para>
+				</step>
+				<step><para>When you insert a DVD into your drive, it should now open automatically using <application>Totem Movie Player</application>.</para></step>
+			</procedure>
+
+				<note><para>Unfortunately, <application>Totem Movie Player</application> has no support for the menu feature of DVDs. To use this feature, you can install an alternative program such as <application>gxine</application>, like this:</para>
+			<procedure>
+				<step><para>Install the <application>gxine</application> package (see <ulink type="help" url="ghelp:add-applications">Add Applications</ulink>)</para></step>
+				<step><para>To ensure that DVDs use <application>gxine</application> automatically when inserted, open &home-folder; and select <menuchoice><guimenu>Edit</guimenu><guimenuitem>Preferences</guimenuitem></menuchoice> and then click on the <guilabel>Media</guilabel> tab. Choose <application>gxine</application> from the <guibutton>DVD Video</guibutton> option.</para></step>
+			</procedure>
+			</note>
+		</sect2>
+		
+		<sect2 id="video-badformats" status="complete">
+			<title>Playing proprietary formats</title>
+			<para>Videos can come in a range of different formats. However, some of these formats are proprietary or commercial and so cannot be included in Ubuntu by default. As a result, additional software must be installed to allow you to view such formats. The following applications may be able to play certain formats which the default applications are unable to handle:</para>
+			<itemizedlist>
+				<listitem><para><application>gxine</application> with <application>Xine extra plugins</application></para></listitem>
+				<listitem><para><application>MPlayer Movie Player</application></para></listitem>
+				<listitem><para><application>VLC media player</application></para></listitem>
+			</itemizedlist>
+			<para>See <ulink type="help" url="ghelp:add-applications">Add Applications</ulink> for help on installing new software.</para>
+			<para>See <ulink type="help" url="ghelp:musicvideophotos#codecs">Multimedia Codecs</ulink> for information on installing support for other audio and video formats.</para>
+		</sect2>
+		
+		<sect2 id="video-online" status="complete">
+			<title>Watch videos in a web browser</title>
+			<para>Many videos available on the Internet can be played from within your web browser. However, many of these require an additional <emphasis>browser plugin</emphasis> to be installed first.</para>
+			<para>The plugins you require depend on the format of the videos you would like to watch. A short list of plugins available for the default <application>Firefox Web Browser</application> is given below:</para>
+			<itemizedlist>
+				<listitem>
+				<para>For the <application>Mplayer</application> plugin, install the <application>mozilla-mplayer</application> package.</para>
+				</listitem>
+				<listitem>
+				<para>For the <application>VLC</application> plugin, install the <application>mozilla-plugin-vlc</application> package.</para>
+				</listitem>
+				<listitem>
+				<para>For the <application>Helix</application> plugin, install the <application>mozilla-helix-player</application> package.</para>
+				</listitem>
+				<listitem>
+				<para>For a free (open-source) <application>Flash</application> plugin, install the <application>mozilla-plugin-gnash</application> package. For the proprietary <application>Flash</application> plugin, install the <application>flashplugin-nonfree</application> package. See <ulink type="help" url="ghelp:internet#web-plugins-flash">Flash multimedia plugin</ulink> for more information.</para>
+				</listitem>
+			</itemizedlist>
+			<para>For help on installing additional software, see <ulink type="help" url="ghelp:add-applications">Add Applications</ulink>.</para>
+			<para>Restart <application>Firefox</application> to make the newly-installed plugins available.</para>
+		</sect2>
+		
+		<sect2 id="onlinemedia-videocasts" status="complete">
+			<title>Watch video podcasts</title>
+			<para>As well as online audio broadcasts (podcasts), many video broadcasts are available from the Internet too. Ubuntu provides several optional applications which you can use to watch videos from the Internet:</para>
+			<itemizedlist>
+				<listitem><para><application>Miro</application></para></listitem>
+				<listitem><para><application>PenguinTV Media Aggregator</application></para></listitem>
+				<listitem><para><application>Kitty</application></para></listitem>
+			</itemizedlist>
+			<para>See <ulink type="help" url="ghelp:add-applications">Add Applications</ulink> for help on installing new software.</para>
+		</sect2>
+		
+		<sect2 id="video-editing" status="complete">
+			<title>Record and edit video</title>
+			<para>Ubuntu comes with a selection of tools to help you record and edit video.</para>
+			<itemizedlist>
+				<listitem>
+					<para><application>DeVeDe</application> is a DVD authoring application capable of creating DVD discs which can be played in set-top DVD players.</para>
+					<para>For more information, see <ulink url="http://www.rastersoft.com/programas/devede.html">the DeVeDe website</ulink>.</para>
+				</listitem>
+				<listitem>
+					<para><application>Kino</application> is an advanced video editor. It features excellent integration with IEEE-1394 (Firewire) for capture, VTR control, and recording back to the camera. It captures video to disk in Raw DV and AVI format, in both type-1 DV and type-2 DV (separate audio stream) encodings.</para>
+					<para>For more information, see <ulink url="http://www.kinodv.org/article/static/2">the Kino website</ulink>.</para>
+				</listitem>
+				<listitem>
+					<para><application>PiTiVi Video Editor</application> is a simple, easy to use video editor.</para>
+					<para>For more information, see <ulink url="http://www.pitivi.org/wiki/Main_Page">the PiTiVi website</ulink>.</para>
+				</listitem>
+				<listitem>
+					<para><application>Stopmotion</application> allows you to create videos using the stop-motion animation technique.</para>
+					<para>For more information, see <ulink url="http://stopmotion.bjoernen.com/">the Stopmotion website</ulink>.</para>
+				</listitem>
+				<listitem>
+					<para><application>Subtitle Editor</application> can be used to edit subtitles for videos.</para>
+					<para>For more information, see <ulink url="http://kitone.free.fr/subtitleeditor/">the Subtitle Editor website</ulink>.</para>
+				</listitem>
+				<listitem>
+					<para><application>Thoggen DVD Ripper</application> allows you to back-up your DVDs onto your computer.</para>
+					<para>For more information, see <ulink url="http://thoggen.net/">the Thoggen website</ulink>.</para>
+				</listitem>
+			</itemizedlist>
+			<para>See <ulink type="help" url="ghelp:add-applications">Add Applications</ulink> for help on installing new software.</para>
+		</sect2>
+		
+	</sect1>
+
+
+	<sect1 id="codecs" status="review">
+		<title>What is a codec?</title>
+		<para>A <emphasis>multimedia codec</emphasis> is a small piece of software which allows you to watch videos or listen to music of a specific format. There are many different multimedia formats and so you may need to install several codecs. Ubuntu includes many codecs by default.</para>
+		<para>Many applications in Ubuntu use the <application>GStreamer</application> open source multimedia framework. The codec plugins for <application>GStreamer</application> are organised in different packages depending on the licensing that applies to the various codecs. You can see which codecs are contained in which plugin on the <ulink url="http://gstreamer.freedesktop.org/documentation/plugins.html">GStreamer website</ulink>.</para>
+		<para>Other applications, such as <application>Mplayer</application> and <application>Xine</application>, do not use the <application>Gstreamer</application> framework. Due to patent and copyright restrictions, codecs for these programs are not included in Ubuntu by default. For more information on these read the <ulink url="&restricted-formats;">Restricted Formats</ulink> wiki page.</para>
+		<para>To install extra codecs, press &gnome-app-install;, type <quote>codec</quote> in the <guilabel>Search</guilabel> box and select which codecs you want to install. Press <guibutton>Apply</guibutton> to install the selected codecs.</para>
+		<warning>
+			<para>In some countries, the use of certain codecs may be prohibited by law. You should verify that you are permitted to use them before installing them.</para>
+		</warning>
+	</sect1>
+
+
+	<sect1 id="photos" status="review">
+		<title>Photos and cameras</title>
+		<para>There are many tools available to help you to work with your digital photo collection.</para>
+		
+		<sect2 id="photos-import" status="complete">
+			<title>Import photos from a digital camera</title>
+			<para>Ubuntu automatically detects most digital cameras when you plug them in, and will offer to import your photos automatically.</para>
+			<para>To import photos from your camera:</para>
+			<procedure>
+				<step><para>Plug-in and switch on the camera by placing it in review mode. Ubuntu should ask you if you would like to import the photos that the camera contains.</para></step>
+				<step><para>Click on <guibutton>Import</guibutton>. You should then see a preview of the photos.</para></step>
+				<step><para>Choose a location to save your photos to, then click on <guibutton>Import</guibutton>. The photos will be saved to your hard drive.</para></step>
+			</procedure>
+			
+			<para>If Ubuntu does not ask you if it can import the photos:</para>
+			<procedure>
+				<step><para>Open &f-spot; and choose <menuchoice><guimenu>File</guimenu><guimenuitem>Import...</guimenuitem></menuchoice>.</para></step>
+				<step><para>Select your camera as the <guilabel>Import Source</guilabel> and then press <guibutton>Import</guibutton> to begin importing your photos.</para></step>
+			</procedure>
+			<para>If your camera does not appear as an import source, press &computer; and check if your camera is visible there as a removable storage device. If it is, you can then copy the photos manually using the <application>File Browser</application>.</para>
+			
+		</sect2>
+		
+		<sect2 id="photos-organize" status="complete">
+			<title>Organize your photo collection</title>
+			<para><application>F-Spot</application> provides a complete solution for managing your photo collection. To start it, choose &f-spot;.</para>
+			<para>With <application>F-Spot</application>, you can import photos from your digital camera or USB stick, tag them with familiar terms, do touch ups, and edit them in different ways. In addition to this, you can upload photos easily to your Flickr, PicasaWeb album and other online photo galleries.</para>
+			<para>For help with <application>F-Spot Photo Manager</application>, see the <ulink type="help" url="ghelp:f-spot">F-Spot User Guide</ulink>.</para>
+		</sect2>
+		
+		<sect2 id="photos-slideshow" status="review">
+			<title>Watch a slideshow of photos</title>	
+			<para>If you want to show off your photos in all of their glory, why not run a slideshow of them?</para>
+			
+			<itemizedlist>
+				<listitem>
+					<para>Watch a slideshow using the <ulink type='help' url='ghelp:eog#eog-fullscreen'>Image Viewer</ulink></para>
+				</listitem>
+				<listitem>
+					<para>Watch a slideshow using the <ulink type='help' url='ghelp:f-spot#enjoying-fullscreen-mode-and-slideshows'>F-Spot Photo Manager</ulink></para>
+				</listitem>
+			</itemizedlist>
+			
+			<sect3 id="photos-slideshow-screensaver" status="review">
+				<title>Setting a Slideshow as Your Screensaver</title>
+				<para>You can use a slideshow of your photos as you screensaver:</para>
+				<orderedlist>
+					<listitem><para>Press &screensaver;</para></listitem>
+					<listitem><para>Select the <guilabel>F-Spot photos</guilabel> screensaver theme</para></listitem>
+					<listitem><para>Photos which are tagged as <guilabel>Favorites</guilabel> in <application>F-Spot Photo Manager</application> will be displayed as your screensaver</para></listitem>
+				</orderedlist>
+		      
+				<para>If you would like to change which tag is used for the slideshow:</para>
+				<orderedlist>
+					<listitem><para>Open F-Spot</para></listitem>
+					<listitem><para>Press <menuchoice><guimenuitem>Edit</guimenuitem><guimenuitem>Preferences</guimenuitem></menuchoice></para></listitem>
+					<listitem><para>Under <guilabel>Screensaver</guilabel>, select the desired tag</para></listitem>
+					<listitem><para>Press <guibutton>Close</guibutton></para></listitem>
+				</orderedlist>
+			</sect3>
+		</sect2>
+
+		<sect2 id="photos-printing" status="review">
+			<title>Printing photos</title>
+
+			<para>Printing your photos is great way to share them with others.</para>
+			<orderedlist>
+				<listitem><para>Double-click the photo you want to print to open it in the <application>Image Viewer</application></para></listitem>
+				<listitem><para>Press <menuchoice><guimenuitem>File</guimenuitem><guimenuitem>Page Setup...</guimenuitem></menuchoice></para>
+					<itemizedlist>
+						<listitem><para>Under <guilabel>Format for</guilabel>, select the printer which you are going to use</para></listitem>
+						<listitem><para>Under <guilabel>Paper size</guilabel>, select the size of the paper which you are going to print the photo onto</para></listitem>
+						<listitem><para>Under <guilabel>Orientation</guilabel>, choose the orientation of the photo on the paper</para></listitem>
+					</itemizedlist>
+				</listitem>
+				<listitem><para>Press <guibutton>Apply</guibutton></para></listitem>
+				<listitem><para>Press <menuchoice><guimenuitem>File</guimenuitem><guimenuitem>Print...</guimenuitem></menuchoice></para></listitem>
+				<listitem><para>Change any settings as appropriate (see below)</para></listitem>
+				<listitem><para>Press <guibutton>Print</guibutton> to print the photo</para></listitem>
+			</orderedlist>
+
+			<sect3 id="photos-printing-settings" status="review">
+				<title>Printer Settings</title>
+			
+				<para>You can tweak your printing settings to get the best results. All of these settings can be found in the <menuchoice><guimenuitem>File</guimenuitem><guimenuitem>Print...</guimenuitem></menuchoice> window.</para>
+				<para>Make sure that you select your printer from the list on the <guilabel>General</guilabel> tab to get the full range of settings supported by your printer.</para>
+				<note>
+					<para>Different makes of printer will have different printer settings. The settings below are only provided as a guide for what you may be able to change with your particular printer.</para>
+				</note>
+
+				<sect4 id="photos-printing-paper" status="review">
+					<title>Paper Type</title>
+					<para>The paper type that you use has a large impact on the quality of your printed photo. You should set the paper type to match the paper which you are using in your printer to prevent poor results. Using a <emphasis>glossy</emphasis> paper type with only <emphasis>plain</emphasis> paper loaded into your printer will generally produce poor results, for example.</para>
+					<para>This setting may automatically change the amount of ink which is used, in order to get the best results and to prevent smudging. How this is handled will depend on your printer.</para>
+				</sect4>
+
+				<sect4 id="photos-printing-quality" status="review">
+					<title>Print Quality</title>
+				
+					<para>Print quality is generally measured in <emphasis>DPI</emphasis> (dots per inch). A greater DPI value should result in better print quality.</para>
+					<itemizedlist>
+						<listitem><para>Choose <guilabel>Draft</guilabel> for making quick draft prints which don't use much ink</para></listitem>
+						<listitem><para>Choose <guilabel>Best Quality</guilabel> or <guilabel>Photo</guilabel> for making high quality prints. Printing will be slower and will use more ink</para></listitem>
+					</itemizedlist>
+				</sect4>
+			
+			</sect3>
+
+			<sect3 id="photos-printing-advanced" status="review">
+				<title>Advanced Photo Printing</title>
+			
+				<para>For advanced photo printing, install <application>PhotoPrint</application> (see <ulink type='help' url='ghelp:add-applications'>Adding, Removing and Updating Applications</ulink>). Once installed, press &photoprint; to start PhotoPrint.</para>
+				<para>PhotoPrint allows you to fine-tune your printing settings.</para>
+				<orderedlist>
+					<listitem><para>Under <guilabel>Page Size</guilabel>, change the page size to the size of paper that you want to print onto.</para></listitem>
+					<listitem><para>Under <guilabel>Layout</guilabel>, change the number of columns and rows to reflect the number of photos that you want to put onto a page</para></listitem>
+					<listitem><para>To change the amount of spacing between photos, change the <guilabel>Horizontal</guilabel> and <guilabel>Vertical</guilabel> settings under <guilabel>Gutters</guilabel></para></listitem>
+					<listitem><para>To add a photo to the page, press <menuchoice><guimenuitem>Image</guimenuitem><guimenuitem>Add Image</guimenuitem></menuchoice> and select a photo</para></listitem>
+					<listitem>
+						<para>To change the advanced printer settings, press <menuchoice><guimenuitem>File</guimenuitem><guimenuitem>Print Setup...</guimenuitem></menuchoice></para>
+						<para>You may need to select the correct printer model on the <guilabel>Output</guilabel> tab</para>
+					</listitem>
+					<listitem><para>Press <menuchoice><guimenuitem>File</guimenuitem><guimenuitem>Print</guimenuitem></menuchoice> to print your photos</para></listitem>
+				</orderedlist>
+			</sect3>
+		</sect2>
+
+		<sect2 id="photos-sharing" status="review">
+			<title>Sharing your photos</title>
+			<para>If you want to share your collection of photos with others, why not use an online photo sharing service or burn a CD of your photos? Ubuntu has plenty of tools to help you share your pictures.</para>
+			<itemizedlist>
+				<listitem>
+					<para><ulink type='help' url='ghelp:musicvideophotos#photos-printing'>Print copies</ulink> of your photos.</para>
+				</listitem>
+				<listitem>
+					<para>Share your photos over the Internet using a <ulink type='help' url='ghelp:f-spot#sharing-flickr-or-php-gallery'>photo sharing service</ulink> or a <ulink type='help' url='ghelp:f-spot#website-gallery-folder'>web gallery</ulink>.</para>
+				</listitem>
+				<listitem>
+					<para>Burn a CD of your photos using the <ulink type='help' url='ghelp:musicvideophotos#cdburning'>File Browser</ulink> or <ulink type='help' url='ghelp:f-spot#sharing-burn-to-cd'>F-Spot Photo Manager</ulink>.</para>
+				</listitem>
+				<listitem>
+					<para>Present a <ulink type='help' url='ghelp:musicvideophotos#photos-slideshow'>slideshow</ulink> of your photos.</para>
+				</listitem>
+				<listitem>
+					<para><ulink type='help' url='ghelp:f-spot#sharing-e-mail'>E-mail copies</ulink> of your photos directly.</para>
+				</listitem>
+			</itemizedlist>
+	</sect2>
+	
+	<sect2 id="photos-editing" status="review">
+		<title>Edit and improve photos</title>
+		<para>Sometimes, you may need to adjust or touch-up a photo to make it look better or to remove some flaw. <application>F-Spot</application> includes a few basic tools for doing this. To access these tools, press the <guibutton>Edit Photo</guibutton> button and then click on one of the tools at the bottom of the screen.</para>
+		<para>The <application>GIMP Image Editor</application> is much more advanced. It is installed in Ubuntu by default, and can be started by choosing &gimp;.</para>
+		<para>The GIMP has many professional-level features. It includes tools for selections, drawing, creating paths, masks, filters, effects, and more.</para>
+		
+		<sect3 id="photos-rotating" status="review">
+			<title>Rotating photos</title>
+			<para>You may find that you have some photos which are the wrong way up. It is easy to rotate photos so that they're the right way up again.</para>
+			<para>The <ulink type='help' url='ghelp:eog#eog-manipulate'>Image Viewer</ulink>, F-Spot Photo Manager, <ulink type='help' url='ghelp:gthumb#gthumb-rotate-jpeg'>gThumb Image Viewer</ulink> and the GIMP Image Editor are all capable of rotating photos.</para>
+		</sect3>
+
+		<sect3 id="photos-resizing" status="review">
+			<title>Resizing photos</title>
+
+			<para>You can resize photos which are too big. If you have a photo which has a large file size, resizing it will also reduce the file size.</para>
+			<para>The <application>GIMP Image Editor</application> supports several methods of resizing photos. We will concentrate on the simplest method.</para>
+			<orderedlist>
+				<listitem><para>Open the photo you want to resize in the <application>GIMP Image Editor</application></para></listitem>
+				<listitem><para>Press <menuchoice><guimenuitem>Image</guimenuitem><guimenuitem>Scale Image...</guimenuitem></menuchoice></para></listitem>
+				<listitem>
+					<para>Adjust the <guilabel>Width</guilabel> or <guilabel>Height</guilabel> as appropriate. The image will be kept to scale.</para>
+					<para>If you want to adjust the width and height independently, press the link button which connects the <guilabel>Width</guilabel> and <guilabel>Height</guilabel> boxes, so that it looks like a broken link.</para>
+				</listitem>
+				<listitem><para>Under <guilabel>Quality</guilabel>, change the <guilabel>Interpolation</guilabel> to <guilabel>Cubic (Best)</guilabel>. This will give you the best quality resized image</para></listitem>
+				<listitem><para>Press <guilabel>Scale</guilabel> to resize the photo</para></listitem>
+				<listitem><para>Press <menuchoice><guimenuitem>File</guimenuitem><guimenuitem>Save As...</guimenuitem></menuchoice> and choose a new filename for the photo</para></listitem>
+				<listitem><para>Press <guilabel>Save</guilabel> to save the resized photo</para></listitem>
+			</orderedlist>
+		</sect3>
+	</sect2>
+	
+	</sect1>
+	
+	<sect1 id="cdburning" status="review">
+		<title>Burn CDs and DVDs</title>
+		<para>You can make your own CDs by <emphasis>burning</emphasis> files onto a blank disc using the <emphasis>CD Writer Drive</emphasis> of your computer.</para>
+		<para>Ubuntu includes CD burning capabilities by default, and allows you to easily <ulink type='help' url='ghelp:user-guide#nautilus-cdwriter-data'>create data CDs</ulink>, <ulink type='help' url='ghelp:user-guide#nautilus-cdwriter-copy'>copy CDs and DVDs</ulink> and <ulink type='help' url='ghelp:user-guide#nautilus-cdwriter-writeimage'>create CDs from a disc image file</ulink>.</para>
+			
+		<sect2 id="cdburning-audio" status="review">
+			<title>Burning audio CDs</title>
+			<para>It is possible to copy music from your computer onto a CD, so that it can be played in another CD player. You must have a CD recording drive to be able to do this.</para>
+			<para>When you put a blank (recordable) CD in the drive, Ubuntu will ask if you want to make an audio or data CD. Clicking on <guibutton>Make Audio CD</guibutton> will open the <application>Brasero</application> <guilabel>New audio disc project</guilabel> window. Alternatively, you can launch <application>Brasero</application> by pressing &brasero;, but you will need to click on the <guibutton>Audio project</guibutton> button to begin creating your audio CD.</para>
+			<para>To add music to your audio CD, either drag music from your File Browser or press the <guibutton>Add</guibutton> button. Alternatively, if you have not yet selected any files, the frame to the right of the window will offer other file selection choices.</para>
+			<para>You will also need to select the size of the CD which you inserted (74, 80, 90, or 100 minutes), which can be done by clicking on the CD icon located below the frame on the right. Brasero will warn you if you exceed the set limit.</para>
+			<para>The <ulink type='help' url='ghelp:rhythmbox#cd-burning'>Rhythmbox Music Player</ulink> is also able to burn audio CDs.</para>
+		</sect2>
+		
+		<sect2 id="burning-apps" status="writing">
+			<title>CD/DVD Burning Applications</title>
+			<para>There are a number of more advanced CD and DVD burning applications which you may find useful.</para>
+			<itemizedlist>
+				<listitem><para>CD/DVD Writer GnomeBaker</para></listitem>
+				<listitem><para>Gnome CD Master</para></listitem>
+				<listitem><para>Graveman</para></listitem>
+				<listitem><para>K3b</para></listitem>
+				<listitem><para>Xfburn</para></listitem>
+			</itemizedlist>			
+		</sect2>
+		
+	</sect1>
+	
+</article>

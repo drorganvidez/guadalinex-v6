@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD Docbook XML V.4.3//EN"
+	  "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+	  <!ENTITY % globalent SYSTEM "../../../libs/global.ent">
+	  %globalent;
+	  <!ENTITY % cdo-C SYSTEM "../../../libs/cdo-C.ent">
+	  %cdo-C;
+	  <!ENTITY % gnome-menus-C SYSTEM "../../../ubuntu/libs/gnome-menus-C.ent">
+	  %gnome-menus-C;
+	  <!ENTITY % xinclude SYSTEM "../../../libs/xinclude.mod">
+	  %xinclude;
+	  <!ENTITY language "en">
+	  <!ENTITY ubuntu '<phrase>Ubuntu</phrase>'>
+	  ]>
+	  <?db.chunk.max_depth 4?>
+<?yelp:chunk-depth 4?>
+<chapter id="connect" status="writing">
+	<title>Connect to the Internet</title>
+	<para>This section shows you how to connect to the Internet and home networks. You will also find troubleshooting guides within the sections.</para>
+	<para>Lastly, this section also provides a guide to Internet applications.</para>
+		<important>
+		<para>Network Manager is used in many sections of this guide - you can find it:</para>
+		<orderedlist>
+			<listitem><para>In &networking;</para></listitem>
+			<listitem><para>In the <guilabel>Notification Area</guilabel>. Its icon resembles two computer screens on top of each other, or a wireless signal indicator if you are connected to a wireless network.</para></listitem>
+		</orderedlist>
+	</important>
+	<para>Choose the method you wish to use to connect to the Internet:</para>
+	<orderedlist>
+		<listitem><para>Wireless, see <xref linkend="wireless-connecting"/></para></listitem>
+		<listitem><para>ADSL USB modems, see <xref linkend="modems-adsl-usb"/></para></listitem>
+		<listitem><para>ADSL PPPoE, see <xref linkend="modems-adsl-pppoe"/></para></listitem>
+		<listitem><para>Dial up modems, see <xref linkend="modem"/></para></listitem>
+	</orderedlist>
+	<para>Wired ethernet connections should work without configuration, if not then see <xref linkend="network-troubleshooting"/>.</para>
+</chapter>

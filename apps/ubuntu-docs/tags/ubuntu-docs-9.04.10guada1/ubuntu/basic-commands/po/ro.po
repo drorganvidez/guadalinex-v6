@@ -1,0 +1,896 @@
+# Romanian translation for ubuntu-docs
+# Copyright (c) (c) 2006 Canonical Ltd, and Rosetta Contributors 2006
+# This file is distributed under the same license as the ubuntu-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2006.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ubuntu-docs\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2007-09-14 08:25+0100\n"
+"PO-Revision-Date: 2008-02-13 22:55+0000\n"
+"Last-Translator: Silviu Bojica <bojicas@gmail.com>\n"
+"Language-Team: Romanian <ro@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2008-02-17 10:22+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+"100 > 19) || ((n % 100 == 0) && (n != 0))) ? 2: 1))\n"
+
+#: basic-commands/C/basic-commands-C.omf:6(creator) basic-commands/C/basic-commands-C.omf:7(maintainer)
+msgid "ubuntu-doc@lists.ubuntu.com (Ubuntu Documentation Project)"
+msgstr "ubuntu-doc@lists.ubuntu.com (Proiectul de Documenţatie Ubuntu)"
+
+#: basic-commands/C/basic-commands-C.omf:8(title) basic-commands/C/basic-commands.xml:15(title)
+msgid "Basic Commands"
+msgstr "Comenzi de bază"
+
+#: basic-commands/C/basic-commands-C.omf:9(date)
+msgid "2006-09-07"
+msgstr "2006-09-07"
+
+#: basic-commands/C/basic-commands-C.omf:11(description)
+msgid "Placeholder."
+msgstr "Înlocuitor"
+
+#: basic-commands/C/basic-commands.xml:18(title)
+msgid "Using this Guide"
+msgstr "Utilizarea acestui ghid"
+
+#: basic-commands/C/basic-commands.xml:28(emphasis)
+msgid "man intro(1)"
+msgstr "man intro(1)"
+
+#: basic-commands/C/basic-commands.xml:20(emphasis)
+msgid ""
+"\"Under Linux there are GUIs (graphical user interfaces), where you can "
+"point and click and drag, and hopefully get work done without first reading "
+"lots of documentation. The traditional Unix environment is a CLI (command "
+"line interface), where you type commands to tell the computer what to do. "
+"That is faster and more powerful, but requires finding out what the commands "
+"are.\" -- from <placeholder-1/>"
+msgstr ""
+"„În sistemul de operare Linux există GUI (Interfeţele grafice cu "
+"utilizatorul), în care poţi folosi mouse-ul pentru a executat diverse "
+"comenzi şi, din fericire, poţi să-ţi faci treaba fără să citeşti foarte "
+"multă documentaţie. Mediul tradiţional al Unix-ului este însă CLI (Interfaţa "
+"linie de comandă), în care introduci de la tastatură comenzi prin care îi "
+"spui calculatorului ce să facă. Acest mod este mai rapid şi mai puternic, "
+"dar este necesar să înveţi mai întâi despre aceste comenzi.” -- citat din"
+
+#: basic-commands/C/basic-commands.xml:33(para)
+msgid ""
+"This guide will make you familiar with basic GNU/Linux shell commands. It is "
+"not intended to be a complete guide to the command line, just an "
+"introduction to complement Ubuntu's graphical tools."
+msgstr ""
+"Acest ghid te va familiariza cu comenzile de bază dintr-un terminal (linia "
+"de comanda) GNU/Linux. Nu intenţionează a fi un ghid complet pentru linia de "
+"comanda, este doar o introducere complementară uneltelor grafice Ubuntu."
+
+#: basic-commands/C/basic-commands.xml:43(para)
+msgid ""
+"All command names, file names or paths to directories will be shown using a "
+"<command>monospace font</command>."
+msgstr ""
+"Orice nume de comandă, nume de fişier sau cale către un dosar vor fi afişate "
+"folosind <command>font-ul monospace</command>."
+
+#: basic-commands/C/basic-commands.xml:50(para)
+msgid ""
+"All the commands on this guide are to be issued from a command prompt in a "
+"<application>Terminal</application> and will be shown as: <screen>command to "
+"type</screen>"
+msgstr ""
+"Orice comandă din acest ghid poate fi folosită doar într-un terminal (linie "
+"de comandă) <application>Terminal</application> şi va fi afişată ca: "
+"<screen>comanda ce va fi tastată</screen>"
+
+#: basic-commands/C/basic-commands.xml:58(para)
+msgid ""
+"<emphasis role=\"strong\">Note that Linux is case sensitive.</emphasis> "
+"User, user, and USER are all different to Linux."
+msgstr ""
+"<emphasis role=\"strong\">De observat că în Linux majusculele sunt "
+"semnificative. </emphasis>Utilizator, utilizator şi UTILIZATOR sunt cuvinte "
+"diferite pentru Linux."
+
+#: basic-commands/C/basic-commands.xml:69(title)
+msgid "Starting a Terminal"
+msgstr "Porneşte un terminal"
+
+#: basic-commands/C/basic-commands.xml:70(para)
+msgid "To open a <application>Terminal</application> do as follow:"
+msgstr ""
+"Pentru a deschide un <application>Terminal</application>, urmăriţi paşii de "
+"mai jos:"
+
+#: basic-commands/C/basic-commands.xml:76(para)
+msgid ""
+"Choose "
+"<menuchoice><guimenu>Applications</guimenu><guimenuitem>Accessories</guimenui"
+"tem><guimenuitem>Terminal</guimenuitem></menuchoice>;"
+msgstr "Alege"
+
+#: basic-commands/C/basic-commands.xml:81(para)
+msgid ""
+"Or press <keycombo><keycap>Alt</keycap><keycap>F2</keycap></keycombo> and "
+"type <command>gnome-terminal</command>."
+msgstr ""
+"Sau apasă <keycombo><keycap>Alt</keycap><keycap>F2</keycap></keycombo> şi "
+"tastează <command>gnome-terminal</command>."
+
+#: basic-commands/C/basic-commands.xml:94(title)
+msgid "File and Directory Commands"
+msgstr "Comenzi pentru fişiere şi directoare"
+
+#: basic-commands/C/basic-commands.xml:97(title)
+msgid "cd"
+msgstr "cd"
+
+#: basic-commands/C/basic-commands.xml:98(para)
+msgid ""
+"The <command>cd</command> command changes directories. When you open a "
+"terminal you will be in your home directory. To move around the file system "
+"you will use <command>cd</command>. Examples:"
+msgstr ""
+"Comanda <command>cd</command> schimbă directoarele. Când deschideţi un "
+"terminal vă veţi afla direct în directorul dvs. personal. Pentru a vă muta "
+"într-un alt director din sistem, folosiţi <command>cd</command>. Exemple:"
+
+#: basic-commands/C/basic-commands.xml:107(para)
+msgid "To navigate into the root directory, type: <screen>cd /</screen>"
+msgstr ""
+"Pentru a merge la directorul rădăcină, tastaţi: <screen>cd /</screen>"
+
+#: basic-commands/C/basic-commands.xml:113(para)
+msgid ""
+"To navigate to your home directory, type: <screen>cd</screen> or <screen>cd "
+"~</screen>"
+msgstr ""
+"Pentru a merge în directorul personal, tastaţi <screen>cd</screen> sau "
+"<screen>cd ~</screen>"
+
+#: basic-commands/C/basic-commands.xml:121(para)
+msgid "To navigate up one directory level, type: <screen>cd ..</screen>"
+msgstr ""
+"Pentru a merge la directorul superior, tastaţi: <screen>cd ..</screen>"
+
+#: basic-commands/C/basic-commands.xml:127(para)
+msgid ""
+"To navigate to the previous directory (or back), type: <screen>cd -</screen>"
+msgstr ""
+"Pentru a merge la directorul precedent, tastaţi: <screen>cd -</screen>"
+
+#: basic-commands/C/basic-commands.xml:134(para)
+msgid ""
+"To navigate through multiple levels of directory at once, specify the full "
+"directory path that you want to go to. For example, type: <screen>cd "
+"/var/www</screen> to go directly to the <filename "
+"class=\"directory\">/www</filename> subdirectory of <filename "
+"class=\"directory\">/var/</filename>. As another example, type: <screen>cd "
+"~/Desktop</screen> to move you to the <filename "
+"class=\"directory\">Desktop</filename> subdirectory inside your home "
+"directory."
+msgstr ""
+"Pentru a ajunge la o destinaţie ce trece prin mai multe dosare, specificaţi "
+"întreaga cale pe care o doriţi să o accesaţi. De exemplu, tastaţi: "
+"<screen>cd /var/www</screen> pentru a ajunge direct în subdosarul <filename "
+"class=\"directory\">/www</filename> din dosarul <filename "
+"class=\"directory\">/var/</filename>. Drept alt exemplu, tastaţi: <screen>cd "
+"~/Desktop</screen> pentru a merge la dosarul <filename "
+"class=\"directory\">Desktop</filename> din dosarul tău personal."
+
+#: basic-commands/C/basic-commands.xml:151(title)
+msgid "pwd"
+msgstr "pwd"
+
+#: basic-commands/C/basic-commands.xml:162(para)
+msgid ""
+"<application>GNOME Terminal</application> also displays this information in "
+"the title bar of it's window."
+msgstr ""
+"<application>Terminal</application> afişează deasemenea această informaţie "
+"în titlul ferestrei sale."
+
+#: basic-commands/C/basic-commands.xml:152(para)
+msgid ""
+"<command>pwd</command>: The <command>pwd</command> command will show you "
+"which directory you're located in (<acronym>pwd</acronym> stands for "
+"<quote>print working directory</quote>). For example, typing "
+"<screen>pwd</screen> in the <filename class=\"directory\">Desktop</filename> "
+"directory, will show <computeroutput>~/Desktop</computeroutput>. "
+"<placeholder-1/>"
+msgstr ""
+"<command>pwd</command>: Comanda <command>pwd</command> va afişa în ce dosar "
+"te aflii (<acronym>pwd</acronym> poate fi explicată drept <quote>arată "
+"dosarul curent</quote>). De exemplu, tastând <screen>pwd</screen> în dosarul "
+"<filename class=\"directory\">Desktop</filename>, va afişa "
+"<computeroutput>~/Desktop</computeroutput>. <placeholder-1/>"
+
+#: basic-commands/C/basic-commands.xml:171(title)
+msgid "ls"
+msgstr "ls"
+
+#: basic-commands/C/basic-commands.xml:172(para)
+msgid ""
+"The <command>ls</command> command shows you the files in your current "
+"directory. Used with certain options, you can see sizes of files, when files "
+"where made, and permissions of files. For example, typing <screen>ls "
+"~</screen> will show you the files that are in your home directory."
+msgstr ""
+"Comanda <command>ls</command> afişează ce fişiere sunt în dosarul curent. "
+"Dacă este folosită cu argumente, poate afişa dimensiunile fişierelor, data "
+"crearii, şi permisiunele acestora. De exemplu, tastând <screen>ls ~</screen> "
+" vor fi afişate fişierele din dosarul tău personal."
+
+#: basic-commands/C/basic-commands.xml:183(title)
+msgid "cp"
+msgstr "cp"
+
+#: basic-commands/C/basic-commands.xml:184(para)
+msgid ""
+"The <command>cp</command> command makes a copy of a file for you. For "
+"example, type: <screen>cp file foo</screen> to make a exact copy of "
+"<filename>file</filename> and name it <filename>foo</filename>, but the file "
+"<filename>file</filename> will still be there."
+msgstr ""
+"Comanda <command>cp</command> efectuează o copie a fişierului. De exemplu, "
+"tastează: <screen>cp fişier foo</screen> pentru a face o copie a fişierului "
+"<filename>fişier</filename> ce se numeşte <filename>foo</filename>, iar "
+"fişierul <filename>file</filename> nu este modificat."
+
+#: basic-commands/C/basic-commands.xml:194(title)
+msgid "mv"
+msgstr "mv"
+
+#: basic-commands/C/basic-commands.xml:206(para)
+msgid ""
+"If you are using <command>mv</command> with <command>sudo</command> you will "
+"not be able to use the <emphasis role=\"strong\">~</emphasis> shortcut, but "
+"will have to use the full pathnames to your files. This is because when you "
+"are working as root, <emphasis role=\"strong\">~</emphasis> will refer to "
+"the root account's home directory, not your own."
+msgstr ""
+"Dacă utilizaţi <command>mv</command> cu <command>sudo</command> nu veţi "
+"putea utiliza scurtătura <emphasis role=\"strong\">~</emphasis>, dar va "
+"trebui să folosiţi numele întreg al fişierelor. Asta apare deoarece atunci "
+"când lucraţi ca root, <emphasis role=\"strong\">~</emphasis> se va referi la "
+"directorul home al contului de root, nu la al tău."
+
+#: basic-commands/C/basic-commands.xml:195(para)
+msgid ""
+"The <command>mv</command> command moves a file to a different location or "
+"will rename a file. Examples are as follows: <screen>mv file foo</screen> "
+"will rename the file <filename>file</filename> to <filename>foo</filename>. "
+"<screen>mv foo ~/Desktop</screen> will move the file "
+"<filename>foo</filename> to your <filename "
+"class=\"directory\">Desktop</filename> directory but will not rename it. You "
+"must specify a new file name to rename a file. <placeholder-1/>"
+msgstr ""
+"Comanda <command>mv</command> mută un fişier într-un alt loc sau va redenumi "
+"un fişier. Iată exemple: <screen>mv file foo</screen> va redenumi fişierul "
+"<filename>file</filename> în <filename>foo</filename>.<screen>mv foo "
+"~/Desktop</screen> va muta fişierul <filename>foo</filename> în directorul "
+"<filename class=\"directory\">Desktop</filename> dar nu îl va redenumi. "
+"Trebuie să specificaţi un nou nume pentru un fişier pentru a redenumi acel "
+"fişier.<placeholder-1/>"
+
+#: basic-commands/C/basic-commands.xml:219(title)
+msgid "rm"
+msgstr "rm"
+
+#: basic-commands/C/basic-commands.xml:220(para)
+msgid ""
+"Use the <command>rm</command> command to remove or delete a file in your "
+"directory. It will not work on directories which have files in them."
+msgstr ""
+"Folosiţi comanda <command>rm</command> pentru a şterge un fişier dintr-un "
+"director. Această comandă nu va şterge directoare care au fişiere în ele."
+
+#: basic-commands/C/basic-commands.xml:228(title)
+msgid "mkdir"
+msgstr "mkdir"
+
+#: basic-commands/C/basic-commands.xml:229(para)
+msgid ""
+"The <command>mkdir</command> command will allow you to create directories. "
+"For example, typing: <screen>mkdir music</screen> will create a music "
+"directory in the current directory."
+msgstr ""
+"Comanda <command>mkdir</command> vă permite să creaţi noi directoare. De "
+"exemplu, scriind : <screen>mkdir music</screen>, se va crea un director cu "
+"numele music în interiorul directorului curent."
+
+#: basic-commands/C/basic-commands.xml:239(title)
+msgid "System Information Commands"
+msgstr "Comenzi pentru Informaţii de Sistem"
+
+#: basic-commands/C/basic-commands.xml:242(title)
+msgid "df"
+msgstr "df"
+
+#: basic-commands/C/basic-commands.xml:243(para)
+msgid ""
+"The <command>df</command> command displays filesystem disk space usage for "
+"all partitions. <screen>df -h</screen> will give information using megabytes "
+"(M) and gigabytes (G) instead of blocks (<emphasis role=\"strong\">-"
+"h</emphasis> means \"human-readable\")."
+msgstr ""
+"Comanda <command>df</command> afişează gradul de utilizare al sistemelor de "
+"fişiere din toate partiţiile. <screen>df -h</screen> va oferi informaţii în "
+"megaocteţi (M) şi gigaocteţi (G) în loc de blocuri (<emphasis "
+"role=\"strong\">-h</emphasis> înseamnă \"human-readable\" trad. \"citibil de "
+"persoane\" în sensul de \"uşor de interpretat\")."
+
+#: basic-commands/C/basic-commands.xml:253(title)
+msgid "free"
+msgstr "free"
+
+#: basic-commands/C/basic-commands.xml:254(para)
+msgid ""
+"The <command>free</command> command displays the amount of free and used "
+"memory in the system. <screen>free -m</screen> will give the information "
+"using megabytes, which is probably most useful for current computers."
+msgstr ""
+"Comanda <command>free</command> afişează cantitatea de memorie liberă şi pe "
+"cea folosită de sistem. <screen>free -m</screen> va arata aceiaşi informaţie "
+"utilizând megaocteţi (megabaiţi), unitate care este probabil cea mai "
+"folositoare pentru computerele actuale."
+
+#: basic-commands/C/basic-commands.xml:264(title)
+msgid "top"
+msgstr "sus"
+
+#: basic-commands/C/basic-commands.xml:265(para)
+msgid ""
+"The <command>top</command> command displays information on your GNU/Linux "
+"system, running processes and system resources, including CPU, RAM &amp; "
+"swap usage and total number of tasks being run. To exit "
+"<application>top</application>, press <keycap>q</keycap>."
+msgstr ""
+"Comanda <command>top</command> afişează informaţii despre sistemul "
+"dumneavoastră GNU/Linux, numărul de procese active şi resursele sistemului, "
+"incluzînd CPU, RAM şi cantitatea de swap folosită şi numărul total de "
+"procese în derulare. Pentru a ieşi din aplicaţia "
+"<application>top</application>, apăsaţi tasta <keycap>q</keycap>."
+
+#: basic-commands/C/basic-commands.xml:275(title)
+msgid "uname"
+msgstr "uname"
+
+#: basic-commands/C/basic-commands.xml:276(para)
+msgid ""
+"The <command>uname</command> command with the <emphasis role=\"strong\">-"
+"a</emphasis> option, prints all system information, including machine name, "
+"kernel name &amp; version, and a few other details. Most useful for checking "
+"which kernel you're using."
+msgstr ""
+"Comanda <command>uname</command> cu opţiunea <emphasis role=\"strong\">-"
+"a</emphasis>, afişează toate informaţiile sistemului, incluzînd numele "
+"calculatorului, nume kernel şi versiune plus alte câteva detalii. Se "
+"foloşeşte in special pentru a afla  versiune de kernel folosită."
+
+#: basic-commands/C/basic-commands.xml:286(title)
+msgid "lsb_release"
+msgstr "lsb_release"
+
+#: basic-commands/C/basic-commands.xml:287(para)
+msgid ""
+"The <emphasis role=\"strong\">lsb_release</emphasis> command with the "
+"<emphasis role=\"strong\">-a</emphasis> option prints version information "
+"for the Linux release you're running. For example, typing: "
+"<screen>lsb_release -a</screen> will give you: <screen>\n"
+"No LSB modules are available.\n"
+"Distributor ID: Ubuntu\n"
+"Description:    Ubuntu 7.04 \n"
+"Release:        7.04\n"
+"Codename:       feisty</screen>"
+msgstr ""
+"Comanda <emphasis role=\"strong\">lsb_release</emphasis> cu opţiunea "
+"<emphasis role=\"strong\">-a</emphasis> afişează informaţii referitoare la "
+"versiunea de Linux pe care o folosiţi. De exemplu, tastînd: "
+"<screen>lsb_release -a</screen> veţi primi răspunsul: <screen>\n"
+"No LSB modules are available.\n"
+"Distributor ID: Ubuntu\n"
+"Description: Ubuntu 7.04\n"
+"Release: 7.04\n"
+"Codename: feisty</screen>"
+
+#: basic-commands/C/basic-commands.xml:305(title)
+msgid "ifconfig"
+msgstr "ifconfig"
+
+#: basic-commands/C/basic-commands.xml:306(para)
+msgid ""
+"The <command>ifconfig</command> command reports on your system's network "
+"interfaces."
+msgstr ""
+"Comanda <command>ifconfig</command> returnează un raport privind interfeţele "
+"de reţea din sistem."
+
+#: basic-commands/C/basic-commands.xml:314(title)
+msgid "Executing Commands with Elevated Privileges"
+msgstr "Executarea comenzilor cu privilegii speciale"
+
+#: basic-commands/C/basic-commands.xml:315(para)
+msgid ""
+"The following commands will need to be prefaced with the "
+"<command>sudo</command> command. Please see <ulink "
+"url=\"https://help.ubuntu.com/community/RootSudo\">RootSudo</ulink> for "
+"information on using <command>sudo</command>."
+msgstr ""
+"Următoarele comenzi au nevoie să fie precedate de comanda "
+"<command>sudo</command>. Consultaţi <ulink "
+"url=\"https://help.ubuntu.com/community/RootSudo\">RootSudo</ulink> pentru "
+"informaţii referitoare la modul de folosire a comenzii "
+"<command>sudo</command>."
+
+#: basic-commands/C/basic-commands.xml:324(title)
+msgid "Adding a New Group"
+msgstr "Adăugarea unui grup nou"
+
+#: basic-commands/C/basic-commands.xml:325(para)
+msgid ""
+"The <command>addgroup</command> command is used to create a new group on the "
+"system. To create a new group, type: <screen>addgroup newgroup</screen> The "
+"above command will create a new group called <emphasis "
+"role=\"strong\">newgroup</emphasis>."
+msgstr ""
+"Comanda <command>addgroup</command> este folosită pentru a crea un grup nou "
+"în sistem. Pentru a crea un grup nou, tastaţi: <screen>addgroup "
+"grupnou</screen> Comanda de mai sus va crea un nou group numit <emphasis "
+"role=\"strong\">grupnou</emphasis>."
+
+#: basic-commands/C/basic-commands.xml:334(title)
+msgid "Adding A New User"
+msgstr "Adaugă un nou utilizator"
+
+#: basic-commands/C/basic-commands.xml:335(para)
+msgid ""
+"The <command>adduser</command> is used to create new users on the system. To "
+"create a new user, type: <screen>adduser newuser</screen> The above command "
+"will create a new user called <emphasis role=\"strong\">newuser</emphasis>."
+msgstr ""
+"Comanda <command>adduser</command> este folosită pentru a adauga noi "
+"utilizatori în sistem. Pentru a crea un utilizator nou, tastaţi: "
+"<screen>adduser utilizator</screen> Comanda de mai sus va crea un utilizator "
+"nou numit <emphasis role=\"strong\">utilizator</emphasis>."
+
+#: basic-commands/C/basic-commands.xml:342(para)
+msgid ""
+"To assign a password for the new user use the <command>passwd</command> "
+"command: <screen>passwd newuser</screen>"
+msgstr ""
+"Pentru a atribui o parolă noului utilizator utilizați comanda "
+"<command>passwd</command>: <screen>passwd utilizatornou</screen>"
+
+#: basic-commands/C/basic-commands.xml:348(para)
+msgid ""
+"Finally, to assign the new user to the new group, type: <screen>adduser "
+"newuser newgroup</screen>"
+msgstr ""
+"În cele din urmă, pentru a adăuga noul utilizator la noul grup, tastaţi: "
+"<screen>adduser utilizatornou grupnou</screen>"
+
+#: basic-commands/C/basic-commands.xml:356(title)
+msgid "Options"
+msgstr "Opțiuni"
+
+#: basic-commands/C/basic-commands.xml:357(para)
+msgid ""
+"The default behavior for a command may usually be modified by adding a "
+"<emphasis role=\"strong\">-- <emphasis>option</emphasis></emphasis> to the "
+"command. The <link linkend=\"ls\"><command>ls</command></link> command, for "
+"example, has a <emphasis role=\"strong\">-s</emphasis> option so that "
+"<command>ls -s</command> will include file sizes in the listing. There is "
+"also a <emphasis role=\"strong\">-h</emphasis> option to get those sizes in "
+"a \"human readable\" format."
+msgstr ""
+"Comportamentul obişnuit al unei comenzi poate fi modificat prin adăugarea "
+"unei <emphasis role=\"strong\">-- <emphasis>opţiună</emphasis></emphasis> la "
+"comandă. Comanda <link linkend=\"ls\"><command>ls</command></link>, de "
+"exemplu, are o opţiune <emphasis role=\"strong\">-s</emphasis>, astfel încât "
+"<command>ls -s</command> va include şi dimensiunea fişierelor în lista "
+"finală. Există deasemenea opţiunea <emphasis role=\"strong\">-h</emphasis> "
+"pentru ca acele dimensiuni să fie afişate într-un format \"uman\"."
+
+#: basic-commands/C/basic-commands.xml:368(para)
+msgid ""
+"Options can be grouped in clusters so <screen>ls -sh</screen> is exactly the "
+"same command as <screen>ls -s -h</screen> Most options have a long version, "
+"prefixed with two dashes instead of one, so even <screen>ls --size --human-"
+"readable</screen> is the same command."
+msgstr ""
+"Opţiunile pot fi grupate asfel încât <screen>ls -sh</screen> este exact la "
+"fel ca <screen>ls -s -h</screen> Cele mai multe opţiuni au o versiune lungă, "
+"care începe cu două cratimi în loc de una, astfel încât <screen>ls --size --"
+"human-readable</screen> va afişa aceleaşi rezultate."
+
+#: basic-commands/C/basic-commands.xml:379(title)
+msgid "\"Man\" and getting help"
+msgstr "\"Man\"  şi obţti ajutor"
+
+#: basic-commands/C/basic-commands.xml:380(para)
+msgid ""
+"<emphasis role=\"strong\"><emphasis>command</emphasis> --help</emphasis> and "
+"<emphasis role=\"strong\">man <emphasis>command</emphasis></emphasis> are "
+"the two most important tools at the command line."
+msgstr ""
+"<emphasis role=\"strong\"><emphasis>nume_comandă</emphasis> --"
+"help</emphasis> şi <emphasis role=\"strong\">man</emphasis> "
+"<emphasis>nume_comandă</emphasis>  sunt două dintre cele mai importante "
+"ajutoare în lucrul în linia de comanda."
+
+#: basic-commands/C/basic-commands.xml:387(para)
+msgid ""
+"Virtually all commands understand the <emphasis role=\"strong\">-"
+"h</emphasis> (or <emphasis role=\"strong\">--help</emphasis>) option which "
+"will produce a short usage description of the command and it's options, then "
+"exit back to the command prompt. Type <screen>man -h</screen> or <screen>man "
+"--help</screen> to see this in action."
+msgstr ""
+"Aproape fără excepţie, toate comenzile înţeleg opţiunea <emphasis "
+"role=\"strong\">-h</emphasis> (sau <emphasis role=\"strong\">--"
+"help</emphasis>) care are ca rezultat afişarea unei descrieri scurte asupra "
+"comenzii şi a opţiunilor sale, după care se revine la linia de comandă. "
+"Tastaţi <screen>man -h</screen> sau <screen>man --help</screen> pentru a o "
+"vedea în acţiune."
+
+#: basic-commands/C/basic-commands.xml:397(para)
+msgid ""
+"Every command and nearly every application in Linux will have a man (manual) "
+"file, so finding them is as simple as typing <command>man command</command> "
+"to bring up a longer manual entry for the specified command. For example, "
+"<screen>man mv</screen> will bring up the <command>mv</command> (move) "
+"manual."
+msgstr ""
+"Toate comenzile şi aproape toate aplicaţiile Linux au un fişier man "
+"(manual), astfel încât găsirea lor este atât de simpla precum tastarea "
+"comenzii <command>man comanda</command> pentru a primi manualul de utilizare "
+"pentru comanda specificată. De exemplu, <screen>man mv</screen> va returna "
+"manualul pentru comanda <command>mv</command> (mutare)."
+
+#: basic-commands/C/basic-commands.xml:406(para)
+#, fuzzy
+msgid ""
+"Move up and down the man file with the arrow keys, and quit back to the "
+"command prompt with <keycap>q</keycap>."
+msgstr ""
+"Mută-te în sus şi în jos cu ajutorul tastelor săgeţi de la tastatură, şi "
+"revino la linia de comandă cu ajutorul tastei <keycap>q</keycap>."
+
+#: basic-commands/C/basic-commands.xml:411(para)
+msgid ""
+"<screen>man man</screen> will bring up the manual entry for the "
+"<command>man</command> command, which is a good place to start."
+msgstr ""
+"<screen>man man</screen> va returna manualul pentru comanda "
+"<command>man</command>, un loc foarte bun de unde să începeţi."
+
+#: basic-commands/C/basic-commands.xml:417(para)
+msgid ""
+"<screen>man intro</screen> is especially useful - it displays the "
+"\"Introduction to user commands\" which is a well-written, fairly brief "
+"introduction to the Linux command line."
+msgstr ""
+"<screen>man intro</screen> este foarte folositoare - afişează textul "
+"\"Introducere în folosirea comenzilor de utilizator\", care este o scurtă "
+"introducere, foarte bine scrisă, despre comezile din Linux."
+
+#: basic-commands/C/basic-commands.xml:422(para)
+msgid ""
+"There are also <command>info</command> pages, which are generally more in-"
+"depth than <command>man</command> pages. Try <screen>info info</screen> for "
+"the introduction to info pages."
+msgstr ""
+"Deasemenea există paginile <command>info</command>, care în general conţin "
+"informaţii mai detaliate decât comenzile <command>man</command>. Încercaţi "
+"<screen>info info</screen> pentru a vedea informaţii detaliate despre "
+"această comandă."
+
+#: basic-commands/C/basic-commands.xml:432(title)
+msgid "Searching for man files"
+msgstr "Căutarea fişierelor man"
+
+#: basic-commands/C/basic-commands.xml:433(para)
+msgid ""
+"If you aren't sure which command or application you need to use, you can try "
+"searching the man files."
+msgstr ""
+"Dacă nu sunteţi sigur ce comandă sau aplicaţie trebuie să folosiţi, puteţi "
+"să încercaţi să cautaţi în fişierele man (manual)."
+
+#: basic-commands/C/basic-commands.xml:446(para)
+msgid "This is the same as the <command>apropos</command> command."
+msgstr "Este echivalentă cu comanda <command>apropos</command>."
+
+#: basic-commands/C/basic-commands.xml:439(para)
+msgid ""
+"<command>man -k foo</command>, will search the man files for "
+"<emphasis>foo</emphasis>. Try <screen>man -k nautilus</screen> to see how "
+"this works. <placeholder-1/>"
+msgstr ""
+"<command>man -k foo</command>, va căuta fişierele man pentru "
+"<emphasis>foo</emphasis>. Încearcaţi <screen>man -k nautilus</screen> pentru "
+"a vedea cum funcţionează. <placeholder-1/>"
+
+#: basic-commands/C/basic-commands.xml:459(para)
+msgid "This is the same as the <command>whatis</command> command."
+msgstr "Este echivalentă cu comanda <command>whatis</command>."
+
+#: basic-commands/C/basic-commands.xml:454(para)
+msgid ""
+"<command>man -f foo</command>, searches only the titles of your system's man "
+"files. For example, try <screen>man -f gnome</screen><placeholder-1/>"
+msgstr ""
+"<command>man -f foo</command>, caută doar în titlurile manualelor de sistem. "
+"De exemplu <screen>man -f gnome</screen><placeholder-1/>"
+
+#: basic-commands/C/basic-commands.xml:471(title)
+msgid "Other Useful Things"
+msgstr "Alte lucruri folositoare"
+
+#: basic-commands/C/basic-commands.xml:474(title)
+msgid "Pasting in commands"
+msgstr ""
+
+#: basic-commands/C/basic-commands.xml:475(para)
+msgid ""
+"Often, you will be referred to instructions that require commands to be "
+"pasted into the terminal. You might be wondering why the text you've copied "
+"from a web page using "
+"<keycombo><keycap>Ctrl</keycap><keycap>C</keycap></keycombo> won't paste in "
+"with <keycombo><keycap>Ctrl</keycap><keycap>V</keycap></keycombo>. Surely "
+"you don't have to type in all those nasty commands and filenames? Relax. "
+"Middle Button Click on your mouse (both buttons simultaneously on a two-"
+"button mouse) or Right Click and select "
+"<menuchoice><guimenuitem>Paste</guimenuitem></menuchoice> from the menu."
+msgstr ""
+
+#: basic-commands/C/basic-commands.xml:498(title)
+msgid "Save on typing"
+msgstr "Salvare în timpul tastării"
+
+#: basic-commands/C/basic-commands.xml:507(para)
+msgid ""
+"<keycap>Up Arrow</keycap> or "
+"<keycombo><keycap>Ctrl</keycap><keycap>p</keycap></keycombo>"
+msgstr ""
+"<keycap>Săgeată sus</keycap> sau "
+"<keycombo><keycap>Ctrl</keycap><keycap>p</keycap></keycombo>"
+
+#: basic-commands/C/basic-commands.xml:517(para)
+msgid "Scrolls through the commands you've entered previously."
+msgstr "Derulează comenzile pe care le-aşi introdus anterior."
+
+#: basic-commands/C/basic-commands.xml:525(para)
+msgid ""
+"<keycap>Down Arrow</keycap> or "
+"<keycombo><keycap>Ctrl</keycap><keycap>n</keycap></keycombo>"
+msgstr ""
+"<keycap>Săgeată jos</keycap> or "
+"<keycombo><keycap>Ctrl</keycap><keycap>n</keycap></keycombo>"
+
+#: basic-commands/C/basic-commands.xml:535(para)
+msgid "Takes you back to a more recent command."
+msgstr "Vă duce înapoi la cea mai recentă comandă."
+
+#: basic-commands/C/basic-commands.xml:542(keycap)
+msgid "Enter"
+msgstr "tasta Enter"
+
+#: basic-commands/C/basic-commands.xml:547(para)
+msgid "When you have the command you want."
+msgstr "Când aveţi comanda pe care o doriţi."
+
+#: basic-commands/C/basic-commands.xml:553(keycap)
+msgid "Tab"
+msgstr "Tab"
+
+#: basic-commands/C/basic-commands.xml:558(para)
+msgid ""
+"A very useful feature. It autocompletes any commands or filenames, if "
+"there's only one option, or else gives you a list of options."
+msgstr ""
+"O funcţie foarte utilă. Ea completează automat orice comandă sau nume de "
+"fişier, dacă există o singură opţiune, sau vă oferă o listă de opţiuni."
+
+#: basic-commands/C/basic-commands.xml:571(title)
+msgid "Change the text"
+msgstr "Schimbă textul"
+
+#: basic-commands/C/basic-commands.xml:572(para)
+msgid ""
+"The mouse won't work. Use the <keycap>Left/Right arrow</keycap> keys to move "
+"around the line."
+msgstr ""
+"Mouse-ul nu funcţionează, Folosiţi tastele <keycap>Săgeata "
+"stânga/dreapta</keycap> pentra a vă deplasa în liniei."
+
+#: basic-commands/C/basic-commands.xml:576(para)
+msgid ""
+"When the cursor is where you want it in the line, typing "
+"<emphasis>inserts</emphasis> text, it doesn't overtype what's already there."
+msgstr ""
+
+#: basic-commands/C/basic-commands.xml:591(keycap) basic-commands/C/basic-commands.xml:607(keycap) basic-commands/C/basic-commands.xml:626(keycap) basic-commands/C/basic-commands.xml:642(keycap) basic-commands/C/basic-commands.xml:657(keycap) basic-commands/C/basic-commands.xml:671(keycap)
+msgid "Ctrl"
+msgstr "Ctrl"
+
+#: basic-commands/C/basic-commands.xml:592(keycap)
+msgid "a"
+msgstr ""
+
+#: basic-commands/C/basic-commands.xml:594(keycap)
+msgid "Home"
+msgstr "Acasă"
+
+#: basic-commands/C/basic-commands.xml:599(para)
+msgid "Moves the cursor to the <emphasis>start</emphasis> of a line."
+msgstr "Mutaţi cursorul la <emphasis>începutul</emphasis> liniei."
+
+#: basic-commands/C/basic-commands.xml:608(keycap)
+msgid "e"
+msgstr ""
+
+#: basic-commands/C/basic-commands.xml:610(keycap)
+msgid "End"
+msgstr "Sfârşit"
+
+#: basic-commands/C/basic-commands.xml:615(para)
+#, fuzzy
+msgid ""
+"Moves the cursor to the <emphasis><emphasis "
+"role=\"strong\">e</emphasis>nd</emphasis> of a line."
+msgstr ""
+"Mută cursorul la <emphasis><emphasis "
+"role=\"strong\">s</emphasis>fârşitul</emphasis> liniei."
+
+#: basic-commands/C/basic-commands.xml:627(keycap)
+msgid "b"
+msgstr ""
+
+#: basic-commands/C/basic-commands.xml:633(para)
+msgid ""
+"Moves to the <emphasis role=\"strong\">b</emphasis>eginning of the previous "
+"or current word."
+msgstr ""
+
+#: basic-commands/C/basic-commands.xml:643(keycap)
+msgid "k"
+msgstr ""
+
+#: basic-commands/C/basic-commands.xml:649(para)
+msgid "Deletes from the current cursor position to the end of the line."
+msgstr "Şterge de la poziţia curentă a cursorului pana la sfârşitul liniei."
+
+#: basic-commands/C/basic-commands.xml:658(keycap)
+msgid "u"
+msgstr ""
+
+#: basic-commands/C/basic-commands.xml:664(para)
+msgid "Deletes the whole of the current line."
+msgstr "Şterge tot de pe linia curentă."
+
+#: basic-commands/C/basic-commands.xml:672(keycap)
+msgid "w"
+msgstr ""
+
+#: basic-commands/C/basic-commands.xml:678(para)
+msgid "Deletes the word before the cursor."
+msgstr "Şterge cuvântul anterior poziţiei cursorului."
+
+#: basic-commands/C/basic-commands.xml:688(title)
+msgid "More Information"
+msgstr "Mai multe informaţii"
+
+#: basic-commands/C/basic-commands.xml:689(para)
+msgid "The following online guides are available:"
+msgstr "Următoarele ajutoare online sunt disponibile:"
+
+#: basic-commands/C/basic-commands.xml:692(para)
+msgid ""
+"<ulink url=\"https://help.ubuntu.com/community/AptGetHowto\"> "
+"AptGetHowto</ulink> - using apt-get to install packages from the command "
+"line."
+msgstr ""
+"<ulink url=\"https://help.ubuntu.com/community/AptGetHowto\"> "
+"AptGetHowto</ulink> - folosirea apt-get pentru a instala pachete cu ajutorul "
+"liniei de comandă."
+
+#: basic-commands/C/basic-commands.xml:699(para)
+msgid ""
+"<ulink url=\"https://help.ubuntu.com/community/Repositories/CommandLine\"> "
+"Commandline Repository Editing</ulink> - adding the Universe/Multiverse "
+"repositories through the command line."
+msgstr ""
+"<ulink "
+"url=\"https://help.ubuntu.com/community/Repositories/CommandLine\">Editarea "
+"arhivelor din linia de comandă</ulink> - adăugarea arhivelor "
+"Universe/Multiverse cu ajutorul liniei de comandă."
+
+#: basic-commands/C/basic-commands.xml:707(para)
+msgid ""
+"<ulink url=\"https://help.ubuntu.com/community/grep\">grep Howto</ulink> - "
+"grep is a powerful command line search tool."
+msgstr ""
+"<ulink url=\"https://help.ubuntu.com/community/grep\">grep Howto</ulink> - "
+"grep este un instrument de căutare foarte puternic."
+
+#: basic-commands/C/basic-commands.xml:714(para)
+msgid ""
+"<ulink url=\"https://help.ubuntu.com/community/find\">find </ulink> - locate "
+"files on the command line."
+msgstr ""
+"<ulink url=\"https://help.ubuntu.com/community/find\">find </ulink> - "
+"gaseşte fişierele cu ajutorul liniei de comandă."
+
+#: basic-commands/C/basic-commands.xml:720(para)
+msgid ""
+"<ulink url=\"https://help.ubuntu.com/community/CommandlineHowto\"> "
+"CommandlineHowto</ulink> - longer and more complete than this basic guide, "
+"but still unfinished."
+msgstr ""
+"<ulink url=\"https://help.ubuntu.com/community/CommandlineHowto\"> "
+"CommandlineHowto</ulink> - un ghid mai lung şi mai complet decât acest ghid "
+"de bază, dar încă neterminat."
+
+#: basic-commands/C/basic-commands.xml:727(para)
+msgid ""
+"<ulink url=\"https://help.ubuntu.com/community/HowToReadline\"> "
+"HowToReadline</ulink> - information on some more advanced customization for "
+"the command line."
+msgstr ""
+"<ulink url=\"https://help.ubuntu.com/community/HowToReadline\"> "
+"HowToReadline</ulink> - informaţii despre alte utilizări avansate ale liniei "
+"de comandă."
+
+#: basic-commands/C/basic-commands.xml:734(para)
+msgid "For more detailed tutorials on the Linux command line, please see:"
+msgstr ""
+"Pentru documentaţie mai detaliată despre linia de comandă în Linux, vă "
+"recomandăm:"
+
+#: basic-commands/C/basic-commands.xml:740(para)
+msgid ""
+"<ulink url=\"http://linuxcommand.org/\"/>- basic BASH tutorials, including "
+"BASH scripting"
+msgstr ""
+"<ulink url=\"http://linuxcommand.org/\"/>- Ghid de bază BASH, incluzând "
+"programare BASH"
+
+#: basic-commands/C/basic-commands.xml:746(para)
+msgid ""
+"<ulink url=\"http://linuxsurvival.com/index.php\"/>- Java-based tutorials"
+msgstr "<ulink url=\"http://linuxsurvival.com/index.php\"/>- Ghid Java"
+
+#: basic-commands/C/basic-commands.xml:752(para)
+msgid ""
+"<ulink url=\"http://rute.2038bug.com/index.html.gz\"/>- a massive online "
+"book about system administration, almost all from the command line."
+msgstr ""
+"<ulink url=\"http://rute.2038bug.com/index.html.gz\"/>- o carte online "
+"complexă despre administrarea de sisteme, aproape în întregime cu ajutorul "
+"liniei de comandă."
+
+#. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2.
+#: basic-commands/C/basic-commands.xml:0(None)
+msgid "translator-credits"
+msgstr ""
+"Launchpad Contributions:\n"
+"  Bivolaru Cătălin https://launchpad.net/~katalinux\n"
+"  Marian Vasile https://launchpad.net/~marianvasile\n"
+"  Mircea MITU https://launchpad.net/~mmitu\n"
+"  Stanislav Sushkov https://launchpad.net/~c00l2sv\n"
+"\n"
+"Launchpad Contributions:\n"
+"  Adi Roiban https://launchpad.net/~adiroiban\n"
+"  Bivolaru Cătălin https://launchpad.net/~katalinux\n"
+"  Bogdan BOTEZ https://launchpad.net/~bmbogdan\n"
+"  Manuel R. Ciosici https://launchpad.net/~manuelciosici\n"
+"  Mircea MITU https://launchpad.net/~mache\n"
+"  Silviu Bojica https://launchpad.net/~bojicas\n"
+"  Stanislav Sushkov https://launchpad.net/~c00l2sv\n"
+"  donkey.hote https://launchpad.net/~donkey-hote"

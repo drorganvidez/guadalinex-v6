@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" 
+	"http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY % globalent SYSTEM "../../../libs/global.ent">
+%globalent;
+<!ENTITY % genericent SYSTEM "../../libs/generic.ent">
+%genericent;
+<!ENTITY % cdo-C SYSTEM "../../../libs/cdo-C.ent">
+%cdo-C;
+<!ENTITY % gnome-menus-C SYSTEM "../../../ubuntu/libs/gnome-menus-C.ent">
+%gnome-menus-C;
+<!ENTITY % xinclude SYSTEM "../../../libs/xinclude.mod">
+%xinclude;
+<!ENTITY language "&EnglishAmerican;">
+<!ENTITY ubuntu '<phrase>Ubuntu</phrase>'>
+]>
+<chapter id="windows-networking" status="complete">
+	<title>Windows Networking</title>
+  <para>Computer networks are often comprised of diverse systems, and while operating a network
+  made up entirely of Ubuntu desktop and server computers would certainly be fun, some network environments
+  must consist of both Ubuntu and <trademark class='registered'>Microsoft</trademark> 
+  <trademark class='registered'>Windows</trademark> systems working together in harmony.  
+  This section of the &ubuntu; &sg-title; introduces principles and tools used in 
+  configuring your Ubuntu Server for sharing network resources with Windows computers.
+  </para>
+	<sect1 id="windows-networking-introduction" status="complete">
+		<title>Introduction</title>
+          <para>
+          Successfully networking your Ubuntu system with Windows clients involves providing and integrating with services 
+          common to Windows environments. Such services assist the sharing of data and information about the computers 
+          and users involved in the network, and may be classified under three major categories of functionality:
+          </para>
+          <itemizedlist>
+             <listitem>
+             <para>
+             <emphasis role="bold">File and Printer Sharing Services</emphasis>. Using the Server Message Block (SMB) protocol to facilitate
+             the sharing of files, folders, volumes, and the sharing of printers throughout the network.
+             </para>
+             </listitem>
+             <listitem>
+             <para>
+             <emphasis role="bold">Directory Services</emphasis>. Sharing vital information about the computers and users of the network
+             with such technologies as the Lightweight Directory Access Protocol (LDAP) and Microsoft
+             <trademark class='registered'>Active Directory</trademark>.
+             </para>
+             </listitem>
+             <listitem>
+             <para>
+             <emphasis role="bold">Authentication and Access</emphasis>. Establishing the identity of a computer or user of the network and 
+             determining the information the computer or user is authorized to access using such principles and technologies as
+             file permissions, group policies, and the Kerberos authentication service.
+             </para>
+             </listitem>
+          </itemizedlist>
+          <para>Fortunately, your Ubuntu system may provide all such facilities to Windows clients and share network resources among them.  
+          One of the principle pieces of software your Ubuntu system includes for Windows networking is the SAMBA suite of SMB server applications
+           and tools.  This section of the &ubuntu; &sg-title; will briefly introduce the installation and limited configuration of the SAMBA
+           suite of server applications and utilities.  Additional, detailed documentation and information on SAMBA is beyond the scope of this
+           documentation, but exists on the <ulink url="http://www.samba.org">SAMBA website</ulink>.
+          </para>
+    </sect1>
+	<sect1 id="installing-samba" status="complete">
+		<title>Installing SAMBA</title>
+          <para>
+          At the prompt enter the following command to install the SAMBA
+          server and client applications:
+          </para>
+          <para>
+<screen>
+<command>sudo apt-get install samba smbclient</command>
+</screen>
+          </para> 
+	  <para>
+	  To mount Windows filesystems using SMB, you will also need smbfs.  Enter the command:
+	  </para>
+	  <para>
+<screen>
+<command>sudo apt-get install smbfs</command>
+</screen>
+	  </para>
+    </sect1>
+	<sect1 id="configuring-samba" status="complete">
+		<title>Configuring SAMBA</title>
+          <para>
+           You may configure the SAMBA server by editing the <filename>/etc/samba/smb.conf</filename> file to change the default settings or add new
+           settings. More information about each setting is available in the comments of the <filename>/etc/samba/smb.conf</filename> file or by
+           viewing the <filename>/etc/samba/smb.conf</filename> manual page from the prompt with the following command typed at a terminal prompt: 
+           </para>
+           <para>
+<screen>
+<command>man smb.conf</command>
+</screen>
+           </para>
+            <tip>
+               <para>Prior to editing the configuration file, you should make a copy of the original file and protect it 
+               from writing so you will have the original settings as a reference and to re-use as necessary.
+             </para>
+            </tip>
+           <para>
+          Backup the <filename>/etc/samba/smb.conf</filename> file:
+          </para>
+             <para>
+<screen>
+<command>sudo cp /etc/samba/smb.conf /etc/samba/smb.conf.original</command>
+</screen>
+             </para> 
+          <para>
+          Now, edit the <filename>/etc/samba/smb.conf</filename> file and make your changes.
+          </para> 
+      <sect2 id="windows-networking-server" status="complete">
+        <title>Server</title>
+          <para>
+            In addition to the SAMBA suite of file and printer sharing server applications, Ubuntu also includes 
+            other powerful server applications designed to provide additional network server functionality to Windows clients
+            similar to the functionality provided by actual Windows servers.  For example, Ubuntu offers centralized
+            management of network resources such as computers and users via Directory Services, and facilitates the identification,
+            and authorization of computers and users via Authentication Services.
+           </para>
+           <para>
+            The following sections will discuss SAMBA and the supporting technologies, such as Lightweight Directory Access Protocol
+            (LDAP) server, and Kerberos authentication server in more detail. You will also learn about some of the available configuration
+            directives available the SAMBA configuration file which facilitate network integration with Windows clients and servers.
+           </para>
+        <sect3 id="active-directory" status="complete">
+          <title>Active Directory</title>
+            <para>
+              Active Directory is a proprietary implementation of Directory Services by Microsoft, and is used to provide
+              a means to share information about network resources and users.  In addition to providing a centralized source
+              of such information, Active Directory also acts as a centralized authentication security authority for the network.
+              Active directory combines capabilities traditionally found in separate, specialized directory systems to simplify
+              integration, management, and security of network resources.  The SAMBA package may be configured to use
+              Active Directory services from a Windows Domain Controller.
+            </para>
+            <sect4 id="ldap" status="complete">
+              <title>LDAP</title>
+              <para>
+                 The LDAP server application provides Directory Services functionality to Windows computers in a manner very similar 
+                 to Microsoft Active Directory services.  Such services include managing the identities and relationships of computers,
+                 users, and groups of computers or users that participate in the network, and providing a consistent means to describe,
+                  locate, and manage these resources. The freely available implementation of LDAP available for your Ubuntu system is
+                  called <emphasis role="italic">OpenLDAP</emphasis>.  The server daemons responsible for handling OpenLDAP directory 
+                  requests and the propagation of directory data from one LDAP server to another on Ubuntu, are 
+                  <application>slapd</application> and <application>slurpd</application>.  
+                  OpenLDAP may be used in conjunction with SAMBA to provide File, Print, and Directory services in much the same way
+                  a Windows Domain Controller does so long as SAMBA is compiled with LDAP support.
+              </para>
+            </sect4>
+            <sect4 id="kerberos" status="complete">
+              <title>Kerberos</title>
+              <para>
+                 The Kerberos authentication security system is a standardized service for providing authentication to 
+                 computers and users by means of a centralized server which grants encrypted authorization tickets accepted
+                 for authorization by any other computer using Kerberos.  Benefits of Kerberos authentication include mutual
+                 authentication, delegated authentication, interoperability, and simplified trust management. The primary
+                 server daemons for handling the Kerberos authentication and Kerberos database administration on Ubuntu 
+                 are <application>krb5kdc</application> and <application>kadmin</application>.  SAMBA may use 
+                 Kerberos as a mechanism for authenticating computers and users against a Windows Domain Controller.  To
+                 do so, the Ubuntu system must have Kerberos installed, and the <filename>/etc/samba/smb.conf</filename> must be modified to
+                 select the the proper <emphasis role="italic">realm</emphasis> and <emphasis role="italic">security</emphasis> mode.
+                 For example, edit the <filename>/etc/samba/smb.conf</filename> file and add
+                 the values:
+                 </para>
+                 <para>
+                 <emphasis role="bold">realm = DOMAIN_NAME</emphasis>
+                 </para>
+                 <para>
+                 <emphasis role="bold">security = ADS</emphasis>
+                 </para>
+                 <para>
+                 to the file, and save the file.  
+                 </para>
+                    <tip>
+                       <para>Be sure to replace the token DOMAIN_NAME in the example above with the actual name of your specific
+                       Windows Domain.
+                       </para>
+                    </tip>
+                 <para>
+                 You will need to restart the SAMBA daemons to effect these changes.  Restart the SAMBA
+                 daemons with the following command entered at a terminal prompt:
+                 </para>
+                    <para>
+<screen>
+<command>sudo /etc/init.d/samba restart</command>
+</screen>
+                    </para>
+            </sect4>
+        </sect3>
+        <sect3 id="computer-accounts" status="complete">
+          <title>Computer Accounts</title>
+            <para>
+              Computer Accounts are used in Directory Services to uniquely identify computer systems participating in a network,
+              and are even treated in the same manner as users in terms of security.  Computer accounts may have passwords just
+              as user accounts do, and are subject to authorization to network resources in the same manner as user accounts.
+              For example, if a network user, with a valid account for a particular network attempts to authenticate with a
+              network resource from a computer which does not have a valid computer account, depending upon policies enforced
+              on the network, the user may be denied access to the resource if the computer the user is attempting authentication
+              from is considered to be an unauthorized computer.
+            </para>
+            <para>
+            A computer account may be added to the SAMBA password file, provided the name of the computer being added exists
+            as a valid user account in the local password database first. The syntax for adding a computer or machine account to
+            the SAMBA password file is to use the <application>smbpasswd</application> command from a terminal prompt as follows:
+            </para>
+               <para>
+<screen>
+<command>sudo smbpasswd -a -m COMPUTER_NAME</command>
+</screen>
+               </para>
+                  <tip>
+                      <para>Be sure to replace the token COMPUTER_NAME in the example above with the actual name of the specific
+                      computer you wish to add a machine account for.
+                      </para>
+                   </tip>
+        </sect3>
+        <sect3 id="file-permissions" status="complete">
+          <title>File Permissions</title>
+            <para>
+              File Permissions define the explicit rights a computer or user has to a particular directory, file, or set of files.  Such
+              permissions may be defined by editing the <filename>/etc/samba/smb.conf</filename> file and specifying the explicit permissions of a defined
+              file share.  For example, if you have defined a SAMBA share called <emphasis role="italic">sourcedocs</emphasis> and wish
+              to give <emphasis role="italic">read-only</emphasis> permissions to the group of users known as <emphasis role="italic">planning</emphasis>,
+              but wanted to allow writing to the share by the group called <emphasis role="italic">authors</emphasis> and the user named
+              <emphasis role="italic">richard</emphasis>, then you could edit the <filename>/etc/samba/smb.conf</filename> file, and add the following entries under 
+              the <emphasis role="italic">[sourcedocs]</emphasis> entry:
+            </para>
+               <para>
+                  <emphasis role="bold">read list = @planning</emphasis>
+               </para>
+               <para>
+                  <emphasis role="bold">write list = @authors, richard</emphasis>
+               </para>
+             <para>
+             Save the <filename>/etc/samba/smb.conf</filename> for the changes to take effect.
+             </para>
+            <para>Another possible permission is to declare <emphasis role="italic">administrative</emphasis> permissions to a particular
+            shared resource.  Users having administrative permissions may read, write, or modify any information contained in the resource
+            the user has been given explicit administrative permissions to.  For example, if you wanted to give the user
+            <emphasis role="italic">melissa</emphasis> administrative permissions to the example <emphasis role="italic">sourcedocs</emphasis>
+            share, you would edit the <filename>/etc/samba/smb.conf</filename> file, and add the following line under the <emphasis role="italic">[sourcedocs]</emphasis> entry:
+            </para>
+               <para>
+                  <emphasis role="bold">admin users = melissa</emphasis>
+               </para>
+             <para>
+             Save the <filename>/etc/samba/smb.conf</filename> for the changes to take effect.
+             </para>
+        </sect3>
+      </sect2>
+      <sect2 id="windows-networking-clients" status="complete">
+        <title>Clients</title>
+          <para>
+            Ubuntu includes client applications and capabilities for accessing network resources shared with the SMB protocol.
+            For example, a utility called <application>smbclient</application> allows for accessing remote shared file-systems, 
+            in a manner similar to a File Transfer Protocol (FTP) client. To access a shared folder resource known as 
+            <emphasis role="italic">documents</emphasis> offered by a remote Windows computer named <emphasis role="italic">bill</emphasis> using 
+            <application>smbclient</application> for example, one would enter a command similar to the following at the prompt:
+            </para>
+                <para>
+<screen>
+<command>smbclient //bill/documents -U &lt;username&gt;</command>
+</screen>
+                </para>
+            <para>
+            You will then be prompted for the password for the user name specified after the -U switch, and upon successful
+            authentication, will be presented with a prompt where commands may be entered for manipulating and transferring
+            files in a syntax similar to that used by non-graphical FTP clients.  For more information on the 
+            <application>smbclient</application> utility, read the utility's manual page with the command:
+<screen>
+<command>man smbclient</command>
+</screen>
+            </para>
+            <para>
+            Local mounting of remote network resources using the SMB protocol is also possible using the <application>smbfs</application> program.
+	    </para>
+            <para>To mount a shared  folder named <emphasis role="italic">project-code</emphasis> on a Windows server named 
+            <emphasis role="italic">development</emphasis> as the user <emphasis role="italic">dlightman</emphasis> to your Ubuntu system's /mnt/pcode 
+            mount-point (the mountpoint you choose should be an empty folder), you would issue this command at the prompt:
+            </para>
+                <para>
+<screen>
+<command>sudo mount -t smbfs -o username=dlightman //development/project-code /mnt/pcode</command>
+</screen>
+                </para>
+                <para>You will then be prompted for the user password, and after successfully authenticating, the contents of the shared resource
+                will be available locally via the mount-point specified as the last argument to the mount command.   To disconnect the shared
+                resource, simply use the <application>umount</application> command as you would with any other mounted file system.
+                For example:
+                </para>
+                <para>
+<screen>
+<command>sudo umount /mnt/pcode</command>
+</screen>
+                </para>
+        <sect3 id="user-accounts" status="complete">
+          <title>User Accounts</title>
+            <para>
+              User Accounts define persons with some level of authorization to use certain computer and network resources.  Typically, in a network
+              environment, a user account is provided to each person allowed to access a computer or network, where policies and permissions then
+              define what explicit rights that user account has access to.  To define SAMBA network users for your Ubuntu system, you may use the
+              <application>smbpasswd</application> command.  For example to add a SAMBA user to your Ubuntu system with the user name
+              <emphasis role="italic">jseinfeld</emphasis>, you would enter this command at the prompt:
+             </para>
+                 <para>
+<screen>
+<command>sudo smbpasswd -a jseinfeld</command>
+</screen>
+                 </para>
+              <para>
+              The <application>smbpasswd</application> application will then prompt you to enter a password for the user:
+              </para>
+                 <para>
+                    <computeroutput>
+                    New SMB password:
+                    </computeroutput>
+                 </para>
+              <para>
+              Enter the password you wish to set for the user, and the <application>smbpasswd</application> application will
+              ask you to confirm the password:
+              </para>
+                    <para>
+                    <computeroutput>
+                    Retype new SMB password:
+                    </computeroutput>
+                     </para>
+               <para>
+               Confirm the password, and <application>smbpasswd</application> will add the entry for the user to the SAMBA password file.
+               </para>
+        </sect3>
+        <sect3 id="windows-networking-groups" status="complete">
+          <title>Groups</title>
+            <para>
+              Groups define a collection of computers or users which have a common level of access to particular network resources and offer a level
+              of granularity in controlling access to such resources.  For example, if a group <emphasis role="italic">qa</emphasis> is defined and contains the users
+              <emphasis role="italic">freda</emphasis>, <emphasis role="italic">danika</emphasis>, and <emphasis role="italic">rob</emphasis> and a second group
+              <emphasis role="italic">support</emphasis> is defined and consists of users <emphasis role="italic">danika</emphasis>, <emphasis role="italic">jeremy</emphasis>,
+              and <emphasis role="italic">vincent</emphasis> then  certain network resources configured to allow access by the <emphasis role="italic">qa</emphasis>
+              group will subsequently enable access by freda, danika, and rob, but not jeremy or vincent.  Since the user <emphasis role="italic">danika</emphasis>
+              belongs to both the <emphasis role="italic">qa</emphasis> and <emphasis role="italic">support</emphasis> groups, she will be able to access resources
+              configured for access by both groups, whereas all other users will have only access to resources explicitly allowing the group they are
+              part of.
+            </para>
+            <para>
+            When defining groups in the SAMBA configuration file, <filename>/etc/samba/smb.conf</filename> the recognized syntax is to preface the group name with an
+            "@" symbol.  For example, if you wished to define a group named <emphasis role="italic">sysadmin</emphasis> in a certain section of the
+            <filename>/etc/samba/smb.conf</filename>, you would do so by entering the group name as <emphasis role="bold">@sysadmin</emphasis>.
+            </para>
+        </sect3>
+        <sect3 id="group-policy" status="complete">
+          <title>Group Policy</title>
+            <para>
+              Group Policy defines certain SAMBA configuration settings pertaining to the Domain or Workgroup computer accounts belong to, and other
+              global settings for the SAMBA server. For example, if the SAMBA server belongs to a Workgroup of Windows computers called
+              <emphasis role="italic">LEVELONE</emphasis>, then the <filename>/etc/samba/smb.conf</filename> could be edited, and the following value changed
+              accordingly:
+            </para>
+               <para>
+               <emphasis role="bold">workgroup = LEVELONE</emphasis>
+               </para>
+            <para>
+            Save the file and restart the SAMBA daemons to affect the change.
+            </para>
+            <para>
+            Other important global policy settings include the <emphasis role="italic">server string</emphasis> which defines the NETBIOS
+            server name reported by your Ubuntu system to other machines on the Windows-based network.  This is the name your Ubuntu system
+            will be recognized as by Windows clients and other computers capable of browsing the network with the SMB protocol.  Additionally, you
+            may specify the name and location of the SAMBA server's log file by using the <emphasis role="italic">log file</emphasis> directive
+            in the <filename>/etc/samba/smb.conf</filename> file.
+            </para>
+            <para>
+            Some of the additional directives governing global group policy include specification of the global nature of all shared resources.  For
+            example, placing certain directives under the <emphasis role="italic">[global]</emphasis> heading of the <filename >/etc/samba/smb.conf</filename> 
+            file will affect all shared resources unless an overriding directive is placed under a particular shared resource heading.  You
+            specify all shares are browseable by all clients on the network by placing a  
+            <emphasis role="italic">browseable</emphasis> directive, which takes a Boolean argument, under the
+            <emphasis role="italic">[global]</emphasis> heading in the <filename>/etc/samba/smb.conf</filename>.  That is, if you edit the file and add the line:
+            </para>
+            <para>
+            <emphasis role="bold">
+            browseable = true
+            </emphasis>
+            </para>
+            <para>
+            under the <emphasis role="italic">[global]</emphasis> section of <filename>/etc/samba/smb.conf</filename>, then all shares provided by
+            your Ubuntu system via SAMBA will be browseable by all authorized clients, unless a specific share contains a 
+            <emphasis role="italic">browseable = false</emphasis> directive, which will override the global directive.
+            </para>
+            <para>
+            Other examples which work in a similar manner, are the <emphasis role="italic">public</emphasis> and
+            <emphasis role="italic">writeable</emphasis> directives.  The <emphasis role="italic">public</emphasis> directive
+            accepts a Boolean value and decides whether a particular shared resource is visible by all clients, authorized or not.  The
+            <emphasis role="italic">writeable</emphasis> directive also takes a Boolean value and defines whether a particular
+            shared resource is writable by any and all network clients.
+            </para>
+        </sect3>
+      </sect2>
+    </sect1>
+    <sect1 id="likewise-open" status="review">
+      <title>Likewise Open</title>
+      <para>
+      <application>Likewise Open</application> simplifies the necessary configuration needed to authenticate a Linux machine to an Active Directory
+      domain.  Based on <application>winbind</application>, the <application>likewise-open</application> package takes the pain out of integrating
+      Ubuntu authentication into an existing Windows network.
+      </para>
+      <sect2 id="likewise-open-install" status="review">
+	<title>Installation</title>
+	<para>
+	There are two ways to use Likewise Open, <application>likewise-open</application> the command line utility and 
+	<application>likewise-open-gui</application>.  This section focuses on the command line utility.
+	</para>
+	<para>
+	To install the <application>likewise-open</application> package, open a terminal prompt and enter:
+	</para>
+<screen>
+<command>sudo apt-get install likewise-open</command>
+</screen>
+      </sect2>
+      <sect2 id="likewise-open-configuration" status="review">
+	<title>Joining a Domain</title>
+        <para>
+	The main executable file of the <application>likewise-open</application> package is <filename>/usr/bin/domainjoin-cli</filename>, 
+	which is used to join your computer to the domain. Before you join a domain you will need to make sure and have:
+	</para>
+	<itemizedlist>
+	  <listitem>
+	    <para>
+	    Access to an Active Directory user with appropriate rights to join the domain.
+	    </para>
+	  </listitem>
+	  <listitem>
+	    <para>
+	    The <emphasis>Fully Qualified Domain Name</emphasis> (FQDN) of the domain you want to join.
+	    </para>
+	  </listitem>
+	  <listitem>
+	    <para>
+	    DNS for the domain setup properly.  In a production AD environment this should be the case.
+	    </para>
+	  </listitem>
+	</itemizedlist>
+	<para>
+	To join a domain, from a terminal prompt enter:
+	</para>
+<screen>
+<command>sudo domainjoin-cli join example.local Administrator</command>
+</screen>
+	<note>
+	  <para>
+	  Replace <emphasis>example.local</emphasis> with your domain name, and <emphasis>Administrator</emphasis> with the appropriate user name.
+	  </para>
+	</note>
+	<para>
+	You will then be prompted for the user's password.  If all goes well a <emphasis>SUCCESS</emphasis> message should be printed to the console.
+	</para>
+	<para>
+	After successfully joining an Ubuntu machine to an Active Directory domain you can authenticate using any valid AD user.  
+	To login you will need to enter the user name as 'domain\username'. For example to ssh to a server joined to the domain enter:
+	</para>
+<screen>
+<command>ssh 'example\steve'@hostname</command>
+</screen>
+	<note>
+	  <para>
+	  If configuring a Desktop the user name will need to be prefixed with <emphasis role="italic">domain\</emphasis> in the graphical logon as well.
+	  </para>
+	</note>
+	<para>
+	The <application>domainjoin-cli</application> utility can also be used to leave the domain.  From a terminal:
+	</para>
+<screen>
+<command>sudo domainjoin-cli leave</command>
+</screen>
+      </sect2>
+      <sect2 id="likewise-open-utilities" status="review">
+	<title>Other Utilities</title>
+	<para>
+	The <application>likewise-open</application> package comes with a few other utilities that may be useful for gathering information about the
+	Active Directory environment.  These utilities are used to join the machine to the domain, and are the same as those available in the 
+	<application>samba-common</application> and <application>winbind</application> packages:
+	</para>
+	<itemizedlist>
+	  <listitem>
+	    <para>
+	    <application>lwinet</application>:  Returns information about the network and the domain.
+	    </para>
+	  </listitem>
+	  <listitem>
+	    <para>
+	    <application>lwimsg</application>:  Allows interaction with the <application>likewise-winbindd</application> daemon.
+	    </para>
+	  </listitem>
+	  <listitem>
+	    <para>
+	    <application>lwiinfo</application>:  Displays information about various parts of the Domain.
+	    </para>
+	  </listitem>
+	</itemizedlist>
+	<para>
+	Please refer to each utility's man page specific for details.
+	</para>
+      </sect2>
+      <sect2 id="likewise-open-references" status="review">
+	<title>References</title>
+	<para>
+	Please refer to the <ulink url="http://www.likewisesoftware.com/">Likewise</ulink> home page for further information.
+	</para>	
+      </sect2>
+    </sect1>
+	</chapter>

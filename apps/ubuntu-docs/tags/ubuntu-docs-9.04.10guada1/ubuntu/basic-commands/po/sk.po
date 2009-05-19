@@ -1,0 +1,893 @@
+# Slovak translation for ubuntu-docs
+# Copyright (c) 2007 Rosetta Contributors and Canonical Ltd 2007
+# This file is distributed under the same license as the ubuntu-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2007.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ubuntu-docs\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2007-09-14 08:25+0100\n"
+"PO-Revision-Date: 2007-11-13 23:33+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Slovak <sk@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2008-02-17 10:22+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+#: basic-commands/C/basic-commands-C.omf:6(creator) basic-commands/C/basic-commands-C.omf:7(maintainer)
+msgid "ubuntu-doc@lists.ubuntu.com (Ubuntu Documentation Project)"
+msgstr "ubuntu-doc@lists.ubuntu.com (Dokumentačný projekt Ubuntu)"
+
+#: basic-commands/C/basic-commands-C.omf:8(title) basic-commands/C/basic-commands.xml:15(title)
+msgid "Basic Commands"
+msgstr "Základné príkazy"
+
+#: basic-commands/C/basic-commands-C.omf:9(date)
+msgid "2006-09-07"
+msgstr "7.9.2006"
+
+#: basic-commands/C/basic-commands-C.omf:11(description)
+msgid "Placeholder."
+msgstr "Zástupný znak"
+
+#: basic-commands/C/basic-commands.xml:18(title)
+msgid "Using this Guide"
+msgstr "Používanie tejto príručky"
+
+#: basic-commands/C/basic-commands.xml:28(emphasis)
+msgid "man intro(1)"
+msgstr "man intro(1)"
+
+#: basic-commands/C/basic-commands.xml:20(emphasis)
+msgid ""
+"\"Under Linux there are GUIs (graphical user interfaces), where you can "
+"point and click and drag, and hopefully get work done without first reading "
+"lots of documentation. The traditional Unix environment is a CLI (command "
+"line interface), where you type commands to tell the computer what to do. "
+"That is faster and more powerful, but requires finding out what the commands "
+"are.\" -- from <placeholder-1/>"
+msgstr ""
+"„V Linuxe existuje veľa GUI programov (s grafickým používateľským "
+"rozhraním), v ktorých môžete na položky ukázať, kliknúť a ich presunúť a "
+"snáď dokončíte prácu bez toho, aby ste museli čítať množstvo dokumentácie. "
+"Tradičné prostredie v Unixe je CLI (rozhranie príkazového riadka), v ktorom "
+"zadávate príkazy, ktorými hovoríte počítaču čo má robiť. Je to rýchlejšie a "
+"mocnejšie, avšak vyžaduje znalosť toho, aké príkazy to vlastne sú.“ -- z "
+"<placeholder-1/>"
+
+#: basic-commands/C/basic-commands.xml:33(para)
+msgid ""
+"This guide will make you familiar with basic GNU/Linux shell commands. It is "
+"not intended to be a complete guide to the command line, just an "
+"introduction to complement Ubuntu's graphical tools."
+msgstr ""
+"Táto príručka vás zoznámi so základnými príkazmi shellu GNU/Linux. Nie je "
+"jej účelom, aby bola kompletným sprievodcom príkazovým riadkom, chce iba "
+"ukázať alternatívu ku grafickým nástrojom v Ubuntu."
+
+#: basic-commands/C/basic-commands.xml:43(para)
+msgid ""
+"All command names, file names or paths to directories will be shown using a "
+"<command>monospace font</command>."
+msgstr ""
+"Všetky názvy príkazov, súborov a ciest do priečinkov budé napísané "
+"<command>písmom s pevnou šírkou znaku</command>."
+
+#: basic-commands/C/basic-commands.xml:50(para)
+msgid ""
+"All the commands on this guide are to be issued from a command prompt in a "
+"<application>Terminal</application> and will be shown as: <screen>command to "
+"type</screen>"
+msgstr ""
+"Všetky príkazy v tejto príručke sa zadávajú do príkazového riadku v "
+"<application>termináli</application> a budú vyzerať takto: <screen>príkaz, "
+"ktorý treba napísať</screen>"
+
+#: basic-commands/C/basic-commands.xml:58(para)
+msgid ""
+"<emphasis role=\"strong\">Note that Linux is case sensitive.</emphasis> "
+"User, user, and USER are all different to Linux."
+msgstr ""
+"<emphasis role=\"strong\">Uvedomte si, že Linux je „case sensitive“ - "
+"rozlišuje veľkosť písmen.</emphasis> Pre Linux je rozdiel medzi User, user a "
+"USER."
+
+#: basic-commands/C/basic-commands.xml:69(title)
+msgid "Starting a Terminal"
+msgstr "Spustenie terminálu"
+
+#: basic-commands/C/basic-commands.xml:70(para)
+msgid "To open a <application>Terminal</application> do as follow:"
+msgstr "<application>Terminál</application> spustíte nasledovne:"
+
+#: basic-commands/C/basic-commands.xml:76(para)
+msgid ""
+"Choose "
+"<menuchoice><guimenu>Applications</guimenu><guimenuitem>Accessories</guimenui"
+"tem><guimenuitem>Terminal</guimenuitem></menuchoice>;"
+msgstr ""
+"Vyberte "
+"<menuchoice><guimenu>Aplikácie</guimenu><guimenuitem>Príslušenstvo</guimenuit"
+"em><guimenuitem>Terminál</guimenuitem></menuchoice>;"
+
+#: basic-commands/C/basic-commands.xml:81(para)
+msgid ""
+"Or press <keycombo><keycap>Alt</keycap><keycap>F2</keycap></keycombo> and "
+"type <command>gnome-terminal</command>."
+msgstr ""
+"Alebo stlačte <keycombo><keycap>Alt</keycap><keycap>F2</keycap></keycombo> a "
+"napíšte <command>gnome-terminal</command>."
+
+#: basic-commands/C/basic-commands.xml:94(title)
+msgid "File and Directory Commands"
+msgstr "Príkazy na manipuláciu so súbormi a adresármi"
+
+#: basic-commands/C/basic-commands.xml:97(title)
+msgid "cd"
+msgstr "cd"
+
+#: basic-commands/C/basic-commands.xml:98(para)
+msgid ""
+"The <command>cd</command> command changes directories. When you open a "
+"terminal you will be in your home directory. To move around the file system "
+"you will use <command>cd</command>. Examples:"
+msgstr ""
+"Príkaz <command>cd</command> mení adresáre. Keď otvoríte terminál, budete v "
+"domovskom adresári. Na presúvanie sa po súborovom systéme použijete príkaz "
+"<command>cd</command>. Napríklad:"
+
+#: basic-commands/C/basic-commands.xml:107(para)
+msgid "To navigate into the root directory, type: <screen>cd /</screen>"
+msgstr ""
+"Na presunutie sa do koreňového adresára zadajte: <screen>cd /</screen>"
+
+#: basic-commands/C/basic-commands.xml:113(para)
+msgid ""
+"To navigate to your home directory, type: <screen>cd</screen> or <screen>cd "
+"~</screen>"
+msgstr ""
+"Na presunutie sa do vášho domovského adresára zadajte: <screen>cd</screen> "
+"alebo <screen>cd ~</screen>"
+
+#: basic-commands/C/basic-commands.xml:121(para)
+msgid "To navigate up one directory level, type: <screen>cd ..</screen>"
+msgstr "Na presunutie sa o adresár vyššie zadajte: <screen>cd ..</screen>"
+
+#: basic-commands/C/basic-commands.xml:127(para)
+msgid ""
+"To navigate to the previous directory (or back), type: <screen>cd -</screen>"
+msgstr ""
+"Na presunutie sa do predchádzajúceho adresára (alebo späť) zadajte: "
+"<screen>cd -</screen>"
+
+#: basic-commands/C/basic-commands.xml:134(para)
+msgid ""
+"To navigate through multiple levels of directory at once, specify the full "
+"directory path that you want to go to. For example, type: <screen>cd "
+"/var/www</screen> to go directly to the <filename "
+"class=\"directory\">/www</filename> subdirectory of <filename "
+"class=\"directory\">/var/</filename>. As another example, type: <screen>cd "
+"~/Desktop</screen> to move you to the <filename "
+"class=\"directory\">Desktop</filename> subdirectory inside your home "
+"directory."
+msgstr ""
+"Na presunutie sa cez viacero adresárových úrovní naraz zadajte celú cestu k "
+"adresáru. napríklad zadajte: <screen>cd /var/www</screen> na presunutie sa "
+"do adresára<filename class=\"directory\">/www</filename>, ktorý je "
+"podadresárom adresára <filename class=\"directory\">/var/</filename>. Iný "
+"príklad, zadajte: <screen>cd ~/Desktop</screen> na presunutie sa do "
+"podadresára <filename class=\"directory\">Desktop</filename> vo vašom "
+"domovskom adresári."
+
+#: basic-commands/C/basic-commands.xml:151(title)
+msgid "pwd"
+msgstr "pwd"
+
+#: basic-commands/C/basic-commands.xml:162(para)
+msgid ""
+"<application>GNOME Terminal</application> also displays this information in "
+"the title bar of it's window."
+msgstr ""
+"<application>GNOME Terminal</application> zobrazuje tieto informácie aj v "
+"záhlavnom paneli svojho okna."
+
+#: basic-commands/C/basic-commands.xml:152(para)
+msgid ""
+"<command>pwd</command>: The <command>pwd</command> command will show you "
+"which directory you're located in (<acronym>pwd</acronym> stands for "
+"<quote>print working directory</quote>). For example, typing "
+"<screen>pwd</screen> in the <filename class=\"directory\">Desktop</filename> "
+"directory, will show <computeroutput>~/Desktop</computeroutput>. "
+"<placeholder-1/>"
+msgstr ""
+"<command>pwd</command>: Príkaz <command>pwd</command> vám ukáže adresár, v "
+"ktorom sa nachádzate (<acronym>pwd</acronym> znamená <quote>zobraziť "
+"aktuálny adresár</quote>). Napríklad zadanie <screen>pwd</screen> v adresári "
+"<filename class=\"directory\">Desktop</filename> zobrazí "
+"<computeroutput>~/Desktop</computeroutput>. <placeholder-1/>"
+
+#: basic-commands/C/basic-commands.xml:171(title)
+msgid "ls"
+msgstr "ls"
+
+#: basic-commands/C/basic-commands.xml:172(para)
+msgid ""
+"The <command>ls</command> command shows you the files in your current "
+"directory. Used with certain options, you can see sizes of files, when files "
+"where made, and permissions of files. For example, typing <screen>ls "
+"~</screen> will show you the files that are in your home directory."
+msgstr ""
+"Príkaz <command>ls</command> vypíše súbory v aktuálnom adresári. Použitím "
+"určitých argumentov si môžete pozrieť napríklad veľkosť súborov, dátum kedy "
+"boli vytvorené ako aj práva vzťahujúce sa na tieto súbory. Napríklad príkaz "
+"<screen>ls ~</screen> vám zobrazí súbory z vášho domovského adresára."
+
+#: basic-commands/C/basic-commands.xml:183(title)
+msgid "cp"
+msgstr "cp"
+
+#: basic-commands/C/basic-commands.xml:184(para)
+msgid ""
+"The <command>cp</command> command makes a copy of a file for you. For "
+"example, type: <screen>cp file foo</screen> to make a exact copy of "
+"<filename>file</filename> and name it <filename>foo</filename>, but the file "
+"<filename>file</filename> will still be there."
+msgstr ""
+"Príkaz <command>cp</command> skopíruje príkaz. Napríklad príkazom: "
+"<screen>cp súbor foo</screen> vytvorí presnú kópiu "
+"<filename>súboru</filename> a nazve ju <filename>foo</filename>, pričom však "
+"ponechá súbor <filename>súbor</filename>."
+
+#: basic-commands/C/basic-commands.xml:194(title)
+msgid "mv"
+msgstr "mv"
+
+#: basic-commands/C/basic-commands.xml:206(para)
+msgid ""
+"If you are using <command>mv</command> with <command>sudo</command> you will "
+"not be able to use the <emphasis role=\"strong\">~</emphasis> shortcut, but "
+"will have to use the full pathnames to your files. This is because when you "
+"are working as root, <emphasis role=\"strong\">~</emphasis> will refer to "
+"the root account's home directory, not your own."
+msgstr ""
+"Ak používate príkaz <command>mv</command> s príkazom "
+"<command>sudo</command>, nebudete môcť používať skratku <emphasis "
+"role=\"strong\">~</emphasis>, ale budete musieť zadávať celú cestu k vašim "
+"súborom. Je to spôsobené tým, že keď pracujete ako root, skratka <emphasis "
+"role=\"strong\">~</emphasis> odkazuje na domovský adresár roota, nie na váš "
+"vlastný."
+
+#: basic-commands/C/basic-commands.xml:195(para)
+msgid ""
+"The <command>mv</command> command moves a file to a different location or "
+"will rename a file. Examples are as follows: <screen>mv file foo</screen> "
+"will rename the file <filename>file</filename> to <filename>foo</filename>. "
+"<screen>mv foo ~/Desktop</screen> will move the file "
+"<filename>foo</filename> to your <filename "
+"class=\"directory\">Desktop</filename> directory but will not rename it. You "
+"must specify a new file name to rename a file. <placeholder-1/>"
+msgstr ""
+"Príkaz <command>mv</command> presúva súbory na iné miesto alebo mení názvy "
+"súborov. Napríklad: <screen>mv súbor foo</screen> zmení meno súboru "
+"<filename>súbor</filename> na <filename>foo</filename>. <screen>mv foo "
+"~/Desktop</screen> premiestni súbor <filename>foo</filename> z vášho "
+"adresára <filename class=\"directory\">Desktop</filename>, avšak nezmení "
+"jeho názov. Aby ste premenovali súbor, musíte uviesť jeho nový názov. "
+"<placeholder-1/>"
+
+#: basic-commands/C/basic-commands.xml:219(title)
+msgid "rm"
+msgstr "rm"
+
+#: basic-commands/C/basic-commands.xml:220(para)
+msgid ""
+"Use the <command>rm</command> command to remove or delete a file in your "
+"directory. It will not work on directories which have files in them."
+msgstr ""
+"Na odstránenie alebo zmazanie súboru z adresára použite príkaz "
+"<command>rm</command>. Nebude to fungovať na adresáre, ktoré obsahujú súbory."
+
+#: basic-commands/C/basic-commands.xml:228(title)
+msgid "mkdir"
+msgstr "mkdir"
+
+#: basic-commands/C/basic-commands.xml:229(para)
+msgid ""
+"The <command>mkdir</command> command will allow you to create directories. "
+"For example, typing: <screen>mkdir music</screen> will create a music "
+"directory in the current directory."
+msgstr ""
+"Príkaz <command>mkdir</command> vám umožní vytvárať adresáre. Napríklad "
+"zadaním: <screen>mkdir hudba</screen> vytvoríte adresár hudba v aktuálnom "
+"adresári."
+
+#: basic-commands/C/basic-commands.xml:239(title)
+msgid "System Information Commands"
+msgstr "Príkazy pre informácie o systéme"
+
+#: basic-commands/C/basic-commands.xml:242(title)
+msgid "df"
+msgstr "df"
+
+#: basic-commands/C/basic-commands.xml:243(para)
+msgid ""
+"The <command>df</command> command displays filesystem disk space usage for "
+"all partitions. <screen>df -h</screen> will give information using megabytes "
+"(M) and gigabytes (G) instead of blocks (<emphasis role=\"strong\">-"
+"h</emphasis> means \"human-readable\")."
+msgstr ""
+"Príkaz <command>df</command> zobrazí zaplnenie pevného disku na všetkých "
+"oddieloch. <screen>df -h</screen> vypíše údaje v megabajtoch (M) a "
+"gigabajtoch (G) a nie v blokoch (<emphasis role=\"strong\">-h</emphasis> "
+"znamená „čitateľné pre ľudí“)."
+
+#: basic-commands/C/basic-commands.xml:253(title)
+msgid "free"
+msgstr "voľných"
+
+#: basic-commands/C/basic-commands.xml:254(para)
+msgid ""
+"The <command>free</command> command displays the amount of free and used "
+"memory in the system. <screen>free -m</screen> will give the information "
+"using megabytes, which is probably most useful for current computers."
+msgstr ""
+"Príkaz <command>free</command> zobrazí množstvo voľnej a využitej pamäte "
+"systému. <screen>free -m</screen> vypíše údaje v megabajtoch, čo je pre vás "
+"pravdepodobne najužitočnejšie."
+
+#: basic-commands/C/basic-commands.xml:264(title)
+msgid "top"
+msgstr "top"
+
+#: basic-commands/C/basic-commands.xml:265(para)
+msgid ""
+"The <command>top</command> command displays information on your GNU/Linux "
+"system, running processes and system resources, including CPU, RAM &amp; "
+"swap usage and total number of tasks being run. To exit "
+"<application>top</application>, press <keycap>q</keycap>."
+msgstr ""
+"Príkaz <command>top</command> zobrazí informácie o vašom systéme GNU/Linux, "
+"prebiehajúcich procesoch a systémových zdrojoch vrátane využitia CPU, RAM, "
+"odkladacieho priestoru a celkový počet bežiacich úloh. "
+"<application>top</application> ukončíte stlačením klávesu <keycap>q</keycap>."
+
+#: basic-commands/C/basic-commands.xml:275(title)
+msgid "uname"
+msgstr "uname"
+
+#: basic-commands/C/basic-commands.xml:276(para)
+msgid ""
+"The <command>uname</command> command with the <emphasis role=\"strong\">-"
+"a</emphasis> option, prints all system information, including machine name, "
+"kernel name &amp; version, and a few other details. Most useful for checking "
+"which kernel you're using."
+msgstr ""
+"Príkaz <command>uname</command> s argumentom <emphasis role=\"strong\">-"
+"a</emphasis> vypíše všetky informácie o systéme vrátane názvu počítača, "
+"názvu jadra a jeho verzie a zopár ďalších údajov. Tento príkaz je "
+"najužitočnejší, ak potrebujete zistiť, aké jadro používate."
+
+#: basic-commands/C/basic-commands.xml:286(title)
+msgid "lsb_release"
+msgstr "lsb_release"
+
+#: basic-commands/C/basic-commands.xml:287(para)
+msgid ""
+"The <emphasis role=\"strong\">lsb_release</emphasis> command with the "
+"<emphasis role=\"strong\">-a</emphasis> option prints version information "
+"for the Linux release you're running. For example, typing: "
+"<screen>lsb_release -a</screen> will give you: <screen>\n"
+"No LSB modules are available.\n"
+"Distributor ID: Ubuntu\n"
+"Description:    Ubuntu 7.04 \n"
+"Release:        7.04\n"
+"Codename:       feisty</screen>"
+msgstr ""
+"Príkaz <emphasis role=\"strong\">lsb_release</emphasis> s argumentom "
+"<emphasis role=\"strong\">-a</emphasis> vypíše informáciu o verzii Linuxu, "
+"ktorý používate. Napríklad zadaním: <screen>lsb_release -a</screen> "
+"dostanete: <screen>\n"
+"No LSB modules are available.\n"
+"Distributor ID: Ubuntu\n"
+"Description:    Ubuntu 7.10 \n"
+"Release:        7.10\n"
+"Codename:       gutsy</screen>"
+
+#: basic-commands/C/basic-commands.xml:305(title)
+msgid "ifconfig"
+msgstr "ifconfig"
+
+#: basic-commands/C/basic-commands.xml:306(para)
+msgid ""
+"The <command>ifconfig</command> command reports on your system's network "
+"interfaces."
+msgstr ""
+"Príkaz <command>ifconfig</command> oznamuje informácie o sieťových "
+"rozhraniach vášho počítača."
+
+#: basic-commands/C/basic-commands.xml:314(title)
+msgid "Executing Commands with Elevated Privileges"
+msgstr "Vykonávanie príkazov s vyššími privilégiami"
+
+#: basic-commands/C/basic-commands.xml:315(para)
+msgid ""
+"The following commands will need to be prefaced with the "
+"<command>sudo</command> command. Please see <ulink "
+"url=\"https://help.ubuntu.com/community/RootSudo\">RootSudo</ulink> for "
+"information on using <command>sudo</command>."
+msgstr ""
+"Pred nasledujúce príkazy je nutné pridať príkaz <command>sudo</command>. "
+"Informácie o použití príkazu <command>sudo</command> nájdete v <ulink "
+"url=\"https://help.ubuntu.com/community/RootSudo\">RootSudo</ulink>."
+
+#: basic-commands/C/basic-commands.xml:324(title)
+msgid "Adding a New Group"
+msgstr "Pridanie novej skupiny"
+
+#: basic-commands/C/basic-commands.xml:325(para)
+msgid ""
+"The <command>addgroup</command> command is used to create a new group on the "
+"system. To create a new group, type: <screen>addgroup newgroup</screen> The "
+"above command will create a new group called <emphasis "
+"role=\"strong\">newgroup</emphasis>."
+msgstr ""
+"Príkaz <command>addgroup</command> sa používa na vytvorenie novej skupiny v "
+"systéme. Novú skupinu vytvoríte zadaním: <screen>addgroup "
+"novaskupina</screen> Uvedený príkaz vytvorí novú skupinu nazvanú <emphasis "
+"role=\"strong\">novaskupina</emphasis>."
+
+#: basic-commands/C/basic-commands.xml:334(title)
+msgid "Adding A New User"
+msgstr "Pridanie nového používateľa"
+
+#: basic-commands/C/basic-commands.xml:335(para)
+msgid ""
+"The <command>adduser</command> is used to create new users on the system. To "
+"create a new user, type: <screen>adduser newuser</screen> The above command "
+"will create a new user called <emphasis role=\"strong\">newuser</emphasis>."
+msgstr ""
+"Príkaz <command>adduser</command> sa používa na vytvorenie nového "
+"používateľa v systéme. Nového používateľa vytvoríte zadaním: <screen>adduser "
+"fero</screen> Uvedený príkaz vytvorí nového používateľa nazvaného <emphasis "
+"role=\"strong\">fero</emphasis>."
+
+#: basic-commands/C/basic-commands.xml:342(para)
+msgid ""
+"To assign a password for the new user use the <command>passwd</command> "
+"command: <screen>passwd newuser</screen>"
+msgstr ""
+"Hesla novému používateľovi pridáte pomocou príkazu "
+"<command>passwd</command>: <screen>passwd fero</screen>"
+
+#: basic-commands/C/basic-commands.xml:348(para)
+msgid ""
+"Finally, to assign the new user to the new group, type: <screen>adduser "
+"newuser newgroup</screen>"
+msgstr ""
+"Na záver priradíme nového používateľa do novej skupiny napísaním: "
+"<screen>adduser fero zliatina</screen>"
+
+#: basic-commands/C/basic-commands.xml:356(title)
+msgid "Options"
+msgstr "Argumenty"
+
+#: basic-commands/C/basic-commands.xml:357(para)
+msgid ""
+"The default behavior for a command may usually be modified by adding a "
+"<emphasis role=\"strong\">-- <emphasis>option</emphasis></emphasis> to the "
+"command. The <link linkend=\"ls\"><command>ls</command></link> command, for "
+"example, has a <emphasis role=\"strong\">-s</emphasis> option so that "
+"<command>ls -s</command> will include file sizes in the listing. There is "
+"also a <emphasis role=\"strong\">-h</emphasis> option to get those sizes in "
+"a \"human readable\" format."
+msgstr ""
+"Predvolené správanie príkazu je obyčajne možné zmeneniť pridaním <emphasis "
+"role=\"strong\">-- <emphasis>argumentu</emphasis></emphasis> do príkazu. "
+"Príkaz <link linkend=\"ls\"><command>ls</command></link> má napríklad "
+"argument <emphasis role=\"strong\">-s</emphasis>, ktorý spôsobí, že výpis z "
+"<command>ls -s</command> bude obsahovať aj veľkosti súborov. Existuje "
+"takisto argument <emphasis role=\"strong\">-h</emphasis>, ktorým dostanete "
+"veľkosti vo formáte jednoducho čítateľnom pre ľudí."
+
+#: basic-commands/C/basic-commands.xml:368(para)
+msgid ""
+"Options can be grouped in clusters so <screen>ls -sh</screen> is exactly the "
+"same command as <screen>ls -s -h</screen> Most options have a long version, "
+"prefixed with two dashes instead of one, so even <screen>ls --size --human-"
+"readable</screen> is the same command."
+msgstr ""
+"Argumenty je možné spájať, takže <screen>ls -sh</screen> je presne ten istý "
+"príkaz ako <screen>ls -s -h</screen> Väčšina argumentov má aj dlhú verziu, "
+"pred ktorú sa dávajú dve pomlčky namiesto jednej, takže dokonca aj "
+"<screen>ls --size --human-readable</screen> je ten istý príkaz."
+
+#: basic-commands/C/basic-commands.xml:379(title)
+msgid "\"Man\" and getting help"
+msgstr "\"Man\" a získanie pomoci"
+
+#: basic-commands/C/basic-commands.xml:380(para)
+msgid ""
+"<emphasis role=\"strong\"><emphasis>command</emphasis> --help</emphasis> and "
+"<emphasis role=\"strong\">man <emphasis>command</emphasis></emphasis> are "
+"the two most important tools at the command line."
+msgstr ""
+"<emphasis role=\"strong\"><emphasis>príkaz</emphasis> --help</emphasis> a "
+"<emphasis role=\"strong\">man <emphasis>príkaz</emphasis></emphasis> sú dva "
+"najdôležitejšie nástroje v príkazovom riadku."
+
+#: basic-commands/C/basic-commands.xml:387(para)
+msgid ""
+"Virtually all commands understand the <emphasis role=\"strong\">-"
+"h</emphasis> (or <emphasis role=\"strong\">--help</emphasis>) option which "
+"will produce a short usage description of the command and it's options, then "
+"exit back to the command prompt. Type <screen>man -h</screen> or <screen>man "
+"--help</screen> to see this in action."
+msgstr ""
+"Prakticky všetky príkazy rozumejú argumentu <emphasis role=\"strong\">-"
+"h</emphasis> (alebo <emphasis role=\"strong\">--help</emphasis>), ktorý "
+"vyprodukuje krátky popis použitia príkazu a jeho argumentov a potom sa "
+"ukončí návratom do príkazového riadka. Napíšte <screen>man -h</screen> alebo "
+"<screen>man --help</screen> a uvidíte to v praxi."
+
+#: basic-commands/C/basic-commands.xml:397(para)
+msgid ""
+"Every command and nearly every application in Linux will have a man (manual) "
+"file, so finding them is as simple as typing <command>man command</command> "
+"to bring up a longer manual entry for the specified command. For example, "
+"<screen>man mv</screen> will bring up the <command>mv</command> (move) "
+"manual."
+msgstr ""
+"Každý príkaz a takmer každá aplikácia v Linuxe má man súbor (manuál). "
+"Dostanete sa k nim napísaním <command>man príkaz</command>, čím sa zobrazí "
+"dlhší manuál príslušného príkazu. Napríklad <screen>man mv</screen> vyvolá "
+"manuál k <command>mv</command> (move - presúvanie)."
+
+#: basic-commands/C/basic-commands.xml:406(para)
+msgid ""
+"Move up and down the man file with the arrow keys, and quit back to the "
+"command prompt with <keycap>q</keycap>."
+msgstr ""
+"Po stránke manuálu sa posúvate šípkami hore a dole. Späť do príkazového "
+"riadka as vrátite stlačením klávesu  <keycap>q</keycap>, ktorý ukončí man."
+
+#: basic-commands/C/basic-commands.xml:411(para)
+msgid ""
+"<screen>man man</screen> will bring up the manual entry for the "
+"<command>man</command> command, which is a good place to start."
+msgstr ""
+"<screen>man man</screen> vyvolá manuál pre príkaz <command>man</command>, čo "
+"je dobré miesto, kde začať."
+
+#: basic-commands/C/basic-commands.xml:417(para)
+msgid ""
+"<screen>man intro</screen> is especially useful - it displays the "
+"\"Introduction to user commands\" which is a well-written, fairly brief "
+"introduction to the Linux command line."
+msgstr ""
+"<screen>man intro</screen> je obzvlášť užitočný - zobrazí „Úvod do "
+"používateľských príkazov“, čo je dobre napísané, vcelku stručné uvedenie do "
+"príkazového riadka Linuxu."
+
+#: basic-commands/C/basic-commands.xml:422(para)
+msgid ""
+"There are also <command>info</command> pages, which are generally more in-"
+"depth than <command>man</command> pages. Try <screen>info info</screen> for "
+"the introduction to info pages."
+msgstr ""
+"Existujú aj <command>info</command> stránky, ktoré sú vo všeobecnosti "
+"obsažnejšie ako <command>man</command> stránky. Úvod do info stránok "
+"vyvoláte zadaním <screen>info info</screen>."
+
+#: basic-commands/C/basic-commands.xml:432(title)
+msgid "Searching for man files"
+msgstr "Vyhľadávanie man súborov"
+
+#: basic-commands/C/basic-commands.xml:433(para)
+msgid ""
+"If you aren't sure which command or application you need to use, you can try "
+"searching the man files."
+msgstr ""
+"Ak ste si nie istý, ktorý príkaz alebo aplikáciu potrebujete použiť, môžete "
+"skúsiť nájsť man súbory."
+
+#: basic-commands/C/basic-commands.xml:446(para)
+msgid "This is the same as the <command>apropos</command> command."
+msgstr "Je to to isté ako príkaz <command>apropos</command>."
+
+#: basic-commands/C/basic-commands.xml:439(para)
+msgid ""
+"<command>man -k foo</command>, will search the man files for "
+"<emphasis>foo</emphasis>. Try <screen>man -k nautilus</screen> to see how "
+"this works. <placeholder-1/>"
+msgstr ""
+"<command>man -k foo</command> vyhľadá man súbory pre "
+"<emphasis>foo</emphasis>. Skúste <screen>man -k nautilus</screen> a uvidíte, "
+"ako to funguje. <placeholder-1/>"
+
+#: basic-commands/C/basic-commands.xml:459(para)
+msgid "This is the same as the <command>whatis</command> command."
+msgstr "Je to to isté ako príkaz <command>whatis</command>."
+
+#: basic-commands/C/basic-commands.xml:454(para)
+msgid ""
+"<command>man -f foo</command>, searches only the titles of your system's man "
+"files. For example, try <screen>man -f gnome</screen><placeholder-1/>"
+msgstr ""
+"<command>man -f foo</command> vyhľadáva iba v názvoch man súborov na vašom "
+"počítači. Vyskúšajte napríklad <screen>man -f gnome</screen><placeholder-1/>"
+
+#: basic-commands/C/basic-commands.xml:471(title)
+msgid "Other Useful Things"
+msgstr "Ostatné užitočné veci"
+
+#: basic-commands/C/basic-commands.xml:474(title)
+msgid "Pasting in commands"
+msgstr "Vkladanie príkazov zo schránky"
+
+#: basic-commands/C/basic-commands.xml:475(para)
+msgid ""
+"Often, you will be referred to instructions that require commands to be "
+"pasted into the terminal. You might be wondering why the text you've copied "
+"from a web page using "
+"<keycombo><keycap>Ctrl</keycap><keycap>C</keycap></keycombo> won't paste in "
+"with <keycombo><keycap>Ctrl</keycap><keycap>V</keycap></keycombo>. Surely "
+"you don't have to type in all those nasty commands and filenames? Relax. "
+"Middle Button Click on your mouse (both buttons simultaneously on a two-"
+"button mouse) or Right Click and select "
+"<menuchoice><guimenuitem>Paste</guimenuitem></menuchoice> from the menu."
+msgstr ""
+"Často vás odkážu na inštrukcie, ktoré vyžadujú vloženie príkazu do "
+"terminálu. Môžete byť prekvapený, prečo text, ktorý ste skopírovali z "
+"internetovej stránky prostredníctvom "
+"<keycombo><keycap>Ctrl</keycap><keycap>C</keycap></keycombo> nebude vložený "
+"stlačením <keycombo><keycap>Ctrl</keycap><keycap>V</keycap></keycombo>. Snáď "
+"nemusíte vypisovať všetky tie podivné príkazy a názvy súborov? Pokoj. "
+"Kliknite na stredné tlačidlo vašej myši (na dvojtlačidlovej myši stlačte "
+"naraz obidve tlačidlá) alebo kliknite pravým a vyberte z ponuky "
+"<menuchoice><guimenuitem>Vložiť</guimenuitem></menuchoice>."
+
+#: basic-commands/C/basic-commands.xml:498(title)
+msgid "Save on typing"
+msgstr "Uložené písanie"
+
+#: basic-commands/C/basic-commands.xml:507(para)
+msgid ""
+"<keycap>Up Arrow</keycap> or "
+"<keycombo><keycap>Ctrl</keycap><keycap>p</keycap></keycombo>"
+msgstr ""
+"<keycap>Šípka hore</keycap> alebo "
+"<keycombo><keycap>Ctrl</keycap><keycap>p</keycap></keycombo>"
+
+#: basic-commands/C/basic-commands.xml:517(para)
+msgid "Scrolls through the commands you've entered previously."
+msgstr "Posúva medzi skôr zadanými príkazmi."
+
+#: basic-commands/C/basic-commands.xml:525(para)
+msgid ""
+"<keycap>Down Arrow</keycap> or "
+"<keycombo><keycap>Ctrl</keycap><keycap>n</keycap></keycombo>"
+msgstr ""
+"<keycap>Šípka dole</keycap> alebo "
+"<keycombo><keycap>Ctrl</keycap><keycap>n</keycap></keycombo>"
+
+#: basic-commands/C/basic-commands.xml:535(para)
+msgid "Takes you back to a more recent command."
+msgstr "Vyvolá posledný zadaný príkaz."
+
+#: basic-commands/C/basic-commands.xml:542(keycap)
+msgid "Enter"
+msgstr "Enter"
+
+#: basic-commands/C/basic-commands.xml:547(para)
+msgid "When you have the command you want."
+msgstr "Keď máte požadovaný príkaz."
+
+#: basic-commands/C/basic-commands.xml:553(keycap)
+msgid "Tab"
+msgstr "Tabulátor"
+
+#: basic-commands/C/basic-commands.xml:558(para)
+msgid ""
+"A very useful feature. It autocompletes any commands or filenames, if "
+"there's only one option, or else gives you a list of options."
+msgstr ""
+"Veľmi užitočná funkcia. Automaticky doplní príkazy alebo názvy súborov, ak "
+"je iba jedna možnosť; v opačnom prípade vypíše zoznam možností."
+
+#: basic-commands/C/basic-commands.xml:571(title)
+msgid "Change the text"
+msgstr "Zmena textu"
+
+#: basic-commands/C/basic-commands.xml:572(para)
+msgid ""
+"The mouse won't work. Use the <keycap>Left/Right arrow</keycap> keys to move "
+"around the line."
+msgstr ""
+"Myš nefunguje. Na presúvanie sa po riadku použite klávesy <keycap>šípka "
+"vpravo/vľavo</keycap>."
+
+#: basic-commands/C/basic-commands.xml:576(para)
+msgid ""
+"When the cursor is where you want it in the line, typing "
+"<emphasis>inserts</emphasis> text, it doesn't overtype what's already there."
+msgstr ""
+"Keď je kurzor na požadovanom mieste v riadku, <emphasis>vložením</emphasis> "
+"textu neprepíšene text už napísaný."
+
+#: basic-commands/C/basic-commands.xml:591(keycap) basic-commands/C/basic-commands.xml:607(keycap) basic-commands/C/basic-commands.xml:626(keycap) basic-commands/C/basic-commands.xml:642(keycap) basic-commands/C/basic-commands.xml:657(keycap) basic-commands/C/basic-commands.xml:671(keycap)
+msgid "Ctrl"
+msgstr "Ctrl"
+
+#: basic-commands/C/basic-commands.xml:592(keycap)
+msgid "a"
+msgstr "a"
+
+#: basic-commands/C/basic-commands.xml:594(keycap)
+msgid "Home"
+msgstr "Home"
+
+#: basic-commands/C/basic-commands.xml:599(para)
+msgid "Moves the cursor to the <emphasis>start</emphasis> of a line."
+msgstr ""
+"Presunie kurzor na <emphasis>z<emphasis "
+"role=\"strong\">a</emphasis>čiatok</emphasis> riadka."
+
+#: basic-commands/C/basic-commands.xml:608(keycap)
+msgid "e"
+msgstr "e"
+
+#: basic-commands/C/basic-commands.xml:610(keycap)
+msgid "End"
+msgstr "End"
+
+#: basic-commands/C/basic-commands.xml:615(para)
+msgid ""
+"Moves the cursor to the <emphasis><emphasis "
+"role=\"strong\">e</emphasis>nd</emphasis> of a line."
+msgstr ""
+"Presunie kurzor na <emphasis>koni<emphasis "
+"role=\"strong\">e</emphasis>c</emphasis> riadka."
+
+#: basic-commands/C/basic-commands.xml:627(keycap)
+msgid "b"
+msgstr "b"
+
+#: basic-commands/C/basic-commands.xml:633(para)
+msgid ""
+"Moves to the <emphasis role=\"strong\">b</emphasis>eginning of the previous "
+"or current word."
+msgstr ""
+"Presunie kurzor na <emphasis>začiatok</emphasis> predchádzajúceho alebo "
+"aktuálneho slova."
+
+#: basic-commands/C/basic-commands.xml:643(keycap)
+msgid "k"
+msgstr "k"
+
+#: basic-commands/C/basic-commands.xml:649(para)
+msgid "Deletes from the current cursor position to the end of the line."
+msgstr "Zmaže všetko od umiestnenia kurzoru až po koniec riadka."
+
+#: basic-commands/C/basic-commands.xml:658(keycap)
+msgid "u"
+msgstr "u"
+
+#: basic-commands/C/basic-commands.xml:664(para)
+msgid "Deletes the whole of the current line."
+msgstr "Zmaže celý riadok."
+
+#: basic-commands/C/basic-commands.xml:672(keycap)
+msgid "w"
+msgstr "w"
+
+#: basic-commands/C/basic-commands.xml:678(para)
+msgid "Deletes the word before the cursor."
+msgstr "Zmaže všetko pred kurzorom."
+
+#: basic-commands/C/basic-commands.xml:688(title)
+msgid "More Information"
+msgstr "Viac informácií"
+
+#: basic-commands/C/basic-commands.xml:689(para)
+msgid "The following online guides are available:"
+msgstr "Sú dostupné nasledujúce online príručky:"
+
+#: basic-commands/C/basic-commands.xml:692(para)
+msgid ""
+"<ulink url=\"https://help.ubuntu.com/community/AptGetHowto\"> "
+"AptGetHowto</ulink> - using apt-get to install packages from the command "
+"line."
+msgstr ""
+"<ulink url=\"https://help.ubuntu.com/community/AptGetHowto\">Príručka "
+"AptGet</ulink> - použitie apt-get na inštaláciu balíkov z príkazového riadka."
+
+#: basic-commands/C/basic-commands.xml:699(para)
+msgid ""
+"<ulink url=\"https://help.ubuntu.com/community/Repositories/CommandLine\"> "
+"Commandline Repository Editing</ulink> - adding the Universe/Multiverse "
+"repositories through the command line."
+msgstr ""
+"<ulink url=\"https://help.ubuntu.com/community/Repositories/CommandLine\"> "
+"Úprava zdrojov softvéru z príkazového riadka</ulink> - pridanie zdrojov "
+"Universe/Multiverse prostredníctvom príkazového riadka."
+
+#: basic-commands/C/basic-commands.xml:707(para)
+msgid ""
+"<ulink url=\"https://help.ubuntu.com/community/grep\">grep Howto</ulink> - "
+"grep is a powerful command line search tool."
+msgstr ""
+"<ulink url=\"https://help.ubuntu.com/community/grep\">Príručka grep</ulink> -"
+" grep je mocný vyhľadávací nástroj pre príkazový riadok."
+
+#: basic-commands/C/basic-commands.xml:714(para)
+msgid ""
+"<ulink url=\"https://help.ubuntu.com/community/find\">find </ulink> - locate "
+"files on the command line."
+msgstr ""
+"<ulink url=\"https://help.ubuntu.com/community/find\">find</ulink> - "
+"lokalizujte súbory v príkazovom riadku."
+
+#: basic-commands/C/basic-commands.xml:720(para)
+msgid ""
+"<ulink url=\"https://help.ubuntu.com/community/CommandlineHowto\"> "
+"CommandlineHowto</ulink> - longer and more complete than this basic guide, "
+"but still unfinished."
+msgstr ""
+"<ulink url=\"https://help.ubuntu.com/community/CommandlineHowto\"> Príručka "
+"príkazového riadka</ulink> - dlhšia a komplexnejšia ako táto základná "
+"príručka, avšak stále nedokončená."
+
+#: basic-commands/C/basic-commands.xml:727(para)
+msgid ""
+"<ulink url=\"https://help.ubuntu.com/community/HowToReadline\"> "
+"HowToReadline</ulink> - information on some more advanced customization for "
+"the command line."
+msgstr ""
+"<ulink url=\"https://help.ubuntu.com/community/HowToReadline\"> Readline "
+"príručka</ulink> - informácie o niektorých pokročilejších prispôsobeniach "
+"príkazového riadka."
+
+#: basic-commands/C/basic-commands.xml:734(para)
+msgid "For more detailed tutorials on the Linux command line, please see:"
+msgstr "Podrobnejších sprievodcov príkazovým riadkom Linuxu nájdete na:"
+
+#: basic-commands/C/basic-commands.xml:740(para)
+msgid ""
+"<ulink url=\"http://linuxcommand.org/\"/>- basic BASH tutorials, including "
+"BASH scripting"
+msgstr ""
+"<ulink url=\"http://linuxcommand.org/\"/>- základní sprievodcovia BASH-om "
+"vrátane tvorby skriptov v BASH-i"
+
+#: basic-commands/C/basic-commands.xml:746(para)
+msgid ""
+"<ulink url=\"http://linuxsurvival.com/index.php\"/>- Java-based tutorials"
+msgstr ""
+"<ulink url=\"http://linuxsurvival.com/index.php\"/>- sprievodcovia založení "
+"na Java"
+
+#: basic-commands/C/basic-commands.xml:752(para)
+msgid ""
+"<ulink url=\"http://rute.2038bug.com/index.html.gz\"/>- a massive online "
+"book about system administration, almost all from the command line."
+msgstr ""
+"<ulink url=\"http://rute.2038bug.com/index.html.gz\"/>- masívna online kniha "
+"o správe systému, obsahuje takmer všetko o príkazovom riadku."
+
+#. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2.
+#: basic-commands/C/basic-commands.xml:0(None)
+msgid "translator-credits"
+msgstr ""
+"Launchpad Contributions:\n"
+"  Martin Pohanka https://launchpad.net/~martin-pohanka\n"
+"  Matej Duman https://launchpad.net/~dumi\n"
+"\n"
+"Launchpad Contributions:\n"
+"  Launchpad Translations Administrators https://launchpad.net/~rosetta-"
+"admins\n"
+"  Martin Pohanka https://launchpad.net/~martin-pohanka\n"
+"  Matej Duman https://launchpad.net/~dumi\n"
+"  helix84 https://launchpad.net/~helix84"

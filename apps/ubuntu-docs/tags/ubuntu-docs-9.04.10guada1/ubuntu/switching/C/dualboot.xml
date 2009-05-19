@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD Docbook XML V.4.3//EN"
+	  "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+	  <!ENTITY % globalent SYSTEM "../../../libs/global.ent">
+	  %globalent;
+	  <!ENTITY % cdo-C SYSTEM "../../../libs/cdo-C.ent">
+	  %cdo-C;
+	  <!ENTITY % gnome-menus-C SYSTEM "../../../ubuntu/libs/gnome-menus-C.ent">
+	  %gnome-menus-C;
+	  <!ENTITY % xinclude SYSTEM "../../../libs/xinclude.mod">
+	  %xinclude;
+	  <!ENTITY language "en">
+	  <!ENTITY ubuntu '<phrase>Ubuntu</phrase>'>
+	  ]>
+
+<chapter id="dualboot" status="review">
+	<title>Dual-booting with Windows</title>
+	<para>This chapter provides instructions and tips on installing Ubuntu and Windows XP onto the same system.</para>
+	<sect1 id="dualboot-intro" status="review">
+		<title>Introduction</title>
+		<para>It is possible to have more than one operating system installed on a computer at once. While only one <emphasis>operating system</emphasis> can be run at once, it is possible to choose which one to start when the computer is initially turned on. This is called <emphasis>dual-booting</emphasis></para>
+		<para>This quick guide is intended to help you to install Ubuntu onto a computer alongside a copy of Windows. You will be able to select whether to start Ubuntu or Windows each time your computer starts up.</para>
+		<sect2 id="dualboot-intro-advantages" status="review">
+			<title>Advantages of dual-booting</title>
+			<itemizedlist>
+				<listitem><para>You can evaluate Ubuntu while still having access to Windows</para></listitem>
+				<listitem><para>You can boot into Windows if you need to use a Windows-specific application.</para></listitem>
+				<listitem><para>You can gradually switch to Ubuntu, one step at a time</para></listitem>
+			</itemizedlist>
+		</sect2>
+		<sect2 id="dualboot-intro-disadvantages" status="review">
+			<title>Disadvantages of dual-booting</title>
+			<itemizedlist>
+				<listitem><para>As two operating systems are installed, they can take up a large amount of hard disk space.</para></listitem>
+				<listitem><para>Upgrading to another version of Windows can cause the dual-boot configuration to break</para></listitem>
+				<listitem><para>Start-up time is slightly increased</para></listitem>
+				<listitem><para>More complicated than just running one operating system</para></listitem>
+			</itemizedlist>
+		</sect2>
+	</sect1>
+	<sect1 id="dualboot-concepts" status="review">
+		<title>Basic concepts</title>
+		<para>In order to understand the basics of dual-booting, it is necessary to be aware of a small number of related concepts.</para>
+		<sect2 id="dualboot-concepts-summary" status="review">
+			<title>Summary</title>
+			<itemizedlist>
+				<listitem><para><emphasis role='strong'>Hard disks can be split up into partitions</emphasis></para></listitem>
+				<listitem><para><emphasis role='strong'>Each partition is treated as if it was a separate hard disk drive</emphasis></para></listitem>
+				<listitem><para><emphasis role='strong'>Operating systems must be installed on separate partitions</emphasis></para></listitem>
+				<listitem><para><emphasis role='strong'>The boot loader decides which operating system to start</emphasis></para></listitem>
+			</itemizedlist>
+		</sect2>
+		<sect2 id="dualboot-concepts-partitions" status="review">
+			<title>Hard disk partitions</title>
+			<para>Your hard disk can be split up into many separate <emphasis>partitions</emphasis>, in a similar way that a large room can be partitioned by dividing walls. Each partition, while still being on the same physical device, is treated as being entirely separate to other partitions - it is as if you have multiple hard drives installed rather than just one. In Windows, each partition has its own <emphasis>drive letter</emphasis>. You might have a C, D and E drive which, while being treated as separate devices, are in fact all stored on the same hard disk.</para>
+			<para>For operating systems to be able to co-exist on the same computer, they should be installed onto separate partitions. This means that, to dual-boot between Ubuntu and Windows, you must partition your hard disk in a suitable manner.</para>
+			<para>By partitioning your disk, you are splitting the storage capacity of your hard disk into separate, differently-sized chunks. You should choose the sizes of each partition carefully to prevent running out of storage space on a partition.</para>
+			<para>Because each partition is treated as a separate device, each partition must be <emphasis>formatted</emphasis> with a <emphasis>filesystem</emphasis>. Formatting is the process of creating a filesystem on a partition. A filesystem is a method which an operating system uses to store your files - there are many different filesystems, each with its own advantages and limitations. Common filesystems used in a dual boot system include NTFS, FAT32, and ext3. NTFS, to which Linux cannot safely write data, is the default filesystem used by Windows. Ubuntu treats this filesystem as read-only. ext3 is a native Linux filesystem that can be accessed from Windows using various tools such as ext2fs. FAT32 (also know as vfat) is a filesystem to which Linux can write safely. Hence, in a dual system, a FAT32 filesystem is commonly used as a way of sharing files between Linux and Windows.</para>
+			<para>There are two different types of partition. <emphasis>Primary</emphasis> partitions can contain only one filesystem and a maximum of four of them can be used on a hard disk. <emphasis>Extended</emphasis> partitions can contain many other partitions, but only one can be used per hard disk.</para>
+		</sect2>
+		<sect2 id="dualboot-concepts-bootloader" status="review">
+			<title>The boot-loader</title>
+			<para>When your computer initially starts up, it quickly checks itself for problems and then passes control over to a program called a <emphasis>boot loader</emphasis>. The boot loader stores a list of operating systems and partitions stored on the computer, and decides which operating system to start up. Once it makes a choice, the operating system it selected is then in control of the computer.</para>
+			<para>When setting-up a dual-boot system, the boot loader must be made aware of the changes which are being made. Ubuntu will install a boot loader for you, which allows you to choose which operating system to start each time the computer boots up. This boot loader is called <application>GRUB</application>.</para>
+		</sect2>
+	
+	</sect1>
+	<sect1 id="dualboot-planning" status="review">
+		<title>Planning your dual-boot configuration</title>
+		<para>When setting up a dual-boot system, you must make some important changes to the way your computer operates. While these changes are routine, there is the possibility that they could go wrong. By planning your dual-boot setup you can reduce the risk of error.</para>
+		<sect2 id="dualboot-planning-current" status="review">
+			<title>Finding out about your current hard disk drive setup</title>
+			<para>In order to decide how to partition your hard disk ready for dual-booting, you will need to know how it is currently partitioned.</para>
+			<para>You need to find out the total storage capacity of your hard disk drive and the layout of the current partitions. This can be done from within <application>Windows XP</application> by using the <application>Disk Management Snap-In</application>.</para>
+			<orderedlist>
+				<listitem><para>Press <menuchoice><guimenuitem>Start</guimenuitem><guimenuitem>Run</guimenuitem></menuchoice>. The <application>Run</application> dialog should appear.</para></listitem>
+				<listitem><para>Type <emphasis>diskmgr.msc</emphasis> into the box provided and press <guibutton>Run</guibutton>.</para></listitem>
+				<listitem><para>The <application>Disk Management Snap-In</application> shows the status of all of the storage devices connected to your computer. Find the device with the <emphasis>C:</emphasis> drive on it. This should be your primary hard disk (if you have more than one installed).</para></listitem>
+				<listitem><para>Note down the total capacity of the hard disk and also the order and size of all of the partitions on the disk (if there is more than one).</para></listitem>
+			</orderedlist>
+		</sect2>
+		<sect2 id="dualboot-planning-scheme" status="review">
+			<title>Deciding what partitions to use</title>
+			<para>Windows will probably use one or two partitions only, though these are likely to take up the entire hard disk. You must decide how much disk space you will need for Windows, and how much you would like to be able to use in Ubuntu.</para>
+			<note>
+				<title>Recovery partitions</title>
+				<para>Many computer manufacturers install recovery partitions onto their computers to allow you to restore Windows in case of problems. These tend to be small partitions which are inaccessible from Windows. Because these partitions may be the sole method of recovering Windows in case of a problem, it is recommended that you do not attempt to change or remove such recovery partitions.</para>
+			</note>
+		</sect2>
+	</sect1>
+	<sect1 id="dualboot-procedure" status="draft">
+		<title>Setting up a dual-boot configuration</title>
+		<para>This section provides the procedure required to set up a dual-boot system with Ubuntu and <application>Windows XP</application>.</para>
+		<orderedlist>
+			<listitem><para>From within Windows, run the Windows defragmentation tool on the <filename>C drive</filename>. This can be accessed by going to <menuchoice><guimenuitem>Start</guimenuitem><guimenuitem>Run</guimenuitem></menuchoice>, typing <emphasis>defrag</emphasis> in the box provided and then pressing <guibutton>OK</guibutton>.</para></listitem>
+			<listitem><para>Defragmentation may take a very long time, up to several hours. Once it has finished, insert your Ubuntu Desktop CD into your disc drive and reboot your PC.</para></listitem>
+			<listitem><para>Follow the instructions given in the <xref linkend="installing"/> section until the installer shows the screen titled <guilabel>Prepare disk space</guilabel>.</para></listitem>
+			<listitem><para>Choose <guilabel>Manually edit partition table</guilabel>. The disk partitioning tool will start, showing a list of the partitions currently set up on the computer.</para></listitem>
+			<listitem><para>Select the partition which contains Windows. You may be able to identify it from its size or label. Once you are sure that you have identified the correct partition, press <keycap>Enter</keycap>.</para></listitem>
+			<listitem><para>On the screen which appears, select <guilabel>Size:</guilabel> and press <keycap>Enter</keycap>.</para></listitem>
+			<listitem><para>On the message which is shown, press <guibutton>Yes</guibutton> and then press <keycap>Enter</keycap>.</para></listitem>
+			<listitem><para>Type in a new size in <emphasis>Gigabytes (GB)</emphasis> for your partition. It is recommended that you reduce the size of the partition by <emphasis role="strong">at least 10 GB</emphasis> in order to provide enough space for Ubuntu on the hard disk.</para></listitem>
+			<listitem><para>Press <keycap>Enter</keycap> to apply the changes. This may take some time to complete.</para></listitem>
+			<listitem><para>In the free space which has now been made, create a swap partition of around 500 MB. See <xref linkend="installing-partitioning"/> for more information on this.</para></listitem>
+			<listitem><para>Also, create a partition for your Ubuntu installation, of at least 10 GB.</para></listitem>
+			<listitem><para>Select <guilabel>Finish partitioning and write changes to disk</guilabel> to permanently apply your changes. This operation may take a while, and cannot be reversed.</para></listitem>
+			<listitem><para>Finish installing Ubuntu according to the instructions on-screen or the <xref linkend="installing"/> section.</para></listitem>
+			<listitem><para>On rebooting your computer after installation, you should be presented with a list of operating systems to boot. Ubuntu should have automatically detected your Windows installation and added an option to boot it on this screen. You can select it using the arrow keys on the keyboard, and can start it by pressing <keycap>Enter</keycap>.</para></listitem>
+		</orderedlist>
+	</sect1>
+	<sect1 id="dualboot-custom" status="review">
+		<title>Customizing your dual-boot setup</title>
+		<para>This section briefly explains how to make basic changes to the settings of your dual-boot setup.</para>
+		<sect2 id="dualboot-custom-timeout" status="review">
+			<title>Changing the boot menu timeout</title>
+			<para>It is possible to change the length of time for which the boot menu is shown. This is useful if you would like the computer to start up faster (without the delay of showing the menu) or would like more time to choose which operating system to start. The instructions for changing the boot menu timeout are given below:</para>
+			<orderedlist>
+				<listitem><para>Press &terminal;.</para></listitem>
+				<listitem><para>The <application>Terminal</application> screen will appear. Type the following into the Terminal, entering your administrative password if prompted:</para>
+				<screen>cd /boot/grub
+sudo cp menu.lst menu_backup.lst
+sudo gedit menu.lst</screen></listitem>
+				<listitem><para>The <application>Text Editor</application> will start, and will open the file <filename>menu.lst</filename>.</para></listitem>
+				<listitem><para>Find the part of the file which contains text similar to the following:</para>
+				<screen>## timeout sec
+# Set a timeout, in SEC seconds, before automatically booting the default entry
+# (normally the first entry defined).
+timeout		10</screen></listitem>
+				<listitem><para>The line beginning with the word <emphasis>timeout</emphasis> determines the time, in seconds, which the boot menu will be shown for. Change the number on this line to the number of seconds which you would like the menu to be shown for. Use <emphasis>0</emphasis> if you would not like the menu to be shown at all.</para></listitem>
+				<listitem><para>Press <menuchoice><guimenuitem>File</guimenuitem><guimenuitem>Save</guimenuitem></menuchoice> to save your changes and close the <application>Text Editor</application>. Your changes should take effect the next time you restart your computer.</para></listitem>
+			</orderedlist>
+		</sect2>
+		<sect2 id="dualboot-custom-bootorder" status="review">
+			<title>Changing the default operating system to boot</title>
+			<para>You can decide which operating system will be started automatically if you have not chosen one from the boot menu within a certain time (see <xref linkend="dualboot-custom-timeout"/> for more information on this).</para>
+			<orderedlist>
+				<listitem><para>Press &terminal;.</para></listitem>
+				<listitem><para>The <application>Terminal</application> screen will appear. Type the following into the Terminal, entering your administrative password if prompted:</para>
+				<screen>cd /boot/grub
+sudo cp menu.lst menu_backup.lst
+sudo gedit menu.lst</screen></listitem>
+				<listitem><para>The <application>Text Editor</application> will start, and will open the file <filename>menu.lst</filename>.</para></listitem>
+				<listitem><para>The entry for each available operating system is arranged in blocks similar to the following:</para>
+				<screen>title		Ubuntu, kernel 2.6.15-26-686
+root		(hd0,0)
+kernel		/boot/vmlinuz-2.6.15-26-686 root=/dev/hda1 ro quiet splash
+initrd		/boot/initrd.img-2.6.15-26-686
+savedefault
+boot</screen>
+				<para>Find the operating system you would like to set as the default by looking at the lines marked <emphasis>title</emphasis> in each block.</para></listitem>
+				<listitem><para> Find out the number of the block you found; the first block is 0, the second is 1 and so on. Count down the list until you get to the block you chose.</para></listitem>
+				
+				<listitem><para>Find the following lines:</para>
+				<screen>## default num
+# Set the default entry to the entry number NUM. Numbering starts from 0, and
+# the entry number 0 is the default if the command is not used.
+#
+# You can specify 'saved' instead of a number. In this case, the default entry
+# is the entry saved with the command 'savedefault'.           
+default		0</screen></listitem>
+				<listitem><para>Go to the line beginning with the word <emphasis>default</emphasis> and replace the number there with the number of the block you just found. For example:</para>
+				<screen>default		2</screen>
+				<para>This will cause the computer to boot the third operating system in the list, which is described by block 2.</para></listitem>
+				
+				<listitem><para>If you are happy with your changes, press <menuchoice><guimenuitem>File</guimenuitem><guimenuitem>Save</guimenuitem></menuchoice> to save your changes and close the <application>Text Editor</application>. The new default should take effect the next time you restart your computer.</para></listitem>
+			</orderedlist>
+		</sect2>
+	</sect1>
+</chapter>

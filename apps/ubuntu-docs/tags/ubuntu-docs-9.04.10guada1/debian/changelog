@@ -1,0 +1,767 @@
+ubuntu-docs (8.03.4) hardy; urgency=low
+
+  * Install omf file for serverguide (LP: #208134)
+
+ -- Matthew East <mdke@ubuntu.com>  Fri, 28 Mar 2008 08:12:48 +0000
+
+ubuntu-docs (8.03.3) hardy; urgency=low
+
+  * New bzr checkout (LP: #181236, LP: #203198, LP: #204163, LP: #204666)
+  * String freeze now in effect
+  * Refresh pot files
+
+ -- Matthew East <mdke@ubuntu.com>  Fri, 21 Mar 2008 14:34:49 +0000
+
+ubuntu-docs (8.03.2) hardy; urgency=low
+
+  * New bzr checkout (LP: #176678, LP: #118963, LP: #108083, LP: #202312)
+  * Replacing "server" document with "serverguide"
+  * Refresh pot files
+  * Fixing debian/rules to filter translations less than 40%
+
+ -- Matthew East <mdke@ubuntu.com>  Sun, 16 Mar 2008 22:16:42 +0000
+
+ubuntu-docs (8.03.1) hardy; urgency=low
+
+  * New bzr checkout (LP: #49435, LP: #197557, LP: #172650, LP: #192202,
+    LP: #144788, LP: #162446, LP: #183339, LP: #195882)
+  * Include html version of contributors in ubuntu-serverguide (LP: #88814)
+  * Refresh pot templates
+
+ -- Matthew East <mdke@ubuntu.com>  Sun, 09 Mar 2008 18:37:08 +0000
+
+ubuntu-docs (8.02.2) hardy; urgency=low
+
+  * Adding translations for all documents
+  * Amending path for pot templates, as requested by carlos
+
+ -- Matthew East <mdke@ubuntu.com>  Wed, 20 Feb 2008 07:56:10 +0000
+
+ubuntu-docs (8.02.1) hardy; urgency=low
+
+  * New bzr checkout - loads of text fixes and improvements (LP: #183148,
+    LP: #183025, LP: #178064, LP: #160435, LP: #158016, LP: #146794, 
+    LP: #144795, LP: #185867, LP: #163188, LP: #150167, LP: #148372, 
+    LP: #144928, LP: #141491, LP: #141444, LP: #138891, LP: #172565, 
+    LP: #144285, LP: #150641, LP: #176678)
+  * First release for hardy
+
+ -- Matthew East <mdke@ubuntu.com>  Sat, 16 Feb 2008 18:31:20 +0000
+
+ubuntu-docs (7.10.4) gutsy; urgency=low
+
+  * Fix broken link in "windows" document (LP: #144796)
+
+ -- Matthew East <mdke@ubuntu.com>  Fri, 12 Oct 2007 08:36:57 +0100
+
+ubuntu-docs (7.10.3) gutsy; urgency=low
+
+  * Advanced Topics - changing link to more useful doc for programming reference
+
+ -- Matthew East <mdke@ubuntu.com>  Sun, 07 Oct 2007 12:34:41 +0100
+
+ubuntu-docs (7.10.2) gutsy; urgency=low
+
+  * New translation export from rosetta
+  * Restoring translations over 40% complete
+  * Including all languages in ubuntu-serverguide package (LP: #110863)
+  * Last package upload before gutsy (LP: #149993)
+
+ -- Matthew East <mdke@ubuntu.com>  Sat, 06 Oct 2007 15:25:19 +0100
+
+ubuntu-docs (7.10.1) gutsy; urgency=low
+
+  * Adding translations to source package
+  * Don't install libs/pdf directory 
+  * Restore symlink-dupes script to eliminate duplicate files (LP: 149040)
+  * Fix debian/rules to take account of new location for pot files (thanks to Martin Pitt)
+  * Only install translations which are >90% complete (temporary measure to keep package size small)
+
+ -- Matthew East <mdke@ubuntu.com>  Thu, 04 Oct 2007 08:17:06 +0100
+
+ubuntu-docs (7.09.3) gutsy; urgency=low
+
+  * Strip out unwanted directories from the source package in 
+		debian/rules rather than manually.
+
+ -- Matthew East <mdke@ubuntu.com>  Mon, 17 Sep 2007 08:46:53 +0100
+
+ubuntu-docs (7.09.2) gutsy; urgency=low
+
+  * New SVN checkout
+  * String Freeze in effect, refreshing pot templates
+
+ -- Matthew East <mdke@ubuntu.com>  Fri, 14 Sep 2007 08:23:05 +0100
+
+ubuntu-docs (7.09.1) gutsy; urgency=low
+
+  * New SVN checkout
+  * Changing 7.04 to 7.10 in browser homepage
+
+ -- Matthew East <mdke@ubuntu.com>  Tue, 28 Aug 2007 08:14:03 +0100
+
+ubuntu-docs (7.07.2) gutsy; urgency=low
+
+  * New SVN checkout.
+
+ -- Jordan Mantha <mantha@ubuntu.com>  Wed, 15 Aug 2007 13:35:31 -0700
+
+ubuntu-docs (7.07.1) gutsy; urgency=low
+
+  * New SVN checkout.
+  * debian/rules: remove symlink-dupes bits.
+
+ -- Daniel Holbach <daniel.holbach@ubuntu.com>  Wed, 04 Jul 2007 09:30:59 +0200
+
+ubuntu-docs (7.04.4) feisty; urgency=low
+
+  * debian/control: Add missing Pre-depends: on dpkg for bzip2 compression
+    support.
+  * debian/rules: Use the same 'poorly translated' barrier for the server
+    parts of ubuntu-doc, and raise the bar to 30%.
+  * debian/rules: Add -o /dev/null to msgfmt calls to avoid writing
+    messages.mo into the root directory.
+
+ -- Martin Pitt <martin.pitt@ubuntu.com>  Wed, 11 Apr 2007 10:00:01 +0200
+
+ubuntu-docs (7.04.3) feisty; urgency=low
+
+  * Update translations from Rosetta
+  * Install translations for ubuntu-serverguide
+  * Unbreak about-ubuntu panel menu entry
+  * [Martin Pitt]:
+    - debian/rules: Do not ship documents which are less than 25% translated.
+      They are useless for non-English speakers anyway and bloat the package.
+    - debian/control: Add bc build dependency (needed for the percentage 
+      calculation).
+
+ -- Matthew East <mdke@ubuntu.com>  Sun,  8 Apr 2007 10:26:54 +0100
+
+ubuntu-docs (7.04.2) feisty; urgency=low
+
+  * Package diet to stop being so ridiculously space inefficient:
+    - debian/rules: Use bzip2 compression.
+    - Add symlink-dupes and run it in debian/rules, to symlink duplicate
+      files. Add fdupes build dependency for that.
+
+ -- Martin Pitt <martin.pitt@ubuntu.com>  Thu,  5 Apr 2007 12:32:17 +0200
+
+ubuntu-docs (7.04.1) feisty; urgency=low
+
+  * Adding translations for all documents
+  * [Daniel Holbach]
+    - debian/control: change gnome2-user-guide to gnome-user-guide.
+
+ -- Matthew East <mdke@ubuntu.com>  Wed,  4 Apr 2007 08:00:57 +0100
+
+ubuntu-docs (7.03.3) feisty; urgency=low
+
+  * A few new strings approved as per DocumentationStringFreeze
+  * Refreshing pot templates
+  * Removing pot template for switching guide
+
+ -- Matthew East <matt@kalliope>  Thu, 15 Mar 2007 08:25:46 +0000
+
+ubuntu-docs (7.03.2) feisty; urgency=low
+
+  * New material, mainly from Phil Bull
+  * Refreshing pot templates
+  * String freeze now in effect
+
+ -- Matthew East <mdke@ubuntu.com>  Thu,  8 Mar 2007 08:20:38 +0000
+
+ubuntu-docs (7.03.1) feisty; urgency=low
+
+  * Two new documents - basic-commands and desktop-effects
+  * Refreshing pot templates
+
+ -- Matthew East <matt@kalliope>  Sat,  3 Mar 2007 11:03:55 +0000
+
+ubuntu-docs (7.02.3) feisty; urgency=low
+
+  * split out serverguide as a standalone .deb
+    - moved install, links, postinst, and prerm to ubuntu-docs.*
+    - added ubuntu-serverguide binary section to debian/control
+    - cleaned up long descriptions to reflect what is actually
+      shipped.
+    - added ubuntu-serverguide build and install rules
+  * split out packagingguide as standalone .deb
+  * updated debian/copyright to reflect above
+
+ -- Jordan Mantha <mantha@ubuntu.com>  Wed, 21 Feb 2007 02:10:28 -0800
+
+ubuntu-docs (7.02.2) feisty; urgency=low
+
+  * Adding a "Files, Folders and Documents" topic.
+  * Various text updates
+
+ -- Matthew East <matt@kalliope>  Fri,  9 Feb 2007 08:21:45 +0000
+
+ubuntu-docs (7.02.1) feisty; urgency=low
+
+  * Installing documents within the gnome/help scheme
+    - for easier linking
+
+ -- Matthew East <mdke@ubuntu.com>  Fri,  2 Feb 2007 00:28:53 +0000
+
+ubuntu-docs (7.01.3) feisty; urgency=low
+
+  * Rearranging directory structure and adding translation templates
+
+ -- Matthew East <mdke@ubuntu.com>  Sat, 27 Jan 2007 07:53:31 -0500
+
+ubuntu-docs (7.01.2) feisty; urgency=low
+
+  * adding new advanced-topics category with links to man pages
+
+ -- Matthew East <mdke@ubuntu.com>  Wed, 24 Jan 2007 00:14:21 +0000
+
+ubuntu-docs (7.01.1) feisty; urgency=low
+
+  * Adding gnome2-user-guide and yelp to Depends
+  * Two new top level topics
+
+ -- Matthew East <mdke@ubuntu.com>  Tue,  9 Jan 2007 00:08:10 +0000
+
+ubuntu-docs (6.12.2) feisty; urgency=low
+
+  * Tweaking of which documents show up on the front page
+  * Various text updates
+
+ -- Matthew East <mdke@ubuntu.com>  Sat, 23 Dec 2006 01:11:53 +0000
+
+ubuntu-docs (6.12.1) feisty; urgency=low
+
+  * Serious revamping of structure of documentation, accordingly
+	 changes made to packaging. Please do some serious testing.
+
+ -- Matthew East <mdke@ubuntu.com>  Sat, 16 Dec 2006 17:00:00 +0000
+
+ubuntu-docs (6.11.2) feisty; urgency=low
+
+  * Changing the packaging process to point mainly at debian/rules rather
+	 than debian/install so we don't have to keep adding files manually to the
+	 latter.
+
+ -- Matthew East <mdke@ubuntu.com>  Sun, 19 Nov 2006 10:39:00 +0000
+
+ubuntu-docs (6.11.1) edgy-updates; urgency=low
+
+  * Some missing entities causing validity havoc in our docbook
+  * Fixing invalidity of contribute.xml
+
+ -- Matthew East <mdke@ubuntu.com>  Sat, 18 Nov 2006 20:53:00 +0000
+
+ubuntu-docs (6.10.4) edgy; urgency=low
+
+  * Updating omf files for getting-help
+  * Removing es_ES locale for aboutubuntu (duplicate of es) - bug 66819
+
+ -- Matthew East <mdke@ubuntu.com>  Fri, 20 Oct 2006 20:30:00 +0100
+
+ubuntu-docs (6.10.3) edgy; urgency=low
+
+  * Matthew East:
+    - Fixing translations by installing *omf files for each document and 
+      fixing paths in the omf files
+  * Daniel Holbach:
+    - fix installation, run dh_scrollkeeper.
+
+ -- Matthew East <mdke@ubuntu.com>  Wed, 18 Oct 2006 22:00:00 +0100
+
+ubuntu-docs (6.10.2) edgy; urgency=low
+
+  * Adding translations for all documents
+
+ -- Matthew East <mdke@ubuntu.com>  Sun, 15 Oct 2006 10:30:00 +0100
+
+ubuntu-docs (6.10.1) edgy; urgency=low
+
+  * Including po files for translations in source package, as requested by Carlos.
+  * Adding pot template and correcting typo in omf file for Getting Help document.
+
+ -- Matthew East <mdke@ubuntu.com>  Sun, 30 Sep 2006 12:00:00 +0100
+
+ubuntu-docs (6.09.3) edgy; urgency=low
+
+  * New SVN checkout.
+  * ubuntu/browser-startpage/*:
+    - changed occurrences of Dapper, Drake, 6.06, LTS, ... to their 'edgy'
+      equivalents - there are more strings to change outside of this.
+
+ -- Daniel Holbach <daniel.holbach@ubuntu.com>  Tue, 26 Sep 2006 12:42:25 +0200
+
+ubuntu-docs (6.09.2) edgy; urgency=low
+
+  * New SVN checkout. 
+
+ -- Daniel Holbach <daniel.holbach@ubuntu.com>  Thu, 21 Sep 2006 22:52:02 +0200
+
+ubuntu-docs (6.09.1) edgy; urgency=low
+
+  * New release.
+  * debian/control:
+    - removed Depends on gnome2-user-guide, after discussion with Corey
+      Burger.
+
+ -- Daniel Holbach <daniel.holbach@ubuntu.com>  Fri, 15 Sep 2006 17:55:30 +0200
+
+ubuntu-docs (6.08.2) edgy; urgency=low
+
+  * New "Contribute to Ubuntu" doc, written by Andreas Lloyd and imported from the wiki
+  * Desktop guide significantly restructured, now includes the Gnome user-guide
+  * Including pot templates for automatic import into Rosetta
+
+ -- Matthew East <mdke@ubuntu.com>  Mon, 28 August 2006 22:00:00 +0100
+
+ubuntu-docs (6.08.1) edgy; urgency=low
+
+  * first package for Edgy
+  * removing translations of documentation
+  * changing installation directory for documentation from /usr/share/ubuntu-doc
+     to /usr/share/gnome/help to integrate with gnome help system
+  * splitting documents up to make a nicer structure for help system, hopefully
+  .
+  * [Daniel Holbach]
+    - debian/README: updated repository URL. 
+    - debian/control:
+      - bumped Standards-Version,
+      - made cdbs and debhelper Build-Depends, not Build-Depends-Indep.
+    - debian/install:
+      - changed ubuntuheader.png location.
+
+ -- Matthew East <mdke@ubuntu.com>  Fri, 2 August 2006 14:00:00 +0100
+
+ubuntu-docs (6.06.2) dapper-updates; urgency=low
+
+  * New snapshot of translations from Rosetta
+
+ -- Matthew East <mdke@ubuntu.com>  Fri, 16 June 2006 13:25:00 +0100
+
+ubuntu-docs (6.06.1) dapper; urgency=low
+
+  * removing useless link (Ubuntu: #47016)
+
+ -- Matthew East <mdke@ubuntu.com>  Sun, 28 May 2006 01:44:00 +0100
+
+ubuntu-docs (6.05.6) dapper; urgency=low
+
+  * Replace `Ubuntu 6.06, Dapper Drake' with `Ubuntu 6.06 LTS'.
+  * Replace 6.04 with 60.6 in generic/libs/generic.ent.
+  * New sk translation of desktopguide (patch via mdke).
+  * Remove `ka_GE' from DapperFirefoxStartPageTranslation locale list.
+    It's too near to the Dapper release to complete the remaining stages
+    of the adding-a-locale process, and we must not stop halfway.
+
+ -- Ian Jackson <iwj@ubuntu.com>  Tue, 23 May 2006 15:39:25 +0100
+
+ubuntu-docs (6.05.5) dapper; urgency=low
+
+  * Updated translations for everything (last update before the release)
+  * [Daniel Holbach]
+    - debian/README: updated.
+
+ -- Matthew East <mdke@ubuntu.com>  Sun, 21 May 2006 17:31:00 +0100
+
+ubuntu-docs (6.05.4) UNRELEASED; urgency=low
+
+  * Adding preface.xml for zh_TW (was causing scrollkeeper errors)
+  * DapperFirefoxStartPageTranslation - new translateable locale `ka_GE'
+
+ -- Matthew East <mdke@ubuntu.com>  Wed, 17 May 2006 20:53:00 +0100
+
+ubuntu-docs (6.05.3) dapper; urgency=low
+
+  * DapperFirefoxStartPageTranslation for epiphany:
+    produce an index-C.html for epiphany's index-%l.html.
+  * New translateable locale `ku'.
+
+ -- Ian Jackson <iwj@ubuntu.com>  Tue, 16 May 2006 17:18:19 +0100
+
+ubuntu-docs (6.05.2) dapper; urgency=low
+
+  * New snapshot of translations for all documents
+
+ -- Matthew East <mdke@ubuntu.com>  Sun, 14 May 2006 12:42:00 +0100
+
+ubuntu-docs (6.05.1) dapper; urgency=low
+
+  * Taking html out of shipped documentation.
+  * Adding preface.xml for those translations which have them
+  * New snapshot of translations for all documents
+
+ -- Matthew East <mdke@ubuntu.com>  Tue, 02 May 2006 19:23:16 +0200
+
+ubuntu-docs (6.04.8) dapper; urgency=low
+
+  * [Matthew East and the Docteam]
+    - Adding some symbolic links so that the css and images in localised 
+      firefox homepages work
+    - Adding translations of the documents (BIG INCREASE IN PACKAGE SIZE)
+    - Moved to debhelper 5 so that we can use comments in debian/install to 
+      keep track of what has now become a long and confusing file.
+    - Relocated sample folders up a directory so that they don't need to be 
+      included for each translation
+  * [Daniel Holbach]
+    - debian/README:
+      - updated instructions to obtain 'source' for ubuntu-docs.
+
+ -- Daniel Holbach <daniel.holbach@ubuntu.com>  Sun, 23 Apr 2006 08:39:40 +0200
+
+ubuntu-docs (6.04.7) dapper; urgency=low
+
+  * Revised DapperFirefoxStartPageTranslation:
+    - new slave alternatives directory for translated homepages
+    - automatic script for generation of link farm
+
+ -- Ian Jackson <iwj@ubuntu.com>  Fri, 21 Apr 2006 18:05:36 +0100
+
+ubuntu-docs (6.04.6) dapper; urgency=low
+
+  * SVN checkout to make mdke happy. 
+
+ -- Daniel Holbach <daniel.holbach@ubuntu.com>  Sat, 15 Apr 2006 13:58:57 +0200
+
+ubuntu-docs (6.04.5) dapper; urgency=low
+
+  * Massive reduction in source package (to make dholbach happy)
+  * Adding more firefox homepage translations
+
+ -- Matthew East <mdke@ubuntu.com>  Tue, 11 Apr 2006 22:26:00 +0100
+
+ubuntu-docs (6.04.4) dapper; urgency=low
+
+  * The "gee the docteam rocks nowadays" release
+  * Documentation string freeze
+  * Pot templates for about ubuntu, desktop guide, server guide, packagingguide, preface
+  * Fixing broken entity in about ubuntu
+  * Adding more firefox homepage translations
+
+ -- Matthew East <mdke@ubuntu.com>  Fri, 07 Apr 2006 15:11:07 +0100
+
+ubuntu-docs (6.04.3) dapper; urgency=low
+
+  * Adding links for dummy firefox homepage translations
+  * Adding lt translation of firefox homepage
+
+ -- Matthew East <mdke@ubuntu.com>  Tue, 05 Apr 2006 15:11:07 +0100
+
+ubuntu-docs (6.04.2) dapper; urgency=low
+
+  * Adding a link for common files in /usr/share/gnome (fixes malone 37979)
+
+ -- Matthew East <mdke@ubuntu.com>  Tue, 04 Apr 2006 11:11:07 +0100
+
+ubuntu-docs (6.04.1) dapper; urgency=low
+
+  * New SVN snapshot:
+    - Rewrite of About Ubuntu document.
+    - Updated pot file for About-Ubuntu
+
+ -- Daniel Holbach <daniel.holbach@ubuntu.com>  Mon, 03 Apr 2006 20:55:07 +0200
+
+ubuntu-docs (6.03.5) dapper; urgency=low
+
+  * New SVN snapshot.
+  * debian/control:
+    - added docbook-xml to Build-Depends.
+
+ -- Daniel Holbach <daniel.holbach@ubuntu.com>  Sun, 26 Mar 2006 16:06:40 +0200
+
+ubuntu-docs (6.03.4) dapper; urgency=low
+
+  * New SVN snapshot, should make scrollkeeper happy again. 
+
+ -- Daniel Holbach <daniel.holbach@ubuntu.com>  Sat, 25 Mar 2006 13:11:39 +0100
+
+ubuntu-docs (6.03.3) dapper; urgency=low
+
+  * New SVN snapshot. 
+
+ -- Daniel Holbach <daniel.holbach@ubuntu.com>  Wed, 22 Mar 2006 14:46:49 +0100
+
+ubuntu-docs (6.03.2) dapper; urgency=low
+
+  * New SVN snapshot. 
+
+ -- Daniel Holbach <daniel.holbach@ubuntu.com>  Tue, 14 Mar 2006 13:10:44 +0100
+
+ubuntu-docs (6.03.1) dapper; urgency=low
+
+  * lots of new material from the whole team
+  * new style for browser homepage, including some images
+  * corrected position of the sample directories for desktop/server guide html versions
+
+ -- Matthew East <mdke@ubuntu.com>  Wed, 8 Mar 2006 16:11:00 +0000
+
+ubuntu-docs (6.02.3) dapper; urgency=low
+
+  * New SVN snapshot.
+    - enhanced copyright file (Malone: #27923)
+
+ -- Daniel Holbach <daniel.holbach@ubuntu.com>  Tue, 28 Feb 2006 08:16:47 +0100
+
+ubuntu-docs (6.02.2) dapper; urgency=low
+
+  * New SVN snapshot.
+
+ -- Daniel Holbach <daniel.holbach@ubuntu.com>  Tue, 21 Feb 2006 14:02:23 +0100
+
+ubuntu-docs (6.02.1) dapper; urgency=low
+
+  * New SVN snapshot.
+
+ -- Daniel Holbach <daniel.holbach@ubuntu.com>  Mon, 13 Feb 2006 17:31:48 +0100
+
+ubuntu-docs (6.01.6) dapper; urgency=low
+
+  * removing links to html versions of the guides from Yelp Table of Contents
+  * new material for desktopguide (Naaman Campbell, Milo Casagrande, mdke); lots of bugs fixed; fairly drastic re-organisation: please test and give feedback!!
+  * new material for serverguide (bhuvan)
+  * reworking of the packagingguide (LaserJock)
+  * included pot templates for all the guides, which will go into Rosetta (hopefully)
+
+ -- Matthew East <mdke@ubuntu.com>  Fri, 3 Feb 2006 12:29:00 +0000
+
+ubuntu-docs (6.01.5) dapper; urgency=low
+
+  * [Daniel Holbach]
+    - New SVN checkout.
+  * [Matthew East]
+    - using a static html browser startpage rather than a page generated from
+    docbook xml.
+
+ -- Daniel Holbach <daniel.holbach@ubuntu.com>  Mon, 23 Jan 2006 15:55:39 +0100
+
+ubuntu-docs (6.01.4) dapper; urgency=low
+
+  * New SVN checkout. 
+
+ -- Daniel Holbach <daniel.holbach@ubuntu.com>  Tue, 17 Jan 2006 20:20:09 +0100
+
+ubuntu-docs (6.01.3) dapper; urgency=low
+
+  * Matthew East <mkde@ubuntu.com>:
+    - new shorter firefox start page.
+  * Daniel Holbach <dholbach@ubuntu.com>:
+    - new SVN checkout.
+
+ -- Daniel Holbach <daniel.holbach@ubuntu.com>  Thu, 12 Jan 2006 10:27:36 +0100
+
+ubuntu-docs (6.01.2) dapper; urgency=low
+
+  * New SVN checkout.
+
+ -- Daniel Holbach <daniel.holbach@ubuntu.com>  Mon,  9 Jan 2006 13:08:28 +0100
+
+ubuntu-docs (6.01.1) dapper; urgency=low
+
+  * New SVN checkout.
+
+ -- Daniel Holbach <daniel.holbach@ubuntu.com>  Mon,  2 Jan 2006 15:19:27 +0100
+
+ubuntu-docs (5.12.4) dapper; urgency=low
+
+  * New SVN checkout.
+  * debian/README:
+    - fixed little typo. 
+  * ubuntu/Makefile:
+    - dropped dg-IT from dg build target to fix build.
+
+ -- Daniel Holbach <daniel.holbach@ubuntu.com>  Thu, 22 Dec 2005 12:18:55 +0100
+
+ubuntu-docs (5.12.3) dapper; urgency=low
+
+  * Use update-alternatives for Firefox index page
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Tue, 20 Dec 2005 19:27:41 +0000
+
+ubuntu-docs (5.12.2) dapper; urgency=low
+
+  * New SVN checkout.
+  * debian/README.Debian
+    - added by Matthew East. 
+    - The directories mentioned in there are stripped from the tarball.
+
+ -- Daniel Holbach <daniel.holbach@ubuntu.com>  Wed, 14 Dec 2005 22:43:52 +0100
+
+ubuntu-docs (5.12.1) dapper; urgency=low
+
+  * New SVN checkout.
+
+ -- Daniel Holbach <daniel.holbach@ubuntu.com>  Tue,  6 Dec 2005 08:32:51 +0100
+
+ubuntu-docs (5.11-4) dapper; urgency=low
+
+  * new text, image and css in /usr/share/ubuntu-artwork/home/index.html (Ubuntu #15013, #16932, #17605 and #20692)
+  * Including the sample/ directory with desktopguide and serverguide
+
+ -- Matthew East <mdke@ubuntu.com>  Mon, 2 Dec 2005 17:37:00 +0000
+
+ubuntu-docs (5.11-3) dapper; urgency=low
+
+  * adding packaging guide to the package
+  * moving xml guides to a new location (/usr/share/ubuntu-docs/ubuntu rather than /usr/share/ubuntu-docs) so that the entities work.
+
+ -- Matthew East <mdke@ubuntu.com>  Mon, 28 Nov 2005 18:37:49 +0000
+
+ubuntu-docs (5.11-2) dapper; urgency=low
+
+  * added html versions of desktopguide and serverguide with relevant omf targets
+  * fixing misplaced css and navigation buttons
+
+ -- Matthew East <mdke@ubuntu.com>  Mon, 28 Nov 2005 18:37:49 +0000
+
+ubuntu-docs (5.11-1) dapper; urgency=low
+
+  * New SVN checkout.
+  * debian/control:
+    - Bumped Standards-Version.
+  * debian/ubuntu-docs.doc-base.quicktour:
+    - dropped.
+
+ -- Daniel Holbach <daniel.holbach@ubuntu.com>  Fri, 25 Nov 2005 20:56:49 +0100
+
+ubuntu-docs (5.10-7) dapper; urgency=low
+
+  * New document names for dapper (faqguide -> desktopguide)
+
+  * Improved About Ubuntu css
+
+  * Removed translations (translation won't start until string freeze)
+
+  * Added new Server Guide
+
+ -- Matthew East <mdke@ubuntu.com>  Fri, 25 Nov 2005 15:52:14 +0000
+
+ubuntu-docs (5.10-6) breezy; urgency=low
+
+  * Resolve remaining errors from pofile export from Rosetta.
+    (Ubuntu #17145)
+    Thanks to Matthew East for this!
+
+  * Make ghelp URIs work again (Ubuntu  #16982)
+
+  * Prune out unused images.
+
+  * Firefox start page now has image and CSS.
+
+  * The faqguide is now known as the "Ubuntu 5.10 Starter Guide"
+
+ -- Jeff Bailey <jbailey@ubuntu.com>  Fri,  7 Oct 2005 16:32:14 -0400
+
+ubuntu-docs (5.10-5) breezy; urgency=low
+
+  * Resolve entity errors (Ubuntu: #15866, 16680)
+
+  * Provide firefox start page (Ubuntu: #16663)
+
+  Note: This page needs work as the image doesn't display and the CSS
+  file crashes firefox, but this kills the annoying error.
+
+ -- Jeff Bailey <jbailey@ubuntu.com>  Mon,  3 Oct 2005 02:20:04 -0400
+
+ubuntu-docs (5.10-4) breezy; urgency=low
+
+  * Final update for NonLanguagePackTranslationDeadlinreg
+
+ -- Jeff Bailey <jbailey@ubuntu.com>  Thu, 29 Sep 2005 23:28:43 -0400
+
+ubuntu-docs (5.10-3) breezy; urgency=low
+
+  * Lighten the package somewhat (Thanks to Jerome Gotangco)
+
+  * Conflict/Replace ubuntu-faqguide (Ubuntu: #16465)
+    Thanks to Matt Zimmerman for catching this!
+
+ -- Jeff Bailey <jbailey@ubuntu.com>  Wed, 28 Sep 2005 00:26:10 -0400
+
+ubuntu-docs (5.10-2) breezy; urgency=low
+
+  * Switch to docbook
+
+  * Remove old ubuntu-quickguide (Ubuntu #14816, #14709)
+
+  * Various updates from the docteam and translators.
+
+ -- Jeff Bailey <jbailey@ubuntu.com>  Tue, 27 Sep 2005 00:34:05 -0400
+
+ubuntu-docs (5.10-1) breezy; urgency=low
+
+  * Redo packaging based heavily off of Matt's packaging, make
+    sure that images are all included and that pages don't say
+    "draft".
+
+    Currently includes: about-ubuntu, faqamd64, faqi386, faqppc,
+    quicktour, and release-notes.
+
+ -- Jeff Bailey <jbailey@ubuntu.com>  Fri,  2 Sep 2005 01:55:34 -0400
+
+ubuntu-docs (5.10-0.0) breezy; urgency=low
+
+  * First release using new revision number scheme
+  * Currently only include releasenotes, aboutubuntu, and the faqguide
+
+ -- Matt T Galvin <matt.t.galvin@gmail.com>  Wed, 10 Aug 2005 20:37:21 -0400
+
+ubuntu-docs (1.0-1) hoary; urgency=low
+
+  * New release
+    (xh OMF files are now translated)
+  * Bump to 1.0 because this one wants to be the last upload for Hoary
+
+ -- Enrico Zini <enrico@debian.org>  Wed,  6 Apr 2005 15:03:50 +0200
+
+ubuntu-docs (0.7-1) hoary; urgency=low
+
+  * New release
+  * Added translated OMF files
+
+ -- Enrico Zini <enrico@debian.org>  Wed,  6 Apr 2005 14:20:26 +0200
+
+ubuntu-docs (0.6-1) hoary; urgency=low
+
+  * New release
+  * Translations updated
+  * quickguide file name changed
+  * Quickguide starts having translations as well
+
+ -- Enrico Zini <enrico@debian.org>  Tue,  5 Apr 2005 16:56:31 +0200
+
+ubuntu-docs (0.5-1) hoary; urgency=low
+
+  * New release
+  * Includes translations
+
+ -- Enrico Zini <enrico@debian.org>  Mon,  4 Apr 2005 15:52:27 +0200
+
+ubuntu-docs (0.4-1) hoary; urgency=low
+
+  * New release
+  * Reworked Debian packaging to install things according to Gnome standards
+
+ -- Enrico Zini <enrico@debian.org>  Thu, 24 Mar 2005 13:29:23 +0100
+
+ubuntu-docs (0.3-1) hoary; urgency=low
+
+  * New release
+  * Fixed the debian/ scripts to handle changes in the location of the release
+    notes
+  * ubuntu-docs conflicts with ubuntu-quickguide << 0.3 because an image has
+    been moved from the quickguide package to the ubuntu-docs package
+
+ -- Enrico Zini <enrico@debian.org>  Mon, 21 Mar 2005 11:16:12 +0100
+
+ubuntu-docs (0.2-1) hoary; urgency=low
+
+  * New release
+  * Added more OMF files; registration with scroolkeeper now works, but the
+    documents show up in the "Other" cathegory, which is suboptimal
+
+ -- Enrico Zini <enrico@enricozini.org>  Fri,  4 Mar 2005 15:42:16 +0100
+
+ubuntu-docs (0.1-1) hoary; urgency=low
+
+  * Initial release.
+
+ -- Enrico Zini <enrico@enricozini.org>  Tue, 30 Nov 2004 17:55:37 +0200

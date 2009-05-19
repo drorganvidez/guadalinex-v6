@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" 
+	"http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY % globalent SYSTEM "../../../libs/global.ent">
+%globalent;
+<!ENTITY % genericent SYSTEM "../../libs/generic.ent">
+%genericent;
+<!ENTITY % cdo-C SYSTEM "../../../libs/cdo-C.ent">
+%cdo-C;
+<!ENTITY % gnome-menus-C SYSTEM "../../../ubuntu/libs/gnome-menus-C.ent">
+%gnome-menus-C;
+<!ENTITY % xinclude SYSTEM "../../../libs/xinclude.mod">
+%xinclude;
+<!ENTITY language "&EnglishAmerican;">
+<!ENTITY ubuntu '<phrase>Ubuntu</phrase>'>
+]>
+<book lang="&language;" id="x01">
+	<title>&ubuntu; &secguide-title;</title>
+	<xi:include href="bookinfo.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+	<xi:include href="../../../common/C/preface.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+	<xi:include href="introduction.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+	<xi:include href="faq.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+	<xi:include href="firewalls.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+	<xi:include href="../../../common/C/ccbysa.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+	<xi:include href="../../../common/C/fdl.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/> 
+</book>

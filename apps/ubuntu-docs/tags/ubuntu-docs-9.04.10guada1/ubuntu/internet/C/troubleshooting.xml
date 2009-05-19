@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" 
+	"http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY % globalent SYSTEM "../../../libs/global.ent">
+%globalent;
+<!ENTITY % cdo-C SYSTEM "../../../libs/cdo-C.ent">
+%cdo-C;
+<!ENTITY % gnome-menus-C SYSTEM "../../../ubuntu/libs/gnome-menus-C.ent">
+%gnome-menus-C;
+<!ENTITY % xinclude SYSTEM "../../../libs/xinclude.mod">
+%xinclude;
+<!ENTITY language "en">
+<!ENTITY ubuntu '<phrase>Ubuntu</phrase>'>
+]>
+
+<article id="troubleshooting" status="review">
+	<articleinfo>
+		<title>Wireless networks</title>
+    	&legalnotice;
+	</articleinfo>
+
+<sect1 id="network-troubleshooting" status="writing">
+	<title>Tools to help with network connection problems</title>
+	<para>If you have a network connection which is not working properly, you can use a few tools to help diagnose what the problem is.</para>
+	<para>Most of the tools in this section require use of the Terminal, which you can open by pressing &terminal;.</para>
+	
+	<sect2 id="network-troubleshooting-iwconfig" status="writing">
+		<title>Identify wireless connections</title>
+		<para><application>iwconfig</application> allows you to change certain settings of your wireless hardware. However, it is also very useful for identifying wireless connections.</para>
+		<para>To identify a wireless connection:</para>
+		<orderedlist>
+			<listitem><para>Press &terminal; to open a Terminal</para></listitem>
+			<listitem><para>Type <userinput>iwconfig</userinput> in the Terminal and press <keycap>Return</keycap></para></listitem>
+			<listitem>
+				<para>You should get output similar to the following:</para>
+				<screen>lo        no wireless extensions.
+
+eth0      no wireless extensions.
+
+eth1      IEEE 802.11g  ESSID:"WLAN Name"  
+Mode:Managed  Frequency:2.432 GHz  Access Point: 00:12:CF:02:6F:EC   
+Bit Rate:54 Mb/s   Tx-Power=20 dBm   Sensitivity=8/0  
+Retry limit:7   RTS thr:off   Fragment thr:off
+Power Management:off
+Link Quality=75/100  Signal level=-54 dBm  Noise level=-89 dBm
+Rx invalid nwid:0  Rx invalid crypt:0  Rx invalid frag:0
+Tx excessive retries:0  Invalid misc:0   Missed beacon:1</screen>
+			</listitem>
+			<listitem><para>The column on the left gives the name of the connection, such as <quote>eth0</quote> or <quote>wlan0</quote></para></listitem>
+			<listitem><para>If the column on the right says <quote>no wireless extensions</quote>, that connection has not been recognized as a wireless connection and is probably a wired network connection</para></listitem>
+			<listitem><para>If the connection <emphasis>has</emphasis> been recognized as a wireless connection, details of the wireless connection will be shown in the column on the right</para>
+			<itemizedlist>
+				<listitem><para><emphasis>ESSID</emphasis> gives the name of the wireless network that you are connected to, if any</para></listitem>
+				<listitem><para><emphasis>Link Quality</emphasis> gives a measure of the strength of the wireless signal</para></listitem>
+			</itemizedlist>
+			</listitem>
+		</orderedlist>
+	</sect2>
+	
+	<sect2 id="network-troubleshooting-iwlist" status="writing">
+		<title>Find information about wireless connections</title>
+		<para><application>iwlist</application> is able to display information about your wireless connection.</para>
+		<orderedlist>
+			<listitem><para>Press &terminal; to open a Terminal</para></listitem>
+			<listitem>
+				<para>Type the following commands in the Terminal and press <keycap>Return</keycap> to run them. Make sure that you replace <emphasis>eth1</emphasis> with the name of your wireless interface, if it is different.</para>
+				<itemizedlist>
+					<listitem><para><userinput>iwlist eth1 accesspoints</userinput> - Show a list of available wireless access points</para></listitem>
+					<listitem><para><userinput>iwlist eth1 rate</userinput> - Show a list of all possible transmission rates for your wireless connection, including the current rate</para></listitem>
+					<listitem><para><userinput>iwlist eth1 key</userinput> - Show information about wireless encryption</para></listitem>
+				</itemizedlist>
+			</listitem>
+		</orderedlist>
+	</sect2>
+	
+	<sect2 id="network-troubleshooting-ifconfig" status="writing">
+		<title>Get information about the current connection</title>
+		<para><application>ifconfig</application> is intended to allow you to change the settings of your network connections, but can also be used to list information about the current connection.</para>
+		<orderedlist>
+			<listitem><para>Press &terminal; to open a Terminal</para></listitem>
+			<listitem>
+				<para>Type <userinput>ifconfig eth1</userinput> in the Terminal and press <keycap>Return</keycap>, replacing <emphasis>eth1</emphasis> with the name of your network interface if it is different.</para>
+				<itemizedlist>
+					<listitem><para><emphasis>inet addr</emphasis> gives the current <emphasis>IP address</emphasis> of the connection</para></listitem>
+					<listitem><para><emphasis>HWaddr</emphasis> gives the <emphasis>MAC address</emphasis> of your network device</para></listitem>
+				</itemizedlist>
+			</listitem>
+		</orderedlist>
+	</sect2>
+	
+	<sect2 id="network-troubleshooting-ping" status="writing">
+		<title>Check if a connection is working correctly</title>
+		<para>A good way of checking if a connection is working correctly is to <emphasis>ping</emphasis> another computer on the network or the Internet.</para>
+		<para>To check if you are connected to the Internet:</para>
+		<orderedlist>
+			<listitem><para>Press &network-tools;</para></listitem>
+			<listitem><para>Select the <guilabel>Ping</guilabel> tab</para></listitem>
+			<listitem><para>Type <userinput>ubuntu.com</userinput> into the <guilabel>Network address</guilabel> box and then press <guibutton>Ping</guibutton></para></listitem>
+			<listitem>
+				<para>After a while, a graph should appear. Look at the number for <guilabel>Successful packets</guilabel> under <guilabel>Transmission Statistics</guilabel></para>
+				<itemizedlist>
+					<listitem><para><emphasis>100% successful packets</emphasis> - Your computer should have a good connection to the Internet</para></listitem>
+					<listitem><para><emphasis>Less than 100% successful</emphasis> - Your computer probably has a poor connection to the Internet or a poor wireless signal</para></listitem>
+					<listitem><para><emphasis>0% successful packets</emphasis> - Your computer has a very bad connection, or is connected to an access point or router which is not connected to the Internet</para></listitem>
+				</itemizedlist>
+			</listitem>
+		</orderedlist>
+		<para>If you get an error message which says <emphasis>The address &apos;ubuntu.com&apos; cannot be found</emphasis>, then your computer is probably not connected to the Internet or cannot reach a <emphasis>DNS server</emphasis>.</para>
+	</sect2>
+</sect1>
+</article>

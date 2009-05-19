@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" 
+	"http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY % globalent SYSTEM "../../../libs/global.ent">
+%globalent;
+<!ENTITY % genericent SYSTEM "../../libs/generic.ent">
+%genericent;
+<!ENTITY % cdo-C SYSTEM "../../../libs/cdo-C.ent">
+%cdo-C;
+<!ENTITY % gnome-menus-C SYSTEM "../../../ubuntu/libs/gnome-menus-C.ent">
+%gnome-menus-C;
+<!ENTITY % xinclude SYSTEM "../../../libs/xinclude.mod">
+%xinclude;
+<!ENTITY language "&EnglishAmerican;">
+<!ENTITY ubuntu '<phrase>Ubuntu</phrase>'>
+]>
+
+<chapter id="faq" status="needshelp">
+	<title>Frequently Asked Questions</title>
+	<para>Security-related questions are asked on support forums on a daily basis.  Answers
+	to these questions are varied.  There is more than one right answer to most of them, and
+	most of them require and deserve more thorough coverage than they generally get on these
+	forums.  We will address some of the most frequently asked general security questions here.
+	</para>
+	
+	<itemizedlist>
+
+		<listitem>
+			<para><emphasis role="bold">Do I need a firewall?</emphasis></para>
+			<para>It can't hurt.  A properly configured firewall can protect your machine and your
+			network from the hostile world of the Internet, where worms, viruses, and nefarious
+			individuals are on constant missions to take control of your systems.  Don't let this
+			lull you into a false sense of security, though; running a firewall does not excuse
+			you from security best-practices, such as keeping your software up to date, shutting
+			down unnecessary services, etc.  While your firewall can in fact provide significant
+			protection on its own, its job is to be the first line of defense in a multi-layered
+			security strategy.</para>
+		</listitem>
+		
+		<listitem>
+			<para><emphasis role="bold">Do I need anti-virus software?</emphasis></para>
+			<para>Security is about trade-offs.  Nearly everything you do to secure your system
+			will involve some kind of sacrifice.  You may be sacrificing performance, usability,
+			maintainability, your precious time, stability, or in a few pleasant cases, nothing
+			at all.  Whether a security measure is a good idea is determined by asking yourself
+			whether the cost is worth the mitigated risk.  A firewall is almost always a good
+			idea, because it provides a significant amount of protection from a wide range of
+			threats without, if properly configured, interfering too much in your activities or
+			requiring a great deal of maintenance.  Once it's up and running, you can almost
+			forget it's there.</para>
+			<para>There are rumors that Linux is impervious to viruses.  While it is true that
+			Linux systems are much more resistant to viruses than Windows systems, and much
+			more difficult to infect, this is not the case.  No virus (if we distinguish viruses
+			from worms) has ever been found infecting Linux machines in the wild, but it's not
+			inconceivable that one could appear in the future.  If it does, it is not likely to
+			be very successful.  Most Linux users - responsible Linux users - do not perform
+			their daily activities, such as surfing the Internet, checking email, etc., with
+			administrative (root) privileges.  For this and other reasons, a virus would have
+			a difficult time infecting system files or spreading itself further.</para>
+			<para>To summarize the virus risk, it is unlikely but possible that you will ever
+			encounter a virus threat to your Linux system.  Anti-virus products are popular on
+			Windows systems because the threat to them is much greater.  If security is of
+			paramount importance to you, you should consider installing an anti-virus system,
+			but you should be aware of the cost.  For anti-virus software to protect effectively,
+			it must scan executable files whenever they are downloaded or executed.  This can
+			have an enormous impact on the performance of your system.  There is an administrative
+			cost, too.  Virus definitions must be updated regularly -- preferably daily.  While
+			this can usually be set up once and forgotten, the antivirus engines must also be
+			updated.  As with most Linux distributions, &ubuntu; usually backports security
+			updates and bugfixes to software in its repositories for stable releases.  This means
+			that your anti-virus engine will need to be updated from outside the official
+			repositories to maintain its ability to cope with new virus threats.  Finally,
+			since anti-virus software is just as prone to bugs as any other software, and since
+			it must scan all your executable files, libraries, documents, etc., it poses a risk
+			to the stability of your system as well.  In short, an anti-virus system may be worth
+			the cost to some users, but most choose to omit it from their security arsenals.  The
+			decision is yours to make.</para>
+		</listitem>
+
+		<listitem>
+			<para><emphasis role="bold">I don't have any sensitive information on my machine.
+			Why should I care about security?</emphasis></para>
+			<para>An unfortunately common attitude on the Internet is that security is only
+			important to those with sensitive information stored on their computers.  It is
+			critical to debunk this myth.  First, you probably have sensitive information on your
+			machine whether you're aware of it or not.  You might instruct your browser to save
+			passwords to secure websites, like your banking site.  Your email client may store
+			authentication information for your mail server, where sensitive information may
+			also be stored, and where it is available to anyone who gains access to your username
+			and password.</para>
+			<para>Even if you truly have no personal motivation to protect the information on
+			your system, though, it is irresponsible and destructive for you to ignore security
+			concerns.  Most of the security threats on the Internet do not have the goal of
+			uncovering secrets stored on your computer.  They seek to gain access to your system
+			in order to use it as a platform for launching attacks on other machines.  If one of
+			the unscrupulous citizens of the Internet takes advantage of an unsecured machine, he
+			may or may not look for sensitive information.  He is much more likely to turn your
+			machine into a <quote>zombie</quote>, without your knowledge, and have it wait to do
+			his bidding.  At the attacker's command, your machine will be used to participate in
+			distributed attacks on other networks, to send spam as fast as your computer can send
+			it, or to launch a targeted attack on another network, masking the attacker's identity
+			by making the attack appear to originate from your system.</para>
+			<para>Security is important, then, not only to protect yourself, but to help make the
+			Internet a safer place by ensuring that your computer and its resources are not
+			subverted for the purpose of attacking others.</para>
+		</listitem>
+
+		<listitem>
+			<para><emphasis role="bold">How secure is Linux?</emphasis></para>
+			<para>Security is a guiding principle behind the development of Linux and most Linux
+			software.  It also benefits, like all open source software, from the fact that its
+			code can be audited for security problems by anyone with the expertise to do so.
+			&ubuntu; as a distribution is also very security-conscious and adheres to a list of
+			rules that help to keep it as secure as possible out of the box while maintaining
+			usability.  Additionally, &ubuntu; benefits from the efforts of Debian's famed
+			security team.  But in the end, a Linux machine -- like any other machine -- is only
+			as secure as its administrator makes it.  A freshly installed &ubuntu; machine has
+			no ports open to the outside world, which helps to make it very secure against
+			external threats, but users inevitably install software that (out of necessity)
+			exposes itself to the Internet, making it less secure.  If these applications are
+			properly configured and kept up to date, they should not represent a significant
+			threat to security, but it is your responsibility as the administrator to do these
+			things.</para>
+		</listitem>
+
+		<listitem>
+			<para id="secure-passwords" xreflabel="secure password">
+			<emphasis role="bold">How long is a secure password?</emphasis></para>
+			<para>Obviously there is no cutoff point where one could call a password of a certain
+			length <quote>secure</quote> and all shorter passwords <quote>insecure</quote>.  Also,
+			there are other factors than length that contribute to the effectiveness of a password.
+			The more <emphasis role="italics">character classes</emphasis> in your password, the
+			more secure it is.  Character classes include uppercase letters, lowercase letters,
+			numbers, and special characters or punctuation.  Any password that can be found in a
+			dictionary is vulnerable to a <emphasis role="italics">dictionary attack</emphasis>
+			and is therefore insecure.  Appending digits to the end of a dictionary password does
+			not significantly enhance its security.  A password like <quote>forest179</quote>
+			would succumb to a dictionary attack in a few seconds.  A password like
+			<quote>9gIn$nf2Y_!</quote> is reasonably secure against all forms of brute force
+			attacks, because it is not in any dictionary, it is 11 characters long, and it uses
+			all character classes (except non-printable characters, which are unsupported in some
+			interfaces).
+			</para>
+		</listitem>
+
+		<listitem>
+			<para><emphasis role="bold">Should I write down my password?</emphasis></para>
+			<para>The consensus on this question has shifted in recent years from an emphatic
+			<quote>No</quote> to a cautious <quote>Yes</quote>.  The problem is that as computers
+			get faster, it becomes harder to choose a password that a user can remember, but
+			which is still secure.  The concept of password authentication is meant to solve the
+			problem of proving who you are to the authenticating system.  A password is,
+			theoretically, something that only you know, so providing it to the system is supposed
+			to prove who you are.  If someone else can obtain your password, the system breaks.
+			If you write down your password, it may be easier for an attacker to obtain that piece
+			of paper than to get into your head, so that practice has historically been considered
+			insecure.  But as computers become more powerful, it becomes easier to obtain unwritten
+			passwords without getting into your head, because you are likely to choose a password
+			that can be broken, because the things that make it easy to remember (it's short, it's
+			a word or phrase that can be pronounced, etc.) are the same things that make it easy to
+			break.  Choosing a more secure password that's difficult to remember, and writing that
+			password down, may help to solve that problem (if you keep your password in a safe
+			place - don't tape it to your monitor!).  The authentication system is now based on
+			<quote>something you have</quote> rather than <quote>something you know</quote>.
+			Many, but certainly not all, security experts now agree that choosing a difficult
+			password and writing it down is more likely to provide securite than trying to choose a 
+			good password that you can remember.</para>
+		</listitem>
+
+		<listitem>
+			<para><emphasis role="bold">How can I make my system more secure?</emphasis></para>
+			<para>
+			There are many steps you can take to secure your system.  Some of these steps are
+			more effective than others, but the most important consideration is that your system
+			is secure <emphasis role="italics">in depth</emphasis>.  If your first line of
+			defense fails or is defeated, another countermeasure should be right behind it to
+			back it up.  For example, if you're too confident in your firewall and trust it as
+			your only security measure, matters will be much worse if and when it fails than if
+			you had secured your system in depth.</para>
+			<para>Specific steps you can take to secure your system will be covered in detail in
+			this document.  If you're looking for the most useful information with the least
+			possible text, the following list should get you started:</para>
+			<itemizedlist>
+				<listitem><para>Don't run--or even install--unnecessary software; the more software 
+				you have running, the more possible points of failure you have.</para></listitem>
+				<listitem><para>For software that you do run, especially servers, ensure that it is not
+				available (does not <quote>listen</quote>) on network interfaces or addresses
+				that are not necessary.</para></listitem>
+				<listitem><para>All software, especially server software, especially server software
+				that listens on an Internet-facing device, should be configured as securely as
+				possible while still providing necessary functionality.  Remember the <xref
+				linkend="least-privilege" />.</para></listitem>
+				<listitem><para>A good firewall can protect you against many attacks to which you might
+				otherwise be vulnerable.</para></listitem>
+				<listitem><para>A <xref linkend="secure-passwords" /> is an absolute requirement for a
+				secure system. (Note that secure non-password authentication counts as a secure
+				password.)</para></listitem>
+			</itemizedlist>
+		</listitem>
+	
+		<listitem>
+			<para id="least-privilege" xreflabel="principle of least privilege"><emphasis
+			role="bold">What is the Principle of Least Privilege?</emphasis></para>
+			<para>The principle of least privilege states that a system operates with the most
+			restrictive set of permissions possible that still allows it to perform its required
+			functions.  A system can be a user, a piece of software, a computer, a network, or
+			even a person.  The more privileges a system has, the more damage it can do to
+			other systems if its security is compromised.  So, if each system operates under the
+			principle of least privilege, all systems are safer because damage is limited in the
+			event one of the systems is compromised.</para>
+		</listitem>
+	
+	</itemizedlist>
+</chapter>

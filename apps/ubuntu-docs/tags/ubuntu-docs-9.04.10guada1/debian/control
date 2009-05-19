@@ -1,0 +1,28 @@
+Source: ubuntu-docs
+Section: text
+Priority: optional
+Maintainer: Ubuntu Documentation Team <ubuntu-doc@lists.ubuntu.com>
+Uploaders: Daniel Holbach <daniel.holbach@ubuntu.com>
+Build-Depends: debhelper (>= 5.0.0), cdbs
+Build-Depends-Indep: xsltproc, docbook-xsl, perl, perl-modules, gnome-doc-utils, docbook-xml, fdupes, bc
+Standards-Version: 3.7.2
+
+Package: ubuntu-docs
+Architecture: all
+Pre-Depends: dpkg (>= 1.10.24)
+Depends: scrollkeeper, gnome-user-guide, yelp
+Conflicts: ubuntu-quickguide (<< 5.10), ubuntu-faqguide
+Replaces: ubuntu-faqguide
+Description: The Ubuntu Documentation Project
+ This package holds the official Ubuntu-specific documentation, maintained 
+ by the Ubuntu Documentation Team. The documentation can  be viewed using
+ Yelp, the GNOME help browser.
+
+Package: ubuntu-serverguide
+Architecture: all
+Pre-Depends: dpkg (>= 1.10.24)
+Suggests: firefox
+Description: The Ubuntu Server Guide
+ This package holds the official Ubuntu Server Guide. The guide can 
+ be viewed using an html browser.
+

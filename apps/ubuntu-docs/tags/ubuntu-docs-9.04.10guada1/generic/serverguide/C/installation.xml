@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" 
+	"http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY % globalent SYSTEM "../../../libs/global.ent">
+%globalent;
+<!ENTITY % genericent SYSTEM "../../libs/generic.ent">
+%genericent;
+<!ENTITY % cdo-C SYSTEM "../../../libs/cdo-C.ent">
+%cdo-C;
+<!ENTITY % gnome-menus-C SYSTEM "../../../ubuntu/libs/gnome-menus-C.ent">
+%gnome-menus-C;
+<!ENTITY % xinclude SYSTEM "../../../libs/xinclude.mod">
+%xinclude;
+<!ENTITY language "&EnglishAmerican;">
+<!ENTITY ubuntu '<phrase>Ubuntu</phrase>'>
+]>
+<chapter id="installation" status="review">
+	<title>Installation</title>
+  <para>
+  This chapter provides a quick overview of installing Ubuntu &distro-rev; Server Edition. For more detailed instructions, 
+  please refer to the <ulink url="https://help.ubuntu.com/&distro-rev;/installation-guide/">Ubuntu Installation Guide</ulink>.
+  </para>
+	<sect1 id="preparing-to-install" status="review">
+		<title>Preparing to Install</title>
+    <para>
+      This section explains various aspects to consider before starting the
+      installation. </para>
+    		<sect2 id="system-requirements" status="review">
+    			<title>System Requirements</title>
+    			<para>Ubuntu &distro-rev; Server Edition supports two (2) major architectures: Intel x86 and AMD64. The table below lists recommended hardware specifications. Depending on your needs, you might manage with less than this. However, most users risk being frustrated if they ignore these suggestions.</para>
+				<table>
+				<title>Recommended Minimum Requirements</title>
+					<tgroup cols="4">
+						<colspec colname="1"/>
+						<colspec colname="2"/>
+						<colspec colname="3" colwidth="2"/>
+						<colspec colname="4"/>
+						<thead>
+							<row>
+								<entry morerows="1" valign="middle"><para>Install Type</para></entry>
+								<entry morerows="1" valign="middle"><para>RAM</para></entry>
+								<entry namest="3" nameend="4" align="center"><para>Hard Drive Space</para></entry>
+							</row>
+ 							<row>
+								<entry><para>Base System</para></entry>
+								<entry><para>All Tasks Installed</para></entry>
+							</row>
+						</thead>
+						<tbody>
+							<row>
+								<entry><para>Server</para></entry>
+								<entry><para>128 megabytes</para></entry>
+								<entry><para>500 megabytes</para></entry>
+								<entry><para>1 gigabyte</para></entry>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+				<para>
+				The Server Edition provides a common base for all sorts of server applications. 
+				It is a minimalist design providing a platform for the desired services, such 
+	 			as file/print services, web hosting, email hosting, etc. 
+				</para>
+    		</sect2>
+
+  <sect2 id="intro-server-differences" status="review">
+    <title>Server and Desktop Differences</title>
+    <para>
+    There are a few differences between the <emphasis>Ubuntu Server Edition</emphasis> and the 
+    <emphasis>Ubuntu Desktop Edition</emphasis>.  It should be noted that both editions use the same 
+    <application>apt</application> repositories.  Making it just as easy to install a <emphasis role="italic">server</emphasis> 
+    application on the Desktop Edition as it is on the Server Edition.
+    </para>
+    <para>
+    The differences between the two editions are the lack of an X window environment in the Server Edition, 
+    the installation process, and different Kernel options.
+    </para>	
+    <para>
+    </para>
+    <sect3 id="intro-kernel-diffs" status="review">
+      <title>Kernel Differences:</title>
+      <itemizedlist>
+        <listitem>	
+	  <para>
+	  The Server Edition uses the <emphasis>Deadline</emphasis> I/O scheduler instead of the
+	  <emphasis>CFQ</emphasis> scheduler used by the Desktop Edition.
+	  </para>
+	</listitem>
+	<listitem>	
+	  <para>
+	  <emphasis>Preemption</emphasis> is turned off in the Server Edition. 
+	  </para>
+	</listitem>
+	<listitem>	
+	  <para>
+	  The timer interrupt is 100 Hz in the Server Edition and 250 Hz in the Desktop Edition.
+	  </para>
+	</listitem>	
+	<listitem>	
+	  <para>
+	  The Server Edition is optimized for i686 processors while the Desktop Edition is optimized for both 
+	  the i586 and i686.
+	  </para>
+	</listitem>
+	<listitem>	
+	  <para>
+	  Virtualization is better supported in the Server Edition through the enabling of IPC namespaces, and 
+          the <application>Xen</application> hypervisor.
+	  </para>
+	</listitem>
+        <listitem>	
+	  <para>
+	  Multiple routing tables for the IPv6 protocol are also supported in the Server Edition.
+	  </para>
+	</listitem>
+	<listitem>	
+	  <para>
+	  For 32-bit systems the Server Edition is configured to use PAE which allows addressing up to 64GB of 
+          <emphasis>memory</emphasis> while the Desktop Edition is configured for 4GB.
+	  </para>
+	</listitem>
+	</itemizedlist>
+	  <note>
+	    <para>
+	    When running a 64-bit version of Ubuntu on 64-bit processors you are not limited by memory addressing space.
+	    </para>
+	  </note>
+	
+	<para>
+	To see all kernel configuration options you can look through <filename>/boot/config-&linux-kernel-version;-server</filename>. 
+	Also, <ulink url="http://www.kroah.com/lkn/">Linux Kernel in a Nutshell</ulink> is a great resource on the options 
+	available.
+	</para>
+    </sect3>
+  </sect2>
+
+      <sect2 id="backing-up" status="complete">
+        <title>Backing Up</title>
+          <itemizedlist>
+            <listitem>
+              <para>
+	      Before installing <application>Ubuntu Server Edition</application> you should make sure all data on the system 
+              is backed up. See <xref linkend="backups"/> for backup options.
+	      </para>
+	      <para> 
+	      If this is not the first time an operating system has been installed on your
+              computer, it is likely you will need to re-partition your disk to make room for Ubuntu. 
+	      </para>
+	      <para> 
+			  Any time you partition your disk, you should be prepared to 
+			  lose everything on the disk should you make a mistake or 
+			  something goes wrong during partitioning.  The programs used in installation are 
+			  quite reliable, most have seen years of use, but they 
+			  also perform destructive actions.
+              </para>
+            </listitem>
+          </itemizedlist>
+      </sect2>
+    </sect1>
+	<sect1 id="installing-from-cd" status="complete">
+  	  <title>Installing from CD</title>
+	  <para>
+	  The basic steps to install Ubuntu Server Edition from CD are the same for installing any operating system from CD.  Unlike
+	  the <emphasis>Desktop Edition</emphasis> the <emphasis>Server Edition</emphasis> does not include a graphical 
+	  installation program.  Instead the Server Edition uses a console menu based process.
+	  </para>
+	  <itemizedlist>
+	    <listitem>
+	      <para>
+	      First, download and burn the appropriate ISO file from the <ulink url="http://www.ubuntu.com/getubuntu/download">
+	      Ubuntu web site</ulink>.
+	      </para>
+	    </listitem>
+	    <listitem>
+	      <para>
+	      Boot the system from the CD-ROM drive.
+	      </para>
+	    </listitem>
+	    <listitem>
+	      <para>
+	      At the boot prompt you will be asked to select the language.
+	      Afterwards the installation process begins by asking for your keyboard layout.
+	      </para>
+	    </listitem>
+	    <listitem>
+	      <para>
+	      The installer then discovers your hardware configuration, and configures the 
+	      network settings using DHCP.
+	      </para>
+	    </listitem>
+	    <listitem>
+	      <para>
+	      Next, the installer asks for the system's hostname and Time Zone. 
+	      </para>
+	    </listitem>
+	    <listitem>
+	      <para>
+	      You can then choose from several options to configure the hard drive layout.
+	      </para>
+	    </listitem>
+	    <listitem>
+	      <para>
+	     The Ubuntu base system is then installed.
+	      </para>
+	    </listitem>
+	    <listitem>
+	      <para>
+	      A new user is setup, this user will have <emphasis>root</emphasis> access
+	      through the <application>sudo</application> utility.
+	      </para>
+	    </listitem>
+	    <listitem>
+	      <para>
+	      You now have the option to install, or not install, several package tasks.  See 
+	      <xref linkend="install-tasks"/> for details.
+	      </para>
+	    </listitem>
+	    <listitem>
+	      <para>
+	      Finally, the last step before rebooting is to set the clock to UTC.
+	      </para>
+	    </listitem>
+	  </itemizedlist>
+	  <note>
+	    <para>
+            If at any point during installation you are not satisfied by the default setting, use the "Go Back" function at 
+            any prompt to be brought to a detailed installation menu that will allow you to modify the default settings.
+	    </para>
+	  </note>
+          <para>
+          At some point during the installation process you may want to
+          read the help screen provided by the installation system. To
+          do this, press F1.
+          </para>
+	  <para>
+	  Once again, for detailed instructions see the <ulink url="https://help.ubuntu.com/&distro-rev;/installation-guide/">
+	  Ubuntu Installation Guide</ulink>.
+	  </para>
+	   
+	  <sect2 id="install-tasks" status="review">
+	    <title>Package Tasks</title>
+	    <para>
+	    During the Server Edition installation you have the option of installing additional packages from the CD.  The packages
+	    are grouped by the type of service they provide. 
+	    </para>
+	    <itemizedlist>
+	      <listitem>
+	        <para>
+		DNS server: Selects the BIND DNS server and its documentation.
+	        </para>
+	      </listitem>
+	      <listitem>
+	        <para>
+		LAMP server: Selects a ready-made Linux/Apache/MySQL/PHP server.	
+	        </para>
+	      </listitem>
+	      <listitem>
+	        <para>
+		Mail server: This task selects a variety of package useful for a general purpose mail  server system.
+	        </para>
+	      </listitem>
+	      <listitem>
+	        <para>
+		OpenSSH server: Selects packages needed for an OpenSSH server.
+	        </para>
+	      </listitem>
+	      <listitem>
+	        <para>
+		PostgreSQL database: This task selects client and server packages for the PostgreSQL database.
+	        </para>
+	      </listitem>
+	      <listitem>
+	        <para>
+		Print server: This task sets up your system to be a print server.
+	        </para>
+	      </listitem>
+	      <listitem>
+	        <para>
+		Samba File server: This task sets up your system to be a Samba file server, which is 
+		especially suitable in networks with both Windows and Linux systems.
+	        </para>
+	      </listitem>
+	    </itemizedlist>
+  	    <para>
+	    Installing the package groups is accomplished using the <application>tasksel</application> utility.  
+	    One of the important difference between Ubuntu (or Debian) and other GNU/Linux distribution is that, when 
+            installed, a package is also configured to reasonable defaults, eventually prompting you for additional required 
+            information. Likewise, when installing a task, the packages are not only installed, but also configured to provided
+            a fully integrated service.
+	    </para>
+	    <para>
+            Once the installation process has finished you can view a list of available tasks by entering the following from a 
+            terminal prompt:
+	    </para>
+<screen>
+<command>tasksel --list-tasks</command>
+</screen>
+	    <note>
+	      <para>
+	      The output will list tasks from other Ubuntu based distributions such as Kubuntu and Edubuntu.
+	      Note that you can also invoke the <command>tasksel</command> command by itself, which will bring up a menu 
+              of the different tasks available.
+	      </para>
+	    </note>
+	    <para>
+	    You can view a list of which packages are installed with each task using the <emphasis>--task-packages</emphasis> option. 
+	    For example, to list the packages installed with the <emphasis>DNS Server</emphasis> task enter the following:
+	    </para>
+<screen>
+<command>tasksel --task-packages dns-server</command>
+</screen>	
+	    <para>
+	    The output of the command should list:
+	    </para>
+<programlisting>
+bind9-doc
+bind9
+</programlisting>
+	    <para>
+	    Also, if you did not install one of the tasks during the installation process, but for example you decide to make your new LAMP server 
+	    a DNS server as well.  Simply insert the installation CD and from a terminal:
+	    </para>
+<screen>
+<command>sudo tasksel install dns-server</command>
+</screen>
+      </sect2>
+    </sect1>
+    <sect1 id="installing-upgrading" status="review">
+      <title>Upgrading</title>
+      <para>
+      There are several ways to upgrade from one Ubuntu release to another.  This section gives an overview of the recommended upgrade method.
+      </para>
+      <sect2 id="do-release-upgrade" status="review">
+        <title>do-release-upgrade</title>
+        <para>
+        The recommended way to upgrade a Server Edition installation is to use the <application>do-release-upgrade</application> utility.
+        Part of the <emphasis>update-manager-core</emphasis> package, it does not have any graphical dependencies and 
+	is installed by default.
+        </para>
+	<para>
+	Debian based systems can also be upgraded by using <command>apt-get dist-upgrade</command>. However, using 
+	<application>do-release-upgrade</application> is recommended because it has the ability to handle system configuration
+	changes sometimes needed between releases.
+	</para>
+	<para>
+	To upgrade to a newer release, from a terminal prompt enter:
+	</para>
+<screen>
+<command>do-release-upgrade</command>
+</screen>
+	<para>
+	It is also possible to use <application>do-release-upgrade</application> to upgrade to a development version of 
+	Ubuntu.  To accomplish this use the <emphasis>-d</emphasis> switch:
+	</para>
+<screen>
+<command>do-release-upgrade -d</command>
+</screen>
+	<warning>
+	  <para>
+	  Upgrading to a development release is <emphasis>not</emphasis> recommended for production environments.
+	  </para>
+	</warning>
+      </sect2>
+    </sect1>
+</chapter>

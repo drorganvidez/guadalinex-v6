@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD Docbook XML V.4.3//EN"
+	  "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+	  <!ENTITY % globalent SYSTEM "../../../libs/global.ent">
+	  %globalent;
+	  <!ENTITY % cdo-C SYSTEM "../../../libs/cdo-C.ent">
+	  %cdo-C;
+	  <!ENTITY % gnome-menus-C SYSTEM "../../../ubuntu/libs/gnome-menus-C.ent">
+	  %gnome-menus-C;
+	  <!ENTITY % xinclude SYSTEM "../../../libs/xinclude.mod">
+	  %xinclude;
+	  <!ENTITY language "en">
+	  <!ENTITY ubuntu '<phrase>Ubuntu</phrase>'>
+	  ]>
+
+<chapter id="installing" status="review">
+	<title>Installing Ubuntu</title>
+	<para>This chapter provides a step-by-step guide to installing Ubuntu onto your computer. It also shows you how to migrate your settings and documents.</para>
+	<sect1 id="installing-get" status="review">
+		<title>Obtaining an Ubuntu installation disc</title>
+		<para>In order to install Ubuntu, you must obtain an installation CD. There are numerous ways of doing this, and the method you use will depend on what is available to you.</para>
+		<sect2 id="installing-get-iso" status="review">
+			<title>Download a CD image</title>
+			<para>The Ubuntu installation CD is available to download from the Ubuntu website as a <emphasis>CD image (.iso)</emphasis>. Visit the <ulink url="http://www.ubuntu.com/getubuntu/download">Ubuntu website</ulink> to download a copy.</para>
+			<para>You will be asked to choose the version you want, Desktop or Server (Server supports Linux, Apache, MySQL and PHP out of the box). You will also need to choose from the latest version or the LTS (Long Term Support) version.</para>
+			<para>Select the architecture you want and a server to download from that is near you.</para>
+			<para>There is also a check box at the bottom that lets you download the Alternate Desktop CD. This has a text based installer for computers with lower memory.</para>
+			<para>The CD image is a large file and may take several hours to download. If you have a slow Internet connection (such as dial-up), it is recommended that you obtain a CD by some other means (see the following sections).</para>
+			<para>Once you have downloaded the ISO file, you must burn it onto a CD. In order to do this, you will need suitable CD-writing software. Full instructions on burning the ISO file to disc are provided on the <ulink url="https://help.ubuntu.com/community/BurningIsoHowto">Ubuntu support website</ulink>.</para>
+		</sect2>
+		<sect2 id="installing-get-buy" status="review">
+			<title>Buy a CD</title>
+			<para>It is possible to buy an Ubuntu CD from a third party, for a (typically) small charge. While these third parties are likely to be selling Ubuntu CDs for their own profit, you may find that buying a CD is the most convenient option for you.</para>
+			<para>Click the Buy Ubuntu on CD tab on the <ulink url="http://www.ubuntu.com/getubuntu/download">Ubuntu website</ulink> for more details.</para>
+		</sect2>		
+		<sect2 id="installing-get-shipit" status="review">
+			<title>Order a CD from ShipIt</title>
+			<para>Ubuntu offers the <emphasis>ShipIt</emphasis> service, which will deliver a small set of Ubuntu CDs to you at no cost. Follow the instructions on the <ulink url="http://shipit.ubuntu.com">ShipIt website</ulink> to place an order - delivery will typically take 6-10 weeks.</para>
+		</sect2>
+		<sect2 id="installing-get-borrow" status="review">
+			<title>Borrow a copy</title>
+			<para>Ubuntu is freely available <emphasis>software libre</emphasis>. You are encouraged and legally entitled to copy, reinstall and redistribute your copy of Ubuntu, and so if you know someone who will allow you to borrow their Ubuntu CD, then by all means do so! If you have a local <emphasis>Linux user group</emphasis>, they may also be able to provide an Ubuntu disc for you.</para>
+		</sect2>
+	</sect1>
+	<sect1 id="installing-burning" status="working">
+		<title>Burning your downloaded Ubuntu image</title>
+		<para>Now you have a Ubuntu image on your PC, you need to get it onto a CD.</para>
+		<sect2 id="installing-burning-windows" status="working">
+			<title>From Windows</title>
+			<orderedlist>
+				<listitem><para>If you do not have software to burn an ISO image, download <ulink url="http://infrarecorder.sourceforge.net/">Infra Recorder</ulink>, open source image burning software.</para></listitem>
+				<listitem><para>Insert a blank CD-R, if a dialog box pops up - click <guilabel>Cancel</guilabel>.</para></listitem>
+				<listitem><para>Open Infra Recorder, and select the <guilabel>Actions</guilabel> menu, then <guilabel>Burn image</guilabel>.</para></listitem>
+				<listitem><para>Select the Ubuntu CD image file you want to use, then click <guilabel>Open</guilabel>.</para></listitem>
+				<listitem><para>In the dialog box that opens, click <guilabel>OK</guilabel>.</para></listitem>
+			</orderedlist>
+		</sect2>
+		<sect2 id="installing-burning-mac" status="working">
+			<title>From a Mac</title>
+			<para>To burn most ISOs, you can use Apple's Disk Utility (Disk Copy in older versions).</para>
+			<orderedlist>
+				<listitem><para>Launch Disk Utility (Applications/Utilities/Disk Utility)</para></listitem>
+				<listitem><para>Drag the ISO to the sidebar of the Disk Utility main window.</para></listitem>
+				<listitem><para>Select the ISO where you just dragged it, and choose (Menu/Image/Burn...)</para></listitem>
+				<listitem><para>In Disk Utility, ensure that the Verify burn checkbox is ticked (you may need to click on the disclosure triangle to see the checkbox).</para></listitem>
+				<listitem><para>Insert a blank CD and select Burn</para></listitem>
+			</orderedlist>
+			<para>Check that verification (if available) was successful. If verification was not available, at least make sure that a sample of directories on the CD can be accessed by the finder.</para>
+		</sect2>
+		<sect2 id="installing-burning-ubuntu" status="working">
+			<title>From Ubuntu</title>
+			<orderedlist>
+				<listitem><para>Insert a blank CD and select <guilabel>Ignore</guilabel> from the pop up dialog.</para></listitem>
+				<listitem><para>In Nautilus, right click on the downloaded ISO and select <guilabel>Write to disc</guilabel>.</para></listitem>
+			</orderedlist>
+		</sect2>
+	</sect1>
+	<sect1 id="installing-booting" status="review">
+		<title>Booting from the install CD</title>
+		<para>In order to install Ubuntu, you must start your computer using the installation CD. While most computers will start from the installation CD if you simply insert the CD and then restart the computer, some computers may require additional steps to allow this.</para>
+		<para>If your computer does not start from the installation CD if you insert it and then restart the computer, use the following steps:</para>
+		<orderedlist>
+			<listitem><para>Restart your computer with the CD still inserted in the drive</para></listitem>
+			<listitem><para>When the computer restarts, look very carefully at the initial screen it shows. Look for an option such as <guilabel>&lt;F10&gt; Boot Order</guilabel> or <guilabel>Press DEL to enter setup</guilabel> and press the key which is noted (e.g. the <keycap>Delete</keycap> key). There are many different variations, so please see your computer manual if you are unsure which button you need to press.</para></listitem>
+			<listitem><para>Find the options relating to <emphasis>Boot Order</emphasis>, <emphasis>Boot Sequence</emphasis> or similar. Ensure that your CD drive is <emphasis>first</emphasis> in the boot order by following the instructions on-screen.</para></listitem>
+			<listitem><para>Once satisfied that your CD is first in the boot order, save your changes and restart the computer. It should now start from the Ubuntu installation CD.</para></listitem>
+		</orderedlist>
+		<para>If you are still unable to boot from CD, please seek support from one of the <ulink url="http://www.ubuntu.com/support">Ubuntu support channels</ulink>.</para>
+		<para>If it has booted from the CD successfully, Ubuntu will load. This may take a while, as a cut-down copy of Ubuntu must be started from the CD.</para>
+	</sect1>	
+	<sect1 id="first-steps" status="review">
+		<title>Preparing to install</title>
+		<para>Before installing Ubuntu, there are a few questions to consider:</para>
+		<orderedlist>
+			<listitem><para>Do you want to dual boot (be able to run Ubuntu and another operating system)?</para></listitem>
+			<listitem><para>Have you backed up your important files?</para></listitem>
+			<listitem><para>Does your hardware work properly?</para></listitem>
+		</orderedlist>
+			<sect2 id="dual-boot" status="review">
+				<title>Dual booting</title>
+				<para>Many people choose to run Windows and Ubuntu. This is straight forward to set up and means you can still go back to Windows. This gives you the best of both worlds and can smooth the transition to Ubuntu.</para>
+				<para>This will involve some extra steps when partioning your hard drive (see <xref linkend="installing-partitioning"/>).</para>
+				<para>For more information, see <xref linkend="dualboot"/></para>
+			</sect2>
+			<sect2 id="backup" status="review">
+				<title>Making backups</title>
+				<para>Its important to backup your important files before you start. There are several ways to do this:</para>
+				<orderedlist>
+					<listitem><para>Use a USB memory stick or external hard drive.</para></listitem>
+					<listitem><para>Burn backups to a DVD or CD-R.</para></listitem>
+					<listitem><para>Create a disc image.</para></listitem>
+				</orderedlist>
+				<para>There is much more information in the Backing-up your Windows installation section (see <xref linkend="preparing-backing-up-entire"/>)</para>
+				<warning>
+					<para>Make sure to create a backup of your important files.</para>
+					<para>Don't forget your emails and bookmarks!</para>
+				</warning>
+			</sect2>
+	</sect1>
+	<sect1 id="installing-info" status="review">
+		<title>Entering basic information</title>
+		<para>Once the Ubuntu installation CD has booted successfully, you will be presented with a desktop, with an icon labelled <guilabel>Install</guilabel>. Double-click this icon to start the <application>Ubuntu installer</application>. Then, follow the instructions below:</para>
+		<orderedlist>
+			<listitem><para>Select your language from the list provided and then press <guibutton>Forward</guibutton>.</para></listitem>
+			<listitem><para>Select a city from your country and timezone by either clicking the map or selecting a city from the drop-down menu labelled <guilabel>Selected city</guilabel>. Press <guibutton>Set Time...</guibutton> if the time is set incorrectly. Once you are satisfied that the time is correct for your location, press <guibutton>Forward</guibutton>.</para></listitem>
+			<listitem><para>Select your keyboard layout from the list provided. You can type in the box provided to test that your keyboard is working correctly. Press <guibutton>Forward</guibutton> once you are satisfied that you have chosen the correct keyboard layout.</para></listitem>
+			<listitem><para>The <guilabel>Prepare disk space</guilabel> screen will load. This will allow you to partition your hard disk. Partitioning is covered in the next section.</para></listitem>
+		</orderedlist>
+	</sect1>
+	<sect1 id="installing-partitioning" status="draft">
+		<title>Partitioning your disks</title>
+		<sect2 id="installing-partitioning-ubuntu" status="review">
+			<title>Single boot - Ubuntu only</title>
+			<para>If you do not intend to keep your copy of Windows installed on the computer, and you have made a backup of all of your important files, choose the <guilabel>Erase entire disk</guilabel> option from the <guilabel>Prepare disk space</guilabel> screen and then press <guibutton>Forward</guibutton>. The installer will automatically partition your hard disk in a suitable manner.</para>
+			
+			<note>
+				<para>You're probably used to how Windows represents disks. Your first hard drive is usually drive c. However Windows can change drive letters, Linux doesn't.</para>
+				<para>Devices are named differently too:</para>
+				<itemizedlist>
+					<listitem><para>The first Master IDE hard disk is called <guilabel>hda</guilabel>.</para></listitem>
+					<listitem><para>SCSI, SATA and USB are referred to as <guilabel>sd</guilabel>.</para></listitem>
+					<listitem><para>Each primary partition is numbered 1 to 4.</para></listitem>
+					<listitem><para>Each logical partition is numbered from 5 upwards.</para></listitem>
+				</itemizedlist>
+				<para>Hence the first logical partition on the master IDE drive will be <guilabel>hda5</guilabel>.</para>
+			</note>
+			
+			<para>Partitioning does not occur until you finalize the installation, so you can decide to abort the installation at the very last minute if you require. After finalizing the installation, however, the hard disk will be re-partitioned and all existing data stored on it will be lost. <emphasis role="strong">Ensure that you have made and tested a backup copy of all important data.</emphasis></para>
+			<para>For more complicated partitioning requirements, select <guilabel>Manually edit partition table</guilabel> from the <guilabel>Prepare disk space</guilabel> screen, and then press <guibutton>Forward</guibutton>. This will start a partitioning tool which you can use to partition your disk yourself. If you are unfamiliar with partitioning, please seek support through an Ubuntu <ulink url="http://www.ubuntu.com/support">support channel</ulink> for advice on partitioning your hard disk safely and correctly.</para>
+		</sect2>
+		<sect2 id="installing-partitioning-dual" status="draft">
+			<title>Dual booting Windows and Ubuntu</title>
+			<note>
+				<para>You must choose the <guilabel>Manually edit partition table</guilabel> option.</para>
+			</note>
+			<para>There are a couple of extra steps involved partitioning for dual boot.</para>
+			<orderedlist>
+				<listitem><para>Resizing existing the Windows partition.</para></listitem>
+				<listitem><para>Creating the swap partition.</para></listitem>	
+				<listitem><para>Creating the root partition.</para></listitem>
+				<listitem><para>Creating a seperate home partition.</para></listitem>
+			</orderedlist>
+			<para>After you've selected the <guilabel>Manually edit partition table</guilabel> option, you'll see the Partition Editor screen.</para>
+			<para>Partitioning does not occur until you finalize the installation, so you can decide to abort the installation at the very last minute if you require. After finalizing the installation, however, the hard disk will be re-partitioned and all existing data stored on it will be lost. <emphasis role="strong">Ensure that you have made and tested a backup copy of all important data.</emphasis></para>
+			<sect3 id="installing-partitioning-dual-resizing" status="draft">
+				<title>Resizing</title>
+				<para>At the moment your hard drive space is all allocated to Windows. This space needs to be reduced to create space for Ubuntu.</para>
+				<para>You don't need a huge amount of space for Ubuntu. You will need enough space for the following:</para>
+				<orderedlist>
+					<listitem><para>Root partition - where Ubuntu is installed. This should be at least 4GB.</para></listitem>
+					<listitem><para>Home partition - where your files are kept.</para></listitem>
+					<listitem><para>Swap partition - this need only be twice the size of your memory.</para></listitem>
+				</orderedlist>
+				<warning>
+					<para>A hard disk can only have 4 primary partitions.</para>
+					<para>However you can create a logical partition instead. This allows another 2 extended partitions to be created within it.</para>
+				</warning>
+				<para>Right click on the Windows partiton - it'll either be NTFS or Fat32. Select <guilabel>resize</guilabel>. You can now type in the new size or move the slider.</para>
+			</sect3>
+			<sect3 id="installing-partitioning-dual-swap" status="draft">
+				<title>Swap space</title>
+				<para>Create a partiton to use as swap space. Swap space is used by the kernel as extra memory. You will need to make it double the size of your installed memory.</para>
+				<para>Click on the free space and select <guilabel>Create new partition</guilabel>. Select <guilabel>Logical</guilabel>, <guilabel>Swap</guilabel> and set the size to double your system memory.</para>
+			</sect3>
+			<sect3 id="installing-partitioning-dual-root" status="draft">
+				<title>Creating the root partition</title>
+				<para>The root partition is akin to the "C" drive in Windows. You will need at least 4GB, double if possible. This will allow you more space to install programs.</para>
+				<para>Select the remaining space (unless you want a home partition). Click <guilabel>Create new partition</guilabel>. Select <guilabel>Logical</guilabel>, <guilabel>Ext3</guilabel> and set it to use the remaining space. Lastly enter the mount point as <guilabel>/</guilabel>.</para>
+			</sect3>
+			<sect3 id="installing-partitioning-dual-home" status="draft">
+				<title>Creating the home partition</title>
+				<para>This step is not necessary but will allow you to keep your settings and files in the event you reinstall Ubuntu. Set it up as you would the home partition but choose <guilabel>/home</guilabel> as the mount point.</para>
+			</sect3>
+		</sect2>
+		<sect2 id="installing-partioning-commit">
+			<title>Finalising</title>
+			<para>Now its all configured, review your settings. Make sure you've a root and swap partition and that your windows partition has a mount point so you can access it.</para>
+		</sect2>
+	</sect1>
+	<sect1 id="migrating" status="review">
+		<title>Migrating your settings and documents</title>
+		<para>Ubuntu can help your transition from Windows. Settings such as emails, bookmarks and even your current wallpaper can be migrated.</para>
+		<para>At this stage of installation an option to migrate settings is available. Select a detected operating system from the <guilabel>list</guilabel>.</para>
+		<para>Now a list of items to import is shown. Click the <guilabel>selection boxes</guilabel> of the items you want to migrate.</para>
+		<para>Enter your name and a user name is generated. You can change this to something more memorable if you wish.</para>
+		<para>Lastly click <guilabel>Forward</guilabel>.</para>
+		<caution>
+			<para>Pay particular attention to the password section - by choosing a more complicated password, you can help to make your computer more secure. You must also ensure that you can remember your password correctly, including the case of the letters you use (&apos;ABC&apos; is different to &apos;abc&apos;).</para>
+			<para>When choosing a password, try to use a combination of letters, numbers and punctuation symbols which spell out a random word (e.g. <emphasis>p0tato!</emphasis>). This will make your password harder to guess if someone tries to access your computer without your permission.</para>
+		</caution>
+		<sect2 id="migrating-not-detected" status="review">
+			<title>What to do if your settings are not detected</title>
+			<para>If Ubuntu does not detect your Windows installation, then click <guilabel>Forward</guilabel>.</para>
+			<para>The next screen asks you to create a user account. Enter your name and a login name is generated. Then enter your password and confirm it.</para>
+			<para>Lastly click <guilabel>Forward</guilabel>.</para>
+			<para>You will still be able to import your data from the backups that you made earlier (see <xref linkend="md"/>)</para>
+		</sect2>
+	</sect1>	
+	<sect1 id="installing-final" status="review">
+		<title>Finalizing the installation</title>
+		<sect2 id="installing-final-advanced" status="review">
+			<title>Advanced options</title>
+			<para>This allows you to select where you want to install the boot loader. A boot loader is a program that boots the operating system. Normally you would install this in the Master Boot Record (MBR). This special area of your hard drive tells the computer what to do next after turning on. Unless you wish to use another program to control which operating system to boot, leave this as <guilabel>Install to MBR</guilabel>.</para>
+			<warning>
+				<para>Once you press <guibutton>Install</guibutton>, the changes you specified on the partitioning screen will be applied. <emphasis role="strong">These changes cannot be undone.</emphasis> Please make sure that the changes you have specified are correct and that you have a back-up copy of any valuable data stored safely.</para>
+			</warning>
+			<note>
+				<para>If you are planning on installing a dual boot system, its easiest to install Windows first. This is because Windows overwrites the MBR when it is installed.</para>
+			</note>
+		</sect2>
+		<sect2 id="installing-final-commit" status="review">
+			<title>Beginning the installation</title>
+			<para>After you have completed the partitioning stage, you will be presented with the <guilabel>Ready to install</guilabel> screen. This will provide a summary of the installation settings you have chosen. If you would like to change any of these settings, this is your last chance to do so. Press <guibutton>Back</guibutton> to change your settings.</para>
+			<para>Once you are sure that you would like to proceed with installation, press <guibutton>Install</guibutton>. The installation process will then start, and may take a while to complete.</para>
+		</sect2>
+	</sect1>
+	<sect1 id="installing-restarting" status="review">
+		<title>Restarting into Ubuntu</title>
+		<para>Once the installation process is complete, your computer will restart. After a short while, Ubuntu will start up for the first time. Type in your user name and password, which you entered earlier on in the installation process. After another short period, your Ubuntu desktop will load completely. <emphasis role="strong">Congratulations - you are now using Ubuntu!</emphasis></para>
+	</sect1>
+</chapter>

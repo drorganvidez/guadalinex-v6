@@ -1,0 +1,797 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" 
+	"http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY % globalent SYSTEM "../../../libs/global.ent">
+%globalent;
+<!ENTITY % genericent SYSTEM "../../libs/generic.ent">
+%genericent;
+<!ENTITY % cdo-C SYSTEM "../../../libs/cdo-C.ent">
+%cdo-C;
+<!ENTITY % gnome-menus-C SYSTEM "../../../ubuntu/libs/gnome-menus-C.ent">
+%gnome-menus-C;
+<!ENTITY % xinclude SYSTEM "../../../libs/xinclude.mod">
+%xinclude;
+<!ENTITY language "&EnglishAmerican;">
+]>
+<chapter id="jeos" status="review">
+    <title>JeOS</title>
+    <para>
+    Ubuntu <emphasis>JeOS</emphasis> (pronounced "Juice") is an efficient variant of the Ubuntu Server operating system, 
+    configured specifically for virtual appliances. Currently available as a CD-ROM ISO for download, JeOS is a specialized 
+    installation of Ubuntu Server Edition with a tuned kernel that only contains the base elements needed to run within a 
+    virtualized environment.
+    </para>
+    <para>
+    Ubuntu JeOS has been tuned to take advantage of key performance technologies in the latest virtualization products 
+    from <emphasis>VMware</emphasis>, and also the Open Source virtualization technology <emphasis>KVM</emphasis>, which utilizes the 
+    latest hardware virtualization optimizations from Intel and AMD.  This combination of reduced size and optimized performance 
+    ensures that Ubuntu JeOS Edition delivers a highly efficient use of server resources in large virtual deployments.
+    </para>
+    <para>
+    Without unnecessary drivers, and only the minimal required packages, ISVs can configure their supporting OS exactly
+    as they require. They have the peace of mind that updates, whether for security or enhancement reasons, will be limited 
+    to the bare minimum of what is required in their specific environment. In turn, users deploying virtual appliances built 
+    on top of JeOS will have to go through fewer updates and therefore less maintenance than they would have had to with a 
+    standard full installation of a server.
+    </para>
+    <sect1 id="jeos-initial-setup" status="review">
+      <title>Initial Setup</title>
+      <para>
+      At this point in time, JeOS is meant to run under VMWare Server, VMWare ESX, and KVM.  It may not work under other virtualization
+      technologies yet. It is assumed in this tutorial that you have already installed a VMWare or KVM environment. We also assume that
+      you know how to use a text based text editor such as <application>nano</application> or <application>vi</application>. If you 
+      have not used any of them before, you can get an overview of the various text editors available by reading the 
+      <ulink url="https://help.ubuntu.com/community/PowerUsersTextEditors">PowerUsersTextEditors</ulink> page.
+      </para>
+      <para>
+      For information on setting up a <emphasis>KVM</emphasis> environment using <application>libvirt</application> see
+      <xref linkend="libvirt"/>.
+      </para>
+      <sect2 id="jeos-download" status="review">
+        <title>Downloading JeOS</title>
+        <para>
+	The latest version of JeOS iso image can be downloaded from the 
+        <ulink url="http://cdimage.ubuntu.com/jeos/releases/">Ubuntu</ulink> website.  To download JeOS using the command line 
+        utility <application>wget</application> from a terminal prompt enter:
+	</para>
+<screen>
+<command>wget http://cdimage.ubuntu.com/jeos/releases/&distro-rev;/release/ubuntu-&distro-rev;-jeos-i386.iso</command>
+</screen>
+	<para>
+	It is always a good idea to verify the <emphasis>md5</emphasis> sum of the downloaded file by comparing the
+        content of <ulink url="http://cdimage.ubuntu.com/jeos/releases/&distro-rev;/release/MD5SUMS">JeOS MD5SUM</ulink> with the result of:
+	</para>
+<screen>
+<command>md5sum ubuntu-&distro-rev;-jeos-i386.iso</command>
+</screen>
+	<para>
+	If the values are not the same, you should try to download the file again. 
+        </para>
+      </sect2>
+    </sect1>
+    <sect1 id="jeos-installation" status="review">
+      <title>JeOS Installation</title>
+      <para>
+      Installation of JeOS is done the same way you would install any other OS in VMWare/KVM, but here are a few thing to consider:
+      </para>
+      <itemizedlist>
+        <listitem>
+          <para>
+          If you plan on shipping a virtual appliance, do not assume that the end-user will know how to extend disk size to fit their 
+          need, so either plan for a large virtual disk to allow for your appliance to grow, or explain fairly well in your 
+          documentation how to allocate more space.
+	  </para>
+	</listitem>
+        <listitem>
+          <para>
+          Given that RAM is much easier to allocate in a VM, RAM size should be set to whatever you think is a safe minimum for your appliance.
+	  </para>
+	</listitem>
+      </itemizedlist>
+      <para>
+      Another option for installing a <application>JeOS</application> virtual machine, is to use <application>ubuntu-vm-builder</application>.
+      If using a local mirror <application>ubuntu-vm-builder</application> can significantly reduce the virtual machine creation time.  It also
+      allows you to add extra packages during the install process, set the IP Address, etc.  See <xref linkend="ubuntu-vm-builder"/>.
+      </para>
+      <sect2 id="jeos-defining-virtualmachine" status="review">
+        <title>Defining the Virtual Machine</title>
+        <para>
+	The following example is based on using VMWare server:
+        </para>
+        <orderedlist>
+          <listitem>
+	    <para>
+      	    Create a new virtual machine.
+            </para>
+          </listitem>
+          <listitem>
+	    <para>
+      	    Click next.
+            </para>
+          </listitem>
+          <listitem>
+	    <para>
+      	    Select Custom configuration, click next.
+            </para>
+          </listitem>
+          <listitem>
+	    <para>
+            Select Linux, pick Ubuntu in the version drop down menu, click next.
+            </para>
+          </listitem>
+          <listitem>
+	    <para>
+      	    Pick a name for your virtual appliance (use something that makes sense for your product), click next.
+            </para>
+          </listitem>
+          <listitem>
+	    <para>
+      	    Pick one processor (always default to the lowest configuration you think your users may have), click next.
+            </para>
+          </listitem>
+          <listitem>
+	    <para>
+            Letting the machine be private is a good secure basis, click next.
+            </para>
+          </listitem>
+          <listitem>
+	    <para>
+            Pick the minimum RAM you think your appliance will need (this can be changed easily by the user later on). Click next.
+            </para>
+          </listitem>
+          <listitem>
+	    <para>
+      	    Bridged networking might seem a sensible default to simplify user set-up later on, click next.
+            </para>
+          </listitem>
+          <listitem>
+	    <para>
+      	    Do not use default SCSI at this point, use IDE, as SCSI drivers are not included in the kernel.  Click next.
+            </para>
+          </listitem>
+          <listitem>
+	    <para>
+            Pick a disk size that makes sense for your virtual appliance. A minimum of 8G seems reasonable, particularly if you do 
+            not pick allocate disk space now. Split the disk into 2Gb files makes sense if you want to allow storage on FAT volumes.
+            Click next.
+            </para>
+          </listitem>
+          <listitem>
+	    <para>
+            Pick where you want to store the disk image, click Finish.
+            </para>
+          </listitem>
+        </orderedlist>
+      </sect2>
+      <sect2 id="joes-installation-parameters" status="review">
+        <title>JeOS Installation Parameters</title>
+        <para>
+        Once your machine has been defined, you need to start it, but before you do that you need to tell it to boot 
+        from the ISO image you downloaded earlier. The installer for JeOS is very similar to the Ubuntu Server Installer, 
+        but as we are preparing a virtual appliance, there are a few steps that we want to change from a regular install.
+	</para>
+        <sect3 id="joes-fixed-ip" status="review">
+          <title>Assigning a fixed IP address</title>
+          <para>
+          As a virtual appliance that may be deployed on various very different networks, it is very difficult to know what 
+          the actual network will look like. In order to simplify configuration, it is a good idea to take an approach similar 
+          to what network hardware vendors usually do, namely assigning an initial fixed IP address to the appliance in a 
+          private class network that you will provide in your documentation. An address in the range 192.168.0.0/255 is usually a good choice.
+	  </para>
+          <para>
+          When you arrive at the screen <emphasis>Configure your network</emphasis> asking you to provide a hostname for this machine:
+          </para>
+	  <itemizedlist>
+            <listitem>
+              <para>
+      	      Press escape to access the network configuration menu.
+              </para>
+	    </listitem>
+            <listitem>
+              <para>
+      	      Select Configure network manually in the next screen.
+              </para>
+	    </listitem>
+            <listitem>
+              <para>
+      	      Enter a fixed IP address and other network information in the subsequent screen.
+              </para>
+	    </listitem>
+            <listitem>
+              <para>
+      	      Once this is done, the installer will continue to its next steps automatically
+              </para>
+	    </listitem>
+          </itemizedlist>
+        </sect3>
+        <sect3 id="jeos-partitioning" status="reveiw">
+          <title>Partitioning</title>
+          <para>
+          Partitioning of the virtual appliance will have to take into consideration what you are planning to do with is. 
+          As stated before, do not pick one of the LVM choice as it will fail, LVM not being provided by default on JeOS at 
+          this time. Because most appliances will run as server, using separate <filename>/home</filename>, <filename>/usr</filename>, 
+          <filename>/var</filename> and <filename>/tmp</filename> partition would make sense. 
+          </para>
+        </sect3>
+        <sect3 id="jeos-user-password" status="reveiw">
+          <title>User and Password</title>
+          <para>
+          Again setting up a virtual appliance, you will need to provide a default user and password that is generic so 
+          that you can include it in your documentation. We will see later on in this tutorial how we will provide some 
+          security by defining a script that will be run the first time a user actually logs in the appliance, that will, 
+          among other things, ask him to change his password. In this example I will use <emphasis>'user'</emphasis> as my 
+          user name, and <emphasis>'default'</emphasis> as the password.
+          </para>
+        </sect3>
+      </sect2>
+    </sect1>  
+    <sect1 id="jeos-preparing-os" status="review">
+      <title>Preparing the OS</title>
+      <para>
+      Once we are done with the initial installation of JeOS and our virtual machine is now waiting with a login prompt, 
+      we now have to prepare our operating to accommodate our application. It is generally a good time to make a snapshot  
+      of your clean VMWare image, so that if a mistake is made later on, it will be possible to revert to a blank page 
+      without having to reinstall everything.
+      </para>
+      <para>
+      The very first thing to do after install of the sytem is to check that it is up to date. This is done by running: 
+      </para>
+<screen>
+<command>sudo apt-get update &amp;&amp; sudo apt-get upgrade</command>
+</screen>
+      <sect2 id="joes-installing-vmwaretools" status="review">
+        <title>Installing VMware Tools</title>
+        <para>
+        VMWare Tools will allow to have a better control of our appliance by the VMware environment, so it is a pretty 
+        good idea to set it up.
+        </para>
+        <itemizedlist>
+          <listitem>
+            <para>
+            First setup our environment by installing the build tools:
+            </para>
+<screen>
+<command>sudo aptitude install build-essential linux-headers-$(uname -r)</command>
+</screen>
+          </listitem>
+          <listitem>
+            <para>
+            Next ask VMware to mount the VMwareTools CD by clicking on VM &gt; Install VMware Tools… in the VMware Server menu.
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+            Mount the cdrom:
+          </para>
+<screen>
+<command>mount /media/cdrom0</command>
+</screen>
+          </listitem>
+          <listitem>
+            <para>
+            Copy the tools to the tmp directory and uncompress them:
+            </para>
+<screen>
+<command>sudo cp -a /media/cdrom0/VMwareTools*.gz /tmp/</command>
+<command>cd /tmp/</command>
+<command>sudo tar -xzvf VMwareTools*.gz</command>
+</screen>
+          </listitem>
+          <listitem>
+            <para>
+	    Run the <application>vmware-install.pl</application> script accepting all the defaults:
+            </para>
+<screen>
+<command>cd vmware-tools-distrib/</command>
+<command>sudo ./vmware-install.pl</command>
+</screen>
+          </listitem>
+        </itemizedlist>
+	<para>
+        Also available for <application>VMWare</application> is the <application>open-vm-tools</application> package, an 
+        Open Source implementation of <application>VMWare Tools</application>.  If using <application>KVM</application> at this time
+	there is no equivalent package, however.
+	</para>
+	<para>
+	To install <application>open-vm-tools</application> from a terminal prompt enter:
+	</para>
+<screen>
+<command>sudo apt-get install open-vm-tools</command>
+</screen>
+      </sect2>
+      <sect2 id="jeos-required-packages" status="review">
+        <title>Installing Required Packages</title>
+        <para>
+        In this example we will be installing a very simple application consisting of a web page that accesses a 
+        <application>MySQL</application> database. We will therefore require our OS to provide us with:
+        </para>
+        <itemizedlist>
+          <listitem><para>Apache</para></listitem>
+          <listitem><para>PHP</para></listitem>
+          <listitem><para>MySQL</para></listitem>
+        </itemizedlist>
+        <para>
+	Which is in the end a basic LAMP stack that we will pull in one single step using the <application>apt-get</application> command:
+        </para>
+<screen>
+<command>sudo tasksel install lamp-server</command>
+</screen>
+        <note>
+        <para>
+          Note that at this point we could easily install any additional packages that we might need using, for example, the 
+          <application>aptitude</application> command line utility.
+          </para>
+        </note>
+        <para>
+        Once we are done installing our base packages, it is another good time to do a snapshot our virtual machine. 
+        We also can save the intermediary steps by doing a full copy of the virtual machine by issuing the following 
+        command on our host after powering it down (you will have to adapt it to your particular environment):
+ 	</para>
+<screen>
+<command>cp -rf /var/lib/vmware/Virtual\ Machines/JeOS /var/lib/vmware/Virtual\ Machines/JeOS-basePackages/</command>
+</screen>
+      </sect2>
+      <sect2 id="jeos-security-considerations" status="review">
+        <title>Security Considerations</title>
+	<itemizedlist>
+          <listitem>
+            <para>
+            <emphasis>OpenSSH</emphasis>
+            </para>
+            <para>
+            Another convenient tool that we want to have on our appliance is <application>OpenSSH</application>, as it will 
+            provide our admins to access to access the appliance remotely. However, pushing in the wild an appliance with a 
+            pre-installed OpenSSH server is a big security risk as all these server will share the same secret key, making 
+            it very easy for hackers to target our appliance with all the tools they need to crack it open in a breeze. As 
+            for the user password, we will instead rely on a script that will install OpenSSH the first time a user logs in 
+            so that the key generated will be different for each appliance.
+            </para>
+            <para>
+            However, it might be simpler during the set-up to access our appliance using ssh, so we still install it at this time, 
+            but we will need to make sure that fully removed by the time we ship our appliance, which is described in the last 
+            part of this tutorial. To install it, simply run:
+            </para>
+<screen>
+<command>sudo apt-get install openssh-server</command>
+</screen>
+          </listitem>
+          <listitem>
+            <para>
+            <emphasis>MySQL</emphasis>
+            </para>
+            <para>
+            When we ran apt-get to install the lamp-server^, the only question we were asked was to provide a default password 
+            for MySQL. It would not be wise to have all our deployed appliances to use the same password, so we will have to 
+            have it changed as well the first time a user logs in our appliance.
+            </para>
+          </listitem>
+        </itemizedlist>
+      </sect2>
+    </sect1>
+    <sect1 id="jeos-installing-application" status="reveiw">
+      <title>Installing and Maintaining the Application</title>
+      <para>
+      In general this is a 4 step process:
+      </para>
+      <orderedlist>
+        <listitem>
+          <para>
+          Package our application so that it is easily deployable.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+          Finish to prepare the system so that our application can run. Here we will simply create a MySQL user for our 
+          application to use.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+          Install the application. Here we will just add a single file in <filename>/opt/sample-app/</filename> and configure 
+          Apache to access it.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+          Setup the system so that it will be automatically updated everyday.
+          </para>
+        </listitem>
+      </orderedlist>
+      <sect2 id="jeos-package-application" status="review">
+        <title>Package the Application</title>
+        <para>
+        Two option are available to us:
+        </para>
+        <itemizedlist>
+          <listitem>
+	    <para>
+            The recommended method to do so is to make a <emphasis>Debian</emphasis> package. Since this is outside of the
+            scope of this tutorial, we will not perform this here and invite the reader to read the documentation on how to do 
+            this in the <ulink url="https://wiki.ubuntu.com/PackagingGuide">Ubuntu Packaging Guide</ulink>. In this case it is 
+            also a good idea to setup a repository for your package so that updates can be conveniently pulled from it. See the
+            <ulink url="http://www.debian-administration.org/articles/286">Debian Administration</ulink> article for a tutorial on this.
+            </para> 
+          </listitem>
+          <listitem>
+	    <para>
+            Manually install the application under <filename>/opt</filename> as recommended by the 
+            <ulink url="http://www.pathname.com/fhs/">FHS guidelines</ulink>. This is the approach we will be using here for 
+            more simplicity even though this is not the one we would recommend for any serious application as it does mean more 
+            complexity in maintaining it. We cover this in <xref linkend="jeos-application-updates"/>.
+            </para> 
+          </listitem>
+        </itemizedlist>
+      </sect2>
+      <sect2 id="jeos-mysql-usersetup" status="review">
+        <title>Setting Up a MySQL User</title>
+        <para>
+        Our application requires to access the MySQL database. For security reasons, we do not want this user to be the root MySQL user,
+        so we define a user named <emphasis>www-data</emphasis> that has read access to the local databases and can only connect locally
+        with some password.
+        </para>
+        <itemizedlist>
+          <listitem>
+            <para>
+	    First we need to connect to the MySQL monitor using the default password we specified earlier:
+            </para>
+          </listitem> 
+        </itemizedlist>
+<programlisting>
+user@JeOS:$ mysql -p --user=root
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 9
+Server version: 5.0.45-Debian_1ubuntu3-log Debian etch distribution
+
+Type 'help;' or '\h' for help. Type '\c' to clear the buffer.
+
+mysql>
+</programlisting>
+        <itemizedlist>
+          <listitem>
+            <para>
+	    Then we can create our user and exit the mysql monitor:
+            </para>
+          </listitem> 
+        </itemizedlist>
+<programlisting>
+mysql> GRANT SELECT ON *.* TO 'www-data'@'localhost' IDENTIFIED BY 'password';
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> exit
+Bye
+user@JeOS:$
+</programlisting>
+      </sect2>
+      <sect2 id="jeos-application-install" status="review">
+        <title>Installing our Application</title>
+        <para>
+        In this example our application is a very simple PHP page that lists the databases available in MySQL:
+        </para>
+<programlisting>
+&lt;?php
+session_start();
+?&gt;
+
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"&gt;
+&lt;html&gt;
+&lt;head&gt;
+   &lt;meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"&gt;
+   &lt;meta name="description" content="Database List"&gt;
+   &lt;title&gt;Database List&gt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;Database list&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;?php
+error_reporting(E_ALL);
+
+$link = mysql_connect('localhost', 'www-data', 'password');
+$db_list = mysql_list_dbs($link);
+
+$i = 0;
+$cnt = mysql_num_rows($db_list);
+while ($i &lt; $cnt) {
+    echo "&lt;li&gt;" . mysql_db_name($db_list, $i) . "&lt;/li&gt;\n";
+    $i++;
+}
+?&gt;
+&lt;/ul&gt;
+
+&lt;/body&gt;
+&lt;/html&gt; 
+</programlisting>
+        <para>
+        To install it:
+        </para>
+        <itemizedlist>
+          <listitem>
+            <para>
+            <command>sudo mkdir /opt/sample-app/</command>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+            Open the file <filename>/opt/sample-app/index.php</filename> using sudo with your text editor of choice.
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+            Paste the above page content in the text editor, save and exit.
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+            <command>sudo chown -R www-data:www-data /opt/sample-app</command> to allow Apache to read it.
+            </para>
+          </listitem>
+        </itemizedlist>
+        <para>
+	Then we just need to modify Apache default configuration to point to our application directory:
+        </para>
+        <itemizedlist>
+          <listitem>
+            <para>
+            Open the file <filename>/etc/apache2/sites-enabled/000-default</filename> using sudo with your text editor of choice.
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+            Change all instances of <filename>/var/www/</filename> to <filename>/opt/sample-app</filename>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+            Save and exit.
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+            <command>sudo /etc/init.d/apache2 reload</command>
+            </para>
+          </listitem>
+        </itemizedlist>
+        <para>
+        You can now test your application by pointing your browser to the IP address of the virtual appliance.
+        </para>
+      </sect2>
+      <sect2 id="jeos-automatic-updates" status="review">
+        <title>Configuring Automatic Updates</title>
+        <para>
+        To have your system be configured to update itself on a regular basis, we will just install unattended-upgrades:
+        </para>
+<screen>
+<command>sudo aptitude install unattended-upgrades</command>
+</screen>
+        <sect3 id="jeos-application-updates" status="review">
+          <title>How to Get Your Application Updated</title>
+          <para>
+          If you decided to package your application as a Debian package and did setup your own repository, all you need to 
+          do is to add your repository to <filename>/etc/apt/source.list.d/</filename>. The above auto-update cron will then 
+          pull the update each time you provide it in your repository. Another advantage of using a packaged approach is that, 
+          if your dependencies evolve during the life of your application, all updated dependencies will be automatically 
+          installed in the same process.
+          </para>
+          <para>
+          If you decided to install your application manually, it is really up to you on how you will be automating the updates. 
+          A possible solution would be to:
+          </para>
+          <itemizedlist>
+            <listitem>
+              <para>
+              Place a <application>tar</application> file with your app on some HTTP server along with a version file.
+              </para>
+            </listitem>
+            <listitem>
+              <para>
+              Create a script that is placed in <filename>/etc/cron.daily</filename> that regularly compares the version 
+              file on the server with the version file that you would have stored in <filename>/opt/sample-app/</filename>
+              </para>
+            </listitem>
+            <listitem>
+              <para>
+              Download and apply the new tar file if the version available on-line is greater.
+              </para>
+            </listitem>
+            <listitem>
+              <para>
+              Reload Apache.
+              </para>
+            </listitem>
+          </itemizedlist>
+        </sect3>
+      </sect2>
+    </sect1>
+    <sect1 id="jeos-preparing-firstboot" status="review">
+      <title>Preparing First User Boot</title>
+      <para>
+      Because of the security risks we outlined earlier, we need to have a few tasks performed the first time a user logs in:
+      </para>
+      <itemizedlist>
+        <listitem>
+          <para>
+          Re-install openssh if the appliance can be accessed this way.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+          Ask for a new user password.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+          Ask for a new MySQL root password
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+          Regenerate the SSL certificate if our application can be accessed through SSL.
+          </para>
+        </listitem>
+     </itemizedlist>
+     <para>
+     To do so we will add a line to the very end of <filename>/etc/bash.bashrc</filename>: 
+     </para>
+<programlisting>
+if [ ! -e /etc/opt/sample-app/initial_config_done ]; then
+  /opt/sample-app/bin/initial_config
+  sudo touch /etc/opt/sample-app/initial_config_done
+fi
+</programlisting>
+      <para>
+      Through this line, the script <filename>/opt/sample-app/bin/initial_config</filename> will be executed upon first login if the file 
+      <filename>/etc/opt/sample-app/initial_config_done</filename> does not exist. So we now need to:
+      </para> 
+      <itemizedlist>
+        <listitem>
+          <para>
+          Create the directory <filename>/etc/opt/sample-app/</filename>: <command>sudo mkdir /etc/opt/sample-app/</command>.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+          Create the script <filename>/opt/sample-app/bin/initial_config</filename> using sudo pasting the script below using 
+          your text editor of choice:
+          </para>
+        </listitem>
+     </itemizedlist>
+<programlisting>
+#!/bin/bash
+# Let's change the user's password
+echo "Thank you for choosing our sample-app appliance"
+echo "For the security of the appliance, we need you to change this user password now."
+passwd
+
+# Now change the mysql password
+echo "We now need you to specify a new MySQL root password"
+let done=0
+while [ $done -eq 0 ]; do
+  read -e -s -r -p "New mysql root password:" PASS1
+  echo ""
+  read -e -s -r -p "Retype mysql root password:" PASS2
+  if [[ "$PASS1" == "$PASS2" ]]; then
+    let done=1
+    #perform the actual change assuming that our initial password is default
+    mysqladmin -u root --password='default' password $PASS1
+  else
+    echo "The 2 passwords did not match, please try again."
+  fi
+done
+
+#Perform the reinstall of openssh so that the key is regenerated
+echo "We are now going to generate your ssh keys."
+sudo apt-get --purge -y remove openssh-server
+sudo apt-get install -y openssh-server
+
+# You can add here any first user login actions that you require
+</programlisting>
+      <itemizedlist>
+        <listitem>
+          <para>
+          Make it executable: <command>sudo chmod a+x /opt/sample-app/bin/initial_config</command>
+          </para>
+        </listitem>
+      </itemizedlist>
+    </sect1>
+    <sect1 id="jeos-cleaning-up" status="review">
+      <title>Cleaning Before Shipping</title>
+      <para>
+      After testing our appliance a bit, it is now time to make it clean before shipping it:
+      </para>
+      <itemizedlist>
+        <listitem>
+          <para>
+          Remove the <filename>/etc/opt/sample-app/initial_config_done</filename> file:
+          </para>
+<screen>
+<command>sudo rm /etc/opt/sample-app/initial_config_done</command>
+</screen>
+        </listitem>
+        <listitem>
+          <para>
+          Reset the passwords to their default values if you have changed them.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+          Remove services that are no longer needed (remember to remove configuration files, too, so use sudo aptitude purge,
+          sudo apt-get --purge remove, or sudo dpkg -P whichever tool you prefer). From our example this would include:
+          </para>
+          <itemizedlist>
+            <listitem><para>openssh-server</para></listitem>
+            <listitem><para>build-essentials</para></listitem>
+            <listitem><para>linux-headers-$(uname -r)</para></listitem>
+          </itemizedlist>
+        </listitem>
+        <listitem>
+          <para>
+          Clear out the apt cache:
+          </para>
+<screen>
+<command>sudo apt-get clean</command>
+</screen>
+        </listitem>
+        <listitem>
+          <para>
+          Remove $HOME/.ssh for both user and root:
+          </para>
+<screen>
+<command>sudo rm -rf /home/user/.ssh &amp;&amp; sudo rm -rf /root/.ssh</command>
+</screen>
+        </listitem>
+        <listitem>
+          <para>
+          Remove any build directories that may have been used in the process. In our example that would be the contents 
+          of the <filename>/tmp</filename> directory.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+          Remove the history of your commands: 
+          </para>
+<screen>
+<command>history -c</command>
+</screen>
+        </listitem>
+        <listitem>
+          <para>
+          Shutdown the system.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+          In VMWare management console:
+          </para>
+          <itemizedlist>
+            <listitem><para>Go to your virtual machine settings.</para></listitem>
+            <listitem><para>Select the virtual disk.</para></listitem>
+            <listitem><para>Defragment it (which should reclaim all the space you freed, making your appliance smaller).</para></listitem>
+          </itemizedlist>
+        </listitem>
+        <listitem>
+          <para>
+          Your appliance is ready for shipment!
+          </para>
+        </listitem>
+      </itemizedlist>
+    </sect1>
+    <sect1 id="jeos-resources" status="review">
+      <title>Resources</title>
+      <para>
+      If you are interested in learning more, have questions or suggestions, please contact the Ubuntu Server Team at:
+      </para>
+      <itemizedlist>
+        <listitem>
+          <para>
+          IRC: #ubuntu-server on Freenode
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+          Mailing list: <ulink url="https://lists.ubuntu.com/mailman/listinfo/ubuntu-server">ubuntu-server at lists.ubuntu.com</ulink>
+          </para>
+        </listitem>
+      </itemizedlist>
+    </sect1>
+</chapter>

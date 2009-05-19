@@ -1,0 +1,209 @@
+<?xml version="1.0"?>
+
+<!--
+
+This is an example configuration file for FOP.
+This file contains the same settings as the default values
+and will have no effect if used unchanged.
+
+Relative config url's will be resolved relative to
+the location of this file.
+
+-->
+
+<!-- NOTE: This is the version of the configuration -->
+<fop version="1.0">
+
+  <!-- Base URL for resolving relative URLs -->
+  <base>.</base>
+  
+  <!-- Source resolution in dpi (dots/pixels per inch) for determining the size of pixels in SVG and bitmap images, default: 72dpi -->
+  <source-resolution>72</source-resolution>
+  <!-- Target resolution in dpi (dots/pixels per inch) for specifying the target resolution for generated bitmaps, default: 72dpi -->
+  <target-resolution>72</target-resolution>
+  
+  <!-- Default page-height and page-width, in case
+       value is specified as auto -->
+  <default-page-settings height="11in" width="8.26in"/>
+  
+  <!-- Information for specific renderers -->
+  <!-- Uses renderer mime type for renderers -->
+  <renderers>
+    <renderer mime="application/pdf">
+      <filterList>
+        <!-- provides compression using zlib flate (default is on) -->
+        <value>flate</value>
+  
+        <!-- encodes binary data into printable ascii characters (default off)
+             This provides about a 4:5 expansion of data size -->
+        <!-- <value>ascii-85</value> -->
+  
+        <!-- encodes binary data with hex representation (default off)
+             This filter is not recommended as it doubles the data size -->
+        <!-- <value>ascii-hex</value> -->
+      </filterList>
+
+      <fonts>
+        <!-- embedded fonts -->
+        <!--
+        This information must exactly match the font specified
+        in the fo file. Otherwise it will use a default font.
+
+        For example,
+        <fo:inline font-family="Arial" font-weight="bold" font-style="normal">
+            Arial-normal-normal font
+        </fo:inline>
+        for the font triplet specified by:
+        <font-triplet name="Arial" style="normal" weight="bold"/>
+
+        If you do not want to embed the font in the pdf document
+        then do not include the "embed-url" attribute.
+        The font will be needed where the document is viewed
+        for it to be displayed properly.
+
+        possible styles: normal | italic | oblique | backslant
+        possible weights: normal | bold | 100 | 200 | 300 | 400
+                          | 500 | 600 | 700 | 800 | 900
+        (normal = 400, bold = 700)
+        -->
+
+        <!--
+        <font metrics-url="arial.xml" kerning="yes" embed-url="arial.ttf">
+          <font-triplet name="Arial" style="normal" weight="normal"/>
+          <font-triplet name="ArialMT" style="normal" weight="normal"/>
+        </font> -->
+
+ <font metrics-url="../libs/pdf/fonts/DejaVuSerif.xml" kerning="yes" embed-url="/usr/share/fonts/truetype/ttf-dejavu/DejaVuSerif.ttf">
+    <font-triplet name="dejavuserif" style="normal" weight="normal"/>
+ </font>
+ <font metrics-url="../libs/pdf/fonts/DejaVuSerif-Bold.xml" kerning="yes" embed-url="/usr/share/fonts/truetype/ttf-dejavu/DejaVuSerif-Bold.ttf">
+    <font-triplet name="dejavuserif" style="normal" weight="bold"/>
+ </font>
+ <font metrics-url="../libs/pdf/fonts/DejaVuSerif-BoldOblique.xml" kerning="yes" embed-url="/usr/share/fonts/ttf-dejavu/DejaVuSerif-BoldOblique.ttf">
+    <font-triplet name="dejavuserif" style="italic" weight="bold"/>
+ </font>
+ <font metrics-url="../libs/pdf/fonts/DejaVuSerif-Oblique.xml" kerning="yes" embed-url="/usr/share/fonts/truetype/ttf-dejavu/DejaVuSerif-Oblique.ttf">
+    <font-triplet name="dejavuserif" style="italic" weight="bold"/>
+ </font>
+
+ <font metrics-url="../libs/pdf/fonts/FreeMono-ttf.xml" kerning="yes" embed-url="/usr/share/fonts/truetype/freefont/FreeMono.ttf">
+    <font-triplet name="monospace" style="normal" weight="normal"/>
+ </font>
+ <font metrics-url="../libs/pdf/fonts/FreeMonoBold-ttf.xml" kerning="yes" embed-url="/usr/share/fonts/truetype/freefont/FreeMonoBold.ttf">
+    <font-triplet name="monospace" style="normal" weight="bold"/>
+ </font>
+ <font metrics-url="../libs/pdf/fonts/FreeMonoOblique-ttf.xml" kerning="yes" embed-url="/usr/share/fonts/truetype/freefont/FreeMonoOblique.ttf">
+    <font-triplet name="monospace" style="italic" weight="normal"/>
+ </font>
+ <font metrics-url="../libs/pdf/fonts/FreeMonoBoldOblique-ttf.xml" kerning="yes" embed-url="/usr/share/fonts/truetype/freefont/FreeMonoBoldOblique.ttf">
+    <font-triplet name="monospace" style="italic" weight="bold"/>
+ </font>
+
+ <font metrics-url="../libs/pdf/fonts/FreeSerif.xml" kerning="yes" embed-url="/usr/share/fonts/truetype/freefont/FreeSerif.ttf">
+    <font-triplet name="serif" style="normal" weight="normal"/>
+ </font>
+ <font metrics-url="../libs/pdf/fonts/FreeSerif-Bold.xml" kerning="yes" embed-url="/usr/share/fonts/truetype/freefont/FreeSerifBold.ttf">
+    <font-triplet name="serif" style="normal" weight="bold"/>
+ </font>
+ <font metrics-url="../libs/pdf/fonts/FreeSerif-BoldItalic.xml" kerning="yes" embed-url="/usr/share/fonts/truetype/freefont/FreeSerifBoldItalic.ttf">
+    <font-triplet name="serif" style="italic" weight="bold"/>
+ </font>
+ <font metrics-url="../libs/pdf/fonts/FreeSerif-Italic.xml" kerning="yes" embed-url="/usr/share/fonts/truetype/freefont/FreeSerifItalic.ttf">
+    <font-triplet name="serif" style="italic" weight="normal"/>
+ </font>
+
+ <font metrics-url="../libs/pdf/fonts/uming.xml" kerning="yes" embed-url="/usr/share/fonts/truetype/arphic/uming.ttf">
+    <font-triplet name="uming" style="normal" weight="normal"/>
+    <font-triplet name="uming" style="italic" weight="normal"/>
+   <font-triplet name="uming" style="normal" weight="bold"/>
+   <font-triplet name="uming" style="italic" weight="normal"/></font>
+
+    <font metrics-url="../libs/pdf/fonts/kochi-gothic.xml" embed-url="/usr/share/fonts/truetype/kochi/kochi-gothic.ttf" kerning="yes">
+      <font-triplet name="Kochi" style="normal"  weight="normal"/>
+      <font-triplet name="Kochi" style="italic"  weight="normal"/>
+      <font-triplet name="Kochi" style="normal"  weight="bold"/>
+      <font-triplet name="Kochi" style="italic"  weight="bold"/>
+    </font>
+
+    <font metrics-url="../libs/pdf/fonts/UnDotum.xml" embed-url="/usr/share/fonts/truetype/unfonts/UnDotum.ttf" kerning="yes">
+      <font-triplet name="dotum" style="normal"  weight="normal"/>
+      <font-triplet name="dotum" style="italic"  weight="normal"/>
+    </font>
+
+    <font metrics-url="../libs/pdf/fonts/UnDotumBold.xml" embed-url="/usr/share/fonts/truetype/unfonts/UnDotumBold.ttf" kerning="yes">
+      <font-triplet name="dotum" style="normal"  weight="bold"/>
+      <font-triplet name="dotum" style="italic"  weight="bold"/>
+    </font>
+
+    <font metrics-url="../libs/pdf/fonts/UnBatang.xml" embed-url="/usr/share/fonts/truetype/unfonts/UnBatang.ttf" kerning="yes">
+      <font-triplet name="batang" style="normal"  weight="normal"/>
+      <font-triplet name="batang" style="italic"  weight="normal"/>
+    </font>
+
+    <font metrics-url="../libs/pdf/fonts/UnBatangBold.xml" embed-url="/usr/share/fonts/truetype/unfonts/UnBatangBold.ttf" kerning="yes">
+      <font-triplet name="batang" style="normal"  weight="bold"/>
+      <font-triplet name="batang" style="italic"  weight="bold"/>
+    </font>
+
+ <font metrics-url="../libs/pdf/fonts/OpenSymbol.xml" kerning="yes" embed-url="/usr/share/fonts/truetype/openoffice/opens___.ttf">
+    <font-triplet name="Symbol" style="normal" weight="normal"/>
+ </font>
+
+	<!--
+        <font metrics-url="arialb.xml" kerning="yes" embed-url="arialb.ttf">
+          <font-triplet name="Arial" style="normal" weight="bold"/>
+          <font-triplet name="ArialMT" style="normal" weight="bold"/>
+        </font>
+        -->
+      </fonts>
+
+      <!-- This option lets you specify additional options on an XML handler -->
+      <!--xml-handler namespace="http://www.w3.org/2000/svg">
+        <stroke-text>false</stroke-text>
+      </xml-handler-->
+
+    </renderer>
+
+    <renderer mime="application/postscript">
+      <!-- This option forces the PS renderer to rotate landscape pages -->
+      <!--auto-rotate-landscape>true</auto-rotate-landscape-->
+      
+      <!-- This option lets you specify additional options on an XML handler -->
+      <!--xml-handler namespace="http://www.w3.org/2000/svg">
+        <stroke-text>false</stroke-text>
+      </xml-handler-->
+    </renderer>
+
+    <renderer mime="application/vnd.hp-PCL">
+    </renderer>
+
+    <!-- MIF does not have a renderer
+    <renderer mime="application/vnd.mif">
+    </renderer>
+    -->
+
+    <renderer mime="image/svg+xml">
+      <format type="paginated"/>
+      <link value="true"/>
+      <strokeText value="false"/>
+    </renderer>
+
+    <renderer mime="application/awt">
+    </renderer>
+
+    <renderer mime="text/xml">
+    </renderer>
+
+    <!-- RTF does not have a renderer
+    <renderer mime="text/rtf">
+    </renderer>
+    -->
+
+    <renderer mime="text/plain">
+      <pageSize columns="80"/>
+    </renderer>
+
+  </renderers>
+
+</fop>
+

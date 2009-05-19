@@ -1,0 +1,928 @@
+# Roman Kalashnikov <cargo200@gmail.com>, 2006,
+# Igor Zubarev <igor4u@gmail.com>, 2006.
+#
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ubuntu-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-09-14 08:25+0100\n"
+"PO-Revision-Date: 2008-02-08 22:34+0000\n"
+"Last-Translator: Igor Zubarev <igor4u@gmail.com>\n"
+"Language-Team: Russian <ru@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2008-02-17 10:22+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+#: basic-commands/C/basic-commands-C.omf:6(creator) basic-commands/C/basic-commands-C.omf:7(maintainer)
+msgid "ubuntu-doc@lists.ubuntu.com (Ubuntu Documentation Project)"
+msgstr "ubuntu-doc@lists.ubuntu.com (Проект документации Ubuntu)"
+
+#: basic-commands/C/basic-commands-C.omf:8(title) basic-commands/C/basic-commands.xml:15(title)
+msgid "Basic Commands"
+msgstr "Основные команды"
+
+#: basic-commands/C/basic-commands-C.omf:9(date)
+msgid "2006-09-07"
+msgstr "07.09.2006"
+
+#: basic-commands/C/basic-commands-C.omf:11(description)
+msgid "Placeholder."
+msgstr "Место подстановки (заполнитель)"
+
+#: basic-commands/C/basic-commands.xml:18(title)
+msgid "Using this Guide"
+msgstr "Использование данного руководства"
+
+#: basic-commands/C/basic-commands.xml:28(emphasis)
+msgid "man intro(1)"
+msgstr "man intro(1)"
+
+#: basic-commands/C/basic-commands.xml:20(emphasis)
+msgid ""
+"\"Under Linux there are GUIs (graphical user interfaces), where you can "
+"point and click and drag, and hopefully get work done without first reading "
+"lots of documentation. The traditional Unix environment is a CLI (command "
+"line interface), where you type commands to tell the computer what to do. "
+"That is faster and more powerful, but requires finding out what the commands "
+"are.\" -- from <placeholder-1/>"
+msgstr ""
+"\"В Linux есть GUI (graphical user interfaces, графические интерфейсы "
+"пользователя), где можно использовать мышь для указания и перемещения "
+"объектов, что позволяет выполнять работу без изучения больших объёмов "
+"документации. Традиционно в Unix используется CLI (command line interface, "
+"интерфейс командной строки), предполагающий написание команд на клавиатуре "
+"для выполнения компьютером требуемых действий. Этот способ быстрее и "
+"предоставляет больше возможностей, но требует изучения существующих "
+"команд.\" -- из <placeholder-1/>"
+
+#: basic-commands/C/basic-commands.xml:33(para)
+msgid ""
+"This guide will make you familiar with basic GNU/Linux shell commands. It is "
+"not intended to be a complete guide to the command line, just an "
+"introduction to complement Ubuntu's graphical tools."
+msgstr ""
+"Данное руководство призвано дать представление об основных командах, "
+"доступных в командной строке GNU/Linux. Оно не является и не подразумевается "
+"полным руководством по работе в командной строке и предоставляет лишь "
+"введение в команды, призванное дополнить графические инструменты, доступные "
+"в Ubuntu."
+
+#: basic-commands/C/basic-commands.xml:43(para)
+msgid ""
+"All command names, file names or paths to directories will be shown using a "
+"<command>monospace font</command>."
+msgstr ""
+"Все команды, имена файлов или пути к каталогам будут выделяться с "
+"использованием <command>моноширного шрифта</command>."
+
+#: basic-commands/C/basic-commands.xml:50(para)
+msgid ""
+"All the commands on this guide are to be issued from a command prompt in a "
+"<application>Terminal</application> and will be shown as: <screen>command to "
+"type</screen>"
+msgstr ""
+"Все команды в данном руководстве должны выполняться в командной строке "
+"<application>Терминала</application> и будут выделяться так: <screen>здесь "
+"набрать нужную команду</screen>"
+
+#: basic-commands/C/basic-commands.xml:58(para)
+msgid ""
+"<emphasis role=\"strong\">Note that Linux is case sensitive.</emphasis> "
+"User, user, and USER are all different to Linux."
+msgstr ""
+"<emphasis role=\"strong\">Учтите, что в Linux регистр имеет "
+"значение.</emphasis> User, user и USER для Linux не одно и то же."
+
+#: basic-commands/C/basic-commands.xml:69(title)
+msgid "Starting a Terminal"
+msgstr "Запуск терминала"
+
+#: basic-commands/C/basic-commands.xml:70(para)
+msgid "To open a <application>Terminal</application> do as follow:"
+msgstr "Чтобы открыть <application>Терминал</application>:"
+
+#: basic-commands/C/basic-commands.xml:76(para)
+msgid ""
+"Choose "
+"<menuchoice><guimenu>Applications</guimenu><guimenuitem>Accessories</guimenui"
+"tem><guimenuitem>Terminal</guimenuitem></menuchoice>;"
+msgstr ""
+"Выберите "
+"<menuchoice><guimenu>Приложения</guimenu><guimenuitem>Стандартные</guimenuite"
+"m><guimenuitem>Терминал</guimenuitem></menuchoice>;"
+
+#: basic-commands/C/basic-commands.xml:81(para)
+msgid ""
+"Or press <keycombo><keycap>Alt</keycap><keycap>F2</keycap></keycombo> and "
+"type <command>gnome-terminal</command>."
+msgstr ""
+"Или нажмите <keycombo><keycap>Alt</keycap><keycap>F2</keycap></keycombo> и "
+"наберите <command>gnome-terminal</command>."
+
+#: basic-commands/C/basic-commands.xml:94(title)
+msgid "File and Directory Commands"
+msgstr "Команды для работы с файлами и каталогами"
+
+#: basic-commands/C/basic-commands.xml:97(title)
+msgid "cd"
+msgstr "cd"
+
+#: basic-commands/C/basic-commands.xml:98(para)
+msgid ""
+"The <command>cd</command> command changes directories. When you open a "
+"terminal you will be in your home directory. To move around the file system "
+"you will use <command>cd</command>. Examples:"
+msgstr ""
+"Команда <command>cd</command> используется для перемещения по каталогам. При "
+"запуске терминала текущим каталогом является домашний каталог пользователя. "
+"Для навигации по файловой системе используйте команду <command>cd</command>. "
+"Примеры использования:"
+
+#: basic-commands/C/basic-commands.xml:107(para)
+msgid "To navigate into the root directory, type: <screen>cd /</screen>"
+msgstr "Чтобы перейти в корневой каталог наберите <screen>cd /</screen>"
+
+#: basic-commands/C/basic-commands.xml:113(para)
+msgid ""
+"To navigate to your home directory, type: <screen>cd</screen> or <screen>cd "
+"~</screen>"
+msgstr ""
+"Для перехода в ваш домашний каталог наберите <screen>cd</screen> или "
+"<screen>cd ~</screen>"
+
+#: basic-commands/C/basic-commands.xml:121(para)
+msgid "To navigate up one directory level, type: <screen>cd ..</screen>"
+msgstr ""
+"Для перехода в каталог уровнем выше в иерархии введите <screen>cd ..</screen>"
+
+#: basic-commands/C/basic-commands.xml:127(para)
+msgid ""
+"To navigate to the previous directory (or back), type: <screen>cd -</screen>"
+msgstr ""
+"Переход в предыдущий каталог (назад) делается с помощью <screen>cd -</screen>"
+
+#: basic-commands/C/basic-commands.xml:134(para)
+msgid ""
+"To navigate through multiple levels of directory at once, specify the full "
+"directory path that you want to go to. For example, type: <screen>cd "
+"/var/www</screen> to go directly to the <filename "
+"class=\"directory\">/www</filename> subdirectory of <filename "
+"class=\"directory\">/var/</filename>. As another example, type: <screen>cd "
+"~/Desktop</screen> to move you to the <filename "
+"class=\"directory\">Desktop</filename> subdirectory inside your home "
+"directory."
+msgstr ""
+"Чтобы перейти через несколько уровней вложенных каталогов с помощью одной "
+"команды, просто укажите полный путь к конечному каталогу. Например, наберите "
+" <screen>cd /var/www</screen>, чтобы перейти в подкаталог  <filename "
+"class=\"directory\">/www</filename> каталога <filename "
+"class=\"directory\">/var/</filename>. Другой пример: выполните <screen>cd "
+"~/Desktop</screen>, чтобы перейти в подкаталог <filename "
+"class=\"directory\">Desktop</filename> внутри вашего домашнего каталога."
+
+#: basic-commands/C/basic-commands.xml:151(title)
+msgid "pwd"
+msgstr "pwd"
+
+#: basic-commands/C/basic-commands.xml:162(para)
+msgid ""
+"<application>GNOME Terminal</application> also displays this information in "
+"the title bar of it's window."
+msgstr ""
+"Данная информация также отображается в заголовке окна <application>Терминала "
+"GNOME</application>."
+
+#: basic-commands/C/basic-commands.xml:152(para)
+msgid ""
+"<command>pwd</command>: The <command>pwd</command> command will show you "
+"which directory you're located in (<acronym>pwd</acronym> stands for "
+"<quote>print working directory</quote>). For example, typing "
+"<screen>pwd</screen> in the <filename class=\"directory\">Desktop</filename> "
+"directory, will show <computeroutput>~/Desktop</computeroutput>. "
+"<placeholder-1/>"
+msgstr ""
+"<command>pwd</command>: Команда <command>pwd</command> отображает каталог, в "
+"котором вы находитесь в данный момент (<acronym>pwd</acronym> сокращение "
+"английского <quote>print working directory</quote>, что означает напечатать "
+"рабочий каталог). Например, ввод <screen>pwd</screen> в каталоге <filename "
+"class=\"directory\">Desktop</filename> отобразит "
+"<computeroutput>/home/вашеимя/Desktop</computeroutput>."
+
+#: basic-commands/C/basic-commands.xml:171(title)
+msgid "ls"
+msgstr "ls"
+
+#: basic-commands/C/basic-commands.xml:172(para)
+msgid ""
+"The <command>ls</command> command shows you the files in your current "
+"directory. Used with certain options, you can see sizes of files, when files "
+"where made, and permissions of files. For example, typing <screen>ls "
+"~</screen> will show you the files that are in your home directory."
+msgstr ""
+"Команда <command>ls</command> выводит список файлов в текущем каталоге. "
+"Воспользовавшись дополнительными параметрами для данной команды, можно "
+"узнать размер файлов, когда файлы были созданы, а также права доступа для "
+"файлов. Например, ввод <screen>ls ~</screen> отобразит список файлов из "
+"вашего домашнего каталога."
+
+#: basic-commands/C/basic-commands.xml:183(title)
+msgid "cp"
+msgstr "cp"
+
+#: basic-commands/C/basic-commands.xml:184(para)
+msgid ""
+"The <command>cp</command> command makes a copy of a file for you. For "
+"example, type: <screen>cp file foo</screen> to make a exact copy of "
+"<filename>file</filename> and name it <filename>foo</filename>, but the file "
+"<filename>file</filename> will still be there."
+msgstr ""
+"Команда <command>cp</command> создаёт копию указанного файла. Например, "
+"наберите <screen>cp файл бе</screen> для создания точной копии "
+"<filename>файл</filename>-а под именем <filename>бе</filename>. В то же "
+"время файл <filename>файл</filename> никуда при этом не денется."
+
+#: basic-commands/C/basic-commands.xml:194(title)
+msgid "mv"
+msgstr "mv"
+
+#: basic-commands/C/basic-commands.xml:206(para)
+msgid ""
+"If you are using <command>mv</command> with <command>sudo</command> you will "
+"not be able to use the <emphasis role=\"strong\">~</emphasis> shortcut, but "
+"will have to use the full pathnames to your files. This is because when you "
+"are working as root, <emphasis role=\"strong\">~</emphasis> will refer to "
+"the root account's home directory, not your own."
+msgstr ""
+"При использовании команды <command>mv</command> совместно с "
+"<command>sudo</command> нельзя  пользоваться сокращением <emphasis "
+"role=\"strong\">~</emphasis>, а нужно указывать полный путь к файлам. Это "
+"связано с тем, что при работе под суперпользователем, <emphasis "
+"role=\"strong\">~</emphasis> будет указывать на его домашний каталог, а не "
+"на ваш собственный."
+
+#: basic-commands/C/basic-commands.xml:195(para)
+msgid ""
+"The <command>mv</command> command moves a file to a different location or "
+"will rename a file. Examples are as follows: <screen>mv file foo</screen> "
+"will rename the file <filename>file</filename> to <filename>foo</filename>. "
+"<screen>mv foo ~/Desktop</screen> will move the file "
+"<filename>foo</filename> to your <filename "
+"class=\"directory\">Desktop</filename> directory but will not rename it. You "
+"must specify a new file name to rename a file. <placeholder-1/>"
+msgstr ""
+"Команда <command>mv</command> используется для перемещения файлов в другое "
+"местоположение или их переименования. Примеры: <screen>mv файл бе</screen> "
+"переименует файл <filename>файл</filename> в <filename>бе</filename>. "
+"<screen>mv бе ~/Desktop</screen> переместит файл <filename>бе</filename> в "
+"ваш каталог <filename class=\"directory\">Desktop</filename>, оставив ему "
+"прежнее имя. Для переименования файла необходимо указать его новое имя. "
+"<placeholder-1/>"
+
+#: basic-commands/C/basic-commands.xml:219(title)
+msgid "rm"
+msgstr "rm"
+
+#: basic-commands/C/basic-commands.xml:220(para)
+msgid ""
+"Use the <command>rm</command> command to remove or delete a file in your "
+"directory. It will not work on directories which have files in them."
+msgstr ""
+"Используйте команду <command>rm</command> для удаления файла из каталога. "
+"Данная команда не удаляет каталоги, в которых содержаться файлы."
+
+#: basic-commands/C/basic-commands.xml:228(title)
+msgid "mkdir"
+msgstr "mkdir"
+
+#: basic-commands/C/basic-commands.xml:229(para)
+msgid ""
+"The <command>mkdir</command> command will allow you to create directories. "
+"For example, typing: <screen>mkdir music</screen> will create a music "
+"directory in the current directory."
+msgstr ""
+"Команда <command>mkdir</command> позволяет создавать каталоги. Например, "
+"набор <screen>mkdir музыка</screen> создаст каталог музыка в текущем "
+"каталоге."
+
+#: basic-commands/C/basic-commands.xml:239(title)
+msgid "System Information Commands"
+msgstr "Системные информационные команды"
+
+#: basic-commands/C/basic-commands.xml:242(title)
+msgid "df"
+msgstr "df"
+
+#: basic-commands/C/basic-commands.xml:243(para)
+msgid ""
+"The <command>df</command> command displays filesystem disk space usage for "
+"all partitions. <screen>df -h</screen> will give information using megabytes "
+"(M) and gigabytes (G) instead of blocks (<emphasis role=\"strong\">-"
+"h</emphasis> means \"human-readable\")."
+msgstr ""
+"<command>df</command> выводит информацию об использовании дискового "
+"пространства файловой системой для всех разделов жёсткого диска. <screen>df -"
+"h</screen> представит информацию с использованием мегабайт (M) и гигабайт "
+"(G) вместо размера в блоках (<emphasis role=\"strong\">-h</emphasis> от "
+"английского \"human-readable\", то есть «понятно для человека»)."
+
+#: basic-commands/C/basic-commands.xml:253(title)
+msgid "free"
+msgstr "free"
+
+#: basic-commands/C/basic-commands.xml:254(para)
+msgid ""
+"The <command>free</command> command displays the amount of free and used "
+"memory in the system. <screen>free -m</screen> will give the information "
+"using megabytes, which is probably most useful for current computers."
+msgstr ""
+"Команда <command>free</command> предоставляет информацию о доступной и "
+"занятой оперативной памяти системы. <screen>free -m</screen> производить "
+"вывод информации в мегабайтах, скорее всего это наиболее адекватно "
+"современным компьютерам."
+
+#: basic-commands/C/basic-commands.xml:264(title)
+msgid "top"
+msgstr "top"
+
+#: basic-commands/C/basic-commands.xml:265(para)
+msgid ""
+"The <command>top</command> command displays information on your GNU/Linux "
+"system, running processes and system resources, including CPU, RAM &amp; "
+"swap usage and total number of tasks being run. To exit "
+"<application>top</application>, press <keycap>q</keycap>."
+msgstr ""
+"<command>top</command> на системах GNU/Linux выводит информацию об "
+"исполняемых процессах и ресурсах системы, включая использование процессора, "
+"памяти, раздела подкачки и общего числа исполняемых процессов. Для выхода из "
+"<application>top</application>, нажмите <keycap>q</keycap>."
+
+#: basic-commands/C/basic-commands.xml:275(title)
+msgid "uname"
+msgstr "uname"
+
+#: basic-commands/C/basic-commands.xml:276(para)
+msgid ""
+"The <command>uname</command> command with the <emphasis role=\"strong\">-"
+"a</emphasis> option, prints all system information, including machine name, "
+"kernel name &amp; version, and a few other details. Most useful for checking "
+"which kernel you're using."
+msgstr ""
+"Команда <command>uname</command> с параметром <emphasis role=\"strong\">-"
+"a</emphasis> выводит полную информацию о системе, включая имя компьютера, "
+"название и версию ядра, а также некоторые другие детали. Наиболее полезна "
+"для проверки, какое ядро используется в системе."
+
+#: basic-commands/C/basic-commands.xml:286(title)
+msgid "lsb_release"
+msgstr "lsb_release"
+
+#: basic-commands/C/basic-commands.xml:287(para)
+msgid ""
+"The <emphasis role=\"strong\">lsb_release</emphasis> command with the "
+"<emphasis role=\"strong\">-a</emphasis> option prints version information "
+"for the Linux release you're running. For example, typing: "
+"<screen>lsb_release -a</screen> will give you: <screen>\n"
+"No LSB modules are available.\n"
+"Distributor ID: Ubuntu\n"
+"Description:    Ubuntu 7.04 \n"
+"Release:        7.04\n"
+"Codename:       feisty</screen>"
+msgstr ""
+"Команда <emphasis role=\"strong\">lsb_release</emphasis> с параметром "
+"<emphasis role=\"strong\">-a</emphasis> выводит информацию о дистрибутиве "
+"Linux, в котором вы работаете. Для примера, команда: <screen>lsb_release -"
+"a</screen> может выдать вам: <screen>\n"
+"No LSB modules are available.\n"
+"Distributor ID: Ubuntu\n"
+"Description:    Ubuntu 7.04 \n"
+"Release:        7.04\n"
+"Codename:       feisty</screen>"
+
+#: basic-commands/C/basic-commands.xml:305(title)
+msgid "ifconfig"
+msgstr "ifconfig"
+
+#: basic-commands/C/basic-commands.xml:306(para)
+msgid ""
+"The <command>ifconfig</command> command reports on your system's network "
+"interfaces."
+msgstr ""
+"Команда <command>ifconfig</command> выводит сведения о сетевых интерфейсах "
+"вашей системы."
+
+#: basic-commands/C/basic-commands.xml:314(title)
+msgid "Executing Commands with Elevated Privileges"
+msgstr "Выполнение команд с повышенными привилегиями"
+
+#: basic-commands/C/basic-commands.xml:315(para)
+msgid ""
+"The following commands will need to be prefaced with the "
+"<command>sudo</command> command. Please see <ulink "
+"url=\"https://help.ubuntu.com/community/RootSudo\">RootSudo</ulink> for "
+"information on using <command>sudo</command>."
+msgstr ""
+"Следующие команды потребуют применения предшествующей команды "
+"<command>sudo</command>. Для дополнительной информации по применению "
+"<command>sudo</command> обратитесь к <ulink "
+"url=\"https://help.ubuntu.com/community/RootSudo\">RootSudo</ulink>."
+
+#: basic-commands/C/basic-commands.xml:324(title)
+msgid "Adding a New Group"
+msgstr "Добавление новой группы"
+
+#: basic-commands/C/basic-commands.xml:325(para)
+msgid ""
+"The <command>addgroup</command> command is used to create a new group on the "
+"system. To create a new group, type: <screen>addgroup newgroup</screen> The "
+"above command will create a new group called <emphasis "
+"role=\"strong\">newgroup</emphasis>."
+msgstr ""
+"Команда <command>addgroup</command> используется для создания в системе "
+"новой группы. Чтобы создать новую группу, напечатайте: <screen>addgroup "
+"newgroup</screen> Эта команда создаст новую группу с именем <emphasis "
+"role=\"strong\">newgroup</emphasis>."
+
+#: basic-commands/C/basic-commands.xml:334(title)
+msgid "Adding A New User"
+msgstr "Добавление нового пользователя"
+
+#: basic-commands/C/basic-commands.xml:335(para)
+msgid ""
+"The <command>adduser</command> is used to create new users on the system. To "
+"create a new user, type: <screen>adduser newuser</screen> The above command "
+"will create a new user called <emphasis role=\"strong\">newuser</emphasis>."
+msgstr ""
+"Команда <command>adduser</command> используется для создания нового "
+"пользователя в системе. Чтобы создать нового пользователя, наберите: "
+"<screen>adduser newuser</screen> Эта команда создаст нового пользователя с "
+"именем <emphasis role=\"strong\">newuser</emphasis>."
+
+#: basic-commands/C/basic-commands.xml:342(para)
+msgid ""
+"To assign a password for the new user use the <command>passwd</command> "
+"command: <screen>passwd newuser</screen>"
+msgstr ""
+"Чтобы назначить пароль для нового пользователя, используйте команду "
+"<command>passwd</command>: <screen>passwd newuser</screen>"
+
+#: basic-commands/C/basic-commands.xml:348(para)
+msgid ""
+"Finally, to assign the new user to the new group, type: <screen>adduser "
+"newuser newgroup</screen>"
+msgstr ""
+"Наконец, чтобы добавить нового пользователя в новую группу, наберите: "
+"<screen>adduser newuser newgroup</screen>"
+
+#: basic-commands/C/basic-commands.xml:356(title)
+msgid "Options"
+msgstr "Параметры"
+
+#: basic-commands/C/basic-commands.xml:357(para)
+msgid ""
+"The default behavior for a command may usually be modified by adding a "
+"<emphasis role=\"strong\">-- <emphasis>option</emphasis></emphasis> to the "
+"command. The <link linkend=\"ls\"><command>ls</command></link> command, for "
+"example, has a <emphasis role=\"strong\">-s</emphasis> option so that "
+"<command>ls -s</command> will include file sizes in the listing. There is "
+"also a <emphasis role=\"strong\">-h</emphasis> option to get those sizes in "
+"a \"human readable\" format."
+msgstr ""
+"Стандартный вывод команды обычно может быть изменён с помощью добавления "
+"<emphasis role=\"strong\">-- <emphasis>параметра</emphasis></emphasis> к "
+"команде. Команда <link linkend=\"ls\"><command>ls</command></link>, к "
+"примеру, имеет параметр <emphasis role=\"strong\">-s</emphasis>, поэтому "
+"команда <command>ls -s</command> выведет размеры всех файлов. Также "
+"существует параметр <emphasis role=\"strong\">-h</emphasis> для вывода "
+"размеров в \"удобно-читаемом\" формате."
+
+#: basic-commands/C/basic-commands.xml:368(para)
+msgid ""
+"Options can be grouped in clusters so <screen>ls -sh</screen> is exactly the "
+"same command as <screen>ls -s -h</screen> Most options have a long version, "
+"prefixed with two dashes instead of one, so even <screen>ls --size --human-"
+"readable</screen> is the same command."
+msgstr ""
+"Параметры могут быть объединены в группы, как например <screen>ls -"
+"sh</screen> вместо <screen>ls -s -h</screen>. Большинство параметров имеют "
+"длинные синонимы, начинающиеся с двойной черты, вместо одинарной, так "
+"например <screen>ls --size --human-readable</screen> это тоже что и "
+"<screen>ls -s -h</screen>."
+
+#: basic-commands/C/basic-commands.xml:379(title)
+msgid "\"Man\" and getting help"
+msgstr "\"Man\" и получение помощи"
+
+#: basic-commands/C/basic-commands.xml:380(para)
+msgid ""
+"<emphasis role=\"strong\"><emphasis>command</emphasis> --help</emphasis> and "
+"<emphasis role=\"strong\">man <emphasis>command</emphasis></emphasis> are "
+"the two most important tools at the command line."
+msgstr ""
+"<emphasis role=\"strong\"><emphasis>имя_команды</emphasis> --help</emphasis> "
+"и <emphasis role=\"strong\">man<emphasis>имя_команды</emphasis></emphasis> - "
+"два наиболее важных инструмента командной строки."
+
+#: basic-commands/C/basic-commands.xml:387(para)
+msgid ""
+"Virtually all commands understand the <emphasis role=\"strong\">-"
+"h</emphasis> (or <emphasis role=\"strong\">--help</emphasis>) option which "
+"will produce a short usage description of the command and it's options, then "
+"exit back to the command prompt. Type <screen>man -h</screen> or <screen>man "
+"--help</screen> to see this in action."
+msgstr ""
+"Практически все команды понимают параметр <emphasis role=\"strong\">-"
+"h</emphasis> (или <emphasis role=\"strong\">--help</emphasis>) который "
+"выдает краткую справку по команде и её опциям и затем возвращается в "
+"командную строку. Введите <screen>man -h</screen> или <screen>man --"
+"help</screen> чтобы посмотреть как это работает."
+
+#: basic-commands/C/basic-commands.xml:397(para)
+msgid ""
+"Every command and nearly every application in Linux will have a man (manual) "
+"file, so finding them is as simple as typing <command>man command</command> "
+"to bring up a longer manual entry for the specified command. For example, "
+"<screen>man mv</screen> will bring up the <command>mv</command> (move) "
+"manual."
+msgstr ""
+"Все команды и практически все программы в Linux имеют файл man (manual - "
+"руководство), Проще всего его найти, введя команду: <command>man "
+"имя_команды</command>. К примеру, команда <screen>man mv</screen> покажет "
+"руководство по команде <command>mv</command> (перемещение)."
+
+#: basic-commands/C/basic-commands.xml:406(para)
+msgid ""
+"Move up and down the man file with the arrow keys, and quit back to the "
+"command prompt with <keycap>q</keycap>."
+msgstr ""
+"Для перемещения по файлу справки пользуйтесь клавишами управления курсором, "
+"а для выхода и возвращения в командную строку — клавишу <keycap>q</keycap>."
+
+#: basic-commands/C/basic-commands.xml:411(para)
+msgid ""
+"<screen>man man</screen> will bring up the manual entry for the "
+"<command>man</command> command, which is a good place to start."
+msgstr ""
+"<screen>man man</screen> вывод справки по команде <command>man</command> - "
+"лучшее решение для начинающих пользователей."
+
+#: basic-commands/C/basic-commands.xml:417(para)
+msgid ""
+"<screen>man intro</screen> is especially useful - it displays the "
+"\"Introduction to user commands\" which is a well-written, fairly brief "
+"introduction to the Linux command line."
+msgstr ""
+"Команда <screen>man intro</screen> особенно полезна: она отображает "
+"\"Введение в пользовательские команды\" - отлично написанное краткое "
+"руководство по основам командной строки Linux."
+
+#: basic-commands/C/basic-commands.xml:422(para)
+msgid ""
+"There are also <command>info</command> pages, which are generally more in-"
+"depth than <command>man</command> pages. Try <screen>info info</screen> for "
+"the introduction to info pages."
+msgstr ""
+"Также существует команда <command>info</command>, отображающая обычно "
+"больше, чем <command>man</command>. Попробуйте <screen>info info</screen> "
+"чтобы прочитать введение в страницы info."
+
+#: basic-commands/C/basic-commands.xml:432(title)
+msgid "Searching for man files"
+msgstr "Поиск руководств man"
+
+#: basic-commands/C/basic-commands.xml:433(para)
+msgid ""
+"If you aren't sure which command or application you need to use, you can try "
+"searching the man files."
+msgstr ""
+"Если вы не уверены, какую команду или приложение следует использовать, "
+"можете попытаться поискать по всем страницам man."
+
+#: basic-commands/C/basic-commands.xml:446(para)
+msgid "This is the same as the <command>apropos</command> command."
+msgstr "Это то же самое, что и команда <command>apropos</command>."
+
+#: basic-commands/C/basic-commands.xml:439(para)
+msgid ""
+"<command>man -k foo</command>, will search the man files for "
+"<emphasis>foo</emphasis>. Try <screen>man -k nautilus</screen> to see how "
+"this works. <placeholder-1/>"
+msgstr ""
+"<command>man -k foo</command>, будет осуществлять поиск файлов справки для "
+"<emphasis>foo</emphasis>. Попробуйте набрать <screen>man -k "
+"nautilus</screen>, чтобы увидеть, как это работает. <placeholder-1/>"
+
+#: basic-commands/C/basic-commands.xml:459(para)
+msgid "This is the same as the <command>whatis</command> command."
+msgstr "Это то же самое, что и команда <command>whatis</command>."
+
+#: basic-commands/C/basic-commands.xml:454(para)
+msgid ""
+"<command>man -f foo</command>, searches only the titles of your system's man "
+"files. For example, try <screen>man -f gnome</screen><placeholder-1/>"
+msgstr ""
+"<command>man -f foo</command>, ищет лишь названия системных файлов справки. "
+"Например, попробуйте <screen>man -f gnome</screen><placeholder-1/>"
+
+#: basic-commands/C/basic-commands.xml:471(title)
+msgid "Other Useful Things"
+msgstr "Другие полезные вещи"
+
+#: basic-commands/C/basic-commands.xml:474(title)
+msgid "Pasting in commands"
+msgstr "Вставка команд из буфера"
+
+#: basic-commands/C/basic-commands.xml:475(para)
+msgid ""
+"Often, you will be referred to instructions that require commands to be "
+"pasted into the terminal. You might be wondering why the text you've copied "
+"from a web page using "
+"<keycombo><keycap>Ctrl</keycap><keycap>C</keycap></keycombo> won't paste in "
+"with <keycombo><keycap>Ctrl</keycap><keycap>V</keycap></keycombo>. Surely "
+"you don't have to type in all those nasty commands and filenames? Relax. "
+"Middle Button Click on your mouse (both buttons simultaneously on a two-"
+"button mouse) or Right Click and select "
+"<menuchoice><guimenuitem>Paste</guimenuitem></menuchoice> from the menu."
+msgstr ""
+"Часто приходится следовать инструкциям, включающим команды, которые "
+"необходимо вводить в терминал. Вас может удивить то, что текст, "
+"скопированный вами с помощью комбинации "
+"<keycombo><keycap>Ctrl</keycap><keycap>C</keycap></keycombo>, не получается "
+"вставить по <keycombo><keycap>Ctrl</keycap><keycap>V</keycap></keycombo>. "
+"Неужели придется перепечатывать сложные команды и длинные имена файлов? "
+"Успокойтесь. :) Вам поможет нажатие на среднюю кнопку мыши (или левой и "
+"правой кнопок одновременно) или пункт "
+"<menuchoice><guimenuitem>Вставить</guimenuitem></menuchoice> из меню правой "
+"кнопки мыши."
+
+#: basic-commands/C/basic-commands.xml:498(title)
+msgid "Save on typing"
+msgstr "Сохранение набранного"
+
+#: basic-commands/C/basic-commands.xml:507(para)
+msgid ""
+"<keycap>Up Arrow</keycap> or "
+"<keycombo><keycap>Ctrl</keycap><keycap>p</keycap></keycombo>"
+msgstr ""
+"<keycap>Стрелка вверх</keycap> или "
+"<keycombo><keycap>Ctrl</keycap><keycap>p</keycap></keycombo>"
+
+#: basic-commands/C/basic-commands.xml:517(para)
+msgid "Scrolls through the commands you've entered previously."
+msgstr "Прокручивает набранные вами ранее команды."
+
+#: basic-commands/C/basic-commands.xml:525(para)
+msgid ""
+"<keycap>Down Arrow</keycap> or "
+"<keycombo><keycap>Ctrl</keycap><keycap>n</keycap></keycombo>"
+msgstr ""
+"<keycap>Стрелка вниз</keycap> или "
+"<keycombo><keycap>Ctrl</keycap><keycap>n</keycap></keycombo>"
+
+#: basic-commands/C/basic-commands.xml:535(para)
+msgid "Takes you back to a more recent command."
+msgstr "Возвращает вас к более ранней команде."
+
+#: basic-commands/C/basic-commands.xml:542(keycap)
+msgid "Enter"
+msgstr "Ввод"
+
+#: basic-commands/C/basic-commands.xml:547(para)
+msgid "When you have the command you want."
+msgstr "Когда вы набрали требуемую команду."
+
+#: basic-commands/C/basic-commands.xml:553(keycap)
+msgid "Tab"
+msgstr "Клавиша Tab"
+
+#: basic-commands/C/basic-commands.xml:558(para)
+msgid ""
+"A very useful feature. It autocompletes any commands or filenames, if "
+"there's only one option, or else gives you a list of options."
+msgstr ""
+"Очень полезная функция. Она автоматически дополняет любые команды или имена "
+"файлов при наличии единственного варианта, или выдаёт список возможных "
+"значений."
+
+#: basic-commands/C/basic-commands.xml:571(title)
+msgid "Change the text"
+msgstr "Изменение текста"
+
+#: basic-commands/C/basic-commands.xml:572(para)
+msgid ""
+"The mouse won't work. Use the <keycap>Left/Right arrow</keycap> keys to move "
+"around the line."
+msgstr ""
+"Мышь не будет функционировать. Используйте клавиши <keycap>Стрелки "
+"Влево/Вправо</keycap>, чтобы перемещаться вдоль строки."
+
+#: basic-commands/C/basic-commands.xml:576(para)
+msgid ""
+"When the cursor is where you want it in the line, typing "
+"<emphasis>inserts</emphasis> text, it doesn't overtype what's already there."
+msgstr ""
+"Когда курсор окажется в нужной позиции, текст, вводимый вами, будет "
+"<emphasis>вставляться</emphasis>, не заменяя уже набранное"
+
+#: basic-commands/C/basic-commands.xml:591(keycap) basic-commands/C/basic-commands.xml:607(keycap) basic-commands/C/basic-commands.xml:626(keycap) basic-commands/C/basic-commands.xml:642(keycap) basic-commands/C/basic-commands.xml:657(keycap) basic-commands/C/basic-commands.xml:671(keycap)
+msgid "Ctrl"
+msgstr "Ctrl"
+
+#: basic-commands/C/basic-commands.xml:592(keycap)
+msgid "a"
+msgstr "a"
+
+#: basic-commands/C/basic-commands.xml:594(keycap)
+msgid "Home"
+msgstr "Главная"
+
+#: basic-commands/C/basic-commands.xml:599(para)
+msgid "Moves the cursor to the <emphasis>start</emphasis> of a line."
+msgstr "Перемещает курсор в <emphasis>начало</emphasis> строки."
+
+#: basic-commands/C/basic-commands.xml:608(keycap)
+msgid "e"
+msgstr "e"
+
+#: basic-commands/C/basic-commands.xml:610(keycap)
+msgid "End"
+msgstr "В конец"
+
+#: basic-commands/C/basic-commands.xml:615(para)
+msgid ""
+"Moves the cursor to the <emphasis><emphasis "
+"role=\"strong\">e</emphasis>nd</emphasis> of a line."
+msgstr ""
+"Перемещает курсор в <emphasis><emphasis "
+"role=\"strong\">К</emphasis>онец</emphasis> строки."
+
+#: basic-commands/C/basic-commands.xml:627(keycap)
+msgid "b"
+msgstr "b"
+
+#: basic-commands/C/basic-commands.xml:633(para)
+msgid ""
+"Moves to the <emphasis role=\"strong\">b</emphasis>eginning of the previous "
+"or current word."
+msgstr ""
+"Перемещает курсор в <emphasis>начало</emphasis> предыдущего или текущего "
+"слова."
+
+#: basic-commands/C/basic-commands.xml:643(keycap)
+msgid "k"
+msgstr "k"
+
+#: basic-commands/C/basic-commands.xml:649(para)
+msgid "Deletes from the current cursor position to the end of the line."
+msgstr "Удаляет текст с текущей позиции курсора до конца строки."
+
+#: basic-commands/C/basic-commands.xml:658(keycap)
+msgid "u"
+msgstr "u"
+
+#: basic-commands/C/basic-commands.xml:664(para)
+msgid "Deletes the whole of the current line."
+msgstr "Целиком очищает командую строку."
+
+#: basic-commands/C/basic-commands.xml:672(keycap)
+msgid "w"
+msgstr "w"
+
+#: basic-commands/C/basic-commands.xml:678(para)
+msgid "Deletes the word before the cursor."
+msgstr "Удаляет слово перед курсором."
+
+#: basic-commands/C/basic-commands.xml:688(title)
+msgid "More Information"
+msgstr "Дополнительные сведения"
+
+#: basic-commands/C/basic-commands.xml:689(para)
+msgid "The following online guides are available:"
+msgstr "Доступны следующие онлайн-руководства:"
+
+#: basic-commands/C/basic-commands.xml:692(para)
+msgid ""
+"<ulink url=\"https://help.ubuntu.com/community/AptGetHowto\"> "
+"AptGetHowto</ulink> - using apt-get to install packages from the command "
+"line."
+msgstr ""
+"<ulink url=\"https://help.ubuntu.com/community/AptGetHowto\"> "
+"AptGetHowto</ulink> - использование apt-get для установки пакетов из "
+"командной строки."
+
+#: basic-commands/C/basic-commands.xml:699(para)
+msgid ""
+"<ulink url=\"https://help.ubuntu.com/community/Repositories/CommandLine\"> "
+"Commandline Repository Editing</ulink> - adding the Universe/Multiverse "
+"repositories through the command line."
+msgstr ""
+"<ulink url=\"https://help.ubuntu.com/community/Repositories/CommandLine\"> "
+"Commandline Repository Editing</ulink> - добавление репозитариев "
+"Universe/Multiverse из командной строки."
+
+#: basic-commands/C/basic-commands.xml:707(para)
+msgid ""
+"<ulink url=\"https://help.ubuntu.com/community/grep\">grep Howto</ulink> - "
+"grep is a powerful command line search tool."
+msgstr ""
+"<ulink url=\"https://help.ubuntu.com/community/grep\">grep Howto</ulink> - "
+"grep это мощная поисковая утилита командной строки."
+
+#: basic-commands/C/basic-commands.xml:714(para)
+msgid ""
+"<ulink url=\"https://help.ubuntu.com/community/find\">find </ulink> - locate "
+"files on the command line."
+msgstr ""
+"<ulink url=\"https://help.ubuntu.com/community/find\">find </ulink> - поиск "
+"файлов из командной строки."
+
+#: basic-commands/C/basic-commands.xml:720(para)
+msgid ""
+"<ulink url=\"https://help.ubuntu.com/community/CommandlineHowto\"> "
+"CommandlineHowto</ulink> - longer and more complete than this basic guide, "
+"but still unfinished."
+msgstr ""
+"<ulink url=\"https://help.ubuntu.com/community/CommandlineHowto\"> "
+"CommandlineHowto</ulink> - более полное и объёмное, чем это, руководство, но "
+"всё ещё незавершённое."
+
+#: basic-commands/C/basic-commands.xml:727(para)
+msgid ""
+"<ulink url=\"https://help.ubuntu.com/community/HowToReadline\"> "
+"HowToReadline</ulink> - information on some more advanced customization for "
+"the command line."
+msgstr ""
+"<ulink url=\"https://help.ubuntu.com/community/HowToReadline\"> "
+"HowToReadline</ulink> - информация о более углублённых настройках командной "
+"строки."
+
+#: basic-commands/C/basic-commands.xml:734(para)
+msgid "For more detailed tutorials on the Linux command line, please see:"
+msgstr ""
+"Для более подробных руководств по командной строке Linux обратитесь к:"
+
+#: basic-commands/C/basic-commands.xml:740(para)
+msgid ""
+"<ulink url=\"http://linuxcommand.org/\"/>- basic BASH tutorials, including "
+"BASH scripting"
+msgstr ""
+"<ulink url=\"http://linuxcommand.org/\"/>- учебные руководства по основным "
+"возможностям BASH, в том числе по написанию скриптов BASH"
+
+#: basic-commands/C/basic-commands.xml:746(para)
+msgid ""
+"<ulink url=\"http://linuxsurvival.com/index.php\"/>- Java-based tutorials"
+msgstr ""
+"<ulink url=\"http://linuxsurvival.com/index.php\"/>- учебные руководства на "
+"базе Java"
+
+#: basic-commands/C/basic-commands.xml:752(para)
+msgid ""
+"<ulink url=\"http://rute.2038bug.com/index.html.gz\"/>- a massive online "
+"book about system administration, almost all from the command line."
+msgstr ""
+"<ulink url=\"http://rute.2038bug.com/index.html.gz\"/>- большая онлайн-книга "
+"об администрировании системы, почти всё из командной строки."
+
+#. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2.
+#: basic-commands/C/basic-commands.xml:0(None)
+msgid "translator-credits"
+msgstr ""
+"Georgy Faradzhev <georgy.faradzhev@gmail.com> \n"
+" Igor Zubarev <igor4u@gmail.com> \n"
+" Андрей Кондукторов <merkator@bk.ru> \n"
+" Dmitry Dementiev <ddmitry@gmail.com> \n"
+" Dmitry Drozdovich <demon_lord@rambler.ru> \n"
+" George Anderston <anderston@gmail.com> \n"
+" Mi Kashkin <mkashkin@gmail.com> \n"
+" Сергей Укустов <zajats@nc.ru> \n"
+" Dmitry Petrov <demon@krasno.ru> \n"
+" Sergey Smirnov <sergous@gmail.com> \n"
+" Shamil Abdullajev <jogin@hot.ee> \n"
+" alexei <alek32@mail.ru> \n"
+" boa <b.o.a@mail.ru> \n"
+" wiz <aenor.realm@gmail.com> \n"
+" Вячеслав Родионов <bepcyc@gmail.com> \n"
+" Александр Саламатников <dev65@gala.net> \n"
+" Sauil\n"
+"\n"
+"Launchpad Contributions:\n"
+"  Alexey Balmashnov https://launchpad.net/~a.balmashnov\n"
+"  ArcFi https://launchpad.net/~arcfi\n"
+"  Brullworfel https://launchpad.net/~brullworfel\n"
+"  Eugene Varnavsky https://launchpad.net/~varnav\n"
+"  Igor Zubarev https://launchpad.net/~igor4u\n"
+"  Ivlev Kirill https://launchpad.net/~webster-spb\n"
+"  Roman Kalashnikov https://launchpad.net/~cargo200\n"
+"\n"
+"Launchpad Contributions:\n"
+"  Alexey Balmashnov https://launchpad.net/~a.balmashnov\n"
+"  ArcFi https://launchpad.net/~arcfi\n"
+"  Brullworfel https://launchpad.net/~brullworfel\n"
+"  Igor Zubarev https://launchpad.net/~igor4u\n"
+"  Ivlev Kirill https://launchpad.net/~webster-spb\n"
+"  Roman Kalashnikov https://launchpad.net/~cargo200\n"
+"  Sergey Kirienko https://launchpad.net/~skirienko\n"
+"  Александр AldeX Крылов https://launchpad.net/~aldex"

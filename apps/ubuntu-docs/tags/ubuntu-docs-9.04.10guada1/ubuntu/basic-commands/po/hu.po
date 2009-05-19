@@ -1,0 +1,908 @@
+# Hungarian translation for ubuntu-docs
+# Copyright (c) (c) 2006 Canonical Ltd, and Rosetta Contributors 2006
+# This file is distributed under the same license as the ubuntu-docs package.
+#
+# Gabor Kelemen <kelemeng@gnome.hu>, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: ubuntu-docs\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2007-09-14 08:25+0100\n"
+"PO-Revision-Date: 2007-11-13 23:30+0000\n"
+"Last-Translator: Gabor Kelemen <kelemeng@gnome.hu>\n"
+"Language-Team: Hungarian <hu@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2008-02-17 10:22+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+#: basic-commands/C/basic-commands-C.omf:6(creator) basic-commands/C/basic-commands-C.omf:7(maintainer)
+msgid "ubuntu-doc@lists.ubuntu.com (Ubuntu Documentation Project)"
+msgstr "ubuntu-doc@lists.ubuntu.com (Ubuntu dokumentációs projekt)"
+
+#: basic-commands/C/basic-commands-C.omf:8(title) basic-commands/C/basic-commands.xml:15(title)
+msgid "Basic Commands"
+msgstr "Alapvető parancsok"
+
+#: basic-commands/C/basic-commands-C.omf:9(date)
+msgid "2006-09-07"
+msgstr "2006-09-07"
+
+#: basic-commands/C/basic-commands-C.omf:11(description)
+msgid "Placeholder."
+msgstr "Helykitöltő"
+
+#: basic-commands/C/basic-commands.xml:18(title)
+msgid "Using this Guide"
+msgstr "Ezen ismertető használata"
+
+#: basic-commands/C/basic-commands.xml:28(emphasis)
+msgid "man intro(1)"
+msgstr "man intro(1)"
+
+#: basic-commands/C/basic-commands.xml:20(emphasis)
+msgid ""
+"\"Under Linux there are GUIs (graphical user interfaces), where you can "
+"point and click and drag, and hopefully get work done without first reading "
+"lots of documentation. The traditional Unix environment is a CLI (command "
+"line interface), where you type commands to tell the computer what to do. "
+"That is faster and more powerful, but requires finding out what the commands "
+"are.\" -- from <placeholder-1/>"
+msgstr ""
+"Linux rendszeren többféle grafikus felhasználói felület is van, ahol az egér "
+"használatával remélhetőleg a dokumentáció hosszas olvasása nélkül "
+"elvégezheti a munkáját. A hagyományos Unix környezet egy parancssoros "
+"felület, ahol parancsok begépelésével mondhatja meg a számítógépnek, hogy "
+"mit csináljon. Ez a módszer gyorsabb és hatékonyabb, de megköveteli a "
+"parancsok ismeretét."
+
+#: basic-commands/C/basic-commands.xml:33(para)
+msgid ""
+"This guide will make you familiar with basic GNU/Linux shell commands. It is "
+"not intended to be a complete guide to the command line, just an "
+"introduction to complement Ubuntu's graphical tools."
+msgstr ""
+"Ez a kézikönyv bemutatja az alapvető GNU/Linux parancssori parancsokat. Nem "
+"szándékozunk teljes útmutatást nyújtani a parancssor használatához, csak egy "
+"bevezetést, amely kiegészíti az Ubuntu grafikus eszközeit."
+
+#: basic-commands/C/basic-commands.xml:43(para)
+msgid ""
+"All command names, file names or paths to directories will be shown using a "
+"<command>monospace font</command>."
+msgstr ""
+"Minden parancsnév, fájlnév vagy könyvtárútvonal <command>rögzített "
+"szélességű</command> betűkészlettel jelenik meg."
+
+#: basic-commands/C/basic-commands.xml:50(para)
+msgid ""
+"All the commands on this guide are to be issued from a command prompt in a "
+"<application>Terminal</application> and will be shown as: <screen>command to "
+"type</screen>"
+msgstr ""
+"Az itt szereplő utasításokat egy <application>terminál</application> "
+"parancssorában kell kiadni és a következőképpen jelennek meg: "
+"<screen>beírandó parancs</screen>"
+
+#: basic-commands/C/basic-commands.xml:58(para)
+msgid ""
+"<emphasis role=\"strong\">Note that Linux is case sensitive.</emphasis> "
+"User, user, and USER are all different to Linux."
+msgstr ""
+"<emphasis role=\"strong\">Vegye figyelembe, hogy a Linux megkülönbözteti a "
+"kis- és nagybetűket.</emphasis> A Felhasználó, felhasználó és FELHASZNÁLÓ "
+"szavak mind különbözőek a Linux számára."
+
+#: basic-commands/C/basic-commands.xml:69(title)
+msgid "Starting a Terminal"
+msgstr "A terminál elindítása"
+
+#: basic-commands/C/basic-commands.xml:70(para)
+msgid "To open a <application>Terminal</application> do as follow:"
+msgstr ""
+"A <application>terminál</application> megnyitásához tegye a következőket:"
+
+#: basic-commands/C/basic-commands.xml:76(para)
+msgid ""
+"Choose "
+"<menuchoice><guimenu>Applications</guimenu><guimenuitem>Accessories</guimenui"
+"tem><guimenuitem>Terminal</guimenuitem></menuchoice>;"
+msgstr ""
+"Válassza az "
+"<menuchoice><guimenu>Alkalmazások</guimenu><guimenuitem>Kellékek</guimenuitem"
+"><guimenuitem>Terminál</guimenuitem></menuchoice> lehetőséget."
+
+#: basic-commands/C/basic-commands.xml:81(para)
+msgid ""
+"Or press <keycombo><keycap>Alt</keycap><keycap>F2</keycap></keycombo> and "
+"type <command>gnome-terminal</command>."
+msgstr ""
+"Vagy nyomja meg az "
+"<keycombo><keycap>Alt</keycap><keycap>F2</keycap></keycombo> "
+"billentyűkombinációt és írja be a <command>gnome-terminal</command> "
+"parancsot."
+
+#: basic-commands/C/basic-commands.xml:94(title)
+msgid "File and Directory Commands"
+msgstr "Fájl- és könyvtárparancsok"
+
+#: basic-commands/C/basic-commands.xml:97(title)
+msgid "cd"
+msgstr "cd"
+
+#: basic-commands/C/basic-commands.xml:98(para)
+msgid ""
+"The <command>cd</command> command changes directories. When you open a "
+"terminal you will be in your home directory. To move around the file system "
+"you will use <command>cd</command>. Examples:"
+msgstr ""
+"A <command>cd</command> parancs lehetővé teszi a könyvtárváltást. Amikor "
+"belép egy terminálba, akkor a saját könyvtárába kerül. A fájlrendszerben "
+"való mozgáshoz a <command>cd</command> parancsot használhatja. Példák:"
+
+#: basic-commands/C/basic-commands.xml:107(para)
+msgid "To navigate into the root directory, type: <screen>cd /</screen>"
+msgstr ""
+"A gyökérkönyvtárba lépéshez használja a <screen>cd /</screen> parancsot."
+
+#: basic-commands/C/basic-commands.xml:113(para)
+msgid ""
+"To navigate to your home directory, type: <screen>cd</screen> or <screen>cd "
+"~</screen>"
+msgstr ""
+"A saját könyvtárba lépéshez használja a <screen>cd</screen> vagy a "
+"<screen>cd ~</screen> parancsot."
+
+#: basic-commands/C/basic-commands.xml:121(para)
+msgid "To navigate up one directory level, type: <screen>cd ..</screen>"
+msgstr ""
+"Egy könyvtárszinttel feljebb lépéshez használja a <screen>cd ..</screen> "
+"parancsot."
+
+#: basic-commands/C/basic-commands.xml:127(para)
+msgid ""
+"To navigate to the previous directory (or back), type: <screen>cd -</screen>"
+msgstr ""
+"Az előző könyvtárba (vagy vissza) lépéshez használja a <screen>cd -</screen> "
+"parancsot"
+
+#: basic-commands/C/basic-commands.xml:134(para)
+msgid ""
+"To navigate through multiple levels of directory at once, specify the full "
+"directory path that you want to go to. For example, type: <screen>cd "
+"/var/www</screen> to go directly to the <filename "
+"class=\"directory\">/www</filename> subdirectory of <filename "
+"class=\"directory\">/var/</filename>. As another example, type: <screen>cd "
+"~/Desktop</screen> to move you to the <filename "
+"class=\"directory\">Desktop</filename> subdirectory inside your home "
+"directory."
+msgstr ""
+"Több könyvtárszint egyszerre történő átlépéséhez adja meg a célkönyvtár "
+"teljes útvonalát. Például a <screen>cd /var/www</screen> segítségével "
+"közvetlenül a <filename class=\"directory\">/www</filename> alkönyvtárba "
+"léphet. Másik példa: a <screen>cd ~/Munkaasztal</screen> parancs a saját "
+"könyvtárának <filename class=\"directory\">Munkaasztal</filename> "
+"alkönyvtárába viszi."
+
+#: basic-commands/C/basic-commands.xml:151(title)
+msgid "pwd"
+msgstr "pwd"
+
+#: basic-commands/C/basic-commands.xml:162(para)
+msgid ""
+"<application>GNOME Terminal</application> also displays this information in "
+"the title bar of it's window."
+msgstr ""
+"A <application>GNOME terminál</application> ezt az információt az ablakának "
+"címsorában is megjeleníti."
+
+#: basic-commands/C/basic-commands.xml:152(para)
+msgid ""
+"<command>pwd</command>: The <command>pwd</command> command will show you "
+"which directory you're located in (<acronym>pwd</acronym> stands for "
+"<quote>print working directory</quote>). For example, typing "
+"<screen>pwd</screen> in the <filename class=\"directory\">Desktop</filename> "
+"directory, will show <computeroutput>~/Desktop</computeroutput>. "
+"<placeholder-1/>"
+msgstr ""
+"<command>pwd</command>: A <command>pwd</command> parancs megmutatja, melyik "
+"könyvtárban tartózkodik éppen (a <acronym>pwd</acronym> a <quote>print "
+"working directory -  munkakönyvtár kiírása</quote> rövidítése). Például: a "
+"<screen>pwd</screen> a Munkaasztal könyvtár alól kiadva a következőt "
+"eredményezi: <computeroutput>~/Munkaasztal</computeroutput>. <placeholder-1/>"
+
+#: basic-commands/C/basic-commands.xml:171(title)
+msgid "ls"
+msgstr "ls"
+
+#: basic-commands/C/basic-commands.xml:172(para)
+msgid ""
+"The <command>ls</command> command shows you the files in your current "
+"directory. Used with certain options, you can see sizes of files, when files "
+"where made, and permissions of files. For example, typing <screen>ls "
+"~</screen> will show you the files that are in your home directory."
+msgstr ""
+"Az <command>ls</command> parancs kilistázza az adott könyvtárban található "
+"fájlokat. A megfelelő kapcsolókkal használva megtekintheti a fájlok méretét, "
+"létrehozásuk időpontját és a fájlok jogosultságait. Például: <emphasis "
+"role=\"strong\">\"ls ~\"</emphasis> megmutatja a saját könyvtárában "
+"található fájlokat."
+
+#: basic-commands/C/basic-commands.xml:183(title)
+msgid "cp"
+msgstr "cp"
+
+#: basic-commands/C/basic-commands.xml:184(para)
+msgid ""
+"The <command>cp</command> command makes a copy of a file for you. For "
+"example, type: <screen>cp file foo</screen> to make a exact copy of "
+"<filename>file</filename> and name it <filename>foo</filename>, but the file "
+"<filename>file</filename> will still be there."
+msgstr ""
+"A <command>cp</command> parancs másolatot készít egy fájlról. A <screen>cp "
+"fájl izé</screen> parancs például egy pontos másolatot készít a "
+"<filename>fájlról</filename>, és az <filename>izé</filename> nevet adja "
+"neki, de a <filename>fájl</filename> fájl továbbra is megmarad."
+
+#: basic-commands/C/basic-commands.xml:194(title)
+msgid "mv"
+msgstr "mv"
+
+#: basic-commands/C/basic-commands.xml:206(para)
+msgid ""
+"If you are using <command>mv</command> with <command>sudo</command> you will "
+"not be able to use the <emphasis role=\"strong\">~</emphasis> shortcut, but "
+"will have to use the full pathnames to your files. This is because when you "
+"are working as root, <emphasis role=\"strong\">~</emphasis> will refer to "
+"the root account's home directory, not your own."
+msgstr ""
+"Ha az mv</emphasi</command> ha <command>sudo</command> parancsokat együtt "
+"használja, akkor a <emphasis role=\"strong\">~</emphasis> rövidítés helyett "
+"a fájlok teljes elérési útját kell beírnia. Ennek oka, hogy amikor "
+"rendszergazdaként dolgozik, a <emphasis role=\"strong\">~</emphasis> a "
+"rendszergazda felhasználó saját könyvtárára hivatkozik, nem az Önére."
+
+#: basic-commands/C/basic-commands.xml:195(para)
+msgid ""
+"The <command>mv</command> command moves a file to a different location or "
+"will rename a file. Examples are as follows: <screen>mv file foo</screen> "
+"will rename the file <filename>file</filename> to <filename>foo</filename>. "
+"<screen>mv foo ~/Desktop</screen> will move the file "
+"<filename>foo</filename> to your <filename "
+"class=\"directory\">Desktop</filename> directory but will not rename it. You "
+"must specify a new file name to rename a file. <placeholder-1/>"
+msgstr ""
+"Az <command>mv</command> parancs egy fájlt egy másik helyre mozgat, vagy "
+"átnevezi a fájlt. Például: az <screen>mv fájl izé</screen> átnevezi a "
+"<filename>fájl</filename> fájlt <filename>izé</filename> névre. Az "
+"<screen>mv izé ~/Munkaasztal</screen> az <filename>izé</filename> fájlt "
+"áthelyezi a <filename class=\"directory\">Munkaasztal</filename> "
+"könyvtárába, de nem nevezi át. A fájl átnevezéséhez meg kell adnia egy új "
+"nevet. <placeholder-1/>"
+
+#: basic-commands/C/basic-commands.xml:219(title)
+msgid "rm"
+msgstr "rm"
+
+#: basic-commands/C/basic-commands.xml:220(para)
+msgid ""
+"Use the <command>rm</command> command to remove or delete a file in your "
+"directory. It will not work on directories which have files in them."
+msgstr ""
+"Az <command>rm</command> parancs segítségével eltávolíthat egy fájlt a "
+"könyvtárából. Ez nem működik fájlokat tartalmazó könyvtárakon."
+
+#: basic-commands/C/basic-commands.xml:228(title)
+msgid "mkdir"
+msgstr "mkdir"
+
+#: basic-commands/C/basic-commands.xml:229(para)
+msgid ""
+"The <command>mkdir</command> command will allow you to create directories. "
+"For example, typing: <screen>mkdir music</screen> will create a music "
+"directory in the current directory."
+msgstr ""
+"Az <command>mkdir</command> paranccsal könyvtárakat hozhat létre. Például az "
+"<emphasis role=\"strong\">\"mkdir zene\"</emphasis> parancs létrehozza a "
+"\"zene\" könyvtárat."
+
+#: basic-commands/C/basic-commands.xml:239(title)
+msgid "System Information Commands"
+msgstr "Rendszerinformációs parancsok"
+
+#: basic-commands/C/basic-commands.xml:242(title)
+msgid "df"
+msgstr "df"
+
+#: basic-commands/C/basic-commands.xml:243(para)
+msgid ""
+"The <command>df</command> command displays filesystem disk space usage for "
+"all partitions. <screen>df -h</screen> will give information using megabytes "
+"(M) and gigabytes (G) instead of blocks (<emphasis role=\"strong\">-"
+"h</emphasis> means \"human-readable\")."
+msgstr ""
+"A <command>df</command> parancs megjeleníti a fájlrendszer partíciói által "
+"használt lemezterület méretét. A <screen>df -h</screen> a blokkok száma "
+"helyett megabájtokban (M) és gigabájtokban (G) adja meg az információkat. (A "
+"<emphasis role=\"strong\">-h</emphasis> jelentése: \"human-readable - "
+"emberek által olvasható\")"
+
+#: basic-commands/C/basic-commands.xml:253(title)
+msgid "free"
+msgstr "free"
+
+#: basic-commands/C/basic-commands.xml:254(para)
+msgid ""
+"The <command>free</command> command displays the amount of free and used "
+"memory in the system. <screen>free -m</screen> will give the information "
+"using megabytes, which is probably most useful for current computers."
+msgstr ""
+"A <command>free</command>parancs megjeleníti a rendszer által használt, "
+"illetve a szabad memória méretét. A <screen>free -m</screen> megabájtban ad "
+"tájékoztatást, valószínűleg ez a leghasznosabb a mai számítógépek esetén."
+
+#: basic-commands/C/basic-commands.xml:264(title)
+msgid "top"
+msgstr "top"
+
+#: basic-commands/C/basic-commands.xml:265(para)
+msgid ""
+"The <command>top</command> command displays information on your GNU/Linux "
+"system, running processes and system resources, including CPU, RAM &amp; "
+"swap usage and total number of tasks being run. To exit "
+"<application>top</application>, press <keycap>q</keycap>."
+msgstr ""
+"A <command>top</command> tájékoztatást ad a GNU/Linux rendszerről, a futó "
+"folyamatokról és a rendszererőforrásokról, beleértve a processzor-, memória- "
+"és lapozóterület-használatot, valamint a futó feladatok számát. A "
+"<application>top</application> programból való kilépéshez nyomja le a "
+"<keycap>q</keycap> billentyűt."
+
+#: basic-commands/C/basic-commands.xml:275(title)
+msgid "uname"
+msgstr "uname"
+
+#: basic-commands/C/basic-commands.xml:276(para)
+msgid ""
+"The <command>uname</command> command with the <emphasis role=\"strong\">-"
+"a</emphasis> option, prints all system information, including machine name, "
+"kernel name &amp; version, and a few other details. Most useful for checking "
+"which kernel you're using."
+msgstr ""
+"Az <command>uname</command> parancs a <emphasis role=\"strong\">-"
+"a</emphasis> kapcsolóval kiírja a számítógép nevét, a kernel nevét és "
+"verziószámát, valamint néhány további részletet. Elsősorban a használt "
+"kernel verziójának kiderítésére alkalmas."
+
+#: basic-commands/C/basic-commands.xml:286(title)
+msgid "lsb_release"
+msgstr "lsb_release"
+
+#: basic-commands/C/basic-commands.xml:287(para)
+msgid ""
+"The <emphasis role=\"strong\">lsb_release</emphasis> command with the "
+"<emphasis role=\"strong\">-a</emphasis> option prints version information "
+"for the Linux release you're running. For example, typing: "
+"<screen>lsb_release -a</screen> will give you: <screen>\n"
+"No LSB modules are available.\n"
+"Distributor ID: Ubuntu\n"
+"Description:    Ubuntu 7.04 \n"
+"Release:        7.04\n"
+"Codename:       feisty</screen>"
+msgstr ""
+"Az <emphasis role=\"strong\">lsb_release</emphasis> parancs a <emphasis "
+"role=\"strong\">-a</emphasis> kapcsolóval kiírja a használt Linux kiadásra "
+"vonatkozó verzióinformációkat, például az <screen>lsb_release -a</screen> a "
+"következőt adja:<screen>\n"
+"No LSB modules are available.\n"
+"Distributor ID: Ubuntu\n"
+"Description:    Ubuntu 7.04 \n"
+"Release:        7.04\n"
+"Codename:       feisty</screen>"
+
+#: basic-commands/C/basic-commands.xml:305(title)
+msgid "ifconfig"
+msgstr "ifconfig"
+
+#: basic-commands/C/basic-commands.xml:306(para)
+msgid ""
+"The <command>ifconfig</command> command reports on your system's network "
+"interfaces."
+msgstr ""
+"Az <command>ifconfig</command> a számítógépének hálózati csatolóiról ad "
+"információkat."
+
+#: basic-commands/C/basic-commands.xml:314(title)
+msgid "Executing Commands with Elevated Privileges"
+msgstr "Parancsok végrehajtása magasabb szintű jogosultságokkal"
+
+#: basic-commands/C/basic-commands.xml:315(para)
+msgid ""
+"The following commands will need to be prefaced with the "
+"<command>sudo</command> command. Please see <ulink "
+"url=\"https://help.ubuntu.com/community/RootSudo\">RootSudo</ulink> for "
+"information on using <command>sudo</command>."
+msgstr ""
+"A következő parancsok nagy részét meg kell hogy előzze a "
+"<command>sudo</command> parancs, ha olyan fájlokkal vagy könyvtárakkal "
+"dolgozik, melyeknek nem Ön a tulajdonosa. A <command>sudo</command> "
+"használatáról további információk a <ulink "
+"url=\"https://help.ubuntu.com/community/RootSudo\"> RootSudo (angol)</ulink> "
+"oldalon találhatók."
+
+#: basic-commands/C/basic-commands.xml:324(title)
+msgid "Adding a New Group"
+msgstr "Új csoport hozzáadása"
+
+#: basic-commands/C/basic-commands.xml:325(para)
+msgid ""
+"The <command>addgroup</command> command is used to create a new group on the "
+"system. To create a new group, type: <screen>addgroup newgroup</screen> The "
+"above command will create a new group called <emphasis "
+"role=\"strong\">newgroup</emphasis>."
+msgstr ""
+"Az <command>addgroup</command> parancs segítségével új csoport hozható létre "
+"a rendszeren. Új csoport létrehozásához adja ki az <screen>addgroup "
+"újcsoport</screen> parancsot. Ezzel létrehozható az <emphasis "
+"role=\"strong\">újcsoport</emphasis> nevű csoport."
+
+#: basic-commands/C/basic-commands.xml:334(title)
+msgid "Adding A New User"
+msgstr "Új felhasználó hozzáadása"
+
+#: basic-commands/C/basic-commands.xml:335(para)
+msgid ""
+"The <command>adduser</command> is used to create new users on the system. To "
+"create a new user, type: <screen>adduser newuser</screen> The above command "
+"will create a new user called <emphasis role=\"strong\">newuser</emphasis>."
+msgstr ""
+"Az <command>adduser</command> parancs segítségével új felhasználók hozhatók "
+"létre a rendszeren. Új felhasználó létrehozásához adja ki az <screen>adduser "
+"újfelhasználó</screen> parancsot. Ezzel létrehozható az <emphasis "
+"role=\"strong\">újfelhasználó</emphasis> nevű felhasználó."
+
+#: basic-commands/C/basic-commands.xml:342(para)
+msgid ""
+"To assign a password for the new user use the <command>passwd</command> "
+"command: <screen>passwd newuser</screen>"
+msgstr ""
+"Az új felhasználó jelszavát a <command>passwd</command> paranccsal "
+"állíthatja be: <screen>passwd újfelhasználó</screen>"
+
+#: basic-commands/C/basic-commands.xml:348(para)
+msgid ""
+"Finally, to assign the new user to the new group, type: <screen>adduser "
+"newuser newgroup</screen>"
+msgstr ""
+"Végül az új felhasználó az új csoporthoz adásához adja ki az <screen>adduser "
+"újfelhasználó újcsoport</screen>"
+
+#: basic-commands/C/basic-commands.xml:356(title)
+msgid "Options"
+msgstr "Kapcsolók"
+
+#: basic-commands/C/basic-commands.xml:357(para)
+msgid ""
+"The default behavior for a command may usually be modified by adding a "
+"<emphasis role=\"strong\">-- <emphasis>option</emphasis></emphasis> to the "
+"command. The <link linkend=\"ls\"><command>ls</command></link> command, for "
+"example, has a <emphasis role=\"strong\">-s</emphasis> option so that "
+"<command>ls -s</command> will include file sizes in the listing. There is "
+"also a <emphasis role=\"strong\">-h</emphasis> option to get those sizes in "
+"a \"human readable\" format."
+msgstr ""
+"Egy parancs alapértelmezett viselkedése rendszerint módosítható egy "
+"<emphasis role=\"strong\">--<emphasis>kapcsoló</emphasis></emphasis> "
+"hozzáadásával. Az <link linkend=\"ls\"><command>ls</command></link> "
+"parancsnak példásul van egy <emphasis role=\"strong\">-s</emphasis> "
+"kapcsolója, így az <command>ls -s</command> a fájlméretet is kiírja a "
+"listában. Létezik egy <emphasis role=\"strong\">-h</emphasis> kapcsoló is, "
+"amellyel a méreteket \"emberek által olvasható\" (\"human readable\") "
+"formában adja meg."
+
+#: basic-commands/C/basic-commands.xml:368(para)
+msgid ""
+"Options can be grouped in clusters so <screen>ls -sh</screen> is exactly the "
+"same command as <screen>ls -s -h</screen> Most options have a long version, "
+"prefixed with two dashes instead of one, so even <screen>ls --size --human-"
+"readable</screen> is the same command."
+msgstr ""
+"A kapcsolókat csoportokba lehet rendezni, így az <screen>ls -sh</screen> "
+"teljesen ugyanaz a parancs, mint az <screen>ls -s -h</screen>. A legtöbb "
+"kapcsolónak hosszú változata is van, ilyenkor egy helyett két kötőjelet kell "
+"használni, így még a <screen>ls --size --human-readable</screen> is ugyanaz "
+"a parancs."
+
+#: basic-commands/C/basic-commands.xml:379(title)
+msgid "\"Man\" and getting help"
+msgstr "A \"man\" és segítség"
+
+#: basic-commands/C/basic-commands.xml:380(para)
+msgid ""
+"<emphasis role=\"strong\"><emphasis>command</emphasis> --help</emphasis> and "
+"<emphasis role=\"strong\">man <emphasis>command</emphasis></emphasis> are "
+"the two most important tools at the command line."
+msgstr ""
+"A <emphasis role=\"strong\"><emphasis>parancs</emphasis> --help</emphasis> "
+"és a <emphasis role=\"strong\">man <emphasis>parancs</emphasis></emphasis> a "
+"két legfontosabb parancssori eszköz."
+
+#: basic-commands/C/basic-commands.xml:387(para)
+msgid ""
+"Virtually all commands understand the <emphasis role=\"strong\">-"
+"h</emphasis> (or <emphasis role=\"strong\">--help</emphasis>) option which "
+"will produce a short usage description of the command and it's options, then "
+"exit back to the command prompt. Type <screen>man -h</screen> or <screen>man "
+"--help</screen> to see this in action."
+msgstr ""
+"Lényegében minden parancs értelmezni tudja a <emphasis role=\"strong\">-"
+"h</emphasis> (vagy a <emphasis role=\"strong\">--help</emphasis>) kapcsolót, "
+"amely kiírja a parancs és a hozzá tartozó kapcsolók rövid használati "
+"utasítását, majd visszatér a parancssorba. Próbálja ki a <screen>man -"
+"h</screen> vagy a <screen>man --help</screen> parancsot ezek működésének "
+"kipróbálásához."
+
+#: basic-commands/C/basic-commands.xml:397(para)
+msgid ""
+"Every command and nearly every application in Linux will have a man (manual) "
+"file, so finding them is as simple as typing <command>man command</command> "
+"to bring up a longer manual entry for the specified command. For example, "
+"<screen>man mv</screen> will bring up the <command>mv</command> (move) "
+"manual."
+msgstr ""
+"Linux alatt minden parancsnak és csaknem minden alkalmazásnak van man "
+"(kézikönyv) oldala, amelyek a <command>man</command> parancs begépelésével "
+"érhetők el, ezáltal az adott parancs hosszabb kézikönyvét kapjuk meg. "
+"Például a <screen>man mv</screen> megjeleníti az <command>mv</command> "
+"(Move) parancs kézikönyvét."
+
+#: basic-commands/C/basic-commands.xml:406(para)
+msgid ""
+"Move up and down the man file with the arrow keys, and quit back to the "
+"command prompt with <keycap>q</keycap>."
+msgstr ""
+"A man oldalakban a kurzorbillentyűkkel mozoghat fel-le, a parancssorba pedig "
+"a <keycap>qbegépelés lenyomásával juthat vissza."
+
+#: basic-commands/C/basic-commands.xml:411(para)
+msgid ""
+"<screen>man man</screen> will bring up the manual entry for the "
+"<command>man</command> command, which is a good place to start."
+msgstr ""
+"A <screen>man man</screen> megjeleníti a <command>man</command> parancs "
+"kézikönyvét, amely egy jó kiindulópont!"
+
+#: basic-commands/C/basic-commands.xml:417(para)
+msgid ""
+"<screen>man intro</screen> is especially useful - it displays the "
+"\"Introduction to user commands\" which is a well-written, fairly brief "
+"introduction to the Linux command line."
+msgstr ""
+"A <screen>man intro</screen> különösen hasznos - megjeleníti a "
+"\"Felhasználói parancsok bemutatóját\", amely a Linux parancssor egy jól "
+"megírt, viszonylag rövid bemutatója."
+
+#: basic-commands/C/basic-commands.xml:422(para)
+msgid ""
+"There are also <command>info</command> pages, which are generally more in-"
+"depth than <command>man</command> pages. Try <screen>info info</screen> for "
+"the introduction to info pages."
+msgstr ""
+"Ezen kívül léteznek <command>info</command> oldalak is, amelyek általában "
+"részletesebbek mint a <command>man</command> oldalak. Az info oldalakkal "
+"való ismerkedéshez próbálja ki az <screen>info info</screen> parancsot!"
+
+#: basic-commands/C/basic-commands.xml:432(title)
+msgid "Searching for man files"
+msgstr "Keresés a man oldalakban"
+
+#: basic-commands/C/basic-commands.xml:433(para)
+msgid ""
+"If you aren't sure which command or application you need to use, you can try "
+"searching the man files."
+msgstr ""
+"Ha nem biztos benne, melyik parancsra vagy alkalmazásra van szüksége, akkor "
+"megpróbálhat keresni a man oldalak között."
+
+#: basic-commands/C/basic-commands.xml:446(para)
+msgid "This is the same as the <command>apropos</command> command."
+msgstr ""
+"Ne feledje, hogy ez ugyanaz mint az <command>apropos</command> parancs."
+
+#: basic-commands/C/basic-commands.xml:439(para)
+msgid ""
+"<command>man -k foo</command>, will search the man files for "
+"<emphasis>foo</emphasis>. Try <screen>man -k nautilus</screen> to see how "
+"this works. <placeholder-1/>"
+msgstr ""
+"A <command>man -k izé</command> a man oldalakon keresi az "
+"<emphasis>izé</emphasis> kifejezést. A működés kipróbálásához adja ki "
+"<screen>man -k nautilus</screen> parancsot. <placeholder-1/>"
+
+#: basic-commands/C/basic-commands.xml:459(para)
+msgid "This is the same as the <command>whatis</command> command."
+msgstr "Ez ugyanaz mint a <command>whatis</command> parancs."
+
+#: basic-commands/C/basic-commands.xml:454(para)
+msgid ""
+"<command>man -f foo</command>, searches only the titles of your system's man "
+"files. For example, try <screen>man -f gnome</screen><placeholder-1/>"
+msgstr ""
+"A <command>man -f izé</command> parancs csupán a számítógépén levő man "
+"oldalak címei között keres. Próbálja ki például a <screen>man -f "
+"gnome</screen> parancsot.<placeholder-1/>"
+
+#: basic-commands/C/basic-commands.xml:471(title)
+msgid "Other Useful Things"
+msgstr "További hasznos dolgok"
+
+#: basic-commands/C/basic-commands.xml:474(title)
+msgid "Pasting in commands"
+msgstr "Parancsok beillesztése"
+
+#: basic-commands/C/basic-commands.xml:475(para)
+msgid ""
+"Often, you will be referred to instructions that require commands to be "
+"pasted into the terminal. You might be wondering why the text you've copied "
+"from a web page using "
+"<keycombo><keycap>Ctrl</keycap><keycap>C</keycap></keycombo> won't paste in "
+"with <keycombo><keycap>Ctrl</keycap><keycap>V</keycap></keycombo>. Surely "
+"you don't have to type in all those nasty commands and filenames? Relax. "
+"Middle Button Click on your mouse (both buttons simultaneously on a two-"
+"button mouse) or Right Click and select "
+"<menuchoice><guimenuitem>Paste</guimenuitem></menuchoice> from the menu."
+msgstr ""
+"Gyakran találkozhat olyan utasításokkal, amelyek parancsok terminálba "
+"illesztését követelik meg. Csodálkozhat, hogy egy honlapról a "
+"<keycombo><keycap>Ctrl</keycap><keycap>C</keycap></keycombo> kombinációval "
+"másolt szöveg nem illeszthető be a "
+"<keycombo><keycap>Ctrl</keycap><keycap>V</keycap></keycombo> "
+"billentyűkombinációval. Biztos, hogy nem kell begépelni az összes csúnya "
+"parancsot és fájlnevet? Nyugalom. Kattintson a középső egérgombra (kétgombos "
+"egéren nyomja meg egyidejűleg mindkét gombot) vagy a jobb egérgomb "
+"megnyomása után a válassza a "
+"<menuchoice><guimenuitem>Beillesztés</guimenuitem></menuchoice> menüpontot."
+
+#: basic-commands/C/basic-commands.xml:498(title)
+msgid "Save on typing"
+msgstr "Gépeljen kevesebbet"
+
+#: basic-commands/C/basic-commands.xml:507(para)
+msgid ""
+"<keycap>Up Arrow</keycap> or "
+"<keycombo><keycap>Ctrl</keycap><keycap>p</keycap></keycombo>"
+msgstr ""
+"<keycap>Fel nyíl</keycap> vagy "
+"<keycombo><keycap>Ctrl</keycap><keycap>p</keycap></keycombo>"
+
+#: basic-commands/C/basic-commands.xml:517(para)
+msgid "Scrolls through the commands you've entered previously."
+msgstr "A korábban kiadott parancsok között lépkedhet."
+
+#: basic-commands/C/basic-commands.xml:525(para)
+msgid ""
+"<keycap>Down Arrow</keycap> or "
+"<keycombo><keycap>Ctrl</keycap><keycap>n</keycap></keycombo>"
+msgstr ""
+"<keycap>Le nyíl</keycap> vagy "
+"<keycombo><keycap>Ctrl</keycap><keycap>n</keycap></keycombo>"
+
+#: basic-commands/C/basic-commands.xml:535(para)
+msgid "Takes you back to a more recent command."
+msgstr "Visszaviszi az utolsó parancshoz."
+
+#: basic-commands/C/basic-commands.xml:542(keycap)
+msgid "Enter"
+msgstr "Enter"
+
+#: basic-commands/C/basic-commands.xml:547(para)
+msgid "When you have the command you want."
+msgstr "Nyomja le, ha megvan a kívánt parancs."
+
+#: basic-commands/C/basic-commands.xml:553(keycap)
+msgid "Tab"
+msgstr "Tab"
+
+#: basic-commands/C/basic-commands.xml:558(para)
+msgid ""
+"A very useful feature. It autocompletes any commands or filenames, if "
+"there's only one option, or else gives you a list of options."
+msgstr ""
+"Ez egy nagyon hasznos funkció. A tabulátor lenyomására a számítógép "
+"automatikusan kiegészít bármely parancsot vagy fájlnevet, ha csak egy "
+"lehetőség van, egyébként felsorolja a lehetőségeket."
+
+#: basic-commands/C/basic-commands.xml:571(title)
+msgid "Change the text"
+msgstr "Szöveg módosítása"
+
+#: basic-commands/C/basic-commands.xml:572(para)
+msgid ""
+"The mouse won't work. Use the <keycap>Left/Right arrow</keycap> keys to move "
+"around the line."
+msgstr ""
+"Az egér nem fog működni. A sorban mozgáshoz használja a "
+"<keycap>balra/jobbra</keycap> nyilakat."
+
+#: basic-commands/C/basic-commands.xml:576(para)
+msgid ""
+"When the cursor is where you want it in the line, typing "
+"<emphasis>inserts</emphasis> text, it doesn't overtype what's already there."
+msgstr ""
+"Ha a kurzor a megfelelő helyen áll, a gépelés <emphasis>beszúrja</emphasis> "
+"a szöveget - vagyis nem írja felül a már ott található karaktereket."
+
+#: basic-commands/C/basic-commands.xml:591(keycap) basic-commands/C/basic-commands.xml:607(keycap) basic-commands/C/basic-commands.xml:626(keycap) basic-commands/C/basic-commands.xml:642(keycap) basic-commands/C/basic-commands.xml:657(keycap) basic-commands/C/basic-commands.xml:671(keycap)
+msgid "Ctrl"
+msgstr "Ctrl"
+
+#: basic-commands/C/basic-commands.xml:592(keycap)
+msgid "a"
+msgstr "a"
+
+#: basic-commands/C/basic-commands.xml:594(keycap)
+msgid "Home"
+msgstr "Home"
+
+#: basic-commands/C/basic-commands.xml:599(para)
+msgid "Moves the cursor to the <emphasis>start</emphasis> of a line."
+msgstr "A kurzort a sor <emphasis>elejére</emphasis> viszi."
+
+#: basic-commands/C/basic-commands.xml:608(keycap)
+msgid "e"
+msgstr "e"
+
+#: basic-commands/C/basic-commands.xml:610(keycap)
+msgid "End"
+msgstr "End"
+
+#: basic-commands/C/basic-commands.xml:615(para)
+msgid ""
+"Moves the cursor to the <emphasis><emphasis "
+"role=\"strong\">e</emphasis>nd</emphasis> of a line."
+msgstr ""
+"A kurzort a sor <emphasis>végére (<emphasis "
+"role=\"strong\">e</emphasis>nd)</emphasis> viszi."
+
+#: basic-commands/C/basic-commands.xml:627(keycap)
+msgid "b"
+msgstr "b"
+
+#: basic-commands/C/basic-commands.xml:633(para)
+msgid ""
+"Moves to the <emphasis role=\"strong\">b</emphasis>eginning of the previous "
+"or current word."
+msgstr ""
+"Az adott vagy az azt megelőző szó elejére (<emphasis "
+"role=\"strong\">b</emphasis>eginning) viszi."
+
+#: basic-commands/C/basic-commands.xml:643(keycap)
+msgid "k"
+msgstr "k"
+
+#: basic-commands/C/basic-commands.xml:649(para)
+msgid "Deletes from the current cursor position to the end of the line."
+msgstr "Töröl mindent a kurzor pozíciójától a sor végéig."
+
+#: basic-commands/C/basic-commands.xml:658(keycap)
+msgid "u"
+msgstr "u"
+
+#: basic-commands/C/basic-commands.xml:664(para)
+msgid "Deletes the whole of the current line."
+msgstr "Törli a teljes sort."
+
+#: basic-commands/C/basic-commands.xml:672(keycap)
+msgid "w"
+msgstr "w"
+
+#: basic-commands/C/basic-commands.xml:678(para)
+msgid "Deletes the word before the cursor."
+msgstr "Törli a kurzor előtti szót."
+
+#: basic-commands/C/basic-commands.xml:688(title)
+msgid "More Information"
+msgstr "További információk"
+
+#: basic-commands/C/basic-commands.xml:689(para)
+msgid "The following online guides are available:"
+msgstr "A következő online kézikönyvek érhetők el:"
+
+#: basic-commands/C/basic-commands.xml:692(para)
+msgid ""
+"<ulink url=\"https://help.ubuntu.com/community/AptGetHowto\"> "
+"AptGetHowto</ulink> - using apt-get to install packages from the command "
+"line."
+msgstr ""
+"<ulink url=\"https://help.ubuntu.com/community/AptGetHowto\">AptGetHowto "
+"(angol)</ulink> - az apt-get használata a csomagok parancssori telepítéséhez."
+
+#: basic-commands/C/basic-commands.xml:699(para)
+msgid ""
+"<ulink url=\"https://help.ubuntu.com/community/Repositories/CommandLine\"> "
+"Commandline Repository Editing</ulink> - adding the Universe/Multiverse "
+"repositories through the command line."
+msgstr ""
+"<ulink url=\"https://help.ubuntu.com/community/Repositories/CommandLine\"> "
+"Commandline Repository Editing (angol)</ulink> - a Universe/Multiverse "
+"tárolók felvétele parancssorból."
+
+#: basic-commands/C/basic-commands.xml:707(para)
+msgid ""
+"<ulink url=\"https://help.ubuntu.com/community/grep\">grep Howto</ulink> - "
+"grep is a powerful command line search tool."
+msgstr ""
+"<ulink url=\"https://help.ubuntu.com/community/grep\">grep Howto "
+"(angol)</ulink> - a grep egy hatékony parancssori keresőeszköz."
+
+#: basic-commands/C/basic-commands.xml:714(para)
+msgid ""
+"<ulink url=\"https://help.ubuntu.com/community/find\">find </ulink> - locate "
+"files on the command line."
+msgstr ""
+"<ulink url=\"https://help.ubuntu.com/community/find\">find (angol)</ulink> - "
+"fájlok keresése parancssorban."
+
+#: basic-commands/C/basic-commands.xml:720(para)
+msgid ""
+"<ulink url=\"https://help.ubuntu.com/community/CommandlineHowto\"> "
+"CommandlineHowto</ulink> - longer and more complete than this basic guide, "
+"but still unfinished."
+msgstr ""
+"<ulink url=\"https://help.ubuntu.com/community/CommandlineHowto\"> "
+"CommandlineHowto (angol)</ulink> - ennél az alapszintű kézikönyvnél hosszabb "
+"és teljesebb, bár még befejezetlen kézikönyv."
+
+#: basic-commands/C/basic-commands.xml:727(para)
+msgid ""
+"<ulink url=\"https://help.ubuntu.com/community/HowToReadline\"> "
+"HowToReadline</ulink> - information on some more advanced customization for "
+"the command line."
+msgstr ""
+"<ulink url=\"https://help.ubuntu.com/community/HowToReadline\"> "
+"HowToReadline (angol)</ulink> - információk a parancsor haladóbb "
+"testreszabásáról."
+
+#: basic-commands/C/basic-commands.xml:734(para)
+msgid "For more detailed tutorials on the Linux command line, please see:"
+msgstr "Még részletesebb Linux parancssori kézikönyvek:"
+
+#: basic-commands/C/basic-commands.xml:740(para)
+msgid ""
+"<ulink url=\"http://linuxcommand.org/\"/>- basic BASH tutorials, including "
+"BASH scripting"
+msgstr ""
+"<ulink url=\"http://linuxcommand.org/\"/> (angol) - alapvető BASH "
+"kézikönyvek, beleértve a BASH programozást."
+
+#: basic-commands/C/basic-commands.xml:746(para)
+msgid ""
+"<ulink url=\"http://linuxsurvival.com/index.php\"/>- Java-based tutorials"
+msgstr ""
+"<ulink url=\"http://linuxsurvival.com/index.php\"/> (angol) - Java alapú "
+"kézikönyvek"
+
+#: basic-commands/C/basic-commands.xml:752(para)
+msgid ""
+"<ulink url=\"http://rute.2038bug.com/index.html.gz\"/>- a massive online "
+"book about system administration, almost all from the command line."
+msgstr ""
+"<ulink url=\"http://rute.2038bug.com/index.html.gz\"/> (angol) - egy "
+"terjedelmes online könyv a rendszeradminisztrációról, majdnem minden a "
+"parancssortól kezdve."
+
+#. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2.
+#: basic-commands/C/basic-commands.xml:0(None)
+msgid "translator-credits"
+msgstr ""
+"Launchpad Contributions:\n"
+"  Fidusz https://launchpad.net/~fidusz\n"
+"  Gabor Kelemen https://launchpad.net/~kelemeng\n"
+"  Lacyc3 https://launchpad.net/~lacyc3\n"
+"  U. Dani https://launchpad.net/~urban-dani\n"
+"\n"
+"Launchpad Contributions:\n"
+"  Fidusz https://launchpad.net/~fidusz\n"
+"  Gabor Kelemen https://launchpad.net/~kelemeng\n"
+"  U. Dani https://launchpad.net/~urban-dani"

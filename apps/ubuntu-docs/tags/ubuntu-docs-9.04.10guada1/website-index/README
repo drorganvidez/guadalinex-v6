@@ -1,0 +1,5 @@
+To make the pot file for this document, you need to install gnome-doc-utils from GNOME CVS, with the new improved "Ubuntu mode"!
+
+Then to build the pot file run: xml2po -m ubuntu -k -o website-index.pot C/website-index.xml
+
+To build translated documentation run (for example, if you have a german translation): xml2po -m ubuntu -k -o de/website-index.xml -p de.po C/website-index.xml

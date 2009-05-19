@@ -1,0 +1,292 @@
+<chapter id="styleguide-grammar">
+	<title>Grammar, Punctuation, and Spelling</title>
+	<para>TODO: Introductory text.</para>
+	<sect1 id="grammar">
+		<title>Grammar and English</title>
+		<para>intro; terminology may seem tedius to learn, but if you want to avoid problems and make your writing clear and understandable to your audience, then you will want to learn them.</para>
+		<orderedlist>
+			<listitem>
+				<para>parts of a sentence</para>
+			</listitem>
+			<listitem>
+				<formalpara>
+					<title>Subject and Predicate</title>
+					A sentence has two main parts; a subject and a predicate. The subject is the person or thing that you are talking about. The predicate is what you are saying about the subject. Without a subject and predicate, there is no sentence.
+				</formalpara>
+			</listitem>
+			<listitem>
+				<formalpara>
+					<title>Clauses</title>
+					Stuff about main and subordinate (independent and dependent clauses), what they are, how to distinguish between the two types, and so on and so forth.
+				</formalpara>
+			</listitem>
+			<listitem>
+				<formalpara>
+					<title>Run-on Sentences</title>
+					Do not use run-on sentences. Run-on sentences are actually two main clauses run together into one sentence and separated by a comma. You can correct a run-on sentence in more than one way. 
+				</formalpara>
+				<informaltable frame='none'>
+					<tgroup cols='2' colsep="1" rowsep="1">
+						<colspec colwidth='0.5in'/>
+						<colspec colwidth='3.5in'/>
+						<tbody>
+							<row>
+								<entry><emphasis role="strong">Wrong</emphasis></entry>
+								<entry>There are also quite a few terminal-based editors available in Ubuntu, popular ones include VIM and Emacs </entry>
+							</row>
+							<row>
+								<entry><emphasis role="strong">Correct</emphasis></entry>
+								<entry>There are also quite a few terminal-based editors available in Ubuntu. Popular ones include VIM and Emacs.</entry>
+							</row>
+							<row>
+								<entry><emphasis role="strong">Correct</emphasis></entry>
+								<entry>There are also quite a few terminal-based editors available in Ubuntu; popular ones include VIM and Emacs.</entry>
+							</row>
+						</tbody>
+					</tgroup>
+				</informaltable>
+			</listitem>
+			<listitem>
+				<para>one topic per paragraph</para>
+			</listitem>
+	</orderedlist>
+	</sect1>
+	<sect1 id="punctuation">
+		<title>Punctuation</title>
+		<para>Much of this section may be obvious to most people, but it's important to clarify  punctuation conventions to ensure that they are applied consistently across all documents. In addition, limits on the use of certain punctuation marks are imposed in order to ease document translation.</para>
+    <sect2>
+      <title>Apostrophe</title>
+      <orderedlist>
+        <listitem>
+          <para>The apostrophe is normally used in forming contractions, but in technical documents which will be translated into languages other than English, try to avoid contractions.</para>
+			 <informaltable frame='none' pgwide="0">
+				 <tgroup cols='2' colsep="1" rowsep="1">
+					 <colspec colwidth='0.5in'/>
+					 <colspec colwidth='3.5in'/>
+					 <tbody>
+						 <row>
+							 <entry><emphasis role="strong">No</emphasis></entry>
+							 <entry>can't, won't, doesn't</entry>
+						 </row>
+						 <row>
+							 <entry><emphasis role="strong">Yes</emphasis></entry>
+							 <entry>cannot, will not, does not</entry>
+						 </row>
+					 </tbody>
+				 </tgroup>
+			 </informaltable>
+        </listitem>
+        <listitem>
+          <para>Avoid using the apostrophe to indicate possession because it can cause problems when your text is being translated into a different language. Instead, rework the sentence so that an apostrophe is not needed.</para>
+			 <informaltable frame='none'>
+				 <tgroup cols='2' colsep="1" rowsep="1">
+					 <colspec colwidth='0.5in'/>
+					 <colspec colwidth='3.5in'/>
+					 <tbody>
+						 <row>
+							 <entry><emphasis role="strong">No</emphasis></entry>
+							 <entry>The file's purpose is to store names and addresses.</entry>
+						 </row>
+						 <row>
+							 <entry><emphasis role="strong">Yes</emphasis></entry>
+							 <entry>The purpose of the file is to store names and addresses.</entry>
+						 </row>
+					 </tbody>
+				 </tgroup>
+			 </informaltable>
+        </listitem>
+        <listitem>
+          <para>Do not use the apostrophe to form plurals of acronyms.</para>
+			 <informaltable frame='none'>
+				 <tgroup cols='2' colsep="1" rowsep="1">
+					 <colspec colwidth='0.5in'/>
+					 <colspec colwidth='3.5in'/>
+					 <tbody>
+						 <row>
+							 <entry><emphasis role="strong">No</emphasis></entry>
+							 <entry>GUI's, IBM's</entry>
+						 </row>
+						 <row>
+							 <entry><emphasis role="strong">Yes</emphasis></entry>
+							 <entry>GUIs, IBMs</entry>
+						 </row>
+					 </tbody>
+				 </tgroup>
+			 </informaltable>
+        </listitem>
+        <listitem>
+          <para>The apostrophe can be used to form plurals in certain cases where the lack of an apostrophe may cause confusion. For example, &quot;1's and 0's&quot;</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+  <sect2>
+    <title>Colon</title>
+    <orderedlist>
+      <listitem>
+        <para>You can use a colon after the words &quot;following&quot; or &quot;follows.&quot; For example, &quot;Docteam members need to install the following packages: <application>docbook</application>, <application>docbook-xsl</application>, and <application>subversion</application>.&quot;</para>
+      </listitem>
+      <listitem>
+        <para>Make sure that text preceding the colon is a complete sentence or a noun phrase. In the example below, a colon is not needed after &quot;download&quot;</para>
+		  <informaltable frame='none'>
+			  <tgroup cols='2' colsep="1" rowsep="1">
+				  <colspec colwidth='0.5in'/>
+				  <colspec colwidth='3.5in'/>
+				  <tbody>
+					  <row>
+						  <entry><emphasis role="strong">No</emphasis></entry>
+						  <entry>Before you try to install a web server, download: apache2, apache2-common, and apache2-doc.</entry>
+					  </row>
+					  <row>
+						  <entry><emphasis role="strong">Yes</emphasis></entry>
+						  <entry>Before you try to install a web server, download apache2, apache2-common, and apache2-doc.</entry>
+					  </row>
+				  </tbody>
+			  </tgroup>
+		  </informaltable>
+      </listitem>
+      <listitem>
+        <para>Use a colon after introductory text. For example, &quot;You have only one option: Restart the computer.&quot;</para>
+      </listitem>
+      <listitem>
+        <para>Do not use a colon in headings, or at the end of a procedure heading.</para>
+      </listitem>
+      <listitem>
+        <para>Do not use a colon in a list that is introduced by &quot;are&quot; or &quot;include.&quot;</para>
+		  <informaltable frame='none'>
+			  <tgroup cols='2' colsep="1" rowsep="1">
+				  <colspec colwidth='0.5in'/>
+				  <colspec colwidth='3.5in'/>
+				  <tbody>
+					  <row>
+						  <entry><emphasis role="strong">No</emphasis></entry>
+						  <entry>The functions available in the calculator application include: addition, subtraction, multiplication, and addition.</entry>
+					  </row>
+					  <row>
+						  <entry><emphasis role="strong">Yes</emphasis></entry>
+						  <entry>The functions available in the calculator application include addition, subtraction, multiplication, and addition.</entry>
+					  </row>
+				  </tbody>
+			  </tgroup>
+		  </informaltable>
+      </listitem>
+    </orderedlist>
+  </sect2>
+  <sect2>
+    <title>Comma</title>
+    <para>The rules for comma use in normal prose are numerous and complicated. However, in a technical document intended for translation, sentences will tend to be shorter and simpler than in normal prose. As a result, comma use will also tend to be limited and therefore only some of the major points are covered here.</para>
+    <orderedlist>
+      <listitem>
+        <para>Use the series comma. The series comma is the comma before the &quot;and&quot; in a list of three or more words or phrases.</para>
+		  <informaltable frame='none'>
+			  <tgroup cols='2' colsep="1" rowsep="1">
+				  <colspec colwidth='0.5in'/>
+				  <colspec colwidth='3.5in'/>
+				  <tbody>
+					  <row>
+						  <entry><emphasis role="strong">No</emphasis></entry>
+						  <entry>The functions available in the calculator application include addition, subtraction, multiplication and division.</entry>
+					  </row>
+					  <row>
+						  <entry><emphasis role="strong">Yes</emphasis></entry>
+						  <entry>The functions available in the calculator application include addition, subtraction, multiplication, and division.</entry>
+					  </row>
+				  </tbody>
+			  </tgroup>
+		  </informaltable>
+      </listitem>
+      <listitem>
+        <para>Use a comma to set off &quot;for example&quot; and similar words and phrases such as &quot;namely&quot; and &quot;that is&quot; For example, you can find many examples of this type of comma use in the style guide.</para>
+      </listitem>
+      <listitem>
+        <para>Use the comma after introductory phrases and clauses.</para>
+		  <informaltable frame='none'>
+			  <tgroup cols='2' colsep="1" rowsep="1">
+				  <colspec colwidth='0.5in'/>
+				  <colspec colwidth='3.5in'/>
+				  <tbody>
+					  <row>
+						  <entry><emphasis role="strong">Example</emphasis></entry>
+						  <entry>To open your browser, click on the Firefox icon.</entry>
+					  </row>
+					  <row>
+						  <entry><emphasis role="strong">Example</emphasis></entry>
+						  <entry>A few minutes after starting your computer, the login screen will appear</entry>
+					  </row>
+				  </tbody>
+			  </tgroup>
+		  </informaltable>
+      </listitem>
+    </orderedlist>
+  </sect2>
+  <sect2>
+    <title>Hyphen</title>
+    <orderedlist>
+      <listitem>
+        <para>Use a hyphen in compound modifiers preceeding a noun. Example: &quot;Evolution is an end-user application.&quot;</para>
+      </listitem>
+      <listitem>
+        <para>Use a hyphen in spelled-out fractions, unless the fraction is at the start of a sentence. Example: &quot;Well-written documentation is one-half of a successful software application.&quot;</para>
+      </listitem>
+      <listitem>
+        <para>Use a hyphen in compound words formed with &quot;better&quot;, &quot;best&quot;, and &quot;well&quot;, unless they are already modified. Example: &quot;Subversion is a well-known version control system. It has very well written documentation.&quot;</para>
+      </listitem>
+    </orderedlist>
+  </sect2>
+    <sect2>
+      <title>Parentheses</title>
+      <orderedlist>
+        <listitem>
+          <para>Use parentheses around abbreviations and acronyms that you will use later. Example: &quot;The Ubuntu Documentation Project (UDP) is an important piece of the Ubuntu Linux distribution.&quot; </para>
+        </listitem>
+        <listitem>
+          <para>Do not use parentheses to set off an explanation or an aside. For example, do not write a sentence (like this one) that uses parentheses in this manner.</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+  <sect2>
+    <title>Period</title>
+    <orderedlist>
+      <listitem>
+        <para>Use a period to end sentences.</para>
+      </listitem>
+      <listitem>
+        <para>End abbreviations with a period. (eg. abbrev.)</para>
+      </listitem>
+      <listitem>
+        <para>Use a period at the end of each step in a procedure.</para>
+      </listitem>
+      <listitem>
+        <para>In lists, use a period only if the list items are complete sentences.</para>
+      </listitem>
+    </orderedlist>
+  </sect2>
+  <sect2>
+    <title>Quotation Marks</title>
+    <orderedlist>
+      <listitem>
+        <para>Use quotation marks around material that is repeated verbatim from another source, when the length of the copied material is such that it can be included &quot;inline&quot; with the paragraph.</para>
+      </listitem>
+      <listitem>
+        <para>Use quotation marks around letters, words or phrases that you want to emphasise without using italics or bold text.</para>
+      </listitem>
+    </orderedlist>
+  </sect2>
+  <sect2>
+    <title>Semicolon</title>
+    <para>The semicolon is frequently misused, so it's best to avoid it. A sentence with a semicolon can usually be split into two or more sentences. Splitting the sentence will make it easier to read and translate. </para>
+  </sect2>
+	</sect1>
+	<sect1 id="spelling">
+		<title>Spelling</title>
+		<formalpara><title>American English</title>
+		<para>Use standard American English spelling in all Ubuntu English language documents.</para>
+		</formalpara>
+		<formalpara><title>Dictionary (for spelling only)</title>
+		<para>There is a great deal of agreement among American English dictionaries when it comes to spelling, so for the purposes of Ubuntu technical documents, you can use any American English dictionary that is convenient. You can use the built-in spellchecker of whatever editor you are using, provided that it is set to American English. Places where there are conflicts (such as &quot;email&quot; versus &quot;e-mail&quot;) are handled by the word list (see <xref linkend="styleguide-wordlist"/>). If you find a spelling conflict that is not in the word list, then please let us know what the word is along with your recommendation for the version to use. There is a list of online and printed dictionaries in the Reference Materials section.</para>
+		</formalpara>
+		<formalpara><title>Compound Words</title>
+		<para>In technical documentation, two-word compounds tend to get converted over time, first into hyphenated compounds, and then into single word compounds. For example, &quot;on line&quot; became &quot;on-line&quot;, and is now gradually becoming &quot;online&quot;. In general, use the one-word compound for Ubuntu documentation. However, there are several exceptions to this rule. If you are not sure of a particular word, then check the word list. See <xref linkend="styleguide-wordlist"/></para>
+		</formalpara>
+	</sect1>
+</chapter>
+

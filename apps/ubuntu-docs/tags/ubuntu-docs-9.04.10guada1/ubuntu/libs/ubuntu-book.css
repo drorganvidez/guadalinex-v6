@@ -1,0 +1,212 @@
+/*
+* Original version created for the Ubuntu documentation team
+by Jeff Schering on Sept 2, 2005
+* Hacked on by Matthew East for the Ubuntu documentation team.
+	
+Original application is for the FAQ Guide, and features
+ the Ubuntu colour scheme
+ 
+This file is in the Public Domain.
+	
+ */
+
+html {
+        background-color: white;
+        color: black;
+        font-family: "Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif;
+        font-size: 0.9em;
+        line-height: 1.5em;
+}
+
+body {
+	margin-left: 5em;
+	margin-right: 5em;
+	margin-top: 0;
+	padding: 0;
+}
+
+#header {
+    margin: 0;
+    padding: 0;
+}
+
+#mastwrap {
+	margin-left: -5em;
+	margin-right: -5em;
+	background: url('img/u-header.png') bottom left repeat-x #DBBA75;
+}
+
+#masthead
+{
+	position:relative;
+	background: url('img/headerlogo.png') bottom left no-repeat transparent;
+	border-style: solid;
+	border-width: 0;
+	color: #000;
+	height: 90px;
+}
+
+ul {
+	margin-left: 5px;
+}
+
+.orderedlist {
+	margin-left: 10px;
+}
+
+.titlepage {
+  padding-right: 1em;
+}
+
+div.toc dt { 
+  margin-top: 2px; 
+}
+
+div.toc {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+div.toc dt :visited { 
+	color: black; /* Ubuntu visited link color */
+}
+
+div.qandaset dt :visited { 
+	color: black; /* Ubuntu visited link color */
+}
+
+:link { 
+	color: #6d4c07; /* dark brown */
+}
+
+:visited { 
+	color: #6d4c07; /* dark brown */
+}
+
+dl { 
+  margin-top: 0em; 
+  margin-bottom: 0.5em; 
+}
+
+dt { 
+  margin-top: 1em; 
+}
+
+div.qandaset {
+	margin-left: 1em;
+}
+
+.guimenu, .guimenuitem, .guisubmenu {
+	font-style: italic;
+	color: #6d4c07; /* dark brown */
+}
+
+.guilabel, .guibutton { 
+}
+
+.question { 
+  font-weight: bold; 
+}
+
+/* accelerator keys in menus */
+.accel { 
+  text-decoration: underline;
+}
+
+h1
+{
+        margin: 1.5em 0 0 0;
+        font-weight: bold;
+	font-size: 2em; 
+        color: #6d4c07; /* ubuntu dark brown */
+        line-height: 1.2em;
+
+}	
+
+
+h2, h3, h4, h5, h6
+{
+        font-weight: normal; 
+        color: #6d4c07; /* ubuntu dark brown */
+        line-height: 1.2em;
+}	
+
+h2
+{
+        font-size: 1.8em;
+	border-bottom: 2px solid #6d4c07;
+}
+
+h3 {
+	font-size: 1.5em;
+}
+
+h4 {
+	font-size: 1.2em;
+}
+
+h5, h6 {font-size: 1em;}
+
+.screen, .programlisting { 
+	background-color:  #f0eee6; /* light salmon */
+	border: 1pt solid #C1B496; /* dark tan */
+  padding: 5px; 
+} 
+
+
+.revhistory { font-size: 0.9em; }
+
+#sisternav {
+	position:absolute;
+	bottom:0px;
+	right:0px;
+}
+
+#sisternav ul {
+	display:inline;
+	margin:0;
+	padding:10px 10px 0 1px;
+	list-style:none;
+}
+                  
+#sisternav li {
+	display:inline;
+	float:left;
+	background:url(img/tab_off_ns1.png) no-repeat left top;
+	margin:0;
+	padding:0 0 0 5px;
+}
+
+#sisternav a {
+	float:left;
+	font-size:0.8em;
+	display:block;
+	background:url(img/tab_off_ns2.png) no-repeat right top;
+	padding:8px 15px 3px 8px;
+	text-decoration:none;
+	font-weight: bold;
+}
+
+/* Commented Backslash Hack hides rule from IE5-Mac \*/
+#sisternav a {float:none;}
+/* End IE5-Mac hack */
+
+#sisternav li:hover, #sisternav li:hover a {
+	background-position:0% -163px;
+}
+
+#sisternav li:hover a {
+	background-position:100% -163px;
+}
+
+#sisternav #current {
+	background:url(img/tab_on_ns1.png) no-repeat left top;                
+}
+
+#sisternav #current a {
+	background:url(img/tab_on_ns2.png) no-repeat right top;
+	padding-bottom:4px;
+}
+
+#sisternav a , #sisternav #current a { color: #444; }
+#sisternav #current a:hover, #sisternav li a:hover { color: black;}

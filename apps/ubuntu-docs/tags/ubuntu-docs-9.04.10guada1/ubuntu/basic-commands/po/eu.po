@@ -1,0 +1,898 @@
+# Basque translation for ubuntu-docs
+# Copyright (c) 2007 Rosetta Contributors and Canonical Ltd 2007
+# This file is distributed under the same license as the ubuntu-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2007.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ubuntu-docs\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2007-09-14 08:25+0100\n"
+"PO-Revision-Date: 2007-11-13 23:33+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Basque <eu@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2008-02-17 10:22+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+#: basic-commands/C/basic-commands-C.omf:6(creator) basic-commands/C/basic-commands-C.omf:7(maintainer)
+msgid "ubuntu-doc@lists.ubuntu.com (Ubuntu Documentation Project)"
+msgstr "ubuntu-doc@lists.ubuntu.com (Ubuntu Dokumentatzeko Proiektua)"
+
+#: basic-commands/C/basic-commands-C.omf:8(title) basic-commands/C/basic-commands.xml:15(title)
+msgid "Basic Commands"
+msgstr "Oinarrizko Aginduak"
+
+#: basic-commands/C/basic-commands-C.omf:9(date)
+msgid "2006-09-07"
+msgstr "2006-09-07"
+
+#: basic-commands/C/basic-commands-C.omf:11(description)
+msgid "Placeholder."
+msgstr "Kokatzailea."
+
+#: basic-commands/C/basic-commands.xml:18(title)
+msgid "Using this Guide"
+msgstr "Gida hau erabiltzea"
+
+#: basic-commands/C/basic-commands.xml:28(emphasis)
+msgid "man intro(1)"
+msgstr "man intro(1)"
+
+#: basic-commands/C/basic-commands.xml:20(emphasis)
+msgid ""
+"\"Under Linux there are GUIs (graphical user interfaces), where you can "
+"point and click and drag, and hopefully get work done without first reading "
+"lots of documentation. The traditional Unix environment is a CLI (command "
+"line interface), where you type commands to tell the computer what to do. "
+"That is faster and more powerful, but requires finding out what the commands "
+"are.\" -- from <placeholder-1/>"
+msgstr ""
+"\"Linuxen GUI (graphical user interface) edo azalak daude, aldez aurretik "
+"dokumentazio pila bat irakurri beharrik gabe nahi duzuna egin ahal izan "
+"dezazun, ia xagua besterik erabili gabe. Unix ingurunea beti izan da CLI "
+"(command line interface) edo agindu-lerro motakoa; bertan, aginduak idatz "
+"ditzakezu ordenagailuari zer egin esateko. Azken hau azkarrago eta "
+"boteretsuagoa da, baina aginduak zeintzuk diren aurkitzera behartzen "
+"zaitu.\" -- <placeholder-1/>"
+
+#: basic-commands/C/basic-commands.xml:33(para)
+msgid ""
+"This guide will make you familiar with basic GNU/Linux shell commands. It is "
+"not intended to be a complete guide to the command line, just an "
+"introduction to complement Ubuntu's graphical tools."
+msgstr ""
+"Gida honi esker GNU/Linux shell-eko aginduak ezagutzen hasiko zara. Ez du "
+"agindu-lerroko gidaliburu osoa izateko helbururik, Ubunturen tresna "
+"grafikoak osatzeko sarreratxo bat baizik."
+
+#: basic-commands/C/basic-commands.xml:43(para)
+msgid ""
+"All command names, file names or paths to directories will be shown using a "
+"<command>monospace font</command>."
+msgstr ""
+"Agindu-izen, fitxategi-izen edo bide-izen guztiak <command>espaziobakar "
+"letrekin</command> erakutsiko dira."
+
+#: basic-commands/C/basic-commands.xml:50(para)
+msgid ""
+"All the commands on this guide are to be issued from a command prompt in a "
+"<application>Terminal</application> and will be shown as: <screen>command to "
+"type</screen>"
+msgstr ""
+"Gida honetako agindu guztiak agindu-lerroan erabiltzeko dira "
+"(<application>Terminal</application> batean) eta honela erakutsiko dira: "
+"<screen>idatzi beharreko agindua</screen>"
+
+#: basic-commands/C/basic-commands.xml:58(para)
+msgid ""
+"<emphasis role=\"strong\">Note that Linux is case sensitive.</emphasis> "
+"User, user, and USER are all different to Linux."
+msgstr ""
+"<emphasis role=\"strong\">Kontutan hartu ezazu Linuxek maiuskula eta "
+"minuskulak ezberdintzen dituela.</emphasis> Erabiltzaile, erabiltzaile eta "
+"ERABILTZAILE ezberdinak dira Linuxentzat."
+
+#: basic-commands/C/basic-commands.xml:69(title)
+msgid "Starting a Terminal"
+msgstr "Terminala abiaraztea"
+
+#: basic-commands/C/basic-commands.xml:70(para)
+msgid "To open a <application>Terminal</application> do as follow:"
+msgstr "<application>Terminal</application> bat abiarazteko, hau egin ezazu:"
+
+#: basic-commands/C/basic-commands.xml:76(para)
+msgid ""
+"Choose "
+"<menuchoice><guimenu>Applications</guimenu><guimenuitem>Accessories</guimenui"
+"tem><guimenuitem>Terminal</guimenuitem></menuchoice>;"
+msgstr ""
+"Hautatu ezazu "
+"<menuchoice><guimenu>Aplikazioak</guimenu><guimenuitem>Gehigarriak</guimenuit"
+"em><guimenuitem>Terminala</guimenuitem></menuchoice>;"
+
+#: basic-commands/C/basic-commands.xml:81(para)
+msgid ""
+"Or press <keycombo><keycap>Alt</keycap><keycap>F2</keycap></keycombo> and "
+"type <command>gnome-terminal</command>."
+msgstr ""
+"edo sakatu ezazu "
+"<keycombo><keycap>Alt</keycap><keycap>F2</keycap></keycombo> eta idatzi "
+"ezazu <command>gnome-terminal</command>."
+
+#: basic-commands/C/basic-commands.xml:94(title)
+msgid "File and Directory Commands"
+msgstr "Fitxategi- eta direktorio-aginduak"
+
+#: basic-commands/C/basic-commands.xml:97(title)
+msgid "cd"
+msgstr "cd"
+
+#: basic-commands/C/basic-commands.xml:98(para)
+msgid ""
+"The <command>cd</command> command changes directories. When you open a "
+"terminal you will be in your home directory. To move around the file system "
+"you will use <command>cd</command>. Examples:"
+msgstr ""
+"<command>cd</command> aginduak direktorioz aldatzen zaitu. Terminal bat "
+"irekitzean, zure etxe-direktorioan egongo zara. Fitxategi-sistema osoan "
+"zehar mugitzeko, <command>cd</command> erabiliko duzu."
+
+#: basic-commands/C/basic-commands.xml:107(para)
+msgid "To navigate into the root directory, type: <screen>cd /</screen>"
+msgstr "Erro direktoriora mugitzeko, idatz ezazu: <screen>cd /</screen>"
+
+#: basic-commands/C/basic-commands.xml:113(para)
+msgid ""
+"To navigate to your home directory, type: <screen>cd</screen> or <screen>cd "
+"~</screen>"
+msgstr ""
+"Zure etxe-direktoriora mugitzeko, idatz ezazu: <screen>cd</screen> edo "
+"<screen>cd ~</screen>"
+
+#: basic-commands/C/basic-commands.xml:121(para)
+msgid "To navigate up one directory level, type: <screen>cd ..</screen>"
+msgstr "Gaineko direktoriora mugitzeko, idatz ezazu: <screen>cd ..</screen>"
+
+#: basic-commands/C/basic-commands.xml:127(para)
+msgid ""
+"To navigate to the previous directory (or back), type: <screen>cd -</screen>"
+msgstr ""
+"Aurreko direktoriora (edo atzera) mugitzeko, idatz ezazu: <screen>cd -"
+"</screen>"
+
+#: basic-commands/C/basic-commands.xml:134(para)
+msgid ""
+"To navigate through multiple levels of directory at once, specify the full "
+"directory path that you want to go to. For example, type: <screen>cd "
+"/var/www</screen> to go directly to the <filename "
+"class=\"directory\">/www</filename> subdirectory of <filename "
+"class=\"directory\">/var/</filename>. As another example, type: <screen>cd "
+"~/Desktop</screen> to move you to the <filename "
+"class=\"directory\">Desktop</filename> subdirectory inside your home "
+"directory."
+msgstr ""
+"Edozein direktoriora mugitzeko, bere bide-izen osoa idatz ezazu. Adibidez: "
+"<screen>cd /var/www</screen> idatz ezazu <filename "
+"class=\"directory\">/var/</filename> direktorioko <filename "
+"class=\"directory\">/www</filename> azpidirektoriora mugitzeko. Beste "
+"adibide bat:: <screen>cd ~/Desktop</screen> idatz ezazu zure etxe-"
+"direktorioko <filename class=\"directory\">Desktop</filename> "
+"azpidirektoriora mugitzeko."
+
+#: basic-commands/C/basic-commands.xml:151(title)
+msgid "pwd"
+msgstr "pwd"
+
+#: basic-commands/C/basic-commands.xml:162(para)
+msgid ""
+"<application>GNOME Terminal</application> also displays this information in "
+"the title bar of it's window."
+msgstr ""
+"<application>GNOME Terminala</application>k bere leihoaren izenburuan ere "
+"erakusten du informazio hau."
+
+#: basic-commands/C/basic-commands.xml:152(para)
+msgid ""
+"<command>pwd</command>: The <command>pwd</command> command will show you "
+"which directory you're located in (<acronym>pwd</acronym> stands for "
+"<quote>print working directory</quote>). For example, typing "
+"<screen>pwd</screen> in the <filename class=\"directory\">Desktop</filename> "
+"directory, will show <computeroutput>~/Desktop</computeroutput>. "
+"<placeholder-1/>"
+msgstr ""
+"<command>pwd</command>: zein direktoriotan zauden erakutsiko dizu (ingelesez "
+"<acronym>pwd</acronym> = <quote>print working directory</quote> lan "
+"direktorioa erakutsi). Adibidez: <screen>pwd</screen> idatzi ezazu zure "
+"<filename class=\"directory\">Desktop</filename> direktorioan zaudenean, eta "
+"<computeroutput>~/Desktop</computeroutput> erakutsiko dizu. <placeholder-1/>"
+
+#: basic-commands/C/basic-commands.xml:171(title)
+msgid "ls"
+msgstr "ls"
+
+#: basic-commands/C/basic-commands.xml:172(para)
+msgid ""
+"The <command>ls</command> command shows you the files in your current "
+"directory. Used with certain options, you can see sizes of files, when files "
+"where made, and permissions of files. For example, typing <screen>ls "
+"~</screen> will show you the files that are in your home directory."
+msgstr ""
+"Une horretan zauden direktorioko fitxategiak erakutsiko dizkizu "
+"<command>ls</command> aginduak. Aukera jakin batzuekin erabiliz gero, "
+"fitxategien tamaina, sortze-data eta baimenak ikusi ahalko dituzu. Adibidez: "
+"<screen>ls ~</screen> erabiliz, zure etxe-direktorioko fitxategiak ikusiko "
+"dituzu."
+
+#: basic-commands/C/basic-commands.xml:183(title)
+msgid "cp"
+msgstr "cp"
+
+#: basic-commands/C/basic-commands.xml:184(para)
+msgid ""
+"The <command>cp</command> command makes a copy of a file for you. For "
+"example, type: <screen>cp file foo</screen> to make a exact copy of "
+"<filename>file</filename> and name it <filename>foo</filename>, but the file "
+"<filename>file</filename> will still be there."
+msgstr ""
+"Fitxategien kopiak egiten ditu <command>cp</command> aginduak. Adibidez: "
+"<screen>cp fitx fitxberria</screen> idatz ezazu, eta "
+"<filename>fitx</filename> fitxategiaren kopia bat egingo da, "
+"<filename>fitxberria</filename> izenekoa, eta jatorrizko "
+"<filename>fitx</filename> ezabatu gabe."
+
+#: basic-commands/C/basic-commands.xml:194(title)
+msgid "mv"
+msgstr "mv"
+
+#: basic-commands/C/basic-commands.xml:206(para)
+msgid ""
+"If you are using <command>mv</command> with <command>sudo</command> you will "
+"not be able to use the <emphasis role=\"strong\">~</emphasis> shortcut, but "
+"will have to use the full pathnames to your files. This is because when you "
+"are working as root, <emphasis role=\"strong\">~</emphasis> will refer to "
+"the root account's home directory, not your own."
+msgstr ""
+"<command>mv</command> eta <command>sudo</command> batera erabiltzen "
+"badituzu, ezingo duzu <emphasis role=\"strong\">~</emphasis> lasterbidea "
+"erabili, eta bide-izen osoak erabili beharko dituzu zure fitxategiekin. Hau "
+"honela da, erro bezala zabiltzanean <emphasis role=\"strong\">~</emphasis> "
+"lasterbideak erro erabiltzailearen etxe-direktorioa adierazten duelako."
+
+#: basic-commands/C/basic-commands.xml:195(para)
+msgid ""
+"The <command>mv</command> command moves a file to a different location or "
+"will rename a file. Examples are as follows: <screen>mv file foo</screen> "
+"will rename the file <filename>file</filename> to <filename>foo</filename>. "
+"<screen>mv foo ~/Desktop</screen> will move the file "
+"<filename>foo</filename> to your <filename "
+"class=\"directory\">Desktop</filename> directory but will not rename it. You "
+"must specify a new file name to rename a file. <placeholder-1/>"
+msgstr ""
+"<command>mv</command> aginduak fitxategi bat beste leku batera mugitzen du, "
+"edo berrizendatu egiten du. Adibidez: <screen>mv fitx fitxberria</screen> "
+"erabiliz, <filename>fitx</filename> fitxategia berrizendatuko duzu "
+"<filename>fitxberria</filename>-ra. <screen>mv fitx ~/Desktop</screen> "
+"erabiliz, <filename>fitx</filename> mugituko duzu zure <filename "
+"class=\"directory\">Desktop</filename> direktoriora, baina ez duzu "
+"berrizendatuko. Berrizendatzeko, fitxategi-izen berria zehaztu behar duzu. "
+"<placeholder-1/>"
+
+#: basic-commands/C/basic-commands.xml:219(title)
+msgid "rm"
+msgstr "rm"
+
+#: basic-commands/C/basic-commands.xml:220(para)
+msgid ""
+"Use the <command>rm</command> command to remove or delete a file in your "
+"directory. It will not work on directories which have files in them."
+msgstr ""
+"<command>rm</command> agindua erabil ezazu fitxategi edo direktorio bat "
+"ezabatzeko. Ez du funtzionatuko direktorioak fitxategiak baditu barnean."
+
+#: basic-commands/C/basic-commands.xml:228(title)
+msgid "mkdir"
+msgstr "mkdir"
+
+#: basic-commands/C/basic-commands.xml:229(para)
+msgid ""
+"The <command>mkdir</command> command will allow you to create directories. "
+"For example, typing: <screen>mkdir music</screen> will create a music "
+"directory in the current directory."
+msgstr ""
+"<command>mkdir</command> agindua erbaili direktorioak sortzeko. Adibidez: "
+"<screen>mkdir musika</screen> erabili ezazu \"musika\" izeneko direktorio "
+"bat sortzeko (une horrtan zauden direktorioan, noski)."
+
+#: basic-commands/C/basic-commands.xml:239(title)
+msgid "System Information Commands"
+msgstr "Sistemaren Informazio Aginduak"
+
+#: basic-commands/C/basic-commands.xml:242(title)
+msgid "df"
+msgstr "df"
+
+#: basic-commands/C/basic-commands.xml:243(para)
+msgid ""
+"The <command>df</command> command displays filesystem disk space usage for "
+"all partitions. <screen>df -h</screen> will give information using megabytes "
+"(M) and gigabytes (G) instead of blocks (<emphasis role=\"strong\">-"
+"h</emphasis> means \"human-readable\")."
+msgstr ""
+"<command>df</command> agindua erabili ezazu partizio guztietan erabilitako "
+"lekua bistaratzeko. Blokeetan beharreaz, informazioa megabyte (M) eta "
+"gigabyte-tan (G) ikusi nahi baduzu, <screen>df -h</screen> erabil ezazu "
+"(ingelesez, <emphasis role=\"strong\">-h</emphasis> = \"human-readable\" "
+"gizakian irakurgarria)."
+
+#: basic-commands/C/basic-commands.xml:253(title)
+msgid "free"
+msgstr "free"
+
+#: basic-commands/C/basic-commands.xml:254(para)
+msgid ""
+"The <command>free</command> command displays the amount of free and used "
+"memory in the system. <screen>free -m</screen> will give the information "
+"using megabytes, which is probably most useful for current computers."
+msgstr ""
+"<command>free</command> agindua erabili sistemaren memoria askea eta "
+"erabiliaren kopuruak erakusteko. Megabyte-tan ikusi nahi baduzu informazio "
+"hau, <screen>free -m</screen> erabil ezazu."
+
+#: basic-commands/C/basic-commands.xml:264(title)
+msgid "top"
+msgstr "top"
+
+#: basic-commands/C/basic-commands.xml:265(para)
+msgid ""
+"The <command>top</command> command displays information on your GNU/Linux "
+"system, running processes and system resources, including CPU, RAM &amp; "
+"swap usage and total number of tasks being run. To exit "
+"<application>top</application>, press <keycap>q</keycap>."
+msgstr ""
+"<command>top</command> agindua erabili zur eGNU/Linux sistemari buruzko "
+"informazio, exekutatzen ari diren prozesuak, sistemaren baliabideak (CPU, "
+"RAM erabilera, swap erabilera, prozesu kopurua...) etab bistaratzeko. "
+"<application>top</application>-etik irteteko, sakatu ezazu "
+"<keycap>q</keycap>."
+
+#: basic-commands/C/basic-commands.xml:275(title)
+msgid "uname"
+msgstr "uname"
+
+#: basic-commands/C/basic-commands.xml:276(para)
+msgid ""
+"The <command>uname</command> command with the <emphasis role=\"strong\">-"
+"a</emphasis> option, prints all system information, including machine name, "
+"kernel name &amp; version, and a few other details. Most useful for checking "
+"which kernel you're using."
+msgstr ""
+"<command>uname</command> eta <emphasis role=\"strong\">-a</emphasis> aukera "
+"erabil itzazu sistemaren informazio guztia bistaratzeko, makinaren izena, "
+"nukleoaren bertsioa eta beste xehetasun batzuk barne. Zein nukleo bertsio "
+"darabilzun egiaztatzeko erabili ohi da."
+
+#: basic-commands/C/basic-commands.xml:286(title)
+msgid "lsb_release"
+msgstr "lsb_release"
+
+#: basic-commands/C/basic-commands.xml:287(para)
+msgid ""
+"The <emphasis role=\"strong\">lsb_release</emphasis> command with the "
+"<emphasis role=\"strong\">-a</emphasis> option prints version information "
+"for the Linux release you're running. For example, typing: "
+"<screen>lsb_release -a</screen> will give you: <screen>\n"
+"No LSB modules are available.\n"
+"Distributor ID: Ubuntu\n"
+"Description:    Ubuntu 7.04 \n"
+"Release:        7.04\n"
+"Codename:       feisty</screen>"
+msgstr ""
+"The <emphasis role=\"strong\">lsb_release</emphasis> command with the "
+"<emphasis role=\"strong\">-a</emphasis> option prints version information "
+"for the Linux release you're running. Adibidez: <screen>lsb_release -"
+"a</screen> idatziz gero, hau ikusiko duzu: <screen>\n"
+"No LSB modules are available.\n"
+"Distributor ID: Ubuntu\n"
+"Description: Ubuntu 7.10\n"
+"Release: 7.10\n"
+"Codename: gutsy</screen>"
+
+#: basic-commands/C/basic-commands.xml:305(title)
+msgid "ifconfig"
+msgstr "ifconfig"
+
+#: basic-commands/C/basic-commands.xml:306(para)
+msgid ""
+"The <command>ifconfig</command> command reports on your system's network "
+"interfaces."
+msgstr ""
+"<command>ifconfig</command> erabili zure sistemaren sare-interfazeak "
+"bistaratzeko."
+
+#: basic-commands/C/basic-commands.xml:314(title)
+msgid "Executing Commands with Elevated Privileges"
+msgstr "Baimen bereziekin exekutatzea aginduak"
+
+#: basic-commands/C/basic-commands.xml:315(para)
+msgid ""
+"The following commands will need to be prefaced with the "
+"<command>sudo</command> command. Please see <ulink "
+"url=\"https://help.ubuntu.com/community/RootSudo\">RootSudo</ulink> for "
+"information on using <command>sudo</command>."
+msgstr ""
+"Ondorengo aginduen aurretik <command>sudo</command> agindua idatzi beharko "
+"duzu. Mesedez, <ulink "
+"url=\"https://help.ubuntu.com/community/RootSudo\">RootSudo</ulink> irakur "
+"ezazu <command>sudo</command> erabiltzeari buruzko informazio gehiago "
+"eskuratzeko."
+
+#: basic-commands/C/basic-commands.xml:324(title)
+msgid "Adding a New Group"
+msgstr "Talde berria gehitzea"
+
+#: basic-commands/C/basic-commands.xml:325(para)
+msgid ""
+"The <command>addgroup</command> command is used to create a new group on the "
+"system. To create a new group, type: <screen>addgroup newgroup</screen> The "
+"above command will create a new group called <emphasis "
+"role=\"strong\">newgroup</emphasis>."
+msgstr ""
+"<command>addgroup</command> erabili ezazu sisteman talde berri bat sortzeko. "
+"Talde berria sortzeko, idatz ezazu: <screen>addgroup taldeberria</screen> "
+"Honela, <emphasis role=\"strong\">taldeberria</emphasis> izeneko talde "
+"berria sortuko da."
+
+#: basic-commands/C/basic-commands.xml:334(title)
+msgid "Adding A New User"
+msgstr "Erabiltzaile berria gehitzea"
+
+#: basic-commands/C/basic-commands.xml:335(para)
+msgid ""
+"The <command>adduser</command> is used to create new users on the system. To "
+"create a new user, type: <screen>adduser newuser</screen> The above command "
+"will create a new user called <emphasis role=\"strong\">newuser</emphasis>."
+msgstr ""
+"<command>adduser</command> erabili ezazu sisteman erabiltzaile berri bat "
+"sortzeko. Erabiltzaile berria sortzeko, idatz ezazu: <screen>adduser "
+"erabiltzaileberria</screen> Honela, <emphasis "
+"role=\"strong\">erabiltzaileberria</emphasis> izeneko erabiltzaile berria "
+"sortuko da."
+
+#: basic-commands/C/basic-commands.xml:342(para)
+msgid ""
+"To assign a password for the new user use the <command>passwd</command> "
+"command: <screen>passwd newuser</screen>"
+msgstr ""
+"Erabiltzaile berriari pasahitz bat ezartzeko, <command>passwd</command> "
+"agindua erabil ezazu: <screen>passwd erabiltzaileberria</screen>"
+
+#: basic-commands/C/basic-commands.xml:348(para)
+msgid ""
+"Finally, to assign the new user to the new group, type: <screen>adduser "
+"newuser newgroup</screen>"
+msgstr ""
+"Azkenik, erabiltzaile berria talde berrira sartzeko, idatz ezazu: "
+"<screen>adduser erabiltzaileberria taldeberria</screen>"
+
+#: basic-commands/C/basic-commands.xml:356(title)
+msgid "Options"
+msgstr "Aukerak"
+
+#: basic-commands/C/basic-commands.xml:357(para)
+msgid ""
+"The default behavior for a command may usually be modified by adding a "
+"<emphasis role=\"strong\">-- <emphasis>option</emphasis></emphasis> to the "
+"command. The <link linkend=\"ls\"><command>ls</command></link> command, for "
+"example, has a <emphasis role=\"strong\">-s</emphasis> option so that "
+"<command>ls -s</command> will include file sizes in the listing. There is "
+"also a <emphasis role=\"strong\">-h</emphasis> option to get those sizes in "
+"a \"human readable\" format."
+msgstr ""
+"Agindu baten portaera normala aldatu dezakezu <emphasis role=\"strong\">-- "
+"<emphasis>aukera</emphasis></emphasis> bat gehituz aginduari. Adibidez, "
+"<link linkend=\"ls\"><command>ls</command></link> aginduak <emphasis "
+"role=\"strong\">-s</emphasis> aukera du; <command>ls -s</command> aginduak "
+"fitxategien tamainak zerrendatuko ditu ere. Badago <emphasis "
+"role=\"strong\">-h</emphasis> aukera ere, tamaina horiek formatu ulergarrian "
+"bistaratzeko."
+
+#: basic-commands/C/basic-commands.xml:368(para)
+msgid ""
+"Options can be grouped in clusters so <screen>ls -sh</screen> is exactly the "
+"same command as <screen>ls -s -h</screen> Most options have a long version, "
+"prefixed with two dashes instead of one, so even <screen>ls --size --human-"
+"readable</screen> is the same command."
+msgstr ""
+"Taldekatu ere egin daitezke aukerak; adibidez: berdinak dira <screen>ls -"
+"sh</screen> eta <screen>ls -s -h</screen> Aukera gehienek bertsio luze bat "
+"ere badut, bi gidoiez hasten direnak; horrela, aurrekoen berdina da ere "
+"<screen>ls --size --human-readable</screen>"
+
+#: basic-commands/C/basic-commands.xml:379(title)
+msgid "\"Man\" and getting help"
+msgstr "\"Man\" eta laguntza eskuratzea"
+
+#: basic-commands/C/basic-commands.xml:380(para)
+msgid ""
+"<emphasis role=\"strong\"><emphasis>command</emphasis> --help</emphasis> and "
+"<emphasis role=\"strong\">man <emphasis>command</emphasis></emphasis> are "
+"the two most important tools at the command line."
+msgstr ""
+"<emphasis role=\"strong\"><emphasis>command</emphasis> --help</emphasis> eta "
+"<emphasis role=\"strong\">man <emphasis>agindua</emphasis></emphasis> dira "
+"agindu-lerroko bi tresna garrantzizkoenak."
+
+#: basic-commands/C/basic-commands.xml:387(para)
+msgid ""
+"Virtually all commands understand the <emphasis role=\"strong\">-"
+"h</emphasis> (or <emphasis role=\"strong\">--help</emphasis>) option which "
+"will produce a short usage description of the command and it's options, then "
+"exit back to the command prompt. Type <screen>man -h</screen> or <screen>man "
+"--help</screen> to see this in action."
+msgstr ""
+"Agindu ia guztiek ulertzen dute <emphasis role=\"strong\">-h</emphasis> (edo "
+"<emphasis role=\"strong\">--help</emphasis>) aukera, bere erabileraren eta "
+"aukeren laburpen bat erakusteko. Idatz ezazu <screen>man -h</screen> edo "
+"<screen>man --help</screen> hau nola dabilen ikusteko."
+
+#: basic-commands/C/basic-commands.xml:397(para)
+msgid ""
+"Every command and nearly every application in Linux will have a man (manual) "
+"file, so finding them is as simple as typing <command>man command</command> "
+"to bring up a longer manual entry for the specified command. For example, "
+"<screen>man mv</screen> will bring up the <command>mv</command> (move) "
+"manual."
+msgstr ""
+"Linuxeko agindu guztiek eta aplikazio gehienek edukiko dute man (manual) "
+"fitxategi bat, eta <command>man agindua</command> idatzi besterik ez du egin "
+"beharko agindu horren gidaliburu osoago bat bistaratzeko. Adibidez: "
+"<screen>man mv</screen> idatziz gero, <command>mv</command> (move) "
+"aginduaren gidaliburua bistaratuko da."
+
+#: basic-commands/C/basic-commands.xml:406(para)
+msgid ""
+"Move up and down the man file with the arrow keys, and quit back to the "
+"command prompt with <keycap>q</keycap>."
+msgstr ""
+"Teklatuko geziak erabili itzazu man fitxategian zehar mugitzeko, eta "
+"<keycap>q</keycap> sakatu ezazu gidaliburutik irteteko."
+
+#: basic-commands/C/basic-commands.xml:411(para)
+msgid ""
+"<screen>man man</screen> will bring up the manual entry for the "
+"<command>man</command> command, which is a good place to start."
+msgstr ""
+"<screen>man man</screen> erabiliz, <command>man</command> aginduaren "
+"gidaliburua bistaratuko duzu; hasteko leku ona."
+
+#: basic-commands/C/basic-commands.xml:417(para)
+msgid ""
+"<screen>man intro</screen> is especially useful - it displays the "
+"\"Introduction to user commands\" which is a well-written, fairly brief "
+"introduction to the Linux command line."
+msgstr ""
+"<screen>man intro</screen> bereziki erabilgarria da - \"Introduction to user "
+"commands\" bistaratzen du, Linuxen agindu-lerrorako sarrera labur eta egokia."
+
+#: basic-commands/C/basic-commands.xml:422(para)
+msgid ""
+"There are also <command>info</command> pages, which are generally more in-"
+"depth than <command>man</command> pages. Try <screen>info info</screen> for "
+"the introduction to info pages."
+msgstr ""
+"<command>info</command> orriak ere badaude, <command>man</command> orriak "
+"baina sakonagoak izan ohi direnak. Proba ezazu <screen>info info</screen>, "
+"info orrietarako sarrera bat bistaratzeko."
+
+#: basic-commands/C/basic-commands.xml:432(title)
+msgid "Searching for man files"
+msgstr "Man fitxategiak bilatzea"
+
+#: basic-commands/C/basic-commands.xml:433(para)
+msgid ""
+"If you aren't sure which command or application you need to use, you can try "
+"searching the man files."
+msgstr ""
+"Ez bazaude ziur zein agindu edo aplikazio behar duzun, man fitxategietan "
+"bilatzen saiatu zaitezke."
+
+#: basic-commands/C/basic-commands.xml:446(para)
+msgid "This is the same as the <command>apropos</command> command."
+msgstr "Hau <command>apropos</command> aginduaren berdina da."
+
+#: basic-commands/C/basic-commands.xml:439(para)
+msgid ""
+"<command>man -k foo</command>, will search the man files for "
+"<emphasis>foo</emphasis>. Try <screen>man -k nautilus</screen> to see how "
+"this works. <placeholder-1/>"
+msgstr ""
+"<command>man -k foo</command> erabili ezazu <emphasis>foo</emphasis>-"
+"rentzako man fitxategiak bilatzeko. Proba ezazu <screen>man -k "
+"nautilus</screen> honek nola funtzionatzen duen ikusteko. <placeholder-1/>"
+
+#: basic-commands/C/basic-commands.xml:459(para)
+msgid "This is the same as the <command>whatis</command> command."
+msgstr "<command>whatis</command> aginduaren berdina da hau."
+
+#: basic-commands/C/basic-commands.xml:454(para)
+msgid ""
+"<command>man -f foo</command>, searches only the titles of your system's man "
+"files. For example, try <screen>man -f gnome</screen><placeholder-1/>"
+msgstr ""
+"<command>man -f foo</command> erabili ezazu zure sistemako man fitxategien "
+"izenburuetan bakarrik bilatzeko. Adibidez, proba ezazu <screen>man -f "
+"gnome</screen><placeholder-1/>"
+
+#: basic-commands/C/basic-commands.xml:471(title)
+msgid "Other Useful Things"
+msgstr "Beste Gauza Erabilgarri Batzuk"
+
+#: basic-commands/C/basic-commands.xml:474(title)
+msgid "Pasting in commands"
+msgstr "Aginduak itsastea"
+
+#: basic-commands/C/basic-commands.xml:475(para)
+msgid ""
+"Often, you will be referred to instructions that require commands to be "
+"pasted into the terminal. You might be wondering why the text you've copied "
+"from a web page using "
+"<keycombo><keycap>Ctrl</keycap><keycap>C</keycap></keycombo> won't paste in "
+"with <keycombo><keycap>Ctrl</keycap><keycap>V</keycap></keycombo>. Surely "
+"you don't have to type in all those nasty commands and filenames? Relax. "
+"Middle Button Click on your mouse (both buttons simultaneously on a two-"
+"button mouse) or Right Click and select "
+"<menuchoice><guimenuitem>Paste</guimenuitem></menuchoice> from the menu."
+msgstr ""
+"Askotan, jasoko dituzun argibideak jarraitzeko, aginduak itsatsi beharko "
+"dituzu terminalean. Ziurrenik, ez duzu ulertuko zergatik ezin duzun webgune "
+"batetik testu bat kopiatu "
+"<keycombo><keycap>Ctrl</keycap><keycap>C</keycap></keycombo> erabiliz eta "
+"ondoren <keycombo><keycap>Ctrl</keycap><keycap>V</keycap></keycombo> "
+"erabiliz itsatsi. Ez dituzu agindu eta fitxategi-izen guzti horiek idatzi "
+"nahi? Lasai. Erdiko botoiarekin klik egin ezazu zure saguan (bi botoidun "
+"sagua bada, bi botoiak batera sakatu itzazu) edo eskuin klik egin ezazu eta "
+"<menuchoice><guimenuitem>Itsatsi</guimenuitem></menuchoice> hautatu."
+
+#: basic-commands/C/basic-commands.xml:498(title)
+msgid "Save on typing"
+msgstr "Azkarrago idatzi"
+
+#: basic-commands/C/basic-commands.xml:507(para)
+msgid ""
+"<keycap>Up Arrow</keycap> or "
+"<keycombo><keycap>Ctrl</keycap><keycap>p</keycap></keycombo>"
+msgstr ""
+"<keycap>Gora gezia</keycap> edo "
+"<keycombo><keycap>Ctrl</keycap><keycap>p</keycap></keycombo>"
+
+#: basic-commands/C/basic-commands.xml:517(para)
+msgid "Scrolls through the commands you've entered previously."
+msgstr "Aurretik idatzi dituzun aginduak eskuratu."
+
+#: basic-commands/C/basic-commands.xml:525(para)
+msgid ""
+"<keycap>Down Arrow</keycap> or "
+"<keycombo><keycap>Ctrl</keycap><keycap>n</keycap></keycombo>"
+msgstr ""
+"<keycap>Behera gezia</keycap> edo "
+"<keycombo><keycap>Ctrl</keycap><keycap>n</keycap></keycombo>"
+
+#: basic-commands/C/basic-commands.xml:535(para)
+msgid "Takes you back to a more recent command."
+msgstr "Agindu berriago bat eskuratu."
+
+#: basic-commands/C/basic-commands.xml:542(keycap)
+msgid "Enter"
+msgstr "Enter"
+
+#: basic-commands/C/basic-commands.xml:547(para)
+msgid "When you have the command you want."
+msgstr "Nahi duzun agindua baduzunean"
+
+#: basic-commands/C/basic-commands.xml:553(keycap)
+msgid "Tab"
+msgstr "Tab"
+
+#: basic-commands/C/basic-commands.xml:558(para)
+msgid ""
+"A very useful feature. It autocompletes any commands or filenames, if "
+"there's only one option, or else gives you a list of options."
+msgstr ""
+"Ezaugarri oso erabilgarria. Aukera bakarra badago, fitxategiaren izena edo "
+"agindua automatikoki osatuko du guztiz; bestela, aukeren zerrenda bat emango "
+"dizu."
+
+#: basic-commands/C/basic-commands.xml:571(title)
+msgid "Change the text"
+msgstr "Testua aldatu"
+
+#: basic-commands/C/basic-commands.xml:572(para)
+msgid ""
+"The mouse won't work. Use the <keycap>Left/Right arrow</keycap> keys to move "
+"around the line."
+msgstr ""
+"Ezingo duzu saguarekin egin. <keycap>Eskuin/Ezker gezia</keycap> teklak "
+"erabili itzazu lerroan zehar mugitzeko."
+
+#: basic-commands/C/basic-commands.xml:576(para)
+msgid ""
+"When the cursor is where you want it in the line, typing "
+"<emphasis>inserts</emphasis> text, it doesn't overtype what's already there."
+msgstr ""
+"Kurtsorea lerroan kokatu duzunean, idatzi ezazu testua "
+"<emphasis>txertatzeko</emphasis> (ez da jadanik dagoena gainidatziko)."
+
+#: basic-commands/C/basic-commands.xml:591(keycap) basic-commands/C/basic-commands.xml:607(keycap) basic-commands/C/basic-commands.xml:626(keycap) basic-commands/C/basic-commands.xml:642(keycap) basic-commands/C/basic-commands.xml:657(keycap) basic-commands/C/basic-commands.xml:671(keycap)
+msgid "Ctrl"
+msgstr "Ctrl"
+
+#: basic-commands/C/basic-commands.xml:592(keycap)
+msgid "a"
+msgstr "a"
+
+#: basic-commands/C/basic-commands.xml:594(keycap)
+msgid "Home"
+msgstr "Inicio"
+
+#: basic-commands/C/basic-commands.xml:599(para)
+msgid "Moves the cursor to the <emphasis>start</emphasis> of a line."
+msgstr "Lerroaren <emphasis>hasiera</emphasis>ra mugitzen du kurtsorea."
+
+#: basic-commands/C/basic-commands.xml:608(keycap)
+msgid "e"
+msgstr "e"
+
+#: basic-commands/C/basic-commands.xml:610(keycap)
+msgid "End"
+msgstr "Fin"
+
+#: basic-commands/C/basic-commands.xml:615(para)
+msgid ""
+"Moves the cursor to the <emphasis><emphasis "
+"role=\"strong\">e</emphasis>nd</emphasis> of a line."
+msgstr ""
+"Lerroaren amaierara (<emphasis><emphasis "
+"role=\"strong\">e</emphasis>nd</emphasis>) mugitzen du kurtsorea."
+
+#: basic-commands/C/basic-commands.xml:627(keycap)
+msgid "b"
+msgstr "b"
+
+#: basic-commands/C/basic-commands.xml:633(para)
+msgid ""
+"Moves to the <emphasis role=\"strong\">b</emphasis>eginning of the previous "
+"or current word."
+msgstr ""
+"Aurreko edo uneko hitzaren hasierara (<emphasis "
+"role=\"strong\">b</emphasis>eginning) mugitzen du kurtsorea."
+
+#: basic-commands/C/basic-commands.xml:643(keycap)
+msgid "k"
+msgstr "k"
+
+#: basic-commands/C/basic-commands.xml:649(para)
+msgid "Deletes from the current cursor position to the end of the line."
+msgstr "Kurtsoretik lerroaren amaierarartekoak ezabatzen ditu."
+
+#: basic-commands/C/basic-commands.xml:658(keycap)
+msgid "u"
+msgstr "u"
+
+#: basic-commands/C/basic-commands.xml:664(para)
+msgid "Deletes the whole of the current line."
+msgstr "Uneko lerro osoa ezabatzen du."
+
+#: basic-commands/C/basic-commands.xml:672(keycap)
+msgid "w"
+msgstr "w"
+
+#: basic-commands/C/basic-commands.xml:678(para)
+msgid "Deletes the word before the cursor."
+msgstr "Kurtsorearen aurreko hitza ezabatzen du."
+
+#: basic-commands/C/basic-commands.xml:688(title)
+msgid "More Information"
+msgstr "Informazio Gehiago"
+
+#: basic-commands/C/basic-commands.xml:689(para)
+msgid "The following online guides are available:"
+msgstr "Ondorengo online-gidak dituzu eskuragarri:"
+
+#: basic-commands/C/basic-commands.xml:692(para)
+msgid ""
+"<ulink url=\"https://help.ubuntu.com/community/AptGetHowto\"> "
+"AptGetHowto</ulink> - using apt-get to install packages from the command "
+"line."
+msgstr ""
+"<ulink url=\"https://help.ubuntu.com/community/AptGetHowto\"> "
+"AptGetHowto</ulink> - nola erabili apt-get agindu-lerroa erabiliz "
+"instalatzeko paketeak."
+
+#: basic-commands/C/basic-commands.xml:699(para)
+msgid ""
+"<ulink url=\"https://help.ubuntu.com/community/Repositories/CommandLine\"> "
+"Commandline Repository Editing</ulink> - adding the Universe/Multiverse "
+"repositories through the command line."
+msgstr ""
+"<ulink url=\"https://help.ubuntu.com/community/Repositories/CommandLine\"> "
+"Commandline Repository Editing</ulink> - nola gehitu Universe/Multiverse "
+"errepositorioak agindu-lerroa erabiliz."
+
+#: basic-commands/C/basic-commands.xml:707(para)
+msgid ""
+"<ulink url=\"https://help.ubuntu.com/community/grep\">grep Howto</ulink> - "
+"grep is a powerful command line search tool."
+msgstr ""
+"<ulink url=\"https://help.ubuntu.com/community/grep\">grep Howto</ulink> - "
+"agindu-lerroa erabiliz bilaketak egiteko tresna boteretsua da grep."
+
+#: basic-commands/C/basic-commands.xml:714(para)
+msgid ""
+"<ulink url=\"https://help.ubuntu.com/community/find\">find </ulink> - locate "
+"files on the command line."
+msgstr ""
+"<ulink url=\"https://help.ubuntu.com/community/find\">find </ulink> - agindu-"
+"lerroa erabiliz bilatu fitxategiak."
+
+#: basic-commands/C/basic-commands.xml:720(para)
+msgid ""
+"<ulink url=\"https://help.ubuntu.com/community/CommandlineHowto\"> "
+"CommandlineHowto</ulink> - longer and more complete than this basic guide, "
+"but still unfinished."
+msgstr ""
+"<ulink url=\"https://help.ubuntu.com/community/CommandlineHowto\"> "
+"CommandlineHowto</ulink> - oinarrizko gida hau baina luzeago eta osatuagoa, "
+"nahiz eta ez dagoen oraindik amaitua."
+
+#: basic-commands/C/basic-commands.xml:727(para)
+msgid ""
+"<ulink url=\"https://help.ubuntu.com/community/HowToReadline\"> "
+"HowToReadline</ulink> - information on some more advanced customization for "
+"the command line."
+msgstr ""
+"<ulink url=\"https://help.ubuntu.com/community/HowToReadline\"> "
+"HowToReadline</ulink> - agindu-lerroaren pertsonalizazio aurreratu gehiagori "
+"buruzko informazio gehiago."
+
+#: basic-commands/C/basic-commands.xml:734(para)
+msgid "For more detailed tutorials on the Linux command line, please see:"
+msgstr ""
+"Linuxen agindu-lerroari buruzko gida osatuagoak eskuratzeko, irakurri:"
+
+#: basic-commands/C/basic-commands.xml:740(para)
+msgid ""
+"<ulink url=\"http://linuxcommand.org/\"/>- basic BASH tutorials, including "
+"BASH scripting"
+msgstr ""
+"<ulink url=\"http://linuxcommand.org/\"/>- oinarrizko BASH gidak, BASH "
+"scripting-ari buruzkoak barne"
+
+#: basic-commands/C/basic-commands.xml:746(para)
+msgid ""
+"<ulink url=\"http://linuxsurvival.com/index.php\"/>- Java-based tutorials"
+msgstr ""
+"<ulink url=\"http://linuxsurvival.com/index.php\"/>- Javan oinarritutako "
+"gidak"
+
+#: basic-commands/C/basic-commands.xml:752(para)
+msgid ""
+"<ulink url=\"http://rute.2038bug.com/index.html.gz\"/>- a massive online "
+"book about system administration, almost all from the command line."
+msgstr ""
+"<ulink url=\"http://rute.2038bug.com/index.html.gz\"/>- sistemen kudeaketari "
+"buruzko online liburu ikaragarria, gehien bat agindu-lerroari buruzkoa."
+
+#. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2.
+#: basic-commands/C/basic-commands.xml:0(None)
+msgid "translator-credits"
+msgstr ""
+"Launchpad Contributions:\n"
+"  Mikel Pascual Aldabaldetreku https://launchpad.net/~mpascual\n"
+"\n"
+"Launchpad Contributions:\n"
+"  Launchpad Translations Administrators https://launchpad.net/~rosetta-"
+"admins\n"
+"  Mikel Pascual Aldabaldetreku https://launchpad.net/~mpascual"

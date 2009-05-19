@@ -54,47 +54,13 @@
 			<listitem><para>Under <guilabel>Wireless Network</guilabel> click the radio button next to the
 			network you want to connect to.</para></listitem>
 		</orderedlist>
-		<para>If you have selected the network previously, the previous supplied details are used to connect.</para>
-		<para>New connections, will present a dialog box and in most circumstances will detect
-		the required security type.</para>
-		<sect2 id="connecting-wireless-wep" status="review">
-			<title>WEP Security</title>
-			<orderedlist>
-				<listitem><para>Select the WEP type from the <guilabel>Wireless Security</guilabel> drop down.</para></listitem>
-				<listitem><para>Enter the <guilabel>Username</guilabel> and <guilabel>Password</guilabel>. Ticking the <guilabel>Show Password</guilabel> will display the key.</para></listitem>
-				<listitem><para>Click the <guibutton>Connect</guibutton>.</para></listitem>
-			</orderedlist>
-		</sect2>
-		<sect2 id="connecting-wireless-leap" status="review">
-			<title>LEAP Security</title>
-			<orderedlist>
-				<listitem><para>Select LEAP from the <guilabel>Wireless Security</guilabel> drop down.</para></listitem>
-				<listitem><para>Enter the key or passphrase. Ticking the <guilabel>Show Key</guilabel> will display the key.</para></listitem>
-				<listitem><para>Select the <guilabel>WEP index</guilabel> drop down, the default is "1".</para></listitem>
-				<listitem><para>Select the authentication type from the <guilabel>Authentication</guilabel>.</para></listitem>
-				<listitem><para>Click the <guibutton>Connect</guibutton>.</para></listitem>
-			</orderedlist>
-		</sect2>
-		<sect2 id="connecting-wireless-dynamic" status="review">
-			<title>802.1x</title>
-			<orderedlist>
-				<listitem><para>Select Dynamic WEP from the <guilabel>Wireless Security</guilabel> drop down.</para></listitem>
-				<listitem><para>Select the <guilabel>Authentication</guilabel> drop down.</para></listitem>
-				<listitem><para>Choose a User Ceritificate by clicking the <guibutton>User Ceritificate</guibutton> browse button. Navigate to the certificate and click <guibutton>Open</guibutton>.</para></listitem>
-				<listitem><para>Choose a CA Ceritificate by clicking the <guibutton>CA Ceritificate</guibutton> browse button. Navigate to the certificate and click <guibutton>Open</guibutton>.</para></listitem>
-				<listitem><para>Choose a Private Key by clicking the <guibutton>Private Key</guibutton> browse button. Navigate to the certificate and click <guibutton>Open</guibutton>.</para></listitem>
-				<listitem><para>Enter the private key password. Ticking the <guilabel>Show Key</guilabel> will display the key.</para></listitem>
-				<listitem><para>Click the <guibutton>Connect</guibutton>.</para></listitem>
-			</orderedlist>
-		</sect2>
-		<sect2 id="connecting-wireless-wpa" status="review">
-			<title>WPA and WPA2 Personal Security</title>
-			<orderedlist>
-				<listitem><para>Select the WEP type from the <guilabel>Wireless Security</guilabel> drop down.</para></listitem>
-				<listitem><para>Enter the password. Ticking the <guilabel>Show Password</guilabel> will display the key.</para></listitem>
-				<listitem><para>Click the <guibutton>Connect</guibutton>.</para></listitem>
-			</orderedlist>
-		</sect2>
+		<para>If you have connected to the network previously, Ubuntu will automatically connect to the network where it is available.</para>
+		<para>If you are connecting to a network for the first time, security details may be needed. If so, a dialog box will open. Enter your security details as follows.</para>
+		<procedure>
+			<step><para>In most cases the security type will be detected automatically. If not, select the security type from the <guilabel>Wireless Security</guilabel> drop-down box. This will depend on how the wireless network is set up. Examples of security types are WEP, WPA and LEAP.</para></step>
+			<step><para>Enter the password, key or other authentication details as appropriate.</para></step>
+			<step><para>Click <guibutton>Connect</guibutton>.</para></step>
+		</procedure>
 	</sect1>
 
 	<sect1 id="connecting-mobile" status="review">

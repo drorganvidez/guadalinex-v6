@@ -207,7 +207,7 @@ syntax of the command, entered at a terminal prompt, is as follows:</para>
 
 	<programlisting> &lt;Location /svn&gt;
   DAV svn
-  SVNPath /path/to/repos
+  SVNParentPath /home/svn
   AuthType Basic
   AuthName "Your repository name"
   AuthUserFile /etc/subversion/passwd
@@ -215,6 +215,13 @@ syntax of the command, entered at a terminal prompt, is as follows:</para>
   Require valid-user
   &lt;/LimitExcept&gt;
   &lt;/Location&gt; </programlisting>
+	<note>
+		<para>The above configuration snippet assumes that Subversion
+    repositories are created under <filename>/home/svn/</filename>
+    directory using <command>svnadmin</command> command.  They can be
+    accessible using <command>htpp://hostname/svn/repos_name</command>
+    url.</para>
+	</note>
          <para>
          To import or commit files to your Subversion repository over
          HTTP, the repository should be owned by the HTTP user. In

@@ -417,7 +417,7 @@ gidNumber: 10000
 
 
 <screen>
-<command>ldapadd -x -b dc=example,dc=com -D cn=admin,dc=example,dc=com -W -f example.com.ldif</command>
+<command>ldapadd -x -D cn=admin,dc=example,dc=com -W -f example.com.ldif</command>
 </screen>
 
 	<para>
@@ -945,11 +945,11 @@ TLS_CACERT /etc/ssl/certs/cacert.pem
           </itemizedlist>
 
           <para>
-          Using the <application>pam-auth-update</application>, configure the system to use LDAP for authentication:
+          Using the <application>pam-auth-update</application> utility, configure the system to use LDAP for authentication:
           </para>
 
 <screen>
-<command>sudo pam-auth-update ldap</command>
+<command>sudo pam-auth-update</command>
 </screen>
 
           <para>
@@ -959,6 +959,13 @@ TLS_CACERT /etc/ssl/certs/cacert.pem
           <para>
           You should now be able to login using user credentials stored in the LDAP directory.
           </para> 
+
+          <note>
+            <para>
+            If you are going to use LDAP to store Samba users you will need to configure the server to authenticate using LDAP.
+            See <xref linkend="samba-ldap"/> for details.
+            </para>
+          </note>
 
         </sect2>
         <sect2 id="ldap-usergroup-management" status="review">

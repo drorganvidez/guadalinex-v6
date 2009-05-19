@@ -43,63 +43,20 @@
       described above does not show the status of it's activation.
       </para>
     </note>
-    <sect2 id="libvirt-network" status="review">
+    <sect2 id="virtual-networking" status="review">
       <title>Virtual Networking</title>
+
       <para>
       There are a few different ways to allow a virtual machine access to the external network.  The default virtual network configuration is 
       <emphasis>usermode</emphasis> networking, which uses the SLIRP protocol and traffic is NATed through the host interface to the outside network.
       </para>
+
       <para>
       To enable external hosts to directly access services on virtual machines a <emphasis>bridge</emphasis> needs to be configured.  This allows
       the virtual interfaces to connect to the outside network through the physical interface, making them appear as normal hosts to the rest 
-      of the network. To setup a bridge interface edit <filename>/etc/network/interfaces</filename> and either 
-      comment or replace the existing config with:
+      of the network. For information on setting up a bridge see <xref linkend="bridging"/>.
       </para>
-<programlisting>
-auto lo
-iface lo inet loopback
 
-auto br0
-iface br0 inet static
-        address 192.168.0.10
-        network 192.168.0.0
-        netmask 255.255.255.0
-        broadcast 192.168.0.255
-        gateway 192.168.0.1
-        bridge_ports eth0
-        bridge_fd 9
-        bridge_hello 2
-        bridge_maxage 12
-        bridge_stp off
-</programlisting>
-      <note>
-        <para>
-        Enter the appropriate values for your physical interface and network.
-        </para>
-      </note>
-      <para>
-      Now restart networking and your virtual machines that are managed by <application>libvirt</application> will appear on the network the same as 
-      physical hosts:
-      </para>
-<screen>
-<command>sudo /etc/init.d/networking restart</command>
-</screen>
-    <para>
-    If setting up a bridge interface using Ubuntu Desktop Edition, or if <application>dhcdbd</application> is installed,  the 
-    <application>dhcdbd</application> daemon will need to be stopped and disabled.  
-    </para>
-    <para>
-    After configuring the bridge in <filename>/etc/network/interfaces</filename>, shutdown <application>dhcdbd</application> by:
-    </para>
-<screen>
-<command>sudo /etc/init.d/dhcdbd stop</command>
-</screen>
-    <para>
-    Now to disable it from starting on boot enter:
-    </para>
-<screen>
-<command>sudo update-rc.d -f dhcdbd remove</command>
-</screen>
     </sect2>
     <sect2 id='libvirt-installation' status='review'>
       <title>Installation</title>
@@ -155,7 +112,7 @@ iface br0 inet static
       There are several options available when using <application>virt-install</application>.  For example:
       </para>
 <screen>
-<command>sudo virt-install -n web_devel -r 256 -f web_devel.img -s 4 -c jeos.iso --accelerate --vnc --noautoconsole</command>
+<command>sudo virt-install -n web_devel -r 256 -f web_devel.img -s 4 -c jeos.iso --accelerate --connect=qemu:///system --vnc --noautoconsole</command>
 </screen>
       <itemizedlist>
         <listitem>
@@ -394,7 +351,7 @@ iface br0 inet static
       </para>
       <para>
       If configured to use a <emphasis>bridged</emphasis> network interface you can also setup <application>SSH</application> access
-      to the virtual machine.  See <xref linkend="openssh-server"/> and <xref linkend="libvirt-network"/> for more details.
+      to the virtual machine.  See <xref linkend="openssh-server"/> and <xref linkend="bridging"/> for more details.
       </para>
     </sect2>
     <sect2 id="libvirt-resources" status="review">

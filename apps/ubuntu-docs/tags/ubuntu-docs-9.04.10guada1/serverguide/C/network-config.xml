@@ -181,6 +181,90 @@ nameserver 208.185.179.218
             add them to the <filename>/etc/hosts</filename> file.
             </para>
         </sect2>
+
+    <sect2 id="bridging" status="review">
+      <title>Bridging</title>
+
+      <para>
+      Bridging multiple interfaces is a more advanced configuration, but is very useful in multiple scenarios.  
+      One scenario is setting up a bridge with multiple network interfaces, then using a firewall to filter traffic
+      between two network segments.  Another scenario is using bridge on a system with one interface to allow virtual
+      machines direct access to the outside network.  The following example covers the latter scenario.
+      </para>
+
+      <para>
+      Before configuring a bridge you will need to install the <application>bridge-utils</application> package.  To install the 
+      package, in a terminal enter:
+      </para>
+
+<screen>
+<command>sudo apt-get install bridge-utils</command>
+</screen>
+
+      <para>
+      Next, configure the bridge by editing <filename>/etc/network/interfaces</filename>:
+      </para>
+
+<programlisting>
+auto lo
+iface lo inet loopback
+
+auto br0
+iface br0 inet static
+        address 192.168.0.10
+        network 192.168.0.0
+        netmask 255.255.255.0
+        broadcast 192.168.0.255
+        gateway 192.168.0.1
+        bridge_ports eth0
+        bridge_fd 9
+        bridge_hello 2
+        bridge_maxage 12
+        bridge_stp off
+</programlisting>
+
+      <note>
+        <para>
+        Enter the appropriate values for your physical interface and network.
+        </para>
+      </note>
+
+      <para>
+      Now restart networking to enable the bridge interface:
+      </para>
+
+<screen>
+<command>sudo /etc/init.d/networking restart</command>
+</screen>
+
+    <para>
+    If setting up a bridge interface using Ubuntu Desktop Edition, or if <application>dhcdbd</application> is installed,  the 
+    <application>dhcdbd</application> daemon will need to be stopped and disabled.  
+    </para>
+
+    <para>
+    After configuring the bridge in <filename>/etc/network/interfaces</filename>, shutdown <application>dhcdbd</application> by:
+    </para>
+
+<screen>
+<command>sudo /etc/init.d/dhcdbd stop</command>
+</screen>
+
+    <para>
+    Now to disable it from starting on boot enter:
+    </para>
+
+<screen>
+<command>sudo update-rc.d -f dhcdbd remove</command>
+</screen>
+
+        <para>
+        The new bridge interface should now be up and running.  The <application>brctl</application> provides useful information
+        about the state of the bridge, controls which interfaces are part of the bridge, etc.  See <command>man brctl</command> 
+        for more information.        
+        </para>
+
+      </sect2>
     </sect1>
 	<sect1 id="tcpip" status="review">
 		<title>TCP/IP</title>

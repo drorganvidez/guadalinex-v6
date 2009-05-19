@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2009-03-10 18:38+0000\n"
+"POT-Creation-Date: 2009-03-21 10:26+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -183,7 +183,7 @@ msgstr ""
 msgid "To create additional shares simply create new <emphasis>[dir]</emphasis> sections in <filename>/etc/samba/smb.conf</filename>, and restart <emphasis>Samba</emphasis>. Just make sure that the directory you want to share actually exists and the permissions are correct."
 msgstr ""
 
-#: serverguide/C/windows-networking.xml:243(title) serverguide/C/windows-networking.xml:336(title) serverguide/C/windows-networking.xml:686(title) serverguide/C/windows-networking.xml:1051(title) serverguide/C/windows-networking.xml:1253(title) serverguide/C/virtualization.xml:366(title) serverguide/C/virtualization.xml:1163(title) serverguide/C/remote-administration.xml:478(title) serverguide/C/network-config.xml:269(title) serverguide/C/network-config.xml:512(title) serverguide/C/network-auth.xml:1186(title) serverguide/C/network-auth.xml:1625(title) serverguide/C/network-auth.xml:2223(title) serverguide/C/network-auth.xml:2676(title) serverguide/C/jeos.xml:782(title) serverguide/C/installation.xml:840(title) serverguide/C/installation.xml:1139(title) serverguide/C/databases.xml:122(title) serverguide/C/databases.xml:268(title) serverguide/C/backups.xml:855(title) 
+#: serverguide/C/windows-networking.xml:243(title) serverguide/C/windows-networking.xml:336(title) serverguide/C/windows-networking.xml:686(title) serverguide/C/windows-networking.xml:1051(title) serverguide/C/windows-networking.xml:1253(title) serverguide/C/virtualization.xml:366(title) serverguide/C/virtualization.xml:1163(title) serverguide/C/remote-administration.xml:478(title) serverguide/C/network-config.xml:269(title) serverguide/C/network-config.xml:512(title) serverguide/C/network-auth.xml:1186(title) serverguide/C/network-auth.xml:1625(title) serverguide/C/network-auth.xml:2223(title) serverguide/C/network-auth.xml:2727(title) serverguide/C/jeos.xml:782(title) serverguide/C/installation.xml:840(title) serverguide/C/installation.xml:1139(title) serverguide/C/databases.xml:122(title) serverguide/C/databases.xml:268(title) serverguide/C/backups.xml:855(title) 
 msgid "Resources"
 msgstr ""
 
@@ -6730,13 +6730,13 @@ msgstr ""
 msgid "As an example of modifying the <emphasis>cn=config</emphasis> tree, add another attribute to the index list using <application>ldapmodify</application>:"
 msgstr ""
 
-#: serverguide/C/network-auth.xml:171(command) serverguide/C/network-auth.xml:723(command) serverguide/C/network-auth.xml:825(command) serverguide/C/network-auth.xml:848(command) serverguide/C/network-auth.xml:2514(command) 
+#: serverguide/C/network-auth.xml:171(command) serverguide/C/network-auth.xml:723(command) serverguide/C/network-auth.xml:825(command) serverguide/C/network-auth.xml:848(command) serverguide/C/network-auth.xml:2405(command) serverguide/C/network-auth.xml:2422(command) 
 msgid "ldapmodify -x -D cn=admin,cn=config -W"
 msgstr ""
 
 #: serverguide/C/network-auth.xml:175(userinput) 
 #, no-wrap
-msgid "\ndn: olcDatabase={1}hdb,cn=config\nadd: olcDbIndex\nolcDbIndex: cn eq,pres,sub"
+msgid "\ndn: olcDatabase={1}hdb,cn=config\nadd: olcDbIndex\nolcDbIndex: entryUUID eq"
 msgstr ""
 
 #: serverguide/C/network-auth.xml:175(computeroutput) 
@@ -6791,7 +6791,7 @@ msgstr ""
 msgid "Next, create a temporary directory to hold the output:"
 msgstr ""
 
-#: serverguide/C/network-auth.xml:259(command) serverguide/C/network-auth.xml:1309(command) serverguide/C/network-auth.xml:2335(command) 
+#: serverguide/C/network-auth.xml:259(command) serverguide/C/network-auth.xml:1309(command) serverguide/C/network-auth.xml:2334(command) 
 msgid "mkdir /tmp/ldif_output"
 msgstr ""
 
@@ -6799,7 +6799,7 @@ msgstr ""
 msgid "Now using <application>slaptest</application> convert the schema files to LDIF:"
 msgstr ""
 
-#: serverguide/C/network-auth.xml:270(command) serverguide/C/network-auth.xml:1320(command) serverguide/C/network-auth.xml:2346(command) 
+#: serverguide/C/network-auth.xml:270(command) serverguide/C/network-auth.xml:1320(command) serverguide/C/network-auth.xml:2345(command) 
 msgid "slaptest -f schema_convert.conf -F /tmp/ldif_output"
 msgstr ""
 
@@ -6825,7 +6825,7 @@ msgstr ""
 msgid "\nstructuralObjectClass: olcSchemaConfig\nentryUUID: 10dae0ea-0760-102d-80d3-f9366b7f7757\ncreatorsName: cn=config\ncreateTimestamp: 20080826021140Z\nentryCSN: 20080826021140.791425Z#000000#000#000000\nmodifiersName: cn=config\nmodifyTimestamp: 20080826021140Z\n"
 msgstr ""
 
-#: serverguide/C/network-auth.xml:308(para) serverguide/C/network-auth.xml:1356(para) serverguide/C/network-auth.xml:2382(para) 
+#: serverguide/C/network-auth.xml:308(para) serverguide/C/network-auth.xml:1356(para) serverguide/C/network-auth.xml:2381(para) 
 msgid "The attribute values will vary, just be sure the attributes are removed."
 msgstr ""
 
@@ -7067,7 +7067,7 @@ msgstr ""
 
 #: serverguide/C/network-auth.xml:753(programlisting) 
 #, no-wrap
-msgid "\nSLAPD_SERVICES=\"ldap://127.0.0.1:389/ ldaps:/// ldapi:///\"\n"
+msgid "\nSLAPD_SERVICES=\"ldap:/// ldapi:/// ldaps:///\"\n"
 msgstr ""
 
 #: serverguide/C/network-auth.xml:757(para) 
@@ -7141,7 +7141,7 @@ msgstr ""
 msgid "dn: olcDatabase={1}hdb,cn=config\nreplace: olcSyncrepl\nolcSyncrepl: {0}rid=003 provider=ldap://ldap01.example.com binddn=\"cn=admin,dc=example,dc=\n com\" bindmethod=simple credentials=secret searchbase=\"dc=example,dc=com\" type=r\n efreshOnly interval=00:00:00:10 retry=\"5 5 300 5\" timeout=1 starttls=yes\nolcSyncrepl: {1}rid=004 provider=ldap://ldap02.example.com binddn=\"cn=admin,dc=example,dc=\n com\" bindmethod=simple credentials=secret searchbase=\"dc=example,dc=com\" type=r\n efreshOnly interval=00:00:00:10 retry=\"5 5 300 5\" timeout=1 starttls=yes"
 msgstr ""
 
-#: serverguide/C/network-auth.xml:852(computeroutput) serverguide/C/network-auth.xml:2515(computeroutput) 
+#: serverguide/C/network-auth.xml:852(computeroutput) serverguide/C/network-auth.xml:2406(computeroutput) 
 #, no-wrap
 msgid "Enter LDAP Password:\n<placeholder-1/>\n\nmodifying entry \"olcDatabase={1}hdb,cn=config\""
 msgstr ""
@@ -7475,7 +7475,7 @@ msgstr ""
 msgid "The <emphasis>samba</emphasis> schema needs to be added to the <emphasis>cn=config</emphasis> tree. The procedure to add a new schema to <application>slapd</application> is also detailed in <xref linkend=\"openldap-configuration\"/>."
 msgstr ""
 
-#: serverguide/C/network-auth.xml:1280(para) serverguide/C/network-auth.xml:2306(para) 
+#: serverguide/C/network-auth.xml:1280(para) serverguide/C/network-auth.xml:2305(para) 
 msgid "First, create a configuration file named <filename>schema_convert.conf</filename>, or a similar descriptive name, containing the following lines:"
 msgstr ""
 
@@ -7484,11 +7484,11 @@ msgstr ""
 msgid "\ninclude /etc/ldap/schema/core.schema\ninclude /etc/ldap/schema/collective.schema\ninclude /etc/ldap/schema/corba.schema\ninclude /etc/ldap/schema/cosine.schema\ninclude /etc/ldap/schema/duaconf.schema\ninclude /etc/ldap/schema/dyngroup.schema\ninclude /etc/ldap/schema/inetorgperson.schema\ninclude /etc/ldap/schema/java.schema\ninclude /etc/ldap/schema/misc.schema\ninclude /etc/ldap/schema/nis.schema\ninclude /etc/ldap/schema/openldap.schema\ninclude /etc/ldap/schema/ppolicy.schema\ninclude /etc/ldap/schema/samba.schema\n"
 msgstr ""
 
-#: serverguide/C/network-auth.xml:1315(para) serverguide/C/network-auth.xml:2341(para) 
+#: serverguide/C/network-auth.xml:1315(para) serverguide/C/network-auth.xml:2340(para) 
 msgid "Now use <application>slaptest</application> to convert the schema files:"
 msgstr ""
 
-#: serverguide/C/network-auth.xml:1323(para) serverguide/C/network-auth.xml:2349(para) 
+#: serverguide/C/network-auth.xml:1323(para) serverguide/C/network-auth.xml:2348(para) 
 msgid "Change the above file and path names to match your own if they are different."
 msgstr ""
 
@@ -7808,7 +7808,7 @@ msgstr ""
 msgid "Now that the KDC running an admin user is needed. It is recommended to use a different username from your everyday username. Using the <application>kadmin.local</application> utility in a terminal prompt enter:"
 msgstr ""
 
-#: serverguide/C/network-auth.xml:1791(command) serverguide/C/network-auth.xml:2532(command) 
+#: serverguide/C/network-auth.xml:1791(command) serverguide/C/network-auth.xml:2583(command) 
 msgid "sudo kadmin.local"
 msgstr ""
 
@@ -8055,7 +8055,7 @@ msgstr ""
 msgid "Finally, start the <application>krb5-kdc</application> daemon on the Secondary KDC:"
 msgstr ""
 
-#: serverguide/C/network-auth.xml:2105(command) serverguide/C/network-auth.xml:2662(command) 
+#: serverguide/C/network-auth.xml:2105(command) serverguide/C/network-auth.xml:2713(command) 
 msgid "sudo /etc/init.d/krb5-kdc start"
 msgstr ""
 
@@ -8167,206 +8167,245 @@ msgid "First, the necessary <emphasis>schema</emphasis> needs to be loaded on an
 msgstr ""
 
 #: serverguide/C/network-auth.xml:2267(para) 
-msgid "It is recommended to configure OpenLDAP for TLS and SSL connections, so that traffic between the KDC and LDAP server is encrypted. See <xref linkend=\"openldap-tls\"/> for details."
+msgid "It is also required to configure OpenLDAP for TLS and SSL connections, so that traffic between the KDC and LDAP server is encrypted. See <xref linkend=\"openldap-tls\"/> for details."
 msgstr ""
 
-#: serverguide/C/network-auth.xml:2275(para) 
+#: serverguide/C/network-auth.xml:2274(para) 
 msgid "To load the schema into LDAP, on the LDAP server install the <application>krb5-kdc-ldap</application> package. From a terminal enter:"
 msgstr ""
 
-#: serverguide/C/network-auth.xml:2281(command) 
+#: serverguide/C/network-auth.xml:2280(command) 
 msgid "sudo apt-get install krb5-kdc-ldap"
 msgstr ""
 
-#: serverguide/C/network-auth.xml:2286(para) 
+#: serverguide/C/network-auth.xml:2285(para) 
 msgid "Next, extract the <filename>kerberos.schema.gz</filename> file:"
 msgstr ""
 
-#: serverguide/C/network-auth.xml:2291(command) 
+#: serverguide/C/network-auth.xml:2290(command) 
 msgid "sudo gzip -d /usr/share/doc/krb5-kdc-ldap/kerberos.schema.gz"
 msgstr ""
 
-#: serverguide/C/network-auth.xml:2292(command) 
+#: serverguide/C/network-auth.xml:2291(command) 
 msgid "sudo cp /usr/share/doc/krb5-kdc-ldap/kerberos.schema /etc/ldap/schema/"
 msgstr ""
 
-#: serverguide/C/network-auth.xml:2298(para) 
+#: serverguide/C/network-auth.xml:2297(para) 
 msgid "The <emphasis>kerberos</emphasis> schema needs to be added to the <emphasis>cn=config</emphasis> tree. The procedure to add a new schema to <application>slapd</application> is also detailed in <xref linkend=\"openldap-configuration\"/>."
 msgstr ""
 
-#: serverguide/C/network-auth.xml:2311(programlisting) 
+#: serverguide/C/network-auth.xml:2310(programlisting) 
 #, no-wrap
 msgid "\ninclude /etc/ldap/schema/core.schema\ninclude /etc/ldap/schema/collective.schema\ninclude /etc/ldap/schema/corba.schema\ninclude /etc/ldap/schema/cosine.schema\ninclude /etc/ldap/schema/duaconf.schema\ninclude /etc/ldap/schema/dyngroup.schema\ninclude /etc/ldap/schema/inetorgperson.schema\ninclude /etc/ldap/schema/java.schema\ninclude /etc/ldap/schema/misc.schema\ninclude /etc/ldap/schema/nis.schema\ninclude /etc/ldap/schema/openldap.schema\ninclude /etc/ldap/schema/ppolicy.schema\ninclude /etc/ldap/schema/kerberos.schema\n"
 msgstr ""
 
-#: serverguide/C/network-auth.xml:2331(para) 
+#: serverguide/C/network-auth.xml:2330(para) 
 msgid "Create a temporary directory to hold the LDIF files:"
 msgstr ""
 
-#: serverguide/C/network-auth.xml:2356(para) 
+#: serverguide/C/network-auth.xml:2355(para) 
 msgid "Edit the generated <filename>/tmp/ldif_output/cn=config/cn=schema/cn={12}kerberos.ldif</filename> file, changing the following attributes:"
 msgstr ""
 
-#: serverguide/C/network-auth.xml:2361(programlisting) 
+#: serverguide/C/network-auth.xml:2360(programlisting) 
 #, no-wrap
 msgid "\ndn: cn=kerberos,cn=schema,cn=config\n...\ncn: kerberos\n"
 msgstr ""
 
-#: serverguide/C/network-auth.xml:2367(para) 
+#: serverguide/C/network-auth.xml:2366(para) 
 msgid "And remove the following lines from the end of the file:"
 msgstr ""
 
-#: serverguide/C/network-auth.xml:2371(programlisting) 
+#: serverguide/C/network-auth.xml:2370(programlisting) 
 #, no-wrap
 msgid "\nstructuralObjectClass: olcSchemaConfig\nentryUUID: 18ccd010-746b-102d-9fbe-3760cca765dc\ncreatorsName: cn=config\ncreateTimestamp: 20090111203515Z\nentryCSN: 20090111203515.326445Z#000000#000#000000\nmodifiersName: cn=config\nmodifyTimestamp: 20090111203515Z\n"
 msgstr ""
 
-#: serverguide/C/network-auth.xml:2390(para) 
-msgid "Finally, load the new schema with <application>ldapadd</application>:"
+#: serverguide/C/network-auth.xml:2389(para) 
+msgid "Load the new schema with <application>ldapadd</application>:"
 msgstr ""
 
-#: serverguide/C/network-auth.xml:2395(command) 
+#: serverguide/C/network-auth.xml:2394(command) 
 msgid "ldapadd -x -D cn=admin,cn=config -W -f /tmp/ldif_output/cn\\=config/cn\\=schema/cn\\=\\{12\\}kerberos.ldif"
 msgstr ""
 
-#: serverguide/C/network-auth.xml:2403(para) 
-msgid "That's it, your LDAP directory is now ready to serve as a Kerberos principal database."
+#: serverguide/C/network-auth.xml:2400(para) 
+msgid "Add an index for the <emphasis>krb5principalname</emphasis> attribute:"
 msgstr ""
 
-#: serverguide/C/network-auth.xml:2409(title) 
-msgid "Primary KDC Configuration"
-msgstr ""
-
-#: serverguide/C/network-auth.xml:2411(para) 
-msgid "With <application>OpenLDAP</application> configured it is time to configure the KDC."
-msgstr ""
-
-#: serverguide/C/network-auth.xml:2417(para) 
-msgid "First, install the necessary packages, from a terminal enter:"
-msgstr ""
-
-#: serverguide/C/network-auth.xml:2422(command) serverguide/C/network-auth.xml:2569(command) 
-msgid "sudo apt-get install krb5-kdc krb5-admin-server krb5-kdc-ldap"
-msgstr ""
-
-#: serverguide/C/network-auth.xml:2428(para) 
-msgid "Now edit <filename>/etc/krb5.conf</filename> adding the following options to under the appropriate sections:"
-msgstr ""
-
-#: serverguide/C/network-auth.xml:2432(programlisting) 
-#, no-wrap
-msgid "\n[libdefaults]\n        default_realm = EXAMPLE.COM\n\n...\n\n[realms]\n        EXAMPLE.COM = {\n                kdc = kdc01.example.com\n                kdc = kdc02.example.com\n                admin_server = kdc01.example.com\n                admin_server = kdc02.example.com\n                default_domain = example.com\n                database_module = openldap_ldapconf\n        }\n\n...\n\n[domain_realm]\n        .example.com = EXAMPLE.COM\n\n\n...\n\n[dbdefaults]\n        ldap_kerberos_container_dn = dc=example,dc=com\n\n[dbmodules]\n        openldap_ldapconf = {\n                db_library = kldap\n                ldap_kdc_dn = \"cn=admin,dc=example,dc=com\"\n\n                # this object needs to have read rights on\n                # the realm container, principal container and realm sub-trees\n                ldap_kadmind_dn = \"cn=admin,dc=example,dc=com\"\n\n                # this object needs to have read and write rights on\n                # the realm container, principal container and realm sub-trees\n                ldap_service_password_file = /etc/krb5kdc/service.keyfile\n                ldap_servers = ldaps://ldap01.example.com ldaps://ldap02.example.com\n                ldap_conns_per_server = 5\n        }\n"
-msgstr ""
-
-#: serverguide/C/network-auth.xml:2477(para) 
-msgid "Change <emphasis>example.com</emphasis>, <emphasis>dc=example,dc=com</emphasis>, <emphasis>cn=admin,dc=example,dc=com</emphasis>, and <emphasis>ldap01.example.com</emphasis> to the appropriate domain, LDAP object, and LDAP server for your network."
-msgstr ""
-
-#: serverguide/C/network-auth.xml:2486(para) 
-msgid "Next, use the <application>kdb5_ldap_util</application> utility to create the realm:"
-msgstr ""
-
-#: serverguide/C/network-auth.xml:2491(command) 
-msgid "sudo kdb5_ldap_util -D cn=admin,dc=example,dc=com create -subtrees dc=example,dc=com -r EXAMPLE.COM -s -H ldap://ldap01.example.com"
-msgstr ""
-
-#: serverguide/C/network-auth.xml:2497(para) 
-msgid "Create a stash of the password used to bind to the LDAP server. This password is used by the <emphasis>ldap_kdc_dn</emphasis> and <emphasis>ldap_kadmin_dn</emphasis> options in <filename>/etc/krb5.conf</filename>:"
-msgstr ""
-
-#: serverguide/C/network-auth.xml:2503(command) serverguide/C/network-auth.xml:2631(command) 
-msgid "sudo kdb5_ldap_util -D cn=admin,dc=example,dc=com stashsrvpw -f /etc/krb5kdc/service.keyfile cn=admin,dc=example,dc=com"
-msgstr ""
-
-#: serverguide/C/network-auth.xml:2509(para) 
-msgid "Finally, add an index for the <emphasis>krb5principalname</emphasis> attribute:"
-msgstr ""
-
-#: serverguide/C/network-auth.xml:2516(userinput) 
+#: serverguide/C/network-auth.xml:2407(userinput) 
 #, no-wrap
 msgid "dn: olcDatabase={1}hdb,cn=config\nadd: olcDbIndex\nolcDbIndex: krbPrincipalName eq,pres,sub"
 msgstr ""
 
-#: serverguide/C/network-auth.xml:2526(para) 
+#: serverguide/C/network-auth.xml:2417(para) 
+msgid "Finally, update the Access Control Lists (ACL):"
+msgstr ""
+
+#: serverguide/C/network-auth.xml:2424(userinput) 
+#, no-wrap
+msgid "dn: olcDatabase={1}hdb,cn=config\nreplace: olcAccess\nolcAccess: to attrs=userPassword,shadowLastChange,krbPrincipalKey by dn=\"cn=admin,dc=exampl\n e,dc=com\" write by anonymous auth by self write by * none\n-\nadd: olcAccess\nolcAccess: to dn.base=\"\" by * read\n-\nadd: olcAccess\nolcAccess: to * by dn=\"cn=admin,dc=example,dc=com\" write by * read"
+msgstr ""
+
+#: serverguide/C/network-auth.xml:2423(computeroutput) 
+#, no-wrap
+msgid "Enter LDAP Password: \n<placeholder-1/>\n\nmodifying entry \"olcDatabase={1}hdb,cn=config\"\n"
+msgstr ""
+
+#: serverguide/C/network-auth.xml:2444(para) 
+msgid "That's it, your LDAP directory is now ready to serve as a Kerberos principal database."
+msgstr ""
+
+#: serverguide/C/network-auth.xml:2450(title) 
+msgid "Primary KDC Configuration"
+msgstr ""
+
+#: serverguide/C/network-auth.xml:2452(para) 
+msgid "With <application>OpenLDAP</application> configured it is time to configure the KDC."
+msgstr ""
+
+#: serverguide/C/network-auth.xml:2458(para) 
+msgid "First, install the necessary packages, from a terminal enter:"
+msgstr ""
+
+#: serverguide/C/network-auth.xml:2463(command) serverguide/C/network-auth.xml:2620(command) 
+msgid "sudo apt-get install krb5-kdc krb5-admin-server krb5-kdc-ldap"
+msgstr ""
+
+#: serverguide/C/network-auth.xml:2469(para) 
+msgid "Now edit <filename>/etc/krb5.conf</filename> adding the following options to under the appropriate sections:"
+msgstr ""
+
+#: serverguide/C/network-auth.xml:2473(programlisting) 
+#, no-wrap
+msgid "\n[libdefaults]\n        default_realm = EXAMPLE.COM\n\n...\n\n[realms]\n        EXAMPLE.COM = {\n                kdc = kdc01.example.com\n                kdc = kdc02.example.com\n                admin_server = kdc01.example.com\n                admin_server = kdc02.example.com\n                default_domain = example.com\n                database_module = openldap_ldapconf\n        }\n\n...\n\n[domain_realm]\n        .example.com = EXAMPLE.COM\n\n\n...\n\n[dbdefaults]\n        ldap_kerberos_container_dn = dc=example,dc=com\n\n[dbmodules]\n        openldap_ldapconf = {\n                db_library = kldap\n                ldap_kdc_dn = \"cn=admin,dc=example,dc=com\"\n\n                # this object needs to have read rights on\n                # the realm container, principal container and realm sub-trees\n                ldap_kadmind_dn = \"cn=admin,dc=example,dc=com\"\n\n                # this object needs to have read and write rights on\n                # the realm container, principal container and realm sub-trees\n                ldap_service_password_file = /etc/krb5kdc/service.keyfile\n                ldap_servers = ldaps://ldap01.example.com ldaps://ldap02.example.com\n                ldap_conns_per_server = 5\n        }\n"
+msgstr ""
+
+#: serverguide/C/network-auth.xml:2518(para) 
+msgid "Change <emphasis>example.com</emphasis>, <emphasis>dc=example,dc=com</emphasis>, <emphasis>cn=admin,dc=example,dc=com</emphasis>, and <emphasis>ldap01.example.com</emphasis> to the appropriate domain, LDAP object, and LDAP server for your network."
+msgstr ""
+
+#: serverguide/C/network-auth.xml:2527(para) 
+msgid "Next, use the <application>kdb5_ldap_util</application> utility to create the realm:"
+msgstr ""
+
+#: serverguide/C/network-auth.xml:2532(command) 
+msgid "sudo kdb5_ldap_util -D cn=admin,dc=example,dc=com create -subtrees dc=example,dc=com -r EXAMPLE.COM -s -H ldap://ldap01.example.com"
+msgstr ""
+
+#: serverguide/C/network-auth.xml:2538(para) 
+msgid "Create a stash of the password used to bind to the LDAP server. This password is used by the <emphasis>ldap_kdc_dn</emphasis> and <emphasis>ldap_kadmin_dn</emphasis> options in <filename>/etc/krb5.conf</filename>:"
+msgstr ""
+
+#: serverguide/C/network-auth.xml:2544(command) serverguide/C/network-auth.xml:2682(command) 
+msgid "sudo kdb5_ldap_util -D cn=admin,dc=example,dc=com stashsrvpw -f /etc/krb5kdc/service.keyfile cn=admin,dc=example,dc=com"
+msgstr ""
+
+#: serverguide/C/network-auth.xml:2550(para) 
+msgid "Copy the CA certificate from the LDAP server:"
+msgstr ""
+
+#: serverguide/C/network-auth.xml:2555(command) 
+msgid "scp ldap01:/etc/ssl/certs/cacert.pem ."
+msgstr ""
+
+#: serverguide/C/network-auth.xml:2556(command) 
+msgid "sudo cp cacert.pem /etc/ssl/certs"
+msgstr ""
+
+#: serverguide/C/network-auth.xml:2559(para) 
+msgid "And edit <filename>/etc/ldap/ldap.conf</filename> to use the certificate:"
+msgstr ""
+
+#: serverguide/C/network-auth.xml:2563(programlisting) 
+#, no-wrap
+msgid "\nTLS_CACERT /etc/ssl/certs/cacert.pem\n"
+msgstr ""
+
+#: serverguide/C/network-auth.xml:2568(para) 
+msgid "The certificate will also need to be copied to the Secondary KDC, to allow the connection to the LDAP servers using LDAPS."
+msgstr ""
+
+#: serverguide/C/network-auth.xml:2577(para) 
 msgid "You can now add Kerberos principals to the LDAP database, and they will be copied to any other LDAP servers configured for replication. To add a principal using the <application>kadmin.local</application> utility enter:"
 msgstr ""
 
-#: serverguide/C/network-auth.xml:2534(userinput) 
+#: serverguide/C/network-auth.xml:2585(userinput) 
 #, no-wrap
 msgid "addprinc -x dn=\"uid=steve,ou=people,dc=example,dc=com\" steve"
 msgstr ""
 
-#: serverguide/C/network-auth.xml:2533(computeroutput) 
+#: serverguide/C/network-auth.xml:2584(computeroutput) 
 #, no-wrap
 msgid "Authenticating as principal root/admin@EXAMPLE.COM with password.\nkadmin.local:  <placeholder-1/>\nWARNING: no policy specified for steve@EXAMPLE.COM; defaulting to no policy\nEnter password for principal \"steve@EXAMPLE.COM\": \nRe-enter password for principal \"steve@EXAMPLE.COM\": \nPrincipal \"steve@EXAMPLE.COM\" created."
 msgstr ""
 
-#: serverguide/C/network-auth.xml:2541(para) 
+#: serverguide/C/network-auth.xml:2592(para) 
 msgid "There should now be krbPrincipalName, krbPrincipalKey, krbLastPwdChange, and krbExtraData attributes added to the <emphasis>uid=steve,ou=people,dc=example,dc=com</emphasis> user object. Use the <application>kinit</application> and <application>klist</application> utilities to test that the user is indeed issued a ticket."
 msgstr ""
 
-#: serverguide/C/network-auth.xml:2548(para) 
+#: serverguide/C/network-auth.xml:2599(para) 
 msgid "If the user object is already created the <emphasis>-x dn=\"...\"</emphasis> option is needed to add the Kerberos attributes. Otherwise a new <emphasis>principal</emphasis> object will be created in the realm subtree."
 msgstr ""
 
-#: serverguide/C/network-auth.xml:2556(title) 
+#: serverguide/C/network-auth.xml:2607(title) 
 msgid "Secondary KDC Configuration"
 msgstr ""
 
-#: serverguide/C/network-auth.xml:2558(para) 
+#: serverguide/C/network-auth.xml:2609(para) 
 msgid "Configuring a Secondary KDC using the LDAP backend is similar to configuring one using the normal Kerberos database."
 msgstr ""
 
-#: serverguide/C/network-auth.xml:2564(para) 
+#: serverguide/C/network-auth.xml:2615(para) 
 msgid "First, install the necessary packages. In a terminal enter:"
 msgstr ""
 
-#: serverguide/C/network-auth.xml:2575(para) 
+#: serverguide/C/network-auth.xml:2626(para) 
 msgid "Next, edit <filename>/etc/krb5.conf</filename> to use the LDAP backend:"
 msgstr ""
 
-#: serverguide/C/network-auth.xml:2579(programlisting) 
+#: serverguide/C/network-auth.xml:2630(programlisting) 
 #, no-wrap
 msgid "\n[libdefaults]\n        default_realm = EXAMPLE.COM\n\n...\n\n[realms]\n        EXAMPLE.COM = {\n                kdc = kdc01.example.com\n                kdc = kdc02.example.com\n                admin_server = kdc01.example.com\n                admin_server = kdc02.example.com\n                default_domain = example.com\n                database_module = openldap_ldapconf\n        }\n\n...\n\n[domain_realm]\n        .example.com = EXAMPLE.COM\n\n...\n\n[dbdefaults]\n        ldap_kerberos_container_dn = dc=example,dc=com\n\n[dbmodules]\n        openldap_ldapconf = {\n                db_library = kldap\n                ldap_kdc_dn = \"cn=admin,dc=example,dc=com\"\n\n                # this object needs to have read rights on\n                # the realm container, principal container and realm sub-trees\n                ldap_kadmind_dn = \"cn=admin,dc=example,dc=com\"\n\n                # this object needs to have read and write rights on\n                # the realm container, principal container and realm sub-trees\n                ldap_service_password_file = /etc/krb5kdc/service.keyfile\n                ldap_servers = ldaps://ldap01.example.com ldaps://ldap02.example.com\n                ldap_conns_per_server = 5\n        }\n"
 msgstr ""
 
-#: serverguide/C/network-auth.xml:2626(para) 
+#: serverguide/C/network-auth.xml:2677(para) 
 msgid "Create the stash for the LDAP bind password:"
 msgstr ""
 
-#: serverguide/C/network-auth.xml:2637(para) 
+#: serverguide/C/network-auth.xml:2688(para) 
 msgid "Now, on the <emphasis>Primary KDC</emphasis> copy the <filename>/etc/krb5kdc/.k5.EXAMPLE.COM</filename><emphasis>Master Key</emphasis> stash to the Secondary KDC. Be sure to copy the file over an encrypted connection such as <application>scp</application>, or on physical media."
 msgstr ""
 
-#: serverguide/C/network-auth.xml:2644(command) 
+#: serverguide/C/network-auth.xml:2695(command) 
 msgid "sudo scp /etc/krb5kdc/.k5.EXAMPLE.COM steve@kdc02.example.com:~"
 msgstr ""
 
-#: serverguide/C/network-auth.xml:2645(command) 
+#: serverguide/C/network-auth.xml:2696(command) 
 msgid "sudo mv .k5.EXAMPLE.COM /etc/krb5kdc/"
 msgstr ""
 
-#: serverguide/C/network-auth.xml:2649(para) 
+#: serverguide/C/network-auth.xml:2700(para) 
 msgid "Again, replace <emphasis>EXAMPLE.COM</emphasis> with your actual realm."
 msgstr ""
 
-#: serverguide/C/network-auth.xml:2657(para) 
+#: serverguide/C/network-auth.xml:2708(para) 
 msgid "Finally, start the <application>krb5-kdc</application> daemon:"
 msgstr ""
 
-#: serverguide/C/network-auth.xml:2668(para) 
+#: serverguide/C/network-auth.xml:2719(para) 
 msgid "You now have redundant KDCs on your network, and with redundant LDAP servers you should be able to continue to authenticate users if one LDAP server, one Kerberos server, or one LDAP and one Kerberos server become unavailable."
 msgstr ""
 
-#: serverguide/C/network-auth.xml:2680(para) 
+#: serverguide/C/network-auth.xml:2731(para) 
 msgid "The <ulink url=\"http://web.mit.edu/Kerberos/krb5-1.6/krb5-1.6.3/doc/krb5-admin.html#Configuring-Kerberos-with-OpenLDAP-back_002dend\"> Kerberos Admin Guide</ulink> has some additional details."
 msgstr ""
 
-#: serverguide/C/network-auth.xml:2686(para) 
+#: serverguide/C/network-auth.xml:2737(para) 
 msgid "For more information on <application>kdb5_ldap_util</application> see <ulink url=\"http://web.mit.edu/Kerberos/krb5-1.6/krb5-1.6.3/doc/krb5-admin.html#Global-Operations-on-the-Kerberos-LDAP-Database\"> Section 5.6</ulink> and the <ulink url=\"http://manpages.ubuntu.com/manpages/jaunty/en/man8/kdb5_ldap_util.8.html\">kdb5_ldap_util man page</ulink>."
 msgstr ""
 
-#: serverguide/C/network-auth.xml:2694(para) 
+#: serverguide/C/network-auth.xml:2745(para) 
 msgid "Another useful link is the <ulink url=\"http://manpages.ubuntu.com/manpages/jaunty/en/man5/krb5.conf.5.html\">krb5.conf man page</ulink>."
 msgstr ""
 

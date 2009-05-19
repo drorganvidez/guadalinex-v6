@@ -450,15 +450,7 @@ bind9
             <step>
  
               <para>
-              Choose <emphasis>"bootable flag"</emphasis> setting it to <emphasis>"on"</emphasis>.  Then select the 
-              <emphasis>"Done setting up the partition"</emphasis> option.
-              </para>
-
-            </step>
-            <step>
- 
-              <para>
-              Repeat steps three through six for the other disks and partitions. 
+              Repeat steps three through five for the other disks and partitions. 
               </para>
 
             </step>
@@ -603,7 +595,12 @@ bind9
           </procedure>
 
           <para>
-          After confirming the partition configuration the installation process will continue normally.
+          If you choose to place the root partition on a RAID array, the installer will then ask if you would like to boot in
+          a <emphasis>degraded</emphasis> state.  See <xref linkend="raid-degraded"/> for further details.  
+          </para>
+
+          <para>
+          The installation process will then continue normally.
           </para>
 
         </sect3>
@@ -616,75 +613,34 @@ bind9
           </para>
 
           <para>
-          By default Ubuntu Server Edition will not boot using to a degraded RAID device, due to the chance of data corruption
-          This may or may not be the desired behavior you want, especially if the machine is in a remote location.
-          </para>
-
-          <para>
-          One way to boot to a degraded RAID array is to use Kernel arguments:
+          If the array has become degraded, due to the chance of data corruption, by default Ubuntu Server Edition will boot 
+          to <emphasis>initramfs</emphasis> after thirty seconds.  Once the initramfs has booted there is a fifteen second 
+          prompt giving you the option to go ahead and boot the system, or attempt manual recover.  Booting to the initramfs
+          prompt may or may not be the desired behavior, especially if the machine is in a remote location.  Booting to a 
+          degraded array can be configured several ways:
           </para>
 
           <itemizedlist>
             <listitem>
-              <para>
-              When the server is booting press <emphasis>ESC</emphasis> to open the <application>Grub</application> menu.
-              </para>
-            </listitem>
-            <listitem>
-              <para>
-              Press <emphasis>"e"</emphasis> to edit your Kernel command options.
-              </para>
-            </listitem>
-            <listitem>
-              <para>
-              Press the <emphasis>DOWN</emphasis> arrow to highlight the kernel line.
-              </para>
-            </listitem>
-            <listitem>
-              <para>
-              Press the <emphasis>"e"</emphasis> key again to edit the kernel line.
-              </para>
-            </listitem>
-            <listitem>
-              <para>
-              Add <emphasis>"bootdegraded=true"</emphasis> (without the quotes) to the end of the line.
-              </para>
-            </listitem>
-            <listitem>
-              <para>
-              Press <emphasis>"ENTER"</emphasis>.
-              </para>
-            </listitem>
-            <listitem>
-              <para>
-              Finally, press <emphasis>"b"</emphasis> to boot the system.
-              </para>
-            </listitem>
-          </itemizedlist>
 
-          <para>
-          Once the system has booted you can either repair the array see <xref linkend="raid-maintenance"/> for details, or copy 
-          important data to another machine due to major hardware failure.
-          </para>
-
-          <para>
-          Another way to boot from a degraded array is to use the <filename>/etc/initramfs-tools/conf.d/mdadm</filename> configuration
-          file.  Using the configuration file has the advantage of being able to pre-configure the system's behavior.
-          </para>
-
-          <para>
-          The <application>dpkg-reconfigure</application> utility can be used to change the file, and during the process you will also
-          be queried about other settings related to the array.  Such as monitoring,  email alerts, etc.  To reconfigure 
-          <application>mdadm</application> enter the following:  
-          </para>
+              <para>
+              The <application>dpkg-reconfigure</application> utility can be used to configure the default behavior, and 
+              during the process you will be queried about additional settings related to the array.  Such as monitoring, email 
+              alerts, etc.  To reconfigure <application>mdadm</application> enter the following:  
+              </para>
 
 <screen>
 <command>sudo dpkg-reconfigure mdadm</command>
 </screen>
 
-          <para>
-          The <filename>/etc/initramfs-tools/conf.d/mdadm</filename> file should now have the following option set:
-          </para>
+             </listitem>
+            <listitem>
+
+              <para>
+              The <command>dpkg-reconfigure mdadm</command> process will change the <filename>/etc/initramfs-tools/conf.d/mdadm</filename>
+              configuration file.  The file has the advantage of being able to pre-configure the system's behavior, and can also be manually
+              edited:
+              </para>
 
 <programlisting>
 BOOT_DEGRADED=true
@@ -695,6 +651,59 @@ BOOT_DEGRADED=true
             The configuration file can be overridden by using a Kernel argument.
             </para>
           </note>          
+
+            </listitem>
+            <listitem>
+    
+              <para>
+              Using a Kernel argument will allow the system to boot to a degraded array as well:
+              </para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>
+                  When the server is booting press <emphasis>ESC</emphasis> to open the <application>Grub</application> menu.
+                  </para>
+                </listitem>
+                <listitem>
+                  <para>
+                  Press <emphasis>"e"</emphasis> to edit your Kernel command options.
+                  </para>
+                </listitem>
+                <listitem>
+                  <para>
+                  Press the <emphasis>DOWN</emphasis> arrow to highlight the kernel line.
+                  </para>
+                </listitem>
+                <listitem>
+                  <para>
+                  Press the <emphasis>"e"</emphasis> key again to edit the kernel line.
+                  </para>
+                </listitem>
+                <listitem>
+                  <para>
+                  Add <emphasis>"bootdegraded=true"</emphasis> (without the quotes) to the end of the line.
+                  </para>
+                </listitem>
+                <listitem>
+                  <para>
+                  Press <emphasis>"ENTER"</emphasis>.
+                  </para>
+                </listitem>
+                <listitem>
+                  <para>
+                  Finally, press <emphasis>"b"</emphasis> to boot the system.
+                  </para>
+                </listitem>
+              </itemizedlist>
+
+            </listitem>
+           </itemizedlist>
+
+           <para>
+           Once the system has booted you can either repair the array see <xref linkend="raid-maintenance"/> for details, or copy 
+           important data to another machine due to major hardware failure.
+           </para>
 
         </sect3>
         <sect3 id="raid-maintenance">

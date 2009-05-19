@@ -56,19 +56,17 @@ PDFSTYLE2=libs/pdf/ubuntu-pdf2.xsl
 # Base gnome directories for output from processor
 BASE=build/
 
-IMAGES=build/images/
-
 .PHONY: website switching
 
 gdeb: 
 
 all: clean style index serverguide switching status contributors
 
-	for doc in `cat libs/shipped-docs`; do xsltproc --xinclude -o $(BASE)$$doc/C/index.html $(UBUNTUCHUNKXSL) $$doc/C/$$doc.xml; sed -i $(BASE)$$doc/C/*legal.html -e "s#\.\./common/C/contributors\.xml#common/C/contributors\.html#g"; done
+	for doc in `cat libs/shipped-docs`; do xsltproc --xinclude -o $(BASE)$$doc/C/index.html $(UBUNTUCHUNKXSL) $$doc/C/$$doc.xml; sed -i $(BASE)$$doc/C/*legal.html -e "s#\.\./libs/C/contributors\.xml#libs/C/contributors\.html#g"; done
 
 index:
 
-	xsltproc --stringparam html.stylesheet "common/ubuntu-book.css" -o $(BASE)index.html $(UBUNTUCHUNKXSL) index.xml
+	xsltproc --stringparam html.stylesheet "libs/ubuntu-book.css" -o $(BASE)index.html $(UBUNTUCHUNKXSL) index.xml
 
 clean:
 	rm -rf $(BASE)*
@@ -76,37 +74,37 @@ clean:
 style:
 
 	# copy style sheet and common images to build directory
-	mkdir -p build/common/img
-	cp libs/*css build/common/
-	cp libs/img/*png build/common/img/
-	mkdir -p $(IMAGES)admon
-	cp -r common/admon/*.* $(IMAGES)admon	
-	mkdir -p $(IMAGES)callouts
-	cp -r common/callouts/*.* $(IMAGES)callouts
-	mkdir -p $(IMAGES)navig
-	cp -r common/navig/*.* $(IMAGES)navig
+	mkdir -p build/libs/img
+	mkdir -p build/libs/admon
+	mkdir -p build/libs/callouts
+	mkdir -p build/libs/navig
+	cp libs/*css build/libs/
+	cp libs/img/*png build/libs/img/
+	cp -r libs/admon/*.* build/libs/admon	
+	cp -r libs/callouts/*.* build/libs/callouts
+	cp -r libs/navig/*.* build/libs/navig
 
 ## Targets for building standalone documents
 
 switching:
 
-	xsltproc --stringparam html.stylesheet "common/ubuntu-book.css" --stringparam navig.graphics.path "images/navig/" --stringparam callout.graphics.path "images/callouts/" --stringparam admon.graphics.path "images/admin/" --xinclude -o $(BASE)switching/index.html $(UBUNTUCHUNKXSL) switching/C/switching.xml
+	xsltproc --stringparam html.stylesheet "libs/ubuntu-book.css" --stringparam navig.graphics.path "images/navig/" --stringparam callout.graphics.path "images/callouts/" --stringparam admon.graphics.path "images/admin/" --xinclude -o $(BASE)switching/index.html $(UBUNTUCHUNKXSL) switching/C/switching.xml
 
 	# copy style sheet and common images to build directory
-	mkdir -p $(BASE)switching/common/img
-	cp libs/*css $(BASE)switching/common/
-	cp libs/img/*png $(BASE)switching/common/img/
+	mkdir -p $(BASE)switching/libs/img
+	cp libs/*css $(BASE)switching/libs/
+	cp libs/img/*png $(BASE)switching/libs/img/
 	mkdir -p $(BASE)switching/images/admon
-	cp -r common/admon/*.* $(BASE)switching/images/admon	
+	cp -r libs/admon/*.* $(BASE)switching/images/admon	
 	mkdir -p $(BASE)switching/images/callouts
-	cp -r common/callouts/*.* $(BASE)switching/images/callouts	
+	cp -r libs/callouts/*.* $(BASE)switching/images/callouts	
 	mkdir -p $(BASE)switching/images/navig
-	cp -r common/navig/*.* $(BASE)switching/images/navig	
+	cp -r libs/navig/*.* $(BASE)switching/images/navig	
 
 serverguide: style
 
 	xsltproc --xinclude -o $(BASE)serverguide/C/index.html $(UBUNTUCHUNKXSL) serverguide/C/serverguide.xml
-	sed -i $(BASE)serverguide/C/*legal.html -e "s#\.\./common/C/contributors\.xml#common/C/contributors\.html#g"
+	sed -i $(BASE)serverguide/C/*legal.html -e "s#\.\./libs/C/contributors\.xml#libs/C/contributors\.html#g"
 
 
 status: style
@@ -116,7 +114,7 @@ status: style
 
 contributors: style
 
-	xsltproc --stringparam root.filename "contributors" -o $(BASE)common/C/ $(UBUNTUCHUNKXSL) common/C/contributors.xml
+	xsltproc --stringparam root.filename "contributors" -o $(BASE)libs/C/ $(UBUNTUCHUNKXSL) libs/C/contributors.xml
 
 index-test: style
 

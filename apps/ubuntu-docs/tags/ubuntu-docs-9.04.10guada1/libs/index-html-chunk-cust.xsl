@@ -4,7 +4,7 @@
     <!-- ======================= -->
     <!-- Imports -->
 	<xsl:import href="/usr/share/xml/docbook/stylesheet/nwalsh/xhtml/onechunk.xsl"/>
-	<xsl:import href="../ubuntu/libs/ubuntu-banner.xsl"/>	
+	<xsl:import href="ubuntu-banner.xsl"/>	
 
     <!-- Params -->
     <xsl:param name="generate.legalnotice.link" select="1"/>
@@ -23,20 +23,20 @@
 
 	<!--Navigation Graphics-->
 	<xsl:param name="navig.graphics" select="1"/>
-	<xsl:param name="navig.graphics.path" select="'../../images/navig/'"/>
+	<xsl:param name="navig.graphics.path" select="'../../libs/navig/'"/>
 	<xsl:param name="navig.graphics.extension" select="'.gif'"/> 
 	<xsl:param name="navig.showtitles" select="1"/>
 	
 	<!--Admon Graphics--> 
 	<xsl:param name="admon.graphics" select="1"/>
 	<xsl:param name="admon.textlabel" select="0"/>
-	<xsl:param name="admon.graphics.path" select="'../../images/admon/'"/>
+	<xsl:param name="admon.graphics.path" select="'../../libs/admon/'"/>
 	<xsl:param name="admon.graphics.extension" select="'.png'"/>
 	
 	<!-- Callout Graphics -->
 	<xsl:param name="callout.unicode" select="1"/>
 	<xsl:param name="callout.graphics" select="0"/>
-	<xsl:param name="callout.graphics.path" select="'../../images/callouts/'"/>
+	<xsl:param name="callout.graphics.path" select="'../../libs/callouts/'"/>
 	<xsl:param name="callout.graphics.extension" select="'.png'"/>
 	
     <!-- Inline Formatting -->

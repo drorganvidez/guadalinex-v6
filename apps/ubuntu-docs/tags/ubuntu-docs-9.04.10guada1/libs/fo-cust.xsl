@@ -25,13 +25,13 @@
   <!-- Admon Graphics -->
     <xsl:param name="admon.graphics" select="1"/>
     <xsl:param name="admon.textlabel" select="0"/>
-    <xsl:param name="admon.graphics.path" select="'../common/admon/'"/>
+    <xsl:param name="admon.graphics.path" select="'libs/admon/'"/>
     <xsl:param name="admon.graphics.extension" select="'.png'"/>
     
     <!-- Callout Graphics -->
     <xsl:param name="callout.unicode" select="1"/>
     <xsl:param name="callout.graphics" select="0"/>
-    <xsl:param name="callout.graphics.path" select="'../common/callouts/'"/>
+    <xsl:param name="callout.graphics.path" select="'libs/callouts/'"/>
     <xsl:param name="callout.graphics.extension" select="'.png'"/>
   
     <!-- ======================= -->

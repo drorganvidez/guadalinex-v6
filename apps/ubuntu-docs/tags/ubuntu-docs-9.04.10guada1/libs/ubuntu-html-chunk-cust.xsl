@@ -13,26 +13,26 @@
     <xsl:param name="toc.max.depth" select="2"/>
     <xsl:param name="chunker.output.indent" select="'yes'"/>
     <xsl:param name="body.font.master" select="10"/>
-    <xsl:param name="html.stylesheet" select="'../../common/ubuntu-book.css'"/>
+    <xsl:param name="html.stylesheet" select="'../../libs/ubuntu-book.css'"/>
     <xsl:param name="shade.verbatim" select="0"/>
     <xsl:param name="draft.mode" select="'yes'"/>
     <xsl:param name="chunk.first.sections" select="'1'"/>
 	<!--Navigation Graphics-->
 	<xsl:param name="navig.graphics" select="1"/>
-	<xsl:param name="navig.graphics.path" select="'../../images/navig/'"/>
+	<xsl:param name="navig.graphics.path" select="'../../libs/navig/'"/>
 	<xsl:param name="navig.graphics.extension" select="'.gif'"/> 
 	<xsl:param name="navig.showtitles" select="1"/>
 	
 	<!--Admon Graphics--> 
 	<xsl:param name="admon.graphics" select="1"/>
 	<xsl:param name="admon.textlabel" select="0"/>
-	<xsl:param name="admon.graphics.path" select="'../../images/admon/'"/>
+	<xsl:param name="admon.graphics.path" select="'../../libs/admon/'"/>
 	<xsl:param name="admon.graphics.extension" select="'.png'"/>
 	
 	<!-- Callout Graphics -->
 	<xsl:param name="callout.unicode" select="1"/>
 	<xsl:param name="callout.graphics" select="0"/>
-	<xsl:param name="callout.graphics.path" select="'../../images/callouts/'"/>
+	<xsl:param name="callout.graphics.path" select="'../../libs/callouts/'"/>
 	<xsl:param name="callout.graphics.extension" select="'.png'"/>
 	
     <!-- Inline Formatting -->

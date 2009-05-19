@@ -7,7 +7,7 @@
 	<div id="header">
 	<div id="logo-floater"><h1><a href="http://help.ubuntu.com" title="Ubuntu Documentation"><img alt="Ubuntu" id="logo" src="https://help.ubuntu.com/htdocs/ubuntunew/img/logo.png" /></a></h1>
 	</div>
-	<div id="sitename"><a href="https://help.ubuntu.com/"><img alt="Official Documentation" src="http://doc.ubuntu.com/~mdke/help-faq.png" /><span>Official Documentation</span></a></div>
+	<div id="sitename"><a href="https://help.ubuntu.com/"><img alt="Official Documentation" src="http://doc.ubuntu.com/~mdke/help-about.png" /><span>Official Documentation</span></a></div>
 	</div>
 </xsl:template>
 

@@ -8,14 +8,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-docs\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2009-03-26 16:34+0000\n"
-"PO-Revision-Date: 2009-03-21 15:48+0000\n"
-"Last-Translator: István Nyitrai <sianis@ubuntu.com>\n"
+"POT-Creation-Date: 2009-04-03 23:04+0100\n"
+"PO-Revision-Date: 2009-04-09 09:08+0000\n"
+"Last-Translator: Gabor Kelemen <kelemeng@gnome.hu>\n"
 "Language-Team: Hungarian <gnome@fsf.hu>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2009-04-01 11:03+0000\n"
+"X-Launchpad-Export-Date: 2009-04-09 18:49+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: internet/C/internet-C.omf:6(creator) internet/C/internet-C.omf:7(maintainer)
@@ -1190,6 +1190,10 @@ msgid ""
 "linkend=\"connecting-wireless\"/> and should it fail begin at the start "
 "again."
 msgstr ""
+"Ebben a hibaelhárítási útmutatóban mindent a leírtak sorrendjében hajtson "
+"végre. Ha egy szakasz végére ér és  az utasítások nem irányítják másikra, "
+"akkor próbálja ki a <xref linkend=\"connecting-wireless\"/> szakaszban "
+"leírtakat. Ha így sem működne, kezdje újra az elejétől."
 
 #: internet/C/troubleshooting.xml:77(title)
 msgid "Check that the device is on"
@@ -1243,22 +1247,29 @@ msgid ""
 "Claimed - this indicates a driver is loaded but not functioning, see <xref "
 "linkend=\"troubleshooting-wireless-ndiswrapper\"/>"
 msgstr ""
+"Claimed - Jelzi, hogy a meghajtó be van töltve, de nem működik, lásd: <xref "
+"linkend=\"troubleshooting-wireless-ndiswrapper\"/>."
 
 #: internet/C/troubleshooting.xml:91(para)
 msgid ""
 "Unclaimed - there is no driver loaded, see <xref linkend=\"troubleshooting-"
 "wireless-ndiswrapper\"/>."
 msgstr ""
+"Unclaimed - A meghajtó nincs betöltve, lásd: <xref linkend=\"troubleshooting-"
+"wireless-ndiswrapper\"/>."
 
 #: internet/C/troubleshooting.xml:92(para)
 msgid ""
 "Enabled - there is a driver loaded, see <xref linkend=\"troubleshooting-"
 "wireless-connection\"/>."
 msgstr ""
+"Enabled - A meghajtó be van töltve, lásd: <xref linkend=\"troubleshooting-"
+"wireless-connection\"/>."
 
 #: internet/C/troubleshooting.xml:93(para)
 msgid "Disabled - see <xref linkend=\"troubleshooting-wireless-disabled\"/>."
 msgstr ""
+"Disabled - Lásd: <xref linkend=\"troubleshooting-wireless-disabled\"/>."
 
 #: internet/C/troubleshooting.xml:97(title)
 msgid "Using Windows Wireless Drivers"
@@ -1360,6 +1371,8 @@ msgid ""
 "If there is an IP address shown see <xref linkend=\"troubleshooting-wireless-"
 "dns\"/>."
 msgstr ""
+"Ha megjelenik egy IP cím, akkor olvassa el a <xref linkend=\"troubleshooting-"
+"wireless-dns\"/> fejezetet."
 
 #: internet/C/troubleshooting.xml:120(para)
 msgid ""
@@ -1415,6 +1428,11 @@ msgid ""
 "secondary domain name servers. Once you have this information see <xref "
 "linkend=\"connecting-wireless\"/>."
 msgstr ""
+"Gépelje be a <code>cat /etc/resolv.conf</code> parancsot. Ha ez nem sorol "
+"fel semmilyen névkiszolgálót, akkor vegye fel a kapcsolatot az "
+"internetszolgáltatójával és kérdezze meg az elsődleges és másodlagos "
+"névkiszolgáló címét. Ezután olvassa el a <xref linkend=\"connecting-"
+"wireless\"/> oldalt."
 
 #: internet/C/troubleshooting.xml:134(title)
 msgid "IPv6 Not Supported"
@@ -1461,6 +1479,10 @@ msgid ""
 "attempts to make the process of connecting invisible, whilst allowing finer "
 "manual control where necessary."
 msgstr ""
+"Az Ubuntu a Hálózatkezelő kisalkalmazás segítségével kezeli a hálózati "
+"kapcsolatokat. A Hálózatkezelő kisalkalmazás próbálja a leginkább "
+"észrevehetetlenné tenni a kapcsolódás folyamatát, de szükség esetén a kézi "
+"beállítást is lehetővé teszi."
 
 #: internet/C/nm.xml:19(para)
 msgid ""
@@ -1853,7 +1875,7 @@ msgstr ""
 
 #: internet/C/networking.xml:157(title)
 msgid "Problems connecting to shared folders in Windows"
-msgstr "Probléma a megoszott mappához kapcsolódáskor Windowson"
+msgstr "Probléma a megosztott mappához kapcsolódáskor Windowson"
 
 #: internet/C/networking.xml:158(para)
 msgid ""
@@ -1861,7 +1883,7 @@ msgid ""
 "<emphasis>IP address</emphasis> of the Ubuntu computer rather than its "
 "<emphasis>host name</emphasis> to access the share:"
 msgstr ""
-"Ha nem képes elérni a megoszott mappát Windows alól, próbálja az Ubuntut "
+"Ha nem képes elérni a megosztott mappát Windows alól, próbálja az Ubuntut "
 "futtató gép <emphasis>IP címét</emphasis> a <emphasis>gépneve</emphasis> "
 "helyett:"
 
@@ -2060,6 +2082,12 @@ msgid ""
 "applications#installing-deb\">Downloading and installing a .deb "
 "package</ulink> for more information."
 msgstr ""
+"A Hálózatkezelő jelenleg nem támogatja a modemes kapcsolatokat, így "
+"telepítenie kell a <ulink url=\"apt:gnome-network-admin\">gnome-network-"
+"admin</ulink> csomagot. Ha nincs működő internetkapcsolata, a csomag "
+"beszerzésével és telepítésével kapcsolatban nézze meg a <ulink "
+"url=\"ghelp:add-applications#installing-deb\">.deb csomag letöltése és "
+"telepítése</ulink> szakaszt."
 
 #: internet/C/modem.xml:47(para)
 msgid "You will need to know the following information:"
@@ -2098,45 +2126,53 @@ msgid ""
 "Select <guilabel>Point to point connection</guilabel> and press "
 "<guibutton>Properties</guibutton>."
 msgstr ""
-"Válaszza a <guilabel>Ponttól pontig kapcsolat</guilabel> menüelemet és "
+"Válassza a <guilabel>Ponttól pontig kapcsolat</guilabel> menüelemet és "
 "kattintson a  <guibutton>Tulajdonságok</guibutton> gombra."
 
 #: internet/C/modem.xml:55(para)
 msgid "Tick <guilabel>Enable this connection</guilabel>"
 msgstr ""
+"Jelölje be a <guilabel>Hálózat engedélyezése</guilabel> jelölőnégyzetet"
 
 #: internet/C/modem.xml:56(para)
 msgid ""
 "Choose <guilabel>Serial Modem</guilabel> from the <guilabel>Connection "
 "Type</guilabel> drop down."
 msgstr ""
+"Válassza a <guilabel>Soros modem</guilabel> lehetőséget a "
+"<guilabel>Kapcsolattípus</guilabel> listából."
 
 #: internet/C/modem.xml:57(para)
 msgid ""
 "Under Internet Service Provider data, enter the phone number and dial prefix."
 msgstr ""
+"Az Internetszolgáltató adatai alatt töltse ki a Telefonszám és a Tárcsázási "
+"előtag mezőket."
 
 #: internet/C/modem.xml:58(para)
 msgid "Under Account Data enter your password and username."
 msgstr ""
+"A Hozzáférés adatai alatt töltse ki a Felhasználónév és Jelszó mezőket."
 
 #: internet/C/modem.xml:59(para)
 msgid "Click the <guilabel>Modem tab</guilabel>."
-msgstr ""
+msgstr "Kattintson a <guilabel>Modem</guilabel> fülre."
 
 #: internet/C/modem.xml:60(para)
 msgid "Choose the modem settings you require."
-msgstr ""
+msgstr "Válassza ki az Önnek megfelelő modembeállításokat."
 
 #: internet/C/modem.xml:62(para)
 msgid ""
 "Select the <guilabel>DNS</guilabel> tab and enter the DNS addresses of your "
 "ISP."
 msgstr ""
+"Válassza a <guilabel>DNS</guilabel> fület és adja meg az "
+"internetszolgáltatója DNS címeit."
 
 #: internet/C/modem.xml:63(para)
 msgid "click <guibutton>Close</guibutton>."
-msgstr ""
+msgstr "Kattintson a <guibutton>Bezárás</guibutton> gombra."
 
 #: internet/C/internet.xml:3(title)
 msgid "Credits and License"
@@ -2207,19 +2243,19 @@ msgstr "Az Ubuntu dokumentációs projekt"
 
 #: internet/C/information.xml:16(title) internet/C/basics.xml:64(title)
 msgid "Information"
-msgstr ""
+msgstr "Információk"
 
 #: internet/C/information.xml:19(para)
 msgid "Click <guilabel>Connection Information</guilabel>."
-msgstr ""
+msgstr "Válassza a <guilabel>Kapcsolatinformációk</guilabel> menüpontot."
 
 #: internet/C/information.xml:20(para)
 msgid "Click <guibutton>Close</guibutton> when finished."
-msgstr ""
+msgstr "Ha végzett, kattintson a <guibutton>Bezárás</guibutton> gombra."
 
 #: internet/C/disconnecting.xml:16(title) internet/C/basics.xml:49(title)
 msgid "Disconnecting"
-msgstr ""
+msgstr "Kapcsolat bontása"
 
 #: internet/C/disconnecting.xml:17(para)
 msgid "NetworkManager is used to disconnect connections."
@@ -2228,11 +2264,12 @@ msgstr ""
 
 #: internet/C/disconnecting.xml:20(title)
 msgid "Wired"
-msgstr ""
+msgstr "Vezetékes"
 
 #: internet/C/disconnecting.xml:23(para)
 msgid "Uncheck <guilabel>Enable Networking</guilabel>."
 msgstr ""
+"Törölje a <guilabel>Hálózat engedélyezése</guilabel> jelölőnégyzetet."
 
 #: internet/C/disconnecting.xml:28(title) internet/C/connecting.xml:50(title) internet/C/basics.xml:28(title) internet/C/basics.xml:58(title)
 msgid "Wireless"
@@ -2241,6 +2278,8 @@ msgstr "Vezeték nélküli"
 #: internet/C/disconnecting.xml:31(para)
 msgid "Uncheck <guilabel>Enable Wireless</guilabel>."
 msgstr ""
+"Törölje a <guilabel>Vezeték nélküli kapcsolat engedélyezése</guilabel> "
+"jelölőnégyzetet."
 
 #: internet/C/connecttoserver.xml:16(title)
 msgid "Connect to a server"
@@ -2283,22 +2322,30 @@ msgid ""
 "Enter the server address in <guilabel>Server</guilabel>, for example "
 "ftp.ubuntu.com."
 msgstr ""
+"Adja meg a kiszolgáló címét a <guilabel>Kiszolgáló</guilabel> mezőben, "
+"például: ftp.ubuntu.com."
 
 #: internet/C/connecttoserver.xml:26(para) internet/C/connecttoserver.xml:40(para)
 msgid ""
 "Enter <guilabel>Port</guilabel> and <guilabel>Folder</guilabel> if you need "
 "to, this is optional."
 msgstr ""
+"Írja be a <guilabel>Port</guilabel> és a <guilabel>Mappa</guilabel> nevét ha "
+"szükséges. Ez elhagyható."
 
 #: internet/C/connecttoserver.xml:27(para)
 msgid ""
 "If you chose <guilabel>FTP (With Login)</guilabel> you will also need to "
 "enter a username."
 msgstr ""
+"Ha az <guilabel>FTP (bejelentkezéssel)</guilabel> lehetőséget választotta, "
+"akkor meg kell adnia a felhasználónevet is."
 
 #: internet/C/connecttoserver.xml:28(para) internet/C/connecttoserver.xml:42(para) internet/C/connecttoserver.xml:56(para) internet/C/connecttoserver.xml:69(para) internet/C/connecttoserver.xml:81(para)
 msgid "If you want a bookmark, click the checkbox and enter a bookmark name."
 msgstr ""
+"Ha könyvjelzőt szeretne hozzáadni, jelölje be a <guilabel>Könyvjelző "
+"hozzáadása</guilabel> jelölőnégyzetet és adja meg a kívánt nevet."
 
 #: internet/C/connecttoserver.xml:29(para) internet/C/connecttoserver.xml:43(para) internet/C/connecttoserver.xml:57(para) internet/C/connecttoserver.xml:70(para) internet/C/connecttoserver.xml:82(para) internet/C/connecting.xml:63(para)
 msgid "Click <guibutton>Connect</guibutton>."
@@ -2309,86 +2356,107 @@ msgid ""
 "If you chose <guilabel>FTP (With Login)</guilabel> you will be prompted for "
 "a password."
 msgstr ""
+"Ha az <guilabel>FTP (bejelentkezéssel)</guilabel> lehetőséget választotta, "
+"most meg kell adnia a jelszavát."
 
 #: internet/C/connecttoserver.xml:35(title)
 msgid "SSH"
-msgstr ""
+msgstr "SSH"
 
 #: internet/C/connecttoserver.xml:38(para)
 msgid ""
 "From <guilabel>Service Type</guilabel> choose <guilabel>SSH</guilabel>."
 msgstr ""
+"A <guilabel>Szolgáltatás típusa</guilabel> listából válassza az "
+"<guilabel>SSH</guilabel> lehetőséget."
 
 #: internet/C/connecttoserver.xml:39(para) internet/C/connecttoserver.xml:53(para) internet/C/connecttoserver.xml:67(para)
 msgid "Enter the server address in <guilabel>Server</guilabel>."
 msgstr ""
+"Adja meg a kiszolgáló címét a <guilabel>Kiszolgáló</guilabel> mezőben."
 
 #: internet/C/connecttoserver.xml:41(para)
 msgid "Enter <guilabel>Username</guilabel>."
-msgstr ""
+msgstr "Adja meg a <guilabel>Felhasználónevet</guilabel>."
 
 #: internet/C/connecttoserver.xml:44(para)
 msgid "You will be prompted for a password."
-msgstr ""
+msgstr "A rendszer bekéri a jelszavát."
 
 #: internet/C/connecttoserver.xml:49(title)
 msgid "Windows Share"
-msgstr ""
+msgstr "Windows-megosztás"
 
 #: internet/C/connecttoserver.xml:52(para)
 msgid ""
 "From <guilabel>Service Type</guilabel> choose <guilabel>Windows "
 "Share</guilabel>."
 msgstr ""
+"A <guilabel>Szolgáltatás típusa</guilabel> listából válassza a "
+"<guilabel>Windows-megosztás</guilabel> lehetőséget."
 
 #: internet/C/connecttoserver.xml:54(para)
 msgid ""
 "Enter <guilabel>Port</guilabel> and <guilabel>Folder</guilabel> and "
 "<guilabel>Domain</guilabel> if you need to, this is optional."
 msgstr ""
+"Ha szükséges, adja meg a <guilabel>Port</guilabel>, a "
+"<guilabel>Mappa</guilabel> és a <guilabel>Tartománynév</guilabel> "
+"beállításokat."
 
 #: internet/C/connecttoserver.xml:55(para)
 msgid ""
 "Enter <guilabel>Username</guilabel>. You can enter a domain and username in "
 "the format DOMAIN\\username."
 msgstr ""
+"Adja meg a <guilabel>Felhasználónevet</guilabel>. A felhasználónevet és a "
+"tartománynevet a következő formátumban adhatja meg: TARTOMÁNYNÉV\\"
+"felhasználónév."
 
 #: internet/C/connecttoserver.xml:58(para) internet/C/connecttoserver.xml:71(para)
 msgid "You will be prompted for a password if necessary."
-msgstr ""
+msgstr "Ha szükséges, a rendszer bekéri a jelszavát."
 
 #: internet/C/connecttoserver.xml:63(title)
 msgid "WebDAV (HTTP)"
-msgstr ""
+msgstr "WebDAV (HTTP)"
 
 #: internet/C/connecttoserver.xml:66(para)
 msgid ""
 "From <guilabel>Service Type</guilabel> choose <guilabel>WebDAV "
 "(HTTP)</guilabel>."
 msgstr ""
+"A <guilabel>Szolgáltatás típusa</guilabel> listából válassza a "
+"<guilabel>WebDAV (HTTP)</guilabel> lehetőséget."
 
 #: internet/C/connecttoserver.xml:68(para)
 msgid ""
 "Enter <guilabel>Port</guilabel> and <guilabel>Folder</guilabel> and "
 "<guilabel>Username</guilabel> if you need to, this is optional."
 msgstr ""
+"Ha szükséges, adja meg a <guilabel>Port</guilabel>, a "
+"<guilabel>Mappa</guilabel> és a <guilabel>Felhasználónév</guilabel> "
+"beállításait."
 
 #: internet/C/connecttoserver.xml:76(title)
 msgid "Custom"
-msgstr ""
+msgstr "Egyéni hely"
 
 #: internet/C/connecttoserver.xml:79(para)
 msgid ""
 "From <guilabel>Service Type</guilabel> choose <guilabel>Custom</guilabel>."
 msgstr ""
+"A <guilabel>Szolgáltatás típusa</guilabel> listából válassza ki az "
+"<guilabel>Egyéni hely</guilabel> lehetőséget."
 
 #: internet/C/connecttoserver.xml:80(para)
 msgid "Enter the server address in <guilabel>Location (URI)</guilabel>."
 msgstr ""
+"Adja meg a kiszolgáló címét a <guilabel>Hely (URI)</guilabel> mezőben."
 
 #: internet/C/connecting.xml:16(title) internet/C/basics.xml:19(title)
 msgid "Connecting"
-msgstr ""
+msgstr "Kapcsolódás"
 
 #: internet/C/connecting.xml:17(para)
 msgid ""
@@ -2396,10 +2464,13 @@ msgid ""
 "connections. It does not currently support dialup modem connections but "
 "there is help available in <xref linkend=\"modem\"/>."
 msgstr ""
+"A Hálózatkezelő kisalkalmazás kezeli a vezetékes, vezeték nélküli, mobil "
+"széles sávú, vpn és dsl kapcsolatokat. Jelenleg nem támogatja a betárcsázós "
+"modemeket, ezekkel kapcsolatban lásd a <xref linkend=\"modem\"/> szakaszt."
 
 #: internet/C/connecting.xml:21(title) internet/C/basics.xml:23(title)
 msgid "Wired (LAN)"
-msgstr ""
+msgstr "Vezetékes (LAN)"
 
 #: internet/C/connecting.xml:22(para)
 msgid ""
@@ -2407,92 +2478,116 @@ msgid ""
 "automatically configured. Wired network connections are selected as default "
 "when connected."
 msgstr ""
+"A DHCP kapcsolatok (ahol a beállításokat egy router végzi) automatikusan "
+"beállításra kerülnek. Ha vezetékes hálózathoz kapcsolódik, akkor az lesz az "
+"alapértelmezett."
 
 #: internet/C/connecting.xml:25(title)
 msgid "DHCP Connections"
-msgstr ""
+msgstr "DHCP kapcsolatok"
 
 #: internet/C/connecting.xml:26(para)
 msgid "Most routers use DHCP to allocate IP addresses."
-msgstr ""
+msgstr "A legtöbb router a DHCP-t használja az IP cím kiosztására."
 
 #: internet/C/connecting.xml:28(para)
 msgid "Click the NetworkManager icon in the system notification area."
 msgstr ""
+"Az értesítési területen kattintson a Hálózatkezelő kisalkalmazás ikonra."
 
 #: internet/C/connecting.xml:29(para)
 msgid ""
 "Under <guilabel>Wired Network</guilabel> click the <guilabel>Radio "
 "Button</guilabel> next to the network you want to connect to."
 msgstr ""
+"A <guilabel>Vezetékes hálózat</guilabel> alatt kattintson a használni kívánt "
+"hálózatra."
 
 #: internet/C/connecting.xml:34(title)
 msgid "Static Connections"
-msgstr ""
+msgstr "Statikus kapcsolatok"
 
 #: internet/C/connecting.xml:35(para)
 msgid "If you don't use DHCP then you can configure a static connection."
 msgstr ""
+"Amennyiben nem DHCP-t használ, lehetősége van statikus kapcsolat "
+"beállítására."
 
 #: internet/C/connecting.xml:37(para)
 msgid "Right click the NetworkManager icon in the system notification area."
 msgstr ""
+"Az értesítési területen kattintson jobb gombbal a Hálózatkezelő "
+"kisalkalmazás ikonra."
 
 #: internet/C/connecting.xml:38(para)
 msgid "Click <guilabel>Edit Connections</guilabel>."
 msgstr ""
+"A megjelenő menüben válassza a <guilabel>Kapcsolatok szerkesztése</guilabel> "
+"menüpontot."
 
 #: internet/C/connecting.xml:39(para)
 msgid "Click the <guilabel>Wired</guilabel> tab."
-msgstr ""
+msgstr "Kattintson a <guilabel>Vezetékes</guilabel> fülre."
 
 #: internet/C/connecting.xml:40(para)
 msgid "Select the connection and click <guibutton>Edit</guibutton>."
 msgstr ""
+"Válassza ki a kapcsolatot, majd kattintson a "
+"<guibutton>Szerkesztés</guibutton> gombra."
 
 #: internet/C/connecting.xml:41(para)
 msgid "Click the <guilabel>IPv4</guilabel> tab."
-msgstr ""
+msgstr "Válassza az <guilabel>IPv4 beállításai</guilabel> fület."
 
 #: internet/C/connecting.xml:42(para)
 msgid ""
 "Choose <guilabel>Manual</guilabel> from the <guilabel>Method</guilabel> drop "
 "down."
 msgstr ""
+"A <guilabel>Módszer</guilabel> legördülő listából válassza a "
+"<guilabel>Kézi</guilabel> lehetőséget."
 
 #: internet/C/connecting.xml:43(para)
 msgid "Enter your details and click <guibutton>OK</guibutton>."
 msgstr ""
+"Adja meg a kívánt adatokat, majd kattintson az <guibutton>OK</guibutton> "
+"gombra."
 
 #: internet/C/connecting.xml:44(para)
 msgid "Click <guibutton>Close</guibutton>."
-msgstr ""
+msgstr "Kattintson a <guibutton>Bezárás</guibutton> gombra."
 
 #: internet/C/connecting.xml:51(para)
 msgid "To connect to a wireless network:"
-msgstr ""
+msgstr "Vezeték nélküli hálózathoz kapcsolódáshoz:"
 
 #: internet/C/connecting.xml:53(para)
 msgid "Ensure that your wireless device is turned on."
-msgstr ""
+msgstr "Győződjön meg róla, hogy a vezeték nélküli eszköz be van kapcsolva."
 
 #: internet/C/connecting.xml:54(para)
 msgid ""
 "Click the <guiicon>NetworkManager</guiicon> icon in the system notification "
 "area."
 msgstr ""
+"Kattintson a <guiicon>Hálózatkezelő kisalkalmazás</guiicon> ikonra az "
+"értesítési területen"
 
 #: internet/C/connecting.xml:55(para)
 msgid ""
 "Under <guilabel>Wireless Network</guilabel> click the radio button next to "
 "the network you want to connect to."
 msgstr ""
+"A <guilabel>Vezeték nélküli hálózatok</guilabel> alatt válassza ki a "
+"használni kívánt kapcsolatot."
 
 #: internet/C/connecting.xml:58(para)
 msgid ""
 "If you have connected to the network previously, Ubuntu will automatically "
 "connect to the network where it is available."
 msgstr ""
+"Ha korábban már kapcsolódott egy hálózathoz, az Ubuntu annak elérhetővé "
+"válásakor automatikusan kapcsolódni fog hozzá."
 
 #: internet/C/connecting.xml:59(para)
 msgid ""
@@ -2500,6 +2595,9 @@ msgid ""
 "be needed. If so, a dialog box will open. Enter your security details as "
 "follows."
 msgstr ""
+"Ha először kapcsolódik egy vezeték nélküli hálózathoz, szükség lehet a "
+"biztonsági információk megadására. A megnyíló párbeszédablakban adja meg "
+"ezeket, az alábbiak szerint."
 
 #: internet/C/connecting.xml:61(para)
 msgid ""
@@ -2508,21 +2606,27 @@ msgid ""
 "drop-down box. This will depend on how the wireless network is set up. "
 "Examples of security types are WEP, WPA and LEAP."
 msgstr ""
+"A Hálózatkezelő a legtöbb esetben automatikusan érzékeli a biztonsági "
+"beállításokat. Ha nem, válassza ki a biztonsági szolgáltatás típusát a "
+"<guilabel>Vezeték nélküli biztonság</guilabel> lapon. Ez a vezeték nélküli "
+"hálózat beállításaitól függ. Példák a biztonsági típusokra: WEP, WPA, LEAP."
 
 #: internet/C/connecting.xml:62(para)
 msgid ""
 "Enter the password, key or other authentication details as appropriate."
-msgstr ""
+msgstr "Adja meg a jelszavát, kulcsát vagy egyéb hitelesítési beállításait."
 
 #: internet/C/connecting.xml:66(para)
 msgid ""
 "If you have a wired network connection as well as an wireless connection, "
 "the wired connection will be used by default."
 msgstr ""
+"Ha rendelkezik vezetékes és vezeték nélküli kapcsolattal is, a vezetékes "
+"lesz az alapértelmezett."
 
 #: internet/C/connecting.xml:72(title) internet/C/basics.xml:33(title)
 msgid "Mobile Broadband"
-msgstr ""
+msgstr "Mobil széles sáv"
 
 #: internet/C/connecting.xml:73(para)
 msgid ""
@@ -2531,6 +2635,11 @@ msgid ""
 "mobile phone with built-in HSPA/UMTS/GPRS data connection. Some laptops have "
 "recently been produced with mobile broadband devices already inside them."
 msgstr ""
+"A <emphasis>Mobil széles sáv</emphasis> alatt azokat a nagy sebességű "
+"internetkapcsolatokat értjük, amikhez nélkülözhetetlen egy külső eszköz, "
+"például egy 3G USB kulcs vagy a mobiltelefonok beépített HSPA/UMTS/GPRS "
+"adatkapcsolatai. Néhány laptopba alapértelmezésben beépítenek ilyen mobil "
+"széles sávú eszközöket."
 
 #: internet/C/connecting.xml:74(para)
 msgid ""
@@ -2538,12 +2647,17 @@ msgid ""
 "connect them to your computer. Ubuntu will prompt you to configure the "
 "device."
 msgstr ""
+"A legtöbb ilyen mobil széles sávú eszközt azok csatlakoztatásakor "
+"automatikusan felismeri a számítógépe és az Ubuntu bekéri az eszköz "
+"beállításait."
 
 #: internet/C/connecting.xml:76(para)
 msgid ""
 "The <guilabel>New Mobile Broadband Connection</guilabel> Wizard will open "
 "automatically when you connect the device."
 msgstr ""
+"A <guilabel>Új mobil széles sávú kapcsolat</guilabel> varázsló automatikusan "
+"megnyílik az eszköz csatlakoztatásakor."
 
 #: internet/C/connecting.xml:77(para)
 msgid ""
@@ -2552,12 +2666,18 @@ msgid ""
 "and type of connection (for example, <emphasis>Contract</emphasis> or "
 "<emphasis>pre-pay</emphasis>)."
 msgstr ""
+"Kattintson a <guibutton>Tovább</guibutton> gombra és adja meg a "
+"beállításait, beleértve az országot ahol a mobil széles sávú eszközét "
+"kiadták, a szolgáltatót és a kapcsolat típusát (például "
+"<emphasis>Előfizetéses</emphasis> vagy <emphasis>Feltöltőkártyás</emphasis>)."
 
 #: internet/C/connecting.xml:78(para)
 msgid ""
 "Give your connection a name (it is up to you what name you choose) and click "
 "<guibutton>Apply</guibutton>."
 msgstr ""
+"Adjon nevet a kapcsolatnak (ez tetszőleges), majd kattintson az "
+"<guibutton>Alkalmaz</guibutton> gombra."
 
 #: internet/C/connecting.xml:79(para)
 msgid ""
@@ -2565,12 +2685,18 @@ msgid ""
 "<guiicon>NetworkManager</guiicon> icon in the top right of the panel and "
 "select your new connection."
 msgstr ""
+"Most már használatba vehető a kapcsolat. A kapcsolódáshoz kattintson bal "
+"egérgombbal a <guiicon>Hálózatkezelő kisalkalmazás</guiicon> ikonra a panel "
+"jobb felső sarkában, majd válassza ki a frissen beállított kapcsolatot."
 
 #: internet/C/connecting.xml:80(para)
 msgid ""
 "To disconnect, left click the <guiicon>NetworkManager</guiicon> icon in the "
 "top right of the panel and click <guibutton>Disconnect</guibutton>."
 msgstr ""
+"A kapcsolat bontásához kattintson a bal egérgombbal a <guiicon>Hálózatkezelő "
+"kisalkalmazás</guiicon> ikonra a panel jobb felső sarkában, majd a "
+"<guibutton>Bontás</guibutton> gombra."
 
 #: internet/C/connecting.xml:82(para)
 msgid ""
@@ -2578,16 +2704,22 @@ msgid ""
 "still be recognised by Ubuntu. In such cases you can add the connection "
 "manually."
 msgstr ""
+"Ha nem jelenik meg a varázsló az eszköz csatlakoztatásakor, az Ubuntu ekkor "
+"is képes lehet felismerni az eszközt, viszont ilyenkor saját kezűleg kell "
+"beállítani a kapcsolatot."
 
 #: internet/C/connecting.xml:84(para)
 msgid ""
 "Right click the <guiicon>NetworkManager</guiicon> icon in the top right of "
 "the panel and click <guilabel>Edit Connections...</guilabel>"
 msgstr ""
+"Kattintson az egér jobb gombjával a <guiicon>Hálózatkezelő "
+"kisalkalmazás</guiicon> ikonra a panel jobb felső sarkában, majd a "
+"<guilabel>Kapcsolatok szerkesztése...</guilabel> menüpontra."
 
 #: internet/C/connecting.xml:85(para)
 msgid "Select the <guilabel>Mobile Broadband</guilabel> tab."
-msgstr ""
+msgstr "Válassza a  <guilabel>Mobil széles sáv</guilabel> fület."
 
 #: internet/C/connecting.xml:86(para) internet/C/connecting.xml:98(para) internet/C/connecting.xml:107(para)
 msgid "Click <guibutton>Add</guibutton>."
@@ -2598,6 +2730,9 @@ msgid ""
 "This should open the <guilabel>New Mobile Broadband Connection</guilabel> "
 "Wizard. Enter your details as described above."
 msgstr ""
+"Ennek hatására megnyílik az <guilabel>Új mobil széles sávú "
+"kapcsolat</guilabel> varázsló. Adja meg a beállításokat a fentebb leírtak "
+"alapján."
 
 #: internet/C/connecting.xml:92(title) internet/C/basics.xml:38(title)
 msgid "Virtual Private Networks"
@@ -2609,6 +2744,8 @@ msgid ""
 "supported by NetworkManager (NM). It is important to know which type of VPN "
 "network you are attempting to connect to."
 msgstr ""
+"A Hálózatkezelő jelenleg három fajta virtuális magánhálózatot (VPN) támogat. "
+"Fontos tudni, hogy milyen típusú VPN hálózathoz próbál csatlakozni."
 
 #: internet/C/connecting.xml:96(para)
 msgid ""
@@ -2617,6 +2754,10 @@ msgid ""
 "manager-pptp</ulink> and/or <ulink url=\"apt:network-manager-vpnc\">network-"
 "manager-vpnc</ulink>."
 msgstr ""
+"Kezdje a <ulink url=\"apt:network-manager-openvpn\">network-manager-"
+"openvpn</ulink>, <ulink url=\"apt:network-manager-pptp\">network-manager-"
+"pptp</ulink> és/vagy <ulink url=\"apt:network-manager-vpnc\">network-manager-"
+"vpnc</ulink> csomagok telepítésével."
 
 #: internet/C/connecting.xml:97(para)
 msgid ""
@@ -2688,7 +2829,7 @@ msgid ""
 "If you have a modem that can connect both via USB and ethernet, or an "
 "ethernet router, you should use the ethernet connection."
 msgstr ""
-"Ha a modemje USB-n és ethernetkábelen keresztül is képes csatlakozni, vagy "
+"Ha a modemje USB-n és ethernet kábelen keresztül is képes csatlakozni, vagy "
 "van ethernetes routere, akkor használja az ethernet kapcsolatot."
 
 #: internet/C/adsl.xml:21(para)
@@ -2985,6 +3126,23 @@ msgstr ""
 "  Odri Kornél https://launchpad.net/~korci\n"
 "  Szenográdi Norbert Péter https://launchpad.net/~sevoir\n"
 "  jackson https://launchpad.net/~jackson-gabor\n"
+"\n"
+"Launchpad Contributions:\n"
+"  Andras Timar https://launchpad.net/~timar-fsf\n"
+"  Attila Hammer https://launchpad.net/~hammera\n"
+"  Enahma https://launchpad.net/~enahma\n"
+"  Gabor Kelemen https://launchpad.net/~kelemeng\n"
+"  Gabor SUVEG https://launchpad.net/~gsuveg\n"
+"  István Nyitrai https://launchpad.net/~sianis\n"
+"  Karoly Gossler https://launchpad.net/~connor\n"
+"  Máté Őry https://launchpad.net/~orymate\n"
+"  Odri Kornél https://launchpad.net/~korci\n"
+"  Pittmann Tamás https://launchpad.net/~zaivaldi\n"
+"  Ricco https://launchpad.net/~ricco79\n"
+"  Richard Somlói https://launchpad.net/~ricsipontaz\n"
+"  Szenográdi Norbert Péter https://launchpad.net/~sevoir\n"
+"  lodovik.trema https://launchpad.net/~lodovik-trema\n"
+"  Ákos Dömötör https://launchpad.net/~akos-domotor\n"
 "\n"
 "Launchpad Contributions:\n"
 "  Andras Timar https://launchpad.net/~timar-fsf\n"

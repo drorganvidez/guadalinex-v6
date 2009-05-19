@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-docs\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2009-03-26 16:34+0000\n"
-"PO-Revision-Date: 2009-03-20 00:43+0000\n"
+"POT-Creation-Date: 2009-04-03 23:03+0100\n"
+"PO-Revision-Date: 2009-04-09 08:26+0000\n"
 "Last-Translator: Gabor Kelemen <kelemeng@gnome.hu>\n"
 "Language-Team: Hungarian <hu@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2009-04-01 10:38+0000\n"
+"X-Launchpad-Export-Date: 2009-04-09 18:25+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: add-applications/C/add-applications-C.omf:6(creator) add-applications/C/add-applications-C.omf:7(maintainer)
@@ -110,15 +110,21 @@ msgid ""
 "to-date. Also covered are how packages are stored by Ubuntu and made "
 "available for download."
 msgstr ""
+"Ez a szakasz leírja, hogy hogyan lehet programokat telepíteni, törölni és "
+"frissíteni. Leírja továbbá, hogy az Ubuntu hogyan tárolja és teszi "
+"elérhetővé a csomagokat."
 
 #: add-applications/C/add-applications.xml:21(title)
 msgid "How is software installation on Ubuntu different from on Windows?"
 msgstr ""
+"Miben különbözik a szoftvertelepítés Ubuntun a Windowson megszokottól?"
 
 #: add-applications/C/add-applications.xml:22(para)
 msgid ""
 "Ubuntu handles software installation in a very different way to Windows."
 msgstr ""
+"Az Ubuntu a Windowson megszokottól teljesen eltérően kezeli a "
+"szoftvertelepítést."
 
 #: add-applications/C/add-applications.xml:25(para)
 msgid ""
@@ -127,6 +133,10 @@ msgid ""
 "You then run the installer program, which guides you through the "
 "installation process."
 msgstr ""
+"Ha egy alkalmazást Windows alá akar telepíteni, normális esetben meg kell "
+"vennie a szoftvert tartalmazó CD-t, vagy le kell töltenie egy "
+"telepítőcsomagot az internetről. Ezután futtatni kell a telepítőprogramot, "
+"amely végigvezeti a telepítési folyamaton."
 
 #: add-applications/C/add-applications.xml:31(para)
 msgid ""
@@ -134,6 +144,9 @@ msgid ""
 "for the application that you want and click a button to install it. Removing "
 "an application is just as simple."
 msgstr ""
+"Ubuntu alatt csak egy <emphasis>csomagkezelőt</emphasis> kell megnyitnia, "
+"amelyben kiválaszthatja és egy gombnyomással telepítheti a kívánt "
+"alkalmazást. Az eltávolítás ugyanilyen egyszerű."
 
 #: add-applications/C/add-applications.xml:36(para)
 msgid ""
@@ -145,6 +158,12 @@ msgid ""
 "browser, if you like, but it is generally much more convenient to let the "
 "package manager handle this for you."
 msgstr ""
+"A csomagkezelő az alkalmazásokat egy szoftvertárolóból tölti le, amely egy "
+"alkalmazásokat tároló hely az interneten. Ezek az alkalmazások "
+"<emphasis>csomagokba</emphasis> vannak szervezve, amelyek a telepítéshez "
+"szükséges összes információt tartalmazzák. Ha akar, letölthet csomagokat a "
+"webböngészője segítségével, de általában sokkal kényelmesebb ezt a "
+"csomagkezelőre hagyni."
 
 #: add-applications/C/add-applications.xml:45(para)
 msgid ""
@@ -153,6 +172,10 @@ msgid ""
 "installed. The package manager automatically installs these "
 "<emphasis>dependencies</emphasis> for you."
 msgstr ""
+"Néhány csomag működése más csomagok telepítésétől függ. Egy szövegszerkesztő "
+"csomag például megkövetelheti egy nyomtatókezelő csomag telepítését. A "
+"csomagkezelő automatikusan telepíti ezeket a "
+"<emphasis>függőségeket</emphasis>."
 
 #: add-applications/C/add-applications.xml:51(para)
 msgid ""
@@ -161,10 +184,14 @@ msgid ""
 "that you want in the default repositories, you can add other (<quote>third-"
 "party</quote>) repositories and install it from there."
 msgstr ""
+"Alapértelmezésben csak a hivatalos Ubuntu szoftvertárolók alkalmazásai "
+"érhetők el a csomagkezelőben. Ha nem talál egy keresett alkalmazást az "
+"alapértelmezett tárolókban, felvehet más (<quote>harmadik féltől "
+"származó</quote>) tárolókat, amelyekből telepítheti."
 
 #: add-applications/C/add-applications.xml:60(title)
 msgid "Installing an application"
-msgstr ""
+msgstr "Alkalmazás telepítése"
 
 #: add-applications/C/add-applications.xml:63(para) add-applications/C/add-applications.xml:185(para)
 msgid ""
@@ -172,50 +199,66 @@ msgid ""
 "<menuchoice><guimenu>Applications</guimenu><guimenuitem>Add/Remove...</guimen"
 "uitem></menuchoice>."
 msgstr ""
+"Válassza ki az "
+"<menuchoice><guimenu>Alkalmazások</guimenu><guimenuitem>Hozzáadás/eltávolítás"
+"</guimenuitem></menuchoice> menüpontot."
 
 #: add-applications/C/add-applications.xml:66(para)
 msgid ""
 "Search for an application, or select a category and find an application from "
 "the list."
 msgstr ""
+"Rákereshet a megfelelő alkalmazásra, vagy válasszon egy kategóriát és "
+"válogasson a felsorolt alkalmazások között."
 
 #: add-applications/C/add-applications.xml:70(para)
 msgid ""
 "Check the box next to the application that you want to install. Do this for "
 "all of the applications that you want to install."
 msgstr ""
+"Jelölje be a telepíteni kívánt alkalmazás melletti négyzetet. Tegye ezt "
+"minden telepíteni kívánt alkalmazás esetén."
 
 #: add-applications/C/add-applications.xml:74(para)
 msgid ""
 "Click <guibutton>Apply Changes</guibutton>, then click "
 "<guibutton>Apply</guibutton> to start the installation."
 msgstr ""
+"Nyomja meg a <guibutton>Változtatások alkalmazása</guibutton>, majd az "
+"<guibutton>Alkalmaz</guibutton> gombra a telepítés megkezdéséhez."
 
 #: add-applications/C/add-applications.xml:78(para)
 msgid ""
 "Enter your password if prompted. The applications that you chose will be "
 "downloaded and installed."
 msgstr ""
+"Adja meg a jelszavát, amikor a program kéri. A kiválasztott alkalmazások "
+"letöltésre és telepítésre kerülnek."
 
 #: add-applications/C/add-applications.xml:82(para)
 msgid ""
 "Once installation has finished, your new applications should be available "
 "from the Applications menu."
 msgstr ""
+"A telepítés befejezése után az új alkalmazások elérhetővé válnak az "
+"Alkalmazások menüből."
 
 #: add-applications/C/add-applications.xml:88(title)
 msgid "Other methods of installing applications"
-msgstr ""
+msgstr "Más módszerek alkalmazások telepítésére"
 
 #: add-applications/C/add-applications.xml:91(title)
 msgid "Using Synaptic Package Manager"
-msgstr ""
+msgstr "A Synaptic csomagkezelő használata"
 
 #: add-applications/C/add-applications.xml:92(para)
 msgid ""
 "Synaptic can be used to manage advanced software packages (such as server "
 "applications) which Add/Remove Applications does not manage."
 msgstr ""
+"A Synaptic segítségével olyan speciális szoftvercsomagok (például "
+"kiszolgálóalkalmazások) kezelhetők, amelyeket a Hozzáadás/eltávolítás nem "
+"jelenít meg."
 
 #: add-applications/C/add-applications.xml:98(para)
 msgid ""
@@ -224,28 +267,39 @@ msgid ""
 "><guimenuitem>Synaptic Package Manager</guimenuitem></menuchoice>. Enter "
 "your password if prompted."
 msgstr ""
+"Válassza a "
+"<menuchoice><guimenu>Rendszer</guimenu><guimenuitem>Adminisztráció</guimenuit"
+"em><guimenuitem>Synaptic csomagkezelő</guimenuitem></menuchoice>. Adja meg a "
+"jelszavát, amikor a program kéri."
 
 #: add-applications/C/add-applications.xml:101(para)
 msgid ""
 "Click <guibutton>Search</guibutton> to search for an application, or click "
 "<guibutton>Sections</guibutton> and look through the categories to find one."
 msgstr ""
+"Kattintson a <guibutton>Keresés</guibutton> gombra a kívánt alkalmazás "
+"kereséséhez, vagy kattintson a <guibutton>Csoportok</guibutton> gombra a "
+"kategóriák tallózásához."
 
 #: add-applications/C/add-applications.xml:106(para)
 msgid ""
 "Right-click the application that you want to install and select "
 "<guilabel>Mark for Installation</guilabel>."
 msgstr ""
+"Kattintson a jobb egérgombbal a telepíteni kívánt alkalmazásra és válassza a "
+"<guilabel>Kijelölés telepítésre</guilabel> menüpontot."
 
 #: add-applications/C/add-applications.xml:110(para)
 msgid ""
 "If you are asked if you would like to mark additional changes, click "
 "<guibutton>Mark</guibutton>."
 msgstr ""
+"Ha a program megkérdezi, hogy kijelöli-e a további változtatásokat, nyomja "
+"meg a <guibutton>Kijelölés</guibutton> gombot."
 
 #: add-applications/C/add-applications.xml:114(para)
 msgid "Select any other applications that you would like to install."
-msgstr ""
+msgstr "Válassza ki a további telepíteni kívánt alkalmazásokat."
 
 #: add-applications/C/add-applications.xml:118(para)
 msgid ""
@@ -253,34 +307,41 @@ msgid ""
 "<guibutton>Apply</guibutton> in the window that appears. The applications "
 "that you chose will be downloaded and installed."
 msgstr ""
+"Nyomja meg az <guibutton>Alkalmaz</guibutton> gombot, majd a megjelenő "
+"ablakban is nyomja meg az <guibutton>Alkalmaz</guibutton> gombot. A "
+"kiválasztott alkalmazások letöltésre és telepítésre kerülnek."
 
 #: add-applications/C/add-applications.xml:126(title)
 msgid "Downloading and installing a .deb package"
-msgstr ""
+msgstr ".deb csomag letöltése és telepítése"
 
 #: add-applications/C/add-applications.xml:127(para)
 msgid ""
 "You can download and install applications from websites. These applications "
 "are contained in Debian (.deb) packages. To install a Debian package:"
 msgstr ""
+"Alkalmazásokat weboldalakról is letölthet és telepíthet. Ezek az "
+"alkalmazások Debian (.deb) csomagokban vannak. Debian csomag telepítése:"
 
 #: add-applications/C/add-applications.xml:133(para)
 msgid "Download the package from a website."
-msgstr ""
+msgstr "Töltse le a csomagot a webhelyről."
 
 #: add-applications/C/add-applications.xml:136(para)
 msgid "Double-click the package. It will be opened in the Package Installer."
-msgstr ""
+msgstr "Kattintson duplán a csomagra. A Csomagtelepítő megnyitja."
 
 #: add-applications/C/add-applications.xml:140(para)
 msgid "Click <guibutton>Install</guibutton> to install the package."
 msgstr ""
+"Kattintson a <guibutton>Telepítés</guibutton> gombra a csomag telepítéséhez."
 
 #: add-applications/C/add-applications.xml:145(para)
 msgid ""
 "Installing single packages in this way is not recommended, for the following "
 "reasons:"
 msgstr ""
+"Az önálló csomagok telepítésének a következők miatt nem ez a javasolt módja:"
 
 #: add-applications/C/add-applications.xml:151(para)
 msgid ""
@@ -288,6 +349,9 @@ msgid ""
 "contain software which harms your computer. You should only download single "
 "packages from websites that you trust."
 msgstr ""
+"A csomagokat biztonsági szempontból nem ellenőrizték Ubuntu tagok és "
+"rosszindulatú szoftvereket is tartalmazhatnak. Csak megbízható weboldalakról "
+"letöltött önálló csomagokat telepítsen."
 
 #: add-applications/C/add-applications.xml:156(para)
 msgid ""
@@ -295,10 +359,13 @@ msgid ""
 "installed automatically. You will have to find and install this software "
 "yourself."
 msgstr ""
+"A csomag működéséhez olyan további szoftverek lehetnek szükségesek, amelyek "
+"nem telepíthetők automatikusan. Ezeket egyedül kell megkeresnie és "
+"telepítenie."
 
 #: add-applications/C/add-applications.xml:164(title)
 msgid "Clicking a link on a web page"
-msgstr ""
+msgstr "Weboldalon lévő hivatkozásra kattintás"
 
 #: add-applications/C/add-applications.xml:165(para)
 msgid ""
@@ -307,6 +374,11 @@ msgid ""
 "will be asked if you would like to install additional software. Click "
 "<guibutton>Install</guibutton> to start the installation process."
 msgstr ""
+"Néhány weboldalon olyan hivatkozások találhatók, amelyekre kattintva "
+"csomagok települnek. Ezeket <quote>apt:</quote> hivatkozásoknak hívjuk. A "
+"hivatkozásra kattintva a program megkérdezi, hogy szeretne-e további "
+"szoftvereket telepíteni. Nyomja meg a <guibutton>Telepítés</guibutton> "
+"gombot a telepítési folyamat elindításához."
 
 #: add-applications/C/add-applications.xml:171(para)
 msgid ""
@@ -315,22 +387,29 @@ msgid ""
 "that websites cannot trick you into installing software which is potentially "
 "harmful to your computer."
 msgstr ""
+"Az alkalmazás csak akkor tölthető le és telepíthető, ha elérhető a "
+"számítógépén engedélyezett egyik szoftvertárolóból. Ez azt jelenti, hogy a "
+"weboldalak így nem csaphatják be és nem vehetik rá rosszindulatú szoftverek "
+"telepítésére."
 
 #: add-applications/C/add-applications.xml:182(title)
 msgid "Removing an application"
-msgstr ""
+msgstr "Alkalmazás eltávolítása"
 
 #: add-applications/C/add-applications.xml:188(para)
 msgid ""
 "Find the application that you want to remove by finding it in the list or by "
 "searching for it."
 msgstr ""
+"Keresse meg az eltávolítani kívánt alkalmazást a listában vagy rákeresve."
 
 #: add-applications/C/add-applications.xml:192(para)
 msgid ""
 "Uncheck the box next to the application that you want to remove. Do this for "
 "all of the applications you want to remove."
 msgstr ""
+"Törölje az  eltávolítani kívánt alkalmazás melletti négyzetet. Ezt minden "
+"ilyen alkalmazással tegye meg."
 
 #: add-applications/C/add-applications.xml:196(para)
 msgid ""
@@ -338,6 +417,9 @@ msgid ""
 "<guibutton>Apply</guibutton> to remove the applications. Enter your password "
 "if prompted."
 msgstr ""
+"Nyomja meg a <guibutton>Változtatások alkalmazása</guibutton>, majd az "
+"<guibutton>Alkalmaz</guibutton> gombra az alkalmazások eltávolításához. Ha a "
+"program kéri, adja meg jelszavát."
 
 #: add-applications/C/add-applications.xml:201(para)
 msgid ""
@@ -347,6 +429,9 @@ msgid ""
 "to confirm that this is what you want to happen before the applications are "
 "removed."
 msgstr ""
+"Néhány alkalmazás megfelelő működése mások jelenlétén múlik. Ha megpróbál "
+"eltávolítani egy másik alkalmazás által igényelt alkalmazást, akkor mindkét "
+"alkalmazás eltávolításra kerül."
 
 #: add-applications/C/add-applications.xml:207(para)
 msgid ""
@@ -356,10 +441,14 @@ msgid ""
 "m><guimenuitem>Synaptic Package Manager</guimenuitem></menuchoice>) to "
 "remove it instead."
 msgstr ""
+"Ha az eltávolítani kívánt alkalmazás nem érhető el az Alkalmazások "
+"hozzáadása/eltávolítása alatt, akkor használja helyette a Synapticot "
+"(<menuchoice><guimenu>Rendszer</guimenu><guimenuitem>Adminisztráció</guimenui"
+"tem><guimenuitem>Synaptic csomagkezelő</guimenuitem></menuchoice>)."
 
 #: add-applications/C/add-applications.xml:214(title)
 msgid "Adding a software repository"
-msgstr ""
+msgstr "Szoftvertároló hozzáadása"
 
 #: add-applications/C/add-applications.xml:215(para)
 msgid ""
@@ -368,6 +457,10 @@ msgid ""
 "party software repository, you must add it to the package manager's list of "
 "available repositories."
 msgstr ""
+"Szoftverek az alapértelmezett Ubuntu tárolók mellett harmadik féltől "
+"származó forrásokból is elérhetők. Ha ilyen harmadik féltől származó "
+"szoftvertárolóból szeretne telepíteni, akkor azt fel kell vennie a "
+"csomagkezelő által elérhető tárolók listájára."
 
 #: add-applications/C/add-applications.xml:222(para)
 msgid ""
@@ -375,6 +468,9 @@ msgid ""
 "software repositories are not checked for security by Ubuntu members, so "
 "could contain software which is harmful to your computer."
 msgstr ""
+"Csak megbízható forrásokból származó szoftvertárolókat vegyen fel. A "
+"harmadik féltől származó tárolókat biztonsági szempontból nem ellenőrizték "
+"Ubuntu tagok és rosszindulatú szoftvereket is tartalmazhatnak."
 
 #: add-applications/C/add-applications.xml:230(para)
 msgid ""
@@ -383,16 +479,23 @@ msgid ""
 "><guimenuitem>Software Sources</guimenuitem></menuchoice> and select "
 "<guilabel>Third Party Software</guilabel>."
 msgstr ""
+"Válassza a "
+"<menuchoice><guimenu>Rendszer</guimenu><guimenuitem>Adminisztráció</guimenuit"
+"em><guimenuitem>Szoftverforrások</guimenuitem></menuchoice> menüelemet és a "
+"<guilabel>Harmadik fél</guilabel> fület."
 
 #: add-applications/C/add-applications.xml:234(para)
 msgid "Click <guibutton>Add</guibutton> to add a new repository."
 msgstr ""
+"Nyomja meg a <guibutton>Hozzáadás</guibutton> gombot új tároló hozzáadásához."
 
 #: add-applications/C/add-applications.xml:237(para)
 msgid ""
 "Enter the APT line for the extra repository. This should be available from "
 "the website of the repository, and should look similar to the following:"
 msgstr ""
+"Adja meg az új tároló APT sorát. Ez a tároló weboldaláról elérhető és a "
+"következőhöz hasonlóan néz ki:"
 
 #: add-applications/C/add-applications.xml:240(screen)
 #, no-wrap
@@ -404,18 +507,22 @@ msgid ""
 "Click <guibutton>Add Source</guibutton> and then click "
 "<guibutton>Close</guibutton> to save your changes."
 msgstr ""
+"Nyomja meg a <guibutton>Forrás hozzáadása</guibutton> gombot, majd a "
+"<guibutton>Bezárás</guibutton> segítségével mentse a változtatásait."
 
 #: add-applications/C/add-applications.xml:247(para)
 msgid ""
 "You will be notified that the information about available software is out-of-"
 "date. Click <guibutton>Reload</guibutton>."
 msgstr ""
+"Értesítést kap, hogy az elérhető szoftverek információi elavultak. Nyomja "
+"meg a <guibutton>Frissítés</guibutton> gombot."
 
 #: add-applications/C/add-applications.xml:251(para)
 msgid ""
 "Packages from the new repository should now be available in your package "
 "manager."
-msgstr ""
+msgstr "Az új tároló csomagjai ezután elérhetők a csomagkezelőben."
 
 #: add-applications/C/add-applications.xml:255(para)
 msgid ""
@@ -426,6 +533,12 @@ msgid ""
 "to the signatures. The key should be available for download on the "
 "repository's website."
 msgstr ""
+"Biztonsági intézkedésként a legtöbb szoftvertároló GPG kulcsot használ az "
+"általa biztosított fájlok aláírására. Ez egyszerűvé teszi a fájlok "
+"változatlanságának ellenőrzését, azaz hogy a készítésük óta senki nem nyúlt "
+"hozzájuk. Ahhoz, hogy a csomagkezelő ellenőrizhesse ezt, az aláírásnak "
+"megfelelő nyilvános kulcsra van szükség. A kulcsnak letölthetőnek kell "
+"lennie a tároló weboldaláról."
 
 #: add-applications/C/add-applications.xml:263(para)
 msgid ""
@@ -435,10 +548,14 @@ msgid ""
 "<guilabel>Authentication</guilabel> tab, click <guibutton>Import Key "
 "File</guibutton> and select the GPG key to be imported."
 msgstr ""
+"Töltse le a GPG kulcsot. Ezután válassza a "
+"<menuchoice><guimenu>Rendszer</guimenu><guimenuitem>Adminisztráció</guimenuit"
+"em><guimenuitem>Szoftverforrások</guimenuitem></menuchoice> menüpontot, majd "
+"a <guilabel>Hitelesítés</guilabel> fület."
 
 #: add-applications/C/add-applications.xml:271(title)
 msgid "Installing software packages without an Internet connection"
-msgstr ""
+msgstr "Szoftvercsomagok telepítése internetkapcsolat nélkül"
 
 #: add-applications/C/add-applications.xml:272(para)
 msgid ""
@@ -450,6 +567,12 @@ msgid ""
 "packages on your system, and create CDs with the contents of various "
 "repositories on them."
 msgstr ""
+"Ha nem csatlakozik az internetre, használhat csomagfájlokat tartalmazó CD-t "
+"alkalmazások telepítéséhez a számítógépre. Az Ubuntu telepítő CD használható "
+"erre a célra és más csomagokat tartalmazó CD-k is elérhetők. Ezen kívül az "
+"<application>APTonCD</application> program képes automatikusan menteni a "
+"rendszerre telepített csomagokat és CD-ket készíteni a különböző tárolók "
+"tartalmából."
 
 #: add-applications/C/add-applications.xml:283(title)
 msgid "Installing packages using the Ubuntu installation CD"
@@ -508,12 +631,17 @@ msgid ""
 "<menuchoice><guimenu>System</guimenu><guimenuitem>Administration</guimenuitem"
 "><guimenuitem>Software Sources</guimenuitem></menuchoice>."
 msgstr ""
+"Válassza ki a "
+"<menuchoice><guimenu>Rendszer</guimenu><guimenuitem>Adminisztráció</guimenuit"
+"em><guimenuitem>Szoftverforrások</guimenuitem></menuchoice> menüpontot."
 
 #: add-applications/C/add-applications.xml:313(para)
 msgid ""
 "Select <guilabel>Third Party Software</guilabel> and click on the "
 "<guibutton>Add CD-ROM</guibutton> button."
 msgstr ""
+"Válassza a <guilabel>Harmadik fél</guilabel> fület és nyomja meg a "
+"<guibutton>CD-ROM hozzáadása</guibutton> gombot."
 
 #: add-applications/C/add-applications.xml:317(para)
 msgid "Insert the CD."
@@ -561,7 +689,7 @@ msgstr ""
 
 #: add-applications/C/add-applications.xml:347(title)
 msgid "What are restricted and non-free software?"
-msgstr ""
+msgstr "Mik azok a korlátozott és nem szabad szoftverek?"
 
 #: add-applications/C/add-applications.xml:348(para)
 msgid ""
@@ -656,7 +784,7 @@ msgstr ""
 
 #: add-applications/C/add-applications.xml:399(title)
 msgid "Overview of the default Ubuntu software repositories"
-msgstr ""
+msgstr "Az alapértelmezett Ubuntu szoftvertárolók bemutatása"
 
 #: add-applications/C/add-applications.xml:400(para)
 msgid ""
@@ -678,7 +806,7 @@ msgid ""
 "it is also very secure because each program you install is built specially "
 "for Ubuntu and checked before it is allowed into the repositories."
 msgstr ""
-"Az Ubuntura többezer csomagot lehet telepíteni. Ezek a csomagok "
+"Az Ubuntura több ezer csomagot lehet telepíteni. Ezek a csomagok "
 "csomagtárolókban vannak, és bármely Ubuntu felhasználó szabadon letöltheti "
 "őket. Ez nagyon könnyűvé teszi új programok telepítését és nagyon "
 "biztonságos, mivel minden, tárolóból telepített programcsomag kifejezetten "
@@ -699,6 +827,12 @@ msgid ""
 "url=\"http://www.ubuntu.com/ubuntu/philosophy\">Free Software "
 "Philosophy</ulink>."
 msgstr ""
+"Az Ubuntu négy tárolóba rendszerezi a csomagokat: <emphasis>Main</emphasis>, "
+"<emphasis>Restricted</emphasis>, <emphasis>Universe</emphasis> és "
+"<emphasis>Multiverse</emphasis>. A besorolás szempontjai az adott program "
+"fejlesztői által adott támogatás mértéke és az Ubuntu <ulink "
+"url=\"http://www.ubuntu.com/ubuntu/philosophy\">Szabad szoftveres "
+"irányelveinek</ulink> való megfelelőség foka."
 
 #: add-applications/C/add-applications.xml:425(para)
 msgid ""
@@ -736,7 +870,7 @@ msgstr ""
 
 #: add-applications/C/add-applications.xml:448(title)
 msgid "Update repositories"
-msgstr ""
+msgstr "Tárolók frissítése"
 
 #: add-applications/C/add-applications.xml:449(para)
 msgid ""
@@ -863,6 +997,18 @@ msgstr ""
 "  J https://launchpad.net/~sorosj\n"
 "  Máté Őry https://launchpad.net/~orymate\n"
 "  Vass Károly https://launchpad.net/~cvk\n"
+"\n"
+"Launchpad Contributions:\n"
+"  Attila Hammer https://launchpad.net/~hammera\n"
+"  Crystal https://launchpad.net/~ebence88\n"
+"  Dora Kovats https://launchpad.net/~dorcssa\n"
+"  Enahma https://launchpad.net/~enahma\n"
+"  Gabor Kelemen https://launchpad.net/~kelemeng\n"
+"  Horváth Árpád https://launchpad.net/~horvath-arpad-roik\n"
+"  István Nyitrai https://launchpad.net/~sianis\n"
+"  Máté Őry https://launchpad.net/~orymate\n"
+"  Vass Károly https://launchpad.net/~cvk\n"
+"  Ákos Dömötör https://launchpad.net/~akos-domotor\n"
 "\n"
 "Launchpad Contributions:\n"
 "  Attila Hammer https://launchpad.net/~hammera\n"

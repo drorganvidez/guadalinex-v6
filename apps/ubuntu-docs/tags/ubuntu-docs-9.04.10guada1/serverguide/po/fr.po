@@ -9,14 +9,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: generic_serverguide_po_serverguide-fr\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2009-03-26 16:35+0000\n"
-"PO-Revision-Date: 2009-03-31 11:44+0000\n"
-"Last-Translator: Pierre Slamich <pierre.slamich@gmail.com>\n"
+"POT-Creation-Date: 2009-04-03 23:05+0100\n"
+"PO-Revision-Date: 2009-04-07 10:45+0000\n"
+"Last-Translator: Bruno Patri <bruno.patri@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2009-04-01 10:44+0000\n"
+"X-Launchpad-Export-Date: 2009-04-09 18:31+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: serverguide/C/serverguide-C.omf:6(creator) serverguide/C/serverguide-C.omf:7(maintainer)
@@ -1934,6 +1934,11 @@ msgid ""
 "system to leave the domain and re-join, a separate package for version five "
 "was created."
 msgstr ""
+"Avec Ubuntu 9.04, <application>Likewise Open 5.0</application> est "
+"disponible dans le dépôt <emphasis>Universe</emphasis>. Cependant, comme la "
+"mise à jour à partir de la version actuelle <application>Likewise Open "
+"4.1</application> nécessite pour le moment que le système quitte le domaine "
+"pour le rejoindre ensuite, un paquet séparé pour la version 5 a été créé."
 
 #: serverguide/C/windows-networking.xml:1300(para)
 msgid "To install <application>Likewise Open 5.0</application> enter:"
@@ -2028,8 +2033,8 @@ msgid ""
 "Replace <emphasis>example.com</emphasis> with your domain name, and "
 "<emphasis>Administrator</emphasis> with the appropriate user name."
 msgstr ""
-"Remplacer <emphasis>example.com</emphasis> par votre nom de domaine and "
-"<emphasis>Administrateur</emphasis> avec l'identifiant approprié."
+"Remplacez <emphasis>example.com</emphasis> par votre nom de domaine et "
+"<emphasis>Administrator</emphasis> par le nom d'utilisateur approprié."
 
 #: serverguide/C/windows-networking.xml:1372(para)
 msgid ""
@@ -2839,7 +2844,7 @@ msgid ""
 "enabled point to \"available\" sites."
 msgstr ""
 "Le répertoire /etc/apache2/sites-availabe n'est <emphasis "
-"rol=\"bold\">pas</emphases> interprété par Apache2. Des liens symboliques "
+"role=\"bold\">pas</emphases> interprété par Apache2. Des liens symboliques "
 "dans /etc/apache2/sites-enabled pointent vers les sites disponibles."
 
 #: serverguide/C/web-servers.xml:260(para)
@@ -4360,6 +4365,13 @@ msgid ""
 "system to run (without root rights) separate private instances while still "
 "using the system-installed libraries."
 msgstr ""
+"Tomcat est surtout utilisé dans des scénarios de développement et de test où "
+"l'utilisation d'une seule instance système n'obéit pas aux éxigences "
+"d'utilisateurs multiples sur un seul système.Les paquets de Tomcat 6.0 "
+"d'Unbutu sont fournis avec des outils pour aider à développer vos propres "
+"instances utilisateur, permettant à tous les utilisateurs du système de "
+"lancer (sans les droits superutilisateur) des instances privées séparées, "
+"tout en utilisant les bibliothèques partagées du système."
 
 #: serverguide/C/web-servers.xml:1162(para)
 msgid ""
@@ -5684,10 +5696,10 @@ msgid ""
 "separate storage for data, having a separate <filename>/var</filename> would "
 "make sense."
 msgstr ""
-"Le partitionnement d'une machine virtuelle doit prendre en compte l'usage à "
-"laquelle elle destinée. Comme la plupart des machines virtuelles ont besoin "
-"d'un espace de stockage séparé pour les données, avoir une partition pour "
-"<filename>/var</filename> peut être judicieux."
+"Le partitionnement d'une machine virtuelle doit prendre en compte l'usage "
+"auquel elle est destinée. Comme la plupart des machines virtuelles ont "
+"besoin d'un espace de stockage séparé pour les données, avoir une partition "
+"pour <filename>/var</filename> peut être judicieux."
 
 #: serverguide/C/virtualization.xml:719(para) serverguide/C/jeos.xml:338(para)
 msgid ""
@@ -5814,7 +5826,7 @@ msgid ""
 "<emphasis>--user USERNAME:</emphasis> Sets the name of the user to be added. "
 "Default: ubuntu."
 msgstr ""
-"<emphasis>--user USERNAME:</emphasis> définit le nom de l'utilisateur à "
+"<emphasis>--user USERNAME :</emphasis> définit le nom de l'utilisateur à "
 "ajouter. Par défaut : ubuntu."
 
 #: serverguide/C/virtualization.xml:793(para) serverguide/C/jeos.xml:412(para)
@@ -5822,7 +5834,7 @@ msgid ""
 "<emphasis>--name FULLNAME:</emphasis> Sets the full name of the user to be "
 "added. Default: Ubuntu."
 msgstr ""
-"<emphasis>--name FULLNAME:</emphasis> définit le nom complet de "
+"<emphasis>--name FULLNAME :</emphasis> définit le nom complet de "
 "l'utilisateur à ajouter. par défaut : Ubuntu."
 
 #: serverguide/C/virtualization.xml:798(para) serverguide/C/jeos.xml:417(para)
@@ -5830,7 +5842,7 @@ msgid ""
 "<emphasis>--pass PASSWORD:</emphasis> Sets the password for the user. "
 "Default: ubuntu."
 msgstr ""
-"<emphasis>--pass PASSWORD:</emphasis> définit le mot de passe de "
+"<emphasis>--pass PASSWORD :</emphasis> définit le mot de passe de "
 "l'utilisateur. Par défaut : ubuntu."
 
 #: serverguide/C/virtualization.xml:804(para) serverguide/C/jeos.xml:423(para)
@@ -5922,13 +5934,15 @@ msgid ""
 "server</application> asking to set a password, the package can be installed "
 "immediately, but we will have to reconfigure it the first time the user logs "
 "in."
-msgstr ""
+msgstr "."
 
 #: serverguide/C/virtualization.xml:854(para) serverguide/C/jeos.xml:473(para)
 msgid ""
 "If some packages that we need to install are not in main, we need to enable "
 "the additional repositories using --comp and --ppa:"
 msgstr ""
+"Si certains paquets nécessaires ne sont pas dans le dépôt main, nous aurons "
+"besoin d'activer les dépôts additionnels en utilisant --comp et --ppa :"
 
 #: serverguide/C/virtualization.xml:858(programlisting) serverguide/C/jeos.xml:477(programlisting)
 #, no-wrap
@@ -5940,6 +5954,13 @@ msgid ""
 "           to \"main\"\n"
 "--ppa=PPA  Add ppa belonging to PPA to the vm's sources.list.\n"
 msgstr ""
+"\n"
+"--components COMP1,COMP2,...,COMPN\n"
+"           Une liste séparée par des virgules de composants de la "
+"distribution à inclure (main,universe \n"
+"           par exemple). Utilisation de « main » par défaut\n"
+"--ppa=PPA  Ajouter au fichier sources.list de la VM un dépôt personnel ppa "
+"appartenant à PPA.\n"
 
 #: serverguide/C/virtualization.xml:865(para) serverguide/C/jeos.xml:484(para)
 msgid ""
@@ -5948,6 +5969,11 @@ msgid ""
 "<filename>/etc/apt/source.list</filename>, so we add the following options "
 "to the command line:"
 msgstr ""
+"Limesurvey n'étant pas disponible pour le moment dans une archive, nous "
+"allons spécifier son adresse de PPA(personal package archive, archive de "
+"paquet personnel) pour qu'il soit ajouté au "
+"<filename>/etc/apt/source.list</filename> de la VM, donc nous ajoutons les "
+"options suivantes à la ligne de commande :"
 
 #: serverguide/C/virtualization.xml:871(command) serverguide/C/jeos.xml:490(command)
 msgid ""
@@ -5980,10 +6006,23 @@ msgid ""
 "<emphasis>--firstboot</emphasis> script, as it does not need any user "
 "interaction."
 msgstr ""
+"Un autre outil qu'il est souhaitable d'avoir sur notre machine est OpenSSH, "
+"car il va permettre à nos administrateurs d'accéder à la machine à distance. "
+"Toutefois, déployer en conditions réelles une machine où un serveur OpenSSH "
+"est pré-installé est un grand risque pour la sécurité de l'ensemble car tous "
+"ces serveurs partageront la même clé secrète, et il sera ainsi très facile "
+"pour les pirates informatiques de cibler notre appareil en leur fournissant "
+"tout ce dont ils ont besoin pour craquer la machine en un clin d'œil. Comme "
+"pour le mot de passe de l'utilisateur, nous allons plutôt compter sur un "
+"script qui va installer OpenSSH la première fois qu'un utilisateur ouvre une "
+"session, de sorte que la clé générée sera différente pour chaque appareil. "
+"Pour ce faire, nous allons utiliser un script <emphasis>--"
+"firstboot</emphasis> de script, comme il n'a pas besoin d'une interaction de "
+"la part de l'utilisateur."
 
 #: serverguide/C/virtualization.xml:892(title) serverguide/C/jeos.xml:511(title)
 msgid "Speed Considerations"
-msgstr ""
+msgstr "Considérations sur la vitesse"
 
 #: serverguide/C/virtualization.xml:895(title) serverguide/C/jeos.xml:514(title)
 msgid "Package Caching"
@@ -6013,6 +6052,10 @@ msgid ""
 "vmbuilder to use it, we'll have to use the <emphasis>--mirror</emphasis> "
 "option:"
 msgstr ""
+"Une fois cette opération terminée, votre proxy (vide) est prêt à l'emploi "
+"sur http://adressedumiroir:9999 et le dépôt ubuntu se trouve dans le dossier "
+"/ubuntu. Pour permettre à  vmbuilder de l'utiliser, il faudra utiliser "
+"l'option <emphasis>--mirror</emphasis> :"
 
 #: serverguide/C/virtualization.xml:915(programlisting) serverguide/C/jeos.xml:534(programlisting)
 #, no-wrap
@@ -6023,6 +6066,12 @@ msgid ""
 "              arches and http://ports.ubuntu.com/ubuntu-ports\n"
 "              otherwise\n"
 msgstr ""
+"\n"
+"--mirror=URL  Utilise le miroir Ubuntu à l'URL indiquée au lieu du défaut, "
+"qui\n"
+"              est http://archive.ubuntu.com/ubuntu pour les architectures\n"
+"              officielles et http://ports.ubuntu.com/ubuntu-ports\n"
+"              sinon\n"
 
 #: serverguide/C/virtualization.xml:922(para) serverguide/C/jeos.xml:541(para)
 msgid "So we add to the command line:"
@@ -6040,6 +6089,11 @@ msgid ""
 "to plan on reseting this address later on, such as in a <emphasis>--"
 "firstboot</emphasis> script."
 msgstr ""
+"L'adresse miroir spécifiée ici sera aussi utilisé dans "
+"<filename>/etc/apt/source.list</filename> de l'invité nouvellement créé, il "
+"est donc utile de spécifier ici une adresse qui pourra être résolue par "
+"l'invité ou planifier une remise à l'état initial de cette adresse plus "
+"tard, comme dans un script <emphasis>--firstboot</emphasis> par exemple."
 
 #: serverguide/C/virtualization.xml:940(title) serverguide/C/jeos.xml:559(title)
 msgid "Install a Local Mirror"
@@ -6052,6 +6106,11 @@ msgid ""
 "script that will handle the mirroring for you. You should plan on having "
 "about 20 gigabyte of free space per supported release and architecture."
 msgstr ""
+"Si nous sommes en environnement plus grand, il pourrait être utile "
+"d'installer un miroir local des dépôts d'Ubuntu. Le paquet apt-mirror vous "
+"fournit un script ce qui va gérer la construction du miroir pour vous. Vous "
+"devez prévoir 20 gigaoctets d'espace libre par version et architecture prise "
+"en charge."
 
 #: serverguide/C/virtualization.xml:948(para) serverguide/C/jeos.xml:567(para)
 msgid ""
@@ -6063,6 +6122,14 @@ msgid ""
 "be i386, amd64, etc... For example, on an amd64 machine, to have the i386 "
 "archives as well, you will have:"
 msgstr ""
+"Par défaut, <application>apt-mirror</application> utilise le fichier de "
+"configuration  dans <filename>/etc/apt/mirror.list</filename>.Tel qu'il est "
+"configuré, il répliquera seulement l'architecture de la machine locale. Si "
+"vous souhaitez prendre en charge d'autres architectures sur votre miroir, "
+"dupliquez simplement les lignes commençant par « deb », en remplaçant le mot "
+"clé « deb » par « /deb-{arch} » où « arch » peut être « i384 », « amd64 », "
+"etc. Par exemple,sur une machine amd64, pour avoir également les archives "
+"pour i386, vous aurez :"
 
 #: serverguide/C/virtualization.xml:955(programlisting) serverguide/C/jeos.xml:574(programlisting)
 #, no-wrap
@@ -6129,6 +6196,9 @@ msgid ""
 "compared to the binaries and they do take a lot more space, but they can be "
 "easily added to the list."
 msgstr ""
+"Notez que les paquets source ne sont pas dupliqués car il sont rarement "
+"utilisés par rapport aux binaires et prennent de la place en plus, mais il "
+"peuvent facilement être ajoutés à la liste."
 
 #: serverguide/C/virtualization.xml:977(para) serverguide/C/jeos.xml:596(para)
 msgid ""
@@ -6138,6 +6208,11 @@ msgid ""
 "default), are published by your Apache server. For more information on "
 "Apache see <xref linkend=\"httpd\"/>."
 msgstr ""
+"Une fois que le miroir a fini de se répliquer (et cela peut être long), vous "
+"devez configurer Apache de façon à ce que les fichiers miroirs (dans "
+"<filename>/var/spool/apt-mirror</filename> si vous n'avez pas changé le "
+"réglage par défaut) soient publiés par votre serveur Apache. Pour plus "
+"d'informations sur Apache consultez <xref linkend=\"httpd\"/>."
 
 #: serverguide/C/virtualization.xml:986(title) serverguide/C/jeos.xml:605(title)
 msgid "Installing in a RAM Disk"
@@ -6150,6 +6225,11 @@ msgid ""
 "perform its operation in a RAMdisk will help a lot and the option <emphasis>-"
 "-tmpfs</emphasis> will help you do just that:"
 msgstr ""
+"Comme vous pouvez facilement l'imaginer, écrire dans la RAM est "
+"<emphasis>BEAUCOUP</emphasis> plus rapide que d'écrire sur le disque. Si "
+"vous avez de la mémoire libre, laisser vmbuilder faire ces opérations dans "
+"le disque virtuel en mémoire facilitera beaucoup les choses. L'option "
+"<emphasis>--tmpfs</emphasis> va vous permettre de faire cela :"
 
 #: serverguide/C/virtualization.xml:994(programlisting) serverguide/C/jeos.xml:613(programlisting)
 #, no-wrap
@@ -6164,6 +6244,8 @@ msgid ""
 "So adding <command>--tmpfs -</command> sounds like a very good idea if you "
 "have 1G of free ram."
 msgstr ""
+"De ce fait, ajouter <command>--tmpfs -</command> si vous avez 1 Go de RAM "
+"disponible est a priori une très bonne idée."
 
 #: serverguide/C/virtualization.xml:1006(title) serverguide/C/jeos.xml:625(title)
 msgid "Package the Application"
@@ -6202,6 +6284,9 @@ msgid ""
 "recommended by the <ulink url=\"http://www.pathname.com/fhs/\">FHS "
 "guidelines</ulink>."
 msgstr ""
+"Installer l'application manuellement sous <filename>/opt</filename>, comme "
+"indiqué par les <ulink url=\"http://www.pathname.com/fhs/\">recommandations "
+"du FHS</ulink>."
 
 #: serverguide/C/virtualization.xml:1030(para) serverguide/C/jeos.xml:649(para)
 msgid ""
@@ -6210,6 +6295,11 @@ msgid ""
 "before, we've made a version of the package available in a PPA (Personal "
 "Package Archive)."
 msgstr ""
+"Dans notre cas nous allons utiliser <application>Limesurvey</application> "
+"comme exemple d'application Web pour laquelle nous souhaitons fournir un "
+"serveur applicatif virtuel. Comme indiqué auparavant, nous avons fait une "
+"version du paquet disponible dans un PPA  (Personal Package Archive, archive "
+"de paquet personnel)."
 
 #: serverguide/C/virtualization.xml:1037(title) serverguide/C/jeos.xml:656(title)
 msgid "Finishing Install"
@@ -6226,6 +6316,10 @@ msgid ""
 "for it is unique for each machine. To do this, we'll write a script called "
 "<filename>boot.sh</filename> as follows:"
 msgstr ""
+"Comme mentionné précédemment, la première fois que la machine démarre nous "
+"avons besoin d'installer <application>openssh-server</application> pour que "
+"la clé générée pour celui-ci soit unique à chaque machine. Pour ce faire, "
+"nous allons écrire un script nommé <filename>boot.sh</filename> comme suit :"
 
 #: serverguide/C/virtualization.xml:1048(programlisting) serverguide/C/jeos.xml:667(programlisting)
 #, no-wrap
@@ -6249,6 +6343,8 @@ msgid ""
 "And we add the <command>--firstboot boot.sh</command> option to our command "
 "line."
 msgstr ""
+"Et nous ajoutons l'option <command>--firstboot boot.sh</command> à notre "
+"ligne de commande."
 
 #: serverguide/C/virtualization.xml:1062(title) serverguide/C/jeos.xml:681(title)
 msgid "First Login"
@@ -6260,6 +6356,10 @@ msgid ""
 "set them up the first time a user logs in using a script named login.sh. "
 "We'll also use this script to let the user specify:"
 msgstr ""
+"Mysql et Limesurvey ont besoin d'interaction avec l'utilisateur pendant leur "
+"installation. Nous allons les régler la première fois qu'utilisateur se "
+"connecte grâce à un script appelé « login.sh ». Nous allons aussi utiliser "
+"ce script pour permettre à l'utilisateur de spécifier :"
 
 #: serverguide/C/virtualization.xml:1070(para) serverguide/C/jeos.xml:689(para)
 msgid "His own password"
@@ -6298,12 +6398,35 @@ msgid ""
 "echo \"Your appliance is now configured.  To use it point your\"\n"
 "echo \"browser to http://serverip/limesurvey/admin\"\n"
 msgstr ""
+"\n"
+"# Ce script est exécuté la première fois qu'un utilisateur se connecte\n"
+"\n"
+"echo \"La configuration de votre appareil est sur le point d'être finie.\"\n"
+"echo \"Pour la terminer, nous devons vous poser quelques questions,\"\n"
+"echo \"en commençant par la modification de votre mot de passe "
+"utilisateur.\"\n"
+"\n"
+"passwd\n"
+"\n"
+"# donner la possibilité de changer le clavier\n"
+"sudo dpkg-reconfigure console-setup\n"
+"\n"
+"# configurer le mot de passe root du serveur mysql\n"
+"sudo dpkg-reconfigure mysql-server-5.0\n"
+"\n"
+"# installer LimeSurvey\n"
+"sudo apt-get install-qqy - force-yes limesurvey\n"
+"\n"
+"echo \"Votre appareil est maintenant configuré. Pour l'utiliser saisissez\"\n"
+"echo \"http://ipduserveur/limesurvey/admin dans votre navigateur.\"\n"
 
 #: serverguide/C/virtualization.xml:1100(para) serverguide/C/jeos.xml:719(para)
 msgid ""
 "And we add the <command>--firstlogin login.sh</command> option to our "
 "command line."
 msgstr ""
+"Et nous ajoutons l'option <command>--firstlogin login.sh</command> à notre "
+"ligne de commande."
 
 #: serverguide/C/virtualization.xml:1107(title) serverguide/C/jeos.xml:726(title)
 msgid "Useful Additions"
@@ -6319,6 +6442,10 @@ msgid ""
 "will just install <application>unattended-upgrades</application>, so we add "
 "the following option to our command line:"
 msgstr ""
+"Afin de configurer votre système pour qu'il se mette à jour automatiquement "
+"de manière régulière, il nous suffit d'installer <application>unattended-"
+"upgrades</application>. Nous ajoutons donc l'option suivante à notre ligne "
+"de commande :"
 
 #: serverguide/C/virtualization.xml:1118(command) serverguide/C/jeos.xml:737(command)
 msgid "--addpkg unattended-upgrades"
@@ -6330,10 +6457,13 @@ msgid ""
 "only the system, but also the application each time we update the version in "
 "the PPA."
 msgstr ""
+"Comme nous avons mis notre paquet d'application dans un PPA, le processus ne "
+"mettra pas seulement à jour le système, mais également l'application à "
+"chaque fois que nous mettons à jour la version présente dans le PPA."
 
 #: serverguide/C/virtualization.xml:1128(title) serverguide/C/jeos.xml:747(title)
 msgid "ACPI Event Handling"
-msgstr ""
+msgstr "Gestion des évènements ACPI"
 
 #: serverguide/C/virtualization.xml:1130(para) serverguide/C/jeos.xml:749(para)
 msgid ""
@@ -6341,6 +6471,9 @@ msgid ""
 "is being sent, it is a good idea to install the acpid package as well. To do "
 "this we just add the following option:"
 msgstr ""
+"Pour que votre machine virtuelle soit en mesure de traiter les événements "
+"redémarrage et arrêt qu'on lui envoie, il est utile d'installer le paquet "
+"acpid. Pour ce faire, il suffit d'ajouter l'option suivante :"
 
 #: serverguide/C/virtualization.xml:1136(command) serverguide/C/jeos.xml:755(command)
 msgid "--addpkg acpid"
@@ -6348,11 +6481,11 @@ msgstr "--addpkg acpid"
 
 #: serverguide/C/virtualization.xml:1142(title) serverguide/C/jeos.xml:761(title)
 msgid "Final Command"
-msgstr ""
+msgstr "Commande finale"
 
 #: serverguide/C/virtualization.xml:1144(para) serverguide/C/jeos.xml:763(para)
 msgid "Here is what the command with all the options discussed above:"
-msgstr ""
+msgstr "Voici la commande avec toutes les options examinées ci-dessus:"
 
 #: serverguide/C/virtualization.xml:1149(command) serverguide/C/jeos.xml:768(command)
 msgid ""
@@ -6415,6 +6548,11 @@ msgid ""
 "computing environment in order to maximize computing resources and provide a "
 "cloud computing environment to your users."
 msgstr ""
+"<emphasis>Eucalyptus</emphasis> est une infrastructure logicielle libre pour "
+"implémenter l'informatique en nuages (« cloud computing ») sur vos propres "
+"grappes de serveurs. <emphasis>Eucalyptus</emphasis> vous permet de créer "
+"votre propre environnement informatique en nuages afin de maximiser les "
+"ressources de calcul et fournir un tel environnement à vos utilisateurs."
 
 #: serverguide/C/virtualization.xml:1193(para)
 msgid ""
@@ -6422,6 +6560,10 @@ msgid ""
 "<application>Eucalyptus</application> with <application>KVM</application>. "
 "For more information on KVM see <xref linkend=\"libvirt\"/>."
 msgstr ""
+"Cette section couvrira la mise en place d'un environnement informatique en "
+"nuages en utilisant <application>Eucalyptus</application> avec "
+"<application>KVM</application>. Pour plus d'informations sur KVM, consultez "
+"<xref linkend=\"libvirt\"/>."
 
 #: serverguide/C/virtualization.xml:1198(para)
 msgid ""
@@ -6429,6 +6571,9 @@ msgid ""
 "installed on at least two separate machines (termed the 'front-end' and "
 "'node(s)' for the rest of this document):"
 msgstr ""
+"L'environnement informatique en nuages sera constitué de trois composants, "
+"généralement installés sur au moins deux machines différentes (appelées le "
+"« frontal » et le(s) « nœud(s) » dans le reste de ce document) :"
 
 #: serverguide/C/virtualization.xml:1205(para)
 msgid ""
@@ -6437,6 +6582,10 @@ msgid ""
 "where virtual machines (VMs) will be housed and manages cluster level VM "
 "networking."
 msgstr ""
+"<emphasis>un frontal :</emphasis> accueille un contrôleur de nuage (ou "
+"« Cloud Controller ), une interface web de configuration basée sur Java, et "
+"un contrôleur de grappe, qui détermine où les machines virtuelles (VM) "
+"seront logées et gère le réseau des VMs au niveau de la grappe."
 
 #: serverguide/C/virtualization.xml:1211(para)
 msgid ""
@@ -6444,6 +6593,9 @@ msgid ""
 "component of Eucalyptus, which allows the machine to be part of the cloud as "
 "a host for VMs."
 msgstr ""
+"<emphasis>un ou plusieurs nœuds de calcul </emphasis> exécutant le composant "
+"contrôleur de nœud d'Eucalyptus, qui permet à la machine de faire partie du "
+"nuage comme hôte de VM."
 
 #: serverguide/C/virtualization.xml:1218(para)
 msgid ""
@@ -6454,12 +6606,21 @@ msgid ""
 "Each node will be configured for bridge networking. For more details see "
 "<xref linkend=\"bridging\"/>."
 msgstr ""
+"L'option simple de réseau <emphasis>System</emphasis> sera utilisée par "
+"défaut. Cette méthode de réseau permet aux instances de machines virtuelles "
+"d'obtenir des adresses IP depuis le LAN local, en supposant qu'un serveur "
+"DHCP soit configuré correctement sur le LAN pour fournir des IP "
+"dynamiquement aux VM qui en demandent. Chaque nœud sera configuré pour "
+"fonctionner en pont réseau (« bridge networking »). Pour plus de détails, "
+"consultez <xref linkend=\"bridging\"/>."
 
 #: serverguide/C/virtualization.xml:1228(para)
 msgid ""
 "First, on the <emphasis>Front-End</emphasis> install the appropriate "
 "packages. In a terminal prompt on the Front-End enter:"
 msgstr ""
+"Tout d'abord, sur le <emphasis>frontal</emphasis>, installez les paquets "
+"appropriés. Dans une invite de terminal sur le frontal, saisissez :"
 
 #: serverguide/C/virtualization.xml:1233(command)
 msgid "sudo apt-get install eucalyptus-cloud eucalyptus-cc"
@@ -6470,6 +6631,9 @@ msgid ""
 "Next, on the each <emphasis>Compute Node</emphasis> install the node "
 "controller package. In a terminal prompt on each Compute Node enter:"
 msgstr ""
+"Ensuite, sur chaque <emphasis>nœud de calcul</emphasis>, installez le paquet "
+"contôleur de nœud. Sur chaque nœud de calcul, saisissez dans une invite de "
+"terminal :"
 
 #: serverguide/C/virtualization.xml:1241(command)
 msgid "sudo apt-get install eucalyptus-nc"
@@ -6484,6 +6648,12 @@ msgid ""
 "password, configure an email address for the admin user, and set the storage "
 "URL."
 msgstr ""
+"Une fois l'installation complétée, et cela peut prendre du temps, allez à "
+"l'adresse <emphasis>https://front-end:8443</emphasis> dans un navigateur, et "
+"connectez-vous sur l'interface d'administration en utilisant le nom "
+"d'utilisateur et le mot de passe par défaut de <emphasis>admin</emphasis>. "
+"Vous serez alors invité à changer le mot de passe, configurer une adresse "
+"électronique pour le compte administrateur, et à définir un URL de stockage."
 
 #: serverguide/C/virtualization.xml:1250(para)
 msgid ""
@@ -6494,12 +6664,20 @@ msgid ""
 "Once the form is filled out click the <emphasis>\"Add Cluster\"</emphasis> "
 "button."
 msgstr ""
+"Dans l'onglet <emphasis>« Configuration »</emphasis> de l'interface Web, "
+"ajoutez une grappe sous le titre <emphasis>« Clusters »</emphasis> (dans "
+"cette configuration, le contrôleur de grappe est sur le même système que le "
+"contrôleur de nuage, il est donc correct de saisir « localhost » pour nom "
+"d'hôte de la grappe). Une fois le formulaire rempli, cliquez sur le bouton "
+"<emphasis>« Add Cluster »</emphasis>."
 
 #: serverguide/C/virtualization.xml:1256(para)
 msgid ""
 "Now, back on the <emphasis>Front-End</emphasis>, add the nodes to the "
 "cluster:"
 msgstr ""
+"À présent, de nouveau sur le <emphasis>frontal</emphasis>, ajoutez les nœuds "
+"à votre grappe :"
 
 #: serverguide/C/virtualization.xml:1261(command)
 msgid "sudo euca_conf -addnode hostname_of_node"
@@ -6515,6 +6693,13 @@ msgid ""
 "synchronizing the eucalyptus component keys and node registration is "
 "complete."
 msgstr ""
+"Il vous sera alors demandé de vous connecter à votre nœud, d'installer le "
+"paquet <application>eucalyptus-nc</application>, d'ajouter la clé SSH de "
+"l'utilisateur <emphasis>eucalyptus</emphasis> au fichier "
+"<filename>authorized_keys</filename> du nœud, et de confirmer l'authenticité "
+"de l'empreinte de la clé OpenSSH RSA de l'hôte. Enfin, la commande se "
+"terminera par la synchronisation des clés du composant Eucalyptus et "
+"l'enregistrement du nœud sera fini."
 
 #: serverguide/C/virtualization.xml:1270(para)
 msgid ""
@@ -6522,6 +6707,10 @@ msgid ""
 "configuration file will need editing to use your node's bridge interface "
 "(assuming here that the interface is named <emphasis>'br0'</emphasis>):"
 msgstr ""
+"Sur le nœud, vous devrez modifier le fichier de configuration "
+"<filename>/etc/eucalyptus/eucalyptus.conf</filename> pour utiliser "
+"l'interface en mode pont de votre nœud (appelée <emphasis>« br0 »</emphasis> "
+"ici) :"
 
 #: serverguide/C/virtualization.xml:1275(programlisting)
 #, no-wrap
@@ -6538,7 +6727,7 @@ msgstr ""
 
 #: serverguide/C/virtualization.xml:1281(para)
 msgid "Finally, restart <application>eucalyptus-nc</application>:"
-msgstr "Enfin, redémarrez <application>eucalyptus-nc</application>:"
+msgstr "Enfin, redémarrez <application>eucalyptus-nc</application> :"
 
 #: serverguide/C/virtualization.xml:1286(command)
 msgid "sudo /etc/init.d/eucalyptus-nc restart"
@@ -6550,19 +6739,24 @@ msgid ""
 "<emphasis>node01</emphasis>, and <emphasis>node02</emphasis> with actual "
 "hostnames."
 msgstr ""
+"Assurez-vous d'avoir remplacé <emphasis>nodecontroller</emphasis>, "
+"<emphasis>node01</emphasis>, et <emphasis>node02</emphasis> par les "
+"véritables noms d'hôtes."
 
 #: serverguide/C/virtualization.xml:1297(para)
 msgid ""
 "<application>Eucalyptus</application> is now ready to host images on the "
 "cloud."
 msgstr ""
+"<application>Eucalyptus</application> est maintenant prêt à héberger des "
+"images sur le nuage."
 
 #: serverguide/C/virtualization.xml:1307(para)
 msgid ""
 "See the <ulink url=\"http://eucalyptus.cs.ucsb.edu/\">Eucalyptus "
 "website</ulink> for more information."
 msgstr ""
-"Voir le <ulink url=\"http://eucalyptus.cs.ucsb.edu/\">site internet "
+"Consultez le <ulink url=\"http://eucalyptus.cs.ucsb.edu/\">site internet "
 "d'Eucalyptus</ulink> pour plus d'informations."
 
 #: serverguide/C/virtualization.xml:1312(para)
@@ -6571,6 +6765,9 @@ msgid ""
 "url=\"https://help.ubuntu.com/community/Eucalyptus\">Eucalyptus Wiki</ulink> "
 "page."
 msgstr ""
+"Pour plus d'informations sur le chargement des instances, consultez la page "
+"du <ulink url=\"https://help.ubuntu.com/community/Eucalyptus\">Wiki "
+"d'Eucalyptus</ulink>."
 
 #: serverguide/C/virtualization.xml:1317(para)
 msgid ""
@@ -6578,6 +6775,10 @@ msgid ""
 "<emphasis>#eucalyptus</emphasis>, and <emphasis>#ubuntu-server</emphasis> "
 "IRC channels on <ulink url=\"http://freenode.net\">Freenode</ulink>."
 msgstr ""
+"Vous pouvez également trouver de l'aide dans les salles de discussions IRC "
+"<emphasis>#ubuntu-virt</emphasis>, <emphasis>#eucalyptus</emphasis>, et "
+"<emphasis>#ubuntu-server</emphasis> sur <ulink "
+"url=\"http://freenode.net\">Freenode</ulink>."
 
 #: serverguide/C/virtualization.xml:1327(title)
 msgid "OpenNebula"
@@ -6589,6 +6790,10 @@ msgid ""
 "and re-placed dynamically on a pool of physical resources. This allows a "
 "virtual machine to be hosted from any location available."
 msgstr ""
+"<application>OpenNebula</application> permet aux machines virtuelles d'être "
+"placées ou replacées dynamiquement sur un pool de ressources physiques. "
+"Ainsi, une machine virtuelle peut être hébergée à n'importe quel emplacement "
+"disponible."
 
 #: serverguide/C/virtualization.xml:1334(para)
 msgid ""
@@ -6598,10 +6803,16 @@ msgid ""
 "also need a bridge configured to allow the virtual machines access to the "
 "local network. For details see <xref linkend=\"bridging\"/>."
 msgstr ""
+"Cette section détaillera la configuration d'une grappe OpenNebula en "
+"utilisant trois machines : un hôte <emphasis>frontal</emphasis> et deux "
+"<emphasis>nœuds de calcul</emphasis> utilisés pour exécuter les machines "
+"virtuelles. Les nœuds de calcul nécessiteront également un pont configuré "
+"pour autoriser l'accès des machines virtuelles au réseau local. Pour des "
+"détails, consultez <xref linkend=\"bridging\"/>."
 
 #: serverguide/C/virtualization.xml:1343(para)
 msgid "First, from a terminal on the Front-End enter:"
-msgstr ""
+msgstr "Tout d'abord, à partir d'un terminal sur le frontal, saisissez :"
 
 #: serverguide/C/virtualization.xml:1348(command)
 msgid "sudo apt-get install opennebula"
@@ -6609,7 +6820,7 @@ msgstr "sudo apt-get install opennebula"
 
 #: serverguide/C/virtualization.xml:1351(para)
 msgid "On each Compute Node install:"
-msgstr ""
+msgstr "Sur chaque nœud de calcul, installez :"
 
 #: serverguide/C/virtualization.xml:1356(command)
 msgid "sudo apt-get install opennebula-node"
@@ -6620,6 +6831,8 @@ msgid ""
 "In order to copy SSH keys, the <emphasis>oneadmin</emphasis> user will need "
 "to have a password. On each machine execute:"
 msgstr ""
+"Afin de copier les clés SSH, l'utilisateur <emphasis>oneadmin</emphasis> "
+"devra posséder un mot de passe. Sur chaque machine exécutez :"
 
 #: serverguide/C/virtualization.xml:1364(command)
 msgid "sudo passwd oneadmin"
@@ -6630,6 +6843,9 @@ msgid ""
 "Next, copy the <emphasis>oneadmin</emphasis> user's SSH key to the Compute "
 "Nodes, and to the Front-End's <filename>authorized_keys</filename> file:"
 msgstr ""
+"Copiez ensuite la clé SSH de l'utilisateur <emphasis>oneadmin</emphasis> sur "
+"les nœuds de calcul, et dans le fichier <filename>authorized_keys</filename> "
+"sur le frontal :"
 
 #: serverguide/C/virtualization.xml:1372(command)
 msgid ""
@@ -6665,6 +6881,13 @@ msgid ""
 "<filename>~/.ssh/known_hosts</filename> to "
 "<filename>/etc/ssh/ssh_known_hosts</filename>:"
 msgstr ""
+"La clé SSH des nœuds de calcul doit être ajoutée au fichier "
+"<filename>/etc/ssh/ssh_known_hosts</filename> sur l'hôte frontal. Pour cela, "
+"lancez <application>ssh</application> vers chaque nœud de calcul, en tant "
+"qu'un utilisateur autre que <emphasis>oneadmin</emphasis>. Quitez alors la "
+"session SSH, et exécutez ce qui suit afin de copier la clé SSH depuis "
+"<filename>~/.ssh/known_hosts</filename> vers "
+"<filename>/etc/ssh/ssh_known_hosts</filename> :"
 
 #: serverguide/C/virtualization.xml:1384(command)
 msgid ""
@@ -6687,6 +6910,8 @@ msgid ""
 "Replace <emphasis>node01</emphasis> and <emphasis>node02</emphasis> with the "
 "appropriate host names."
 msgstr ""
+"Remplacez <emphasis>node01</emphasis> et <emphasis>node02</emphasis> par les "
+"noms d'hôtes appropriés."
 
 #: serverguide/C/virtualization.xml:1394(para)
 msgid ""
@@ -6694,12 +6919,17 @@ msgid ""
 "<application>scp</application>, without a password or manual intervention, "
 "to deploy an image to the Compute Nodes."
 msgstr ""
+"Ceci permet à <emphasis>oneadmin</emphasis> d'utiliser "
+"<application>scp</application> sans mot de passe ou intervention manuelle, "
+"pour déployer une image sur les nœuds de calcul."
 
 #: serverguide/C/virtualization.xml:1399(para)
 msgid ""
 "On the Front-End create a directory to store the VM images, giving the "
 "<emphasis>oneadmin</emphasis> user access to the directory:"
 msgstr ""
+"Sur le frontal, créez un répertoire pour stocker les images des VM, en "
+"donnant l'accès au répertoire à l'utilisateur <emphasis>oneadmin</emphasis> :"
 
 #: serverguide/C/virtualization.xml:1404(command)
 msgid "sudo mkdir /var/lib/one/images"
@@ -6716,30 +6946,38 @@ msgid ""
 "machine using <application>vmbuilder</application>, see <xref linkend=\"jeos-"
 "and-vmbuilder\"/> for details."
 msgstr ""
+"Enfin, copiez un fichier de disque de machine virtuelle dans "
+"<filename>/var/lib/one/images</filename>. Vous pouvez créer une machine "
+"virtuelle Ubuntu en utilisant <application>vmbuilder</application>, "
+"consultez <xref linkend=\"jeos-and-vmbuilder\"/> pour plus de détails."
 
 #: serverguide/C/virtualization.xml:1417(para)
 msgid ""
 "The <emphasis>OpenNebula Cluster</emphasis> is now ready to be configured, "
 "and virtual machines added to the cluster."
 msgstr ""
+"La <emphasis>grappe OpenNebula</emphasis> est maintenant prête à être "
+"configurée, et les machines virtuelles à être ajoutées à la grappe."
 
 #: serverguide/C/virtualization.xml:1421(para)
 msgid "From a terminal prompt enter:"
-msgstr ""
+msgstr "Dans un terminal, saisissez :"
 
 #: serverguide/C/virtualization.xml:1426(command)
 msgid "onehost create node01 im_kvm vmm_kvm tm_ssh"
-msgstr ""
+msgstr "onehost create node01 im_kvm vmm_kvm tm_ssh"
 
 #: serverguide/C/virtualization.xml:1427(command)
 msgid "onehost create node02 im_kvm vmm_kvm tm_ssh"
-msgstr ""
+msgstr "onehost create node02 im_kvm vmm_kvm tm_ssh"
 
 #: serverguide/C/virtualization.xml:1430(para)
 msgid ""
 "Next, create a <emphasis>Virtual Network</emphasis> template file named "
 "<filename>vnet01.template</filename>:"
 msgstr ""
+"Ensuite, créez un fichier modèle de <emphasis>réseau virtuel</emphasis> "
+"nommé <filename>vnet01.template</filename> :"
 
 #: serverguide/C/virtualization.xml:1434(programlisting)
 #, no-wrap
@@ -6762,12 +7000,16 @@ msgstr ""
 msgid ""
 "Be sure to change <emphasis>192.168.0.0</emphasis> to your local network."
 msgstr ""
+"Assurez-vous de remplacer <emphasis>192.168.0.0</emphasis> par votre adresse "
+"de réseau local."
 
 #: serverguide/C/virtualization.xml:1448(para)
 msgid ""
 "Using the <application>onevnet</application> utility, add the virtual "
 "network to OpenNebula:"
 msgstr ""
+"Grâce à l'utilitaire <application>onevnet</application>, ajoutez le réseau "
+"virtuel à OpenNebula :"
 
 #: serverguide/C/virtualization.xml:1453(command)
 msgid "onevnet create vnet01.template"
@@ -6778,6 +7020,8 @@ msgid ""
 "Now create a <emphasis>VM Template</emphasis> file named "
 "<filename>vm01.template</filename>:"
 msgstr ""
+"Créez maintenant un fichier <emphasis>modèle de VM</emphasis> nommé "
+"<filename>vm01.template</filename> :"
 
 #: serverguide/C/virtualization.xml:1460(programlisting)
 #, no-wrap
@@ -6817,7 +7061,7 @@ msgstr ""
 #: serverguide/C/virtualization.xml:1477(para)
 msgid "Start the virtual machine using <application>onevm</application>:"
 msgstr ""
-"Démarrez la machine virtuelle en utilisant <application>onevm</application>:"
+"Démarrez la machine virtuelle en utilisant <application>onevm</application> :"
 
 #: serverguide/C/virtualization.xml:1482(command)
 msgid "onevm submit vm01.template"
@@ -6829,6 +7073,10 @@ msgid ""
 "about virtual machines. Also, the <application>onevm show vm01</application> "
 "option will display more details about a specific virtual machine."
 msgstr ""
+"Utilisez l'option <application>onevm list</application> pour visualiser des "
+"informations sur les machines virtuelles. De plus, l'option "
+"<application>onevm show vm01</application> affichera plus de détails sur une "
+"machine virtuelle particulière."
 
 #: serverguide/C/virtualization.xml:1496(para)
 msgid ""
@@ -6837,7 +7085,7 @@ msgid ""
 "> for more information."
 msgstr ""
 "Référez-vous au <ulink "
-"url=\"http://www.opennebula.org/doku.php?id=start\">site "
+"url=\"http://www.opennebula.org/doku.php?id=start\">site Web "
 "d'OpenNebula</ulink> pour plus d'informations."
 
 #: serverguide/C/virtualization.xml:1501(para)
@@ -6846,6 +7094,9 @@ msgid ""
 "<emphasis>#ubuntu-server</emphasis> IRC channels on <ulink "
 "url=\"http://freenode.net\">Freenode</ulink>."
 msgstr ""
+"Vous pouvez également trouver de l'aide dans les salles de discussion IRC "
+"<emphasis>#ubuntu-virt</emphasis> et <emphasis>#ubuntu-server</emphasis> sur "
+"<ulink url=\"http://freenode.net\">Freenode</ulink>."
 
 #: serverguide/C/vcs.xml:13(title)
 msgid "Version Control System"
@@ -7078,7 +7329,7 @@ msgid ""
 msgstr ""
 "Les dépôts Subversion sont accessibles (vérifiés) via de nombreuses méthodes "
 "différentes (sur un disque local ou au travers de protocoles réseaux "
-"divers). L'emplacement d'un dépôt est cependant toujours une URL. Le tableau "
+"divers). L'emplacement d'un dépôt est cependant toujours un URL. Le tableau "
 "indique comment les différents types d'URL sont reliés aux méthodes d'accès "
 "disponibles."
 
@@ -7237,6 +7488,10 @@ msgid ""
 "<command>svnadmin</command> command. They can be accessible using "
 "<command>htpp://hostname/svn/repos_name</command> url."
 msgstr ""
+"Le fragment de code de configuration ci-dessus suppose que les dépots de "
+"Subversion sont créés dans le répertoire <filename>/home/svn/</filename> en "
+"utilisant la commande <command>svnadmin</command>. Ils sont accessibles à "
+"l'URL <command>http://hostname/svn/repos_name</command>."
 
 #: serverguide/C/vcs.xml:225(para)
 msgid ""
@@ -7274,6 +7529,11 @@ msgid ""
 "following command at a command prompt (which will create the file and add "
 "the first user):"
 msgstr ""
+"Ensuite, vous devez créer le fichier "
+"<filename>/etc/subversion/passwd</filename> qui contiendra les détails "
+"d'authentification des utilisateurs. Pour cela, saisissez la commande "
+"suivante dans une invite de terminal (ce qui créera le fichier et ajoutera "
+"le premier utilisateur) :"
 
 #: serverguide/C/vcs.xml:252(command)
 msgid "sudo htpasswd -c /etc/subversion/passwd user_name"
@@ -7284,10 +7544,13 @@ msgid ""
 "To add additional users omit the <emphasis>\"-c\"</emphasis> option as this "
 "option replaces the old file. Instead use this form:"
 msgstr ""
+"Pour ajouter d'autres utilisateurs, omettez l'option <emphasis>« -"
+"c »</emphasis> car celle-ci remplace l'ancien fichier. Utilisez à la place "
+"cette formulation :"
 
 #: serverguide/C/vcs.xml:260(command)
 msgid "sudo htpasswd /etc/subversion/password user_name"
-msgstr ""
+msgstr "sudo htpasswd /etc/subversion/passwd nom_utilisateur"
 
 #: serverguide/C/vcs.xml:264(para)
 msgid ""
@@ -7563,6 +7826,15 @@ msgid ""
 "<command>sudo apt-get install xinetd</command>\n"
 "</screen>"
 msgstr ""
+"Pour installer <application>CVS</application>, saisissez la commande "
+"suivante à partir d'un terminal: <screen>\n"
+"<command>sudo apt-get install cvs</command>\n"
+"</screen> Après avoir installé <application>cvs</application>, vous devrez "
+"installer <application>xinetd</application> pour démarrer/arrêter le serveur "
+"cvs. Toujours dans le terminal, saisissez la commande suivante pour "
+"installer <application>xinetd</application>: <screen>\n"
+"<command>sudo apt-get install xinetd</command>\n"
+"</screen>"
 
 #: serverguide/C/vcs.xml:434(programlisting)
 #, no-wrap
@@ -7619,6 +7891,19 @@ msgid ""
 "<command>sudo /etc/init.d/xinetd restart</command>\n"
 "</screen>"
 msgstr ""
+"Une fois que vous avez installé cvs, le dépôt sera automatiquement "
+"initialisé. Par défaut, le dépôt se trouve dans le répertoire "
+"<application>/var/lib/cvs</application>. Vous pouvez modifier ce chemin en "
+"exécutant la commande suivante: <screen>\n"
+"<command>cvs -d /votre/nouveau/depot/cvs repo init </command>\n"
+"</screen> Une fois que le dépôt initial est mis en place, vous pouvez "
+"configurer <application>xinetd</application> pour qu'il démarre le serveur "
+"CVS. Vous pouvez copier les lignes suivantes dans le fichier <filename> "
+"/etc/xinetd.d/cvspserver</filename>. <placeholder-1/><placeholder-2/> Une "
+"fois que vous avez configuré <application>xinetd</application>, vous pouvez "
+"lancer le serveur cvs en exécutant la commande suivante: <screen>\n"
+"<command>sudo /etc/init.d/xinetd restart</command>\n"
+"</screen>"
 
 #: serverguide/C/vcs.xml:463(para)
 msgid ""
@@ -7757,6 +8042,12 @@ msgid ""
 "(https://wiki.ubuntu.com/DocumentationTeam). For a list of contributors, see "
 "the <ulink url=\"../../libs/C/contributors.xml\">contributors page</ulink>"
 msgstr ""
+"Ce document est maintenu par l'équipe de documentation d'Ubuntu "
+"(https://wiki.ubuntu.com/DocumentationTeam). Pour obtenir la liste des "
+"contributeurs, consultez la <ulink "
+"url=\"../../libs/C/contributors.xml\">page des contributeurs</ulink>. En cas "
+"de problème avec la traduction française, vous pouvez contacter l'équipe de "
+"traduction sur la liste de diffusion : ubuntu-fr-l10n@lists.ubuntu.com"
 
 #: serverguide/C/serverguide.xml:5(para) serverguide/C/bookinfo.xml:5(para)
 msgid ""
@@ -8891,6 +9182,8 @@ msgstr "sudo ufw allow 22"
 #: serverguide/C/security.xml:462(para)
 msgid "Rules can also be added using a <emphasis>numbered</emphasis> format:"
 msgstr ""
+"Les règles peuvent également être ajoutées en utilisant un format "
+"<emphasis>numéroté</emphasis> :"
 
 #: serverguide/C/security.xml:466(command)
 msgid "sudo ufw insert 1 allow 80"
@@ -9022,7 +9315,7 @@ msgstr "sudo ufw status verbose"
 
 #: serverguide/C/security.xml:557(para)
 msgid "To view the <emphasis>numbered</emphasis> format:"
-msgstr ""
+msgstr "Pour voir le format <emphasis>numéroté</emphasis> :"
 
 #: serverguide/C/security.xml:561(command)
 msgid "sudo ufw status numbered"
@@ -9104,6 +9397,9 @@ msgid ""
 "Replace <emphasis>Samba</emphasis> and <emphasis>192.168.0.0/24</emphasis> "
 "with the application profile you are using and the IP range for your network."
 msgstr ""
+"Remplacez <emphasis>Samba</emphasis> et <emphasis>192.168.0.0/24</emphasis> "
+"par le profil d'application que vous utilisez et la plage d'adresses IP de "
+"votre réseau."
 
 #: serverguide/C/security.xml:625(para)
 msgid ""
@@ -11348,8 +11644,8 @@ msgid ""
 "file."
 msgstr ""
 "Il y a beaucoup de directives dans le fichier de configuration de "
-"<application>sshd</application> contrôlant les paramètres de communications "
-"et les modes d'authetification. Suivent ci-dessous des exemples de "
+"<application>sshd</application> contrôlant les paramètres de communication "
+"et les modes d'authentification. Suivent ci-dessous des exemples de "
 "directives pouvant être changées en modifiant le "
 "fichier<filename>/etc/ssh/sshd_config</filename>."
 
@@ -11569,6 +11865,10 @@ msgid ""
 "application configuration. The modular design of eBox allows you to pick and "
 "choose which services you want to configure using eBox."
 msgstr ""
+"<application>eBox</application> est une infrastructure Web utilisée pour "
+"gérer la configuration des applications du serveur. La conception modulaire "
+"de eBox vous permet de choisir les services que vous souhaitez configurer en "
+"utilisant eBox."
 
 #: serverguide/C/remote-administration.xml:221(para)
 msgid ""
@@ -11942,6 +12242,12 @@ msgid ""
 "for your Ubuntu computer, the package management facilities also feature "
 "dependency resolution capabilities and software update checking."
 msgstr ""
+"Ubuntu dispose d'un vaste système de gestion des paquets pour "
+"l'installation, la mise à niveau, la configuration et la suppression de "
+"logiciels. En plus de fournir l'accès à une base organisée de plus de 24000 "
+"paquets logiciels pour votre ordinateur Ubuntu, l'infrastructure de gestion "
+"des paquets est aussi dotée de capacités de résolution de dépendances et de "
+"vérification des mises à jour."
 
 #: serverguide/C/package-management.xml:16(para)
 msgid ""
@@ -11996,6 +12302,16 @@ msgid ""
 "dependencies must be installed. The software management tools in Ubuntu will "
 "do this automatically."
 msgstr ""
+"Beaucoup de paquets complexes utilisent le concept de <emphasis "
+"role=\"italics\">dépendances</emphasis>. Les dépendances sont des paquets "
+"additionnels requis par le paquet principal pour fonctionner correctement. "
+"Par exemple, la paquet de synthèse de la parole "
+"<application>Festival</application> dépend du paquet "
+"<application>libasound2</application>, qui est un paquet fournissant la "
+"bibliothèque de sons <application>ALSA</application> nécessaire à la lecture "
+"audio. Pour que <application>Festival</application> fonctionne, ce programme "
+"ainsi que toutes ses dépendances doivent être installés. Les outils de "
+"gestion des logiciels dans Ubuntu feront ceci automatiquement."
 
 #: serverguide/C/package-management.xml:32(title)
 msgid "dpkg"
@@ -12010,6 +12326,12 @@ msgid ""
 "section covers using <application>dpkg</application> to manage locally "
 "installed packages:"
 msgstr ""
+"<application>dpkg</application> est un gestionnaire de paquets pour les "
+"systèmes basés sur <emphasis>Debian</emphasis> . Il peut installer, "
+"supprimer et compiler les paquets, mais contrairement à d'autres systèmes de "
+"gestion de paquets , il ne peut pas télécharger et installer automatiquement "
+"les paquets et leurs dépendances. Cette section porte sur l'utilisation de "
+"<application>dpkg</application> pour gérer les paquets localement installés:"
 
 #: serverguide/C/package-management.xml:43(para)
 msgid ""
@@ -17789,7 +18111,7 @@ msgstr ""
 "<emphasis>Principal :</emphasis> tous les utilisateurs, ordinateurs et "
 "services fournis par des serveurs doivent être définis comme « principals » "
 "Kerberos. (NdT : un « principal » Kerberos est une chaîne de caractères "
-"constituant un identité unique à laquelle Kerberos peut assigner des "
+"constituant une identité unique à laquelle Kerberos peut assigner des "
 "tickets.)"
 
 #: serverguide/C/network-auth.xml:1684(para)
@@ -17818,12 +18140,17 @@ msgid ""
 "Server (AS), the Ticket Granting Ticket (TGT) is encrypted in the user's "
 "password which is known only to the user and the KDC."
 msgstr ""
+"<emphasis>Ticket d'octroi de ticket :</emphasis> émis par le serveur "
+"d'authentification (AS), le ticket d'octroi du ticket (TGT) est chiffré avec "
+"le mot de passe utilisateur qui n'est connu que par l'utilisateur et le KDC."
 
 #: serverguide/C/network-auth.xml:1707(para)
 msgid ""
 "<emphasis>Ticket Granting Server:</emphasis> (TGS) issues service tickets to "
 "clients upon request."
 msgstr ""
+"<emphasis>Serveur d'octroi de ticket :</emphasis> (TGS) génère sur demande "
+"des tickets de service aux clients."
 
 #: serverguide/C/network-auth.xml:1712(para)
 msgid ""
@@ -17838,6 +18165,9 @@ msgid ""
 "<emphasis>Keytab Files:</emphasis> are files extracted from the KDC "
 "principal database and contain the encryption key for a service or host."
 msgstr ""
+"<emphasis>Fichiers Keytab :</emphasis> ce sont des fichiers extraits de la "
+"base de données KDC des « principals » et qui contiennent la clé de "
+"chiffrement pour un service ou un hôte."
 
 #: serverguide/C/network-auth.xml:1725(para)
 msgid ""
@@ -17853,7 +18183,7 @@ msgstr ""
 
 #: serverguide/C/network-auth.xml:1734(title)
 msgid "Kerberos Server"
-msgstr ""
+msgstr "Serveur Kerberos"
 
 #: serverguide/C/network-auth.xml:1738(para)
 msgid ""
@@ -17930,7 +18260,7 @@ msgstr ""
 #: serverguide/C/network-auth.xml:1793(userinput)
 #, no-wrap
 msgid " addprinc steve/admin"
-msgstr ""
+msgstr " addprinc steve/admin"
 
 #: serverguide/C/network-auth.xml:1794(computeroutput)
 #, no-wrap
@@ -18992,6 +19322,8 @@ msgstr "sudo cp cacert.pem /etc/ssl/certs"
 msgid ""
 "And edit <filename>/etc/ldap/ldap.conf</filename> to use the certificate:"
 msgstr ""
+"Et modifiez <filename>/etc/ldap/ldap.conf</filename> pour utiliser le "
+"certificat:"
 
 #: serverguide/C/network-auth.xml:2563(programlisting)
 #, no-wrap
@@ -19202,7 +19534,7 @@ msgstr ""
 
 #: serverguide/C/network-auth.xml:2708(para)
 msgid "Finally, start the <application>krb5-kdc</application> daemon:"
-msgstr ""
+msgstr "Enfin, démarrez le démon <application>krb5-kdc</application>:"
 
 #: serverguide/C/network-auth.xml:2719(para)
 msgid ""
@@ -19210,6 +19542,10 @@ msgid ""
 "you should be able to continue to authenticate users if one LDAP server, one "
 "Kerberos server, or one LDAP and one Kerberos server become unavailable."
 msgstr ""
+"Vous avez maintenant des KDCs redondants sur votre réseau, et avec des "
+"serveurs LDAP redondants, vous devriez être en mesure de continuer à "
+"authentifier les utilisateurs si un serveur LDAP, un serveur Kerberos, ou un "
+"serveur LDAP et un serveur Kerberos deviennent indisponibles."
 
 #: serverguide/C/network-auth.xml:2731(para)
 msgid ""
@@ -19217,6 +19553,9 @@ msgid ""
 "admin.html#Configuring-Kerberos-with-OpenLDAP-back_002dend\"> Kerberos Admin "
 "Guide</ulink> has some additional details."
 msgstr ""
+"<ulink url=\"http://web.mit.edu/Kerberos/krb5-1.6/krb5-1.6.3/doc/krb5-"
+"admin.html#Configuring-Kerberos-with-OpenLDAP-back_002dend\">Le Guide "
+"d'administration de Kerberos</ulink> contient des détails supplémentaires."
 
 #: serverguide/C/network-auth.xml:2737(para)
 msgid ""
@@ -19227,6 +19566,12 @@ msgid ""
 "url=\"http://manpages.ubuntu.com/manpages/jaunty/en/man8/kdb5_ldap_util.8.htm"
 "l\">kdb5_ldap_util man page</ulink>."
 msgstr ""
+"Pour plus d'informations sur <application>kdb5_ldap_util</application>, voir "
+"la <ulink url=\"http://web.mit.edu/Kerberos/krb5-1.6/krb5-1.6.3/doc/krb5-"
+"admin.html#Global-Operations-on-the-Kerberos-LDAP-Database\"> Rubrique 5.6 "
+"</ulink> et la <ulink "
+"url=\"http://manpages.ubuntu.com/manpages/jaunty/fr/man8/kdb5_ldap_util.8.htm"
+"l\">page de manuel kdb5_ldap_util</ulink>."
 
 #: serverguide/C/network-auth.xml:2745(para)
 msgid ""
@@ -19328,7 +19673,7 @@ msgstr "courriel.exemple.fr"
 
 #: serverguide/C/mail.xml:58(para)
 msgid "steve"
-msgstr ""
+msgstr "steve"
 
 #: serverguide/C/mail.xml:59(para)
 msgid "mail.example.com, localhost.localdomain, localhost"
@@ -22482,7 +22827,7 @@ msgid ""
 "customizing your system."
 msgstr ""
 "Vous trouverez ici des informations sur l'installation et la configuration "
-"de diverses apllications serveur. C'est un guide décrivant les actions pas-à-"
+"de diverses applications serveur. C'est un guide décrivant les actions pas-à-"
 "pas pour configurer et personnaliser votre système."
 
 #: serverguide/C/introduction.xml:19(para)
@@ -22916,6 +23261,11 @@ msgid ""
 "to launch <application>aptitude</application> to choose specific packages to "
 "install. For more information see <xref linkend=\"aptitude\"/>."
 msgstr ""
+"Vous avez maintenant la possibilité d'installer ou de ne pas installer "
+"plusieurs paquets de tâches. Voir <xref linkend=\"install-tasks\"/> pour "
+"plus de détails. Il existe aussi une option pour lancer "
+"<application>aptitude</application> afin de choisir les paquets à installer. "
+"Pour de plus amples informations, voir <xref linkend=\"aptitude\"/>."
 
 #: serverguide/C/installation.xml:229(para)
 msgid "Finally, the last step before rebooting is to set the clock to UTC."
@@ -23455,7 +23805,7 @@ msgstr ""
 
 #: serverguide/C/installation.xml:671(command)
 msgid "sudo dpkg-reconfigure mdadm"
-msgstr ""
+msgstr "sudo dpkg-reconfigure mdadm"
 
 #: serverguide/C/installation.xml:677(para)
 msgid ""
@@ -23471,6 +23821,8 @@ msgid ""
 "\n"
 "BOOT_DEGRADED=true\n"
 msgstr ""
+"\n"
+"BOOT_DEGRADED=true\n"
 
 #: serverguide/C/installation.xml:688(para)
 msgid "The configuration file can be overridden by using a Kernel argument."
@@ -23507,6 +23859,8 @@ msgid ""
 "Add <emphasis>\"bootdegraded=true\"</emphasis> (without the quotes) to the "
 "end of the line."
 msgstr ""
+"Ajoutez <emphasis>\"bootdegraded=true\"</emphasis> (sans les guillemets) en "
+"fin de ligne."
 
 #: serverguide/C/installation.xml:727(para)
 msgid "Press <emphasis>\"ENTER\"</emphasis>."
@@ -23539,7 +23893,7 @@ msgstr ""
 
 #: serverguide/C/installation.xml:761(command)
 msgid "sudo mdadm -D /dev/md0"
-msgstr ""
+msgstr "sudo mdadm -D /dev/md0"
 
 #: serverguide/C/installation.xml:764(para)
 msgid ""
@@ -23555,13 +23909,16 @@ msgstr ""
 
 #: serverguide/C/installation.xml:774(command)
 msgid "sudo mdadm -E /dev/sda1"
-msgstr ""
+msgstr "sudo mdadm -E /dev/sda1"
 
 #: serverguide/C/installation.xml:776(para)
 msgid ""
 "The output if very similar to the <command>mdadm -D</command> command, "
 "adjust <filename>/dev/sda1</filename> for each disk."
 msgstr ""
+"Le résultat est très similaire à celui de la commande <command>mdadm -"
+"D</command>, modifiez <filename>/dev/sda1</filename> à votre convenance pour "
+"chaque disque."
 
 #: serverguide/C/installation.xml:781(para)
 msgid "If a disk fails and needs to be removed from an array enter:"
@@ -23569,7 +23926,7 @@ msgstr ""
 
 #: serverguide/C/installation.xml:785(command)
 msgid "sudo mdadm --remove /dev/md0 /dev/sda1"
-msgstr ""
+msgstr "sudo mdadm --remove /dev/md0 /dev/sda1"
 
 #: serverguide/C/installation.xml:787(para)
 msgid ""
@@ -23579,11 +23936,11 @@ msgstr ""
 
 #: serverguide/C/installation.xml:792(para)
 msgid "Similarly, to add a new disk:"
-msgstr ""
+msgstr "De la même manière, pour ajouter un disque :"
 
 #: serverguide/C/installation.xml:796(command)
 msgid "sudo mdadm --add /dev/md0 /dev/sda1"
-msgstr ""
+msgstr "sudo mdadm --add /dev/md0 /dev/sda1"
 
 #: serverguide/C/installation.xml:801(para)
 msgid ""
@@ -23602,7 +23959,7 @@ msgstr ""
 
 #: serverguide/C/installation.xml:812(command)
 msgid "cat /proc/mdstat"
-msgstr ""
+msgstr "cat /proc/mdstat"
 
 #: serverguide/C/installation.xml:813(computeroutput)
 #, no-wrap
@@ -23622,7 +23979,7 @@ msgstr ""
 
 #: serverguide/C/installation.xml:825(command)
 msgid "watch -n1 cat /proc/mdstat"
-msgstr ""
+msgstr "watch -n1 cat /proc/mdstat"
 
 #: serverguide/C/installation.xml:828(para)
 msgid ""
@@ -23640,7 +23997,7 @@ msgstr ""
 
 #: serverguide/C/installation.xml:838(command)
 msgid "sudo grub-install /dev/md0"
-msgstr ""
+msgstr "sudo grub-install /dev/md0"
 
 #: serverguide/C/installation.xml:841(para)
 msgid ""
@@ -23652,18 +24009,21 @@ msgid ""
 "The topic of RAID arrays is a complex one due to the plethora of ways RAID "
 "can be configured. Please see the following links for more information:"
 msgstr ""
+"Les matrices RAID sont un sujet complexe en raison de la multitude de façons "
+"de paramétrer le RAID. Consultez les liens suivants pour plus "
+"d'informations :"
 
 #: serverguide/C/installation.xml:857(ulink)
 msgid "Software RAID HOWTO"
-msgstr ""
+msgstr "Guide pratique du RAID logiciel"
 
 #: serverguide/C/installation.xml:862(ulink)
 msgid "Managing RAID on Linux"
-msgstr ""
+msgstr "Gérer le RAID sous LInux"
 
 #: serverguide/C/installation.xml:869(title)
 msgid "Logical Volume Manager (LVM)"
-msgstr ""
+msgstr "Gestionnaire de volumes logiques (Logical Volume Manager, LVM)"
 
 #: serverguide/C/installation.xml:871(para)
 msgid ""
@@ -23673,6 +24033,12 @@ msgid ""
 "standard partitions residing on a single disk. Volumes can also be extended, "
 "giving greater flexibility to systems as requirements change."
 msgstr ""
+"Le gestionnaire de volumes logiques, ou <emphasis>LVM</emphasis>, permet aux "
+"administrateurs de créer des volumes <emphasis>logiques</emphasis> à partir "
+"d'un ou plusieurs espaces de stockage. Les volumes LVM peuvent être créés "
+"sur des partitions RAID logicielles ou sur des partitions normales résidant "
+"sur un unique disque. Les volumes peuvent être dimensionnés après-coup, "
+"donnant ainsi une plus grande flexibilité au système."
 
 #: serverguide/C/installation.xml:880(para)
 msgid ""
@@ -23680,12 +24046,17 @@ msgid ""
 "complication. Before diving into the LVM installation process, it is best to "
 "get familiar with some terms."
 msgstr ""
+"Un effet secondaire de la puissance et de la flexibilité de LVM est un degré "
+"accru de complexité. Avant de se plonger dans le processus d'installation de "
+"LVM, il est préférable de se familiariser avec quelques termes techniques."
 
 #: serverguide/C/installation.xml:887(para)
 msgid ""
 "<emphasis>Volume Group (VG):</emphasis> contains one or several Logical "
 "Volumes (LV)."
 msgstr ""
+"<emphasis>Groupe de volumes (Volume Group ou VG) :</emphasis> contient un ou "
+"plusieurs volumes logiques (Logical Volumes ou LV)."
 
 #: serverguide/C/installation.xml:892(para)
 msgid ""
@@ -23693,12 +24064,19 @@ msgid ""
 "LVM system. Multiple Physical Volumes (PV) can make up one LV, on top of "
 "which resides the actual EXT3, XFS, JFS, etc filesystem."
 msgstr ""
+"<emphasis>Volume Logique (Logical Volume ou LV) :</emphasis> similaire à une "
+"partition d'un système non LVM. Plusieurs volumes physiques (Physical "
+"Volumes ou PV) peuvent servir à créer un LV, au-dessus duquel réside le "
+"véritable système de fichier EXT3, XFS, JFS, etc."
 
 #: serverguide/C/installation.xml:898(para)
 msgid ""
 "<emphasis>Physical Volume (PV):</emphasis> physical hard disk or software "
 "RAID partition. The Volume Group can be extended by adding more PVs."
 msgstr ""
+"<emphasis>Volume physique (Physical Volume ou PV) :</emphasis> disque dur "
+"physique ou partition logicielle RAID. Le groupe de volumes peut être "
+"agrandi en ajoutant des PV."
 
 #: serverguide/C/installation.xml:909(para)
 msgid ""
@@ -23708,6 +24086,11 @@ msgid ""
 "Group (VG). Another PV will be added after install to demonstrate how a VG "
 "can be extended."
 msgstr ""
+"À titre d'exemple, cette section décrit l'installation d'Ubuntu édition "
+"serveur en montant <filename role=\"directory\">/srv</filename> sur un "
+"volume LVM. Lors de l'installation initiale, un seul volume physique (PV) "
+"fera partie du groupe de volumes (VG). Un autre PV lui sera affecté plus "
+"tard pour montrer comment un VG peut être agrandi."
 
 #: serverguide/C/installation.xml:915(para)
 msgid ""
@@ -23719,24 +24102,37 @@ msgid ""
 "system with both LVM and standard partitions, during installation, is to use "
 "the Manual approach."
 msgstr ""
+"Plusieurs méthodes d'installation sont disponibles pour LVM : "
+"<emphasis>Assistée - utiliser tout un disque avec LVM</emphasis>, "
+"<emphasis>Assistée - utiliser tout un disque avec LVM chiffré</emphasis> et "
+"<emphasis>Manuelle</emphasis>. Pour l'instant l'approche manuelle est la "
+"seule option nous permettant de paramétrer des partitions usuelles et LVM."
 
 #: serverguide/C/installation.xml:932(para)
 msgid ""
 "At the <emphasis>\"Partition Disks</emphasis> screen choose "
 "<emphasis>\"Manual\"</emphasis>."
 msgstr ""
+"Choisissez <emphasis>Manuel</emphasis> à l'étape <emphasis>Partitionner les "
+"disques</emphasis>."
 
 #: serverguide/C/installation.xml:939(para)
 msgid ""
 "Select the hard disk and on the next screen choose \"yes\" to "
 "<emphasis>\"Create a new empty partition table on this device\"</emphasis>."
 msgstr ""
+"Sélectionnez votre disque et répondez oui à la question <emphasis>Faut-il "
+"créer une nouvelle table de partitions sur ce disque</emphasis> de l'écran "
+"suivant."
 
 #: serverguide/C/installation.xml:946(para)
 msgid ""
 "Next, create standard <emphasis>/boot</emphasis>, <emphasis>swap</emphasis>, "
 "and <emphasis>/</emphasis> partitions with whichever filesystem you prefer."
 msgstr ""
+"Créez ensuite trois partitions usuelles <emphasis>/boot</emphasis>, "
+"<emphasis>swap</emphasis> et <emphasis>/</emphasis> avec le système de "
+"fichiers de votre choix."
 
 #: serverguide/C/installation.xml:954(para)
 msgid ""
@@ -23792,26 +24188,33 @@ msgstr ""
 #: serverguide/C/installation.xml:1006(para)
 msgid "There are some useful utilities to view information about LVM:"
 msgstr ""
+"Il existe des outils pratiques pour afficher des informations sur LVM :"
 
 #: serverguide/C/installation.xml:1011(para)
 msgid ""
 "<emphasis>vgdisplay:</emphasis> shows information about Volume Groups."
 msgstr ""
+"<emphasis>vgdisplay :</emphasis> affiche les informations des groupes de "
+"volumes."
 
 #: serverguide/C/installation.xml:1012(para)
 msgid ""
 "<emphasis>lvdisplay:</emphasis> has information about Logical Volumes."
 msgstr ""
+"<emphasis>lvdisplay :</emphasis> affiche les informations des volumes "
+"logiques"
 
 #: serverguide/C/installation.xml:1013(para)
 msgid ""
 "<emphasis>pvdisplay:</emphasis> similarly displays information about "
 "Physical Volumes."
 msgstr ""
+"<emphasis>pvdisplay :</emphasis> affiche les informations des volumes "
+"physiques."
 
 #: serverguide/C/installation.xml:1018(title)
 msgid "Extending Volume Groups"
-msgstr ""
+msgstr "Agrandir des groupes de volumes"
 
 #: serverguide/C/installation.xml:1020(para)
 msgid ""
@@ -23830,19 +24233,19 @@ msgstr ""
 
 #: serverguide/C/installation.xml:1032(para)
 msgid "First, create the physical volume, in a terminal execute:"
-msgstr ""
+msgstr "Commencez par créer le volume physique. Depuis un terminal, lancez :"
 
 #: serverguide/C/installation.xml:1037(command)
 msgid "sudo pvcreate /dev/sdb"
-msgstr ""
+msgstr "sudo pvcreate /dev/sdb"
 
 #: serverguide/C/installation.xml:1043(para)
 msgid "Now extend the Volume Group (VG):"
-msgstr ""
+msgstr "Agrandissez maintenant le groupe de volumes (VG) :"
 
 #: serverguide/C/installation.xml:1048(command)
 msgid "sudo vgextend vg01 /dev/sdb"
-msgstr ""
+msgstr "sudo vgextend vg01 /dev/sdb"
 
 #: serverguide/C/installation.xml:1054(para)
 msgid ""
@@ -23860,7 +24263,7 @@ msgstr ""
 
 #: serverguide/C/installation.xml:1065(command)
 msgid "sudo lvextend /dev/vg01/srv -l +511"
-msgstr ""
+msgstr "sudo lvextend /dev/vg01/srv -l +511"
 
 #: serverguide/C/installation.xml:1068(para)
 msgid ""
@@ -23877,6 +24280,11 @@ msgid ""
 "mess up the day you want to reduce a logical volume (in that case unmounting "
 "first is compulsory)."
 msgstr ""
+"Même si vous êtes censé être en mesure d' <emphasis>agrandir</emphasis> un "
+"système de fichiers ext3 ou ext4 sans démontage préalable, c'est une bonne "
+"pratique de néanmoins le démonter et de vérifier le système de fichiers, "
+"afin de ne pas avoir de mauvais réflexes le jour où vous souhaiterez réduire "
+"un volume logique (dans ce cas, un démontage préalable est obligatoire)."
 
 #: serverguide/C/installation.xml:1082(para)
 msgid ""
@@ -23884,38 +24292,45 @@ msgid ""
 "<emphasis>EXT4</emphasis> filesystem. If you are using another filesystem "
 "there may be other utilities available."
 msgstr ""
+"Les commandes suivantes sont pour un système de fichiers "
+"<emphasis>EXT3</emphasis> ou <emphasis>EXT4</emphasis>. Si vous utilisez un "
+"autre système de fichiers, il peut exister d'autres utilitaires disponibles."
 
 #: serverguide/C/installation.xml:1089(command)
 msgid "sudo e2fsck -f /dev/vg01/srv"
-msgstr ""
+msgstr "sudo e2fsck -f /dev/vg01/srv"
 
 #: serverguide/C/installation.xml:1092(para)
 msgid ""
 "The <emphasis>-f</emphasis> option of <application>e2fsck</application> "
 "forces checking even if the system seems clean."
 msgstr ""
+"L'option <emphasis>-f</emphasis> de <application>e2fsck</application> force "
+"le contrôle, même si le système semble propre."
 
 #: serverguide/C/installation.xml:1099(para)
 msgid "Finally, resize the filesystem:"
-msgstr ""
+msgstr "Enfin, redimensionnez le système de fichiers :"
 
 #: serverguide/C/installation.xml:1104(command)
 msgid "sudo resize2fs /dev/vg01/srv"
-msgstr ""
+msgstr "sudo resize2fs /dev/vg01/srv"
 
 #: serverguide/C/installation.xml:1110(para)
 msgid "Now mount the partition and check its size."
-msgstr ""
+msgstr "Montez ensuite la partition et vérifiez sa taille."
 
 #: serverguide/C/installation.xml:1115(command)
 msgid "mount /dev/vg01/srv /srv &amp;&amp; df -h /srv"
-msgstr ""
+msgstr "mount /dev/vg01/srv /srv &amp;&amp; df -h /srv"
 
 #: serverguide/C/installation.xml:1127(para)
 msgid ""
 "See the <ulink url=\"http://tldp.org/HOWTO/LVM-HOWTO/index.html\">LVM "
 "HOWTO</ulink> for more information."
 msgstr ""
+"Consultez le <ulink url=\"http://tldp.org/HOWTO/LVM-HOWTO/index.html\">guide "
+"pratique LVM</ulink> (en anglais) pour plus d'informations."
 
 #: serverguide/C/installation.xml:1132(para)
 msgid ""
@@ -23924,6 +24339,10 @@ msgid ""
 "space-with-lvm.html\">Managing Disk Space with LVM</ulink> on O'Reilly's "
 "linuxdevcenter.com site."
 msgstr ""
+"Un autre bon article <ulink "
+"url=\"http://www.linuxdevcenter.com/pub/a/linux/2006/04/27/managing-disk-"
+"space-with-lvm.html\">Managing Disk Space with LVM</ulink> (en anglais) sur "
+"le site linuxdevcenter.com de O'Reilly."
 
 #: serverguide/C/installation.xml:1139(para)
 msgid ""
@@ -23931,6 +24350,10 @@ msgid ""
 "url=\"http://manpages.ubuntu.com/manpages/jaunty/en/man8/fdisk.8.html\">fdisk"
 " man page</ulink>."
 msgstr ""
+"Pour plus d'informations sur <application> fdisk</application>, consultez la "
+"<ulink "
+"url=\"http://manpages.ubuntu.com/manpages/jaunty/fr/man8/fdisk.8.html\">page "
+"de manuel (ou man page) de fdisk</ulink >."
 
 #: serverguide/C/file-server.xml:13(title)
 msgid "File Servers"
@@ -24005,7 +24428,7 @@ msgstr ""
 
 #: serverguide/C/file-server.xml:65(command)
 msgid "sudo apt-get install vsftpd"
-msgstr ""
+msgstr "sudo apt-get install vsftpd"
 
 #: serverguide/C/file-server.xml:71(title)
 msgid "Anonymous FTP Configuration"
@@ -24028,19 +24451,20 @@ msgstr ""
 
 #: serverguide/C/file-server.xml:87(command)
 msgid "sudo mkdir /srv/ftp"
-msgstr ""
+msgstr "sudo mkdir /srv/ftp"
 
 #: serverguide/C/file-server.xml:88(command)
 msgid "sudo usermod -d /srv/ftp ftp"
-msgstr ""
+msgstr "sudo usermod -d /srv/ftp ftp"
 
 #: serverguide/C/file-server.xml:91(para)
 msgid "After making the change restart <application>vsftpd</application>:"
 msgstr ""
+"Les changements effectués, redémarrez <application>vsftpd</application> :"
 
 #: serverguide/C/file-server.xml:96(command) serverguide/C/file-server.xml:124(command) serverguide/C/file-server.xml:189(command) serverguide/C/file-server.xml:237(command)
 msgid "sudo /etc/init.d/vsftpd restart"
-msgstr ""
+msgstr "sudo /etc/init.d/vsftpd restart"
 
 #: serverguide/C/file-server.xml:99(para)
 msgid ""
@@ -24065,10 +24489,13 @@ msgid ""
 "local_enable=YES\n"
 "write_enable=YES\n"
 msgstr ""
+"\n"
+"local_enable=YES\n"
+"write_enable=YES\n"
 
 #: serverguide/C/file-server.xml:119(para)
 msgid "Now restart <application>vsftpd</application>:"
-msgstr ""
+msgstr "Redémarrez maintenant <application>vsftpd</application> :"
 
 #: serverguide/C/file-server.xml:127(para)
 msgid ""
@@ -24090,6 +24517,8 @@ msgid ""
 "\n"
 "anon_upload_enable=YES\n"
 msgstr ""
+"\n"
+"anon_upload_enable=YES\n"
 
 #: serverguide/C/file-server.xml:145(para)
 msgid ""
@@ -24122,6 +24551,8 @@ msgid ""
 "\n"
 "chroot_local_user=YES\n"
 msgstr ""
+"\n"
+"chroot_local_user=YES\n"
 
 #: serverguide/C/file-server.xml:174(para)
 msgid ""
@@ -24135,6 +24566,9 @@ msgid ""
 "chroot_list_enable=YES\n"
 "chroot_list_file=/etc/vsftpd.chroot_list\n"
 msgstr ""
+"\n"
+"chroot_list_enable=YES\n"
+"chroot_list_file=/etc/vsftpd.chroot_list\n"
 
 #: serverguide/C/file-server.xml:183(para)
 msgid ""
@@ -24175,6 +24609,8 @@ msgid ""
 "\n"
 "ssl_enable=Yes\n"
 msgstr ""
+"\n"
+"ssl_enable=Yes\n"
 
 #: serverguide/C/file-server.xml:216(para)
 msgid "Also, notice the certificate and key related options:"
@@ -24187,6 +24623,9 @@ msgid ""
 "rsa_cert_file=/etc/ssl/certs/ssl-cert-snakeoil.pem\n"
 "rsa_private_key_file=/etc/ssl/private/ssl-cert-snakeoil.key\n"
 msgstr ""
+"\n"
+"rsa_cert_file=/etc/ssl/certs/ssl-cert-snakeoil.pem\n"
+"rsa_private_key_file=/etc/ssl/private/ssl-cert-snakeoil.key\n"
 
 #: serverguide/C/file-server.xml:225(para)
 msgid ""
@@ -24202,6 +24641,8 @@ msgid ""
 "Now restart <application>vsftpd</application>, and non-anonymous users will "
 "be forced to use <emphasis>FTPS</emphasis>:"
 msgstr ""
+"Redémarrez maintenant <application>vsftpd</application>, et les utilisateurs "
+"non-anonymes seront désormais forcés d'utiliser <emphasis>FTPS</emphasis> :"
 
 #: serverguide/C/file-server.xml:240(para)
 msgid ""
@@ -24244,6 +24685,8 @@ msgid ""
 "\n"
 "auth    required        pam_shells.so\n"
 msgstr ""
+"\n"
+"auth    required        pam_shells.so\n"
 
 #: serverguide/C/file-server.xml:272(para)
 msgid ""
@@ -24257,12 +24700,17 @@ msgid ""
 "<application>lftp</application> command line FTP client has the ability to "
 "use FTPS as well."
 msgstr ""
+"La plupart des principaux clients FTP peuvent être paramétrés pour utiliser "
+"FTPS. Le programme en ligne de commande <application>lftp</application> a "
+"également cette possibilité."
 
 #: serverguide/C/file-server.xml:288(para)
 msgid ""
 "See the <ulink url=\"http://vsftpd.beasts.org/vsftpd_conf.html\">vsftpd "
 "website</ulink> for more information."
 msgstr ""
+"Consultez le <ulink url=\"http://vsftpd.beasts.org/vsftpd_conf.html\">site "
+"internet de vsftpd</ulink> pour de plus amples informations."
 
 #: serverguide/C/file-server.xml:293(para)
 msgid ""
@@ -24879,7 +25327,7 @@ msgstr ""
 
 #: serverguide/C/dns.xml:98(title)
 msgid "Caching Nameserver"
-msgstr "serveur de noms de cache"
+msgstr "Serveur de noms de cache"
 
 #: serverguide/C/dns.xml:99(para)
 msgid ""
@@ -25514,7 +25962,7 @@ msgstr ""
 
 #: serverguide/C/dns.xml:416(command)
 msgid "ping example.com"
-msgstr ""
+msgstr "ping example.com"
 
 #: serverguide/C/dns.xml:418(para)
 msgid ""
@@ -25534,7 +25982,7 @@ msgstr ""
 
 #: serverguide/C/dns.xml:429(title)
 msgid "named-checkzone"
-msgstr ""
+msgstr "named-checkzone"
 
 #: serverguide/C/dns.xml:430(para)
 msgid ""
@@ -25553,7 +26001,7 @@ msgstr ""
 
 #: serverguide/C/dns.xml:441(command)
 msgid "named-checkzone example.com /etc/bind/db.example.com"
-msgstr ""
+msgstr "named-checkzone example.com /etc/bind/db.example.com"
 
 #: serverguide/C/dns.xml:443(para)
 msgid ""
@@ -25567,6 +26015,9 @@ msgid ""
 "zone example.com/IN: loaded serial 6\n"
 "OK\n"
 msgstr ""
+"\n"
+"zone example.com/IN: loaded serial 6\n"
+"OK\n"
 
 #: serverguide/C/dns.xml:452(para)
 msgid "Similarly, to test the Reverse zone file enter the following:"
@@ -25574,7 +26025,7 @@ msgstr ""
 
 #: serverguide/C/dns.xml:456(command)
 msgid "named-checkzone example.com /etc/bind/db.192"
-msgstr ""
+msgstr "named-checkzone example.com /etc/bind/db.192"
 
 #: serverguide/C/dns.xml:458(para)
 msgid "The output should be similar to:"
@@ -25587,6 +26038,9 @@ msgid ""
 "zone example.com/IN: loaded serial 3\n"
 "OK\n"
 msgstr ""
+"\n"
+"zone example.com/IN: loaded serial 3\n"
+"OK\n"
 
 #: serverguide/C/dns.xml:468(para)
 msgid ""
@@ -25620,6 +26074,11 @@ msgid ""
 "     category unmatched { null; };\n"
 "};\n"
 msgstr ""
+"\n"
+"logging {\n"
+"     category default { default_syslog; default_debug; };\n"
+"     category unmatched { null; };\n"
+"};\n"
 
 #: serverguide/C/dns.xml:489(para)
 msgid ""
@@ -26889,6 +27348,9 @@ msgid ""
 "<filename>crontab</filename> file. <filename>crontab</filename> files are "
 "separated into fields:"
 msgstr ""
+"<application>cron</application> est configuré au travers d'entrées dans un "
+"fichier <filename>crontab</filename>. Les fichiers "
+"<filename>crontab</filename> sont séparés en champs:"
 
 #: serverguide/C/backups.xml:176(programlisting)
 #, no-wrap
@@ -26983,12 +27445,17 @@ msgid ""
 "# m h dom mon dow   command\n"
 "0 0 * * * bash /usr/local/bin/backup.sh\n"
 msgstr ""
+"\n"
+"# m h dom mon dow   command\n"
+"0 0 * * * bash /usr/local/bin/backup.sh\n"
 
 #: serverguide/C/backups.xml:235(para)
 msgid ""
 "The <application>backup.sh</application> script will now be executed every "
 "day at 12:00 am."
 msgstr ""
+"Le script <application>backup.sh</application> sera maintenant lancé tous "
+"les jours à 12h00."
 
 #: serverguide/C/backups.xml:239(para)
 msgid ""
@@ -28393,6 +28860,76 @@ msgstr ""
 "  hardball https://launchpad.net/~slzk-n\n"
 "  madden https://launchpad.net/~linux-madfix\n"
 "  olivier perrin https://launchpad.net/~bilou-perrin\n"
+"  seb35690 https://launchpad.net/~sebastien-reverdy\n"
+"  thebachman https://launchpad.net/~thebachman\n"
+"  vouzico https://launchpad.net/~herve-marcy-free\n"
+"\n"
+"Launchpad Contributions:\n"
+"  Alain Lebret https://launchpad.net/~frosch74\n"
+"  Alexandre Franke https://launchpad.net/~afranke\n"
+"  Anis CHEBBI https://launchpad.net/~chebbi-anis\n"
+"  Anthony Guéchoum https://launchpad.net/~athael\n"
+"  Arthur WEBER https://launchpad.net/~godu\n"
+"  Aurélien Luciani https://launchpad.net/~fascagate\n"
+"  Banal https://launchpad.net/~banalanab\n"
+"  Bruno Patri https://launchpad.net/~bruno-patri\n"
+"  CarZ https://launchpad.net/~xavier-delhoume\n"
+"  Christophe Painchaud https://launchpad.net/~dash-ionblast\n"
+"  Claude Paroz https://launchpad.net/~paroz\n"
+"  Congelli501 https://launchpad.net/~colingille\n"
+"  Damien Deroussen https://launchpad.net/~damien-deroussen-gmail\n"
+"  Damien Haïkal https://launchpad.net/~damien-haikal\n"
+"  David Bertho https://launchpad.net/~davidbertho-deactivatedaccount\n"
+"  Denis Bisaro https://launchpad.net/~denisb6481\n"
+"  Donk https://launchpad.net/~donk\n"
+"  Enrico Rosina https://launchpad.net/~e-rosina\n"
+"  Etienne Malandain https://launchpad.net/~etienne-malandain\n"
+"  Gilles Accad https://launchpad.net/~dagg\n"
+"  JF Jarry https://launchpad.net/~jf.jarry\n"
+"  James Dupin https://launchpad.net/~james-dupin\n"
+"  Jean Champémont https://launchpad.net/~kwiwaa\n"
+"  Jean-Luc Villoué https://launchpad.net/~jluc\n"
+"  Jean-Philippe https://launchpad.net/~skateinmars\n"
+"  Jerome Beaumard https://launchpad.net/~g-rom\n"
+"  Joanna Tordjeman https://launchpad.net/~jocanak\n"
+"  Jonathan Clarke https://launchpad.net/~bubblebob\n"
+"  Kkouet https://launchpad.net/~kkouet1\n"
+"  Knah Tsaeb https://launchpad.net/~knah-tsaeb\n"
+"  Laurent RICHARD https://launchpad.net/~laurent-richard-ael\n"
+"  Lionel Montrieux https://launchpad.net/~lionel-montrieux\n"
+"  ManuPeng https://launchpad.net/~mvieuxmaire\n"
+"  Marc Auer https://launchpad.net/~pepe.ciseaux\n"
+"  Mathieu Cinquin https://launchpad.net/~shini31\n"
+"  Mathieu Goeminne https://launchpad.net/~mathieugoeminne\n"
+"  Michel https://launchpad.net/~midali\n"
+"  Milan https://launchpad.net/~nalimilan\n"
+"  Nicolas Borboën https://launchpad.net/~ponsfrilus\n"
+"  Nicolas DERIVE https://launchpad.net/~kalon33\n"
+"  Nicolas Velin https://launchpad.net/~nsv\n"
+"  PETIT Aymeric https://launchpad.net/~mulx\n"
+"  Pascal Corpet https://launchpad.net/~m-launchpad-pascal-corpet-net\n"
+"  Philippe Piquer https://launchpad.net/~philippep62\n"
+"  Pierre Slamich https://launchpad.net/~pierre-slamich\n"
+"  Pierrick Vandenbroucke https://launchpad.net/~vanpie\n"
+"  Psykocrash https://launchpad.net/~younes-s\n"
+"  Romain Pineau https://launchpad.net/~pineau-romain\n"
+"  Stéphane V https://launchpad.net/~svergeylen\n"
+"  Sun Wukong https://launchpad.net/~sunwukong\n"
+"  SuperBOB https://launchpad.net/~nicholas-holford\n"
+"  Sylvain Lasnier https://launchpad.net/~sylvain-lasnier\n"
+"  TaZmaniak https://launchpad.net/~tazmaniak66\n"
+"  Tarsus https://launchpad.net/~tarsus\n"
+"  TuxLinux https://launchpad.net/~tuxlinux\n"
+"  Valentin Rocher https://launchpad.net/~bishiboosh\n"
+"  Will Hunting https://launchpad.net/~will-hunting\n"
+"  X https://launchpad.net/~fakhryfield\n"
+"  baptiste https://launchpad.net/~baptiste-goupil\n"
+"  bruno https://launchpad.net/~annoa.b\n"
+"  hardball https://launchpad.net/~slzk-n\n"
+"  madden https://launchpad.net/~linux-madfix\n"
+"  olivier perrin https://launchpad.net/~bilou-perrin\n"
+"  onwa https://launchpad.net/~asokjeux\n"
+"  p-yves https://launchpad.net/~pyperrier\n"
 "  seb35690 https://launchpad.net/~sebastien-reverdy\n"
 "  thebachman https://launchpad.net/~thebachman\n"
 "  vouzico https://launchpad.net/~herve-marcy-free"

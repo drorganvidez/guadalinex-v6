@@ -6,14 +6,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-03-26 16:34+0000\n"
-"PO-Revision-Date: 2009-04-01 07:56+0000\n"
-"Last-Translator: Alexander Telenga <telenga@gmail.com>\n"
+"POT-Creation-Date: 2009-04-03 23:04+0100\n"
+"PO-Revision-Date: 2009-04-08 19:04+0000\n"
+"Last-Translator: Igor Zubarev <igor4u@gmail.com>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2009-04-01 11:02+0000\n"
+"X-Launchpad-Export-Date: 2009-04-09 18:48+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: internet/C/internet-C.omf:6(creator) internet/C/internet-C.omf:7(maintainer)
@@ -953,6 +953,8 @@ msgid ""
 "disabled from the NetworkManager icon in the <guilabel>System Notification "
 "Area</guilabel>."
 msgstr ""
+"После введения апплета NetworkManager подключения могут быть активированы "
+"или разорваны с помощью иконки в <guilabel>Области уведомлений</guilabel>."
 
 #: internet/C/troubleshooting.xml:19(para)
 msgid ""
@@ -966,6 +968,8 @@ msgid ""
 "Right click the <guiicon>NetworkManager</guiicon> icon in the notification "
 "area."
 msgstr ""
+"Нажмите правой кнопкой мыши на иконку <guiicon>Апплета "
+"NetworkManager</guiicon> в области уведомлений."
 
 #: internet/C/troubleshooting.xml:22(para)
 msgid "Check <guilabel>Enable Networking</guilabel>."
@@ -1169,6 +1173,10 @@ msgid ""
 "linkend=\"connecting-wireless\"/> and should it fail begin at the start "
 "again."
 msgstr ""
+"Это руководство по устранению неполадок разработано для выполнения по шагам. "
+"Если вы дочитали до конца раздела и не были перенаправлены в другой — "
+"попробуйте воспользоваться <xref linkend=\"connecting-wireless\"/>, если и "
+"это не сработает, то начните опять с самого начала данного руководства."
 
 #: internet/C/troubleshooting.xml:77(title)
 msgid "Check that the device is on"
@@ -1400,6 +1408,10 @@ msgid ""
 "secondary domain name servers. Once you have this information see <xref "
 "linkend=\"connecting-wireless\"/>."
 msgstr ""
+"Введите команду: <code>cat /etc/resolv.conf</code>. Если не будет выдано ни "
+"одного сервера имен, обратитесь в провайдеру услуг Интернет (ISP) и узнайте "
+"основной и вторичный сервера имен.После этого обратитесь в раздел <xref "
+"linkend=\"connecting-wireless\"/>."
 
 #: internet/C/troubleshooting.xml:134(title)
 msgid "IPv6 Not Supported"
@@ -1445,6 +1457,9 @@ msgid ""
 "attempts to make the process of connecting invisible, whilst allowing finer "
 "manual control where necessary."
 msgstr ""
+"Теперь для управления сетевыми подключениями Ubuntu использует апплет "
+"NetworkManager. Он пытается сделать процесс подключения незаметным, однако "
+"позволяет при необходимости провести ручную настройку."
 
 #: internet/C/nm.xml:19(para)
 msgid ""
@@ -1459,6 +1474,8 @@ msgid ""
 "NetworkManager also keeps passwords secure by utilising the user's keyring "
 "to store passphrases."
 msgstr ""
+"Апплет NetworkManager сохраняет пароли, используя для хранения "
+"пользовательские ключи."
 
 #: internet/C/nm.xml:23(para)
 msgid ""
@@ -1466,18 +1483,26 @@ msgid ""
 "top right of your screen. It looks like two over-lapping computer screens or "
 "four blue or grey stepped bars (when connected wirelessly)."
 msgstr ""
+"Network Manager — это маленькая иконка в области уведомления в правом "
+"верхнем углу рабочего стола. Она выглядит как 2 пересекающихся компьютерных "
+"монитора либо как четырех синих или серых прямоугольника при подключении к "
+"беспроводной сети."
 
 #: internet/C/nm.xml:26(para)
 msgid ""
 "<guibutton>Left click</guibutton> for automatic functions, such as "
 "connecting to a network."
 msgstr ""
+"<guibutton>Щёлкните левой кнопкой мыши</guibutton> для автоматических "
+"действий, например, подключению к сети"
 
 #: internet/C/nm.xml:27(para)
 msgid ""
 "<guibutton>Right click</guibutton> for manual control and to disable or "
 "enable connections."
 msgstr ""
+"<guibutton>Щелкните правой кнопкой мыши</guibutton> для ручного управления и "
+"для включения или отключения соединения."
 
 #: internet/C/networking.xml:16(title)
 msgid "Home Networks"
@@ -1512,6 +1537,10 @@ msgid ""
 "password will normally be the username and password for a user of the "
 "computer on which you are trying to connect."
 msgstr ""
+"Вам может потребоваться имя пользователя, пароль и название домена. Получите "
+"эти данные у системного администратора, если необходимо. Имя пользователя и "
+"пароль обычно совпадают с именем пользователя и паролем учётной записи "
+"пользователя компьютера, которому осуществляется попытка подключения."
 
 #: internet/C/networking.xml:24(para)
 msgid "The domain can often be left blank."
@@ -1775,6 +1804,9 @@ msgid ""
 "<quote>username</quote> with your own username. Press <keycap>Enter</keycap> "
 "to run the command."
 msgstr ""
+"Введите <command>sudo smbpasswd -a username</command>, заменив "
+"<quote>username</quote> на ваше имя пользователя. Нажмите "
+"<keycap>Enter</keycap> чтобы выполнить команду."
 
 #: internet/C/networking.xml:138(para)
 msgid ""
@@ -1970,6 +2002,10 @@ msgid ""
 "item><guimenuitem>Terminal</guimenuitem></menuchoice>) and type the "
 "following commands, pressing <keycap>Enter</keycap> after each line:"
 msgstr ""
+"Откройте Терминал "
+"(<menuchoice><guimenu>Приложения</guimenu><guimenuitem>Стандартные</guimenuit"
+"em><guimenuitem>Терминал</guimenuitem></menuchoice>) и введите следующие "
+"команды, нажимая <keycap>Enter</keycap> после ввода каждой из них:"
 
 #: internet/C/modem.xml:29(screen)
 #, no-wrap
@@ -2019,6 +2055,12 @@ msgid ""
 "applications#installing-deb\">Downloading and installing a .deb "
 "package</ulink> for more information."
 msgstr ""
+"NetworkManagerна данный момент не поддерживает модемные соединения, поэтому "
+"Вам необходимо <ulink url=\"apt:gnome-network-admin\">установить пакет gnome-"
+"network-admin</ulink>. Если у Вас не работающего соединения с Интернет, Вам "
+"придётся скачать его каким-то другим образом и установить, смотрите <ulink "
+"url=\"ghelp:add-applications#installing-deb\">Скачивание и установка .deb "
+"пакетов</ulink> для получения более подробной информации."
 
 #: internet/C/modem.xml:47(para)
 msgid "You will need to know the following information:"
@@ -2037,6 +2079,9 @@ msgid ""
 "<menuchoice><guimenu>System</guimenu><guimenuitem>Administration</guimenuitem"
 "><guimenuitem>Network</guimenuitem></menuchoice>"
 msgstr ""
+"Откройте "
+"<menuchoice><guimenu>Система</guimenu><guimenuitem>Администрирование</guimenu"
+"item><guimenuitem>Сеть</guimenuitem></menuchoice>"
 
 #: internet/C/modem.xml:52(para)
 msgid ""
@@ -2055,43 +2100,52 @@ msgid ""
 "Select <guilabel>Point to point connection</guilabel> and press "
 "<guibutton>Properties</guibutton>."
 msgstr ""
+"Выберите <guilabel>Соединение точка-точка</guilabel> и нажмите "
+"<guibutton>Свойства</guibutton>."
 
 #: internet/C/modem.xml:55(para)
 msgid "Tick <guilabel>Enable this connection</guilabel>"
-msgstr ""
+msgstr "Поставьте галочку <guilabel>Активировать соединение</guilabel>"
 
 #: internet/C/modem.xml:56(para)
 msgid ""
 "Choose <guilabel>Serial Modem</guilabel> from the <guilabel>Connection "
 "Type</guilabel> drop down."
 msgstr ""
+"Выберите <guilabel>Модем на последовательном порту</guilabel> из выпадающего "
+"списка <guilabel>Тип соединения</guilabel>."
 
 #: internet/C/modem.xml:57(para)
 msgid ""
 "Under Internet Service Provider data, enter the phone number and dial prefix."
 msgstr ""
+"В поля данных вашего провайдера введите номер телефона и префикс при наборе."
 
 #: internet/C/modem.xml:58(para)
 msgid "Under Account Data enter your password and username."
 msgstr ""
+"В поля данных учётной записи пользователя введите ваши имя пользователя и "
+"пароль."
 
 #: internet/C/modem.xml:59(para)
 msgid "Click the <guilabel>Modem tab</guilabel>."
-msgstr ""
+msgstr "Нажмите на <guilabel>вкладку Модем</guilabel>."
 
 #: internet/C/modem.xml:60(para)
 msgid "Choose the modem settings you require."
-msgstr ""
+msgstr "Выберите необходимые настройки модема."
 
 #: internet/C/modem.xml:62(para)
 msgid ""
 "Select the <guilabel>DNS</guilabel> tab and enter the DNS addresses of your "
 "ISP."
 msgstr ""
+"Перейдите на вкладку <guilabel>DNS</guilabel> и введите адрес DNS вашего "
+"провайдера."
 
 #: internet/C/modem.xml:63(para)
 msgid "click <guibutton>Close</guibutton>."
-msgstr ""
+msgstr "нажмите <guibutton>Закрыть</guibutton>."
 
 #: internet/C/internet.xml:3(title)
 msgid "Credits and License"
@@ -2162,15 +2216,15 @@ msgstr "Проект документации Ubuntu"
 
 #: internet/C/information.xml:16(title) internet/C/basics.xml:64(title)
 msgid "Information"
-msgstr ""
+msgstr "Информация"
 
 #: internet/C/information.xml:19(para)
 msgid "Click <guilabel>Connection Information</guilabel>."
-msgstr ""
+msgstr "Нажмите <guilabel>Сведения о соединении</guilabel>."
 
 #: internet/C/information.xml:20(para)
 msgid "Click <guibutton>Close</guibutton> when finished."
-msgstr ""
+msgstr "Когда закончите, нажмите <guibutton>Закрыть</guibutton>."
 
 #: internet/C/disconnecting.xml:16(title) internet/C/basics.xml:49(title)
 msgid "Disconnecting"
@@ -2186,7 +2240,7 @@ msgstr "Проводная сеть"
 
 #: internet/C/disconnecting.xml:23(para)
 msgid "Uncheck <guilabel>Enable Networking</guilabel>."
-msgstr ""
+msgstr "Снимите отметку <guilabel>Сеть</guilabel>."
 
 #: internet/C/disconnecting.xml:28(title) internet/C/connecting.xml:50(title) internet/C/basics.xml:28(title) internet/C/basics.xml:58(title)
 msgid "Wireless"
@@ -2194,11 +2248,11 @@ msgstr "Беспроводная сеть"
 
 #: internet/C/disconnecting.xml:31(para)
 msgid "Uncheck <guilabel>Enable Wireless</guilabel>."
-msgstr "Снимите галочку <guilabel>Включить беспроводную сеть</guilabel>."
+msgstr "Снимите галочку <guilabel>Беспроводная сеть</guilabel>."
 
 #: internet/C/connecttoserver.xml:16(title)
 msgid "Connect to a server"
-msgstr "Подсоединиться к серверу"
+msgstr "Поключение к серверу"
 
 #: internet/C/connecttoserver.xml:17(para)
 msgid ""
@@ -2212,13 +2266,15 @@ msgstr ""
 
 #: internet/C/connecttoserver.xml:20(title)
 msgid "FTP"
-msgstr ""
+msgstr "FTP"
 
 #: internet/C/connecttoserver.xml:22(para) internet/C/connecttoserver.xml:37(para) internet/C/connecttoserver.xml:51(para) internet/C/connecttoserver.xml:65(para) internet/C/connecttoserver.xml:78(para)
 msgid ""
 "Click <menuchoice><guimenu>Places</guimenu><guimenuitem>Connect to "
 "Server...</guimenuitem></menuchoice>."
 msgstr ""
+"Нажмите <menuchoice><guimenu>Переход</guimenu><guimenuitem>Соединиться с "
+"сервером...</guimenuitem></menuchoice>."
 
 #: internet/C/connecttoserver.xml:23(para)
 msgid ""
@@ -2226,55 +2282,69 @@ msgid ""
 "FTP</guilabel> for an anonymous connection or <guilabel>FTP (With "
 "Login)</guilabel> if you have a username."
 msgstr ""
+"Для анонимного подключения выберите <guilabel>Публичный FTP</guilabel> в "
+"списке <guilabel>Тип сервиса</guilabel>, если у вас есть учетная запись, "
+"выберите <guilabel>FTP (с авторизацией)</guilabel>."
 
 #: internet/C/connecttoserver.xml:25(para)
 msgid ""
 "Enter the server address in <guilabel>Server</guilabel>, for example "
 "ftp.ubuntu.com."
 msgstr ""
+"Введите адрес сервера в поле <guilabel>Сервер</guilabel>, например "
+"ftp.ubuntu.com."
 
 #: internet/C/connecttoserver.xml:26(para) internet/C/connecttoserver.xml:40(para)
 msgid ""
 "Enter <guilabel>Port</guilabel> and <guilabel>Folder</guilabel> if you need "
 "to, this is optional."
 msgstr ""
+"Если необходимо, введите данные в поля <guilabel>Порт</guilabel> и "
+"<guilabel>Папка</guilabel>. Эти параметры не обязательны."
 
 #: internet/C/connecttoserver.xml:27(para)
 msgid ""
 "If you chose <guilabel>FTP (With Login)</guilabel> you will also need to "
 "enter a username."
 msgstr ""
+"Если вы выберите <guilabel>FTP (с авторизацией)</guilabel>, вам также будет "
+"необходимо ввести имя пользователя."
 
 #: internet/C/connecttoserver.xml:28(para) internet/C/connecttoserver.xml:42(para) internet/C/connecttoserver.xml:56(para) internet/C/connecttoserver.xml:69(para) internet/C/connecttoserver.xml:81(para)
 msgid "If you want a bookmark, click the checkbox and enter a bookmark name."
 msgstr ""
+"Если необходимо сделать закладку, сделайте отметку и введите имя для "
+"закладки."
 
 #: internet/C/connecttoserver.xml:29(para) internet/C/connecttoserver.xml:43(para) internet/C/connecttoserver.xml:57(para) internet/C/connecttoserver.xml:70(para) internet/C/connecttoserver.xml:82(para) internet/C/connecting.xml:63(para)
 msgid "Click <guibutton>Connect</guibutton>."
-msgstr "Щелкните <guibutton>Подключиться</guibutton>."
+msgstr "Щелкните <guibutton>Соединиться</guibutton>."
 
 #: internet/C/connecttoserver.xml:30(para)
 msgid ""
 "If you chose <guilabel>FTP (With Login)</guilabel> you will be prompted for "
 "a password."
 msgstr ""
+"При выборе <guilabel>FTP (с авторизацией)</guilabel> появится запрос на ввод "
+"пароля."
 
 #: internet/C/connecttoserver.xml:35(title)
 msgid "SSH"
-msgstr ""
+msgstr "SSH"
 
 #: internet/C/connecttoserver.xml:38(para)
 msgid ""
 "From <guilabel>Service Type</guilabel> choose <guilabel>SSH</guilabel>."
 msgstr ""
+"Выберите <guilabel>SSH</guilabel> из списка <guilabel>Тип сервиса</guilabel>."
 
 #: internet/C/connecttoserver.xml:39(para) internet/C/connecttoserver.xml:53(para) internet/C/connecttoserver.xml:67(para)
 msgid "Enter the server address in <guilabel>Server</guilabel>."
-msgstr ""
+msgstr "Введите адрес сервера в <guilabel>Сервер</guilabel>."
 
 #: internet/C/connecttoserver.xml:41(para)
 msgid "Enter <guilabel>Username</guilabel>."
-msgstr ""
+msgstr "Введите <guilabel>Имя поользователя</guilabel>."
 
 #: internet/C/connecttoserver.xml:44(para)
 msgid "You will be prompted for a password."
@@ -2282,62 +2352,74 @@ msgstr "Вас попросят ввести свой пароль."
 
 #: internet/C/connecttoserver.xml:49(title)
 msgid "Windows Share"
-msgstr ""
+msgstr "Ресурс ОС Windows"
 
 #: internet/C/connecttoserver.xml:52(para)
 msgid ""
 "From <guilabel>Service Type</guilabel> choose <guilabel>Windows "
 "Share</guilabel>."
 msgstr ""
+"Выберите <guilabel>Ресурс ОС Windows</guilabel> из списка <guilabel>Тип "
+"сервиса</guilabel>."
 
 #: internet/C/connecttoserver.xml:54(para)
 msgid ""
 "Enter <guilabel>Port</guilabel> and <guilabel>Folder</guilabel> and "
 "<guilabel>Domain</guilabel> if you need to, this is optional."
 msgstr ""
+"Заполните, при необходимости, поля <guilabel>Порт</guilabel>, "
+"<guilabel>Папка</guilabel> и  <guilabel>Домен</guilabel>."
 
 #: internet/C/connecttoserver.xml:55(para)
 msgid ""
 "Enter <guilabel>Username</guilabel>. You can enter a domain and username in "
 "the format DOMAIN\\username."
 msgstr ""
+"Введите <guilabel>Имя пользователя</guilabel>. Вы можете ввести имя домена и "
+"пользователя в формате ДОМЕН\\пользователь."
 
 #: internet/C/connecttoserver.xml:58(para) internet/C/connecttoserver.xml:71(para)
 msgid "You will be prompted for a password if necessary."
-msgstr ""
+msgstr "Вы будете уведомлены о пароле, если потребуется."
 
 #: internet/C/connecttoserver.xml:63(title)
 msgid "WebDAV (HTTP)"
-msgstr ""
+msgstr "WebDAV (HTTP)"
 
 #: internet/C/connecttoserver.xml:66(para)
 msgid ""
 "From <guilabel>Service Type</guilabel> choose <guilabel>WebDAV "
 "(HTTP)</guilabel>."
 msgstr ""
+"Из списка <guilabel>Тип сервиса</guilabel> выберите <guilabel>WebDAV "
+"(HTTP)</guilabel>."
 
 #: internet/C/connecttoserver.xml:68(para)
 msgid ""
 "Enter <guilabel>Port</guilabel> and <guilabel>Folder</guilabel> and "
 "<guilabel>Username</guilabel> if you need to, this is optional."
 msgstr ""
+"Введите <guilabel>Порт</guilabel>, <guilabel>Папку</guilabel> и "
+"<guilabel>Имя пользователя</guilabel>, если необходимо. Это опционально."
 
 #: internet/C/connecttoserver.xml:76(title)
 msgid "Custom"
-msgstr ""
+msgstr "Другой адрес"
 
 #: internet/C/connecttoserver.xml:79(para)
 msgid ""
 "From <guilabel>Service Type</guilabel> choose <guilabel>Custom</guilabel>."
 msgstr ""
+"Выберите <guilabel>Другой адрес</guilabel> из списка <guilabel>Тип "
+"сервиса</guilabel>."
 
 #: internet/C/connecttoserver.xml:80(para)
 msgid "Enter the server address in <guilabel>Location (URI)</guilabel>."
-msgstr ""
+msgstr "Введите адрес сервера в <guilabel>Адрес (URI)</guilabel>."
 
 #: internet/C/connecting.xml:16(title) internet/C/basics.xml:19(title)
 msgid "Connecting"
-msgstr ""
+msgstr "Подключение"
 
 #: internet/C/connecting.xml:17(para)
 msgid ""
@@ -2345,10 +2427,14 @@ msgid ""
 "connections. It does not currently support dialup modem connections but "
 "there is help available in <xref linkend=\"modem\"/>."
 msgstr ""
+"NetworkManager управляет подключениями к проводным, беспроводным, мобильным "
+"широкополосным, виртуальным частным сетями и DSL. В данный момент им не "
+"поддерживаются модемные подключения, справочная информация по которым "
+"доступна в <xref linkend=\"modem\"/>."
 
 #: internet/C/connecting.xml:21(title) internet/C/basics.xml:23(title)
 msgid "Wired (LAN)"
-msgstr ""
+msgstr "Проводные (LAN)"
 
 #: internet/C/connecting.xml:22(para)
 msgid ""
@@ -2356,92 +2442,110 @@ msgid ""
 "automatically configured. Wired network connections are selected as default "
 "when connected."
 msgstr ""
+"DHCP соединения (когда настройки подключения берутся с маршрутизатора) "
+"настраиваются автоматически. При наличии подключения проводным сетям "
+"отдаётся предпочтение."
 
 #: internet/C/connecting.xml:25(title)
 msgid "DHCP Connections"
-msgstr ""
+msgstr "DHCP соединения"
 
 #: internet/C/connecting.xml:26(para)
 msgid "Most routers use DHCP to allocate IP addresses."
 msgstr ""
+"Болшинство маршрутизаторов используют DHCP метод для назначения IP адресов."
 
 #: internet/C/connecting.xml:28(para)
 msgid "Click the NetworkManager icon in the system notification area."
-msgstr ""
+msgstr "Щёлкните по значку NetworkManager в области системных уведомлений."
 
 #: internet/C/connecting.xml:29(para)
 msgid ""
 "Under <guilabel>Wired Network</guilabel> click the <guilabel>Radio "
 "Button</guilabel> next to the network you want to connect to."
 msgstr ""
+"В списке <guilabel>Проводная сеть</guilabel> щёлкните по "
+"<guilabel>отметке</guilabel> напротив той сети, к которой вы хотите "
+"подключиться."
 
 #: internet/C/connecting.xml:34(title)
 msgid "Static Connections"
-msgstr ""
+msgstr "Статически настраиваемое подключение"
 
 #: internet/C/connecting.xml:35(para)
 msgid "If you don't use DHCP then you can configure a static connection."
-msgstr ""
+msgstr "При неиспользовании DHCP, можно настроить статическое подключение."
 
 #: internet/C/connecting.xml:37(para)
 msgid "Right click the NetworkManager icon in the system notification area."
 msgstr ""
+"Щёлкните правой кнопкой мыши по пиктограмме NetworkManager в области "
+"уведомлений."
 
 #: internet/C/connecting.xml:38(para)
 msgid "Click <guilabel>Edit Connections</guilabel>."
-msgstr ""
+msgstr "Щёлкните <guilabel>Изменить соединения...</guilabel>."
 
 #: internet/C/connecting.xml:39(para)
 msgid "Click the <guilabel>Wired</guilabel> tab."
-msgstr ""
+msgstr "Выберите вкладку <guilabel>Проводные</guilabel> ."
 
 #: internet/C/connecting.xml:40(para)
 msgid "Select the connection and click <guibutton>Edit</guibutton>."
-msgstr ""
+msgstr "Выберите соединение и нажмите <guibutton>Изменить</guibutton>."
 
 #: internet/C/connecting.xml:41(para)
 msgid "Click the <guilabel>IPv4</guilabel> tab."
-msgstr ""
+msgstr "Перейдите на вкладку <guilabel>Параметры IPv4</guilabel>."
 
 #: internet/C/connecting.xml:42(para)
 msgid ""
 "Choose <guilabel>Manual</guilabel> from the <guilabel>Method</guilabel> drop "
 "down."
 msgstr ""
+"Выберите <guilabel>Вручную</guilabel> из выпадающего списка "
+"<guilabel>Метод</guilabel>."
 
 #: internet/C/connecting.xml:43(para)
 msgid "Enter your details and click <guibutton>OK</guibutton>."
 msgstr ""
+"Введите параметры и щёлкните по кнопке <guibutton>Применить...</guibutton>."
 
 #: internet/C/connecting.xml:44(para)
 msgid "Click <guibutton>Close</guibutton>."
-msgstr ""
+msgstr "Нажмите <guibutton>Закрыть</guibutton>."
 
 #: internet/C/connecting.xml:51(para)
 msgid "To connect to a wireless network:"
-msgstr ""
+msgstr "Чтобы подсоединиться к беспроводной сети:"
 
 #: internet/C/connecting.xml:53(para)
 msgid "Ensure that your wireless device is turned on."
-msgstr ""
+msgstr "Удостоверьтесь, что устройство беспрводного доступа включено."
 
 #: internet/C/connecting.xml:54(para)
 msgid ""
 "Click the <guiicon>NetworkManager</guiicon> icon in the system notification "
 "area."
 msgstr ""
+"Щёлкните по значку <guiicon>NetworkManager</guiicon> в области системных "
+"уведомлений."
 
 #: internet/C/connecting.xml:55(para)
 msgid ""
 "Under <guilabel>Wireless Network</guilabel> click the radio button next to "
 "the network you want to connect to."
 msgstr ""
+"В списке <guilabel>Беспроводные сети</guilabel> отметьте сеть, к которой вы "
+"хотите подключиться."
 
 #: internet/C/connecting.xml:58(para)
 msgid ""
 "If you have connected to the network previously, Ubuntu will automatically "
 "connect to the network where it is available."
 msgstr ""
+"Если вы ранее подключались к данной сети, Ubuntu автоматически подключится к "
+"ней, если это возможно."
 
 #: internet/C/connecting.xml:59(para)
 msgid ""
@@ -2449,6 +2553,9 @@ msgid ""
 "be needed. If so, a dialog box will open. Enter your security details as "
 "follows."
 msgstr ""
+"Если же вы подключаетесь к данной сети впервые, могут потребоваться "
+"параметры настроек безопасности. Если они на самом деле нужны, появится "
+"окно. Введите параметры настроек безопасности, как описано далее."
 
 #: internet/C/connecting.xml:61(para)
 msgid ""
@@ -2457,21 +2564,29 @@ msgid ""
 "drop-down box. This will depend on how the wireless network is set up. "
 "Examples of security types are WEP, WPA and LEAP."
 msgstr ""
+"В большинстве случаев система тип защиты беспроводной сети будет определён "
+"автоматически. Если этого не произошло, выберите тип защиты из списка "
+"<guilabel>Защита беспроводной сети</guilabel>. Он будет зависеть от настроек "
+"конкретной беспроводной сети. Примерами типов защиты являются WEP, WPA и "
+"LEAP."
 
 #: internet/C/connecting.xml:62(para)
 msgid ""
 "Enter the password, key or other authentication details as appropriate."
 msgstr ""
+"По необходимости введите пароль, ключ и другие данные аутентификации."
 
 #: internet/C/connecting.xml:66(para)
 msgid ""
 "If you have a wired network connection as well as an wireless connection, "
 "the wired connection will be used by default."
 msgstr ""
+"При наличии как проводного, так и беспроводного соединения, проводная сеть "
+"будет задействована по умолчанию."
 
 #: internet/C/connecting.xml:72(title) internet/C/basics.xml:33(title)
 msgid "Mobile Broadband"
-msgstr ""
+msgstr "Мобильное широкополосное"
 
 #: internet/C/connecting.xml:73(para)
 msgid ""
@@ -2480,6 +2595,11 @@ msgid ""
 "mobile phone with built-in HSPA/UMTS/GPRS data connection. Some laptops have "
 "recently been produced with mobile broadband devices already inside them."
 msgstr ""
+"<emphasis>Мобильное широкополосное</emphasis> означает любой тип "
+"высокоскоростного подключения к интернет, предоставляемого внешним "
+"устройством типа 3G usb устройства или мобильного телефона со встроенной "
+"возможностью передачи данных по HSPA/UMTS/GPRS. С недавних пор появились "
+"ноутбуки, в которые имели встроенные мобильные широкополосные устройства."
 
 #: internet/C/connecting.xml:74(para)
 msgid ""
@@ -2487,12 +2607,17 @@ msgid ""
 "connect them to your computer. Ubuntu will prompt you to configure the "
 "device."
 msgstr ""
+"Большинство мобильных широкополосных устройств должно распознаваться "
+"автоматически при их подключении к компьютеру. Ubuntu попросит вас настроить "
+"устройство."
 
 #: internet/C/connecting.xml:76(para)
 msgid ""
 "The <guilabel>New Mobile Broadband Connection</guilabel> Wizard will open "
 "automatically when you connect the device."
 msgstr ""
+"При подключении устройства автоматически запуститься помощник "
+"<guilabel>Новое мобильное широкополосное подключение</guilabel>."
 
 #: internet/C/connecting.xml:77(para)
 msgid ""
@@ -2501,12 +2626,18 @@ msgid ""
 "and type of connection (for example, <emphasis>Contract</emphasis> or "
 "<emphasis>pre-pay</emphasis>)."
 msgstr ""
+"Щёлкните <guibutton>Вперёд</guibutton> и введите свои данные, включая "
+"страну, в которой вы получили своё устройство мобильной широкополосной "
+"связи, сеть провайдера и тип подключения (<emphasis>Контракт</emphasis> или "
+"<emphasis>предоплата</emphasis>, например)."
 
 #: internet/C/connecting.xml:78(para)
 msgid ""
 "Give your connection a name (it is up to you what name you choose) and click "
 "<guibutton>Apply</guibutton>."
 msgstr ""
+"Введите название подключения на своё усмотрение и нажмите "
+"<guibutton>Применить</guibutton>."
 
 #: internet/C/connecting.xml:79(para)
 msgid ""
@@ -2514,12 +2645,17 @@ msgid ""
 "<guiicon>NetworkManager</guiicon> icon in the top right of the panel and "
 "select your new connection."
 msgstr ""
+"Соединение настроено для использования. Чтобы подключиться, щёлкните по "
+"пиктограмме <guiicon>NetworkManager</guiicon> в правом верхнем углу экрана и "
+"выберите вновь настроенное подключение."
 
 #: internet/C/connecting.xml:80(para)
 msgid ""
 "To disconnect, left click the <guiicon>NetworkManager</guiicon> icon in the "
 "top right of the panel and click <guibutton>Disconnect</guibutton>."
 msgstr ""
+"Для разрыва соединения, щёлкните по иконке <guiicon>NetworkManager</guiicon> "
+"в правом верхнем углу панели и выберите <guibutton>Отключить</guibutton>."
 
 #: internet/C/connecting.xml:82(para)
 msgid ""
@@ -2527,30 +2663,37 @@ msgid ""
 "still be recognised by Ubuntu. In such cases you can add the connection "
 "manually."
 msgstr ""
+"Если запрос на настройку устройства при его подключении не выдаётся, "
+"возможно устройство всё ещё может быть распознано Ubuntu. В подобных случаях "
+"можно добавить подключение вручную."
 
 #: internet/C/connecting.xml:84(para)
 msgid ""
 "Right click the <guiicon>NetworkManager</guiicon> icon in the top right of "
 "the panel and click <guilabel>Edit Connections...</guilabel>"
 msgstr ""
+"Щёлкните правой кнопкой мыши по иконке <guiicon>NetworkManager</guiicon> в "
+"верхнем правом углу и выберите <guilabel>Изменить соединения...</guilabel>"
 
 #: internet/C/connecting.xml:85(para)
 msgid "Select the <guilabel>Mobile Broadband</guilabel> tab."
-msgstr ""
+msgstr "Выберите вкладек <guilabel>Мобильные широкополосные</guilabel>."
 
 #: internet/C/connecting.xml:86(para) internet/C/connecting.xml:98(para) internet/C/connecting.xml:107(para)
 msgid "Click <guibutton>Add</guibutton>."
-msgstr ""
+msgstr "Щёлкните <guibutton>Добавить</guibutton>."
 
 #: internet/C/connecting.xml:87(para)
 msgid ""
 "This should open the <guilabel>New Mobile Broadband Connection</guilabel> "
 "Wizard. Enter your details as described above."
 msgstr ""
+"Должен запуститься мастер <guilabel>Новое мобильное широкополосное "
+"соединение</guilabel>. Заполните ваши данные, как было описано выше."
 
 #: internet/C/connecting.xml:92(title) internet/C/basics.xml:38(title)
 msgid "Virtual Private Networks"
-msgstr ""
+msgstr "Виртуальные частные сети"
 
 #: internet/C/connecting.xml:93(para)
 msgid ""
@@ -2558,6 +2701,9 @@ msgid ""
 "supported by NetworkManager (NM). It is important to know which type of VPN "
 "network you are attempting to connect to."
 msgstr ""
+"В данный момент NetworkManager (NM) поддерживает три типа Виртуальных "
+"частных сетей (VPN). Важно знать, к какому типу VPN сети вы пытаетесь "
+"подключиться."
 
 #: internet/C/connecting.xml:96(para)
 msgid ""
@@ -2566,6 +2712,10 @@ msgid ""
 "manager-pptp</ulink> and/or <ulink url=\"apt:network-manager-vpnc\">network-"
 "manager-vpnc</ulink>."
 msgstr ""
+"Сначала установите <ulink url=\"apt:network-manager-openvpn\">network-"
+"manager-openvpn</ulink>, <ulink url=\"apt:network-manager-pptp\">network-"
+"manager-pptp</ulink> и/или <ulink url=\"apt:network-manager-vpnc\">network-"
+"manager-vpnc</ulink>."
 
 #: internet/C/connecting.xml:97(para)
 msgid ""
@@ -2573,20 +2723,25 @@ msgid ""
 "<guilabel>Configure VPN...</guilabel> from the <guilabel>VPN "
 "Connections</guilabel> option."
 msgstr ""
+"Щёлкните левой кнопкой мыши по значку <guiicon>NetworkManager</guiicon> "
+"затем щёлкните <guilabel>Настроить VPN...</guilabel> из раздела "
+"<guilabel>Соединения VPN</guilabel>."
 
 #: internet/C/connecting.xml:103(title) internet/C/basics.xml:43(title)
 msgid "DSL"
-msgstr ""
+msgstr "DSL"
 
 #: internet/C/connecting.xml:105(para)
 msgid ""
 "Right click the <guiicon>NetworkManager</guiicon> icon and click "
 "<guilabel>Edit connections...</guilabel>"
 msgstr ""
+"Щёлкните правой кнопкой мыши по значку <guiicon>NetworkManager</guiicon> и "
+"выберите <guilabel>Изменить соединения...</guilabel>"
 
 #: internet/C/connecting.xml:106(para)
 msgid "Click <guilabel>DSL</guilabel>."
-msgstr ""
+msgstr "Щёлкните по <guilabel>DSL</guilabel>."
 
 #: internet/C/basics.xml:16(title)
 msgid "Networking Basics"
@@ -2594,19 +2749,19 @@ msgstr "Основы компьютерных сетей"
 
 #: internet/C/basics.xml:20(para) internet/C/basics.xml:50(para) internet/C/basics.xml:65(para)
 msgid "INTRO"
-msgstr ""
+msgstr "Вступление"
 
 #: internet/C/basics.xml:24(para) internet/C/basics.xml:29(para) internet/C/basics.xml:34(para) internet/C/basics.xml:39(para) internet/C/basics.xml:44(para) internet/C/basics.xml:54(para) internet/C/basics.xml:59(para)
 msgid "HOWTO"
-msgstr ""
+msgstr "Руководство"
 
 #: internet/C/basics.xml:53(title)
 msgid "Networking"
-msgstr ""
+msgstr "Работа в сети"
 
 #: internet/C/adsl.xml:16(title)
 msgid "ADSL Modems"
-msgstr "АДСЛ-модемы (ADSL-модемы)"
+msgstr "ADSL-модемы"
 
 #: internet/C/adsl.xml:18(title)
 msgid "USB ADSL Modems"
@@ -2620,6 +2775,11 @@ msgid ""
 "having a working connection, then transfer the downloaded files to your "
 "Ubuntu installation."
 msgstr ""
+"Зачастую драйвера ADSL USB модемов являются проприетарными, с закрытым "
+"исходным кодом, поэтому они не могут распространяться вместе с Ubuntu. Чтобы "
+"настроить модем на работу с такими драйверами, необходимо сначала скачать "
+"драйвера из Интернета на компьютере с работающим подключением, а затем "
+"переместить их в установленную Ubuntu."
 
 #: internet/C/adsl.xml:20(para)
 msgid ""
@@ -2746,11 +2906,11 @@ msgstr ""
 
 #: internet/C/adsl.xml:51(para)
 msgid "In the terminal, type <screen>sudo pppoeconf</screen>"
-msgstr "В онке терминала наберите <screen>sudo pppoeconf</screen>"
+msgstr "В окне терминала наберите <screen>sudo pppoeconf</screen>"
 
 #: internet/C/adsl.xml:54(para)
 msgid "Confirm that your Ethernet card is detected."
-msgstr "Убедитесь, что ваша плата Ethernet обнаружена."
+msgstr "Убедитесь, что устройство Ethernet обнаружено."
 
 #: internet/C/adsl.xml:55(para)
 msgid "Enter your username."
@@ -2765,8 +2925,7 @@ msgid ""
 "If you already have a PPPoE Connection configured, you will be asked if it "
 "may be modified."
 msgstr ""
-"Если ваше PPPoE соединение уже настроено, вас спросят хотите ли вы его "
-"изменить."
+"Если PPPoE соединение уже настроено, вас спросят, хотите ли вы его изменить."
 
 #: internet/C/adsl.xml:58(para)
 msgid ""
@@ -2926,6 +3085,32 @@ msgstr ""
 "  Launchpad Translations Administrators https://launchpad.net/~rosetta-"
 "admins\n"
 "  Maxim Rogachev https://launchpad.net/~5070007\n"
+"  Nicolae Istratii https://launchpad.net/~tallman9\n"
+"  Nikolay Rysev https://launchpad.net/~mad-f3ka\n"
+"  Petr E. Antonov https://launchpad.net/~antpeter\n"
+"  Sergey Rebko https://launchpad.net/~arch1s\n"
+"  Victor Drobot https://launchpad.net/~linux776\n"
+"  Viktor Kazakov https://launchpad.net/~kvs16\n"
+"  Vyacheslav Kurenyshev https://launchpad.net/~slavic\n"
+"  diviz https://launchpad.net/~diviz\n"
+"  mikhail2704 https://launchpad.net/~mikhail2704\n"
+"  semyenov https://launchpad.net/~semyenov-gmail\n"
+"  Александр AldeX Крылов https://launchpad.net/~aldex\n"
+"\n"
+"Launchpad Contributions:\n"
+"  Alexander Telenga https://launchpad.net/~telenga\n"
+"  Alexey Balmashnov https://launchpad.net/~a.balmashnov\n"
+"  Andrey Shitov https://launchpad.net/~aa-shtv\n"
+"  Andy Lemz https://launchpad.net/~andy-lemz\n"
+"  Dmitriy Kudryashov https://launchpad.net/~overmailed\n"
+"  Igor Zakharoff https://launchpad.net/~f2404\n"
+"  Igor Zubarev https://launchpad.net/~igor4u\n"
+"  Illarion Kovalchuk https://launchpad.net/~illarion-kovalchuk\n"
+"  Ilya B https://launchpad.net/~randomaction\n"
+"  Launchpad Translations Administrators https://launchpad.net/~rosetta-"
+"admins\n"
+"  Maxim Rogachev https://launchpad.net/~5070007\n"
+"  Nick Gorbunov https://launchpad.net/~intsurfer\n"
 "  Nicolae Istratii https://launchpad.net/~tallman9\n"
 "  Nikolay Rysev https://launchpad.net/~mad-f3ka\n"
 "  Petr E. Antonov https://launchpad.net/~antpeter\n"

@@ -7,19 +7,19 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-docs\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2009-03-26 16:35+0000\n"
-"PO-Revision-Date: 2008-04-30 22:17+0000\n"
+"POT-Creation-Date: 2009-04-03 23:05+0100\n"
+"PO-Revision-Date: 2009-04-05 16:49+0000\n"
 "Last-Translator: nglnx <Unknown>\n"
 "Language-Team: Portuguese <pt@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2009-04-01 10:43+0000\n"
+"X-Launchpad-Export-Date: 2009-04-09 18:30+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: serverguide/C/serverguide-C.omf:6(creator) serverguide/C/serverguide-C.omf:7(maintainer)
 msgid "ubuntu-doc@lists.ubuntu.com (Ubuntu Documentation Project)"
-msgstr ""
+msgstr "ubuntu-doc@lists.ubuntu.com (Projecto de Documentação do Ubuntu)"
 
 #: serverguide/C/serverguide-C.omf:8(title) serverguide/C/serverguide-C.omf:11(description) serverguide/C/serverguide.xml:14(title) serverguide/C/bookinfo.xml:13(title)
 msgid "Ubuntu Server Guide"
@@ -27,7 +27,7 @@ msgstr "Guia do Servidor Ubuntu"
 
 #: serverguide/C/serverguide-C.omf:9(date)
 msgid "2007-09-30"
-msgstr ""
+msgstr "30-09-2007"
 
 #: serverguide/C/windows-networking.xml:13(title)
 msgid "Windows Networking"
@@ -128,7 +128,7 @@ msgstr ""
 
 #: serverguide/C/windows-networking.xml:70(title)
 msgid "Samba File Server"
-msgstr ""
+msgstr "Servidor de Ficheiros Samba"
 
 #: serverguide/C/windows-networking.xml:72(para)
 msgid ""
@@ -156,7 +156,7 @@ msgstr ""
 
 #: serverguide/C/windows-networking.xml:90(command) serverguide/C/windows-networking.xml:294(command)
 msgid "sudo apt-get install samba"
-msgstr ""
+msgstr "sudo apt-get install samba"
 
 #: serverguide/C/windows-networking.xml:93(para)
 msgid ""
@@ -278,11 +278,11 @@ msgstr ""
 
 #: serverguide/C/windows-networking.xml:199(command)
 msgid "sudo mkdir -p /srv/samba/share"
-msgstr ""
+msgstr "sudo mkdir -p /srv/samba/share"
 
 #: serverguide/C/windows-networking.xml:200(command)
 msgid "sudo chown nobody.nogroup /srv/samba/share/"
-msgstr ""
+msgstr "sudo chown nobody.nogroup /srv/samba/share/"
 
 #: serverguide/C/windows-networking.xml:204(para)
 msgid ""
@@ -350,7 +350,7 @@ msgstr ""
 
 #: serverguide/C/windows-networking.xml:269(title)
 msgid "Samba Print Server"
-msgstr ""
+msgstr "Servidor de Impressão Samba"
 
 #: serverguide/C/windows-networking.xml:271(para)
 msgid ""
@@ -401,10 +401,13 @@ msgid ""
 "   browsable = yes\n"
 "   guest ok = yes\n"
 msgstr ""
+"\n"
+"   browsable = yes\n"
+"   guest ok = yes\n"
 
 #: serverguide/C/windows-networking.xml:321(para)
 msgid "After editing <filename>smb.conf</filename> restart Samba:"
-msgstr ""
+msgstr "Reinicie o Samba depois de editar <filename>smb.conf</filename>"
 
 #: serverguide/C/windows-networking.xml:329(para)
 msgid ""
@@ -424,7 +427,7 @@ msgstr ""
 
 #: serverguide/C/windows-networking.xml:370(title)
 msgid "Samba Security Modes"
-msgstr ""
+msgstr "Modos de segurança do Samba"
 
 #: serverguide/C/windows-networking.xml:372(para)
 msgid ""
@@ -498,7 +501,7 @@ msgstr ""
 
 #: serverguide/C/windows-networking.xml:435(command)
 msgid "sudo apt-get install libpam-smbpass"
-msgstr ""
+msgstr "sudo apt-get install libpam-smbpass"
 
 #: serverguide/C/windows-networking.xml:439(para)
 msgid ""
@@ -518,6 +521,8 @@ msgid ""
 "\n"
 "    guest ok = no\n"
 msgstr ""
+"\n"
+"    guest ok = no\n"
 
 #: serverguide/C/windows-networking.xml:453(para)
 msgid "Finally, restart Samba for the new settings to take effect:"
@@ -668,6 +673,8 @@ msgid ""
 "\n"
 "    admin users = melissa\n"
 msgstr ""
+"\n"
+"    admin users = melissa\n"
 
 #: serverguide/C/windows-networking.xml:552(para)
 msgid ""
@@ -704,6 +711,9 @@ msgid ""
 "UUID=66bcdd2e-8861-4fb0-b7e4-e61c569fe17d /srv  ext3    noatime,relatime,acl "
 "0       1\n"
 msgstr ""
+"\n"
+"UUID=66bcdd2e-8861-4fb0-b7e4-e61c569fe17d /srv ext3 noatime,relatime,acl 0 "
+"1\n"
 
 #: serverguide/C/windows-networking.xml:583(para)
 msgid "Then remount the partition:"
@@ -711,7 +721,7 @@ msgstr ""
 
 #: serverguide/C/windows-networking.xml:588(command)
 msgid "sudo mount -v -o remount /srv"
-msgstr ""
+msgstr "sudo mount -v -o remount /srv"
 
 #: serverguide/C/windows-networking.xml:592(para)
 msgid ""
@@ -732,15 +742,15 @@ msgstr ""
 
 #: serverguide/C/windows-networking.xml:607(command)
 msgid "sudo chown -R melissa /srv/samba/share/"
-msgstr ""
+msgstr "sudo chown -R melissa /srv/samba/share/"
 
 #: serverguide/C/windows-networking.xml:608(command)
 msgid "sudo chgrp -R sysadmin /srv/samba/share/"
-msgstr ""
+msgstr "sudo chgrp -R sysadmin /srv/samba/share/"
 
 #: serverguide/C/windows-networking.xml:609(command)
 msgid "sudo setfacl -R -m g:qa:rx /srv/samba/share/"
-msgstr ""
+msgstr "sudo setfacl -R -m g:qa:rx /srv/samba/share/"
 
 #: serverguide/C/windows-networking.xml:613(para)
 msgid ""
@@ -760,7 +770,7 @@ msgstr ""
 
 #: serverguide/C/windows-networking.xml:627(title)
 msgid "Samba AppArmor Profile"
-msgstr ""
+msgstr "Perfil AppArmor do Samba"
 
 #: serverguide/C/windows-networking.xml:629(para)
 msgid ""
@@ -780,7 +790,7 @@ msgstr ""
 
 #: serverguide/C/windows-networking.xml:642(command) serverguide/C/security.xml:978(command)
 msgid "sudo apt-get install apparmor-profiles"
-msgstr ""
+msgstr "sudo apt-get install apparmor-profiles"
 
 #: serverguide/C/windows-networking.xml:646(para)
 msgid "This package contains profiles for several other binaries."
@@ -809,6 +819,9 @@ msgid ""
 "  /srv/samba/share/ r,\n"
 "  /srv/samba/share/** rwkix,\n"
 msgstr ""
+"\n"
+"  /srv/samba/share/ r,\n"
+"  /srv/samba/share/** rwkix,\n"
 
 #: serverguide/C/windows-networking.xml:668(para)
 msgid ""
@@ -817,11 +830,11 @@ msgstr ""
 
 #: serverguide/C/windows-networking.xml:673(command)
 msgid "sudo aa-enforce /usr/sbin/smbd"
-msgstr ""
+msgstr "sudo aa-enforce /usr/sbin/smbd"
 
 #: serverguide/C/windows-networking.xml:674(command)
 msgid "cat /etc/apparmor.d/usr.sbin.smbd | sudo apparmor_parser -r"
-msgstr ""
+msgstr "cat /etc/apparmor.d/usr.sbin.smbd | sudo apparmor_parser -r"
 
 #: serverguide/C/windows-networking.xml:677(para)
 msgid ""
@@ -855,7 +868,7 @@ msgstr ""
 
 #: serverguide/C/windows-networking.xml:725(title)
 msgid "Samba as a Domain Controller"
-msgstr ""
+msgstr "O Samba como um Controlador de Domínio"
 
 #: serverguide/C/windows-networking.xml:727(para)
 msgid ""
@@ -868,7 +881,7 @@ msgstr ""
 
 #: serverguide/C/windows-networking.xml:734(title)
 msgid "Primary Domain Controller"
-msgstr ""
+msgstr "Controlador de Domínio Primário"
 
 #: serverguide/C/windows-networking.xml:736(para)
 msgid ""
@@ -884,7 +897,7 @@ msgstr ""
 
 #: serverguide/C/windows-networking.xml:749(command) serverguide/C/windows-networking.xml:965(command)
 msgid "sudo apt-get install samba libpam-smbpass"
-msgstr ""
+msgstr "sudo apt-get install samba libpam-smbpass"
 
 #: serverguide/C/windows-networking.xml:755(para)
 msgid ""
@@ -1028,11 +1041,11 @@ msgstr ""
 
 #: serverguide/C/windows-networking.xml:883(command)
 msgid "sudo mkdir -p /srv/samba/netlogon"
-msgstr ""
+msgstr "sudo mkdir -p /srv/samba/netlogon"
 
 #: serverguide/C/windows-networking.xml:884(command)
 msgid "sudo touch /srv/samba/netlogon/logon.cmd"
-msgstr ""
+msgstr "sudo touch /srv/samba/netlogon/logon.cmd"
 
 #: serverguide/C/windows-networking.xml:887(para)
 msgid ""
@@ -1135,7 +1148,7 @@ msgstr ""
 
 #: serverguide/C/windows-networking.xml:1002(command)
 msgid "sudo chgrp -R admin /var/lib/samba"
-msgstr ""
+msgstr "sudo chgrp -R admin /var/lib/samba"
 
 #: serverguide/C/windows-networking.xml:1008(para)
 msgid ""
@@ -1215,7 +1228,7 @@ msgstr ""
 
 #: serverguide/C/windows-networking.xml:1109(command)
 msgid "sudo apt-get install samba smbfs smbclient"
-msgstr ""
+msgstr "sudo apt-get install samba smbfs smbclient"
 
 #: serverguide/C/windows-networking.xml:1112(para)
 msgid ""
@@ -1227,11 +1240,11 @@ msgstr ""
 
 #: serverguide/C/windows-networking.xml:1118(command)
 msgid "sudo mv /var/lib/samba/secrets.tdb /var/lib/samba/secrets.tdb.orig"
-msgstr ""
+msgstr "sudo mv /var/lib/samba/secrets.tdb /var/lib/samba/secrets.tdb.orig"
 
 #: serverguide/C/windows-networking.xml:1119(command)
 msgid "sudo ln -s /etc/samba/secrets.tdb /var/lib/samba"
-msgstr ""
+msgstr "sudo ln -s /etc/samba/secrets.tdb /var/lib/samba"
 
 #: serverguide/C/windows-networking.xml:1122(para)
 msgid "Next, edit <filename>/etc/samba/smb.conf</filename> changing:"
@@ -1406,7 +1419,7 @@ msgstr ""
 
 #: serverguide/C/windows-networking.xml:1291(command)
 msgid "sudo apt-get install likewise-open"
-msgstr ""
+msgstr "sudo apt-get install likewise-open"
 
 #: serverguide/C/windows-networking.xml:1294(para)
 msgid ""
@@ -1423,7 +1436,7 @@ msgstr ""
 
 #: serverguide/C/windows-networking.xml:1305(command)
 msgid "sudo apt-get install likewise-open5"
-msgstr ""
+msgstr "sudo apt-get install likewise-open5"
 
 #: serverguide/C/windows-networking.xml:1309(para)
 msgid ""
@@ -1533,7 +1546,7 @@ msgstr ""
 
 #: serverguide/C/windows-networking.xml:1407(command)
 msgid "sudo /etc/init.d/likewise-open restart"
-msgstr ""
+msgstr "sudo /etc/init.d/likewise-open restart"
 
 #: serverguide/C/windows-networking.xml:1411(para)
 msgid ""
@@ -1550,7 +1563,7 @@ msgstr ""
 
 #: serverguide/C/windows-networking.xml:1422(command)
 msgid "sudo domainjoin-cli leave"
-msgstr ""
+msgstr "sudo domainjoin-cli leave"
 
 #: serverguide/C/windows-networking.xml:1427(title) serverguide/C/security.xml:1830(title)
 msgid "Other Utilities"
@@ -1655,7 +1668,7 @@ msgstr ""
 
 #: serverguide/C/windows-networking.xml:1512(command) serverguide/C/network-config.xml:237(command)
 msgid "sudo /etc/init.d/networking restart"
-msgstr ""
+msgstr "sudo /etc/init.d/networking restart"
 
 #: serverguide/C/windows-networking.xml:1515(para)
 msgid "You should now be able to join the Active Directory domain."
@@ -1883,7 +1896,7 @@ msgstr ""
 
 #: serverguide/C/web-servers.xml:53(command)
 msgid "sudo apt-get install apache2"
-msgstr ""
+msgstr "sudo apt-get install apache2"
 
 #: serverguide/C/web-servers.xml:63(para)
 msgid ""
@@ -2208,20 +2221,18 @@ msgid ""
 "requested directory matching any of these names, the first will be displayed."
 msgstr ""
 "Por exemplo, quando um utilizador solicita a página "
-"http://www.exemplo.pt/este_directorio/, ele/a obterá a página DirectoryIndex "
-"se esta existir, a listagem dos ficheiros do directório, gerada pelo "
-"servidor, se a página não existir, ou a página Permissão Negada <empasis "
-"role=\"italics\">Permission Denied</empasis> caso as anteriores hipóteses "
-"não sejam verdadeiras. O servidor tentará encontrar um dos ficheiros "
-"existentes na directiva DirectoryIndex e devolverá o primeiro que encontrar. "
-"Se não encontrar nenhum desses ficheiros e se a directiva Options Indexes "
-"apontar para esse directório, o servidor gerará e devolverá uma lista, em "
-"formato HTML, das sub-directórios e ficheiros existentes no directório. O "
-"valor por omissão, existente no ficheiro "
-"<filename>/etc/apache2/apache2.conf</filename> é \" index.html index.cgi "
-"index.pl index.php index.xhtml\". Assim, se o Apache2 encontrar um ficheiro "
-"no directório pedido que corresponda a um destes nomes, o primeiro deles "
-"será apresentado."
+"http://www.exemplo.com/esta_pasta/, ele obtém: a página DirectoryIndex, se "
+"esta existir; uma lista (criada pelo servidor), dos ficheiros existentes na "
+"pasta, se a página DirectoryIndex não existir e a opção Indexes for "
+"especificada; uma página Permission Denied, se nenhum dos casos anteriores "
+"se verificar. O servidor tentará encontrar um dos ficheiros presentes na "
+"directiva DirectoryIndex e devolverá o primeiro que encontrar. Se não "
+"encontrar nenhum desses ficheiros e se a directiva Options Indexes apontar "
+"para essa pasta, o servidor criará e devolverá uma lista, em formato HTML, "
+"das sub-pastas e ficheiros existentes nessa pasta. O valor por omissão, "
+"definido no ficheiro <filename>/etc/apache2/apache2.conf</filename> é \" "
+"index.html index.cgi index.pl index.php index.xhtml\". Logo, o Apache2 "
+"devolverá o primeiro desses ficheiros que encontrar na pasta solicitada."
 
 #: serverguide/C/web-servers.xml:332(para)
 msgid ""
@@ -2484,7 +2495,7 @@ msgstr ""
 
 #: serverguide/C/web-servers.xml:546(command)
 msgid "sudo a2dismod auth_mysql"
-msgstr ""
+msgstr "sudo a2dismod auth_mysql"
 
 #: serverguide/C/web-servers.xml:553(title)
 msgid "HTTPS Configuration"
@@ -2533,7 +2544,7 @@ msgstr ""
 
 #: serverguide/C/web-servers.xml:589(command)
 msgid "sudo a2ensite default-ssl"
-msgstr ""
+msgstr "sudo a2ensite default-ssl"
 
 #: serverguide/C/web-servers.xml:593(para)
 msgid ""
@@ -2841,7 +2852,7 @@ msgstr ""
 
 #: serverguide/C/web-servers.xml:810(command)
 msgid "sudo apt-get install squid"
-msgstr ""
+msgstr "sudo apt-get install squid"
 
 #: serverguide/C/web-servers.xml:816(para)
 msgid ""
@@ -3045,7 +3056,7 @@ msgstr ""
 
 #: serverguide/C/web-servers.xml:947(command)
 msgid "sudo apt-get install rails"
-msgstr ""
+msgstr "sudo apt-get install rails"
 
 #: serverguide/C/web-servers.xml:953(para)
 msgid ""
@@ -3093,7 +3104,7 @@ msgstr ""
 
 #: serverguide/C/web-servers.xml:984(command)
 msgid "sudo a2enmod rewrite"
-msgstr ""
+msgstr "sudo a2enmod rewrite"
 
 #: serverguide/C/web-servers.xml:987(para)
 msgid ""
@@ -3164,7 +3175,7 @@ msgstr ""
 
 #: serverguide/C/web-servers.xml:1039(command)
 msgid "sudo apt-get install tomcat6"
-msgstr ""
+msgstr "sudo apt-get install tomcat6"
 
 #: serverguide/C/web-servers.xml:1041(para)
 msgid ""
@@ -3267,7 +3278,7 @@ msgstr ""
 
 #: serverguide/C/web-servers.xml:1100(command)
 msgid "sudo apt-get install tomcat6-docs"
-msgstr ""
+msgstr "sudo apt-get install tomcat6-docs"
 
 #: serverguide/C/web-servers.xml:1104(title)
 msgid "Tomcat administration webapps"
@@ -3282,7 +3293,7 @@ msgstr ""
 
 #: serverguide/C/web-servers.xml:1110(command)
 msgid "sudo apt-get install tomcat6-admin"
-msgstr ""
+msgstr "sudo apt-get install tomcat6-admin"
 
 #: serverguide/C/web-servers.xml:1112(para)
 msgid ""
@@ -3323,11 +3334,11 @@ msgstr ""
 
 #: serverguide/C/web-servers.xml:1135(command)
 msgid "sudo chgrp -R tomcat6 /etc/tomcat6"
-msgstr ""
+msgstr "sudo chgrp -R tomcat6 /etc/tomcat6"
 
 #: serverguide/C/web-servers.xml:1136(command)
 msgid "sudo chmod -R g+w /etc/tomcat6"
-msgstr ""
+msgstr "sudo chmod -R g+w /etc/tomcat6"
 
 #: serverguide/C/web-servers.xml:1141(title)
 msgid "Tomcat examples webapps"
@@ -3343,7 +3354,7 @@ msgstr ""
 
 #: serverguide/C/web-servers.xml:1148(command)
 msgid "sudo apt-get install tomcat6-examples"
-msgstr ""
+msgstr "sudo apt-get install tomcat6-examples"
 
 #: serverguide/C/web-servers.xml:1154(title)
 msgid "Using private instances"
@@ -3377,7 +3388,7 @@ msgstr ""
 
 #: serverguide/C/web-servers.xml:1170(command)
 msgid "sudo apt-get install tomcat6-user"
-msgstr ""
+msgstr "sudo apt-get install tomcat6-user"
 
 #: serverguide/C/web-servers.xml:1174(title)
 msgid "Creating a private instance"
@@ -3549,7 +3560,7 @@ msgstr ""
 
 #: serverguide/C/virtualization.xml:67(command)
 msgid "sudo apt-get install kvm libvirt-bin"
-msgstr ""
+msgstr "sudo apt-get install kvm libvirt-bin"
 
 #: serverguide/C/virtualization.xml:69(para)
 msgid ""
@@ -3565,7 +3576,7 @@ msgstr ""
 
 #: serverguide/C/virtualization.xml:77(command)
 msgid "sudo adduser $USER libvirtd"
-msgstr ""
+msgstr "sudo adduser $USER libvirtd"
 
 #: serverguide/C/virtualization.xml:80(para)
 msgid ""
@@ -3620,7 +3631,7 @@ msgstr ""
 
 #: serverguide/C/virtualization.xml:109(command)
 msgid "sudo apt-get install python-virtinst"
-msgstr ""
+msgstr "sudo apt-get install python-virtinst"
 
 #: serverguide/C/virtualization.xml:111(para)
 msgid ""
@@ -3633,6 +3644,8 @@ msgid ""
 "sudo virt-install -n web_devel -r 256 -f web_devel.img \\ -s 4 -c jeos.iso --"
 "accelerate \\ --connect=qemu:///system --vnc \\ --noautoconsole -v"
 msgstr ""
+"sudo virt-install -n web_devel -r 256 -f web_devel.img \\ -s 4 -c jeos.iso --"
+"accelerate \\ --connect=qemu:///system --vnc \\ --noautoconsole -v"
 
 #: serverguide/C/virtualization.xml:122(para)
 msgid ""
@@ -3706,6 +3719,8 @@ msgid ""
 "sudo virt-clone -o web_devel -n database_devel -f "
 "/path/to/database_devel.img --connect=qemu:///system"
 msgstr ""
+"sudo virt-clone -o web_devel -n database_devel -f "
+"/path/to/database_devel.img --connect=qemu:///system"
 
 #: serverguide/C/virtualization.xml:184(para)
 msgid "<emphasis>-o:</emphasis> original virtual machine."
@@ -3844,7 +3859,7 @@ msgstr ""
 
 #: serverguide/C/virtualization.xml:306(command)
 msgid "sudo apt-get install virt-manager"
-msgstr ""
+msgstr "sudo apt-get install virt-manager"
 
 #: serverguide/C/virtualization.xml:308(para)
 msgid ""
@@ -3898,7 +3913,7 @@ msgstr ""
 
 #: serverguide/C/virtualization.xml:342(command)
 msgid "sudo apt-get install virt-viewer"
-msgstr ""
+msgstr "sudo apt-get install virt-viewer"
 
 #: serverguide/C/virtualization.xml:344(para)
 msgid ""
@@ -4108,7 +4123,7 @@ msgstr ""
 
 #: serverguide/C/virtualization.xml:523(command) serverguide/C/jeos.xml:142(command)
 msgid "sudo apt-get install python-vm-builder"
-msgstr ""
+msgstr "sudo apt-get install python-vm-builder"
 
 #: serverguide/C/virtualization.xml:527(para) serverguide/C/jeos.xml:146(para)
 msgid ""
@@ -4170,6 +4185,8 @@ msgid ""
 "sudo vmbuilder kvm ubuntu --suite jaunty --flavour virtual --arch i386 -o --"
 "libvirt qemu:///system"
 msgstr ""
+"sudo vmbuilder kvm ubuntu --suite jaunty --flavour virtual --arch i386 -o --"
+"libvirt qemu:///system"
 
 #: serverguide/C/virtualization.xml:578(para) serverguide/C/jeos.xml:197(para)
 msgid ""
@@ -4272,6 +4289,8 @@ msgid ""
 "sudo vmbuilder kvm ubuntu --suite jaunty --flavour virtual --arch i386 -o --"
 "libvirt qemu:///system --ip 192.168.0.100"
 msgstr ""
+"sudo vmbuilder kvm ubuntu --suite jaunty --flavour virtual --arch i386 -o --"
+"libvirt qemu:///system --ip 192.168.0.100"
 
 #: serverguide/C/virtualization.xml:672(title) serverguide/C/jeos.xml:291(title)
 msgid "Modifying the libvirt Template to use Bridging"
@@ -4395,6 +4414,8 @@ msgid ""
 "sudo vmbuilder kvm ubuntu --suite jaunty --flavour virtual --arch i386 \\ -o "
 "--libvirt qemu:///system --ip 192.168.0.100 --part vmbuilder.partition"
 msgstr ""
+"sudo vmbuilder kvm ubuntu --suite jaunty --flavour virtual --arch i386 \\ -o "
+"--libvirt qemu:///system --ip 192.168.0.100 --part vmbuilder.partition"
 
 #: serverguide/C/virtualization.xml:765(para) serverguide/C/jeos.xml:384(para)
 msgid ""
@@ -4587,7 +4608,7 @@ msgstr ""
 
 #: serverguide/C/virtualization.xml:907(command) serverguide/C/jeos.xml:526(command)
 msgid "sudo apt-get install apt-proxy"
-msgstr ""
+msgstr "sudo apt-get install apt-proxy"
 
 #: serverguide/C/virtualization.xml:910(para) serverguide/C/jeos.xml:529(para)
 msgid ""
@@ -4987,7 +5008,7 @@ msgstr ""
 
 #: serverguide/C/virtualization.xml:1233(command)
 msgid "sudo apt-get install eucalyptus-cloud eucalyptus-cc"
-msgstr ""
+msgstr "sudo apt-get install eucalyptus-cloud eucalyptus-cc"
 
 #: serverguide/C/virtualization.xml:1236(para)
 msgid ""
@@ -4997,7 +5018,7 @@ msgstr ""
 
 #: serverguide/C/virtualization.xml:1241(command)
 msgid "sudo apt-get install eucalyptus-nc"
-msgstr ""
+msgstr "sudo apt-get install eucalyptus-nc"
 
 #: serverguide/C/virtualization.xml:1244(para)
 msgid ""
@@ -5062,7 +5083,7 @@ msgstr ""
 
 #: serverguide/C/virtualization.xml:1286(command)
 msgid "sudo /etc/init.d/eucalyptus-nc restart"
-msgstr ""
+msgstr "sudo /etc/init.d/eucalyptus-nc restart"
 
 #: serverguide/C/virtualization.xml:1291(para)
 msgid ""
@@ -5123,7 +5144,7 @@ msgstr ""
 
 #: serverguide/C/virtualization.xml:1348(command)
 msgid "sudo apt-get install opennebula"
-msgstr ""
+msgstr "sudo apt-get install opennebula"
 
 #: serverguide/C/virtualization.xml:1351(para)
 msgid "On each Compute Node install:"
@@ -6306,7 +6327,7 @@ msgstr ""
 
 #: serverguide/C/security.xml:39(command)
 msgid "sudo passwd"
-msgstr ""
+msgstr "sudo passwd"
 
 #: serverguide/C/security.xml:41(para)
 msgid ""
@@ -6344,7 +6365,7 @@ msgstr ""
 
 #: serverguide/C/security.xml:55(command)
 msgid "sudo passwd -l root"
-msgstr ""
+msgstr "sudo passwd -l root"
 
 #: serverguide/C/security.xml:59(para)
 msgid ""
@@ -6354,7 +6375,7 @@ msgstr ""
 
 #: serverguide/C/security.xml:63(command)
 msgid "man sudo"
-msgstr ""
+msgstr "man sudo"
 
 #: serverguide/C/security.xml:67(para)
 msgid ""
@@ -7015,7 +7036,7 @@ msgstr ""
 
 #: serverguide/C/security.xml:450(command)
 msgid "sudo ufw enable"
-msgstr ""
+msgstr "sudo ufw enable"
 
 #: serverguide/C/security.xml:454(para)
 msgid "To open a port (ssh in this example):"
@@ -7023,7 +7044,7 @@ msgstr ""
 
 #: serverguide/C/security.xml:458(command)
 msgid "sudo ufw allow 22"
-msgstr ""
+msgstr "sudo ufw allow 22"
 
 #: serverguide/C/security.xml:462(para)
 msgid "Rules can also be added using a <emphasis>numbered</emphasis> format:"
@@ -7031,7 +7052,7 @@ msgstr ""
 
 #: serverguide/C/security.xml:466(command)
 msgid "sudo ufw insert 1 allow 80"
-msgstr ""
+msgstr "sudo ufw insert 1 allow 80"
 
 #: serverguide/C/security.xml:470(para)
 msgid "Similarly, to close an opened port:"
@@ -7039,7 +7060,7 @@ msgstr ""
 
 #: serverguide/C/security.xml:474(command)
 msgid "sudo ufw deny 22"
-msgstr ""
+msgstr "sudo ufw deny 22"
 
 #: serverguide/C/security.xml:478(para)
 msgid "To remove a rule, use delete followed by the rule:"
@@ -7047,7 +7068,7 @@ msgstr ""
 
 #: serverguide/C/security.xml:482(command)
 msgid "sudo ufw delete deny 22"
-msgstr ""
+msgstr "sudo ufw delete deny 22"
 
 #: serverguide/C/security.xml:486(para)
 msgid ""
@@ -7058,7 +7079,7 @@ msgstr ""
 
 #: serverguide/C/security.xml:491(command)
 msgid "sudo ufw allow proto tcp from 192.168.0.2 to any port 22"
-msgstr ""
+msgstr "sudo ufw allow proto tcp from 192.168.0.2 to any port 22"
 
 #: serverguide/C/security.xml:493(para)
 msgid ""
@@ -7076,7 +7097,7 @@ msgstr ""
 
 #: serverguide/C/security.xml:505(command)
 msgid "sudo ufw --dry-run allow http"
-msgstr ""
+msgstr "sudo ufw --dry-run allow http"
 
 #: serverguide/C/security.xml:509(computeroutput)
 #, no-wrap
@@ -7110,7 +7131,7 @@ msgstr ""
 
 #: serverguide/C/security.xml:537(command)
 msgid "sudo ufw disable"
-msgstr ""
+msgstr "sudo ufw disable"
 
 #: serverguide/C/security.xml:541(para)
 msgid "To see the firewall status, enter:"
@@ -7118,7 +7139,7 @@ msgstr ""
 
 #: serverguide/C/security.xml:545(command)
 msgid "sudo ufw status"
-msgstr ""
+msgstr "sudo ufw status"
 
 #: serverguide/C/security.xml:549(para)
 msgid "And for more verbose status information use:"
@@ -7126,7 +7147,7 @@ msgstr ""
 
 #: serverguide/C/security.xml:553(command)
 msgid "sudo ufw status verbose"
-msgstr ""
+msgstr "sudo ufw status verbose"
 
 #: serverguide/C/security.xml:557(para)
 msgid "To view the <emphasis>numbered</emphasis> format:"
@@ -7171,7 +7192,7 @@ msgstr ""
 
 #: serverguide/C/security.xml:594(command)
 msgid "sudo ufw app list"
-msgstr ""
+msgstr "sudo ufw app list"
 
 #: serverguide/C/security.xml:600(para)
 msgid ""
@@ -7181,7 +7202,7 @@ msgstr ""
 
 #: serverguide/C/security.xml:605(command)
 msgid "sudo ufw allow Samba"
-msgstr ""
+msgstr "sudo ufw allow Samba"
 
 #: serverguide/C/security.xml:611(para)
 msgid "An extended syntax is available as well:"
@@ -7213,7 +7234,7 @@ msgstr ""
 
 #: serverguide/C/security.xml:639(command)
 msgid "sudo ufw app info Samba"
-msgstr ""
+msgstr "sudo ufw app info Samba"
 
 #: serverguide/C/security.xml:645(para)
 msgid ""
@@ -7386,7 +7407,7 @@ msgstr ""
 
 #: serverguide/C/security.xml:751(command)
 msgid "sudo ufw disable &amp;&amp; sudo ufw enable"
-msgstr ""
+msgstr "sudo ufw disable &amp;&amp; sudo ufw enable"
 
 #: serverguide/C/security.xml:755(para)
 msgid ""
@@ -7424,7 +7445,7 @@ msgstr ""
 
 #: serverguide/C/security.xml:787(command)
 msgid "sudo sysctl -p"
-msgstr ""
+msgstr "sudo sysctl -p"
 
 #: serverguide/C/security.xml:791(para)
 msgid ""
@@ -7438,6 +7459,8 @@ msgid ""
 "\n"
 "sudo iptables -t nat -A POSTROUTING -s 192.168.0.0/16 -o ppp0 -j MASQUERADE\n"
 msgstr ""
+"\n"
+"sudo iptables -t nat -A POSTROUTING -s 192.168.0.0/16 -o ppp0 -j MASQUERADE\n"
 
 #: serverguide/C/security.xml:797(para)
 msgid ""
@@ -7499,6 +7522,10 @@ msgid ""
 "sudo iptables -A FORWARD -d 192.168.0.0/16 -m state --state "
 "ESTABLISHED,RELATED -i ppp0 -j ACCEPT\n"
 msgstr ""
+"\n"
+"sudo iptables -A FORWARD -s 192.168.0.0/16 -o ppp0 -j ACCEPT\n"
+"sudo iptables -A FORWARD -d 192.168.0.0/16 -m state --state "
+"ESTABLISHED,RELATED -i ppp0 -j ACCEPT\n"
 
 #: serverguide/C/security.xml:826(para)
 msgid ""
@@ -7543,7 +7570,7 @@ msgstr ""
 
 #: serverguide/C/security.xml:857(command)
 msgid "sudo ufw logging on"
-msgstr ""
+msgstr "sudo ufw logging on"
 
 #: serverguide/C/security.xml:859(para)
 msgid ""
@@ -7565,6 +7592,9 @@ msgid ""
 "sudo iptables -A INPUT -m state --state NEW -p tcp --dport 80 -j LOG --log-"
 "prefix \"NEW_HTTP_CONN: \"\n"
 msgstr ""
+"\n"
+"sudo iptables -A INPUT -m state --state NEW -p tcp --dport 80 -j LOG --log-"
+"prefix \"NEW_HTTP_CONN: \"\n"
 
 #: serverguide/C/security.xml:868(para)
 msgid ""
@@ -7751,7 +7781,7 @@ msgstr ""
 
 #: serverguide/C/security.xml:1007(command)
 msgid "sudo apparmor_status"
-msgstr ""
+msgstr "sudo apparmor_status"
 
 #: serverguide/C/security.xml:1011(para)
 msgid ""
@@ -7786,7 +7816,7 @@ msgstr ""
 
 #: serverguide/C/security.xml:1035(command)
 msgid "sudo aa-complain /etc/apparmor.d/*"
-msgstr ""
+msgstr "sudo aa-complain /etc/apparmor.d/*"
 
 #: serverguide/C/security.xml:1037(para)
 msgid "To place all profiles in enforce mode:"
@@ -7794,7 +7824,7 @@ msgstr ""
 
 #: serverguide/C/security.xml:1041(command)
 msgid "sudo aa-enforce /etc/apparmor.d/*"
-msgstr ""
+msgstr "sudo aa-enforce /etc/apparmor.d/*"
 
 #: serverguide/C/security.xml:1045(para)
 msgid ""
@@ -7823,7 +7853,7 @@ msgstr ""
 
 #: serverguide/C/security.xml:1064(command)
 msgid "sudo /etc/init.d/apparmor reload"
-msgstr ""
+msgstr "sudo /etc/init.d/apparmor reload"
 
 #: serverguide/C/security.xml:1068(para)
 msgid ""
@@ -7859,11 +7889,11 @@ msgstr ""
 
 #: serverguide/C/security.xml:1090(command)
 msgid "sudo /etc/init.d/apparmor stop"
-msgstr ""
+msgstr "sudo /etc/init.d/apparmor stop"
 
 #: serverguide/C/security.xml:1091(command)
 msgid "sudo update-rc.d -f apparmor remove"
-msgstr ""
+msgstr "sudo update-rc.d -f apparmor remove"
 
 #: serverguide/C/security.xml:1095(para)
 msgid "To re-enable <application>AppArmor</application> enter:"
@@ -7871,11 +7901,11 @@ msgstr ""
 
 #: serverguide/C/security.xml:1099(command)
 msgid "sudo /etc/init.d/apparmor start"
-msgstr ""
+msgstr "sudo /etc/init.d/apparmor start"
 
 #: serverguide/C/security.xml:1100(command)
 msgid "sudo update-rc.d apparmor defaults"
-msgstr ""
+msgstr "sudo update-rc.d apparmor defaults"
 
 #: serverguide/C/security.xml:1105(para)
 msgid ""
@@ -8017,7 +8047,7 @@ msgstr ""
 
 #: serverguide/C/security.xml:1228(command)
 msgid "sudo aa-genprof slapd"
-msgstr ""
+msgstr "sudo aa-genprof slapd"
 
 #: serverguide/C/security.xml:1232(para)
 msgid ""
@@ -8050,7 +8080,7 @@ msgstr ""
 
 #: serverguide/C/security.xml:1259(command)
 msgid "sudo aa-logprof"
-msgstr ""
+msgstr "sudo aa-logprof"
 
 #: serverguide/C/security.xml:1267(para)
 msgid ""
@@ -8441,11 +8471,11 @@ msgstr ""
 
 #: serverguide/C/security.xml:1557(command)
 msgid "sudo mkdir /etc/ssl/CA"
-msgstr ""
+msgstr "sudo mkdir /etc/ssl/CA"
 
 #: serverguide/C/security.xml:1558(command)
 msgid "sudo mkdir /etc/ssl/newcerts"
-msgstr ""
+msgstr "sudo mkdir /etc/ssl/newcerts"
 
 #: serverguide/C/security.xml:1564(para)
 msgid ""
@@ -8457,11 +8487,11 @@ msgstr ""
 
 #: serverguide/C/security.xml:1571(command)
 msgid "sudo sh -c \"echo '01' &gt; /etc/ssl/CA/serial\""
-msgstr ""
+msgstr "sudo sh -c \"echo '01' &gt; /etc/ssl/CA/serial\""
 
 #: serverguide/C/security.xml:1572(command)
 msgid "sudo touch /etc/ssl/CA/index.txt"
-msgstr ""
+msgstr "sudo touch /etc/ssl/CA/index.txt"
 
 #: serverguide/C/security.xml:1578(para)
 msgid ""
@@ -8502,11 +8532,11 @@ msgstr ""
 
 #: serverguide/C/security.xml:1615(command)
 msgid "sudo mv cakey.pem /etc/ssl/private/"
-msgstr ""
+msgstr "sudo mv cakey.pem /etc/ssl/private/"
 
 #: serverguide/C/security.xml:1616(command)
 msgid "sudo mv cacert.pem /etc/ssl/certs/"
-msgstr ""
+msgstr "sudo mv cacert.pem /etc/ssl/certs/"
 
 #: serverguide/C/security.xml:1622(para)
 msgid ""
@@ -8518,7 +8548,7 @@ msgstr ""
 
 #: serverguide/C/security.xml:1629(command)
 msgid "sudo openssl ca -in server.csr -config /etc/ssl/openssl.cnf"
-msgstr ""
+msgstr "sudo openssl ca -in server.csr -config /etc/ssl/openssl.cnf"
 
 #: serverguide/C/security.xml:1632(para)
 msgid ""
@@ -8635,7 +8665,7 @@ msgstr ""
 
 #: serverguide/C/security.xml:1737(command)
 msgid "sudo apt-get install ecryptfs-utils"
-msgstr ""
+msgstr "sudo apt-get install ecryptfs-utils"
 
 #: serverguide/C/security.xml:1740(para)
 msgid "Now mount the partition to be encrypted:"
@@ -8643,7 +8673,7 @@ msgstr ""
 
 #: serverguide/C/security.xml:1745(command)
 msgid "sudo mount -t ecryptfs /srv /srv"
-msgstr ""
+msgstr "sudo mount -t ecryptfs /srv /srv"
 
 #: serverguide/C/security.xml:1748(para)
 msgid ""
@@ -8660,7 +8690,7 @@ msgstr ""
 
 #: serverguide/C/security.xml:1758(command) serverguide/C/clustering.xml:185(command)
 msgid "sudo cp -r /etc/default /srv"
-msgstr ""
+msgstr "sudo cp -r /etc/default /srv"
 
 #: serverguide/C/security.xml:1761(para)
 msgid "Now unmount <filename>/srv</filename>, and try to view a file:"
@@ -8668,7 +8698,7 @@ msgstr ""
 
 #: serverguide/C/security.xml:1766(command) serverguide/C/installation.xml:1088(command) serverguide/C/clustering.xml:193(command)
 msgid "sudo umount /srv"
-msgstr ""
+msgstr "sudo umount /srv"
 
 #: serverguide/C/security.xml:1767(command)
 msgid "cat /srv/default/cron"
@@ -9151,7 +9181,7 @@ msgstr ""
 
 #: serverguide/C/remote-administration.xml:234(command)
 msgid "sudo apt-get install ebox"
-msgstr ""
+msgstr "sudo apt-get install ebox"
 
 #: serverguide/C/remote-administration.xml:237(para)
 msgid ""
@@ -9550,7 +9580,7 @@ msgstr ""
 
 #: serverguide/C/package-management.xml:110(command)
 msgid "sudo dpkg -i zip_2.32-1_i386.deb"
-msgstr ""
+msgstr "sudo dpkg -i zip_2.32-1_i386.deb"
 
 #: serverguide/C/package-management.xml:113(para)
 msgid ""
@@ -9564,7 +9594,7 @@ msgstr ""
 
 #: serverguide/C/package-management.xml:125(command)
 msgid "sudo dpkg -r zip"
-msgstr ""
+msgstr "sudo dpkg -r zip"
 
 #: serverguide/C/package-management.xml:129(para)
 msgid ""
@@ -9999,7 +10029,7 @@ msgstr ""
 
 #: serverguide/C/package-management.xml:293(command)
 msgid "sudo apt-get install unattended-upgrades"
-msgstr ""
+msgstr "sudo apt-get install unattended-upgrades"
 
 #: serverguide/C/package-management.xml:296(para)
 msgid ""
@@ -10078,7 +10108,7 @@ msgstr ""
 
 #: serverguide/C/package-management.xml:351(command)
 msgid "sudo apt-get install apticron"
-msgstr ""
+msgstr "sudo apt-get install apticron"
 
 #: serverguide/C/package-management.xml:354(para)
 msgid ""
@@ -10363,7 +10393,7 @@ msgstr ""
 
 #: serverguide/C/other-apps.xml:98(command)
 msgid "sudo apt-get install weather-util"
-msgstr ""
+msgstr "sudo apt-get install weather-util"
 
 #: serverguide/C/other-apps.xml:103(para)
 msgid ""
@@ -10415,7 +10445,7 @@ msgstr ""
 
 #: serverguide/C/other-apps.xml:144(command)
 msgid "sudo chmod 755 /usr/local/bin/local-weather"
-msgstr ""
+msgstr "sudo chmod 755 /usr/local/bin/local-weather"
 
 #: serverguide/C/other-apps.xml:148(para)
 msgid ""
@@ -10427,6 +10457,7 @@ msgstr ""
 msgid ""
 "sudo ln -s /usr/local/bin/local-weather /etc/update-motd.d/60-local-weather"
 msgstr ""
+"sudo ln -s /usr/local/bin/local-weather /etc/update-motd.d/60-local-weather"
 
 #: serverguide/C/other-apps.xml:157(para)
 msgid "Finally, update the MOTD:"
@@ -10434,7 +10465,7 @@ msgstr ""
 
 #: serverguide/C/other-apps.xml:162(command)
 msgid "sudo update-motd"
-msgstr ""
+msgstr "sudo update-motd"
 
 #: serverguide/C/other-apps.xml:167(para)
 msgid ""
@@ -10468,7 +10499,7 @@ msgstr ""
 
 #: serverguide/C/other-apps.xml:190(command)
 msgid "sudo apt-get install etckeeper"
-msgstr ""
+msgstr "sudo apt-get install etckeeper"
 
 #: serverguide/C/other-apps.xml:193(para)
 msgid ""
@@ -10489,7 +10520,7 @@ msgstr ""
 
 #: serverguide/C/other-apps.xml:205(command)
 msgid "sudo etckeeper init"
-msgstr ""
+msgstr "sudo etckeeper init"
 
 #: serverguide/C/other-apps.xml:208(para)
 msgid "Next, commit the files to the repository:"
@@ -10497,7 +10528,7 @@ msgstr ""
 
 #: serverguide/C/other-apps.xml:213(command)
 msgid "sudo etckeeper commit \"initial import\""
-msgstr ""
+msgstr "sudo etckeeper commit \"initial import\""
 
 #: serverguide/C/other-apps.xml:216(para)
 msgid ""
@@ -10507,7 +10538,7 @@ msgstr ""
 
 #: serverguide/C/other-apps.xml:221(command)
 msgid "sudo bzr log /etc/passswd"
-msgstr ""
+msgstr "sudo bzr log /etc/passswd"
 
 #: serverguide/C/other-apps.xml:224(para)
 msgid ""
@@ -10517,7 +10548,7 @@ msgstr ""
 
 #: serverguide/C/other-apps.xml:229(command) serverguide/C/mail.xml:38(command)
 msgid "sudo apt-get install postfix"
-msgstr ""
+msgstr "sudo apt-get install postfix"
 
 #: serverguide/C/other-apps.xml:232(para)
 msgid ""
@@ -10578,7 +10609,7 @@ msgstr ""
 
 #: serverguide/C/other-apps.xml:284(command)
 msgid "sudo bzr status /etc/"
-msgstr ""
+msgstr "sudo bzr status /etc/"
 
 #: serverguide/C/other-apps.xml:285(computeroutput)
 #, no-wrap
@@ -11090,7 +11121,7 @@ msgstr ""
 
 #: serverguide/C/network-config.xml:201(command)
 msgid "sudo apt-get install bridge-utils"
-msgstr ""
+msgstr "sudo apt-get install bridge-utils"
 
 #: serverguide/C/network-config.xml:204(para)
 msgid ""
@@ -11144,7 +11175,7 @@ msgstr ""
 
 #: serverguide/C/network-config.xml:250(command)
 msgid "sudo /etc/init.d/dhcdbd stop"
-msgstr ""
+msgstr "sudo /etc/init.d/dhcdbd stop"
 
 #: serverguide/C/network-config.xml:253(para)
 msgid "Now to disable it from starting on boot enter:"
@@ -11152,7 +11183,7 @@ msgstr ""
 
 #: serverguide/C/network-config.xml:258(command)
 msgid "sudo update-rc.d -f dhcdbd remove"
-msgstr ""
+msgstr "sudo update-rc.d -f dhcdbd remove"
 
 #: serverguide/C/network-config.xml:261(para)
 msgid ""
@@ -12002,7 +12033,7 @@ msgstr "Para instalar o ntpd:"
 #: serverguide/C/network-config.xml:749(screen)
 #, no-wrap
 msgid "sudo apt-get install ntp\n"
-msgstr ""
+msgstr "sudo apt-get install ntp\n"
 
 #: serverguide/C/network-config.xml:754(title)
 msgid "Changing Time Servers"
@@ -12141,7 +12172,7 @@ msgstr ""
 
 #: serverguide/C/network-auth.xml:60(command)
 msgid "sudo apt-get install slapd ldap-utils"
-msgstr ""
+msgstr "sudo apt-get install slapd ldap-utils"
 
 #: serverguide/C/network-auth.xml:63(para)
 msgid ""
@@ -12161,7 +12192,7 @@ msgstr ""
 
 #: serverguide/C/network-auth.xml:78(command)
 msgid "sudo dpkg-reconfigure slapd"
-msgstr ""
+msgstr "sudo dpkg-reconfigure slapd"
 
 #: serverguide/C/network-auth.xml:81(para)
 msgid ""
@@ -12683,7 +12714,7 @@ msgstr ""
 
 #: serverguide/C/network-auth.xml:578(command) serverguide/C/network-auth.xml:778(command) serverguide/C/network-auth.xml:882(command)
 msgid "sudo /etc/init.d/slapd restart"
-msgstr ""
+msgstr "sudo /etc/init.d/slapd restart"
 
 #: serverguide/C/network-auth.xml:584(para)
 msgid ""
@@ -12893,11 +12924,11 @@ msgstr ""
 
 #: serverguide/C/network-auth.xml:762(command)
 msgid "sudo adduser openldap ssl-cert"
-msgstr ""
+msgstr "sudo adduser openldap ssl-cert"
 
 #: serverguide/C/network-auth.xml:763(command)
 msgid "sudo chgrp ssl-cert /etc/ssl/private/server.key"
-msgstr ""
+msgstr "sudo chgrp ssl-cert /etc/ssl/private/server.key"
 
 #: serverguide/C/network-auth.xml:767(para)
 msgid ""
@@ -13052,7 +13083,7 @@ msgstr ""
 
 #: serverguide/C/network-auth.xml:899(command)
 msgid "sudo apt-get install libnss-ldap"
-msgstr ""
+msgstr "sudo apt-get install libnss-ldap"
 
 #: serverguide/C/network-auth.xml:902(para)
 msgid ""
@@ -13068,7 +13099,7 @@ msgstr ""
 
 #: serverguide/C/network-auth.xml:911(command)
 msgid "sudo dpkg-reconfigure ldap-auth-config"
-msgstr ""
+msgstr "sudo dpkg-reconfigure ldap-auth-config"
 
 #: serverguide/C/network-auth.xml:914(para)
 msgid ""
@@ -13085,7 +13116,7 @@ msgstr ""
 
 #: serverguide/C/network-auth.xml:925(command)
 msgid "sudo auth-client-config -t nss -p lac_ldap"
-msgstr ""
+msgstr "sudo auth-client-config -t nss -p lac_ldap"
 
 #: serverguide/C/network-auth.xml:930(para)
 msgid ""
@@ -13112,7 +13143,7 @@ msgstr ""
 
 #: serverguide/C/network-auth.xml:952(command)
 msgid "sudo pam-auth-update"
-msgstr ""
+msgstr "sudo pam-auth-update"
 
 #: serverguide/C/network-auth.xml:955(para)
 msgid ""
@@ -13151,7 +13182,7 @@ msgstr ""
 
 #: serverguide/C/network-auth.xml:985(command)
 msgid "sudo apt-get install ldapscripts"
-msgstr ""
+msgstr "sudo apt-get install ldapscripts"
 
 #: serverguide/C/network-auth.xml:988(para)
 msgid ""
@@ -13189,7 +13220,7 @@ msgstr ""
 
 #: serverguide/C/network-auth.xml:1012(command)
 msgid "sudo chmod 400 /etc/ldapscripts/ldapscripts.passwd"
-msgstr ""
+msgstr "sudo chmod 400 /etc/ldapscripts/ldapscripts.passwd"
 
 #: serverguide/C/network-auth.xml:1016(para)
 msgid ""
@@ -13255,7 +13286,7 @@ msgstr ""
 
 #: serverguide/C/network-auth.xml:1064(command)
 msgid "sudo ldapaddgroup qa"
-msgstr ""
+msgstr "sudo ldapaddgroup qa"
 
 #: serverguide/C/network-auth.xml:1068(para)
 msgid "Delete a group:"
@@ -13263,7 +13294,7 @@ msgstr ""
 
 #: serverguide/C/network-auth.xml:1072(command)
 msgid "sudo ldapdeletegroup qa"
-msgstr ""
+msgstr "sudo ldapdeletegroup qa"
 
 #: serverguide/C/network-auth.xml:1076(para)
 msgid "Add a user to a group:"
@@ -13467,7 +13498,7 @@ msgstr ""
 
 #: serverguide/C/network-auth.xml:1238(command)
 msgid "sudo apt-get install samba samba-doc smbldap-tools"
-msgstr ""
+msgstr "sudo apt-get install samba samba-doc smbldap-tools"
 
 #: serverguide/C/network-auth.xml:1241(para)
 msgid ""
@@ -13501,10 +13532,12 @@ msgid ""
 "sudo cp /usr/share/doc/samba-doc/examples/LDAP/samba.schema.gz "
 "/etc/ldap/schema/"
 msgstr ""
+"sudo cp /usr/share/doc/samba-doc/examples/LDAP/samba.schema.gz "
+"/etc/ldap/schema/"
 
 #: serverguide/C/network-auth.xml:1266(command)
 msgid "sudo gzip -d /etc/ldap/schema/samba.schema.gz"
-msgstr ""
+msgstr "sudo gzip -d /etc/ldap/schema/samba.schema.gz"
 
 #: serverguide/C/network-auth.xml:1272(para)
 msgid ""
@@ -13648,11 +13681,11 @@ msgstr ""
 
 #: serverguide/C/network-auth.xml:1430(command)
 msgid "sudo gzip -d /usr/share/doc/smbldap-tools/configure.pl.gz"
-msgstr ""
+msgstr "sudo gzip -d /usr/share/doc/smbldap-tools/configure.pl.gz"
 
 #: serverguide/C/network-auth.xml:1431(command)
 msgid "sudo perl /usr/share/doc/smbldap-tools/configure.pl"
-msgstr ""
+msgstr "sudo perl /usr/share/doc/smbldap-tools/configure.pl"
 
 #: serverguide/C/network-auth.xml:1434(para)
 msgid ""
@@ -13673,7 +13706,7 @@ msgstr ""
 
 #: serverguide/C/network-auth.xml:1451(command)
 msgid "sudo slapcat -l backup.ldif"
-msgstr ""
+msgstr "sudo slapcat -l backup.ldif"
 
 #: serverguide/C/network-auth.xml:1457(para)
 msgid ""
@@ -13683,7 +13716,7 @@ msgstr ""
 
 #: serverguide/C/network-auth.xml:1462(command)
 msgid "sudo smbldap-populate"
-msgstr ""
+msgstr "sudo smbldap-populate"
 
 #: serverguide/C/network-auth.xml:1466(para)
 msgid ""
@@ -14023,7 +14056,7 @@ msgstr ""
 
 #: serverguide/C/network-auth.xml:1757(command) serverguide/C/network-auth.xml:1932(command)
 msgid "sudo apt-get install krb5-kdc krb5-admin-server"
-msgstr ""
+msgstr "sudo apt-get install krb5-kdc krb5-admin-server"
 
 #: serverguide/C/network-auth.xml:1760(para)
 msgid ""
@@ -14040,7 +14073,7 @@ msgstr ""
 
 #: serverguide/C/network-auth.xml:1770(command)
 msgid "sudo krb5_newrealm"
-msgstr ""
+msgstr "sudo krb5_newrealm"
 
 #: serverguide/C/network-auth.xml:1777(para)
 msgid ""
@@ -14059,7 +14092,7 @@ msgstr ""
 
 #: serverguide/C/network-auth.xml:1791(command) serverguide/C/network-auth.xml:2583(command)
 msgid "sudo kadmin.local"
-msgstr ""
+msgstr "sudo kadmin.local"
 
 #: serverguide/C/network-auth.xml:1792(computeroutput)
 #, no-wrap
@@ -14134,7 +14167,7 @@ msgstr ""
 
 #: serverguide/C/network-auth.xml:1838(command)
 msgid "sudo /etc/init.d/krb5-admin-server restart"
-msgstr ""
+msgstr "sudo /etc/init.d/krb5-admin-server restart"
 
 #: serverguide/C/network-auth.xml:1844(para)
 msgid ""
@@ -14273,7 +14306,7 @@ msgstr ""
 
 #: serverguide/C/network-auth.xml:1973(command)
 msgid "sudo mv keytab.kdc02 /etc/krb5.keytab"
-msgstr ""
+msgstr "sudo mv keytab.kdc02 /etc/krb5.keytab"
 
 #: serverguide/C/network-auth.xml:1977(para)
 msgid ""
@@ -14289,7 +14322,7 @@ msgstr ""
 
 #: serverguide/C/network-auth.xml:1988(command)
 msgid "sudo klist -k /etc/krb5.keytab"
-msgstr ""
+msgstr "sudo klist -k /etc/krb5.keytab"
 
 #: serverguide/C/network-auth.xml:1994(para)
 msgid ""
@@ -14312,7 +14345,7 @@ msgstr ""
 
 #: serverguide/C/network-auth.xml:2012(command)
 msgid "sudo kdb5_util -s create"
-msgstr ""
+msgstr "sudo kdb5_util -s create"
 
 #: serverguide/C/network-auth.xml:2018(para)
 msgid ""
@@ -14323,7 +14356,7 @@ msgstr ""
 
 #: serverguide/C/network-auth.xml:2025(command)
 msgid "sudo kpropd -S"
-msgstr ""
+msgstr "sudo kpropd -S"
 
 #: serverguide/C/network-auth.xml:2031(para)
 msgid ""
@@ -14333,7 +14366,7 @@ msgstr ""
 
 #: serverguide/C/network-auth.xml:2036(command)
 msgid "sudo kdb5_util dump /var/lib/krb5kdc/dump"
-msgstr ""
+msgstr "sudo kdb5_util dump /var/lib/krb5kdc/dump"
 
 #: serverguide/C/network-auth.xml:2042(para)
 msgid ""
@@ -14347,7 +14380,7 @@ msgstr ""
 
 #: serverguide/C/network-auth.xml:2048(command)
 msgid "sudo mv keytab.kdc01 /etc/kr5b.keytab"
-msgstr ""
+msgstr "sudo mv keytab.kdc01 /etc/kr5b.keytab"
 
 #: serverguide/C/network-auth.xml:2052(para)
 msgid ""
@@ -14407,7 +14440,7 @@ msgstr ""
 
 #: serverguide/C/network-auth.xml:2105(command) serverguide/C/network-auth.xml:2713(command)
 msgid "sudo /etc/init.d/krb5-kdc start"
-msgstr ""
+msgstr "sudo /etc/init.d/krb5-kdc start"
 
 #: serverguide/C/network-auth.xml:2111(para)
 msgid ""
@@ -14442,6 +14475,7 @@ msgstr ""
 msgid ""
 "sudo apt-get install krb5-user libpam-krb5 libpam-ccreds auth-client-config"
 msgstr ""
+"sudo apt-get install krb5-user libpam-krb5 libpam-ccreds auth-client-config"
 
 #: serverguide/C/network-auth.xml:2139(para)
 msgid ""
@@ -14460,7 +14494,7 @@ msgstr ""
 
 #: serverguide/C/network-auth.xml:2155(command)
 msgid "sudo dpkg-reconfigure krb5-config"
-msgstr ""
+msgstr "sudo dpkg-reconfigure krb5-config"
 
 #: serverguide/C/network-auth.xml:2158(para)
 msgid ""
@@ -14605,7 +14639,7 @@ msgstr ""
 
 #: serverguide/C/network-auth.xml:2280(command)
 msgid "sudo apt-get install krb5-kdc-ldap"
-msgstr ""
+msgstr "sudo apt-get install krb5-kdc-ldap"
 
 #: serverguide/C/network-auth.xml:2285(para)
 msgid "Next, extract the <filename>kerberos.schema.gz</filename> file:"
@@ -14613,12 +14647,13 @@ msgstr ""
 
 #: serverguide/C/network-auth.xml:2290(command)
 msgid "sudo gzip -d /usr/share/doc/krb5-kdc-ldap/kerberos.schema.gz"
-msgstr ""
+msgstr "sudo gzip -d /usr/share/doc/krb5-kdc-ldap/kerberos.schema.gz"
 
 #: serverguide/C/network-auth.xml:2291(command)
 msgid ""
 "sudo cp /usr/share/doc/krb5-kdc-ldap/kerberos.schema /etc/ldap/schema/"
 msgstr ""
+"sudo cp /usr/share/doc/krb5-kdc-ldap/kerberos.schema /etc/ldap/schema/"
 
 #: serverguide/C/network-auth.xml:2297(para)
 msgid ""
@@ -14758,7 +14793,7 @@ msgstr ""
 
 #: serverguide/C/network-auth.xml:2463(command) serverguide/C/network-auth.xml:2620(command)
 msgid "sudo apt-get install krb5-kdc krb5-admin-server krb5-kdc-ldap"
-msgstr ""
+msgstr "sudo apt-get install krb5-kdc krb5-admin-server krb5-kdc-ldap"
 
 #: serverguide/C/network-auth.xml:2469(para)
 msgid ""
@@ -14861,7 +14896,7 @@ msgstr ""
 
 #: serverguide/C/network-auth.xml:2556(command)
 msgid "sudo cp cacert.pem /etc/ssl/certs"
-msgstr ""
+msgstr "sudo cp cacert.pem /etc/ssl/certs"
 
 #: serverguide/C/network-auth.xml:2559(para)
 msgid ""
@@ -15122,7 +15157,7 @@ msgstr ""
 
 #: serverguide/C/mail.xml:50(command)
 msgid "sudo dpkg-reconfigure postfix"
-msgstr ""
+msgstr "sudo dpkg-reconfigure postfix"
 
 #: serverguide/C/mail.xml:56(para)
 msgid "Internet Site"
@@ -15201,7 +15236,7 @@ msgstr ""
 
 #: serverguide/C/mail.xml:96(command)
 msgid "sudo apt-get install dovecot-postfix"
-msgstr ""
+msgstr "sudo apt-get install dovecot-postfix"
 
 #: serverguide/C/mail.xml:99(para)
 msgid ""
@@ -15233,7 +15268,7 @@ msgstr ""
 
 #: serverguide/C/mail.xml:119(command) serverguide/C/mail.xml:182(command) serverguide/C/mail.xml:775(command) serverguide/C/mail.xml:1324(command)
 msgid "sudo /etc/init.d/postfix restart"
-msgstr ""
+msgstr "sudo /etc/init.d/postfix restart"
 
 #: serverguide/C/mail.xml:125(para)
 msgid ""
@@ -15370,7 +15405,7 @@ msgstr ""
 
 #: serverguide/C/mail.xml:209(command)
 msgid "sudo postconf -e 'smtpd_tls_loglevel = 4'"
-msgstr ""
+msgstr "sudo postconf -e 'smtpd_tls_loglevel = 4'"
 
 #: serverguide/C/mail.xml:213(para)
 msgid ""
@@ -15496,7 +15531,7 @@ msgstr ""
 
 #: serverguide/C/mail.xml:311(command)
 msgid "sudo dpkg-reconfigure exim4-config"
-msgstr ""
+msgstr "sudo dpkg-reconfigure exim4-config"
 
 #: serverguide/C/mail.xml:313(para)
 msgid ""
@@ -15517,7 +15552,7 @@ msgstr ""
 
 #: serverguide/C/mail.xml:332(command) serverguide/C/mail.xml:405(command)
 msgid "sudo update-exim4.conf"
-msgstr ""
+msgstr "sudo update-exim4.conf"
 
 #: serverguide/C/mail.xml:334(para)
 msgid ""
@@ -15544,7 +15579,7 @@ msgstr ""
 
 #: serverguide/C/mail.xml:353(command) serverguide/C/mail.xml:785(command)
 msgid "sudo /etc/init.d/exim4 start"
-msgstr ""
+msgstr "sudo /etc/init.d/exim4 start"
 
 #: serverguide/C/mail.xml:358(para)
 msgid ""
@@ -15559,7 +15594,7 @@ msgstr ""
 
 #: serverguide/C/mail.xml:365(command)
 msgid "sudo /usr/share/doc/exim4-base/examples/exim-gencert"
-msgstr ""
+msgstr "sudo /usr/share/doc/exim4-base/examples/exim-gencert"
 
 #: serverguide/C/mail.xml:367(para)
 msgid ""
@@ -15616,7 +15651,7 @@ msgstr ""
 
 #: serverguide/C/mail.xml:406(command)
 msgid "sudo /etc/init.d/exim4 restart"
-msgstr ""
+msgstr "sudo /etc/init.d/exim4 restart"
 
 #: serverguide/C/mail.xml:410(title)
 msgid "Configuring SASL"
@@ -15636,7 +15671,7 @@ msgstr ""
 
 #: serverguide/C/mail.xml:418(command)
 msgid "sudo apt-get install sasl2-bin"
-msgstr ""
+msgstr "sudo apt-get install sasl2-bin"
 
 #: serverguide/C/mail.xml:420(para)
 msgid ""
@@ -15660,7 +15695,7 @@ msgstr ""
 
 #: serverguide/C/mail.xml:431(command)
 msgid "sudo adduser Debian-exim sasl"
-msgstr ""
+msgstr "sudo adduser Debian-exim sasl"
 
 #: serverguide/C/mail.xml:433(para)
 msgid "Now start the <application>saslauthd</application> service:"
@@ -15668,7 +15703,7 @@ msgstr ""
 
 #: serverguide/C/mail.xml:437(command)
 msgid "sudo /etc/init.d/saslauthd start"
-msgstr ""
+msgstr "sudo /etc/init.d/saslauthd start"
 
 #: serverguide/C/mail.xml:439(para)
 msgid ""
@@ -15711,7 +15746,7 @@ msgstr ""
 
 #: serverguide/C/mail.xml:476(command)
 msgid "sudo apt-get install dovecot-imapd dovecot-pop3d"
-msgstr ""
+msgstr "sudo apt-get install dovecot-imapd dovecot-pop3d"
 
 #: serverguide/C/mail.xml:481(para)
 msgid ""
@@ -15788,7 +15823,7 @@ msgstr ""
 
 #: serverguide/C/mail.xml:531(command)
 msgid "sudo /etc/init.d/dovecot restart"
-msgstr ""
+msgstr "sudo /etc/init.d/dovecot restart"
 
 #: serverguide/C/mail.xml:534(para)
 msgid ""
@@ -15982,7 +16017,7 @@ msgstr ""
 
 #: serverguide/C/mail.xml:686(command)
 msgid "sudo apt-get install mailman"
-msgstr ""
+msgstr "sudo apt-get install mailman"
 
 #: serverguide/C/mail.xml:688(para)
 msgid ""
@@ -16015,6 +16050,7 @@ msgstr ""
 msgid ""
 "sudo cp /etc/mailman/apache.conf /etc/apache2/sites-available/mailman.conf"
 msgstr ""
+"sudo cp /etc/mailman/apache.conf /etc/apache2/sites-available/mailman.conf"
 
 #: serverguide/C/mail.xml:717(para)
 msgid ""
@@ -16025,7 +16061,7 @@ msgstr ""
 
 #: serverguide/C/mail.xml:722(command)
 msgid "sudo a2ensite mailman.conf"
-msgstr ""
+msgstr "sudo a2ensite mailman.conf"
 
 #: serverguide/C/mail.xml:725(para)
 msgid ""
@@ -16055,11 +16091,11 @@ msgstr ""
 
 #: serverguide/C/mail.xml:745(command)
 msgid "sudo postconf -e 'transport_maps = hash:/etc/postfix/transport'"
-msgstr ""
+msgstr "sudo postconf -e 'transport_maps = hash:/etc/postfix/transport'"
 
 #: serverguide/C/mail.xml:746(command)
 msgid "sudo postconf -e 'mailman_destination_recipient_limit = 1'"
-msgstr ""
+msgstr "sudo postconf -e 'mailman_destination_recipient_limit = 1'"
 
 #: serverguide/C/mail.xml:748(para)
 msgid ""
@@ -16103,7 +16139,7 @@ msgstr ""
 
 #: serverguide/C/mail.xml:769(command)
 msgid "sudo postmap -v /etc/postfix/transport"
-msgstr ""
+msgstr "sudo postmap -v /etc/postfix/transport"
 
 #: serverguide/C/mail.xml:771(para)
 msgid "Then restart Postfix to enable the new configurations:"
@@ -16317,7 +16353,7 @@ msgstr ""
 
 #: serverguide/C/mail.xml:909(command)
 msgid "sudo /etc/init.d/mailman start"
-msgstr ""
+msgstr "sudo /etc/init.d/mailman start"
 
 #: serverguide/C/mail.xml:911(para)
 msgid ""
@@ -16327,7 +16363,7 @@ msgstr ""
 
 #: serverguide/C/mail.xml:917(command)
 msgid "sudo /usr/sbin/newlist mailman"
-msgstr ""
+msgstr "sudo /usr/sbin/newlist mailman"
 
 #: serverguide/C/mail.xml:920(programlisting)
 #, no-wrap
@@ -16584,11 +16620,11 @@ msgstr ""
 
 #: serverguide/C/mail.xml:1102(command)
 msgid "sudo apt-get install amavisd-new spamassassin clamav-daemon"
-msgstr ""
+msgstr "sudo apt-get install amavisd-new spamassassin clamav-daemon"
 
 #: serverguide/C/mail.xml:1103(command)
 msgid "sudo apt-get install dkim-filter python-policyd-spf"
-msgstr ""
+msgstr "sudo apt-get install dkim-filter python-policyd-spf"
 
 #: serverguide/C/mail.xml:1105(para)
 msgid ""
@@ -16598,7 +16634,7 @@ msgstr ""
 
 #: serverguide/C/mail.xml:1109(command)
 msgid "sudo apt-get install pyzor razor"
-msgstr ""
+msgstr "sudo apt-get install pyzor razor"
 
 #: serverguide/C/mail.xml:1111(para)
 msgid ""
@@ -16611,6 +16647,8 @@ msgid ""
 "sudo apt-get install arj cabextract cpio lha nomarch pax rar unrar unzip zip "
 "zoo"
 msgstr ""
+"sudo apt-get install arj cabextract cpio lha nomarch pax rar unrar unzip zip "
+"zoo"
 
 #: serverguide/C/mail.xml:1120(para)
 msgid "Now configure everything to work together and filter email."
@@ -16636,7 +16674,7 @@ msgstr ""
 
 #: serverguide/C/mail.xml:1135(command)
 msgid "sudo adduser clamav amavis"
-msgstr ""
+msgstr "sudo adduser clamav amavis"
 
 #: serverguide/C/mail.xml:1139(title)
 msgid "Spamassassin"
@@ -16669,7 +16707,7 @@ msgstr ""
 
 #: serverguide/C/mail.xml:1155(command)
 msgid "sudo /etc/init.d/spamassassin start"
-msgstr ""
+msgstr "sudo /etc/init.d/spamassassin start"
 
 #: serverguide/C/mail.xml:1159(title)
 msgid "Amavisd-new"
@@ -16753,7 +16791,7 @@ msgstr ""
 
 #: serverguide/C/mail.xml:1214(command) serverguide/C/mail.xml:1260(command)
 msgid "sudo /etc/init.d/amavis restart"
-msgstr ""
+msgstr "sudo /etc/init.d/amavis restart"
 
 #: serverguide/C/mail.xml:1217(title)
 msgid "DKIM Whitelist"
@@ -16819,7 +16857,7 @@ msgstr ""
 
 #: serverguide/C/mail.xml:1278(command)
 msgid "sudo postconf -e 'content_filter = smtp-amavis:[127.0.0.1]:10024'"
-msgstr ""
+msgstr "sudo postconf -e 'content_filter = smtp-amavis:[127.0.0.1]:10024'"
 
 #: serverguide/C/mail.xml:1280(para)
 msgid ""
@@ -17406,7 +17444,7 @@ msgstr ""
 
 #: serverguide/C/lamp-applications.xml:309(command)
 msgid "sudo ln -s /var/lib/mediawiki /var/www/mediawiki"
-msgstr ""
+msgstr "sudo ln -s /var/lib/mediawiki /var/www/mediawiki"
 
 #: serverguide/C/lamp-applications.xml:312(para)
 msgid "Point your web browser to the following URL for MediaWiki setup:"
@@ -17467,7 +17505,7 @@ msgstr ""
 
 #: serverguide/C/lamp-applications.xml:368(command)
 msgid "sudo apt-get install phpmyadmin"
-msgstr ""
+msgstr "sudo apt-get install phpmyadmin"
 
 #: serverguide/C/lamp-applications.xml:371(para)
 msgid ""
@@ -18071,7 +18109,7 @@ msgstr ""
 
 #: serverguide/C/installation.xml:344(command)
 msgid "sudo tasksel install dns-server"
-msgstr ""
+msgstr "sudo tasksel install dns-server"
 
 #: serverguide/C/installation.xml:349(title)
 msgid "Upgrading"
@@ -18381,7 +18419,7 @@ msgstr ""
 
 #: serverguide/C/installation.xml:671(command)
 msgid "sudo dpkg-reconfigure mdadm"
-msgstr ""
+msgstr "sudo dpkg-reconfigure mdadm"
 
 #: serverguide/C/installation.xml:677(para)
 msgid ""
@@ -18465,7 +18503,7 @@ msgstr ""
 
 #: serverguide/C/installation.xml:761(command)
 msgid "sudo mdadm -D /dev/md0"
-msgstr ""
+msgstr "sudo mdadm -D /dev/md0"
 
 #: serverguide/C/installation.xml:764(para)
 msgid ""
@@ -18481,7 +18519,7 @@ msgstr ""
 
 #: serverguide/C/installation.xml:774(command)
 msgid "sudo mdadm -E /dev/sda1"
-msgstr ""
+msgstr "sudo mdadm -E /dev/sda1"
 
 #: serverguide/C/installation.xml:776(para)
 msgid ""
@@ -18495,7 +18533,7 @@ msgstr ""
 
 #: serverguide/C/installation.xml:785(command)
 msgid "sudo mdadm --remove /dev/md0 /dev/sda1"
-msgstr ""
+msgstr "sudo mdadm --remove /dev/md0 /dev/sda1"
 
 #: serverguide/C/installation.xml:787(para)
 msgid ""
@@ -18509,7 +18547,7 @@ msgstr ""
 
 #: serverguide/C/installation.xml:796(command)
 msgid "sudo mdadm --add /dev/md0 /dev/sda1"
-msgstr ""
+msgstr "sudo mdadm --add /dev/md0 /dev/sda1"
 
 #: serverguide/C/installation.xml:801(para)
 msgid ""
@@ -18566,7 +18604,7 @@ msgstr ""
 
 #: serverguide/C/installation.xml:838(command)
 msgid "sudo grub-install /dev/md0"
-msgstr ""
+msgstr "sudo grub-install /dev/md0"
 
 #: serverguide/C/installation.xml:841(para)
 msgid ""
@@ -18760,7 +18798,7 @@ msgstr ""
 
 #: serverguide/C/installation.xml:1037(command)
 msgid "sudo pvcreate /dev/sdb"
-msgstr ""
+msgstr "sudo pvcreate /dev/sdb"
 
 #: serverguide/C/installation.xml:1043(para)
 msgid "Now extend the Volume Group (VG):"
@@ -18768,7 +18806,7 @@ msgstr ""
 
 #: serverguide/C/installation.xml:1048(command)
 msgid "sudo vgextend vg01 /dev/sdb"
-msgstr ""
+msgstr "sudo vgextend vg01 /dev/sdb"
 
 #: serverguide/C/installation.xml:1054(para)
 msgid ""
@@ -18786,7 +18824,7 @@ msgstr ""
 
 #: serverguide/C/installation.xml:1065(command)
 msgid "sudo lvextend /dev/vg01/srv -l +511"
-msgstr ""
+msgstr "sudo lvextend /dev/vg01/srv -l +511"
 
 #: serverguide/C/installation.xml:1068(para)
 msgid ""
@@ -18813,7 +18851,7 @@ msgstr ""
 
 #: serverguide/C/installation.xml:1089(command)
 msgid "sudo e2fsck -f /dev/vg01/srv"
-msgstr ""
+msgstr "sudo e2fsck -f /dev/vg01/srv"
 
 #: serverguide/C/installation.xml:1092(para)
 msgid ""
@@ -18827,7 +18865,7 @@ msgstr ""
 
 #: serverguide/C/installation.xml:1104(command)
 msgid "sudo resize2fs /dev/vg01/srv"
-msgstr ""
+msgstr "sudo resize2fs /dev/vg01/srv"
 
 #: serverguide/C/installation.xml:1110(para)
 msgid "Now mount the partition and check its size."
@@ -18923,7 +18961,7 @@ msgstr ""
 
 #: serverguide/C/file-server.xml:65(command)
 msgid "sudo apt-get install vsftpd"
-msgstr ""
+msgstr "sudo apt-get install vsftpd"
 
 #: serverguide/C/file-server.xml:71(title)
 msgid "Anonymous FTP Configuration"
@@ -18946,11 +18984,11 @@ msgstr ""
 
 #: serverguide/C/file-server.xml:87(command)
 msgid "sudo mkdir /srv/ftp"
-msgstr ""
+msgstr "sudo mkdir /srv/ftp"
 
 #: serverguide/C/file-server.xml:88(command)
 msgid "sudo usermod -d /srv/ftp ftp"
-msgstr ""
+msgstr "sudo usermod -d /srv/ftp ftp"
 
 #: serverguide/C/file-server.xml:91(para)
 msgid "After making the change restart <application>vsftpd</application>:"
@@ -18958,7 +18996,7 @@ msgstr ""
 
 #: serverguide/C/file-server.xml:96(command) serverguide/C/file-server.xml:124(command) serverguide/C/file-server.xml:189(command) serverguide/C/file-server.xml:237(command)
 msgid "sudo /etc/init.d/vsftpd restart"
-msgstr ""
+msgstr "sudo /etc/init.d/vsftpd restart"
 
 #: serverguide/C/file-server.xml:99(para)
 msgid ""
@@ -19429,7 +19467,7 @@ msgstr ""
 
 #: serverguide/C/file-server.xml:460(command)
 msgid "sudo apt-get install cupsys"
-msgstr ""
+msgstr "sudo apt-get install cupsys"
 
 #: serverguide/C/file-server.xml:463(para)
 msgid ""
@@ -19693,7 +19731,7 @@ msgstr ""
 
 #: serverguide/C/dns.xml:35(command)
 msgid "sudo apt-get install dnsutils"
-msgstr ""
+msgstr "sudo apt-get install dnsutils"
 
 #: serverguide/C/dns.xml:40(para)
 msgid ""
@@ -19789,7 +19827,7 @@ msgstr ""
 
 #: serverguide/C/dns.xml:118(command) serverguide/C/dns.xml:194(command) serverguide/C/dns.xml:253(command) serverguide/C/dns.xml:312(command) serverguide/C/dns.xml:561(command)
 msgid "sudo /etc/init.d/bind9 restart"
-msgstr ""
+msgstr "sudo /etc/init.d/bind9 restart"
 
 #: serverguide/C/dns.xml:120(para)
 msgid ""
@@ -19943,7 +19981,7 @@ msgstr ""
 
 #: serverguide/C/dns.xml:223(command)
 msgid "sudo cp /etc/bind/db.127 /etc/bind/db.192"
-msgstr ""
+msgstr "sudo cp /etc/bind/db.127 /etc/bind/db.192"
 
 #: serverguide/C/dns.xml:225(para)
 msgid ""
@@ -20366,11 +20404,11 @@ msgstr ""
 
 #: serverguide/C/dns.xml:534(command)
 msgid "sudo touch /var/log/query.log"
-msgstr ""
+msgstr "sudo touch /var/log/query.log"
 
 #: serverguide/C/dns.xml:535(command)
 msgid "sudo chown bind /var/log/query.log"
-msgstr ""
+msgstr "sudo chown bind /var/log/query.log"
 
 #: serverguide/C/dns.xml:539(para)
 msgid ""
@@ -20392,7 +20430,7 @@ msgstr ""
 
 #: serverguide/C/dns.xml:550(command)
 msgid "cat /etc/apparmor.d/usr.sbin.named | sudo apparmor_parser -r"
-msgstr ""
+msgstr "cat /etc/apparmor.d/usr.sbin.named | sudo apparmor_parser -r"
 
 #: serverguide/C/dns.xml:552(para)
 msgid ""
@@ -20543,7 +20581,7 @@ msgstr ""
 
 #: serverguide/C/databases.xml:46(command)
 msgid "sudo apt-get install mysql-server"
-msgstr ""
+msgstr "sudo apt-get install mysql-server"
 
 #: serverguide/C/databases.xml:48(para)
 msgid ""
@@ -20620,7 +20658,7 @@ msgstr ""
 
 #: serverguide/C/databases.xml:113(command)
 msgid "sudo dpkg-reconfigure mysql-server-5.0"
-msgstr ""
+msgstr "sudo dpkg-reconfigure mysql-server-5.0"
 
 #: serverguide/C/databases.xml:116(para)
 msgid ""
@@ -20643,7 +20681,7 @@ msgstr ""
 
 #: serverguide/C/databases.xml:135(command)
 msgid "sudo apt-get install mysql-doc-5.0"
-msgstr ""
+msgstr "sudo apt-get install mysql-doc-5.0"
 
 #: serverguide/C/databases.xml:137(para)
 msgid ""
@@ -20755,7 +20793,7 @@ msgstr ""
 
 #: serverguide/C/databases.xml:229(command)
 msgid "sudo -u postgres psql template1"
-msgstr ""
+msgstr "sudo -u postgres psql template1"
 
 #: serverguide/C/databases.xml:231(para)
 msgid ""
@@ -20803,7 +20841,7 @@ msgstr ""
 
 #: serverguide/C/databases.xml:257(command)
 msgid "sudo /etc/init.d/postgresql-8.3 restart"
-msgstr ""
+msgstr "sudo /etc/init.d/postgresql-8.3 restart"
 
 #: serverguide/C/databases.xml:260(para)
 msgid ""
@@ -20823,7 +20861,7 @@ msgstr ""
 
 #: serverguide/C/databases.xml:277(command)
 msgid "sudo apt-get install postgresql-doc-8.3"
-msgstr ""
+msgstr "sudo apt-get install postgresql-doc-8.3"
 
 #: serverguide/C/databases.xml:279(para)
 msgid ""
@@ -20855,7 +20893,7 @@ msgstr ""
 
 #: serverguide/C/clustering.xml:29(command)
 msgid "sudo apt-get install drbd8-utils"
-msgstr ""
+msgstr "sudo apt-get install drbd8-utils"
 
 #: serverguide/C/clustering.xml:32(para)
 msgid ""
@@ -20934,7 +20972,7 @@ msgstr ""
 
 #: serverguide/C/clustering.xml:107(command)
 msgid "sudo mv drbd.conf /etc/"
-msgstr ""
+msgstr "sudo mv drbd.conf /etc/"
 
 #: serverguide/C/clustering.xml:113(para)
 msgid ""
@@ -20943,7 +20981,7 @@ msgstr ""
 
 #: serverguide/C/clustering.xml:118(command)
 msgid "sudo /etc/init.d/drbd start"
-msgstr ""
+msgstr "sudo /etc/init.d/drbd start"
 
 #: serverguide/C/clustering.xml:124(para)
 msgid ""
@@ -20953,7 +20991,7 @@ msgstr ""
 
 #: serverguide/C/clustering.xml:130(command)
 msgid "sudo drbdadm create-md r0"
-msgstr ""
+msgstr "sudo drbdadm create-md r0"
 
 #: serverguide/C/clustering.xml:136(para)
 msgid ""
@@ -20963,7 +21001,7 @@ msgstr ""
 
 #: serverguide/C/clustering.xml:141(command)
 msgid "sudo drbdadm -- --overwrite-data-of-peer primary all"
-msgstr ""
+msgstr "sudo drbdadm -- --overwrite-data-of-peer primary all"
 
 #: serverguide/C/clustering.xml:147(para)
 msgid ""
@@ -20987,11 +21025,11 @@ msgstr ""
 
 #: serverguide/C/clustering.xml:168(command)
 msgid "sudo mkfs.ext3 /dev/drbd0"
-msgstr ""
+msgstr "sudo mkfs.ext3 /dev/drbd0"
 
 #: serverguide/C/clustering.xml:169(command) serverguide/C/clustering.xml:217(command)
 msgid "sudo mount /dev/drbd0 /srv"
-msgstr ""
+msgstr "sudo mount /dev/drbd0 /srv"
 
 #: serverguide/C/clustering.xml:179(para)
 msgid ""
@@ -21012,7 +21050,7 @@ msgstr ""
 
 #: serverguide/C/clustering.xml:201(command)
 msgid "sudo drbdadm secondary r0"
-msgstr ""
+msgstr "sudo drbdadm secondary r0"
 
 #: serverguide/C/clustering.xml:204(para)
 msgid ""
@@ -21022,7 +21060,7 @@ msgstr ""
 
 #: serverguide/C/clustering.xml:209(command)
 msgid "sudo drbdadm primary r0"
-msgstr ""
+msgstr "sudo drbdadm primary r0"
 
 #: serverguide/C/clustering.xml:212(para)
 msgid "Lastly, mount the partition:"
@@ -21240,7 +21278,7 @@ msgstr ""
 
 #: serverguide/C/backups.xml:160(command)
 msgid "sudo bash backup.sh"
-msgstr ""
+msgstr "sudo bash backup.sh"
 
 #: serverguide/C/backups.xml:162(para)
 msgid ""
@@ -21320,7 +21358,7 @@ msgstr ""
 
 #: serverguide/C/backups.xml:220(command)
 msgid "sudo crontab -e"
-msgstr ""
+msgstr "sudo crontab -e"
 
 #: serverguide/C/backups.xml:223(para)
 msgid ""
@@ -21786,7 +21824,7 @@ msgstr ""
 
 #: serverguide/C/backups.xml:599(command)
 msgid "sudo apt-get install bacula"
-msgstr ""
+msgstr "sudo apt-get install bacula"
 
 #: serverguide/C/backups.xml:601(para)
 msgid ""
@@ -21928,7 +21966,7 @@ msgstr ""
 
 #: serverguide/C/backups.xml:701(command)
 msgid "sudo /etc/init.d/bacula-sd restart"
-msgstr ""
+msgstr "sudo /etc/init.d/bacula-sd restart"
 
 #: serverguide/C/backups.xml:705(para)
 msgid ""
@@ -22168,4 +22206,22 @@ msgstr ""
 "  Tiago Silva https://launchpad.net/~tiagosilva\n"
 "  Tiago Sousa https://launchpad.net/~tiagoboldt\n"
 "  cetautomatix https://launchpad.net/~mag-formacao\n"
-"  homemr https://launchpad.net/~homemr"
+"  homemr https://launchpad.net/~homemr\n"
+"\n"
+"Launchpad Contributions:\n"
+"  Fernando Pereira https://launchpad.net/~jordao\n"
+"  Joao Carvalhinho https://launchpad.net/~latrine\n"
+"  Luis Reis https://launchpad.net/~luis-marafado\n"
+"  Manuel Silva https://launchpad.net/~manuel-n-silva\n"
+"  Marco Rodrigues https://launchpad.net/~gothicx\n"
+"  Marco da Silva https://launchpad.net/~igama\n"
+"  Matthew East https://launchpad.net/~mdke\n"
+"  Miguel Pires da Rosa https://launchpad.net/~miguelpires\n"
+"  Mykas0 https://launchpad.net/~mykas0\n"
+"  Rui Az. https://launchpad.net/~astronomy\n"
+"  Susana Pereira https://launchpad.net/~susana\n"
+"  Tiago Silva https://launchpad.net/~tiagosilva\n"
+"  Tiago Sousa https://launchpad.net/~tiagoboldt\n"
+"  cetautomatix https://launchpad.net/~mag-formacao\n"
+"  homemr https://launchpad.net/~homemr\n"
+"  nglnx https://launchpad.net/~nglnx"

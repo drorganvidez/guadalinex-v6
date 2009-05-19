@@ -48,23 +48,20 @@
 		<sect2 id="troubleshooting-device" status="review">
 			<title>Check for device recognition</title>
 			<orderedlist>
-				<listitem><para>Open <application>Device Manager</application> (&device-manager;).</para></listitem>
-				<listitem><para>Check to see if the wireless device is recognized. If it is, then <xref linkend="troubleshooting-driver"/></para></listitem>
-				<listitem><para>If your device is not displayed then there may be a hardware problem. Ensure if it is PCMCIA or PCI that it is inserted correctly.</para></listitem>
-			</orderedlist>
-		</sect2>
-		<sect2 id="troubleshooting-driver" status="review">
-			<title>Check for a driver</title>
-			<orderedlist>
 				<listitem><para>Open a <application>Terminal</application> (&terminal;) and type the command: <code>sudo lshw -C network</code></para></listitem>
-				<listitem><para>If there is a driver listed then see <xref linkend="troubleshooting-disabled"/>.</para></listitem>
-				<listitem><para>Set up NDISWrapper (<xref linkend="ndiswrapper"/>).</para></listitem>
+			</orderedlist>
+			<para>You should see an output, along with the words "CLAIMED, UNCLAIMED, ENABLED or DISABLED"</para>
+			<orderedlist>				
+				<listitem><para>Claimed - this indicates a driver is loaded but not functioning, see <xref linkend="ndiswrapper"/></para></listitem>
+				<listitem><para>Unclaimed - there is no driver loaded, see <xref linkend="ndiswrapper"/>.</para></listitem>
+				<listitem><para>Enabled - move on to If there is a driver listed then see <xref linkend="troubleshooting-connection" />.</para></listitem>
+				<listitem><para>Disabled - see <xref linkend="troubleshooting-disabled"/>.</para></listitem>
 			</orderedlist>
 		</sect2>
 		<sect2 id="troubleshooting-disabled" status="review">
 			<title>Check that the device is on</title>
 			<orderedlist>
-				<listitem><para>Many wireless network devices can be turned on or off. Check to see if the device is turned on by opening a <application>Terminal</application> (&terminal;) and type the command: <code>sudo lshw -C network</code>.</para></listitem>
+				<listitem><para>Many wireless network devices can be turned on or off. Check to see if there is a hardware switch, some devices can be switched off from Windows and may need to be turned back on from Windows.</para></listitem>
 				<listitem><para>If it is turned on then see <xref linkend="troubleshooting-connection"/>.</para></listitem>
 			</orderedlist>
 		</sect2>
@@ -104,6 +101,7 @@
 			</orderedlist>
 		</sect2>	
 	</sect1>
+
 
 	<sect1 id="ndiswrapper" status="review">
 		<title>Using Windows Wireless Drivers</title>

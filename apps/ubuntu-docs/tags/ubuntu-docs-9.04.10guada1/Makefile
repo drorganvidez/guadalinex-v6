@@ -39,24 +39,24 @@ NWDBXSL=/usr/share/xml/docbook/stylesheet/nwalsh/html/docbook.xsl
 endif
 
 # Makes an Image list text file
-MKIMGLST=../libs/imagelist.xsl
+MKIMGLST=libs/imagelist.xsl
 
 # Collected and Write Status
-wOS=../libs/writeOwnerStatus.xsl
+wOS=libs/writeOwnerStatus.xsl
 
 # Ubuntu Docbook Customization Layer
 
 UBUNTUCHUNKXSL=libs/ubuntu-html-chunk-cust.xsl
 UBUNTUSINGLEXSL=libs/ubuntu-html-single-cust.xsl
-PDFSTYLE=../libs/pdf/ubuntu-pdf.xsl
-LULUSTYLE=../libs/pdf/ubuntu-pdf-lulu.xsl
+PDFSTYLE=libs/pdf/ubuntu-pdf.xsl
+LULUSTYLE=libs/pdf/ubuntu-pdf-lulu.xsl
 # Local path to newer xsl for use with fop 0.90
-PDFSTYLE2=../libs/pdf/ubuntu-pdf2.xsl
+PDFSTYLE2=libs/pdf/ubuntu-pdf2.xsl
 
 # Base gnome directories for output from processor
-BASE=../build/ubuntu/
+BASE=build/
 
-IMAGES=../build/ubuntu/images/
+IMAGES=build/images/
 
 .PHONY: website switching
 
@@ -76,15 +76,15 @@ clean:
 style:
 
 	# copy style sheet and common images to build directory
-	mkdir -p ../build/ubuntu/common/img
-	cp libs/*css ../build/ubuntu/common/
-	cp libs/img/*png ../build/ubuntu/common/img/
+	mkdir -p build/common/img
+	cp libs/*css build/common/
+	cp libs/img/*png build/common/img/
 	mkdir -p $(IMAGES)admon
-	cp -r ../common/admon/*.* $(IMAGES)admon	
+	cp -r common/admon/*.* $(IMAGES)admon	
 	mkdir -p $(IMAGES)callouts
-	cp -r ../common/callouts/*.* $(IMAGES)callouts
+	cp -r common/callouts/*.* $(IMAGES)callouts
 	mkdir -p $(IMAGES)navig
-	cp -r ../common/navig/*.* $(IMAGES)navig
+	cp -r common/navig/*.* $(IMAGES)navig
 
 ## Targets for building standalone documents
 
@@ -105,18 +105,18 @@ switching:
 
 serverguide: style
 
-	xsltproc --xinclude -o $(BASE)serverguide/C/index.html $(UBUNTUCHUNKXSL) ../generic/serverguide/C/serverguide.xml
-	sed -i ../build/ubuntu/serverguide/C/*legal.html -e "s#\.\./common/C/contributors\.xml#common/C/contributors\.html#g"
+	xsltproc --xinclude -o $(BASE)serverguide/C/index.html $(UBUNTUCHUNKXSL) serverguide/C/serverguide.xml
+	sed -i ../build/serverguide/C/*legal.html -e "s#\.\./common/C/contributors\.xml#common/C/contributors\.html#g"
 
 
 status: style
 
-	xsltproc --xinclude -o $(BASE)status/sg-report.xml $(wOS) ../generic/serverguide/C/serverguide.xml
+	xsltproc --xinclude -o $(BASE)status/sg-report.xml $(wOS) serverguide/C/serverguide.xml
 	xsltproc --xinclude -o $(BASE)status/sg-report.html $(NWDBXSL) $(BASE)status/sg-report.xml
 
 contributors: style
 
-	xsltproc --stringparam root.filename "contributors" -o $(BASE)common/C/ $(UBUNTUCHUNKXSL) ../common/C/contributors.xml
+	xsltproc --stringparam root.filename "contributors" -o $(BASE)common/C/ $(UBUNTUCHUNKXSL) common/C/contributors.xml
 
 index-test: style
 

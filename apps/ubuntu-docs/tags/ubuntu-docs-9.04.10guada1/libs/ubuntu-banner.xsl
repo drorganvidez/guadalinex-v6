@@ -13,6 +13,8 @@
 <xsl:template name="breadcrumbs">
   <xsl:param name="this.node" select="."/>
   <div class="breadcrumbs">
+	<a href="http://help.ubuntu.com/">Home</a>
+      <xsl:text> &gt; </xsl:text>
     <xsl:for-each select="$this.node/ancestor::*">
       <span class="breadcrumb-link">
         <a>

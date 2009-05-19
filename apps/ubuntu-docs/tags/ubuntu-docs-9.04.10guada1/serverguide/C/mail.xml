@@ -1218,7 +1218,7 @@ instructions in the email to subscribe.
 	     <filename>/etc/clamav</filename>.
 	     </para>
 	     <para>
-	     Add the <emphasis>amavis</emphasis> user to the <emphasis>clamav</emphasis> group in order for <application>Amavisd-new</application>
+	     Add the <emphasis>clamav</emphasis> user to the <emphasis>amavis</emphasis> group in order for <application>Amavisd-new</application>
  	     to have the appropriate access to scan files:
  	     </para>
 <screen>
@@ -1303,6 +1303,55 @@ $myhostname = 'mail.example.com';
 <screen>
 <command>sudo /etc/init.d/amavis restart</command>
 </screen>
+             <sect4 id="amavis-dkim-whitelist" status="review">
+               <title>DKIM Whitelist</title>
+
+               <para>
+               If you have elected to install the <application>dkim-filter</application> package, 
+               <application>amavisd-new</application> can be configured to automatically <emphasis>Whitelist</emphasis>
+               addresses from domains with valid Domain Keys.  There are some pre-configured domains in the 
+               <filename>/etc/amavis/conf.d/40-policy_banks</filename>.  
+               </para>
+
+               <para>
+               There are multiple ways to configure the Whitelist for a domain:
+               </para>
+
+               <itemizedlist>
+                 <listitem>
+                   <para>
+                   <emphasis>'example.com' => 'WHITELIST',</emphasis>: will whitelist any address from the "example.com" domain.
+                   </para>
+                 </listitem>
+                 <listitem>
+                   <para>
+                   <emphasis>'.example.com' => 'WHITELIST',</emphasis>: will whitelist any address from any <emphasis>subdomains</emphasis>
+                   of "example.com" that have a valid signature.
+                   </para>
+                 </listitem>
+                 <listitem>
+                   <para>
+                   <emphasis>'.example.com/@example.com' => 'WHITELIST',</emphasis>: will whitelist subdomains of "example.com" that use the 
+                   signature of <emphasis role="italic">example.com</emphasis> the parent domain.
+                   </para>
+                 </listitem>
+                 <listitem>
+                   <para>
+                   <emphasis>'./@example.com' => 'WHITELIST',</emphasis>: adds addresses that have a valid signature from "example.com".  
+                   This is usually used for discussion groups that sign thier messages.
+                   </para>
+                 </listitem>
+               </itemizedlist>
+
+               <para>
+               A domain can also have multiple Whitelist configurations.  After, editing the file restart <application>amaisd-new</application>:
+               </para>
+
+<screen>
+<command>sudo /etc/init.d/amavis restart</command>
+</screen>
+
+             </sect4>
 	   </sect3>
 	   <sect3 id="postfix-mail-filtering-configuration" status="review">
 	     <title>Postfix</title>

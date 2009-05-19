@@ -84,9 +84,9 @@
 </screen>
             <para>
             There are many directives in the <application>sshd</application> configuration 
-	    file controlling such things as communications settings and authentication modes. 
+	    file controlling such things as communication settings and authentication modes. 
 	    The following are examples of configuration directives that can be changed by 
-	    editing the <filename>/etc/ssh/ssh_config</filename> file.
+	    editing the <filename>/etc/ssh/sshd_config</filename> file.
             </para>
             <tip>
                 <para>Prior to editing the configuration file, you should make a copy of the 
@@ -233,15 +233,13 @@
 <screen>
 <command>sudo apt-get install ebox</command>
 </screen>
-      <para>
-      If you want to install all the available modules, the <application>ebox-all</application> 
-      meta package will install all the modules.
-      </para>
+
       <para>
       During the installation you will be asked to supply a password for the ebox user. After 
       installing eBox the web interface can be accessed from: 
       <emphasis>https://yourserver/ebox</emphasis>.
       </para>
+
     </sect2>
     <sect2 id="ebox-configuration" status="review">
       <title>Configuration</title>

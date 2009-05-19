@@ -42,14 +42,15 @@
 				<title>Quickly install common plugins</title>
 				<para>It is possible to install a whole set of commonly-used restricted plugins at once, by installing the <application>Ubuntu restricted extras</application> package.</para>
 				<warning><para><emphasis>Restricted plugins</emphasis> are those which cannot be distributed with Ubuntu because of legal issues surrounding their use in some countries. Check that you are allowed to use this software before installing it. See the <ulink url='http://www.ubuntu.com/ubuntu/licensing'>Ubuntu website</ulink> for more information on restricted software.</para></warning>
-				<procedure>
-					<step>
-						<para><ulink url="ubuntu-restricted-extras">Install the <application>ubuntu-restrictedextras</application> package</ulink> from the <quote>Multiverse</quote> repository.</para>
-					</step>
-					<step>
-						<para>Restart the <application>Firefox Web Browser</application> to make the included browser plugins available.</para>
-					</step>
-				</procedure>
+				<orderedlist>
+					<listitem><para>Open &gnome-app-install;.</para></listitem>
+					<listitem><para>Select <guilabel>All Available Applications</guilabel> from the <guilabel>Show:</guilabel> drop down.</para></listitem>
+					<listitem><para>Tick <guilabel>Ubuntu Restricted Extras</guilabel>.</para></listitem>
+					<listitem><para>A warning appears which you must agree to to install, click <guibutton>Enable</guibutton> or <guibutton>Cancel</guibutton>.</para></listitem>
+					<listitem><para>Click <guibutton>Apply Changes</guibutton>.</para></listitem>
+					<listitem><para>Click <guibutton>Apply</guibutton>.</para></listitem>
+					<listitem><para>You are asked for a password, then the plugin is downloaded.</para></listitem>
+				</orderedlist>
 				<para>As well as plugins and multimedia codecs, <application>Java</application> and a set of Windows fonts will be installed.</para>
 				<para>The following plugins and codecs are installed by the <application>Ubuntu restricted extras</application> package:</para>
 				<itemizedlist>
@@ -60,50 +61,47 @@
 					<listitem><para><application>sun-java6-plugin</application></para></listitem>
 				</itemizedlist>
 			</sect3>
-<!-- REMOVING UNTIL MVP IS UPDATED			
+		
 			<sect3 id="web-plugins-audiovideo" status="review">
 				<title>Audio and video plugins</title>
 				<para>Many different multimedia formats are used on the Internet and you may find that you are unable to play some audio and video files without installing an appropriate plugin.</para>
-				<para>See the following articles for information on installing and using multimedia plugins with the <application>Firefox Web Browser</application>:</para>
-				<itemizedlist>
-					<listitem><para><xref linkend="video-online"/></para></listitem>
-					<listitem><para><xref linkend="musicvideophotos#video"/></para></listitem>
-					<listitem><para><xref linkend="web-plugins"/></para></listitem>
-					<listitem><para><xref linkend="web-plugins-flash"/></para></listitem>
-					<listitem><para><xref linkend="music-audiostreams"/> (instructions for installing <application>RealPlayer</application>)</para></listitem>
-					<listitem><para><xref linkend="musicvideophotos#codecs"/>.</para></listitem>
-				</itemizedlist>
+				<para>Quicktime, Real, WMV and many others are available.</para>
+				<orderedlist>
+					<listitem><para>Open &gnome-app-install;.</para></listitem>
+					<listitem><para>Select <guilabel>All Available Applications</guilabel> from the <guilabel>Show:</guilabel> drop down.</para></listitem>
+					<listitem><para>Tick the applications you require.</para></listitem>
+					<listitem><para>A warning appears which you must agree to to install, click <guibutton>Enable</guibutton> or <guibutton>Cancel</guibutton>.</para></listitem>
+					<listitem><para>Click <guibutton>Apply Changes</guibutton>.</para></listitem>
+					<listitem><para>Click <guibutton>Apply</guibutton>.</para></listitem>
+					<listitem><para>You are asked for a password, then the plugin is downloaded.</para></listitem>
+				</orderedlist>
 			</sect3>
--->						
+
 			<sect3 id="web-plugins-flash" status="review">
 				<title>Flash multimedia plugin</title>
-				<para>Flash is a proprietary plugin which allows you to watch videos and animations on the Internet.</para>
-				<para>To view Flash graphics from the <application>Firefox Web Browser</application>:</para>
-				<procedure>
-					<step>
-						<para><xref linkend="web-plugins-commonrestricted" />.</para>
-					</step>
-					<step>
-						<para>Restart <application>Firefox</application> to make the plugin available.</para>
-					</step>
-				</procedure>
-				<para>A copy of the Flash plugin is not actually included in the package, but is automatically downloaded from the Adobe website when you install the package. This is due to legal restrictions on the redistribution of the plugin. As a result, you must be connected to the Internet for the plugin to be downloaded successfully.</para>
+				<orderedlist>
+					<listitem><para>Open &gnome-app-install;.</para></listitem>
+					<listitem><para>Select <guilabel>All Available Applications</guilabel> from the <guilabel>Show:</guilabel> drop down.</para></listitem>
+					<listitem><para>Tick <guilabel>Macromedia Flash Player</guilabel>.</para></listitem>
+					<listitem><para>A warning appears which you must agree to to install, click <guibutton>Enable</guibutton> or <guibutton>Cancel</guibutton>.</para></listitem>
+					<listitem><para>Click <guibutton>Apply Changes</guibutton>.</para></listitem>
+					<listitem><para>Click <guibutton>Apply</guibutton>.</para></listitem>
+					<listitem><para>You are asked for a password, then the plugin is downloaded.</para></listitem>
+				</orderedlist>
 			</sect3>
 			
 			<sect3 id="web-plugins-java" status="review">
 				<title>Java browser plugin</title>
 				<para>Some websites use small <application>Java</application> programs, which require a Java plugin to be installed in order to run.</para>
-				<para>These instructions are for <emphasis>i386</emphasis> and <emphasis>AMD64</emphasis> computers only. The plugin is not currently available for other computers.</para>
-				<itemizedlist>
-					<listitem>
-					<para>If you are using an <emphasis>i386</emphasis> computer <ulink url="apt:sun-java6-plugin">install the <application>sun-java6-plugin</application> package</ulink>.</para>
-					</listitem>
-					<listitem>
-					<para>If you are using an <emphasis>AMD64</emphasis> computer <ulink url="apt:j2re1.4-mozilla.plugin">install the <application>j2re1.4-mozilla.plugin</application> package</ulink>.</para>
-					</listitem>
-
-				</itemizedlist>
-				<para>For a more complete Java installation, see <xref linkend="java"/>.</para>
+				<orderedlist>
+					<listitem><para>Open &gnome-app-install;.</para></listitem>
+					<listitem><para>Select <guilabel>All Available Applications</guilabel> from the <guilabel>Show:</guilabel> drop down.</para></listitem>
+					<listitem><para>Tick <guilabel>Sun Java 6.0 Plugin</guilabel>.</para></listitem>
+					<listitem><para>A warning appears which you must agree to to install, click <guibutton>Enable</guibutton> or <guibutton>Cancel</guibutton>.</para></listitem>
+					<listitem><para>Click <guibutton>Apply Changes</guibutton>.</para></listitem>
+					<listitem><para>Click <guibutton>Apply</guibutton>.</para></listitem>
+					<listitem><para>You are asked for a password, then the plugin is downloaded.</para></listitem>
+				</orderedlist>
 			</sect3>
 			
 		</sect2>

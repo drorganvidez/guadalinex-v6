@@ -8,7 +8,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 xmlns:fo="http://www.w3.org/1999/XSL/Format">
 
 <!-- Import the new xsl -->
-<xsl:import href="/home/matt/tmp/docbook-xsl-snapshot/fo/docbook.xsl"/>
+<xsl:import href="/usr/share/xml/docbook/stylesheet/nwalsh/fo/docbook.xsl"/>
 
 <!-- ***************  Fonts  *********************  -->
 <!-- ***************************************************  -->

@@ -48,7 +48,7 @@ wOS=libs/writeOwnerStatus.xsl
 
 UBUNTUCHUNKXSL=libs/ubuntu-html-chunk-cust.xsl
 UBUNTUSINGLEXSL=libs/ubuntu-html-single-cust.xsl
-UBUNTUPDFXSL=libs/pdf/ubuntu-pdf.xsl
+UBUNTUPDFXSL=libs/ubuntu-pdf.xsl
 
 # Base gnome directories for output from processor
 BASE=build/

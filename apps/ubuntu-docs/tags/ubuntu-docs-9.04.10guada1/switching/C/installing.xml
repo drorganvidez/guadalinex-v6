@@ -97,7 +97,7 @@
 			<sect2 id="dual-boot" status="review">
 				<title>Dual booting</title>
 				<para>Many people choose to run Windows and Ubuntu. This is straight forward to set up and means you can still go back to Windows. This gives you the best of both worlds and can smooth the transition to Ubuntu.</para>
-				<para>This will involve some extra steps when partioning your hard drive (see <xref linkend="installing-partitioning"/>).</para>
+				<para>This will involve some extra steps when partitioning your hard drive (see <xref linkend="installing-partitioning"/>).</para>
 				<para>For more information, see <xref linkend="dualboot"/></para>
 			</sect2>
 			<sect2 id="backup" status="review">
@@ -120,7 +120,7 @@
 		<para>Once the Ubuntu installation CD has booted successfully, you will be presented with a desktop, with an icon labelled <guilabel>Install</guilabel>. Double-click this icon to start the <application>Ubuntu installer</application>. Then, follow the instructions below:</para>
 		<orderedlist>
 			<listitem><para>Select your language from the list provided and then press <guibutton>Forward</guibutton>.</para></listitem>
-			<listitem><para>Select a city from your country and timezone by clicking it on the map. Press <guibutton>Set Time...</guibutton> if the time is set incorrectly. Once you are satisfied that the time is correct for your location, press <guibutton>Forward</guibutton>.</para></listitem>
+			<listitem><para>Select a city from your country and time zone by clicking it on the map. Press <guibutton>Set Time...</guibutton> if the time is set incorrectly. Once you are satisfied that the time is correct for your location, press <guibutton>Forward</guibutton>.</para></listitem>
 			<listitem><para>Select your keyboard layout from the list provided. You can type in the box provided to test that your keyboard is working correctly. Press <guibutton>Forward</guibutton> once you are satisfied that you have chosen the correct keyboard layout.</para></listitem>
 			<listitem><para>The <guilabel>Partition Editor</guilabel> screen will load. This will allow you to partition your hard disk. Partitioning is covered in the next section.</para></listitem>
 		</orderedlist>
@@ -132,7 +132,7 @@
 			<para>If you do not intend to keep your copy of Windows installed on the computer, and you have made a backup of all of your important files, choose the <guilabel>Erase entire disk</guilabel> option from the <guilabel>Prepare disk space</guilabel> screen and then press <guibutton>Forward</guibutton>. The installer will automatically partition your hard disk in a suitable manner.</para>
 			
 			<note>
-				<para>You're probably used to how Windows represents disks. Your first hard drive partition is usually the C: drive. However, Windows can change drive letters; Linux doesn't.</para>
+				<para>You are probably used to how Windows represents disks. Your first hard drive partition is usually the C: drive, although this can be changed. Linux has a fixed way of referring to disks, which cannot be changed.</para>
 				<para>Devices are named differently too:</para>
 				<itemizedlist>
 					<listitem><para>The first Master IDE hard disk is called <guilabel>hda</guilabel>.</para></listitem>
@@ -156,9 +156,9 @@
 				<listitem><para>Resizing existing the Windows partition.</para></listitem>
 				<listitem><para>Creating the swap partition.</para></listitem>	
 				<listitem><para>Creating the root partition.</para></listitem>
-				<listitem><para>Creating a seperate home partition.</para></listitem>
+				<listitem><para>Creating a separate home partition.</para></listitem>
 			</orderedlist>
-			<para>After you've selected the <guilabel>Manually edit partition table</guilabel> option, you'll see the Partition Editor screen.</para>
+			<para>After you have selected the <guilabel>Manually edit partition table</guilabel> option, you will see the Partition Editor screen.</para>
 			<para>Partitioning does not occur until you finalize the installation, so you can decide to abort the installation at the very last minute if you require. After finalizing the installation, however, the hard disk will be re-partitioned and all existing data stored on it will be lost. <emphasis role="strong">Ensure that you have made and tested a backup copy of all important data.</emphasis></para>
 			<sect3 id="installing-partitioning-dual-resizing" status="review">
 				<title>Resizing</title>
@@ -173,11 +173,11 @@
 					<para>A hard disk can only have 4 primary partitions.</para>
 					<para>However you can create a logical partition instead. This allows another 2 extended partitions to be created within it.</para>
 				</warning>
-				<para>Right click on the Windows partiton - it'll either be NTFS or Fat32. Select <guilabel>resize</guilabel>. You can now type in the new size or move the slider.</para>
+				<para>Right click on the Windows partition, which will be formatted as either NTFS or FAT32. Select <guilabel>resize</guilabel>. You can now type in the new size or move the slider.</para>
 			</sect3>
 			<sect3 id="installing-partitioning-dual-swap" status="review">
 				<title>Swap space</title>
-				<para>Create a partiton to use as swap space. Swap space is used by the kernel as extra memory. You will need to make it doubled the size of your installed memory.</para>
+				<para>Create a partition to use as swap space. Swap space is used by the kernel as extra memory. You will need to make it doubled the size of your installed memory.</para>
 				<para>Click on the free space and select <guilabel>Create new partition</guilabel>. Select <guilabel>Logical</guilabel>, <guilabel>Swap</guilabel> and set the size to double your system memory.</para>
 			</sect3>
 			<sect3 id="installing-partitioning-dual-root" status="review">

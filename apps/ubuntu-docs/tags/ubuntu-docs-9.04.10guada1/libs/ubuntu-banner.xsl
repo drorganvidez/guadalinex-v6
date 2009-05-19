@@ -52,7 +52,7 @@ urchinTracker();
   <div class="breadcrumbs">
 	<a href="https://help.ubuntu.com/">Ubuntu Documentation</a>
       <xsl:text> &gt; </xsl:text>
-	<a href="https://help.ubuntu.com/8.10">Ubuntu 8.10</a>
+	<a href="https://help.ubuntu.com/9.04">Ubuntu 9.04</a>
       <xsl:text> &gt; </xsl:text>
     <xsl:for-each select="$this.node/ancestor::*">
       <span class="breadcrumb-link">
@@ -84,7 +84,7 @@ urchinTracker();
   <div id="ubuntulinks">
 
 	<p>The material in this document is available under a free license, see <a href="/legal.html">Legal</a> for details<br />
-	For information on contributing or to report a problem, visit the <a href="https://bugs.launchpad.net/ubuntu/+source/ubuntu-docs">bug page for Ubuntu Documentation</a></p>
+	For information on contributing see the <a href="https://wiki.ubuntu.com/DocumentationTeam">Ubuntu Documentation Team wiki page</a>. To report a problem, visit the <a href="https://bugs.launchpad.net/ubuntu/+source/ubuntu-docs">bug page for Ubuntu Documentation</a></p>
 
   </div>
 

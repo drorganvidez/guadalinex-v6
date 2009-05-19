@@ -43,7 +43,7 @@ translate () {
 	    xml2po -e -p ${1} C/${document}-C.omf >${y}/${document}-${y}.omf
 	    sed -i -e s@\"C\"@\"${y}\"@g -e s@C/@${y}/@g ${y}/${document}-${y}.omf
 	fi
-	../../validate.sh ${y}/${document}.xml
+	../scripts/validate.sh ${y}/${document}.xml
 	bzr add -q ${y}
 }
 

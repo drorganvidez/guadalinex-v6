@@ -84,6 +84,7 @@ for y in `cat libs/shipped-docs`; do
  	sed -i ../build/ubuntu/$y/C/*.html -e "s#ghelp:eog\#eog-manipulate#http://library\.gnome\.org/users/eog/stable/eog-manipulate\.html#g"
  	sed -i ../build/ubuntu/$y/C/*.html -e "s#ghelp:sound-juicer\#extracting#http://library\.gnome\.org/users/sound-juicer/stable/extracting\.html#g"
  	sed -i ../build/ubuntu/$y/C/*.html -e "s#ghelp:gnome-sound-recorder\#grecord-usage#http://library\.gnome\.org/users/gnome-sound-recorder/stable/grecord-usage\.html#g"
-
+ 	sed -i ../build/ubuntu/$y/C/*.html -e "s#file:///usr/share/doc/diveintopython/html/toc/index\.html#http://diveintopython\.org/toc/index\.html#g"
+ 	sed -i ../build/ubuntu/$y/C/*.html -e "s#file:///usr/share/doc/python-gtk2-tutorial/html/index\.html#http://www\.pygtk\.org/pygtk2tutorial/#g"
 done
 

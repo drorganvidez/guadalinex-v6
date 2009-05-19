@@ -265,6 +265,38 @@ iface br0 inet static
         </para>
 
       </sect2>
+      <sect2 id="network-config-resources" status="review">
+        <title>Resources</title>
+    
+        <para>
+        
+        </para>
+
+        <itemizedlist>
+          <listitem>
+            <para>
+            The <ulink url="http://manpages.ubuntu.com/manpages/jaunty/en/man5/interfaces.5.html">interafaces man page</ulink> has 
+            details on more options for <filename>/etc/network/interfaces</filename>.
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+            For more information on DNS client configuration see the 
+            <ulink url="http://manpages.ubuntu.com/manpages/jaunty/en/man5/resolver.5.html">resolver man page</ulink>.  Also, Chapter 
+            6 of O'Reilly's <ulink url="http://oreilly.com/catalog/linag2/book/ch06.html">Linux Network Administrator's Guide</ulink> is 
+            a good source of resolver and name service configuration information.
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+            For more information on <emphasis>bridging</emphasis> see the 
+            <ulink url="http://manpages.ubuntu.com/manpages/jaunty/en/man8/brctl.8.html">brctl man page</ulink> and the Linux Foundation's
+            <ulink url="http://www.linuxfoundation.org/en/Net:Bridge">Net:Bridge</ulink> page.
+            </para>
+          </listitem>
+        </itemizedlist>
+
+      </sect2>
     </sect1>
 	<sect1 id="tcpip" status="review">
 		<title>TCP/IP</title>
@@ -476,6 +508,29 @@ iface br0 inet static
               Protocol Daemon</emphasis> (imapd), which provides E-Mail services.
             </para>
         </sect2>
+        <sect2 id="tcpip-resources" status="review">
+          <title>Resources</title>
+
+          <itemizedlist>
+            <listitem>
+              <para>
+              There are man pages for <ulink url="http://manpages.ubuntu.com/manpages/jaunty/en/man7/tcp.7.html">TCP</ulink> and
+              <ulink url="http://manpages.ubuntu.com/manpages/jaunty/man7/ip.7.html">IP</ulink> that contain more useful information.
+              </para>
+            </listitem>
+            <listitem>
+              <para>
+              Also, see the <ulink url="http://www.redbooks.ibm.com/abstracts/gg243376.html">TCP/IP Tutorial and Technical Overview</ulink>
+              IBM Redbook.
+              </para>
+            </listitem>
+            <listitem>
+              <para>
+              Another resource is O'Reilly's <ulink url="http://oreilly.com/catalog/9780596002978/">TCP/IP Network Administration</ulink>.
+              </para>
+            </listitem>
+          </itemizedlist>
+        </sect2>
     </sect1>
 
 	<sect1 id="dhcp" status="review">
@@ -637,9 +692,21 @@ option netbios-name-servers 192.168.1.1;
       </sect2>
       <sect2 id="dhcp-references" status="review">
         <title>References</title>
-          <para>
-            <ulink url="http://www.dhcp-handbook.com/dhcp_faq.html">DHCP FAQ</ulink>
-          </para>
+
+          <itemizedlist>
+            <listitem>
+              <para>
+              For more <filename>/etc/dhcp3/dchpd.conf</filename> options see the 
+              <ulink url="http://manpages.ubuntu.com/manpages/jaunty/en/man5/dhcpd.conf.5.html">dhcpd.conf man page</ulink>.
+              </para>
+            </listitem>
+            <listitem>
+              <para>
+              Also see the <ulink url="http://www.dhcp-handbook.com/dhcp_faq.html">DHCP FAQ</ulink>
+              </para>
+            </listitem>
+          </itemizedlist>
+
       </sect2>
     </sect1>
 

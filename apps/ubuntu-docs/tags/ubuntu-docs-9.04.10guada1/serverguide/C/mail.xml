@@ -70,175 +70,55 @@
 	    range of your mail server, and steve with the appropriate username.
             </para>
             </note>
-            <para>
-            Now is a good time to decide which mailbox format you want to use.  By default 
-            Postifx will use  <emphasis role="strong">mbox</emphasis> for the mailbox format.
-            Rather than editing the configuration file directly, 
-	    you can use the <command>postconf</command> command to configure
-            all <application>postfix</application> parameters.  The
-            configuration parameters will be stored in
-            <filename>/etc/postfix/main.cf</filename> file. Later if you
-            wish to re-configure a particular parameter, you can either
-            run the command or change it manually in the file.
-            </para>
-            <para>
-            To configure the mailbox format for <emphasis role="strong">Maildir:</emphasis>
-            </para>
-<screen>
-<command>sudo postconf -e 'home_mailbox = Maildir/'</command>
-</screen>
-            <note>
-            <para>
-            This will place new mail in /home/<emphasis role="italic">username</emphasis>/Maildir so 
-            you will need to configure your Mail Delivery Agent (MDA) to use the same path.
-            </para>
-            </note>
+       
 	 </sect2>
         <sect2 id="postfix-smtp-authentication" status="review">
           <title>SMTP Authentication</title>
+
             <para>
 	    SMTP-AUTH allows a client to identify itself through an authentication mechanism (SASL).
 	    Transport Layer Security (TLS) should be used to encrypt the authentication process.
 	    Once authenticated the SMTP server will allow the client to relay mail.  
             </para>
-	<procedure>
-		 <step>
-     	         <para>
-                 Configure Postfix for SMTP-AUTH using SASL (Dovecot SASL):
-		 </para>
-<screen>
-sudo postconf -e 'smtpd_sasl_type = dovecot'
-sudo postconf -e 'smtpd_sasl_path = private/auth-client'
-sudo postconf -e 'smtpd_sasl_local_domain ='
-sudo postconf -e 'smtpd_sasl_security_options = noanonymous'
-sudo postconf -e 'broken_sasl_auth_clients = yes'
-sudo postconf -e 'smtpd_sasl_auth_enable = yes'
-sudo postconf -e 'smtpd_recipient_restrictions = permit_sasl_authenticated,permit_mynetworks,reject_unauth_destination'
-sudo postconf -e 'inet_interfaces = all'
-</screen>
-	        <note>
-		<para>
-		The <emphasis>smtpd_sasl_path</emphasis> configuration is a path relative to the Postfix queue directory.
-	        </para>
-		</note>
-		</step>
-		<step>
-                <para>
-                Next, obtain a digital certificate for TLS. See <xref linkend="certificates-and-security"/> for details.
-                This example also uses a Certificate Authority (CA).  For information on generating a CA certificate see
-                <xref linkend="certificate-authority"/>.
-	        </para>
-		<note>
-                <para>
-                You can get the digital certificate from a certificate
-		authority.   But unlike web clients, SMTP clients rarely
-		complain about
-		"self-signed certificates", so alternatively, you
-                can create the certificate yourself. Refer to 
-		<xref linkend="creating-a-self-signed-certificate"/> for more
-                details.
-                </para>
-                </note>
-		</step>
-		<step>
-                <para>
-                Once you have a certificate, configure Postfix to provide TLS encryption for both incoming and outgoing mail:
-                </para>
-<screen>
-sudo postconf -e 'smtpd_tls_auth_only = no'
-sudo postconf -e 'smtp_use_tls = yes'
-sudo postconf -e 'smtpd_use_tls = yes'
-sudo postconf -e 'smtp_tls_note_starttls_offer = yes'
-sudo postconf -e 'smtpd_tls_key_file = /etc/ssl/private/server.key'
-sudo postconf -e 'smtpd_tls_cert_file = /etc/ssl/certs/server.crt'
-sudo postconf -e 'smtpd_tls_CAfile = /etc/ssl/certs/cacert.pem'
-sudo postconf -e 'smtpd_tls_loglevel = 1'
-sudo postconf -e 'smtpd_tls_received_header = yes'
-sudo postconf -e 'smtpd_tls_session_cache_timeout = 3600s'
-sudo postconf -e 'tls_random_source = dev:/dev/urandom'
-sudo postconf -e 'myhostname = mail.example.com'
-</screen>
-		</step>
-		</procedure>
-            <note>
+
             <para>
-            After running all the commands, <application>Postfix</application> is configured for SMTP-AUTH 
-	    and a self-signed certificate has been created for TLS encryption.
+            Configuring <application>Postfix</application> for SMTP-AUTH is very simple using the <application>dovecot-postfix</application>
+            package.  This package will install <application>Dovecot</application> and configure <application>Postfix</application> to 
+            use it for both SASL authentication and as a Mail Delivery Agent (MDA).  The package also configures <application>Dovecot</application>
+            for IMAP, IMAPS, POP3, and POP3S.
             </para>
-            </note>
+
             <para>
-            Now, the file <filename>/etc/postfix/main.cf</filename>
-            should look like <ulink url="../sample/postfix_configuration">this</ulink>.
-	    </para>
-	    <para>
-            The postfix initial configuration is complete. Run
-            the following command to restart the postfix daemon:
-	    </para>
+            To install the package, from a terminal prompt enter:
+            </para>
+
+<screen>
+<command>sudo apt-get install dovecot-postfix</command>
+</screen>
+
+            <para>
+            You should now have a working mail server, but there are a few options that you may wish to further customize.  For example, the
+            package uses the certificate and key from the <application>ssl-cert</application> package, and in a production environment you should
+            use a certificate and key generated for the host.  See <xref linkend="certificates-and-security"/> for more details.
+            </para>
+    
+            <para>
+            Once you have a customized certificate and key for the host, change the following options in <filename>/etc/postfix/main.cf</filename>:
+            </para>
+
+<programlisting>
+smtpd_tls_cert_file = /etc/ssl/certs/ssl-mail.pem
+smtpd_tls_key_file = /etc/ssl/private/ssl-mail.key
+</programlisting>
+
+            <para>
+            Then restart Postfix:
+            </para>
+
 <screen>
 <command>sudo /etc/init.d/postfix restart</command>
 </screen>
-	    <para>
-            <application>Postfix</application> supports SMTP-AUTH as defined in
-            <ulink
-            url="ftp://ftp.isi.edu/in-notes/rfc2554.txt">RFC2554</ulink>.
-            It is based on <ulink
-            url="ftp://ftp.isi.edu/in-notes/rfc2222.txt">SASL</ulink>. However it is still necessary 
-	    to set up SASL authentication before you can use SMTP-AUTH.
-            </para>
-	</sect2>
-	<sect2 id="postfix-sasl" status="review">
-	  <title>Configuring SASL</title>
-            <para>	              
-	    Postfix supports two SASL implementations Cyrus SASL and Dovecot SASL.  To enable Dovecot SASL 	    
-	    the <application>dovecot-common</application> package will need to be installed.  From a terminal prompt
-	    enter the following:
-	    </para>
-<screen>
-<command>sudo apt-get install dovecot-common</command>
-</screen>
-	    <para>
- 	    Next you will need to edit <filename>/etc/dovecot/dovecot.conf</filename>.  In the <emphasis>auth default</emphasis>
-	    section uncomment the <emphasis>socket listen</emphasis> option and change the following:
-	    </para>
-<programlisting>
-  socket listen {
-    #master {
-      # Master socket provides access to userdb information. It's typically
-      # used to give Dovecot's local delivery agent access to userdb so it
-      # can find mailbox locations.
-      #path = /var/run/dovecot/auth-master
-      #mode = 0600
-      # Default user/group is the one who started dovecot-auth (root)
-      #user = 
-      #group = 
-    #}
-    client {
-      # The client socket is generally safe to export to everyone. Typical use
-      # is to export it to your SMTP server so it can do SMTP AUTH lookups
-      # using it.
-      path = /var/spool/postfix/private/auth-client
-      mode = 0660
-      user = postfix
-      group = postfix
-    }
-  }
-</programlisting>
-
-            <para>
-            In order to let <application>Outlook</application> clients use SMTPAUTH, in the <emphasis>auth default</emphasis> 
-            section of /etc/dovecot/dovecot.conf add <emphasis>"login"</emphasis>:
-            </para>
-
-<programlisting>
-  mechanisms = plain login
-</programlisting>
-
-	    <para>
-	    Once you have <application>Dovecot</application> configured restart it with:
-	    </para>
-<screen>
-<command>sudo /etc/init.d/dovecot restart</command>
-</screen>
+	
         </sect2>
         <sect2 id="postfix-testing" status="review">
           <title>Testing</title>
@@ -646,7 +526,11 @@ mail_location = mbox:~/mail:INBOX=/var/spool/mail/%u # (for mbox)
           Once you have configured dovecot, restart the <application>dovecot</application> daemon
           in order to test your setup:
 	  </para>
-          <screen><command>sudo /etc/init.d/dovecot restart</command></screen>
+
+<screen>
+<command>sudo /etc/init.d/dovecot restart</command>
+</screen>
+
 	  <para>
           If you have enabled imap, or pop3, you can also try to log in
           with the commands <command>telnet localhost pop3</command> or

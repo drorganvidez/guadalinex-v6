@@ -19,15 +19,15 @@
 		<sect2 id="installing-get-iso" status="review">
 			<title>Download a CD image</title>
 			<para>The Ubuntu installation CD is available to download from the Ubuntu website as a <emphasis>CD image (.iso)</emphasis>. Visit the <ulink url="http://www.ubuntu.com/getubuntu/download">Ubuntu website</ulink> to download a copy.</para>
-			<para>You will be asked to choose the version you want, Desktop or Server (Server supports Linux, Apache, MySQL and PHP out of the box). You will also need to choose from the latest version or the LTS (Long Term Support) version.</para>
-			<para>Select the architecture you want and a server to download from that is near you.</para>
+			<para>You will be asked to choose the version you want, Desktop or Server. You will also need to choose from the latest version or the LTS (Long Term Support) version.</para>
+			<para>Select the architecture you want and the server to download from.</para>
 			<para>There is also a check box at the bottom that lets you download the Alternate Desktop CD. This has a text based installer for computers with lower memory.</para>
-			<para>The CD image is a large file and may take several hours to download. If you have a slow Internet connection (such as dial-up), it is recommended that you obtain a CD by some other means (see the following sections).</para>
+			<para>The CD image is a large file and may take several hours to download. If you have a slow Internet connection such as dial-up, it is recommended that you obtain a CD by some other means, indicated in the following sections.</para>
 			<para>Once you have downloaded the ISO file, you must burn it onto a CD. In order to do this, you will need suitable CD-writing software. Full instructions on burning the ISO file to disc are provided on the <ulink url="https://help.ubuntu.com/community/BurningIsoHowto">Ubuntu support website</ulink>.</para>
 		</sect2>
 		<sect2 id="installing-get-buy" status="review">
 			<title>Buy a CD</title>
-			<para>It is possible to buy an Ubuntu CD from a third party, for a (typically) small charge. While these third parties are likely to be selling Ubuntu CDs for their own profit, you may find that buying a CD is the most convenient option for you.</para>
+			<para>It is possible to buy an Ubuntu CD from a third party, generally for a small charge. While these third parties are likely to be selling Ubuntu CDs for their own profit, you may find that buying a CD is the most convenient option for you.</para>
 			<para>Click the Buy Ubuntu on CD tab on the <ulink url="http://www.ubuntu.com/getubuntu/download">Ubuntu website</ulink> for more details.</para>
 		</sect2>		
 		<sect2 id="installing-get-shipit" status="review">
@@ -36,7 +36,8 @@
 		</sect2>
 		<sect2 id="installing-get-borrow" status="review">
 			<title>Borrow a copy</title>
-			<para>Ubuntu is freely available <emphasis>software libre</emphasis>. You are encouraged and legally entitled to copy, reinstall and redistribute your copy of Ubuntu, and so if you know someone who will allow you to borrow their Ubuntu CD, then by all means do so! If you have a local <emphasis>Linux user group</emphasis>, they may also be able to provide an Ubuntu disc for you.</para>
+			<para>Ubuntu is freely available <emphasis>software libre</emphasis>. You are encouraged and legally entitled to copy, reinstall and redistribute your copy of Ubuntu. If you know someone who will allow you to borrow their Ubuntu CD, then by all means do so!</para>
+			<para>If you have a local <ulink url="http://www.linux.org/groups/"><emphasis>Linux User Group</emphasis></ulink>, they may also be able to provide an Ubuntu disc for you.</para>
 		</sect2>
 	</sect1>
 	<sect1 id="installing-burning" status="review">
@@ -45,9 +46,9 @@
 		<sect2 id="installing-burning-windows" status="review">
 			<title>From Windows</title>
 			<orderedlist>
-				<listitem><para>If you do not have software to burn an ISO image, download <ulink url="http://infrarecorder.sourceforge.net/">Infra Recorder</ulink>, open source image burning software.</para></listitem>
+				<listitem><para>If you do not have software to burn an ISO image, download <ulink url="http://infrarecorder.sourceforge.net/">Infra Recorder</ulink>, an open source image burning software.</para></listitem>
 				<listitem><para>Insert a blank CD-R, if a dialog box pops up - click <guilabel>Cancel</guilabel>.</para></listitem>
-				<listitem><para>Open Infra Recorder, and select the <guilabel>Actions</guilabel> menu, then <guilabel>Burn image</guilabel>.</para></listitem>
+				<listitem><para>Open Infra Recorder, and select the <menuchoice><guimenuitem>Actions</guimenuitem><guimenuitem>Burn image</guimenuitem></menuchoice>.</para></listitem>
 				<listitem><para>Select the Ubuntu CD image file you want to use, then click <guilabel>Open</guilabel>.</para></listitem>
 				<listitem><para>In the dialog box that opens, click <guilabel>OK</guilabel>.</para></listitem>
 			</orderedlist>
@@ -56,13 +57,13 @@
 			<title>From a Mac</title>
 			<para>To burn most ISOs, you can use Apple's Disk Utility (Disk Copy in older versions).</para>
 			<orderedlist>
-				<listitem><para>Launch Disk Utility (Applications/Utilities/Disk Utility)</para></listitem>
+				<listitem><para>Launch Disk Utility <menuchoice><guimenuitem>Applications</guimenuitem><guimenuitem>Utilities</guimenuitem><guimenuitem>Disk Utility</guimenuitem></menuchoice></para></listitem>
 				<listitem><para>Drag the ISO to the sidebar of the Disk Utility main window.</para></listitem>
-				<listitem><para>Select the ISO where you just dragged it, and choose (Menu/Image/Burn...)</para></listitem>
-				<listitem><para>In Disk Utility, ensure that the Verify burn checkbox is ticked (you may need to click on the disclosure triangle to see the checkbox).</para></listitem>
+				<listitem><para>Select the ISO where you just dragged it, and select <menuchoice><guimenuitem>Menu</guimenuitem><guimenuitem>Image</guimenuitem><guimenuitem>Burn...</guimenuitem></menuchoice></para></listitem>
+				<listitem><para>In Disk Utility, ensure that the <emphasis>Verify</emphasis> burn checkbox is ticked. You may need to click on the disclosure triangle to see the checkbox.</para></listitem>
 				<listitem><para>Insert a blank CD and select Burn</para></listitem>
 			</orderedlist>
-			<para>Check that verification (if available) was successful. If verification was not available, at least make sure that a sample of directories on the CD can be accessed by the finder.</para>
+			<para>Check that the verification was successful. If the verification was unsuccessful, make sure that a sample of the directories on the CD can be accessed by the finder.</para>
 		</sect2>
 		<sect2 id="installing-burning-ubuntu" status="review">
 			<title>From Ubuntu</title>
@@ -89,7 +90,7 @@
 		<title>Preparing to install</title>
 		<para>Before installing Ubuntu, there are a few questions to consider:</para>
 		<orderedlist>
-			<listitem><para>Do you want to dual boot (be able to run Ubuntu and another operating system)?</para></listitem>
+			<listitem><para>Do you want to dual boot (be able to run Ubuntu as well as another operating system)?</para></listitem>
 			<listitem><para>Have you backed up your important files?</para></listitem>
 			<listitem><para>Does your hardware work properly?</para></listitem>
 		</orderedlist>
@@ -104,7 +105,7 @@
 				<para>Its important to backup your important files before you start. There are several ways to do this:</para>
 				<orderedlist>
 					<listitem><para>Use a USB memory stick or external hard drive.</para></listitem>
-					<listitem><para>Burn backups to a DVD or CD-R.</para></listitem>
+					<listitem><para>Burn backups to a DVD or CD.</para></listitem>
 					<listitem><para>Create a disc image.</para></listitem>
 				</orderedlist>
 				<para>There is much more information in the Backing-up your Windows installation section (see <xref linkend="preparing-backing-up-entire"/>)</para>
@@ -119,9 +120,9 @@
 		<para>Once the Ubuntu installation CD has booted successfully, you will be presented with a desktop, with an icon labelled <guilabel>Install</guilabel>. Double-click this icon to start the <application>Ubuntu installer</application>. Then, follow the instructions below:</para>
 		<orderedlist>
 			<listitem><para>Select your language from the list provided and then press <guibutton>Forward</guibutton>.</para></listitem>
-			<listitem><para>Select a city from your country and timezone by either clicking the map or selecting a city from the drop-down menu labelled <guilabel>Selected city</guilabel>. Press <guibutton>Set Time...</guibutton> if the time is set incorrectly. Once you are satisfied that the time is correct for your location, press <guibutton>Forward</guibutton>.</para></listitem>
+			<listitem><para>Select a city from your country and timezone by clicking it on the map. Press <guibutton>Set Time...</guibutton> if the time is set incorrectly. Once you are satisfied that the time is correct for your location, press <guibutton>Forward</guibutton>.</para></listitem>
 			<listitem><para>Select your keyboard layout from the list provided. You can type in the box provided to test that your keyboard is working correctly. Press <guibutton>Forward</guibutton> once you are satisfied that you have chosen the correct keyboard layout.</para></listitem>
-			<listitem><para>The <guilabel>Prepare disk space</guilabel> screen will load. This will allow you to partition your hard disk. Partitioning is covered in the next section.</para></listitem>
+			<listitem><para>The <guilabel>Partition Editor</guilabel> screen will load. This will allow you to partition your hard disk. Partitioning is covered in the next section.</para></listitem>
 		</orderedlist>
 	</sect1>
 	<sect1 id="installing-partitioning" status="review">
@@ -131,7 +132,7 @@
 			<para>If you do not intend to keep your copy of Windows installed on the computer, and you have made a backup of all of your important files, choose the <guilabel>Erase entire disk</guilabel> option from the <guilabel>Prepare disk space</guilabel> screen and then press <guibutton>Forward</guibutton>. The installer will automatically partition your hard disk in a suitable manner.</para>
 			
 			<note>
-				<para>You're probably used to how Windows represents disks. Your first hard drive is usually drive c. However Windows can change drive letters, Linux doesn't.</para>
+				<para>You're probably used to how Windows represents disks. Your first hard drive partition is usually the C: drive. However, Windows can change drive letters; Linux doesn't.</para>
 				<para>Devices are named differently too:</para>
 				<itemizedlist>
 					<listitem><para>The first Master IDE hard disk is called <guilabel>hda</guilabel>.</para></listitem>
@@ -176,7 +177,7 @@
 			</sect3>
 			<sect3 id="installing-partitioning-dual-swap" status="review">
 				<title>Swap space</title>
-				<para>Create a partiton to use as swap space. Swap space is used by the kernel as extra memory. You will need to make it double the size of your installed memory.</para>
+				<para>Create a partiton to use as swap space. Swap space is used by the kernel as extra memory. You will need to make it doubled the size of your installed memory.</para>
 				<para>Click on the free space and select <guilabel>Create new partition</guilabel>. Select <guilabel>Logical</guilabel>, <guilabel>Swap</guilabel> and set the size to double your system memory.</para>
 			</sect3>
 			<sect3 id="installing-partitioning-dual-root" status="review">
@@ -189,18 +190,18 @@
 				<para>This step is not necessary but will allow you to keep your settings and files in the event you reinstall Ubuntu. Set it up as you would the home partition but choose <guilabel>/home</guilabel> as the mount point.</para>
 			</sect3>
 		</sect2>
-		<sect2 id="installing-partioning-commit">
-			<title>Finalising</title>
-			<para>Now its all configured, review your settings. Make sure you've a root and swap partition and that your windows partition has a mount point so you can access it.</para>
+		<sect2 id="installing-partitioning-commit">
+			<title>Finalizing</title>
+			<para>Now that it is all configured, review your settings. Make sure you have a root and swap partition and that your Windows partition has a mount point so you can access it.</para>
 		</sect2>
 	</sect1>
 	<sect1 id="migrating" status="review">
 		<title>Migrating your settings and documents</title>
-		<para>Ubuntu can help your transition from Windows. Settings such as emails, bookmarks and even your current wallpaper can be migrated.</para>
+		<para>Ubuntu can help your transition from Windows. Settings such as emails, bookmarks, and even your current wallpaper can be migrated.</para>
 		<para>At this stage of installation an option to migrate settings is available. Select a detected operating system from the <guilabel>list</guilabel>.</para>
 		<para>Now a list of items to import is shown. Click the <guilabel>selection boxes</guilabel> of the items you want to migrate.</para>
-		<para>Enter your name and a user name is generated. You can change this to something more memorable if you wish.</para>
-		<para>Lastly click <guilabel>Forward</guilabel>.</para>
+		<para>Enter your name and a <emphasis>username</emphasis> is generated. You can change this to something more memorable if you wish.</para>
+		<para>Lastly, click <guilabel>Forward</guilabel>.</para>
 		<caution>
 			<para>Pay particular attention to the password section - by choosing a more complicated password, you can help to make your computer more secure. You must also ensure that you can remember your password correctly, including the case of the letters you use (&apos;ABC&apos; is different to &apos;abc&apos;).</para>
 			<para>When choosing a password, try to use a combination of letters, numbers and punctuation symbols which spell out a random word (e.g. <emphasis>p0tato!</emphasis>). This will make your password harder to guess if someone tries to access your computer without your permission.</para>
@@ -222,17 +223,17 @@
 				<para>Once you press <guibutton>Install</guibutton>, the changes you specified on the partitioning screen will be applied. <emphasis role="strong">These changes cannot be undone.</emphasis> Please make sure that the changes you have specified are correct and that you have a back-up copy of any valuable data stored safely.</para>
 			</warning>
 			<note>
-				<para>If you are planning on installing a dual boot system, its easiest to install Windows first. This is because Windows overwrites the MBR when it is installed.</para>
+				<para>If you are planning on installing a dual-boot system, it is easiest to install Windows first. This is because Windows overwrites the MBR when it is installed.</para>
 			</note>
 		</sect2>
 		<sect2 id="installing-final-commit" status="review">
 			<title>Beginning the installation</title>
-			<para>After you have completed the partitioning stage, you will be presented with the <guilabel>Ready to install</guilabel> screen. This will provide a summary of the installation settings you have chosen. If you would like to change any of these settings, this is your last chance to do so. Press <guibutton>Back</guibutton> to change your settings.</para>
-			<para>Once you are sure that you would like to proceed with installation, press <guibutton>Install</guibutton>. The installation process will then start, and may take a while to complete.</para>
+			<para>After you have completed the partitioning stage, you will be presented with the <guilabel>Ready to install</guilabel> screen. This will provide a summary of the installation settings you have chosen. If you would like to change any of these settings, this is your last chance to do so. Click <guibutton>Back</guibutton> to change your settings.</para>
+			<para>Once you are sure that you would like to proceed with installation, click <guibutton>Install</guibutton>. The installation process will then start, and may take a while to complete.</para>
 		</sect2>
 	</sect1>
 	<sect1 id="installing-restarting" status="review">
 		<title>Restarting into Ubuntu</title>
-		<para>Once the installation process is complete, your computer will restart. After a short while, Ubuntu will start up for the first time. Type in your user name and password, which you entered earlier on in the installation process. After another short period, your Ubuntu desktop will load completely. <emphasis role="strong">Congratulations - you are now using Ubuntu!</emphasis></para>
+		<para>Once the installation process is complete, your computer will be prompted to restart. Ubuntu will now start up for the first time. Type in your username and password, which you entered earlier on in the installation process. After another short period, your Ubuntu desktop will load completely. <emphasis role="strong">Congratulations - you are now using Ubuntu!</emphasis></para>
 	</sect1>
 </chapter>

@@ -971,7 +971,7 @@ unused devices: &lt;none&gt;</computeroutput>
  
               <para>
               Back at the <emphasis>"LVM configuration action"</emphasis> screen, select <emphasis>"Create logical volume"</emphasis>.  Select 
-              the newly created Logical Volume, and enter a name for the new LV, for example <emphasis>srv</emphasis> since that is the intended
+              the newly created volume group, and enter a name for the new LV, for example <emphasis>srv</emphasis> since that is the intended
               mount point.  Then choose a size, which may be the full partition because it can always be extended later. Choose 
               <emphasis>"Finish"</emphasis> and you should be back at the main <emphasis>"Partition Disks"</emphasis> screen.    
               </para>
@@ -1011,104 +1011,79 @@ unused devices: &lt;none&gt;</computeroutput>
           <title>Extending Volume Groups</title>
 
           <para>
-          Continuing the <emphasis>/srv</emphasis> as an LVM volume example, this section covers adding a second Physical Volume (PV) to 
-          <filename role="directory">/srv</filename> and expanding the filesystem.  This example assumes a second hard disk has been added
-          to the system and will be added to the <emphasis>vg01</emphasis> volume group.
+          Continuing with <emphasis>srv</emphasis> as an LVM volume example, this section covers adding a second hard disk, creating
+          a Physical Volume (PV), adding it to the volume group (VG), extending the logical volume <filename role="directory">srv</filename>
+          and finally extending the filesystem. This example assumes a second hard disk has been added to the system. This hard disk will be 
+          named <filename>/dev/sdb</filename> in our example. BEWARE: make sure you don't already have an existing <filename>/dev/sdb</filename>
+          before issuing the commands below. You could lose some data if you issue those commands on a non-empty disk. In our example we will 
+          use the entire disk as a physical volume (you could choose to create partitions and use them as different physical volumes)
           </para>
 
           <procedure>
             <step>
  
               <para>
-              First, create a partition on the new disk using the <application>fdisk</application> utility.  For example,
-              from a terminal enter:
+              First, create the physical volume, in a terminal execute:
               </para>
 
 <screen>
-<command>sudo fdisk /dev/sdb</command>
-<computeroutput>Device contains neither a valid DOS partition table, nor Sun, SGI or OSF disklabel
-Building a new DOS disklabel with disk identifier 0x7b741e03.
-Changes will remain in memory only, until you decide to write them.
-After that, of course, the previous content won't be recoverable.
-
-Warning: invalid flag 0x0000 of partition table 4 will be corrected by w(rite)
-
-Command (m for help): <userinput>n</userinput>
-Command action
-   e   extended
-   p   primary partition (1-4)
-<userinput>p</userinput>
-Partition number (1-4): <userinput>1</userinput>
-First cylinder (1-391, default 1): 
-Using default value 1
-Last cylinder, +cylinders or +size{K,M,G} (1-391, default 391): 
-Using default value 391
-Command (m for help): <userinput>w</userinput>
-The partition table has been altered!
-
-Calling ioctl() to re-read partition table.
-Syncing disks.</computeroutput>
-</screen>
-
-              <para>
-              The above output creates a single partition covering the entire disk.  Your output will vary depending on your hard disk.
-              </para>
-
-              <para>
-              A quick <application>fdisk</application> reference:
-              </para>
-
-              <itemizedlist>
-                <listitem><para><emphasis>n:</emphasis> creates a new partition.</para></listitem>
-                <listitem><para><emphasis>p:</emphasis> prints the partition table.</para></listitem>
-                <listitem><para><emphasis>w:</emphasis> writes the changes to disk, and exits fdisk.</para></listitem>
-                <listitem><para><emphasis>q:</emphasis> quits fdisk without writing the changes to disk.</para></listitem>
-              </itemizedlist>
-
-              <note>
-                <para>
-                Adjust <filename>/dev/sdb</filename> according to your system.  Also, the <application>cfdisk</application>,
-                menu driven, partition utility can be used instead of <application>fdisk</application>.
-                </para>
-              </note>
-
-            </step>
-            <step>
- 
-              <para>
-              Next, create a Physical Volume (PV) on the new partition:
-              </para>
-
-<screen>
-<command>sudo pvcreate /dev/sdb1</command>
+<command>sudo pvcreate /dev/sdb</command>
 </screen>
 
             </step>
             <step>
- 
+
               <para>
               Now extend the Volume Group (VG):
               </para>
 
 <screen>
-<command>sudo vgextend vg01 /dev/sdb1</command>
+<command>sudo vgextend vg01 /dev/sdb</command>
 </screen>
+
+            </step>
+            <step>
+
+              <para>
+              Use <application>vgdisplay</application> to find out the free physical extents - Free PE / size (the size you can allocate). 
+              We will assume a free size of 511 PE (equivalent to 2GB with a PE size of 4MB) and we will use the whole free space available.
+              Use your own PE and/or free space.
+              </para>
+
+              <para>
+              The Logical Volume (LV) can now be extended by different methods, we will only see how to use the PE to extend the LV:
+              </para>
+
+<screen>
+<command>sudo lvextend /dev/vg01/srv -l +511</command>
+</screen>
+
+              <para>
+              The <emphasis>-l</emphasis> option allows the LV to be extended using PE.
+              The <emphasis>-L</emphasis> option allows the LV to be extended using Meg, Gig, Tera, etc bytes.
+              </para>
 
             </step>
             <step>
  
               <para>
-              The Logical Volume (LV) can now be extended:
+              Even though you are supposed to be able to <emphasis>expand</emphasis> an ext3 or ext4 filesystem without unmounting it first, 
+              it may be a good pratice to unmount it anyway and check the filesystem, so that you don't mess up the day you want to reduce
+              a logical volume (in that case unmounting first is compulsory).
+              </para>
+
+              <para>
+              The following commands are for an <emphasis>EXT3</emphasis> or <emphasis>EXT4</emphasis> filesystem. If you are
+              using another filesystem there may be other utilities available.
               </para>
 
 <screen>
-<command>sudo lvextend /dev/vg01/srv -L3221M</command>
+<command>sudo umount /srv</command>
+<command>sudo e2fsck -f /dev/vg01/srv</command>
 </screen>
 
               <para>
-              The <emphasis>-L</emphasis> option allows the LV to be extended using Meg, Gig, Tera, etc bytes.  Just be sure the 
-              hard disk has enough space for the value you choose.  The <application>fdisk</application> <emphasis>q</emphasis> 
-              option will display the exact size of a drive.
+              The <emphasis>-f</emphasis> option of <application>e2fsck</application> forces checking even if the system seems clean.
               </para>
 
             </step>
@@ -1122,17 +1097,19 @@ Syncing disks.</computeroutput>
 <command>sudo resize2fs /dev/vg01/srv</command>
 </screen>
 
+            </step>
+            <step>
+ 
               <para>
-              The above command is for an <application>EXT3</application> or <application>EXT4</application> filesystem.  If you are 
-              using another filesystem there may be other resize utilities available.
+              Now mount the partition and check its size.
               </para>
+
+<screen>
+<command>mount /dev/vg01/srv /srv &amp;&amp; df -h /srv</command>
+</screen>
 
             </step>
           </procedure>
-
-          <para>
-          You should now see the expanded space in <filename>/srv</filename>: <command>df -h</command>.
-          </para>
 
         </sect3>
         <sect3 id="lvm-resources" status="review">

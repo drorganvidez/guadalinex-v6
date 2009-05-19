@@ -53,14 +53,12 @@
             The user interface will be displayed. On each screen, select the following
             values:
             <itemizedlist spacing="compact">
-            <listitem><para>Ok</para></listitem>
             <listitem><para>Internet Site</para></listitem>
-            <listitem><para>NONE</para></listitem>
             <listitem><para>mail.example.com</para></listitem>
+            <listitem><para>steve</para></listitem>
             <listitem><para>mail.example.com, localhost.localdomain, localhost</para></listitem>
             <listitem><para>No</para></listitem>
-            <listitem><para>127.0.0.0/8, 192.168.0/24</para></listitem>
-            <listitem><para>Yes</para></listitem>
+            <listitem><para>127.0.0.0/8 [::ffff:127.0.0.0]/104 [::1]/128 192.168.0/24</para></listitem>
             <listitem><para>0</para></listitem>
             <listitem><para>+</para></listitem>
             <listitem><para>all</para></listitem>
@@ -68,8 +66,8 @@
             </para>
             <note>
             <para>
-            Replace mail.example.com with your mail server hostname, and 192.168.0/24 with the actual network and class 
-	    range of your mail server.
+            Replace mail.example.com with your mail server hostname, 192.168.0/24 with the actual network and class 
+	    range of your mail server, and steve with the appropriate username.
             </para>
             </note>
             <para>
@@ -1224,7 +1222,7 @@ instructions in the email to subscribe.
  	     to have the appropriate access to scan files:
  	     </para>
 <screen>
-<command>sudo adduser amavis clamav</command>
+<command>sudo adduser clamav amavis</command>
 </screen>
 	   </sect3>
 	   <sect3 id="spamassassin-configuration" status="review">
@@ -1286,6 +1284,19 @@ use strict;
 <programlisting>
 $final_spam_destiny       = D_DISCARD;
 </programlisting>
+
+             <para>
+             If the server's <emphasis>hostname</emphasis> is different from the domain's MX record you may need to manually set
+             the <emphasis>$myhostname</emphasis> option.  Also, if the server receives mail for multiple domains the 
+             <emphasis>@local_domains_acl</emphasis> option will need to be customized.  Edit the 
+             <filename>/etc/amavis/conf.d/50-user</filename> file:
+             </para>
+
+<programlisting>
+$myhostname = 'mail.example.com';
+@local_domains_acl = ( "example.com", "example.org" );
+</programlisting>
+          
 	     <para>
 	     After configuration <application>Amavisd-new</application> needs to be restarted: 
 	     </para>

@@ -1141,8 +1141,13 @@ UUID=66bcdd2e-8861-4fb0-b7e4-e61c569fe17d /srv  ext3    noatime,relatime,acl 0  
 	</listitem>
 	<listitem>
 	  <para>
-	  DNS for the domain setup properly.  In a production AD environment this should be the case.
+	  DNS for the domain setup properly.  In a production AD environment this should be the case.  Proper Microsoft 
+          DNS is needed so that client workstations can determine the Active Directory domain is available.
 	  </para>
+          <para>
+          If you don't have a Windows DNS server on your network, see <xref linkend="likewise-open-ms-dns"/> for details.
+          </para>
+          
 	</listitem>
       </itemizedlist>
 	
@@ -1180,6 +1185,29 @@ UUID=66bcdd2e-8861-4fb0-b7e4-e61c569fe17d /srv  ext3    noatime,relatime,acl 0  
         <para>
 	If configuring a Desktop the user name will need to be prefixed with <emphasis role="italic">domain\</emphasis> in the
         graphical logon as well.
+        </para>
+      </note>
+
+      <para>
+      To make likewise-open use a default domain, you can add the following statement to <filename>/etc/samba/lwiauthd.conf</filename>:
+      </para>
+
+<programlisting>
+winbind use default domain = yes
+</programlisting>
+
+      <para>
+      Then restart the <application>likewise-open</application> daemons:
+      </para>
+
+<screen>
+<command>sudo /etc/init.d/likewise-open restart</command>
+</screen>
+
+      <note>
+        <para>
+        Once configured for a <emphasis>default domain</emphasis> the <emphasis role="italic">'domain\'</emphasis> is no longer required, 
+        users can login using only their username.
         </para>
       </note>
 
@@ -1225,11 +1253,102 @@ UUID=66bcdd2e-8861-4fb0-b7e4-e61c569fe17d /srv  ext3    noatime,relatime,acl 0  
       </para>
 
       </sect2>
+      <sect2 id="likewise-open-troubleshooting" status="review">
+        <title>Troubleshooting</title>
+   
+        <para>
+        If the client has trouble joining the domain, double check that the Microsoft DNS is listed first in <filename>/etc/resolv.conf</filename>.
+        For example:
+        </para>
+
+<programlisting>
+nameserver 192.168.0.1
+</programlisting>
+
+        <para>
+        For more information when joining a domain, use the <emphasis>--loglevel verbose</emphasis> or <emphasis>--advanced</emphasis> option of the 
+        <application>domainjoin-cli</application> utility:
+        </para>
+
+<screen>
+<command>sudo domainjoin-cli --loglevel verbose join example.local Administrator</command>
+</screen>
+
+        <para>
+        If an Active Directory user has trouble logging in, check the <filename>/var/log/auth.log</filename> for details.
+        </para>
+
+      </sect2>
+      <sect2 id="likewise-open-ms-dns" status="review">
+        <title>Microsoft DNS</title>
+      
+        <para>
+        The following are instructions for installing DNS on an Active Directory domain controller:
+        </para>
+
+        <itemizedlist>
+            <listitem>
+              <para>
+              Click 
+              <menuchoice>
+                <guimenuitem>Start</guimenuitem><guimenuitem>Administrative Tools</guimenuitem><guimenuitem>Manager Your Server</guimenuitem>
+              </menuchoice>.
+              This will open the <application>Server Role Mangement</application> utility.
+              </para>
+            </listitem>
+            <listitem>
+             <orderedlist>
+               <listitem><para>In the Server Role Management utility, Click</para></listitem>
+               <listitem><para>Add or remove a role</para></listitem>
+               <listitem><para>Click Next</para></listitem>
+               <listitem><para>Select "DNS Server"</para></listitem>
+               <listitem><para>Click Next</para></listitem>
+               <listitem><para>Next</para></listitem>
+               <listitem><para>Select "Create a forward lookup zone" if it is not selected.</para></listitem>
+               <listitem><para>Click Next</para></listitem>
+               <listitem><para>Make sure "This server maintains the zone" is selected and click Next.</para></listitem>
+               <listitem><para>Enter your domain name and click Next</para></listitem>
+               <listitem><para>Click Next to "Allow only secure dynamic updates"</para></listitem>
+               <listitem><para>Click Next to "Allow only secure dynamic updates"</para></listitem>
+               <listitem>
+                 <para>
+                 Enter the IP for DNS servers to forward queries to, or Select "No, it should not forward queries" and click Next.
+                 </para>
+               </listitem>
+               <listitem><para>Click Finish</para></listitem>
+               <listitem><para>Click Finish</para></listitem>
+              </orderedlist>
+              <para>
+              DNS is now installed and can be further configured using the <application>Microsoft Management Console</application> DNS snap-in.
+              </para>
+            </listitem>
+            <listitem>
+              <para>
+              Next, configure the Server to use itself for DNS queries:
+                <orderedlist>
+                  <listitem><para>Click Start</para></listitem>
+                  <listitem><para>Control Panel</para></listitem>
+                  <listitem><para>Network Connections</para></listitem>
+                  <listitem><para>Right Click "Local Area Connection"</para></listitem>
+                  <listitem><para>Click Properties</para></listitem>
+                  <listitem><para>Double click "Internet Protocol (TCP/IP)</para></listitem>
+                  <listitem><para>Enter the Server's IP Addressin as the "Preferred DNS server"</para></listitem>
+                  <listitem><para>Click Ok</para></listitem>
+                  <listitem><para>Click Ok again to save the seetings</para></listitem>
+                </orderedlist>
+              </para>
+            </listitem>
+          </itemizedlist>
+      </sect2>
       <sect2 id="likewise-open-references" status="review">
 	<title>References</title>
-
+       
 	<para>
 	Please refer to the <ulink url="http://www.likewisesoftware.com/">Likewise</ulink> home page for further information.
+	</para>	
+
+	<para>
+	For more <application>domainjoin-cli</application> options see the man page: <command>man domainjoin-cli</command>.
 	</para>	
 
       </sect2>

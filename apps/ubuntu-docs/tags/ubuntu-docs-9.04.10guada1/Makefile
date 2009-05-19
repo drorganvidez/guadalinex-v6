@@ -149,7 +149,7 @@ install: style
 
 # To build an Ubuntu look n feel version of the installation-guide, download
 # the source package and unpack it to ubuntu/installation-guide. Then amend
-# build/buildone.sh so that the "web" stylesheet refers to the Ubuntu stylesheet
+# build/buildone.sh so that the "web" stylesheet refers to the Ubuntu installguide stylesheet
 # in ubuntu/libs. Then use this make target.
 
 	cd installation-guide/build && mkdir -p ../../build/installation-guide && destination='../../build/installation-guide/'  formats='html txt' architectures='amd64 hppa i386 ia64 powerpc sparc' ./buildweb.sh && cd ../../

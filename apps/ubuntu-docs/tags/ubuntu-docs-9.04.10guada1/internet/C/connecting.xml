@@ -90,7 +90,10 @@
 
 	<sect1 id="connecting-vpn" status="review">
 		<title>Virtual Private Networks</title>
+		<para>There are three types of Virtual Private Networks (VPNs) that are currently supported by NetworkManager (NM).  It is important to know which type of VPN network you are attempting to connect to. 
+		</para>
 		<orderedlist>
+			<listitem><para>Begin by installing <ulink url="apt:network-manager-openvpn">network-manager-openvpn</ulink>, <ulink url="apt:network-manager-pptp">network-manager-pptp</ulink> and/or <ulink url="apt:network-manager-vpnc">network-manager-vpnc</ulink>.</para></listitem>
 			<listitem><para>Left click the <guiicon>NetworkManager</guiicon> icon and click <guilabel>Configure VPN...</guilabel> from the <guilabel>VPN Connections</guilabel> option.</para></listitem>
 			<listitem><para>Click <guibutton>Add</guibutton>.</para></listitem>
 		</orderedlist>

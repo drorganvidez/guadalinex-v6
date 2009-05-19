@@ -390,7 +390,9 @@ bind9
 
         <para>
         The RAID software included with current versions of Linux (and Ubuntu) is based on the <application>'mdadm'</application>
-        driver and works very well, better even than many so-called 'hardware' RAID controllers. 
+        driver and works very well, better even than many so-called 'hardware' RAID controllers.  This section will guide you 
+        through installing Ubuntu Server Edition using two RAID1 partitions on two physical hard drives, one for 
+        <emphasis>/</emphasis> and another for <emphasis>swap</emphasis>.
         </para>
 
         <sect3 id="raid-partitioning" status="review">
@@ -429,8 +431,9 @@ bind9
             <step>
  
               <para>
-              Next, select the <emphasis>Size</emphasis> of the partition, then choose <emphasis>Primary</emphasis>,
-              then <emphasis>Beginnning</emphasis>. 
+              Next, select the <emphasis>Size</emphasis> of the partition.  This partition will be the <emphasis>swap</emphasis> partition,
+              and a general rule for swap size is twice that of RAM.  Enter the partition size, then choose <emphasis>Primary</emphasis>,
+              then <emphasis>Beginning</emphasis>. 
               </para>
 
             </step>
@@ -438,14 +441,38 @@ bind9
  
               <para>
               Select the <emphasis>"Use as:"</emphasis> line at the top.  By default this is 
-              <emphasis role="italic">"Ext3 journaling file system"</emphasis>, change that to <emphasis>"physical volume for RAID"</emphasis>. 
+              <emphasis role="italic">"Ext3 journaling file system"</emphasis>, change that to <emphasis>"physical volume for RAID"</emphasis>
+              then <emphasis>"Done setting up partition"</emphasis>. 
               </para>
 
             </step>
             <step>
  
               <para>
-              Repeat steps three through five for the other disks and partitions. 
+              For the <emphasis>/</emphasis> partition once again select <emphasis>"Free Space"</emphasis> on the first drive then
+              <emphasis>"Create a new partition"</emphasis>. 
+              </para>
+
+            </step>
+            <step>
+ 
+              <para>
+              Use the rest of the free space on the drive and choose <emphasis>Continue</emphasis>, then <emphasis>Primary</emphasis>. 
+              </para>
+
+            </step>
+            <step>
+ 
+              <para>
+              As with the swap partition, select the <emphasis>"Use as:"</emphasis> line at the top, changing it to 
+              <emphasis>"physical volume for RAID"</emphasis> then choose <emphasis>"Done setting up partition"</emphasis>. 
+              </para>
+
+            </step>
+            <step>
+ 
+              <para>
+              Repeat steps three through eight for the other disk and partitions. 
               </para>
 
             </step>
@@ -456,7 +483,7 @@ bind9
           <title>RAID Configuration</title>
 
           <para>
-          With the partitions setup the array is ready to be configured:
+          With the partitions setup the arrays are ready to be configured:
           </para>
 
           <procedure>
@@ -477,14 +504,15 @@ bind9
             <step>
  
               <para>
-              Choose <emphasis>"Create new MD drive"</emphasis>.
+              Choose <emphasis>"Create MD drive"</emphasis>.
               </para>
 
             </step>
             <step>
  
               <para>
-              Select <emphasis>"RAID1"</emphasis>, or the type of RAID you want (RAID0 RAID1 RAID5).
+              For this example, select <emphasis>"RAID1"</emphasis>, but if you are using a different setup choose the appropriate type 
+              (RAID0 RAID1 RAID5).
               </para>
 
               <note>
@@ -514,10 +542,11 @@ bind9
  
               <para>
               Choose which partitions to use. Generally they will be sda1, sdb1, sdc1, etc. The numbers will usually match and the different 
-              letters correspond to different hard drives.
+              letters correspond to different hard drives.  
               </para>
 
               <para>
+              For the <emphasis>swap</emphasis> partition choose <emphasis>sda1</emphasis> and <emphasis>sdb1</emphasis>.
               Select <emphasis>"Continue"</emphasis> to go to the next step.
               </para>
 
@@ -525,8 +554,8 @@ bind9
             <step>
  
               <para>
-              Repeat steps <emphasis>three</emphasis> through <emphasis>seven</emphasis> with each pair of partitions you have created 
-              (you may only have one pair).
+              Repeat steps <emphasis>three</emphasis> through <emphasis>seven</emphasis> for the <emphasis>/</emphasis> partition choosing 
+              <emphasis>sda2</emphasis> and <emphasis>sdb2</emphasis>.
               </para>
 
             </step>
@@ -553,30 +582,37 @@ bind9
             <step>
  
               <para>
-              Select first RAID device partition. 
+              Select the <emphasis>RAID1 device #0</emphasis> partition. 
               </para>
 
             </step>
             <step>
  
               <para>
-              Choose <emphasis>"Use as:"</emphasis>.  Then select <emphasis>"Ext3 journaling file system"</emphasis>, or whichever filesystem you 
-              prefer. 
+              Choose <emphasis>"Use as:"</emphasis>.  Then select <emphasis>"swap area"</emphasis>, then 
+              <emphasis>"Done setting up partition"</emphasis>.
               </para>
 
             </step>
             <step>
  
               <para>
-              If you selected Ext3, then select your mount point.  You can also create multiple partitions on one RAID device or use multiple RAID
-              devices for different partitions.  As an example, if you only have one partition for choose <emphasis>"/"</emphasis> as the mount point.
+              Next, select the <emphasis>RAID1 device #1</emphasis> partition. 
               </para>
 
             </step>
             <step>
  
               <para>
-              Repeat for any additional RAID devices. 
+              Choose <emphasis>"Use as:"</emphasis>.  Then select <emphasis>"Ext3 journaling file system"</emphasis>.
+              </para>
+
+            </step>
+            <step>
+ 
+              <para>
+              Then select the <emphasis>"Mount point"</emphasis> and choose <emphasis>"/ - the root file system"</emphasis>.
+              Change any of the other options as appropriate, then select <emphasis>"Done setting up partition"</emphasis>.
               </para>
 
             </step>

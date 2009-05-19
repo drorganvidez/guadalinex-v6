@@ -5,6 +5,7 @@
     <!-- Imports -->
 	<xsl:import href="/usr/share/xml/docbook/stylesheet/nwalsh/xhtml/chunk.xsl"/>
 	<xsl:import href="ubuntu-banner.xsl"/>	
+	<xsl:import href="draft-watermark-customisation.xsl"/>
 
     <!-- Params -->
     <xsl:param name="generate.legalnotice.link" select="1"/>

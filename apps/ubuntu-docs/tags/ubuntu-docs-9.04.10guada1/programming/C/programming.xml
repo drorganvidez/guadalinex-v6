@@ -15,49 +15,48 @@
 		<title>Programming</title>
     	&legalnotice;
 	</articleinfo>
-			<para>This section contains some basic information for those wishing to use Ubuntu for writing and running their own programs.</para>
+	<para>This section contains information to help you get started writing and running your own programs.</para>
 		
-		<sect1 id="programming-learning" status="review">
-				<title>Learning how to program</title>
-				<para>Ubuntu provides a number of resources intended to help you to learn how to develop and run programs yourself. Below is a list of some resources which you may find useful.</para>
-				<sect2 id="diveintopython" status="review">
-					<title><citetitle>Dive Into Python</citetitle></title>
-					<para><citetitle>Dive Into Python</citetitle> is a book for learning how to program in Python, aimed at programmers with some previous experience.</para>
-					<itemizedlist>
-						<listitem><para><ulink url="file:///usr/share/doc/diveintopython/html/toc/index.html">Read <citetitle>Dive Into Python</citetitle></ulink></para></listitem>
-					</itemizedlist>
-				</sect2>			
-				<sect2 id="pygtk-tutorial" status="review">
-					<title>PyGTK Tutorial</title>
-						<para>PyGTK Tutorial is a tutorial on developing with the graphical toolkit often used for developing Ubuntu applications. It assumes that you have knowledge of Python but not necessarily GTK.
-						</para>
-						<procedure>
-							<step>
-								<para>Install the <application>python-gtk2-tutorial</application> package (see <ulink type="help" url="ghelp:add-applications">Add Applications</ulink>). You will need to use <application>Synaptic Package Manager</application> to install this package.
-								</para>
-							</step>
-							<step>
-								<para>To access the documentation, visit <ulink url="file:///usr/share/doc/python-gtk2-tutorial/html/index.html">python-gtk-tutorial</ulink>.
-								</para>
-							</step>
-						</procedure>
-				</sect2>
-				<sect2 id="devhelp" status="review">
-					<title>Devhelp</title>
-						<para><application>Devhelp</application> is an application to read and search all of the documentation that you install.
-						</para>
-						<procedure>
-							<step>
-								<para>Install the <application>devhelp</application> package (see <ulink type="help" url="ghelp:add-applications">Add Applications</ulink>).</para>
-							</step>
-							<step>
-								<para>Choose &devhelp;.
-								</para>
-							</step>	
+	<sect1 id="programming-learning" status="review">
+			<title>Learning how to program</title>
+			<para>Ubuntu provides a number of resources intended to help you to learn how to develop and run programs yourself. Below is a list of some resources which you may find useful.</para>
+			<sect2 id="diveintopython" status="review">
+				<title><citetitle>Dive Into Python</citetitle></title>
+				<para><citetitle>Dive Into Python</citetitle> is a book for learning how to program in Python, aimed at programmers with some previous experience.</para>
+				<itemizedlist>
+					<listitem><para><ulink url="file:///usr/share/doc/diveintopython/html/toc/index.html">Read <citetitle>Dive Into Python</citetitle></ulink></para></listitem>
+				</itemizedlist>
+			</sect2>			
+			<sect2 id="pygtk-tutorial" status="review">
+				<title>PyGTK Tutorial</title>
+					<para>PyGTK Tutorial is a tutorial on developing with the graphical toolkit often used for developing Ubuntu applications. It assumes that you have knowledge of Python but not necessarily GTK.
+					</para>
+					<procedure>
+						<step>
+							<para>Install the <application>python-gtk2-tutorial</application> package (see <ulink type="help" url="ghelp:add-applications">Add Applications</ulink>). You will need to use <application>Synaptic Package Manager</application> to install this package.
+							</para>
+						</step>
+						<step>
+							<para>To access the documentation, visit <ulink url="file:///usr/share/doc/python-gtk2-tutorial/html/index.html">python-gtk-tutorial</ulink>.
+							</para>
+						</step>
 					</procedure>
-				</sect2>	
-			</sect1>
-
+			</sect2>
+			<sect2 id="devhelp" status="review">
+				<title>Devhelp</title>
+					<para><application>Devhelp</application> is an application to read and search all of the documentation that you install.
+					</para>
+					<procedure>
+						<step>
+							<para>Install the <application>devhelp</application> package (see <ulink type="help" url="ghelp:add-applications">Add Applications</ulink>).</para>
+						</step>
+						<step>
+							<para>Choose &devhelp;.
+							</para>
+						</step>	
+				</procedure>
+			</sect2>	
+		</sect1>
             <sect1 id="build-essential" status="review">
                 <title>C and C++</title>
                 <para>Compiling C and C++ programs requires some packages that are not installed by default.</para>
@@ -96,125 +95,171 @@
             <sect1 id="java" status="review">
                 <title>Java</title>
                 <note>
-                    <para>
-                        These instructions are for <emphasis>i386</emphasis> and <emphasis>AMD64</emphasis> computers only. For <emphasis>PowerPC</emphasis> machines, see <ulink url="https://help.ubuntu.com/community/Java">Ubuntu Help Online</ulink>.
-                    </para>
+                	<para>For <emphasis>PowerPC</emphasis> machines, see <ulink url="https://help.ubuntu.com/community/Java">Ubuntu Help Online</ulink>.</para>
                 </note>
-                <procedure>
-                    <step>
-                        <para>
-                            Install <application>sun-java5-jdk</application> from the <quote>Multiverse</quote> repository (see <ulink type="help" url="ghelp:add-applications">Add Applications</ulink>). You will need to use <application>Synaptic Package Manager</application> to install these packages.</para>
-                    </step>
-                    <step>
-                        <para>Read the Java license presented. You must accept it to continue.</para>
-                    </step>
-                    <step>
-                    		<para>To get your system to use Sun Java instead of the open-source (but less functional) GIJ that is installed by default, run:
-                    			<screen>sudo update-alternatives --config java</screen>
-                    		and choose the option that has <filename>j2re1.5-sun</filename> in it.
-                    		</para>
-                    </step>
-                </procedure>
-                <para>Java 1.6 is also available, and can be installed by following the above directions, swapping all instances of 1.5 to 1.6</para>
-               
-               <sect2 id="eclipse-ide" status="review">
-               		<title>Eclipse IDE for Java</title>
-	               <para>The <application>Eclipse</application> platform provides a complete, extensible Java development environment.</para>
-        	       <procedure>
+                <para>Java, developed by Sun Microsystems, is and interpreted language which is compiled to bytecode. This bytecode can be run on any Java Virtual Machine, making Java a highly portable language. It is object oriented, has similar syntax to C and is designed to be secure.</para>
+                <sect2 id="java-installing" status="writing">
+                	<title>Installation</title>
+                	<para>Ubuntu supports both Java 1.5  and 1.6 in both Sun and Open Source flavors.</para>
+                	<sect3 id="java-installing-15" status="writing">
+						<title>JDK 1.5</title>
+						<procedure>
+							<step>
+								<para>
+									Install <application>sun-java5-jdk</application> from the <quote>Multiverse</quote> repository (see <ulink type="help" url="ghelp:add-applications">Add Applications</ulink>). You will need to use <application>Synaptic Package Manager</application> to install these packages.</para>
+							</step>
+							<step>
+								<para>Read the Java license presented. You must accept it to continue.</para>
+							</step>
+							<step>
+									<para>To get your system to use Sun Java instead of the open-source (but less functional) GIJ that is installed by default, run:
+<screen>sudo update-alternatives --config java</screen>
+									and choose the option that has <filename>j2re1.5-sun</filename> in it.
+									</para>
+							</step>
+						</procedure>
+					</sect3>
+					<sect3 id="java-installing-16" status="writing">
+						<title>JDK 1.6</title>                
+						<para>Java 1.6 is also available, and can be installed by following the above directions, swapping all instances of 1.5 to 1.6</para>
+						<procedure>
+							<step>
+								<para>
+									Install <application>sun-java5-jdk</application> from the <quote>Multiverse</quote> repository (see <ulink type="help" url="ghelp:add-applications">Add Applications</ulink>). You will need to use <application>Synaptic Package Manager</application> to install these packages.</para>
+							</step>
+							<step>
+								<para>Read the Java license presented. You must accept it to continue.</para>
+							</step>
+							<step>
+									<para>To get your system to use Sun Java instead of the open-source (but less functional) GIJ that is installed by default, run:
+<screen>sudo update-alternatives --config java</screen>
+									and choose the option that has <filename>j2re1.6-sun</filename> in it.
+									</para>
+							</step>
+						</procedure>      
+					</sect3>
+                </sect2>
+                <sect2 id="java-hello-world" status="writing">
+                	<title>Hello World</title>
+                	<para>Enter the following code into a text editior and save it as "Hello.java":</para>
+<screen>public class Hello {
+    public static void main(String[] args) {
+        System.out.println("Hello world");
+    }
+}
+</screen>
+					<para>Open a terminal and run your code by typing:<screen>javac Hello.java; java Hello</screen></para>
+                </sect2>        
+                <sect2 id="java-ide" status="writing">
+                	<title>Integrated Development Environments</title> 
+					<sect3 id="java-ide-eclipse" status="review">
+						<title>Eclipse IDE for Java</title>
+						<para>The <application>Eclipse</application> platform provides a complete, extensible Java development environment.</para>
+						<procedure>
+							<step>
+								<para>Install the <application>eclipse</application> package from the <quote>Universe</quote> repository (see <ulink type="help" url="ghelp:add-applications">Add Applications</ulink>).</para>
+							</step>
+							<step>
+								<para>Press &eclipse-ide; to start using <application>Eclipse</application>.</para>
+							</step>
+					   </procedure>
+					</sect3>
+					<sect3 id="java-ide-netbeans" status="review">
+						<title>Netbeans</title>
+						<para>The <application>Netbeans</application> platform provides a complete, extensible Java development environment.</para>
+						<procedure>
+							<step>
+								<para>Install the <application>Netbeans</application> package from the <quote>Universe</quote> repository (see <ulink type="help" url="ghelp:add-applications">Add Applications</ulink>).</para>
+							</step>
+                		</procedure>
+                	</sect3>
+                </sect2> 
+	</sect1>
+			
+	<sect1 id="programming-otherlanguages" status="review">
+		<title>Other programming languages</title>
+		<para>There are many programming tools available in Ubuntu for many different programming languages. This section provides a short list of some of the more commonly-used languages.</para>
+		
+		<sect2 id="mono" status="review">
+			<title>Mono .NET development environment</title>
+			<para><application>Mono</application> is an implementation of the <application>.NET</application> stack, which allows you to write cross-platform programs in a number of different languages, including C#, Java, Visual Basic .NET and JavaScript. More information about <application>Mono</application> is available from the <ulink url='http://www.mono-project.com/'>Mono project homepage</ulink>.</para>
+			<procedure>
 				<step>
-					<para>Install the <application>eclipse</application> package from the <quote>Universe</quote> repository (see <ulink type="help" url="ghelp:add-applications">Add Applications</ulink>).</para>
+					<para>Install the <application>monodevelop</application> and <application>monodoc</application> packages from the <quote>Universe</quote> repository.</para>
 				</step>
 				<step>
-					<para>Press &eclipse-ide; to start using <application>Eclipse</application>.</para>
+					<para>Press &monodevelop; to start the <application>MonoDevelop</application> IDE.</para>
 				</step>
-        	       </procedure>
+				<step>
+					<para>Press &monodoc; to start the <application>Monodoc</application> documentation browser.</para>
+				</step>
+			</procedure>
 		</sect2>
-            </sect1>
+		
+		<sect2 id="basic" status="review">
+			<title>Gambas graphical BASIC language</title>
+			<para><application>Gambas</application> is a <application>Visual Basic</application>-like development environment, which allows you to rapidly design and build graphical applications using the easy-to-learn BASIC language.</para>
+			<procedure>
+				<step>
+					<para>Install the <application>gambas</application> package from the <quote>Universe</quote> repository.</para>
+				</step>
+				<step>
+					<para>Press &gambas; to start the <application>Gambas</application> IDE.</para>
+				</step>
+			</procedure>
+			<para>A set of example applications are provided with <application>Gambas</application>, which you can use to help you to learn the language. To view an example application, start <application>Gambas</application>, press <guibutton>Examples</guibutton> on the <guilabel>Welcome to Gambas!</guilabel> screen and select the example which you would like to view.</para>
+		</sect2>
+	</sect1>
+	
+	<sect1 id="programming-devtools" status="review">
+		<title>Development Tools</title>
+		<para>There are many development tools available for Ubuntu. A list of some of these is included below.</para>
+			<sect2 id="ides-and-editors" status="review">
+				<title>Integrated Development Environments (IDEs) and source-code editors</title>
+				<itemizedlist>
+					<listitem><para><ulink url="http://anjuta.sourceforge.net/">Anjuta</ulink> is an Integrated Development Environment (IDE) for C and C++.</para>
+						</listitem>
+					<listitem><para><ulink url="http://bluefish.openoffice.nl/index.html">Bluefish</ulink> is a powerful editor for experienced web designers and programmers.</para>
+						</listitem>
+					<listitem><para><ulink url="http://www.eclipse.org/">Eclipse</ulink> is an IDE for Java and other programming languages. It forms the basis for closed-source programs such as JBuilder.</para>
+						</listitem>
+					<listitem><para><ulink url="http://www.die-offenbachs.de/eric/">Eric</ulink> is a fully featured Python and Ruby IDE.</para>
+						</listitem>
+					<listitem><para><ulink url="http://geany.uvena.de/">Geany</ulink> is a general-purpose IDE which can handle manydifferent programming and markup languages.</para>
+						</listitem>
+					<listitem><para><ulink url="http://www.python.org/idle/">IDLE</ulink> is the Python IDE built with the Tkinter GUI toolkit.</para>
+						</listitem>
+					<listitem><para><ulink url="http://www.kdevelop.org/">KDevelop</ulink> is a IDE for KDE which supports many programming languages.</para>
+						</listitem>
+					<listitem><para><ulink url="http://www.monodevelop.com/Main_Page">MonoDevelop</ulink> is an IDE for writing Mono/.NET applications in C# and other languages.</para>
+						</listitem>
+					<listitem><para><ulink url="http://www.netbeans.org/index.html">NetBeans</ulink> is a Java IDE that features support for CVS and a form builder.</para>
+						</listitem>
+					<listitem><para><ulink url="http://quanta.kdewebdev.org/">Quanta</ulink> is a powerful IDE for web development and features support for DocBook editing.</para>
+						</listitem>
+				</itemizedlist>
+			</sect2>
 			
-			<sect1 id="programming-otherlanguages" status="review">
-				<title>Other programming languages</title>
-				<para>There are many programming tools available in Ubuntu for many different programming languages. This section provides a short list of some of the more commonly-used languages.</para>
+			<sect2 id="source-code-management" status="review">
+				<title>Source-code management systems</title>
+				<itemizedlist>
 				
-				<sect2 id="mono" status="review">
-					<title>Mono .NET development environment</title>
-					<para><application>Mono</application> is an implementation of the <application>.NET</application> stack, which allows you to write cross-platform programs in a number of different languages, including C#, Java, Visual Basic .NET and JavaScript. More information about <application>Mono</application> is available from the <ulink url='http://www.mono-project.com/'>Mono project homepage</ulink>.</para>
-					<procedure>
-						<step>
-							<para>Install the <application>monodevelop</application> and <application>monodoc</application> packages from the <quote>Universe</quote> repository.</para>
-						</step>
-						<step>
-							<para>Press &monodevelop; to start the <application>MonoDevelop</application> IDE.</para>
-						</step>
-						<step>
-							<para>Press &monodoc; to start the <application>Monodoc</application> documentation browser.</para>
-						</step>
-					</procedure>
-				</sect2>
-				
-				<sect2 id="basic" status="review">
-					<title>Gambas graphical BASIC language</title>
-					<para><application>Gambas</application> is a <application>Visual Basic</application>-like development environment, which allows you to rapidly design and build graphical applications using the easy-to-learn BASIC language.</para>
-					<procedure>
-						<step>
-							<para>Install the <application>gambas</application> package from the <quote>Universe</quote> repository.</para>
-						</step>
-						<step>
-							<para>Press &gambas; to start the <application>Gambas</application> IDE.</para>
-						</step>
-					</procedure>
-					<para>A set of example applications are provided with <application>Gambas</application>, which you can use to help you to learn the language. To view an example application, start <application>Gambas</application>, press <guibutton>Examples</guibutton> on the <guilabel>Welcome to Gambas!</guilabel> screen and select the example which you would like to view.</para>
-				</sect2>
-			</sect1>
+					<listitem><para><ulink url="http://www.bazaar-ng.org/">Bazaar-NG</ulink> is a decentralised version control system used for Ubuntu development.</para>
+						</listitem>
+					<listitem><para><ulink url="http://www.nongnu.org/cvs/">CVS</ulink> is an advanced version control system used by many open-source projects.</para>
+						</listitem>
+					<listitem><para><ulink url="http://subversion.tigris.org/">Subversion</ulink> (SVN) is a powerful version control system intended as a replacement for CVS.</para>
+						</listitem>
+				</itemizedlist>
+			</sect2>
 			
-			<sect1 id="programming-devtools" status="review">
-				<title>Development Tools</title>
-				<para>There are many development tools available for Ubuntu. A list of some of these is included below.</para>
-					<sect2 id="ides-and-editors" status="review">
-						<title>Integrated Development Environments (IDEs) and source-code editors</title>
-						<itemizedlist>
-							<listitem><para><ulink url="http://anjuta.sourceforge.net/">Anjuta</ulink> is an Integrated Development Environment (IDE) for C and C++.</para>
-								</listitem>
-							<listitem><para><ulink url="http://bluefish.openoffice.nl/index.html">Bluefish</ulink> is a powerful editor for experienced web designers and programmers.</para>
-								</listitem>
-							<listitem><para><ulink url="http://www.eclipse.org/">Eclipse</ulink> is an IDE for Java and other programming languages. It forms the basis for closed-source programs such as JBuilder.</para>
-								</listitem>
-							<listitem><para><ulink url="http://www.die-offenbachs.de/eric/">Eric</ulink> is a fully featured Python and Ruby IDE.</para>
-								</listitem>
-							<listitem><para><ulink url="http://geany.uvena.de/">Geany</ulink> is a general-purpose IDE which can handle manydifferent programming and markup languages.</para>
-								</listitem>
-							<listitem><para><ulink url="http://www.python.org/idle/">IDLE</ulink> is the Python IDE built with the Tkinter GUI toolkit.</para>
-								</listitem>
-							<listitem><para><ulink url="http://www.kdevelop.org/">KDevelop</ulink> is a IDE for KDE which supports many programming languages.</para>
-								</listitem>
-							<listitem><para><ulink url="http://www.monodevelop.com/Main_Page">MonoDevelop</ulink> is an IDE for writing Mono/.NET applications in C# and other languages.</para>
-								</listitem>
-							<listitem><para><ulink url="http://www.netbeans.org/index.html">NetBeans</ulink> is a Java IDE that features support for CVS and a form builder.</para>
-								</listitem>
-							<listitem><para><ulink url="http://quanta.kdewebdev.org/">Quanta</ulink> is a powerful IDE for web development and features support for DocBook editing.</para>
-								</listitem>
-						</itemizedlist>
-					</sect2>
-					
-					<sect2 id="source-code-management" status="review">
-						<title>Source-code management systems</title>
-						<itemizedlist>
-						
-							<listitem><para><ulink url="http://www.bazaar-ng.org/">Bazaar-NG</ulink> is a decentralised version control system used for Ubuntu development.</para>
-								</listitem>
-							<listitem><para><ulink url="http://www.nongnu.org/cvs/">CVS</ulink> is an advanced version control system used by many open-source projects.</para>
-								</listitem>
-							<listitem><para><ulink url="http://subversion.tigris.org/">Subversion</ulink> (SVN) is a powerful version control system intended as a replacement for CVS.</para>
-								</listitem>
-						</itemizedlist>
-					</sect2>
-					
-					<sect2 id="other-programming-tools" status="review">
-						<title>Other tools</title>
-						<itemizedlist>
-							<listitem><para><ulink url="http://glade.gnome.org/">Glade</ulink> is a user interface designer for building GNOME and GTK applications.</para>
-								</listitem>
-						</itemizedlist>
-					</sect2>
-			</sect1>	
-			
-			</article>
+			<sect2 id="other-programming-tools" status="review">
+				<title>Other tools</title>
+				<itemizedlist>
+					<listitem><para><ulink url="http://glade.gnome.org/">Glade</ulink> is a user interface designer for building GNOME and GTK applications.</para>
+						</listitem>
+				</itemizedlist>
+			</sect2>
+	</sect1>	
+	
+</article>

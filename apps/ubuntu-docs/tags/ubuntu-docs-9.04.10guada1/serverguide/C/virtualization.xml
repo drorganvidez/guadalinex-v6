@@ -878,12 +878,12 @@ swap 4000
           <title>OpenSSH</title>
 
           <para>
-          Another convenient tool that we want to have on our appliance is OpenSSH, as it will provide our admins to access 
-          to access the appliance remotely. However, pushing in the wild an appliance with a pre-installed OpenSSH server 
-          is a big security risk as all these server will share the same secret key, making it very easy for hackers to target 
-          our appliance with all the tools they need to crack it open in a breeze. As for the user password, we will instead 
-          rely on a script that will install OpenSSH the first time a user logs in so that the key generated will be different 
-          for each appliance. For this we'll use a <emphasis>--firstboot</emphasis> script, as it does not need any user interaction. 
+          Another convenient tool that we want to have on our appliance is OpenSSH, as it will allows our admins to access 
+          the appliance remotely. However, pushing in the wild an appliance with a pre-installed OpenSSH server is a big security
+          risk as all these server will share the same secret key, making it very easy for hackers to target our appliance with all
+          the tools they need to crack it open in a breeze. As for the user password, we will instead rely on a script that will
+          install OpenSSH the first time a user logs in so that the key generated will be different for each appliance. For this
+          we'll use a <emphasis>--firstboot</emphasis> script, as it does not need any user interaction.
           </para>
 
         </sect4>

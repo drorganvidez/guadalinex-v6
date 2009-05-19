@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2009-03-01 20:28+0000\n"
+"POT-Creation-Date: 2009-03-08 14:02+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -57,7 +57,7 @@ msgstr ""
 msgid "Enter your <guilabel>Network Key</guilabel>."
 msgstr ""
 
-#: internet/C/wireless.xml:29(para) internet/C/wireless.xml:39(para) internet/C/wireless.xml:52(para) internet/C/connecttoserver.xml:29(para) internet/C/connecttoserver.xml:43(para) internet/C/connecttoserver.xml:57(para) internet/C/connecttoserver.xml:70(para) internet/C/connecttoserver.xml:82(para) 
+#: internet/C/wireless.xml:29(para) internet/C/wireless.xml:39(para) internet/C/wireless.xml:52(para) internet/C/connecttoserver.xml:29(para) internet/C/connecttoserver.xml:43(para) internet/C/connecttoserver.xml:57(para) internet/C/connecttoserver.xml:70(para) internet/C/connecttoserver.xml:82(para) internet/C/connecting.xml:63(para) 
 msgid "Click <guibutton>Connect</guibutton>."
 msgstr ""
 
@@ -1290,7 +1290,7 @@ msgstr ""
 msgid "Uncheck <guilabel>Enable Networking</guilabel>."
 msgstr ""
 
-#: internet/C/disconnecting.xml:28(title) internet/C/connecting.xml:31(title) internet/C/basics.xml:28(title) internet/C/basics.xml:58(title) 
+#: internet/C/disconnecting.xml:28(title) internet/C/connecting.xml:50(title) internet/C/basics.xml:28(title) internet/C/basics.xml:58(title) 
 msgid "Wireless"
 msgstr ""
 
@@ -1414,135 +1414,171 @@ msgstr ""
 msgid "Wired (LAN)"
 msgstr ""
 
-#: internet/C/connecting.xml:22(para) internet/C/connecting.xml:32(para) 
-msgid "Wired network connections are selected as default when connected."
+#: internet/C/connecting.xml:22(para) 
+msgid "DHCP connections (where settings are concfigured by your router) are automatically configured. Wired network connections are selected as default when connected."
 msgstr ""
 
-#: internet/C/connecting.xml:24(para) 
+#: internet/C/connecting.xml:25(title) 
+msgid "DHCP Connections"
+msgstr ""
+
+#: internet/C/connecting.xml:26(para) 
+msgid "Most routers use DHCP to allocate IP addresses."
+msgstr ""
+
+#: internet/C/connecting.xml:28(para) 
 msgid "Click the NetworkManager icon in the system notification area."
 msgstr ""
 
-#: internet/C/connecting.xml:25(para) 
+#: internet/C/connecting.xml:29(para) 
 msgid "Under <guilabel>Wired Network</guilabel> click the <guilabel>Radio Button</guilabel> next to the network you want to connect to."
 msgstr ""
 
-#: internet/C/connecting.xml:34(para) 
-msgid "Click the <guiicon>NetworkManager</guiicon> icon in the system notification area."
+#: internet/C/connecting.xml:34(title) 
+msgid "Static Connections"
 msgstr ""
 
 #: internet/C/connecting.xml:35(para) 
-msgid "Under <guilabel>Wireless Network</guilabel> click the radio button next to the network you want to connect to."
+msgid "If you don't use DHCP then you can configure a static connection."
+msgstr ""
+
+#: internet/C/connecting.xml:37(para) 
+msgid "Right click the NetworkManager icon in the system notification area."
 msgstr ""
 
 #: internet/C/connecting.xml:38(para) 
-msgid "If you have selected the network previously, the previous supplied details are used to connect."
+msgid "Click <guilabel>Edit Connections</guilabel>."
 msgstr ""
 
 #: internet/C/connecting.xml:39(para) 
-msgid "New connections, will present a dialog box and in most circumstances will detect the required security type."
+msgid "Click the <guilabel>Wired</guilabel> tab."
 msgstr ""
 
-#: internet/C/connecting.xml:42(title) 
-msgid "WEP Security"
+#: internet/C/connecting.xml:40(para) 
+msgid "Select the connection and click <guibutton>Edit</guibutton>."
 msgstr ""
 
-#: internet/C/connecting.xml:44(para) internet/C/connecting.xml:74(para) 
-msgid "Select the WEP type from the <guilabel>Wireless Security</guilabel> drop down."
+#: internet/C/connecting.xml:41(para) 
+msgid "Click the <guilabel>IPv4</guilabel> tab."
 msgstr ""
 
-#: internet/C/connecting.xml:45(para) 
-msgid "Enter the <guilabel>Username</guilabel> and <guilabel>Password</guilabel>. Ticking the <guilabel>Show Password</guilabel> will display the key."
+#: internet/C/connecting.xml:42(para) 
+msgid "Choose <guilabel>Manual</guilabel> from the <guilabel>Method</guilabel> drop down."
 msgstr ""
 
-#: internet/C/connecting.xml:46(para) internet/C/connecting.xml:56(para) internet/C/connecting.xml:68(para) internet/C/connecting.xml:76(para) 
-msgid "Click the <guibutton>Connect</guibutton>."
+#: internet/C/connecting.xml:43(para) 
+msgid "Enter your details and click <guibutton>OK</guibutton>."
 msgstr ""
 
-#: internet/C/connecting.xml:50(title) 
-msgid "LEAP Security"
+#: internet/C/connecting.xml:44(para) 
+msgid "Click <guibutton>Close</guibutton>."
 msgstr ""
 
-#: internet/C/connecting.xml:52(para) 
-msgid "Select LEAP from the <guilabel>Wireless Security</guilabel> drop down."
+#: internet/C/connecting.xml:51(para) 
+msgid "To connect to a wireless network:"
 msgstr ""
 
 #: internet/C/connecting.xml:53(para) 
-msgid "Enter the key or passphrase. Ticking the <guilabel>Show Key</guilabel> will display the key."
+msgid "Ensure that your wireless device is turned on."
 msgstr ""
 
 #: internet/C/connecting.xml:54(para) 
-msgid "Select the <guilabel>WEP index</guilabel> drop down, the default is \"1\"."
+msgid "Click the <guiicon>NetworkManager</guiicon> icon in the system notification area."
 msgstr ""
 
 #: internet/C/connecting.xml:55(para) 
-msgid "Select the authentication type from the <guilabel>Authentication</guilabel>."
+msgid "Under <guilabel>Wireless Network</guilabel> click the radio button next to the network you want to connect to."
 msgstr ""
 
-#: internet/C/connecting.xml:60(title) 
-msgid "802.1x"
+#: internet/C/connecting.xml:58(para) 
+msgid "If you have connected to the network previously, Ubuntu will automatically connect to the network where it is available."
+msgstr ""
+
+#: internet/C/connecting.xml:59(para) 
+msgid "If you are connecting to a network for the first time, security details may be needed. If so, a dialog box will open. Enter your security details as follows."
+msgstr ""
+
+#: internet/C/connecting.xml:61(para) 
+msgid "In most cases the security type will be detected automatically. If not, select the security type from the <guilabel>Wireless Security</guilabel> drop-down box. This will depend on how the wireless network is set up. Examples of security types are WEP, WPA and LEAP."
 msgstr ""
 
 #: internet/C/connecting.xml:62(para) 
-msgid "Select Dynamic WEP from the <guilabel>Wireless Security</guilabel> drop down."
-msgstr ""
-
-#: internet/C/connecting.xml:63(para) 
-msgid "Select the <guilabel>Authentication</guilabel> drop down."
-msgstr ""
-
-#: internet/C/connecting.xml:64(para) 
-msgid "Choose a User Ceritificate by clicking the <guibutton>User Ceritificate</guibutton> browse button. Navigate to the certificate and click <guibutton>Open</guibutton>."
-msgstr ""
-
-#: internet/C/connecting.xml:65(para) 
-msgid "Choose a CA Ceritificate by clicking the <guibutton>CA Ceritificate</guibutton> browse button. Navigate to the certificate and click <guibutton>Open</guibutton>."
+msgid "Enter the password, key or other authentication details as appropriate."
 msgstr ""
 
 #: internet/C/connecting.xml:66(para) 
-msgid "Choose a Private Key by clicking the <guibutton>Private Key</guibutton> browse button. Navigate to the certificate and click <guibutton>Open</guibutton>."
+msgid "If you have a wired network connection as well as an wireless connection, the wired connection will be used by default."
 msgstr ""
 
-#: internet/C/connecting.xml:67(para) 
-msgid "Enter the private key password. Ticking the <guilabel>Show Key</guilabel> will display the key."
-msgstr ""
-
-#: internet/C/connecting.xml:72(title) 
-msgid "WPA and WPA2 Personal Security"
-msgstr ""
-
-#: internet/C/connecting.xml:75(para) 
-msgid "Enter the password. Ticking the <guilabel>Show Password</guilabel> will display the key."
-msgstr ""
-
-#: internet/C/connecting.xml:82(title) internet/C/basics.xml:33(title) 
+#: internet/C/connecting.xml:72(title) internet/C/basics.xml:33(title) 
 msgid "Mobile Broadband"
 msgstr ""
 
-#: internet/C/connecting.xml:84(para) internet/C/connecting.xml:101(para) 
-msgid "Right click the <guiicon>NetworkManager</guiicon> icon and click <guilabel>Edit connections...</guilabel>"
+#: internet/C/connecting.xml:73(para) 
+msgid "<emphasis>Mobile Broadband</emphasis> means any kind of high speed internet connection which is provided by an external device such as a 3G usb stick or mobile phone with built-in HSPA/UMTS/GPRS data connection. Some laptops have recently been produced with mobile broadband devices already inside them."
+msgstr ""
+
+#: internet/C/connecting.xml:74(para) 
+msgid "Most Mobile Broadband devices should be recognised automatically when you connect them to your computer. Ubuntu will prompt you to configure the device."
+msgstr ""
+
+#: internet/C/connecting.xml:76(para) 
+msgid "The <guilabel>New Mobile Broadband Connection</guilabel> Wizard will open automatically when you connect the device."
+msgstr ""
+
+#: internet/C/connecting.xml:77(para) 
+msgid "Click <guibutton>Forward</guibutton> and insert your details, including the country where your Mobile Broadband device was issued, the network provider and type of connection (for example, <emphasis>Contract</emphasis> or <emphasis>pre-pay</emphasis>)."
+msgstr ""
+
+#: internet/C/connecting.xml:78(para) 
+msgid "Give your connection a name (it is up to you what name you choose) and click <guibutton>Apply</guibutton>."
+msgstr ""
+
+#: internet/C/connecting.xml:79(para) 
+msgid "Your connection is now ready to use. To connect, left click the <guiicon>NetworkManager</guiicon> icon in the top right of the panel and select your new connection."
+msgstr ""
+
+#: internet/C/connecting.xml:80(para) 
+msgid "To disconnect, left click the <guiicon>NetworkManager</guiicon> icon in the top right of the panel and click <guibutton>Disconnect</guibutton>."
+msgstr ""
+
+#: internet/C/connecting.xml:82(para) 
+msgid "If you are not prompted to configure the device when you connect it, it may still be recognised by Ubuntu. In such cases you can add the connection manually."
+msgstr ""
+
+#: internet/C/connecting.xml:84(para) 
+msgid "Right click the <guiicon>NetworkManager</guiicon> icon in the top right of the panel and click <guilabel>Edit Connections...</guilabel>"
 msgstr ""
 
 #: internet/C/connecting.xml:85(para) 
-msgid "Click <guilabel>Mobile Broadband</guilabel>."
+msgid "Select the <guilabel>Mobile Broadband</guilabel> tab."
 msgstr ""
 
-#: internet/C/connecting.xml:86(para) internet/C/connecting.xml:94(para) internet/C/connecting.xml:103(para) 
+#: internet/C/connecting.xml:86(para) internet/C/connecting.xml:95(para) internet/C/connecting.xml:104(para) 
 msgid "Click <guibutton>Add</guibutton>."
 msgstr ""
 
-#: internet/C/connecting.xml:91(title) internet/C/basics.xml:38(title) 
+#: internet/C/connecting.xml:87(para) 
+msgid "This should open the <guilabel>New Mobile Broadband Connection</guilabel> Wizard. Enter your details as described above."
+msgstr ""
+
+#: internet/C/connecting.xml:92(title) internet/C/basics.xml:38(title) 
 msgid "Virtual Private Networks"
 msgstr ""
 
-#: internet/C/connecting.xml:93(para) 
+#: internet/C/connecting.xml:94(para) 
 msgid "Left click the <guiicon>NetworkManager</guiicon> icon and click <guilabel>Configure VPN...</guilabel> from the <guilabel>VPN Connections</guilabel> option."
 msgstr ""
 
-#: internet/C/connecting.xml:99(title) internet/C/basics.xml:43(title) 
+#: internet/C/connecting.xml:100(title) internet/C/basics.xml:43(title) 
 msgid "DSL"
 msgstr ""
 
 #: internet/C/connecting.xml:102(para) 
+msgid "Right click the <guiicon>NetworkManager</guiicon> icon and click <guilabel>Edit connections...</guilabel>"
+msgstr ""
+
+#: internet/C/connecting.xml:103(para) 
 msgid "Click <guilabel>DSL</guilabel>."
 msgstr ""
 

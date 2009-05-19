@@ -68,14 +68,16 @@
             </para>
 
 <programlisting>
-tcp        0      0 localhost.localdomain:mysql           *:* LISTEN -
+tcp        0      0 localhost:mysql         *:*                     LISTEN      2556/mysqld
 </programlisting>
-	<para>If the server is not running correctly, you can type the following command to start it:</para>
-            <para>
+
+  	    <para>
+            If the server is not running correctly, you can type the following command to start it:
+            </para>
+            
 <screen>
 <command>sudo /etc/init.d/mysql restart</command>
 </screen>
-        </para>
 
         </sect2>
         <sect2 id="mysql-configuration" status="review">
@@ -101,6 +103,20 @@ bind-address            = 192.168.0.5
 <screen>
 <command>sudo /etc/init.d/mysql restart</command>
 </screen>
+
+            <para>
+            If you would like to change the <application>MySQL</application> <emphasis>root</emphasis> password, 
+            in a terminal enter:
+            </para>
+
+<screen>
+<command>sudo dpkg-reconfigure mysql-server-5.0</command>
+</screen>
+
+            <para>
+            The <application>mysql</application> daemon will be stopped, and you will be prompted to enter a new password.
+            </para>
+
         </sect2>
 	<sect2 id="mysql-resources" status="review">
 	  <title>Resources</title>

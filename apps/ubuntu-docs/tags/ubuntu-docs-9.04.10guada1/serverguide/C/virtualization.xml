@@ -394,8 +394,9 @@
     <application>ubuntu-vm-builder</application> provides a method to quickly create a clean testing environment, a way to automate the 
     virtual machine installation process, and for software developers, the ability to integrate the creation of a virtual machine into 
     the build process of an application.  If using a local mirror the virtual machine creation process can take less than two minutes 
-    from start to finish.
-    </para>
+    from start to finish.  By default <application>ubuntu-vm-builder</application> uses <application>KVM</application> as the virtualization
+    technology, but <application>Xen</application> virtual machines can also be created.
+    </para>     
 
     <para>
     To create a custom virtual machine, enter the following:
@@ -408,6 +409,7 @@
     <para>
     The above command will create a KVM image adding the <application>vim</application> package to the virtual machine.
     The default virtual machine image is <application>KVM</application>, but vmw6, vmserver, vbox, and qemu image options are also available.
+    Also, if you would like to create a Xen VM replace the <emphasis>kvm</emphasis> option with <emphasis>xen</emphasis>.
     </para>
 
     <para>

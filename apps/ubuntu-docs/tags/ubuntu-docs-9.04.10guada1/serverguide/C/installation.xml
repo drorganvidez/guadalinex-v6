@@ -786,6 +786,19 @@ unused devices: &lt;none&gt;</computeroutput>
           Press <emphasis>Ctrl+c</emphasis> to stop the <application>watch</application> command.
           </para>
 
+          <para>
+          If you do need to replace a faulty drive, after the drive has been replaced and synced, <application>grub</application> will need to be 
+          installed.  To install <application>grub</application> on the new drive, enter the following:
+          </para>
+
+<screen>
+<command>sudo grub-install /dev/md0</command>
+</screen>
+
+          <para>
+          Replace <filename>/dev/md0</filename> with the appropriate array device name.
+          </para>
+
         </sect3>
         <sect3 id="raid-resources" status="review">
           <title>Resources</title>

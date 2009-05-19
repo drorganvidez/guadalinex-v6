@@ -19,7 +19,7 @@
 	<!--Navigation Graphics-->
 	<xsl:param name="navig.graphics" select="1"/>
 	<xsl:param name="navig.graphics.path" select="'../../navig/'"/>
-	<xsl:param name="navig.graphics.extension" select="'.gif'"/> 
+	<xsl:param name="navig.graphics.extension" select="'.png'"/> 
 	<xsl:param name="navig.showtitles" select="1"/>
 	
 	<!--Admon Graphics--> 

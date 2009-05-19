@@ -24,18 +24,27 @@
 		<procedure>
 			<step>
 				<para>Open &networking;.</para>
-						   </step>
+			</step>
 			<step>
-				<para>Go to the <guilabel>Connections</guilabel> tab and click the connection you wish to use to select it.</para>
+				<para>Press <guibutton>Unlock</guibutton>.</para>
+			</step>
+			<step>
+				<para>Enter your administrative password and press <guibutton>Authenticate</guibutton>.</para>
+			</step>
+			<step>
+				<para>Go to the <guilabel>Connections</guilabel> tab and select the connection you wish to use.</para>
 		</step>
 			<step>
-				<para>Press <guibutton>Properties</guibutton> to change any settings.</para>
+				<para>Press <guibutton>Properties</guibutton>.</para>
 			</step>
 			<step>
-				<para>If your ISP or network administrator has given you an <emphasis>IP address</emphasis>, set <guilabel>Configuration</guilabel> to <guilabel>Static IP address</guilabel>, then enter the address in the <guilabel>IP address</guilabel> field and click <guibutton>OK</guibutton>. Otherwise, set <guilabel>Configuration</guilabel> to <guilabel>Automatic configuration (DHCP)</guilabel> and click <guibutton>OK</guibutton>.</para>
+				<para>If your ISP or network administrator has given you a <emphasis>static IP address</emphasis>, <emphasis>subnet mask</emphasis>, and <emphasis>gateway address</emphasis>, set <guilabel>Configuration</guilabel> to <guilabel>Static IP address</guilabel>. Enter the IP address in the <guilabel>IP address</guilabel> field. Enter the provided subnet mask and gateway address in the <guilabel>Subnet mask</guilabel> and <guilabel>Gateway address</guilabel> fields. Press the <guilabel>OK</guilabel> button. </para>
 			</step>
 			<step>
-				<para>Tick the box next to your connection to enable it.</para>
+				<para>If you were not provided with network information, set <guilabel>Configuration</guilabel> to <guilabel>Automatic configuration (DHCP)</guilabel> and press the <guibutton>OK</guibutton> button.</para>
+			</step>
+			<step>
+				<para>Select the box next to your connection to enable it.</para>
 			</step>
 		</procedure>
 	</sect1>
@@ -46,13 +55,13 @@
 
 		<sect2 id="networking-enable-nm" status="review">
 			<title>Use Network Manager to connect to a network</title>
-			<para>If your network connection is managed by <application>Network Manager</application> (as most are), the connection should be enabled automatically.</para>
+			<para>If your network connection is managed by <application>Network Manager</application> the connection should be enabled automatically.</para>
 			<para>If the connection is not enabled automatically:</para>
 			<orderedlist>
 				<listitem><para>Find the Network Manager icon in the notification area. It should look like a small signal strength indicator or a computer monitor and will probably be close to the clock</para></listitem>
-				<listitem><para>Right-click the icon and ensure that <guilabel>Enable Networking</guilabel> is ticked</para></listitem>
-				<listitem><para>If you have a wireless network connection, also ensure that <guilabel>Enable Wireless</guilabel> is ticked</para></listitem>
-				<listitem><para>Left-click once on the Network Manager icon and then click on the network you want to connect to</para></listitem>
+				<listitem><para>Right-click the icon and ensure that <guilabel>Enable Networking</guilabel> is selected in the popup menu.</para></listitem>
+				<listitem><para>If you have a wireless network connection, make sure that <guilabel>Enable Wireless</guilabel> is selected.</para></listitem>
+				<listitem><para>Left-click the Network Manager icon and then click on the network you want to connect to</para></listitem>
 				<listitem><para>After a short period you should receive a message which says <guilabel>Connection Established</guilabel></para></listitem>
 				<listitem><para>You should now be connected to a network.</para></listitem>
 			</orderedlist>
@@ -68,15 +77,15 @@
 		
 		<sect2 id="networking-enable-ifup" status="review">
 			<title>Use the ifup command to connect to a network</title>
-			<para><application>ifup</application> is a command-line tool for enabling network connections.</para>
+			<para><application>Ifup</application> is a command-line tool for enabling network connections.</para>
 			<para>To enable a network connection:</para>
 			<orderedlist>
-				<listitem><para>Press &terminal; to open a Terminal</para></listitem>
-				<listitem><para>Type <userinput>sudo ifdown eth1</userinput> in the Terminal and press <keycap>Return</keycap>, replacing <emphasis>eth1</emphasis> with the name of your network interface if it is different</para></listitem>
-				<listitem><para>Enter your password if prompted</para></listitem>
-				<listitem><para>Type <userinput>sudo ifup eth1</userinput> in the Terminal and press <keycap>Return</keycap>, again replacing <emphasis>eth1</emphasis> with the name of your network interface</para></listitem>
+				<listitem><para>Press &terminal; to open a terminal.</para></listitem>
+				<listitem><para>Type <command>sudo ifdown eth1</command> in the terminal and press <keycap>Return</keycap>. Replace <emphasis>eth1</emphasis> with the name of your network interface if it is different.</para></listitem>
+				<listitem><para>Enter your password if prompted.</para></listitem>
+				<listitem><para>Type <command>sudo ifup eth1</command> in the terminal and press <keycap>Return</keycap>, again replacing <emphasis>eth1</emphasis> with the name of your network interface.</para></listitem>
 				<listitem>
-					<para>If you have connected successfully, you should see a message similar to the following (the numbers may be different):</para>
+					<para>If you have connected successfully, you should see a message similar to the following:</para>
 					<screen>DHCPACK from 192.168.2.1
 bound to 192.168.2.4 -- renewal in 536349522 seconds.</screen>
 				</listitem>
@@ -92,9 +101,9 @@ bound to 192.168.2.4 -- renewal in 536349522 seconds.</screen>
 			<title>Disconnecting using Network Manager</title>
 			<para>It is likely that <application>Network Manager</application> is running your network connections. If so, you must disconnect from the network by disabling your network connection in Network Manager:</para>
 			<orderedlist>
-				<listitem><para>Find the Network Manager icon in the notification area. It should look like a small signal strength indicator or a computer monitor and will probably be close to the clock</para></listitem>
-				<listitem><para>Right-click the icon and uncheck <guilabel>Enable Networking</guilabel></para></listitem>
-				<listitem><para>You should be disconnected from the network</para></listitem>
+				<listitem><para>Find the Network Manager icon in the notification area. It should look like a small signal strength indicator or a computer monitor and will probably be close to the clock.</para></listitem>
+				<listitem><para>Right-click the icon and uncheck <guilabel>Enable Networking</guilabel>.</para></listitem>
+				<listitem><para>You should be disconnected from the network.</para></listitem>
 			</orderedlist>
 		</sect2>
 		
@@ -102,22 +111,23 @@ bound to 192.168.2.4 -- renewal in 536349522 seconds.</screen>
 			<title>Disconnecting using Network Settings</title>
 			<para>If Network Manager is not running, use the <application>Network Settings</application> tool to disconnect your network connection:</para>
 			<orderedlist>
-				<listitem><para>Press &networking;</para></listitem>
-				<listitem><para>Select the <guilabel>Connections</guilabel> tab</para></listitem>
-				<listitem><para>Uncheck your network connection to disconnect it</para></listitem>
-				<listitem><para>Press <guibutton>Close</guibutton></para></listitem>
+				<listitem><para>Press &networking;.</para></listitem>
+				<listitem><para>Press <guilabel>Unlock</guilabel>. Enter your administrative password and press the <guibutton>Authenticate</guibutton> button.</para></listitem>
+				<listitem><para>Select the <guilabel>Connections</guilabel> tab.</para></listitem>
+				<listitem><para>Uncheck your network connection to disconnect it.</para></listitem>
+				<listitem><para>Press the <guibutton>Close</guibutton> button.</para></listitem>
 			</orderedlist>
 		</sect2>
 		
 		<sect2 id="networking-disable-ifdown" status="review">
 			<title>Disconnecting using the ifdown command</title>
-			<para><application>ifdown</application> is a command-line tool for disabling network connections.</para>
+			<para><application>Ifdown</application> is a command-line tool for disabling network connections.</para>
 			<para>To disable a network connection using ifdown:</para>
 			<orderedlist>
-				<listitem><para>Press &terminal; to open a Terminal</para></listitem>
-				<listitem><para>Type <userinput>sudo ifdown eth1</userinput> in the Terminal and press <keycap>Return</keycap>, replacing <emphasis>eth1</emphasis> with the name of your network interface if it is different</para></listitem>
-				<listitem><para>Enter your password if prompted</para></listitem>
-				<listitem><para>Your network connection should be disconnected</para></listitem>
+				<listitem><para>Press &terminal; to open a terminal.</para></listitem>
+				<listitem><para>Type <command>sudo ifdown eth1</command> in the terminal and press <keycap>Return</keycap>. Replace <emphasis>eth1</emphasis> with the name of your network interface if it is different.</para></listitem>
+				<listitem><para>Enter your password if prompted.</para></listitem>
+				<listitem><para>Your network connection should be disconnected.</para></listitem>
 			</orderedlist>
 		</sect2>
 	</sect1>

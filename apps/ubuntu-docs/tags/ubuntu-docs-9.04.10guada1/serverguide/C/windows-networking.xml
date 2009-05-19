@@ -310,6 +310,10 @@
 </programlisting>
 
     <para>
+    
+    </para>
+
+    <para>
     After editing <filename>smb.conf</filename> restart the Samaba:
     </para>
 
@@ -724,9 +728,221 @@ UUID=66bcdd2e-8861-4fb0-b7e4-e61c569fe17d /srv  ext3    noatime,relatime,acl 0  
     <title>Samba as a Domain Controller</title>
     
     <para>
-    TODO
-    </para> 
+    Although cannot act as an Active Directory Primary Domain Controller (PDC) a Samba server can be configured to appear 
+    as a Windows NT4 stype domain controller.  A major advantage of this configuration is the ability to centralize 
+    user and machine credentials.  Samba can also use multiple backends to store the user information.
+    </para>
 
+    <sect2 id="samba-pdc-smbpasswd" status="review">
+      <title>PDC</title>
+
+      <para>
+      This section covers configuring Samba as a Primary Domain Controller (PDC) using the default smbpasswd backend.
+      </para> 
+
+      <procedure>
+        <step>
+
+          <para>
+          First, install Samba, and <application>libpam-smbpass</application> to sync the user accounts,
+          by entering the following in a terminal prompt:
+          </para>
+
+<screen>
+<command>sudo apt-get install samba libpam-smbpass</command>
+</screen>
+        
+        </step>
+        <step>
+
+          <para>
+          Next, configure Samba by editing <filename>/etc/samba/smb.conf</filename>. 
+          The <emphasis>security</emphasis> mode should be set to <emphasis role="italic">user</emphasis>, and
+          the <emphasis>workgroup</emphasis> should relate to your organization:
+          </para>
+
+<programlisting>
+   workgroup = EXAMPLE
+   ...
+   security = user
+</programlisting>
+
+        </step>
+        <step>
+
+          <para>
+          In the commented <quote>Domains</quote> section add or uncomment the following:
+          </para>
+
+<programlisting>
+   domain logons = yes
+   domain master = yes
+   logon path = \\%N\%U\profile
+   logon drive = H:
+   logon home = \\%N\%U
+   logon script = logon.cmd
+   add machine script = sudo /usr/sbin/useradd -n -g machines -c Machine -d /var/lib/samba -s /bin/false %u
+</programlisting>
+ 
+          <itemizedlist>
+            <listitem>
+              <para>
+              <emphasis>domain logons:</emphasis> provides the netlogon service causing Samba to act as a domain controller.
+              </para>
+            </listitem>
+            <listitem>
+              <para>
+              <emphasis>domain master:</emphasis> configures Samba to be a PDC.
+              </para>
+            </listitem>
+            <listitem>
+              <para>
+              <emphasis>logon path:</emphasis> places the user's Windows profile into their home directory.  It is also
+              possible to configure a <emphasis>[profiles]</emphasis> share placing all profiles under a single directory.
+              </para>
+            </listitem>
+            <listitem>
+              <para>
+              <emphasis>logon drive:</emphasis> specifies the home directory local path.
+              </para>
+            </listitem>
+            <listitem>
+              <para>
+              <emphasis>logon home:</emphasis> specifies the home directory location.
+              </para>
+            </listitem>
+            <listitem>
+              <para>
+              <emphasis>logon script:</emphasis> determines the script to be run locally once a user has logged in.
+              The script needs to be placed in the <emphasis>[netlogon]</emphasis> share. 
+              </para>
+            </listitem>
+            <listitem>
+              <para>
+              <emphasis>add machine script:</emphasis> a script that will automatically create the 
+              <emphasis>Machine Trust Account</emphasis> needed for a workstation to join the domain.
+              </para>
+              <para>
+              In this example the <emphasis>machines</emphasis> group will need to be created using the 
+              <application>addgroup</application> utility see <xref linkend="adding-deleting-users"/> for details.
+              </para>
+            </listitem>
+          </itemizedlist>
+
+          <note>
+            <para>
+            If you wish to not use <emphasis>Roaming Profiles</emphasis> leave the <emphasis>logon home</emphasis>
+            and <emphasis>logon path</emphasis> options commented.
+            </para>
+          </note>
+
+        </step>
+        <step>
+     
+          <para>
+          Uncomment the <emphasis>[homes]</emphasis> share to allow the <emphasis role="italic">logon home</emphasis>
+          to be mapped:
+          </para>
+
+<programlisting>
+[homes]
+   comment = Home Directories
+   browseable = no
+   read only = no
+   create mask = 0700
+   directory mask = 0700
+   valid users = %S
+</programlisting>
+
+        </step>
+        <step>
+
+          <para>
+          When configured as a domain controller a <emphasis>[netlogon]</emphasis> share needs to be configured.  To 
+          enable the share uncomment:
+          </para>
+
+<programlisting>
+[netlogon]
+   comment = Network Logon Service
+   path = /srv/samba/netlogon
+   guest ok = yes
+   read only = yes
+   share modes = no
+</programlisting>
+
+          <note>
+            <para>
+            The original <emphasis>netlogon</emphasis> share path is <filename>/home/samba/netlogon</filename>, but according 
+            to the Filesystem Hierarchy Standard (FHS), 
+            <ulink url="http://www.pathname.com/fhs/pub/fhs-2.3.html#SRVDATAFORSERVICESPROVIDEDBYSYSTEM">/srv</ulink> is the 
+            correct location for site-specific data provided by the system.
+            </para>
+          </note>
+
+        </step>
+        <step>
+
+          <para>
+          Now create the <filename role="directory">netlogon</filename> directory, and an empty (for now) 
+          <filename>logon.cmd</filename> script file:
+          </para> 
+
+<screen>
+<command>sudo mkdir -p /srv/samba/netlogon</command>
+<command>sudo touch /srv/samba/netlogon/logon.cmd</command>
+</screen>
+ 
+          <para>
+          You can enter any normal Windows logon script commands in <filename>logon.cmd</filename> to customize the
+          client's environment.
+          </para>
+
+        </step>
+        <step>
+
+          <para>
+          With <emphasis>root</emphasis> being disabled by default, in order to join a workstation to the domain, a system
+          group needs to be mapped to the Windows <emphasis>Domain Admins</emphasis> group.  
+          Using the <application>net</application> utility, from a terminal enter:
+          </para>
+
+<screen>
+<command>sudo net groupmap add ntgroup="Domain Admins" unixgroup=sysadmin rid=512 type=d</command>
+</screen>
+
+          <note>
+            <para>
+            Change <emphasis role="italic">sysadmin</emphasis> to whichever group you prefer.  Also, the user
+            used to join the domain needs to be a member of the <emphasis>sysadmin</emphasis> group, as well 
+            as a member of the system <emphasis>admin</emphasis> group.  The <emphasis>admin</emphasis> group allows 
+            <application>sudo</application> use.
+            </para>
+          </note>
+
+        </step>
+        <step>
+
+          <para>
+          Finally, restart Samba to enable the new domain controller:
+          </para> 
+
+<screen>
+<command>sudo /etc/init.d/samba restart</command>
+</screen>
+
+        </step>
+        <step>
+
+          <para>
+          You should now be able to join Windows clients to the Domain in the same manner as joining them to an 
+          Active Directory domain running on a Windows server.
+          </para>
+
+        </step>        
+
+      </procedure>
+    </sect2>
   </sect1>
   <sect1 id="samba-ad-integration" status="review">
     <title>Samba Active Directory Integration</title>

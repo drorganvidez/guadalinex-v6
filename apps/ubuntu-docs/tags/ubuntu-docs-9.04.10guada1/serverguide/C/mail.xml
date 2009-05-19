@@ -124,22 +124,10 @@ sudo postconf -e 'inet_interfaces = all'
 		</step>
 		<step>
                 <para>
-                Next, configure the digital certificate for TLS. When asked questions, follow 
-                the instructions and answer appropriately:
+                Next, obtain a digital certificate for TLS. See <xref linkend="certificates-and-security"/> for details.
+                This example also uses a Certificate Authority (CA).  For information on generating a CA certificate see
+                <xref linkend="certificate-authority"/>.
 	        </para>
-<screen>
-openssl genrsa -des3 -rand /etc/hosts -out smtpd.key 1024
-chmod 600 smtpd.key
-openssl req -new -key smtpd.key -out smtpd.csr
-sudo openssl x509 -req -days 365 -in smtpd.csr -signkey smtpd.key -out smtpd.crt
-openssl rsa -in smtpd.key -out smtpd.key.unencrypted
-mv -f smtpd.key.unencrypted smtpd.key
-openssl req -new -x509 -extensions v3_ca -keyout cakey.pem -out cacert.pem -days 3650
-sudo mv smtpd.key /etc/ssl/private/
-sudo mv smtpd.crt /etc/ssl/certs/
-sudo mv cakey.pem /etc/ssl/private/
-sudo mv cacert.pem /etc/ssl/certs/
-</screen>
 		<note>
                 <para>
                 You can get the digital certificate from a certificate
@@ -154,15 +142,15 @@ sudo mv cacert.pem /etc/ssl/certs/
 		</step>
 		<step>
                 <para>
-                Configure Postfix to provide TLS encryption for both incoming and outgoing mail:
+                Once you have a certificate, configure Postfix to provide TLS encryption for both incoming and outgoing mail:
                 </para>
 <screen>
 sudo postconf -e 'smtpd_tls_auth_only = no'
 sudo postconf -e 'smtp_use_tls = yes'
 sudo postconf -e 'smtpd_use_tls = yes'
 sudo postconf -e 'smtp_tls_note_starttls_offer = yes'
-sudo postconf -e 'smtpd_tls_key_file = /etc/ssl/private/smtpd.key'
-sudo postconf -e 'smtpd_tls_cert_file = /etc/ssl/certs/smtpd.crt'
+sudo postconf -e 'smtpd_tls_key_file = /etc/ssl/private/server.key'
+sudo postconf -e 'smtpd_tls_cert_file = /etc/ssl/certs/server.crt'
 sudo postconf -e 'smtpd_tls_CAfile = /etc/ssl/certs/cacert.pem'
 sudo postconf -e 'smtpd_tls_loglevel = 1'
 sudo postconf -e 'smtpd_tls_received_header = yes'
@@ -235,6 +223,16 @@ sudo postconf -e 'myhostname = mail.example.com'
     }
   }
 </programlisting>
+
+            <para>
+            In order to let <application>Outlook</application> clients use SMTPAUTH, in the <emphasis>auth default</emphasis> 
+            section of /etc/dovecot/dovecot.conf add <emphasis>"login"</emphasis>:
+            </para>
+
+<programlisting>
+  mechanisms = plain login
+</programlisting>
+
 	    <para>
 	    Once you have <application>Dovecot</application> configured restart it with:
 	    </para>

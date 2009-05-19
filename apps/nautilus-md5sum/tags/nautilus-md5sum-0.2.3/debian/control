@@ -1,0 +1,16 @@
+Source: nautilus-md5sum
+Section: utils
+Priority: optional
+Maintainer: Junta de Andalucía <packmaster@guadalinex.org>
+Uploaders: Álvaro Pinel <alvaropinel@gmail.com>
+Build-Depends: debhelper (>= 5)
+Standards-Version: 3.8.0
+Homepage: http://launchpad.net/nautilus-md5sum
+Vcs-Browser: http://codebrowse.launchpad.net/~guadalinex-members/nautilus-md5sum/trunk/changes
+Vcs-Bzr: http://bazaar.launchpad.net/~guadalinex-members/nautilus-md5sum/trunk
+
+Package: nautilus-md5sum
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}, python, python-nautilus, python-dev, nautilus
+Description: Graphical extension for check MD5 sum in nautilus
+ Graphical extension for check MD5 sum in nautilus in python.

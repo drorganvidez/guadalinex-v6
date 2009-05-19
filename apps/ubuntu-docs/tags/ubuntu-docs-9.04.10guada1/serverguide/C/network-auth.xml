@@ -249,6 +249,74 @@ access to attrs=userPassword,shadowLastChange
 
 	</sect2>
 
+        <sect2 id="openldap-tls" status="review">
+          <title>TLS and SSL</title>
+
+          <para>
+          When authenticating to an OpenLDAP server it is best to do so using an encrypted session.  This can be accomplished using Transport
+          Layer Security (TLS) and/or Secure Sockets Layer (SSL).
+          </para>
+
+          <para>
+          The first step in the process is to obtain or create a <emphasis>certificate</emphasis>.  See <xref linkend="certificates-and-security"/>
+          for details.
+          </para>
+
+          <para>
+          Once you have a certificate and key, edit <filename>/etc/ldap/slapd.conf</filename> adding the following options under the index entries:
+          </para>
+
+<programlisting>
+# TLS/SSL
+TLSCertificateFile    /etc/ssl/certs/server.crt
+TLSCertificateKeyFile /etc/ssl/private/server.key
+</programlisting>
+
+          <note>
+            <para>
+            Adjust the <filename>server.crt</filename> and <filename>server.key</filename> names if yours are different.
+            </para>
+          </note>
+
+          <para>
+          Next, edit <filename>/etc/default/slapd</filename> uncomment the <emphasis>SLAPD_SERVICES</emphasis> option:
+          </para>
+
+<programlisting>
+SLAPD_SERVICES="ldap://127.0.0.1:389/ ldaps:/// ldapi:///"
+</programlisting>
+
+          <para>
+          Now the <emphasis>openldap</emphasis> user needs access to the certificate:
+          </para>
+
+<screen>
+<command>sudo adduser openldap ssl-cert</command>
+<command>sudo chgrp ssl-cert /etc/ssl/private/server.key</command>
+</screen>
+
+          <note>
+            <para>
+            If the <filename role="directory">/etc/ssl/private</filename> and <filename>/etc/ssl/private/server.key</filename> have
+            different permissions, adjust the commands appropriately.     
+            </para>
+          </note>
+
+          <para>
+          Finally, restart <application>slapd</application>:
+          </para>
+
+<screen>
+<command>sudo /etc/init.d/slapd restart</command>
+</screen>
+
+          <para>
+          The <application>slapd</application> daemon should now be listening for LDAPS connections and be able to use STARTTLS during
+          authentication.
+          </para>
+
+        </sect2>
+
 	<sect2 id="openldap-server-replication" status="review">
 		<title>LDAP replication</title>
 
@@ -350,6 +418,239 @@ syncrepl rid=123
 	</para>
 		
 	</sect2>
+        <sect2 id="openldap-auth-config" status="review">
+          <title>LDAP Authentication</title>
+
+          <para>
+          Once you have a working LDAP server, the <application>auth-client-config</application> and <application>libnss-ldap</application> 
+          packages take the pain out of configuring an Ubuntu client to authenticate using LDAP.  To install the packages from, a terminal 
+          prompt enter:
+          </para> 
+
+<screen>
+<command>sudo apt-get install libnss-ldap</command>
+</screen>
+
+         <para>
+         During the install a menu dialog will ask you connection details about your LDAP server.
+         </para>
+       
+         <para>
+         If you make a mistake when entering your information you can execute the dialog again using:
+         </para>
+
+<screen>
+<command>sudo dpkg-reconfigure ldap-auth-config</command>
+</screen>
+
+         <para>
+         The results of the dialog can be seen in <filename>/etc/ldap.conf</filename>.  If your server requires options not covered in the menu 
+         edit this file accordingly.
+         </para>
+
+         <para>
+         Now that <application>libnss-ldap</application> is configured enable the <application>auth-client-config</application> LDAP profile by 
+         entering:
+         </para>
+
+<screen>
+<command>sudo auth-client-config -a -p lac_ldap</command>
+</screen>
+         
+          <itemizedlist>
+	    <listitem>
+              <para>
+	      <emphasis>-a:</emphasis> applies the specified profile.
+	      </para>
+            </listitem>
+	    <listitem>
+              <para>
+	      <emphasis>-p:</emphasis> name of the profile to enable, disable, etc.
+	      </para>
+	    </listitem>
+	    <listitem>
+              <para>
+	      <emphasis>lac_ldap:</emphasis> the <application>auth-client-config</application> profile that is part of the 
+              <application>ldap-auth-config</application> package.
+	      </para>
+	    </listitem>
+          </itemizedlist>
+
+          <para>
+          You should now be able to login using user credentials stored in the LDAP directory.
+          </para> 
+
+        </sect2>
+        <sect2 id="ldap-usergroup-management" status="review">
+          <title>User and Group Management</title>
+
+          <para>
+          The <application>ldap-utils</application> comes with multiple utilities to manage the directory, but the long 
+          string of options needed, can make them a burden to use. The <application>ldapscripts</application> package contains 
+          configurable scripts to easily manage LDAP users and groups.
+          </para>
+
+          <para>
+          To install the package, from a terminal enter:
+          </para>
+
+<screen>
+<command>sudo apt-get install ldapscripts</command>
+</screen>
+
+          <para> 
+          Next, edit the config file <filename>/etc/ldapscripts/ldapscripts.conf</filename> uncommenting and changing the following:
+          </para>       
+
+<programlisting>
+SERVER=localhost
+BINDDN='cn=admin,dc=example,dc=com'
+BINDPWDFILE="/etc/ldapscripts/ldapscripts.passwd"
+SUFFIX='dc=example,dc=com'
+GSUFFIX='ou=Groups'
+USUFFIX='ou=People'
+MSUFFIX='ou=Computers'
+GIDSTART=1000
+UIDSTART=1000
+MIDSTART=1000
+LOGFILE="/var/log/ldapscripts.log"
+UHOMES="/home/%u"
+</programlisting>
+
+          <para>
+          Now, create the <filename>ldapscripts.passwd</filename> file to allow authenticated access to the directory:
+          </para>
+
+<screen>
+<command>sudo sh -c "echo -n 'secret' > /etc/ldapscripts/ldapscripts.passwd"</command>
+<command>sudo chmod 400 /etc/ldapscripts/ldapscripts.passwd</command>
+</screen>
+
+          <note>
+            <para>
+            Replace <quote>secret</quote> with the actual password for your LDAP admin user.
+            </para>
+          </note>
+
+          <para>
+          The <application>ldapscripts</application> are now ready to help manage your directory.  The following are some examples
+          of how to use the scripts:
+          </para>
+
+          <itemizedlist>
+	    <listitem>
+              <para>
+	      Create a new user:
+	      </para>
+<screen>
+<command>sudo ldapadduser george example</command>
+</screen>
+              <para>
+              This will create a user with uid <emphasis role="italic">george</emphasis> and set the user's primary group (gid) to
+              <emphasis role="italic">example</emphasis>
+              </para>
+	    </listitem>
+	    <listitem>
+              <para>
+	      Change a user's password:
+	      </para>
+<screen>
+<command>sudo _ldappasswd george</command>
+<computeroutput>Changing password for user uid=george,ou=People,dc=example,dc=com</computeroutput>
+<userinput>New Password: </userinput>
+<userinput>New Password (verify): </userinput>
+</screen>
+	    </listitem>
+	    <listitem>
+              <para>
+	      Delete a user:
+	      </para>
+<screen>
+<command>sudo ldapdeleteuser george</command>
+</screen>
+              <warning>
+                <para>
+                This script will also remove the user's <emphasis>home directory</emphasis>.
+                </para>
+              </warning>
+	    </listitem>
+	    <listitem>
+              <para>
+	      Add a group:
+	      </para>
+<screen>
+<command>sudo ldapaddgroup qa</command>
+</screen>
+	    </listitem>
+	    <listitem>
+              <para>
+	      Delete a group:
+	      </para>
+<screen>
+<command>sudo ldapdeletegroup qa</command>
+</screen>
+	    </listitem>
+	    <listitem>
+              <para>
+	      Add a user to a group:
+	      </para>
+<screen>
+<command>sudo ldapaddusertogroup george qa</command>
+</screen>
+              <para>
+              You should now see a <emphasis>memberUid</emphasis> attribute for the <emphasis role="italic">qa</emphasis> group with 
+              a value of <emphasis role="italic">george</emphasis>.
+              </para>
+	    </listitem>
+            <listitem>
+              <para>
+	      Remove a user from a group:
+	      </para>
+<screen>
+<command>sudo ldapdeleteuserfromgroup george qa</command>
+</screen>
+              <para>
+              The <emphasis>memberUid</emphasis> attribute should now be removed from the <emphasis role="italic">qa</emphasis>
+              group.
+              </para>
+	    </listitem>
+            <listitem>
+              <para>
+	      The <application>_ldapmodifyuser</application> script allows you to add, remove, or replace a user's attributes.  
+              The script uses the same syntax as the <application>ldapmodify</application> utility.  For example:
+	      </para>
+<screen>
+<command>sudo _ldapmodifyuser george</command>
+<computeroutput># About to modify the following entry :
+dn: uid=george,ou=People,dc=example,dc=com
+objectClass: account
+objectClass: posixAccount
+cn: george
+uid: george
+uidNumber: 1001
+gidNumber: 1001
+homeDirectory: /home/george
+loginShell: /bin/bash
+gecos: george
+description: User account
+userPassword:: e1NTSEF9eXFsTFcyWlhwWkF1eGUybVdFWHZKRzJVMjFTSG9vcHk=
+
+# Enter your modifications here, end with CTRL-D.
+dn: uid=george,ou=People,dc=example,dc=com</computeroutput>
+<userinput>replace: gecos
+gecos: George Stevens</userinput>
+</screen>
+              <para>
+              The user's <emphasis>gecos</emphasis> should now be <quote>George Stevens</quote>.
+              </para>
+	    </listitem>
+          </itemizedlist>
+
+          <para>
+          There are more useful scripts in the package, to see a full list enter: <command>dpkg -L ldapscripts | grep bin</command>
+          </para>
+
+        </sect2>
 	<sect2 id="openldap-server-resources" status="review">
 	  <title>Resources</title>
 	  <itemizedlist>
@@ -364,8 +665,327 @@ syncrepl rid=123
 	      O'Reilly's <ulink url="http://www.oreilly.com/catalog/ldapsa/">LDAP System Administration</ulink>
 	      </para>
 	    </listitem>
+	    <listitem>
+              <para>
+              Packt's <ulink url="http://www.packtpub.com/OpenLDAP-Developers-Server-Open-Source-Linux/book">Mastering OpenLDAP</ulink>
+              is a great reference covering newer versions of OpenLDAP.
+	      </para>
+	    </listitem>
+	    <listitem>
+              <para>
+              For more information on <application>auth-client-config</application> see the man page: <command>man auth-client-config</command>.
+	      </para>
+	    </listitem>
+	    <listitem>
+              <para>
+              For more details regarding the <application>ldapscripts</application> package see the man pages: <command>man ldapscripts</command>,
+              <command>man ldapadduser</command>, <command>man ldapaddgroup</command>, etc.
+	      </para>
+	    </listitem>
 	  </itemizedlist>
 	 
 	</sect2>
+  </sect1>
+  <sect1 id="samba-ldap" status="review">
+    <title>Samba and LDAP</title>
+
+    <para>
+    This section covers configuring Samba to use LDAP for user, group, and machine account information and authentication.
+    The assumption is, you already have a working OpenLDAP directory installed and the server is configured to use it for 
+    authentication. See <xref linkend="openldap-server"/> and <xref linkend="openldap-auth-config"/> for details on setting up OpenLDAP.
+    </para>
+
+    <sect2 id="samba-ldap-installation" status="review">
+      <title>Installation</title>
+  
+      <para>
+      There are three packages needed when integrating Samba with LDAP.  <application>samba</application>, <application>samba-doc</application>,
+      and <application>smbldap-tools</application> packages .  To install the packages, from a terminal enter:
+      </para>
+
+<screen>
+<command>sudo apt-get install samba samba-doc smbldap-tools</command>
+</screen>
+
+      <para>
+      Strictly speaking the <application>smbldap-tools</application> package isn't needed, but unless you have another package or custom scripts,
+      a method of managing users, groups, and computer accounts is needed.  
+      </para>
+
+    </sect2>
+    <sect2 id="samba-ldap-openldap-configuration" status="review">
+      <title>OpenLDAP Configuration</title>
+
+      <para>
+      In order for Samba to use OpenLDAP as a <emphasis>passdb backend</emphasis>, the user objects in the directory will need additional
+      attributes.  This section assumes you want Samba to be configured as a Windows NT domain controller, and will add the necessary LDAP
+      objects and attributes.
+      </para>
+
+      <para>
+      The Samba attributes are defined in the <filename>samba.schema</filename> file which is part of the 
+      <application>samba-doc</application> package.  The schema file needs to be unzipped and copied to 
+      <filename>/etc/ldap/schema</filename>.  From a terminal prompt enter:
+      </para>
+
+<screen>
+<command>sudo cp /usr/share/doc/samba-doc/examples/LDAP/samba.schema.gz /etc/ldap/schema/</command>
+<command>sudo gzip -d /etc/ldap/schema/samba.schema.gz</command>
+</screen>
+
+      <para>
+      Next, edit <filename>/etc/ldap/slapd.conf</filename> adding the new schema and the necessary indexes:
+      </para>
+
+<programlisting>
+include         /etc/ldap/schema/samba.schema
+...
+index           objectClass             eq,pres
+index           uidNumber               eq
+index           gidNumber               eq
+index           loginShell              eq
+index           uid                     eq,pres,sub
+index           memberUid               eq,pres,sub
+index           uniqueMember            eq,pres
+index           sambaSID                eq
+index           sambaPrimaryGroupSID    eq
+index           sambaGroupType          eq
+index           sambaSIDList            eq
+index           sambaDomainName         eq
+index           default                 sub
+</programlisting>
+
+      <para>
+      Restart <application>slapd</application> for the new settings to take effect, and run <application>slapindex</application> to create the 
+      new indexes:
+      </para>
+
+<screen>
+<command>sudo /etc/init.d/slapd stop</command>
+<command>sudo -u openldap slapindex -f /etc/ldap/slapd.conf</command>
+<command>sudo /etc/init.d/slapd start</command>
+</screen>
+
+      <para>
+      Next, configure the <application>smbldap-tools</application> package to match your environment.  The package comes with a configuration
+      script that will ask questions about the needed options.  To run the script enter:
+      </para>
+
+<screen>
+<command>sudo gzip -d /usr/share/doc/smbldap-tools/configure.pl.gz</command>
+<command>sudo perl /usr/share/doc/smbldap-tools/configure.pl</command>
+</screen>
+
+      <para>
+      Once you have answered the questions, there should be <filename>/etc/smbldap-tools/smbldap.conf</filename> 
+      and <filename>/etc/smbldap-tools/smbldap_bind.conf</filename> files.  These files are generated by the configure script, so if
+      you made any mistakes while executing the script it may be simpler to edit the file appropriately. 
+      </para>
+
+      <para>
+      The <application>smbldap-populate</application> script will add the necessary users, groups, and LDAP objects required for Samba.  It is
+      a good idea to make a backup LDAP Data Interchange Format (LDIF) file with <application>slapcat</application> before executing the command:
+      </para>
+
+<screen>
+<command>sudo slapcat -l backup.ldif</command>
+</screen>
+
+      <para>
+      Once you have a current backup execute <application>smbldap-populate</application> by entering:
+      </para>
+
+<screen>
+<command>sudo smbldap-populate</command>
+</screen>
+
+      <note>
+        <para>
+        You can create an LDIF file containing the new Samba objects by executing <command>sudo smbldap-populate -e samba.ldif</command>.
+        This allows you to look over the changes making sure everything is correct.
+        </para>
+      </note>
+
+      <para>
+      Your LDAP directory now has the necessary domain information to authenticate Samba users.
+      </para>
+
+    </sect2>
+    <sect2 id="samba-ldap-samba-configuration">
+      <title>Samba Configuration</title>
+
+      <para>
+      There a multiple ways to configure Samba for details on some common configurations see <xref linkend="windows-networking"/>.      
+      To configure Samba to use LDAP, edit the main Samba configuration file <filename>/etc/samba/smb.conf</filename> commenting 
+      the <emphasis>passdb backend</emphasis> option and adding the following:
+      </para>
+
+<programlisting>
+#   passdb backend = tdbsam
+
+# LDAP Settings
+   passdb backend = ldapsam:ldap://hostname
+   ldap suffix = dc=example,dc=com
+   ldap user suffix = ou=People
+   ldap group suffix = ou=Groups
+   ldap machine suffix = ou=Computers
+   ldap idmap suffix = dc=example,dc=com
+   ldap admin dn = cn=admin,dc=example,dc=com
+   ldap ssl = start tls
+   ldap passwd sync = yes
+...
+   add machine script = sudo /usr/sbin/smbldap-useradd -t 0 -w "%u"
+</programlisting>
+
+      <para>
+      Restart <application>samba</application> to enable the new settings:
+      </para>
+
+<screen>
+<command>sudo /etc/init.d/samba restart</command>
+</screen>
+
+      <para>
+      Now Samba needs to know the LDAP admin password.  From a terminal prompt enter:
+      </para>
+
+<screen>
+<command>sudo smbpasswd -w secret</command>
+</screen>
+
+      <note>
+        <para>
+        Replacing <emphasis role="italic">secret</emphasis> with your LDAP admin password.
+        </para>
+      </note>
+
+      <para>
+      If you currently have users in LDAP, and you want them to authenticate using Samba, they will need some  
+      Samba attributes defined in the <filename>samba.schema</filename> file.
+      Add the Samba attributes to existing users using the <application>smbpasswd</application> utility, replacing 
+      <emphasis role="italic">username</emphasis> with an actual user:
+      </para>
+
+<screen>
+<command>sudo smbpasswd -a username</command>
+</screen>
+
+      <para>
+      You will then be asked to enter the user's password.
+      </para>
+
+      <para>
+      To add new user, group, and machine accounts use the utilities from the <application>smbldap-tools</application> package.  Here are some 
+      examples:
+      </para> 
+
+      <itemizedlist>
+        <listitem>
+          <para>
+          To add a new user to LDAP with Samba attributes enter the following, replacing username with an actual username:
+          </para>
+<screen>
+<command>sudo smbldap-useradd -a -P username</command>
+</screen>
+          <para>
+          The <emphasis>-a</emphasis> option adds the Samba attributes, and the <emphasis>-P</emphasis> options calls the 
+          <application>smbldap-passwd</application> utility after the user is created allowing you to enter a password for the user.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+          To remove a user from the directory enter:
+          </para>
+<screen>
+<command>sudo smbldap-userdel username</command>
+</screen>
+          <para>
+          The <application>smbldap-userdel</application> utility also has a <emphasis>-r</emphasis> option to remove the user's home directory.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+          Use <application>smbldap-groupadd</application> to add a group, replacing groupname with an appropriate group:
+          </para>
+<screen>
+<command>sudo smbldap-groupadd -a groupname</command>
+</screen>
+          <para>
+          Similar to <application>smbldap-useradd</application>, the <emphasis>-a</emphasis> adds the Samba attributes.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+          To add a user to a group use <application>smbldap-groupmod</application>:
+          </para>
+<screen>
+<command>sudo smbldap-groupmod -m username groupname</command>
+</screen>
+          <para>
+          Be sure to replace <emphasis>username</emphasis> with a real user.  Also, the <emphasis>-m</emphasis> option can add more than one 
+          user at a time by listing them in <emphasis>comma separated</emphasis> format.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+          <application>smbldap-groupmod</application> can also be used to remove a user from a group:
+          </para>
+<screen>
+<command>sudo smbldap-groupmod -x username groupname</command>
+</screen>
+        </listitem>
+        <listitem>
+          <para>
+          Additionally, the <application>smbldap-useradd</application> utility can add Samba machine accounts:
+          </para>
+<screen>
+<command>sudo smbldap-useradd -t 0 -w username</command>
+</screen>
+          <para>
+          Replace <emphasis>username</emphasis> with the name of the workstation.  The <emphasis>-t 0</emphasis> option creates the machine account
+          without a delay, while the <emphasis>-w</emphasis> option specifies the user as a machine account.  Also, note the 
+          <emphasis>add machine script</emphasis> option in <filename>/etc/samba/smb.conf</filename> was changed to use 
+          <application>smbldap-useradd</application>.
+          </para>
+        </listitem>
+      </itemizedlist>
+
+      <para>
+      There are more useful utilities and options in the <application>smbldap-tools</application> package.  The man page for each utility provides
+      more details.
+      </para>
+
+    </sect2>
+    <sect2 id="samba-ldap-resources" status="review">
+      <title>Resources</title>
+
+      <itemizedlist>
+        <listitem>
+          <para>
+          There are multiple places where LDAP and Samba is documented in the 
+          <ulink url="http://samba.org/samba/docs/man/Samba-HOWTO-Collection/">Samba HOWTO Collection</ulink>.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+          Specifically see the  
+          <ulink url="http://samba.org/samba/docs/man/Samba-HOWTO-Collection/passdb.html">passdb section</ulink>.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+          Another good site is 
+          <ulink url="http://www.iallanis.info/smbldap-tools/docs/samba-ldap-howto/">Samba OpenLDAP HOWTO</ulink>.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+          Again, for more information on <application>smbldap-tools</application> see the man pages: 
+          <command>man smbldap-useradd</command>, <command>man smbldap-groupadd</command>, <command>man smbldap-populate</command>,
+          etc.
+          </para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
   </sect1>
 </chapter>

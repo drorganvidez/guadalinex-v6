@@ -619,11 +619,12 @@ olcAccess: {2}to * by dn="cn=admin,dc=example,dc=com" write by * read
 
           <para>
           The first step in the process is to obtain or create a <emphasis>certificate</emphasis>.  See <xref linkend="certificates-and-security"/>
-          for details.
+          and <xref linkend="certificate-authority"/> for details.
           </para>
 
           <para>
-          Once you have a certificate and key, use <application>ldapmodify</application> to add the new configuration options:
+          Once you have a certificate, key, and CA cert installed, use <application>ldapmodify</application> to add the new 
+          configuration options:
           </para>
 
 <screen>
@@ -633,6 +634,9 @@ olcAccess: {2}to * by dn="cn=admin,dc=example,dc=com" write by * read
 <screen>
 <computeroutput>Enter LDAP Password:
 <userinput>dn: cn=config
+add: olcTLSCACertificateFile
+olcTLSCACertificateFile: /etc/ssl/certs/cacert.pem
+-
 add: olcTLSCertificateFile
 olcTLSCertificateFile: /etc/ssl/certs/server.crt
 -
@@ -645,7 +649,8 @@ modifying entry "cn=config"
 
           <note>
             <para>
-            Adjust the <filename>server.crt</filename> and <filename>server.key</filename> names if yours are different.
+            Adjust the <filename>server.crt</filename>, <filename>server.key</filename>, and <filename>cacert.pem</filename>
+            names if yours are different.
             </para>
           </note>
 
@@ -732,11 +737,11 @@ SLAPD_SERVICES="ldap://127.0.0.1:389/ ldaps:/// ldapi:///"
 <computeroutput>Enter LDAP Password: 
 <userinput>dn: olcDatabase={0}config,cn=config
 replace: olcSyncrepl
-olcSyncrepl: {0}rid=001 provider=ldap://ldap01.fishles.org binddn="cn=admin,cn
- =config" bindmethod=simple credentials=loco searchbase="cn=config" type=refre
+olcSyncrepl: {0}rid=001 provider=ldap://ldap01.example.com binddn="cn=admin,cn
+ =config" bindmethod=simple credentials=secret searchbase="cn=config" type=refre
  shAndPersist retry="5 5 300 5" timeout=1 starttls=yes
-olcSyncrepl: {1}rid=002 provider=ldap://ldap02.fishles.org binddn="cn=admin,cn
- =config" bindmethod=simple credentials=loco searchbase="cn=config" type=refre
+olcSyncrepl: {1}rid=002 provider=ldap://ldap02.example.com binddn="cn=admin,cn
+ =config" bindmethod=simple credentials=secret searchbase="cn=config" type=refre
  shAndPersist retry="5 5 300 5" timeout=1 starttls=yes</userinput>
 
 modifying entry "olcDatabase={0}config,cn=config"
@@ -766,8 +771,20 @@ modifying entry "olcDatabase={1}hdb,cn=config"</computeroutput>
 </screen>
 
             <para>
-            Finally, you may need to restart <application>slapd</application> on each of the servers:
+            If the LDAP server hostname does not match the Fully Qualified Domain Name (FQDN) in the certificate, you may have to edit 
+            <filename>/etc/ldap/ldap.conf</filename> and add the following TLS options:
             </para>
+
+<programlisting>
+TLS_CERT /etc/ssl/certs/server.crt
+TLS_KEY /etc/ssl/private/server.key
+TLS_CACERT /etc/ssl/certs/cacert.pem
+</programlisting>
+
+
+              <para>
+              Finally, restart <application>slapd</application> on each of the servers:
+              </para>
 
 <screen>
 <command>sudo /etc/init.d/slapd restart</command>

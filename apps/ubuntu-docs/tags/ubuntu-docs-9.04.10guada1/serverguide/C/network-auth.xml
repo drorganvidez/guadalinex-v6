@@ -66,21 +66,161 @@
 	</para>
 
 	<para>
-	After installing <application>slapd</application> the directory can be
-	configured using <application>dpkg-reconfigure</application>:
+        By default the directory suffix will match the domain name of the server.
+        For example, if the machine's Fully Qualified Domain Name (FQDN) is 
+        ldap.example.com, the default suffix will be <emphasis>dc=example,dc=com</emphasis>.
+        If you require a different suffix, the directory can be	reconfigured using 
+        <application>dpkg-reconfigure</application>.  Enter the following in a terminal
+        prompt:
 	</para>
+
 <screen>
 <command>sudo dpkg-reconfigure slapd</command>
 </screen>
 
 	<para>
-	You will then be taken through a menu based configuration dialog allowing
-	you to configure various <application>slapd</application> options.  For 
-	the most part the defaults work well, but if your <emphasis>root</emphasis>
-	node differs from the server's FQDN be sure to enter the correct name.
+	You will then be taken through a menu based configuration dialog, allowing
+	you to configure various <application>slapd</application> options.  
 	</para>
 	
 	</sect2>
+        <sect2 id="openldap-configuration" status="review">
+          <title>Configuration</title>
+
+          <para>
+          <application>OpenLDAP</application> uses a separate database which contains the 
+          <emphasis>cn=config</emphasis> Directory Information Tree (DIT).  The
+          <emphasis>cn=config</emphasis> DIT is used to dynamically configure the 
+          <application>slapd</application> daemon, allowing the modification of schema 
+          definitions, indexes, ACLs, etc without stopping the service.
+          </para>
+
+          <para>
+          The <emphasis>cn=config</emphasis> tree can be manipulated using the utilities in the 
+          <application>ldap-utils</application> package.  For example:
+          </para>
+
+          <itemizedlist>
+            <listitem>
+
+              <para>
+              Use <application>ldapsearch</application> to view the tree, entering the admin 
+              password set during installation or reconfiguration:
+              </para>
+
+<screen>
+<command>ldapsearch -xLLL -b cn=config -D cn=admin,cn=config -W olcDatabase={1}hdb</command>
+</screen>
+
+<screen>
+<computeroutput>Enter LDAP Password: 
+dn: olcDatabase={1}hdb,cn=config
+objectClass: olcDatabaseConfig
+objectClass: olcHdbConfig
+olcDatabase: {1}hdb
+olcDbDirectory: /var/lib/ldap
+olcSuffix: dc=example,dc=com
+olcAccess: {0}to attrs=userPassword,shadowLastChange by dn="cn=admin,dc=exampl
+ e,dc=com" write by anonymous auth by self write by * none
+olcAccess: {1}to dn.base="" by * read
+olcAccess: {2}to * by dn="cn=admin,dc=example,dc=com" write by * read
+olcLastMod: TRUE
+olcDbCheckpoint: 512 30
+olcDbConfig: {0}set_cachesize 0 2097152 0
+olcDbConfig: {1}set_lk_max_objects 1500
+olcDbConfig: {2}set_lk_max_locks 1500
+olcDbConfig: {3}set_lk_max_lockers 1500
+olcDbIndex: objectClass eq
+</computeroutput>
+</screen>
+
+              <para>
+              The output above is the current configuration options for the <emphasis>hdb</emphasis>
+              backend database.  Which in this case containes the <emphasis>dc=example,dc=com</emphasis>
+              suffix.
+              </para>
+
+            </listitem>
+            <listitem>
+
+              <para>
+              Refine the search by supplying a <emphasis role="italic">filter</emphasis>, 
+              in this case only show which attributes are indexed:
+              </para>
+
+<screen>
+<command>ldapsearch -xLLL -b cn=config -D cn=admin,cn=config -W olcDatabase={1}hdb olcDbIndex</command>
+</screen>
+
+<screen>
+<computeroutput>Enter LDAP Password: 
+dn: olcDatabase={1}hdb,cn=config
+olcDbIndex: objectClass eq
+</computeroutput>
+</screen>
+
+            </listitem>
+            <listitem>
+
+              <para>
+              As an example of modifying the <emphasis>cn=config</emphasis> tree, add another attribute 
+              to the index list using <application>ldapmodify</application>:
+              </para>
+
+<screen>
+<command>ldapmodify -x -D cn=admin,cn=config -W</command>
+</screen>
+
+<screen>
+<computeroutput>Enter LDAP Password:<userinput>
+dn: olcDatabase={1}hdb,cn=config
+add: olcDbIndex
+olcDbIndex: cn eq,pres,sub</userinput>
+
+modifying entry "olcDatabase={1}hdb,cn=config"
+</computeroutput>
+</screen>
+
+              <para>
+              Once the modification has completed, press <emphasis>Ctrl+D</emphasis> to exit the utility.
+              </para>
+
+            </listitem>
+            <listitem>
+
+              <para>
+              <application>ldapmodify</application> can also read the changes from a file.  Copy and paste
+              the following into a file named <filename>uid_index.ldif</filename>:              
+              </para>
+
+<programlisting>
+dn: olcDatabase={1}hdb,cn=config
+add: olcDbIndex
+olcDbIndex: uid eq,pres,sub
+</programlisting>
+
+              <para>
+              Then execute <application>ldapmodify</application>:
+              </para> 
+
+<screen>
+<command>ldapmodify -x -D cn=admin,cn=config -W -f uid_index.ldif</command>
+</screen>
+
+<screen>
+<computeroutput>Enter LDAP Password: 
+modifying entry "olcDatabase={1}hdb,cn=config"
+</computeroutput>
+</screen>
+
+              <para>
+              The file method is very useful for large changes.
+              </para>
+
+            </listitem>
+          </itemizedlist>
+
+        </sect2>
 	<sect2 id="openldap-server-populate" status="review">
 		<title>Populating LDAP</title>
 
@@ -226,26 +366,246 @@ givenName: John
 	
 	</sect2>
 
+	<sect2 id="openldap-server-replication" status="review">
+		<title>LDAP replication</title>
+
+	<para>
+	LDAP often quickly becomes a highly critical service to the network.  Multiple systems 
+        will come to depend on LDAP for authentication, authorization, configuration, etc. It is a good idea to 
+        setup a redundant system through replication. 
+	</para>
+	
+	<para>
+	Replication is achieved using the <emphasis>Syncrepl</emphasis> engine. Syncrepl allows the
+	directory to be synced using either a <emphasis>push</emphasis> or <emphasis>pull</emphasis> based
+	system.  In a push based configuration a <quote>primary</quote> server will push directory updates
+	to <quote>secondary</quote> servers, while a pull based approach allows replication servers to sync on
+	a time based interval.
+	</para>
+
+	<para>
+	The following is an example of a <emphasis>Multi-Master</emphasis> configuration.  In this configuration each
+        OpenLDAP server is configured for both <emphasis>push</emphasis> and <emphasis>pull</emphasis> replication. 
+	</para>
+
+        <procedure>
+          <step>
+  
+            <para>
+            First, configure the server to sync the <emphasis>cn=config</emphasis> database.  Copy the following to a 
+            file named <filename>syncrepl_cn-config.ldif</filename>:
+            </para>
+
+<programlisting>
+dn: cn=module{0},cn=config
+changetype: modify
+add: olcModuleLoad
+olcModuleLoad: syncprov
+
+dn: cn=config
+changetype: modify
+replace: olcServerID
+olcServerID: 1 ldap://ldap01.example.com
+olcServerID: 2 ldap://ldap02.example.com
+
+dn: olcOverlay=syncprov,olcDatabase={0}config,cn=config
+changetype: add
+objectClass: olcOverlayConfig
+objectClass: olcSyncProvConfig
+olcOverlay: syncprov
+
+dn: olcDatabase={0}config,cn=config
+changetype: modify
+add: olcSyncRepl
+olcSyncRepl: rid=001 provider=ldap://ldap01.example.com binddn="cn=admin,cn=config" bindmethod=simple
+  credentials=secret searchbase="cn=config" type=refreshAndPersist
+  retry="5 5 300 5" timeout=1
+olcSyncRepl: rid=002 provider=ldap://ldap02.example.com binddn="cn=admin,cn=config" bindmethod=simple
+  credentials=secret searchbase="cn=config" type=refreshAndPersist
+  retry="5 5 300 5" timeout=1
+-
+add: olcMirrorMode
+olcMirrorMode: TRUE
+</programlisting>
+
+          </step>
+          <step>
+
+            <para>
+            Edit the file changing:
+            </para>
+
+            <itemizedlist>
+              <listitem>
+                <para>
+                <emphasis>ldap://ldap01.example.com</emphasis> and <emphasis>ldap://ldap02.example.com</emphasis>
+                to the hostnames of your LDAP servers.  
+                </para>
+                <note>
+                  <para>
+                  You can have more than two LDAP servers, and when a change is made to one of them it will by synced
+                  to the rest.  Be sure to increment the <emphasis>olcServerID</emphasis> for each server, and the
+                  <emphasis>rid</emphasis> for each <emphasis>olcSyncRepl</emphasis> entry.
+                  </para>
+                </note>
+              </listitem>
+              <listitem>
+                <para>
+                And adjust <emphasis>credentials=secret</emphasis> to match your admin password.
+                </para>
+              </listitem>
+            </itemizedlist>
+
+          </step>
+          <step>
+
+
+            <para>
+            Next, add the LDIF file using the <application>ldapmodify</application> utility:
+            </para>
+
+<screen>
+<command>ldapmodify -x -D cn=admin,cn=config -W -f syncrepl_cn-config.ldif</command>
+</screen>
+
+          </step>
+          <step>
+
+            <para>
+            Copy the <filename>syncrepl_cn-config.ldif</filename> file to the next LDAP server and repeat the 
+            <application>ldapmodify</application> command above.
+            </para>
+
+          </step>
+          <step>
+
+            <para>
+            Because a new module has been added, the <application>slapd</application> daemon, on all replicated
+            servers, needs to be restarted:
+            </para>
+
+<screen>
+<command>sudo /etc/init.d/slapd restart</command>
+</screen>
+
+          </step>
+          <step>
+
+            <para>
+            Now that the configuration database is synced between servers, the <emphasis>backend</emphasis> 
+            database needs to be synced as well.  Copy and paste the following into another LDIF file named 
+            <filename>syncrepl_backend.ldif</filename>:
+            </para>
+
+<programlisting>
+dn: olcDatabase={1}hdb,cn=config
+changetype: modify
+add: olcRootDN
+olcRootDN: cn=admin,dc=example,dc=edu
+-
+add: olcSyncRepl
+olcSyncRepl: rid=003 provider=ldap://ldap01.example.com binddn="cn=admin,dc=example,dc=com" 
+ bindmethod=simple credentials=secret searchbase="dc=example,dc=com" type=refreshOnly 
+ interval=00:00:00:10 retry="5 5 300 5" timeout=1
+olcSyncRepl: rid=004 provider=ldap://ldap02.example.com binddn="cn=admin,dc=example,dc=com" 
+ bindmethod=simple credentials=secret searchbase="dc=example,dc=com" type=refreshOnly 
+ interval=00:00:00:10 retry="5 5 300 5" timeout=1
+-
+add: olcMirrorMode
+olcMirrorMode: TRUE
+
+dn: olcOverlay=syncprov,olcDatabase={1}hdb,cn=config
+changetype: add
+objectClass: olcOverlayConfig
+objectClass: olcSyncProvConfig
+olcOverlay: syncprov
+</programlisting>
+
+          </step>
+          <step>
+
+            <para>
+            Like the previous LDIF file, edit this one changing:
+            </para>
+
+            <itemizedlist>
+              <listitem>
+                <para>
+                <emphasis>searchbase="dc=example,dc=com"</emphasis> to your directory's searchbase.
+                </para>
+              </listitem>              
+              <listitem>
+                <para>
+                If you use a different admin user, change <emphasis>binddn="cn=admin,dc=example,dc=com"</emphasis>.
+                </para>
+              </listitem>
+              <listitem>
+                <para>
+                Also, replace <emphasis>credentials=secret</emphasis> with your admin password.
+                </para>
+              </listitem>
+            </itemizedlist>
+
+          </step>
+          <step>
+
+            <para>
+            Add the LDIF file:
+            </para>
+
+<screen>
+<command>ldapmodify -x -D cn=admin,cn=config -W -f syncrepl_backend.ldif</command>
+</screen>
+
+            <para>
+            Because the servers' configuration is already synced there is no need to copy this LDIF 
+            file to the other servers.
+            </para>
+
+          </step>
+        </procedure>
+
+        <para>
+        The configuration and backend databases should now sycnc to the other servers.  You can add additional servers using the 
+        <application>ldapmodify</application> utility as the need arises.  See <xref linkend="openldap-configuration"/> for details.
+        </para>
+
+        <note>
+  	  <para>
+          The <application>slapd</application> daemon will send log information to <filename>/var/log/syslog</filename>
+          by default.  So if all does <emphasis>not</emphasis> go well check there for errors and other troubleshooting information.
+          </para>
+        </note>
+		
+	</sect2>
+
 	<sect2 id="openldap-server-acl" status="review">
               <title>Setting up ACL</title>
 
 	<para>
 	Authentication requires access to the password field, that should be not
-	accessible by default. Another issue is that during password change
-	using <command>passwd</command>, <emphasis>shadowLastChange</emphasis> needs 
-	to be accessible by authenticated users.  The following code, from 
-	<application>/etc/ldap/slapd.conf</application>, shows the default ACL 
-	setting that permits the <emphasis>admin</emphasis> user and authenticated 
-	users access to shadowLastChange:
+	accessible by default. Also, in order for users to change their own password,
+	using <command>passwd</command> or other utilities, <emphasis>shadowLastChange</emphasis> 
+        needs to be accessible once a user has authenticated.  
 	</para>
 
-<programlisting>
-access to attrs=userPassword,shadowLastChange
-        by dn="cn=admin,dc=example,dc=com" write
-        by anonymous auth
-        by self write
-        by * none
-</programlisting>
+        <para>
+        To view the Access Control List (ACL), use the <application>ldapsearch</application> utility:
+        </para>
+
+<screen>
+<command>ldapsearch -xLLL -b cn=config -D cn=admin,cn=config -W olcDatabase=hdb olcAccess</command>
+</screen>
+
+<screen>
+<computeroutput>Enter LDAP Password: 
+dn: olcDatabase={1}hdb,cn=config
+olcAccess: {0}to attrs=userPassword,shadowLastChange by dn="cn=admin,dc=exampl
+ e,dc=com" write by anonymous auth by self write by * none
+olcAccess: {1}to dn.base="" by * read
+olcAccess: {2}to * by dn="cn=admin,dc=example,dc=com" write by * read
+</computeroutput>
+</screen>
 
 	</sect2>
 
@@ -263,14 +623,25 @@ access to attrs=userPassword,shadowLastChange
           </para>
 
           <para>
-          Once you have a certificate and key, edit <filename>/etc/ldap/slapd.conf</filename> adding the following options under the index entries:
+          Once you have a certificate and key, use <application>ldapmodify</application> to add the new configuration options:
           </para>
 
-<programlisting>
-# TLS/SSL
-TLSCertificateFile    /etc/ssl/certs/server.crt
-TLSCertificateKeyFile /etc/ssl/private/server.key
-</programlisting>
+<screen>
+<command>ldapmodify -x -D cn=admin,cn=config -W</command>
+</screen>
+
+<screen>
+<computeroutput>Enter LDAP Password:
+<userinput>dn: cn=config
+add: olcTLSCertificateFile
+olcTLSCertificateFile: /etc/ssl/certs/server.crt
+-
+add: olcTLSCertificateKeyFile
+olcTLSCertificateKeyFile: /etc/ssl/private/server.key</userinput>
+
+modifying entry "cn=config"
+</computeroutput>
+</screen>
 
           <note>
             <para>
@@ -315,109 +686,97 @@ SLAPD_SERVICES="ldap://127.0.0.1:389/ ldaps:/// ldapi:///"
           authentication.
           </para>
 
+          <sect3 id="openldap-tls-replication" status="review">
+            <title>TLS Replication</title>
+
+            <para>
+            If you have setup <application>Syncrepl</application> between servers, it is prudent to encrypt the replication traffic 
+            using <emphasis>Transport Layer Security (TLS)</emphasis>.  For details on setting up replication see 
+            <xref linkend="openldap-server-replication"/>.
+            </para>
+
+            <para>
+            After setting up replication, and following the instructions in <xref linkend="openldap-tls"/>, there are a couple of 
+            consequences that should be kept in mind:
+            </para>
+
+            <itemizedlist>
+              <listitem>
+                <para>
+                The configuration only needs to be modified on <emphasis>one</emphasis> server.
+                </para>
+              </listitem>
+              <listitem>
+                <para>
+                The path names for the <emphasis>certificate</emphasis> and <emphasis>key</emphasis> must be the 
+                same on all servers.
+                </para>
+              </listitem>
+            </itemizedlist>
+
+            <para>
+            So on each replicated server: install a certificate, edit <filename>/etc/default/slapd</filename>, and 
+            restart <application>slapd</application>.
+            </para>
+
+            <para>
+            Once <emphasis>TLS</emphasis> has been setup on each server, modify the <emphasis>cn=config</emphasis> replication
+            by entering the following in a terminal:
+            </para>
+
+<screen>
+<command>ldapmodify -x -D cn=admin,cn=config -W</command>
+</screen>
+
+<screen>
+<computeroutput>Enter LDAP Password: 
+<userinput>dn: olcDatabase={0}config,cn=config
+replace: olcSyncrepl
+olcSyncrepl: {0}rid=001 provider=ldap://ldap01.fishles.org binddn="cn=admin,cn
+ =config" bindmethod=simple credentials=loco searchbase="cn=config" type=refre
+ shAndPersist retry="5 5 300 5" timeout=1 starttls=yes
+olcSyncrepl: {1}rid=002 provider=ldap://ldap02.fishles.org binddn="cn=admin,cn
+ =config" bindmethod=simple credentials=loco searchbase="cn=config" type=refre
+ shAndPersist retry="5 5 300 5" timeout=1 starttls=yes</userinput>
+
+modifying entry "olcDatabase={0}config,cn=config"
+</computeroutput>
+</screen>
+
+            <para>
+            Now adjust the <emphasis>backend</emphasis> database replication:
+            </para>
+
+<screen>
+<command>ldapmodify -x -D cn=admin,cn=config -W</command>
+</screen>
+
+<screen>
+<computeroutput>Enter LDAP Password:
+<userinput>dn: olcDatabase={1}hdb,cn=config
+replace: olcSyncrepl
+olcSyncrepl: {0}rid=003 provider=ldap://ldap01.example.com binddn="cn=admin,dc=example,dc=
+ com" bindmethod=simple credentials=secret searchbase="dc=example,dc=com" type=r
+ efreshOnly interval=00:00:00:10 retry="5 5 300 5" timeout=1 starttls=yes
+olcSyncrepl: {1}rid=004 provider=ldap://ldap02.example.com binddn="cn=admin,dc=example,dc=
+ com" bindmethod=simple credentials=secret searchbase="dc=example,dc=com" type=r
+ efreshOnly interval=00:00:00:10 retry="5 5 300 5" timeout=1 starttls=yes</userinput>
+
+modifying entry "olcDatabase={1}hdb,cn=config"</computeroutput>
+</screen>
+
+            <para>
+            Finally, you may need to restart <application>slapd</application> on each of the servers:
+            </para>
+
+<screen>
+<command>sudo /etc/init.d/slapd restart</command>
+</screen>
+
+          </sect3>
+
         </sect2>
 
-	<sect2 id="openldap-server-replication" status="review">
-		<title>LDAP replication</title>
-
-	<para>
-	LDAP service often quickly becomes a highly critical service in an
-	information system: multiple systems depend on LDAP for authentication, 
-	authorization, mail, etc. It is a good idea to setup a 
-	redundant system. 
-	</para>
-	
-	<para>
-	Replication is achieved using the <emphasis>Syncrepl</emphasis> engine. Syncrepl allows the
-	directory to be synced using either a <emphasis>push</emphasis> or <emphasis>pull</emphasis> based
-	system.  In a push based configuration a <quote>primary</quote> server will push directory updates
-	to <quote>secondary</quote> servers, while a pull based approach allows replication servers to sync on
-	a time based interval.
-	</para>
-
-	<para>
-	The following is an example of <emphasis>push</emphasis> configuration.  First you need to setup the
-	<application>slapd</application> provider by uncommenting the following line in 
-	<filename>/etc/ldap/slapd.conf</filename>:
-	</para>
-
-<programlisting>
-rootdn          "cn=admin,dc=example,dc=com"
-</programlisting>
-
-	<para>
-	Below the <emphasis>rootdn</emphasis> line add:
-	</para>
-	
-<programlisting>
-moduleload  syncprov.la
-overlay syncprov
-syncprov-checkpoint 100 10
-syncprov-sessionlog 100
-</programlisting>
-
-	<para>
-	Now restart <application>slapd</application>:
-	</para>
-<screen>
-<command>sudo /etc/init.d/slapd restart</command>
-</screen>
-
-	<para>
-	On separate <application>OpenLDAP</application> server configure the <application>slapd</application> consumer
-	by again uncommenting the <emphasis>rootdn</emphasis> line in <filename>/etc/ldap/slapd.conf</filename>:
-	</para>
-
-<programlisting>
-rootdn          "cn=admin,dc=example,dc=com"
-</programlisting>
-
-	<para>
-	Then add the following below the rootdn entry:
-	</para>
-
-<programlisting>
-syncrepl rid=123
-	 provider=ldap://ldap01.example.com:389
-	 type=refreshAndPersist
-         searchbase="dc=example,dc=com"
-         filter="(objectClass=*)"
-         scope=sub
-         schemachecking=off
-         bindmethod=simple
-         binddn="uid=john,ou=people,dc=example,dc=com"
-         credentials=password
-</programlisting>
-
-	<note>
-	  <para>
-	  This example uses the <emphasis>john</emphasis> user we created above to authenticate the sync process.  Be sure
-	  to use an account with sufficient privileges.  Also, replace <emphasis role="italic">ldap://ldap01.example.com:389</emphasis>
-	  with the appropriate host name.
-	  </para>
-	</note>
-
-	<para>
-	Now restart the consumer <application>slapd</application> daemon:
-	</para>
-<screen>
-<command>sudo /etc/init.d/slapd restart</command>
-</screen>
-
-	<para>
-	If all goes well you should be able to execute the <application>ldapsearch</application> example from 
-	above on the server with the replicated directory.
-	</para>
-<screen>
-<command>ldapsearch -xLLL -b "dc=example,dc=com" uid=john sn givenName cn</command>
-</screen>
-
-	<para>
-	The <application>slapd</application> daemon will send log information to <filename>/var/log/syslog</filename>
-	by default.  So if all does <emphasis>not</emphasis> go well check there for errors and other troubleshooting information.
-	</para>
-		
-	</sect2>
         <sect2 id="openldap-auth-config" status="review">
           <title>LDAP Authentication</title>
 

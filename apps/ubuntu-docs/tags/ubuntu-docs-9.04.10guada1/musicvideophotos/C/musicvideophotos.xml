@@ -180,6 +180,25 @@
         </para>
     </sect2>
     
+    <sect2 id="music-mtp" status="review">
+    	<title>MTP Media Players</title>
+    	<para>A number of MP3 players, such as those produced by Samsung use 
+    	Media Transfer Protocol(MTP). These devices, when used with the correct
+    	driver, often appear in Windows as a media device but can be accessed as a USB
+    	device.</para>
+    	<para>Ubuntu supports these devices but requires two steps:</para>
+    	<orderedlist>
+    		<listitem><para>Install the <ulink url="apt:mtpfs"><application>mtpfs</application></ulink> 
+    		and <ulink url="apt:mtpfs"><application>mtp-tools</application></ulink> packages.</para></listitem>
+    		<listitem><para>Open &rhythmbox;.</para></listitem>
+    		<listitem><para>Click <menuchoice><guimenu>Edit</guimenu><guimenuitem>Plugins</guimenuitem></menuchoice></para></listitem>
+    		<listitem><para>Tick the <guilabel>Portable Players - MTP</guilabel> plugin.</para></listitem>
+    		<listitem><para>Click <guibutton>Close</guibutton>.</para></listitem>
+    	</orderedlist>
+    	<para>Your device will now be displayed in the left hand pane under <guilabel>Devices</guilabel> 
+    	when connected.</para>
+    </sect2>
+    
     <sect2 id="music-ipod" status="review">
         <title>Use an iPod or other portable music player</title>
         <para>

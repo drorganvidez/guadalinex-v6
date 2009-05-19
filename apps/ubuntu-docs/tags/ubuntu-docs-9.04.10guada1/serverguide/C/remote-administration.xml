@@ -183,17 +183,17 @@
      <para>
      By default the <emphasis>public</emphasis> key is saved in the file <filename>~/.ssh/id_dsa.pub</filename>, while 
      <filename>~/.ssh/id_dsa</filename> is the <emphasis>private</emphasis> key.  Now copy the <filename>id_dsa.pub</filename> file
-     to the remote host and appended it to <filename>~/.ssh/authorized_keys2</filename>:
+     to the remote host and append it to <filename>~/.ssh/authorized_keys</filename> by entering:
      </para>
 <screen>
-<command>cat id_dsa.pub >> .ssh/authorized_keys2</command>
+<command>ssh-copy-id username@remotehost</command>
 </screen>
      <para>
-     Finally, double check the permissions on the <filename>authorized_keys2</filename> file, only the authenticated user should have read and write permissions.
+     Finally, double check the permissions on the <filename>authorized_keys</filename> file, only the authenticated user should have read and write permissions.
      If the permissions are not correct change them by:
      </para>
 <screen>
-<command>chmod 644 .ssh/authorized_keys2</command>
+<command>chmod 644 .ssh/authorized_keys</command>
 </screen>
      <para>
      You should now be able to SSH to the host without being prompted for a password.

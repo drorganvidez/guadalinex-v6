@@ -127,7 +127,7 @@ serverguide-pdf:
 		./scripts/translate.sh -d serverguide -l $(LN); \
 	fi
 	if find serverguide/$(LN) -name "*.xml"; then \
-		xsltproc --xinclude -o $(BASE)serverguide/$(LN/serverguide.fo $(UBUNTUPDFXSL) serverguide/$(LN)/serverguide.xml; \
+		xsltproc --xinclude -o $(BASE)serverguide/$(LN)/serverguide.fo $(UBUNTUPDFXSL) serverguide/$(LN)/serverguide.xml; \
 		fop -fo $(BASE)serverguide/$(LN)/serverguide.fo -pdf $(BASE)serverguide/$(LN)/serverguide.pdf; \
 	fi
 

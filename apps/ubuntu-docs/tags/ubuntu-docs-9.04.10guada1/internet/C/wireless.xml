@@ -29,22 +29,50 @@
 				<listitem><para>Click <guibutton>Connect</guibutton>.</para></listitem>
 			</orderedlist>		
 		</sect2>
-		<sect2 id="wireless-connecting-manual" status="review">
-			<title>Manually connecting</title>
+		<sect2 id="wireless-connecting-hidden" status="review">
+			<title>Connecting to a hidden network</title>
 			<orderedlist>
-				<listitem><para>Select the connection and press <guibutton>Properties</guibutton>.</para></listitem>
-				<listitem><para>From the <guilabel>Network Name</guilabel> drop down box choose your router. If it is not shown your router may not broadcast its ID. In this case manually enter the ESSID.</para></listitem>
-				<listitem><para>Select the <guilabel>Password Type</guilabel> and enter your password.</para></listitem>
-				<listitem><para>If your ISP gave you a static IP address then select <guilabel>Static IP Address</guilabel> from the <guilabel>Configuration</guilabel> box.</para></listitem>
-				<listitem><para>If your router assigns IP addresses then leave the <guilabel>Configuration</guilabel> as <guilabel>Automatic Configuration (DHCP)</guilabel>.</para></listitem>
-				<listitem><para>Click <guibutton>OK</guibutton>.</para></listitem>
+				<listitem><para>Left click the Network Manager icon in the system tray.</para></listitem>
+				<listitem><para>Click<guilabel>Connect to Hidden Wireless Network</guilabel></para></listitem>
+				<listitem><para>In the network name text box enter the ESSID you are connecting to.</para></listitem>
+				<listitem><para>Select the type of security used from the drop down list.</para></listitem>
+				<listitem><para>Click <guibutton>Connect</guibutton>.</para></listitem>
 			</orderedlist>
 		</sect2>
 	</sect1>
-
+	<sect1 id="wireless-disconnecting" status="review">
+		<title>Change or disable a wireless network</title>
+		<sect2 id="wireless-disconnecting-another" status="review">
+			<title>Connecting to another wireless network</title>
+			<para><application>Network Manager</application> (&networking;) supports Roaming mode. This allows you to connect to any available wireless network in range.</para>
+			<orderedlist>
+				<listitem><para>In the <guilabel>Taskbar</guilabel> click the <application>Network Manager</application> icon.</para></listitem>
+				<listitem><para>Select your wireless network from the list.</para></listitem>
+				<listitem><para>Enter your <guilabel>Network Key</guilabel>.</para></listitem>
+				<listitem><para>Click <guibutton>Connect</guibutton>.</para></listitem>
+			</orderedlist>		
+		</sect2>		
+		<sect2 id="wireless-disconnecting-drop" status="review">
+			<title>Disabling wireless connections</title>
+			<orderedlist>
+				<listitem><para>Right click the Network Manager icon in the system tray.</para></listitem>
+				<listitem><para>Click <guilabel>Enable Wireless</guilabel> removing the check mark.</para></listitem>
+			</orderedlist>
+		</sect2>
+	</sect1>
+	
 	<sect1 id="troubleshooting" status="review">
-		<title>Troubleshooting</title>
-		<para>This troubleshooting guide is designed to be carried out in order.</para>
+		<title>Wireless troubleshooting</title>
+		<para>While not exhaustive, this section covers some common problems faced with wireless support.</para>
+		<para>There is much more information available from the <ulink url="https://help.ubuntu.com/community/WifiDocs">Community Documentation</ulink>.</para>
+		<note><para>This troubleshooting guide is designed to be carried out in order.</para></note>
+		<sect2 id="troubleshooting-disabled" status="review">
+			<title>Check that the device is on</title>
+			<orderedlist>
+				<listitem><para>Many wireless network devices can be turned on or off. Check to see if there is a hardware switch, some devices can be switched off from Windows and may need to be turned back on from Windows.</para></listitem>
+				<listitem><para>If it is turned on then see <xref linkend="troubleshooting-device"/>.</para></listitem>
+			</orderedlist>
+		</sect2>
 		<sect2 id="troubleshooting-device" status="review">
 			<title>Check for device recognition</title>
 			<orderedlist>
@@ -56,13 +84,6 @@
 				<listitem><para>Unclaimed - there is no driver loaded, see <xref linkend="ndiswrapper"/>.</para></listitem>
 				<listitem><para>Enabled - move on to If there is a driver listed then see <xref linkend="troubleshooting-connection" />.</para></listitem>
 				<listitem><para>Disabled - see <xref linkend="troubleshooting-disabled"/>.</para></listitem>
-			</orderedlist>
-		</sect2>
-		<sect2 id="troubleshooting-disabled" status="review">
-			<title>Check that the device is on</title>
-			<orderedlist>
-				<listitem><para>Many wireless network devices can be turned on or off. Check to see if there is a hardware switch, some devices can be switched off from Windows and may need to be turned back on from Windows.</para></listitem>
-				<listitem><para>If it is turned on then see <xref linkend="troubleshooting-connection"/>.</para></listitem>
 			</orderedlist>
 		</sect2>
 		<sect2 id="troubleshooting-connection" status="review">
@@ -86,7 +107,7 @@
 		<sect2 id="troubleshooting-dns" status="review">
 			<title>Check DNS</title>
 			<orderedlist>
-				<listitem><para>Open a <application>Terminal</application> (&terminal;) and type the command: <code>ping 82.211.81.158</code>.</para></listitem>
+				<listitem><para>Open a <application>Terminal</application> (&terminal;) and type the command: <code>ping -c3 85.190.27.2</code>.</para></listitem>
 				<listitem><para>Now type the command: <code>ping www.ubuntu.com</code>. If you get a response from the both then see <xref linkend="troubleshooting-ipv6"/>.</para></listitem>
 				<listitem><para>Type the command: <code>cat /etc/resolv.conf</code>. If there is no nameserver listed then contact your ISP and find out your primary and secondary domain name servers. Once you have this information see <xref linkend="wireless-connecting"/>.</para></listitem>
 			</orderedlist>
@@ -121,8 +142,7 @@
 		<para></para>
 		<sect2 id="security-wpa" status="review">
 			<title>Configuring WPA support.</title>
-			<para>WiFi Protected Access (WPA) is an based on WEP and provides stronger security.</para>
-			<para>WPA is integrated with <application>Network Manager</application>. You must also have the <application>wpasupplicant</application> package installed.</para>
+			<para>WPA support is now integrated with <application>Network Manager</application>.</para>
 			<para>If you need to manually configure WPA support, see the <ulink url="https://help.ubuntu.com/community/WifiDocs/WPAHowTo?highlight=%28wpa%29">Wiki Entry</ulink>.</para>
 		</sect2>
 	</sect1>

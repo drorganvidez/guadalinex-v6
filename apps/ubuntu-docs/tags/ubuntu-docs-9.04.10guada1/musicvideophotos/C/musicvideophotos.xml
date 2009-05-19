@@ -471,9 +471,9 @@
         </para>
         <warning>
         <para>
-        Read about <ulink url='ghelp:XXXX'>restricted formats</ulink> before 
-        following the instructions below. There are some legal issues that 
-        you should be aware of.
+        Read about <ulink url='ghelp:add-applications#restricted-software'>
+        restricted formats</ulink> before following the instructions below. 
+        There are some legal issues that you should be aware of.
         </para>
         </warning>
         <procedure>
@@ -542,8 +542,8 @@
         Totem movie player or Firefox web browser, install the 
         <ulink url='apt:ubuntu-restricted-extras'>
         ubuntu-restricted-extras</ulink> package (see 
-        <ulink url='ghelp:XXXXX'>Restricted Software</ulink> for more 
-        information).
+        <ulink url='ghelp:add-applications#restricted-software'>Restricted 
+        Software</ulink> for more information).
         </para>
         
         <sect3 id="video-playback-file" status="review">
@@ -561,10 +561,10 @@
         <para>
         If you are asked to <guilabel>confirm installation of restricted 
         software</guilabel>, the codec required to play your video may have 
-        some <ulink url='ghelp:XXXXX'>legal restrictions</ulink> which you 
-        should be aware of. If you think that the restrictions do not apply to 
-        you, press <guibutton>Confirm</guibutton> to continue with the 
-        installation.
+        some <ulink url='ghelp:add-applications#restricted-software'>legal 
+        restrictions</ulink> which you should be aware of. If you think that 
+        the restrictions do not apply to you, press 
+        <guibutton>Confirm</guibutton> to continue with the installation.
         </para>
         <para>
         Once installation is complete, the video should begin to play. If not, 
@@ -692,7 +692,7 @@ sudo ./RealPlayer*</screen>
 </sect1>
 
 
-<sect1 id="codecs" status="review">
+<!--<sect1 id="codecs" status="review">
     <title>What is a codec?</title>
     <para>
     A <emphasis>multimedia codec</emphasis> is a small piece of software which 
@@ -709,20 +709,6 @@ sudo ./RealPlayer*</screen>
     <ulink url="http://gstreamer.freedesktop.org/documentation/plugins.html">
     GStreamer website</ulink>.
     </para>
-    <para>
-    Other applications, such as <application>Mplayer</application> and 
-    <application>Xine</application>, do not use the 
-    <application>Gstreamer</application> framework. Due to patent and copyright 
-    restrictions, codecs for these programs are not included in Ubuntu by 
-    default. For more information on these read the 
-    <ulink url="&restricted-formats;">Restricted Formats</ulink> wiki page.
-    </para>
-    <para>
-    To install extra codecs, press &gnome-app-install;, type 
-    <quote>codec</quote> in the <guilabel>Search</guilabel> box and select 
-    which codecs you want to install. Press <guibutton>Apply</guibutton> to 
-    install the selected codecs.
-    </para>
     
     <warning>
         <para>
@@ -732,6 +718,7 @@ sudo ./RealPlayer*</screen>
         </para>
     </warning>
 </sect1>
+-->
 
 <sect1 id="photos" status="review">
     <title>Photos and cameras</title>
@@ -1253,19 +1240,22 @@ sudo ./RealPlayer*</screen>
 </sect1>
     
 <sect1 id="cdburning" status="review">
-    <title>Burn CDs and DVDs</title>
+    <title>Burning CDs and DVDs</title>
     <para>
     You can make your own CDs by <emphasis>burning</emphasis> files onto a 
-    blank disc using the <emphasis>CD Writer Drive</emphasis> of your computer.
+    blank disc using the <emphasis>CD writer drive</emphasis> of your computer.
     </para>
     <para>
-    Ubuntu includes CD burning capabilities by default, and allows you to 
-    easily <ulink type='help' url='ghelp:user-guide#nautilus-cdwriter-data'>
-    create data CDs</ulink>, 
-    <ulink type='help' url='ghelp:user-guide#nautilus-cdwriter-copy'>
-    copy CDs and DVDs</ulink> and 
-    <ulink type='help' url='ghelp:user-guide#nautilus-cdwriter-writeimage'>
-    create CDs from a disc image file</ulink>.
+    Use the Brasero Disc Burning software to create data, audio and video CDs, 
+    copy CDs and DVDs and create CDs from disc image files. Click &brasero; to 
+    start Brasero.
+    </para>
+    <para>
+    For help and instructions, open Brasero and click 
+    <menuchoice>
+     <guimenuitem>Help</guimenuitem>
+     <guimenuitem>Contents</guimenuitem>
+    </menuchoice> to view a full manual.
     </para>
 </sect1>
 

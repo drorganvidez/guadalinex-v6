@@ -22,14 +22,19 @@
 			<para>Ubuntu provides a number of resources intended to help you to learn how to develop and run programs yourself. Below is a list of some resources which you may find useful.</para>
 			<sect2 id="diveintopython" status="review">
 				<title><citetitle>Dive Into Python</citetitle></title>
-				<para><citetitle>Dive Into Python</citetitle> is a book for learning how to program in Python, aimed at programmers with some previous experience.</para>
-				<itemizedlist>
-					<listitem><para><ulink url="file:///usr/share/doc/diveintopython/html/toc/index.html">Read <citetitle>Dive Into Python</citetitle></ulink></para></listitem>
-				</itemizedlist>
+				<para><application>Dive Into Python</application> is a book for learning how to program in Python, aimed at programmers with some previous experience.</para>
+				<procedure>
+					<step>
+						<para><ulink url="apt:diveintopython">Install the <application>diveintopython</application> package</ulink>.</para>
+					</step>
+					<step>
+						<para>To access the documentation, visit <ulink url="file:///usr/share/doc/diveintopython/html/toc/index.html">diveintopython</ulink>.</para>
+					</step>
+				</procedure>
 			</sect2>			
 			<sect2 id="pygtk-tutorial" status="review">
 				<title>PyGTK Tutorial</title>
-					<para>PyGTK Tutorial is a tutorial on developing with the graphical toolkit often used for developing Ubuntu applications. It assumes that you have knowledge of Python but not necessarily GTK.
+				<para><application>PyGTK Tutorial</application> is a tutorial on developing with the graphical toolkit often used for developing Ubuntu applications. It assumes that you have knowledge of Python but not necessarily GTK.
 					</para>
 					<procedure>
 						<step>
@@ -70,22 +75,10 @@
 	               <para><application>Anjuta</application> is an IDE for developing applications in C and C++ for the <quote>GNOME</quote> platform.</para>
         	       <procedure>
 				<step>
-					<para><ulink url="apt:anjuta">Install the <application>anjuta</application> package</ulink> from the <quote>Universe</quote> repository.</para>
+					<para><ulink url="apt:anjuta">Install the <application>anjuta</application> package</ulink>.</para>
 				</step>
 				<step>
-					<para>Press <keycombo><keycap>Alt</keycap><keycap>F2</keycap></keycombo>, type <quote>anjuta</quote> and press <guibutton>Run</guibutton> to start using <application>Anjuta</application>.</para>
-				</step>
-        	       </procedure>
-		</sect2>
-		<sect2 id="kdevelop-ide" status="review">
-               		<title>KDevelop IDE for KDE</title>
-	               <para><application>KDevelop</application> is an IDE for developing applications in C and C++ for the <quote>KDE</quote> platform.</para>
-        	       <procedure>
-				<step>
-					<para><ulink url="apt:kdevelop">Install the <application>kdevelop</application> package</ulink> from the <quote>Universe</quote> repository.</para>
-				</step>
-				<step>
-					<para>Press &kdevelop; to start using <application>KDevelop</application>.</para>
+					<para>Press &anjuta-ide; to start using <application>anjuta</application>.</para>
 				</step>
         	       </procedure>
 		</sect2>
@@ -104,7 +97,7 @@
 						<title>JDK 1.5</title>
 						<procedure>
 							<step>
-								<para><ulink url="apt:sun-java5-jdk">Install the <application>sun-java5-jdk</application> package</ulink> from the <quote>Multiverse</quote> repository.</para>
+								<para><ulink url="apt:sun-java5-jdk">Install the <application>sun-java5-jdk</application> package</ulink>.</para>
 							</step>
 							<step>
 								<para>Read the Java license presented. You must accept it to continue.</para>
@@ -122,7 +115,7 @@
 						<para>Java 1.6 is also available, and can be installed by following the above directions, swapping all instances of 1.5 to 1.6</para>
 						<procedure>
 							<step>
-								<para><ulink url="apt:sun-java6-jdk">Install the <application>sun-java6-jdk</application> package</ulink> from the <quote>Multiverse</quote> repository.</para>
+								<para><ulink url="apt:sun-java6-jdk">Install the <application>sun-java6-jdk</application> package</ulink>.</para>
 							</step>
 							<step>
 								<para>Read the Java license presented. You must accept it to continue.</para>
@@ -138,14 +131,14 @@
                 </sect2>
                 <sect2 id="java-hello-world" status="writing">
                 	<title>Hello World</title>
-                	<para>Enter the following code into a text editior and save it as "Hello.java":</para>
+                	<para>Enter the following code into a text editor and save it as "Hello.java":</para>
 <screen>public class Hello {
     public static void main(String[] args) {
         System.out.println("Hello world");
     }
 }
 </screen>
-					<para>Open a terminal and run your code by typing:<screen>javac Hello.java; java Hello</screen></para>
+<para>Open a terminal and compile your code by typing:<screen>javac Hello.java</screen>. You can then run your code by typing:<screen>java Hello</screen></para>
                 </sect2>        
                 <sect2 id="java-ide" status="writing">
                 	<title>Integrated Development Environments</title> 
@@ -154,7 +147,7 @@
 						<para>The <application>Eclipse</application> platform provides a complete, extensible Java development environment.</para>
 						<procedure>
 							<step>
-								<para><ulink url="apt:eclipse">Install the <application>eclipse</application> package</ulink> from the <quote>Universe</quote> repository.</para>
+								<para><ulink url="apt:eclipse">Install the <application>eclipse</application> package</ulink>.</para>
 							</step>
 							<step>
 								<para>Press &eclipse-ide; to start using <application>Eclipse</application>.</para>
@@ -166,7 +159,7 @@
 						<para>The <application>Netbeans</application> platform provides a complete, extensible Java development environment.</para>
 						<procedure>
 							<step>
-								<para><ulink url="apt:netbeans">Install the <application>Netbeans</application> package</ulink> from the <quote>Universe</quote> repository.</para>
+								<para><ulink url="apt:netbeans">Install the <application>Netbeans</application> package</ulink>.</para>
 							</step>
                 		</procedure>
                 	</sect3>
@@ -182,7 +175,7 @@
 			<para><application>Mono</application> is an implementation of the <application>.NET</application> stack, which allows you to write cross-platform programs in a number of different languages, including C#, Java, Visual Basic .NET and JavaScript. More information about <application>Mono</application> is available from the <ulink url='http://www.mono-project.com/'>Mono project homepage</ulink>.</para>
 			<procedure>
 				<step>
-					<para>Install the <ulink url="apt:monodevelop"><application>monodevelop</application></ulink> and <ulink url="apt:monodoc"><application>monodoc</application></ulink> packages from the <quote>Universe</quote> repository.</para>
+					<para>Install the <ulink url="apt:monodevelop"><application>monodevelop</application></ulink> and <ulink url="apt:monodoc"><application>monodoc</application></ulink> packages.</para>
 				</step>
 				<step>
 					<para>Press &monodevelop; to start the <application>MonoDevelop</application> IDE.</para>
@@ -198,7 +191,7 @@
 			<para><application>Gambas</application> is a <application>Visual Basic</application>-like development environment, which allows you to rapidly design and build graphical applications using the easy-to-learn BASIC language.</para>
 			<procedure>
 				<step>
-					<para><ulink url="apt:gambas">Install the <application>gambas</application> package</ulink> from the <quote>Universe</quote> repository.</para>
+					<para><ulink url="apt:gambas">Install the <application>gambas</application> package</ulink>.</para>
 				</step>
 				<step>
 					<para>Press &gambas; to start the <application>Gambas</application> IDE.</para>
@@ -210,44 +203,33 @@
 	
 	<sect1 id="programming-devtools" status="review">
 		<title>Development Tools</title>
-		<para>There are many development tools available for Ubuntu. A list of some of these is included below.</para>
-			<sect2 id="ides-and-editors" status="review">
-				<title>Integrated Development Environments (IDEs) and source-code editors</title>
-				<itemizedlist>
-					<listitem><para><ulink url="http://anjuta.sourceforge.net/">Anjuta</ulink> is an Integrated Development Environment (IDE) for C and C++.</para>
-						</listitem>
-					<listitem><para><ulink url="http://bluefish.openoffice.nl/index.html">Bluefish</ulink> is a powerful editor for experienced web designers and programmers.</para>
-						</listitem>
-					<listitem><para><ulink url="http://www.eclipse.org/">Eclipse</ulink> is an IDE for Java and other programming languages. It forms the basis for closed-source programs such as JBuilder.</para>
-						</listitem>
-					<listitem><para><ulink url="http://eric-ide.python-projects.org/index.html">Eric</ulink> is a fully featured Python and Ruby IDE.</para>
-						</listitem>
-					<listitem><para><ulink url="http://geany.uvena.de/">Geany</ulink> is a general-purpose IDE which can handle manydifferent programming and markup languages.</para>
-						</listitem>
-					<listitem><para><ulink url="http://www.python.org/idle/">IDLE</ulink> is the Python IDE built with the Tkinter GUI toolkit.</para>
-						</listitem>
-					<listitem><para><ulink url="http://www.kdevelop.org/">KDevelop</ulink> is a IDE for KDE which supports many programming languages.</para>
-						</listitem>
-					<listitem><para><ulink url="http://www.monodevelop.com/Main_Page">MonoDevelop</ulink> is an IDE for writing Mono/.NET applications in C# and other languages.</para>
-						</listitem>
-					<listitem><para><ulink url="http://www.netbeans.org/index.html">NetBeans</ulink> is a Java IDE that features support for CVS and a form builder.</para>
-						</listitem>
-					<listitem><para><ulink url="http://quanta.kdewebdev.org/">Quanta</ulink> is a powerful IDE for web development and features support for DocBook editing.</para>
-						</listitem>
-				</itemizedlist>
-			</sect2>
-			
+		<para>There are many development tools available for Ubuntu. A selection of these are described below.</para>
 			<sect2 id="source-code-management" status="review">
-				<title>Source-code management systems</title>
-				<itemizedlist>
-				
-					<listitem><para><ulink url="http://www.bazaar-ng.org/">Bazaar-NG</ulink> is a decentralised version control system used for Ubuntu development.</para>
+				<title>Version control systems</title>
+				<sect3 id="bzr" status="review">
+					<title>Bazaar-NG</title>
+					<para><application>Bazaar-NG</application> is a decentralised version control system used for Ubuntu development</para>
+					<procedure>
+						<step>
+							<para>Install the <ulink url="apt:bzr"><application>bzr</application></ulink> and the <ulink url="apt:bzr-gtk"><application>bzr-gtk</application></ulink> packages.</para>
+						</step>
+						<step>
+							<para>Press &bzrgtk; to start the <application>Bazaar-GTK</application> graphical interface or to use the command line interface open a terminal and type: <screen>bzr</screen></para>
+						</step>
+					</procedure>
+				</sect3>
+				<sect3 id="othervcs">
+					<title>Other version control systems</title>
+					<itemizedlist>
+						<listitem>
+							<para><ulink url="http://subversion.tigris.org/">Subversion</ulink> (SVN) is a version control system intended as a replacement for CVS.</para>
 						</listitem>
-					<listitem><para><ulink url="http://www.nongnu.org/cvs/">CVS</ulink> is an advanced version control system used by many open-source projects.</para>
+						<listitem>
+							<para><ulink url="http://www.nongnu.org/cvs/">CVS</ulink> is also available, however you should give strong consideration to using other version control systems for new projects.</para>
 						</listitem>
-					<listitem><para><ulink url="http://subversion.tigris.org/">Subversion</ulink> (SVN) is a powerful version control system intended as a replacement for CVS.</para>
-						</listitem>
-				</itemizedlist>
+					</itemizedlist>
+				</sect3>
+
 			</sect2>
 			
 			<sect2 id="other-programming-tools" status="review">
@@ -258,5 +240,4 @@
 				</itemizedlist>
 			</sect2>
 	</sect1>	
-	
 </article>

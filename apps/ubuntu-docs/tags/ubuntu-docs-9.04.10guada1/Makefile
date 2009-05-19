@@ -93,20 +93,20 @@ switching:
 	xsltproc --stringparam html.stylesheet "common/ubuntu-book.css" --stringparam navig.graphics.path "images/navig/" --stringparam callout.graphics.path "images/callouts/" --stringparam admon.graphics.path "images/admin/" --xinclude -o $(BASE)switching/index.html $(UBUNTUCHUNKXSL) switching/C/switching.xml
 
 	# copy style sheet and common images to build directory
-	mkdir -p ../build/ubuntu/switching/common/img
-	cp libs/*css ../build/ubuntu/switching/common/
-	cp libs/img/*png ../build/ubuntu/switching/common/img/
-	mkdir -p ../build/ubuntu/switching/images/admon
-	cp -r ../common/admon/*.* ../build/ubuntu/switching/images/admon	
-	mkdir -p ../build/ubuntu/switching/images/callouts
-	cp -r ../common/callouts/*.* ../build/ubuntu/switching/images/callouts	
-	mkdir -p ../build/ubuntu/switching/images/navig
-	cp -r ../common/navig/*.* ../build/ubuntu/switching/images/navig	
+	mkdir -p $(BASE)switching/common/img
+	cp libs/*css $(BASE)switching/common/
+	cp libs/img/*png $(BASE)switching/common/img/
+	mkdir -p $(BASE)switching/images/admon
+	cp -r common/admon/*.* $(BASE)switching/images/admon	
+	mkdir -p $(BASE)switching/images/callouts
+	cp -r common/callouts/*.* $(BASE)switching/images/callouts	
+	mkdir -p $(BASE)switching/images/navig
+	cp -r common/navig/*.* $(BASE)switching/images/navig	
 
 serverguide: style
 
 	xsltproc --xinclude -o $(BASE)serverguide/C/index.html $(UBUNTUCHUNKXSL) serverguide/C/serverguide.xml
-	sed -i ../build/serverguide/C/*legal.html -e "s#\.\./common/C/contributors\.xml#common/C/contributors\.html#g"
+	sed -i $(BASE)serverguide/C/*legal.html -e "s#\.\./common/C/contributors\.xml#common/C/contributors\.html#g"
 
 
 status: style

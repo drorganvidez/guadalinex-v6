@@ -171,6 +171,99 @@ weather -i KINT >> /var/run/update-motd/60-local-weather
     </para>
 
   </sect1>
+  <sect1 id="etckeeper" status="review">
+    <title>etckeeper</title>
+
+    <para>
+    <application>etckeeper</application> allows the contents of <filename role="directory">/etc</filename> be easily stored in 
+    Version Control System (VCS) repository. It hooks into <application>apt</application> to automatically commit changes to
+    <filename>/etc</filename> when packages are installed or upgraded.  Placing <filename>/etc</filename> under version control 
+    is considered an industry best practice, and the goal of <application>etckeeper</application> is to make this process as 
+    painless as possible.  
+    </para>
+
+    <para>
+    
+    </para>
+
+   
+  </sect1>
+  <sect1 id="screen-profiles" status="review">
+    <title>Screen Profiles</title>
+
+    <para>
+    One of the most useful applications for any system administrator is <application>screen</application>.  It allows the execution
+    of multiple shells in one terminal. To make some of the advanced <application>screen</application> features more 
+    user friendly, and provide some useful information about the system, the <application>screen-profiles</application> package was 
+    created.  
+    </para>
+
+    <para>
+    When executing <application>screen</application> for the first time you will be presented with the 
+    <application>screen-profiles-helper</application> menu.  This menu will allow you to:
+    </para>
+
+    <itemizedlist>
+      <listitem><para>View the Help menu</para></listitem>
+      <listitem><para>Change the key binding set</para></listitem>
+      <listitem><para>Change screen profiles</para></listitem>
+      <listitem><para>Change the escape sequence</para></listitem>
+      <listitem><para>Create new screen windows</para></listitem>
+      <listitem><para>Manage the default windows</para></listitem>
+      <listitem><para>Install screen by default at login</para></listitem>
+    </itemizedlist>
+
+    <para>
+    The <emphasis>key bindings</emphasis> determine such things as the escape sequence, new window, change window, etc.  There 
+    are two key binding sets to choose from <emphasis>common</emphasis> and <emphasis>none</emphasis>.  If you wish to use the 
+    original key bindings choose the <emphasis>none</emphasis> set.
+    </para>
+
+    <para>
+    The Ubuntu <application>screen-profiles</application> provide a menu which displays the Ubuntu release, processor information,
+    memory information, and the time and date. The effect is similar to a desktop menu.  When a profile is selected it will be 
+    symlinked to <filename>~/.screenrc</filename>.  The <application>select-screen-profile</application> utility can also be used 
+    to change profiles, in a terminal enter:
+    </para>
+
+<screen>
+<command>select-screen-profile -s ubuntu-light</command>
+</screen>
+   
+    <para>
+    The <emphasis>plain</emphasis> profile will change <application>screen</application> back to the defaults, which does not include
+    the information menu at the bottom.
+    </para>
+
+    <para>
+    Using the <emphasis>"Install screen by default at login"</emphasis> option will cause screen to be executed any time a terminal is opened.
+    Changes made to <application>screen</application> are on a per user basis, and will not affect other users on the system.
+    </para>
+
+    <para>
+    One difference when using screen is the <emphasis>scrollback</emphasis> mode.  If you are using one of the Ubuntu profiles press the 
+    <emphasis>F7</emphasis>, or <emphasis>Ctrl+a+[</emphasis> if not, to enter scrollback mode.  Scrollback mode allows you to navigate 
+    past output using <emphasis>vi</emphasis> like commands.  Here is a quick list of movement commands:
+    </para>
+
+    <itemizedlist>
+      <listitem><para><emphasis>h</emphasis> - Move the cursor left by one character</para></listitem>
+      <listitem><para><emphasis>j</emphasis> - Move the cursor down by one line</para></listitem>
+      <listitem><para><emphasis>k</emphasis> - Move the cursor up by one line</para></listitem>
+      <listitem><para><emphasis>l</emphasis> - Move the cursor right by one character</para></listitem>
+      <listitem><para><emphasis>0</emphasis> - Move to the beginning of the current line</para></listitem>
+      <listitem><para><emphasis>$</emphasis> - Move to the end of the current line</para></listitem>
+      <listitem><para><emphasis>G</emphasis> - Moves to the specified line (defaults to the end of the buffer)</para></listitem>
+      <listitem><para><emphasis>C-u</emphasis> - Scrolls a half page up</para></listitem>
+      <listitem><para><emphasis>C-b</emphasis> - Scrolls a full page up</para></listitem>
+      <listitem><para><emphasis>C-d</emphasis> - Scrolls a half page down</para></listitem>
+      <listitem><para><emphasis>C-f</emphasis> - Scrolls the full page down</para></listitem>
+      <listitem><para><emphasis>/</emphasis> - Search forward</para></listitem>
+      <listitem><para><emphasis>?</emphasis> - Search backward</para></listitem>
+      <listitem><para><emphasis>n</emphasis> - Moves to the next match, either forward or backword</para></listitem>
+    </itemizedlist>
+
+  </sect1>
   <sect1 id="other-app-references" status="review">
     <title>References</title>
 
@@ -186,6 +279,17 @@ weather -i KINT >> /var/run/update-motd/60-local-weather
         The Debian Package of the Day 
         <ulink url="http://debaday.debian.net/2007/10/04/weather-check-weather-conditions-and-forecasts-on-the-command-line/">weather</ulink>
         article has more details about using the <application>weather</application>utility.
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+        For more information on <application>screen</application> see the <ulink url="http://www.gnu.org/software/screen/">screen web site</ulink>.
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+        Also, see the <application>screen-profiles</application> <ulink url="https://launchpad.net/screen-profiles">project page</ulink> for more
+        information.
         </para>
       </listitem>
     </itemizedlist>

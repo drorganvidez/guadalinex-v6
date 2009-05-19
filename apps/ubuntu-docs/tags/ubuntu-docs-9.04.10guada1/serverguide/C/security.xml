@@ -1384,13 +1384,36 @@ sudo iptables -A INPUT -m state --state NEW -p tcp --dport 80 -j LOG --log-prefi
         </sect2>
         <sect2 id="generating-a-csr" status="review">
           <title>Generating a Certificate Signing Request (CSR)</title>
-            <para>Whether you are getting a certificate from a CA or generating your own
-            self-signed certificate, the first step is to generate a key.
-            </para>
+
+          <para>
+          Whether you are getting a certificate from a CA or generating your own
+          self-signed certificate, the first step is to generate a key.
+          </para>
+
+          <para>       
+          If the certificate will be used by service daemons, such as Apache, Postfix, Dovecot, etc, 
+          a key without a passphrase is often appropriate.  Not having a passphrase allows the services
+          to start without manual intervention, usually the preferred way to start a daemon.
+          </para>
+
+          <para>                  
+          This section will cover generating a key with a passphrase, and one without.  The non-passphrase 
+          key will then be used to generate a certificate that can be used with various service daemons. 
+          </para>
+
+          <warning>
             <para>
-            To generate the <emphasis>keys</emphasis> for the Certificate Signing Request (CSR) run the 
-            following command from a terminal prompt:
+            Running your secure service without a passphrase is convenient because you will not 
+            need to enter the passphrase every time you start your secure service. But it is 
+            insecure and a compromise of the key means a compromise of the server as well.
             </para>
+          </warning>
+
+          <para>
+          To generate the <emphasis>keys</emphasis> for the Certificate Signing Request (CSR) run the 
+          following command from a terminal prompt:
+          </para>
+
 <screen>
 <command>openssl genrsa -des3 -out server.key 1024</command>
 </screen>
@@ -1407,7 +1430,7 @@ Enter pass phrase for server.key:
         <para>
         You can now enter your passphrase. For best security, it should
         at least contain eight characters. The minimum length when
-		specifying -des3 is four characters. It should include numbers
+        specifying -des3 is four characters. It should include numbers
         and/or punctuation and not be a word in a dictionary. Also
         remember that your passphrase is case-sensitive. 
         </para>
@@ -1417,35 +1440,27 @@ Enter pass phrase for server.key:
         correctly, the server key is generated and stored in the
         <filename>server.key</filename> file.
         </para>
-
-        <warning>
+      
         <para>
-        You can also run your secure service without a passphrase.
-        This is convenient because you will not need to enter the
-        passphrase every time you start your secure service. But it
-        is highly insecure and a compromise of the key means a
-        compromise of the server as well.
-        </para>
-        </warning>
-
-        <para>
-        In any case, you can choose to run your secure service without
-        a passphrase by leaving out the -des3 switch in the generation
-        phase or by issuing the following command at a terminal prompt:
+        Now create the insecure key, the one without a passphrase, and shuffle 
+        the key names:
         </para>
 
 <screen>
 <command>openssl rsa -in server.key -out server.key.insecure</command>
+<command>mv server.key server.key.secure</command>
+<command>mv server.key.insecure server.key</command>
 </screen>
+
         <para>
-        Once you run the above command, the insecure key will be stored
-        in the <filename>server.key.insecure</filename> file. You can use this
+        The insecure key is now named <filename>server.key</filename>, and you can use this
         file to generate the CSR without passphrase.
         </para>
 
         <para>
         To create the CSR, run the following command at a terminal prompt:
         </para>
+
 <screen>
 <command>openssl req -new -key server.key -out server.csr</command>
 </screen>

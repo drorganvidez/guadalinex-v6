@@ -487,11 +487,54 @@ $1$s3YiK$M3lxAbqA6JLm2FbDWnClQ0</computeroutput>
 		</para>
 	      </listitem>
               <listitem>
+
+                <para>
+                Adding the <emphasis>--dry-run</emphasis> option to a <emphasis>ufw</emphasis> command will output the resulting
+                rules, but not apply them.  For example, the following is what would be applied if opening the HTTP port:
+                </para>
+
+<screen>
+<command> sudo ufw --dry-run allow http</command>
+</screen>
+
+<screen>
+<computeroutput>*filter
+:ufw-user-input - [0:0]
+:ufw-user-output - [0:0]
+:ufw-user-forward - [0:0]
+:ufw-user-limit - [0:0]
+:ufw-user-limit-accept - [0:0]
+### RULES ###
+
+### tuple ### allow tcp 80 0.0.0.0/0 any 0.0.0.0/0
+-A ufw-user-input -p tcp --dport 80 -j ACCEPT
+
+### END RULES ###
+-A ufw-user-input -j RETURN
+-A ufw-user-output -j RETURN
+-A ufw-user-forward -j RETURN
+-A ufw-user-limit -m limit --limit 3/minute -j LOG --log-prefix "[UFW LIMIT]: "
+-A ufw-user-limit -j REJECT
+-A ufw-user-limit-accept -j ACCEPT
+COMMIT
+Rules updated</computeroutput>
+</screen>
+
+              </listitem>
+              <listitem>
                 <para>
                 <application>ufw</application> can be disabled by:
 	        </para>
 <screen>
 <command>sudo ufw disable</command>
+</screen>
+	      </listitem>
+              <listitem>
+                <para>
+                To see the firewall status, enter:
+	        </para>
+<screen>
+<command>sudo ufw status</command>
 </screen>
 	      </listitem>
 	    </itemizedlist>
@@ -501,9 +544,126 @@ $1$s3YiK$M3lxAbqA6JLm2FbDWnClQ0</computeroutput>
 	      In the above examples, replace <emphasis>22</emphasis> with <emphasis>ssh</emphasis>. 
               </para>
 	    </note>
+
   	    <para>
-	    This is a quick introduction to using <application>ufw</application>. Please refer to the <application>ufw</application> man page for more information.
+	    This is a quick introduction to using <application>ufw</application>. Please refer to the <application>ufw</application> man page for 
+            more information.
 	    </para>
+
+            <sect3 id="ufw-application-integration" status="review">
+              <title>ufw Application Integration</title>
+
+              <para>
+              Applications that open ports can include an <application>ufw</application> profile, which details the ports needed for the 
+              application to function properly.  The profiles are kept in <filename role="directory">/etc/ufw/applications.d</filename>,
+              and can be edited if the default ports have been changed.
+              </para>
+
+              <itemizedlist>
+                <listitem>
+
+                  <para>
+                  To view which applications have installed a profile, enter the following in a terminal:
+                  </para>
+
+<screen>
+<command>sudo ufw app list</command>
+</screen>
+
+                </listitem>
+                <listitem>
+
+                  <para>
+                  Similar to allowing traffic to a port, enabling an application profile is accomplished by entering:
+                  </para>
+
+<screen>
+<command>sudo ufw allow samba</command>
+</screen>
+
+                </listitem>
+                <listitem>
+
+                  <para>
+                  An extended syntax is available as well:
+                  </para>
+
+<screen>
+<command>ufw allow from 192.168.0.0/24 to any app samba</command>
+</screen>
+
+                  <para>
+                  Replace <emphasis>samba</emphasis> and <emphasis>192.168.0.0/24</emphasis> with the application you are enabling and
+                  the IP range for your network. 
+                  </para>
+
+                  <note>
+                    <para>
+                    There is no need to specify the <emphasis>protocol</emphasis> for the application, because that information is detailed in
+                    the profile.  Also, note that the <emphasis>app</emphasis> name replaces the <emphasis>port</emphasis> number.
+                    </para>
+                  </note>
+
+                </listitem>
+                <listitem>
+
+                  <para>
+                  To view details about which ports, protocols, etc are enabled for an application, enter:
+                  </para>
+
+<screen>
+<command>sudo ufw info samba</command>
+</screen>
+
+                </listitem>
+                <listitem>
+
+                  <para>
+                  If you have edited an application's profile, enable the changes with:
+                  </para>
+
+<screen>
+<command>sudo ufw app update apache2</command>
+</screen>
+
+                  <para>
+                  Add the <emphasis>--add-new</emphasis> to the above command to update the application profile and add any new rules
+                  automatically.
+                  </para>
+
+                </listitem>
+                <listitem>
+
+                  <para>
+                  By default the <emphasis>--add-new</emphasis> option will <emphasis>skip</emphasis> any new rules added to an application
+                  profile.  To change this policy, enter:
+                  </para>
+
+<screen>
+<command>ufw app default allow</command>
+</screen>
+
+                  <para>
+                  This will automatically open any ports enabled in a profile when using the <emphasis>--add-new</emphasis> option.
+                  </para>
+
+                  <warning>
+                    <para>
+                    Setting the default policy to <emphasis>allow</emphasis> may have security implications, use caution when enabling
+                    applications using this policy.
+                    </para>
+                  </warning>
+
+                </listitem>
+              </itemizedlist>
+
+              <para>
+              Not all applications that require opening a network port come with <application>ufw</application> profiles, but if 
+              you have profiled an application and want the file to be included with the package, please file a bug against the 
+              package in <ulink url="https://launchpad.net/">Launchpad</ulink>.
+              </para>
+
+            </sect3>
 	  </sect2>
         <sect2 id="ip-masquerading" status="review">
           <title>IP Masquerading</title>
@@ -583,6 +743,20 @@ COMMIT
 # don't delete the 'COMMIT' line or these rules won't be processed
 COMMIT
 </programlisting>
+
+                  <para>
+                  For each <emphasis>Table</emphasis> a corresponding <emphasis>COMMIT</emphasis> statement is required.  In these examples 
+                  only the <emphasis>nat</emphasis> and <emphasis>filter</emphasis> tables are shown, but you can also add rules for the 
+                  <emphasis>raw</emphasis> and <emphasis>mangle</emphasis> tables.
+                  </para>
+
+                  <note>
+                   <para>
+                   In the above example replace <emphasis>eth0</emphasis>, <emphasis>eth1</emphasis>, and <emphasis>192.168.0.0/24</emphasis> 
+                   with the appropriate interfaces and IP range for your network.
+                   </para>
+                  </note>
+
 		</listitem>
 	        <listitem>
 		  <para>

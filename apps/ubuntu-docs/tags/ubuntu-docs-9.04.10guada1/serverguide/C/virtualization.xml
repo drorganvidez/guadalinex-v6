@@ -1209,7 +1209,7 @@ echo "browser to http://serverip/limesurvey/admin"
         </listitem>
         <listitem>
           <para>
-          <emphasis>Two Compute Nodes:</emphasis> runs the <emphasis>Node Controller</emphasis> component of Eucalyptus, which
+          <emphasis>Two Compute Nodes:</emphasis> run the <application>eucalyptus-nc</application> component, which
           allows the machine to be part of the cloud.
           </para>
         </listitem>
@@ -1256,7 +1256,7 @@ echo "browser to http://serverip/limesurvey/admin"
 </screen>
 
       <para>
-      On each of the <emphasis>Cluster Nodes</emphasis> install the <application>eucalyptus-nc</application> package, 
+      On each of the <emphasis>Compute Nodes</emphasis> install the <application>eucalyptus-nc</application> package, 
       and set a password for the <emphasis>eucalyptus</emphasis> user:
       </para>
 
@@ -1479,7 +1479,7 @@ INSTANCE	i-45E108DD	emi-FFD11190	0.0.0.0	0.0.0.0	running		0		m1.small	2009-03-21
 
     <para>
     This section will detail configuring an OpenNebula cluster using three machines: one <emphasis>Front-End</emphasis> host, and two 
-    <emphasis>Cluster Nodes</emphasis> used to run the virtual machines. The Cluster Nodes will also need a bridge configured to allow the 
+    <emphasis>Compute Nodes</emphasis> used to run the virtual machines. The Compute Nodes will also need a bridge configured to allow the 
     virtual machines access to the local network.  For details see <xref linkend="bridging"/>.
     </para>
 
@@ -1495,7 +1495,7 @@ INSTANCE	i-45E108DD	emi-FFD11190	0.0.0.0	0.0.0.0	running		0		m1.small	2009-03-21
 </screen>
   
       <para>
-      On each Cluster Node install:
+      On each Compute Node install:
       </para>
 
 <screen>
@@ -1511,7 +1511,7 @@ INSTANCE	i-45E108DD	emi-FFD11190	0.0.0.0	0.0.0.0	running		0		m1.small	2009-03-21
 </screen>
 
       <para>
-      Next, copy the <emphasis>oneadmin</emphasis> user's SSH key to the Cluster Nodes, and to the Front-End's <filename>authorized_keys</filename> file:
+      Next, copy the <emphasis>oneadmin</emphasis> user's SSH key to the Compute Nodes, and to the Front-End's <filename>authorized_keys</filename> file:
       </para>
 
 <screen>
@@ -1521,8 +1521,8 @@ INSTANCE	i-45E108DD	emi-FFD11190	0.0.0.0	0.0.0.0	running		0		m1.small	2009-03-21
 </screen>  
 
       <para>
-      The SSH key for the Cluster Nodes needs to be added to the <filename>/etc/ssh/ssh_known_hosts</filename> file on the Front-End host.  To accomplish
-      this <application>ssh</application> to each Cluster Node as a user other than <emphasis>oneadmin</emphasis>.  Then exit from the SSH session, and 
+      The SSH key for the Compute Nodes needs to be added to the <filename>/etc/ssh/ssh_known_hosts</filename> file on the Front-End host.  To accomplish
+      this <application>ssh</application> to each Compute Node as a user other than <emphasis>oneadmin</emphasis>.  Then exit from the SSH session, and 
       execute the following to copy the SSH key from <filename>~/.ssh/known_hosts</filename> to <filename>/etc/ssh/ssh_known_hosts</filename>:
       </para>
 
@@ -1539,7 +1539,7 @@ INSTANCE	i-45E108DD	emi-FFD11190	0.0.0.0	0.0.0.0	running		0		m1.small	2009-03-21
 
       <para>
       This allows the <emphasis>oneadmin</emphasis> to use <application>scp</application>, without a password or manual intervention, to deploy an
-      image to the Cluster Nodes.
+      image to the Compute Nodes.
       </para>
 
       <para>
@@ -1608,9 +1608,7 @@ NAME   = vm01
 CPU    = 0.5
 MEMORY = 512
 
-OS      = [
-  KERNEL = /vmlinuz,
-  BOOT   = hd ]
+OS      = [ BOOT   = hd ]
 
 DISK   = [
   source   = "/var/lib/one/images/vm01.qcow2",
@@ -1618,6 +1616,8 @@ DISK   = [
   readonly = "no" ]
 
 NIC    = [ NETWORK="LAN" ]
+
+GRAPHICS = [type="vnc",listen="127.0.0.1",port="-1"]
 </programlisting>
 
       <para>

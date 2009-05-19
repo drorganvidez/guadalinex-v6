@@ -1291,6 +1291,34 @@ UUID=66bcdd2e-8861-4fb0-b7e4-e61c569fe17d /srv  ext3    noatime,relatime,acl 0  
 <command>sudo apt-get install likewise-open</command>
 </screen>
 
+      <para>
+      With Ubuntu 9.04 <application>Likewise Open 5.0</application> is available in the <emphasis>Universe</emphasis> repository.  
+      However, since upgrading from <application>Likewise Open 4.1</application> currently requires the system to leave the 
+      domain and re-join, a separate package for version five was created.
+      </para>
+
+      <para>
+      To install <application>Likewise Open 5.0</application> enter:
+      </para>
+
+<screen>
+<command>sudo apt-get install likewise-open5</command>
+</screen>
+
+      <warning>
+        <para>
+        Installing likewise-open5 over an existing likewise-open (4.1) installation will replace it. You will have to rejoin 
+        the domain after install.
+        </para>
+      </warning>
+
+      <note>
+        <para>
+        The command line tools, and GUI interface, for likewise-open5 are the same as version four.
+        </para>
+      </note>
+
+
     </sect2>
     <sect2 id="likewise-open-configuration" status="review">
       <title>Joining a Domain</title>

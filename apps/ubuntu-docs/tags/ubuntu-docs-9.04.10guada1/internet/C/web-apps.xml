@@ -28,7 +28,7 @@
 				<listitem><para><application>Mozilla Seamonkey Application Suite</application></para></listitem>
 				<listitem><para><application>Opera</application></para></listitem>
 			</itemizedlist>
-			<para>See <ulink type="help" url="ghelp:add-applications">Add Applications</ulink> for help on installing new software.</para>
+			<para>See <xref linkend="add-applications" /> for help on installing new software.</para>
 		</sect2>
 		<sect2 id="web-plugins" status="review">
 			<title>Get plugins for your web browser</title>
@@ -60,28 +60,28 @@
 					<listitem><para><application>sun-java6-plugin</application></para></listitem>
 				</itemizedlist>
 			</sect3>
-			
+<!-- REMOVING UNTIL MVP IS UPDATED			
 			<sect3 id="web-plugins-audiovideo" status="review">
 				<title>Audio and video plugins</title>
 				<para>Many different multimedia formats are used on the Internet and you may find that you are unable to play some audio and video files without installing an appropriate plugin.</para>
 				<para>See the following articles for information on installing and using multimedia plugins with the <application>Firefox Web Browser</application>:</para>
 				<itemizedlist>
-					<listitem><para><ulink type="help" url='ghelp:musicvideophotos#video-online'>Watch videos in a web browser</ulink></para></listitem>
-					<listitem><para><ulink type="help" url="ghelp:musicvideophotos#video">Play movies and videos</ulink></para></listitem>
-					<listitem><para><ulink url='https://help.ubuntu.com/community/FirefoxPlugins'>Firefox Plugins</ulink> (Ubuntu Community support pages)</para></listitem>
-					<listitem><para><ulink type="help" url='ghelp:internet#web-plugins-flash'>Flash multimedia plugin</ulink></para></listitem>
-					<listitem><para><ulink type="help" url="ghelp:musicvideophotos#music-audiostreams">Listen to online audio streams</ulink> (instructions for installing <application>RealPlayer</application>)</para></listitem>
-					<listitem><para><ulink type="help" url="ghelp:musicvideophotos#codecs">Multimedia codecs</ulink></para></listitem>
+					<listitem><para><xref linkend="video-online"/></para></listitem>
+					<listitem><para><xref linkend="musicvideophotos#video"/></para></listitem>
+					<listitem><para><xref linkend="web-plugins"/></para></listitem>
+					<listitem><para><xref linkend="web-plugins-flash"/></para></listitem>
+					<listitem><para><xref linkend="music-audiostreams"/> (instructions for installing <application>RealPlayer</application>)</para></listitem>
+					<listitem><para><xref linkend="musicvideophotos#codecs"/>.</para></listitem>
 				</itemizedlist>
 			</sect3>
-			
+-->						
 			<sect3 id="web-plugins-flash" status="review">
 				<title>Flash multimedia plugin</title>
 				<para>Flash is a proprietary plugin which allows you to watch videos and animations on the Internet.</para>
 				<para>To view Flash graphics from the <application>Firefox Web Browser</application>:</para>
 				<procedure>
 					<step>
-						<para><ulink url="apt:flashplugin-nonfree">Install the <application>flashplugin-nonfree</application> package</ulink>.</para>
+						<para><xref linkend="web-plugins-commonrestricted" />.</para>
 					</step>
 					<step>
 						<para>Restart <application>Firefox</application> to make the plugin available.</para>
@@ -103,7 +103,7 @@
 					</listitem>
 
 				</itemizedlist>
-				<para>For a more complete Java installation, see <ulink type="help" url="ghelp:programming#java">Java</ulink>.</para>
+				<para>For a more complete Java installation, see <xref linkend="java"/>.</para>
 			</sect3>
 			
 		</sect2>

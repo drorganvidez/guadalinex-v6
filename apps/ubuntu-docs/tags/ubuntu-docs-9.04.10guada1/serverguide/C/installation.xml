@@ -91,29 +91,6 @@
 	  The timer interrupt is 100 Hz in the Server Edition and 250 Hz in the Desktop Edition.
 	  </para>
 	</listitem>	
-	<listitem>	
-	  <para>
-	  The Server Edition is optimized for i686 processors while the Desktop Edition is optimized for both 
-	  the i586 and i686.
-	  </para>
-	</listitem>
-	<listitem>	
-	  <para>
-	  Virtualization is better supported in the Server Edition through the enabling of IPC namespaces, and 
-          the <application>Xen</application> hypervisor.
-	  </para>
-	</listitem>
-        <listitem>	
-	  <para>
-	  Multiple routing tables for the IPv6 protocol are also supported in the Server Edition.
-	  </para>
-	</listitem>
-	<listitem>	
-	  <para>
-	  For 32-bit systems the Server Edition is configured to use PAE which allows addressing up to 64GB of 
-          <emphasis>memory</emphasis> while the Desktop Edition is configured for 4GB.
-	  </para>
-	</listitem>
 	</itemizedlist>
 	  <note>
 	    <para>
@@ -191,6 +168,7 @@
 	    <listitem>
 	      <para>
 	      You can then choose from several options to configure the hard drive layout.
+              For advanced disk options see <xref linkend="advanced-installation"/>.
 	      </para>
 	    </listitem>
 	    <listitem>
@@ -203,6 +181,41 @@
 	      A new user is setup, this user will have <emphasis>root</emphasis> access
 	      through the <application>sudo</application> utility.
 	      </para>
+	    </listitem>
+	    <listitem>
+	      <para>
+              After the user is setup, you will be asked to setup an encrypted 
+              <filename role="directory">Private</filename> directory.  If you choose to setup
+              the directory you will then be prompted for an encryption password.
+	      </para>
+	    </listitem>
+	    <listitem>
+	      <para>
+              The next step in the installation process is to decide how you want to update the system.
+              There are three options: 
+	      </para>
+                <itemizedlist>
+                  <listitem>
+                    <para>
+                    <emphasis>No automatic updates</emphasis>: this requires an administrator to log into
+                    the machine and manually install updates.
+                    </para>
+                  </listitem>
+                  <listitem>
+                    <para>
+                    <emphasis>Install security updates Automatically</emphasis>: will configure a 
+                    <application>cron</application> job to install security updates without the intervention
+                    of an administrator.
+                    </para>
+                  </listitem>
+                  <listitem>
+                    <para>
+                    <emphasis>Manage the system with Landscape</emphasis>: Landscape is a paid service provided
+                    by Canonical to help manager your Ubuntu machines.  See the 
+                    <ulink url="http://www.canonical.com/projects/landscape">Landscape</ulink> site for details.
+                    </para>
+                  </listitem>
+                </itemizedlist>
 	    </listitem>
 	    <listitem>
 	      <para>
@@ -241,6 +254,11 @@
 	    <itemizedlist>
 	      <listitem>
 	        <para>
+		Basic Ubuntu server: Installs some additional utilities and documentation.
+	        </para>
+	      </listitem>
+	      <listitem>
+	        <para>
 		DNS server: Selects the BIND DNS server and its documentation.
 	        </para>
 	      </listitem>
@@ -273,6 +291,11 @@
 	        <para>
 		Samba File server: This task sets up your system to be a Samba file server, which is 
 		especially suitable in networks with both Windows and Linux systems.
+	        </para>
+	      </listitem>
+	      <listitem>
+	        <para>
+		Tomcat server: Installs the Apache Tomcat and needed dependencies Java, gcj, etc.
 	        </para>
 	      </listitem>
 	    </itemizedlist>

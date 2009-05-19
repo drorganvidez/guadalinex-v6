@@ -52,7 +52,6 @@ for y in `cat libs/shipped-docs`; do
  	sed -i build/$y/$lang/*.html -e "s#ghelp:internet\#web-plugins-flash#\.\./\.\./internet/$lang/web-plugins.html\#web-plugins-flash#g"
  	sed -i build/$y/$lang/*.html -e "s#ghelp:programming\#java#\.\./\.\./programming/$lang/java.html#g"
  	sed -i build/$y/$lang/*.html -e "s#ghelp:programming#\.\./\.\./programming/$lang/index.html#g"
- 	sed -i build/$y/$lang/*.html -e "s#ghelp:serverguide#\.\./\.\./serverguide/$lang/index.html#g"
  	sed -i build/$y/$lang/*.html -e "s#ghelp:windows#\.\./\.\./windows/$lang/#g"
         sed -i build/$y/$lang/*.html -e "s#\"legal\.html\"#\"/legal\.html\"#g"
  	sed -i build/$y/$lang/*.html -e "s#man:apt-get#http://manpages\.ubuntu\.com/manpages/intrepid/en/man8/apt-get\.html#g"

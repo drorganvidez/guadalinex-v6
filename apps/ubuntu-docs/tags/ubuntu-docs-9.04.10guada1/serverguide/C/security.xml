@@ -537,6 +537,14 @@ Rules updated</computeroutput>
 <command>sudo ufw status</command>
 </screen>
 	      </listitem>
+              <listitem>
+                <para>
+                And for more verbose status information use:
+	        </para>
+<screen>
+<command>sudo ufw status verbose</command>
+</screen>
+	      </listitem>
 	    </itemizedlist>
 	    <note>
 	      <para>
@@ -574,11 +582,11 @@ Rules updated</computeroutput>
                 <listitem>
 
                   <para>
-                  Similar to allowing traffic to a port, enabling an application profile is accomplished by entering:
+                  Similar to allowing traffic to a port, using an application profile is accomplished by entering:
                   </para>
 
 <screen>
-<command>sudo ufw allow samba</command>
+<command>sudo ufw allow Samba</command>
 </screen>
 
                 </listitem>
@@ -589,12 +597,12 @@ Rules updated</computeroutput>
                   </para>
 
 <screen>
-<command>ufw allow from 192.168.0.0/24 to any app samba</command>
+<command>ufw allow from 192.168.0.0/24 to any app Samba</command>
 </screen>
 
                   <para>
-                  Replace <emphasis>samba</emphasis> and <emphasis>192.168.0.0/24</emphasis> with the application you are enabling and
-                  the IP range for your network. 
+                  Replace <emphasis>Samba</emphasis> and <emphasis>192.168.0.0/24</emphasis> with the application profile you are 
+                  using and the IP range for your network. 
                   </para>
 
                   <note>
@@ -608,52 +616,12 @@ Rules updated</computeroutput>
                 <listitem>
 
                   <para>
-                  To view details about which ports, protocols, etc are enabled for an application, enter:
+                  To view details about which ports, protocols, etc are defined for an application, enter:
                   </para>
 
 <screen>
-<command>sudo ufw info samba</command>
+<command>sudo ufw info Samba</command>
 </screen>
-
-                </listitem>
-                <listitem>
-
-                  <para>
-                  If you have edited an application's profile, enable the changes with:
-                  </para>
-
-<screen>
-<command>sudo ufw app update apache2</command>
-</screen>
-
-                  <para>
-                  If there are no <application>ufw</application> rules applying the profile, then the above command will simply make 
-                  the new rule available.  However, with the <emphasis>--add-new</emphasis> option added to the above command, the application 
-                  profile and any new rules will be applied automatically.
-                  </para>
-
-                </listitem>
-                <listitem>
-
-                  <para>
-                  By default the <emphasis>--add-new</emphasis> option will <emphasis>skip</emphasis> any new rules added to an application
-                  profile.  To change this policy, enter:
-                  </para>
-
-<screen>
-<command>ufw app default allow</command>
-</screen>
-
-                  <para>
-                  This will automatically open any ports enabled in a profile when using the <emphasis>--add-new</emphasis> option.
-                  </para>
-
-                  <warning>
-                    <para>
-                    Setting the default policy to <emphasis>allow</emphasis> may have security implications, use caution when enabling
-                    applications using this policy.
-                    </para>
-                  </warning>
 
                 </listitem>
               </itemizedlist>
@@ -954,6 +922,11 @@ sudo iptables -A INPUT -m state --state NEW -p tcp --dport 80 -j LOG --log-prefi
 	      <para>
 	      The <ulink url="https://wiki.ubuntu.com/UbuntuFirewall">Ubuntu Firewall</ulink> wiki page contains information on the development
 	      of <application>ufw</application>.
+	      </para>
+	    </listitem> 
+	    <listitem>
+	      <para>
+              Also, the <application>ufw</application> manual page contains some very useful information: <command>man ufw</command>.
 	      </para>
 	    </listitem> 
 	    <listitem>

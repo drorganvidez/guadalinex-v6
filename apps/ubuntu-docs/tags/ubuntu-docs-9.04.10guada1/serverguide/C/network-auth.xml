@@ -175,7 +175,7 @@ olcDbIndex: objectClass eq
 <computeroutput>Enter LDAP Password:<userinput>
 dn: olcDatabase={1}hdb,cn=config
 add: olcDbIndex
-olcDbIndex: cn eq,pres,sub</userinput>
+olcDbIndex: entryUUID eq</userinput>
 
 modifying entry "olcDatabase={1}hdb,cn=config"
 </computeroutput>
@@ -751,7 +751,7 @@ modifying entry "cn=config"
           </para>
 
 <programlisting>
-SLAPD_SERVICES="ldap://127.0.0.1:389/ ldaps:/// ldapi:///"
+SLAPD_SERVICES="ldap:/// ldapi:/// ldaps:///"
 </programlisting>
 
           <para>
@@ -2263,13 +2263,12 @@ klist: You have no tickets cached</computeroutput>
       configured between at least two servers.  For information on setting up OpenLDAP see <xref linkend="openldap-server"/>.
       </para>
 
-      <note>
-        <para>
-        It is recommended to configure OpenLDAP for TLS and SSL connections, so that traffic between the KDC and LDAP server is encrypted.
-        See <xref linkend="openldap-tls"/> for details.
-        </para>
-      </note>
-
+      
+      <para>
+      It is also required to configure OpenLDAP for TLS and SSL connections, so that traffic between the KDC and LDAP server is encrypted.
+      See <xref linkend="openldap-tls"/> for details.
+      </para>
+      
       <itemizedlist>
         <listitem>
           <para>
@@ -2388,14 +2387,56 @@ modifyTimestamp: 20090111203515Z
                 <step>
 
                   <para>
-                  Finally, load the new schema with <application>ldapadd</application>:
+                  Load the new schema with <application>ldapadd</application>:
                   </para>
 
 <screen>
 <command>ldapadd -x -D cn=admin,cn=config -W -f /tmp/ldif_output/cn\=config/cn\=schema/cn\=\{12\}kerberos.ldif</command>
 </screen>
 
-             </step>
+                </step>
+                <step>
+        
+                  <para>
+                  Add an index for the <emphasis>krb5principalname</emphasis> attribute:
+                  </para>
+
+<screen>
+<command>ldapmodify -x -D cn=admin,cn=config -W</command>
+<computeroutput>Enter LDAP Password:
+<userinput>dn: olcDatabase={1}hdb,cn=config
+add: olcDbIndex
+olcDbIndex: krbPrincipalName eq,pres,sub</userinput>
+
+modifying entry "olcDatabase={1}hdb,cn=config"</computeroutput>
+</screen>
+      
+                </step>
+                <step>
+        
+                  <para>
+                  Finally, update the Access Control Lists (ACL):
+                  </para>
+
+<screen>
+<command>ldapmodify -x -D cn=admin,cn=config -W</command>
+<computeroutput>Enter LDAP Password: 
+<userinput>dn: olcDatabase={1}hdb,cn=config
+replace: olcAccess
+olcAccess: to attrs=userPassword,shadowLastChange,krbPrincipalKey by dn="cn=admin,dc=exampl
+ e,dc=com" write by anonymous auth by self write by * none
+-
+add: olcAccess
+olcAccess: to dn.base="" by * read
+-
+add: olcAccess
+olcAccess: to * by dn="cn=admin,dc=example,dc=com" write by * read</userinput>
+
+modifying entry "olcDatabase={1}hdb,cn=config"
+</computeroutput>
+</screen>
+      
+                </step>
            </procedure>    
         </listitem>
       </itemizedlist>
@@ -2507,18 +2548,28 @@ modifyTimestamp: 20090111203515Z
         <listitem>
         
           <para>
-          Finally, add an index for the <emphasis>krb5principalname</emphasis> attribute:
+          Copy the CA certificate from the LDAP server:
           </para>
 
 <screen>
-<command>ldapmodify -x -D cn=admin,cn=config -W</command>
-<computeroutput>Enter LDAP Password:
-<userinput>dn: olcDatabase={1}hdb,cn=config
-add: olcDbIndex
-olcDbIndex: krbPrincipalName eq,pres,sub</userinput>
-
-modifying entry "olcDatabase={1}hdb,cn=config"</computeroutput>
+<command>scp ldap01:/etc/ssl/certs/cacert.pem .</command>
+<command>sudo cp cacert.pem /etc/ssl/certs</command>
 </screen>
+
+          <para> 
+          And edit <filename>/etc/ldap/ldap.conf</filename> to use the certificate:
+          </para>
+
+<programlisting>
+TLS_CACERT /etc/ssl/certs/cacert.pem
+</programlisting>
+
+          <note>
+            <para>
+            The certificate will also need to be copied to the Secondary KDC, to allow the connection to the LDAP servers using
+            LDAPS.
+            </para>
+          </note>
       
         </listitem>
       </itemizedlist>

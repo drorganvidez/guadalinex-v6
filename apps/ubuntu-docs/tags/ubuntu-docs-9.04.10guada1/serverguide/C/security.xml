@@ -1692,5 +1692,186 @@ private_key     = $dir/private/cakey.pem# The private key
           </itemizedlist>
         </sect2>
         </sect1>
-    </chapter>
+        <sect1 id="ecryptfs" status="review">
+          <title>eCryptfs</title>
+          
+          <para>
+          <emphasis>eCryptfs</emphasis> is a POSIX-compliant enterprise-class stacked cryptographic filesystem for Linux.  Layering on
+          top of the filesystem layer <emphasis>eCryptfs</emphasis> protects files no matter the underlying filesystem, partition 
+          type, etc.
+          </para>
 
+          <para>
+          During installation there is an option to encrypt the <filename role="directory">/home</filename> partition.  This will automatically
+          configure everything needed to encrypt and mount the partition.
+          </para>
+
+          <para>
+          As an example, this section will cover configuring <filename role="directory">/srv</filename> to be encrypted using eCryptfs.
+          </para>
+
+          <sect2 id="ecryptfs-usage" status="review">
+            <title>Using eCryptfs</title>
+
+            <para>
+            First, install the necessary packages.  From a terminal prompt enter:
+            </para>
+
+<screen>
+<command>sudo apt-get install ecryptfs-utils</command>
+</screen>
+
+            <para>
+            Now mount the partition to be encrypted:
+            </para>
+
+<screen>
+<command>sudo mount -t ecryptfs /srv /srv</command>
+</screen>
+
+            <para>
+            You will then be prompted for some details on how <application>ecryptfs</application> should encrypt the data.
+            </para>
+         
+            <para>
+            To test that files placed in <filename>/srv</filename> are indeed encrypted copy the <filename>/etc/default</filename>
+            folder to <filename>/srv</filename>:
+            </para>
+
+<screen>
+<command>sudo cp -r /etc/default /srv</command>
+</screen>
+
+            <para>
+            Now unmount <filename>/srv</filename>, and try to view a file:
+            </para>
+
+<screen>
+<command>sudo umount /srv</command>
+<command>cat /srv/default/cron</command>
+</screen>
+
+            <para>
+            Remounting <filename>/srv</filename> using <application>ecryptfs</application> will make the data viewable once again.
+            </para>
+     
+          </sect2>
+          <sect2 id="ecryptfs-automount" status="review">
+            <title>Automatically Mounting Encrypted Partitions</title>
+            
+            <para>
+            There are a couple of ways to automatically mount an <application>ecryptfs</application> encrypted filesystem 
+            at boot.  This example will use a <filename>/root/.ecryptfsrc</filename> file containing mount options, along with
+            a passphrase file residing on a USB key.
+            </para>
+
+            <para>
+            First, create <filename>/root/.ecryptfsrc</filename> containing:
+            </para>
+
+<programlisting>
+key=passphrase:passphrase_passwd_file=/mnt/usb/passwd_file.txt
+ecryptfs_sig=5826dd62cf81c615
+ecryptfs_cipher=aes
+ecryptfs_key_bytes=16
+ecryptfs_passthrough=n
+ecryptfs_enable_filename_crypto=n
+</programlisting>
+
+            <note>
+              <para>
+              Adjust the <emphasis>ecryptfs_sig</emphasis> to the signature in <filename>/root/.ecryptfs/sig-cache.txt</filename>.
+              </para>
+            </note>
+
+            <para>
+            Next, create the <filename>/mnt/usb/passwd_file.txt</filename> passphrase file:
+            </para>
+
+<programlisting>
+passphrase_passwd=[secrets]
+</programlisting>
+
+            <para>
+            Now add the necessary lines to <filename>/etc/fstab</filename>:
+            </para>
+
+<programlisting>
+/dev/sdb1       /mnt/usb        ext3    ro      0 0
+/srv /srv ecryptfs defaults 0 0
+</programlisting>
+
+            <para>
+            Make sure the USB drive is mounted before the encrypted partition.  
+            </para>
+
+            <para>
+            Finally, reboot and the <filename>/srv</filename> should be mounted using ecryptfs.  
+            </para>
+            
+          </sect2>
+          <sect2 id="ecryptfs-other-utils" status="review">
+            <title>Other Utilities</title>
+
+            <para>
+            The <application>ecryptfs-utils</application> package includes several other useful utilities:
+            </para>
+
+            <itemizedlist>
+              <listitem>
+                <para>
+                <emphasis>ecryptfs-setup-private:</emphasis> creates a <filename>~/Private</filename> directory 
+                to contain encrypted information.  This utility can be run by unprivileged users to keep 
+                data private from other users on the system.
+                </para>
+              </listitem>
+              <listitem>
+                <para>
+                <emphasis>ecryptfs-mount-private and ecryptfs-umount-private:</emphasis> will mount and unmount
+                respectively, a users <filename>~/Private</filename> directory.
+                </para>
+              </listitem>
+              <listitem>
+                <para>
+                <emphasis>ecryptfs-add-passphrase:</emphasis> adds a new passphrase to the kernel keyring.
+                </para>
+              </listitem>
+              <listitem>
+                <para>
+                <emphasis>ecryptfs-manager:</emphasis> manages <application>eCryptfs</application> objects such as keys.
+                </para>
+              </listitem>
+              <listitem>
+                <para>
+                <emphasis>ecryptfs-stat:</emphasis> allows you to view the <application>ecryptfs</application> meta information
+                for a file.
+                </para>
+              </listitem>
+            </itemizedlist>
+
+          </sect2>
+          <sect2 id="ecryptfs-references" status="review">
+            <title>References</title>
+            
+            <itemizedlist>
+              <listitem>
+                <para>
+                For more information on eCryptfs see the <ulink url="https://launchpad.net/ecryptfs">Launch Pad project page</ulink>
+                </para>
+              </listitem>
+              <listitem>
+                <para>
+                There is also a <ulink url="http://www.linuxjournal.com/article/9400">Linux Journal</ulink> article covering eCryptfs.
+                </para>
+              </listitem>
+              <listitem>
+                <para>
+                Also, for more <application>ecryptfs</application> options see the
+                <ulink url="http://manpages.ubuntu.com/manpages/jaunty/en/man7/ecryptfs.7.html">ecryptfs man page</ulink>.
+                </para>
+              </listitem>
+            </itemizedlist>
+
+          </sect2>
+        </sect1>
+    </chapter>

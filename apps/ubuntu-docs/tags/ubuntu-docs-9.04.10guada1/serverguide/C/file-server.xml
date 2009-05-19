@@ -9,7 +9,7 @@
 %xinclude;
 <!ENTITY language "&EnglishAmerican;">
 ]>
-<chapter id="file-servers" status="complete">
+<chapter id="file-servers" status="review">
 	<title>File Servers</title>
 		<!--to write -->
 		<para>
@@ -17,7 +17,7 @@
       need to share files between them.  In this section we cover installing and configuring 
       FTP, NFS, and CUPS. 
     </para>
-	<sect1 id="ftp-server" status="complete">
+	<sect1 id="ftp-server" status="review">
         <title>FTP Server</title> 
             <para>File Transfer Protocol (FTP) is a TCP protocol for uploading and downloading
                 files between computers. FTP works on a client/server model. The server component is
@@ -42,7 +42,7 @@
                 rule, the FTP daemon will hide the root directory of the FTP server and change it to
                 the FTP Home directory. This hides the rest of the file system from remote
             sessions.</para>
-            <sect2 id="vsftpd-ftp-server-installation" status="complete">
+            <sect2 id="vsftpd-ftp-server-installation" status="review">
                 <title>vsftpd - FTP Server Installation</title>
                     <para>vsftpd is an FTP daemon available in
                     Ubuntu. It is easy to install, set up, and
@@ -52,7 +52,7 @@
                 </para>
 
                 </sect2>
-            <sect2 id="vsftpd-ftp-server-configuration" status="complete">
+            <sect2 id="vsftpd-ftp-server-configuration" status="review">
                 <title>vsftpd - FTP Server Configuration</title>
                 <para>
                 You can edit the vsftpd configuration file,
@@ -122,7 +122,7 @@ anonymous_enable=NO
 				</para></note>
                 </sect2>
     </sect1>
-	<sect1 id="network-file-system" status="complete">
+	<sect1 id="network-file-system" status="review">
 		<title>Network File System (NFS)</title>
           <para>
           NFS allows a system to share directories and files with others
@@ -154,7 +154,7 @@ network.</para>
           </listitem>
           </itemizedlist>
 
-      <sect2 id="nfs-installation" status="complete">
+      <sect2 id="nfs-installation" status="review">
         <title>Installation</title>
       
           <para>
@@ -167,7 +167,7 @@ network.</para>
 </screen>
           </para>
       </sect2>
-      <sect2 id="nfs-configuration" status="complete">
+      <sect2 id="nfs-configuration" status="review">
         <title>Configuration</title>
           <para>
           You can configure the directories to be exported by adding them to
@@ -195,7 +195,7 @@ network.</para>
 </screen>
           </para>
       </sect2>
-      <sect2 id="nfs-client-configuration" status="complete">
+      <sect2 id="nfs-client-configuration" status="review">
         <title>NFS Client Configuration</title>
           <para>
           Use the <application>mount</application> command to mount a shared NFS directory from
@@ -243,13 +243,13 @@ example.hostname.com:/ubuntu /local/ubuntu nfs rsize=8192,wsize=8192,timeo=14,in
 </screen>
           </para>
       </sect2>
-      <sect2 id="nfs-references" status="complete">
+      <sect2 id="nfs-references" status="review">
         <title>References</title>
 				<para><ulink url="http://nfs.sourceforge.net/">Linux NFS faq</ulink></para>
       </sect2>
     </sect1>
 
-	<sect1 id="cups" status="complete">
+	<sect1 id="cups" status="review">
 		<title>CUPS - Print Server</title>
           <para>
             The primary mechanism for Ubuntu printing and print services is the 
@@ -266,7 +266,7 @@ example.hostname.com:/ubuntu /local/ubuntu nfs rsize=8192,wsize=8192,timeo=14,in
 		  auto-detection of network printers, and features a simple web-based 
 		  configuration and administration tool. 
           </para>
-      <sect2 id="cups-installation" status="complete">
+      <sect2 id="cups-installation" status="review">
         <title>Installation</title>
           <para>
             To install CUPS on your Ubuntu computer, simply use <application>sudo</application> with the <application>apt-get</application> command and give the packages to install as the first parameter. A complete CUPS install has many package dependencies, but they may all be specified on the same command line.  Enter the following at a terminal prompt to install CUPS:
@@ -292,7 +292,7 @@ example.hostname.com:/ubuntu /local/ubuntu nfs rsize=8192,wsize=8192,timeo=14,in
 		  prevent the log file from becoming overly large.
           </para>
       </sect2>
-      <sect2 id="cups-configuration" status="complete">
+      <sect2 id="cups-configuration" status="review">
         <title>Configuration</title>
           <para>
             The Common UNIX Printing System server's behavior is configured through the 
@@ -404,7 +404,7 @@ Port 631  # Listen on port 631 on all interfaces
 	</itemizedlist>
 
       </sect2>
-      <sect2 id="cups-references" status="complete">
+      <sect2 id="cups-references" status="review">
         <title>References</title>
         <para>
         <ulink url="http://www.cups.org/">CUPS Website</ulink>

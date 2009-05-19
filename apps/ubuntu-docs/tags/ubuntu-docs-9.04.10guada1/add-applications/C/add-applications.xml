@@ -10,13 +10,13 @@
 <!ENTITY language "en">
 <!ENTITY ubuntu '<phrase>Ubuntu</phrase>'>
 ]>
-<article id="add-applications" status="complete">
+<article id="add-applications" status="review">
 	<articleinfo>
 	<title>Adding, Removing and Updating Applications</title>
     	&legalnotice;
 	</articleinfo>
 	<para>In this section you can learn how to use a package manager to add or remove applications in Ubuntu with a few clicks. You can also learn about more advanced techniques of managing applications and discover some optional applications which you can add to Ubuntu.</para>
-	<sect1 id="add-applications-introduction" status="complete">
+	<sect1 id="add-applications-introduction" status="review">
 		<title>What is a package manager?</title>
 		<para>A package manager is a program that installs and uninstalls software, and keeps track of all the components each piece of software needs.</para>
 		<para>To add or remove applications in Ubuntu, you need to use a <emphasis>package manager</emphasis>. It will automatically download the software required from the Internet and install it.</para>
@@ -32,7 +32,7 @@
 		<para>You need administrative access to use any of these programs. See <ulink type="help" url="ghelp:administrative">Administrative Tasks</ulink> for more details.</para>
 	</sect1>
 	
-	<sect1 id="extra-repositories" status="complete">
+	<sect1 id="extra-repositories" status="review">
 		<title>Software repositories</title>
 		<para>A software repository is a place from which you can download and install software over the Internet.</para>
 		<para>There are thousands of programs available to install on Ubuntu. These programs are stored in software archives (<emphasis>repositories</emphasis>) and are made freely available for installation over the Internet. This makes it very easy to install new programs in Linux, and it is also very secure, because each program you install is built specially for Ubuntu and checked before it is installed.</para>
@@ -45,7 +45,7 @@
 		<para>You can find more information about the Repositories available <ulink url="&ubuntu-components;">on the website</ulink>.</para>
 	</sect1>
 	
-	<sect1 id="extra-repositories-adding" status="complete">
+	<sect1 id="extra-repositories-adding" status="review">
 		<title>Adding extra repositories</title>
 		<para>It is possible to add extra repositories, such as those provided by third parties or those for older version of Ubuntu.</para>
 		<caution>
@@ -72,7 +72,7 @@
 			</step>
 		</procedure>
 	</sect1>
-  <sect1 id="gnome-app-install" status="complete">
+  <sect1 id="gnome-app-install" status="review">
 		<title>Add/Remove Applications</title>
 		<para>With the <guimenuitem>Add/Remove</guimenuitem> item in the <guimenu>Applications</guimenu> menu, you can install programs to do new things with Ubuntu. You can also remove programs you do not want. You need administrative access to use <application>Add/Remove Applications</application> (see <ulink type="help" url="ghelp:administrative">Administrative Tasks</ulink> for more details).</para>
 		<para>If you know the name of a program you want to install, enter it in the <guilabel>Search</guilabel> field. Otherwise, begin by choosing a software category on the left.</para>
@@ -81,15 +81,15 @@
     <para>Some software cannot be installed or removed using <application>Add/Remove Applications</application>. If you cannot find the package you are looking for, start the advanced package manager <application>Synaptic</application> (see <xref linkend="advanced"/>).
 		</para>
 	</sect1>
-	<sect1 id="offline" status="writing">
+	<sect1 id="offline" status="review">
 		<title>Installing packages without an Internet connection</title>
 		<para>Other than using tools that download packages automatically, it is also possible to use a CD to install packages through a package manager while not connected to the Internet. The Ubuntu installation CD can be used for this purpose, and other CDs with different packages are available as well. Additionally, the program <application>APTonCD</application> can automatically backup installed packages on your system, and create CDs with the contents of various repositories on them.</para>
-		<sect2 id="ubuntu-installation-cd" status="writing">
+		<sect2 id="ubuntu-installation-cd" status="review">
 			<title>Installing packages using the Ubuntu installation CD</title>
 				<para>Some packages from the <emphasis>main</emphasis> and <emphasis>restricted</emphasis> Ubuntu package repositories can be installed from the Ubuntu installation CD. Simply insert your Ubuntu installation CD and open &synaptic;. To list only packages on the Ubuntu installation CD, click on the <guibutton>Origin</guibutton> button in the lower left corner of <application>Synaptic Package Manager</application>. The packages should be listed under the <guimenuitem>&distro-apt-cd-name;</guimenuitem> section.</para>
 				<para>If the packages are not listed, it may be because the CD is not listed as a package repository (the CD should be listed as a repository by default). To add the CD as a package repository, follow the instructions in <xref linkend="repository-cds"/>, below.</para>	
 		</sect2>
-		<sect2 id="repository-cds" status="writing">
+		<sect2 id="repository-cds" status="review">
 			<title>Enabling other CDs that can be used to install packages</title>
 			<para>To enable <application>Synaptic</application> and other package managers to install software from CDs which contain packages:</para>
 			<procedure>
@@ -105,17 +105,17 @@
 			</procedure>
 			<para>The packages should then be listed. To have <application>Synaptic</application> only list packages from the CD, click the <guibutton>Origin</guibutton> button on the lower left corner of <application>Synaptic Package Manager</application>, then find the name of the CD on the list in the upper left corner of <application>Synaptic</application>.</para>
 		</sect2>
-		<sect2 id="APTonCD" status="writing">
+		<sect2 id="APTonCD" status="review">
 			<title>Using APTonCD to install packages</title>
 			<para><application>APTonCD</application> can be used to create a CD that contains all the packages you have on your system, or it can create CDs with packages or entire repositories of your choice. In a package manager such as <application>Synaptic</application>, find the <emphasis>aptoncd</emphasis> package and install it.</para>
 			<para>Further documentation on <application>APTonCD</application> can be found on its website, <ulink url="http://aptoncd.sourceforge.net">aptoncd.sourceforge.net</ulink></para>
 		</sect2> 
 	</sect1>
 	
-	<sect1 id="advanced" status="complete">
+	<sect1 id="advanced" status="review">
 		<title>Advanced package management</title>
 			<para>Several other package managers exist in Ubuntu. These contain more advanced features than <application>Add/Remove Applications</application>.</para>
-	<sect2 id="synaptic" status="complete">
+	<sect2 id="synaptic" status="review">
 		<title>Synaptic Package Manager</title>
 		<para><application>Synaptic</application> is an advanced package management application that can install and remove every package available to your system. The interface is graphical like <application>Add/Remove Applications</application>, but presents much more information and gives you complete control over the software on your computer.</para>
 		<para>To launch <application>Synaptic</application>, press &synaptic;.
@@ -126,7 +126,7 @@
 		<para>To remove a package that is already installed, choose <guimenuitem>Mark for Removal</guimenuitem>.</para>
 		<para>When you have finished, click <guibutton>Apply</guibutton> and Ubuntu will make the changes you selected. If you do not want to make any changes, close the window instead.</para>
 	</sect2>
-    <sect2 id="apt" status="complete">
+    <sect2 id="apt" status="review">
       <title>Command-line package management with APT</title>
       <para>If you are comfortable using the Terminal, you can use
       <application>apt</application> (Advanced Packaging Tool) to
@@ -162,7 +162,7 @@
       <para>For more information, see the <ulink url="&debian-apt;">Debian <application>apt</application> manual</ulink> and the <ulink url="man:apt-get">apt-get manual</ulink>.</para>
     </sect2>
   </sect1>
-  <sect1 id="install-file" status="complete">
+  <sect1 id="install-file" status="review">
     <title>Installing a single package file</title>
     <para>
       The preferred method of installing programs is via the package
@@ -201,7 +201,7 @@
       </para>
     </warning>
     
-    <sect2 id="install-deb" status="complete">
+    <sect2 id="install-deb" status="review">
       <title>Installing/uninstalling <filename class="extension">.deb</filename> files</title>
       <para>
 	These files are <emphasis>Debian packages</emphasis>. The
@@ -223,7 +223,7 @@
 	<screen>sudo dpkg -r <replaceable>package_name</replaceable></screen>
       </para>
     </sect2>
-    <sect2 id="alien" status="complete">
+    <sect2 id="alien" status="review">
       <title>Converting <filename
 	  class="extension">.rpm</filename>
 	files to <filename class="extension">.deb</filename> files</title>
@@ -253,7 +253,7 @@
 	</step>
       </procedure>
     </sect2>
-    <sect2 id="tarballs" status="complete">
+    <sect2 id="tarballs" status="review">
       <title>Installing <emphasis>tarballs</emphasis></title>
       <para>
 	Files with the <filename class="extension">.tar</filename>,
@@ -280,7 +280,7 @@
 	<para>
 	  Compiling programs requires some packages that are not installed by default. You can install most of these all at once by installing the <application>build-essential</application> package.</para></note>
     </sect2>
-    <sect2 id="runpackages" status="complete">
+    <sect2 id="runpackages" status="review">
       <title>Install <filename class="extension">.run</filename> packages</title>
       <para>Sometimes you may need to install software (most often a game) which has been packaged as a .run file. These files contain the software and a small program to install the software.</para>
       <para>Follow the procedure

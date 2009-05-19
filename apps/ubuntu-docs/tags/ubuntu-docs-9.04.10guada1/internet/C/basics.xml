@@ -12,7 +12,7 @@
 	  ]>
 	  <?db.chunk.max_depth 4?>
 <?yelp:chunk-depth 4?>
-<chapter id="basics" status="writing">
+<chapter id="basics" status="review">
 	<title>Networking Basics</title>
 	<sect1 id="internet-basic-procedure" status="review">
 		<title>Basic Procedure</title>
@@ -40,11 +40,11 @@
 		</procedure>
 	</sect1>
 
-	<sect1 id="networking-enable" status="writing">
+	<sect1 id="networking-enable" status="review">
 		<title>Connect to a network</title>
 		<para>If you change the settings of your network connection or connect to a different network than usual, you may have to enable the connection yourself.</para>
 
-		<sect2 id="networking-enable-nm" status="writing">
+		<sect2 id="networking-enable-nm" status="review">
 			<title>Use Network Manager to connect to a network</title>
 			<para>If your network connection is managed by <application>Network Manager</application> (as most are), the connection should be enabled automatically.</para>
 			<para>If the connection is not enabled automatically:</para>
@@ -66,7 +66,7 @@
 			</orderedlist>
 		</sect2>
 		
-		<sect2 id="networking-enable-ifup" status="writing">
+		<sect2 id="networking-enable-ifup" status="review">
 			<title>Use the ifup command to connect to a network</title>
 			<para><application>ifup</application> is a command-line tool for enabling network connections.</para>
 			<para>To enable a network connection:</para>
@@ -84,11 +84,11 @@ bound to 192.168.2.4 -- renewal in 536349522 seconds.</screen>
 		</sect2>
 	</sect1>
 		
-	<sect1 id="networking-disable" status="writing">
+	<sect1 id="networking-disable" status="review">
 		<title>Disable a network connection</title>
 		<para>Sometimes you may want to disable a network connection. There are several different ways of achieving this.</para>
 		
-		<sect2 id="networking-disable-nm" status="writing">
+		<sect2 id="networking-disable-nm" status="review">
 			<title>Disconnecting using Network Manager</title>
 			<para>It is likely that <application>Network Manager</application> is running your network connections. If so, you must disconnect from the network by disabling your network connection in Network Manager:</para>
 			<orderedlist>
@@ -98,7 +98,7 @@ bound to 192.168.2.4 -- renewal in 536349522 seconds.</screen>
 			</orderedlist>
 		</sect2>
 		
-		<sect2 id="networking-disable-networksettings" status="writing">
+		<sect2 id="networking-disable-networksettings" status="review">
 			<title>Disconnecting using Network Settings</title>
 			<para>If Network Manager is not running, use the <application>Network Settings</application> tool to disconnect your network connection:</para>
 			<orderedlist>
@@ -109,7 +109,7 @@ bound to 192.168.2.4 -- renewal in 536349522 seconds.</screen>
 			</orderedlist>
 		</sect2>
 		
-		<sect2 id="networking-disable-ifdown" status="writing">
+		<sect2 id="networking-disable-ifdown" status="review">
 			<title>Disconnecting using the ifdown command</title>
 			<para><application>ifdown</application> is a command-line tool for disabling network connections.</para>
 			<para>To disable a network connection using ifdown:</para>

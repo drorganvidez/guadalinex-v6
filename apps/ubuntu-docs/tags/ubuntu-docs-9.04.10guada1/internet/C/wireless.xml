@@ -12,14 +12,14 @@
 	  ]>
 	  <?db.chunk.max_depth 4?>
 <?yelp:chunk-depth 4?>
-<chapter id="wireless" status="writing">
+<chapter id="wireless" status="review">
 	<title>Wireless Networking</title>
-	<sect1 id="wireless-connecting" status="writing">
+	<sect1 id="wireless-connecting" status="review">
 		<title>Connect to a wireless network</title>
 		<important>
 			<para>If there is no <guilabel>Wireless Connection</guilabel> shown see Troubleshooting (<xref linkend="troubleshooting"/>)</para>
 		</important>
-		<sect2 id="wireless-connecting-networkmanager" status="writing">
+		<sect2 id="wireless-connecting-networkmanager" status="review">
 			<title>Connecting using Network Manager</title>
 			<para><application>Network Manager</application> (&networking;) supports Roaming mode. This allows you to connect to any available wireless network in range.</para>
 			<orderedlist>
@@ -29,7 +29,7 @@
 				<listitem><para>Click <guibutton>Connect</guibutton>.</para></listitem>
 			</orderedlist>		
 		</sect2>
-		<sect2 id="wireless-connecting-manual" status="writing">
+		<sect2 id="wireless-connecting-manual" status="review">
 			<title>Manually connecting</title>
 			<orderedlist>
 				<listitem><para>Select the connection and press <guibutton>Properties</guibutton>.</para></listitem>
@@ -42,10 +42,10 @@
 		</sect2>
 	</sect1>
 
-	<sect1 id="troubleshooting" status="writing">
+	<sect1 id="troubleshooting" status="review">
 		<title>Troubleshooting</title>
 		<para>This troubleshooting guide is designed to be carried out in order.</para>
-		<sect2 id="troubleshooting-device" status="writing">
+		<sect2 id="troubleshooting-device" status="review">
 			<title>Check for device recognition</title>
 			<orderedlist>
 				<listitem><para>Open <application>Device Manager</application> (&device-manager;).</para></listitem>
@@ -53,7 +53,7 @@
 				<listitem><para>If your device is not displayed then there may be a hardware problem. Ensure if it is PCMCIA or PCI that it is inserted correctly.</para></listitem>
 			</orderedlist>
 		</sect2>
-		<sect2 id="troubleshooting-driver" status="writing">
+		<sect2 id="troubleshooting-driver" status="review">
 			<title>Check for driver</title>
 			<orderedlist>
 				<listitem><para>Open a <application>Terminal</application> (&terminal;) and type the command: <code>sudo lshw -C network</code></para></listitem>
@@ -61,14 +61,14 @@
 				<listitem><para>Set up NDISWrapper (<xref linkend="ndiswrapper"/>).</para></listitem>
 			</orderedlist>
 		</sect2>
-		<sect2 id="troubleshooting-disabled" status="writing">
+		<sect2 id="troubleshooting-disabled" status="review">
 			<title>Check device is on</title>
 			<orderedlist>
 				<listitem><para>Many wireless network devices can be turned on or off. Check to see if the device is turned on by opening a <application>Terminal</application> (&terminal;) and type the command: <code>sudo lshw -C network</code>.</para></listitem>
 				<listitem><para>If it is turned on then see <xref linkend="troubleshooting-connection"/>.</para></listitem>
 			</orderedlist>
 		</sect2>
-		<sect2 id="troubleshooting-connection" status="writing">
+		<sect2 id="troubleshooting-connection" status="review">
 			<title>Check for a connection to the router</title>
 			<orderedlist>
 				<listitem><para>Open a <application>Terminal</application> (&terminal;) and type the command: <code>iwconfig</code>.</para></listitem>
@@ -76,7 +76,7 @@
 				<listitem><para>If the ESSID for our router is shown there may be a problem with ACPI support. Boot the kernel with the <code>pci=noacpi</code> option.</para></listitem>
 			</orderedlist>
 		</sect2>	
-		<sect2 id="troubleshooting-ip" status="writing">
+		<sect2 id="troubleshooting-ip" status="review">
 			<title>Check IP assignment</title>
 			<orderedlist>
 				<listitem><para>Open a <application>Terminal</application> (&terminal;) and type the command: <code>ifconfig</code>.</para></listitem>
@@ -86,7 +86,7 @@
 				<listitem><para>If not then reboot the system.</para></listitem>
 			</orderedlist>
 		</sect2>
-		<sect2 id="troubleshooting-dns" status="writing">
+		<sect2 id="troubleshooting-dns" status="review">
 			<title>Check DNS</title>
 			<orderedlist>
 				<listitem><para>Open a <application>Terminal</application> (&terminal;) and type the command: <code>ping 82.211.81.158</code>.</para></listitem>
@@ -94,7 +94,7 @@
 				<listitem><para>Type the command: <code>cat /etc/resolv.conf</code>. If there is no nameserver listed then contact your ISP and find out your primary and secondary domain name servers. Once you have this information see <xref linkend="wireless-connecting"/>.</para></listitem>
 			</orderedlist>
 		</sect2>
-		<sect2 id="troubleshooting-ipv6" status="writing">
+		<sect2 id="troubleshooting-ipv6" status="review">
 			<title>IPv6 Not Supported</title>
 			<orderedlist>
 				<listitem><para>IPv6 is supported by default in Ubuntu and can sometimes cause problems.</para></listitem>
@@ -105,7 +105,7 @@
 		</sect2>	
 	</sect1>
 
-	<sect1 id="ndiswrapper" status="working">
+	<sect1 id="ndiswrapper" status="review">
 		<title>Using Windows Wireless Drivers</title>
 		<para>Ubuntu supports a system known as NDISWrapper. This allows you to use a Windows wireless device driver under Ubuntu.</para>
 		<orderedlist>
@@ -118,10 +118,10 @@
 		</orderedlist>
 	</sect1>
 
-	<sect1 id="security" status="writing">
+	<sect1 id="security" status="review">
 		<title>Wireless network security</title>
 		<para></para>
-		<sect2 id="security-wpa" status="writing">
+		<sect2 id="security-wpa" status="review">
 			<title>Configuring WPA support.</title>
 			<para>WiFi Protected Access (WPA) is an based on WEP and provides stronger security.</para>
 			<para>WPA is integrated with <application>Network Manager</application>. You must also have the <application>wpasupplicant</application> package installed.</para>

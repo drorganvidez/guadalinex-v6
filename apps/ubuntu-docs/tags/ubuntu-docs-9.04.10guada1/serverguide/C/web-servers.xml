@@ -9,13 +9,13 @@
 %xinclude;
 <!ENTITY language "&EnglishAmerican;">
 ]>
-<chapter id="web-servers" status="complete">
+<chapter id="web-servers" status="review">
 	<title>Web Servers</title>
 		<para>A Web server is a software responsible for accepting HTTP requests
     from clients, which are known as Web browsers, and serving them HTTP
     responses along with optional data contents, which usually are Web
     pages such as HTML documents and linked objects (images, etc.).</para>
-	<sect1 id="httpd" status="complete">
+	<sect1 id="httpd" status="review">
 		<title>HTTPD - Apache2 Web Server</title>
       <para>Apache is the most commonly used Web Server on Linux systems. Web Servers are used
           to serve Web Pages requested by client computers. Clients typically request and view
@@ -37,7 +37,7 @@
           configuration is termed LAMP (Linux, Apache, MySQL and Perl/Python/PHP) and forms a
           powerful and robust platform for the development and deployment of Web-based
           applications.</para>
-<sect2 id="http-installation" status="complete">
+<sect2 id="http-installation" status="review">
   <title>Installation</title>
                   <para>The Apache2 web server is available in Ubuntu
                   Linux. To install Apache2:</para>
@@ -50,7 +50,7 @@
 			</step>
 	    </procedure>
       </sect2>
-      <sect2 id="http-configuration" status="complete">
+      <sect2 id="http-configuration" status="review">
         <title>Configuration</title>
           <para>
           Apache is configured by placing <emphasis>directives</emphasis> in plain text
@@ -71,7 +71,7 @@
           configure the port number, document root, modules, log files, 
           virtual hosts, etc.
           </para>
-        <sect3 id="http-basic-settings" status="complete">
+        <sect3 id="http-basic-settings" status="review">
           <title>Basic Settings</title>
             <para>
              This section explains Apache2 server essential configuration
@@ -164,7 +164,7 @@
 			</para></tip>
 
         </sect3>
-        <sect3 id="default-settings" status="complete">
+        <sect3 id="default-settings" status="review">
           <title>Default Settings</title>
             <para>
              This section explains configuration of the Apache2 server
@@ -309,7 +309,7 @@
             </listitem>
             </itemizedlist>
         </sect3>
-        <sect3 id="virtual-hosts-settings" status="complete">
+        <sect3 id="virtual-hosts-settings" status="review">
 
           <title>Virtual Hosts Settings</title>
             <para>
@@ -339,7 +339,7 @@
 			</para>
 
         </sect3>
-        <sect3 id="server-settings" status="complete">
+        <sect3 id="server-settings" status="review">
           <title>Server Settings</title>
             <para>
 This section explains how to configure basic server settings.</para>
@@ -364,7 +364,7 @@ The default value for User is www-data.  </para>
  <para>The Group directive is similar to the User directive. Group sets the group under which the server will answer requests. The default group is also www-data.</para>
 
         </sect3>
-        <sect3 id="apache-modules" status="complete">
+        <sect3 id="apache-modules" status="review">
           <title>Apache Modules</title>
               <para>
 
@@ -406,7 +406,7 @@ The default value for User is www-data.  </para>
               </para>
         </sect3>
       </sect2>
-      <sect2 id="https-configuration" status="complete">
+      <sect2 id="https-configuration" status="review">
         <title>HTTPS Configuration</title>
           <para>
            The <application>mod_ssl</application> module adds
@@ -478,7 +478,7 @@ SSLCertificateKeyFile /etc/ssl/private/server.key
             </para>
 
       </sect2>
-      <sect2 id="http-references" status="complete">
+      <sect2 id="http-references" status="review">
         <title>References</title>
           <para>
           <ulink url="http://httpd.apache.org/docs/2.2/">Apache2
@@ -491,7 +491,7 @@ SSLCertificateKeyFile /etc/ssl/private/server.key
       </sect2>
     </sect1>
 
-	<sect1 id="php5" status="complete">
+	<sect1 id="php5" status="review">
 		<title>PHP5 - Scripting Language</title>
       <para>PHP is a general-purpose scripting language suited for Web
       development. The PHP script can be embedded into HTML. This
@@ -502,7 +502,7 @@ SSLCertificateKeyFile /etc/ssl/private/server.key
       Apache 2 section and MySQL sections in this document to install and
       configure Apache 2 and MySQL respectively.</para>
 
-<sect2 id="php5-installation" status="complete">
+<sect2 id="php5-installation" status="review">
   <title>Installation</title>
       <para>The PHP5 is available in Ubuntu Linux. </para>
       
@@ -553,7 +553,7 @@ SSLCertificateKeyFile /etc/ssl/private/server.key
 			</step>
 	    </procedure>
       </sect2>
-      <sect2 id="php5-configuration" status="complete">
+      <sect2 id="php5-configuration" status="review">
         <title>Configuration</title>
           <para>
           Once you install PHP5, you can run PHP5 scripts from your web
@@ -580,7 +580,7 @@ SSLCertificateKeyFile /etc/ssl/private/server.key
 <screen><command>sudo /etc/init.d/apache2 restart</command> </screen>
           </para>
       </sect2>
-      <sect2 id="php5-testing" status="complete">
+      <sect2 id="php5-testing" status="review">
         <title>Testing</title>
           <para>To verify your installation, you can run following PHP5
           phpinfo script:
@@ -601,7 +601,7 @@ print_r (phpinfo());
       </sect2>
     </sect1>
 	
-	<sect1 id="squid" status="complete">
+	<sect1 id="squid" status="review">
 		<title>Squid - Proxy Server</title>
           <para>
           Squid is a full-featured web proxy cache server application which provides proxy and cache services for Hyper Text
@@ -618,7 +618,7 @@ print_r (phpinfo());
           for use as a dedicated Squid proxy, or caching servers, ensure your system is configured with a large amount of physical
           memory, as Squid maintains an in-memory cache for increased performance.
           </para>
-      <sect2 id="squid-installation" status="complete">
+      <sect2 id="squid-installation" status="review">
         <title>Installation</title>
           <para>
             At a terminal prompt, enter the following command to install the Squid server:
@@ -629,7 +629,7 @@ print_r (phpinfo());
 </screen>
           </para>
       </sect2>
-      <sect2 id="squid-configuration" status="complete">
+      <sect2 id="squid-configuration" status="review">
         <title>Configuration</title>
           <para>
             Squid is configured by editing the directives contained within the <filename>/etc/squid/squid.conf</filename> configuration file.
@@ -724,7 +724,7 @@ http_access allow biz_network biz_hours
 </screen>
           </para>
       </sect2>
-      <sect2 id="squid-references" status="complete">
+      <sect2 id="squid-references" status="review">
       <title>References</title>
       <para>
       <ulink url="http://www.squid-cache.org/">Squid Website</ulink>
@@ -732,14 +732,14 @@ http_access allow biz_network biz_hours
       </sect2>
     </sect1>
 
-	<sect1 id="ruby-on-rails" status="complete">
+	<sect1 id="ruby-on-rails" status="review">
 		<title>Ruby on Rails</title>
     <para>Ruby on Rails is an open source web framework for developing
     database backed web applications. It is optimized for sustainable
     productivity of the programmer since it lets the programmer to write
     code by favouring convention over configuration.</para>
 
-    <sect2 id="ruby-on-rails-installation" status="complete">
+    <sect2 id="ruby-on-rails-installation" status="review">
       <title>Installation</title>
     	<para>
 	    Before installing <application>Rails</application> you should install <application>Apache</application>
@@ -766,7 +766,7 @@ http_access allow biz_network biz_hours
 </screen>
     
     </sect2>
-    <sect2 id="ruby-on-rails-configuration" status="complete">
+    <sect2 id="ruby-on-rails-configuration" status="review">
     <title>Configuration</title>    
     <para>
     	Modify the <filename>/etc/apache2/sites-available/default</filename>

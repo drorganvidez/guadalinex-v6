@@ -9,7 +9,7 @@
 %xinclude;
 <!ENTITY language "&EnglishAmerican;">
 ]>
-	<chapter id="email-services" status="complete">
+	<chapter id="email-services" status="review">
 		<title>Email Services</title>
           <para>
             The process of getting an email from one person to another over a network or
@@ -20,7 +20,7 @@
 			recipient's mailbox, from which it
 			will be retrieved by the recipient's email client, usually via a POP3 or IMAP server.
           </para>
-      <sect1 id="postfix" status="complete">
+      <sect1 id="postfix" status="review">
         <title>Postfix</title>
           <para>
             <application>Postfix</application> is the default Mail Transfer Agent (MTA) in Ubuntu. It
@@ -29,7 +29,7 @@
             to install and configure <application>postfix</application>. It also explains how to
             set it up as an SMTP server using a secure connection (for sending emails securely).
           </para>
-        <sect2 id="postfix-installation" status="complete">
+        <sect2 id="postfix-installation" status="review">
           <title>Installation</title>
             <para>
             To install <application>postfix</application> run the following command:
@@ -41,7 +41,7 @@
 	    Simply press return when the installation process asks questions, the configuration will be done in greater detail in the next stage.
             </para>
         </sect2>
-        <sect2 id="postfix-configuration" status="complete">
+        <sect2 id="postfix-configuration" status="review">
           <title>Basic Configuration</title>
             <para>
             To configure <application>postfix</application>, run the following command:
@@ -96,7 +96,7 @@
             </para>
             </note>
 	 </sect2>
-        <sect2 id="postfix-smtp-authentication" status="complete">
+        <sect2 id="postfix-smtp-authentication" status="review">
           <title>SMTP Authentication</title>
             <para>
 	    SMTP-AUTH allows a client to identify itself through an authentication mechanism (SASL).
@@ -244,7 +244,7 @@ sudo postconf -e 'myhostname = mail.example.com'
 <command>sudo /etc/init.d/dovecot restart</command>
 </screen>
         </sect2>
-        <sect2 id="postfix-testing" status="complete">
+        <sect2 id="postfix-testing" status="review">
           <title>Testing</title>
             <para>
             SMTP-AUTH configuration is complete. Now it is time to test the setup. 
@@ -406,7 +406,7 @@ auth_debug_passwords=yes
       </sect2>
       </sect1>
 
-      <sect1 id="exim4" status="complete">
+      <sect1 id="exim4" status="review">
         <title>Exim4</title>
           <para>
             <application>Exim4</application> is another Message Transfer
@@ -417,7 +417,7 @@ auth_debug_passwords=yes
             <application>exim</application> is quite different to
             that of <application>sendmail</application>.
           </para>
-        <sect2 id="exim4-installation" status="complete">
+        <sect2 id="exim4-installation" status="review">
           <title>Installation</title>
             <para>
             To install <application>exim4</application>, run the following command:
@@ -426,7 +426,7 @@ auth_debug_passwords=yes
 </screen>
             </para>
         </sect2>
-        <sect2 id="exim4-configuration" status="complete">
+        <sect2 id="exim4-configuration" status="review">
           <title>Configuration</title>
             <para>
             To configure <application>exim4</application>, run the following command:
@@ -565,7 +565,7 @@ START=yes
 	  </para>
 	</sect2>
       </sect1>
-      <sect1 id="dovecot-server" status="complete">
+      <sect1 id="dovecot-server" status="review">
         <title>Dovecot Server</title> 
           <para>
           <application>Dovecot</application> is a Mail Delivery Agent, written with security
@@ -573,7 +573,7 @@ START=yes
           or Maildir. This section explain how to set it up as an imap or
           pop3 server.
           </para>
-        <sect2 id="dovecot-installation" status="complete">
+        <sect2 id="dovecot-installation" status="review">
           <title>Installation</title>
             <para>
             To install <application>dovecot</application>, run the following command in the
@@ -583,7 +583,7 @@ START=yes
 <command>sudo apt-get install dovecot-imapd dovecot-pop3d</command>
 </screen>
         </sect2>
-        <sect2 id="dovecot-configuration" status="complete">
+        <sect2 id="dovecot-configuration" status="review">
           <title>Configuration</title>
             <para>
             To configure <application>dovecot</application>, you can edit the file
@@ -649,7 +649,7 @@ Escape character is '^]'.
 +OK Dovecot ready.
 </programlisting>
         </sect2>
-        <sect2 id="dovecot-ssl" status="complete">
+        <sect2 id="dovecot-ssl" status="review">
           <title>Dovecot SSL Configuration</title>
             <para>
             To configure <application>dovecot</application> to use SSL, you can edit the file
@@ -691,7 +691,7 @@ disable_plaintext_auth = no
           </para>
         </sect2>
       </sect1>
-      <sect1 id="mailman" status="complete">
+      <sect1 id="mailman" status="review">
         <title>Mailman</title> 
           <para>
           Mailman is an open source program for managing electronic mail
@@ -701,7 +701,7 @@ disable_plaintext_auth = no
           Mailman as their mailing list software. It is powerful and easy
           to install and maintain.
           </para>
-        <sect2 id="mailman-installation" status="complete">
+        <sect2 id="mailman-installation" status="review">
           <title>Installation</title>
             <para>
             Mailman provides a web interface for the administrators
@@ -787,7 +787,7 @@ disable_plaintext_auth = no
              </para>
           </sect3>
         </sect2>
-        <sect2 id="mailman-configuration" status="complete">
+        <sect2 id="mailman-configuration" status="review">
           <title>Configuration</title>
             <para>
             This section assumes you have successfully installed
@@ -1041,7 +1041,7 @@ references section.
 	     </para>
           </sect3>
         </sect2>
-        <sect2 id="mailman-admin" status="complete">
+        <sect2 id="mailman-admin" status="review">
           <title>Administration</title>
 <para>
 We assume you have a default installation. The
@@ -1067,7 +1067,7 @@ You can create a new mailing list using the command line utility
 Alternatively, you can create a new mailing list using the web interface. 
 </para>
         </sect2>
-        <sect2 id="mailman-users" status="complete">
+        <sect2 id="mailman-users" status="review">
           <title>Users</title>
 <para>
 Mailman provides a web based interface for users. To access this page,
@@ -1087,7 +1087,7 @@ An email invitation will be sent to you. You can follow the
 instructions in the email to subscribe.
 </para>
         </sect2>
-        <sect2 id="mailman-references" status="complete">
+        <sect2 id="mailman-references" status="review">
           <title>References</title>
 <para>
 <ulink url="http://www.list.org/mailman-install/index.html"> GNU Mailman

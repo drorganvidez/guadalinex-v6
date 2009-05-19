@@ -9,7 +9,7 @@
 %xinclude;
 <!ENTITY language "&EnglishAmerican;">
 ]>
-<chapter id="networking" status="complete">
+<chapter id="networking" status="review">
 	<title>Networking</title>
 	<para>
 	Networks consist of two or more devices, such as computer systems, printers, 
@@ -22,14 +22,14 @@
         to networking, including an overview of network concepts and detailed 
 	discussion of popular network protocols.
 	</para>
-	<sect1 id="network-configuration" status="complete">
+	<sect1 id="network-configuration" status="review">
 		<title>Network Configuration</title>
 		<para>
             	Ubuntu ships with a number of graphical utilities to configure your 
 		network devices.  This document is geared toward server administrators 
 		and will focus on managing your	network on the command line.
           	</para>
-      <sect2 id="ethernet" status="complete">
+      <sect2 id="ethernet" status="review">
         <title>Ethernet</title> 
           <para>
 	  Most ethernet configuration is centralized in a single file,
@@ -116,7 +116,7 @@ nameserver 4.2.2.2
 	configurations.
 	</para>
       </sect2>
-      <sect2 id="managing-dns-entries" status="complete">
+      <sect2 id="managing-dns-entries" status="review">
           <title>Managing DNS Entries</title>
             <para>This section explains how to configure which nameserver
             to use when resolving IP addresses to hostnames and vice
@@ -161,7 +161,7 @@ nameserver 208.185.179.218
             </warning>
 
         </sect2>
-        <sect2 id="managing-hosts" status="complete">
+        <sect2 id="managing-hosts" status="review">
           <title>Managing Hosts</title>
             <para>
             To manage hosts, you can add, edit, or remove hosts from
@@ -183,7 +183,7 @@ nameserver 208.185.179.218
             </para>
         </sect2>
     </sect1>
-	<sect1 id="tcpip" status="complete">
+	<sect1 id="tcpip" status="review">
 		<title>TCP/IP</title>
           <para>
             The Transmission Control Protocol and Internet Protocol (TCP/IP) is a standard 
@@ -192,7 +192,7 @@ nameserver 208.185.179.218
 			computers and computer networks. TCP/IP is the driving force of the Internet, 
 			and thus it is the most popular set of network protocols on Earth. 
           </para>
-      <sect2 id="tcpip-introduction" status="complete">
+      <sect2 id="tcpip-introduction" status="review">
         <title>TCP/IP Introduction</title> 
           <para>
             The two protocol components of TCP/IP deal with different aspects of computer networking.
@@ -206,7 +206,7 @@ nameserver 208.185.179.218
 			the same order as sent from another network host.
           </para>
           </sect2>
-        <sect2 id="tcpip-configuration" status="complete">
+        <sect2 id="tcpip-configuration" status="review">
           <title>TCP/IP Configuration</title>
             <para>
             The TCP/IP protocol configuration consists of several elements which must be set by 
@@ -317,7 +317,7 @@ nameserver 208.185.179.218
             </itemizedlist>
             </para>
         </sect2>
-        <sect2 id="ip-routing" status="complete">
+        <sect2 id="ip-routing" status="review">
           <title>IP Routing</title>
             <para>
               IP routing is a means of specifying and discovering paths in a TCP/IP network along which
@@ -351,7 +351,7 @@ nameserver 208.185.179.218
             but still consumes network bandwidth.
             </para>
         </sect2>
-        <sect2 id="tcp-and-udp" status="complete">
+        <sect2 id="tcp-and-udp" status="review">
           <title>TCP and UDP</title>
             <para>
               TCP is a connection-based protocol, offering error correction and guaranteed delivery of
@@ -370,7 +370,7 @@ nameserver 208.185.179.218
 			  is not generally catastrophic.
             </para>
         </sect2>
-        <sect2 id="icmp" status="complete">
+        <sect2 id="icmp" status="review">
           <title>ICMP</title>
             <para>
               The Internet Control Messaging Protocol (ICMP) is an extension to the Internet Protocol (IP) as defined
@@ -381,7 +381,7 @@ nameserver 208.185.179.218
               <emphasis>Destination Unreachable</emphasis> and <emphasis>Time Exceeded</emphasis>.
             </para>
         </sect2>
-        <sect2 id="daemons" status="complete">
+        <sect2 id="daemons" status="review">
           <title>Daemons</title>
             <para>
               Daemons are special system applications which typically execute continuously in the background and
@@ -395,7 +395,7 @@ nameserver 208.185.179.218
         </sect2>
     </sect1>
 
-	<sect1 id="dhcp" status="complete">
+	<sect1 id="dhcp" status="review">
 		<title>Dynamic Host Configuration Protocol (DHCP)</title>
             <para>
 	    The Dynamic Host Configuration Protocol (DHCP) is a network service that enables 
@@ -483,7 +483,7 @@ nameserver 208.185.179.218
 	    programs are easy to install and configure and will be automatically started at
 	    system boot.
 	    </para>
-      <sect2 id="dhcp-installation" status="complete">
+      <sect2 id="dhcp-installation" status="review">
         <title>Installation</title>
           <para>
 	  At a terminal prompt, enter the following command to install
@@ -505,7 +505,7 @@ nameserver 208.185.179.218
 	  diagnostics messages.
 	  </para>
       </sect2>
-      <sect2 id="dhcp-configuration" status="complete">
+      <sect2 id="dhcp-configuration" status="review">
         <title>Configuration</title>
             <para>
 	    The error message the installation ends with might be a little confusing, but the
@@ -552,7 +552,7 @@ option netbios-name-servers 192.168.1.1;
             <ulink url="http://www.tldp.org/HOWTO/DHCP/index.html">here</ulink>.
 	    </para>
       </sect2>
-      <sect2 id="dhcp-references" status="complete">
+      <sect2 id="dhcp-references" status="review">
         <title>References</title>
           <para>
             <ulink url="http://www.dhcp-handbook.com/dhcp_faq.html">DHCP FAQ</ulink>
@@ -560,7 +560,7 @@ option netbios-name-servers 192.168.1.1;
       </sect2>
     </sect1>
 
-	<sect1 id="NTP" status="complete">
+	<sect1 id="NTP" status="review">
 		<title>Time Synchronisation with NTP</title>
 	<para>
 This page describes methods for keeping your computer's time accurate. This is useful for servers, but is not necessary (or desirable) for desktop machines. 
@@ -575,7 +575,7 @@ Behind this simple description, there is a lot of complexity - there are tiers o
 Ubuntu has two ways of automatically setting your time: ntpdate and ntpd. 
 </para>
 
-<sect2 id="ntpdate" status="complete">
+<sect2 id="ntpdate" status="review">
 <title>ntpdate</title>
 	<para>
 Ubuntu comes with ntpdate as standard, and will run it once at boot time to set up your time according to Ubuntu's NTP server. However, a server's clock is likely to drift considerably between reboots, so it makes sense to correct the time occasionally. The easiest way to do this is to get cron to run ntpdate every day. With your favourite editor, as root, create a file 
@@ -590,7 +590,7 @@ The file <code>/etc/cron.daily/ntpdate</code> must also be executable.
 <screen>sudo chmod 755 /etc/cron.daily/ntpdate
 </screen>
 </sect2>
-      <sect2 id="ntpd" status="complete">
+      <sect2 id="ntpd" status="review">
 <title>ntpd</title>
 	<para>
 ntpdate is a bit of a blunt instrument - it can only adjust the time once a day, in one big correction. The ntp daemon ntpd is far more subtle. It calculates the drift of your system clock and continuously adjusts it, so there are no large corrections that could lead to inconsistent logs for instance. The cost is a little processing power and memory, but for a modern server this is negligible. 
@@ -600,7 +600,7 @@ ntpdate is a bit of a blunt instrument - it can only adjust the time once a day,
 </screen>
 <para/>
 </sect2>
-<sect2 id="timeservers" status="complete">
+<sect2 id="timeservers" status="review">
 <title>Changing Time Servers</title>
 	<para>
 In both cases above, your system will use Ubuntu's NTP server at 
@@ -637,7 +637,7 @@ You can also Google for NTP servers in your region, and add these to your config
 </para>
 <para/>
 </sect2>
-	<sect2 id="relatedpages" status="complete">
+	<sect2 id="relatedpages" status="review">
 <title>Related Pages</title>
 	<itemizedlist>
 	<listitem>

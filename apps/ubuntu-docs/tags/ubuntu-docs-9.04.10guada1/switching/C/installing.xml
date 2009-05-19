@@ -39,10 +39,10 @@
 			<para>Ubuntu is freely available <emphasis>software libre</emphasis>. You are encouraged and legally entitled to copy, reinstall and redistribute your copy of Ubuntu, and so if you know someone who will allow you to borrow their Ubuntu CD, then by all means do so! If you have a local <emphasis>Linux user group</emphasis>, they may also be able to provide an Ubuntu disc for you.</para>
 		</sect2>
 	</sect1>
-	<sect1 id="installing-burning" status="working">
+	<sect1 id="installing-burning" status="review">
 		<title>Burning your downloaded Ubuntu image</title>
 		<para>Now you have a Ubuntu image on your PC, you need to get it onto a CD.</para>
-		<sect2 id="installing-burning-windows" status="working">
+		<sect2 id="installing-burning-windows" status="review">
 			<title>From Windows</title>
 			<orderedlist>
 				<listitem><para>If you do not have software to burn an ISO image, download <ulink url="http://infrarecorder.sourceforge.net/">Infra Recorder</ulink>, open source image burning software.</para></listitem>
@@ -52,7 +52,7 @@
 				<listitem><para>In the dialog box that opens, click <guilabel>OK</guilabel>.</para></listitem>
 			</orderedlist>
 		</sect2>
-		<sect2 id="installing-burning-mac" status="working">
+		<sect2 id="installing-burning-mac" status="review">
 			<title>From a Mac</title>
 			<para>To burn most ISOs, you can use Apple's Disk Utility (Disk Copy in older versions).</para>
 			<orderedlist>
@@ -64,7 +64,7 @@
 			</orderedlist>
 			<para>Check that verification (if available) was successful. If verification was not available, at least make sure that a sample of directories on the CD can be accessed by the finder.</para>
 		</sect2>
-		<sect2 id="installing-burning-ubuntu" status="working">
+		<sect2 id="installing-burning-ubuntu" status="review">
 			<title>From Ubuntu</title>
 			<orderedlist>
 				<listitem><para>Insert a blank CD and select <guilabel>Ignore</guilabel> from the pop up dialog.</para></listitem>
@@ -124,7 +124,7 @@
 			<listitem><para>The <guilabel>Prepare disk space</guilabel> screen will load. This will allow you to partition your hard disk. Partitioning is covered in the next section.</para></listitem>
 		</orderedlist>
 	</sect1>
-	<sect1 id="installing-partitioning" status="draft">
+	<sect1 id="installing-partitioning" status="review">
 		<title>Partitioning your disks</title>
 		<sect2 id="installing-partitioning-ubuntu" status="review">
 			<title>Single boot - Ubuntu only</title>
@@ -145,7 +145,7 @@
 			<para>Partitioning does not occur until you finalize the installation, so you can decide to abort the installation at the very last minute if you require. After finalizing the installation, however, the hard disk will be re-partitioned and all existing data stored on it will be lost. <emphasis role="strong">Ensure that you have made and tested a backup copy of all important data.</emphasis></para>
 			<para>For more complicated partitioning requirements, select <guilabel>Manually edit partition table</guilabel> from the <guilabel>Prepare disk space</guilabel> screen, and then press <guibutton>Forward</guibutton>. This will start a partitioning tool which you can use to partition your disk yourself. If you are unfamiliar with partitioning, please seek support through an Ubuntu <ulink url="http://www.ubuntu.com/support">support channel</ulink> for advice on partitioning your hard disk safely and correctly.</para>
 		</sect2>
-		<sect2 id="installing-partitioning-dual" status="draft">
+		<sect2 id="installing-partitioning-dual" status="review">
 			<title>Dual booting Windows and Ubuntu</title>
 			<note>
 				<para>You must choose the <guilabel>Manually edit partition table</guilabel> option.</para>
@@ -159,7 +159,7 @@
 			</orderedlist>
 			<para>After you've selected the <guilabel>Manually edit partition table</guilabel> option, you'll see the Partition Editor screen.</para>
 			<para>Partitioning does not occur until you finalize the installation, so you can decide to abort the installation at the very last minute if you require. After finalizing the installation, however, the hard disk will be re-partitioned and all existing data stored on it will be lost. <emphasis role="strong">Ensure that you have made and tested a backup copy of all important data.</emphasis></para>
-			<sect3 id="installing-partitioning-dual-resizing" status="draft">
+			<sect3 id="installing-partitioning-dual-resizing" status="review">
 				<title>Resizing</title>
 				<para>At the moment your hard drive space is all allocated to Windows. This space needs to be reduced to create space for Ubuntu.</para>
 				<para>You don't need a huge amount of space for Ubuntu. You will need enough space for the following:</para>
@@ -174,17 +174,17 @@
 				</warning>
 				<para>Right click on the Windows partiton - it'll either be NTFS or Fat32. Select <guilabel>resize</guilabel>. You can now type in the new size or move the slider.</para>
 			</sect3>
-			<sect3 id="installing-partitioning-dual-swap" status="draft">
+			<sect3 id="installing-partitioning-dual-swap" status="review">
 				<title>Swap space</title>
 				<para>Create a partiton to use as swap space. Swap space is used by the kernel as extra memory. You will need to make it double the size of your installed memory.</para>
 				<para>Click on the free space and select <guilabel>Create new partition</guilabel>. Select <guilabel>Logical</guilabel>, <guilabel>Swap</guilabel> and set the size to double your system memory.</para>
 			</sect3>
-			<sect3 id="installing-partitioning-dual-root" status="draft">
+			<sect3 id="installing-partitioning-dual-root" status="review">
 				<title>Creating the root partition</title>
 				<para>The root partition is akin to the "C" drive in Windows. You will need at least 4GB, double if possible. This will allow you more space to install programs.</para>
 				<para>Select the remaining space (unless you want a home partition). Click <guilabel>Create new partition</guilabel>. Select <guilabel>Logical</guilabel>, <guilabel>Ext3</guilabel> and set it to use the remaining space. Lastly enter the mount point as <guilabel>/</guilabel>.</para>
 			</sect3>
-			<sect3 id="installing-partitioning-dual-home" status="draft">
+			<sect3 id="installing-partitioning-dual-home" status="review">
 				<title>Creating the home partition</title>
 				<para>This step is not necessary but will allow you to keep your settings and files in the event you reinstall Ubuntu. Set it up as you would the home partition but choose <guilabel>/home</guilabel> as the mount point.</para>
 			</sect3>

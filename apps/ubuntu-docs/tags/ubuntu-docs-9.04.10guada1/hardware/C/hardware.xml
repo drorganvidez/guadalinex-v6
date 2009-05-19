@@ -22,10 +22,10 @@
 	</articleinfo>
 	<para>Your computer consists of a number of connected devices, which are collectively known as computer <emphasis>hardware</emphasis>.</para>
 	<para>Ubuntu normally configures your hardware automatically, but there may be occasions when you need to make changes to hardware settings yourself. This section provides information on tools which can be used to configure your hardware.</para>
-	<sect1 id="restricted-manager" status="writing">
+	<sect1 id="restricted-manager" status="review">
 		<title>Restricted drivers</title>
 		<para>Some devices attached to your computer may need restricted drivers to be installed in order to work properly.</para>
-		<sect2 id="restrictedmanager-whyrestricted" status="writing">
+		<sect2 id="restrictedmanager-whyrestricted" status="review">
 			<title>Why are some drivers restricted?</title>
 			<para><emphasis>Restricted drivers are drivers for your hardware which are not freely available or open-source.</emphasis></para>
 			<para>Most of the devices (hardware) attached to your computer should function properly in Ubuntu. These devices are likely to have <emphasis>unrestricted</emphasis> drivers, which means that the drivers can be modified by the Ubuntu developers and problems with them can be fixed.</para>
@@ -36,7 +36,7 @@
 				<para>Restricted drivers are often maintained by the hardware manufacturer, and so cannot be modified by Ubuntu developers if there is a problem.</para>
 			</caution>
 		</sect2>
-		<sect2 id="restrictedmanager-enable" status="writing">
+		<sect2 id="restrictedmanager-enable" status="review">
 			<title>Enabling a restricted driver</title>
 			<para>To use a restricted driver for a device:</para>
 			<procedure>
@@ -57,7 +57,7 @@
 				</step>
 			</procedure>
 		</sect2>
-		<sect2 id="restrictedmanager-disable" status="writing">
+		<sect2 id="restrictedmanager-disable" status="review">
 			<title>Disabling a restricted driver</title>
 			<para>If a restricted driver is causing problems, or you would just like to turn it off, follow the procedure below:</para>
 			<procedure>
@@ -109,7 +109,7 @@
 	    <secondary>file system</secondary>
 	  </indexterm>
 
-	<sect2 id="checking-usage" status="complete">
+	<sect2 id="checking-usage" status="review">
 	    <title>Checking disk capacity</title>
 	    <para>To check the amount of free and used space on a disk, do either of the following:
 	      <itemizedlist>
@@ -124,7 +124,7 @@
 	      </itemizedlist>
 	    </para>
 	    
-	    <sect3 id="advanced-disk-analysis" status="complete">
+	    <sect3 id="advanced-disk-analysis" status="review">
 	      <title>Advanced disk-usage analysis</title>
 	      <para>
 		For a more accurate analysis of your filesystem, press &baobab; to start the
@@ -141,7 +141,7 @@
 	    </sect3>
 	  </sect2>
 
-	  <sect2 id="partitioning-device" status="complete">
+	  <sect2 id="partitioning-device" status="review">
 	    <title>Partitioning a device</title>
 	    <para>
 	      You can use &gnome-partition-editor; to partition storage devices. Install the <application>gparted</application> package
@@ -151,7 +151,7 @@
 	    	<para>Be careful when altering disk partitions, as it is possible to lose your data if you delete or change the wrong partition.</para>
 	    </caution>
 
-	    <sect3 id="freeing-space" status="complete">
+	    <sect3 id="freeing-space" status="review">
 	      <title>Freeing space for a new partition</title>
 	      <para>
 		To create a new partition inside an already partitioned
@@ -200,7 +200,7 @@
 		</orderedlist>
 	      </para>
 	    </sect3>
-	    <sect3 id="creating-new-partition" status="complete">
+	    <sect3 id="creating-new-partition" status="review">
 	      <title>Creating a new partition</title>
 	      <para>
 		To create a new partition:
@@ -236,7 +236,7 @@
 	    </sect3>
 	  </sect2>
 
-	  <sect2 id="partition-formatting" status="complete">
+	  <sect2 id="partition-formatting" status="review">
 	    <title>Formatting a partition</title>
 	    <para>
 	      You can use &gnome-partition-editor; to format disk partitions (see <xref linkend="partitioning-device"/> for more information on &gnome-partition-editor;).
@@ -290,7 +290,7 @@
 	    </warning>
 	  </sect2>
 	  
-	  <sect2 id="to-format-meaning" status="complete">
+	  <sect2 id="to-format-meaning" status="review">
 	    <title>What is formatting?</title>
 	    <para>
 	      To format a hard disk, device or partition means to prepare
@@ -353,7 +353,7 @@
 	    </para>
 	  </sect2>
 
-	  <sect2 id="partition-meaning" status="complete">
+	  <sect2 id="partition-meaning" status="review">
 	    <title>What is a Partition?</title>
 	    <para>
 	      A partition is a means of dividing the storage capacity of a device, 
@@ -404,7 +404,7 @@
 	  </sect2>
   </sect1>
 
-<sect1 id="laptops" status="writing">
+<sect1 id="laptops" status="review">
 	<title>Laptops</title>
 	<para>This section contains information for people using Ubuntu on a laptop computer.</para>	
 	<sect2 id="laptops-suspending" status="review">
@@ -477,10 +477,10 @@
 	</sect2>
 </sect1>
 	
-<sect1 id="input-devices" status="writing">
+<sect1 id="input-devices" status="review">
 	<title>Mice and keyboards</title>
 	<para>This section provides instructions on using and configuring mice, keyboards and other input devices to make them more comfortable for you to use.</para>
-	<sect2 id="input-mice" status="writing">
+	<sect2 id="input-mice" status="review">
 		<title>Mice and other pointing devices</title>
 		<para>You can change numerous options related to your mouse, such as how fast the pointer moves and how clicks are interpreted by the computer.</para>
 		<itemizedlist>
@@ -503,7 +503,7 @@
 		</itemizedlist>
 	</sect2>
 	
-	<sect2 id="input-keyboard" status="writing">
+	<sect2 id="input-keyboard" status="review">
 		<title>Keyboards</title>
 		<para>There are many options related to your keyboard which you can change, such as the keyboard language and keyboard shortcuts.</para>
 		<itemizedlist>
@@ -538,7 +538,7 @@
 		</itemizedlist>
 	</sect2>
 	
-	<sect2 id="input-touchpads" status="writing">
+	<sect2 id="input-touchpads" status="review">
 		<title>Touchpads and graphics tablets</title>
 		<para>You can use a touchpad or graphics tablet to move a mouse pointer.</para>
 		<itemizedlist>

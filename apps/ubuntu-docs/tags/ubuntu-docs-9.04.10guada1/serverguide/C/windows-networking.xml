@@ -9,7 +9,7 @@
 %xinclude;
 <!ENTITY language "&EnglishAmerican;">
 ]>
-<chapter id="windows-networking" status="complete">
+<chapter id="windows-networking" status="review">
 	<title>Windows Networking</title>
   <para>Computer networks are often comprised of diverse systems, and while operating a network
   made up entirely of Ubuntu desktop and server computers would certainly be fun, some network environments
@@ -18,7 +18,7 @@
   This section of the &ubuntu; &sg-title; introduces principles and tools used in 
   configuring your Ubuntu Server for sharing network resources with Windows computers.
   </para>
-	<sect1 id="windows-networking-introduction" status="complete">
+	<sect1 id="windows-networking-introduction" status="review">
 		<title>Introduction</title>
           <para>
           Successfully networking your Ubuntu system with Windows clients involves providing and integrating with services 
@@ -54,7 +54,7 @@
            documentation, but exists on the <ulink url="http://www.samba.org">SAMBA website</ulink>.
           </para>
     </sect1>
-	<sect1 id="installing-samba" status="complete">
+	<sect1 id="installing-samba" status="review">
 		<title>Installing SAMBA</title>
           <para>
           At the prompt enter the following command to install the SAMBA
@@ -74,7 +74,7 @@
 </screen>
 	  </para>
     </sect1>
-	<sect1 id="configuring-samba" status="complete">
+	<sect1 id="configuring-samba" status="review">
 		<title>Configuring SAMBA</title>
           <para>
            You may configure the SAMBA server by editing the <filename>/etc/samba/smb.conf</filename> file to change the default settings or add new
@@ -102,7 +102,7 @@
           <para>
           Now, edit the <filename>/etc/samba/smb.conf</filename> file and make your changes.
           </para> 
-      <sect2 id="windows-networking-server" status="complete">
+      <sect2 id="windows-networking-server" status="review">
         <title>Server</title>
           <para>
             In addition to the SAMBA suite of file and printer sharing server applications, Ubuntu also includes 
@@ -116,7 +116,7 @@
             (LDAP) server, and Kerberos authentication server in more detail. You will also learn about some of the available configuration
             directives available the SAMBA configuration file which facilitate network integration with Windows clients and servers.
            </para>
-        <sect3 id="active-directory" status="complete">
+        <sect3 id="active-directory" status="review">
           <title>Active Directory</title>
             <para>
               Active Directory is a proprietary implementation of Directory Services by Microsoft, and is used to provide
@@ -126,7 +126,7 @@
               integration, management, and security of network resources.  The SAMBA package may be configured to use
               Active Directory services from a Windows Domain Controller.
             </para>
-            <sect4 id="ldap" status="complete">
+            <sect4 id="ldap" status="review">
               <title>LDAP</title>
               <para>
                  The LDAP server application provides Directory Services functionality to Windows computers in a manner very similar 
@@ -140,7 +140,7 @@
                   a Windows Domain Controller does so long as SAMBA is compiled with LDAP support.
               </para>
             </sect4>
-            <sect4 id="kerberos" status="complete">
+            <sect4 id="kerberos" status="review">
               <title>Kerberos</title>
               <para>
                  The Kerberos authentication security system is a standardized service for providing authentication to 
@@ -180,7 +180,7 @@
                     </para>
             </sect4>
         </sect3>
-        <sect3 id="computer-accounts" status="complete">
+        <sect3 id="computer-accounts" status="review">
           <title>Computer Accounts</title>
             <para>
               Computer Accounts are used in Directory Services to uniquely identify computer systems participating in a network,
@@ -207,7 +207,7 @@
                       </para>
                    </tip>
         </sect3>
-        <sect3 id="file-permissions" status="complete">
+        <sect3 id="file-permissions" status="review">
           <title>File Permissions</title>
             <para>
               File Permissions define the explicit rights a computer or user has to a particular directory, file, or set of files.  Such
@@ -241,7 +241,7 @@
              </para>
         </sect3>
       </sect2>
-      <sect2 id="windows-networking-clients" status="complete">
+      <sect2 id="windows-networking-clients" status="review">
         <title>Clients</title>
           <para>
             Ubuntu includes client applications and capabilities for accessing network resources shared with the SMB protocol.
@@ -286,7 +286,7 @@
 <command>sudo umount /mnt/pcode</command>
 </screen>
                 </para>
-        <sect3 id="user-accounts" status="complete">
+        <sect3 id="user-accounts" status="review">
           <title>User Accounts</title>
             <para>
               User Accounts define persons with some level of authorization to use certain computer and network resources.  Typically, in a network
@@ -321,7 +321,7 @@
                Confirm the password, and <application>smbpasswd</application> will add the entry for the user to the SAMBA password file.
                </para>
         </sect3>
-        <sect3 id="windows-networking-groups" status="complete">
+        <sect3 id="windows-networking-groups" status="review">
           <title>Groups</title>
             <para>
               Groups define a collection of computers or users which have a common level of access to particular network resources and offer a level
@@ -340,7 +340,7 @@
             <filename>/etc/samba/smb.conf</filename>, you would do so by entering the group name as <emphasis role="bold">@sysadmin</emphasis>.
             </para>
         </sect3>
-        <sect3 id="group-policy" status="complete">
+        <sect3 id="group-policy" status="review">
           <title>Group Policy</title>
             <para>
               Group Policy defines certain SAMBA configuration settings pertaining to the Domain or Workgroup computer accounts belong to, and other

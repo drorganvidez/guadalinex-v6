@@ -505,7 +505,7 @@ $1$s3YiK$M3lxAbqA6JLm2FbDWnClQ0</computeroutput>
 	    This is a quick introduction to using <application>ufw</application>. Please refer to the <application>ufw</application> man page for more information.
 	    </para>
 	  </sect2>
-        <sect2 id="ip-masquerading" status="complete">
+        <sect2 id="ip-masquerading" status="review">
           <title>IP Masquerading</title>
             <para>
               The purpose of IP Masquerading is to allow machines with private, non-routable IP
@@ -1131,7 +1131,7 @@ sudo iptables -A INPUT -m state --state NEW -p tcp --dport 80 -j LOG --log-prefi
 	  </sect2>
 	</sect1>
 
-        <sect1 id="certificates-and-security" status="complete">
+        <sect1 id="certificates-and-security" status="review">
           <title>Certificates</title>
             <para>
             One of the most common forms of cryptography today is <emphasis>public-key</emphasis> cryptography.
@@ -1150,7 +1150,7 @@ sudo iptables -A INPUT -m state --state NEW -p tcp --dport 80 -j LOG --log-prefi
             <emphasis>Certificate Authority</emphasis> or CA.  A CA is a trusted third party that has confirmed that the information
             contained in the certificate is accurate.
             </para>
-        <sect2 id="types-of-certificates" status="complete">
+        <sect2 id="types-of-certificates" status="review">
           <title>Types of Certificates</title>
             <para>
               To set up a secure server using public-key cryptography, in most cases, you
@@ -1234,7 +1234,7 @@ sudo iptables -A INPUT -m state --state NEW -p tcp --dport 80 -j LOG --log-prefi
             </orderedlist>
 
         </sect2>
-        <sect2 id="generating-a-csr" status="complete">
+        <sect2 id="generating-a-csr" status="review">
           <title>Generating a Certificate Signing Request (CSR)</title>
             <para>Whether you are getting a certificate from a CA or generating your own
             self-signed certificate, the first step is to generate a key.
@@ -1317,7 +1317,7 @@ Enter pass phrase for server.key:
         certificate using this CSR.</para>
         
 	</sect2>
-        <sect2 id="creating-a-self-signed-certificate" status="complete">
+        <sect2 id="creating-a-self-signed-certificate" status="review">
           <title>Creating a Self-Signed Certificate</title>
             <para>
             To create the self-signed certificate, run the
@@ -1339,7 +1339,7 @@ Enter pass phrase for server.key:
         </para>
         </warning>
         </sect2>
-        <sect2 id="installing-the-certificate" status="complete">
+        <sect2 id="installing-the-certificate" status="review">
           <title>Installing the Certificate</title>
 
             <para>You can install the key file

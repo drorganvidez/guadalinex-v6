@@ -9,11 +9,11 @@
 %xinclude;
 <!ENTITY language "&EnglishAmerican;">
 ]>
-	<chapter id="version-control-system" status="complete">
+	<chapter id="version-control-system" status="review">
 		<title>Version Control System</title>
           <para>
 Version control is the art of managing changes to information. It has long been a critical tool for programmers, who typically spend their time making small changes to software and then undoing those changes the next day. But the usefulness of version control software extends far beyond the bounds of the software development world. Anywhere you can find people using computers to manage information that changes often, there is room for version control.</para>
-      <sect1 id="bazaar" status="complete">
+      <sect1 id="bazaar" status="review">
         <title>Bazaar</title> 
           <para>
           Bazaar is a new version control system sponsored by Canonical, the
@@ -24,7 +24,7 @@ Version control is the art of managing changes to information. It has long been 
           Bazaar is designed to maximize the level of community participation
           in open source projects.
           </para>
-        <sect2 id="bzr-installation" status="complete">
+        <sect2 id="bzr-installation" status="review">
           <title>Installation</title>
             <para>
               At a terminal prompt, enter the following command to install
@@ -35,7 +35,7 @@ Version control is the art of managing changes to information. It has long been 
 </screen>
             </para>
         </sect2>
-        <sect2 id="bzr-configuration" status="complete">
+        <sect2 id="bzr-configuration" status="review">
           <title>Configuration</title>
             <para>
             To introduce yourself to <application>bzr</application>,
@@ -45,7 +45,7 @@ Version control is the art of managing changes to information. It has long been 
 </screen>
             </para>
         </sect2>
-        <sect2 id="bzr-learning" status="complete">
+        <sect2 id="bzr-learning" status="review">
           <title>Learning Bazaar</title>
             <para>
             Bazaar comes with bundled documentation installed into
@@ -64,7 +64,7 @@ Version control is the art of managing changes to information. It has long been 
 </screen>            
             </para>
         </sect2>
-        <sect2 id="bzr-lp-integration" status="complete">
+        <sect2 id="bzr-lp-integration" status="review">
           <title>Launchpad Integration</title>
             <para>
             While highly useful as a stand-alone system, Bazaar has good, optional
@@ -77,12 +77,12 @@ Version control is the art of managing changes to information. It has long been 
             http://bazaar-vcs.org/LaunchpadIntegration</ulink>.</para>
         </sect2>
       </sect1>
-      <sect1 id="subversion" status="complete">
+      <sect1 id="subversion" status="review">
         <title>Subversion</title>
           <para>
 Subversion is an open source version control system. Using Subversion, you can record the history of source files and documents. It manages files and directories over time. A tree of files is placed into a central repository. The repository is much like an ordinary file server, except that it remembers every change ever made to files and directories.
           </para>
-        <sect2 id="subversion-installation" status="complete">
+        <sect2 id="subversion-installation" status="review">
           <title>Installation</title>
             <para>
 To access Subversion repository using the HTTP protocol, you must install and 
@@ -103,11 +103,11 @@ configure the digital certificate.
 	    </para>
 
         </sect2>
-        <sect2 id="subversion-configuration" status="complete">
+        <sect2 id="subversion-configuration" status="review">
           <title>Server Configuration</title>
             <para>
 	This step assumes you have installed above mentioned packages on your system. This section explains how to create a Subversion repository and access the project.</para>
-			<sect3 id="create-svn-repos" status="complete">
+			<sect3 id="create-svn-repos" status="review">
 				<title>Create Subversion Repository</title>
 <para>The Subversion repository can be created using the following command from a terminal prompt:</para>
 
@@ -117,7 +117,7 @@ configure the digital certificate.
 </screen>
         </para>
 			</sect3>
-                        <sect3 id="import-svn-files" status="complete">
+                        <sect3 id="import-svn-files" status="review">
           		  <title>Importing Files</title>
 			    <para>
                             Once you create the repository you can
@@ -130,7 +130,7 @@ configure the digital certificate.
                             </para>	
                         </sect3>
         </sect2>
-        <sect2 id="access-methods" status="complete">
+        <sect2 id="access-methods" status="review">
           <title>Access Methods</title>
 <para>Subversion repositories can be accessed (checked out) through many 
 different methods --on local disk, or through various network protocols. 
@@ -178,7 +178,7 @@ these access methods. Here, we cover the basics. For more advanced
 usage details, refer to the <ulink 
 url="http://svnbook.red-bean.com/">svn book</ulink>.
 				</para>
-			<sect3 id="direct-repos-access" status="complete">
+			<sect3 id="direct-repos-access" status="review">
 				<title>Direct repository access (file://)</title>
 <para> This is the simplest of all access methods. It does not 
 require any Subversion server process to be running. This access 
@@ -201,7 +201,7 @@ syntax of the command, entered at a terminal prompt, is as follows:</para>
 	</note>
 		<para>The repository permissions depend on filesystem permissions. If the user has read/write permission, he can checkout from and commit to the repository.</para>
 			</sect3>
-			<sect3 id="access-via-webdav" status="complete">
+			<sect3 id="access-via-webdav" status="review">
 				<title>Access via WebDAV protocol (http://)</title>
 <para> To access the Subversion repository via WebDAV protocol, you must configure your Apache 2 web server. You must add the following snippet in your <filename>/etc/apache2/apache2.conf</filename> file:</para>
 
@@ -251,7 +251,7 @@ syntax of the command, entered at a terminal prompt, is as follows:</para>
 		</para>
 	</warning>
 			</sect3>
-			<sect3 id="access-via-webdav-with-ssl" status="complete">
+			<sect3 id="access-via-webdav-with-ssl" status="review">
 				<title>Access via WebDAV protocol with SSL encryption (https://)</title>
 					<para> 
 						Accessing Subversion repository via WebDAV protocol with SSL 
@@ -274,7 +274,7 @@ syntax of the command, entered at a terminal prompt, is as follows:</para>
 					</para>
 
 			</sect3>
-			<sect3 id="access-via-custom-protocol" status="complete">
+			<sect3 id="access-via-custom-protocol" status="review">
 				<title>Access via custom protocol (svn://)</title>
 					<para> 
 					Once the Subversion repository is created, you can configure the 
@@ -334,7 +334,7 @@ $ svnserve --help</programlisting>
                     <para><screen><command>svn co help</command></screen></para>
 
 			</sect3>
-			<sect3 id="access-via-custom-protocol-with-ssl" status="complete">
+			<sect3 id="access-via-custom-protocol-with-ssl" status="review">
 				<title>Access via custom protocol with SSL encryption (svn+ssh://)</title>
 					<para> The configuration and server process is same as in the
 					svn:// method. For details, please refer to the above section. 
@@ -372,13 +372,13 @@ $ svnserve --help</programlisting>
 			</sect2>
 
       </sect1>
-      <sect1 id="cvs-server" status="complete">
+      <sect1 id="cvs-server" status="review">
         <title>CVS Server</title> 
           <para>
           CVS is a version control system. You can use it to record the
           history of source files.
           </para>
-        <sect2 id="cvs-installation" status="complete">
+        <sect2 id="cvs-installation" status="review">
           <title>Installation</title>
             <para>
               At a terminal prompt, enter the following command to install
@@ -398,7 +398,7 @@ prompt, enter the following command to install
 </screen>
             </para>
         </sect2>
-        <sect2 id="cvs-configuration" status="complete">
+        <sect2 id="cvs-configuration" status="review">
           <title>Configuration</title>
             <para>
             Once you install cvs, the repository will be automatically
@@ -478,7 +478,7 @@ to the CVS manual for details.
         </warning>
 
         </sect2>
-        <sect2 id="cvs-add-projects" status="complete">
+        <sect2 id="cvs-add-projects" status="review">
           <title>Add Projects</title>
             <para>
             This section explains how to add new project to the CVS 
@@ -514,7 +514,7 @@ manage projects in the CVS repository.
             </para>
         </sect2>
       </sect1>
-      <sect1 id="version-control-ref" status="complete">
+      <sect1 id="version-control-ref" status="review">
         <title>References</title> 
 				<para><ulink url="http://bazaar-vcs.org/">Bazaar Home Page</ulink></para>
 				<para><ulink url="https://launchpad.net/">Launchpad</ulink></para>

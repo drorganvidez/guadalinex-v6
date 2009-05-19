@@ -9,14 +9,14 @@
 %xinclude;
 <!ENTITY language "&EnglishAmerican;">
 ]>
-<chapter id="package-management" status="complete">
+<chapter id="package-management" status="review">
 	<title>Package Management</title>
         <para>Ubuntu features a comprehensive package management system for the installation, upgrade, configuration, and removal of software.  In addition to providing access to an organized base of over 17,000 software packages for your Ubuntu computer, the package management facilities also feature dependency resolution capabilities and software update checking.
         </para>
         <para>
         Several tools are available for interacting with Ubuntu's package management system, from simple command-line utilities which may be easily automated by system administrators, to a simple graphical interface which is easy to use by those new to Ubuntu.
         </para>
-  <sect1 id="package-management-introduction" status="complete">
+  <sect1 id="package-management-introduction" status="review">
 	<title>Introduction</title>
         <para>
         Ubuntu's package management system is derived from the same system used by the Debian GNU/Linux distribution.  The package files contain all of the necessary files, meta-data, and instructions to implement a particular functionality or software application on your Ubuntu computer.
@@ -28,7 +28,7 @@
         Many complex packages use the concept of <emphasis role="italics">dependencies</emphasis>.  Dependencies are additional packages required by the principal package in order to function properly.  For example, the speech synthesis package <application>Festival</application> depends upon the package <application>libasound2</application>, which is a package supplying the <application>ALSA</application> sound library needed for audio playback.  In order for <application>Festival</application> to function, it and all of it's dependencies must be installed. The software management tools in Ubuntu will do this automatically.
         </para>
   </sect1>
-  <sect1 id="apt-get" status="complete">
+  <sect1 id="apt-get" status="review">
 	<title>Apt-Get</title>
         <para>
         The <application>apt-get</application> command is a powerful command-line tool used to work with Ubuntu's <emphasis>Advanced Packaging Tool</emphasis> (APT) performing such functions as installation of new software packages, upgrade of existing software packages, updating of the package list index, and even upgrading the entire Ubuntu system.
@@ -90,7 +90,7 @@
 		<para>For further information about the use of <application>APT</application>, read the comprehensive <ulink url="&debian-apt;">Debian APT User Manual</ulink> or type: <screen>apt-get help</screen></para>
   </sect1>
 
-  <sect1 id="aptitude" status="complete">
+  <sect1 id="aptitude" status="review">
 	<title>Aptitude</title>
         <para>
         <application>Aptitude</application> is a menu-driven, text-based front-end to the <emphasis>Advanced Packaging Tool</emphasis> (APT) system. Many of the common package management functions, such as installation, removal, and upgrade, are performed in <application>Aptitude</application> with single-key commands, which are typically lowercase letters.
@@ -166,7 +166,7 @@ as a normal user with the following command at a terminal prompt:
         <para>To exit Aptitude, simply press the <keycap>q</keycap> key and confirm you wish to exit. Many other functions are available from the Aptitude menu by pressing the <keycap>F10</keycap> key.
         </para>
   </sect1>
-	<sect1 id="configuration" status="complete">
+	<sect1 id="configuration" status="review">
 		<title>Configuration</title>
           <para>
           Configuration of the <emphasis>Advanced Packaging Tool</emphasis> (APT) system repositories is stored in the /etc/apt/sources.list configuration file. An example of this file is referenced here, along with information on adding or removing repository references from the file.
@@ -185,7 +185,7 @@ as a normal user with the following command at a terminal prompt:
           </para>
           
     </sect1>
-	<sect1 id="extra-repositories" status="complete">
+	<sect1 id="extra-repositories" status="review">
 		<title>Extra Repositories</title>
           <para>
           In addition to the officially supported package repositories available for Ubuntu, there exist additional community-maintained repositories which add thousands more potential packages for installation.  Two of the most popular are the <emphasis>Universe</emphasis> and <emphasis>Multiverse</emphasis> repositories. These repositories are not officially supported by Ubuntu, but because they are maintained by the community they generally provide packages which are safe for use with your Ubuntu computer. 
@@ -226,7 +226,7 @@ deb http://security.ubuntu.com/ubuntu &distro-short-codename;-security multivers
 deb-src http://security.ubuntu.com/ubuntu &distro-short-codename;-security multiverse
 </programlisting>
           </para>
-          <sect2 id="extra-repositories-references" status="complete">
+          <sect2 id="extra-repositories-references" status="review">
                 <title>References</title>
                 <para>
                 <ulink url="https://help.ubuntu.com/community/Repositories/Ubuntu">Adding Repositories Howto (Ubuntu Wiki)</ulink>

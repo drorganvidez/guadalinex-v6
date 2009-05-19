@@ -15,262 +15,336 @@
 	<title>Adding, Removing and Updating Applications</title>
     	&legalnotice;
 	</articleinfo>
-	<para>This section discusses how applications are installed, removed and kept up to date. Also covered are how packages are stored by Ubuntu and made available for download.</para>
-	<para>It also covers some more advanced techniques for managing applications.</para>
-	
-<sect1 id="add-applications-introduction" status="review">
-    <title>What is a package manager?</title>
+	<para>This section discusses how applications are installed, removed and kept up-to-date. Also covered are how packages are stored by Ubuntu and made available for download.</para>
+
+<sect1 id="installation-windows-ubuntu" status="draft">
+    <title>How is software installation on Ubuntu different from on Windows?</title>
     <para>
-    A package manager is a program that you can use to install, remove and 
-    upgrade software. Software for Ubuntu is provided in the form of packages, 
-    which are automatically downloaded by the package manager.
+    Ubuntu handles software installation in a very different way to Windows.
     </para>
     <para>
-    There are three main package management programs you can use in Ubuntu:
+    If you want to install an application on Windows, you must normally buy a 
+    CD containing the software, or download an installer package from the 
+    Internet. You then run the installer program, which guides you through the 
+    installation process.
     </para>
-    
-    <itemizedlist>
-        <listitem>
-        <para>
-        <link linkend="gnome-app-install">Add/Remove Applications</link> - 
-        Quickly installs and removes popular programs, as well as providing 
-        ratings.
-        </para>
-        </listitem>
-        <listitem>
-        <para>
-        <link linkend="synaptic">Synaptic</link> - Allows more advanced 
-        management, such as installing server applications and choosing 
-        different versions of the same package.
-        </para>
-        </listitem>
-        <listitem>
-        <para>
-        <link linkend="apt">Apt</link> - Allows package management from the 
-        command line.
-        </para>
-        </listitem>
-    </itemizedlist>
-    
-    <warning>
-        <para>
-        You can only use one package manager at a time. If you start another 
-        package manager while one is already open, you will receive an error 
-        message.
-        </para>
-    </warning>
-    
     <para>
-    You will require administrative access to install and remove software. This 
-    is because packages sometimes need to change important system files. See 
-    <ulink type="help" url="ghelp:administrative">Administrative Tasks</ulink> 
-    for more information on administrative access.
+    On Ubuntu, you simply open a <emphasis>package manager</emphasis>, search 
+    for the application that you want and click a button to install it. 
+    Removing an application is just as simple.
     </para>
-    
-    <sect2 id="package-management-terms" status="review">
-        <title>Common package-management terms</title>
-        
-        <para>
-        If you are unfamiliar with Ubuntu's package management system, you may 
-        like to take a look at some of the following definitions.
-        </para>
-        
-        <para>
-        <emphasis role='strong'>Packages</emphasis> 
-        are files which contain a program and all of the files required to run it 
-        on your computer. When you install a package, a file is downloaded from a 
-        repository and installed by a package manager.
-        </para>
-        
-        <para>
-        <emphasis role='strong'>Dependencies</emphasis> 
-        are packages which must be installed before certain other packages can be 
-        installed. Dependency packages usually contain some files and programs 
-        needed by the other packages - for example, a word-processing package may 
-        depend on a printing package being installed in order to be able to print 
-        documents.
-        </para>
-    </sect2>
+    <para>
+    The package manager downloads applications from a <emphasis>software 
+    repository</emphasis>, which is a location on the Internet which stores a 
+    collection of applications. These applications come bundled in 
+    <emphasis>packages</emphasis>, which contain all of the information needed 
+    for installation. You can download packages yourself, using your web 
+    browser, if you like, but it is generally much more convenient to let the 
+    package manager handle this for you.
+    </para>
+    <para>
+    Some packages depend on other packages being installed in order to work. 
+    For example, a word processing package may require a printing package to be 
+    installed. The package manager automatically installs these 
+    <emphasis>dependencies</emphasis> for you.
+    </para>
+    <para>
+    By default, only applications from the official Ubuntu software 
+    repositories are available in your package manager. If you cannot find the 
+    application that you want in the default repositories, you can add other 
+    (<quote>third-party</quote>) repositories and install it from there.
+    </para>
 </sect1>
 
-<sect1 id="extra-repositories" status="review">
-    <title>Software repositories</title>
-    <para>
-    When you install software on Ubuntu, the package manager automatically 
-    downloads the required software packages from a 
-    <emphasis>software repository</emphasis>, a location on the Internet which 
-    stores collections of packages ready to be downloaded.
-    </para>
-    <para>
-    There are thousands of programs available to install on Ubuntu. These 
-    programs are stored in software repositories and are made freely available 
-    for all Ubuntu users. This makes it very easy to install new programs, and 
-    it is also very secure because each program you install is built specially 
-    for Ubuntu and checked before it is allowed into the repositories.
-    </para>
-    <para>
-    To organise the software, Ubuntu repositories are categorised into four 
-    groups: <emphasis>Main</emphasis>, <emphasis>Restricted</emphasis>, 
-    <emphasis>Universe</emphasis>, and <emphasis>Multiverse</emphasis>. The 
-    rationale used to determine which software goes into which category is 
-    based on the level of support that software development teams provide for a 
-    program and the level of compliance the program has to the 
-    <ulink url="&ubuntu-philosophy;">Free Software Philosophy</ulink>.
-    </para>
-    <para>
-    The standard Ubuntu Install CD contains some software from the 
-    <emphasis>Main</emphasis> and <emphasis>Restricted</emphasis> categories.
-    </para>
-    <para>
-    If your system is connected to the Internet, many more software programs 
-    are made available for installation. For example, the 
-    <quote>Universe</quote> and <quote>Multiverse</quote> repositories are only 
-    available over the Internet.
-    </para>
-    
-    <warning>
-        <para>
-        The <emphasis>Multiverse</emphasis> repository contains software which 
-        has been classified as <emphasis>non-free</emphasis>. This software 
-        may not be permitted in some jurisdictions. When installing each 
-        package from this repository, you should verify that the laws of your 
-        country permit you to use it. Also, this software may not include 
-        security updates.
-        </para>
-    </warning>
-    
-    <para>
-    You can find more information about the Repositories available 
-    <ulink url="&ubuntu-components;">on the website</ulink>.
-    </para>
+<sect1 id="installing" status="draft">
+    <title>Installing an application</title>
+    <procedure>
+    <step>
+        <para>Click &gnome-app-install;.</para>
+    </step>
+    <step>
+        <para>Search for an application, or select a category and find an 
+        application from the list.</para>
+    </step>
+    <step>
+        <para>Check the box next to the application that you want to install. 
+        Do this for all of the applications that you want to install.</para>
+    </step>
+    <step>
+        <para>Click <guibutton>Apply Changes</guibutton>, then click 
+        <guibutton>Apply</guibutton> to start the installation.</para>
+    </step>
+    <step>
+        <para>Enter your password if prompted. The applications that you chose 
+        will be downloaded and installed.</para>
+    </step>
+    <step>
+        <para>Once installation has finished, your new applications should be 
+        available from the Applications menu.</para>
+    </step>
+    </procedure>
 
-    <sect2 id="extra-repositories-adding" status="review">
-        <title>Adding extra repositories</title>
-        <para>
-        It is possible to add extra repositories, such as those provided 
-        by third parties or those for older version of Ubuntu.
-        </para>
-        
-        <caution>
-        <para>
-        Be careful when installing software from third-party repositories. It 
-        may not have been tested with Ubuntu and could cause your system to 
-        break.
-        </para>
-        </caution>
-        
-        <procedure>
-            <step>
-            <para>
-            Open &software-properties; and press 
-            <guilabel>Third Party Software</guilabel>.
-            </para>
-            </step>
-            <step>
-            <para>
-            Press <guibutton>Add</guibutton> to add a new repository.
-            </para>
-            </step>
-            <step>
-            <para>
-            Enter the <guilabel>APT line</guilabel> for the extra repository. 
-            This should be available from the website of the repository or 
-            similar, and should look similar to the following:
-            </para>
-            <screen>deb http://ftp.debian.org etch main</screen>
-            </step>
-            <step>
-            <para>Press <guibutton>Add Source</guibutton> and then click 
-            <guibutton>Close</guibutton> to save your changes.
-            </para>
-            </step>
-            <step>
-            <para>
-            You will be notified that the information about available software 
-            is out-of-date. Press <guibutton>Reload</guibutton>.
-            </para>
-            </step>
-            <step>
-            <para>
-            Most software repositories use a GPG key to digitally sign the 
-            files they provide, which makes it easy to check that the files 
-            have not been tampered with since their creation.  In order for apt 
-            to be able to check this, you need the public key that corresponds 
-            to the signatures.  The key should be available for download on the 
-            repository's website.
-            </para>
-            </step>
-            <step>
-            <para>
-            Once you have downloaded the GPG key, import the key by selecting 
-            the <guilabel>Authentication</guilabel> tab, clicking on 
-            <guibutton>Import Key File</guibutton>, and then selecting the GPG 
-            key to be imported.
-            </para>
-            </step>
-        </procedure>
-    </sect2>
-    
-    <sect2 id="update-repos-info" status="review">
-    <title>Why are there several different Ubuntu update repositories?</title>
-    <para>
-    The Update Manager automatically finds software updates for your computer 
-    when they are available. It regularly gathers information on potential 
-    updates from a number of online update sources.
-    </para>
-    <para>
-    If you click &software-properties; and select the 
-    <guilabel>Updates</guilabel> tab, you will notice that four update sources 
-    are available. An explanation for each of these is provided below:
-    </para>
+<sect2 id="installing-others" status="draft">
+    <title>Other methods of installing applications</title>
 
+<sect3 id="installing-synaptic" status="draft">
+    <title>Using Synaptic Package Manager</title>
+    <para>
+    Synaptic can be used to manage advanced software packages (such as server 
+    applications) which Add/Remove Applications does not manage.
+    </para>
+    <procedure>
+    <step>
+        <para>Click &synaptic;. Enter your password if prompted.</para>
+    </step>
+    <step>
+        <para>Click <guibutton>Search</guibutton> to search for an application, 
+        or click <guibutton>Sections</guibutton> and look through the 
+        categories to find one.</para>
+    </step>
+    <step>
+        <para>Right-click the application that you want to install and select 
+        <guilabel>Mark for Installation</guilabel>.</para>
+    </step>
+    <step>
+        <para>If you are asked if you would like to mark additional changes, 
+        click <guibutton>Mark</guibutton>.</para>
+    </step>
+    <step>
+        <para>Select any other applications that you would like to 
+        install.</para>
+    </step>
+    <step>
+        <para>Click <guibutton>Apply</guibutton>, and then click 
+        <guibutton>Apply</guibutton> in the window that appears. The 
+        applications that you chose will be downloaded and installed.</para>
+    </step>
+    </procedure>
+</sect3>
+
+<sect3 id="installing-deb" status="draft">
+    <title>Downloading and installing a .deb package</title>
+    <para>
+    You can download and install applications from websites. These applications 
+    are contained in Debian (.deb) packages. To install a Debian package:
+    </para>
+    <procedure>
+    <step>
+        <para>Download the package from a website.</para>
+    </step>
+    <step>
+        <para>Double-click the package. It will be opened in the Package 
+        Installer.</para>
+    </step>
+    <step>
+        <para>Click <guibutton>Install</guibutton> to install the 
+        package.</para>
+    </step>
+    </procedure>
+    
+    <para>
+    Installing single packages in this way is not recommended, for the 
+    following reasons:
+    </para>
     <itemizedlist>
-        <listitem>
-        <para>
-        <emphasis role='strong'>Important security updates:</emphasis>
-        Updates which fix critical security flaws are made available through 
-        this source. It is recommended that all users leave this source enabled 
-        (it should be enabled by default).
-        </para>
-        </listitem>
-        <listitem>
-        <para>
-        <emphasis role='strong'>Recommended updates:</emphasis>
-        Updates which fix serious software problems (which are not security 
-        flaws) are made available through this source. Most users will want to 
-        leave this source enabled as common and annoying problems are often 
-        fixed with these updates.
-        </para>
-        </listitem>
-        <listitem>
-        <para>
-        <emphasis role='strong'>Pre-released updates:</emphasis>
-        Updates which are currently being tested before being released to 
-        everyone are provided through this update source. If you would like to 
-        help test new updates (and get fixes for problems more quickly), enable 
-        this source. Be aware that these updates may not yet be well tested; it 
-        is not recommended that you enable this source unless you are prepared 
-        to experience occasional problems.
-        </para>
-        </listitem>
-        <listitem>
-        <para>
-        <emphasis role='strong'>Unsupported updates:</emphasis>
-        When new versions of popular software are released they are sometimes 
-        <quote>back-ported</quote> to an older version of Ubuntu so that users 
-        can benefit from new features and fixes for problems. These backports 
-        are unsupported, may cause problems when installed and should only be 
-        used by people who are in desperate need of a new version of a software 
-        package which they know has been backported.
-        </para>
-        </listitem>
+    <listitem>
+        <para>The packages have not been checked for security by Ubuntu 
+        members, and could contain software which harms your computer. You 
+        should only download single packages from websites that you trust.</para>
+    </listitem>
+    <listitem>
+        <para>The package may require some extra software to run, which cannot 
+        be installed automatically. You will have to find and install this 
+        software yourself.</para>
+    </listitem>
     </itemizedlist>
-    </sect2>
-    
+</sect3>
+
+<sect3 id="installing-webpage" status="draft">
+    <title>Clicking a link on a web page</title>
+    <para>
+    Some web pages have links which install applications when you click them. 
+    These are known as <quote>apt:</quote> links. After clicking the link, you 
+    will be asked if you would like to install additional software. Click 
+    <guibutton>Install</guibutton> to start the installation process.
+    </para>
+    <para>
+    The application can only be downloaded and installed if it is available in 
+    a software repository which is currently enabled on your computer. This 
+    means that websites cannot trick you into installing software which is 
+    potentially harmful to your computer.
+    </para>
+</sect3>
+</sect2>
 </sect1>
 
-<sect1 id="restricted-software" status="review">
-    <title>Restricted and non-free software</title>
+<sect1 id="removing" status="draft">
+    <title>Removing an application</title>
+    <procedure>
+    <step>
+        <para>Click &gnome-app-install;.</para>
+    </step>
+    <step>
+        <para>Find the application that you want to remove by finding it in 
+        the list or by searching for it.</para>
+    </step>
+    <step>
+        <para>Uncheck the box next to the application that you want to remove. 
+        Do this for all of the applications you want to remove.</para>
+    </step>
+    <step>
+        <para>Click <guibutton>Apply Changes</guibutton>, then click 
+        <guibutton>Apply</guibutton> to remove the applications. Enter your 
+        password if prompted.</para>
+    </step>
+    </procedure>
+    <para>
+    Some applications depend on others being installed in order to work 
+    properly. If you try to remove an application which is required by another 
+    application, both of those applications will be removed. You will be asked 
+    to confirm that this is what you want to happen before the applications 
+    are removed.</para>
+    <para>
+    If the application that you want to uninstall is not available in 
+    Add/Remove Applications, use Synaptic (&synaptic;) to remove it instead.
+    </para>
+</sect1>
+
+<sect1 id="adding-repos" status="draft">
+    <title>Adding a software repository</title>
+    <para>
+    Software is available from third-party sources, as well as from the default 
+    Ubuntu software repositories. If you want to install software from a 
+    third-party software repository, you must add it to the package manager's 
+    list of available repositories.
+    </para>
+    <caution>
+    <para>
+    Only add software repositories from sources that you trust. Third-party 
+    software repositories are not checked for security by Ubuntu members, so 
+    could contain software which is harmful to your computer.
+    </para>
+    </caution>
+    <procedure>
+    <step>
+        <para>Open &software-sources; and select <guilabel>Third Party 
+        Software</guilabel>.</para>
+    </step>
+    <step>
+        <para>Click <guibutton>Add</guibutton> to add a new repository.</para>
+    </step>
+    <step>
+        <para>Enter the APT line for the extra repository. This should be 
+        available from the website of the repository, and should look similar 
+        to the following:</para>
+        <screen>deb http://ftp.debian.org etch main</screen>
+    </step>
+    <step>
+        <para>Click <guibutton>Add Source</guibutton> and then click 
+        <guibutton>Close</guibutton> to save your changes.</para>
+    </step>
+    <step>
+        <para>You will be notified that the information about available 
+        software is out-of-date. Click <guibutton>Reload</guibutton>.</para>
+    </step>
+    <step>
+        <para>Packages from the new repository should now be available in your 
+        package manager.</para>
+    </step>
+    </procedure>
+    <para>
+    As a security measure, most software repositories use a GPG key to 
+    digitally sign the files they provide. This makes it easy to check that the 
+    files have not been tampered with since their creation. In order for your 
+    package manager to be able to check this, you need the public key that 
+    corresponds to the signatures. The key should be available for download on 
+    the repository's website.
+    </para>
+    <para>
+    Download the GPG key. Then, click &software-sources;, select the 
+    <guilabel>Authentication</guilabel> tab, click <guibutton>Import Key 
+    File</guibutton> and select the GPG key to be imported.
+    </para>
+</sect1>
+
+<sect1 id="offline" status="draft">
+    <title>Installing software packages without an Internet connection</title>
+    <para>
+    If you are not connected to the Internet, you can use a CD containing 
+    package files to install applications on your computer. The Ubuntu 
+    installation CD can be used for this purpose, and other CDs with different 
+    packages are available as well. Additionally, the program 
+    <application>APTonCD</application> can automatically backup installed 
+    packages on your system, and create CDs with the contents of various 
+    repositories on them.
+    </para>
+    
+<sect2 id="ubuntu-installation-cd" status="review">
+    <title>Installing packages using the Ubuntu installation CD</title>
+    <para>
+    Some packages from the <emphasis>main</emphasis> and 
+    <emphasis>restricted</emphasis> Ubuntu package repositories can be 
+    installed from the Ubuntu installation CD. Simply insert your Ubuntu 
+    installation CD and open &synaptic;. To list only packages on the 
+    Ubuntu installation CD, click on the <guibutton>Origin</guibutton> 
+    button in the lower left corner of the Synaptic window. The packages 
+    should be listed under the 
+    <guimenuitem>&distro-apt-cd-name;</guimenuitem> section.
+    </para>
+    <para>
+    If the packages are not listed, it may be because the CD is not listed 
+    as a package repository (the CD should be listed as a repository by 
+    default). To add the CD as a package repository, follow the 
+    instructions in <xref linkend="repository-cds"/>, below.
+    </para>	
+</sect2>
+
+<sect2 id="repository-cds" status="review">
+    <title>Enabling other CDs that can be used to install packages</title>
+    <para>
+    To enable Synaptic and other package managers to install software from 
+    CDs which contain packages:
+    </para>
+    <procedure>
+    <step>
+        <para>Click &software-sources;.</para> 
+    </step>
+    <step>
+        <para>Select <guilabel>Third Party Software</guilabel> and click on 
+        the <guibutton>Add CD-ROM</guibutton> button.</para>
+    </step> 
+    <step>
+        <para>Insert the CD.</para>
+    </step>
+    </procedure>
+    <para>
+    The packages should then be listed. To have Synaptic only list packages 
+    from the CD, click the <guibutton>Origin</guibutton> button on the 
+    lower left corner of the Synaptic window and then find the name of the 
+    CD in the list in the upper left corner the window.
+    </para>
+</sect2>
+
+<sect2 id="aptoncd" status="review">
+    <title>Using APTonCD to install packages</title>
+    <para>
+    <application>APTonCD</application> can be used to create a CD that 
+    contains all the packages you have on your system, or it can create 
+    CDs with packages or entire repositories of your choice. In a package 
+    manager such as <application>Synaptic</application>, find the 
+    <emphasis>aptoncd</emphasis> package and install it.
+    </para>
+    <para>
+    Further documentation on APTonCD can be found on its website, 
+    <ulink url="http://aptoncd.sourceforge.net">
+    aptoncd.sourceforge.net</ulink>
+    </para>
+</sect2>
+</sect1>
+
+
+<sect1 id="restricted-software" status="draft">
+    <title>What are restricted and non-free software?</title>
     <para>
     Most of the software available for Ubuntu is free, open-source software. 
     This software is free for anyone to install and use, and people can modify 
@@ -320,392 +394,110 @@
     </para>
     </warning>
 </sect1>
-	
-<sect1 id="gnome-app-install" status="review">
-    <title>Add/Remove Applications</title>
-    <para>
-    With the <guimenuitem>Add/Remove</guimenuitem> item in the 
-    <guimenu>Applications</guimenu> menu, you can install programs to do new 
-    things with Ubuntu. You can also remove programs which you do not want. 
-    You need administrative access to use 
-    <application>Add/Remove Applications</application> (see 
-    <ulink type="help" url="ghelp:administrative">Administrative Tasks</ulink> 
-    for more details).
-    </para>
-    <para>
-    If you know the name of a program you want to install, enter it in the 
-    <guilabel>Search</guilabel> field. Otherwise, begin by choosing a software 
-    category on the left.
-    </para>
-    <para>
-    Programs that are already installed have a check mark next to their name. 
-    Uncheck a program if you want to remove it from your computer.
-    </para>
-    <para>
-    When you click <guibutton>Apply Changes</guibutton>, any new software will 
-    be downloaded from the Internet, and Ubuntu will make any other changes you 
-    selected. If you have not activated the online package archive, you may be 
-    asked to insert your Ubuntu CD-ROM to install some packages.
-    </para>
-    <para>
-    Some software cannot be installed or removed using 
-    <application>Add/Remove Applications</application>. If you cannot find the 
-    package you are looking for, start the advanced package manager 
-    <application>Synaptic</application> (see <xref linkend="advanced"/>).
-    </para>
-</sect1>
 
-<sect1 id="offline" status="review">
-    <title>Installing packages without an Internet connection</title>
+<sect1 id="default-repos" status="draft">
+    <title>Overview of the default Ubuntu software repositories</title>
     <para>
-    Other than using tools that download packages automatically, it is also 
-    possible to use a CD to install packages through a package manager while 
-    not connected to the Internet. The Ubuntu installation CD can be used for 
-    this purpose, and other CDs with different packages are available as well. 
-    Additionally, the program <application>APTonCD</application> can 
-    automatically backup installed packages on your system, and create CDs with 
-    the contents of various repositories on them.
+    When you install software on Ubuntu, the package manager automatically 
+    downloads the required software packages from a 
+    <emphasis>software repository</emphasis>, a location on the Internet which 
+    stores collections of packages ready to be downloaded.
     </para>
-    
-    <sect2 id="ubuntu-installation-cd" status="review">
-        <title>Installing packages using the Ubuntu installation CD</title>
-        <para>
-        Some packages from the <emphasis>main</emphasis> and 
-        <emphasis>restricted</emphasis> Ubuntu package repositories can be 
-        installed from the Ubuntu installation CD. Simply insert your Ubuntu 
-        installation CD and open &synaptic;. To list only packages on the 
-        Ubuntu installation CD, click on the <guibutton>Origin</guibutton> 
-        button in the lower left corner of the Synaptic window. The packages 
-        should be listed under the 
-        <guimenuitem>&distro-apt-cd-name;</guimenuitem> section.
-        </para>
-        <para>
-        If the packages are not listed, it may be because the CD is not listed 
-        as a package repository (the CD should be listed as a repository by 
-        default). To add the CD as a package repository, follow the 
-        instructions in <xref linkend="repository-cds"/>, below.
-        </para>	
-    </sect2>
-    
-    <sect2 id="repository-cds" status="review">
-        <title>Enabling other CDs that can be used to install packages</title>
-        <para>
-        To enable Synaptic and other package managers to install software from 
-        CDs which contain packages:
-        </para>
-        
-        <procedure>
-            <step>
-            <para>
-            Press <menuchoice><guimenuitem>System</guimenuitem>
-            <guimenuitem>Administration</guimenuitem>
-            <guimenuitem>Software Sources</guimenuitem>
-            </menuchoice>.
-            </para> 
-            </step>
-            <step>
-            <para>
-            Go to the <guilabel>Third Party Software</guilabel> tab and click 
-            on the <guibutton>Add CD-ROM</guibutton> button.
-            </para>
-            </step> 
-            <step>
-            <para>
-            Insert the CD.
-            </para>
-            </step>
-        </procedure>
-        
-        <para>
-        The packages should then be listed. To have Synaptic only list packages 
-        from the CD, click the <guibutton>Origin</guibutton> button on the 
-        lower left corner of the Synaptic window and then find the name of the 
-        CD in the list in the upper left corner the window.
-        </para>
-    </sect2>
-    
-    <sect2 id="APTonCD" status="review">
-        <title>Using APTonCD to install packages</title>
-        <para>
-        <application>APTonCD</application> can be used to create a CD that 
-        contains all the packages you have on your system, or it can create 
-        CDs with packages or entire repositories of your choice. In a package 
-        manager such as <application>Synaptic</application>, find the 
-        <emphasis>aptoncd</emphasis> package and install it.
-        </para>
-        <para>
-        Further documentation on APTonCD can be found on its website, 
-        <ulink url="http://aptoncd.sourceforge.net">
-        aptoncd.sourceforge.net</ulink>
-        </para>
-    </sect2>
-</sect1>
+    <para>
+    There are thousands of programs available to install on Ubuntu. These 
+    programs are stored in software repositories and are made freely available 
+    for all Ubuntu users. This makes it very easy to install new programs, and 
+    it is also very secure because each program you install is built specially 
+    for Ubuntu and checked before it is allowed into the repositories.
+    </para>
 
-<sect1 id="advanced" status="review">
-    <title>Advanced package management</title>
+<sect2 id="default-repos-main" status="draft">
+    <title>Software repositories</title>
     <para>
-    Several other package managers exist in Ubuntu. These contain more advanced 
-    features than <application>Add/Remove Applications</application>.
-    </para>
-    
-    <sect2 id="synaptic" status="review">
-        <title>Synaptic Package Manager</title>
-        <para>
-        <application>Synaptic</application> is an advanced package management 
-        application that can install and remove every package available to your 
-        system. The interface is graphical like <application>Add/Remove 
-        Applications</application>, but presents much more information and 
-        gives you complete control over the software on your computer.
-        </para>
-        <para>
-        To launch Synaptic, press &synaptic;. You will need administrative 
-        access to use it; see <ulink type="help" url="ghelp:administrative">
-        Administrative Tasks</ulink> for more details.
-        </para>
-        <para>
-        See the <ulink type='help' url='ghelp:synaptic#synaptic-single'>
-        Synaptic manual</ulink> for more information on managing packages with 
-        Synaptic.
-        </para>
-    </sect2>
-    
-    <sect2 id="apt" status="review">
-        <title>Command-line package management with APT</title>
-        <para>
-        If you are comfortable using the Terminal, you can use 
-        <application>apt</application> (Advanced Packaging Tool) to install or 
-        remove software. You need administrative access to use apt; see 
-        <ulink type="help" url="ghelp:administrative">
-        Administrative Tasks</ulink> for more details.
-        </para>
-        <para>
-        To update the local list of packages, enter in a Terminal:
-        <screen>sudo apt-get update</screen>
-        </para>
-        <para>
-        To install all available updates:
-        <screen>sudo apt-get upgrade</screen>
-        </para>
-        <para>
-        To search for a package:
-        <screen>apt-cache search <replaceable>package</replaceable></screen>
-        </para>
-        <para>
-        To install a package:
-        <screen>sudo apt-get install <replaceable>package</replaceable></screen>
-        </para>
-        <para>
-        To remove a package:
-        <screen>sudo apt-get remove <replaceable>package</replaceable></screen>
-        </para>
-        <para>
-        To remove a package and all its dependencies (that are not in use by 
-        other programs):
-        <screen>sudo apt-get autoremove <replaceable>package</replaceable></screen>
-        </para>      
-        <para>
-        To list other <application>apt</application> commands and options:
-        <screen>apt-get help</screen>
-        </para>
-        <para>
-        For more information, see the <ulink url="&debian-apt;">Debian 
-        apt manual</ulink> and the <ulink url="man:apt-get">apt-get manual 
-        page</ulink>.
-        </para>
-    </sect2>
-</sect1>
-
-<sect1 id="install-file" status="review">
-    <title>Installing a single package file</title>
-    <para>
-    The preferred method of installing programs is via the package
-    managers described in this chapter. However, although the Ubuntu
-    package archives are very large, it is possible that you may
-    wish to install a package that is not available in the Ubuntu
-    archives. If this happens, you can also download and install
-    files from websites.
+    To organize the software, Ubuntu repositories are categorized into four 
+    groups: <emphasis>Main</emphasis>, <emphasis>Restricted</emphasis>, 
+    <emphasis>Universe</emphasis>, and <emphasis>Multiverse</emphasis>. The 
+    rationale used to determine which software goes into which category is 
+    based on the level of support that software development teams provide for a 
+    program and the level of compliance the program has to the 
+    <ulink url="&ubuntu-philosophy;">Free Software Philosophy</ulink>.
     </para>
     <para>
-    It is important to ensure that any files you download come from
-    a safe source before installing them.
+    The standard Ubuntu Install CD contains some software from the 
+    <emphasis>Main</emphasis> and <emphasis>Restricted</emphasis> categories.
     </para>
     <para>
-    There are many different kinds of Linux package
-    files. Most of these are associated with the package
-    managers of specific Linux distributions. Examples are
-    <emphasis>Debian Package</emphasis> files (<filename
-    class="extension">.deb</filename> files),
-    <emphasis>RPM Package Manager</emphasis> files
-    (<filename class="extension">.rpm</filename> files),
-    <emphasis>Tarballs</emphasis> (<filename
-    class="extension">.tar</filename> files) and <filename
-    class="extension">.run</filename> files.
-    </para>
-    <para>
-    This section deals with installing these single files.
+    If your system is connected to the Internet, many more software programs 
+    are made available for installation. For example, the 
+    <quote>Universe</quote> and <quote>Multiverse</quote> repositories are only 
+    available over the Internet.
     </para>
     <warning>
-    <para>It is not guaranteed that these files will be compatible
-    with your system and you will not receive security updates if
-    you install these files. For these reasons, if you wish to
-    install a program, always use a native Ubuntu package of the
-    application available through a package manager, if there is
-    one available.
-    </para>
+        <para>
+        The <emphasis>Multiverse</emphasis> repository contains software which 
+        has been classified as <emphasis>non-free</emphasis>. This software 
+        may not be permitted in some jurisdictions. When installing each 
+        package from this repository, you should verify that the laws of your 
+        country permit you to use it. Also, this software may not include 
+        security updates.
+        </para>
     </warning>
+</sect2>
 
-    <sect2 id="install-deb" status="review">
-        <title>Installing/uninstalling .deb files</title>
+<sect2 id="default-repos-update" status="draft">
+    <title>Update repositories</title>
+    <para>
+    The Update Manager automatically finds software updates for your computer 
+    when they are available. It regularly gathers information on potential 
+    updates from a number of online update sources.
+    </para>
+    <para>
+    If you click &software-properties; and select the 
+    <guilabel>Updates</guilabel> tab, you will notice that four update sources 
+    are available. An explanation for each of these is provided below:
+    </para>
+    <itemizedlist>
+        <listitem>
         <para>
-        These files are <emphasis>Debian packages</emphasis>. The
-        package files associated with Ubuntu have the <filename
-        class="extension">.deb</filename> suffix because of Ubuntu's
-        close relations with the Debian GNU/Linux distribution. You
-        will need administrative privileges to install a <filename
-        class="extension">.deb</filename> file. See <ulink type="help"
-        url="ghelp:administrative">Administrative Tasks</ulink> for
-        more details.
+        <emphasis role='strong'>Important security updates:</emphasis>
+        Updates which fix critical security flaws are made available through 
+        this source. It is recommended that all users leave this source enabled 
+        (it should be enabled by default).
         </para>
-        <para>To install a <filename class="extension">.deb</filename>
-        file, double-click on it. If you prefer using the Terminal, enter:
-        <screen>sudo dpkg -i <replaceable>package_file.deb</replaceable></screen>
-        </para>
-        <para>You can use your package manager to uninstall a 
-        <filename class="extension">.deb</filename> file once it has been installed. 
-        Alternatively, enter the following in a Terminal:
-        <screen>sudo dpkg -r <replaceable>package_name</replaceable></screen>
-        </para>
-    </sect2>
-    
-    <sect2 id="alien" status="review">
-        <title>Converting .rpm files to .deb files</title>
+        </listitem>
+        <listitem>
         <para>
-        Another type of package is the <emphasis>Red Hat Package
-        Manager</emphasis> (RPM) file. These have the
-        <filename class="extension">.rpm</filename> suffix. It is not 
-        recommended to install these on an Ubuntu system. In almost all cases, 
-        a native Ubuntu <filename class="extension">.deb</filename> package is 
-        available. However, if absolutely necessary, an
-        <filename class="extension">.rpm</filename> file can be converted to a
-        <filename class="extension">.deb</filename> package using the 
-        <application>alien</application> application. The resulting
-        <filename class="extension">.deb</filename> file can be installed as
-        described above.
+        <emphasis role='strong'>Recommended updates:</emphasis>
+        Updates which fix serious software problems (which are not security 
+        flaws) are made available through this source. Most users will want to 
+        leave this source enabled as common and annoying problems are often 
+        fixed with these updates.
         </para>
+        </listitem>
+        <listitem>
         <para>
-        To convert an RPM into a 
-        <filename class="extension">.deb</filename>:
+        <emphasis role='strong'>Pre-released updates:</emphasis>
+        Updates which are currently being tested before being released to 
+        everyone are provided through this update source. If you would like to 
+        help test new updates (and get fixes for problems more quickly), enable 
+        this source. Be aware that these updates may not yet be well tested; it 
+        is not recommended that you enable this source unless you are prepared 
+        to experience occasional problems.
         </para>
-        <procedure>
-            <step>
-            <para>
-            <ulink url="apt:alien">Install the <application>alien</application> package</ulink>.
-            </para>
-            </step>
-            <step>
-            <para>
-            In a Terminal, enter:
-            <screen>sudo alien <replaceable>package_file.rpm</replaceable></screen>
-            </para>
-            </step>
-        </procedure>
-    </sect2>
-    
-    <sect2 id="tarballs" status="review">
-        <title>Installing <emphasis>tarballs</emphasis></title>
+        </listitem>
+        <listitem>
         <para>
-        Files with the <filename class="extension">.tar</filename>,
-        <filename class="extension">.tgz</filename>, <filename
-        class="extension">.tar.gz</filename> or <filename
-        class="extension">.tar.bz2</filename> suffix are package files
-        known as <emphasis>tarballs</emphasis>, and are widely used in Linux 
-        and Unix to package software. Tarballs can also be used to archive and 
-        compress other files.
+        <emphasis role='strong'>Unsupported updates:</emphasis>
+        When new versions of popular software are released they are sometimes 
+        <quote>back-ported</quote> to an older version of Ubuntu so that users 
+        can benefit from new features and fixes for problems. These backports 
+        are unsupported, may cause problems when installed and should only be 
+        used by people who are in desperate need of a new version of a software 
+        package which they know has been backported.
         </para>
-        <para>
-        If there is no native Ubuntu package available in any of the Ubuntu 
-        repositories, you can use the command line to install or uninstall the 
-        tarball file.
-        </para>
-        <para>
-        The first step will be to uncompress and extract the tarball. If it is 
-        a <emphasis>.tgz</emphasis> or a <emphasis>.tar.gz</emphasis>, in a 
-        Terminal enter:
-        <screen>tar xfvz <replaceable>tarball_name</replaceable></screen>
-        </para>
-        <para>
-        Then it will be necessary to follow the instructions that come
-        with the package. These are generally located in the extracted
-        tarball in a file called <filename>README</filename> or
-        <filename>INSTALL</filename>.
-        </para>
-        <para>
-        Tarballs often contain the source code of the program, and need to be 
-        <emphasis>compiled</emphasis> in order to be used.
-        </para>
-        <note>
-            <para>
-            Compiling programs requires some packages that are not installed by 
-            default. You can install most of these all at once by installing 
-            the <ulink url="apt:build-essential">build-essential</ulink> 
-            package.
-            </para>
-        </note>
-    </sect2>
-    
-    <sect2 id="runpackages" status="review">
-        <title>Install .run packages</title>
-        <para>
-        Sometimes you may need to install software (most often a game) which 
-        has been packaged as a .run file. These files contain the software and 
-        a small program to install the software.
-        </para>
-        <para>
-        Follow the procedure below to install software packaged in a 
-        <filename class="extension">.run</filename> file:
-        </para>
-        
-        <procedure>
-            <step>
-            <para>
-            Find the <filename class="extension">.run</filename> file in the 
-            <application>File Browser</application>
-            </para>
-            </step>
-            <step>
-            <para>
-            Right-click the file and select <guilabel>Properties</guilabel>
-            </para>
-            </step>
-            <step>
-            <para>
-            Under the <guilabel>Permissions</guilabel> tab, make sure that 
-            <guilabel>Allow executing file as program</guilabel> is checked and 
-            press <guibutton>Close</guibutton>
-            </para>
-            </step>
-            <step>
-            <para>
-            Double-click the <filename class="extension">.run</filename> file 
-            and press <guibutton>Run in Terminal</guibutton> to run the 
-            installer
-            </para>
-            </step>
-            <step>
-            <para>
-            A Terminal window will open. Follow any instructions on-screen to 
-            install the program
-            </para>
-            </step>
-        </procedure>
-        
-        <note>
-            <para>
-            Once you have started the installer, it may take a while to display 
-            an installation screen. This is normally due to the installer 
-            extracting all of the files from the .run file ready for use.
-            </para>
-        </note>
-    </sect2>
+        </listitem>
+    </itemizedlist>
+</sect2>
 </sect1>
+
 </article>

@@ -205,6 +205,26 @@
 					</itemizedlist>
 				</listitem>
 			</orderedlist>
+		</sect2>		
+
+		<sect2 id="network-troubleshooting-ping" status="review">
+			<title>Check if a connection is working correctly</title>
+			<para>A good way of checking if a connection is working correctly is to <emphasis>ping</emphasis> another computer on the network or the Internet.</para>
+			<para>To check if you are connected to the Internet:</para>
+			<orderedlist>
+				<listitem><para>Press &network-tools; to open the networking tools suite.</para></listitem>
+				<listitem><para>Select the <guilabel>Ping</guilabel> tab.</para></listitem>
+				<listitem><para>Type <userinput>ubuntu.com</userinput> into the <guilabel>Network address</guilabel> box and then press <guibutton>Ping</guibutton>.</para></listitem>
+				<listitem>
+					<para>After a while, a graph should appear. Look at the number for <guilabel>Successful packets</guilabel> under <guilabel>Transmission Statistics</guilabel></para>
+					<itemizedlist>
+						<listitem><para><emphasis>100% successful packets</emphasis> - Your computer has a good connection to the Internet.</para></listitem>
+						<listitem><para><emphasis>Less than 100% successful</emphasis> - Your computer probably has a poor connection to the Internet or a poor wireless signal.</para></listitem>
+						<listitem><para><emphasis>0% successful packets</emphasis> - Your computer has a very bad connection, or is connected to an access point or router which is not connected to the Internet</para></listitem>
+					</itemizedlist>
+				</listitem>
+			</orderedlist>
+			<para>If you get an error message which says <emphasis>The address &apos;ubuntu.com&apos; cannot be found</emphasis>, then you cannot reach a <emphasis>DNS server</emphasis>.</para>
 		</sect2>
 		
 		<sect2 id="network-troubleshooting-dns" status="review">
@@ -228,24 +248,5 @@
 			<para>If the address is found then try the next stage.</para>
 		</sect2>
 		
-		<sect2 id="network-troubleshooting-ping" status="review">
-			<title>Check if a connection is working correctly</title>
-			<para>A good way of checking if a connection is working correctly is to <emphasis>ping</emphasis> another computer on the network or the Internet.</para>
-			<para>To check if you are connected to the Internet:</para>
-			<orderedlist>
-				<listitem><para>Press &network-tools; to open the networking tools suite.</para></listitem>
-				<listitem><para>Select the <guilabel>Ping</guilabel> tab.</para></listitem>
-				<listitem><para>Type <userinput>ubuntu.com</userinput> into the <guilabel>Network address</guilabel> box and then press <guibutton>Ping</guibutton>.</para></listitem>
-				<listitem>
-					<para>After a while, a graph should appear. Look at the number for <guilabel>Successful packets</guilabel> under <guilabel>Transmission Statistics</guilabel></para>
-					<itemizedlist>
-						<listitem><para><emphasis>100% successful packets</emphasis> - Your computer has a good connection to the Internet.</para></listitem>
-						<listitem><para><emphasis>Less than 100% successful</emphasis> - Your computer probably has a poor connection to the Internet or a poor wireless signal.</para></listitem>
-						<listitem><para><emphasis>0% successful packets</emphasis> - Your computer has a very bad connection, or is connected to an access point or router which is not connected to the Internet</para></listitem>
-					</itemizedlist>
-				</listitem>
-			</orderedlist>
-			<para>If you get an error message which says <emphasis>The address &apos;ubuntu.com&apos; cannot be found</emphasis>, then you cannot reach a <emphasis>DNS server</emphasis>.</para>
-		</sect2>		
 	</sect1>        
 </chapter>

@@ -19,12 +19,31 @@
 	
 	<sect1 id="connecting-wired" status="review">
 		<title>Wired (LAN)</title>
-		<para>Wired network connections are selected as default when connected.</para>
-		<orderedlist>
-			<listitem><para>Click the NetworkManager icon in the system notification area.</para></listitem>
-			<listitem><para>Under <guilabel>Wired Network</guilabel> click the <guilabel>Radio Button</guilabel> 
-			next to the network you want to connect to.</para></listitem>
-		</orderedlist>
+		<para>DHCP connections (where settings are concfigured by your router) are automatically configured. 
+		Wired network connections are selected as default when connected.</para>
+		<sect2 id="connecting-wired-dhcp">
+			<title>DHCP Connections</title>
+			<p>Most routers use DHCP to allocate IP addresses.</p>
+			<orderedlist>
+				<listitem><para>Click the NetworkManager icon in the system notification area.</para></listitem>
+				<listitem><para>Under <guilabel>Wired Network</guilabel> click the <guilabel>Radio Button</guilabel> 
+				next to the network you want to connect to.</para></listitem>
+			</orderedlist>
+		</sect2>
+		<sect2 id="connecting-wired-manual" status="review">
+			<title>Static Connections</title>
+			<p>If you don't use DHCP then you can configure a static connection.</p>
+			<orderedlist>
+				<listitem><para>Right click the NetworkManager icon in the system notification area.</para></listitem>
+				<listitem><para>Click <guilabel>Edit Connections</guilabel>.</para></listitem>
+				<listitem><para>Click the <guilabel>Wired</guilabel> tab.</para></listitem>
+				<listitem><para>Select the connection and click <guibutton>Edit</guibutton>.</para></listitem>
+				<listitem><para>Click the <guilabel>IPv4</guilabel> tab.</para></listitem>
+				<listitem><para>Choose <guilabel>Manual</guilabel> from the <guilabel>Method</guilabel> drop down</para>.</listitem>
+				<listitem><para>Enter your details and click <guibutton>OK</guibutton>.</para></listitem>
+				<listitem><para>Click <guibutton>Close</guibutton>.</para></listitem>
+			</orderedlist>			
+		</sect2>
 	</sect1>
 
 	<sect1 id="connecting-wireless" status="review">

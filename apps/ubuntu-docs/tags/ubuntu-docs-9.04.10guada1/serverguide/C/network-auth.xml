@@ -973,7 +973,7 @@ TLS_CACERT /etc/ssl/certs/cacert.pem
           <title>User and Group Management</title>
 
           <para>
-          The <application>ldap-utils</application> comes with multiple utilities to manage the directory, but the long 
+          The <application>ldap-utils</application> package comes with multiple utilities to manage the directory, but the long 
           string of options needed, can make them a burden to use. The <application>ldapscripts</application> package contains 
           configurable scripts to easily manage LDAP users and groups.
           </para>
@@ -987,7 +987,8 @@ TLS_CACERT /etc/ssl/certs/cacert.pem
 </screen>
 
           <para> 
-          Next, edit the config file <filename>/etc/ldapscripts/ldapscripts.conf</filename> uncommenting and changing the following:
+          Next, edit the config file <filename>/etc/ldapscripts/ldapscripts.conf</filename> uncommenting and changing the following to 
+          match your environment:
           </para>       
 
 <programlisting>
@@ -998,11 +999,9 @@ SUFFIX='dc=example,dc=com'
 GSUFFIX='ou=Groups'
 USUFFIX='ou=People'
 MSUFFIX='ou=Computers'
-GIDSTART=1000
-UIDSTART=1000
-MIDSTART=1000
-LOGFILE="/var/log/ldapscripts.log"
-UHOMES="/home/%u"
+GIDSTART=10000
+UIDSTART=10000
+MIDSTART=10000
 </programlisting>
 
           <para>
@@ -1043,7 +1042,7 @@ UHOMES="/home/%u"
 	      Change a user's password:
 	      </para>
 <screen>
-<command>sudo _ldappasswd george</command>
+<command>sudo ldapsetpasswd george</command>
 <computeroutput>Changing password for user uid=george,ou=People,dc=example,dc=com</computeroutput>
 <userinput>New Password: </userinput>
 <userinput>New Password (verify): </userinput>
@@ -1056,11 +1055,7 @@ UHOMES="/home/%u"
 <screen>
 <command>sudo ldapdeleteuser george</command>
 </screen>
-              <warning>
-                <para>
-                This script will also remove the user's <emphasis>home directory</emphasis>.
-                </para>
-              </warning>
+
 	    </listitem>
 	    <listitem>
               <para>
@@ -1104,11 +1099,11 @@ UHOMES="/home/%u"
 	    </listitem>
             <listitem>
               <para>
-	      The <application>_ldapmodifyuser</application> script allows you to add, remove, or replace a user's attributes.  
+	      The <application>ldapmodifyuser</application> script allows you to add, remove, or replace a user's attributes.  
               The script uses the same syntax as the <application>ldapmodify</application> utility.  For example:
 	      </para>
 <screen>
-<command>sudo _ldapmodifyuser george</command>
+<command>sudo ldapmodifyuser george</command>
 <computeroutput># About to modify the following entry :
 dn: uid=george,ou=People,dc=example,dc=com
 objectClass: account
@@ -1126,11 +1121,60 @@ userPassword:: e1NTSEF9eXFsTFcyWlhwWkF1eGUybVdFWHZKRzJVMjFTSG9vcHk=
 # Enter your modifications here, end with CTRL-D.
 dn: uid=george,ou=People,dc=example,dc=com</computeroutput>
 <userinput>replace: gecos
-gecos: George Stevens</userinput>
+gecos: George Carlin</userinput>
 </screen>
               <para>
-              The user's <emphasis>gecos</emphasis> should now be <quote>George Stevens</quote>.
+              The user's <emphasis>gecos</emphasis> should now be <quote>George Carlin</quote>.
               </para>
+	    </listitem>
+            <listitem>
+              <para>
+	      Another great feature of <application>ldapscripts</application>, is the template system.  Templates
+              allow you to customize the attributes of user, group, and machine objectes.  For example, to enable
+              the <emphasis>user</emphasis> template edit <filename>/etc/ldapscripts/ldapscripts.conf</filename> 
+              changing:
+	      </para>
+
+<programlisting>
+UTEMPLATE="/etc/ldapscripts/ldapadduser.template"
+</programlisting>
+
+              <para>
+              There are <emphasis role="italic">sample</emphasis> templates in the <filename>/etc/ldapscripts</filename> directory.
+              Copy or rename the <filename>ldapadduser.template.sample</filename> file to 
+              <filename>/etc/ldapscripts/ldapadduser.template</filename>:
+              </para>
+
+<screen>
+<command>sudo cp /etc/ldapscripts/ldapadduser.template.sample /etc/ldapscripts/ldapadduser.template</command>
+</screen>
+
+              <para>
+              Edit the new template to add the desired attributes.  The following will create new user's as with an 
+              <emphasis>objectClass</emphasis> of <emphasis>inetOrgPerson</emphasis>:
+              </para>
+
+<programlisting>
+dn: uid=&lt;user&gt;,&lt;usuffix&gt;,&lt;suffix&gt;
+objectClass: inetOrgPerson
+objectClass: posixAccount
+cn: &lt;user&gt;
+sn: &lt;ask&gt;
+uid: &lt;user&gt;
+uidNumber: &lt;uid&gt;
+gidNumber: &lt;gid&gt;
+homeDirectory: &lt;home&gt;
+loginShell: &lt;shell&gt;
+gecos: &lt;user&gt;
+description: User account
+title: Employee
+</programlisting>
+
+              <para>
+              Notice the <emphasis>&lt;ask&gt;</emphasis> option used for the <emphasis>cn</emphasis> value.  Using &lt;ask&gt; 
+              will configure <application>ldapadduser</application> to prompt you for the attribute value during user creation.
+              </para>
+
 	    </listitem>
           </itemizedlist>
 

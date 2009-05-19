@@ -23,5 +23,5 @@
 # example: ./validate userguide/userguide.xml
 #################################################################################
 
-echo "Validating $1 ..."
+echo " --Validating $1 ..."
 xmllint --noout --xinclude --noent --postvalid $1

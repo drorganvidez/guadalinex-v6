@@ -21,6 +21,21 @@
 			<para>
 			Keep your password safe. If you want to change it, you can by opening <application>About Me</application> (&about-me;) and clicking <guibutton>Change Password</guibutton>.
 			</para>
+			<para>It is possible to automatically login to Ubuntu.</para>
+			<warning>
+				<para>Automatic login is highly discouraged because it provides less security for your
+				system. Also take care when in the Login Settings application as there are options
+				which may prevent Ubuntu from logging in or starting properly.</para>
+			</warning>
+			<orderedlist>
+				<listitem><para>Open &login-screen-setup;.</para></listitem>
+				<listitem><para>You will be prompted for your password.</para></listitem>
+				<listitem><para>Click <guilabel>Security</guilabel>.</para></listitem>
+				<listitem><para>Tick <guilabel>Enable Automatic Login</guilabel>.</para></listitem>
+				<listitem><para>Choose a <guilabel>Username</guilabel> from the drop down list to login as.</para></listitem>
+				<listitem><para>Click <guibutton>Close</guibutton>.</para></listitem>
+				<listitem><para>Changes will be applied on re-boot.</para></listitem>
+			</orderedlist>
 		</sect1>
 		<sect1 id="users" status="review">
 			<title>Give a separate user account to each person</title>

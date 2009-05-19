@@ -417,7 +417,7 @@ gidNumber: 10000
 
 
 <screen>
-<command>ldapadd -x -D cn=admin,dc=example,dc=com -W -f example.com.ldif</command>
+<command>ldapadd -x -b dc=example,dc=com -D cn=admin,dc=example,dc=com -W -f example.com.ldif</command>
 </screen>
 
 	<para>

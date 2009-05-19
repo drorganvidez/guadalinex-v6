@@ -49,12 +49,12 @@
 			<title>Check for device recognition</title>
 			<orderedlist>
 				<listitem><para>Open <application>Device Manager</application> (&device-manager;).</para></listitem>
-				<listitem><para>Check to see the hardware is recognised if it is then <xref linkend="troubleshooting-driver"/></para></listitem>
+				<listitem><para>Check to see if the wireless device is recognized. If it is, then <xref linkend="troubleshooting-driver"/></para></listitem>
 				<listitem><para>If your device is not displayed then there may be a hardware problem. Ensure if it is PCMCIA or PCI that it is inserted correctly.</para></listitem>
 			</orderedlist>
 		</sect2>
 		<sect2 id="troubleshooting-driver" status="review">
-			<title>Check for driver</title>
+			<title>Check for a driver</title>
 			<orderedlist>
 				<listitem><para>Open a <application>Terminal</application> (&terminal;) and type the command: <code>sudo lshw -C network</code></para></listitem>
 				<listitem><para>If there is a driver listed then see <xref linkend="troubleshooting-disabled"/>.</para></listitem>
@@ -62,7 +62,7 @@
 			</orderedlist>
 		</sect2>
 		<sect2 id="troubleshooting-disabled" status="review">
-			<title>Check device is on</title>
+			<title>Check that the device is on</title>
 			<orderedlist>
 				<listitem><para>Many wireless network devices can be turned on or off. Check to see if the device is turned on by opening a <application>Terminal</application> (&terminal;) and type the command: <code>sudo lshw -C network</code>.</para></listitem>
 				<listitem><para>If it is turned on then see <xref linkend="troubleshooting-connection"/>.</para></listitem>

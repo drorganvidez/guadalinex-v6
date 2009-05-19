@@ -1307,8 +1307,7 @@ $myhostname = 'mail.example.com';
                <title>DKIM Whitelist</title>
 
                <para>
-               If you have elected to install the <application>dkim-filter</application> package, 
-               <application>amavisd-new</application> can be configured to automatically <emphasis>Whitelist</emphasis>
+               <application>Amavisd-new</application> can be configured to automatically <emphasis>Whitelist</emphasis>
                addresses from domains with valid Domain Keys.  There are some pre-configured domains in the 
                <filename>/etc/amavis/conf.d/40-policy_banks</filename>.  
                </para>
@@ -1350,6 +1349,13 @@ $myhostname = 'mail.example.com';
 <screen>
 <command>sudo /etc/init.d/amavis restart</command>
 </screen>
+
+               <note>
+                 <para>
+                 In this context, once a domain has been added to the Whitelist the message will not receive any anti-virus or spam filtering. 
+                 This may or may not be the intended behavior you wish for a domain.
+                 </para>
+               </note>
 
              </sect4>
 	   </sect3>
@@ -1519,6 +1525,11 @@ LogVerbose true
 	     <listitem>
 	       <para>
                <ulink url="http://razor.sourceforge.net/">Razor Homepage</ulink>
+  	       </para>
+	     </listitem>
+	     <listitem>
+	       <para>
+               <ulink url="http://dkim.org/">DKIM.org</ulink>
   	       </para>
 	     </listitem>
 	   </itemizedlist>

@@ -28,6 +28,120 @@
         Many complex packages use the concept of <emphasis role="italics">dependencies</emphasis>.  Dependencies are additional packages required by the principal package in order to function properly.  For example, the speech synthesis package <application>Festival</application> depends upon the package <application>libasound2</application>, which is a package supplying the <application>ALSA</application> sound library needed for audio playback.  In order for <application>Festival</application> to function, it and all of it's dependencies must be installed. The software management tools in Ubuntu will do this automatically.
         </para>
   </sect1>
+  <sect1 id="dpkg" status="review">
+    <title>dpkg</title>
+
+    <para>
+    <application>dpkg</application> is a package manager for <emphasis>Debian</emphasis> based systems.  It can install, remove, and build packages, but
+    unlike other package management system's it can not automatically download and install packages and their dependencies.  This section covers using
+    <application>dpkg</application> to manage locally installed packages:
+    </para>
+
+    <itemizedlist>
+      <listitem>
+
+        <para>
+        To list all packages installed on the system, from a terminal prompt enter:
+        </para>
+
+<screen>
+<command>dpkg -l</command>
+</screen>
+
+      </listitem>
+      <listitem>
+
+        <para>
+        Depending on the amount of packages on your system, this can generate a large amount of output.  Pipe the output through 
+        <application>grep</application> to see if a specific package is installed:
+        </para>
+
+<screen>
+<command>dpkg -l | grep apache2</command>
+</screen>
+
+        <para>
+        Replace <emphasis>apache2</emphasis> with any package name, part of a package name, or other regular expression.
+        </para>
+
+      </listitem>
+      <listitem>
+
+        <para>
+        To list the files installed by a package, in this case the <application>ufw</application> package, enter:
+        </para>
+
+<screen>
+<command>dpkg -L ufw</command>
+</screen>
+
+      </listitem>
+      <listitem>
+
+        <para>
+        If you are not sure which package installed a file, <application>dpkg -S</application> may be able to tell you.
+        For example:
+        </para>
+
+<screen>
+<command>dpkg -S /etc/host.conf </command>
+<computeroutput>base-files: /etc/host.conf</computeroutput>
+</screen>
+
+        <para>
+        The output shows that the <filename>/etc/host.conf</filename> belongs to the <application>base-files</application> package.
+        </para>
+
+        <note>
+          <para>
+          Many files are automatically generated during the package install process, and even though they are on the filesystem 
+          <command>dpkg -S</command> may not know which package they belong to.
+          </para>
+        </note>
+
+      </listitem>
+      <listitem>
+
+        <para>
+        You can install a local <emphasis>.deb</emphasis> file by entering:
+        </para>
+
+<screen>
+<command>sudo dpkg -i zip_2.32-1_i386.deb</command>
+</screen>
+    
+        <para>
+        Change <filename>zip_2.32-1_i386.deb</filename> to the actual file name of the local .deb file.
+        </para>
+
+      </listitem>
+      <listitem>
+
+        <para>
+        Uninstalling a package can be accomplished by:
+        </para>
+
+<screen>
+<command>sudo dpkg -r zip</command>
+</screen>
+
+        <caution>
+          <para>
+          Uninstalling packages using <application>dpkg</application>, in most cases, is <emphasis>NOT</emphasis> recommended.
+          It is better to use a package manager that handles dependencies, to ensure that the system is in a consistent state.  For
+          example using <command>dpkg -r</command> you can remove the <application>zip</application> package, but any packages that
+          depend on it will still be installed and may no longer function correctly.
+          </para>
+        </caution>
+
+      </listitem>
+    </itemizedlist>
+
+    <para>
+    For more <application>dpkg</application> options see the man page: <command>man dpkg</command>.
+    </para>
+
+  </sect1>
   <sect1 id="apt-get" status="review">
 	<title>Apt-Get</title>
         <para>

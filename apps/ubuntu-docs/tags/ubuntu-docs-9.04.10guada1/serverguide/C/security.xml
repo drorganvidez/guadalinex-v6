@@ -627,8 +627,9 @@ Rules updated</computeroutput>
 </screen>
 
                   <para>
-                  Add the <emphasis>--add-new</emphasis> to the above command to update the application profile and add any new rules
-                  automatically.
+                  If there are no <application>ufw</application> rules applying the profile, then the above command will simply make 
+                  the new rule available.  However, with the <emphasis>--add-new</emphasis> option added to the above command, the application 
+                  profile and any new rules will be applied automatically.
                   </para>
 
                 </listitem>

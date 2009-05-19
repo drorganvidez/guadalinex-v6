@@ -174,6 +174,9 @@ xmlns:fo="http://www.w3.org/1999/XSL/Format">
 <!-- If true (non-zero), admonitions are presented with a generated text label such as Note or Warning in the appropriate language. If zero, such labels are turned off, but any title children of the admonition element are still output. The default value is 1. -->
 <xsl:param name="admon.textlabel" select="0"></xsl:param>
 
+<xsl:param name="admon.graphics.path" select="'libs/admon/'"/>
+<xsl:param name="admon.graphics.extension" select="'.png'"/>
+
 <xsl:template match="*" mode="admon.graphic.width">
   <xsl:text>24pt</xsl:text>
 </xsl:template>

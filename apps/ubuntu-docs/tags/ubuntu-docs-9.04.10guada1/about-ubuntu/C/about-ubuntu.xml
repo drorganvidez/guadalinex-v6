@@ -178,6 +178,87 @@
 			<para>Canonical Ltd. also sponsors a number of other Open Source software projects, about which more information can be found on the <ulink url="&canonical-url;">Canonical website</ulink>.
 			</para>
                 </sect1>
+
+<sect1 id="upgrade" status="review">
+<title>How can I upgrade to the latest version of Ubuntu?</title>
+<para>
+A new version of Ubuntu is released every 6 months; the Update Manager should 
+inform you when a new version is available for download. To check for a new 
+version:
+</para>
+
+<procedure>
+    <step>
+    <para>
+    Open Software Sources (&software-properties;) and select the 
+    <guilabel>Updates</guilabel> tab.
+    </para>
+    </step>
+    <step>
+    <para>
+    Under <guilabel>Release upgrade</guilabel>, make sure that 
+    <guilabel>Normal releases</guilabel> is selected and click 
+    <guibutton>Close</guibutton>.
+    </para>
+    </step>
+    <step>
+    <para>
+    Open the Update Manager (&update-manager;), click 
+    <guibutton>Check</guibutton> and enter your password if prompted. Wait for 
+    the list of available updates to be downloaded.
+    </para>
+    </step>
+    <step>
+    <para>
+    If a new version of Ubuntu is available, a box at the top of the window 
+    will appear saying that a new distribution release is available.
+    </para>
+    </step>
+    <step>
+    <para>
+    To upgrade to the latest release, save all of your open documents and click 
+    the <guibutton>Upgrade</guibutton> button in the Update Manager.
+    </para>
+    </step>
+</procedure>
+
+<para>
+Upgrades usually take a while to complete. Typically, around 700MB of packages 
+must be downloaded and installed, although the actual figure will depend on how 
+many packages are already installed on your computer.
+</para>
+
+<para>
+You can only upgrade to the latest Ubuntu release if you are running the second 
+most recent release. If you have an older release, you must upgrade to the next 
+release after that, and so on until you are running the most recent version. 
+For example, users of version 7.10 would first have to upgrade to version 8.04 
+before upgrading to version 8.10. An exception to this rule is with LTS (Long 
+Term Support) releases. You can upgrade directly from the previous LTS release 
+to the current release.
+</para>
+
+<sect2 id="upgrade-development" status="review">
+    <title>Upgrading to a development release</title>
+    <para>
+    If you would like to install and test the latest development version of 
+    Ubuntu before it is released, press <keycombo><keycap>Alt</keycap>
+    <keycap>F2</keycap></keycombo>, type 
+    <userinput>gksudo update-manager -c -d</userinput> into the box and click 
+    <guibutton>Run</guibutton>. This will allow you to upgrade to the current 
+    development release.
+    </para>
+
+    <caution>
+    <para>
+    Development releases often suffer from package breakages and other 
+    problems. Only install a development release if you are prepared to attempt 
+    to fix these problems for yourself.
+    </para>
+    </caution>
+</sect2>
+</sect1>
+
             <sect1 id="about-linux" status="review">
             <title>What is Linux?</title>
             <para>The <ulink url="&kernel;">Linux kernel</ulink>, pronounced

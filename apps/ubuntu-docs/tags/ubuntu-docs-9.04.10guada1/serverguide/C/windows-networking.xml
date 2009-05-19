@@ -121,7 +121,7 @@
 <programlisting>
    workgroup = EXAMPLE
    ...
-   security = share
+   security = user
 </programlisting>
 
         <para>
@@ -197,7 +197,7 @@
 
 <screen>
 <command>sudo mkdir -p /srv/samba/share</command>
-<command>sudo chmod 777 /srv/samba/share</command>
+<command>sudo chown nobody.nogroup /srv/samba/share/</command>
 </screen>
 
       <note>
@@ -306,12 +306,17 @@
 <programlisting>
    workgroup = EXAMPLE
    ...
-   security = share
+   security = user
 </programlisting>
 
     <para>
-    
+    In the <emphasis>[printers]</emphasis> section change the <emphasis>guest ok</emphasis> option to <emphasis role="italic">yes</emphasis>:
     </para>
+
+<programlisting>
+   browsable = yes
+   guest ok = yes
+</programlisting>
 
     <para>
     After editing <filename>smb.conf</filename> restart the Samaba:
@@ -438,15 +443,7 @@
       </note>
 
       <para>
-      Edit <filename>/etc/samba/smb.conf</filename> changing the <emphasis>security</emphasis> parameter:
-      </para>
-
-<programlisting>
-   security = user
-</programlisting>
-
-      <para>
-      Next, in the <emphasis>[share]</emphasis> section change:
+      Edit <filename>/etc/samba/smb.conf</filename>, and in the <emphasis>[share]</emphasis> section change:
       </para>
 
 <programlisting>

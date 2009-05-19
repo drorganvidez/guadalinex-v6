@@ -218,6 +218,118 @@ modifying entry "olcDatabase={1}hdb,cn=config"
               </para>
 
             </listitem>
+            <listitem>
+
+              <para>
+              Adding additional <emphasis>schemas</emphasis> to <application>slapd</application> requires the
+              schema to be converted to LDIF format.  Fortunately, the <application>slapd</application> program
+              can be used to automate the conversion.  The following example will add the <emphasis>misc.schema</emphasis>:
+              </para>
+
+              <procedure>
+                <step>
+                  <para>                  
+                  First, create a conversion <filename>schema_convert.conf</filename> file containing the 
+                  following lines:
+                  </para>
+
+<programlisting>
+include /etc/ldap/schema/core.schema
+include /etc/ldap/schema/collective.schema
+include /etc/ldap/schema/corba.schema
+include /etc/ldap/schema/cosine.schema
+include /etc/ldap/schema/duaconf.schema
+include /etc/ldap/schema/dyngroup.schema
+include /etc/ldap/schema/inetorgperson.schema
+include /etc/ldap/schema/java.schema
+include /etc/ldap/schema/misc.schema
+include /etc/ldap/schema/nis.schema
+include /etc/ldap/schema/openldap.schema
+include /etc/ldap/schema/ppolicy.schema
+</programlisting>
+
+                </step>
+                <step>
+
+                  <para>
+                  Next, create a temporary directory to hold the output:
+                  </para> 
+
+<screen>
+<command>mkdir /tmp/ldif_output</command>
+</screen>
+
+                </step>
+                <step>
+
+                  <para>
+                  Now using <application>slaptest</application> convert the schema files to LDIF:
+                  </para>
+
+<screen>
+<command>slaptest -f schema_convert.conf -F /tmp/ldif_output</command>
+</screen>
+
+                  <para>
+                  Adjust the configuration file name and temporary directory names if yours are different.
+                  Also, it may be worthwhile to keep the <filename>ldif_output</filename> directory around
+                  in case you want to add additional schemas in the future.
+                  </para>
+
+                </step>
+                <step>
+
+                  <para>
+                  Edit the <filename>/tmp/ldif_output/cn=config/cn=schema/cn={8}misc.ldif</filename>
+                  file, changing the following attributes:
+                  </para> 
+
+<programlisting>
+dn: cn=misc,cn=schema,cn=config
+...
+cn: misc
+</programlisting>
+
+                  <para>
+                  And remove the following lines from the bottom of the file:
+                  </para> 
+
+<programlisting>
+structuralObjectClass: olcSchemaConfig
+entryUUID: 10dae0ea-0760-102d-80d3-f9366b7f7757
+creatorsName: cn=config
+createTimestamp: 20080826021140Z
+entryCSN: 20080826021140.791425Z#000000#000#000000
+modifiersName: cn=config
+modifyTimestamp: 20080826021140Z
+</programlisting>
+
+                  <note>
+                    <para>
+                    The attribute values will vary, just be sure the attributes are removed.
+                    </para>
+                  </note>
+
+                </step>
+                <step>
+
+                  <para>
+                  Finally, using the <application>ldapadd</application> utility, add the new schema to the 
+                  directory:
+                  </para>
+
+<screen>
+<command>ldapadd -x -D cn=admin,cn=config -f /tmp/ldif_output/cn\=config/cn\=schema/cn\=\{8\}misc.ldif</command>
+</screen>
+
+                </step>
+              </procedure>
+
+              <para>
+              There should now be a <emphasis>dn: cn={4}misc,cn=schema,cn=config</emphasis> entry in the cn=config tree.
+              </para> 
+
+            </listitem>
           </itemizedlist>
 
         </sect2>
@@ -1097,90 +1209,224 @@ gecos: George Stevens</userinput>
       attributes.  This section assumes you want Samba to be configured as a Windows NT domain controller, and will add the necessary LDAP
       objects and attributes.
       </para>
-
-      <para>
-      The Samba attributes are defined in the <filename>samba.schema</filename> file which is part of the 
-      <application>samba-doc</application> package.  The schema file needs to be unzipped and copied to 
-      <filename>/etc/ldap/schema</filename>.  From a terminal prompt enter:
-      </para>
-
+      
+      <itemizedlist>
+        <listitem>
+          <para>
+          The Samba attributes are defined in the <filename>samba.schema</filename> file which is part of the 
+          <application>samba-doc</application> package.  The schema file needs to be unzipped and copied to 
+          <filename>/etc/ldap/schema</filename>.  From a terminal prompt enter:
+          </para>
+        
 <screen>
 <command>sudo cp /usr/share/doc/samba-doc/examples/LDAP/samba.schema.gz /etc/ldap/schema/</command>
 <command>sudo gzip -d /etc/ldap/schema/samba.schema.gz</command>
 </screen>
 
-      <para>
-      Next, edit <filename>/etc/ldap/slapd.conf</filename> adding the new schema and the necessary indexes:
-      </para>
+         </listitem> 
+         <listitem>
+
+           <para>
+           The <emphasis>samba</emphasis> schema needs to be added to the <emphasis>cn=config</emphasis> tree.
+           The procedure to add a new schema to <application>slapd</application> is also detailed in 
+           <xref linkend="openldap-configuration"/>.
+           </para>
+
+           <procedure>
+              <step>
+                <para>                  
+                First, create a configuration file named <filename>schema_convert.conf</filename>, or a similar 
+                descriptive name, containing the following lines:
+                </para>
 
 <programlisting>
-include         /etc/ldap/schema/samba.schema
-...
-index           objectClass             eq,pres
-index           uidNumber               eq
-index           gidNumber               eq
-index           loginShell              eq
-index           uid                     eq,pres,sub
-index           memberUid               eq,pres,sub
-index           uniqueMember            eq,pres
-index           sambaSID                eq
-index           sambaPrimaryGroupSID    eq
-index           sambaGroupType          eq
-index           sambaSIDList            eq
-index           sambaDomainName         eq
-index           default                 sub
+include /etc/ldap/schema/core.schema
+include /etc/ldap/schema/collective.schema
+include /etc/ldap/schema/corba.schema
+include /etc/ldap/schema/cosine.schema
+include /etc/ldap/schema/duaconf.schema
+include /etc/ldap/schema/dyngroup.schema
+include /etc/ldap/schema/inetorgperson.schema
+include /etc/ldap/schema/java.schema
+include /etc/ldap/schema/misc.schema
+include /etc/ldap/schema/nis.schema
+include /etc/ldap/schema/openldap.schema
+include /etc/ldap/schema/ppolicy.schema
+include /etc/ldap/schema/samba.schema
 </programlisting>
 
-      <para>
-      Restart <application>slapd</application> for the new settings to take effect, and run <application>slapindex</application> to create the 
-      new indexes:
-      </para>
+              </step>
+              <step>
+
+                <para>
+                Next, create a temporary directory to hold the output:
+                </para> 
 
 <screen>
-<command>sudo /etc/init.d/slapd stop</command>
-<command>sudo -u openldap slapindex -f /etc/ldap/slapd.conf</command>
-<command>sudo /etc/init.d/slapd start</command>
+<command>mkdir /tmp/ldif_output</command>
 </screen>
 
-      <para>
-      Next, configure the <application>smbldap-tools</application> package to match your environment.  The package comes with a configuration
-      script that will ask questions about the needed options.  To run the script enter:
-      </para>
+              </step>
+              <step>
+
+                <para>
+                Now use <application>slaptest</application> to convert the schema files:
+                </para>
+
+<screen>
+<command>slaptest -f schema_convert.conf -F /tmp/ldif_output</command>
+</screen>
+
+                <para>
+                Change the above file and path names to match your own if they are different.
+                </para>
+
+              </step>
+              <step>
+
+                <para>
+                Edit the generated <filename>/tmp/ldif_output/cn=config/cn=schema/cn={12}samba.ldif</filename> 
+                file, changing the following attributes:
+                </para> 
+
+<programlisting>
+dn: cn=samba,cn=schema,cn=config
+...
+cn: samba
+</programlisting>
+
+                <para>
+                And remove the following lines from the bottom of the file:
+                </para> 
+
+<programlisting>
+structuralObjectClass: olcSchemaConfig
+entryUUID: b53b75ca-083f-102d-9fff-2f64fd123c95
+creatorsName: cn=config
+createTimestamp: 20080827045234Z
+entryCSN: 20080827045234.341425Z#000000#000#000000
+modifiersName: cn=config
+modifyTimestamp: 20080827045234Z
+</programlisting>
+
+                <note>
+                  <para>
+                  The attribute values will vary, just be sure the attributes are removed.
+                  </para>
+                </note>
+
+              </step>
+              <step>
+
+                <para>
+                Finally, using the <application>ldapadd</application> utility, add the new schema to the 
+                directory:
+                </para>
+
+<screen>
+<command>ldapadd -x -D cn=admin,cn=config -f /tmp/ldif_output/cn\=config/cn\=schema/cn\=\{12\}misc.ldif</command>
+</screen>
+
+              </step>
+            </procedure>
+
+            <para>
+            There should now be a <emphasis>dn: cn={X}misc,cn=schema,cn=config</emphasis>, where "X" is the next 
+            sequential schema, entry in the cn=config tree.
+            </para> 
+
+          </listitem>
+          <listitem>
+
+            <para>
+            Copy and paste the following into a file named <filename>samba_indexes.ldif</filename>:
+            </para>
+
+<programlisting>
+dn: olcDatabase={1}hdb,cn=config
+changetype: modify
+add: olcDbIndex
+olcDbIndex: uidNumber eq
+olcDbIndex: gidNumber eq
+olcDbIndex: loginShell eq
+olcDbIndex: uid eq,pres,sub
+olcDbIndex: memberUid eq,pres,sub
+olcDbIndex: uniqueMember eq,pres
+olcDbIndex: sambaSID eq
+olcDbIndex: sambaPrimaryGroupSID eq
+olcDbIndex: sambaGroupType eq
+olcDbIndex: sambaSIDList eq
+olcDbIndex: sambaDomainName eq
+olcDbIndex: default sub
+</programlisting>
+
+            <para>
+            Using the <application>ldapmodify</application> utility load the new indexes:
+            </para>
+
+<screen>
+<command>ldapmodify -x -D cn=admin,cn=config -W -f samba_indexes.ldif</command>
+</screen>
+            <para>
+            If all went well you should see the new indexes using <application>ldapsearch</application>:
+            </para>
+
+<screen>
+<command>ldapsearch -xLLL -D cn=admin,cn=config -x -b cn=config -W olcDatabase={1}hdb</command>
+</screen>
+
+          </listitem>
+          <listitem>
+ 
+            <para>
+            Next, configure the <application>smbldap-tools</application> package to match your environment.  The package 
+            comes with a configuration script that will ask questions about the needed options.  To run the script enter:
+            </para>
 
 <screen>
 <command>sudo gzip -d /usr/share/doc/smbldap-tools/configure.pl.gz</command>
 <command>sudo perl /usr/share/doc/smbldap-tools/configure.pl</command>
 </screen>
 
-      <para>
-      Once you have answered the questions, there should be <filename>/etc/smbldap-tools/smbldap.conf</filename> 
-      and <filename>/etc/smbldap-tools/smbldap_bind.conf</filename> files.  These files are generated by the configure script, so if
-      you made any mistakes while executing the script it may be simpler to edit the file appropriately. 
-      </para>
+            <para>
+            Once you have answered the questions, there should be <filename>/etc/smbldap-tools/smbldap.conf</filename> 
+            and <filename>/etc/smbldap-tools/smbldap_bind.conf</filename> files.  These files are generated by the 
+            configure script, so if you made any mistakes while executing the script it may be simpler to edit the file 
+            appropriately. 
+            </para>
 
-      <para>
-      The <application>smbldap-populate</application> script will add the necessary users, groups, and LDAP objects required for Samba.  It is
-      a good idea to make a backup LDAP Data Interchange Format (LDIF) file with <application>slapcat</application> before executing the command:
-      </para>
+          </listitem>
+          <listitem>
+
+            <para>
+            The <application>smbldap-populate</application> script will add the necessary users, groups, and LDAP objects
+            required for Samba.  It is a good idea to make a backup LDAP Data Interchange Format (LDIF) file with 
+            <application>slapcat</application> before executing the command:
+            </para>
 
 <screen>
 <command>sudo slapcat -l backup.ldif</command>
 </screen>
+          
+          </listitem>
+          <listitem>
 
-      <para>
-      Once you have a current backup execute <application>smbldap-populate</application> by entering:
-      </para>
+            <para>
+            Once you have a current backup execute <application>smbldap-populate</application> by entering:
+            </para>
 
 <screen>
 <command>sudo smbldap-populate</command>
 </screen>
 
-      <note>
-        <para>
-        You can create an LDIF file containing the new Samba objects by executing <command>sudo smbldap-populate -e samba.ldif</command>.
-        This allows you to look over the changes making sure everything is correct.
-        </para>
-      </note>
+          <note>
+            <para>
+            You can create an LDIF file containing the new Samba objects by executing <command>sudo smbldap-populate -e samba.ldif</command>.
+            This allows you to look over the changes making sure everything is correct.
+            </para>
+          </note>
+        </listitem>
+      </itemizedlist>
 
       <para>
       Your LDAP directory now has the necessary domain information to authenticate Samba users.

@@ -19,17 +19,8 @@
 #    at /usr/share/common-licenses/GPL
 ####################################################################################
 
-# We have some different groups of documentation for the purposes of making
-# the pot files
-
-# Group one - shipped docs
 for x in `cat libs/shipped-docs`; do
 	echo ${x}
 	xml2po -e -o ${x}/po/${x}.pot ${x}/C/*.xml ${x}/C/*-C.omf
 done
-
-# Group two - other docs
-
-	echo server
-	xml2po -e -o ../generic/serverguide/po/serverguide.pot ../generic/serverguide/C/*xml ../generic/serverguide/C/*omf
 

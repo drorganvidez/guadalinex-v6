@@ -210,6 +210,63 @@
             </step>
         </procedure>
     </sect2>
+    
+    <sect2 id="update-repos-info" status="review">
+    <title>Why are there several different Ubuntu update repositories?</title>
+    <para>
+    The Update Manager automatically finds software updates for your computer 
+    when they are available. It regularly gathers information on potential 
+    updates from a number of online update sources.
+    </para>
+    <para>
+    If you click &software-properties; and select the 
+    <guilabel>Updates</guilabel> tab, you will notice that four update sources 
+    are available. An explanation for each of these is provided below:
+    </para>
+
+    <itemizedlist>
+        <listitem>
+        <para>
+        <emphasis role='strong'>Important security updates:</emphasis>
+        Updates which fix critical security flaws are made available through 
+        this source. It is recommended that all users leave this source enabled 
+        (it should be enabled by default).
+        </para>
+        </listitem>
+        <listitem>
+        <para>
+        <emphasis role='strong'>Recommended updates:</emphasis>
+        Updates which fix serious software problems (which are not security 
+        flaws) are made available through this source. Most users will want to 
+        leave this source enabled as common and annoying problems are often 
+        fixed with these updates.
+        </para>
+        </listitem>
+        <listitem>
+        <para>
+        <emphasis role='strong'>Proposed updates:</emphasis>
+        Updates which are currently being tested before being released to 
+        everyone are provided through this update source. If you would like to 
+        help test new updates (and get fixes for problems more quickly), enable 
+        this source. Be aware that these updates may not yet be well tested; it 
+        is not recommended that you enable this source unless you are prepared 
+        to experience occasional problems.
+        </para>
+        </listitem>
+        <listitem>
+        <para>
+        <emphasis role='strong'>Unsupported updates:</emphasis>
+        When new versions of popular software are released they are sometimes 
+        <quote>back-ported</quote> to an older version of Ubuntu so that users 
+        can benefit from new features and fixes for problems. These backports 
+        are unsupported, may cause problems when installed and should only be 
+        used by people who are in desperate need of a new version of a software 
+        package which they know has been backported.
+        </para>
+        </listitem>
+    </itemizedlist>
+    </sect2>
+    
 </sect1>
 
 <sect1 id="restricted-software" status="review">

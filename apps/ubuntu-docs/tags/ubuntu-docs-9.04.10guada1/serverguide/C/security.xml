@@ -460,6 +460,14 @@ $1$s3YiK$M3lxAbqA6JLm2FbDWnClQ0</computeroutput>
 	      </listitem>
               <listitem>
                 <para>
+                Rules can also be added using a <emphasis>numbered</emphasis> format:
+	        </para>
+<screen>
+<command>sudo ufw insert 1 allow 80</command>
+</screen>
+	      </listitem>
+              <listitem>
+                <para>
                 Similarly, to close an opened port:
 	        </para>
 <screen>
@@ -545,6 +553,14 @@ Rules updated</computeroutput>
 <command>sudo ufw status verbose</command>
 </screen>
 	      </listitem>
+              <listitem>
+                <para>
+                To view the <emphasis>numbered</emphasis> format:
+	        </para>
+<screen>
+<command>sudo ufw status numbered</command>
+</screen>
+	      </listitem>
 	    </itemizedlist>
 	    <note>
 	      <para>
@@ -620,7 +636,7 @@ Rules updated</computeroutput>
                   </para>
 
 <screen>
-<command>sudo ufw info Samba</command>
+<command>sudo ufw app info Samba</command>
 </screen>
 
                 </listitem>

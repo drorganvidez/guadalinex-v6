@@ -1136,7 +1136,9 @@ UUID=66bcdd2e-8861-4fb0-b7e4-e61c569fe17d /srv  ext3    noatime,relatime,acl 0  
 	</listitem>
 	<listitem>
 	  <para>
-	  The <emphasis>Fully Qualified Domain Name</emphasis> (FQDN) of the domain you want to join.
+	  The <emphasis>Fully Qualified Domain Name</emphasis> (FQDN) of the domain you want to join.  If your AD domain
+          does not match a valid domain such as <emphasis role="italic">example.com</emphasis>, it is likely that it has
+          the form of <emphasis>domainname.local</emphasis>.  
 	  </para>
 	</listitem>
 	<listitem>
@@ -1156,12 +1158,12 @@ UUID=66bcdd2e-8861-4fb0-b7e4-e61c569fe17d /srv  ext3    noatime,relatime,acl 0  
       </para>
 
 <screen>
-<command>sudo domainjoin-cli join example.local Administrator</command>
+<command>sudo domainjoin-cli join example.com Administrator</command>
 </screen>
 
       <note>
         <para>
-	Replace <emphasis>example.local</emphasis> with your domain name, and <emphasis>Administrator</emphasis> with the
+	Replace <emphasis>example.com</emphasis> with your domain name, and <emphasis>Administrator</emphasis> with the
         appropriate user name.
 	</para>
       </note>
@@ -1255,35 +1257,73 @@ winbind use default domain = yes
       </sect2>
       <sect2 id="likewise-open-troubleshooting" status="review">
         <title>Troubleshooting</title>
-   
-        <para>
-        If the client has trouble joining the domain, double check that the Microsoft DNS is listed first in <filename>/etc/resolv.conf</filename>.
-        For example:
-        </para>
+
+        <itemizedlist>
+          <listitem>  
+            <para>
+            If the client has trouble joining the domain, double check that the Microsoft DNS is listed first in <filename>/etc/resolv.conf</filename>.
+            For example:
+            </para>
 
 <programlisting>
 nameserver 192.168.0.1
 </programlisting>
-
-        <para>
-        For more information when joining a domain, use the <emphasis>--loglevel verbose</emphasis> or <emphasis>--advanced</emphasis> option of the 
-        <application>domainjoin-cli</application> utility:
-        </para>
+          </listitem>
+          <listitem>  
+            <para>
+            For more information when joining a domain, use the <emphasis>--loglevel verbose</emphasis> or <emphasis>--advanced</emphasis> option of the 
+            <application>domainjoin-cli</application> utility:
+            </para>
 
 <screen>
-<command>sudo domainjoin-cli --loglevel verbose join example.local Administrator</command>
+<command>sudo domainjoin-cli --loglevel verbose join example.com Administrator</command>
 </screen>
+          </listitem>
+          <listitem>
+            <para>
+            If an Active Directory user has trouble logging in, check the <filename>/var/log/auth.log</filename> for details.
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+            When joining an Ubuntu Desktop workstation to a domain, you may need to edit <filename>/etc/nsswitch.conf</filename> if your AD domain 
+            uses the <emphasis role="italic">.local</emphasis> syntax.  In order to join the domain the <emphasis>"mdns4"</emphasis> entry from the
+            <emphasis>hosts</emphasis> option.  For example:
+            </para>
 
-        <para>
-        If an Active Directory user has trouble logging in, check the <filename>/var/log/auth.log</filename> for details.
-        </para>
+<programlisting>
+hosts: files mdns4_minimal [NOTFOUND=return] dns mdns4
+</programlisting>
+
+            <para>
+            Change the above to:
+            </para>
+
+<programlisting>
+hosts: files dns [NOTFOUND=return]
+</programlisting>
+
+            <para>
+            Then restart networking by entering:
+            </para>
+
+<screen>
+<command>sudo /etc/init.d/networking restart</command>
+</screen>
+        
+            <para>
+            You should now be able to join the Active Directory domain.
+            </para>
+          </listitem>
+        </itemizedlist>
 
       </sect2>
       <sect2 id="likewise-open-ms-dns" status="review">
         <title>Microsoft DNS</title>
       
         <para>
-        The following are instructions for installing DNS on an Active Directory domain controller:
+        The following are instructions for installing DNS on an Active Directory domain controller running Windows Server 2003, 
+        but the instructions should be similar for other versions:
         </para>
 
         <itemizedlist>
@@ -1295,11 +1335,8 @@ nameserver 192.168.0.1
               </menuchoice>.
               This will open the <application>Server Role Mangement</application> utility.
               </para>
-            </listitem>
-            <listitem>
              <orderedlist>
-               <listitem><para>In the Server Role Management utility, Click</para></listitem>
-               <listitem><para>Add or remove a role</para></listitem>
+               <listitem><para>Click Add or remove a role</para></listitem>
                <listitem><para>Click Next</para></listitem>
                <listitem><para>Select "DNS Server"</para></listitem>
                <listitem><para>Click Next</para></listitem>
@@ -1331,10 +1368,10 @@ nameserver 192.168.0.1
                   <listitem><para>Network Connections</para></listitem>
                   <listitem><para>Right Click "Local Area Connection"</para></listitem>
                   <listitem><para>Click Properties</para></listitem>
-                  <listitem><para>Double click "Internet Protocol (TCP/IP)</para></listitem>
-                  <listitem><para>Enter the Server's IP Addressin as the "Preferred DNS server"</para></listitem>
+                  <listitem><para>Double click "Internet Protocol (TCP/IP)"</para></listitem>
+                  <listitem><para>Enter the Server's IP Address as the "Preferred DNS server"</para></listitem>
                   <listitem><para>Click Ok</para></listitem>
-                  <listitem><para>Click Ok again to save the seetings</para></listitem>
+                  <listitem><para>Click Ok again to save the settings</para></listitem>
                 </orderedlist>
               </para>
             </listitem>

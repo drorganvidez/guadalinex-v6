@@ -48,10 +48,7 @@ wOS=libs/writeOwnerStatus.xsl
 
 UBUNTUCHUNKXSL=libs/ubuntu-html-chunk-cust.xsl
 UBUNTUSINGLEXSL=libs/ubuntu-html-single-cust.xsl
-PDFSTYLE=libs/pdf/ubuntu-pdf.xsl
-LULUSTYLE=libs/pdf/ubuntu-pdf-lulu.xsl
-# Local path to newer xsl for use with fop 0.90
-PDFSTYLE2=libs/pdf/ubuntu-pdf2.xsl
+UBUNTUPDFXSL=libs/pdf/ubuntu-pdf.xsl
 
 # Base gnome directories for output from processor
 BASE=build/
@@ -106,6 +103,10 @@ serverguide: style
 	xsltproc --xinclude -o $(BASE)serverguide/C/index.html $(UBUNTUCHUNKXSL) serverguide/C/serverguide.xml
 	sed -i $(BASE)serverguide/C/*legal.html -e "s#\.\./libs/C/contributors\.xml#libs/C/contributors\.html#g"
 
+serverguide-pdf:
+
+	xsltproc --xinclude -o $(BASE)serverguide/C/serverguide.fo $(UBUNTUPDFXSL) serverguide/C/serverguide.xml
+	fop -fo $(BASE)serverguide/C/serverguide.fo -pdf $(BASE)serverguide/C/serverguide.pdf
 
 status: style
 

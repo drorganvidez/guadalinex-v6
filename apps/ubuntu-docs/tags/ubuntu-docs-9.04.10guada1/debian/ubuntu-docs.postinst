@@ -13,7 +13,7 @@ case "$1" in
 
         link=/usr/share/gnome/help/libs
         if [ -d "$link" ] && ! [ -L "$link" ] \
-           && dpkg --compare-versions "$2" lt-nl <9.04.6>
+           && dpkg --compare-versions "$2" lt-nl 9.04.7
         then
                 rmdir "$link"
                 ln -s ../../ubuntu-docs/libs "$link"

@@ -38,10 +38,10 @@
 			<sect3 id="web-plugins-commonrestricted" status="review">
 				<title>Quickly install common plugins</title>
 				<para>It is possible to install a whole set of commonly-used restricted plugins at once, by installing the <application>Ubuntu restricted extras</application> package.</para>
-				<para><emphasis>Restricted plugins</emphasis> are those which cannot be distributed with Ubuntu because of legal issues surrounding their use in some countries. Check that you are allowed to use this software before installing it. See the <ulink url='http://www.ubuntu.com/ubuntu/licensing'>Ubuntu website</ulink> for more information on restricted software.</para>
+				<warning><para><emphasis>Restricted plugins</emphasis> are those which cannot be distributed with Ubuntu because of legal issues surrounding their use in some countries. Check that you are allowed to use this software before installing it. See the <ulink url='http://www.ubuntu.com/ubuntu/licensing'>Ubuntu website</ulink> for more information on restricted software.</para></warning>
 				<procedure>
 					<step>
-						<para>Install the <application>Ubuntu restricted extras</application> package from the <quote>Multiverse</quote> repository (see <ulink type="help" url="ghelp:add-applications">Add Applications</ulink>).</para>
+						<para><ulink url="ubuntu-restricted-extras">Install the <application>ubuntu-restrictedextras</application> package</ulink> from the <quote>Multiverse</quote> repository.</para>
 					</step>
 					<step>
 						<para>Restart the <application>Firefox Web Browser</application> to make the included browser plugins available.</para>
@@ -78,7 +78,7 @@
 				<para>To view Flash graphics from the <application>Firefox Web Browser</application>:</para>
 				<procedure>
 					<step>
-						<para>Install the <application>flashplugin-nonfree</application> package from the <quote>Multiverse</quote> repository (see <ulink type="help" url="ghelp:add-applications">Add Applications</ulink>).</para>
+						<para><ulink url="apt:flashplugin-nonfree">Install the <application>flashplugin-nonfree</application> package</ulink>.</para>
 					</step>
 					<step>
 						<para>Restart <application>Firefox</application> to make the plugin available.</para>
@@ -93,13 +93,13 @@
 				<para>These instructions are for <emphasis>i386</emphasis> and <emphasis>AMD64</emphasis> computers only. The plugin is not currently available for other computers.</para>
 				<itemizedlist>
 					<listitem>
-					<para>If you are using an <emphasis>i386</emphasis> computer install the <application>sun-java6-plugin</application> package from the <quote>Multiverse</quote> repository.</para>
+					<para>If you are using an <emphasis>i386</emphasis> computer <ulink url="apt:sun-java6-plugin">install the <application>sun-java6-plugin</application> package</ulink>.</para>
 					</listitem>
 					<listitem>
-					<para>If you are using an <emphasis>AMD64</emphasis> computer install the <application>j2re1.4-mozilla.plugin</application> package from the <quote>Multiverse</quote> repository.</para>
+					<para>If you are using an <emphasis>AMD64</emphasis> computer <ulink url="apt:j2re1.4-mozilla.plugin">install the <application>j2re1.4-mozilla.plugin</application> package</ulink>.</para>
 					</listitem>
+
 				</itemizedlist>
-				<para>See <ulink type="help" url="ghelp:add-applications">Add Applications</ulink> for help on installing new software.</para>
 				<para>For a more complete Java installation, see <ulink type="help" url="ghelp:programming#java">Java</ulink>.</para>
 			</sect3>
 			
@@ -135,7 +135,7 @@
 			</itemizedlist>
 			<para>Evolution can be automatically configured to use Bogofilter.</para>
 			<itemizedlist>
-				<listitem><para>Install the <application>Bogofilter</application> package (see <ulink type="help" url="ghelp:add-applications">Add Applications</ulink>)</para></listitem>
+				<listitem><para><ulink url="apt:bogofilter">Install the <application>Bogofilter</application> package</ulink>.</para></listitem>
 				<listitem><para>Open &evolution-mail;.</para></listitem>
 				<listitem><para>Enable the junk mail filter by selecting <menuchoice><guimenu>Edit</guimenu><guimenu>Preferences</guimenu><guimenu>Mail Preferences</guimenu><guimenu>Junk</guimenu><guimenu>Check incoming mail for junk</guimenu></menuchoice>.</para></listitem>
 				<listitem><para>Turn on the Bogofilter plugin by selecting <menuchoice><guimenu>Edit</guimenu><guimenu>Plugins</guimenu></menuchoice></para></listitem>
@@ -145,7 +145,7 @@
 		
 		<sect2 id="email-alternative" status="review">
 			<title>Alternative email applications</title>
-			<para>You can also use <application>Mozilla Thunderbird</application> for email. To install it, install the <application>thunderbird</application> package (see <ulink type="help" url="ghelp:add-applications">Add Applications</ulink>).</para>
+			<para>You can also use <application>Mozilla Thunderbird</application> for email. To install it, <ulink url="apt:thunderbird">install the <application>thunderbird</application> package</ulink>.</para>
 			<para>To start <application>Thunderbird</application>, choose &thunderbird;.</para>
 			<para>To change your preferred email client to <application>Mozilla Thunderbird</application>:</para>
 			<procedure>
@@ -186,7 +186,7 @@
 			<para>For users of IRC instant messaging services, an alternative to <application>Pidgin</application> is <application>XChat-GNOME</application>. Its features include advanced scripting support (perl and python) and a clean, easy to use interface.</para>
 			<procedure>
 				<step>
-					<para>Install the <application>xchat-gnome</application> package (see <ulink type="help" url="ghelp:add-applications">Add Applications</ulink>).</para>
+					<para><ulink url="xchat-gnome">Install the <application>xchat-gnome</application> package</ulink>.</para>
 				</step>
 				<step>
 					<para>To start <application>XChat-GNOME</application>, choose &xchat-gnome;.</para>
@@ -224,7 +224,7 @@
 			<para>An alternative P2P application is the <application>aMule File Sharing Client</application>.</para>
 			<procedure>
 				<step>
-					<para>Install the <application>amule</application> package from the <quote>Universe</quote> repository (see <ulink type="help" url="ghelp:add-applications">Add Applications</ulink>).</para>
+					<para><ulink url="apt:amule">Install the <application>amule</application> package</ulink>.</para>
 				</step>
 				<step>
 					<para>To open <application>aMule</application>, choose &amule;.</para>
@@ -238,12 +238,12 @@
 			<itemizedlist>
 				<listitem>
 					<para><emphasis>Usenet</emphasis> is one of the oldest and allows you to discuss news and other topics with people from all around the world. <application>Pan Newsreader</application> is a news reader which works with Usenet.</para>
-					<para>Install the <application>pan</application> package and then choose &pan; to start using <application>Pan</application>.
+					<para><ulink url="apt:pan">Install the <application>pan</application> package</ulink> and then choose &pan; to start using <application>Pan</application>.
 					</para>
 				</listitem>
 				<listitem>
 					<para><emphasis>RSS feeds</emphasis> are a popular way of automatically receiving regular news updates and articles. <application>Liferea Feed Reader</application> is an RSS feed reader with many useful features.</para>
-					<para>Install the <application>liferea</application> package and then choose &liferea; to start using <application>Liferea</application>.</para>
+					<para><ulink url="apt:liferea">Install the <application>liferea</application> package</ulink> and then choose &liferea; to start using <application>Liferea</application>.</para>
 				</listitem>
 			</itemizedlist>
 		
@@ -272,7 +272,7 @@
 				<para><application>Bluefish</application> supports many programming and markup languages, and includes many utilities for designers and programmers.</para>
 				<itemizedlist>
 					<listitem><para>For more information, see the <ulink url="http://bluefish.openoffice.nl/">Bluefish website</ulink>.</para></listitem>
-					<listitem><para>Install the <application>bluefish</application> package from the <quote>Universe</quote> repository (see <ulink type="help" url="ghelp:add-applications">Add Applications</ulink>).</para></listitem>
+					<listitem><para><ulink url="apt:bluefish">Install the <application>bluefish</application> package</ulink>.</para></listitem>
 					<listitem><para>To start Bluefish, press &bluefish;.</para></listitem>
 				</itemizedlist>
 			</listitem>

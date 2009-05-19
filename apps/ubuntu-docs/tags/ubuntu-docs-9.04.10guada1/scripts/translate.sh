@@ -31,7 +31,7 @@
 
 translate () {
 	y=$(basename ${1} .po)
-	echo " ${y}"
+	echo " --Translating ${y}"
 	mkdir -p ${y}
 	for i in C/*xml; do
 		j=$(basename ${i} C/)
@@ -39,12 +39,10 @@ translate () {
 		xml2po -e -p po/${y}.po C/${j} >${y}/${j}
 	done
 	if [ -e C/${document}-C.omf ]; then
-		echo "  Generating omf file for ${document}"
 	    xml2po -e -p ${1} C/${document}-C.omf >${y}/${document}-${y}.omf
 	    sed -i -e s@\"C\"@\"${y}\"@g -e s@C/@${y}/@g ${y}/${document}-${y}.omf
 	fi
 	../scripts/validate.sh ${y}/${document}.xml
-	bzr add -q ${y}
 }
 
 choose_language () {
@@ -53,7 +51,7 @@ choose_language () {
 	if [ ${2} ]; then
 		translate "po/${2}.po"
 	else
-		for x in po/*; do
+		for x in po/*.po; do
 			translate ${x}
 		done
 	fi

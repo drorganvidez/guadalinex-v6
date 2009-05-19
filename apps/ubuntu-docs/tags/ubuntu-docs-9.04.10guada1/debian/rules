@@ -34,6 +34,7 @@ common-binary-post-install-indep::
 # Install the documents; skip documents which are less than 40% translated
 
 	set -x; for doc in `cat libs/shipped-docs`; do \
+		scripts/translate.sh -d $$doc ; \
 		numstrings=`LANG=C msgfmt --statistics $$doc/po/$$doc.pot 2>&1 | sed -r 's/^.* ([[:digit:]]+) untranslated.*$$/\1/'`; \
 			for lang in `ls $$doc/`; do \
 				if [ -e $$doc/po/$$lang.po ]; then \
@@ -43,7 +44,6 @@ common-binary-post-install-indep::
 						continue; \
 					fi; \
 				fi; \
-				scripts/translate.sh -d $$doc -l $$lang ; \
 				if [ -e $$doc/$$lang/$$doc.xml ]; then \
 					mkdir -p debian/ubuntu-docs/usr/share/gnome/help/$$doc/$$lang/; \
 					cp $$doc/$$lang/*xml debian/ubuntu-docs/usr/share/gnome/help/$$doc/$$lang/; \

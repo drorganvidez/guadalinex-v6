@@ -319,7 +319,7 @@ modifyTimestamp: 20080826021140Z
                   </para>
 
 <screen>
-<command>ldapadd -x -D cn=admin,cn=config -f /tmp/ldif_output/cn\=config/cn\=schema/cn\=\{8\}misc.ldif</command>
+<command>ldapadd -x -D cn=admin,cn=config -W -f /tmp/ldif_output/cn\=config/cn\=schema/cn\=\{8\}misc.ldif</command>
 </screen>
 
                 </step>
@@ -591,7 +591,7 @@ olcMirrorMode: TRUE
 dn: olcDatabase={1}hdb,cn=config
 changetype: modify
 add: olcRootDN
-olcRootDN: cn=admin,dc=example,dc=edu
+olcRootDN: cn=admin,dc=example,dc=com
 -
 add: olcSyncRepl
 olcSyncRepl: rid=003 provider=ldap://ldap01.example.com binddn="cn=admin,dc=example,dc=com" 
@@ -664,6 +664,8 @@ olcOverlay: syncprov
   	  <para>
           The <application>slapd</application> daemon will send log information to <filename>/var/log/syslog</filename>
           by default.  So if all does <emphasis>not</emphasis> go well check there for errors and other troubleshooting information.
+          Also, be sure that each server knows it's Fully Qualified Domain Name (FQDN).  This is configured in <filename>/etc/hosts</filename>
+          with a line similar to: <programlisting>127.0.0.1	ldap01.example.com ldap01</programlisting>.
           </para>
         </note>
 		
@@ -920,13 +922,13 @@ TLS_CACERT /etc/ssl/certs/cacert.pem
          </para>
 
 <screen>
-<command>sudo auth-client-config -a -p lac_ldap</command>
+<command>sudo auth-client-config -t nss -p lac_ldap</command>
 </screen>
          
           <itemizedlist>
 	    <listitem>
               <para>
-	      <emphasis>-a:</emphasis> applies the specified profile.
+	      <emphasis>-t:</emphasis> only modifies <filename>/etc/nsswitch.conf</filename>.
 	      </para>
             </listitem>
 	    <listitem>
@@ -941,6 +943,18 @@ TLS_CACERT /etc/ssl/certs/cacert.pem
 	      </para>
 	    </listitem>
           </itemizedlist>
+
+          <para>
+          Using the <application>pam-auth-update</application>, configure the system to use LDAP for authentication:
+          </para>
+
+<screen>
+<command>sudo pam-auth-update ldap</command>
+</screen>
+
+          <para>
+          From the <application>pam-auth-update</application> menu, choose LDAP and any other authentication mechanisms you need.
+          </para>
 
           <para>
           You should now be able to login using user credentials stored in the LDAP directory.
@@ -1346,7 +1360,7 @@ modifyTimestamp: 20080827045234Z
                 </para>
 
 <screen>
-<command>ldapadd -x -D cn=admin,cn=config -f /tmp/ldif_output/cn\=config/cn\=schema/cn\=\{12\}misc.ldif</command>
+<command>ldapadd -x -D cn=admin,cn=config -W -f /tmp/ldif_output/cn\=config/cn\=schema/cn\=\{12\}samba.ldif</command>
 </screen>
 
               </step>
@@ -2220,6 +2234,435 @@ klist: You have no tickets cached</computeroutput>
           </para>
         </listitem>
       </itemizedlist>
+
+    </sect2>
+  </sect1>
+  <sect1 id="kerberos-ldap" status="review">
+    <title>Kerberos and LDAP</title>
+
+    <para>
+    Replicating a Kerberos principal database between two servers can be complicated, and adds an additional user
+    database to your network.  Fortunately, MIT Kerberos can be configured to use an <application>LDAP</application>
+    directory as a principal database.  This section covers configuring a primary and secondary kerberos server to use
+    <application>OpenLDAP</application> for the principal database.
+    </para>
+
+    <sect2 id="kerberos-ldap-openldap" status="review">
+      <title>Configuring OpenLDAP</title>
+
+      <para>
+      First, the necessary <emphasis>schema</emphasis> needs to be loaded on an <application>OpenLDAP</application> server that has
+      network connectivity to the Primary and Secondary KDCs.  The rest of this section assumes that you also have LDAP replication
+      configured between at least two servers.  For information on setting up OpenLDAP see <xref linkend="openldap-server"/>.
+      </para>
+
+      <note>
+        <para>
+        It is recommended to configure OpenLDAP for TLS and SSL connections, so that traffic between the KDC and LDAP server is encrypted.
+        See <xref linkend="openldap-tls"/> for details.
+        </para>
+      </note>
+
+      <itemizedlist>
+        <listitem>
+          <para>
+          To load the schema into LDAP, on the LDAP server install the <application>krb5-kdc-ldap</application> package.
+          From a terminal enter:
+          </para>
+
+<screen>
+<command>sudo apt-get install krb5-kdc-ldap</command>
+</screen>
+
+        </listitem>
+        <listitem>
+          <para>
+          Next, extract the <filename>kerberos.schema.gz</filename> file:
+          </para>
+
+<screen>
+<command>sudo gzip -d /usr/share/doc/krb5-kdc-ldap/kerberos.schema.gz</command>
+<command>sudo cp /usr/share/doc/krb5-kdc-ldap/kerberos.schema /etc/ldap/schema/</command>
+</screen>
+
+        </listitem>
+        <listitem>
+
+           <para>
+           The <emphasis>kerberos</emphasis> schema needs to be added to the <emphasis>cn=config</emphasis> tree.
+           The procedure to add a new schema to <application>slapd</application> is also detailed in 
+           <xref linkend="openldap-configuration"/>.
+           </para>
+
+           <procedure>
+              <step>
+                <para>                  
+                First, create a configuration file named <filename>schema_convert.conf</filename>, or a similar 
+                descriptive name, containing the following lines:
+                </para>
+
+<programlisting>
+include /etc/ldap/schema/core.schema
+include /etc/ldap/schema/collective.schema
+include /etc/ldap/schema/corba.schema
+include /etc/ldap/schema/cosine.schema
+include /etc/ldap/schema/duaconf.schema
+include /etc/ldap/schema/dyngroup.schema
+include /etc/ldap/schema/inetorgperson.schema
+include /etc/ldap/schema/java.schema
+include /etc/ldap/schema/misc.schema
+include /etc/ldap/schema/nis.schema
+include /etc/ldap/schema/openldap.schema
+include /etc/ldap/schema/ppolicy.schema
+include /etc/ldap/schema/kerberos.schema
+</programlisting>
+
+
+                </step>
+                <step>
+
+                  <para>
+                   Create a temporary directory to hold the LDIF files:
+                  </para>
+<screen>
+<command>mkdir /tmp/ldif_output</command>
+</screen>
+
+                </step>
+                <step>
+
+                  <para>
+                  Now use <application>slaptest</application> to convert the schema files: 
+                  </para>
+
+<screen>
+<command>slaptest -f schema_convert.conf -F /tmp/ldif_output</command>
+</screen>
+
+                  <para>
+                  Change the above file and path names to match your own if they are different.
+                  </para>
+                
+                </step>
+                <step>
+
+                  <para>
+                  Edit the generated <filename>/tmp/ldif_output/cn=config/cn=schema/cn={12}kerberos.ldif</filename>
+                  file, changing the following attributes: 
+                  </para>
+
+<programlisting>
+dn: cn=kerberos,cn=schema,cn=config
+...
+cn: kerberos
+</programlisting>
+
+                  <para>
+                  And remove the following lines from the end of the file:
+                  </para>
+
+<programlisting>
+structuralObjectClass: olcSchemaConfig
+entryUUID: 18ccd010-746b-102d-9fbe-3760cca765dc
+creatorsName: cn=config
+createTimestamp: 20090111203515Z
+entryCSN: 20090111203515.326445Z#000000#000#000000
+modifiersName: cn=config
+modifyTimestamp: 20090111203515Z
+</programlisting>
+
+                  <note>
+                    <para>
+                    The attribute values will vary, just be sure the attributes are removed. 
+                    </para>
+                  </note>
+
+                </step>
+                <step>
+
+                  <para>
+                  Finally, load the new schema with <application>ldapadd</application>:
+                  </para>
+
+<screen>
+<command>ldapadd -x -D cn=admin,cn=config -W -f /tmp/ldif_output/cn\=config/cn\=schema/cn\=\{12\}kerberos.ldif</command>
+</screen>
+
+             </step>
+           </procedure>    
+        </listitem>
+      </itemizedlist>
+
+      <para>
+      That's it, your LDAP directory is now ready to serve as a Kerberos principal database.
+      </para>
+
+    </sect2>
+    <sect2 id="kerberos-ldap-primary-kdc" status="review">
+      <title>Primary KDC Configuration</title>
+
+      <para>
+      With <application>OpenLDAP</application> configured it is time to configure the KDC.
+      </para>
+
+      <itemizedlist>
+        <listitem>
+          <para>
+          First, install the necessary packages, from a terminal enter:
+          </para>
+
+<screen>
+<command>sudo apt-get install krb5-kdc krb5-admin-server krb5-kdc-ldap</command>
+</screen>
+
+        </listitem>
+        <listitem>
+
+          <para>
+          Now edit <filename>/etc/krb5.conf</filename> adding the following options to under the appropriate sections:
+          </para>
+
+<programlisting>
+[libdefaults]
+        default_realm = EXAMPLE.COM
+
+...
+
+[realms]
+        EXAMPLE.COM = {
+                kdc = kdc01.example.com
+                kdc = kdc02.example.com
+                admin_server = kdc01.example.com
+                admin_server = kdc02.example.com
+                default_domain = example.com
+                database_module = openldap_ldapconf
+        }
+
+...
+
+[domain_realm]
+        .example.com = EXAMPLE.COM
+
+
+...
+
+[dbdefaults]
+        ldap_kerberos_container_dn = dc=example,dc=com
+
+[dbmodules]
+        openldap_ldapconf = {
+                db_library = kldap
+                ldap_kdc_dn = "cn=admin,dc=example,dc=com"
+
+                # this object needs to have read rights on
+                # the realm container, principal container and realm sub-trees
+                ldap_kadmind_dn = "cn=admin,dc=example,dc=com"
+
+                # this object needs to have read and write rights on
+                # the realm container, principal container and realm sub-trees
+                ldap_service_password_file = /etc/krb5kdc/service.keyfile
+                ldap_servers = ldaps://ldap01.example.com ldaps://ldap02.example.com
+                ldap_conns_per_server = 5
+        }
+</programlisting>
+
+          <note>
+            <para>
+            Change <emphasis>example.com</emphasis>, <emphasis>dc=example,dc=com</emphasis>, <emphasis>cn=admin,dc=example,dc=com</emphasis>,
+            and <emphasis>ldap01.example.com</emphasis> to the appropriate domain, LDAP object, and LDAP server for your network.
+            </para>
+          </note>
+
+        </listitem>
+        <listitem>
+        
+          <para>
+          Next, use the <application>kdb5_ldap_util</application> utility to create the realm:
+          </para>
+
+<screen>
+<command>sudo kdb5_ldap_util -D  cn=admin,dc=example,dc=com create -subtrees dc=example,dc=com -r EXAMPLE.COM -s -H ldap://ldap01.example.com</command>
+</screen>
+      
+        </listitem>
+        <listitem>
+        
+          <para>
+          Create a stash of the password used to bind to the LDAP server.  This password is used by the <emphasis>ldap_kdc_dn</emphasis> and        
+          <emphasis>ldap_kadmin_dn</emphasis> options in <filename>/etc/krb5.conf</filename>:
+          </para>
+
+<screen>
+<command>sudo kdb5_ldap_util -D  cn=admin,dc=example,dc=com stashsrvpw -f /etc/krb5kdc/service.keyfile cn=admin,dc=example,dc=com</command>
+</screen>
+      
+        </listitem>
+        <listitem>
+        
+          <para>
+          Finally, add an index for the <emphasis>krb5principalname</emphasis> attribute:
+          </para>
+
+<screen>
+<command>ldapmodify -x -D cn=admin,cn=config -W</command>
+<computeroutput>Enter LDAP Password:
+<userinput>dn: olcDatabase={1}hdb,cn=config
+add: olcDbIndex
+olcDbIndex: krbPrincipalName eq,pres,sub</userinput>
+
+modifying entry "olcDatabase={1}hdb,cn=config"</computeroutput>
+</screen>
+      
+        </listitem>
+      </itemizedlist>
+
+      <para>
+      You can now add Kerberos principals to the LDAP database, and they will be copied to any other LDAP servers configured for replication.
+      To add a principal using the <application>kadmin.local</application> utility enter:
+      </para>
+
+<screen>
+<command>sudo kadmin.local</command>
+<computeroutput>Authenticating as principal root/admin@EXAMPLE.COM with password.
+kadmin.local:  <userinput>addprinc -x dn="uid=steve,ou=people,dc=example,dc=com" steve</userinput>
+WARNING: no policy specified for steve@EXAMPLE.COM; defaulting to no policy
+Enter password for principal "steve@EXAMPLE.COM": 
+Re-enter password for principal "steve@EXAMPLE.COM": 
+Principal "steve@EXAMPLE.COM" created.</computeroutput>
+</screen>
+
+      <para>
+      There should now be krbPrincipalName, krbPrincipalKey, krbLastPwdChange, and krbExtraData attributes added to the 
+      <emphasis>uid=steve,ou=people,dc=example,dc=com</emphasis> user object.  Use the <application>kinit</application> and 
+      <application>klist</application> utilities to test that the user is indeed issued a ticket.
+      </para>
+
+      <note>
+        <para>
+        If the user object is already created the <emphasis>-x dn="..."</emphasis> option is needed to add the Kerberos attributes.
+        Otherwise a new <emphasis>principal</emphasis> object will be created in the realm subtree.
+        </para>
+      </note>
+
+    </sect2>
+    <sect2 id="kerberos-ldap-secondary-kdc" status="review">
+      <title>Secondary KDC Configuration</title>
+
+      <para>
+      Configuring a Secondary KDC using the LDAP backend is similar to configuring one using the normal Kerberos database.
+      </para>
+
+      <itemizedlist>
+        <listitem>
+          <para>
+          First, install the necessary packages.  In a terminal enter:
+          </para>
+
+<screen>
+<command>sudo apt-get install krb5-kdc krb5-admin-server krb5-kdc-ldap</command>
+</screen>
+
+        </listitem>
+        <listitem>
+
+          <para>
+          Next, edit <filename>/etc/krb5.conf</filename> to use the LDAP backend:
+          </para>
+
+<programlisting>
+[libdefaults]
+        default_realm = EXAMPLE.COM
+
+...
+
+[realms]
+        EXAMPLE.COM = {
+                kdc = kdc01.example.com
+                kdc = kdc02.example.com
+                admin_server = kdc01.example.com
+                admin_server = kdc02.example.com
+                default_domain = example.com
+                database_module = openldap_ldapconf
+        }
+
+...
+
+[domain_realm]
+        .example.com = EXAMPLE.COM
+
+...
+
+[dbdefaults]
+        ldap_kerberos_container_dn = dc=example,dc=com
+
+[dbmodules]
+        openldap_ldapconf = {
+                db_library = kldap
+                ldap_kdc_dn = "cn=admin,dc=example,dc=com"
+
+                # this object needs to have read rights on
+                # the realm container, principal container and realm sub-trees
+                ldap_kadmind_dn = "cn=admin,dc=example,dc=com"
+
+                # this object needs to have read and write rights on
+                # the realm container, principal container and realm sub-trees
+                ldap_service_password_file = /etc/krb5kdc/service.keyfile
+                ldap_servers = ldaps://ldap01.example.com ldaps://ldap02.example.com
+                ldap_conns_per_server = 5
+        }
+</programlisting>
+
+
+        </listitem>
+        <listitem>
+        
+      <para>
+      Create the stash for the LDAP bind password:
+      </para>
+
+<screen>
+<command>sudo kdb5_ldap_util -D  cn=admin,dc=example,dc=com stashsrvpw -f /etc/krb5kdc/service.keyfile cn=admin,dc=example,dc=com</command>
+</screen>
+      
+        </listitem>
+        <listitem>
+
+          <para>
+          Now, on the <emphasis>Primary KDC</emphasis> copy the <filename>/etc/krb5kdc/.k5.EXAMPLE.COM</filename> 
+          <emphasis>Master Key</emphasis> stash to the Secondary KDC.  Be sure to copy the file over an encrypted 
+          connection such as <application>scp</application>, or on physical media.
+          </para>
+
+<screen>
+<command>sudo scp /etc/krb5kdc/.k5.EXAMPLE.COM steve@kdc02.example.com:~</command>
+<command>sudo mv .k5.EXAMPLE.COM /etc/krb5kdc/</command>
+</screen>
+
+        <note>
+          <para>
+          Again, replace <emphasis>EXAMPLE.COM</emphasis> with your actual realm.
+          </para>
+        </note>
+
+        </listitem>
+        <listitem>
+
+          <para>
+          Finally, start the <application>krb5-kdc</application> daemon:
+          </para>
+
+<screen>
+<command>sudo /etc/init.d/krb5-kdc start</command>
+</screen>
+
+        </listitem>
+      </itemizedlist>
+
+      <para>
+      You now have redundant KDCs on your network, and with redundant LDAP servers you should be able to 
+      continue to authenticate users if one LDAP server, one Kerberos server, or one LDAP and one Kerberos 
+      server become unavailable. 
+      </para>
 
     </sect2>
   </sect1>

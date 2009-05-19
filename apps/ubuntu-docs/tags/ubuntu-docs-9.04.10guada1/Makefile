@@ -21,6 +21,10 @@
 
 MAKECMD=make
 
+# Language code for documents
+# Ex. LN=ja for japanese
+LN=C
+
 # XSL Processors
 XSLTPROC=/usr/bin/xsltproc
 
@@ -59,8 +63,15 @@ gdeb:
 
 all: clean style index serverguide switching status contributors
 
-	for doc in `cat libs/shipped-docs`; do xsltproc --xinclude -o $(BASE)$$doc/C/index.html $(UBUNTUCHUNKXSL) $$doc/C/$$doc.xml; done
-	./scripts/fix-urls.sh
+	for doc in `cat libs/shipped-docs`; do \
+		if [ $(LN) != "C" ]; then \
+			./scripts/translate.sh -d $$doc -l $(LN); \
+		fi; \
+		if find $$doc/$(LN) -name "*.xml"; then \
+			xsltproc --xinclude -o $(BASE)$$doc/$(LN)/index.html $(UBUNTUCHUNKXSL) $$doc/$(LN)/$$doc.xml; \
+		fi; \
+	done
+	./scripts/fix-urls.sh -l $(LN)
 
 index:
 
@@ -101,19 +112,34 @@ switching:
 
 serverguide: style
 
-	xsltproc --xinclude -o $(BASE)serverguide/C/index.html $(UBUNTUCHUNKXSL) serverguide/C/serverguide.xml
-	cp -r serverguide/sample $(BASE)serverguide/sample
-	sed -i $(BASE)serverguide/C/*legal.html -e "s#\.\./libs/C/contributors\.xml#libs/C/contributors\.html#g"
+	if [ $(LN) != "C" ]; then \
+		./scripts/translate.sh -d serverguide -l $(LN); \
+	fi
+	if find serverguide/$(LN) -name "*.xml"; then \
+		xsltproc --xinclude -o $(BASE)serverguide/$(LN)/index.html $(UBUNTUCHUNKXSL) serverguide/$(LN)/serverguide.xml; \
+		cp -r serverguide/sample $(BASE)serverguide/sample; \
+		sed -i $(BASE)serverguide/$(LN)/*legal.html -e "s#\.\./libs/C/contributors\.xml#libs/$(LN)/contributors\.html#g"; \
+	fi
 
 serverguide-pdf:
 
-	xsltproc --xinclude -o $(BASE)serverguide/C/serverguide.fo $(UBUNTUPDFXSL) serverguide/C/serverguide.xml
-	fop -fo $(BASE)serverguide/C/serverguide.fo -pdf $(BASE)serverguide/C/serverguide.pdf
+	if [ $(LN) != "C" ]; then \
+		./scripts/translate.sh -d serverguide -l $(LN); \
+	fi
+	if find serverguide/$(LN) -name "*.xml"; then \
+		xsltproc --xinclude -o $(BASE)serverguide/$(LN/serverguide.fo $(UBUNTUPDFXSL) serverguide/$(LN)/serverguide.xml; \
+		fop -fo $(BASE)serverguide/$(LN)/serverguide.fo -pdf $(BASE)serverguide/$(LN)/serverguide.pdf; \
+	fi
 
 status: style
 
-	xsltproc --xinclude -o $(BASE)status/sg-report.xml $(wOS) serverguide/C/serverguide.xml
-	xsltproc --xinclude -o $(BASE)status/sg-report.html $(NWDBXSL) $(BASE)status/sg-report.xml
+	if [ $(LN) != "C" ]; then \
+		./scripts/translate.sh -d serverguide -l $(LN); \
+	fi
+	if find serverguide/$(LN) -name "*.xml"; then \
+		xsltproc --xinclude -o $(BASE)status/sg-report.xml $(wOS) serverguide/$(LN)/serverguide.xml; \
+		xsltproc --xinclude -o $(BASE)status/sg-report.html $(NWDBXSL) $(BASE)status/sg-report.xml; \
+	fi
 
 contributors: style
 

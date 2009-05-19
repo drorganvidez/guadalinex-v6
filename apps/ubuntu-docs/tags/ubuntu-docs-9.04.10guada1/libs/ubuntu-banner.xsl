@@ -13,11 +13,11 @@ urchinTracker();
 	<div id="header">
 	<div id="logo-floater"><h1><a href="https://help.ubuntu.com" title="Ubuntu Documentation"><img alt="Ubuntu" id="logo" src="https://help.ubuntu.com/htdocs/ubuntunew/img/logo.png" /></a></h1>
 	</div>
-<form action="https://help.ubuntu.com/search.html" id="cse-search-box">
+<noscript><form action="http://www.google.com/cse" id="cse-search-box"></noscript>
+<script>document.write('<form action="https://help.ubuntu.com/search.html" id="cse-search-box"><input type="hidden" name="cof" value="FORID:9" />');</script>
   <div>
 
     <input type="hidden" name="cx" value="003883529982892832976:e2vwumte3fq" />
-    <input type="hidden" name="cof" value="FORID:9" />
     <input type="hidden" name="ie" value="UTF-8" />
     <input type="text" name="q" size="27" />
     <input type="submit" name="sa" value="Search" />

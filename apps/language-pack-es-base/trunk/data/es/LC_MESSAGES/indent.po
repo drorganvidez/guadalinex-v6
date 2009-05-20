@@ -1,0 +1,311 @@
+# Mensajes en español para GNU indent.
+# Copyright (C) 2002, 2004, 2007 Free Software Foundation, Inc.
+# Tomás Bautista <bautista@iuma.ulpgc.es>, 2002.
+# Santiago Vila Doncel <sanvila@unex.es>, 2004, 2007.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: GNU indent 2.2.9\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-03-11 19:55+0100\n"
+"PO-Revision-Date: 2008-09-20 15:06+0000\n"
+"Last-Translator: Ricardo Pérez López <ricpelo@gmail.com>\n"
+"Language-Team: Spanish <es@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2009-04-11 00:25+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+#: src/args.c:610
+msgid ""
+"usage: indent file [-o outfile ] [ options ]\n"
+"       indent file1 file2 ... fileN [ options ]\n"
+msgstr ""
+"uso: indent archivo [-o salida ] [ opciones ]\n"
+"       indent archivo1 archivo2 ... archivoN [ opciones ]\n"
+
+#: src/args.c:676
+#, c-format
+msgid "%s: missing argument to parameter %s\n"
+msgstr "%s: falta argumento en el parámetro %s\n"
+
+#: src/args.c:801
+#, c-format
+msgid "%s: unknown option \"%s\"\n"
+msgstr "%s: opción «%s» desconocida\n"
+
+#: src/args.c:811
+#, c-format
+msgid "option: %s\n"
+msgstr "opción: %s\n"
+
+#: src/args.c:827
+#, c-format
+msgid "GNU indent %s\n"
+msgstr "GNU indent %s\n"
+
+#: src/args.c:912
+#, c-format
+msgid "%s: option ``%s'' requires a numeric parameter\n"
+msgstr "%s: la opción «%s» requieres un parámetro numérico\n"
+
+#: src/args.c:920
+#, c-format
+msgid "set_option: internal error: p_type %d\n"
+msgstr "set_option: error interno: p_type %d\n"
+
+#: src/args.c:976
+msgid "Profile contains an unterminated comment"
+msgstr "El perfil contiene un comentario indeterminado"
+
+#: src/args.c:1014
+msgid "Profile contains unpalatable characters"
+msgstr "El perfil contiene caracteres desagradables"
+
+#: src/args.c:1182
+#, c-format
+msgid ""
+"File named by environment variable %s does not exist or is not readable"
+msgstr ""
+"El archivo nombrado por la variable de entorno %s no existe o no puede leerse"
+
+#: src/backup.c:466
+#, c-format
+msgid "indent:  Strange version-control value\n"
+msgstr "indent: valor de control de versión extraño\n"
+
+#: src/backup.c:467
+#, c-format
+msgid "indent:  Using numbered-existing\n"
+msgstr "indent: usando numeración existente\n"
+
+#: src/backup.c:498
+#, c-format
+msgid "indent: Can't make backup filename of %s\n"
+msgstr "indent: Imposible hacer respaldo del archivo de nombre %s\n"
+
+#: src/backup.c:506
+#, c-format
+msgid "Can't open backup file %s"
+msgstr "Imposible abrir respaldo del archivo %s"
+
+#: src/backup.c:513
+#, c-format
+msgid "Can't write to backup file %s"
+msgstr "Imposible escribir un respaldo del archivo %s"
+
+#: src/backup.c:526
+#, c-format
+msgid "Can't preserve modification time on backup file %s"
+msgstr ""
+"No se puede preservar la hora de la modificación en el archivo de respaldo %s"
+
+#: src/globs.c:49 src/globs.c:74
+#, c-format
+msgid "indent: Virtual memory exhausted.\n"
+msgstr "indent: Memoria virtual insuficiente\n"
+
+#: src/globs.c:93
+#, c-format
+msgid "indent: %s:%d: %s:"
+msgstr "indent: %s:%d: %s:"
+
+#: src/globs.c:109
+#, c-format
+msgid "indent: Fatal Error: "
+msgstr "indent: Error fatal "
+
+#: src/globs.c:119
+#, c-format
+msgid "indent: System Error: "
+msgstr "indent: Error de sistema "
+
+#: src/globs.h:27
+msgid "Warning"
+msgstr "Aviso"
+
+#: src/globs.h:31
+msgid "Error"
+msgstr "Error"
+
+#: src/indent.c:187
+msgid "Ran out of memory"
+msgstr "Ran fuera de memoria"
+
+#: src/indent.c:596 src/indent.c:1318
+#, c-format
+msgid "Extra %c"
+msgstr "Extra %c"
+
+#: src/indent.c:1440 src/indent.c:1466 src/indent.c:2624
+msgid "Line broken"
+msgstr "Linea rota"
+
+#: src/indent.c:2115
+msgid "Unmatched #else"
+msgstr "#else no coincidente"
+
+#: src/indent.c:2116
+msgid "Unmatched #elif"
+msgstr "#elif no coincidente"
+
+#: src/indent.c:2143
+msgid "Unmatched #endif"
+msgstr "#endif no coincidente"
+
+#: src/indent.c:2563
+msgid "EOF encountered in comment"
+msgstr "Se encontró EOF en el comentario"
+
+#: src/indent.c:2802
+msgid "Unexpected end of file"
+msgstr "Fin inesperado de archivo"
+
+#: src/indent.c:2808
+#, c-format
+msgid "There were %d non-blank output lines and %d comments\n"
+msgstr "Hubo %d líneas resultantes no vacías y %d comentarios\n"
+
+#: src/indent.c:2812
+#, c-format
+msgid "(Lines with comments)/(Lines with code): %6.3f\n"
+msgstr "(Lineas con comentarios)/(Lineas con código): %6.3f\n"
+
+#: src/indent.c:2836
+msgid "Line broken 2"
+msgstr "Linea rota 2"
+
+#: src/indent.c:3059
+#, c-format
+msgid "indent: only one output file (2nd was %s)\n"
+msgstr "indent: solo un fichero de salida (el segundo fue %s)\n"
+
+#: src/indent.c:3068 src/indent.c:3094
+#, c-format
+msgid "indent: only one input file when output file is specified\n"
+msgstr ""
+"indent: solo un fichero de entrada cuando el fichero de salida se "
+"especifica\n"
+
+#: src/indent.c:3082 src/indent.c:3129
+#, c-format
+msgid "indent: can't have filenames when specifying standard input\n"
+msgstr ""
+"indent: no puedo tener nombres de archivo cuando tengo la salida estándar "
+"especificada\n"
+
+#: src/indent.c:3102
+#, c-format
+msgid "indent: only one input file when stdout is used\n"
+msgstr "indent: solo un archivo de salida cuando se usa la salida estándar\n"
+
+#: src/indent.c:3138
+msgid "command line"
+msgstr "línea de comandos"
+
+#: src/indent.c:3330
+#, c-format
+msgid "Read profile %s\n"
+msgstr "Leer perfil %s\n"
+
+#: src/code_io.c:169
+msgid "Internal buffering error"
+msgstr "Error de buffer interno"
+
+#: src/code_io.c:262
+#, c-format
+msgid "Can't open input file %s"
+msgstr "No puedo abrir el archivo de entrada %s"
+
+#: src/code_io.c:267
+#, c-format
+msgid "Can't stat input file %s"
+msgstr "No se puede verificar el archivo de entrada %s"
+
+#: src/code_io.c:272
+#, c-format
+msgid "Warning: Zero-length file %s"
+msgstr "Aviso: archivo %s de longitud cero"
+
+#: src/code_io.c:280
+#, c-format
+msgid "File %s is too big to read"
+msgstr "El archivo %s es demasiado grande para leerlo"
+
+#: src/code_io.c:288
+#, c-format
+msgid "System problem reading file %s"
+msgstr "Problema de sistema leyendo el archivo %s"
+
+#: src/code_io.c:312
+#, c-format
+msgid "Error reading input file %s"
+msgstr "Error leyendo el archivo de entrada %s"
+
+#: src/code_io.c:317
+#, c-format
+msgid "Error closeing input file %s"
+msgstr "Error cerrando el archivo de entrada %s"
+
+#: src/code_io.c:505
+#, c-format
+msgid "Warning: File %s contains NULL-characters\n"
+msgstr "Aviso: el archivo %s contiene caracteres nulos\n"
+
+#: src/lexi.c:787
+msgid "Unterminated character constant"
+msgstr "Carácter constante indeterminado"
+
+#: src/lexi.c:788
+msgid "Unterminated string constant"
+msgstr "Cadena constante indeterminada"
+
+#: src/lexi.c:1034
+#, c-format
+msgid "old style assignment ambiguity in \"=%c\".  Assuming \"= %c\"\n"
+msgstr ""
+"ambigüedad en la asignación del antiguo estilo \"=%c\".  Se asume \"= %c\"\n"
+
+#: src/output.c:1312
+#, c-format
+msgid "indent: can't create %s\n"
+msgstr "indent: no se puede crear %s\n"
+
+#: src/output.c:1351
+#, c-format
+msgid "Can't close output file %s"
+msgstr "No se puede cerrar el archivo de salida %s"
+
+#: src/output.c:1364
+#, c-format
+msgid "Can't preserve modification time on output file %s"
+msgstr ""
+"No se puede preservar la hora de modificación en el archivo de salida %s"
+
+#: src/parse.c:447
+msgid "Unmatched 'else'"
+msgstr "\"else\" no coincidente"
+
+#: src/parse.c:473
+msgid "Stmt nesting error."
+msgstr "Error de anidamiento de stmt"
+
+#: src/parse.c:515
+msgid "Unknown code to parser"
+msgstr "Código desconocido para analizar"
+
+#: src/parse.c:525
+#, c-format
+msgid "ParseStack [%d]:\n"
+msgstr "Pila de análisis [%d]:\n"
+
+# Creo que no se debería traducir `stack' tb
+#: src/parse.c:529
+#, c-format
+msgid "  stack[%d] =>   stack: %d   ind_level: %d\n"
+msgstr "  pila[%d] =>    pila: %d    nivel_de_sangrado: %d\n"
+
+#: src/wildexp.c:126
+msgid "CANNOT FIND '@' FILE!"
+msgstr "¡NO SE PUEDE ENCONTRAR EL ARCHIVO '@'!"

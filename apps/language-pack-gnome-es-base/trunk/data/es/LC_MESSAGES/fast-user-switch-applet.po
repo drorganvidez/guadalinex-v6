@@ -1,0 +1,739 @@
+# translation of fast-user-switch-applet.HEAD.po to Español
+# Copyright (C) 2005 The GNOME Project
+# This file is distributed under the same license as the fast-user-switch-applet package.
+#
+# Antonio Ognio <gnrfan@gnrfan.org>, 2005.
+# Francisco Javier F. Serrador <serrador@tecknolabs.com>, 2006.
+# Francisco Javier F. Serrador <serrador@cvs.gnome.org>, 2006.
+# Jorge González <jorgegonz@svn.gnome.org>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: fast-user-switch-applet.HEAD\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-04-14 13:27+0000\n"
+"PO-Revision-Date: 2009-04-14 15:20+0000\n"
+"Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
+"Language-Team: Español <gnome-es-list@gnome.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Launchpad-Export-Date: 2009-05-18 21:42+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+#: ../data/GNOME_FastUserSwitchApplet.server.in.in.h:1
+msgid "A menu to quickly switch between users"
+msgstr "Un menú para cambiar rápidamente entre usuarios"
+
+#: ../data/GNOME_FastUserSwitchApplet.server.in.in.h:2
+msgid "User Switcher"
+msgstr "Selector de usuarios"
+
+#: ../data/GNOME_FastUserSwitchApplet.server.in.in.h:3
+msgid "User Switcher Applet Factory"
+msgstr "Fábrica de la miniaplicación del selector de usuarios"
+
+#: ../data/GNOME_FastUserSwitchApplet.xml.h:1
+msgid "Edit Personal _Information"
+msgstr "Editar _información personal"
+
+#: ../data/GNOME_FastUserSwitchApplet.xml.h:2
+msgid "_About"
+msgstr "Acerca _de"
+
+#: ../data/GNOME_FastUserSwitchApplet.xml.h:3
+msgid "_Edit Users and Groups"
+msgstr "_Editar usuarios y grupos"
+
+#: ../data/GNOME_FastUserSwitchApplet.xml.h:4
+msgid "_Help"
+msgstr "Ay_uda"
+
+#: ../data/GNOME_FastUserSwitchApplet.xml.h:5
+msgid "_Preferences"
+msgstr "_Preferencias"
+
+#: ../data/GNOME_FastUserSwitchApplet.xml.h:6
+msgid "_Setup Login Screen"
+msgstr "_Configurar la pantalla de entrada"
+
+#: ../data/fast-user-switch-applet.schemas.in.h:1
+msgid "Display Style"
+msgstr "Estilo de pantalla"
+
+#: ../data/fast-user-switch-applet.schemas.in.h:2
+msgid "Lock Screen After Switch"
+msgstr "Bloquea la pantalla después de cambiar"
+
+#: ../data/fast-user-switch-applet.schemas.in.h:3
+msgid "Show \"Login Window\" Menuitem"
+msgstr "Mostrar el elemento del menú «Ventana de entrada»"
+
+#: ../data/fast-user-switch-applet.schemas.in.h:4
+msgid "Show \"Other\" Menuitem"
+msgstr "Mostrar el elemento de menú «Otro»"
+
+#: ../data/fast-user-switch-applet.schemas.in.h:5
+msgid "Show Active Users Only"
+msgstr "Mostrar sólo los usuarios activos"
+
+#: ../data/fast-user-switch-applet.schemas.in.h:6
+msgid "Show Commands to Affect the Session"
+msgstr "Visualizar comandos que afectan a la sesión"
+
+#: ../data/fast-user-switch-applet.schemas.in.h:7
+msgid "Show Presence State"
+msgstr "Mostrar estado de presencia"
+
+#: ../data/fast-user-switch-applet.schemas.in.h:8
+msgid "Show the \"Guest session\" Menuitem"
+msgstr "Mostrar la opción de menú «Sesión de invitado»"
+
+#: ../data/fast-user-switch-applet.schemas.in.h:9
+msgid ""
+"Specifies how to display the applet in the panel. Use \"username\" to "
+"display the current user's name, \"icon\" to show the people icon, or "
+"\"text\" to use the word `Users.'"
+msgstr ""
+"Especifica cómo mostrar la miniaplicación en el panel. Use \"username\" para "
+"mostrar el nombre del usuario actual, \"icon\" para mostrar el icono de la "
+"gente, ó \"text\" para usar la palabra «Usuarios»."
+
+#: ../data/fast-user-switch-applet.schemas.in.h:10
+msgid "Suppress the dialog to confirm logout, restart and shutdown action"
+msgstr ""
+"Suprimir la ventana de confirmación al cerrar sesión, reiniciar y apagar."
+
+#: ../data/fast-user-switch-applet.schemas.in.h:11
+msgid "Use Xnest"
+msgstr "Usar Xnest"
+
+#: ../data/fast-user-switch-applet.schemas.in.h:12
+msgid ""
+"When to show the \"Login Window\" item. Possible values include: \"always\" "
+"to always show the item, \"never\" to never show the item, and \"auto\" (the "
+"default) to show the item when the applet is in Xnest mode."
+msgstr ""
+"Cuando mostrar el elemento «Pantalla de entrada». Los valores posibles "
+"incluyen: \"always\" para mostrar siempre el elemento, \"never\" para no "
+"mostrar nunca el elemento, y \"auto\" (el valor por omisión) para mostrar el "
+"elemento cuando la miniaplicación está en modo Xnest."
+
+#: ../data/fast-user-switch-applet.schemas.in.h:13
+msgid ""
+"When to show the \"Other\" item. Possible values include: \"always\" to "
+"always show the item, \"never\" to never show the item, and \"auto\" (the "
+"default) to show the item when the applet is in console (not Xnest) mode."
+msgstr ""
+"Cuando mostrar el elemento de menú «Otro». Los valores posibles son "
+"\"always\" para mostrar el elemento siempre, \"never\" para no mostrar el "
+"elemento nunca, y \"auto\" (valor por omisión) para mostrar el elemento "
+"cuando la miniaplicación esté en consola (no en modo Xnest)."
+
+#: ../data/fast-user-switch-applet.schemas.in.h:14
+msgid ""
+"Whether or not to create new Xnest windows instead of spawning new consoles "
+"when switching users."
+msgstr ""
+"Si se desea o no crear ventanas anidadas con Xnest en lugar de crear "
+"consolas nuevas al cambiar de usuarios."
+
+#: ../data/fast-user-switch-applet.schemas.in.h:15
+msgid ""
+"Whether or not to lock the screen after switching to a different console."
+msgstr ""
+"Si se desea o no bloquear la pantalla después de cambiar a una consola "
+"diferente."
+
+#: ../data/fast-user-switch-applet.schemas.in.h:16
+msgid ""
+"Whether or not to show a menu item to start a guest session using the gdm-"
+"guest-session command."
+msgstr ""
+"Si se debe mostrar una opción de menú para iniciar una sesión de invitado "
+"usando el comando gdm-guest-session."
+
+#: ../data/fast-user-switch-applet.schemas.in.h:17
+msgid ""
+"Whether or not to show confirmation dialogs for logout, restart and shutdown "
+"actions."
+msgstr ""
+"Si se debe o no mostrar las ventanas de confirmación al cerrar sesión, "
+"reiniciar y apagar."
+
+#: ../data/fast-user-switch-applet.schemas.in.h:18
+msgid "Whether to show only users who are currently logged in, or all users."
+msgstr ""
+"Si se debe mostrar sólo a los usuarios que hayan entrado, o todos los "
+"usuarios."
+
+#: ../data/fast-user-switch-applet.schemas.in.h:19
+msgid ""
+"Whether to show the commands to logout, login and shutdown the computer in "
+"the applet's menu."
+msgstr ""
+"Si hay que mostrar los comandos para salir, entrar y apagar el equipo en el "
+"menú de la miniaplicación."
+
+#: ../data/fast-user-switch-applet.schemas.in.h:20
+msgid ""
+"Whether to show the logged in user's presence information and allow changing "
+"it in the applet."
+msgstr ""
+"Si hay que mostrar la información de presencia del usuario que ha iniciado "
+"una sesión, y permitir cambiarla en la miniaplicación."
+
+#: ../data/ui.glade.h:1
+msgid "<span weight=\"bold\" size=\"larger\">Multiple Logins Found</span>"
+msgstr ""
+"<span weight=\"bold\" size=\"larger\">Se encontraron sesiones "
+"múltiples</span>"
+
+#: ../data/ui.glade.h:2
+msgid "Appearance"
+msgstr "Apariencia"
+
+#: ../data/ui.glade.h:3 ../src/applet.c:3003
+msgid "Continue"
+msgstr "Continuar"
+
+#: ../data/ui.glade.h:4
+msgid "Create new logins in _nested windows"
+msgstr "Crear sesiones nuevas en ventanas _anidadas"
+
+#: ../data/ui.glade.h:5
+msgid "Details"
+msgstr "Detalles"
+
+#: ../data/ui.glade.h:6
+msgid "Logout, restart and shutdown actions have to be confirmed."
+msgstr ""
+"Se deben confirmar las acciones de cerrar sesión, reiniciar y apagar."
+
+#: ../data/ui.glade.h:7
+msgid "Multiple Logins Found - User Switcher"
+msgstr "Múltiples sesiones encontradas - Cambiador de usuarios"
+
+#: ../data/ui.glade.h:8
+msgid "Options"
+msgstr "Opciones"
+
+#: ../data/ui.glade.h:9
+msgid "Show _confirm dialogs for logout, restart and shutdown"
+msgstr "Solicitar _confirmación al cerrar sesión, reiniciar y apagar"
+
+#: ../data/ui.glade.h:10
+msgid "Some preferences have been locked by the system adminstrator."
+msgstr ""
+"Algunas preferencias han sido bloqueadas por el administrador del sistema."
+
+#: ../data/ui.glade.h:11 ../src/applet.c:3028
+msgid ""
+"The user you want to switch to is logged in multiple times on this computer. "
+"Which login do you want to switch to?"
+msgstr ""
+"El usuario al que desea cambiar ha entrado varias veces en este equipo. ¿A "
+"qué sesión quiere cambiar?"
+
+#: ../data/ui.glade.h:12
+msgid "Use the `people' icon for the menu title"
+msgstr "Usar el icono de «gente» en el título del menú"
+
+#: ../data/ui.glade.h:13
+msgid "Use the current user's name for the menu title"
+msgstr "Usar el nombre del usuario actual en el título del menú"
+
+#: ../data/ui.glade.h:14
+msgid "Use the word `Users' as the menu title"
+msgstr "Usar la palabra «Usuarios» en el título del menú"
+
+#: ../data/ui.glade.h:15
+msgid "User Switcher Error"
+msgstr "Error del selector de usuarios"
+
+#: ../data/ui.glade.h:16
+msgid "User Switcher Preferences"
+msgstr "Preferencias del selector de usuarios"
+
+#: ../data/ui.glade.h:17 ../src/applet.c:642 ../src/applet.c:649
+#: ../src/applet.c:1903 ../src/applet.c:1908 ../src/applet.c:1921
+#: ../src/applet.c:1926
+msgid "Users"
+msgstr "Usuarios"
+
+#: ../data/ui.glade.h:18
+msgid ""
+"When a new login must be created to switch users, create it in a window "
+"instead of on a new screen"
+msgstr ""
+"Cuando se cree una sesión nueva al cambiar de usuario, crearla en una "
+"ventana en lugar de en una pantalla nueva"
+
+#: ../data/ui.glade.h:19
+msgid ""
+"When changing to a different display, activate the screensaver for this "
+"display."
+msgstr ""
+"Al cambiar a otra pantalla, activar el salvapantallas para esta pantalla."
+
+#: ../data/ui.glade.h:20
+msgid "_Lock the screen after switching users"
+msgstr "_Bloquear la pantalla después de cambiar a otro usuario"
+
+#: ../src/applet.c:468
+msgid "Fast User Switch Applet"
+msgstr "Miniaplicación del selector de usuarios"
+
+#: ../src/applet.c:515
+msgid "Switch users or shut down"
+msgstr "Cambiar de usuario o apagar"
+
+#. Add entry for lock screen
+#: ../src/applet.c:706
+msgid "Lock screen"
+msgstr "Bloquear la pantalla"
+
+#. Add the 'other user' entry
+#: ../src/applet.c:723
+msgid "Switch User..."
+msgstr "Cambiar de usuario..."
+
+#. Add an entry for a login window
+#: ../src/applet.c:795
+msgid "Login Window"
+msgstr "Ventana de entrada"
+
+#: ../src/applet.c:818 ../src/applet.c:1950
+msgid "Log Out"
+msgstr "Cerrar sesión"
+
+#: ../src/applet.c:822 ../src/applet.c:1954
+msgid "Log Out..."
+msgstr "Cerrar sesión..."
+
+#. Add entry for suspend
+#: ../src/applet.c:834
+msgid "Suspend"
+msgstr "Suspender"
+
+#. Add entry for hibernate
+#: ../src/applet.c:845
+msgid "Hibernate"
+msgstr "Hibernar"
+
+#: ../src/applet.c:861 ../src/applet.c:1952
+msgid "Restart"
+msgstr "Reiniciar"
+
+#: ../src/applet.c:865 ../src/applet.c:1956 ../src/logout-dialog.c:76
+msgid "Restart..."
+msgstr "Reiniciar..."
+
+#: ../src/applet.c:882 ../src/applet.c:1951
+msgid "Shut Down"
+msgstr "Apagar"
+
+#: ../src/applet.c:886 ../src/applet.c:1955
+msgid "Shut Down..."
+msgstr "Apagar..."
+
+#: ../src/applet.c:908
+msgid "Guest session"
+msgstr "Sesión de invitado"
+
+#: ../src/applet.c:1494
+msgid ""
+"The Fast User Switch Applet is free software; you can redistribute it and/or "
+"modify it under the terms of the GNU General Public License as published by "
+"the Free Software Foundation; either version 2 of the License, or (at your "
+"option) any later version."
+msgstr ""
+"La miniaplicación «Cambio rápido de usuario» es software libre; puede "
+"redistribuirla y/o modificarla bajo los términos de la Licencia Pública "
+"General de GNU tal como la publica la Free Software Foundation; ya sea en su "
+"versión 2 de la Licencia, o (a su elección) cualquier versión posterior."
+
+#: ../src/applet.c:1498
+msgid ""
+"This program is distributed in the hope that it will be useful, but WITHOUT "
+"ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
+"FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
+"more details."
+msgstr ""
+"Este programa se distribuye con la esperanza de que le sea útil, pero SIN "
+"NINGUNA GARANTÍA; sin incluso la garantía implícita de MERCANTILIDAD o "
+"IDONEIDAD PARA UN PROPÓSITO PARTICULAR. Vea la Licencia Pública General de "
+"GNU para más detalles."
+
+#: ../src/applet.c:1502
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"this program; if not, write to the Free Software Foundation, Inc., 51 "
+"Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA "
+msgstr ""
+"Debería haber recibido una copia de la Licencia Pública General GNU junto "
+"con este programa; si no, escriba a la Free Software Foundation, Inc, 51 "
+"Franklin Street, Fifth Floor, Boston, MA 02110-1301, EEUU "
+
+#: ../src/applet.c:1515
+msgid "A menu to quickly switch between users."
+msgstr "Un menú para cambiar rápidamente entre usuarios."
+
+#: ../src/applet.c:1520
+msgid "translator-credits"
+msgstr ""
+"Jorge González <jorgegonz@svn.gnome.org>, 2008\n"
+"Francisco Javier F. Serrador <serrador@cvs.gnome.org>, 2006\n"
+"Antonio Ognio <gnrfan@gnrfan.org>, 2005\n"
+"\n"
+"Launchpad Contributions:\n"
+"  Francisco Javier F. Serrador https://launchpad.net/~serrador-tecknolabs\n"
+"  Jorge González https://launchpad.net/~jorgegonz\n"
+"  Julián Alarcón https://launchpad.net/~alarconj\n"
+"  Ricardo Pérez López https://launchpad.net/~ricardo"
+
+#: ../src/applet.c:2997
+msgid "Multiple Logins Found - Fast User-Switch"
+msgstr "Múltiples sesiones encontradas - Cambio rápido de usuario"
+
+#: ../src/applet.c:3027
+msgid "Multiple Logins Found"
+msgstr "Se encontraron múltiples sesiones"
+
+#: ../src/applet.c:3045
+#, c-format
+msgid "%s in a nested window on console %d"
+msgstr "%s es una ventana anidada en la consola %d"
+
+#: ../src/applet.c:3049
+#, c-format
+msgid "%s on console %d"
+msgstr "%s en la consola %d"
+
+#: ../src/applet.c:3091
+msgid "Display Manager Unavailable"
+msgstr "El Gestor de Pantallas no está disponible"
+
+#: ../src/applet.c:3092
+msgid ""
+"In order for the User Selector to function properly, the GNOME Display "
+"Manager must be running, but it is not."
+msgstr ""
+"Para que el «Selector de usuarios» funcione correctamente, el «Gestor de "
+"entrada» de GNOME debe estar ejecutándose, cosa que no sucede en este "
+"momento."
+
+#: ../src/applet.c:3096
+msgid "Multiple Consoles Not Supported"
+msgstr "No están soportadas las consolas múltiples"
+
+#: ../src/applet.c:3097
+msgid "This system does not support multiple graphical login screens."
+msgstr ""
+"Este sistema no soporta el uso de múltiples pantallas gráficas entrada."
+
+#: ../src/applet.c:3102
+msgid "Too Many Sessions"
+msgstr "Demasiadas sesiones"
+
+#: ../src/applet.c:3103
+msgid ""
+"There are currently too many sessions running to create a new one. Someone "
+"must log out, or the system configuration must be changed to allow for more."
+msgstr ""
+"Existen en este momento demasiadas sesiones ejecutándose como para crear una "
+"más. Es necesario que alguna sesión sea cerrada ó se ajuste la configuración "
+"del sistema para permitir un mayor número de sesiones simultáneas."
+
+#: ../src/applet.c:3109
+msgid "Graphical System Error"
+msgstr "Error del sistema gráfico"
+
+#: ../src/applet.c:3110
+msgid ""
+"The graphical interface did not properly start, which is needed for "
+"graphical logins. It is likely that the X Window System or GDM is not "
+"properly configured."
+msgstr ""
+"El interfaz gráfico no se inició correctamente, lo que impide iniciar nuevas "
+"pantallas de entrada gráficas. Es probable que el Sistema de Ventanas X ó "
+"GDM no estén correctamente configurados."
+
+#: ../src/applet.c:3115
+msgid "Permissions Error"
+msgstr "Errores de permisos"
+
+#: ../src/applet.c:3116
+msgid ""
+"Your user does not have permissions to create additional logins.  Check your "
+"<i>~/.Xauthority</i> setup."
+msgstr ""
+"Su cuenta de usuario no tiene permisos suficientes para crear nuevas "
+"sesiones.  Revise la configuración de su archivo <i>~/.Xauthority</i>."
+
+#: ../src/applet.c:3284
+msgid "Missing Required File"
+msgstr "Falta un archivo requerido"
+
+#: ../src/applet.c:3286
+#, c-format
+msgid ""
+"The User Selector's interfaces file, `%s', could not be opened. It is likely "
+"that this application was not properly installed or configured."
+msgstr ""
+"No se pudo abrir el archivo de interfaces del «Selector de usuarios» «%s». "
+"Es probable que esta aplicación no haya sido instalada ó configurada "
+"apropiadamente aún."
+
+#: ../src/applet.c:3363
+#, c-format
+msgid "Can't lock screen: %s"
+msgstr "No se pudo bloquear la pantalla: %s"
+
+#: ../src/applet.c:3377
+#, c-format
+msgid "Can't temporarily set screensaver to blank screen: %s"
+msgstr ""
+"No se pudo configurar temporalmente el salvapantallas como una pantalla en "
+"blanco: %s"
+
+#: ../src/fusa-display.c:119 ../src/fusa-user.c:150
+msgid "Manager"
+msgstr "Administrador"
+
+#: ../src/fusa-display.c:120
+msgid "The manager which owns this object."
+msgstr "El administrador que tiene la propiedad de este objeto."
+
+#: ../src/fusa-display.c:127
+msgid "Name"
+msgstr "Nombre"
+
+#: ../src/fusa-display.c:128
+msgid "The name of the X11 display this object refers to."
+msgstr "El nombre de la pantalla X11 a la que este objeto hace referencia."
+
+#: ../src/fusa-display.c:134 ../src/fusa-user-menu-item.c:164
+msgid "User"
+msgstr "Usuario"
+
+#: ../src/fusa-display.c:135
+msgid "The user currently logged in on this virtual terminal."
+msgstr ""
+"El usuario que ha iniciado la sesión actual en esta terminal virtual."
+
+#: ../src/fusa-display.c:141
+msgid "Console"
+msgstr "Terminal"
+
+#: ../src/fusa-display.c:142
+msgid ""
+"The number of the virtual console this display can be found on, or %-1."
+msgstr ""
+"El número de la terminal virtual en la que se puede encontrar a esta "
+"pantalla, ó %-1."
+
+#: ../src/fusa-display.c:148
+msgid "Nested"
+msgstr "Anidada"
+
+#: ../src/fusa-display.c:149
+msgid "Whether or not this display is a windowed (Xnest) display."
+msgstr ""
+"Si esta pantalla es ó no es una pantalla dentro de una ventana (Xnest)."
+
+#: ../src/fusa-manager.c:1058
+msgid "The display manager could not be contacted for unknown reasons."
+msgstr ""
+"No se pudo contactar con el administrador de pantallas por razones "
+"desconocidas."
+
+#: ../src/fusa-manager.c:1065
+msgid "The display manager is not running or too old."
+msgstr ""
+"El administrador de pantallas no se está ejecutando ó es muy antiguo."
+
+#: ../src/fusa-manager.c:1068
+msgid "The configured limit of flexible servers has been reached."
+msgstr ""
+"Se ha alcanzado el límite configurado actualmente para servidores flexibles."
+
+#: ../src/fusa-manager.c:1071
+msgid "There was an unknown error starting X."
+msgstr "Ocurrió un error desconocido al iniciar X."
+
+#: ../src/fusa-manager.c:1074
+msgid "The X server failed to finish starting."
+msgstr "El servidor X no logró terminar de iniciarse."
+
+#: ../src/fusa-manager.c:1077
+msgid "There are too many X sessions running."
+msgstr "Hay demasiadas sesiones de X en ejecución."
+
+#: ../src/fusa-manager.c:1080
+msgid "The nested X server (Xnest) cannot connect to your current X server."
+msgstr ""
+"El servidor X anidado (Xnest) no puede conectarse a su servidor X actual."
+
+#: ../src/fusa-manager.c:1083
+msgid "The X server in the GDM configuration could not be found."
+msgstr "No se encontró el servidor X en la configuración de GDM."
+
+#: ../src/fusa-manager.c:1086
+msgid ""
+"Trying to set an unknown logout action, or trying to set a logout action "
+"which is not available."
+msgstr ""
+"Tratando de ejecutar una cierre de sesión desconocido, ó tratando de "
+"ejecutar un cierre de sesión que no esta disponible."
+
+#: ../src/fusa-manager.c:1089
+msgid "Virtual terminals not supported."
+msgstr "Las terminales virtuales no están soportadas."
+
+#: ../src/fusa-manager.c:1092
+msgid "Invalid virtual terminal number."
+msgstr "El número de la terminal virtual no es válido."
+
+#: ../src/fusa-manager.c:1095
+msgid "Trying to update an unsupported configuration key."
+msgstr "Tratando de actualizar una clave de configuración no soportada."
+
+#: ../src/fusa-manager.c:1098
+msgid "~/.Xauthority file badly configured or missing."
+msgstr "Archivo ~/.Xauthority inexistente ó mal configurado."
+
+#: ../src/fusa-manager.c:1101
+msgid "Too many messages were sent to the display manager, and it hung up."
+msgstr ""
+"Se han enviado demasiados mensajes al gestor de pantallas y se ha colgado."
+
+#: ../src/fusa-manager.c:1105
+msgid "The display manager sent an unknown error message."
+msgstr "El gestor de pantallas envió un mensaje de error desconocido."
+
+#: ../src/fusa-user-menu-item.c:165
+msgid "The user this menu item represents."
+msgstr "El usuario al que este elemento del menú representa."
+
+#: ../src/fusa-user-menu-item.c:172
+msgid "Icon Size"
+msgstr "Tamaño del icono"
+
+#: ../src/fusa-user-menu-item.c:173
+msgid "The size of the icon to use."
+msgstr "El tamaño del icono a usar."
+
+#: ../src/fusa-user-menu-item.c:179
+msgid "Indicator Size"
+msgstr "Tamaño del indicador"
+
+#: ../src/fusa-user-menu-item.c:180
+msgid "Size of check indicator"
+msgstr "Tamaño del indicador de prueba"
+
+#: ../src/fusa-user-menu-item.c:185
+msgid "Indicator Spacing"
+msgstr "Espaciado del indicador"
+
+#: ../src/fusa-user-menu-item.c:186
+msgid "Space between the username and the indicator"
+msgstr "Espacio entra el nombre del usuario y el indicador"
+
+#: ../src/fusa-user.c:151
+msgid "The user manager object this user is controlled by."
+msgstr "El objeto administrador de usuarios que controla a este usuario."
+
+#: ../src/fusa-utils.c:80
+msgid "Show Details"
+msgstr "Mostrar detalles"
+
+#. LOGOUT_DIALOG_LOGOUT,
+#: ../src/logout-dialog.c:65
+msgctxt "title"
+msgid "Log Out"
+msgstr "Cerrar sesión"
+
+#. LOGOUT_DIALOG_RESTART,
+#: ../src/logout-dialog.c:66
+msgctxt "title"
+msgid "Restart"
+msgstr "Reiniciar"
+
+#. LOGOUT_DIALOG_SHUTDOWN,
+#: ../src/logout-dialog.c:67
+msgctxt "title"
+msgid "Shut Down"
+msgstr "Apagar"
+
+#. LOGOUT_DIALOG_LOGOUT,
+#: ../src/logout-dialog.c:71
+msgctxt "button"
+msgid "Log Out"
+msgstr "Cerrar sesión"
+
+#. LOGOUT_DIALOG_RESTART,
+#: ../src/logout-dialog.c:72
+msgctxt "button"
+msgid "Restart"
+msgstr "Reiniciar"
+
+#. LOGOUT_DIALOG_SHUTDOWN,
+#: ../src/logout-dialog.c:73
+msgctxt "button"
+msgid "Shut Down"
+msgstr "Apagar"
+
+#: ../src/logout-dialog.c:78
+msgid ""
+"You recently installed updates which will only take effect after a restart.  "
+"Restart to apply software updates."
+msgstr ""
+"Ha instalado recientemente actualizaciones que solo tendrán efecto después "
+"de reiniciar. Reinicie para aplicar las actualizaciones de software."
+
+#: ../src/logout-dialog.c:121
+#, c-format
+msgid "You will be logged out in %d second."
+msgid_plural "You will be logged out in %d seconds."
+msgstr[0] "Su sesión se cerrará en %d segundo."
+msgstr[1] "Su sesión se cerrará en %d segundos."
+
+#: ../src/logout-dialog.c:126
+#, c-format
+msgid "The computer will restart in %d second."
+msgid_plural "The computer will restart in %d seconds."
+msgstr[0] "El equipo se reiniciará en %d segundo."
+msgstr[1] "El equipo se reiniciará en %d segundos."
+
+#: ../src/logout-dialog.c:131
+#, c-format
+msgid "The computer will be shut down in %d second."
+msgid_plural "The computer will be shut down in %d seconds."
+msgstr[0] "El equipo se apagará en %d segundo."
+msgstr[1] "El equipo se apagará en %d segundos."
+
+#. FUSA_STATUS_MANAGER_STATUS_ONLINE,
+#: ../src/status-manager.c:75
+msgid "Available"
+msgstr "Disponible"
+
+#. FUSA_STATUS_MANAGER_STATUS_AWAY,
+#: ../src/status-manager.c:76
+msgid "Away"
+msgstr "Ausente"
+
+#. FUSA_STATUS_MANAGER_STATUS_DND
+#: ../src/status-manager.c:77
+msgid "Busy"
+msgstr "Ocupado"
+
+#. FUSA_STATUS_MANAGER_STATUS_INVISIBLE,
+#: ../src/status-manager.c:78
+msgid "Invisible"
+msgstr "Invisible"
+
+#. FUSA_STATUS_MANAGER_STATUS_OFFLINE,
+#: ../src/status-manager.c:79
+msgid "Offline"
+msgstr "Desconectado"

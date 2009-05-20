@@ -1,0 +1,303 @@
+# translation of PACKAGE.
+# Copyright (C) 2008 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Ricardo Pérez López <ricardo@ubuntu.com>, 2008.
+# , fuzzy
+#
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-04-17 05:45+0000\n"
+"PO-Revision-Date: 2009-04-08 08:12+0000\n"
+"Last-Translator: Ricardo Pérez López <ricpelo@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2009-05-19 00:16+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+#: ../computerjanitorapp/app.py:36
+#, python-format
+msgid ""
+"Essential package %s is missing. There may be problems with apt sources.list "
+"or Packages files may be missing?"
+msgstr ""
+"Falta el paquete esencial %s. Es posible que haya problemas con el "
+"sources.list de apt o que falten los archivos Packages."
+
+#. We're OK with something going wrong.
+#: ../computerjanitorapp/app.py:66
+msgid "Logging to syslog cannot be set up."
+msgstr "No se ha podido configurar el registro sobre syslog."
+
+#: ../computerjanitorapp/app.py:90
+msgid "Running application, with:"
+msgstr "Ejecutando la aplicación, con:"
+
+#: ../computerjanitorapp/app.py:107
+msgid ""
+"\n"
+"%prog [options] find\n"
+"%prog [options] cleanup [CRUFT]...\n"
+"%prog [options] ignore [CRUFT]...\n"
+"%prog [options] unignore [CRUFT]...\n"
+"\n"
+"%prog finds and removes cruft from your system. \n"
+"\n"
+"Cruft is anything that shouldn't be on the system, but is. Stretching\n"
+"the definition, it is also things that should be on the system, but\n"
+"aren't."
+msgstr ""
+"\n"
+"%prog [opciones] find \n"
+"%prog·[opciones]·cleanup·[BASURA]...\n"
+"%prog·[opciones]·ignore·[BASURA]...\n"
+"%prog·[opciones]·unignore·[BASURA]...\n"
+"\n"
+"%prog·busca y elimina basura de su sistema. \n"
+"\n"
+"«Basura» es cualquier cosa que no debería estar en el sistema, pero está.\n"
+"Ampliando la definición, son también cosas que deberían estar pero no\n"
+"están."
+
+#: ../computerjanitorapp/app.py:120
+msgid ""
+"Make the 'cleanup' command remove all packages, if none are given on the "
+"command line."
+msgstr ""
+"Al usar la orden «cleanup» desinstalará todos los paquetes, si no se ha "
+"indicado ninguno en la línea de órdenes."
+
+#: ../computerjanitorapp/app.py:126
+#, python-format
+msgid "Store state of each piece of cruft in FILE. (Default is %default)."
+msgstr ""
+"Guarda el estado de cada porción de basura en ARCHIVO. (Por omisión es "
+"%default)."
+
+#: ../computerjanitorapp/app.py:130
+msgid ""
+"Don't actually remove anything, just pretend to do so. This is useful for "
+"testing stuff."
+msgstr ""
+"No eliminar nada realmente; tan sólo fingir que se hace. Resulta útil para "
+"hacer pruebas."
+
+#: ../computerjanitorapp/app.py:135
+msgid ""
+"Verbose operation: make find show an explanation for each piece of cruft "
+"found."
+msgstr ""
+"Operación detallada: hace que find muestre una explicación de cada porción "
+"de basura encontrada."
+
+#: ../computerjanitorapp/ui_cli.py:31
+#, python-format
+msgid "Unknown command: %s"
+msgstr "Orden desconocida: %s"
+
+#: ../computerjanitorapp/ui_cli.py:37
+#, python-format
+msgid "Unknown cruft: %s"
+msgstr "Basura desconocida: %s"
+
+#: ../computerjanitorapp/ui_cli.py:43
+msgid "computer-janitor must be run as root, sorry."
+msgstr "computer-janitor debe ejecutarse como administrador."
+
+#: ../computerjanitorapp/ui_cli.py:116
+msgid "removable"
+msgstr "desinstalable"
+
+#: ../computerjanitorapp/ui_cli.py:118
+msgid "ignored"
+msgstr "ignorado"
+
+#: ../computerjanitorapp/ui_cli.py:143
+#, python-format
+msgid "Ignored: %s"
+msgstr "Ignorado: %s"
+
+#: ../computerjanitorapp/ui_cli.py:147
+#, python-format
+msgid "Pretending to remove cruft: %s"
+msgstr "Se pretende desinstalar basura: %s"
+
+#: ../computerjanitorapp/ui_cli.py:149
+#, python-format
+msgid "Removing cruft: %s"
+msgstr "Eliminando basura: %s"
+
+#: ../computerjanitorapp/ui_cli.py:153 ../computerjanitorapp/ui_gtk.py:114
+#, python-format
+msgid "Pretending to post-cleanup: %s"
+msgstr "Se pretende hacer post-limpieza: %s"
+
+#: ../computerjanitorapp/ui_cli.py:155 ../computerjanitorapp/ui_gtk.py:116
+#, python-format
+msgid "Post-cleanup: %s"
+msgstr "Post-limpieza: %s"
+
+#: ../computerjanitorapp/ui_gtk.py:56
+msgid "Finding plugins"
+msgstr "Buscando complementos"
+
+#: ../computerjanitorapp/ui_gtk.py:63
+msgid "Finding problems"
+msgstr "Buscando problemas"
+
+#: ../computerjanitorapp/ui_gtk.py:102
+msgid "Cleaning up"
+msgstr "Limpiando"
+
+#: ../computerjanitorapp/ui_gtk.py:106
+#, python-format
+msgid "Pretending to clean up: %s"
+msgstr "Fingiendo limpiar: %s"
+
+#: ../computerjanitorapp/ui_gtk.py:108
+#, python-format
+msgid "Cleaning up: %s"
+msgstr "Limpiando: %s"
+
+#: ../computerjanitorapp/ui_gtk.py:112
+msgid "Post-cleanup"
+msgstr "Post-limpieza"
+
+#: ../computerjanitorapp/ui_gtk.py:123
+msgid "Could not clean up properly"
+msgstr "No se ha podido limpiar adecuadamente"
+
+#: ../computerjanitorapp/ui_gtk.py:168
+msgid "Really clean up?"
+msgstr "¿Limpiar de verdad?"
+
+#: ../computerjanitorapp/ui_gtk.py:175
+#, python-format
+msgid ""
+"You are <b>removing %d .deb packages.</b> This may break your system, if you "
+"need them. Do you want to continue?"
+msgstr ""
+"Está <b>eliminando %d paquetes .deb</b>. Esto puede estropear su sistema. "
+"¿Desea continuar?"
+
+#: ../computerjanitorapp/ui_gtk.py:180
+msgid "Do you want to continue?"
+msgstr "¿Desea continuar?"
+
+#: ../computerjanitorapp/ui_gtk.py:246
+msgid "Root access required."
+msgstr "Se requiere acceso de administrador."
+
+#: ../computerjanitorapp/ui_gtk.py:247
+msgid "You must run computer-janitor-gtk as root. Sorry."
+msgstr "Debe ejecutar computer-janitor-gtk como administrador."
+
+#. create the column with the toggle
+#: ../computerjanitorapp/ui_gtk.py:343
+msgid "Remove/fix?"
+msgstr "¿Eliminar/arreglar?"
+
+#. create the column with the name of cruft
+#: ../computerjanitorapp/ui_gtk.py:352
+msgid "Name"
+msgstr "Nombre"
+
+#. Display the version number.
+#: ../computerjanitorapp/ui_gtk.py:368
+#, python-format
+msgid "Computer Janitor %s"
+msgstr "Encargado de limpieza %s"
+
+#: ../data/ComputerJanitor.glade.h:1
+msgid "<big><b>Keep your system clean</b></big>"
+msgstr "<big><b>Mantenga limpio su sistema</b></big>"
+
+#: ../data/ComputerJanitor.glade.h:2
+msgid "Clean_up"
+msgstr "_Limpiar"
+
+#: ../data/ComputerJanitor.glade.h:3
+#: ../data/computer-janitor-gtk.desktop.in.h:2
+msgid "Computer Janitor"
+msgstr "Encargado de limpieza"
+
+#: ../data/ComputerJanitor.glade.h:4
+msgid ""
+"This application helps you find and remove software packages you might not "
+"need anymore. It also suggests configuration changes that might benefit you."
+msgstr ""
+"Esta aplicación le ayuda a buscar y eliminar paquetes de software que ya no "
+"va a necesitar. También sugiere cambios de configuración que le pueden "
+"beneficiar."
+
+#: ../data/ComputerJanitor.glade.h:5
+msgid "updates"
+msgstr "actualizaciones"
+
+#: ../data/computer-janitor-gtk.desktop.in.h:1
+msgid "Clean up a system so it's more like a freshly installed one"
+msgstr "Limpia su sistema para que se parezca más a uno recién instalado"
+
+#: ../plugins/add_nfs_common_plugin.py:36
+msgid "NFS is being used, so the nfs-common package needs to be installed."
+msgstr ""
+"Se está usando NFS, así que es necesario tener instalado el paquete nfs-"
+"common."
+
+#: ../plugins/autoremoval_plugin.py:35
+msgid ""
+"Package was installed because another package required it, but now nothing "
+"requires it anymore."
+msgstr ""
+"El paquete fue instalado porque otro paquete lo necesitaba, pero ahora ya no "
+"lo necesita ninguno."
+
+#: ../plugins/check_admin_group_plugin.py:37
+msgid "User is missing from admin group."
+msgstr "El usuario no está en el grupo admin."
+
+#: ../plugins/check_admin_group_plugin.py:43
+#: ../plugins/check_admin_group_plugin.py:70
+#, python-format
+msgid "User %s needs to be added to the admin group."
+msgstr "Se necesita añadir al usuario %s en el grupo admin."
+
+#: ../plugins/dpkg_dotfile_plugin.py:38
+msgid ""
+"File was left on the disk by dpkg as part of its configuration file "
+"handling. If your computer works fine, you can remove it. You may want to "
+"compare it with the actual configuration file (the one without the .dpkg-old "
+"or .dpkg-new suffix). If unsure, don't remove the file."
+msgstr ""
+"Dpkg dejó el archivo en el disco como parte de su gestión de archivos de "
+"configuración. Si su equipo funciona bien, puede borrarlo. Puede que quiera "
+"compararlo con el archivo de configuración actual (el que no tiene el sufijo "
+".dpkg-old o .dpkg-new). Si no es está seguro, no borre el archivo."
+
+#: ../plugins/fstab_plugin.py:46
+#, python-format
+msgid "The 'relatime' mount option is missing for filesystem mounted at %s"
+msgstr ""
+"Falta la opción de montaje 'relatime' en el sistema de archivos montado en %s"
+
+#: ../plugins/fstab_plugin.py:72
+msgid "The '/dev/scd0' device should be '/dev/cdrom' in fstab."
+msgstr "El dispositivo «/dev/scd0» debería ser «/dev/cdrom» en fstab."
+
+#: ../plugins/landscape_stub_plugin.py:42
+msgid "Remove landscape-client stub"
+msgstr "Eliminar el paquete landscape-client"
+
+#: ../plugins/unsupported_plugin.py:37
+msgid ""
+"Package is no longer supported: it is no longer in the package archive. (It "
+"may also have been installed from an unofficial archive that is no longer "
+"available. In that case you may want to keep it.)"
+msgstr ""
+"El paquete ya no está soportado: ya no está en el repositorio de paquetes. "
+"(También puede que se haya instalado desde un repositorio no oficial que ya "
+"no esté disponible. En ese caso, puede que quiera conservarlo.)"

@@ -1,8 +1,8 @@
 #! /bin/sh /usr/share/dpatch/dpatch-run
-## xdg_support_for_photos_dir.dpatch by  <distromatic@distromatic-1>
+## xdg_support_for_photos_dir.dpatch by  <rcmorano@emergya.es>
 ##
 ## All lines beginning with `## DP:' are a description of the patch.
-## DP: No description.
+## DP: Workaround to use XDG 'Pictures' dir instead of "$HOME/Photos".
 
 @DPATCH@
 diff -urNad f-spot-0.5.0.3-orig~/src/Core/Global.cs f-spot-0.5.0.3-orig/src/Core/Global.cs

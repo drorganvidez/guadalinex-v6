@@ -1,0 +1,66 @@
+Source: f-spot
+Section: gnome
+Priority: optional
+Maintainer: Junta de Andalucía <packmaster@guadalinex.org>
+XSBC-Original-Maintainer: Debian CLI Applications Team <pkg-cli-apps-team@lists.alioth.debian.org>
+Uploaders: Tim Retout <tim@retout.co.uk>, Mirco Bauer <meebey@debian.org>, Iain Lane <laney@ubuntu.com>, Roberto C. Morano <rcmorano@emergya.es>
+Build-Depends: debhelper (>= 5.0.0),
+ cli-common-dev (>= 0.5.4),
+ cdbs,
+ dpatch,
+ mono-devel (>= 2.0),
+ libgtk2.0-dev (>= 2.6),
+ libgtk2.0-cil (>= 2.8),
+ gtk-sharp2-gapi,
+ libgnome2-dev (>= 2.2),
+ libgnome2.24-cil,
+ libgtkhtml3.16-cil (>= 2.20),
+ libmono-dev (>= 1.2.4),
+ libmono-sqlite2.0-cil,
+ libmono-system-runtime2.0-cil,
+ libcairo2-dev,
+ libmono-cairo2.0-cil,
+ libmono-addins0.2-cil (>= 0.4),
+ libmono-addins-gui0.2-cil (>= 0.4),
+ libndesk-dbus1.0-cil (>= 0.4.2),
+ libndesk-dbus-glib1.0-cil (>= 0.3.0),
+ libgconf2.24-cil,
+ libglade2.0-cil,
+ libgnome-vfs2.24-cil,
+ libflickrnet2.1.5-cil (>= 25277-5),
+ libgnome-keyring1.0-cil,
+ liblcms1-dev,
+ libgnomeui-dev (>= 2.2),
+ libexif-dev (>= 0.5.7),
+ libusb-dev,
+ libsqlite3-dev,
+ libgphoto2-2-dev (>= 2.1.4),
+ libgl1-mesa-dev | libgl-dev,
+ libglu1-mesa-dev,
+ libglitz1-dev,
+ libglitz-glx1-dev,
+ libjpeg62-dev,
+ libxml-parser-perl,
+ gtk-sharp2-gapi,
+ gnome-screensaver,
+ gnome-doc-utils (>= 0.3.2),
+ docbook-xml,
+ intltool,
+ libtool,
+ autoconf,
+ automake1.10
+Standards-Version: 3.8.0
+Homepage: http://www.f-spot.org/
+Vcs-Svn: svn://svn.debian.org/svn/pkg-cli-apps/packages/f-spot/trunk/
+Vcs-Browser: http://svn.debian.org/wsvn/pkg-cli-apps/packages/f-spot/trunk/
+
+Package: f-spot
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ${cli:Depends}, dbus, gvfs-bin
+Recommends: dcraw, dbus-x11
+Description: personal photo management application
+ F-Spot is a full-featured personal photo management application for the
+ GNOME desktop. It simplifies digital photography by providing intuitive
+ tools to help you share, touch-up, find and organize your images.
+ It allows for importing of your existing photo collections, tagging photos
+ with identifiers, as well as doing simple edits of photos (e.g. rotating).

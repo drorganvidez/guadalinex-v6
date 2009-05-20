@@ -1,0 +1,1199 @@
+f-spot (0.5.0.3-1ubuntu6guada1) jaunty; urgency=low
+
+  * debian/patches/xdg_support_photos_dir.dpatch:
+    - Use XDG dirs instead of $HOME/Photos-i18n dir (lp: #182852)
+
+ -- rcmorano <rcmorano@emergya.es>  Wed, 20 May 2009 09:13:51 +0200
+
+f-spot (0.5.0.3-1ubuntu6) jaunty; urgency=low
+
+  * debian/patches/svn-display-sidebar.dpatch:
+    - svn change to display the sidebar by default (lp: #286490)
+  * debian/patches/svn-no-versionellipze.dpatch:
+    - svn change to not ellipize the version menu labels (lp: #296852, #356989)
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Wed, 08 Apr 2009 14:26:19 +0200
+
+f-spot (0.5.0.3-1ubuntu5) jaunty; urgency=low
+
+  * debian/patches/ubuntu_importer-targetdir-selector.dpatch:
+    - only set PhotoDirectory if it actually exists
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Wed, 25 Mar 2009 13:33:03 +0100
+
+f-spot (0.5.0.3-1ubuntu4) jaunty; urgency=low
+
+  * debian/patches/ubuntu_nofuse_fix_photo_import.dpatch:
+    - set X-GIO-NoFuse in the import desktop so gvfs uri are correctly used
+      (lp: #338466)
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Tue, 10 Mar 2009 15:28:09 +0100
+
+f-spot (0.5.0.3-1ubuntu3) jaunty; urgency=low
+
+  * debian/control:
+    - don't recommends sqlite, sqlite3 since the migration was done before
+      hardy and those are not required nowadays
+  * debian/patches/ubuntu_1024x600_CDExport.cs.dpatch:
+    - change by Ying-Chun Liu for small screen compatibility (lp: #320817)
+  * debian/patches/ubuntu_fix_export_crash_FlickrRemote.cs.dpatch:
+    - change by Ying-Chun Liu to not crash when exporting to flickr and having
+      internet connectivity issues (lp: #320602)
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Fri, 06 Mar 2009 18:42:22 +0100
+
+f-spot (0.5.0.3-1ubuntu2) jaunty; urgency=low
+
+  * Pass CSC=/usr/bin/csc to configure, needed to fix FTBFS in gio-sharp
+    build. 
+
+ -- Iain Lane <laney@ubuntu.com>  Tue, 10 Feb 2009 18:24:46 +0000
+
+f-spot (0.5.0.3-1ubuntu1) jaunty; urgency=low
+
+  * Merged from Debian experimental, remaining changes:
+    - debian/patches/svn-r4545_locales-import.dpatch:
+      - Patch backported from SVN trunk revision 4545 -
+        initialize the translation catalog earlier (LP: #293305).
+        Thanks to Florian Heinle for finding the patch.
+    - debian/control:
+      - Build-depend on libmono-dev (>= 1.2.4).
+
+ -- Chris Coulson <chrisccoulson@googlemail.com>  Fri, 06 Feb 2009 17:06:37 +0000
+
+f-spot (0.5.0.3-1) experimental; urgency=low
+
+  [ David Paleino ]
+  * debian/patches/:
+    + svn_folder-export.dpatch added, thanks to Arnaud Cornet.
+      (Closes: #491126)
+  * debian/watch fixed to correctly search for new releases.
+
+  [ Mirco Bauer ]
+  * debian/control:
+    + Replaced mono-gmcs build-dep with mono-devel >= 2.0 as part of the
+      Mono 2.0 transition.
+    + Enhanced package description.
+    + Added gtk-sharp2-gapi to build-deps.
+  * debian/patches/debian_use_csc.dpatch:
+    + Replaces hardcoded compiler calls with MCS variable from configure.
+      (thanks to Iain Lane <laney@ubuntu.com> for the patch)
+  * debian/rules:
+    + Pass csc compiler variable to configure.
+
+  [ Iain Lane ]
+  * New upstream version 0.5.0.3, based on Ubuntu package (Closes: #499615)
+  * debian/control: Build-depend on libjpeg62-dev, add gvfs-bin dependency
+    so that gphoto patch below works.
+  * debian/control: Buid-depend on mono-addins >= 0.4 so that edit sidebar
+    works properly and we do not have to use embedded copy of m-a.
+  * debian/watch: Update to correct regex.
+  * debian/patches/f-spot-import-gphoto.dpatch: Add. Patch by Martin Pitt to
+    allow f-spot to import from gphoto:/// URLs.
+  * debian/patches/ubuntu_fname_quote_percent.dpatch: Add. Escape '%' in
+    filenames so that importing from gvfs fuse paths works. Thanks to Martin
+    Pitt.
+  * debian/patches/svn-r455_fix-crash-on-icon-size-change.dpatch: Add.
+    Backport upstream patch to fix crash when enabling 'Color Management' in
+    preferences. Thanks to Chris Coulson.
+  * debian/patches/ubuntu_importer-targetdir-selector.dpatch: Add. Add a
+    destination directory selector to the camera import dialog. Thanks to
+    Matvey Kozhev.
+  * debian/patches/debian_unlink_nunit, debian_link-system-flickrnet:
+    Updated for new upstream version, thanks to Chris Coulson
+  * debian/patches/svn-folder-export,
+    debian/patches/debian_from-svn-gio-sharp-destdir,
+    debian/patches/debian_flickrnet-2.1.5-port.dpatch,
+    debian/patches/svn-044-4010_gio-sharp-destdir.dpatch: Removed, now
+    upstream.
+  * debian/control, debian/rules: Regenerate autotools during the build
+  * Add myself to Uploaders. 
+
+  [ Christopher James Halse Rogers ]
+  * debian/patches/debian_link_2.0_profile_cairo.dpatch:
+    + Link f-spot against the 2.0 profile Mono.Cairo and remove checks for
+      mono-cairo.  libmono-cairo2.0-cil doesn't ship mono-cairo.pc, so we need
+      to specify it manually.
+  * debian/control:
+    + gnome-sharp2 transition:
+      - lib{gnome,gconf,gnome-vfs}2.0-cil -> lib{gnome,gconf,gnome-vfs}2.24-cil
+
+ -- Iain Lane <laney@ubuntu.com>  Sun, 01 Feb 2009 20:15:17 +0000
+
+f-spot (0.5.0.3-0ubuntu5) jaunty; urgency=low
+
+  * Update for mono 2.0 transition (LP: #303793):
+    + debian/rules: Set MCS=/usr/bin/csc for configure
+    + debian/patches/mono_transition_use_csc.dpatch: Added, patch hardcoded
+      gmcs to use $(MCS) variable to pick up new compiler
+    + debian/patches/98_autoreconf.dpatch: Refreshed to pick up above
+
+ -- Iain Lane <laney@ubuntu.com>  Sun, 30 Nov 2008 21:09:22 +0000
+
+f-spot (0.5.0.3-0ubuntu4) intrepid-proposed; urgency=low
+
+  * debian/patches/svn-r4555_fix-crash-on-icon-size-change.dpatch
+    - Updated to implement another upstream patch to fix a crash that
+      was exposed as a consequence of the changes made in
+      0.5.0.3-0ubuntu3 (LP: #293437) 
+
+ -- Chris Coulson <chrisccoulson@googlemail.com>  Tue, 04 Nov 2008 17:57:10 +0000
+
+f-spot (0.5.0.3-0ubuntu3) intrepid-proposed; urgency=low
+
+  * debian/patches/svn-r4555_fix-crash-on-icon-size-change.dpatch
+    - Implement upstream patch to fix a crash that occurred when
+      enabling 'Color Management' in the Preferences window
+      (LP: #291189, Gnome: #557793).
+
+ -- Chris Coulson <chrisccoulson@googlemail.com>  Sun, 02 Nov 2008 15:58:08 +0000
+
+f-spot (0.5.0.3-0ubuntu2) intrepid; urgency=low
+
+  * Add gvfs-bin dependency, so that the gvfs umounting in
+    f-spot-import-gphoto.dpatch can actually work. Otherwise F-Spot fails with
+    "Cannot lock device" on import. (LP: #258083)
+
+ -- Martin Pitt <martin.pitt@ubuntu.com>  Wed, 22 Oct 2008 00:44:44 +0200
+
+f-spot (0.5.0.3-0ubuntu1) intrepid; urgency=low
+
+  * New upstream bug fix version:
+    - fix a (yet another) MAJOR WTF with the duplicate detection code
+    - fix subselect column names for sqlite > 3.6.0
+    - fix the ChangePath extension
+    - updated translations
+  * debian/patches/98_autoreconf.dpatch:
+    - new version update
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Mon, 20 Oct 2008 09:42:06 +0200
+
+f-spot (0.5.0.2-0ubuntu4) intrepid; urgency=low
+
+  * f-spot-import-gphoto.dpatch: Also handle gphoto: URLs with a trailing
+    slash, as passed by nautilus.
+
+ -- Martin Pitt <martin.pitt@ubuntu.com>  Thu, 16 Oct 2008 10:07:24 +0200
+
+f-spot (0.5.0.2-0ubuntu3) intrepid; urgency=low
+
+  * Add f-spot-import-gphoto.dpatch: Fix f-spot-import to understand GIO
+    gphoto:// URLs, which fixes (i. e. gets rid of) the device dialog on
+    import. Also speculatively gvfs-umount the camera, otherwise F-Spot cannot
+    communicate with it.
+
+ -- Martin Pitt <martin.pitt@ubuntu.com>  Wed, 15 Oct 2008 19:30:31 +0200
+
+f-spot (0.5.0.2-0ubuntu2) intrepid; urgency=low
+
+  * Drop ubuntu_import_fuse.dpatch again, it was a quick fix for beta. It
+    causes f-spot to be utterly slow due to now really knowing that the fuse
+    directory is actually a slow libgphoto link. gvfs was changed to not
+    automount the camera any more, thus F-spot, gthumb, and friends will just
+    continue to directly talk to the camera.
+
+ -- Martin Pitt <martin.pitt@ubuntu.com>  Wed, 15 Oct 2008 13:06:34 +0200
+
+f-spot (0.5.0.2-0ubuntu1) intrepid; urgency=low
+
+  * New upstream release (LP: #271895)
+    - Dropped svn-044-4010_gio-sharp-destdir.dpatch - implemented upstream. 
+    - debian_unlink-nunit.dpatch: Ported to new upstream source.
+    - debian_link-system-flickrnet.dpatch: Ported to new upstream source.
+    - Dropped debian_flickrnet-2.1.5-port.dpatch - implemented upstream. 
+    - ubuntu_importer-targetdir-selector.dpatch: Ported to new upstream
+      source.
+    - Dropped ubuntu_fix-gtk-deprecated.dpatch - implemented upstream.
+    - Dropped debian_link-system-mono-addins.dpatch - This seems to break
+      the new Edit sidebar.
+    - Re-generated 98_autoreconf.dpatch.
+    - debian/control:
+      - Bumped libmono-dev dependency to 1.2.4.
+
+ -- Chris Coulson <chrisccoulson@googlemail.com>  Mon, 06 Oct 2008 23:11:41 +0100
+
+f-spot (0.4.4-1ubuntu4) intrepid; urgency=low
+
+  * Add ubuntu_import_fuse.dpatch: Import from the gvfs fuse path instead of
+    libgphoto URL, so that we can import from libghoto handled cameras which
+    nautilus already automounted through gvfs-gphoto. (LP: #258083)
+  * Add ubuntu_fname_quote_percent.dpatch: Escape '%' in file names, so that
+    importing from gvfs fuse paths actually works. (Gnome #433829)
+
+ -- Martin Pitt <martin.pitt@ubuntu.com>  Mon, 29 Sep 2008 17:22:58 +0200
+
+f-spot (0.4.4-1ubuntu3) intrepid; urgency=low
+
+  * Replaced deprecated definitions in libeog to fix FTBFS. (LP: #250047)
+
+ -- Matvey Kozhev <sikon@ubuntu.com>  Sat, 19 Jul 2008 13:54:51 +0700
+
+f-spot (0.4.4-1ubuntu2) intrepid; urgency=low
+
+  * Added missing build-dependencies: libjpeg62-dev, mono-mcs and
+    gtk-sharp2-gapi. (LP: #247626)
+
+ -- Matvey Kozhev <sikon@ubuntu.com>  Fri, 11 Jul 2008 21:25:02 +0700
+
+f-spot (0.4.4-1ubuntu1) intrepid; urgency=low
+
+  * Merged from Debian unstable (LP: #246147).
+    + Dropped Ubuntu patches applied upstream:
+      - ubuntu_no-extra-logging.dpatch
+      - ubuntu_from-svn-allow-multiple-view-selection.dpatch
+  * Remaining Ubuntu changes:
+    + debian/patches/ubuntu_importer-targetdir-selector.dpatch:
+      - Add a destination directory selector to the camera import dialog.
+
+ -- Matvey Kozhev <sikon@ubuntu.com>  Mon, 07 Jul 2008 08:59:42 +0700
+
+f-spot (0.4.4-1) unstable; urgency=medium
+
+  [ Tim Retout ]
+  * New upstream version. (Closes: #487229)
+    + Includes relicenced semweb library. (Closes: #479349)
+      (fixes RC bug, thus urgency set to medium)
+    + No longer crashes if gconfd-2 is not running. (Closes: #474264)
+    + Fixes some Spanish translation issues. (Closes: #481709, #481710)
+    + Add gio-sharp/* to debian/copyright. 
+    + Update patches for new version:
+      - debian_unlink-nunit
+      - debian_link-system-flickrnet
+  * New patches:
+    + svn-044-4010_gio-sharp-destdir: Patch from upstream (via Ubuntu) to fix
+      missing DESTDIR variables.
+  * Redo 98_autoreconf patch for Makefile.am changes.
+    + Add build dependency on intltool, required by recent intltool versions. 
+
+  [ Mirco Bauer ]
+  * debian/control:
+    + Removed beagle from build and binary dependencies, as beagle doesn't add
+      any significant features but might cause a new set of issues.
+      (Closes: #458897)
+    + Added libcairo2-dev, libglu1-mesa-dev, libglitz1-dev and
+      libglitz-glx1-dev to build-dependencies, needed for resolving the binary
+      dependencies, using dh_clideps.
+    + Bumped Standards-Version to 3.8.0 (no changes needed).
+  * debian/rules
+    debian/NDesk.Glitz.dll.config
+    debian/patches/debian_fix_f-spot.exe.config.dpatch:
+    + Added missing DLL maps.
+
+ -- Tim Retout <tim@retout.co.uk>  Tue, 01 Jul 2008 23:35:19 +0200
+
+f-spot (0.4.3.1-1ubuntu1) intrepid; urgency=low
+
+  * Merged from Debian unstable (LP: #226117), bugs fixed upstream:
+    - Rotate progress dialog shows wrong information (LP: #141400)
+    - Slideshow funky colours on powerpc (LP: #194705)
+    - Page Down does not make the selection advance (LP: #200270)
+  * Remaining Ubuntu changes:
+    + Re-added Ubuntu patches:
+      - ubuntu_importer-targetdir-selector.dpatch
+      - ubuntu_no-extra-logging.dpatch
+      - ubuntu_from-svn-allow-multiple-view-selection.dpatch
+    + debian/control:
+      - Move dbus-x11 from Recommends to Depends. However, sqlite and sqlite3
+        remain in Recommends because the database migration is complete
+        (LP: #217589).
+      - Disable beagle.
+      - Changed maintainer field.
+
+ -- Matvey Kozhev <sikon@ubuntu.com>  Sat, 03 May 2008 19:30:32 +0700
+
+f-spot (0.4.3.1-1) unstable; urgency=low
+
+  [ Tim Retout ]
+  * New upstream version.
+    + Shows a 'missing icon' image in the import dialog rather than
+      throwing an exception when f-spot icon is not found. (Closes: #459261)
+    + Fixes crash in tag icon file chooser. (Closes: #470787)
+    + Fixes bug in gphoto2 bindings when using Mono 1.9. (Closes: #475662)
+    + Remove patches now included upstream: fix_cms_linkage, fix_v8_db_update,
+      gtkhtml-sharp-3.14_port, fix_gnome-sharp_typo, fix_bashisms,
+      fix_gallery_extension_install_hook, fix_deleting_1000_photos.
+  * Now prefix all remaining patch names with 'debian_' where they are not
+    included in the upstream SVN repository, to make them easier to track.
+  * debian/patches/debian_link-system-mono-addins.dpatch,
+    debian/patches/debian_link-system-flickrnet.dpatch:
+    + Remove configure.in entries so that Makefiles aren't generated.
+  * debian/patches/debian_link-system-flickrnet.dpatch:
+    + Update to account for Makefile.am change.
+  * debian/patches/11_screensaver_path.dpatch:
+    + Remove - there is no point hardcoding a full path.
+  * debian/control:
+    + Add line breaks to Build-Depends.
+  * debian/update_src_to_use_system_libs.sh: Remove unused script.
+
+  [ Mirco Bauer ]
+  * debian/control:
+    + Added libgnome-keyring1.0-cil to build-dependencies.
+  * debian/patches/debian_link-system-gnome-keyring.dpatch:
+    + Link with the libgnome-keyring1.0-cil package.
+  * debian/patches/debian_fix-distclean.dpatch:
+    + "make distclean" should not remove gnome-doc-utils.make
+  * debian/patches/98_autoreconf.dpatch:
+    + Updated
+
+ -- Mirco Bauer <meebey@debian.org>  Fri, 02 May 2008 16:10:21 +0200
+
+f-spot (0.4.3.1-0ubuntu1) hardy-proposed; urgency=low
+
+  * New upstream version (lp: #230306):
+    - new print dialog with preview, new print options (lp: #222307)
+  * debian/patches/fix_cms_linkage.dpatch,
+    debian/patches/fix_v8_db_update.dpatch,
+    debian/patches/gtkhtml-sharp-3.14_port.dpatch,
+    debian/patches/fix_gnome-sharp_typo.dpatch,
+    debian/patches/fix_bashisms.dpatch,
+    debian/patches/fix_gallery_extension_install_hook.dpatch,
+    debian/patches/fix_deleting_1000_photos.dpatch,
+    debian/patches/fix_gnome_screensaver.dpatch:
+    - dropped, those are fixed in the new version
+  * debian/patches/link_system_flickrnet.dpatch:
+    - updated using the new debian version
+  * debian/patches/11_screensaver-path.dpatch:
+    - dropped not required debian change
+  * debian/patches/90_from_svn_allow_multiple_view_selection.dpatch:
+    - allow to select multiple files to view in nautilus (lp: #202717)
+  * debian/f-spot-import.desktop, debian/install:
+    - dropped distribution changes, the new upstream version fixes the issue
+
+ -- Sebastien Bacher <seb128@canonical.com>  Wed, 07 May 2008 14:58:56 +0200
+
+f-spot (0.4.2-1ubuntu3) hardy; urgency=low
+
+  * debian/control: 
+    - Depends on sqlite, sqlite3 rather than Recommends those they are required
+      to migrate the database after upgrades
+  * debian/patches/no_extra_logging.dpatch:
+    - don't write to much non debug informations
+
+ -- Sebastien Bacher <seb128@canonical.com>  Mon, 14 Apr 2008 14:06:59 +0200
+
+f-spot (0.4.2-1ubuntu2) hardy; urgency=low
+
+  * Fixed an issue regarding gnome-screensaver, thanks to Lorenzo Milesi
+    for the original code. LP: #208629
+
+ -- Paul Schorfheide <pschorf2@uiuc.edu>  Mon, 07 Apr 2008 22:35:39 -0500
+
+f-spot (0.4.2-1ubuntu1) hardy; urgency=low
+
+  * Sync on Debian
+  * debian/control.in:
+    - don't use beagle
+    - updated maintainer information
+  * debian/patches/importer_targetdir_selector.dpatch:
+    - Add a target directory selector to the camera import dialog, so that
+      people can continue to use their customized directory layout.
+
+  [ James Westby ]
+  * Change the fix from 0.4.1-4ubuntu4 to use a separate
+    f-spot-import.desktop, as f-spot.desktop will not start
+    f-spot if you pass it a directory. This happens when you
+    use the context bar in nautilus to open f-spot from e.g.
+    a CF card full of photos. There is already an f-spot
+    command provided in the path. To use that we will create
+    a new .desktop that is associated with those mimetypes
+    and leave the normal f-spot.desktop to provide the menu
+    item. (LP: #191475)
+
+ -- Sebastien Bacher <seb128@canonical.com>  Wed, 26 Mar 2008 09:43:45 +0100
+
+f-spot (0.4.2-1) unstable; urgency=low
+
+  * New upstream version. (Closes: #470788, #470814, #457030, #459273)
+    + Drop patches now included upstream:
+      - debian/patches/20_refresh-menus-on-extensions.dpatch
+      - debian/patches/detect_and_upgrade_sqlite2_database.dpatch
+    + Upstream moved Flickr export to an extension, so:
+      - Update debian/patches/forward_port_to_flickrnet_2.1.5.dpatch
+      - New patch debian/patches/link_system_flickrnet.dpatch for changes
+        to FlickrExport makefiles.
+    + Update patches for bitrot:
+      - debian/patches/unlink_nunit.dpatch
+      - debian/patches/link_system_libs.dpatch
+  * Delete unused patches:
+    + debian/patches/01_build-system.dpatch
+    + debian/patches/10_cs-changes.dpatch
+  * New patches:
+    + debian/patches/fix_bashisms.dpatch:
+      - Ensure f-spot-sqlite-upgrade will run correctly under shells other
+        than bash. (Closes: #464652)
+    + debian/patches/fix_deleting_1000_photos.dpatch:
+      - Fix from upstream SVN for deleting >1000 photos. (Closes: #462798)
+    + debian/patches/fix_cms_linkage.dpatch:
+      - Fix from upstream stable SVN branch for linking Cms.dll against
+        libfspot.
+    + debian/patches/fix_v8_db_update.dpatch:
+      - Fix from upstream stable SVN branch for updating from v7 to v8 of the
+        f-spot photo database.
+    + debian/patches/fix_gnome-sharp_typo.dpatch:
+      - Fix from upstream SVN for typo in configure.in.
+    + debian/patches/gtkhtml-sharp-3.14_port.dpatch:
+      - Forward port to gtkhtml-sharp-3.14.
+    + debian/patches/98_autoreconf.dpatch:
+      - Move all generated changes from other patches into single patch,
+        for easier maintenance. 
+  * debian/control:
+    + Recommend dbus-x11. (Closes: #459272)
+    + Require a version of libgnome2.0-cil >= 2.20.
+    + Build against libgtkhtml3.16-cil rather than libgtkhtml2.0-cil.
+      (Closes: #470822)
+
+ -- Tim Retout <tim@retout.co.uk>  Thu, 20 Mar 2008 19:45:46 +0000
+
+f-spot (0.4.2-0ubuntu4) hardy; urgency=low
+
+  * debian/patches/gtkhtml-sharp-3.14_port.dpatch:
+    + Fix configure script to check for gnome-sharp-2.0 instead of
+      gnome-sharp.
+
+ -- Sebastian Dröge <slomo@debian.org>  Sat, 22 Mar 2008 13:54:27 +0100
+
+f-spot (0.4.2-0ubuntu3) hardy; urgency=low
+
+  * debian/patches/gtkhtml-sharp-3.14_port.dpatch,
+    debian/control:
+    + Build with gtkhtml-sharp-3.14. Patch taken from the Debian package.
+
+ -- Sebastian Dröge <slomo@debian.org>  Fri, 21 Mar 2008 19:26:43 +0100
+
+f-spot (0.4.2-0ubuntu2) hardy; urgency=low
+
+  * Added debian/patches/fix_cms_linkage.dpatch:
+    - Fix build of Cms.dll with libfspot to get the
+      "Automatically adjust the colors" button working again
+      (fixed in upstream SVN 3690) (LP: #192933)
+
+ -- Matvey Kozhev <sikon@ubuntu.com>  Mon, 18 Feb 2008 21:15:51 +0600
+
+f-spot (0.4.2-0ubuntu1) hardy; urgency=low
+
+  * New upstream release. (LP: #192041)
+  * Dropped patches originally from older upstream SVN:
+    - 20_refresh-menus-on-extensions.dpatch
+    - 25_delete-from-disk-throw-exception.dpatch
+    - 30_fix-infinite-loop.dpatch
+    - 35_validate-gallery-names.dpatch
+    - 40_flickr-export-crash.dpatch
+    - 45_about-dialog.dpatch
+  * Dropped detect_and_upgrade_sqlite2_database.dpatch, merged upstream.
+  * Dropped 50-fix-missing-G_GNUC_FUNCTION.dpatch, upstream has reworked
+    the code to remove G_GNUC_FUNCTION.
+  * Deleted unused patches that have been since deleted in Debian SVN:
+    - 01_build-system.dpatch
+    - 10_cs-changes.dpatch
+  * Updated patches for this release:
+    - forward_port_to_flickrnet_2.1.5.dpatch
+    - link_system_libs.dpatch
+    - unlink_nunit.dpatch
+  * Updated debian/update_src_to_use_system_libs.sh to correctly substitute
+    FlickrNet paths.
+  * Added galleryexport_rm.dpatch:
+    - Delete makefile command attempting to
+      rm -f /usr/lib/f-spot/extensions/GalleryExport.addin.xml
+  * Added disable_bundled_flickrnet_build.dpatch:
+    - Prevent bundled Mono.Addins and FlickrNet from building (separated from
+      link_system_libs for ease of maintenance as that patch is autogenerated).
+
+ -- Matvey Kozhev <sikon@lucidfox.org>  Fri, 15 Feb 2008 10:51:31 +0600
+
+f-spot (0.4.1-4ubuntu4) hardy; urgency=low
+
+  [ Matvey Kozhev ]
+  * debian/patches/45_about-dialog.dpatch:
+    - Cherry-picked migration to Gtk.AboutDialog from SVN 3568. (LP: #41825)
+
+  [ Michael Vogt ]
+  * debian/patches/50-fix-missing-G_GNUC_FUNCTION.diff:
+    - fix ftbfs because of G_GNUC_FUNCTION
+  * debian/patches/55-add-mimetype.dpatch:
+    Modify the patch by Matvey to register F-Spot in the Media tab
+    in the file management preferences (LP: #191475)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Thu, 14 Feb 2008 09:50:24 +0100
+
+f-spot (0.4.1-4ubuntu3) hardy; urgency=low
+
+  * Add debian/patches/importer_targetdir_selector.dpatch:
+    - Add a target directory selector to the camera import dialog, so that
+      people can continue to use their customized directory layout.
+    - Forwarded to upstream in Gnome #511569
+    - LP: #182858
+
+ -- Martin Pitt <martin.pitt@ubuntu.com>  Wed, 23 Jan 2008 15:51:34 +0000
+ 
+f-spot (0.4.1-4ubuntu2) hardy; urgency=low
+
+  * debian/patches/30_fix-infinite-loop.dpatch:
+    - Fixed FTBFS in main.cs. (LP: #183722)
+
+ -- Matvey Kozhev <sikon@lucidfox.org>  Thu, 17 Jan 2008 16:02:42 +0600
+
+f-spot (0.4.1-4ubuntu1) hardy; urgency=low
+
+  * Merged from Debian. (LP: #181332, LP: #141180)
+  * debian/control:
+    - Do not depend on beagle.
+    - Depend on dbus-x11. (LP: #89832)
+  * debian/patches: Pulled patches from upstream SVN:
+    - 25_delete-from-disk-throw-exception.dpatch: SVN 3472 (LP: #117862)
+    - 30_fix-infinite-loop.dpatch: SVN 3484 (LP: #95318)
+    - 35_validate-gallery-names.dpatch: SVN 3491 (LP: #85417)
+    - 40_flickr-export-crash.dpatch: SVN 3493 (LP: #155209)
+
+ -- Matvey Kozhev <sikon@lucidfox.org>  Wed, 09 Jan 2008 01:27:06 +0600
+
+f-spot (0.4.1-4) unstable; urgency=low
+
+  * debian/control:
+    + Updated libflickrnet2.1.5-cil build-dependency to >= 25277-5 to ensure
+      f-spot is linked with an ABI compatible version on all architectures.
+      (Closes: #458940)
+
+ -- Mirco Bauer <meebey@debian.org>  Sun, 06 Jan 2008 18:54:46 +0100
+
+f-spot (0.4.1-3) unstable; urgency=low
+
+  * debian/control:
+    + Added beagle to dependencies, it's not handled unfortunely via dh_clideps
+      as beagle is not using the GAC for the libraries. beagle-dev was added in
+      0.4.1-1 as build-dep, but didn't affect f-spot as the beagle version was
+      too old and thus ignored. (Closes: #458805)
+
+ -- Mirco Bauer <meebey@debian.org>  Thu, 03 Jan 2008 00:41:13 +0100
+
+f-spot (0.4.1-2) unstable; urgency=low
+
+  [ Mirco Bauer ]
+  * The "Happy New Year!" release
+  * debian/patches/02_autoreconf.dpatch:
+    + Dropped
+  * debian/patches/unlink_nunit.dpatch:
+    + Don't link with nunit, the users don't want/can't use the test-cases,
+      but causes unnecesary dependency and produces different build results
+      depending if nunit was installed or not.
+  * debian/patches/detect_sqlite2_databases.dpatch
+    debian/patches/detect_and_upgrade_sqlite2_database.dpatch:
+    (Closes: #456308)
+    + Renamed detect_sqlite2_databases.dpatch to
+      detect_and_upgrade_sqlite2_database.dpatch.
+    + Made error message less developerish.
+    + Implemented automatic and silent upgrade of the sqlite database, only
+      bail out if there was an error.
+    + Enhanced or rather implemented error handling in the
+      f-spot-sqlite-upgrade script.
+  * debian/control:
+    + Made sqlite and sqlite3 recommends for a while, till all older f-spot
+      users are migrated to sqlite3.
+    + Added build dependencies on all libraries the configure script explicitly
+      checks for, fixes FTBFS. (Closes: #458672)
+  * debian/menu:
+    + Changed Apps -> Applications.
+
+  [ Tim Retout ]
+  * debian/patches/no_dup_apps_icons.dpatch: Adjust Makefiles so as not to
+    install application icons in two different locations. (Closes: #441326)
+
+ -- Mirco Bauer <meebey@debian.org>  Tue, 01 Jan 2008 17:47:16 +0100
+
+f-spot (0.4.1-1) unstable; urgency=low
+
+  [ Mirco Bauer ]
+  * New upstream version.
+    + Fixes NDesk.Glitz FTBFS. (Closes: #441686)
+    + Fixes crash when double clicking an image or attaching a tag while the
+      image is open. (Closes: #447986)
+  * debian/control:
+    + Added myself to Uploaders.
+    + Updated cli-common-dev build-dependency to >= 0.4.4.
+    + Updated Standards-Version to 3.7.3, no changes needed.
+    + Added sqlite and sqlite3 to Suggests, needed for the
+      f-spot-sqlite-upgrade script.
+    + Added libflickrnet2.1.5-cil, libmono-addins0.2-cil and
+      libmono-addins-gui0.2-cil to build-dependencies.
+  * debian/copyright:
+    + Rewritten, checked copyright and licenses of all source files.
+  * debian/patches/01_build-system.dpatch:
+    + Disabled as upstream allows to link against system ndesk-dbus now.
+  * debian/patches/10_cs-changes.dpatch:
+    + Disabled as PicasaWeb export, .kdc file support and sqlite3 support are
+      already fixed upstream.
+  * Added beagle-dev to build-dependencies for beagle support.
+  * debian/patches/fix_libfspot_linkage.dpatch
+    debian/patches/fix_libfspoteog_linkage.dpatch
+    debian/patches/fix_libfspotjpegtran_linkage.dpatch:
+    + Wrote patch to link correctly against used libraries.
+  * debian/patches/20_refresh-menus-on-extensions.dpatch:
+    + Refresh the Export and Tools menus on new or removed extensions.
+      (upstream SVN revision: 3478)
+      (thanks to Matvey Kozhev <sikon@lucidfox.org> for the dpatch and
+       investigation)
+  * debian/patches/link_system_libs.dpatch:
+    + Link against the Mono.Addins and FlickrNet debian packages instead of the
+      bundled versions.
+  * debian/patches/forward_port_to_flickrnet_2.1.5.dpatch:
+    + API forward port for FlickrNet 2.1.5.
+  * debian/patches/detect_sqlite2_databases.dpatch:
+    + Wrote patch to detect an existing sqlite2 database during startup of
+      f-spot and print out upgrade instructions.
+  * debian/rules
+    debian/patches/99_ltmain_as-needed.dpatch:
+    + Pass --as-needed to linker for lesser dependencies.
+
+  [ Tim Retout ]
+  * New upstream version. (Closes: #436298, #446409)
+  * New maintainer. (Closes: #453474)
+  * Acknowledge NMUs by Margarita Manterola.
+    (Closes: #435697, #427287, #401647)
+  * Use dpatch to manage patches.
+  * debian/watch: Update to look for 0.4.x versions, not 0.1.x.
+  * debian/control:
+    + Added myself to Uploaders.
+    + Add build dependency on dpatch.
+    + Add new Homepage field.
+    + Add new Vcs-* fields.
+
+ -- Mirco Bauer <meebey@debian.org>  Thu, 13 Dec 2007 20:57:10 +0100
+
+f-spot (0.3.5-1.2) unstable; urgency=low
+
+  * Non-maintainer upload, to fix spurious Failures to Build From Source.
+  * Added docbook-xml as a dependency.
+  * Changed all xsltproc calls to xsltproc --nonet, so that no network is
+    used while generating the documentation. (Closes: #435697).
+
+ -- Margarita Manterola <marga@debian.org>  Thu, 02 Aug 2007 19:13:54 -0300
+
+f-spot (0.3.5-1.1) unstable; urgency=low
+
+  * Non-maintainer upload to fix Failure to Build From Source.
+  * Added libgconf2.0-cil and libglade2.0-cil as Build-Dependencies,
+    as suggested by Cyril Brulebois. (Closes: #427287).
+  * Added dbus as a dependency, since F-Spot does not work when dbus is
+    not present.  (Closes: #401647)
+
+ -- Margarita Manterola <marga@debian.org>  Wed, 01 Aug 2007 23:18:53 -0300
+
+f-spot (0.3.5-1) unstable; urgency=low
+
+  * Upload current Ubuntu package to Debian as a new upstream release
+
+ -- Andrew Mitchell <ajmitch@debian.org>  Mon,  7 May 2007 21:49:44 +1200
+
+f-spot (0.3.5-0ubuntu2) feisty; urgency=low
+
+  * Support .KDC files as a RAW image type (LP: 91488)
+
+ -- Andrew Mitchell <ajmitch@ubuntu.com>  Wed, 21 Mar 2007 23:26:56 +1200
+
+f-spot (0.3.5-0ubuntu1) feisty; urgency=low
+
+  * New upstream release
+    - Fix slideshow with missing images
+    - More descriptive error when dbus session bus is missing
+    - Don't show Hidden photos unless asked
+  * Add fix to google-sharp/PicasaWeb.cs from r3011 to fix PicasaWeb export
+	
+ -- Andrew Mitchell <ajmitch@ubuntu.com>  Wed, 14 Mar 2007 10:29:37 +1300
+
+f-spot (0.3.4-0ubuntu1) feisty; urgency=low
+
+  * New upstream release
+  * Use system copies of NDesk.DBus instead of using the bundled source
+  * Add patch from SVN r2790 for LP: #59723
+
+ -- Andrew Mitchell <ajmitch@ubuntu.com>  Mon, 26 Feb 2007 23:07:50 +1300
+
+f-spot (0.3.3-0ubuntu1) feisty; urgency=low
+
+  * New upstream release
+    - Fix the insensitive editors problem.
+  * Add libgl1-mesa-dev | libgl-dev to Build-Depends to be able to load 
+    libGL.so.1 at run time (LP: #81578)
+  * Disable scrollkeeper usage in debian/ules
+	
+ -- Andrew Mitchell <ajmitch@ubuntu.com>  Tue,  6 Feb 2007 11:53:45 +1300
+
+f-spot (0.3.2-0ubuntu1) feisty; urgency=low
+
+  * New upstream release
+    - New editing effects: Soft Focus and Straighten.
+    - Lots of fixes to the OpenGL slideshow introduced in 0.3.1
+    - Export to 23hq.com and SmugMug (Thomas Van Machelen)
+    - Background color for transparent regions of images can be chosen 
+      in --view mode (Stephane Delcroix)
+    - New red-eye removal algorithm. Threshold value for redeye removal is 
+      read from gconf. Default is set to -15 (Stephane Delcroix)
+    - Zero-pad month and days while creating files and directories 
+      (Stephane Delcroix)
+    - In browse mode hjkl now behave just like left, down, up, right arrow
+      keys do (Gabriel Burt)
+    - Accepts dropped URIs from Firefox. Drag an image from Firefox and 
+      drop it in f-spot --view (Stephane Delcroix)
+    - Fullscreen mode uses overlayed controls, powered by compiz (Larry Ewing)
+    - Fixes to histogram (Larry Ewing)
+    - Initial work on color management (Larry Ewing)
+    - Refactored multi service support (Larry Ewing)
+    - More work on unit tests (Larry Ewing)
+    - Other fixes and improvements
+
+ -- Andrew Mitchell <ajmitch@ubuntu.com>  Wed, 24 Jan 2007 22:03:15 +1300
+
+f-spot (0.3.0-1) unstable; urgency=low
+
+  * New upstream release
+    - Massive view  mode improvements (Stephane Delcroix, Thomas Van Machelen).
+    - Fix for new Picasa web interface (Stephane Delcroix).
+    - Integrated unit tests using nunit.
+    - New multiresolution icons.
+    - New User Guide (Bengt Thuree, Alexandre Prokoudine and others).
+    - Query improvements (Gabriel Burt).
+
+ -- Andrew Mitchell <ajmitch@debian.org>  Sun, 10 Dec 2006 20:28:28 +1300
+
+f-spot (0.3.0-0ubuntu1) feisty; urgency=low
+
+  * New upstream release
+    - Massive view  mode improvements (Stephane Delcroix, Thomas Van Machelen).
+    - Fix for new Picasa web interface (Stephane Delcroix).
+    - Integrated unit tests using nunit.
+    - New multiresolution icons.
+    - New User Guide (Bengt Thuree, Alexandre Prokoudine and others).
+    - Query improvements (Gabriel Burt).
+
+ -- Andrew Mitchell <ajmitch@ubuntu.com>  Fri,  1 Dec 2006 00:24:28 +1300
+
+f-spot (0.2.2-0ubuntu1) feisty; urgency=low
+
+  * Update to 0.2.2 upstream
+
+ -- Andrew Mitchell <ajmitch@ubuntu.com>  Tue,  7 Nov 2006 11:27:24 +1300
+
+f-spot (0.2.1-1.1) unstable; urgency=medium
+
+   * Non-maintainer upload.
+   * Fix FTBFS, Kudos to Roland Mas and Mirco Bauer for looking
+     into this and preparing a Patch (Closes: #394142)
+
+ -- Michael Ablassmeier <abi@debian.org>  Fri, 27 Oct 2006 12:59:23 +0200 
+	
+f-spot (0.2.1-1ubuntu1) edgy; urgency=low
+
+  * Apply bug fixes from upstream CVS:
+    - #340901: Close colour dialog on switching to browse mode
+    - #353801: Tag drag & drop crashing
+    - #355653: Picasa export UI fix
+    - #356543: Picasa progressbar UI fix
+    - #329299: Landscape/portrait constraints while cropping
+    - #357286: Crash in commandline parsing
+    - #354621: Update google-sharp for authenticated connections
+  * Fix screensaver exec line in tools/f-spot-screensaver
+	
+ -- Andrew Mitchell <ajmitch@ubuntu.com>  Thu, 12 Oct 2006 17:17:16 +1300
+
+f-spot (0.2.1-1) unstable; urgency=low
+
+  * New upstream release, incorporating Ubuntu changes
+
+ -- Andrew Mitchell <ajmitch@debian.org>  Tue,  3 Oct 2006 11:05:04 +1300
+
+f-spot (0.2.1-0ubuntu1) edgy; urgency=low
+
+  * New upstream release (UVF Exception granted as malone #61550)
+    - Picasa Web album export.
+    - Fixes for recent mono versions.
+    - Support for scaling when sending mail.
+    - Support for exporting the images in correct orientation.
+    - Improved generation.
+    - Many more bug fixes.
+  * Fixes for bashisms merged upstream (Closes: #367459)
+  * Fix libgphoto-sharp dllmap (Closes: #385979, #389513)
+  
+ -- Andrew Mitchell <ajmitch@ubuntu.com>  Thu, 21 Sep 2006 13:54:31 +1200
+
+f-spot (0.2.0-1ubuntu1) edgy; urgency=low
+
+  * Add libgphoto2_port.so to libgphoto2-sharp.dll.config dllmap
+
+ -- Andrew Mitchell <ajmitch@ubuntu.com>  Wed,  6 Sep 2006 19:29:05 +1200
+
+f-spot (0.2.0-1) unstable; urgency=low
+
+  * New upstream release
+    - Initial gnome-vfs --view support. 
+    - Impoved static html and folder export logic.
+    - Improved loupe.
+    - Fixes for mono head.
+    - Many many more fixes see ChangeLog.
+  * Most patch branches incorporated upstream, remaining are
+    - ubuntu.01-fix-wrapper: Fix for bashisms
+    - ubuntu.03-sqlite3-when-new: Create sqlite 3 database by default
+    - ubuntu.04-screensaver: Set correct screensaver path
+  * Add f-spot(1) manpage, thanks to Andrew Burton (Closes: #312566)
+  	
+ -- Andrew Mitchell <ajmitch@debian.org>  Fri,  1 Sep 2006 09:16:30 +1200
+
+f-spot (0.1.11-3ubuntu5) edgy; urgency=low
+
+  * Update removable metadata patch from upstream (Malone: #42736)
+  * Update location of screensaver
+
+ -- Andrew Mitchell <ajmitch@ubuntu.com>  Sat, 12 Aug 2006 13:52:02 +1200
+
+f-spot (0.1.11-3ubuntu4) edgy; urgency=low
+
+  * Apply patch from f-spot-0.1 branch to import rotated images 
+    correctly (Malone: #37972)
+
+ -- Andrew Mitchell <ajmitch@ubuntu.com>  Wed,  9 Aug 2006 23:45:48 +1200
+
+f-spot (0.1.11-3ubuntu3) edgy; urgency=low
+
+  * Remove dpatch from Build-Depends, rm debian/patched (Malone: #54760)
+
+ -- Andrew Mitchell <ajmitch@ubuntu.com>  Tue,  1 Aug 2006 22:02:27 +1200
+
+f-spot (0.1.11-3ubuntu2) edgy; urgency=low
+
+  * debian/control:
+    + Build-Depend on cli-common-dev instead of cli-common to fix FTBFS
+
+ -- Sebastian Dröge <slomo@ubuntu.com>  Sun, 30 Jul 2006 17:45:19 +0200 
+
+f-spot (0.1.11-3ubuntu1) edgy; urgency=low
+
+  * Remove unneeded libmono0 & libsqlite* dependencies
+
+ -- Andrew Mitchell <ajmitch@ubuntu.com>  Sun, 30 Jul 2006 21:09:40 +1200
+
+f-spot (0.1.11-3) unstable; urgency=high
+
+  * Drop use of dpatch, using bzr for patch management now
+  * Automake fixes for missing .la files (Closes: #377158)
+
+ -- Andrew Mitchell <ajmitch@debian.org>  Fri, 21 Jul 2006 14:18:10 +1200
+
+f-spot (0.1.11-2) unstable; urgency=low
+
+  * Add libmono-sqlite1.0-cil to Build-Depends (Closes: #364440)
+  * Fix screensaver script path
+  * Update to Standards-Version 3.7.2
+
+ -- Andrew Mitchell <ajmitch@debian.org>  Sat,  3 Jun 2006 17:15:39 +1200
+
+f-spot (0.1.11-1ubuntu1) dapper; urgency=low
+
+  * Add patch to ignore failure in writing metadata to images 
+    imported from a removable device. Thanks to Chris Wilson for this
+    - Malone #42736  
+  * Update 02_f-spot-copy.dpatch from GNOME #326860
+    - Malone #38010  
+	
+ -- Andrew Mitchell <ajmitch@ubuntu.com>  Tue, 16 May 2006 18:17:23 +1200
+
+f-spot (0.1.11-1) unstable; urgency=low
+
+  * New upstream release
+    - Much improved contrast function.
+    - Database opens existing databases regardless of the sqlite
+      version.
+    - Database tries to force the correct encoding on v2 databases.
+    - Import dialog is better about cleaning up after itself.
+    - Valid cameras are no longer discarded from the camera list.
+    - Group selector handles empty groups.
+    - Many slideshow improvements.
+    - Fix the erratic open with menu behavior. 
+    - Improve the tag menu behavior when adding tags.
+    - Add --debug and --uninstalled command line options.
+    - Fixed JPEG orientation when saving new versions.
+    - Added a general exception dialog.
+    - Many many more bugfixes.
+    Closes: #337240, #338536, #354135, #358954, #358551, #349501
+  * Add dcraw to Recommends for RAW image support
+  * Add patch to fix copying on import
+  * Use SQLite 3 database format by default
+  * Thanks to Roland Mas for NMU (Closes: #349501, #354849)
+  
+ -- Andrew Mitchell <ajmitch@debian.org>  Tue,  4 Apr 2006 22:35:32 +1200
+
+f-spot (0.1.10-0ubuntu1) dapper; urgency=low
+
+  * New upstream release
+    - Script to launch f-spot import based on hal id
+    - Screensaver wrappers for gnomescreensaver.- New gnome-screensaver mode.
+    - Timezone utc clean-ups.
+    - Fixed time dialog set the date properly.
+    - Expose the sort order to the ui.
+    - Added cancel button to color dialog
+    - Fixed memory leak in async loader.
+    - Many more bugfixes.
+
+ -- Andrew Mitchell <ajmitch@ubuntu.com>  Sat, 25 Feb 2006 06:32:13 +1000
+
+f-spot (0.1.9-0ubuntu1) dapper; urgency=low
+
+  * New upstream release
+    - Small import dialog improvements.
+    - Support for new Flickr API.
+    - Open With menu.
+    - Database upgrade path.
+    - Translated default tag names.
+	
+ -- Andrew Mitchell <ajmitch@ubuntu.com>  Tue, 14 Feb 2006 11:50:37 +1300
+
+f-spot (0.1.8-1) unstable; urgency=low
+
+  * New upstream release
+    - New icons
+    - Fixed typos.
+    - Png metadata support.
+    - Support for dates before the unix Epoch.
+    - Improved XMP handing.
+    - Enhanced time dialog.
+  * Remove outdated README from debian/docs
+
+ -- Andrew Mitchell <ajmitch@debian.org>  Tue, 31 Jan 2006 09:14:12 +1300
+
+f-spot (0.1.7-0ubuntu1) dapper; urgency=low
+
+  * New upstream release
+    - Uses async I/O when loading pictures (Closes: #341790)
+  * DBUS 0.60 transition (Closes: #348177)
+    - Drop libdbus-cil from Build-Depends
+  
+ -- Andrew Mitchell <ajmitch@debian.org>  Thu, 19 Jan 2006 03:40:19 +1300
+
+f-spot (0.1.5-1) unstable; urgency=low
+
+  * New upstream release (Closes: #343046)
+    - Fix comments in Original export.
+    - Improve Zooming logic, remove the old View->Size menu.
+    - Keep in the timeline place when removing photos.
+    - Allow changes to case in tag names.
+    - Support adding albums to existing galleries.
+    - Support Gallery 2 in gallery export.
+    - Added russian translation from Alexsandre Prokoudine.
+  * Sticking with sqlite2 for now, until a clean upgrade path is found
+
+ -- Andrew Mitchell <ajmitch@debian.org>  Thu, 15 Dec 2005 20:58:55 +0000
+
+f-spot (0.1.4-1) unstable; urgency=low
+
+  * New upstream release 
+    - Menu rotation is 270 degrees, not 90. Closes (#341791) 
+  * Patches 02_endianness_fix.dpatch & 03_ciff.cs.dpatch dropped, included in upstream release
+  * Added patch to use sqlite 3
+
+ -- Andrew Mitchell <ajmitch@debian.org>  Fri,  9 Dec 2005 08:48:57 +1300
+
+f-spot (0.1.3-3) unstable; urgency=low
+
+  * Update for new maintainer address
+  * Set watch file to look for 0.1.x versions
+
+ -- Andrew Mitchell <ajmitch@debian.org>  Wed,  7 Dec 2005 23:58:52 +1300
+
+f-spot (0.1.3-2) experimental; urgency=low
+
+  * Add patch to src/Ciff.cs from CVS (Ciff.cs rev 1.9)
+  * Merge in Ubuntu changes, use dbus 0.50
+
+ -- Andrew Mitchell <ajmitch@debian.org>  Sat, 26 Nov 2005 00:05:32 +1300
+
+f-spot (0.1.3-1ubuntu1.1) breezy-updates; urgency=low
+
+  * Fix big-endian data-loss bug
+  * Patch from GNOME #319190 (Malone #3338)
+
+ -- Andrew Mitchell <ajmitch@ubuntu.com>  Thu, 20 Oct 2005 09:31:10 +1300
+
+f-spot (0.1.3-1ubuntu1) breezy; urgency=low
+
+  * Change {Build-,}Depends back to libdbus-1-cil for breezy
+
+ -- Andrew Mitchell <ajmitch@ubuntu.com>  Fri, 30 Sep 2005 01:09:20 +1200
+
+f-spot (0.1.3-1) unstable; urgency=low
+
+  * New upstream release (Closes: #301152, #311871, #330461)
+  * Rebuild for gtk# 2.3.91 
+  * Andrew Mitchell
+    - Add Depends on libdbus-cil
+    - Updated debian/patches/01_fix_wrapper.dpatch to match upstream changes
+
+ -- Debian Mono Group <pkg-mono-group@lists.alioth.debian.org>  Thu, 29 Sep 2005 23:33:44 +0000
+
+f-spot (0.1.2-0ubuntu1) breezy; urgency=low
+
+  * New upstream release
+  * Andrew Mitchell
+    - Add Depends on libdbus-1-cil
+    - Update for cli-common 0.2.0
+  
+ -- Debian Mono Group <pkg-mono-group@lists.alioth.debian.org>  Thu,  8 Sep 2005 21:55:04 +0000
+
+f-spot (0.1.1-2) unstable; urgency=low
+
+  * Andrew Mitchell
+    - Add libsqlite0 to Depends (Closes: #325375, #325762)
+
+ -- Debian Mono Group <pkg-mono-group@lists.alioth.debian.org>  Tue, 30 Aug 2005 22:27:05 +0000
+
+f-spot (0.1.1-1) unstable; urgency=low
+
+  * Andrew Mitchell
+    - New upstream version
+    - F-Spot now uses GTK# 2.0, updated Build-Depends to libgnome2.0-cil (Closes: #316776)
+    - Removed gnome-pkg-tools from Build-Depends
+
+ -- Debian Mono Group <pkg-mono-group@lists.alioth.debian.org>  Mon, 22 Aug 2005 22:04:52 +0000
+
+f-spot (0.1.0-1) unstable; urgency=low
+
+  * New upstream version
+
+ -- Debian Mono Group <pkg-mono-group@lists.alioth.debian.org>  Mon, 15 Aug 2005 21:03:42 +0000
+
+f-spot (0.0.13-4) unstable; urgency=low
+
+  * Andrew Mitchell
+    + debian/control:
+      - New Maintainer (Debian Mono Group)
+      - Rebuild with newer libexif-dev & removed explicit Depends on libexif10, libgphoto2-2 (Closes: #321310)
+      - Removed unneeded control.in & uploaders
+      - Removed extra dh_clideps arguments
+      - Added dpatch build dependency
+      - Updated to Standards Version 3.6.2 (no changes needed)
+    + debian/rules:
+      - Changed simple-patchsys.mk to dpatch.mk
+      - Added unpatch target for dpatch
+    + debian/dirs:
+      - Remove unneeded directories from debian/dirs
+    + debian/watch:
+      - Added
+
+ -- Debian Mono Group <pkg-mono-group@lists.alioth.debian.org>  Wed, 10 Aug 2005 19:44:27 +1200
+
+f-spot (0.0.13-3) unstable; urgency=low
+
+  * Fix FTBFS on amd64 (add MONO_SHARED_DIR to debian/rules (Closes: #314515)
+    Thanks to Brandon Hale.
+
+ -- Ondřej Surý <ondrej@sury.org>  Mon, 20 Jun 2005 21:48:14 +0200
+
+f-spot (0.0.13-2) unstable; urgency=low
+
+  * Change ${net:Depends} to ${cli:Depends} to get dependencies right (Closes: #311721)
+
+ -- Ondřej Surý <ondrej@sury.org>  Fri,  3 Jun 2005 08:34:57 +0200
+
+f-spot (0.0.13-1ubuntu1) unstable; urgency=low
+
+  * Synchronize with Debian.
+    * We are now hosted on pkg-mono/non-group/f-spot on svn.debian.org
+
+ -- Brandon Hale <brandon@smarterits.com>  Fri,  3 Jun 2005 06:22:37 -0400
+
+f-spot (0.0.13-1) unstable; urgency=low
+
+  * New upstream relase
+  * Updated for mono 1.1 (Closes: #311473)
+
+ -- OndÅ™ej SurÃ½ <ondrej@sury.org>  Thu,  2 Jun 2005 08:42:59 +0200
+
+f-spot (0.0.13-0ubuntu1) breezy; urgency=low
+
+  * New upstream release
+    + 00_MonoConventions.patch dropped
+    + debian/rules - de-/usr/share/dotnet
+    + Move from dh_netdeps to dh_clideps and s/mono-utils/cli-common in
+    build-dep 
+
+ -- Brandon Hale <brandon@smarterits.com>  Fri, 13 May 2005 21:36:29 -0400
+
+f-spot (0.0.12-1) unstable; urgency=low
+
+  * New upstream release (Closes: #305016)
+
+ -- OndÅ™ej SurÃ½ <ondrej@sury.org>  Mon, 18 Apr 2005 09:02:33 +0200
+
+f-spot (0.0.12-0ubuntu1) hoary; urgency=low
+
+  * New upstream release
+
+ -- Brandon Hale <brandon@smarterits.com>  Sat, 19 Mar 2005 22:25:22 -0500
+
+f-spot (0.0.11-1) unstable; urgency=low
+
+  * New upstream release
+  * Update 00_MonoConventions.patch
+
+ -- Brandon Hale <brandon@smarterits.com>  Tue, 15 Mar 2005 09:43:14 -0500
+
+f-spot (0.0.10-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Brandon Hale <brandon@smarterits.com>  Sun,  6 Mar 2005 15:53:29 -0500
+
+f-spot (0.0.9-3) unstable; urgency=low
+
+  * [Brandon] Update 01_fspot-config.patch to also dllmap libexif.so.10
+  * [Ondrej] Bump build dependency on mono-utils to version 1.0
+
+ -- Ondřej Surý <ondrej@sury.org>  Thu, 24 Feb 2005 08:26:05 +0100
+
+f-spot (0.0.9-2) unstable; urgency=low
+
+  * Fix misspeled dependency.
+
+ -- Ondřej Surý <ondrej@sury.org>  Wed, 23 Feb 2005 13:05:18 +0100
+
+f-spot (0.0.9-1) unstable; urgency=low
+
+  * New upstream release.
+  * Fix missing dependencies (Closes: #296372, #296541)
+  * Use Brandon Hale package as base for mine.
+
+ -- Ondřej Surý <ondrej@sury.org>  Wed, 23 Feb 2005 08:50:06 +0100
+
+f-spot (0.0.8-3) unstable; urgency=low
+
+  * Add a libgphoto2-sharp.dll.config to remap libgphoto2.so to libgphoto2.so.2
+
+ -- Brandon Hale <brandon@smarterits.com>  Sun, 20 Feb 2005 15:56:07 -0500
+
+f-spot (0.0.8-2) unstable; urgency=low
+
+  * liblcms1-dev to debian/control.in, not debian/control
+
+ -- Brandon Hale <brandon@smarterits.com>  Sat, 19 Feb 2005 07:39:02 -0500
+
+f-spot (0.0.8-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Brandon Hale <brandon@smarterits.com>  Thu, 17 Feb 2005 18:09:48 -0500
+
+f-spot (0.0.3-2) unstable; urgency=low
+
+  * Update f-spot.exe.config to include mapping for internal libraries
+    (Closes: #283469)
+
+ -- Ondřej Surý <ondrej@sury.org>  Wed, 15 Dec 2004 11:45:53 +0100
+
+f-spot (0.0.3-1) unstable; urgency=low
+
+  * New upstream release. (Closes: #283183)
+
+ -- Ondřej Surý <ondrej@sury.org>  Sun, 28 Nov 2004 18:41:11 +0100
+
+f-spot (0.0.2-1) unstable; urgency=low
+
+  * Initial Release. (Closes: #239558)
+
+ -- Ondřej Surý <ondrej@debian.org>  Sat,  4 Sep 2004 21:32:52 +0200
+

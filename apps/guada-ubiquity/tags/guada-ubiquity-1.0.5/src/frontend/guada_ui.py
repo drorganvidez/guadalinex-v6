@@ -274,6 +274,7 @@ class Wizard(ubiquity.frontend.gtk_ui.Wizard):
         first_step = self.stepGuadaWelcome
         
         self.set_current_page(self.steps.page_num(first_step))
+        self.back.hide()
         if got_intro:
             # intro_label was the only focusable widget, but got can-focus
             # removed, so we end up with no input focus and thus pressing
@@ -355,6 +356,8 @@ class Wizard(ubiquity.frontend.gtk_ui.Wizard):
         # migration-assistant.
         self.backup = False
         self.live_installer.show()
+        self.allow_go_backward(True)
+        self.back.show()
 
         if n == 'Partman':
             # Rather than try to guess which partman page we should be on,
@@ -364,11 +367,10 @@ class Wizard(ubiquity.frontend.gtk_ui.Wizard):
         elif n == 'GuadaPrePartition':
             cur = self.stepGuadaPrePartition
         elif n == 'UserSetup':
+            self.allow_go_forward(False)
             cur = self.stepUserInfo
         elif n == 'Summary':
             cur = self.stepReady
-            self.allow_go_backward(True)
-            self.back.show()
             self.next.set_label(self.get_string('install_button'))
         elif n == 'MigrationAssistant':
             cur = self.stepMigrationAssistant

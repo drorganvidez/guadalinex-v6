@@ -86,7 +86,8 @@ import types
 # i18n
 import gettext, locale
 from gettext import gettext as _
-import defs setup_gettext('hermes-hardware', defs.DATA_DIR)
+import defs
+setup_gettext('hermes-hardware', defs.DATA_DIR)
 
 from utils.hermestrayicon import HermesTrayIcon
 from utils import DeviceList, ColdPlugListener, CaptureLogGui

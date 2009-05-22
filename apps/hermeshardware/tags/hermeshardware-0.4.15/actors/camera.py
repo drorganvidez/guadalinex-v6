@@ -62,7 +62,7 @@ class Actor(DeviceActor):
     ---------------------------------------------------------------------------
     [en] Digital Cameras Actor class implementation
     """
-    __required__ = {'info.category':'camera', 'info.bus':'usb'}
+    __required__ = {'info.category':'camera', 'info.subsystem':'usb'}
 
     __icon_path__  = os.path.abspath('actors/img/camera.png')
     __iconoff_path__ = os.path.abspath('actors/img/cameraoff.png')

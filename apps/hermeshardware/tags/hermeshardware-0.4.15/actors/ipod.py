@@ -50,11 +50,10 @@
 
 import os.path
 
-#from utils.pkginstaller import PkgInstaller 
-from deviceactor import DeviceActor #PkgDeviceActor
+from deviceactor import DeviceActor
 from gettext import gettext as _
 
-class Actor(DeviceActor):#PkgDeviceActor):
+class Actor(DeviceActor):
     """ 
     [es] Implementacion de clase Actor para reproductor de musica iPod
     --------------------------------------------------------------------------

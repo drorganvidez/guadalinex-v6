@@ -1,0 +1,896 @@
+# Spanish translation for devmapper
+# Copyright (c) (c) 2006 Canonical Ltd, and Rosetta Contributors 2006
+# This file is distributed under the same license as the devmapper package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2006.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: devmapper\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2007-04-27 20:54+0100\n"
+"PO-Revision-Date: 2009-03-24 18:30+0000\n"
+"Last-Translator: Paco Molinero <paco@byasl.com>\n"
+"Language-Team: Spanish <es@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2009-04-11 14:20+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+#: datastruct/hash.c:96 datastruct/hash.c:109 ioctl/libdm-iface.c:247
+#: libdm-deptree.c:471 libdm-deptree.c:475 libdm-deptree.c:481
+#: libdm-deptree.c:491 libdm-deptree.c:502 libdm-deptree.c:594
+#: libdm-deptree.c:598 libdm-deptree.c:614 libdm-deptree.c:712
+#: libdm-deptree.c:721 libdm-deptree.c:863 libdm-deptree.c:959
+#: libdm-deptree.c:964 libdm-deptree.c:969 libdm-deptree.c:1020
+#: libdm-deptree.c:1025 libdm-deptree.c:1030 libdm-deptree.c:1064
+#: libdm-deptree.c:1093 libdm-deptree.c:1109 libdm-deptree.c:1120
+#: libdm-deptree.c:1226 libdm-deptree.c:1230 libdm-deptree.c:1267
+#: libdm-deptree.c:1279 libdm-deptree.c:1283 libdm-deptree.c:1290
+#: libdm-deptree.c:1297 libdm-deptree.c:1304 libdm-deptree.c:1312
+#: libdm-deptree.c:1318 libdm-deptree.c:1326 libdm-deptree.c:1333
+#: libdm-deptree.c:1341 libdm-deptree.c:1343 libdm-deptree.c:1348
+#: libdm-deptree.c:1354 libdm-deptree.c:1357 libdm-deptree.c:1365
+#: libdm-deptree.c:1381 libdm-deptree.c:1391 libdm-deptree.c:1415
+#: libdm-deptree.c:1460 libdm-deptree.c:1504 libdm-deptree.c:1511
+#: libdm-deptree.c:1518 libdm-deptree.c:1609 libdm-deptree.c:1618
+#: libdm-deptree.c:1637 libdm-deptree.c:1646 libdm-deptree.c:1655
+#: libdm-deptree.c:1667 libdm-deptree.c:1676 libdm-deptree.c:1685
+#: libdm-deptree.c:1697 libdm-deptree.c:1733 libdm-deptree.c:1752
+#: libdm-deptree.c:1795 libdm-deptree.c:1809 libdm-deptree.c:1820
+#: libdm-report.c:313 libdm-report.c:384 regex/matcher.c:181
+#: regex/matcher.c:202 regex/matcher.c:205 regex/matcher.c:277
+#: regex/matcher.c:281 regex/matcher.c:293 regex/matcher.c:313
+#: regex/parse_rx.c:228 regex/parse_rx.c:279 regex/parse_rx.c:304
+#: regex/parse_rx.c:327 regex/parse_rx.c:339 regex/ttree.c:90
+#: regex/ttree.c:110
+msgid "<backtrace>"
+msgstr "<backtrace>"
+
+#: ioctl/libdm-iface.c:143
+#, c-format
+msgid "%s: fopen failed: %s"
+msgstr "%s: fopen falló: %s"
+
+#: ioctl/libdm-iface.c:153 ioctl/libdm-iface.c:163
+#, c-format
+msgid "%s: fclose failed: %s"
+msgstr "%s: fclose falló: %s"
+
+#: ioctl/libdm-iface.c:166
+#, c-format
+msgid "%s: No entry for %s found"
+msgstr "%s: No se encontró ninguna entrada para %s"
+
+#: ioctl/libdm-iface.c:193
+#, c-format
+msgid "%s: stat failed: %s"
+msgstr "%s: stat falló: %s"
+
+#: ioctl/libdm-iface.c:199
+#, c-format
+msgid "%s: Wrong inode type"
+msgstr "%s: Tipo de inodo incorrecto"
+
+#: ioctl/libdm-iface.c:202 ioctl/libdm-iface.c:214
+#, c-format
+msgid "%s: unlink failed: %s"
+msgstr "%s: unlink falló: %s"
+
+#: ioctl/libdm-iface.c:208
+#, c-format
+msgid "%s: Wrong device number: (%u, %u) instead of (%u, %u)"
+msgstr "%s: Número de dispositivo erróneo: (%u, %u) en vez de (%u, %u)"
+
+#: ioctl/libdm-iface.c:237
+#, c-format
+msgid "Creating device %s (%u, %u)"
+msgstr "Creando dispositivo %s (%u, %u)"
+
+#: ioctl/libdm-iface.c:241
+#, c-format
+msgid "%s: mknod failed: %s"
+msgstr "%s: mknod falló: %s"
+
+#: ioctl/libdm-iface.c:297
+msgid "Is device-mapper driver missing from kernel?"
+msgstr "¿Falta el controlador device-mapper del kernel?"
+
+#: ioctl/libdm-iface.c:304
+#, c-format
+msgid "%s: open failed: %s"
+msgstr "%s: falló la apertura: %s"
+
+#: ioctl/libdm-iface.c:309
+msgid "Failed to set up list of device-mapper major numbers"
+msgstr "No se logró establecer una lista de números mayores de device-mapper"
+
+#: ioctl/libdm-iface.c:316
+msgid "Failure to communicate with kernel device-mapper driver."
+msgstr "Fallo de comunicación con el controlador device-mapper del kernel"
+
+#: ioctl/libdm-iface.c:778
+msgid "Failed to get device-mapper version"
+msgstr "Hubo un error al obtener la versión de device-mapper"
+
+#: ioctl/libdm-iface.c:814
+#, c-format
+msgid ""
+"device-mapper ioctl protocol version %u failed. Trying protocol version 1."
+msgstr ""
+"La versión %u del protocolo oictl de device-mapper falló. Intentando con la "
+"versión 1 del protocolo."
+
+#: ioctl/libdm-iface.c:818
+msgid "Using device-mapper ioctl protocol version 1"
+msgstr "Utilizando la versión 1 del protocolo ioctl de device-mapper"
+
+#: ioctl/libdm-iface.c:826
+#, c-format
+msgid "Incompatible libdevmapper %s%s and kernel driver %s"
+msgstr "libdevmapper %s%s y driver del kernel %s incompatibles"
+
+#: ioctl/libdm-iface.c:990
+#, c-format
+msgid "dm_task_set_newname: strdup(%s) failed"
+msgstr "dm_task_set_newname: strdup(%s) falló"
+
+#: ioctl/libdm-iface.c:1000
+#, c-format
+msgid "dm_task_set_message: strdup(%s) failed"
+msgstr "dm_task_set_message: strdup(%s) falló"
+
+#: ioctl/libdm-iface.c:1019
+msgid "dm_task_set_geometry: dm_malloc failed"
+msgstr "dm_task_set_geometry: dm_malloc falló"
+
+#: ioctl/libdm-iface.c:1024
+msgid "dm_task_set_geometry: sprintf failed"
+msgstr "dm_task_set_geometry: sprintf falló"
+
+#: ioctl/libdm-iface.c:1065
+#, c-format
+msgid "create_target: malloc(%zu) failed"
+msgstr "create_target: malloc(%zu) falló"
+
+#: ioctl/libdm-iface.c:1073
+msgid "create_target: strdup(params) failed"
+msgstr "create_target: strdup(params) falló"
+
+#: ioctl/libdm-iface.c:1078
+msgid "create_target: strdup(type) failed"
+msgstr "create_target: strdup(type) falló"
+
+#: ioctl/libdm-iface.c:1117
+#, c-format
+msgid "t->params= '%s'"
+msgstr "t->params= '%s'"
+
+#: ioctl/libdm-iface.c:1185
+msgid "targets and message are incompatible"
+msgstr "Destinos y mensaje son incompatibles"
+
+#: ioctl/libdm-iface.c:1190
+msgid "targets and newname are incompatible"
+msgstr "los objetivos y el nuevo nombre son incompatibles"
+
+#: ioctl/libdm-iface.c:1195
+msgid "targets and geometry are incompatible"
+msgstr "Destinos y geometria son incompatibles"
+
+#: ioctl/libdm-iface.c:1200
+msgid "message and newname are incompatible"
+msgstr "mensaje y nuevo nombre son incompatibles"
+
+#: ioctl/libdm-iface.c:1205
+msgid "geometry and newname are incompatible"
+msgstr "geometría y nuevo nombre son incompatibles"
+
+#: ioctl/libdm-iface.c:1210
+msgid "geometry and message are incompatible"
+msgstr "geometría y mensaje son incompatibles"
+
+#: ioctl/libdm-iface.c:1215
+msgid "message is required with sector"
+msgstr "se requiere mensaje con sector"
+
+#: ioctl/libdm-iface.c:1255
+msgid "Missing major number for persistent device."
+msgstr "Número mayor para dispositivo persistente no encontrado."
+
+#: ioctl/libdm-iface.c:1265
+#, c-format
+msgid "Unable to find name for device (%u:%u)"
+msgstr "Imposible encontrar el nombre del dispositivo (%u:%u)"
+
+#: ioctl/libdm-iface.c:1269
+#, c-format
+msgid "device (%u:%u) is %s for compatibility with old kernel"
+msgstr "dispositivo (%u:%u) es %s para compatibilidad con viejo núcleo"
+
+#: ioctl/libdm-iface.c:1327
+#, c-format
+msgid "opendir %s: %s"
+msgstr "abrir directcorio %s: %s"
+
+#: ioctl/libdm-iface.c:1341
+#, c-format
+msgid "closedir %s: %s"
+msgstr "cerrar directorio %s: %s"
+
+#: ioctl/libdm-iface.c:1399 ioctl/libdm-iface.c:1427 ioctl/libdm-iface.c:1478
+msgid "Failed to create device-mapper task struct"
+msgstr "Error al crear la estructura de tareas de device-mapper"
+
+#: ioctl/libdm-iface.c:1465
+msgid "Failed to revert device creation."
+msgstr "Fallo al revertir la creación del dispositivo."
+
+#: ioctl/libdm-iface.c:1545
+msgid "Couldn't create ioctl argument."
+msgstr "No se pudo crear argumento ioctl."
+
+#: ioctl/libdm-iface.c:1557
+#, c-format
+msgid "dm %s %s %s%s%s %s%.0d%s%.0d%s%s%c%c%s %.0lu %s [%u]"
+msgstr "dm %s %s %s%s%s %s%.0d%s%.0d%s%s%c%c%s %.0lu %s [%u]"
+
+#: ioctl/libdm-iface.c:1581 ioctl/libdm-iface.c:1586
+#, c-format
+msgid "device-mapper: %s ioctl failed: %s"
+msgstr "device-mapper: %s falló ioctl: %s"
+
+#: ioctl/libdm-iface.c:1616
+#, c-format
+msgid "Internal error: unknown device-mapper task %d"
+msgstr "Error interno: proceso desconocido de device-mapper %d"
+
+#: ioctl/libdm-iface.c:1653
+msgid "Warning: libdevmapper buffer too small for data"
+msgstr "Cuidado: buffer de libdevmapper demasiado pequeño para los datos"
+
+#: libdm-common.c:99
+#, c-format
+msgid "dm_task_create: malloc(%zu) failed"
+msgstr "dm_task_create: malloc(%zu) falló"
+
+#: libdm-common.c:141
+#, c-format
+msgid "dm_task_set_name: Device %s not found"
+msgstr "dm_task_set_name: Dispositivo %s no encontrado"
+
+#: libdm-common.c:150
+#, c-format
+msgid "dm_task_set_name: strdup(%s) failed"
+msgstr "dm_task_set_name: strdup(%s) falló"
+
+#: libdm-common.c:165
+#, c-format
+msgid "dm_task_set_uuid: strdup(%s) failed"
+msgstr "dm_task_set_uuid: strdup(%s) falló"
+
+#: libdm-common.c:234
+#, c-format
+msgid "%s: matchpathcon %07o failed: %s"
+msgstr "%s: matchpathcon %07o falló: %s"
+
+#: libdm-common.c:239
+#, c-format
+msgid "Setting SELinux context for %s to %s."
+msgstr "Estableciendo el  contexto SELinux para %s a %s."
+
+#: libdm-common.c:242
+#, c-format
+msgid "%s: lsetfilecon failed: %s"
+msgstr "%s: lsetfilecon falló: %s"
+
+#: libdm-common.c:264 libdm-common.c:311
+#, c-format
+msgid "A non-block device file at '%s' is already present"
+msgstr "Ya existe un archivo de dispositivo no bloqueante en '%s'"
+
+#: libdm-common.c:274 libdm-common.c:321 libdm-common.c:347
+#, c-format
+msgid "Unable to unlink device node for '%s'"
+msgstr "No se puede desvincular el nodo del dispositivo para '%s'"
+
+#: libdm-common.c:282
+#, c-format
+msgid "Unable to make device node for '%s'"
+msgstr "No se puede crear el nodo del dispositivo para '%s'"
+
+#: libdm-common.c:288
+#, c-format
+msgid "%s: chown failed: %s"
+msgstr "%s: chown falló: %s"
+
+#: libdm-common.c:328
+#, c-format
+msgid "Unable to rename device node from '%s' to '%s'"
+msgstr "No se puede renombrar el nodo del dispositivo de '%s' a '%s'"
+
+#: libdm-common.c:407
+msgid "Insufficient memory to stack mknod operation"
+msgstr "Memoria insuficiente para apilar la operación mknod"
+
+#: libdm-common.c:504
+msgid "Failed to get driver version"
+msgstr "Se produjo un fallo al intentar obtener la versión del controlador"
+
+#: libdm-deptree.c:157
+msgid "dm_tree_create malloc failed"
+msgstr "dm_tree_create malloc falló"
+
+#: libdm-deptree.c:169
+msgid "dtree pool creation failed"
+msgstr "la creación de pool de dtree falló"
+
+#: libdm-deptree.c:175
+msgid "dtree hash creation failed"
+msgstr "la creación de hash de dtree falló"
+
+#: libdm-deptree.c:182
+msgid "dtree uuid hash creation failed"
+msgstr "la creación del hash dtree uuid falló"
+
+#: libdm-deptree.c:220
+msgid "dtree link allocation failed"
+msgstr "falló la asignación de enlace a dtree"
+
+#: libdm-deptree.c:314
+msgid "_create_dm_tree_node alloc failed"
+msgstr "_create_dm_tree_node alloc falló"
+
+#: libdm-deptree.c:334
+msgid "dtree node hash insertion failed"
+msgstr "la inserción del hash del nódulo de dtree falló"
+
+#: libdm-deptree.c:341
+msgid "dtree uuid hash insertion failed"
+msgstr "la inserción del hash del uuid de dtree falló"
+
+#: libdm-deptree.c:394
+msgid "deps dm_task creation failed"
+msgstr "la creación de deps dm_task falló"
+
+#: libdm-deptree.c:399
+#, c-format
+msgid "_deps: failed to set major for (%u:%u)"
+msgstr "_deps: fallo al establecer el valor mayor para (%u:%u)"
+
+#: libdm-deptree.c:405
+#, c-format
+msgid "_deps: failed to set minor for (%u:%u)"
+msgstr "_deps: fallo al establecer el valor menor para (%u:%u)"
+
+#: libdm-deptree.c:411
+#, c-format
+msgid "_deps: task run failed for (%u:%u)"
+msgstr "_deps: ejecución de la tarea falló para (%u:%u)"
+
+#: libdm-deptree.c:417
+#, c-format
+msgid "_deps: failed to get info for (%u:%u)"
+msgstr "_deps: falló al obtener información para (%u:%u)"
+
+#: libdm-deptree.c:428
+#, c-format
+msgid "Inconsistent dtree major number: %u != %u"
+msgstr "Número mayor de dtree inconsistente: %u != %u"
+
+#: libdm-deptree.c:433
+#, c-format
+msgid "Inconsistent dtree minor number: %u != %u"
+msgstr "Número menor de dtree inconsistente: %u != %u"
+
+#: libdm-deptree.c:438 libdm-deptree.c:577 libdm-deptree.c:606
+msgid "name pool_strdup failed"
+msgstr "nombre pool_strdup falló"
+
+#: libdm-deptree.c:442 libdm-deptree.c:581
+msgid "uuid pool_strdup failed"
+msgstr "uuid pool_strdup falló"
+
+#: libdm-deptree.c:520
+msgid "_node_clear_table failed: missing info"
+msgstr "_node_clear_table falló: falta información"
+
+#: libdm-deptree.c:525
+msgid "_node_clear_table failed: missing name"
+msgstr "_node_clear_table falló: falta nombre"
+
+#: libdm-deptree.c:533
+#, c-format
+msgid "Clearing inactive table %s (%u:%u)"
+msgstr "Limpiando tabla inactiva %s (%u:%u)"
+
+#: libdm-deptree.c:538
+#, c-format
+msgid "Table clear dm_task creation failed for %s"
+msgstr "Creación de limpieza de tabla dm_task falló para %s"
+
+#: libdm-deptree.c:544
+#, c-format
+msgid "Failed to set device number for %s table clear"
+msgstr "Fallo al asignar número de dispositivo para limpieza de tabla %s"
+
+#: libdm-deptree.c:552
+#, c-format
+msgid "_node_clear_table failed: info missing after running task for %s"
+msgstr ""
+"_node_clear_table falló: se falta información después de cumplir tarea para "
+"%s"
+
+#: libdm-deptree.c:791
+msgid "_info_by_dev: dm_task creation failed"
+msgstr "_info_by_dev: falló la creación de dm_task"
+
+#: libdm-deptree.c:796
+msgid "_info_by_dev: Failed to set device number"
+msgstr "_info_by_dev: falló al fijar el número de dispositivo"
+
+#: libdm-deptree.c:802 libdm-deptree.c:831 libdm-deptree.c:866
+#: libdm-deptree.c:897 libdm-deptree.c:930 libdm-deptree.c:1191
+#: libdm-deptree.c:1456
+msgid "Failed to disable open_count"
+msgstr "Fallo al desactivar open_count"
+
+#: libdm-deptree.c:817
+#, c-format
+msgid "Removing %s (%u:%u)"
+msgstr "Removiendo %s (%u:%u)"
+
+#: libdm-deptree.c:820
+#, c-format
+msgid "Deactivation dm_task creation failed for %s"
+msgstr "Desactivación de la creación de dm_task falló por %s"
+
+#: libdm-deptree.c:825
+#, c-format
+msgid "Failed to set device number for %s deactivation"
+msgstr "Falló al asignar el número de dispositivo para desactivación %s"
+
+#: libdm-deptree.c:850
+#, c-format
+msgid "Renaming %s (%u:%u) to %s"
+msgstr "Renombrando %s (%u:%u) a %s"
+
+#: libdm-deptree.c:853
+#, c-format
+msgid "Rename dm_task creation failed for %s"
+msgstr "Fallo al renombrar dm_task para %s"
+
+#: libdm-deptree.c:858
+#, c-format
+msgid "Failed to set name for %s rename."
+msgstr "No se pudo asignar un nombre para %s renombrar"
+
+#: libdm-deptree.c:883
+#, c-format
+msgid "Resuming %s (%u:%u)"
+msgstr "Reanudando %s (%u:%u)"
+
+#: libdm-deptree.c:886 libdm-deptree.c:919
+#, c-format
+msgid "Suspend dm_task creation failed for %s"
+msgstr "Falló creación de suspender dm_task para %s"
+
+#: libdm-deptree.c:891
+#, c-format
+msgid "Failed to set device number for %s resumption."
+msgstr "No se pudo asignar un número de dispositivo para reanudación de %s"
+
+#: libdm-deptree.c:913
+#, c-format
+msgid "Suspending %s (%u:%u)%s%s"
+msgstr "Suspendiendo %s (%u:%u)%s%s"
+
+#: libdm-deptree.c:924
+#, c-format
+msgid "Failed to set device number for %s suspension."
+msgstr "No se pudo asignar un número de dispositivo para suspensión de %s"
+
+#: libdm-deptree.c:933
+msgid "Failed to set skip_lockfs flag."
+msgstr "Falló al asignar bandera skip_lockfs."
+
+#: libdm-deptree.c:936
+msgid "Failed to set no_flush flag."
+msgstr "Falló al establecer no_flush ."
+
+#: libdm-deptree.c:983
+#, c-format
+msgid "Unable to deactivate %s (%u:%u)"
+msgstr "No se pudo desactivar %s (%u:%u)"
+
+#: libdm-deptree.c:1049
+#, c-format
+msgid "Unable to suspend %s (%u:%u)"
+msgstr "No se pudo suspender %s (%u:%u)"
+
+#: libdm-deptree.c:1127
+#, c-format
+msgid "Failed to rename %s (%u:%u) to %s"
+msgstr "Fallo al renombrar %s (%u:%u) a %s"
+
+#: libdm-deptree.c:1140 libdm-deptree.c:1531
+#, c-format
+msgid "Unable to resume %s (%u:%u)"
+msgstr "Imposible reanudar %s (%u:%u)"
+
+#: libdm-deptree.c:1161
+#, c-format
+msgid "Creating %s"
+msgstr "Creando %s"
+
+#: libdm-deptree.c:1164
+#, c-format
+msgid "Create dm_task creation failed for %s"
+msgstr "Falló la creación de dm_task para  %s"
+
+#: libdm-deptree.c:1169
+#, c-format
+msgid "Failed to set device name for %s"
+msgstr "Falló al asignar nombre de dispositivo para %s"
+
+#: libdm-deptree.c:1174
+#, c-format
+msgid "Failed to set uuid for %s"
+msgstr "Falló al asignar uuid para %s"
+
+#: libdm-deptree.c:1181
+#, c-format
+msgid "Failed to set device number for %s creation."
+msgstr "Falló al asignar número de dispositivo para creación %s."
+
+#: libdm-deptree.c:1186 libdm-deptree.c:1451
+#, c-format
+msgid "Failed to set read only flag for %s"
+msgstr "Falló al asignar bandera de solo lectura para %s"
+
+#: libdm-deptree.c:1206
+#, c-format
+msgid "Failed to format %s device number for %s as dm target (%u,%u)"
+msgstr ""
+"Falló al formatear número de dispositivo %s para %s como objetivo dm (%u,%u)"
+
+#: libdm-deptree.c:1387
+#, c-format
+msgid "Adding target: %lu %lu %s %s"
+msgstr "Agregando destino: %lu %lu %s %s"
+
+#: libdm-deptree.c:1407
+msgid "Insufficient space for target parameters."
+msgstr "Espacio insuficiente para los parámetros de destino."
+
+#: libdm-deptree.c:1420
+#, c-format
+msgid "Insufficient space in params[%zu] for target parameters."
+msgstr "Espacio insuficiente en params[%zu] para parámetros de destino."
+
+#: libdm-deptree.c:1426
+msgid "Target parameter size too big. Aborting."
+msgstr "Tamaño del parámetro de destino demasiado grande. Abortando."
+
+#: libdm-deptree.c:1437
+#, c-format
+msgid "Loading %s table"
+msgstr "Cargando tabla %s"
+
+#: libdm-deptree.c:1440
+#, c-format
+msgid "Reload dm_task creation failed for %s"
+msgstr "Falló al recargar dm_task por %s"
+
+#: libdm-deptree.c:1446
+#, c-format
+msgid "Failed to set device number for %s reload."
+msgstr "Falló al asignar número de dispositivo para recargar %s."
+
+#: libdm-deptree.c:1463
+msgid "Failed to suppress reload of identical tables."
+msgstr "Falló al suprimir recarga de tablas idénticas."
+
+#: libdm-deptree.c:1468
+#, c-format
+msgid "Suppressed %s identical table reload."
+msgstr "Se han recargado las %s tablas idénticas suprimidas"
+
+#: libdm-deptree.c:1559
+msgid "Failed to get uuid for dtree node."
+msgstr "Falla al obtener el uuid para el nodo dtree"
+
+#: libdm-deptree.c:1581
+msgid "dtree node segment allocation failed"
+msgstr "falló la asignación del segmento del nodo de dtree"
+
+#: libdm-deptree.c:1612 libdm-deptree.c:1640 libdm-deptree.c:1649
+#, c-format
+msgid "Couldn't find snapshot origin uuid %s."
+msgstr "No se pudo encontrar el origen de la instantánea uuid %s"
+
+#: libdm-deptree.c:1715 libdm-deptree.c:1813
+msgid "Internal error: Attempt to add target area to missing segment."
+msgstr ""
+"Error interno: se intentó añadir área de destino a un sector perdido."
+
+#: libdm-deptree.c:1723
+msgid "log uuid pool_strdup failed"
+msgstr "fallo al registrar uuid pool_strdup"
+
+#: libdm-deptree.c:1728
+#, c-format
+msgid "Couldn't find mirror log uuid %s."
+msgstr "No se pudo encontrar registro espejo uuid %s."
+
+#: libdm-deptree.c:1762
+msgid "Failed to allocate target segment area."
+msgstr "No se pudo asignar el área de segmento objetivo."
+
+#: libdm-deptree.c:1785
+msgid "dm_tree_node_add_target_area called without device"
+msgstr "dm_tree_node_add_target_area llamado sin dispositivo"
+
+#: libdm-deptree.c:1791
+#, c-format
+msgid "Couldn't find area uuid %s."
+msgstr "No se pudo encontrar área uuid %s"
+
+#: libdm-deptree.c:1798
+#, c-format
+msgid "Device %s not found."
+msgstr "Dispositivo %s no encontrado."
+
+#: libdm-deptree.c:1803
+#, c-format
+msgid "Device %s is not a block device."
+msgstr "Dispositivo %s no es un dispositivo de bloques."
+
+#: libdm-file.c:28
+#, c-format
+msgid "Creating directory \"%s\""
+msgstr "Creando directorio \"%s\""
+
+#: libdm-file.c:36 libdm-file.c:47
+#, c-format
+msgid "%s: mkdir failed: %s"
+msgstr "%s: mkdir falló: %s"
+
+#: libdm-file.c:71
+#, c-format
+msgid "Directory \"%s\" not found"
+msgstr "Directorio \"%s\" no encontrado"
+
+#: libdm-report.c:108
+msgid "dm_report_field_string: dm_pool_strdup failed"
+msgstr "dm_report_field_string: dm_pool_strdup falló"
+
+#: libdm-report.c:126 libdm-report.c:131
+msgid "dm_report_field_int: dm_pool_alloc failed"
+msgstr "dm_report_field_int: dm_pool_alloc falló"
+
+#: libdm-report.c:136
+#, c-format
+msgid "dm_report_field_int: int too big: %d"
+msgstr "dm_report_field_int: int demasiado grande: %d"
+
+#: libdm-report.c:155 libdm-report.c:160
+msgid "dm_report_field_uint32: dm_pool_alloc failed"
+msgstr "dm_report_field_uint32: dm_pool_alloc falló"
+
+#: libdm-report.c:165
+#, c-format
+msgid "dm_report_field_uint32: uint32 too big: %u"
+msgstr "dm_report_field_uint32: uint32 demasiado grande: %u"
+
+#: libdm-report.c:184 libdm-report.c:189
+msgid "dm_report_field_int32: dm_pool_alloc failed"
+msgstr "dm_report_field_int32: dm_pool_alloc falló"
+
+#: libdm-report.c:194
+#, c-format
+msgid "dm_report_field_int32: int32 too big: %d"
+msgstr "dm_report_field_int32: int32 demasiado grande: %d"
+
+#: libdm-report.c:213 libdm-report.c:218
+msgid "dm_report_field_uint64: dm_pool_alloc failed"
+msgstr "dm_report_field_uint64: dm_pool_alloc falló"
+
+#: libdm-report.c:223
+#, c-format
+msgid "dm_report_field_uint64: uint64 too big: %d"
+msgstr "dm_report_field_uint64: uint64 demasiado grande: %d"
+
+#: libdm-report.c:264 libdm-report.c:448
+msgid " "
+msgstr " "
+
+#: libdm-report.c:265
+#, c-format
+msgid "%s Fields"
+msgstr "%s Camposs"
+
+#: libdm-report.c:266
+#, c-format
+msgid "%*.*s"
+msgstr "%*.*s"
+
+#: libdm-report.c:273
+#, c-format
+msgid "  %-*s - %s"
+msgstr "  %-*s - %s"
+
+#: libdm-report.c:291
+#, c-format
+msgid "dm_report: field not match: %s"
+msgstr "dm_report: no coincide el campo: %s"
+
+#: libdm-report.c:307
+msgid "dm_report: struct field_properties allocation failed"
+msgstr "dm_report: struct field_properties falló la asignación"
+
+#: libdm-report.c:387
+#, c-format
+msgid "dm_report: Ignoring duplicate sort field: %s"
+msgstr "dm_report: Ignorando campo de orden duplicado: %s"
+
+#: libdm-report.c:419
+msgid "dm_report: Missing sort field name"
+msgstr "dm_report: Falta el nombre del campo para ordenar"
+
+#: libdm-report.c:450
+#, c-format
+msgid "Unrecognised field: %.*s"
+msgstr "Campo desconocido: %.*s"
+
+#: libdm-report.c:472
+#, c-format
+msgid "dm_report: Unrecognised field: %.*s"
+msgstr "dm_report: campo desconocido: %.*s"
+
+#: libdm-report.c:494
+msgid "dm_report_init: dm_malloc failed"
+msgstr "dm_report_init: fallo en dm_malloc"
+
+#: libdm-report.c:526
+msgid "dm_report_init: allocation of memory pool failed"
+msgstr "dm_report_init: asignación de memoria común falló"
+
+#: libdm-report.c:577
+msgid "dm_report_object: struct row allocation failed"
+msgstr "dm_report_object: fallo al asignar estructura de fila"
+
+#: libdm-report.c:587
+msgid "dm_report_object: row sort value structure allocation failed"
+msgstr ""
+"dm_report_object: fallo al asignar estructura de valor de ordenación de filas"
+
+#: libdm-report.c:598
+msgid "dm_report_object: struct dm_report_field allocation failed"
+msgstr "dm_report_object: fallo al asignar estructura dm_report_field"
+
+#: libdm-report.c:611
+#, c-format
+msgid "dm_report_object: report function failed for field %s"
+msgstr "dm_report_object: informe de fallo de función para el campo %s"
+
+#: libdm-report.c:651
+msgid "dm_report: dm_pool_begin_object failed for headings"
+msgstr "dm_report: fallo en dm_pool_begin_object para las cabeceras"
+
+#: libdm-report.c:665
+msgid "dm_report: snprintf heading failed"
+msgstr "dm_report: fallo en la cabecera de snprintf"
+
+#: libdm-report.c:669 libdm-report.c:674 libdm-report.c:681 libdm-report.c:686
+msgid "dm_report: Failed to generate report headings for printing"
+msgstr ""
+"dm_report: Falla al generar los encabezados del informe para impresión"
+
+#: libdm-report.c:689 libdm-report.c:851
+#, c-format
+msgid "%s"
+msgstr "%s"
+
+#: libdm-report.c:752
+msgid "dm_report: sort array allocation failed"
+msgstr "dm_report: fallo al asignar la matriz de ordenación"
+
+#: libdm-report.c:795
+msgid "dm_report: Unable to allocate output line"
+msgstr "dm_report: No se pudo asignar la línea de salida"
+
+#: libdm-report.c:809 libdm-report.c:823 libdm-report.c:833 libdm-report.c:842
+msgid "dm_report: Unable to extend output line"
+msgstr "dm_report: No se pudo extender la línea de salida"
+
+#: libdm-report.c:819
+msgid "dm_report: left-aligned snprintf() failed"
+msgstr "dm_report: fallo en snprintf() alineado a la izquierda"
+
+#: libdm-report.c:829
+msgid "dm_report: right-aligned snprintf() failed"
+msgstr "dm_report: fallo en snprintf() alineado a la derecha"
+
+#: libdm-report.c:848
+msgid "dm_report: Unable to terminate output line"
+msgstr "dm_report: Imposible terminar la linea de salida"
+
+#: mm/dbg_malloc.c:26
+msgid "Internal error: dm_strdup called with NULL pointer"
+msgstr "Error interno: llamada a dm_strdup con un puntero nulo"
+
+#: mm/dbg_malloc.c:63 mm/dbg_malloc.c:238
+#, c-format
+msgid "Huge memory allocation (size %zu) rejected - metadata corruption?"
+msgstr ""
+"Enorme asignación de memoria (tamaño %zu) rechazado - ¿corrupción de "
+"metadatos?"
+
+#: mm/dbg_malloc.c:69
+#, c-format
+msgid "couldn't allocate any memory, size = %zu"
+msgstr "No se pudo asignar ninguna memoria, tamaño = %zu"
+
+#: mm/dbg_malloc.c:193
+msgid "You have a memory leak:"
+msgstr "Tiene una fuga de memoria:"
+
+#: mm/dbg_malloc.c:208
+#, c-format
+msgid "block %d at %p, size %zu\t [%s]"
+msgstr "bloque %d en %p, tamaño %zu\t [%s]"
+
+#: mm/dbg_malloc.c:215
+#, c-format
+msgid "%ld bytes leaked in total"
+msgstr "%ld bytes fugados en total"
+
+#: mm/pool-fast.c:43
+#, c-format
+msgid "Couldn't create memory pool %s (size %zu)"
+msgstr "No se pudo crear el banco de memoria %s (tamaño %zu)"
+
+#: mm/pool-fast.c:132
+msgid "Internal error: pool_free asked to free pointer not in pool"
+msgstr ""
+"Error interno: pool_free pidió liberar un puntero que no se encuentra en el "
+"banco."
+
+#: mm/pool-fast.c:221
+#, c-format
+msgid "Out of memory.  Requested %zu bytes."
+msgstr "Memoria induficiente. Se solicitaron %zu bytes."
+
+#: regex/matcher.c:136
+msgid "Internal error: Unknown calc node type"
+msgstr "Error interno: Tipo de nodo calc desconocido"
+
+#: regex/matcher.c:262
+#, c-format
+msgid "Matcher built with %d dfa states"
+msgstr "Coincidencias construidas con estados dfa %d"
+
+#: regex/matcher.c:303
+msgid "Couldn't parse regex"
+msgstr "No se puede analizar regex"
+
+#: regex/parse_rx.c:88
+msgid "Incomplete rangespecification"
+msgstr "Especificación de rango incompleta"
+
+#: regex/parse_rx.c:166
+msgid "Badly quoted character at end of expression"
+msgstr "Caracter con comillas incorrectas al final de la expresion"
+
+#: regex/parse_rx.c:240
+msgid "missing ')' in regular expression"
+msgstr "sin ')' en la expresión regular"
+
+#: regex/parse_rx.c:322
+msgid "Badly formed 'or' expression"
+msgstr "Expresión 'or' mal formada"
+
+#: regex/parse_rx.c:350
+msgid "Parse error in regex"
+msgstr "Error de análisis en regex"

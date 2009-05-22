@@ -1,0 +1,454 @@
+# Spanish translation for neon27
+# Copyright (c) 2008 Rosetta Contributors and Canonical Ltd 2008
+# This file is distributed under the same license as the neon27 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2008.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: neon27\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2008-03-03 10:36+0000\n"
+"PO-Revision-Date: 2009-05-02 06:51+0000\n"
+"Last-Translator: Paco Molinero <paco@byasl.com>\n"
+"Language-Team: Spanish <es@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2009-05-18 23:42+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+#: src/ne_207.c:198
+#, c-format
+msgid ""
+"Invalid HTTP status line in status element at line %d of response:\n"
+"Status line was: %s"
+msgstr ""
+"Línea de estado HTTP inválida en la línea %d del elemento de estado de la "
+"respuesta: \n"
+"La línea de estado era: %s"
+
+#: src/ne_auth.c:130
+#, c-format
+msgid "Could not authenticate to server: %s"
+msgstr "No se puede autenticar al servidor: %s"
+
+#: src/ne_auth.c:135
+#, c-format
+msgid "Could not authenticate to proxy server: %s"
+msgstr "No se puede autenticar al servidor proxy: %s"
+
+#: src/ne_auth.c:358
+#, c-format
+msgid "rejected %s challenge"
+msgstr "reto %s rechazado"
+
+#: src/ne_auth.c:374
+msgid "missing realm in Basic challenge"
+msgstr "reino perdido en el reto básico"
+
+#: src/ne_auth.c:469
+msgid "invalid Negotiate token"
+msgstr "Token de negociación inválido"
+
+#: src/ne_auth.c:492
+msgid "GSSAPI authentication error: "
+msgstr "error de autenticación GSSAPI: "
+
+#: src/ne_auth.c:505
+#, c-format
+msgid "GSSAPI failure (code %u)"
+msgstr "fallo en GSSAPI (código %u)"
+
+#: src/ne_auth.c:1036
+#, c-format
+msgid "Digest mutual authentication failure: missing parameters"
+msgstr "Falló la autenticación mutua resumida: parámetros desaparecidos"
+
+#: src/ne_auth.c:1225
+#, c-format
+msgid "ignored %s challenge"
+msgstr "se ignora el reto %s"
+
+#: src/ne_auth.c:1304
+msgid "could not parse challenge"
+msgstr "no se puede analizar el reto"
+
+#: src/ne_basic.c:98
+#, c-format
+msgid "Could not determine file size: %s"
+msgstr "No se puede determinar el tamaño del archivo: %s"
+
+#: src/ne_basic.c:149
+#, c-format
+msgid "Response did not include requested range"
+msgstr "La respuesta no incluyó el rango solicitado"
+
+#: src/ne_basic.c:183
+#, c-format
+msgid "Range is not satisfiable"
+msgstr "No se puede satisfacer el rango."
+
+#: src/ne_compress.c:184
+#, c-format
+msgid "%s: %s (code %d)"
+msgstr "%s: %s (código %d)"
+
+#: src/ne_compress.c:232
+msgid "Could not inflate data"
+msgstr "No se pudieron descomprimir los datos"
+
+#: src/ne_compress.c:293
+msgid "Could not initialize zlib"
+msgstr "No se pudo inicializar zlib"
+
+#: src/ne_gnutls.c:160
+#, c-format
+msgid "[unprintable:#%lu]"
+msgstr "[inimprimible:#%lu]"
+
+#: src/ne_gnutls.c:186
+msgid "[unprintable]"
+msgstr "[inimprimible]"
+
+#: src/ne_gnutls.c:694 src/ne_openssl.c:419
+#, c-format
+msgid "Server certificate was missing commonName attribute in subject name"
+msgstr ""
+"Al certificado del servidor le falta el atributo commonName en el nombre del "
+"sujeto"
+
+#: src/ne_gnutls.c:734 src/ne_openssl.c:638
+#, c-format
+msgid "SSL negotiation failed: %s"
+msgstr "La negociación SSL falló: %s"
+
+#: src/ne_gnutls.c:743
+#, c-format
+msgid "Server did not send certificate chain"
+msgstr "El servidor no envió la cadena del certificado"
+
+#: src/ne_locks.c:584
+msgid "LOCK response missing Lock-Token header"
+msgstr "Falta respuesta LOCK de la cabecera de Lock-Token"
+
+#: src/ne_locks.c:759
+#, c-format
+msgid "Response missing activelock for %s"
+msgstr "Le falta activelock a la respuesta para %s"
+
+#: src/ne_openssl.c:451
+#, c-format
+msgid "Certificate verification error: %s"
+msgstr "Error en la verificación del certificado: %s"
+
+#: src/ne_openssl.c:657
+#, c-format
+msgid "SSL server did not present certificate"
+msgstr "El servidor SSL no presentó certificado"
+
+#: src/ne_openssl.c:666
+#, c-format
+msgid "Server certificate changed: connection intercepted?"
+msgstr "El certificado del servidor cambio: ¿La conexión fue interceptada?"
+
+#: src/ne_props.c:371 src/ne_props.c:435
+msgid "Response exceeds maximum property count"
+msgstr "La respuesta excede el máximo del contador de la propiedad"
+
+#: src/ne_redirect.c:92
+#, c-format
+msgid "Could not parse redirect destination URL"
+msgstr "No se pudo analizar el URL que redirige el destino"
+
+#: src/ne_request.c:193
+#, c-format
+msgid "%s: connection was closed by proxy server"
+msgstr "%s: la conexión fue cerrada por el servidor proxy"
+
+#: src/ne_request.c:196
+#, c-format
+msgid "%s: connection was closed by server"
+msgstr "%s: la conexión fue cerrada por el servidor"
+
+#: src/ne_request.c:201
+#, c-format
+msgid "%s: connection timed out"
+msgstr "%s: tiempo de conexión terminado"
+
+#: src/ne_request.c:306
+msgid "offset invalid"
+msgstr "posición inválida"
+
+#: src/ne_request.c:359
+msgid "Could not send request body"
+msgstr "No se pudo enviar el cuerpo de la petición."
+
+#: src/ne_request.c:692
+msgid "Could not read chunk size"
+msgstr "No se puede leer el tamaño del trozo"
+
+#: src/ne_request.c:699
+msgid "Could not parse chunk size"
+msgstr "No se puede analizar el tamaño del trozo"
+
+#: src/ne_request.c:736
+msgid "Could not read response body"
+msgstr "No se puede leer el cuerpo de la respuesta"
+
+#: src/ne_request.c:752
+msgid "Could not read chunk delimiter"
+msgstr "No se puede leer el delimitador del trozo"
+
+#: src/ne_request.c:755
+msgid "Chunk delimiter was invalid"
+msgstr "El delimitador de la sección fue invalido"
+
+#: src/ne_request.c:861
+msgid "Could not read status line"
+msgstr "No se pudo leer la línea de estado"
+
+#: src/ne_request.c:883
+msgid "Could not parse response status line"
+msgstr "No se puede analizar la línea de estado de la respuesta"
+
+#: src/ne_request.c:895
+msgid "Could not read interim response headers"
+msgstr "No se pueden leer las cabeceras provisionales de respuesta"
+
+#: src/ne_request.c:929
+msgid "Could not send request"
+msgstr "No se pudo enviar la petición"
+
+#: src/ne_request.c:977 src/ne_request.c:995 src/ne_request.c:1005
+msgid "Error reading response headers"
+msgstr "Error al leer las cabeceras de la respuesta"
+
+#: src/ne_request.c:1023
+#, c-format
+msgid "Response header too long"
+msgstr "La cabecera de la respuesta es demasiado larga"
+
+#: src/ne_request.c:1105
+msgid "Response exceeded maximum number of header fields"
+msgstr "La respuesta excede el número máximo de campos del encabezado"
+
+#: src/ne_request.c:1122
+#, c-format
+msgid "Could not resolve hostname `%s': %s"
+msgstr "No se pudo resolver el nombre del anfitrión `%s': %s"
+
+#: src/ne_request.c:1244
+msgid "Invalid Content-Length in response"
+msgstr "Tamaño del contenido inválido en la respuesta"
+
+#: src/ne_request.c:1317
+#, c-format
+msgid "Could not write to file: %s"
+msgstr "No se pudo escribir en el archivo: %s"
+
+#: src/ne_request.c:1390
+#, c-format
+msgid "Could not create SSL connection through proxy server: %s"
+msgstr "No se pudo crear una conexión SSL a través del servidor proxy: %s"
+
+#: src/ne_request.c:1437
+#, c-format
+msgid "Could not create socket"
+msgstr "No se pudo crear un zócalo"
+
+#: src/ne_request.c:1499
+msgid "Could not connect to proxy server"
+msgstr "No se pudo conectar con el servidor proxy"
+
+#: src/ne_request.c:1500
+msgid "Could not connect to server"
+msgstr "No se pudo conectar con el servidor"
+
+#: src/ne_session.c:356 src/ne_session.c:367
+msgid "[invalid date]"
+msgstr "[fecha inválida]"
+
+#: src/ne_session.c:380
+msgid "certificate is not yet valid"
+msgstr "el certificado todavía no es válido"
+
+#: src/ne_session.c:381
+msgid "certificate has expired"
+msgstr "el certificado ha expirado"
+
+#: src/ne_session.c:382
+msgid "certificate issued for a different hostname"
+msgstr "certificado emitido para un servidor diferente"
+
+#: src/ne_session.c:383
+msgid "issuer is not trusted"
+msgstr "el emisor no es de confianza"
+
+#: src/ne_session.c:388
+msgid "Server certificate verification failed: "
+msgstr "La verificación del certificado del servidor falló: "
+
+#: src/ne_socket.c:509 src/ne_socket.c:563 src/ne_socket.c:666
+msgid "Connection closed"
+msgstr "Conexión cerrada"
+
+#: src/ne_socket.c:573 src/ne_socket.c:678
+msgid "Secure connection truncated"
+msgstr "Conexión segura truncada"
+
+#: src/ne_socket.c:585 src/ne_socket.c:690
+#, c-format
+msgid "SSL error: %s"
+msgstr "error SSL: %s"
+
+#: src/ne_socket.c:588
+#, c-format
+msgid "SSL error code %d/%d/%lu"
+msgstr "Código de error SSL %d/%d/%lu"
+
+#: src/ne_socket.c:671
+#, c-format
+msgid "SSL alert received: %s"
+msgstr "alerta SSL recibida: %s"
+
+#: src/ne_socket.c:686
+msgid "SSL socket read failed"
+msgstr "fallo al leer el zócalo SSL"
+
+#: src/ne_socket.c:785
+msgid "Line too long"
+msgstr "Línea demasiado larga"
+
+#: src/ne_socket.c:930 src/ne_socket.c:936
+msgid "Host not found"
+msgstr "Anfitrión no encontrado"
+
+#: src/ne_socket.c:1043
+msgid "Connection timed out"
+msgstr "Expiró la conexión"
+
+#: src/ne_socket.c:1205
+msgid "Socket descriptor number exceeds FD_SETSIZE"
+msgstr "El número de descriptor del zócalo excede FD_SETSIZE"
+
+#: src/ne_socket.c:1266
+msgid "Socket family not supported"
+msgstr "Familia de zócalo no permitida"
+
+#: src/ne_socket.c:1489
+msgid "Client certificate verification failed"
+msgstr "La verificación del certificado del cliente falló"
+
+#: src/ne_socket.c:1505
+msgid "SSL disabled due to lack of entropy"
+msgstr "SSL deshabilitado debido a una falta de entropía"
+
+#: src/ne_socket.c:1512
+msgid "SSL disabled due to library version mismatch"
+msgstr ""
+"SSL deshabilitado debido a una diferencia en la versión de la biblioteca"
+
+#: src/ne_socket.c:1518
+msgid "Could not create SSL structure"
+msgstr "No se pudo crear la estructura SSL"
+
+#: src/ne_xml.c:280
+#, c-format
+msgid "XML parse error at line %d: invalid element name"
+msgstr "XML error de análisis en la línea %d: nombre de elemento inválido"
+
+#: src/ne_xml.c:452
+msgid "Unknown error"
+msgstr "Error desconocido"
+
+#: src/ne_xml.c:537
+msgid "Invalid Byte Order Mark"
+msgstr "Marca de orden de byte inválida"
+
+#: src/ne_xml.c:625
+#, c-format
+msgid "XML parse error at line %d: %s"
+msgstr "Error de análisis XML en la línea %d: %s"
+
+#: src/ne_xmlreq.c:36
+#, c-format
+msgid "Could not parse response: %s"
+msgstr "No se puede analizar la respuesta: %s"
+
+#: src/ne_auth.c:540
+msgid "ignoring empty Negotiate continuation"
+msgstr ""
+
+#: src/ne_auth.c:555
+#, c-format
+msgid "Negotiate response verification failed: invalid response header token"
+msgstr ""
+
+#: src/ne_auth.c:577
+#, c-format
+msgid "Negotiate response verification failure: %s"
+msgstr ""
+
+#: src/ne_auth.c:697
+msgid "unknown algorithm in Digest challenge"
+msgstr "algoritmo desconocido en el reto de resumen"
+
+#: src/ne_auth.c:701
+msgid "incompatible algorithm in Digest challenge"
+msgstr "algoritmo incomplatible en el reto de resumen"
+
+#: src/ne_auth.c:705
+msgid "missing parameter in Digest challenge"
+msgstr ""
+
+#: src/ne_auth.c:709
+msgid "initial Digest challenge was stale"
+msgstr ""
+
+#: src/ne_auth.c:716
+msgid "stale Digest challenge with new algorithm or realm"
+msgstr ""
+
+#: src/ne_auth.c:728
+msgid "could not parse domain in Digest challenge"
+msgstr ""
+
+#: src/ne_auth.c:1041
+#, c-format
+msgid "Digest mutual authentication failure: client nonce mismatch"
+msgstr ""
+
+#: src/ne_auth.c:1051
+#, c-format
+msgid "Digest mutual authentication failure: could not parse nonce count"
+msgstr ""
+
+#: src/ne_auth.c:1056
+#, c-format
+msgid ""
+"Digest mutual authentication failure: nonce count mismatch (%u not %u)"
+msgstr ""
+
+#: src/ne_auth.c:1099
+#, c-format
+msgid "Digest mutual authentication failure: request-digest mismatch"
+msgstr ""
+
+#: src/ne_basic.c:188
+#, c-format
+msgid "Resource does not support ranged GET requests"
+msgstr "El recurso no permite el rango de peticiones GET"
+
+#: src/ne_locks.c:801
+#, c-format
+msgid "No activelock for <%s> returned in LOCK refresh response"
+msgstr ""
+
+#: src/ne_request.c:311
+#, c-format
+msgid "Could not seek to offset %s of request body file: %s"
+msgstr ""
+
+#: src/ne_request.c:1233
+msgid "Unknown transfer-coding in response"
+msgstr "Coficación de transferencia desconocida en la respuesta"

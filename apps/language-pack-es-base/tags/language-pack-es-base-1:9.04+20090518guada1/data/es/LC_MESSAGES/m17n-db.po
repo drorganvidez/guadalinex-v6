@@ -1,0 +1,395 @@
+# Spanish translation for m17n-db
+# Copyright (c) 2008 Rosetta Contributors and Canonical Ltd 2008
+# This file is distributed under the same license as the m17n-db package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2008.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: m17n-db\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2008-06-23 14:58+0900\n"
+"PO-Revision-Date: 2009-01-25 10:06+0000\n"
+"Last-Translator: Paco Molinero <paco@byasl.com>\n"
+"Language-Team: Spanish <es@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2009-04-11 14:16+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+#: MIM/bo-ewts.mim:32
+msgid ""
+"Flag to tell whether or not to generate precomposed characters.\n"
+"If 1, generate precomposed characters if available (e.g. \"ྲྀ\"(U+0F76).\n"
+"If 0, generate only decomposed characters (e.g. \"ྲྀ\" (U+0FB2 U+0F80)."
+msgstr ""
+
+#: MIM/cmc-kbd.mim:26
+msgid ""
+"Cham input method simulating Cham keyboard.\n"
+"Cham characters are encoded in logical order in memory and in files.\n"
+"But, you can type Cham text in visual order with this input method.\n"
+"Backspace and Delete also work in the manner of visual order."
+msgstr ""
+
+#: MIM/fr-azerty.mim:26
+#, lisp-format
+msgid ""
+"Simulating Azerty keyboard on English keyboard.\n"
+"\n"
+"     &1  é2  \"3  '4  (5  -6  è7  _8  ç9  à0  )°  =_  ²~\n"
+"      aA  zZ  eE  rR  tT  yY  uU  iI  oO  pP  ^¨  $£\n"
+"       qQ  sS  dD  fF  gG  hH  jJ  kK  lL  mM  ù%  *|\n"
+"        wW  xX  cC  vV  bB  nN  ,?  ;.  :/  !§\n"
+"\n"
+"'[' and '{' are used as a dead key to type a character with the\n"
+"circumflex and diaeresis respectively (e.g. '[' 'e' -> \"ê\").\n"
+"\n"
+"'Alt-2' and 'Alt-7' are used as a dead key to type a character\n"
+"with tilde and grave respectively (e.g. 'Alt-2' 'n' -> \"ñ\").\n"
+"\n"
+"'Ctrl-Alt-2' and 'Ctrl-Alt-7' can be used as 'Alt-2' and 'Alt-7'\n"
+"respectively.\n"
+"\n"
+"Azerty keyboard has one more key at the bottom left corner for\n"
+"inputting \"<\" and \">\".  As a normal English keyboard doesn't\n"
+"have such a key left, type '<' and '>' twice for \"<\" and \">\"\n"
+"respectively."
+msgstr ""
+
+#: MIM/global.mim:25
+msgid ""
+"Global variable and command definitions.\n"
+"This is actually not an input method, but provides documents,\n"
+"default values of global variables, and default key-bindings of\n"
+"global commands."
+msgstr ""
+"Variable global y definciones de órdenes.\n"
+"Esto no es en realidad un método de entrada, pero proporciona los "
+"documentos,\n"
+"valores predeterminados de variables globales, y los enlaces clave "
+"predeterminados\n"
+"de las órdenes globales."
+
+#: MIM/global.mim:32
+msgid ""
+"Maxmum number of candidates in a candidate group.\n"
+"Value must be an integer.\n"
+"If the value is not positive, number of candidates in a group is decided\n"
+"by how candiates are grouped in an input method source file."
+msgstr ""
+
+#: MIM/global.mim:39
+msgid ""
+"Character set to limit candidates.\n"
+"Value must be a symbol representing a charater set, or nil.\n"
+"If the value is not nil, a candidate containing a character not belonging\n"
+"to the specified character set is ignored."
+msgstr ""
+
+#: MIM/global.mim:48
+msgid ""
+"Commit\n"
+"Commit the preedit text"
+msgstr ""
+
+#: MIM/global.mim:52
+msgid ""
+"Convert\n"
+"Convert the preedit text"
+msgstr ""
+"Convertir\n"
+"Convertir el texto pre-editado"
+
+#: MIM/global.mim:56
+msgid ""
+"Revert\n"
+"Revert the conversion"
+msgstr ""
+"Revertir\n"
+"Revertir el texto pre-editado"
+
+#: MIM/global.mim:60
+msgid ""
+"Previous candidate\n"
+"Spot the previous candidate"
+msgstr ""
+
+#: MIM/global.mim:64
+msgid ""
+"Next candidate\n"
+"Spot the next candidate"
+msgstr ""
+
+#: MIM/global.mim:68
+msgid ""
+"First candidate\n"
+"Spot the first candidate in the current group"
+msgstr ""
+
+#: MIM/global.mim:72
+msgid ""
+"Last candidate\n"
+"Spot the last candidate in the current group"
+msgstr ""
+
+#: MIM/global.mim:76
+msgid ""
+"Previous candidate group\n"
+"Move to the previous candidate group"
+msgstr ""
+
+#: MIM/global.mim:80
+msgid ""
+"Next candidate group\n"
+"Move to the next candidate group"
+msgstr ""
+
+#: MIM/global.mim:84
+msgid ""
+"Select the 1st candidate\n"
+"Select the first candidate in the current group"
+msgstr ""
+"Seleccionar el 1er candidato\n"
+"Seleccionar el 1er candidato en el grupo actual"
+
+#: MIM/global.mim:88
+msgid ""
+"Select the 2nd candidate\n"
+"Select the second candidate in the current group"
+msgstr ""
+"Seleccionar el 2º candidato\n"
+"Seleccionar el 2º candidato en el grupo actual"
+
+#: MIM/global.mim:92
+msgid ""
+"Select the 3rd candidate\n"
+"Select the third candidate in the current group"
+msgstr ""
+"Seleccionar el 3er candidato\n"
+"Seleccionar el 3er candidato en el grupo actual"
+
+#: MIM/global.mim:96
+msgid ""
+"Select the 4th candidate\n"
+"Select the fourth candidate in the current group"
+msgstr ""
+"Seleccionar el 4º candidato\n"
+"Seleccionar el 4º candidato en el grupo actual"
+
+#: MIM/global.mim:100
+msgid ""
+"Select the 5th candidate\n"
+"Select the fifth candidate in the current group"
+msgstr ""
+"Seleccionar el 5º candidato\n"
+"Seleccionar el 5º candidato en el grupo actual"
+
+#: MIM/global.mim:104
+msgid ""
+"Select the 6th candidate\n"
+"Select the sixth candidate in the current group"
+msgstr ""
+"Seleccionar el 6º candidato\n"
+"Seleccionar el 6º candidato en el grupo actual"
+
+#: MIM/global.mim:108
+msgid ""
+"Select the 7th candidate\n"
+"Select the seventh candidate in the current group"
+msgstr ""
+"Seleccionar el 7º candidato\n"
+"Seleccionar el 7º candidato en el grupo actual"
+
+#: MIM/global.mim:112
+msgid ""
+"select the 8th candidate\n"
+"Select the eighth candidate in the current group"
+msgstr ""
+"Seleccionar el 8º candidato\n"
+"Seleccionar el 8º candidato en el grupo actual"
+
+#: MIM/global.mim:116
+msgid ""
+"Select the 9th candidate\n"
+"Select the ninth candidate in the current group"
+msgstr ""
+"Seleccionar el 9º candidato\n"
+"Seleccionar el 9º candidato en el grupo actual"
+
+#: MIM/global.mim:120
+msgid ""
+"Select the 10th candidate\n"
+"Select the tenth candidate in the current group"
+msgstr ""
+"Seleccionar el 10º candidato\n"
+"Seleccionar el 10º candidato en el grupo actual"
+
+#: MIM/global.mim:124
+msgid ""
+"Previous character\n"
+"Move to the previous character in the preedit text"
+msgstr ""
+"Carácter previo\n"
+"Mover al carácter previo en el texto pre-editado"
+
+#: MIM/global.mim:128
+msgid ""
+"Next character\n"
+"Move to the next character in the preedit text"
+msgstr ""
+"Carácter siguiente\n"
+"Mover al carácter siguiente en el texto pre-editado"
+
+#: MIM/global.mim:132
+msgid ""
+"Fist character\n"
+"Move to the first character in the preedit text"
+msgstr ""
+"Primer carácter\n"
+"Mover al primer carácter en el texto pre-editado"
+
+#: MIM/global.mim:136
+msgid ""
+"Last character\n"
+"Move to the last character in the preedit text"
+msgstr ""
+"Último carácter\n"
+"Mover al último carácter en el texto pre-editado"
+
+#: MIM/global.mim:140
+msgid ""
+"Delete char backward\n"
+"Delete the previous character in the preedit text"
+msgstr ""
+
+#: MIM/global.mim:144
+msgid ""
+"Delete char\n"
+"Delete the following character in the preedit text"
+msgstr ""
+
+#: MIM/global.mim:148
+msgid ""
+"Previous segment\n"
+"Move to the previous segment in the preedit text"
+msgstr ""
+
+#: MIM/global.mim:152
+msgid ""
+"Next segment\n"
+"Move to the next segment in the preedit text"
+msgstr ""
+
+#: MIM/global.mim:156
+msgid ""
+"First segment\n"
+"Move to the first segment in the preedit text"
+msgstr ""
+
+#: MIM/global.mim:160
+msgid ""
+"Last segment\n"
+"Move to the last segment in the preedit text"
+msgstr ""
+
+#: MIM/global.mim:164
+msgid ""
+"Extend segment\n"
+"Extend the current segment length to the tail"
+msgstr ""
+
+#: MIM/global.mim:168
+msgid ""
+"Shrink segment\n"
+"Shrink the current segment length from the tail"
+msgstr ""
+
+#: MIM/global.mim:172
+msgid ""
+"Reload input method\n"
+"Reload the input method (and configulation if any) and freshly start it.\n"
+"Note that the length of key-sequence bound for this command must be 1.\n"
+"This is one of special commands reserved by the m17n library, and\n"
+"should not be used in a map of an input method."
+msgstr ""
+
+#: MIM/th-kesmanee.mim:33 MIM/th-pattachote.mim:33 MIM/th-tis820.mim:33
+msgid ""
+"Acceptance level\n"
+"The level of character sequence acceptance defined in WTT 2.0.\n"
+"0 accepts any key sequence.  2 accepts only orthographic ones.\n"
+"1 is somewhere between."
+msgstr ""
+
+#: MIM/unicode.mim:26
+msgid ""
+"Input method for Unicode BMP characters using hexadigits.\n"
+"Type C-u followed by four hexadecimal numbers [0-9A-Fa-f]\n"
+"of a Unicode character code.\n"
+msgstr ""
+
+#: MIM/unicode.mim:32
+msgid ""
+"Preedit prompt\n"
+"Prompt string shown in the preedit area while typing hexadecimal numbers."
+msgstr ""
+
+#: MIM/unicode.mim:36
+msgid ""
+"Start Unicode\n"
+"Start typing hexadecimal numbers of Unicode character."
+msgstr ""
+
+#: MIM/vi-tcvn.mim:26
+msgid ""
+"Vietnames input method using the TCVN6064 sequence.\n"
+"Typing Backslash ('\\') toggles the normal mode and English mode.\n"
+"The following variables are customizable:\n"
+"  tone-mark-on-last: control tone mark position in equivocal cases\n"
+"  backspace-is-undo: control the action of Backspace key (delete or undo)"
+msgstr ""
+
+#: MIM/vi-tcvn.mim:36 MIM/vi-telex.mim:36 MIM/vi-viqr.mim:36 MIM/vi-vni.mim:36
+msgid ""
+"Flag to control tone mark position in equivocal cases.\n"
+"If this variable is 0 (the default), put tone mark on the first vowel\n"
+"in such equivocal cases as \"oa\", \"oe\", \"uy\".\n"
+"Otherwise, put tone mark on the last vowel."
+msgstr ""
+
+#: MIM/vi-tcvn.mim:43 MIM/vi-telex.mim:43 MIM/vi-viqr.mim:43 MIM/vi-vni.mim:43
+msgid ""
+"Flag to control the action of Backspace key (delete or undo).\n"
+"If this variable is 0 (the default), Backspace key deletes the previous\n"
+"character (e.g. \"q u a i s BS\" => \"quá\").\n"
+"If the value is 1, Backspace key undoes the previous key\n"
+"(e.g. \"q u a i s BS\" => \"quai\")."
+msgstr ""
+
+#: MIM/vi-telex.mim:26
+msgid ""
+"Vietnames input method using the TELEX key sequence.\n"
+"Typing Backslash ('\\') toggles the normal mode and English mode.\n"
+"The following variables are customizable:\n"
+"  tone-mark-on-last: control tone mark position in equivocal cases\n"
+"  backspace-is-undo: control the action of Backspace key (delete or undo)"
+msgstr ""
+
+#: MIM/vi-viqr.mim:26
+msgid ""
+"Vietnames input method using the VIQR key sequence.\n"
+"Typing Backslash ('\\') toggles the normal mode and English mode.\n"
+"The following variables are customizable:\n"
+"  tone-mark-on-last: control tone mark position in equivocal cases\n"
+"  backspace-is-undo: control the action of Backspace key (delete or undo)"
+msgstr ""
+
+#: MIM/vi-vni.mim:26
+msgid ""
+"Vietnames input method using the VNI key sequence.\n"
+"Typing Backslash ('\\') toggles the normal mode and English mode.\n"
+"The following variables are customizable:\n"
+"  tone-mark-on-last: control tone mark position in equivocal cases\n"
+"  backspace-is-undo: control the action of Backspace key (delete or undo)"
+msgstr ""

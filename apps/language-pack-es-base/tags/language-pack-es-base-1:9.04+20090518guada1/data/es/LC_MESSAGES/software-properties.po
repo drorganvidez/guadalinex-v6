@@ -1,0 +1,568 @@
+# translation of update-manager to Spanish
+# This file is distributed under the same license as the update-manager package.
+#  Copyright (c) 2004 Canonical
+#                2004 Michiel Sikkes
+# Jorge Bernal <koke@amedias.org>, 2005.
+# Jorge Bernal <koke@sindominio.net>, 2005.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: es\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-03-27 15:33+0000\n"
+"PO-Revision-Date: 2009-04-24 09:09+0000\n"
+"Last-Translator: Ricardo Pérez López <ricpelo@gmail.com>\n"
+"Language-Team: Spanish <traductores@gnome.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Launchpad-Export-Date: 2009-05-18 21:34+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+#: ../data/software-properties.desktop.in.h:1
+msgid "Configure the sources for installable software and updates"
+msgstr ""
+"Configura los orígenes para el software instalable y las actualizaciones"
+
+#: ../data/software-properties.desktop.in.h:2
+#: ../softwareproperties/gtk/SoftwarePropertiesGtk.py:532
+#: ../softwareproperties/gtk/SoftwarePropertiesGtk.py:552
+#: ../data/glade/main.glade.h:23
+msgid "Software Sources"
+msgstr "Orígenes del software"
+
+#: ../software-properties-gtk:80
+msgid "You need to be root to run this program"
+msgstr "Necesita ser administrador para ejecutar este programa"
+
+#: ../softwareproperties/distro.py:28
+msgid ""
+"<i>To improve the user experience of Ubuntu please take part in the "
+"popularity contest. If you do so the list of installed software and how "
+"often it was used will be collected and sent anonymously to the Ubuntu "
+"project on a weekly basis.\n"
+"\n"
+"The results are used to improve the support for popular applications and to "
+"rank applications in the search results.</i>"
+msgstr ""
+"<i>Para mejorar la experiencia del usuario de Ubuntu, por favor, participe "
+"en la encuesta de popularidad. Al hacerlo, se creará una lista con las "
+"aplicaciones que tenga instaladas y con qué frecuencia las utiliza, y se "
+"enviará de forma anónima al proyecto Ubuntu todas las semanas.\n"
+"\n"
+"Los resultados se usan para mejorar el soporte de las aplicaciones populares "
+"y para ordenar las aplicaciones en los resultados de las búsquedas.</i>"
+
+#: ../softwareproperties/distro.py:37
+msgid ""
+"<i>To improve the user experiece of Debian please take part in the "
+"popularity contest. If you do so the list of installed software and how "
+"often it was used will be collected and sent anonymously to the Debian "
+"project.\n"
+"\n"
+"The results are used to optimise the layout of the installation CDs."
+msgstr ""
+"<i>Para mejorar la experiencia del usuario de Ubuntu, por favor, participe "
+"en la encuesta de popularidad. Al hacerlo, se creará una lista con las "
+"aplicaciones que tenga instaladas y con qué frecuencia las utiliza, y se "
+"enviará de forma anónima al proyecto Ubuntu todas las semanas.\n"
+"\n"
+"Los resultados se usarán para optimizar la organización de los CDs de "
+"instalación."
+
+#: ../softwareproperties/distro.py:44
+msgid ""
+"Submit the list of installed software and how often it is is used to the "
+"distribution project."
+msgstr ""
+"Envía la lista de software instalado y con qué frecuencia se usa en el "
+"proyecto de distribución."
+
+#: ../softwareproperties/kde/DialogMirror.py:68
+msgid "Mirror"
+msgstr "Servidor espejo"
+
+#: ../softwareproperties/kde/DialogMirror.py:214
+#: ../softwareproperties/kde/DialogMirror.py:215
+msgid "Testing Mirrors"
+msgstr "Comprobando servidores espejo"
+
+#: ../softwareproperties/kde/DialogMirror.py:214
+#: ../softwareproperties/kde/DialogMirror.py:217
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. update_days = apt_pkg.Config.FindI(softwareproperties.CONF_MAP["autoupdate"])
+#: ../softwareproperties/kde/SoftwarePropertiesKDE.py:188
+#: ../softwareproperties/gtk/SoftwarePropertiesGtk.py:158
+msgid "Daily"
+msgstr "Diariamente"
+
+#: ../softwareproperties/kde/SoftwarePropertiesKDE.py:189
+#: ../softwareproperties/gtk/SoftwarePropertiesGtk.py:159
+msgid "Every two days"
+msgstr "Cada dos días"
+
+#: ../softwareproperties/kde/SoftwarePropertiesKDE.py:190
+#: ../softwareproperties/gtk/SoftwarePropertiesGtk.py:160
+msgid "Weekly"
+msgstr "Una vez a la semana"
+
+#: ../softwareproperties/kde/SoftwarePropertiesKDE.py:191
+#: ../softwareproperties/gtk/SoftwarePropertiesGtk.py:161
+msgid "Every two weeks"
+msgstr "Cada dos semanas"
+
+#: ../softwareproperties/kde/SoftwarePropertiesKDE.py:198
+#: ../softwareproperties/gtk/SoftwarePropertiesGtk.py:170
+#, python-format
+msgid "Every %s days"
+msgstr "Cada %s días"
+
+#. TRANS: %s stands for the distribution name e.g. Debian or Ubuntu
+#: ../softwareproperties/kde/SoftwarePropertiesKDE.py:240
+#: ../softwareproperties/gtk/SoftwarePropertiesGtk.py:238
+#, python-format
+msgid "%s updates"
+msgstr "Actualizaciones de %s"
+
+#. TRANS: %s stands for the distribution name e.g. Debian or Ubuntu
+#: ../softwareproperties/kde/SoftwarePropertiesKDE.py:244
+#: ../softwareproperties/gtk/SoftwarePropertiesGtk.py:241
+#, python-format
+msgid "%s Software"
+msgstr "Software de %s"
+
+#. TRANSLATORS: Label for the components in the Internet section
+#. first %s is the description of the component
+#. second %s is the code name of the comp, eg main, universe
+#: ../softwareproperties/kde/SoftwarePropertiesKDE.py:264
+#: ../softwareproperties/gtk/SoftwarePropertiesGtk.py:255
+#, python-format
+msgid "%s (%s)"
+msgstr "%s (%s)"
+
+#. add a separator and the option to choose another mirror from the list
+#. #FIXME server_store.append(["sep", None, True])
+#: ../softwareproperties/kde/SoftwarePropertiesKDE.py:316
+#: ../softwareproperties/kde/SoftwarePropertiesKDE.py:421
+#: ../softwareproperties/gtk/SoftwarePropertiesGtk.py:367
+#: ../softwareproperties/gtk/SoftwarePropertiesGtk.py:424
+msgid "Other..."
+msgstr "Otro…"
+
+#. L10N: the example is of the format: deb http://ftp.debian.org sarge main
+#: ../softwareproperties/kde/SoftwarePropertiesKDE.py:647
+#, python-format
+msgid ""
+"<p><b>Enter the complete APT line of the<br /> repository that you want to "
+"add as source</b></p><p>The APT line includes the type, location and "
+"components of a repository,<br /> for example <i>\"%s\"</i>.</p>"
+msgstr ""
+"<p><b>Introduzca la línea de APT completa del repositorio que quiera añadir "
+"como origen</b></p><p>La línea de APT contiene el tipo, la ubicación y los "
+"componentes de un repositorio, por ejemplo <i>\"%s\"</i>.</p>"
+
+#: ../softwareproperties/kde/SoftwarePropertiesKDE.py:648
+msgid "Add APT repository"
+msgstr "Añadir repositorio APT"
+
+#: ../softwareproperties/kde/SoftwarePropertiesKDE.py:687
+#: ../softwareproperties/gtk/SoftwarePropertiesGtk.py:752
+msgid "Import key"
+msgstr "Importar clave"
+
+#: ../softwareproperties/kde/SoftwarePropertiesKDE.py:690
+#: ../softwareproperties/gtk/SoftwarePropertiesGtk.py:762
+#: ../softwareproperties/gtk/DialogAptKey.py:88
+msgid "Error importing selected file"
+msgstr "Hubo un error al importar el archivo seleccionado"
+
+#: ../softwareproperties/kde/SoftwarePropertiesKDE.py:691
+#: ../softwareproperties/gtk/SoftwarePropertiesGtk.py:763
+#: ../softwareproperties/gtk/DialogAptKey.py:89
+msgid "The selected file may not be a GPG key file or it might be corrupt."
+msgstr ""
+"Puede que el archivo seleccionado no sea un archivo de clave GPG o que esté "
+"dañado."
+
+#: ../softwareproperties/kde/SoftwarePropertiesKDE.py:705
+#: ../softwareproperties/gtk/SoftwarePropertiesGtk.py:776
+#: ../softwareproperties/gtk/DialogAptKey.py:101
+msgid "Error removing the key"
+msgstr "Hubo un error al quitar la clave"
+
+#: ../softwareproperties/kde/SoftwarePropertiesKDE.py:706
+#: ../softwareproperties/gtk/SoftwarePropertiesGtk.py:777
+#: ../softwareproperties/gtk/DialogAptKey.py:102
+msgid ""
+"The key you selected could not be removed. Please report this as a bug."
+msgstr ""
+"No se puede quitar la clave que ha seleccionado. Por favor, informe de esto "
+"como un fallo."
+
+#: ../softwareproperties/kde/SoftwarePropertiesKDE.py:722
+msgid "Reload"
+msgstr "Recargar"
+
+#: ../softwareproperties/kde/SoftwarePropertiesKDE.py:724
+#: ../data/glade/dialogs.glade.h:4
+msgid ""
+"<b><big>The information about available software is out-of-date</big></b>\n"
+"\n"
+"To install software and updates from newly added or changed sources, you "
+"have to reload the information about available software.\n"
+"\n"
+"You need a working internet connection to continue."
+msgstr ""
+"<b><big>La información sobre el software disponible está obsoleta</big></b>\n"
+"\n"
+"Para poder instalar programas y actualizaciones a partir de los orígenes que "
+"se hayan añadido o cambiado recientemente, es necesario recargar la "
+"información sobre el software disponible.\n"
+"\n"
+"Necesita una conexión a Internet para continuar."
+
+#: ../softwareproperties/kde/SoftwarePropertiesKDE.py:754
+msgid "CD Error"
+msgstr "Error del CD"
+
+#: ../softwareproperties/kde/SoftwarePropertiesKDE.py:755
+#: ../softwareproperties/gtk/SoftwarePropertiesGtk.py:822
+#, python-format
+msgid ""
+"<big><b>Error scanning the CD</b></big>\n"
+"\n"
+"%s"
+msgstr ""
+"<big><b>Error examinando el CD</b></big>\n"
+"\n"
+"%s"
+
+#: ../softwareproperties/kde/CdromProgress.py:51
+msgid "CD Name"
+msgstr "Nombre del CD"
+
+#: ../softwareproperties/kde/CdromProgress.py:51
+#: ../softwareproperties/gtk/CdromProgress.py:58
+msgid "Please enter a name for the disc"
+msgstr "Por favor, introduzca un nombre para el disco"
+
+#: ../softwareproperties/kde/CdromProgress.py:55
+msgid "Insert Disk"
+msgstr "Insertar disco"
+
+#: ../softwareproperties/kde/CdromProgress.py:55
+#: ../softwareproperties/gtk/CdromProgress.py:74
+msgid "Please insert a disk in the drive:"
+msgstr "Por favor, inserte un disco en la unidad:"
+
+#: ../softwareproperties/kde/DialogEdit.py:40
+msgid "Binary"
+msgstr "Binario"
+
+#: ../softwareproperties/kde/DialogEdit.py:41 ../data/glade/main.glade.h:24
+msgid "Source code"
+msgstr "Código fuente"
+
+#: ../softwareproperties/SoftwareProperties.py:431
+msgid "(Source Code)"
+msgstr "(Código fuente)"
+
+#: ../softwareproperties/SoftwareProperties.py:437
+msgid "Source Code"
+msgstr "Código fuente"
+
+#: ../softwareproperties/gtk/DialogMirror.py:244
+msgid "New mirror"
+msgstr "Nuevo servidor espejo"
+
+#: ../softwareproperties/gtk/DialogMirror.py:302
+#, python-format
+msgid "Completed %s of %s tests"
+msgstr "Completadas %s de %s comprobaciones"
+
+#: ../softwareproperties/gtk/DialogMirror.py:355
+msgid "No suitable download server was found"
+msgstr "No se ha encontrado ningún servidor de descarga apropiado"
+
+#: ../softwareproperties/gtk/DialogMirror.py:356
+msgid "Please check your Internet connection."
+msgstr "Por favor, compruebe su conexión a Internet."
+
+#: ../softwareproperties/gtk/DialogMirror.py:372
+msgid "Canceling..."
+msgstr "Cancelando…"
+
+#: ../softwareproperties/gtk/SoftwarePropertiesGtk.py:543
+#: ../softwareproperties/gtk/SoftwarePropertiesGtk.py:563
+msgid "Active"
+msgstr "Activo"
+
+#. some known keys
+#: ../softwareproperties/gtk/DialogAptKey.py:37
+#: ../softwareproperties/AptAuth.py:33
+msgid "Ubuntu Archive Automatic Signing Key <ftpmaster@ubuntu.com>"
+msgstr ""
+"Clave de firma automática del archivo de Ubuntu <ftpmaster@ubuntu.com>"
+
+#: ../softwareproperties/gtk/DialogAptKey.py:38
+#: ../softwareproperties/AptAuth.py:34
+msgid "Ubuntu CD Image Automatic Signing Key <cdimage@ubuntu.com>"
+msgstr ""
+"Clave de firma automática de las imágenes de CD de Ubuntu "
+"<cdimage@ubuntu.com>"
+
+#: ../softwareproperties/gtk/DialogAptKey.py:78
+msgid "Choose a key-file"
+msgstr "Seleccione un archivo de clave"
+
+#: ../softwareproperties/gtk/DialogAddSourcesList.py:39
+msgid "Add Software Channels"
+msgstr "Añadir canales de software"
+
+#: ../softwareproperties/gtk/DialogAddSourcesList.py:80
+msgid "Install software additionally or only from this source?"
+msgid_plural "Install software additionally or only from these sources?"
+msgstr[0] "¿Instalar software adicionalmente, o sólo desde este origen?"
+msgstr[1] "¿Instalar software adicionalmente, o sólo desde estos orígenes?"
+
+#: ../softwareproperties/gtk/DialogAddSourcesList.py:85
+msgid ""
+"You can either add the following sources or replace your current sources by "
+"them. Only install software from trusted sources."
+msgstr ""
+"Puede añadir los siguientes orígenes, o sustituir con ellos a sus orígenes "
+"actuales. Instale software que provenga únicamente de orígenes fiables."
+
+#: ../softwareproperties/gtk/DialogAddSourcesList.py:100
+msgid "There are no sources to install software from"
+msgstr "No hay ningún origen desde el que se pueda instalar software"
+
+#: ../softwareproperties/gtk/DialogAddSourcesList.py:101
+#, python-format
+msgid "The file '%s' does not contain any valid software sources."
+msgstr "El archivo «%s» no contiene ningún origen válido de software."
+
+#. L10N: the example is of the format: deb http://ftp.debian.org sarge main
+#: ../softwareproperties/gtk/DialogAdd.py:60
+#, python-format
+msgid ""
+"The APT line includes the type, location and components of a repository, for "
+"example  '%s'."
+msgstr ""
+"La línea de APT incluye el tipo, la ubicación y los componentes de un "
+"repositorio, por ejemplo «%s»."
+
+#: ../data/glade/main.glade.h:1
+msgid "    "
+msgstr "    "
+
+#: ../data/glade/main.glade.h:2
+msgid "<b>Automatic updates</b>"
+msgstr "<b>Actualizaciones automáticas</b>"
+
+#: ../data/glade/main.glade.h:3
+msgid "<b>Downloadable from the Internet</b>"
+msgstr "<b>Descargable de Internet</b>"
+
+#: ../data/glade/main.glade.h:4
+msgid "<b>Installable from CD-ROM/DVD</b>"
+msgstr "<b>Instalable desde CD-ROM/DVD</b>"
+
+#: ../data/glade/main.glade.h:5
+msgid "<b>Release upgrade</b>"
+msgstr "<b>Actualización de la distribución</b>"
+
+#: ../data/glade/main.glade.h:6
+msgid "<b>Trusted software providers</b>"
+msgstr "<b>Proveedores de software en los que confía</b>"
+
+#: ../data/glade/main.glade.h:7
+msgid "Add CD-ROM..."
+msgstr "Añadir CD-ROM..."
+
+#: ../data/glade/main.glade.h:8
+msgid "Add..."
+msgstr "Añadir..."
+
+#: ../data/glade/main.glade.h:9
+msgid "Authentication"
+msgstr "Autenticación"
+
+#: ../data/glade/main.glade.h:10
+msgid "Chec_k for updates:"
+msgstr "_Comprobar actualizaciones:"
+
+#: ../data/glade/main.glade.h:11
+msgid "Download from:"
+msgstr "Descargar desde:"
+
+#: ../data/glade/main.glade.h:12
+msgid "Edit..."
+msgstr "Editar…"
+
+#: ../data/glade/main.glade.h:13
+msgid "Import the public key from a trusted software provider"
+msgstr "Importar la clave pública desde un proveedor de confianza"
+
+#: ../data/glade/main.glade.h:14
+msgid "Install _security updates without confirmation"
+msgstr "_Instalar actualizaciones de seguridad sin confirmación"
+
+#: ../data/glade/main.glade.h:15
+msgid ""
+"Keys are used to authenticate the correct source of software and so protect "
+"your computer from malicious software"
+msgstr ""
+"Las claves se usan para autenticar el origen correcto del software, y así "
+"proteger a su equipo del software malicioso"
+
+#: ../data/glade/main.glade.h:16
+msgid ""
+"Never\n"
+"Normal releases\n"
+"Long term support releases only"
+msgstr ""
+"Nunca\n"
+"Ediciones normales\n"
+"Sólo ediciones con soporte de larga duración"
+
+#: ../data/glade/main.glade.h:19
+msgid "Only _notify about available updates"
+msgstr "Sólo _notificar que hay actualizaciones disponibles"
+
+#: ../data/glade/main.glade.h:20
+msgid "Restore _Defaults"
+msgstr "Restaurar valores predeterminados"
+
+#: ../data/glade/main.glade.h:21
+msgid "Restore the default keys of your distribution"
+msgstr "Restaurar las claves predeterminadas de su distribución"
+
+#: ../data/glade/main.glade.h:22
+msgid "Show new distribution releases: "
+msgstr "Mostrar nuevas versiones de la distribución: "
+
+#: ../data/glade/main.glade.h:25
+msgid "Statistics"
+msgstr "Estadísticas"
+
+#: ../data/glade/main.glade.h:26
+msgid "Submit statistical information"
+msgstr "Enviar información estadística"
+
+#: ../data/glade/main.glade.h:27
+msgid "Third-Party Software"
+msgstr "Software de terceros"
+
+#: ../data/glade/main.glade.h:28
+msgid "To install from a CD-ROM or DVD, insert the medium into the drive."
+msgstr ""
+"Para instalar desde un CD-ROM o DVD, inserte el soporte en la unidad."
+
+#: ../data/glade/main.glade.h:29
+msgid "Updates"
+msgstr "Actualizaciones"
+
+#: ../data/glade/main.glade.h:30
+msgid "_Download all updates in the background"
+msgstr "_Descargar todas las actualizaciones en segundo plano"
+
+#: ../data/glade/main.glade.h:31
+msgid "_Import Key File..."
+msgstr "_Importar clave..."
+
+#: ../data/glade/dialogs.glade.h:1
+msgid ""
+"<b><big>Testing download servers</big></b>\n"
+"\n"
+"A series of tests will be done to find the best mirror for your location."
+msgstr ""
+"<b><big>Comprobando servidores de descarga</big></b>\n"
+"\n"
+"Se llevarán a cabo una serie de pruebas para encontrar el mejor servidor "
+"espejo para su ubicación."
+
+#: ../data/glade/dialogs.glade.h:9
+msgid "<b>Comment:</b>"
+msgstr "<b>Comentario:</b>"
+
+#: ../data/glade/dialogs.glade.h:10
+msgid "<b>Components:</b>"
+msgstr "<b>Componentes:</b>"
+
+#: ../data/glade/dialogs.glade.h:11
+msgid "<b>Distribution:</b>"
+msgstr "<b>Distribución:</b>"
+
+#: ../data/glade/dialogs.glade.h:12
+msgid "<b>Type:</b>"
+msgstr "<b>Tipo:</b>"
+
+#: ../data/glade/dialogs.glade.h:13
+msgid "<b>URI:</b>"
+msgstr "<b>URI:</b>"
+
+#: ../data/glade/dialogs.glade.h:14
+msgid ""
+"<big><b>Enter the complete APT line of the repository that you want to add "
+"as source</b></big>"
+msgstr ""
+"<big><b>Introduzca la línea de APT completa del repositorio que quiere "
+"añadir como origen de software</b></big>"
+
+#: ../data/glade/dialogs.glade.h:15
+msgid "APT line:"
+msgstr "Línea de APT:"
+
+#: ../data/glade/dialogs.glade.h:16
+msgid ""
+"Binary\n"
+"Source"
+msgstr ""
+"Binario\n"
+"Fuente"
+
+#: ../data/glade/dialogs.glade.h:18
+msgid "Choose _Server"
+msgstr "Seleccionar _servidor"
+
+#: ../data/glade/dialogs.glade.h:19
+msgid "Choose a Download Server"
+msgstr "Seleccionar un servidor de descarga"
+
+#: ../data/glade/dialogs.glade.h:20
+msgid "Edit Source"
+msgstr "Editar origen"
+
+#: ../data/glade/dialogs.glade.h:21
+msgid "Performs a connection test to find the best mirror for your location"
+msgstr ""
+"Realizar una prueba de conexión para encontrar el mejor servidor espejo para "
+"su ubicación."
+
+#: ../data/glade/dialogs.glade.h:22
+msgid "Protocol:"
+msgstr "Protocolo:"
+
+#: ../data/glade/dialogs.glade.h:23
+msgid "Scanning CD-ROM"
+msgstr "Analizando el CD-ROM"
+
+#: ../data/glade/dialogs.glade.h:24
+msgid "_Add Source"
+msgstr "_Añadir origen"
+
+#: ../data/glade/dialogs.glade.h:25
+msgid "_Reload"
+msgstr "_Recargar"
+
+#: ../data/glade/dialogs.glade.h:26
+msgid "_Replace"
+msgstr "_Sustituir"
+
+#: ../data/glade/dialogs.glade.h:27
+msgid "_Select Best Server"
+msgstr "_Seleccionar el mejor servidor"

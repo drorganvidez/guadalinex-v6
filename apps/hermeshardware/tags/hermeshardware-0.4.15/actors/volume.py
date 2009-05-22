@@ -60,9 +60,9 @@ VOLUMEICON = os.path.abspath('actors/img/volume.png')
 
 class Actor (DeviceActor):
     """ 
-    [es] 
-    -----------------------------------------------------------------------
-    [en] 
+    [es] Implementacion de clase Actor para volumenes(sistemas de ficheros)
+    --------------------------------------------------------------------------
+    [en] Actor class implementation for volume devices (filesystems)
     """
 
     __required__ = {'info.category': 'volume'}
@@ -70,9 +70,9 @@ class Actor (DeviceActor):
 
     def __init__(self, *args, **kwargs):
         """
-        [es] 
+        [es] Clase de inicializacion del actor
         -----------------------------------------------------------------------
-        [en] 
+        [en] Actor initialization class
         """ 
         super(Actor, self).__init__(*args, **kwargs)
 
@@ -80,9 +80,9 @@ class Actor (DeviceActor):
 
     def register_listener(cls, listener):
         """
-        [es] 
+        [es] Registramos el monitor
         -----------------------------------------------------------------------
-        [en] 
+        [en] Listener registration
         """ 
         cls.__listener_factories__.append(listener)
 
@@ -93,9 +93,9 @@ class Actor (DeviceActor):
 
     def on_modified(self, key):
         """
-        [es] 
+        [es] Acciones a ejecutar cuando se detecta un cambio en el estado
         -----------------------------------------------------------------------
-        [en] 
+        [en] Actions to take when a status change is detected
         """ 
         if key == 'volume.is_mounted':
             try:
@@ -126,7 +126,8 @@ class Actor (DeviceActor):
 
 class AutoRegister(type):
     """ 
-    [es] 
+    [es] Esta meta clase registra automáticamente cada clase como un
+         monitor de Actor
     -----------------------------------------------------------------------
     [en] This meta class auto register each class as an Actor listener
     """
@@ -138,17 +139,21 @@ class AutoRegister(type):
 
 class VolumeListener(object):
     """ 
-    [es] 
+    [es] Un monitor de volumenes es un proceso que lanza notificaciones
+         cuando detecta algún cambio en el estado de un volumen
     -----------------------------------------------------------------------
-    [en] A Volume Listener is something that wants notifications when the
-         state of a volume changes
+    [en] A Volume Listener launches notifications when the state of a
+         volume changes
     """
 
     __metaclass__ = AutoRegister
 
     def is_valid(self, properties):
         """
-        [es] 
+        [es] Este metodo actua como un filtro. En base a las propiedades de 
+             HAL para el dispositivo, este método devuelve:
+                - True si el monitor debe ser usado
+                - False en cualquier otro caso
         -----------------------------------------------------------------------
         [en] This method acts like a filter.
              Based on the HAL properties this method should returns
@@ -159,14 +164,14 @@ class VolumeListener(object):
 
     def volume_mounted(self, mount_point):
         """
-        [es] 
+        [es] Acciones a tomar cuando el volumen se monta
         -----------------------------------------------------------------------
         [en] This is called when the volume is mounted
         """ 
 
     def volume_unmounted(self):
         """
-        [es] 
+        [es] Acciones a tomar cuando el volumen se desmonta
         -----------------------------------------------------------------------
         [en] This is called when the volume is unmounted 
         """
@@ -175,7 +180,10 @@ CERTMANAGER_CMD = '/usr/bin/certmanager.py'
 
 class CertificateListener(VolumeListener):
     """ 
-    [es] 
+    [es] Invocamos a cert_manager para detectar si el volumen contiene
+         ceritificados electronicos y para configurar a las aplicaciones
+         correspondientes para que los puedan usar. Sólo valido para 
+         discos USB
     -----------------------------------------------------------------------
     [en] Call cert_manager to detect certificates in the volume and to
          setup the main applications to use them
@@ -183,18 +191,19 @@ class CertificateListener(VolumeListener):
     """
     def __init__(self):
         """ 
-        [es] 
+        [es] Clase de inicializacion
         -------------------------------------------------------------------
-        [en] 
+        [en] Initialization class
         """
         super(CertificateListener, self).__init__()
         self.mount_point = None
 
     def is_valid(self, properties):
         """ 
-        [es] 
+        [es] Verificamos si se cumplen determinadas propiedades para lanzar
+             el monitor
         -------------------------------------------------------------------
-        [en] 
+        [en] We check wether some properties exist to launch the listener
         """
         if properties.get('volume.mount_point', None):
             if glob.glob(properties.get('volume.mount_point', None)+'/*.p12'):
@@ -202,10 +211,10 @@ class CertificateListener(VolumeListener):
         return False
 
     def volume_mounted(self, mount_point):
-        """ 
-        [es] 
+        """
+        [es] Acciones a ejecutar cuando se monta el volumen
         -------------------------------------------------------------------
-        [en] 
+        [en] Actions to take when the volume gets mounted
         """
         self.mount_point = mount_point
 
@@ -214,9 +223,9 @@ class CertificateListener(VolumeListener):
 
     def volume_unmounted(self):
         """ 
-        [es] 
+        [es] Acciones a ejecutar cuando se desmonta el volumen
         -------------------------------------------------------------------
-        [en] 
+        [en] Actions to take when the volume gets unmounted
         """
         if os.path.exists(CERTMANAGER_CMD):
             user_dir = os.path.expanduser('~')

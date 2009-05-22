@@ -351,8 +351,8 @@ class PkgDeviceActor(DeviceActor):
             actions = {_("Install required packages"): install_packages}
 
         self.msg_render.show(self.__device_title__, 
-                self.__device_conn_description__,
-             self.__icon_path__, actions = actions)
+                             self.__device_conn_description__,
+                             self.__icon_path__, actions = actions)
 
 
     def on_removed(self):

@@ -193,8 +193,8 @@ class DeviceListener:
                 actor.on_added()
             except:
                 self.logger.warning(str(traceback.format_exc()))
-                self.message_render.show_warning(_("Warning"),
-                                _("Unknown Device Connected")+".")
+            #    self.message_render.show_warning(_("Warning"),
+            #                    _("Unknown Device Connected")+".")
 
 
 

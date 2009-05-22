@@ -62,6 +62,9 @@ from gettext import gettext as _
 
 CERTMANAGER_CMD = '/usr/bin/certmanager.py'
 
+def is_valid(value):
+        return value in [0x6, 0x9]
+
 class Actor(PkgDeviceActor):
     """
     [es] Implementación de la clase Actor para dispositivos lectores de
@@ -72,8 +75,7 @@ class Actor(PkgDeviceActor):
     __required__ = {
             "info.subsystem": "usb_device",
             "usb_device.vendor_id":0x783,
-            "usb_device.product_id":0x6
-    }
+            "usb_device.product_id":is_valid}
 
     __icon_path__  = os.path.abspath('actors/img/ltc31.png')
     __iconoff_path__ = os.path.abspath('actors/img/ltc31off.png')

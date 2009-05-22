@@ -4,7 +4,8 @@
 #     Guadalinex developers team
 #     Jose Chaso (pchaso) <jose.chaso at gmail>
 #
-# [es] Modulo sudo -
+# [es] Modulo sudo - Módulo que intenta ganar permiso de sudo
+#      para el usuario. 
 # [en] sudo module -
 #
 # Copyright (C) 2009 Junta de Andalucía
@@ -52,20 +53,29 @@ from gettext import gettext as _
 
 def get_sudo():
     """ 
-    [es] 
+    [es] Devuelve VERDADERO si el usuario adquirió permiso de uso de sudo.
+         FALSO en caso contrario. El usuario tiene 3 intentos para
+         introducir una contraseña válida para sudo.
+         Necesario para ejecutar acciones que requieran permisos de 
+         administrador como la instalacion de paquetes en el sistema 
     -----------------------------------------------------------------------
-    [en] Return true if user has login as sudoer. False in other way.
+    [en] Returns TRUE if user has login as sudoer. False otherwise. Asks
+         user for a sudo valid password for 3 times.
+         Needed to execute root permission required actions, such as system
+         package installation.
     """
     logger = logging.getLogger() 
     #Try for password. Three times.
     res = 768 
     attemps = 0
 
-    # Errno 768: Bad password
+    # [es] Error num. 768: Contraseña incorrecta
+    # [en] Errno 768: Bad password
     while res == 768 and attemps < 3:
-	# FIXME: i18n
         res = os.system('gksudo -m "%s" /bin/true' % _('Type password'))
-        # Errno 512: User press cancel
+
+        # [es] Error num. 512: El usuario presiono CANCEL
+        # [en] Errno 512: User pressed CANCEL
         if res == 512:
             logger.debug(_("User pressed cancel"))
             return False

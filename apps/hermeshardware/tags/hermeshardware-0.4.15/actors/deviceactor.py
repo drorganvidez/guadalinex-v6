@@ -128,9 +128,21 @@ class DeviceActor(object):
     # [es] Valores: 1, 2, 3, 4, 5. A mayor valor, mayor prioridad.
     # [en] Values: 1, 2, 3, 4, 5. The higher value, the more priority.
     __priority__ = 3 
+
+    # [es] Propiedades necesarias para la notificacion. Se deben definir
+    #      en cada actor. Por defecto en blanco.
+    # [en] Notification needed properties. To be defined by each actor·
+    #      Blank by default.
+    __icon_path__  = ''
+    __iconoff_path__ = ''
+    __device_title__ = ''
+    __device_conn_description__ = ''
+    __device_disconn_description__ = ''
+
     # [es] Puede ser usado por un actor para deshabilitar otro actor.
     # [en] This can be used by an actor to disable another actor.
     __enabled__ = True 
+
 
     def __init__(self, message_render, device_properties):
         """ 
@@ -171,7 +183,7 @@ class DeviceActor(object):
         """
         self.msg_render.show(self.__device_title__, 
                              self.__device_conn_description__,
-                             self.__icon_path__) 
+                             self.__icon_path__)
 
     def on_removed(self):
         """ 

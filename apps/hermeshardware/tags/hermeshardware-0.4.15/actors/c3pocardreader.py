@@ -98,7 +98,8 @@ class Actor(PkgDeviceActor):
             # The os.getlogin() raises OSError: [Errno 25]
             # Moved to getpwuid
             user = pwd.getpwuid(os.geteuid())[0]
-            # get root access
+            # [es] Obtenemos acceso en modo administrador
+            # [en] get root access
             if get_sudo():
                 cmd = '/usr/bin/gksudo /usr/sbin/adduser %s scard' % user
                 status, output = commands.getstatusoutput(cmd)
@@ -113,10 +114,3 @@ class Actor(PkgDeviceActor):
                              self.__device_conn_description__,
                              self.__icon_path__, actions=actions)
 
-
-
-    def on_removed(self):
-        self.msg_render.show(self.__device_title__, 
-                             self.__device_disconn_description__,
-                             self.__iconoff_path__, actions=actions)
-        

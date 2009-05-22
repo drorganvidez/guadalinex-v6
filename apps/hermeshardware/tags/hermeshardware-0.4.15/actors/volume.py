@@ -56,7 +56,7 @@ import os.path
 from deviceactor import DeviceActor
 from gettext import gettext as _
 
-VOLUMEICON = os.path.abspath('actors/img/volume.png') 
+#VOLUMEICON = os.path.abspath('actors/img/volume.png') 
 
 class Actor (DeviceActor):
     """ 
@@ -66,6 +66,11 @@ class Actor (DeviceActor):
     """
 
     __required__ = {'info.category': 'volume'}
+    __icon_path__  = os.path.abspath('actors/img/volume.png')
+    __iconoff_path__ = os.path.abspath('actors/img/volume.png')
+    __device_title__ = _("Storage")
+    __device_conn_description__ = _("Volume mounted")
+    __device_disconn_description__ = _("Volume umounted")
     __listener_factories__ = []
 
     def __init__(self, *args, **kwargs):
@@ -106,7 +111,7 @@ class Actor (DeviceActor):
                         os.system('nautilus "%s"' % mount_point) 
 
                     self.message_render.show(_("Storage"), 
-                        _("Device mounted on"), VOLUMEICON,
+                        __device_conn_description__, __icon_path__,
                         actions = {mount_point: open_volume})
 
                     for listener in self.listeners:
@@ -115,14 +120,14 @@ class Actor (DeviceActor):
 
                 else:
                     self.message_render.show(_("Storage"),
-                            _("Device unmounted"), VOLUMEICON) 
+                            __device_disconn_description__, __iconoff_path__) 
 
                     for listener in self.listeners:
                         if listener.is_valid(self.properties):
                             listener.volume_unmounted()
 
             except Exception, e:
-                self.logger.error(_("Error:") + " " + str(e))
+                self.logger.error(_("Error") + ": " + str(e))
 
 class AutoRegister(type):
     """ 

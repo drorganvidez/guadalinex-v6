@@ -56,9 +56,6 @@ from utils.pkginstaller import PkgInstaller
 from deviceactor import PkgDeviceActor
 from gettext import gettext as _
 
-BLUETOOTHICON_ON = os.path.abspath('actors/img/bluetooth.png')
-BLUETOOTHICON_OFF = os.path.abspath('actors/img/bluetoothoff.png')
-
 class Actor(PkgDeviceActor):
     """
     [es] Implementación de la clase Actor para dispositivos Bluetooth
@@ -74,11 +71,3 @@ class Actor(PkgDeviceActor):
     __device_conn_description__ = _('Bluetooth device connected')
     __device_disconn_description__ = _('Bluetooth device disconnected')
     __device_use_title__ = _('Setup bluetooth preferences')
-
-    def on_added(self):
-        self.msg_render.show(_("Bluetooth"), _("Bluetooth device connected"),
-                             icon = BLUETOOTHICON_ON)
-
-    def on_removed(self):
-        self.msg_render.show(_("Bluetooth"), _("Bluetooth device disconnected"),
-                             icon = BLUETOOTHICON_OFF)

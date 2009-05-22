@@ -2,6 +2,7 @@
 # -*- coding: utf8 -*-
 
 import dbus
+from gettext import gettext as _
 
 bus = dbus.SystemBus()
 

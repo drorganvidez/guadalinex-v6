@@ -104,16 +104,16 @@ class PkgInstaller(IPkgInstaller):
         -------------------------------------------------------------------
         [en] Initialization method
         """
-        # [es] Seleccionamos el instalador de paquetes (PkgInstaller)
-        # [en] Select correct PkgInstaller
-        config_path = os.path.abspath('actors/config/installer')
-        installer_name = open(config_path).read().strip()
-        if installer_name == 'synaptic':
-            self.pkg_installer = SynapticInstaller()
-        elif installer_name == 'rpm':
-            self.pkg_installer = RpmInstaller()
-        else:
-            self.pkg_installer = SynapticInstaller()
+##      # [es] Seleccionamos el instalador de paquetes (PkgInstaller)
+##      # [en] Select correct PkgInstaller
+##        config_path = os.path.abspath('actors/config/installer')
+##        installer_name = open(config_path).read().strip()
+##        if installer_name == 'synaptic':
+##            self.pkg_installer = SynapticInstaller()
+##        elif installer_name == 'rpm':
+##            self.pkg_installer = RpmInstaller()
+##        else:
+        self.pkg_installer = SynapticInstaller()
 
 
     def check(self, pkg_list):
@@ -206,16 +206,11 @@ class SynapticInstaller(IPkgInstaller):
         return True
 
 
-class RpmInstaller(IPkgInstaller):
-    """ 
-    [es] 
-    -----------------------------------------------------------------------
-    [en] 
-    """
-    pass
+##class RpmInstaller(IPkgInstaller):
+##    pass
 
 
 if __name__ == "__main__":
     s = SynapticInstaller()
-    s.check(['ifrench'])
-    s.install(['ifrench'])
+##    s.check(['ifrench'])
+##    s.install(['ifrench'])

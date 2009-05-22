@@ -4,8 +4,8 @@
 #     Guadalinex developers team
 #     Jose Chaso (pchaso) <jose.chaso at gmail>
 #
-# [es] Modulo synaptic -
-# [en] synaptic module -
+# [es] Modulo synaptic - Modulo para la instalacion de paquetes
+# [en] synaptic module - Package instalation module
 #
 # Copyright (C) 2009 Junta de Andalucía
 # 
@@ -54,26 +54,30 @@ from utils.sudo import get_sudo
 from gettext import gettext as _
 
 class Synaptic(object):
-    """ 
-    [es] 
-    -----------------------------------------------------------------------
-    [en] 
     """
+    [es] Clase que utiliza el instalador de paquetes debian synaptic
+    -----------------------------------------------------------------------
+    [en] Synaptic debian package installer class handler
+    """         
 
     def __init__(self):
         """ 
-        [es] 
+        [es] Método de inicialización
         -------------------------------------------------------------------
-        [en] 
+        [en] Initialization method
         """
         apt_pkg.init()
 
     def install(self, pkg_list):
-        """ 
-        [es] 
-        -------------------------------------------------------------------
-        [en] 
         """
+        [es] Instala todos los paquetes en pkg_list. Devuelve VERDADERO si 
+             la instalación no encuentra ningun error y FALSO en caso 
+             contrario.                                                                                                                    
+        -------------------------------------------------------------------
+        [en] Install all packages in pkg_list.
+             Returns True if success. False otherwise.                                                                                     
+        """ 
+
         if not get_sudo():
             return False
 
@@ -100,19 +104,22 @@ class Synaptic(object):
 
 
     def check(self, pkg_list):
-        """ 
-        [es] 
-        -------------------------------------------------------------------
-        [en] Return True if all packages in pkg_list are installed. False
-             in other case.
         """
-        #Collect the packages by name
+        [es] Devolvemos Verdadero si todos los paquetes de la lista 
+             pkg_list estan instalado. Falso en otro caso.
+        ------------------------------------------------------------------- 
+        [en] Return True if all packages in pkg_list are installed. False 
+             in other case.                                                                                                                
+        """
+        # [es] Recopilamos los paquetes por nombre
+        # [en] Collect the packages by name
         packages = apt_pkg.GetCache().Packages
         packages_dict = {}
         for pkg in packages:
             packages_dict[pkg.Name] = pkg
 
-        #Check state
+        # [es] Comprobamos el estado de los paquetes
+        # [en] Check packages status
         for pkg_name in pkg_list:
             if (not packages_dict.has_key(pkg_name)) or \
                     (not packages_dict[pkg_name].CurrentVer):
@@ -122,4 +129,4 @@ class Synaptic(object):
 
 if __name__ == "__main__":
     s = Synaptic()
-    s.install(['ifrench'])
+#    s.install(['ifrench'])

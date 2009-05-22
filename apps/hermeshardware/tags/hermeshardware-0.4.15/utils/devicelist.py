@@ -55,7 +55,6 @@ import pwd
 import time
 
 from gettext import gettext as _
-from sets import Set
 
 class DeviceList:
     """ 
@@ -82,7 +81,7 @@ class DeviceList:
         [en] initialize device list with the ones found attached
         """
         self.logger = logging.getLogger()
-        self.__udi_set = Set()
+        self.__udi_set = set()
         self.__properties_dict = {}
         self.__data = (self.__udi_set, self.__properties_dict)
         self.__data_to_compare = None
@@ -123,7 +122,7 @@ class DeviceList:
             self.__data_to_compare = pickle.load(file)
             file.close()
         except EOFError, e:
-            self.__data_to_compare = {0:Set([])}
+            self.__data_to_compare = {0:set([])}
             self.logger.warning(_("Error reading from: ") + filename)
 
 

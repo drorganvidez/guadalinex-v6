@@ -51,7 +51,7 @@ from gettext import gettext as _
 
 class Actor(PkgDeviceActor):
 
-    __required__ = {'mmc.type':'SD'}
+    __required__ = {'storage.drive_type':'sd_mmc'}
 
     __icon_path__  = os.path.abspath('actors/img/mediaflash.png')
     __iconoff_path__ = os.path.abspath('actors/img/mediaflashoff.png')

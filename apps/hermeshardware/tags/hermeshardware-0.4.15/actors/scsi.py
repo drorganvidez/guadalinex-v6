@@ -47,7 +47,7 @@ from deviceactor import DeviceActor
 
 class Actor(DeviceActor):
 
-    __required__ = {'info.bus': 'scsi'}
+    __required__ = {'info.subsystem': 'scsi'}
 
 
 

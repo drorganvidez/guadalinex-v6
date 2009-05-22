@@ -54,7 +54,7 @@ USBICONOFF = os.path.abspath('actors/img/usboff.png')
 
 class Actor(DeviceActor):
 
-    #__required__ = {'info.bus' : 'usb_device'}
+    #__required__ = {'info.subsystem' : 'usb_device'}
     __required__ = {}
 
     def on_added(self):

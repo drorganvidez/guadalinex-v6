@@ -62,7 +62,7 @@ def is_valid(value):
 
 class Actor(PkgDeviceActor):
 
-    __required__ = {'info.bus': 'usb',
+    __required__ = {'info.subsystem': 'usb',
             'info.linux.driver': is_valid,
             }
 

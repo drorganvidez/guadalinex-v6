@@ -57,7 +57,7 @@ from deviceactor import PkgDeviceActor
 
 class Actor(PkgDeviceActor):
     __required__ = {
-        'info.bus': 'usb',
+        'info.subsystem': 'usb',
         'info.linux.driver': 'usblp'
     }
 

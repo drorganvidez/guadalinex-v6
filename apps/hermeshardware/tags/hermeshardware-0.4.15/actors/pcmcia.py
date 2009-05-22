@@ -54,7 +54,7 @@ PCMCIAICONOFF = os.path.abspath('actors/img/pcmciaoff.png')
 class Actor(DeviceActor):
 
     __required__ = {
-    'info.bus' : 'pcmcia'
+    'info.subsystem' : 'pcmcia'
     }
 
     def on_added(self):

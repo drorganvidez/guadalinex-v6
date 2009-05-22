@@ -62,7 +62,7 @@ def is_valid(value):
 
 class Actor(PkgDeviceActor):
 
-    __required__ = {'info.bus':'usb_device',
+    __required__ = {'info.subsystem':'usb_device',
 	    'info.product': is_valid,
             }
 

@@ -104,7 +104,7 @@ class Actor(DvbActor):
 
     usbmap = get_usbmap()
 
-    __required__ = {'info.bus': 'usb',
+    __required__ = {'info.subsystem': 'usb',
             'usb.vendor_id': is_valid_vendor,
             'usb.product_id': is_valid_product,
             }

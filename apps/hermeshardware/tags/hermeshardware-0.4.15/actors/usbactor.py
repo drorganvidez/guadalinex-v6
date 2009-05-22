@@ -47,5 +47,5 @@ from deviceactor import DeviceActor
 
 class Actor(DeviceActor):
 
-    __required__ = {'info.bus' : 'usb'}
+    __required__ = {'info.subsystem' : 'usb'}
 

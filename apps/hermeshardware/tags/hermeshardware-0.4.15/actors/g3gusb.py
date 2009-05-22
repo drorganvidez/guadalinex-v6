@@ -60,7 +60,7 @@ from g3gpcmcia import VP_IDS
 class Actor(G3gActor):
 
     __required__ = {
-            'info.bus': 'usb_device',
+            'info.subsystem': 'usb_device',
             'usb_device.vendor_id': is_valid_vendor,
             'usb_device.product_id': is_valid_product
             }

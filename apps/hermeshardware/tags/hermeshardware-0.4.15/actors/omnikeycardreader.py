@@ -57,7 +57,7 @@ CERTMANAGER_CMD = '/usr/bin/certmanager.py'
 class Actor(PkgDeviceActor):
 
     __required__ = {
-            "info.bus": "usb_device",
+            "info.subsystem": "usb_device",
             "usb_device.vendor_id":0x076b,
             "usb_device.product_id":0x3021
     }

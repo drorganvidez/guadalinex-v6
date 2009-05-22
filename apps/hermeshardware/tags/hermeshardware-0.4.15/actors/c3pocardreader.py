@@ -70,7 +70,7 @@ class Actor(PkgDeviceActor):
     [en]  ltc31 and C3PO cardreader devices Actor class implementation
     """
     __required__ = {
-            "info.bus": "usb_device",
+            "info.subsystem": "usb_device",
             "usb_device.vendor_id":0x783,
             "usb_device.product_id":0x6
     }

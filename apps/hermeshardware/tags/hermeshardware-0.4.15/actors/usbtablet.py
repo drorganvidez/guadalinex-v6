@@ -53,7 +53,7 @@ TABLETOFF = os.path.abspath('actors/img/tabletoff.png')
 
 class Actor (DeviceActor):
 
-    __required__ = {'info.bus':'usb', 
+    __required__ = {'info.subsystem':'usb', 
 		    'info.linux.driver':'wacom'
     }
 

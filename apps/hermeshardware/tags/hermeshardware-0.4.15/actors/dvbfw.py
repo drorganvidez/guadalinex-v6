@@ -1,47 +1,52 @@
 # -*- coding: utf-8 -*-
-
-#Módulo dvbfw - Módulo que implementa el "actor hardware" para los
-#dispositivos de TDT con problemas con el firmware 
 #
-#Copyright (C) 2007 Junta de Andalucía
+# Authors:
+#     Gumersindo Coronel Pérez (gcoronel)
+#     Jose Chaso (pchaso) <jose.chaso at gmail>
 #
-#Autor/es (Author/s):
+# [es] Modulo dvbfw - Módulo que implementa el "actor hardware" para los
+#                     sintonizadores de TDT con problemas de firmware
+# [en] dvbfw module - Implements hardware actor for DVB devices with no
+#                     firmware files
 #
-#- Gumersindo Coronel Pérez <gcoronel@emergya.info>
+# Copyright (C) 2009 Junta de Andalucía
 #
-#Este fichero es parte de Detección de Hardware de Guadalinex 
+# ----------------------------[es]---------------------------------------------
 #
-#Detección de Hardware de Guadalinex es software libre. Puede redistribuirlo y/o modificarlo 
-#bajo los términos de la Licencia Pública General de GNU según es 
-#publicada por la Free Software Foundation, bien de la versión 2 de dicha
-#Licencia o bien (según su elección) de cualquier versión posterior. 
+# Este fichero es parte de Detección de Hardware de Guadalinex V6
 #
-#Detección de Hardware de Guadalinex se distribuye con la esperanza de que sea útil, 
-#pero SIN NINGUNA GARANTÍA, incluso sin la garantía MERCANTIL 
-#implícita o sin garantizar la CONVENIENCIA PARA UN PROPÓSITO 
-#PARTICULAR. Véase la Licencia Pública General de GNU para más detalles. 
+# Este programa es software libre: puede redistribuirlo y/o modificarlo bajo
+# los términos de la Licencia Pública General version 3 de GNU según
+# es publicada por la Free Software Foundation.
 #
-#Debería haber recibido una copia de la Licencia Pública General 
-#junto con Detección de Hardware de Guadalinex . Si no ha sido así, escriba a la Free Software
-#Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA.
+# Este programa se distribuye con la esperanza de que será útil, pero
+# SIN NINGUNA GARANTÍA, incluso sin la garantías implicitas de
+# MERCANTILIZACION, CALIDAD SATISFACTORIA o de CONVENIENCIA PARA UN PROPÓSITO
+# PARTICULAR. Véase la Licencia Pública General de GNU para más detalles.
 #
-#-------------------------------------------------------------------------
+# Debería haber recibido una copia de la Licencia Pública General
+# junto con este programa; si no ha sido así,
+# visite <http://www.gnu.org/licenses/>
+# o escriba a la Free Software Foundation, Inc.,
+# 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA.
 #
-#This file is part of Detección de Hardware de Guadalinex .
+# ----------------------------[en]---------------------------------------------
 #
-#Detección de Hardware de Guadalinex is free software; you can redistribute it and/or modify
-#it under the terms of the GNU General Public License as published by
-#the Free Software Foundation; either version 2 of the License, or
-#at your option) any later version.
+# This file is part of Guadalinex V6 Hardware Detection.
 #
-#Detección de Hardware de Guadalinex is distributed in the hope that it will be useful,
-#but WITHOUT ANY WARRANTY; without even the implied warranty of
-#MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#GNU General Public License for more details.
+# This program is free software: you can redistribute it and/or modify it
+# under the terms of the GNU General Public License version 3, as published
+# by the Free Software Foundation.
 #
-#You should have received a copy of the GNU General Public License
-#along with Foobar; if not, write to the Free Software
-#Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranties of
+# MERCHANTABILITY, SATISFACTORY QUALITY, or FITNESS FOR A PARTICULAR
+# PURPOSE.  See the GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, visit <http://www.gnu.org/licenses/>
+# or write to the Free Software Foundation, Inc.,
+# 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
 import os
 import webbrowser
@@ -51,10 +56,8 @@ from gettext import gettext as _
 from dvb import Actor as DvbActor
 
 def get_usbmap():
-    valid_list = [ 
-            'cinergyT2', 'b2c2', 'bt8xx', 'ttusb-budget', 
-            'pluto2', 'ttpci', 'ttusb-dec'
-            ]
+    valid_list = ['cinergyT2', 'b2c2', 'bt8xx', 'ttusb-budget', 
+                  'pluto2', 'ttpci', 'ttusb-dec'] 
 
     kernel_version = os.popen('uname -r').read().strip()
     try:
@@ -99,24 +102,32 @@ def is_valid_product(value):
 
 
 class Actor(DvbActor):
-    """ DVB devices which haven't got firmware files.
+    """ 
+    [es] Dispositivos DVB (Sintonizadores de TDT) que no disponen
+         de firmware
+    --------------------------------------------------------------
+    [en] DVB devices which haven't got firmware files.
     """
 
     usbmap = get_usbmap()
 
     __required__ = {'info.subsystem': 'usb',
-            'usb.vendor_id': is_valid_vendor,
-            'usb.product_id': is_valid_product,
-            }
+                    'usb.vendor_id': is_valid_vendor,
+                    'usb.product_id': is_valid_product,}
 
-    # Important for compatibility with dvb !!
+    # [es] Importante para compatibilidad con actor dvb
+    # [en] Important for compatibility with dvb actor
     __priority__ = 3
 
     def on_added(self):
-
+        """
+        [es] Acciones a ejecutar cuando se conecta el dispositivo
+        -------------------------------------------------------------------
+        [en] Actions to take when the device gets connected
+        """
         def open_browser():
-            webbrowser.open('http://www.guadalinex.org/distro/V5/hermes/tdt')
+            webbrowser.open('http://www.guadalinex.org/distro/V6/hermes/tdt')
 
-        self.msg_render.show_warning('TDT', 
-                _('TDT device without firmware!!'),
-                actions = {_('More info...'): open_browser})
+        self.msg_render.show_warning(__device_title__, 
+                                     _('DVB device without firmware!!'),
+                                     actions = {_('More info...'): open_browser})

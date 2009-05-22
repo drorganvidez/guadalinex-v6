@@ -5,9 +5,9 @@
 #     Jose Chaso (pchaso) <jose.chaso at gmail>
 #
 # [es] Modulo camara - Implementación del "actor hardware" para
-#         camaras de fotografía digitales
+#                      camaras de fotografía digitales
 # [en] Camera module - Digital cameras "hardware actor"
-#          implementation
+#                      implementation
 #
 # Copyright (C) 2009 Junta de Andalucía
 #
@@ -51,7 +51,6 @@
 
 import os.path
 
-from utils.synaptic import Synaptic
 from deviceactor import DeviceActor
 from gettext import gettext as _
 
@@ -63,7 +62,6 @@ class Actor(DeviceActor):
     [en] Digital Cameras Actor class implementation
     """
     __required__ = {'info.category':'camera', 'info.subsystem':'usb'}
-
     __icon_path__  = os.path.abspath('actors/img/camera.png')
     __iconoff_path__ = os.path.abspath('actors/img/cameraoff.png')
     __device_title__ = _("CAMERA")

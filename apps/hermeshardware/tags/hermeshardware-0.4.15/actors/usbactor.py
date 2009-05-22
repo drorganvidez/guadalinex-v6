@@ -48,4 +48,8 @@ from deviceactor import DeviceActor
 class Actor(DeviceActor):
 
     __required__ = {'info.subsystem' : 'usb'}
-
+    __icon_path__  = os.path.abspath('actors/img/usb.png')
+    __iconoff_path__ = os.path.abspath('actors/img/usboff.png')
+    __device_title__ = _("USB")
+    __device_conn_description__ = _("USB connected")
+    __device_disconn_description__ = _("USB disconnected")

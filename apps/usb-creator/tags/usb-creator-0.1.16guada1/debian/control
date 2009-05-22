@@ -1,0 +1,15 @@
+Source: usb-creator
+Section: admin
+Priority: optional
+Maintainer: Evan Dandrea <evand@ubuntu.com>
+Build-Depends: cdbs, debhelper (>= 7), python, python-central (>= 0.5.6), python-dbus
+XS-Python-Version: all
+Standards-Version: 3.7.3
+
+Package: usb-creator
+Architecture: any
+Depends: ${python:Depends}, python-gtk2, python-glade2
+XB-Python-Version: ${python:Versions}
+Description: Ubuntu USB desktop image creator
+ This is a simple utility designed to make bootable USB desktop images from
+ Ubuntu CDs.

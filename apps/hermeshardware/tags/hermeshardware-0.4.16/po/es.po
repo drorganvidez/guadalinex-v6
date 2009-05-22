@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-05-22 13:08+0200\n"
+"POT-Creation-Date: 2009-05-22 13:31+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -80,7 +80,7 @@ msgstr "Cámara digital desconectada"
 msgid "Use device"
 msgstr "Utilizar dispositivo"
 
-#: actors/deviceactor.py:363 actors/usbscanner.py:120 actors/usbwebcam.py:117
+#: actors/deviceactor.py:363 actors/usbwebcam.py:117
 msgid "Install required packages"
 msgstr "Instalar paquetes requeridos"
 
@@ -101,7 +101,6 @@ msgid "Run TV-Player"
 msgstr "Ejecutar reproductor de TV"
 
 #: actors/dvbfw.py:132
-#, fuzzy
 msgid "DVB device without firmware!!"
 msgstr "Dispositivo TDT sin firmware"
 
@@ -126,7 +125,6 @@ msgid "iPod device detected"
 msgstr "Se ha detectado un dispositivo iPod"
 
 #: actors/ipod.py:68
-#, fuzzy
 msgid "iPod device disconnected"
 msgstr "Dispositivo iPod desconectado."
 
@@ -210,9 +208,8 @@ msgid "Keyboard"
 msgstr "Teclado"
 
 #: actors/usbkeyboard.py:70
-#, fuzzy
 msgid "USB keyboard connected"
-msgstr "Teclado USB desconectado"
+msgstr "Teclado USB conectado"
 
 #: actors/usbkeyboard.py:71
 msgid "USB keyboard disconnected"
@@ -242,21 +239,17 @@ msgstr "Impresora conectada"
 msgid "Printer disconnected"
 msgstr "Impresora desconectada"
 
-#: actors/usbscanner.py:118
-msgid "Run rendering program"
-msgstr "Ejecutar programa de renderizado"
+#: actors/usbsanescanner.py:72
+msgid "SANE supported Scanner"
+msgstr "Escaner compatible con SANE"
 
-#: actors/usbscanner.py:122 actors/usbscanner.py:130
-msgid "SCANNER"
-msgstr "ESCÁNER"
+#: actors/usbsanescanner.py:73
+msgid "USB SANE Scanner connected"
+msgstr "Escáner compatible con SANE conectado"
 
-#: actors/usbscanner.py:122
-msgid "Scanner device connected"
-msgstr "Escáner conectado"
-
-#: actors/usbscanner.py:130
-msgid "Scanner device disconnected"
-msgstr "Dispositivo escáner desconectado"
+#: actors/usbsanescanner.py:74
+msgid "USB SANE Scanner disconnected"
+msgstr "Escaner compatible con SANE desconectado"
 
 #: actors/usbtablet.py:67
 msgid "Graphics Tablet"
@@ -291,14 +284,12 @@ msgid "Storage"
 msgstr "Almacenamiento"
 
 #: actors/volume.py:72
-#, fuzzy
 msgid "Volume mounted"
-msgstr "Dispositivo desmontado"
+msgstr "Sistema de ficheros montado"
 
 #: actors/volume.py:73
-#, fuzzy
 msgid "Volume umounted"
-msgstr "Dispositivo desmontado"
+msgstr "Sistema de ficheros desmontado"
 
 #: actors/volume.py:130 tests/test_notify.py:71
 msgid "Error"
@@ -393,7 +384,6 @@ msgid "usage: %prog [options]"
 msgstr "uso: %prog [opciones]"
 
 #: hermes_hardware.py:450
-#, fuzzy
 msgid "Starts in debug mode."
 msgstr "Inicia en modo depuración."
 
@@ -528,12 +518,10 @@ msgid "show_info:"
 msgstr "muestra_informacion:"
 
 #: utils/notification.py:257
-#, fuzzy
 msgid "show_warning:"
-msgstr "muestra_dvertencia"
+msgstr "muestra_advertencia:"
 
 #: utils/notification.py:266
-#, fuzzy
 msgid "show_error:"
 msgstr "muestra_error:"
 
@@ -560,6 +548,15 @@ msgstr "Instalando paquetes"
 #: utils/synaptic.py:90
 msgid "Installed packages"
 msgstr "Paquetes instalados"
+
+#~ msgid "Run rendering program"
+#~ msgstr "Ejecutar programa de renderizado"
+
+#~ msgid "SCANNER"
+#~ msgstr "ESCÁNER"
+
+#~ msgid "Scanner device disconnected"
+#~ msgstr "Dispositivo escáner desconectado"
 
 #~ msgid "USB keyboard configured"
 #~ msgstr "Teclado USB configurado"

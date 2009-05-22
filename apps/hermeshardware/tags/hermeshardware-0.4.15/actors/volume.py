@@ -67,7 +67,7 @@ class Actor (DeviceActor):
 
     __required__ = {'info.category': 'volume'}
     __icon_path__  = os.path.abspath('actors/img/volume.png')
-    __iconoff_path__ = os.path.abspath('actors/img/volume.png')
+    __iconoff_path__ = os.path.abspath('actors/img/volumeoff.png')
     __device_title__ = _("Storage")
     __device_conn_description__ = _("Volume mounted")
     __device_disconn_description__ = _("Volume umounted")

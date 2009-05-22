@@ -66,7 +66,7 @@ class Actor (DeviceActor):
     __required__ = {'info.subsystem':'input',
                     'info.capabilities': is_valid}
     __icon_path__  = os.path.abspath('actors/img/mouse.png')
-    __iconoff_path__ = os.path.abspath('actors/img/mouse.png')
+    __iconoff_path__ = os.path.abspath('actors/img/mouseoff.png')
     __device_title__ = _("Mouse")
     __device_conn_description__ = _("USB mouse connected")
     __device_disconn_description__ = _("USB mouse disconnected")

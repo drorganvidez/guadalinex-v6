@@ -51,11 +51,6 @@ from utils.pkginstaller import PkgInstaller
 from deviceactor import PkgDeviceActor
 from gettext import gettext as _
 
-def is_valid(value):
-    valid_list = ['ipod','generic'] 
-    if (value.lower() in valid_list):
-        return True
-
 class Actor(PkgDeviceActor):
     __required__ = {'portable_audio_player.access_method.protocols': ['storage', 'ipod'],
                     'info.product': 'iPod'}

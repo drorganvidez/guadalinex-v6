@@ -64,51 +64,6 @@ from optparse import OptionParser
 from Queue import Queue
 
 
-class DefaultMessageRender:
-    """ 
-    [es] 
-    -----------------------------------------------------------------------
-    [en] 
-    """
-    def __init__(self):
-        pass
-
-
-    def show_message(self, message, type):
-        """ 
-        [es] 
-        -------------------------------------------------------------------
-        [en] 
-        """
-        pstring = ''
-        if type == gtk.MESSAGE_INFO:
-            pstring = _("Info") + ": "
-        elif type == gtk.MESSAGE_WARNING:
-            pstring = _("Warning") + ": "
-        elif type == gtk.MESSAGE_ERROR:
-            pstring = _("Error") + ": "
-
-        print pstring + str(message)
-
-
-    def ask_message(self, message, type):
-        """ 
-        [es] 
-        -------------------------------------------------------------------
-        [en] 
-        """
-        pstring = ''
-        if type == gtk.MESSAGE_INFO:
-            pstring = _("Ask Info") + ": "
-        elif type == gtk.MESSAGE_WARNING:
-            pstring = _("Ask Warning") + ": "
-        elif type == gtk.MESSAGE_ERROR:
-            pstring = _("Ask Error") + ": "
-
-        print pstring + str(message)
-
-
-
 class HermesTray (egg.trayicon.TrayIcon):
     """ 
     [es] 

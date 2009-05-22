@@ -220,11 +220,11 @@ class PkgDeviceActor(DeviceActor):
          order to make the device work.
     """
 	
-    __icon_path__  = ''
-    __iconoff_path__ = ''
-    __device_title__ = ''
-    __device_conn_description__ = ''
-    __device_disconn_description__ = ''
+    #__icon_path__  = ''
+    #__iconoff_path__ = ''
+    #__device_title__ = ''
+    #__device_conn_description__ = ''
+    #__device_disconn_description__ = ''
     __device_use_title__ = _('Use device')
 
     __packages__ = []

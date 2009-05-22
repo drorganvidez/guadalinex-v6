@@ -265,7 +265,7 @@ class DeviceListener:
 
     def get_actor_from_properties(self, prop):
         """
-        [es] Devuelve un actor que encaje con las propiedades espeficicadas
+        [es] Devuelve un actor que encaje con las propiedades especificadas
              en prop
         -----------------------------------------------------------------------
         [en] Returns an actor that matches the especified properties in prop
@@ -279,6 +279,7 @@ class DeviceListener:
         priority_counts = [0, 0, 0, 0, 0]
 
         import actors
+        
         for klass in actors.ACTORSLIST:
             # [es] Ponemos prioridad a 3 si no esta entre 1 y 5
             # [en] Set priority to 3 if not in 1 to 5 range

@@ -57,7 +57,7 @@ def is_valid(value):
         return True
 
 class Actor(PkgDeviceActor):
-    __required__ = {'portable_audio_player.type': is_valid,
+    __required__ = {'portable_audio_player.access_method.protocols': ['storage', 'ipod'],
                     'info.product': 'iPod'}
 
     __icon_path__  =  os.path.abspath('actors/img/ipod.png')

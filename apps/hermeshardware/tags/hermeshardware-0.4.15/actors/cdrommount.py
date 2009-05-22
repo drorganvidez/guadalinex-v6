@@ -61,10 +61,8 @@ class Actor (VolumeActor):
     ---------------------------------------------------------------------------
     [en] CDROM & DVDROM mount Actor class implementation
     """
-    __required__ = {
-            'volume.is_disc': True,
-            'block.is_volume': True
-            }
+    __required__ = {'volume.is_disc': True,
+                    'block.is_volume': True}
 
     def on_added(self):
         """

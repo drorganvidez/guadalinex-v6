@@ -1,14 +1,15 @@
 Source: usb-creator
 Section: admin
 Priority: optional
-Maintainer: Evan Dandrea <evand@ubuntu.com>
-Build-Depends: cdbs (>= 0.4.43), debhelper (>= 7), python, python-central (>= 0.5.6)
-XS-Python-Version: all
-Standards-Version: 3.7.3
+Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
+Build-Depends: cdbs (>= 0.4.43), debhelper (>= 6), python, python-central (>= 0.5.6), python-distutils-extra
+XS-Python-Version: current
+Standards-Version: 3.8.0
+Vcs-Bzr: http://bazaar.launchpad.net/~usb-creator-hackers/usb-creator/trunk
 
 Package: usb-creator
 Architecture: all
-Depends: ${python:Depends}, python-gtk2, python-glade2, python-dbus
+Depends: ${python:Depends}, gksu, python-gtk2, python-glade2, python-dbus, syslinux, parted, mtools
 XB-Python-Version: ${python:Versions}
 Description: Ubuntu USB desktop image creator
  This is a simple utility designed to make bootable USB desktop images from

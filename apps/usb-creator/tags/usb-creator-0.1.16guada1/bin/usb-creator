@@ -1,11 +1,10 @@
 #!/usr/bin/python
-#
-# Copyright (C) 2008  Canonical, Ltd.
-#
+
+# Copyright (C) 2008 Canonical Ltd.
+
 # This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
+# it under the terms of the GNU General Public License version 3,
+# as published by the Free Software Foundation.
 #
 # This program is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -16,10 +15,61 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 import sys
+import optparse
+import os
+import linecache
 from usbcreator.gtk_frontend import GtkFrontend
 
-def main():
-    f = GtkFrontend()
+trace_file = None
 
-if __name__ == '__main__':
-    main()
+def _traceit(frame, event, arg):
+    if event == "line":
+        lineno = frame.f_lineno
+        filename = frame.f_globals["__file__"]
+        if (filename.endswith(".pyc") or
+            filename.endswith(".pyo")):
+            filename = filename[:-1]
+        name = frame.f_globals["__name__"]
+        line = linecache.getline(filename, lineno)
+        print >>trace_file, "%s:%s: %s" % (name, lineno, line.rstrip())
+        trace_file.flush()
+    return _traceit
+
+usage = '%prog [options]'
+parser = optparse.OptionParser(usage=usage, version='0.1.11')
+parser.set_defaults(
+    safe=False,
+    iso=None,
+    persistent=True,
+    trace=False)
+parser.add_option('-s', '--safe', dest='safe', action='store_true',
+                  help='choose safer options when constructing the USB '
+                  'disk (may slow down the boot process).')
+parser.add_option('-i', '--iso', dest='iso',
+                  help='provide a source ISO to pre-populate the UI.')
+parser.add_option('-n', '--not_persistent', dest='persistent', action="store_false",
+                  help='disable persistent setting by default in the UI')
+parser.add_option('-t', '--trace', dest='trace', action='store_true',
+                  help='create a ~/.usb-creator.trace file')
+(options, args) = parser.parse_args()
+if options.safe:
+    os.environ['USBCREATOR_SAFE'] = '1'
+
+if options.trace:
+    if 'SUDO_USER' in os.environ:
+        filename = '%s/.usb-creator.trace' % \
+            os.path.expanduser('~' + os.environ['SUDO_USER'])
+    else:
+        filename = '%s/.usb-creator.trace' % \
+            os.path.expanduser('~')
+    trace_file = open(filename, 'w')
+    sys.settrace(_traceit)
+
+if os.getuid() != 0:
+    args = ['gksu', 'gksu', '--desktop',
+    '/usr/share/applications/usb-creator.desktop', '--']
+    args.extend(sys.argv)
+    os.execvp(args[0], args)
+
+# TODO: trap sigterm, hook into copy shutdown routine.
+f = GtkFrontend(options.iso,options.persistent)

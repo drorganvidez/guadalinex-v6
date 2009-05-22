@@ -58,7 +58,11 @@ def is_valid(value):
     return 'input' in value and 'input.mouse' in value 
 
 class Actor (DeviceActor):
-
+    """ 
+    [es] Implementacion de clase Actor para raton usb
+    --------------------------------------------------------------------------
+    [en] Actor class implementation for USB mouse
+    """
     __required__ = {'info.subsystem':'input',
                     'info.capabilities': is_valid}
     __icon_path__  = os.path.abspath('actors/img/mouse.png')

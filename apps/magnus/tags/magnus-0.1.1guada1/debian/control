@@ -1,0 +1,16 @@
+Source: magnus
+Section: utils
+Priority: optional
+Maintainer: Junta de Andalucía <packmaster@guadalinex.org>
+Uploaders: David Amián Valle <amialinux@gmail.org>, Álvaro Pinel Bueno <alvaropinel@gmail.com>, Juanje Ojeda Croissier <jojeda@emergya.es>
+Build-Depends: debhelper (>= 7)
+Standards-Version: 3.8.0
+Homepage: http://magnusproject.wordpress.com/
+Vcs-Browser: https://forja.rediris.es/plugins/scmsvn/viewcvs.php/?root=csl2-magnus
+Vcs-Svn: https://forja.rediris.es/svn/csl2-magnus/trunk/
+
+Package: magnus
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}, ant, default-jre | sun-java6-jre | sun-java5-jre
+Description:Mouse Advanced GNU Speech
+ Mouse Advanced GNU Speech is a speech controlled mouse pointer application through Spanish voice commands. This application aims to provide oral accessibility for people with reduced mobility.

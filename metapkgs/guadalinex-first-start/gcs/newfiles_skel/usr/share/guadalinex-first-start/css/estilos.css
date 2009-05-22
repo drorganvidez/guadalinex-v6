@@ -1,0 +1,367 @@
+/*
+
+Guadalinex
+Version 6
+Pagina de inicio Mozilla Firefox
+
+*/
+
+body{
+	margin: 0;
+	padding:0;
+	font-family:Arial, sans-serif;
+	color: #fff;
+	background:#03284c url(../img/bg5.jpg) no-repeat top center;}
+
+
+/* genericas */
+	.clear{clear:both;}
+	.clearleft{clear:left;}
+	.clearright{clear:left;}
+	.floatleft{float:left;}
+	.floatright{float:left;}
+	.oculto{display:none; visibility:hidden;}
+
+
+/* layout */
+
+	#marco{
+		width:700px;
+		margin:0 auto;}
+
+
+		/* ------------------------------------- Extras no incluidos ------------------------------------------------------------------------- */
+		.software{
+			width:180px;
+			height:250px;
+			float:left;
+			padding:20px;
+			margin:0 5px 10px 5px;
+			-moz-border-radius: 5px;
+			-webkit-border-radius: 5px;
+			border: 1px solid #ebf1f7;}
+			
+			.par{background:#ebf1f7;}
+			.impar{background:#dadfe5;}
+			
+			.software h3 {
+				font-size:1em;
+				margin: 0 0 0 0;
+				padding: 0 0 0 0;
+				color:#0f4378;}
+				
+			.software p {
+				font-size:0.8em;
+				color:#333;
+				margin: 10px 0 0 0;
+				padding: 0 0 0 0;
+				line-height:1.1em;
+				text-align:justify;}
+				
+			.software ul {
+				list-style:none;
+				margin: 10px 0 0 0; 
+				padding: 0 0 0 0;}
+			
+			.software li {font-size:0.8em;}
+			
+			.software li a {
+				display:block;
+				padding:3px 10px;
+				margin: 2px 0;
+				color:#093864;
+				font-weight:bold;
+				background:#ebf1f7;}
+			.software li a.par {background:#f3f9ff;}
+			.software li a:hover {
+				text-decoration:none;
+				background:#cfd3d9;}
+
+
+		/* ------------------------------------- Comunidades, foros, ayuda ------------------------------------------------------------------------- */				
+		.informacion{
+			padding:20px;
+			margin:0 0 0 0;
+			-moz-border-radius-topleft:5px;
+			-webkit-border-top-left-radius: 5px;
+			-moz-border-radius-topright: 5px;
+			-webkit-border-top-right-radius: 5px;
+			border: 1px solid #ebf1f7;
+			background:#ebf1f7;}
+
+			.informacion h3 {
+				font-size:1.3em;
+				margin: 0 0 0 0;
+				padding: 0 0 0 0;
+				color:#0f4378;}
+				
+			.informacion p {
+				font-size:0.8em;
+				color:#333;
+				font-weight:normal;
+				margin: 10px 0 0 0;
+				padding: 0 0 0 0;
+				line-height:1.4em;
+				text-align:justify;}
+
+		.enlace_externo{
+			list-style-type:none;
+			margin: 0 0 0 0;
+			padding: 0 0 0 0;}
+
+			.enlace_externo li{
+				margin: 0 0 0 0;
+				padding: 0 0 0 0;
+				font-size:0.8em;}
+				
+			.enlace_externo li a{
+				display:block;
+				height:30px;
+				padding:10px 20px 0 20px;
+				margin: 1px 0 0 0;
+				color:#093864;
+				font-weight:bold;
+				-moz-border-radius-bottomleft: 5px;
+				-webkit-border-bottom-left-radius: 5px;
+				-moz-border-radius-bottomright: 5px;
+				-webkit-border-bottom-right-radius: 5px;
+				background:#dadfe5;}
+				
+				
+		/* ------------------------------------- Primer inicio ------------------------------------------------------------------------- */
+		.primerinicio{
+			width:201px;
+			height:255px;
+			float:left;
+			padding:10px;
+			margin:0 5px 10px 5px;
+			-moz-border-radius: 5px;
+			-webkit-border-radius: 5px;
+			border: 1px solid #ebf1f7;}
+			
+		.primerinicio-superior-unico{
+			padding:10px;
+			margin:0 5px 1px 5px;
+			-moz-border-radius-topleft:5px;
+			-webkit-border-top-left-radius: 5px;
+			-moz-border-radius-topright: 5px;
+			-webkit-border-top-right-radius: 5px;
+			background:#ebf1f7;}
+
+		.primerinicio-inferior-unico{
+			padding:10px;
+			margin:0 5px 0 5px;
+			-moz-border-radius-bottomleft: 5px;
+			-webkit-border-bottom-left-radius: 5px;
+			-moz-border-radius-bottomright: 5px;
+			-webkit-border-bottom-right-radius: 5px;
+			background:#dadfe5;}
+			
+			.primerinicio h3,
+			.primerinicio-superior-unico h3,
+			.primerinicio-inferior-unico h3{
+				font-size:1em;
+				margin: 0 0 0 0;
+				padding: 0 0 0 0;
+				color:#0f4378;}
+				
+			.primerinicio p,
+			.primerinicio-superior-unico p,
+			.primerinicio-inferior-unico p {
+				font-size:0.7em;
+				color:#333;
+				margin: 10px 0 0 0;
+				padding: 0 0 0 0;
+				line-height:1.1em;
+				text-align:justify;}
+				
+			.primerinicio ul,
+			.primerinicio-superior-unico ul, 
+			.primerinicio-inferior-unico ul{
+				list-style:none;
+				margin: 10px 0 0 0; 
+				padding: 0 0 0 0;}
+			
+			.primerinicio li, .primerinicio-superior-unico li, .primerinicio-inferior-unico li {font-size:0.8em;}
+			
+			.primerinicio li a,
+			.primerinicio-superior-unico li a,
+			.primerinicio-inferior-unico li a{
+				display:block;
+				padding:3px 10px;
+				margin: 2px 0;
+				color:#093864;
+				font-weight:bold;
+				background:#ebf1f7;}
+			.primerinicio li a.par, .primerinicio-superior-unico a.par, .primerinicio-inferior-unico a.par {background:#f3f9ff;}
+			.primerinicio li a:hover, .primerinicio-superior-unico a.hover, .primerinicio-inferior-unico a.hover {
+				text-decoration:none;
+				background:#cfd3d9;}
+				
+				.cuarto{
+					width:132px;
+					height:155px;
+					display:block;
+					float:left;
+					text-align:left !important;
+					margin:10px 5px 0 5px!important;
+					padding: 10px !important;
+					-moz-border-radius: 5px;
+					-webkit-border-radius: 5px;
+					background:#fff;
+			}
+					
+					.cuarto span{
+						height:35px;
+						display:block;
+						color:#1f75ac;
+						padding: 0 0 5px 0;
+						margin: 0 0 5px 0;
+						font-weight:bold;
+						border-bottom:1px solid #0f4378;}
+				
+
+		/* ------------------------------------- Primer inicio ------------------------------------------------------------------------- */
+		.mozilla-inicio{
+			width:201px;
+			height:255px;
+			float:left;
+			padding:10px;
+			margin:0 5px 10px 5px;
+			-moz-border-radius: 5px;
+			-webkit-border-radius: 5px;
+			border: 1px solid #ebf1f7;}
+			
+			.mozilla-inicio img{
+				display:block;
+				margin: 0 auto;}
+			
+			.mozilla-inicio h3 {
+				font-size:1em;
+				border-bottom:1px solid #999;
+				margin: 0 0 0 0;
+				padding: 5px 0 5px 0;
+				color:#0f4378;}
+				
+			.mozilla-inicio p {
+				font-size:0.8em;
+				color:#333;
+				margin: 10px 0 0 0;
+				padding: 0 0 0 0;
+				line-height:1.2em;
+				text-align:justify;}
+				
+			.mozilla-inicio ul {
+				list-style:none;
+				margin: 10px 0 0 0; 
+				padding: 0 0 0 0;}
+			
+			.mozilla-inicio li {font-size:0.8em;}
+			
+			.mozilla-inicio li a,
+			.mozilla-inicio li a,
+			.mozilla-inicio li a{
+				display:block;
+				padding:3px 10px;
+				margin: 2px 0;
+				color:#093864;
+				font-weight:bold;
+				background:#ebf1f7;}
+			.mozilla-inicio li a.par {background:#f3f9ff;}
+			.mozilla-inicio li a:hover {
+				text-decoration:none;
+				background:#cfd3d9;}
+				
+				
+		.lista_horizontal{
+			text-align:center;}
+		.lista_horizontal li{
+			display:inline;
+			font-size:0.8em;
+			padding: 0 2px;}
+		.lista_horizontal li a{color:#5fb2ff;}
+		.lista_horizontal li a:hover{color:#a5d4ff;}
+
+
+
+
+
+				
+			/* ------------------------------------- layout ------------------------------------------------------------------------- */
+	.contenido{
+		margin-left:auto;
+		margin-right:auto;
+		margin-top:25px;
+		text-align:left;}
+
+		.titular {
+			width: 300px;
+			height:120px;
+			padding: 0 0 0.5% 190px;
+			margin: 0 auto;
+			background: url(../img/logo_guadalinex_v6.png) no-repeat top left;}
+			
+			.titular h2{font-size:1.3em; font-variant:small-caps; margin: 0 0 0 0; padding: 0 0 0 0;}
+			.titular h2 span{color:#12aeff;}
+			.titular ul{margin: 10px 0 0 0; padding: 0 0 0 0;}
+			.titular li{
+				padding:10px;
+				font-size:0.8em;
+				color:#072a50;
+				-moz-border-radius: 5px;
+				-webkit-border-radius: 5px;
+				border: 1px solid #ebf1f7;
+				background:#ebf1f7;}
+				
+		.logotipo {
+			width: 100%;
+			height:90px;
+			padding: 0 0 0 0;
+			margin: 0 auto;
+			background: url(../img/logo_guadalinex_v6.png) no-repeat 50% 50%;}
+			
+			.logotipo h1{display:none;}
+				
+			.mensaje {padding: 0 0 0 20px; border-left:1px solid #1f4977;}
+
+			.desc{
+				background-position: left top;
+				line-height:145%;
+				margin-left:85px;
+				background-color:#fff;
+				-moz-border-radius:10px;
+				-moz-opacity:0.85;
+				padding:15px 25px;
+				text-align: center;}
+				
+			#newsticker {position: relative;}
+				
+				#newsticker ul {
+					list-style: none;
+					min-height: 1.6em;
+					padding: 1px 1px 25px;}
+		
+				* html #newsticker ul {
+					height: 1.6em;
+					overflow: visible;}
+		
+				#newsticker li.error {color: #f00;}
+				
+				.descripcion{color:#212A3D;}
+		
+			.centrado{font-size:0.8em; font-weight:bold; text-align:center; padding: 10px 0; border-top:1px solid #1f4977; border-bottom:1px solid #1f4977;}
+
+
+	#pie{
+		clear:both;
+		position:relative;
+		padding:10px 0 0 0;
+		text-align:left;}
+
+		.logo_junta{
+			width:180px;
+			height:67px;
+			margin:0 auto;}
+
+	.enlaces_texto:hover{text-decoration:underline;}
+

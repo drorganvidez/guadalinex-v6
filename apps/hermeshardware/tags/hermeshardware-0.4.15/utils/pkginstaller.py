@@ -4,8 +4,9 @@
 #     Guadalinex developers team
 #     Jose Chaso (pchaso) <jose.chaso at gmail>
 #
-# [es] Modulo pkginstaller -
-# [en] pkginstaller module -
+# [es] Modulo pkginstaller - Módulo para instalar paquetes
+#      debian
+# [en] pkginstaller module - Debian packages installer module
 #
 # Copyright (C) 2009 Junta de Andalucía
 # 
@@ -58,50 +59,53 @@ from gettext import gettext as _
 
 class IPkgInstaller(object):
     """ 
-    [es] 
+    [es] Interfaz común para la instalación de paquetes
     -----------------------------------------------------------------------
     [en] Common interface for packages installers.
     """
 
     def check(self, pkg_list):
         """ 
-        [es] 
+        [es] Comprobamos si están instalados los paquetes de la lista
+             pkg_list
+             Devolvemos un booleano VERDADERO si todos los paquetes de la 
+             lista pkg_list estan actualmente instalados en el sistema.
+             En otro caso devolvemos FALSO.        
         -------------------------------------------------------------------
         [en] Check packages installation.
-
-             @rtype: boolean
-             @return: True if _all_ packages in pkg_list  re installed. 
-                      False otherwise.
+             Returns a TRUE boolean value if all the packages in pkg_list 
+             are installed. Returns FALSE otherwise.
         """
         raise NotImplementedError
 
 
     def install(self, pkg_list):
         """ 
-        [es] 
+        [es] Instala todos los paquetes en pkg_list. Devuelve VERDADERO si
+             la instalación no encuentra ningun error y FALSO en caso
+             contrario.
         -------------------------------------------------------------------
         [en] Install all packages in pkg_list.
-
-             @rtype: boolean
-             @return: True if success. False otherwise.
+             Returns True if success. False otherwise.
         """
         raise NotImplementedError
 
 
 class PkgInstaller(IPkgInstaller):
     """ 
-    [es] 
+    [es] Clase que implementa la interfaz IPkgInstaller
     -----------------------------------------------------------------------
-    [en] 
+    [en] Clase que implementa la interfaz IPkgInstaller
     """
 
     def __init__(self):
         """ 
-        [es] 
+        [es] Método de inicialización
         -------------------------------------------------------------------
-        [en] 
+        [en] Initialization method
         """
-        # Select correct PkgInstaller
+        # [es] Seleccionamos el instalador de paquetes (PkgInstaller)
+        # [en] Select correct PkgInstaller
         config_path = os.path.abspath('actors/config/installer')
         installer_name = open(config_path).read().strip()
         if installer_name == 'synaptic':
@@ -114,42 +118,49 @@ class PkgInstaller(IPkgInstaller):
 
     def check(self, pkg_list):
         """ 
-        [es] 
+        [es] Comprobamos si estan instalados todos los paquetes de la lista
+             pkg_list
         -------------------------------------------------------------------
-        [en] 
+        [en] We check if all packages in pkg_list are installed
         """
         return  self.pkg_installer.check(pkg_list)
 
     
     def install(self, pkg_list):
         """ 
-        [es] 
+        [es] Instala todos los paquetes en pkg_list. Devuelve VERDADERO si
+             la instalación no encuentra ningun error y FALSO en caso
+             contrario.
         -------------------------------------------------------------------
-        [en] 
+        [en] Install all packages in pkg_list.
+             Returns True if success. False otherwise.
         """
         return  self.pkg_installer.install(pkg_list)
 
 
 class SynapticInstaller(IPkgInstaller):
     """ 
-    [es] 
+    [es] Clase que utiliza el instalador de paquetes debian apt
     -----------------------------------------------------------------------
-    [en] 
+    [en] Debian apt package installer class handler
     """
 
     def __init__(self):
         """ 
-        [es] 
+        [es] Método de inicialización
         -------------------------------------------------------------------
-        [en] 
+        [en] Initialization method
         """
         apt_pkg.init()
 
     def install(self, pkg_list):
         """ 
-        [es] 
+        [es] Instala todos los paquetes en pkg_list. Devuelve VERDADERO si
+             la instalación no encuentra ningun error y FALSO en caso
+             contrario.
         -------------------------------------------------------------------
-        [en] 
+        [en] Install all packages in pkg_list.
+             Returns True if success. False otherwise.
         """
         if not get_sudo():
             return False
@@ -175,7 +186,8 @@ class SynapticInstaller(IPkgInstaller):
 
     def check(self, pkg_list):
         """ 
-        [es] 
+        [es] Devolvemos Verdadero si todos los paquetes de la lista
+             pkg_list estan instalado. Falso en otro caso.
         -------------------------------------------------------------------
         [en] Return True if all packages in pkg_list are installed. False
              in other case.

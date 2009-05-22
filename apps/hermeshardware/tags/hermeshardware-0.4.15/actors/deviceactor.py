@@ -169,7 +169,9 @@ class DeviceActor(object):
         -----------------------------------------------------------------------
         [en] Interface for the actions to take when the device is connected
         """
-        pass
+        self.msg_render.show(self.__device_title__, 
+                             self.__device_conn_description__,
+                             self.__icon_path__) 
 
     def on_removed(self):
         """ 
@@ -178,7 +180,9 @@ class DeviceActor(object):
         -----------------------------------------------------------------------
         [en] Interface for the actions to take when the device is disconnected
         """
-        pass
+        self.msg_render.show(self.__device_title__,
+                             self.__device_disconn_description__,
+                             self.__iconoff_path__)
     
     def on_modified(self, prop_name):
         """ 

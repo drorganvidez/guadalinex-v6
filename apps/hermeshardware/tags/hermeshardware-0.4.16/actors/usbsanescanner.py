@@ -54,9 +54,6 @@ from deviceactor import DeviceActor
 from gettext import gettext as _
 
 
-def is_valid(value):
-    return 'input' in value and 'input.mouse' in value 
-
 class Actor (DeviceActor):
     """ 
     [es] Implementacion de clase Actor para usb soportados por SANE

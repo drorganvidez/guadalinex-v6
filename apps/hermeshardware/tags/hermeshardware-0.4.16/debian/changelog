@@ -1,9 +1,44 @@
+hermeshardware (0.4.16) jaunty; urgency=low
+
+  [ José Jesús Chaso González ]
+  * Typo en importacion dos lineas se han pegado
+  * Eliminado el metodo is_valid que se habia colado al copiar el codigo de usbmouse.py
+  * Actualizado diccionario de traducciones
+
+ -- Juanje Ojeda Croissier <jojeda@emergya.es>  Fri, 22 May 2009 14:01:37 +0200
+
+hermeshardware (0.4.15) jaunty; urgency=low
+
+  [ Juanje Ojeda Croissier ]
+  * Changed hal key for the ipod actor. The previous one was changed
+  * Removed non used function 'is_valid' on ipod actor
+  * Changed camera's info key for hal. info.bus is now renamed to info.subsystem
+  * Changed sdcard's info key for hal. mmc.type is now renamed to
+    storage.drive_type=sd_mmc
+
+  [ José Jesús Chaso González ]
+  * Normalizacion a actor pasivo, heredando de DeviceActor, usando las propiedades de notificacion y eliminando los metodos on_added y on_removed por estar ya definidos en la clase base.
+  * Modificaciones para evitar la creacion de actores genericos para dispositivos desconocidos.
+  * Esto estaba provocando el lanzamiento de notificaciones en vacio.
+  * notification-osd de ubuntu parece que los filtraba y no las mostraba, pero al cambiar al sistema de notificaciones de siempre se ha detectado el problema.
+  * Por ejemplo al conectar un raton se detectan 3 subdispositivos.
+  * De esta forma solo se considera el principal y se lanza una sola notificacion.
+  * Añadidas propiedades de configuracion para el notificador.
+  * Normalizacion a propiedades de notificacion mediante metodos de la clase padre en vez de implementacion particular de los mismos.
+  * Añadido otro product_id, convertimos en lista mediante is_valid para poder añadir más detectados en el futuro
+  * Actualizado el diccionario de traducciones a español con las cadenas nuevas
+    utils/hermes_notifier.py se elimino del respositorio y se ha comentado en el fichero POTFILES.in
+    para que no se busque a la hora de crear el diccionario de cadenas de i18n
+
+ -- Juanje Ojeda Croissier <jojeda@emergya.es>  Fri, 22 May 2009 13:25:54 +0200
+
 hermeshardware (0.4.14) jaunty; urgency=low
 
   [ José Jesús Chaso González ]
   * Pequeños ajustes en cadenas de identificacion en ficheros .desktop
   * Arreglado path del icono de la barra de tareas
   * Retirada identificacion HERMES: en notificaciones
+  * HAL info.bus renamed to usb.subsystem on some actors
 
  -- Juanje Ojeda Croissier <jojeda@emergya.es>  Tue, 05 May 2009 17:22:07 +0200
 

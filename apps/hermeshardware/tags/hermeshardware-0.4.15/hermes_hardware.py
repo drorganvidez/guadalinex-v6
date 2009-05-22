@@ -86,8 +86,7 @@ import types
 # i18n
 import gettext, locale
 from gettext import gettext as _
-import defs
-setup_gettext('hermes-hardware', defs.DATA_DIR)
+import defs setup_gettext('hermes-hardware', defs.DATA_DIR)
 
 from utils.hermestrayicon import HermesTrayIcon
 from utils import DeviceList, ColdPlugListener, CaptureLogGui
@@ -179,23 +178,20 @@ class DeviceListener:
 
         obj = self.bus.get_object('org.freedesktop.Hal', udi)
         obj = dbus.Interface(obj, 'org.freedesktop.Hal.Device')
-
         properties = obj.GetAllProperties()
-        print
-        print
-        print _("Connected") + " ################################"
-        self.__print_properties(properties)
-
         actor = self.get_actor_from_properties(properties)
+        
+
 
         if actor: 
+            print
+            print
+            print _("Connected") + " ################################"
+            self.__print_properties(properties)
             try:
                 actor.on_added()
             except:
                 self.logger.warning(str(traceback.format_exc()))
-            #    self.message_render.show_warning(_("Warning"),
-            #                    _("Unknown Device Connected")+".")
-
 
 
     def on_device_removed(self, udi, *args): 
@@ -223,9 +219,9 @@ class DeviceListener:
             print _("Disconnected") + " ################################"
             self.__print_properties(disp.properties)
             del self.udi_dict[udi]
-        else:
-            self.message_render.show_warning(_("Warning"),
-                                             _("Unknown Device Removed") + ".")
+#        else:
+#            self.message_render.show_warning(_("Warning"),
+#                                             _("Unknown Device Removed") + ".")
 
 
     def on_property_modified(self, udi, num, values):
@@ -315,14 +311,10 @@ class DeviceListener:
                     dbus_interface = 'org.freedesktop.Hal.Device',
                     signal_name = "PropertyModified",
                     path = udi)
-        else:
-            # [es] Configuracion del registro abreviada (en los actores, 
-            #      logging.getLogger debe ser invocado tras la funcion main
-            # [en] Shorting logger setup (in module actors, logging.getLogger 
-            #      must be invoked _after_ than in main function).
-            from actors.deviceactor import DeviceActor
-            actor = DeviceActor(self.message_render, prop)
-            self.udi_dict[udi] = actor
+        #else:
+            #from actors.deviceactor import DeviceActor
+            #actor = DeviceActor(self.message_render, prop)
+            #self.udi_dict[udi] = actor
 
         return actor
 

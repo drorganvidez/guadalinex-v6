@@ -1,0 +1,7 @@
+if [ -d /etc/skel/Imágenes ]
+then
+	cp -a /usr/share/guadalinex-example-content/Imagenes/* /etc/skel/Imágenes/
+else
+	mkdir /etc/skel/Imágenes
+	cp -a /usr/share/guadalinex-example-content/Imagenes/* /etc/skel/Imágenes/
+fi

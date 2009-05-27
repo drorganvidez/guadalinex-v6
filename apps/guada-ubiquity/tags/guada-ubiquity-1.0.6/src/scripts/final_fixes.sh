@@ -2,7 +2,7 @@
 
 logs=/target/var/log/installer/debug
 
-exec > $logs 2>&1
+exec >> $logs 2>&1
 
 function error() {
 	echo "Error: $*"

@@ -188,7 +188,10 @@ class Wizard(ubiquity.frontend.gtk_ui.Wizard):
     def prepartition_intro(self):
         #self.prepartition_image.set_from_file("/usr/share/guada-ubiquity/pics/photo_1024.jpg")
         return True
-    
+
+    def launch_hermes(self):
+	os.spawnlp(os.P_NOWAIT,'hermeshardware','hermeshardware')
+ 
     def run(self):
         """run the interface."""
 
@@ -200,6 +203,10 @@ class Wizard(ubiquity.frontend.gtk_ui.Wizard):
                                        title)
             dialog.run()
             sys.exit(1)
+
+	# we need to kill hermeshardware
+	os.spawnlp(os.P_NOWAIT,'killall', 'killall', '-9', 'hermes_hardware.py')
+	atexit.register(self.launch_hermes)
 
         self.disable_volume_manager()
 

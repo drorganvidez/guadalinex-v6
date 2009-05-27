@@ -61,8 +61,7 @@ import gtk.glade
 
 import debconf
 
-from ubiquity import filteredcommand, gconftool, i18n, osextras, validation, \
-                     zoommap
+from ubiquity import filteredcommand, gconftool, i18n, osextras, validation
 from ubiquity.misc import *
 from ubiquity.components import console_setup, language, timezone, usersetup, \
                                 partman, partman_commit, \

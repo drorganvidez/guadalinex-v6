@@ -133,6 +133,7 @@ PRESEED = ["debconf debconf/language string es",
 "ubiquity localechooser/supported-locales multiselect es_ES.UTF-8",
 "ubiquity tzconfig/gmt boolean false",
 "ubiquity time/zone select Europe/Madrid",
+"ubiquity ubiquity/success_command string /usr/share/guada-ubiquity/final_fixes.sh",
 "console-setup console-setup/variant select Spain",
 "console-setup console-setup/layout select Spain"
 ]

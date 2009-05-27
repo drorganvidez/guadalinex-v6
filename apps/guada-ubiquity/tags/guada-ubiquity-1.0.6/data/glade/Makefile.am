@@ -5,3 +5,6 @@ guadaubiquityglade_DATA =				\
 			diskpreview.glade	
 
 EXTRA_DIST=$(guadaubiquityglade_DATA)
+
+CLEANFILES = Makefile.in
+

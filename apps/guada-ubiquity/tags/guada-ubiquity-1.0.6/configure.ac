@@ -1,21 +1,10 @@
-AC_INIT(src/frontend/guada_ui.py)
+AC_INIT([guada-ubiquity],[0.9],[jojeda@emergya.es])
+AC_PREREQ([2.61])
+AC_CONFIG_HEADERS([config.h])
+AM_INIT_AUTOMAKE([-Wall -Werror foreign])
 
-PACKAGE=guada-ubiquity
-VERSION=0.9
+GNOME_COMMON_INIT
 
-AC_SUBST(PACKAGE)
-AC_SUBST(VERSION)
-
-AM_INIT_AUTOMAKE($PACKAGE, $VERSION)
-AM_CONFIG_HEADER(config.h)
-
-AM_MAINTAINER_MODE
-
-AC_ISC_POSIX
-AC_PROG_CC
-AC_STDC_HEADERS
-AM_DISABLE_STATIC
-AC_PROG_LIBTOOL
 
 dnl check for python
 dnl ----------------------------
@@ -31,7 +20,7 @@ AC_SUBST(PYDBUS_LIBS)
 
 dnl check for libglade
 dnl -----------------------------------------
-AC_MSG_CHECKING(for gtk.glade)
+AC_MSG_CHECKING([for gtk.glade])
 prog="
 import sys
 try:
@@ -45,13 +34,17 @@ sys.exit(0)
 
 if $PYTHON -c "$prog" 1>&AC_FD_CC 2>&AC_FD_CC
 then
-  AC_MSG_RESULT(found)
+  AC_MSG_RESULT([found])
 else
-  AC_MSG_RESULT(not found)
+  AC_MSG_RESULT([not found])
   AC_MSG_ERROR([You need to have python libglade bindings installed])
 fi
 
-AC_OUTPUT([
+AC_SUBST(VERSION)
+AC_SUBST(PACKAGE)
+
+AC_CONFIG_SRCDIR([src/frontend/guada_ui.py])
+AC_CONFIG_FILES([
 Makefile
 data/Makefile
 data/glade/Makefile
@@ -65,4 +58,14 @@ src/DiskPreview/Makefile
 src/scripts/Makefile
 src/ubiquity-init/Makefile
 ])
+AC_OUTPUT
 
+echo
+echo $PACKAGE v$VERSION
+echo
+
+echo Prefix............... : $prefix
+
+echo "Now type make to compile"
+echo "Then su to root and type: make install"
+echo

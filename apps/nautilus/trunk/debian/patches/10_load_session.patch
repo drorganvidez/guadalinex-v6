@@ -1,0 +1,15 @@
+Index: nautilus-2.26.2/cut-n-paste-code/libegg/eggsmclient.c
+===================================================================
+--- nautilus-2.26.2.orig/cut-n-paste-code/libegg/eggsmclient.c	2009-04-25 02:18:21.289920137 +0200
++++ nautilus-2.26.2/cut-n-paste-code/libegg/eggsmclient.c	2009-04-25 02:19:21.805416302 +0200
+@@ -240,6 +240,10 @@ egg_sm_client_get_option_group (void)
+     { "sm-config-prefix", 0, G_OPTION_FLAG_HIDDEN,
+       G_OPTION_ARG_STRING, &sm_config_prefix,
+       NULL, NULL },
++    /* Compatibility with the old nautilus code */
++    { "load-session", 0, G_OPTION_FLAG_HIDDEN,
++      G_OPTION_ARG_FILENAME, &sm_client_state_file,
++      NULL, NULL },
+     { NULL }
+   };
+   GOptionGroup *group;

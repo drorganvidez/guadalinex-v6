@@ -1,0 +1,50 @@
+# Description: launchpad integration items
+# UbuntuSpecific: launchpad
+#
+Index: nautilus-2.26.1/configure.in
+===================================================================
+--- nautilus-2.26.1.orig/configure.in	2009-03-26 15:04:01.000000000 +0100
++++ nautilus-2.26.1/configure.in	2009-04-03 17:41:31.000000000 +0200
+@@ -429,7 +429,7 @@
+ AC_SUBST(LIBNAUTILUS_EXTENSION_LIBS)
+ 
+ dnl core nautilus
+-CORE_MODULES="glib-2.0 gnome-desktop-2.0 gthread-2.0 gio-2.0 gio-unix-2.0 unique-1.0 dbus-glib-1 gail gconf-2.0 libxml-2.0 $EXTRA_CORE_MODULES"
++CORE_MODULES="glib-2.0 gnome-desktop-2.0 launchpad-integration gthread-2.0 gio-2.0 gio-unix-2.0 unique-1.0 dbus-glib-1 gail gconf-2.0 libxml-2.0 $EXTRA_CORE_MODULES"
+ CORE_CFLAGS="`$PKG_CONFIG --cflags $CORE_MODULES` $x_cflags $WARNING_CFLAGS"
+ AC_SUBST(CORE_CFLAGS)
+ CORE_LIBS="`$PKG_CONFIG --libs $CORE_MODULES` $x_libs"
+Index: nautilus-2.26.1/src/nautilus-shell-ui.xml
+===================================================================
+--- nautilus-2.26.1.orig/src/nautilus-shell-ui.xml	2009-01-15 14:05:06.000000000 +0100
++++ nautilus-2.26.1/src/nautilus-shell-ui.xml	2009-04-03 17:41:31.000000000 +0200
+@@ -63,6 +63,7 @@
+ 	<placeholder name="Other Menus"/>
+ 	<menu action="Help">
+ 		<menuitem name="Nautilus Manual" action="Nautilus Manual"/>
++		<placeholder name='LaunchpadItems'/>
+ 		<menuitem name="About Nautilus" action="About Nautilus"/>
+ 	</menu>
+ </menubar>
+Index: nautilus-2.26.1/src/nautilus-window-menus.c
+===================================================================
+--- nautilus-2.26.1.orig/src/nautilus-window-menus.c	2009-03-26 15:04:01.000000000 +0100
++++ nautilus-2.26.1/src/nautilus-window-menus.c	2009-04-03 17:41:45.000000000 +0200
+@@ -56,6 +56,7 @@
+ #include <libnautilus-private/nautilus-signaller.h>
+ #include <libnautilus-private/nautilus-trash-monitor.h>
+ #include <string.h>
++#include <launchpad-integration.h>
+ 
+ #define MENU_PATH_EXTENSION_ACTIONS                     "/MenuBar/File/Extension Actions"
+ #define POPUP_PATH_EXTENSION_ACTIONS                     "/background/Before Zoom Items/Extension Actions"
+@@ -922,6 +923,9 @@
+ 
+ 	ui = nautilus_ui_string_get ("nautilus-shell-ui.xml");
+ 	gtk_ui_manager_add_ui_from_string (ui_manager, ui, -1, NULL);
++ 
++	launchpad_integration_add_ui (ui_manager,
++				      "/MenuBar/Help/LaunchpadItems");
+ 
+ 	nautilus_window_initialize_trash_icon_monitor (window);
+ 	nautilus_window_initialize_bookmarks_menu (window);

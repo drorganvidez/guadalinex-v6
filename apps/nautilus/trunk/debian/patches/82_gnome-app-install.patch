@@ -1,0 +1,45 @@
+Index: nautilus-2.26.2/libnautilus-private/nautilus-mime-actions.c
+===================================================================
+--- nautilus-2.26.2.orig/libnautilus-private/nautilus-mime-actions.c	2009-04-16 14:52:09.000000000 +0200
++++ nautilus-2.26.2/libnautilus-private/nautilus-mime-actions.c	2009-04-16 15:06:02.000000000 +0200
+@@ -1375,6 +1375,27 @@
+ 	g_object_unref (proxy);
+ }
+ 
++void launch_gnome_app_install_mimetype(GdkScreen  *screen,
++				       NautilusFile *file,
++				       char *uri) {
++	char *qmimetype, *quri, *qduri, *command;
++	if (!screen)
++		screen = gdk_display_get_default_screen(gdk_display_get_default ());
++
++	qmimetype = g_shell_quote (nautilus_file_info_get_mime_type (file));
++	quri = g_shell_quote (uri);
++	command = g_strconcat("gnome-app-install --mime-type=",
++			     qmimetype, " ", quri, 
++			     (char*)0 /* NB NULL is wrong */);
++	g_free (qmimetype);
++	g_free (quri);
++	g_free (qduri);
++
++	//eel_gnome_shell_execute_on_screen (command, screen);
++	gdk_spawn_command_line_on_screen (screen, command, NULL);
++	g_free (command);
++}
++
+ static void
+ application_unhandled_uri (ActivateParameters *parameters, char *uri)
+ {
+@@ -1423,6 +1444,12 @@
+ 		goto out;
+ 	}
+ 
++	// try g-a-i now
++	if (g_find_program_in_path("gnome-app-install")) {
++	   launch_gnome_app_install_mimetype(NULL, file, uri);
++	   goto out;
++	}
++
+ 	/* Check whether PackageKit can be spawned */
+ 	connection = dbus_g_bus_get (DBUS_BUS_SESSION, &error);
+ 	if (connection == NULL) {

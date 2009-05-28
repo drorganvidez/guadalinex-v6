@@ -1,0 +1,2189 @@
+diff -Nur nautilus-2.27.1/Makefile.in nautilus-2.27.1.ubuntu/Makefile.in
+--- nautilus-2.27.1/Makefile.in	2009-05-05 02:44:43.000000000 +0200
++++ nautilus-2.27.1.ubuntu/Makefile.in	2009-05-11 14:15:33.000000000 +0200
+@@ -39,11 +39,7 @@
+ 	ltmain.sh missing mkinstalldirs
+ subdir = .
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+-am__aclocal_m4_deps = $(top_srcdir)/m4/gtk-doc.m4 \
+-	$(top_srcdir)/m4/intltool.m4 $(top_srcdir)/m4/libtool.m4 \
+-	$(top_srcdir)/m4/ltoptions.m4 $(top_srcdir)/m4/ltsugar.m4 \
+-	$(top_srcdir)/m4/ltversion.m4 $(top_srcdir)/m4/lt~obsolete.m4 \
+-	$(top_srcdir)/m4/shave.m4 $(top_srcdir)/configure.in
++am__aclocal_m4_deps = $(top_srcdir)/configure.in
+ am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
+ 	$(ACLOCAL_M4)
+ am__CONFIG_DISTCLEAN_FILES = config.status config.cache config.log \
+@@ -82,7 +78,6 @@
+ ALL_LIBS = @ALL_LIBS@
+ ALL_LINGUAS = @ALL_LINGUAS@
+ AMTAR = @AMTAR@
+-AM_MAKEFLAGS = @AM_MAKEFLAGS@
+ AR = @AR@
+ AS = @AS@
+ AUTOCONF = @AUTOCONF@
+@@ -100,7 +95,6 @@
+ CORE_LIBS = @CORE_LIBS@
+ CPP = @CPP@
+ CPPFLAGS = @CPPFLAGS@
+-CXX = @CXX@
+ CYGPATH_W = @CYGPATH_W@
+ DATADIRNAME = @DATADIRNAME@
+ DEFS = @DEFS@
+@@ -122,8 +116,6 @@
+ EXEMPI_NEW_API_LIBS = @EXEMPI_NEW_API_LIBS@
+ EXIF_CFLAGS = @EXIF_CFLAGS@
+ EXIF_LIBS = @EXIF_LIBS@
+-F77 = @F77@
+-FC = @FC@
+ FGREP = @FGREP@
+ GAIL_REQUIRED = @GAIL_REQUIRED@
+ GCONFTOOL = @GCONFTOOL@
+@@ -163,7 +155,6 @@
+ LN_S = @LN_S@
+ LTLIBOBJS = @LTLIBOBJS@
+ MAINT = @MAINT@
+-MAKEFLAGS = @MAKEFLAGS@
+ MAKEINFO = @MAKEINFO@
+ MKDIR_P = @MKDIR_P@
+ MKINSTALLDIRS = @MKINSTALLDIRS@
+@@ -173,7 +164,6 @@
+ NAUTILUS_EXTENSION_VERSION_INFO = @NAUTILUS_EXTENSION_VERSION_INFO@
+ NM = @NM@
+ NMEDIT = @NMEDIT@
+-OBJC = @OBJC@
+ OBJDUMP = @OBJDUMP@
+ OBJEXT = @OBJEXT@
+ OTOOL = @OTOOL@
+@@ -192,7 +182,6 @@
+ POSUB = @POSUB@
+ PO_IN_DATADIR_FALSE = @PO_IN_DATADIR_FALSE@
+ PO_IN_DATADIR_TRUE = @PO_IN_DATADIR_TRUE@
+-Q = @Q@
+ RANLIB = @RANLIB@
+ RENDER_LIBS = @RENDER_LIBS@
+ SED = @SED@
+@@ -204,7 +193,6 @@
+ TRACKER_LIBS = @TRACKER_LIBS@
+ UPDATE_MIME_DATABASE = @UPDATE_MIME_DATABASE@
+ USE_NLS = @USE_NLS@
+-V = @V@
+ VERSION = @VERSION@
+ XGETTEXT = @XGETTEXT@
+ XMKMF = @XMKMF@
+@@ -259,7 +247,6 @@
+ psdir = @psdir@
+ sbindir = @sbindir@
+ sharedstatedir = @sharedstatedir@
+-shavedir = @shavedir@
+ srcdir = @srcdir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+diff -Nur nautilus-2.27.1/aclocal.m4 nautilus-2.27.1.ubuntu/aclocal.m4
+--- nautilus-2.27.1/aclocal.m4	2009-05-05 02:41:46.000000000 +0200
++++ nautilus-2.27.1.ubuntu/aclocal.m4	2009-05-11 14:41:21.000000000 +0200
+@@ -596,14 +596,16 @@
+ # _PKG_CONFIG([VARIABLE], [COMMAND], [MODULES])
+ # ---------------------------------------------
+ m4_define([_PKG_CONFIG],
+-[if test -n "$$1"; then
+-    pkg_cv_[]$1="$$1"
+- elif test -n "$PKG_CONFIG"; then
+-    PKG_CHECK_EXISTS([$3],
+-                     [pkg_cv_[]$1=`$PKG_CONFIG --[]$2 "$3" 2>/dev/null`],
+-		     [pkg_failed=yes])
+- else
+-    pkg_failed=untried
++[if test -n "$PKG_CONFIG"; then
++    if test -n "$$1"; then
++        pkg_cv_[]$1="$$1"
++    else
++        PKG_CHECK_EXISTS([$3],
++                         [pkg_cv_[]$1=`$PKG_CONFIG --[]$2 "$3" 2>/dev/null`],
++			 [pkg_failed=yes])
++    fi
++else
++	pkg_failed=untried
+ fi[]dnl
+ ])# _PKG_CONFIG
+ 
+@@ -647,9 +649,9 @@
+ if test $pkg_failed = yes; then
+         _PKG_SHORT_ERRORS_SUPPORTED
+         if test $_pkg_short_errors_supported = yes; then
+-	        $1[]_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors "$2" 2>&1`
++	        $1[]_PKG_ERRORS=`$PKG_CONFIG --short-errors --errors-to-stdout --print-errors "$2"`
+         else 
+-	        $1[]_PKG_ERRORS=`$PKG_CONFIG --print-errors "$2" 2>&1`
++	        $1[]_PKG_ERRORS=`$PKG_CONFIG --errors-to-stdout --print-errors "$2"`
+         fi
+ 	# Put the nasty error message in config.log where it belongs
+ 	echo "$$1[]_PKG_ERRORS" >&AS_MESSAGE_LOG_FD
+@@ -975,59 +977,61 @@
+ # gives unlimited permission to copy and/or distribute it,
+ # with or without modifications, as long as this notice is preserved.
+ 
+-#serial 4
++#serial 5
+ 
+ # _AM_OUTPUT_DEPENDENCY_COMMANDS
+ # ------------------------------
+ AC_DEFUN([_AM_OUTPUT_DEPENDENCY_COMMANDS],
+-[# Autoconf 2.62 quotes --file arguments for eval, but not when files
+-# are listed without --file.  Let's play safe and only enable the eval
+-# if we detect the quoting.
+-case $CONFIG_FILES in
+-*\'*) eval set x "$CONFIG_FILES" ;;
+-*)   set x $CONFIG_FILES ;;
+-esac
+-shift
+-for mf
+-do
+-  # Strip MF so we end up with the name of the file.
+-  mf=`echo "$mf" | sed -e 's/:.*$//'`
+-  # Check whether this is an Automake generated Makefile or not.
+-  # We used to match only the files named `Makefile.in', but
+-  # some people rename them; so instead we look at the file content.
+-  # Grep'ing the first line is not enough: some people post-process
+-  # each Makefile.in and add a new line on top of each file to say so.
+-  # Grep'ing the whole file is not good either: AIX grep has a line
+-  # limit of 2048, but all sed's we know have understand at least 4000.
+-  if sed -n 's,^#.*generated by automake.*,X,p' "$mf" | grep X >/dev/null 2>&1; then
+-    dirpart=`AS_DIRNAME("$mf")`
+-  else
+-    continue
+-  fi
+-  # Extract the definition of DEPDIR, am__include, and am__quote
+-  # from the Makefile without running `make'.
+-  DEPDIR=`sed -n 's/^DEPDIR = //p' < "$mf"`
+-  test -z "$DEPDIR" && continue
+-  am__include=`sed -n 's/^am__include = //p' < "$mf"`
+-  test -z "am__include" && continue
+-  am__quote=`sed -n 's/^am__quote = //p' < "$mf"`
+-  # When using ansi2knr, U may be empty or an underscore; expand it
+-  U=`sed -n 's/^U = //p' < "$mf"`
+-  # Find all dependency output files, they are included files with
+-  # $(DEPDIR) in their names.  We invoke sed twice because it is the
+-  # simplest approach to changing $(DEPDIR) to its actual value in the
+-  # expansion.
+-  for file in `sed -n "
+-    s/^$am__include $am__quote\(.*(DEPDIR).*\)$am__quote"'$/\1/p' <"$mf" | \
+-       sed -e 's/\$(DEPDIR)/'"$DEPDIR"'/g' -e 's/\$U/'"$U"'/g'`; do
+-    # Make sure the directory exists.
+-    test -f "$dirpart/$file" && continue
+-    fdir=`AS_DIRNAME(["$file"])`
+-    AS_MKDIR_P([$dirpart/$fdir])
+-    # echo "creating $dirpart/$file"
+-    echo '# dummy' > "$dirpart/$file"
++[{
++  # Autoconf 2.62 quotes --file arguments for eval, but not when files
++  # are listed without --file.  Let's play safe and only enable the eval
++  # if we detect the quoting.
++  case $CONFIG_FILES in
++  *\'*) eval set x "$CONFIG_FILES" ;;
++  *)   set x $CONFIG_FILES ;;
++  esac
++  shift
++  for mf
++  do
++    # Strip MF so we end up with the name of the file.
++    mf=`echo "$mf" | sed -e 's/:.*$//'`
++    # Check whether this is an Automake generated Makefile or not.
++    # We used to match only the files named `Makefile.in', but
++    # some people rename them; so instead we look at the file content.
++    # Grep'ing the first line is not enough: some people post-process
++    # each Makefile.in and add a new line on top of each file to say so.
++    # Grep'ing the whole file is not good either: AIX grep has a line
++    # limit of 2048, but all sed's we know have understand at least 4000.
++    if sed -n 's,^#.*generated by automake.*,X,p' "$mf" | grep X >/dev/null 2>&1; then
++      dirpart=`AS_DIRNAME("$mf")`
++    else
++      continue
++    fi
++    # Extract the definition of DEPDIR, am__include, and am__quote
++    # from the Makefile without running `make'.
++    DEPDIR=`sed -n 's/^DEPDIR = //p' < "$mf"`
++    test -z "$DEPDIR" && continue
++    am__include=`sed -n 's/^am__include = //p' < "$mf"`
++    test -z "am__include" && continue
++    am__quote=`sed -n 's/^am__quote = //p' < "$mf"`
++    # When using ansi2knr, U may be empty or an underscore; expand it
++    U=`sed -n 's/^U = //p' < "$mf"`
++    # Find all dependency output files, they are included files with
++    # $(DEPDIR) in their names.  We invoke sed twice because it is the
++    # simplest approach to changing $(DEPDIR) to its actual value in the
++    # expansion.
++    for file in `sed -n "
++      s/^$am__include $am__quote\(.*(DEPDIR).*\)$am__quote"'$/\1/p' <"$mf" | \
++	 sed -e 's/\$(DEPDIR)/'"$DEPDIR"'/g' -e 's/\$U/'"$U"'/g'`; do
++      # Make sure the directory exists.
++      test -f "$dirpart/$file" && continue
++      fdir=`AS_DIRNAME(["$file"])`
++      AS_MKDIR_P([$dirpart/$fdir])
++      # echo "creating $dirpart/$file"
++      echo '# dummy' > "$dirpart/$file"
++    done
+   done
+-done
++}
+ ])# _AM_OUTPUT_DEPENDENCY_COMMANDS
+ 
+ 
+diff -Nur nautilus-2.27.1/configure nautilus-2.27.1.ubuntu/configure
+--- nautilus-2.27.1/configure	2009-05-11 14:28:10.000000000 +0200
++++ nautilus-2.27.1.ubuntu/configure	2009-05-11 14:41:23.000000000 +0200
+@@ -13455,10 +13455,11 @@
+ { $as_echo "$as_me:$LINENO: checking for ALL" >&5
+ $as_echo_n "checking for ALL... " >&6; }
+ 
+-if test -n "$ALL_CFLAGS"; then
+-    pkg_cv_ALL_CFLAGS="$ALL_CFLAGS"
+- elif test -n "$PKG_CONFIG"; then
+-    if test -n "$PKG_CONFIG" && \
++if test -n "$PKG_CONFIG"; then
++    if test -n "$ALL_CFLAGS"; then
++        pkg_cv_ALL_CFLAGS="$ALL_CFLAGS"
++    else
++        if test -n "$PKG_CONFIG" && \
+     { ($as_echo "$as_me:$LINENO: \$PKG_CONFIG --exists --print-errors \"
+ 	glib-2.0		>= 2.19.0
+ 	gnome-desktop-2.0	>= 2.25.5
+@@ -13504,13 +13505,15 @@
+ else
+   pkg_failed=yes
+ fi
+- else
+-    pkg_failed=untried
++    fi
++else
++	pkg_failed=untried
+ fi
+-if test -n "$ALL_LIBS"; then
+-    pkg_cv_ALL_LIBS="$ALL_LIBS"
+- elif test -n "$PKG_CONFIG"; then
+-    if test -n "$PKG_CONFIG" && \
++if test -n "$PKG_CONFIG"; then
++    if test -n "$ALL_LIBS"; then
++        pkg_cv_ALL_LIBS="$ALL_LIBS"
++    else
++        if test -n "$PKG_CONFIG" && \
+     { ($as_echo "$as_me:$LINENO: \$PKG_CONFIG --exists --print-errors \"
+ 	glib-2.0		>= 2.19.0
+ 	gnome-desktop-2.0	>= 2.25.5
+@@ -13556,8 +13559,9 @@
+ else
+   pkg_failed=yes
+ fi
+- else
+-    pkg_failed=untried
++    fi
++else
++	pkg_failed=untried
+ fi
+ 
+ 
+@@ -13570,7 +13574,7 @@
+         _pkg_short_errors_supported=no
+ fi
+         if test $_pkg_short_errors_supported = yes; then
+-	        ALL_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors "
++	        ALL_PKG_ERRORS=`$PKG_CONFIG --short-errors --errors-to-stdout --print-errors "
+ 	glib-2.0		>= 2.19.0
+ 	gnome-desktop-2.0	>= 2.25.5
+ 	gthread-2.0
+@@ -13582,9 +13586,9 @@
+ 	gail			>= 0.16
+ 	unique-1.0
+ 	dbus-glib-1
+-" 2>&1`
++"`
+         else
+-	        ALL_PKG_ERRORS=`$PKG_CONFIG --print-errors "
++	        ALL_PKG_ERRORS=`$PKG_CONFIG --errors-to-stdout --print-errors "
+ 	glib-2.0		>= 2.19.0
+ 	gnome-desktop-2.0	>= 2.25.5
+ 	gthread-2.0
+@@ -13596,7 +13600,7 @@
+ 	gail			>= 0.16
+ 	unique-1.0
+ 	dbus-glib-1
+-" 2>&1`
++"`
+         fi
+ 	# Put the nasty error message in config.log where it belongs
+ 	echo "$ALL_PKG_ERRORS" >&5
+@@ -18259,10 +18263,11 @@
+ { $as_echo "$as_me:$LINENO: checking for EXIF" >&5
+ $as_echo_n "checking for EXIF... " >&6; }
+ 
+-if test -n "$EXIF_CFLAGS"; then
+-    pkg_cv_EXIF_CFLAGS="$EXIF_CFLAGS"
+- elif test -n "$PKG_CONFIG"; then
+-    if test -n "$PKG_CONFIG" && \
++if test -n "$PKG_CONFIG"; then
++    if test -n "$EXIF_CFLAGS"; then
++        pkg_cv_EXIF_CFLAGS="$EXIF_CFLAGS"
++    else
++        if test -n "$PKG_CONFIG" && \
+     { ($as_echo "$as_me:$LINENO: \$PKG_CONFIG --exists --print-errors \"libexif > 0.5.12\"") >&5
+   ($PKG_CONFIG --exists --print-errors "libexif > 0.5.12") 2>&5
+   ac_status=$?
+@@ -18272,13 +18277,15 @@
+ else
+   pkg_failed=yes
+ fi
+- else
+-    pkg_failed=untried
++    fi
++else
++	pkg_failed=untried
+ fi
+-if test -n "$EXIF_LIBS"; then
+-    pkg_cv_EXIF_LIBS="$EXIF_LIBS"
+- elif test -n "$PKG_CONFIG"; then
+-    if test -n "$PKG_CONFIG" && \
++if test -n "$PKG_CONFIG"; then
++    if test -n "$EXIF_LIBS"; then
++        pkg_cv_EXIF_LIBS="$EXIF_LIBS"
++    else
++        if test -n "$PKG_CONFIG" && \
+     { ($as_echo "$as_me:$LINENO: \$PKG_CONFIG --exists --print-errors \"libexif > 0.5.12\"") >&5
+   ($PKG_CONFIG --exists --print-errors "libexif > 0.5.12") 2>&5
+   ac_status=$?
+@@ -18288,8 +18295,9 @@
+ else
+   pkg_failed=yes
+ fi
+- else
+-    pkg_failed=untried
++    fi
++else
++	pkg_failed=untried
+ fi
+ 
+ 
+@@ -18302,9 +18310,9 @@
+         _pkg_short_errors_supported=no
+ fi
+         if test $_pkg_short_errors_supported = yes; then
+-	        EXIF_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors "libexif > 0.5.12" 2>&1`
++	        EXIF_PKG_ERRORS=`$PKG_CONFIG --short-errors --errors-to-stdout --print-errors "libexif > 0.5.12"`
+         else
+-	        EXIF_PKG_ERRORS=`$PKG_CONFIG --print-errors "libexif > 0.5.12" 2>&1`
++	        EXIF_PKG_ERRORS=`$PKG_CONFIG --errors-to-stdout --print-errors "libexif > 0.5.12"`
+         fi
+ 	# Put the nasty error message in config.log where it belongs
+ 	echo "$EXIF_PKG_ERRORS" >&5
+@@ -18317,10 +18325,11 @@
+ { $as_echo "$as_me:$LINENO: checking for EXIF" >&5
+ $as_echo_n "checking for EXIF... " >&6; }
+ 
+-if test -n "$EXIF_CFLAGS"; then
+-    pkg_cv_EXIF_CFLAGS="$EXIF_CFLAGS"
+- elif test -n "$PKG_CONFIG"; then
+-    if test -n "$PKG_CONFIG" && \
++if test -n "$PKG_CONFIG"; then
++    if test -n "$EXIF_CFLAGS"; then
++        pkg_cv_EXIF_CFLAGS="$EXIF_CFLAGS"
++    else
++        if test -n "$PKG_CONFIG" && \
+     { ($as_echo "$as_me:$LINENO: \$PKG_CONFIG --exists --print-errors \"libexif = 0.5.12\"") >&5
+   ($PKG_CONFIG --exists --print-errors "libexif = 0.5.12") 2>&5
+   ac_status=$?
+@@ -18330,13 +18339,15 @@
+ else
+   pkg_failed=yes
+ fi
+- else
+-    pkg_failed=untried
++    fi
++else
++	pkg_failed=untried
+ fi
+-if test -n "$EXIF_LIBS"; then
+-    pkg_cv_EXIF_LIBS="$EXIF_LIBS"
+- elif test -n "$PKG_CONFIG"; then
+-    if test -n "$PKG_CONFIG" && \
++if test -n "$PKG_CONFIG"; then
++    if test -n "$EXIF_LIBS"; then
++        pkg_cv_EXIF_LIBS="$EXIF_LIBS"
++    else
++        if test -n "$PKG_CONFIG" && \
+     { ($as_echo "$as_me:$LINENO: \$PKG_CONFIG --exists --print-errors \"libexif = 0.5.12\"") >&5
+   ($PKG_CONFIG --exists --print-errors "libexif = 0.5.12") 2>&5
+   ac_status=$?
+@@ -18346,8 +18357,9 @@
+ else
+   pkg_failed=yes
+ fi
+- else
+-    pkg_failed=untried
++    fi
++else
++	pkg_failed=untried
+ fi
+ 
+ 
+@@ -18360,9 +18372,9 @@
+         _pkg_short_errors_supported=no
+ fi
+         if test $_pkg_short_errors_supported = yes; then
+-	        EXIF_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors "libexif = 0.5.12" 2>&1`
++	        EXIF_PKG_ERRORS=`$PKG_CONFIG --short-errors --errors-to-stdout --print-errors "libexif = 0.5.12"`
+         else
+-	        EXIF_PKG_ERRORS=`$PKG_CONFIG --print-errors "libexif = 0.5.12" 2>&1`
++	        EXIF_PKG_ERRORS=`$PKG_CONFIG --errors-to-stdout --print-errors "libexif = 0.5.12"`
+         fi
+ 	# Put the nasty error message in config.log where it belongs
+ 	echo "$EXIF_PKG_ERRORS" >&5
+@@ -18415,10 +18427,11 @@
+ { $as_echo "$as_me:$LINENO: checking for EXIF" >&5
+ $as_echo_n "checking for EXIF... " >&6; }
+ 
+-if test -n "$EXIF_CFLAGS"; then
+-    pkg_cv_EXIF_CFLAGS="$EXIF_CFLAGS"
+- elif test -n "$PKG_CONFIG"; then
+-    if test -n "$PKG_CONFIG" && \
++if test -n "$PKG_CONFIG"; then
++    if test -n "$EXIF_CFLAGS"; then
++        pkg_cv_EXIF_CFLAGS="$EXIF_CFLAGS"
++    else
++        if test -n "$PKG_CONFIG" && \
+     { ($as_echo "$as_me:$LINENO: \$PKG_CONFIG --exists --print-errors \"libexif = 0.5.12\"") >&5
+   ($PKG_CONFIG --exists --print-errors "libexif = 0.5.12") 2>&5
+   ac_status=$?
+@@ -18428,13 +18441,15 @@
+ else
+   pkg_failed=yes
+ fi
+- else
+-    pkg_failed=untried
++    fi
++else
++	pkg_failed=untried
+ fi
+-if test -n "$EXIF_LIBS"; then
+-    pkg_cv_EXIF_LIBS="$EXIF_LIBS"
+- elif test -n "$PKG_CONFIG"; then
+-    if test -n "$PKG_CONFIG" && \
++if test -n "$PKG_CONFIG"; then
++    if test -n "$EXIF_LIBS"; then
++        pkg_cv_EXIF_LIBS="$EXIF_LIBS"
++    else
++        if test -n "$PKG_CONFIG" && \
+     { ($as_echo "$as_me:$LINENO: \$PKG_CONFIG --exists --print-errors \"libexif = 0.5.12\"") >&5
+   ($PKG_CONFIG --exists --print-errors "libexif = 0.5.12") 2>&5
+   ac_status=$?
+@@ -18444,8 +18459,9 @@
+ else
+   pkg_failed=yes
+ fi
+- else
+-    pkg_failed=untried
++    fi
++else
++	pkg_failed=untried
+ fi
+ 
+ 
+@@ -18458,9 +18474,9 @@
+         _pkg_short_errors_supported=no
+ fi
+         if test $_pkg_short_errors_supported = yes; then
+-	        EXIF_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors "libexif = 0.5.12" 2>&1`
++	        EXIF_PKG_ERRORS=`$PKG_CONFIG --short-errors --errors-to-stdout --print-errors "libexif = 0.5.12"`
+         else
+-	        EXIF_PKG_ERRORS=`$PKG_CONFIG --print-errors "libexif = 0.5.12" 2>&1`
++	        EXIF_PKG_ERRORS=`$PKG_CONFIG --errors-to-stdout --print-errors "libexif = 0.5.12"`
+         fi
+ 	# Put the nasty error message in config.log where it belongs
+ 	echo "$EXIF_PKG_ERRORS" >&5
+@@ -18554,10 +18570,11 @@
+ { $as_echo "$as_me:$LINENO: checking for EXEMPI" >&5
+ $as_echo_n "checking for EXEMPI... " >&6; }
+ 
+-if test -n "$EXEMPI_CFLAGS"; then
+-    pkg_cv_EXEMPI_CFLAGS="$EXEMPI_CFLAGS"
+- elif test -n "$PKG_CONFIG"; then
+-    if test -n "$PKG_CONFIG" && \
++if test -n "$PKG_CONFIG"; then
++    if test -n "$EXEMPI_CFLAGS"; then
++        pkg_cv_EXEMPI_CFLAGS="$EXEMPI_CFLAGS"
++    else
++        if test -n "$PKG_CONFIG" && \
+     { ($as_echo "$as_me:$LINENO: \$PKG_CONFIG --exists --print-errors \"exempi-2.0 >= 1.99.2\"") >&5
+   ($PKG_CONFIG --exists --print-errors "exempi-2.0 >= 1.99.2") 2>&5
+   ac_status=$?
+@@ -18567,13 +18584,15 @@
+ else
+   pkg_failed=yes
+ fi
+- else
+-    pkg_failed=untried
++    fi
++else
++	pkg_failed=untried
+ fi
+-if test -n "$EXEMPI_LIBS"; then
+-    pkg_cv_EXEMPI_LIBS="$EXEMPI_LIBS"
+- elif test -n "$PKG_CONFIG"; then
+-    if test -n "$PKG_CONFIG" && \
++if test -n "$PKG_CONFIG"; then
++    if test -n "$EXEMPI_LIBS"; then
++        pkg_cv_EXEMPI_LIBS="$EXEMPI_LIBS"
++    else
++        if test -n "$PKG_CONFIG" && \
+     { ($as_echo "$as_me:$LINENO: \$PKG_CONFIG --exists --print-errors \"exempi-2.0 >= 1.99.2\"") >&5
+   ($PKG_CONFIG --exists --print-errors "exempi-2.0 >= 1.99.2") 2>&5
+   ac_status=$?
+@@ -18583,8 +18602,9 @@
+ else
+   pkg_failed=yes
+ fi
+- else
+-    pkg_failed=untried
++    fi
++else
++	pkg_failed=untried
+ fi
+ 
+ 
+@@ -18597,9 +18617,9 @@
+         _pkg_short_errors_supported=no
+ fi
+         if test $_pkg_short_errors_supported = yes; then
+-	        EXEMPI_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors "exempi-2.0 >= 1.99.2" 2>&1`
++	        EXEMPI_PKG_ERRORS=`$PKG_CONFIG --short-errors --errors-to-stdout --print-errors "exempi-2.0 >= 1.99.2"`
+         else
+-	        EXEMPI_PKG_ERRORS=`$PKG_CONFIG --print-errors "exempi-2.0 >= 1.99.2" 2>&1`
++	        EXEMPI_PKG_ERRORS=`$PKG_CONFIG --errors-to-stdout --print-errors "exempi-2.0 >= 1.99.2"`
+         fi
+ 	# Put the nasty error message in config.log where it belongs
+ 	echo "$EXEMPI_PKG_ERRORS" >&5
+@@ -18651,10 +18671,11 @@
+ { $as_echo "$as_me:$LINENO: checking for EXEMPI_NEW_API" >&5
+ $as_echo_n "checking for EXEMPI_NEW_API... " >&6; }
+ 
+-if test -n "$EXEMPI_NEW_API_CFLAGS"; then
+-    pkg_cv_EXEMPI_NEW_API_CFLAGS="$EXEMPI_NEW_API_CFLAGS"
+- elif test -n "$PKG_CONFIG"; then
+-    if test -n "$PKG_CONFIG" && \
++if test -n "$PKG_CONFIG"; then
++    if test -n "$EXEMPI_NEW_API_CFLAGS"; then
++        pkg_cv_EXEMPI_NEW_API_CFLAGS="$EXEMPI_NEW_API_CFLAGS"
++    else
++        if test -n "$PKG_CONFIG" && \
+     { ($as_echo "$as_me:$LINENO: \$PKG_CONFIG --exists --print-errors \"exempi-2.0 >= 1.99.5\"") >&5
+   ($PKG_CONFIG --exists --print-errors "exempi-2.0 >= 1.99.5") 2>&5
+   ac_status=$?
+@@ -18664,13 +18685,15 @@
+ else
+   pkg_failed=yes
+ fi
+- else
+-    pkg_failed=untried
++    fi
++else
++	pkg_failed=untried
+ fi
+-if test -n "$EXEMPI_NEW_API_LIBS"; then
+-    pkg_cv_EXEMPI_NEW_API_LIBS="$EXEMPI_NEW_API_LIBS"
+- elif test -n "$PKG_CONFIG"; then
+-    if test -n "$PKG_CONFIG" && \
++if test -n "$PKG_CONFIG"; then
++    if test -n "$EXEMPI_NEW_API_LIBS"; then
++        pkg_cv_EXEMPI_NEW_API_LIBS="$EXEMPI_NEW_API_LIBS"
++    else
++        if test -n "$PKG_CONFIG" && \
+     { ($as_echo "$as_me:$LINENO: \$PKG_CONFIG --exists --print-errors \"exempi-2.0 >= 1.99.5\"") >&5
+   ($PKG_CONFIG --exists --print-errors "exempi-2.0 >= 1.99.5") 2>&5
+   ac_status=$?
+@@ -18680,8 +18703,9 @@
+ else
+   pkg_failed=yes
+ fi
+- else
+-    pkg_failed=untried
++    fi
++else
++	pkg_failed=untried
+ fi
+ 
+ 
+@@ -18694,9 +18718,9 @@
+         _pkg_short_errors_supported=no
+ fi
+         if test $_pkg_short_errors_supported = yes; then
+-	        EXEMPI_NEW_API_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors "exempi-2.0 >= 1.99.5" 2>&1`
++	        EXEMPI_NEW_API_PKG_ERRORS=`$PKG_CONFIG --short-errors --errors-to-stdout --print-errors "exempi-2.0 >= 1.99.5"`
+         else
+-	        EXEMPI_NEW_API_PKG_ERRORS=`$PKG_CONFIG --print-errors "exempi-2.0 >= 1.99.5" 2>&1`
++	        EXEMPI_NEW_API_PKG_ERRORS=`$PKG_CONFIG --errors-to-stdout --print-errors "exempi-2.0 >= 1.99.5"`
+         fi
+ 	# Put the nasty error message in config.log where it belongs
+ 	echo "$EXEMPI_NEW_API_PKG_ERRORS" >&5
+@@ -18745,10 +18769,11 @@
+ { $as_echo "$as_me:$LINENO: checking for TRACKER" >&5
+ $as_echo_n "checking for TRACKER... " >&6; }
+ 
+-if test -n "$TRACKER_CFLAGS"; then
+-    pkg_cv_TRACKER_CFLAGS="$TRACKER_CFLAGS"
+- elif test -n "$PKG_CONFIG"; then
+-    if test -n "$PKG_CONFIG" && \
++if test -n "$PKG_CONFIG"; then
++    if test -n "$TRACKER_CFLAGS"; then
++        pkg_cv_TRACKER_CFLAGS="$TRACKER_CFLAGS"
++    else
++        if test -n "$PKG_CONFIG" && \
+     { ($as_echo "$as_me:$LINENO: \$PKG_CONFIG --exists --print-errors \"tracker >= 0.0.1\"") >&5
+   ($PKG_CONFIG --exists --print-errors "tracker >= 0.0.1") 2>&5
+   ac_status=$?
+@@ -18758,13 +18783,15 @@
+ else
+   pkg_failed=yes
+ fi
+- else
+-    pkg_failed=untried
++    fi
++else
++	pkg_failed=untried
+ fi
+-if test -n "$TRACKER_LIBS"; then
+-    pkg_cv_TRACKER_LIBS="$TRACKER_LIBS"
+- elif test -n "$PKG_CONFIG"; then
+-    if test -n "$PKG_CONFIG" && \
++if test -n "$PKG_CONFIG"; then
++    if test -n "$TRACKER_LIBS"; then
++        pkg_cv_TRACKER_LIBS="$TRACKER_LIBS"
++    else
++        if test -n "$PKG_CONFIG" && \
+     { ($as_echo "$as_me:$LINENO: \$PKG_CONFIG --exists --print-errors \"tracker >= 0.0.1\"") >&5
+   ($PKG_CONFIG --exists --print-errors "tracker >= 0.0.1") 2>&5
+   ac_status=$?
+@@ -18774,8 +18801,9 @@
+ else
+   pkg_failed=yes
+ fi
+- else
+-    pkg_failed=untried
++    fi
++else
++	pkg_failed=untried
+ fi
+ 
+ 
+@@ -18788,9 +18816,9 @@
+         _pkg_short_errors_supported=no
+ fi
+         if test $_pkg_short_errors_supported = yes; then
+-	        TRACKER_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors "tracker >= 0.0.1" 2>&1`
++	        TRACKER_PKG_ERRORS=`$PKG_CONFIG --short-errors --errors-to-stdout --print-errors "tracker >= 0.0.1"`
+         else
+-	        TRACKER_PKG_ERRORS=`$PKG_CONFIG --print-errors "tracker >= 0.0.1" 2>&1`
++	        TRACKER_PKG_ERRORS=`$PKG_CONFIG --errors-to-stdout --print-errors "tracker >= 0.0.1"`
+         fi
+ 	# Put the nasty error message in config.log where it belongs
+ 	echo "$TRACKER_PKG_ERRORS" >&5
+@@ -18871,10 +18899,11 @@
+ { $as_echo "$as_me:$LINENO: checking for BEAGLE" >&5
+ $as_echo_n "checking for BEAGLE... " >&6; }
+ 
+-if test -n "$BEAGLE_CFLAGS"; then
+-    pkg_cv_BEAGLE_CFLAGS="$BEAGLE_CFLAGS"
+- elif test -n "$PKG_CONFIG"; then
+-    if test -n "$PKG_CONFIG" && \
++if test -n "$PKG_CONFIG"; then
++    if test -n "$BEAGLE_CFLAGS"; then
++        pkg_cv_BEAGLE_CFLAGS="$BEAGLE_CFLAGS"
++    else
++        if test -n "$PKG_CONFIG" && \
+     { ($as_echo "$as_me:$LINENO: \$PKG_CONFIG --exists --print-errors \"\$BEAGLE_PKGCONFIG >= 0.2.4\"") >&5
+   ($PKG_CONFIG --exists --print-errors "$BEAGLE_PKGCONFIG >= 0.2.4") 2>&5
+   ac_status=$?
+@@ -18884,13 +18913,15 @@
+ else
+   pkg_failed=yes
+ fi
+- else
+-    pkg_failed=untried
++    fi
++else
++	pkg_failed=untried
+ fi
+-if test -n "$BEAGLE_LIBS"; then
+-    pkg_cv_BEAGLE_LIBS="$BEAGLE_LIBS"
+- elif test -n "$PKG_CONFIG"; then
+-    if test -n "$PKG_CONFIG" && \
++if test -n "$PKG_CONFIG"; then
++    if test -n "$BEAGLE_LIBS"; then
++        pkg_cv_BEAGLE_LIBS="$BEAGLE_LIBS"
++    else
++        if test -n "$PKG_CONFIG" && \
+     { ($as_echo "$as_me:$LINENO: \$PKG_CONFIG --exists --print-errors \"\$BEAGLE_PKGCONFIG >= 0.2.4\"") >&5
+   ($PKG_CONFIG --exists --print-errors "$BEAGLE_PKGCONFIG >= 0.2.4") 2>&5
+   ac_status=$?
+@@ -18900,8 +18931,9 @@
+ else
+   pkg_failed=yes
+ fi
+- else
+-    pkg_failed=untried
++    fi
++else
++	pkg_failed=untried
+ fi
+ 
+ 
+@@ -18914,9 +18946,9 @@
+         _pkg_short_errors_supported=no
+ fi
+         if test $_pkg_short_errors_supported = yes; then
+-	        BEAGLE_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors "$BEAGLE_PKGCONFIG >= 0.2.4" 2>&1`
++	        BEAGLE_PKG_ERRORS=`$PKG_CONFIG --short-errors --errors-to-stdout --print-errors "$BEAGLE_PKGCONFIG >= 0.2.4"`
+         else
+-	        BEAGLE_PKG_ERRORS=`$PKG_CONFIG --print-errors "$BEAGLE_PKGCONFIG >= 0.2.4" 2>&1`
++	        BEAGLE_PKG_ERRORS=`$PKG_CONFIG --errors-to-stdout --print-errors "$BEAGLE_PKGCONFIG >= 0.2.4"`
+         fi
+ 	# Put the nasty error message in config.log where it belongs
+ 	echo "$BEAGLE_PKG_ERRORS" >&5
+@@ -21767,27 +21799,28 @@
+ 
+ 
+   case $ac_file$ac_mode in
+-    "depfiles":C) test x"$AMDEP_TRUE" != x"" || # Autoconf 2.62 quotes --file arguments for eval, but not when files
+-# are listed without --file.  Let's play safe and only enable the eval
+-# if we detect the quoting.
+-case $CONFIG_FILES in
+-*\'*) eval set x "$CONFIG_FILES" ;;
+-*)   set x $CONFIG_FILES ;;
+-esac
+-shift
+-for mf
+-do
+-  # Strip MF so we end up with the name of the file.
+-  mf=`echo "$mf" | sed -e 's/:.*$//'`
+-  # Check whether this is an Automake generated Makefile or not.
+-  # We used to match only the files named `Makefile.in', but
+-  # some people rename them; so instead we look at the file content.
+-  # Grep'ing the first line is not enough: some people post-process
+-  # each Makefile.in and add a new line on top of each file to say so.
+-  # Grep'ing the whole file is not good either: AIX grep has a line
+-  # limit of 2048, but all sed's we know have understand at least 4000.
+-  if sed -n 's,^#.*generated by automake.*,X,p' "$mf" | grep X >/dev/null 2>&1; then
+-    dirpart=`$as_dirname -- "$mf" ||
++    "depfiles":C) test x"$AMDEP_TRUE" != x"" || {
++  # Autoconf 2.62 quotes --file arguments for eval, but not when files
++  # are listed without --file.  Let's play safe and only enable the eval
++  # if we detect the quoting.
++  case $CONFIG_FILES in
++  *\'*) eval set x "$CONFIG_FILES" ;;
++  *)   set x $CONFIG_FILES ;;
++  esac
++  shift
++  for mf
++  do
++    # Strip MF so we end up with the name of the file.
++    mf=`echo "$mf" | sed -e 's/:.*$//'`
++    # Check whether this is an Automake generated Makefile or not.
++    # We used to match only the files named `Makefile.in', but
++    # some people rename them; so instead we look at the file content.
++    # Grep'ing the first line is not enough: some people post-process
++    # each Makefile.in and add a new line on top of each file to say so.
++    # Grep'ing the whole file is not good either: AIX grep has a line
++    # limit of 2048, but all sed's we know have understand at least 4000.
++    if sed -n 's,^#.*generated by automake.*,X,p' "$mf" | grep X >/dev/null 2>&1; then
++      dirpart=`$as_dirname -- "$mf" ||
+ $as_expr X"$mf" : 'X\(.*[^/]\)//*[^/][^/]*/*$' \| \
+ 	 X"$mf" : 'X\(//\)[^/]' \| \
+ 	 X"$mf" : 'X\(//\)$' \| \
+@@ -21810,28 +21843,28 @@
+ 	    q
+ 	  }
+ 	  s/.*/./; q'`
+-  else
+-    continue
+-  fi
+-  # Extract the definition of DEPDIR, am__include, and am__quote
+-  # from the Makefile without running `make'.
+-  DEPDIR=`sed -n 's/^DEPDIR = //p' < "$mf"`
+-  test -z "$DEPDIR" && continue
+-  am__include=`sed -n 's/^am__include = //p' < "$mf"`
+-  test -z "am__include" && continue
+-  am__quote=`sed -n 's/^am__quote = //p' < "$mf"`
+-  # When using ansi2knr, U may be empty or an underscore; expand it
+-  U=`sed -n 's/^U = //p' < "$mf"`
+-  # Find all dependency output files, they are included files with
+-  # $(DEPDIR) in their names.  We invoke sed twice because it is the
+-  # simplest approach to changing $(DEPDIR) to its actual value in the
+-  # expansion.
+-  for file in `sed -n "
+-    s/^$am__include $am__quote\(.*(DEPDIR).*\)$am__quote"'$/\1/p' <"$mf" | \
+-       sed -e 's/\$(DEPDIR)/'"$DEPDIR"'/g' -e 's/\$U/'"$U"'/g'`; do
+-    # Make sure the directory exists.
+-    test -f "$dirpart/$file" && continue
+-    fdir=`$as_dirname -- "$file" ||
++    else
++      continue
++    fi
++    # Extract the definition of DEPDIR, am__include, and am__quote
++    # from the Makefile without running `make'.
++    DEPDIR=`sed -n 's/^DEPDIR = //p' < "$mf"`
++    test -z "$DEPDIR" && continue
++    am__include=`sed -n 's/^am__include = //p' < "$mf"`
++    test -z "am__include" && continue
++    am__quote=`sed -n 's/^am__quote = //p' < "$mf"`
++    # When using ansi2knr, U may be empty or an underscore; expand it
++    U=`sed -n 's/^U = //p' < "$mf"`
++    # Find all dependency output files, they are included files with
++    # $(DEPDIR) in their names.  We invoke sed twice because it is the
++    # simplest approach to changing $(DEPDIR) to its actual value in the
++    # expansion.
++    for file in `sed -n "
++      s/^$am__include $am__quote\(.*(DEPDIR).*\)$am__quote"'$/\1/p' <"$mf" | \
++	 sed -e 's/\$(DEPDIR)/'"$DEPDIR"'/g' -e 's/\$U/'"$U"'/g'`; do
++      # Make sure the directory exists.
++      test -f "$dirpart/$file" && continue
++      fdir=`$as_dirname -- "$file" ||
+ $as_expr X"$file" : 'X\(.*[^/]\)//*[^/][^/]*/*$' \| \
+ 	 X"$file" : 'X\(//\)[^/]' \| \
+ 	 X"$file" : 'X\(//\)$' \| \
+@@ -21854,7 +21887,7 @@
+ 	    q
+ 	  }
+ 	  s/.*/./; q'`
+-    { as_dir=$dirpart/$fdir
++      { as_dir=$dirpart/$fdir
+   case $as_dir in #(
+   -*) as_dir=./$as_dir;;
+   esac
+@@ -21895,10 +21928,11 @@
+   } || test -d "$as_dir" || { { $as_echo "$as_me:$LINENO: error: cannot create directory $as_dir" >&5
+ $as_echo "$as_me: error: cannot create directory $as_dir" >&2;}
+    { (exit 1); exit 1; }; }; }
+-    # echo "creating $dirpart/$file"
+-    echo '# dummy' > "$dirpart/$file"
++      # echo "creating $dirpart/$file"
++      echo '# dummy' > "$dirpart/$file"
++    done
+   done
+-done
++}
+  ;;
+     "libtool":C)
+ 
+diff -Nur nautilus-2.27.1/cut-n-paste-code/Makefile.in nautilus-2.27.1.ubuntu/cut-n-paste-code/Makefile.in
+--- nautilus-2.27.1/cut-n-paste-code/Makefile.in	2009-05-05 02:41:49.000000000 +0200
++++ nautilus-2.27.1.ubuntu/cut-n-paste-code/Makefile.in	2009-05-11 14:15:31.000000000 +0200
+@@ -34,11 +34,7 @@
+ subdir = cut-n-paste-code
+ DIST_COMMON = README $(srcdir)/Makefile.am $(srcdir)/Makefile.in
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+-am__aclocal_m4_deps = $(top_srcdir)/m4/gtk-doc.m4 \
+-	$(top_srcdir)/m4/intltool.m4 $(top_srcdir)/m4/libtool.m4 \
+-	$(top_srcdir)/m4/ltoptions.m4 $(top_srcdir)/m4/ltsugar.m4 \
+-	$(top_srcdir)/m4/ltversion.m4 $(top_srcdir)/m4/lt~obsolete.m4 \
+-	$(top_srcdir)/m4/shave.m4 $(top_srcdir)/configure.in
++am__aclocal_m4_deps = $(top_srcdir)/configure.in
+ am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
+ 	$(ACLOCAL_M4)
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+@@ -65,7 +61,6 @@
+ ALL_LIBS = @ALL_LIBS@
+ ALL_LINGUAS = @ALL_LINGUAS@
+ AMTAR = @AMTAR@
+-AM_MAKEFLAGS = @AM_MAKEFLAGS@
+ AR = @AR@
+ AS = @AS@
+ AUTOCONF = @AUTOCONF@
+@@ -83,7 +78,6 @@
+ CORE_LIBS = @CORE_LIBS@
+ CPP = @CPP@
+ CPPFLAGS = @CPPFLAGS@
+-CXX = @CXX@
+ CYGPATH_W = @CYGPATH_W@
+ DATADIRNAME = @DATADIRNAME@
+ DEFS = @DEFS@
+@@ -105,8 +99,6 @@
+ EXEMPI_NEW_API_LIBS = @EXEMPI_NEW_API_LIBS@
+ EXIF_CFLAGS = @EXIF_CFLAGS@
+ EXIF_LIBS = @EXIF_LIBS@
+-F77 = @F77@
+-FC = @FC@
+ FGREP = @FGREP@
+ GAIL_REQUIRED = @GAIL_REQUIRED@
+ GCONFTOOL = @GCONFTOOL@
+@@ -146,7 +138,6 @@
+ LN_S = @LN_S@
+ LTLIBOBJS = @LTLIBOBJS@
+ MAINT = @MAINT@
+-MAKEFLAGS = @MAKEFLAGS@
+ MAKEINFO = @MAKEINFO@
+ MKDIR_P = @MKDIR_P@
+ MKINSTALLDIRS = @MKINSTALLDIRS@
+@@ -156,7 +147,6 @@
+ NAUTILUS_EXTENSION_VERSION_INFO = @NAUTILUS_EXTENSION_VERSION_INFO@
+ NM = @NM@
+ NMEDIT = @NMEDIT@
+-OBJC = @OBJC@
+ OBJDUMP = @OBJDUMP@
+ OBJEXT = @OBJEXT@
+ OTOOL = @OTOOL@
+@@ -175,7 +165,6 @@
+ POSUB = @POSUB@
+ PO_IN_DATADIR_FALSE = @PO_IN_DATADIR_FALSE@
+ PO_IN_DATADIR_TRUE = @PO_IN_DATADIR_TRUE@
+-Q = @Q@
+ RANLIB = @RANLIB@
+ RENDER_LIBS = @RENDER_LIBS@
+ SED = @SED@
+@@ -187,7 +176,6 @@
+ TRACKER_LIBS = @TRACKER_LIBS@
+ UPDATE_MIME_DATABASE = @UPDATE_MIME_DATABASE@
+ USE_NLS = @USE_NLS@
+-V = @V@
+ VERSION = @VERSION@
+ XGETTEXT = @XGETTEXT@
+ XMKMF = @XMKMF@
+@@ -242,7 +230,6 @@
+ psdir = @psdir@
+ sbindir = @sbindir@
+ sharedstatedir = @sharedstatedir@
+-shavedir = @shavedir@
+ srcdir = @srcdir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+diff -Nur nautilus-2.27.1/cut-n-paste-code/libegg/Makefile.in nautilus-2.27.1.ubuntu/cut-n-paste-code/libegg/Makefile.in
+--- nautilus-2.27.1/cut-n-paste-code/libegg/Makefile.in	2009-05-05 02:41:49.000000000 +0200
++++ nautilus-2.27.1.ubuntu/cut-n-paste-code/libegg/Makefile.in	2009-05-11 14:15:32.000000000 +0200
+@@ -35,11 +35,7 @@
+ subdir = cut-n-paste-code/libegg
+ DIST_COMMON = $(srcdir)/Makefile.am $(srcdir)/Makefile.in
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+-am__aclocal_m4_deps = $(top_srcdir)/m4/gtk-doc.m4 \
+-	$(top_srcdir)/m4/intltool.m4 $(top_srcdir)/m4/libtool.m4 \
+-	$(top_srcdir)/m4/ltoptions.m4 $(top_srcdir)/m4/ltsugar.m4 \
+-	$(top_srcdir)/m4/ltversion.m4 $(top_srcdir)/m4/lt~obsolete.m4 \
+-	$(top_srcdir)/m4/shave.m4 $(top_srcdir)/configure.in
++am__aclocal_m4_deps = $(top_srcdir)/configure.in
+ am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
+ 	$(ACLOCAL_M4)
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+@@ -81,7 +77,6 @@
+ ALL_LIBS = @ALL_LIBS@
+ ALL_LINGUAS = @ALL_LINGUAS@
+ AMTAR = @AMTAR@
+-AM_MAKEFLAGS = @AM_MAKEFLAGS@
+ AR = @AR@
+ AS = @AS@
+ AUTOCONF = @AUTOCONF@
+@@ -99,7 +94,6 @@
+ CORE_LIBS = @CORE_LIBS@
+ CPP = @CPP@
+ CPPFLAGS = @CPPFLAGS@
+-CXX = @CXX@
+ CYGPATH_W = @CYGPATH_W@
+ DATADIRNAME = @DATADIRNAME@
+ DEFS = @DEFS@
+@@ -121,8 +115,6 @@
+ EXEMPI_NEW_API_LIBS = @EXEMPI_NEW_API_LIBS@
+ EXIF_CFLAGS = @EXIF_CFLAGS@
+ EXIF_LIBS = @EXIF_LIBS@
+-F77 = @F77@
+-FC = @FC@
+ FGREP = @FGREP@
+ GAIL_REQUIRED = @GAIL_REQUIRED@
+ GCONFTOOL = @GCONFTOOL@
+@@ -162,7 +154,6 @@
+ LN_S = @LN_S@
+ LTLIBOBJS = @LTLIBOBJS@
+ MAINT = @MAINT@
+-MAKEFLAGS = @MAKEFLAGS@
+ MAKEINFO = @MAKEINFO@
+ MKDIR_P = @MKDIR_P@
+ MKINSTALLDIRS = @MKINSTALLDIRS@
+@@ -172,7 +163,6 @@
+ NAUTILUS_EXTENSION_VERSION_INFO = @NAUTILUS_EXTENSION_VERSION_INFO@
+ NM = @NM@
+ NMEDIT = @NMEDIT@
+-OBJC = @OBJC@
+ OBJDUMP = @OBJDUMP@
+ OBJEXT = @OBJEXT@
+ OTOOL = @OTOOL@
+@@ -191,7 +181,6 @@
+ POSUB = @POSUB@
+ PO_IN_DATADIR_FALSE = @PO_IN_DATADIR_FALSE@
+ PO_IN_DATADIR_TRUE = @PO_IN_DATADIR_TRUE@
+-Q = @Q@
+ RANLIB = @RANLIB@
+ RENDER_LIBS = @RENDER_LIBS@
+ SED = @SED@
+@@ -203,7 +192,6 @@
+ TRACKER_LIBS = @TRACKER_LIBS@
+ UPDATE_MIME_DATABASE = @UPDATE_MIME_DATABASE@
+ USE_NLS = @USE_NLS@
+-V = @V@
+ VERSION = @VERSION@
+ XGETTEXT = @XGETTEXT@
+ XMKMF = @XMKMF@
+@@ -258,7 +246,6 @@
+ psdir = @psdir@
+ sbindir = @sbindir@
+ sharedstatedir = @sharedstatedir@
+-shavedir = @shavedir@
+ srcdir = @srcdir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+diff -Nur nautilus-2.27.1/data/Makefile.in nautilus-2.27.1.ubuntu/data/Makefile.in
+--- nautilus-2.27.1/data/Makefile.in	2009-05-05 02:41:50.000000000 +0200
++++ nautilus-2.27.1.ubuntu/data/Makefile.in	2009-05-11 14:15:32.000000000 +0200
+@@ -42,11 +42,7 @@
+ 	$(srcdir)/nautilus-home.desktop.in.in \
+ 	$(srcdir)/nautilus.desktop.in.in
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+-am__aclocal_m4_deps = $(top_srcdir)/m4/gtk-doc.m4 \
+-	$(top_srcdir)/m4/intltool.m4 $(top_srcdir)/m4/libtool.m4 \
+-	$(top_srcdir)/m4/ltoptions.m4 $(top_srcdir)/m4/ltsugar.m4 \
+-	$(top_srcdir)/m4/ltversion.m4 $(top_srcdir)/m4/lt~obsolete.m4 \
+-	$(top_srcdir)/m4/shave.m4 $(top_srcdir)/configure.in
++am__aclocal_m4_deps = $(top_srcdir)/configure.in
+ am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
+ 	$(ACLOCAL_M4)
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+@@ -89,7 +85,6 @@
+ ALL_LIBS = @ALL_LIBS@
+ ALL_LINGUAS = @ALL_LINGUAS@
+ AMTAR = @AMTAR@
+-AM_MAKEFLAGS = @AM_MAKEFLAGS@
+ AR = @AR@
+ AS = @AS@
+ AUTOCONF = @AUTOCONF@
+@@ -107,7 +102,6 @@
+ CORE_LIBS = @CORE_LIBS@
+ CPP = @CPP@
+ CPPFLAGS = @CPPFLAGS@
+-CXX = @CXX@
+ CYGPATH_W = @CYGPATH_W@
+ DATADIRNAME = @DATADIRNAME@
+ DEFS = @DEFS@
+@@ -129,8 +123,6 @@
+ EXEMPI_NEW_API_LIBS = @EXEMPI_NEW_API_LIBS@
+ EXIF_CFLAGS = @EXIF_CFLAGS@
+ EXIF_LIBS = @EXIF_LIBS@
+-F77 = @F77@
+-FC = @FC@
+ FGREP = @FGREP@
+ GAIL_REQUIRED = @GAIL_REQUIRED@
+ GCONFTOOL = @GCONFTOOL@
+@@ -170,7 +162,6 @@
+ LN_S = @LN_S@
+ LTLIBOBJS = @LTLIBOBJS@
+ MAINT = @MAINT@
+-MAKEFLAGS = @MAKEFLAGS@
+ MAKEINFO = @MAKEINFO@
+ MKDIR_P = @MKDIR_P@
+ MKINSTALLDIRS = @MKINSTALLDIRS@
+@@ -180,7 +171,6 @@
+ NAUTILUS_EXTENSION_VERSION_INFO = @NAUTILUS_EXTENSION_VERSION_INFO@
+ NM = @NM@
+ NMEDIT = @NMEDIT@
+-OBJC = @OBJC@
+ OBJDUMP = @OBJDUMP@
+ OBJEXT = @OBJEXT@
+ OTOOL = @OTOOL@
+@@ -199,7 +189,6 @@
+ POSUB = @POSUB@
+ PO_IN_DATADIR_FALSE = @PO_IN_DATADIR_FALSE@
+ PO_IN_DATADIR_TRUE = @PO_IN_DATADIR_TRUE@
+-Q = @Q@
+ RANLIB = @RANLIB@
+ RENDER_LIBS = @RENDER_LIBS@
+ SED = @SED@
+@@ -211,7 +200,6 @@
+ TRACKER_LIBS = @TRACKER_LIBS@
+ UPDATE_MIME_DATABASE = @UPDATE_MIME_DATABASE@
+ USE_NLS = @USE_NLS@
+-V = @V@
+ VERSION = @VERSION@
+ XGETTEXT = @XGETTEXT@
+ XMKMF = @XMKMF@
+@@ -266,7 +254,6 @@
+ psdir = @psdir@
+ sbindir = @sbindir@
+ sharedstatedir = @sharedstatedir@
+-shavedir = @shavedir@
+ srcdir = @srcdir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+diff -Nur nautilus-2.27.1/data/icons/Makefile.in nautilus-2.27.1.ubuntu/data/icons/Makefile.in
+--- nautilus-2.27.1/data/icons/Makefile.in	2009-05-05 02:41:50.000000000 +0200
++++ nautilus-2.27.1.ubuntu/data/icons/Makefile.in	2009-05-11 14:15:32.000000000 +0200
+@@ -35,11 +35,7 @@
+ subdir = data/icons
+ DIST_COMMON = $(srcdir)/Makefile.am $(srcdir)/Makefile.in
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+-am__aclocal_m4_deps = $(top_srcdir)/m4/gtk-doc.m4 \
+-	$(top_srcdir)/m4/intltool.m4 $(top_srcdir)/m4/libtool.m4 \
+-	$(top_srcdir)/m4/ltoptions.m4 $(top_srcdir)/m4/ltsugar.m4 \
+-	$(top_srcdir)/m4/ltversion.m4 $(top_srcdir)/m4/lt~obsolete.m4 \
+-	$(top_srcdir)/m4/shave.m4 $(top_srcdir)/configure.in
++am__aclocal_m4_deps = $(top_srcdir)/configure.in
+ am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
+ 	$(ACLOCAL_M4)
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+@@ -55,7 +51,6 @@
+ ALL_LIBS = @ALL_LIBS@
+ ALL_LINGUAS = @ALL_LINGUAS@
+ AMTAR = @AMTAR@
+-AM_MAKEFLAGS = @AM_MAKEFLAGS@
+ AR = @AR@
+ AS = @AS@
+ AUTOCONF = @AUTOCONF@
+@@ -73,7 +68,6 @@
+ CORE_LIBS = @CORE_LIBS@
+ CPP = @CPP@
+ CPPFLAGS = @CPPFLAGS@
+-CXX = @CXX@
+ CYGPATH_W = @CYGPATH_W@
+ DATADIRNAME = @DATADIRNAME@
+ DEFS = @DEFS@
+@@ -95,8 +89,6 @@
+ EXEMPI_NEW_API_LIBS = @EXEMPI_NEW_API_LIBS@
+ EXIF_CFLAGS = @EXIF_CFLAGS@
+ EXIF_LIBS = @EXIF_LIBS@
+-F77 = @F77@
+-FC = @FC@
+ FGREP = @FGREP@
+ GAIL_REQUIRED = @GAIL_REQUIRED@
+ GCONFTOOL = @GCONFTOOL@
+@@ -136,7 +128,6 @@
+ LN_S = @LN_S@
+ LTLIBOBJS = @LTLIBOBJS@
+ MAINT = @MAINT@
+-MAKEFLAGS = @MAKEFLAGS@
+ MAKEINFO = @MAKEINFO@
+ MKDIR_P = @MKDIR_P@
+ MKINSTALLDIRS = @MKINSTALLDIRS@
+@@ -146,7 +137,6 @@
+ NAUTILUS_EXTENSION_VERSION_INFO = @NAUTILUS_EXTENSION_VERSION_INFO@
+ NM = @NM@
+ NMEDIT = @NMEDIT@
+-OBJC = @OBJC@
+ OBJDUMP = @OBJDUMP@
+ OBJEXT = @OBJEXT@
+ OTOOL = @OTOOL@
+@@ -165,7 +155,6 @@
+ POSUB = @POSUB@
+ PO_IN_DATADIR_FALSE = @PO_IN_DATADIR_FALSE@
+ PO_IN_DATADIR_TRUE = @PO_IN_DATADIR_TRUE@
+-Q = @Q@
+ RANLIB = @RANLIB@
+ RENDER_LIBS = @RENDER_LIBS@
+ SED = @SED@
+@@ -177,7 +166,6 @@
+ TRACKER_LIBS = @TRACKER_LIBS@
+ UPDATE_MIME_DATABASE = @UPDATE_MIME_DATABASE@
+ USE_NLS = @USE_NLS@
+-V = @V@
+ VERSION = @VERSION@
+ XGETTEXT = @XGETTEXT@
+ XMKMF = @XMKMF@
+@@ -232,7 +220,6 @@
+ psdir = @psdir@
+ sbindir = @sbindir@
+ sharedstatedir = @sharedstatedir@
+-shavedir = @shavedir@
+ srcdir = @srcdir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+diff -Nur nautilus-2.27.1/data/patterns/Makefile.in nautilus-2.27.1.ubuntu/data/patterns/Makefile.in
+--- nautilus-2.27.1/data/patterns/Makefile.in	2009-05-05 02:41:50.000000000 +0200
++++ nautilus-2.27.1.ubuntu/data/patterns/Makefile.in	2009-05-11 14:15:32.000000000 +0200
+@@ -35,11 +35,7 @@
+ subdir = data/patterns
+ DIST_COMMON = $(srcdir)/Makefile.am $(srcdir)/Makefile.in
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+-am__aclocal_m4_deps = $(top_srcdir)/m4/gtk-doc.m4 \
+-	$(top_srcdir)/m4/intltool.m4 $(top_srcdir)/m4/libtool.m4 \
+-	$(top_srcdir)/m4/ltoptions.m4 $(top_srcdir)/m4/ltsugar.m4 \
+-	$(top_srcdir)/m4/ltversion.m4 $(top_srcdir)/m4/lt~obsolete.m4 \
+-	$(top_srcdir)/m4/shave.m4 $(top_srcdir)/configure.in
++am__aclocal_m4_deps = $(top_srcdir)/configure.in
+ am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
+ 	$(ACLOCAL_M4)
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+@@ -63,7 +59,6 @@
+ ALL_LIBS = @ALL_LIBS@
+ ALL_LINGUAS = @ALL_LINGUAS@
+ AMTAR = @AMTAR@
+-AM_MAKEFLAGS = @AM_MAKEFLAGS@
+ AR = @AR@
+ AS = @AS@
+ AUTOCONF = @AUTOCONF@
+@@ -81,7 +76,6 @@
+ CORE_LIBS = @CORE_LIBS@
+ CPP = @CPP@
+ CPPFLAGS = @CPPFLAGS@
+-CXX = @CXX@
+ CYGPATH_W = @CYGPATH_W@
+ DATADIRNAME = @DATADIRNAME@
+ DEFS = @DEFS@
+@@ -103,8 +97,6 @@
+ EXEMPI_NEW_API_LIBS = @EXEMPI_NEW_API_LIBS@
+ EXIF_CFLAGS = @EXIF_CFLAGS@
+ EXIF_LIBS = @EXIF_LIBS@
+-F77 = @F77@
+-FC = @FC@
+ FGREP = @FGREP@
+ GAIL_REQUIRED = @GAIL_REQUIRED@
+ GCONFTOOL = @GCONFTOOL@
+@@ -144,7 +136,6 @@
+ LN_S = @LN_S@
+ LTLIBOBJS = @LTLIBOBJS@
+ MAINT = @MAINT@
+-MAKEFLAGS = @MAKEFLAGS@
+ MAKEINFO = @MAKEINFO@
+ MKDIR_P = @MKDIR_P@
+ MKINSTALLDIRS = @MKINSTALLDIRS@
+@@ -154,7 +145,6 @@
+ NAUTILUS_EXTENSION_VERSION_INFO = @NAUTILUS_EXTENSION_VERSION_INFO@
+ NM = @NM@
+ NMEDIT = @NMEDIT@
+-OBJC = @OBJC@
+ OBJDUMP = @OBJDUMP@
+ OBJEXT = @OBJEXT@
+ OTOOL = @OTOOL@
+@@ -173,7 +163,6 @@
+ POSUB = @POSUB@
+ PO_IN_DATADIR_FALSE = @PO_IN_DATADIR_FALSE@
+ PO_IN_DATADIR_TRUE = @PO_IN_DATADIR_TRUE@
+-Q = @Q@
+ RANLIB = @RANLIB@
+ RENDER_LIBS = @RENDER_LIBS@
+ SED = @SED@
+@@ -185,7 +174,6 @@
+ TRACKER_LIBS = @TRACKER_LIBS@
+ UPDATE_MIME_DATABASE = @UPDATE_MIME_DATABASE@
+ USE_NLS = @USE_NLS@
+-V = @V@
+ VERSION = @VERSION@
+ XGETTEXT = @XGETTEXT@
+ XMKMF = @XMKMF@
+@@ -240,7 +228,6 @@
+ psdir = @psdir@
+ sbindir = @sbindir@
+ sharedstatedir = @sharedstatedir@
+-shavedir = @shavedir@
+ srcdir = @srcdir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+diff -Nur nautilus-2.27.1/docs/Makefile.in nautilus-2.27.1.ubuntu/docs/Makefile.in
+--- nautilus-2.27.1/docs/Makefile.in	2009-05-05 02:41:50.000000000 +0200
++++ nautilus-2.27.1.ubuntu/docs/Makefile.in	2009-05-11 14:15:32.000000000 +0200
+@@ -34,11 +34,7 @@
+ subdir = docs
+ DIST_COMMON = $(srcdir)/Makefile.am $(srcdir)/Makefile.in
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+-am__aclocal_m4_deps = $(top_srcdir)/m4/gtk-doc.m4 \
+-	$(top_srcdir)/m4/intltool.m4 $(top_srcdir)/m4/libtool.m4 \
+-	$(top_srcdir)/m4/ltoptions.m4 $(top_srcdir)/m4/ltsugar.m4 \
+-	$(top_srcdir)/m4/ltversion.m4 $(top_srcdir)/m4/lt~obsolete.m4 \
+-	$(top_srcdir)/m4/shave.m4 $(top_srcdir)/configure.in
++am__aclocal_m4_deps = $(top_srcdir)/configure.in
+ am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
+ 	$(ACLOCAL_M4)
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+@@ -69,7 +65,6 @@
+ ALL_LIBS = @ALL_LIBS@
+ ALL_LINGUAS = @ALL_LINGUAS@
+ AMTAR = @AMTAR@
+-AM_MAKEFLAGS = @AM_MAKEFLAGS@
+ AR = @AR@
+ AS = @AS@
+ AUTOCONF = @AUTOCONF@
+@@ -87,7 +82,6 @@
+ CORE_LIBS = @CORE_LIBS@
+ CPP = @CPP@
+ CPPFLAGS = @CPPFLAGS@
+-CXX = @CXX@
+ CYGPATH_W = @CYGPATH_W@
+ DATADIRNAME = @DATADIRNAME@
+ DEFS = @DEFS@
+@@ -109,8 +103,6 @@
+ EXEMPI_NEW_API_LIBS = @EXEMPI_NEW_API_LIBS@
+ EXIF_CFLAGS = @EXIF_CFLAGS@
+ EXIF_LIBS = @EXIF_LIBS@
+-F77 = @F77@
+-FC = @FC@
+ FGREP = @FGREP@
+ GAIL_REQUIRED = @GAIL_REQUIRED@
+ GCONFTOOL = @GCONFTOOL@
+@@ -150,7 +142,6 @@
+ LN_S = @LN_S@
+ LTLIBOBJS = @LTLIBOBJS@
+ MAINT = @MAINT@
+-MAKEFLAGS = @MAKEFLAGS@
+ MAKEINFO = @MAKEINFO@
+ MKDIR_P = @MKDIR_P@
+ MKINSTALLDIRS = @MKINSTALLDIRS@
+@@ -160,7 +151,6 @@
+ NAUTILUS_EXTENSION_VERSION_INFO = @NAUTILUS_EXTENSION_VERSION_INFO@
+ NM = @NM@
+ NMEDIT = @NMEDIT@
+-OBJC = @OBJC@
+ OBJDUMP = @OBJDUMP@
+ OBJEXT = @OBJEXT@
+ OTOOL = @OTOOL@
+@@ -179,7 +169,6 @@
+ POSUB = @POSUB@
+ PO_IN_DATADIR_FALSE = @PO_IN_DATADIR_FALSE@
+ PO_IN_DATADIR_TRUE = @PO_IN_DATADIR_TRUE@
+-Q = @Q@
+ RANLIB = @RANLIB@
+ RENDER_LIBS = @RENDER_LIBS@
+ SED = @SED@
+@@ -191,7 +180,6 @@
+ TRACKER_LIBS = @TRACKER_LIBS@
+ UPDATE_MIME_DATABASE = @UPDATE_MIME_DATABASE@
+ USE_NLS = @USE_NLS@
+-V = @V@
+ VERSION = @VERSION@
+ XGETTEXT = @XGETTEXT@
+ XMKMF = @XMKMF@
+@@ -246,7 +234,6 @@
+ psdir = @psdir@
+ sbindir = @sbindir@
+ sharedstatedir = @sharedstatedir@
+-shavedir = @shavedir@
+ srcdir = @srcdir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+diff -Nur nautilus-2.27.1/docs/reference/Makefile.in nautilus-2.27.1.ubuntu/docs/reference/Makefile.in
+--- nautilus-2.27.1/docs/reference/Makefile.in	2009-05-05 02:41:50.000000000 +0200
++++ nautilus-2.27.1.ubuntu/docs/reference/Makefile.in	2009-05-11 14:15:32.000000000 +0200
+@@ -34,11 +34,7 @@
+ subdir = docs/reference
+ DIST_COMMON = $(srcdir)/Makefile.am $(srcdir)/Makefile.in
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+-am__aclocal_m4_deps = $(top_srcdir)/m4/gtk-doc.m4 \
+-	$(top_srcdir)/m4/intltool.m4 $(top_srcdir)/m4/libtool.m4 \
+-	$(top_srcdir)/m4/ltoptions.m4 $(top_srcdir)/m4/ltsugar.m4 \
+-	$(top_srcdir)/m4/ltversion.m4 $(top_srcdir)/m4/lt~obsolete.m4 \
+-	$(top_srcdir)/m4/shave.m4 $(top_srcdir)/configure.in
++am__aclocal_m4_deps = $(top_srcdir)/configure.in
+ am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
+ 	$(ACLOCAL_M4)
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+@@ -65,7 +61,6 @@
+ ALL_LIBS = @ALL_LIBS@
+ ALL_LINGUAS = @ALL_LINGUAS@
+ AMTAR = @AMTAR@
+-AM_MAKEFLAGS = @AM_MAKEFLAGS@
+ AR = @AR@
+ AS = @AS@
+ AUTOCONF = @AUTOCONF@
+@@ -83,7 +78,6 @@
+ CORE_LIBS = @CORE_LIBS@
+ CPP = @CPP@
+ CPPFLAGS = @CPPFLAGS@
+-CXX = @CXX@
+ CYGPATH_W = @CYGPATH_W@
+ DATADIRNAME = @DATADIRNAME@
+ DEFS = @DEFS@
+@@ -105,8 +99,6 @@
+ EXEMPI_NEW_API_LIBS = @EXEMPI_NEW_API_LIBS@
+ EXIF_CFLAGS = @EXIF_CFLAGS@
+ EXIF_LIBS = @EXIF_LIBS@
+-F77 = @F77@
+-FC = @FC@
+ FGREP = @FGREP@
+ GAIL_REQUIRED = @GAIL_REQUIRED@
+ GCONFTOOL = @GCONFTOOL@
+@@ -146,7 +138,6 @@
+ LN_S = @LN_S@
+ LTLIBOBJS = @LTLIBOBJS@
+ MAINT = @MAINT@
+-MAKEFLAGS = @MAKEFLAGS@
+ MAKEINFO = @MAKEINFO@
+ MKDIR_P = @MKDIR_P@
+ MKINSTALLDIRS = @MKINSTALLDIRS@
+@@ -156,7 +147,6 @@
+ NAUTILUS_EXTENSION_VERSION_INFO = @NAUTILUS_EXTENSION_VERSION_INFO@
+ NM = @NM@
+ NMEDIT = @NMEDIT@
+-OBJC = @OBJC@
+ OBJDUMP = @OBJDUMP@
+ OBJEXT = @OBJEXT@
+ OTOOL = @OTOOL@
+@@ -175,7 +165,6 @@
+ POSUB = @POSUB@
+ PO_IN_DATADIR_FALSE = @PO_IN_DATADIR_FALSE@
+ PO_IN_DATADIR_TRUE = @PO_IN_DATADIR_TRUE@
+-Q = @Q@
+ RANLIB = @RANLIB@
+ RENDER_LIBS = @RENDER_LIBS@
+ SED = @SED@
+@@ -187,7 +176,6 @@
+ TRACKER_LIBS = @TRACKER_LIBS@
+ UPDATE_MIME_DATABASE = @UPDATE_MIME_DATABASE@
+ USE_NLS = @USE_NLS@
+-V = @V@
+ VERSION = @VERSION@
+ XGETTEXT = @XGETTEXT@
+ XMKMF = @XMKMF@
+@@ -242,7 +230,6 @@
+ psdir = @psdir@
+ sbindir = @sbindir@
+ sharedstatedir = @sharedstatedir@
+-shavedir = @shavedir@
+ srcdir = @srcdir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+diff -Nur nautilus-2.27.1/docs/reference/libnautilus-extension/Makefile.in nautilus-2.27.1.ubuntu/docs/reference/libnautilus-extension/Makefile.in
+--- nautilus-2.27.1/docs/reference/libnautilus-extension/Makefile.in	2009-05-05 02:41:50.000000000 +0200
++++ nautilus-2.27.1.ubuntu/docs/reference/libnautilus-extension/Makefile.in	2009-05-11 14:15:32.000000000 +0200
+@@ -41,11 +41,7 @@
+ 	$(srcdir)/version.xml.in $(top_srcdir)/gtk-doc.make
+ subdir = docs/reference/libnautilus-extension
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+-am__aclocal_m4_deps = $(top_srcdir)/m4/gtk-doc.m4 \
+-	$(top_srcdir)/m4/intltool.m4 $(top_srcdir)/m4/libtool.m4 \
+-	$(top_srcdir)/m4/ltoptions.m4 $(top_srcdir)/m4/ltsugar.m4 \
+-	$(top_srcdir)/m4/ltversion.m4 $(top_srcdir)/m4/lt~obsolete.m4 \
+-	$(top_srcdir)/m4/shave.m4 $(top_srcdir)/configure.in
++am__aclocal_m4_deps = $(top_srcdir)/configure.in
+ am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
+ 	$(ACLOCAL_M4)
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+@@ -60,7 +56,6 @@
+ ALL_LIBS = @ALL_LIBS@
+ ALL_LINGUAS = @ALL_LINGUAS@
+ AMTAR = @AMTAR@
+-AM_MAKEFLAGS = @AM_MAKEFLAGS@
+ AR = @AR@
+ AS = @AS@
+ AUTOCONF = @AUTOCONF@
+@@ -78,7 +73,6 @@
+ CORE_LIBS = @CORE_LIBS@
+ CPP = @CPP@
+ CPPFLAGS = @CPPFLAGS@
+-CXX = @CXX@
+ CYGPATH_W = @CYGPATH_W@
+ DATADIRNAME = @DATADIRNAME@
+ DEFS = @DEFS@
+@@ -100,8 +94,6 @@
+ EXEMPI_NEW_API_LIBS = @EXEMPI_NEW_API_LIBS@
+ EXIF_CFLAGS = @EXIF_CFLAGS@
+ EXIF_LIBS = @EXIF_LIBS@
+-F77 = @F77@
+-FC = @FC@
+ FGREP = @FGREP@
+ GAIL_REQUIRED = @GAIL_REQUIRED@
+ GCONFTOOL = @GCONFTOOL@
+@@ -141,7 +133,6 @@
+ LN_S = @LN_S@
+ LTLIBOBJS = @LTLIBOBJS@
+ MAINT = @MAINT@
+-MAKEFLAGS = @MAKEFLAGS@
+ MAKEINFO = @MAKEINFO@
+ MKDIR_P = @MKDIR_P@
+ MKINSTALLDIRS = @MKINSTALLDIRS@
+@@ -151,7 +142,6 @@
+ NAUTILUS_EXTENSION_VERSION_INFO = @NAUTILUS_EXTENSION_VERSION_INFO@
+ NM = @NM@
+ NMEDIT = @NMEDIT@
+-OBJC = @OBJC@
+ OBJDUMP = @OBJDUMP@
+ OBJEXT = @OBJEXT@
+ OTOOL = @OTOOL@
+@@ -170,7 +160,6 @@
+ POSUB = @POSUB@
+ PO_IN_DATADIR_FALSE = @PO_IN_DATADIR_FALSE@
+ PO_IN_DATADIR_TRUE = @PO_IN_DATADIR_TRUE@
+-Q = @Q@
+ RANLIB = @RANLIB@
+ RENDER_LIBS = @RENDER_LIBS@
+ SED = @SED@
+@@ -182,7 +171,6 @@
+ TRACKER_LIBS = @TRACKER_LIBS@
+ UPDATE_MIME_DATABASE = @UPDATE_MIME_DATABASE@
+ USE_NLS = @USE_NLS@
+-V = @V@
+ VERSION = @VERSION@
+ XGETTEXT = @XGETTEXT@
+ XMKMF = @XMKMF@
+@@ -237,7 +225,6 @@
+ psdir = @psdir@
+ sbindir = @sbindir@
+ sharedstatedir = @sharedstatedir@
+-shavedir = @shavedir@
+ srcdir = @srcdir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+diff -Nur nautilus-2.27.1/eel/Makefile.in nautilus-2.27.1.ubuntu/eel/Makefile.in
+--- nautilus-2.27.1/eel/Makefile.in	2009-05-05 02:41:50.000000000 +0200
++++ nautilus-2.27.1.ubuntu/eel/Makefile.in	2009-05-11 14:15:32.000000000 +0200
+@@ -38,18 +38,16 @@
+ DIST_COMMON = README $(srcdir)/Makefile.am $(srcdir)/Makefile.in \
+ 	ChangeLog
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+-am__aclocal_m4_deps = $(top_srcdir)/m4/gtk-doc.m4 \
+-	$(top_srcdir)/m4/intltool.m4 $(top_srcdir)/m4/libtool.m4 \
+-	$(top_srcdir)/m4/ltoptions.m4 $(top_srcdir)/m4/ltsugar.m4 \
+-	$(top_srcdir)/m4/ltversion.m4 $(top_srcdir)/m4/lt~obsolete.m4 \
+-	$(top_srcdir)/m4/shave.m4 $(top_srcdir)/configure.in
++am__aclocal_m4_deps = $(top_srcdir)/configure.in
+ am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
+ 	$(ACLOCAL_M4)
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_HEADER = $(top_builddir)/config.h
+ CONFIG_CLEAN_FILES =
+ LTLIBRARIES = $(noinst_LTLIBRARIES)
+-libeel_2_la_LIBADD =
++am__DEPENDENCIES_1 =
++libeel_2_la_DEPENDENCIES = $(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
++	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1)
+ am__objects_1 =
+ am_libeel_2_la_OBJECTS = eel-accessibility.lo eel-alert-dialog.lo \
+ 	eel-art-extensions.lo eel-art-gtk-extensions.lo \
+@@ -99,7 +97,6 @@
+ ALL_LIBS = @ALL_LIBS@
+ ALL_LINGUAS = @ALL_LINGUAS@
+ AMTAR = @AMTAR@
+-AM_MAKEFLAGS = @AM_MAKEFLAGS@
+ AR = @AR@
+ AS = @AS@
+ AUTOCONF = @AUTOCONF@
+@@ -117,7 +114,6 @@
+ CORE_LIBS = @CORE_LIBS@
+ CPP = @CPP@
+ CPPFLAGS = @CPPFLAGS@
+-CXX = @CXX@
+ CYGPATH_W = @CYGPATH_W@
+ DATADIRNAME = @DATADIRNAME@
+ DEFS = @DEFS@
+@@ -139,8 +135,6 @@
+ EXEMPI_NEW_API_LIBS = @EXEMPI_NEW_API_LIBS@
+ EXIF_CFLAGS = @EXIF_CFLAGS@
+ EXIF_LIBS = @EXIF_LIBS@
+-F77 = @F77@
+-FC = @FC@
+ FGREP = @FGREP@
+ GAIL_REQUIRED = @GAIL_REQUIRED@
+ GCONFTOOL = @GCONFTOOL@
+@@ -180,7 +174,6 @@
+ LN_S = @LN_S@
+ LTLIBOBJS = @LTLIBOBJS@
+ MAINT = @MAINT@
+-MAKEFLAGS = @MAKEFLAGS@
+ MAKEINFO = @MAKEINFO@
+ MKDIR_P = @MKDIR_P@
+ MKINSTALLDIRS = @MKINSTALLDIRS@
+@@ -190,7 +183,6 @@
+ NAUTILUS_EXTENSION_VERSION_INFO = @NAUTILUS_EXTENSION_VERSION_INFO@
+ NM = @NM@
+ NMEDIT = @NMEDIT@
+-OBJC = @OBJC@
+ OBJDUMP = @OBJDUMP@
+ OBJEXT = @OBJEXT@
+ OTOOL = @OTOOL@
+@@ -209,7 +201,6 @@
+ POSUB = @POSUB@
+ PO_IN_DATADIR_FALSE = @PO_IN_DATADIR_FALSE@
+ PO_IN_DATADIR_TRUE = @PO_IN_DATADIR_TRUE@
+-Q = @Q@
+ RANLIB = @RANLIB@
+ RENDER_LIBS = @RENDER_LIBS@
+ SED = @SED@
+@@ -221,7 +212,6 @@
+ TRACKER_LIBS = @TRACKER_LIBS@
+ UPDATE_MIME_DATABASE = @UPDATE_MIME_DATABASE@
+ USE_NLS = @USE_NLS@
+-V = @V@
+ VERSION = @VERSION@
+ XGETTEXT = @XGETTEXT@
+ XMKMF = @XMKMF@
+@@ -276,7 +266,6 @@
+ psdir = @psdir@
+ sbindir = @sbindir@
+ sharedstatedir = @sharedstatedir@
+-shavedir = @shavedir@
+ srcdir = @srcdir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+@@ -300,6 +289,9 @@
+ 
+ libeel_2_la_LDFLAGS = \
+ 	-no-undefined				\
++	$(NULL)
++
++libeel_2_la_LIBADD = \
+ 	$(CORE_LIBS)				\
+ 	$(RENDER_LIBS)				\
+ 	$(X_LIBS)				\
+diff -Nur nautilus-2.27.1/icons/Makefile.in nautilus-2.27.1.ubuntu/icons/Makefile.in
+--- nautilus-2.27.1/icons/Makefile.in	2009-05-05 02:41:50.000000000 +0200
++++ nautilus-2.27.1.ubuntu/icons/Makefile.in	2009-05-11 14:15:33.000000000 +0200
+@@ -35,11 +35,7 @@
+ subdir = icons
+ DIST_COMMON = $(srcdir)/Makefile.am $(srcdir)/Makefile.in
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+-am__aclocal_m4_deps = $(top_srcdir)/m4/gtk-doc.m4 \
+-	$(top_srcdir)/m4/intltool.m4 $(top_srcdir)/m4/libtool.m4 \
+-	$(top_srcdir)/m4/ltoptions.m4 $(top_srcdir)/m4/ltsugar.m4 \
+-	$(top_srcdir)/m4/ltversion.m4 $(top_srcdir)/m4/lt~obsolete.m4 \
+-	$(top_srcdir)/m4/shave.m4 $(top_srcdir)/configure.in
++am__aclocal_m4_deps = $(top_srcdir)/configure.in
+ am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
+ 	$(ACLOCAL_M4)
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+@@ -63,7 +59,6 @@
+ ALL_LIBS = @ALL_LIBS@
+ ALL_LINGUAS = @ALL_LINGUAS@
+ AMTAR = @AMTAR@
+-AM_MAKEFLAGS = @AM_MAKEFLAGS@
+ AR = @AR@
+ AS = @AS@
+ AUTOCONF = @AUTOCONF@
+@@ -81,7 +76,6 @@
+ CORE_LIBS = @CORE_LIBS@
+ CPP = @CPP@
+ CPPFLAGS = @CPPFLAGS@
+-CXX = @CXX@
+ CYGPATH_W = @CYGPATH_W@
+ DATADIRNAME = @DATADIRNAME@
+ DEFS = @DEFS@
+@@ -103,8 +97,6 @@
+ EXEMPI_NEW_API_LIBS = @EXEMPI_NEW_API_LIBS@
+ EXIF_CFLAGS = @EXIF_CFLAGS@
+ EXIF_LIBS = @EXIF_LIBS@
+-F77 = @F77@
+-FC = @FC@
+ FGREP = @FGREP@
+ GAIL_REQUIRED = @GAIL_REQUIRED@
+ GCONFTOOL = @GCONFTOOL@
+@@ -144,7 +136,6 @@
+ LN_S = @LN_S@
+ LTLIBOBJS = @LTLIBOBJS@
+ MAINT = @MAINT@
+-MAKEFLAGS = @MAKEFLAGS@
+ MAKEINFO = @MAKEINFO@
+ MKDIR_P = @MKDIR_P@
+ MKINSTALLDIRS = @MKINSTALLDIRS@
+@@ -154,7 +145,6 @@
+ NAUTILUS_EXTENSION_VERSION_INFO = @NAUTILUS_EXTENSION_VERSION_INFO@
+ NM = @NM@
+ NMEDIT = @NMEDIT@
+-OBJC = @OBJC@
+ OBJDUMP = @OBJDUMP@
+ OBJEXT = @OBJEXT@
+ OTOOL = @OTOOL@
+@@ -173,7 +163,6 @@
+ POSUB = @POSUB@
+ PO_IN_DATADIR_FALSE = @PO_IN_DATADIR_FALSE@
+ PO_IN_DATADIR_TRUE = @PO_IN_DATADIR_TRUE@
+-Q = @Q@
+ RANLIB = @RANLIB@
+ RENDER_LIBS = @RENDER_LIBS@
+ SED = @SED@
+@@ -185,7 +174,6 @@
+ TRACKER_LIBS = @TRACKER_LIBS@
+ UPDATE_MIME_DATABASE = @UPDATE_MIME_DATABASE@
+ USE_NLS = @USE_NLS@
+-V = @V@
+ VERSION = @VERSION@
+ XGETTEXT = @XGETTEXT@
+ XMKMF = @XMKMF@
+@@ -240,7 +228,6 @@
+ psdir = @psdir@
+ sbindir = @sbindir@
+ sharedstatedir = @sharedstatedir@
+-shavedir = @shavedir@
+ srcdir = @srcdir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+diff -Nur nautilus-2.27.1/libnautilus-extension/Makefile.in nautilus-2.27.1.ubuntu/libnautilus-extension/Makefile.in
+--- nautilus-2.27.1/libnautilus-extension/Makefile.in	2009-05-05 02:41:50.000000000 +0200
++++ nautilus-2.27.1.ubuntu/libnautilus-extension/Makefile.in	2009-05-11 14:15:33.000000000 +0200
+@@ -41,11 +41,7 @@
+ 	$(top_srcdir)/Makefile.shared
+ subdir = libnautilus-extension
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+-am__aclocal_m4_deps = $(top_srcdir)/m4/gtk-doc.m4 \
+-	$(top_srcdir)/m4/intltool.m4 $(top_srcdir)/m4/libtool.m4 \
+-	$(top_srcdir)/m4/ltoptions.m4 $(top_srcdir)/m4/ltsugar.m4 \
+-	$(top_srcdir)/m4/ltversion.m4 $(top_srcdir)/m4/lt~obsolete.m4 \
+-	$(top_srcdir)/m4/shave.m4 $(top_srcdir)/configure.in
++am__aclocal_m4_deps = $(top_srcdir)/configure.in
+ am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
+ 	$(ACLOCAL_M4)
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+@@ -103,7 +99,6 @@
+ ALL_LIBS = @ALL_LIBS@
+ ALL_LINGUAS = @ALL_LINGUAS@
+ AMTAR = @AMTAR@
+-AM_MAKEFLAGS = @AM_MAKEFLAGS@
+ AR = @AR@
+ AS = @AS@
+ AUTOCONF = @AUTOCONF@
+@@ -121,7 +116,6 @@
+ CORE_LIBS = @CORE_LIBS@
+ CPP = @CPP@
+ CPPFLAGS = @CPPFLAGS@
+-CXX = @CXX@
+ CYGPATH_W = @CYGPATH_W@
+ DATADIRNAME = @DATADIRNAME@
+ DEFS = @DEFS@
+@@ -143,8 +137,6 @@
+ EXEMPI_NEW_API_LIBS = @EXEMPI_NEW_API_LIBS@
+ EXIF_CFLAGS = @EXIF_CFLAGS@
+ EXIF_LIBS = @EXIF_LIBS@
+-F77 = @F77@
+-FC = @FC@
+ FGREP = @FGREP@
+ GAIL_REQUIRED = @GAIL_REQUIRED@
+ GCONFTOOL = @GCONFTOOL@
+@@ -184,7 +176,6 @@
+ LN_S = @LN_S@
+ LTLIBOBJS = @LTLIBOBJS@
+ MAINT = @MAINT@
+-MAKEFLAGS = @MAKEFLAGS@
+ MAKEINFO = @MAKEINFO@
+ MKDIR_P = @MKDIR_P@
+ MKINSTALLDIRS = @MKINSTALLDIRS@
+@@ -194,7 +185,6 @@
+ NAUTILUS_EXTENSION_VERSION_INFO = @NAUTILUS_EXTENSION_VERSION_INFO@
+ NM = @NM@
+ NMEDIT = @NMEDIT@
+-OBJC = @OBJC@
+ OBJDUMP = @OBJDUMP@
+ OBJEXT = @OBJEXT@
+ OTOOL = @OTOOL@
+@@ -213,7 +203,6 @@
+ POSUB = @POSUB@
+ PO_IN_DATADIR_FALSE = @PO_IN_DATADIR_FALSE@
+ PO_IN_DATADIR_TRUE = @PO_IN_DATADIR_TRUE@
+-Q = @Q@
+ RANLIB = @RANLIB@
+ RENDER_LIBS = @RENDER_LIBS@
+ SED = @SED@
+@@ -225,7 +214,6 @@
+ TRACKER_LIBS = @TRACKER_LIBS@
+ UPDATE_MIME_DATABASE = @UPDATE_MIME_DATABASE@
+ USE_NLS = @USE_NLS@
+-V = @V@
+ VERSION = @VERSION@
+ XGETTEXT = @XGETTEXT@
+ XMKMF = @XMKMF@
+@@ -280,7 +268,6 @@
+ psdir = @psdir@
+ sbindir = @sbindir@
+ sharedstatedir = @sharedstatedir@
+-shavedir = @shavedir@
+ srcdir = @srcdir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+diff -Nur nautilus-2.27.1/libnautilus-private/Makefile.in nautilus-2.27.1.ubuntu/libnautilus-private/Makefile.in
+--- nautilus-2.27.1/libnautilus-private/Makefile.in	2009-05-05 02:41:50.000000000 +0200
++++ nautilus-2.27.1.ubuntu/libnautilus-private/Makefile.in	2009-05-11 14:15:33.000000000 +0200
+@@ -39,11 +39,7 @@
+ @HAVE_TRACKER_TRUE@am__append_2 = $(TRACKER_SOURCES)
+ subdir = libnautilus-private
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+-am__aclocal_m4_deps = $(top_srcdir)/m4/gtk-doc.m4 \
+-	$(top_srcdir)/m4/intltool.m4 $(top_srcdir)/m4/libtool.m4 \
+-	$(top_srcdir)/m4/ltoptions.m4 $(top_srcdir)/m4/ltsugar.m4 \
+-	$(top_srcdir)/m4/ltversion.m4 $(top_srcdir)/m4/lt~obsolete.m4 \
+-	$(top_srcdir)/m4/shave.m4 $(top_srcdir)/configure.in
++am__aclocal_m4_deps = $(top_srcdir)/configure.in
+ am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
+ 	$(ACLOCAL_M4)
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+@@ -221,7 +217,6 @@
+ ALL_LIBS = @ALL_LIBS@
+ ALL_LINGUAS = @ALL_LINGUAS@
+ AMTAR = @AMTAR@
+-AM_MAKEFLAGS = @AM_MAKEFLAGS@
+ AR = @AR@
+ AS = @AS@
+ AUTOCONF = @AUTOCONF@
+@@ -239,7 +234,6 @@
+ CORE_LIBS = @CORE_LIBS@
+ CPP = @CPP@
+ CPPFLAGS = @CPPFLAGS@
+-CXX = @CXX@
+ CYGPATH_W = @CYGPATH_W@
+ DATADIRNAME = @DATADIRNAME@
+ DEFS = @DEFS@
+@@ -261,8 +255,6 @@
+ EXEMPI_NEW_API_LIBS = @EXEMPI_NEW_API_LIBS@
+ EXIF_CFLAGS = @EXIF_CFLAGS@
+ EXIF_LIBS = @EXIF_LIBS@
+-F77 = @F77@
+-FC = @FC@
+ FGREP = @FGREP@
+ GAIL_REQUIRED = @GAIL_REQUIRED@
+ GCONFTOOL = @GCONFTOOL@
+@@ -302,7 +294,6 @@
+ LN_S = @LN_S@
+ LTLIBOBJS = @LTLIBOBJS@
+ MAINT = @MAINT@
+-MAKEFLAGS = @MAKEFLAGS@
+ MAKEINFO = @MAKEINFO@
+ MKDIR_P = @MKDIR_P@
+ MKINSTALLDIRS = @MKINSTALLDIRS@
+@@ -312,7 +303,6 @@
+ NAUTILUS_EXTENSION_VERSION_INFO = @NAUTILUS_EXTENSION_VERSION_INFO@
+ NM = @NM@
+ NMEDIT = @NMEDIT@
+-OBJC = @OBJC@
+ OBJDUMP = @OBJDUMP@
+ OBJEXT = @OBJEXT@
+ OTOOL = @OTOOL@
+@@ -331,7 +321,6 @@
+ POSUB = @POSUB@
+ PO_IN_DATADIR_FALSE = @PO_IN_DATADIR_FALSE@
+ PO_IN_DATADIR_TRUE = @PO_IN_DATADIR_TRUE@
+-Q = @Q@
+ RANLIB = @RANLIB@
+ RENDER_LIBS = @RENDER_LIBS@
+ SED = @SED@
+@@ -343,7 +332,6 @@
+ TRACKER_LIBS = @TRACKER_LIBS@
+ UPDATE_MIME_DATABASE = @UPDATE_MIME_DATABASE@
+ USE_NLS = @USE_NLS@
+-V = @V@
+ VERSION = @VERSION@
+ XGETTEXT = @XGETTEXT@
+ XMKMF = @XMKMF@
+@@ -398,7 +386,6 @@
+ psdir = @psdir@
+ sbindir = @sbindir@
+ sharedstatedir = @sharedstatedir@
+-shavedir = @shavedir@
+ srcdir = @srcdir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+diff -Nur nautilus-2.27.1/m4/Makefile.in nautilus-2.27.1.ubuntu/m4/Makefile.in
+--- nautilus-2.27.1/m4/Makefile.in	2009-05-05 02:41:50.000000000 +0200
++++ nautilus-2.27.1.ubuntu/m4/Makefile.in	2009-05-11 14:15:33.000000000 +0200
+@@ -35,11 +35,7 @@
+ DIST_COMMON = $(srcdir)/Makefile.am $(srcdir)/Makefile.in \
+ 	$(srcdir)/shave-libtool.in $(srcdir)/shave.in
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+-am__aclocal_m4_deps = $(top_srcdir)/m4/gtk-doc.m4 \
+-	$(top_srcdir)/m4/intltool.m4 $(top_srcdir)/m4/libtool.m4 \
+-	$(top_srcdir)/m4/ltoptions.m4 $(top_srcdir)/m4/ltsugar.m4 \
+-	$(top_srcdir)/m4/ltversion.m4 $(top_srcdir)/m4/lt~obsolete.m4 \
+-	$(top_srcdir)/m4/shave.m4 $(top_srcdir)/configure.in
++am__aclocal_m4_deps = $(top_srcdir)/configure.in
+ am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
+ 	$(ACLOCAL_M4)
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+@@ -54,7 +50,6 @@
+ ALL_LIBS = @ALL_LIBS@
+ ALL_LINGUAS = @ALL_LINGUAS@
+ AMTAR = @AMTAR@
+-AM_MAKEFLAGS = @AM_MAKEFLAGS@
+ AR = @AR@
+ AS = @AS@
+ AUTOCONF = @AUTOCONF@
+@@ -72,7 +67,6 @@
+ CORE_LIBS = @CORE_LIBS@
+ CPP = @CPP@
+ CPPFLAGS = @CPPFLAGS@
+-CXX = @CXX@
+ CYGPATH_W = @CYGPATH_W@
+ DATADIRNAME = @DATADIRNAME@
+ DEFS = @DEFS@
+@@ -94,8 +88,6 @@
+ EXEMPI_NEW_API_LIBS = @EXEMPI_NEW_API_LIBS@
+ EXIF_CFLAGS = @EXIF_CFLAGS@
+ EXIF_LIBS = @EXIF_LIBS@
+-F77 = @F77@
+-FC = @FC@
+ FGREP = @FGREP@
+ GAIL_REQUIRED = @GAIL_REQUIRED@
+ GCONFTOOL = @GCONFTOOL@
+@@ -135,7 +127,6 @@
+ LN_S = @LN_S@
+ LTLIBOBJS = @LTLIBOBJS@
+ MAINT = @MAINT@
+-MAKEFLAGS = @MAKEFLAGS@
+ MAKEINFO = @MAKEINFO@
+ MKDIR_P = @MKDIR_P@
+ MKINSTALLDIRS = @MKINSTALLDIRS@
+@@ -145,7 +136,6 @@
+ NAUTILUS_EXTENSION_VERSION_INFO = @NAUTILUS_EXTENSION_VERSION_INFO@
+ NM = @NM@
+ NMEDIT = @NMEDIT@
+-OBJC = @OBJC@
+ OBJDUMP = @OBJDUMP@
+ OBJEXT = @OBJEXT@
+ OTOOL = @OTOOL@
+@@ -164,7 +154,6 @@
+ POSUB = @POSUB@
+ PO_IN_DATADIR_FALSE = @PO_IN_DATADIR_FALSE@
+ PO_IN_DATADIR_TRUE = @PO_IN_DATADIR_TRUE@
+-Q = @Q@
+ RANLIB = @RANLIB@
+ RENDER_LIBS = @RENDER_LIBS@
+ SED = @SED@
+@@ -176,7 +165,6 @@
+ TRACKER_LIBS = @TRACKER_LIBS@
+ UPDATE_MIME_DATABASE = @UPDATE_MIME_DATABASE@
+ USE_NLS = @USE_NLS@
+-V = @V@
+ VERSION = @VERSION@
+ XGETTEXT = @XGETTEXT@
+ XMKMF = @XMKMF@
+@@ -231,7 +219,6 @@
+ psdir = @psdir@
+ sbindir = @sbindir@
+ sharedstatedir = @sharedstatedir@
+-shavedir = @shavedir@
+ srcdir = @srcdir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+diff -Nur nautilus-2.27.1/src/Makefile.in nautilus-2.27.1.ubuntu/src/Makefile.in
+--- nautilus-2.27.1/src/Makefile.in	2009-05-05 02:41:51.000000000 +0200
++++ nautilus-2.27.1.ubuntu/src/Makefile.in	2009-05-11 14:15:33.000000000 +0200
+@@ -41,11 +41,7 @@
+ 	nautilus-connect-server$(EXEEXT)
+ subdir = src
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+-am__aclocal_m4_deps = $(top_srcdir)/m4/gtk-doc.m4 \
+-	$(top_srcdir)/m4/intltool.m4 $(top_srcdir)/m4/libtool.m4 \
+-	$(top_srcdir)/m4/ltoptions.m4 $(top_srcdir)/m4/ltsugar.m4 \
+-	$(top_srcdir)/m4/ltversion.m4 $(top_srcdir)/m4/lt~obsolete.m4 \
+-	$(top_srcdir)/m4/shave.m4 $(top_srcdir)/configure.in
++am__aclocal_m4_deps = $(top_srcdir)/configure.in
+ am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
+ 	$(ACLOCAL_M4)
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+@@ -179,7 +175,6 @@
+ ALL_LIBS = @ALL_LIBS@
+ ALL_LINGUAS = @ALL_LINGUAS@
+ AMTAR = @AMTAR@
+-AM_MAKEFLAGS = @AM_MAKEFLAGS@
+ AR = @AR@
+ AS = @AS@
+ AUTOCONF = @AUTOCONF@
+@@ -197,7 +192,6 @@
+ CORE_LIBS = @CORE_LIBS@
+ CPP = @CPP@
+ CPPFLAGS = @CPPFLAGS@
+-CXX = @CXX@
+ CYGPATH_W = @CYGPATH_W@
+ DATADIRNAME = @DATADIRNAME@
+ DEFS = @DEFS@
+@@ -219,8 +213,6 @@
+ EXEMPI_NEW_API_LIBS = @EXEMPI_NEW_API_LIBS@
+ EXIF_CFLAGS = @EXIF_CFLAGS@
+ EXIF_LIBS = @EXIF_LIBS@
+-F77 = @F77@
+-FC = @FC@
+ FGREP = @FGREP@
+ GAIL_REQUIRED = @GAIL_REQUIRED@
+ GCONFTOOL = @GCONFTOOL@
+@@ -260,7 +252,6 @@
+ LN_S = @LN_S@
+ LTLIBOBJS = @LTLIBOBJS@
+ MAINT = @MAINT@
+-MAKEFLAGS = @MAKEFLAGS@
+ MAKEINFO = @MAKEINFO@
+ MKDIR_P = @MKDIR_P@
+ MKINSTALLDIRS = @MKINSTALLDIRS@
+@@ -270,7 +261,6 @@
+ NAUTILUS_EXTENSION_VERSION_INFO = @NAUTILUS_EXTENSION_VERSION_INFO@
+ NM = @NM@
+ NMEDIT = @NMEDIT@
+-OBJC = @OBJC@
+ OBJDUMP = @OBJDUMP@
+ OBJEXT = @OBJEXT@
+ OTOOL = @OTOOL@
+@@ -289,7 +279,6 @@
+ POSUB = @POSUB@
+ PO_IN_DATADIR_FALSE = @PO_IN_DATADIR_FALSE@
+ PO_IN_DATADIR_TRUE = @PO_IN_DATADIR_TRUE@
+-Q = @Q@
+ RANLIB = @RANLIB@
+ RENDER_LIBS = @RENDER_LIBS@
+ SED = @SED@
+@@ -301,7 +290,6 @@
+ TRACKER_LIBS = @TRACKER_LIBS@
+ UPDATE_MIME_DATABASE = @UPDATE_MIME_DATABASE@
+ USE_NLS = @USE_NLS@
+-V = @V@
+ VERSION = @VERSION@
+ XGETTEXT = @XGETTEXT@
+ XMKMF = @XMKMF@
+@@ -356,7 +344,6 @@
+ psdir = @psdir@
+ sbindir = @sbindir@
+ sharedstatedir = @sharedstatedir@
+-shavedir = @shavedir@
+ srcdir = @srcdir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+diff -Nur nautilus-2.27.1/src/file-manager/Makefile.in nautilus-2.27.1.ubuntu/src/file-manager/Makefile.in
+--- nautilus-2.27.1/src/file-manager/Makefile.in	2009-05-05 02:41:51.000000000 +0200
++++ nautilus-2.27.1.ubuntu/src/file-manager/Makefile.in	2009-05-11 14:15:33.000000000 +0200
+@@ -38,11 +38,7 @@
+ @ENABLE_EMPTY_VIEW_TRUE@am__append_1 = $(EMPTY_VIEW_SOURCES)
+ subdir = src/file-manager
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+-am__aclocal_m4_deps = $(top_srcdir)/m4/gtk-doc.m4 \
+-	$(top_srcdir)/m4/intltool.m4 $(top_srcdir)/m4/libtool.m4 \
+-	$(top_srcdir)/m4/ltoptions.m4 $(top_srcdir)/m4/ltsugar.m4 \
+-	$(top_srcdir)/m4/ltversion.m4 $(top_srcdir)/m4/lt~obsolete.m4 \
+-	$(top_srcdir)/m4/shave.m4 $(top_srcdir)/configure.in
++am__aclocal_m4_deps = $(top_srcdir)/configure.in
+ am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
+ 	$(ACLOCAL_M4)
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+@@ -102,7 +98,6 @@
+ ALL_LIBS = @ALL_LIBS@
+ ALL_LINGUAS = @ALL_LINGUAS@
+ AMTAR = @AMTAR@
+-AM_MAKEFLAGS = @AM_MAKEFLAGS@
+ AR = @AR@
+ AS = @AS@
+ AUTOCONF = @AUTOCONF@
+@@ -120,7 +115,6 @@
+ CORE_LIBS = @CORE_LIBS@
+ CPP = @CPP@
+ CPPFLAGS = @CPPFLAGS@
+-CXX = @CXX@
+ CYGPATH_W = @CYGPATH_W@
+ DATADIRNAME = @DATADIRNAME@
+ DEFS = @DEFS@
+@@ -142,8 +136,6 @@
+ EXEMPI_NEW_API_LIBS = @EXEMPI_NEW_API_LIBS@
+ EXIF_CFLAGS = @EXIF_CFLAGS@
+ EXIF_LIBS = @EXIF_LIBS@
+-F77 = @F77@
+-FC = @FC@
+ FGREP = @FGREP@
+ GAIL_REQUIRED = @GAIL_REQUIRED@
+ GCONFTOOL = @GCONFTOOL@
+@@ -183,7 +175,6 @@
+ LN_S = @LN_S@
+ LTLIBOBJS = @LTLIBOBJS@
+ MAINT = @MAINT@
+-MAKEFLAGS = @MAKEFLAGS@
+ MAKEINFO = @MAKEINFO@
+ MKDIR_P = @MKDIR_P@
+ MKINSTALLDIRS = @MKINSTALLDIRS@
+@@ -193,7 +184,6 @@
+ NAUTILUS_EXTENSION_VERSION_INFO = @NAUTILUS_EXTENSION_VERSION_INFO@
+ NM = @NM@
+ NMEDIT = @NMEDIT@
+-OBJC = @OBJC@
+ OBJDUMP = @OBJDUMP@
+ OBJEXT = @OBJEXT@
+ OTOOL = @OTOOL@
+@@ -212,7 +202,6 @@
+ POSUB = @POSUB@
+ PO_IN_DATADIR_FALSE = @PO_IN_DATADIR_FALSE@
+ PO_IN_DATADIR_TRUE = @PO_IN_DATADIR_TRUE@
+-Q = @Q@
+ RANLIB = @RANLIB@
+ RENDER_LIBS = @RENDER_LIBS@
+ SED = @SED@
+@@ -224,7 +213,6 @@
+ TRACKER_LIBS = @TRACKER_LIBS@
+ UPDATE_MIME_DATABASE = @UPDATE_MIME_DATABASE@
+ USE_NLS = @USE_NLS@
+-V = @V@
+ VERSION = @VERSION@
+ XGETTEXT = @XGETTEXT@
+ XMKMF = @XMKMF@
+@@ -279,7 +267,6 @@
+ psdir = @psdir@
+ sbindir = @sbindir@
+ sharedstatedir = @sharedstatedir@
+-shavedir = @shavedir@
+ srcdir = @srcdir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+diff -Nur nautilus-2.27.1/test/Makefile.in nautilus-2.27.1.ubuntu/test/Makefile.in
+--- nautilus-2.27.1/test/Makefile.in	2009-05-05 02:41:51.000000000 +0200
++++ nautilus-2.27.1.ubuntu/test/Makefile.in	2009-05-11 14:15:33.000000000 +0200
+@@ -43,11 +43,7 @@
+ subdir = test
+ DIST_COMMON = $(srcdir)/Makefile.am $(srcdir)/Makefile.in
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+-am__aclocal_m4_deps = $(top_srcdir)/m4/gtk-doc.m4 \
+-	$(top_srcdir)/m4/intltool.m4 $(top_srcdir)/m4/libtool.m4 \
+-	$(top_srcdir)/m4/ltoptions.m4 $(top_srcdir)/m4/ltsugar.m4 \
+-	$(top_srcdir)/m4/ltversion.m4 $(top_srcdir)/m4/lt~obsolete.m4 \
+-	$(top_srcdir)/m4/shave.m4 $(top_srcdir)/configure.in
++am__aclocal_m4_deps = $(top_srcdir)/configure.in
+ am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
+ 	$(ACLOCAL_M4)
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+@@ -164,7 +160,6 @@
+ ALL_LIBS = @ALL_LIBS@
+ ALL_LINGUAS = @ALL_LINGUAS@
+ AMTAR = @AMTAR@
+-AM_MAKEFLAGS = @AM_MAKEFLAGS@
+ AR = @AR@
+ AS = @AS@
+ AUTOCONF = @AUTOCONF@
+@@ -182,7 +177,6 @@
+ CORE_LIBS = @CORE_LIBS@
+ CPP = @CPP@
+ CPPFLAGS = @CPPFLAGS@
+-CXX = @CXX@
+ CYGPATH_W = @CYGPATH_W@
+ DATADIRNAME = @DATADIRNAME@
+ DEFS = @DEFS@
+@@ -204,8 +198,6 @@
+ EXEMPI_NEW_API_LIBS = @EXEMPI_NEW_API_LIBS@
+ EXIF_CFLAGS = @EXIF_CFLAGS@
+ EXIF_LIBS = @EXIF_LIBS@
+-F77 = @F77@
+-FC = @FC@
+ FGREP = @FGREP@
+ GAIL_REQUIRED = @GAIL_REQUIRED@
+ GCONFTOOL = @GCONFTOOL@
+@@ -245,7 +237,6 @@
+ LN_S = @LN_S@
+ LTLIBOBJS = @LTLIBOBJS@
+ MAINT = @MAINT@
+-MAKEFLAGS = @MAKEFLAGS@
+ MAKEINFO = @MAKEINFO@
+ MKDIR_P = @MKDIR_P@
+ MKINSTALLDIRS = @MKINSTALLDIRS@
+@@ -255,7 +246,6 @@
+ NAUTILUS_EXTENSION_VERSION_INFO = @NAUTILUS_EXTENSION_VERSION_INFO@
+ NM = @NM@
+ NMEDIT = @NMEDIT@
+-OBJC = @OBJC@
+ OBJDUMP = @OBJDUMP@
+ OBJEXT = @OBJEXT@
+ OTOOL = @OTOOL@
+@@ -274,7 +264,6 @@
+ POSUB = @POSUB@
+ PO_IN_DATADIR_FALSE = @PO_IN_DATADIR_FALSE@
+ PO_IN_DATADIR_TRUE = @PO_IN_DATADIR_TRUE@
+-Q = @Q@
+ RANLIB = @RANLIB@
+ RENDER_LIBS = @RENDER_LIBS@
+ SED = @SED@
+@@ -286,7 +275,6 @@
+ TRACKER_LIBS = @TRACKER_LIBS@
+ UPDATE_MIME_DATABASE = @UPDATE_MIME_DATABASE@
+ USE_NLS = @USE_NLS@
+-V = @V@
+ VERSION = @VERSION@
+ XGETTEXT = @XGETTEXT@
+ XMKMF = @XMKMF@
+@@ -341,7 +329,6 @@
+ psdir = @psdir@
+ sbindir = @sbindir@
+ sharedstatedir = @sharedstatedir@
+-shavedir = @shavedir@
+ srcdir = @srcdir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@

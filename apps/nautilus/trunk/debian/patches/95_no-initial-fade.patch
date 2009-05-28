@@ -1,0 +1,16 @@
+# Upstream: http://bugzilla.gnome.org/show_bug.cgi?id=575964
+# Patch: http://bugzilla.gnome.org/attachment.cgi?id=130970&action=view
+# Description: remove initial background fade-in
+#
+diff -ruNp nautilus-2.26.0~/eel/eel-background.c nautilus-2.26.0/eel/eel-background.c
+--- nautilus-2.26.0~/eel/eel-background.c	2009-02-24 10:11:32.000000000 +0000
++++ nautilus-2.26.0/eel/eel-background.c	2009-03-19 13:59:11.000000000 +0000
+@@ -878,8 +878,6 @@ widget_realized_setup (GtkWidget *widget
+ 		} else {
+ 			background->details->use_common_pixmap = FALSE;
+ 		}
+-
+-		init_fade (background, widget);
+ 	}
+ }
+ 

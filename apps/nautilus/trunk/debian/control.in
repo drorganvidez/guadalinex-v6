@@ -1,0 +1,149 @@
+Source: nautilus
+Section: gnome
+Priority: optional
+Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
+XSBC-Original-Maintainer: Josselin Mouette <joss@debian.org>
+Uploaders: @GNOME_TEAM@
+Build-Depends: debhelper (>= 5),
+               cdbs (>= 0.4.41),
+               quilt,
+               gnome-pkg-tools (>= 0.13),
+               dpkg-dev (>= 1.13.19),
+               libglib2.0-dev (>= 2.19.0),
+               libgnome-desktop-dev (>= 2.25.5),
+               libpango1.0-dev (>= 1.1.2),
+               libgtk2.0-dev (>= 2.16.0),
+               libxml2-dev (>= 2.4.7),
+               libexif-dev (>= 0.5.12),
+               libexempi-dev (>= 1.99.5),
+               libgail-dev (>= 0.16),
+               libunique-dev,
+               libdbus-glib-1-dev,
+               intltool (>= 0.40.1),
+               gtk-doc-tools (>= 1.4),
+               libxt-dev,
+               libx11-dev,
+               libselinux1-dev | not+linux-gnu,
+               libxrender-dev,
+               libxext-dev,
+               libgconf2-dev,
+               x11proto-core-dev,
+               shared-mime-info (>= 0.50),
+               liblaunchpad-integration-dev (>= 0.1.17),
+               libglib2.0-doc,
+               libgtk2.0-doc
+Homepage: http://www.gnome.org/projects/nautilus/
+VCS-Browser: http://svn.debian.org/wsvn/pkg-gnome/desktop/unstable/nautilus/
+VCS-Svn: svn://svn.debian.org/svn/pkg-gnome/desktop/unstable/nautilus/
+Vcs-Bzr: https://code.launchpad.net/~ubuntu-desktop/nautilus/ubuntu
+Standards-Version: 3.8.1
+
+Package: nautilus
+Architecture: any
+Depends: ${shlibs:Depends},
+         ${misc:Depends},
+         nautilus-data (>= ${gnome:Version}),
+         nautilus-data (<< ${gnome:NextVersion}),
+         shared-mime-info (>= 0.50),
+         desktop-file-utils (>= 0.7),
+         gvfs (>= 1.0.2)
+Provides: nautilus-extensions-2.0
+Recommends: eject,
+            nautilus-cd-burner | brasero (>= 2.26),
+            librsvg2-common,
+            gnome-app-install,
+            app-install-data,
+            gvfs-backends,
+            gnome-mount,
+            consolekit
+Suggests: eog,
+          evince | pdf-viewer,
+          totem | mp3-decoder,
+          xdg-user-dirs
+Conflicts: libnautilus2-2,
+           libnautilus2-dev
+Breaks: gnome-volume-manager (<< 2.24),
+        rhythmbox (<< 0.12)
+Replaces: libnautilus2-2
+Description: file manager and graphical shell for GNOME
+ Nautilus is the official file manager for the GNOME desktop. It allows
+ to browse directories, preview files and launch applications associated
+ with them. It is also responsible for handling the icons on the GNOME
+ desktop. It works on local and remote filesystems.
+ .
+ Several icon themes and components for viewing different kinds of files
+ are available in separate packages.
+
+Package: nautilus-dbg
+Section: debug
+Architecture: any
+Priority: extra
+Depends: nautilus (= ${binary:Version})
+Replaces: libnautilus-extension1-dbg
+Description: file manager and graphical shell for GNOME - debugging version
+ Nautilus is the official file manager for the GNOME desktop. It allows
+ to browse directories, preview files and launch applications associated
+ with them. It is also responsible for handling the icons on the GNOME
+ desktop. It works on local and remote filesystems.
+ .
+ Several icon themes and components for viewing different kinds of files
+ are available in separate packages.
+ .
+ This development package contains unstripped binaries compiled with
+ debugging symbols needed by gdb.
+ 
+Package: libnautilus-extension1
+Architecture: any
+Section: libs
+Depends: ${misc:Depends},
+         ${shlibs:Depends}
+Conflicts: libnautilus2-2
+Breaks: nautilus (<< 2.22),
+        gnome-mount (<< 0.8),
+        nautilus-cd-burner (<< 2.22),
+        file-roller (<< 2.24),
+        python-nautilus (<< 0.5),
+        nautilus-sendto (<< 0.14.0-2),
+        nautilus-open-terminal (<< 0.9),
+        nautilus-image-converter (<< 0.3),
+        nautilus-filename-repairer (<< 0.0.5-2),
+        eiciel (<< 0.9.6.1-3),
+        diff-ext (<= 0.2.3-3),
+        nautilus-gksu (<< 2.0.2-2+b1),
+        nautilus-actions (<< 1.4.1-1+b1),
+        nautilus-share (<< 0.7.2-4+b1),
+        seahorse-plugins (<< 2.24.1-3+b1)
+Replaces: libnautilus2-2
+Description: libraries for nautilus components - runtime version
+ Nautilus is the official file manager and graphical shell for the
+ GNOME desktop.
+ .
+ This package contains a few runtime libraries needed by nautilus' extensions.
+
+Package: libnautilus-extension-dev
+Architecture: any
+Section: libdevel
+Depends: libnautilus-extension1 (= ${binary:Version}),
+         libglib2.0-dev (>= 2.19.0),
+         libgtk2.0-dev (>= 2.16.0),
+         ${shlibs:Depends}
+Conflicts: libnautilus2-dev
+Replaces: libnautilus2-dev
+Description: libraries for nautilus components - development version
+ Nautilus is the official file manager and graphical shell for the
+ GNOME desktop.
+ .
+ This package provides the necessary development libraries and include
+ files to develop and compile Nautilus extensions.
+
+Package: nautilus-data
+Architecture: all
+Depends: scrollkeeper, ${misc:Depends}
+Conflicts: nautilus (<< 2.14.1-3)
+Recommends: nautilus
+Description: data files for nautilus
+ Nautilus is the official file manager and graphical shell for the
+ GNOME desktop.
+ .
+ This package contains pictures, localization files and other data
+ needed by nautilus.

@@ -1,0 +1,13 @@
+# Ubuntu: https://launchpad.net/bugs/39002
+# Description: renaming change due to language packs
+# UbuntuSpecific: the change is due to the ubuntu gettext desktop changes
+--- nautilus-2.21.1.orig/libnautilus-private/nautilus-link.c	2008-01-07 15:33:24.000000000 +0100
++++ nautilus-2.21.1/libnautilus-private/nautilus-link.c	2008-01-07 15:33:46.000000000 +0100
+@@ -250,6 +250,7 @@
+ 	}
+ 
+ 	gnome_desktop_item_set_localestring (desktop_file, "Name", text);
++	gnome_desktop_item_set_string (desktop_file, "Name", text);
+ 	success = gnome_desktop_item_save (desktop_file, NULL, FALSE, NULL);
+ 	gnome_desktop_item_unref (desktop_file);
+ 	

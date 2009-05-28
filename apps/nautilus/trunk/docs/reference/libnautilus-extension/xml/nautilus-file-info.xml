@@ -1,0 +1,400 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY version SYSTEM "version.xml">
+]>
+
+<refentry id="libnautilus-extension-nautilus-file-info">
+<refmeta>
+<refentrytitle role="top_of_page" id="libnautilus-extension-nautilus-file-info.top_of_page">nautilus-file-info</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>LIBNAUTILUS-EXTENSION Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>nautilus-file-info</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="libnautilus-extension-nautilus-file-info.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+<anchor id="NautilusFileInfo"/>
+<synopsis>
+#define             <link linkend="NAUTILUS-FILE-DEFINED--CAPS">NAUTILUS_FILE_DEFINED</link>
+typedef             <link linkend="NautilusFile">NautilusFile</link>;
+typedef             <link linkend="NautilusFileInfo">NautilusFileInfo</link>;
+                    <link linkend="NautilusFileInfoIface">NautilusFileInfoIface</link>;
+<link linkend="GList">GList</link> *             <link linkend="nautilus-file-info-list-copy">nautilus_file_info_list_copy</link>        (<link linkend="GList">GList</link> *files);
+<link linkend="void">void</link>                <link linkend="nautilus-file-info-list-free">nautilus_file_info_list_free</link>        (<link linkend="GList">GList</link> *files);
+<link linkend="gboolean">gboolean</link>            <link linkend="nautilus-file-info-is-gone">nautilus_file_info_is_gone</link>          (<link linkend="NautilusFileInfo">NautilusFileInfo</link> *file);
+<link linkend="GFileType">GFileType</link>           <link linkend="nautilus-file-info-get-file-type">nautilus_file_info_get_file_type</link>    (<link linkend="NautilusFileInfo">NautilusFileInfo</link> *file);
+<link linkend="GFile">GFile</link> *             <link linkend="nautilus-file-info-get-location">nautilus_file_info_get_location</link>     (<link linkend="NautilusFileInfo">NautilusFileInfo</link> *file);
+<link linkend="char">char</link> *              <link linkend="nautilus-file-info-get-name">nautilus_file_info_get_name</link>         (<link linkend="NautilusFileInfo">NautilusFileInfo</link> *file);
+<link linkend="char">char</link> *              <link linkend="nautilus-file-info-get-uri">nautilus_file_info_get_uri</link>          (<link linkend="NautilusFileInfo">NautilusFileInfo</link> *file);
+<link linkend="char">char</link> *              <link linkend="nautilus-file-info-get-activation-uri">nautilus_file_info_get_activation_uri</link>
+                                                        (<link linkend="NautilusFileInfo">NautilusFileInfo</link> *file);
+<link linkend="GFile">GFile</link> *             <link linkend="nautilus-file-info-get-parent-location">nautilus_file_info_get_parent_location</link>
+                                                        (<link linkend="NautilusFileInfo">NautilusFileInfo</link> *file);
+<link linkend="char">char</link> *              <link linkend="nautilus-file-info-get-parent-uri">nautilus_file_info_get_parent_uri</link>   (<link linkend="NautilusFileInfo">NautilusFileInfo</link> *file);
+<link linkend="GMount">GMount</link> *            <link linkend="nautilus-file-info-get-mount">nautilus_file_info_get_mount</link>        (<link linkend="NautilusFileInfo">NautilusFileInfo</link> *file);
+<link linkend="char">char</link> *              <link linkend="nautilus-file-info-get-uri-scheme">nautilus_file_info_get_uri_scheme</link>   (<link linkend="NautilusFileInfo">NautilusFileInfo</link> *file);
+<link linkend="NautilusFileInfo">NautilusFileInfo</link>*   <link linkend="nautilus-file-info-get-parent-info">nautilus_file_info_get_parent_info</link>  (<link linkend="NautilusFileInfo">NautilusFileInfo</link> *file);
+<link linkend="char">char</link> *              <link linkend="nautilus-file-info-get-mime-type">nautilus_file_info_get_mime_type</link>    (<link linkend="NautilusFileInfo">NautilusFileInfo</link> *file);
+<link linkend="gboolean">gboolean</link>            <link linkend="nautilus-file-info-is-mime-type">nautilus_file_info_is_mime_type</link>     (<link linkend="NautilusFileInfo">NautilusFileInfo</link> *file,
+                                                         const <link linkend="char">char</link> *mime_type);
+<link linkend="gboolean">gboolean</link>            <link linkend="nautilus-file-info-is-directory">nautilus_file_info_is_directory</link>     (<link linkend="NautilusFileInfo">NautilusFileInfo</link> *file);
+<link linkend="gboolean">gboolean</link>            <link linkend="nautilus-file-info-can-write">nautilus_file_info_can_write</link>        (<link linkend="NautilusFileInfo">NautilusFileInfo</link> *file);
+<link linkend="void">void</link>                <link linkend="nautilus-file-info-add-emblem">nautilus_file_info_add_emblem</link>       (<link linkend="NautilusFileInfo">NautilusFileInfo</link> *file,
+                                                         const <link linkend="char">char</link> *emblem_name);
+<link linkend="char">char</link> *              <link linkend="nautilus-file-info-get-string-attribute">nautilus_file_info_get_string_attribute</link>
+                                                        (<link linkend="NautilusFileInfo">NautilusFileInfo</link> *file,
+                                                         const <link linkend="char">char</link> *attribute_name);
+<link linkend="void">void</link>                <link linkend="nautilus-file-info-add-string-attribute">nautilus_file_info_add_string_attribute</link>
+                                                        (<link linkend="NautilusFileInfo">NautilusFileInfo</link> *file,
+                                                         const <link linkend="char">char</link> *attribute_name,
+                                                         const <link linkend="char">char</link> *value);
+<link linkend="void">void</link>                <link linkend="nautilus-file-info-invalidate-extension-info">nautilus_file_info_invalidate_extension_info</link>
+                                                        (<link linkend="NautilusFileInfo">NautilusFileInfo</link> *file);
+</synopsis>
+</refsynopsisdiv>
+
+<refsect1 id="libnautilus-extension-nautilus-file-info.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+  <link linkend="GInterface">GInterface</link>
+   +----NautilusFileInfo
+</synopsis>
+</refsect1>
+
+<refsect1 id="libnautilus-extension-nautilus-file-info.prerequisites" role="prerequisites">
+<title role="prerequisites.title">Prerequisites</title>
+<para>
+NautilusFileInfo requires
+ <link linkend="GObject">GObject</link>.</para>
+</refsect1>
+
+
+
+
+
+
+
+<refsect1 id="libnautilus-extension-nautilus-file-info.description" role="desc">
+<title role="desc.title">Description</title>
+<para>
+</para>
+</refsect1>
+
+<refsect1 id="libnautilus-extension-nautilus-file-info.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="NAUTILUS-FILE-DEFINED--CAPS" role="macro">
+<title>NAUTILUS_FILE_DEFINED</title>
+<indexterm zone="NAUTILUS-FILE-DEFINED--CAPS"><primary sortas="NAUTILUS_FILE_DEFINED">NAUTILUS_FILE_DEFINED</primary></indexterm><programlisting>#define NAUTILUS_FILE_DEFINED
+</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="NautilusFile" role="typedef">
+<title>NautilusFile</title>
+<indexterm zone="NautilusFile"><primary sortas="NautilusFile">NautilusFile</primary></indexterm><programlisting>typedef struct NautilusFile          NautilusFile;
+</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="NautilusFileInfo" role="typedef">
+<title>NautilusFileInfo</title>
+<indexterm zone="NautilusFileInfo"><primary sortas="NautilusFileInfo">NautilusFileInfo</primary></indexterm><programlisting>typedef NautilusFile                  NautilusFileInfo;
+</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="NautilusFileInfoIface" role="struct">
+<title>NautilusFileInfoIface</title>
+<indexterm zone="NautilusFileInfoIface"><primary sortas="NautilusFileInfoIface">NautilusFileInfoIface</primary></indexterm><programlisting>typedef struct {
+	GTypeInterface g_iface;
+
+	gboolean          (*is_gone)              (NautilusFileInfo *file);
+	
+	char *            (*get_name)             (NautilusFileInfo *file);
+	char *            (*get_uri)              (NautilusFileInfo *file);
+	char *            (*get_parent_uri)       (NautilusFileInfo *file);
+	char *            (*get_uri_scheme)       (NautilusFileInfo *file);
+	
+	char *            (*get_mime_type)        (NautilusFileInfo *file);
+	gboolean          (*is_mime_type)         (NautilusFileInfo *file,
+						   const char       *mime_Type);
+	gboolean          (*is_directory)         (NautilusFileInfo *file);
+	
+	void              (*add_emblem)           (NautilusFileInfo *file,
+						   const char       *emblem_name);
+	char *            (*get_string_attribute) (NautilusFileInfo *file,
+						   const char       *attribute_name);
+	void              (*add_string_attribute) (NautilusFileInfo *file,
+						   const char       *attribute_name,
+						   const char       *value);
+	void              (*invalidate_extension_info) (NautilusFileInfo *file);
+	
+	char *            (*get_activation_uri)   (NautilusFileInfo *file);
+
+	GFileType         (*get_file_type)        (NautilusFileInfo *file);
+	GFile *           (*get_location)         (NautilusFileInfo *file);
+	GFile *           (*get_parent_location)  (NautilusFileInfo *file);
+	NautilusFileInfo* (*get_parent_info)      (NautilusFileInfo *file);
+	GMount *          (*get_mount)            (NautilusFileInfo *file);
+	gboolean          (*can_write)            (NautilusFileInfo *file);
+} NautilusFileInfoIface;
+</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="nautilus-file-info-list-copy" role="function">
+<title>nautilus_file_info_list_copy ()</title>
+<indexterm zone="nautilus-file-info-list-copy"><primary sortas="nautilus_file_info_list_copy">nautilus_file_info_list_copy</primary></indexterm><programlisting><link linkend="GList">GList</link> *             nautilus_file_info_list_copy        (<link linkend="GList">GList</link> *files);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>files</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="nautilus-file-info-list-free" role="function">
+<title>nautilus_file_info_list_free ()</title>
+<indexterm zone="nautilus-file-info-list-free"><primary sortas="nautilus_file_info_list_free">nautilus_file_info_list_free</primary></indexterm><programlisting><link linkend="void">void</link>                nautilus_file_info_list_free        (<link linkend="GList">GList</link> *files);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>files</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="nautilus-file-info-is-gone" role="function">
+<title>nautilus_file_info_is_gone ()</title>
+<indexterm zone="nautilus-file-info-is-gone"><primary sortas="nautilus_file_info_is_gone">nautilus_file_info_is_gone</primary></indexterm><programlisting><link linkend="gboolean">gboolean</link>            nautilus_file_info_is_gone          (<link linkend="NautilusFileInfo">NautilusFileInfo</link> *file);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>file</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="nautilus-file-info-get-file-type" role="function">
+<title>nautilus_file_info_get_file_type ()</title>
+<indexterm zone="nautilus-file-info-get-file-type"><primary sortas="nautilus_file_info_get_file_type">nautilus_file_info_get_file_type</primary></indexterm><programlisting><link linkend="GFileType">GFileType</link>           nautilus_file_info_get_file_type    (<link linkend="NautilusFileInfo">NautilusFileInfo</link> *file);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>file</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="nautilus-file-info-get-location" role="function">
+<title>nautilus_file_info_get_location ()</title>
+<indexterm zone="nautilus-file-info-get-location"><primary sortas="nautilus_file_info_get_location">nautilus_file_info_get_location</primary></indexterm><programlisting><link linkend="GFile">GFile</link> *             nautilus_file_info_get_location     (<link linkend="NautilusFileInfo">NautilusFileInfo</link> *file);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>file</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="nautilus-file-info-get-name" role="function">
+<title>nautilus_file_info_get_name ()</title>
+<indexterm zone="nautilus-file-info-get-name"><primary sortas="nautilus_file_info_get_name">nautilus_file_info_get_name</primary></indexterm><programlisting><link linkend="char">char</link> *              nautilus_file_info_get_name         (<link linkend="NautilusFileInfo">NautilusFileInfo</link> *file);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>file</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="nautilus-file-info-get-uri" role="function">
+<title>nautilus_file_info_get_uri ()</title>
+<indexterm zone="nautilus-file-info-get-uri"><primary sortas="nautilus_file_info_get_uri">nautilus_file_info_get_uri</primary></indexterm><programlisting><link linkend="char">char</link> *              nautilus_file_info_get_uri          (<link linkend="NautilusFileInfo">NautilusFileInfo</link> *file);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>file</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="nautilus-file-info-get-activation-uri" role="function">
+<title>nautilus_file_info_get_activation_uri ()</title>
+<indexterm zone="nautilus-file-info-get-activation-uri"><primary sortas="nautilus_file_info_get_activation_uri">nautilus_file_info_get_activation_uri</primary></indexterm><programlisting><link linkend="char">char</link> *              nautilus_file_info_get_activation_uri
+                                                        (<link linkend="NautilusFileInfo">NautilusFileInfo</link> *file);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>file</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="nautilus-file-info-get-parent-location" role="function">
+<title>nautilus_file_info_get_parent_location ()</title>
+<indexterm zone="nautilus-file-info-get-parent-location"><primary sortas="nautilus_file_info_get_parent_location">nautilus_file_info_get_parent_location</primary></indexterm><programlisting><link linkend="GFile">GFile</link> *             nautilus_file_info_get_parent_location
+                                                        (<link linkend="NautilusFileInfo">NautilusFileInfo</link> *file);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>file</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="nautilus-file-info-get-parent-uri" role="function">
+<title>nautilus_file_info_get_parent_uri ()</title>
+<indexterm zone="nautilus-file-info-get-parent-uri"><primary sortas="nautilus_file_info_get_parent_uri">nautilus_file_info_get_parent_uri</primary></indexterm><programlisting><link linkend="char">char</link> *              nautilus_file_info_get_parent_uri   (<link linkend="NautilusFileInfo">NautilusFileInfo</link> *file);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>file</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="nautilus-file-info-get-mount" role="function">
+<title>nautilus_file_info_get_mount ()</title>
+<indexterm zone="nautilus-file-info-get-mount"><primary sortas="nautilus_file_info_get_mount">nautilus_file_info_get_mount</primary></indexterm><programlisting><link linkend="GMount">GMount</link> *            nautilus_file_info_get_mount        (<link linkend="NautilusFileInfo">NautilusFileInfo</link> *file);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>file</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="nautilus-file-info-get-uri-scheme" role="function">
+<title>nautilus_file_info_get_uri_scheme ()</title>
+<indexterm zone="nautilus-file-info-get-uri-scheme"><primary sortas="nautilus_file_info_get_uri_scheme">nautilus_file_info_get_uri_scheme</primary></indexterm><programlisting><link linkend="char">char</link> *              nautilus_file_info_get_uri_scheme   (<link linkend="NautilusFileInfo">NautilusFileInfo</link> *file);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>file</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="nautilus-file-info-get-parent-info" role="function">
+<title>nautilus_file_info_get_parent_info ()</title>
+<indexterm zone="nautilus-file-info-get-parent-info"><primary sortas="nautilus_file_info_get_parent_info">nautilus_file_info_get_parent_info</primary></indexterm><programlisting><link linkend="NautilusFileInfo">NautilusFileInfo</link>*   nautilus_file_info_get_parent_info  (<link linkend="NautilusFileInfo">NautilusFileInfo</link> *file);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>file</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="nautilus-file-info-get-mime-type" role="function">
+<title>nautilus_file_info_get_mime_type ()</title>
+<indexterm zone="nautilus-file-info-get-mime-type"><primary sortas="nautilus_file_info_get_mime_type">nautilus_file_info_get_mime_type</primary></indexterm><programlisting><link linkend="char">char</link> *              nautilus_file_info_get_mime_type    (<link linkend="NautilusFileInfo">NautilusFileInfo</link> *file);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>file</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="nautilus-file-info-is-mime-type" role="function">
+<title>nautilus_file_info_is_mime_type ()</title>
+<indexterm zone="nautilus-file-info-is-mime-type"><primary sortas="nautilus_file_info_is_mime_type">nautilus_file_info_is_mime_type</primary></indexterm><programlisting><link linkend="gboolean">gboolean</link>            nautilus_file_info_is_mime_type     (<link linkend="NautilusFileInfo">NautilusFileInfo</link> *file,
+                                                         const <link linkend="char">char</link> *mime_type);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>file</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>mime_type</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="nautilus-file-info-is-directory" role="function">
+<title>nautilus_file_info_is_directory ()</title>
+<indexterm zone="nautilus-file-info-is-directory"><primary sortas="nautilus_file_info_is_directory">nautilus_file_info_is_directory</primary></indexterm><programlisting><link linkend="gboolean">gboolean</link>            nautilus_file_info_is_directory     (<link linkend="NautilusFileInfo">NautilusFileInfo</link> *file);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>file</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="nautilus-file-info-can-write" role="function">
+<title>nautilus_file_info_can_write ()</title>
+<indexterm zone="nautilus-file-info-can-write"><primary sortas="nautilus_file_info_can_write">nautilus_file_info_can_write</primary></indexterm><programlisting><link linkend="gboolean">gboolean</link>            nautilus_file_info_can_write        (<link linkend="NautilusFileInfo">NautilusFileInfo</link> *file);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>file</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="nautilus-file-info-add-emblem" role="function">
+<title>nautilus_file_info_add_emblem ()</title>
+<indexterm zone="nautilus-file-info-add-emblem"><primary sortas="nautilus_file_info_add_emblem">nautilus_file_info_add_emblem</primary></indexterm><programlisting><link linkend="void">void</link>                nautilus_file_info_add_emblem       (<link linkend="NautilusFileInfo">NautilusFileInfo</link> *file,
+                                                         const <link linkend="char">char</link> *emblem_name);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>file</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>emblem_name</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="nautilus-file-info-get-string-attribute" role="function">
+<title>nautilus_file_info_get_string_attribute ()</title>
+<indexterm zone="nautilus-file-info-get-string-attribute"><primary sortas="nautilus_file_info_get_string_attribute">nautilus_file_info_get_string_attribute</primary></indexterm><programlisting><link linkend="char">char</link> *              nautilus_file_info_get_string_attribute
+                                                        (<link linkend="NautilusFileInfo">NautilusFileInfo</link> *file,
+                                                         const <link linkend="char">char</link> *attribute_name);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>file</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>attribute_name</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="nautilus-file-info-add-string-attribute" role="function">
+<title>nautilus_file_info_add_string_attribute ()</title>
+<indexterm zone="nautilus-file-info-add-string-attribute"><primary sortas="nautilus_file_info_add_string_attribute">nautilus_file_info_add_string_attribute</primary></indexterm><programlisting><link linkend="void">void</link>                nautilus_file_info_add_string_attribute
+                                                        (<link linkend="NautilusFileInfo">NautilusFileInfo</link> *file,
+                                                         const <link linkend="char">char</link> *attribute_name,
+                                                         const <link linkend="char">char</link> *value);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>file</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>attribute_name</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>value</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="nautilus-file-info-invalidate-extension-info" role="function">
+<title>nautilus_file_info_invalidate_extension_info ()</title>
+<indexterm zone="nautilus-file-info-invalidate-extension-info"><primary sortas="nautilus_file_info_invalidate_extension_info">nautilus_file_info_invalidate_extension_info</primary></indexterm><programlisting><link linkend="void">void</link>                nautilus_file_info_invalidate_extension_info
+                                                        (<link linkend="NautilusFileInfo">NautilusFileInfo</link> *file);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>file</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+
+
+
+
+</refentry>

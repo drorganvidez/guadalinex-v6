@@ -1,0 +1,14 @@
+Index: nautilus-2.26.2/eel/Makefile.am
+===================================================================
+--- nautilus-2.26.2.orig/eel/Makefile.am	2009-03-17 10:20:25.000000000 +0100
++++ nautilus-2.26.2/eel/Makefile.am	2009-04-25 00:01:57.757468721 +0200
+@@ -17,6 +17,9 @@ INCLUDES =						\
+ 
+ libeel_2_la_LDFLAGS =				\
+ 	-no-undefined				\
++	$(NULL)
++
++libeel_2_la_LIBADD =				\
+ 	$(CORE_LIBS)				\
+ 	$(RENDER_LIBS)				\
+ 	$(X_LIBS)				\

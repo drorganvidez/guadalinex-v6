@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY version SYSTEM "version.xml">
+]>
+
+<refentry id="libnautilus-extension-nautilus-column-provider">
+<refmeta>
+<refentrytitle role="top_of_page" id="libnautilus-extension-nautilus-column-provider.top_of_page">nautilus-column-provider</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>LIBNAUTILUS-EXTENSION Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>nautilus-column-provider</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="libnautilus-extension-nautilus-column-provider.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+<anchor id="NautilusColumnProvider"/>
+<synopsis>
+                    <link linkend="NautilusColumnProvider-struct">NautilusColumnProvider</link>;
+                    <link linkend="NautilusColumnProviderIface">NautilusColumnProviderIface</link>;
+<link linkend="GList">GList</link> *             <link linkend="nautilus-column-provider-get-columns">nautilus_column_provider_get_columns</link>
+                                                        (<link linkend="NautilusColumnProvider">NautilusColumnProvider</link> *provider);
+</synopsis>
+</refsynopsisdiv>
+
+<refsect1 id="libnautilus-extension-nautilus-column-provider.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+  <link linkend="GInterface">GInterface</link>
+   +----NautilusColumnProvider
+</synopsis>
+</refsect1>
+
+<refsect1 id="libnautilus-extension-nautilus-column-provider.prerequisites" role="prerequisites">
+<title role="prerequisites.title">Prerequisites</title>
+<para>
+NautilusColumnProvider requires
+ <link linkend="GObject">GObject</link>.</para>
+</refsect1>
+
+
+
+
+
+
+
+<refsect1 id="libnautilus-extension-nautilus-column-provider.description" role="desc">
+<title role="desc.title">Description</title>
+<para>
+</para>
+</refsect1>
+
+<refsect1 id="libnautilus-extension-nautilus-column-provider.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="NautilusColumnProvider-struct" role="struct">
+<title>NautilusColumnProvider</title>
+<indexterm zone="NautilusColumnProvider-struct"><primary sortas="NautilusColumnProvider">NautilusColumnProvider</primary></indexterm><programlisting>typedef struct _NautilusColumnProvider NautilusColumnProvider;</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="NautilusColumnProviderIface" role="struct">
+<title>NautilusColumnProviderIface</title>
+<indexterm zone="NautilusColumnProviderIface"><primary sortas="NautilusColumnProviderIface">NautilusColumnProviderIface</primary></indexterm><programlisting>typedef struct {
+	GTypeInterface g_iface;
+
+	GList *(*get_columns) (NautilusColumnProvider *provider);
+} NautilusColumnProviderIface;
+</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="nautilus-column-provider-get-columns" role="function">
+<title>nautilus_column_provider_get_columns ()</title>
+<indexterm zone="nautilus-column-provider-get-columns"><primary sortas="nautilus_column_provider_get_columns">nautilus_column_provider_get_columns</primary></indexterm><programlisting><link linkend="GList">GList</link> *             nautilus_column_provider_get_columns
+                                                        (<link linkend="NautilusColumnProvider">NautilusColumnProvider</link> *provider);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>provider</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+
+
+
+
+</refentry>

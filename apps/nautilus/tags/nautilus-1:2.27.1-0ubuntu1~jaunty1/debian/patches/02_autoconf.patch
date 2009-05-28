@@ -1,0 +1,16 @@
+# Description: configure update due to launchpad integration changes
+# UbuntuSpecific: launchpad
+#
+Index: nautilus-2.25.2/configure
+===================================================================
+--- nautilus-2.25.2.orig/configure	2008-12-17 14:17:23.000000000 +0100
++++ nautilus-2.25.2/configure	2008-12-17 14:17:32.000000000 +0100
+@@ -27484,7 +27484,7 @@
+ LIBNAUTILUS_EXTENSION_LIBS="`$PKG_CONFIG --libs $LIBNAUTILUS_EXTENSION_MODULES`"
+ 
+ 
+-CORE_MODULES="glib-2.0 gnome-desktop-2.0 gthread-2.0 gio-2.0 gio-unix-2.0 unique-1.0 dbus-glib-1 gail gconf-2.0 libxml-2.0 $EXTRA_CORE_MODULES"
++CORE_MODULES="glib-2.0 gnome-desktop-2.0 launchpad-integration gthread-2.0 gio-2.0 gio-unix-2.0 unique-1.0 dbus-glib-1 gail gconf-2.0 libxml-2.0 $EXTRA_CORE_MODULES"
+ CORE_CFLAGS="`$PKG_CONFIG --cflags $CORE_MODULES` $x_cflags $WARNING_CFLAGS"
+ 
+ CORE_LIBS="`$PKG_CONFIG --libs $CORE_MODULES` $x_libs"

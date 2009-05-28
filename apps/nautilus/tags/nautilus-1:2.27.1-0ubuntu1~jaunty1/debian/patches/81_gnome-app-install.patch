@@ -1,0 +1,59 @@
+--- nautilus-2.21.1.orig/libnautilus-private/nautilus-program-choosing.c	2007-12-14 11:24:07.000000000 +0100
++++ nautilus-2.21.1/libnautilus-private/nautilus-program-choosing.c	2008-01-07 16:31:13.000000000 +0100
+@@ -45,6 +45,7 @@
+ #include <libgnome/gnome-url.h>
+ #include <libgnomeui/gnome-uidefs.h>
+ #include <stdlib.h>
++#include <libnautilus-extension/nautilus-file-info.h>
+ 
+ #include <gdk/gdk.h>
+ #include <gdk/gdkx.h>
+@@ -228,6 +229,29 @@
+ }
+ 
+ 
++void launch_gnome_app_install_mimetype(GdkScreen  *screen,
++				       NautilusFile *file,
++				       char *uri, char *uri_for_display) {
++	char *qmimetype, *quri, *qduri, *command;
++	if (!screen)
++		screen = gdk_display_get_default_screen(gdk_display_get_default ());
++
++	qmimetype = g_shell_quote (nautilus_file_info_get_mime_type (file));
++	quri = g_shell_quote (uri);
++	qduri = g_shell_quote (uri_for_display);
++	command = g_strconcat("gnome-app-install --mime-type=",
++			     qmimetype, " ", quri, " ", qduri,
++			     (char*)0 /* NB NULL is wrong */);
++	g_free (qmimetype);
++	g_free (quri);
++	g_free (qduri);
++
++	eel_gnome_shell_execute_on_screen (command, screen);
++	g_free (command);
++}
++
++
++
+ /**
+  * nautilus_launch_application:
+  * 
+@@ -306,12 +330,18 @@
+ 							  parent_window);
+ 			g_free (uri_scheme);
+ 		} else {
++			launch_gnome_app_install_mimetype (screen,
++							   file,
++							   uri,
++							   uri_for_display);
++#if 0
+ #ifdef NEW_MIME_COMPLETE
+ 			nautilus_program_chooser_show_invalid_message
+ 				(GNOME_VFS_MIME_ACTION_TYPE_APPLICATION, file, parent_window);
+ #else
+ 			g_warning ("Can't open app: %s\n", error->message);
+ #endif
++#endif
+ 		}
+ 	} else {
+ 		for (l = files; l != NULL; l = l->next) {

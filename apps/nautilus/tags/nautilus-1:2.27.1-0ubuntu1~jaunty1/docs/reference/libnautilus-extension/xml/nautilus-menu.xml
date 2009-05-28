@@ -1,0 +1,320 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY version SYSTEM "version.xml">
+]>
+
+<refentry id="NautilusMenuItem">
+<refmeta>
+<refentrytitle role="top_of_page" id="NautilusMenuItem.top_of_page">NautilusMenuItem</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>LIBNAUTILUS-EXTENSION Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>NautilusMenuItem</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="NautilusMenuItem.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+<anchor id="NautilusMenu"/>
+<synopsis>
+#define             <link linkend="NAUTILUS-TYPE-MENU-ITEM--CAPS">NAUTILUS_TYPE_MENU_ITEM</link>
+#define             <link linkend="NAUTILUS-MENU-ITEM--CAPS">NAUTILUS_MENU_ITEM</link>                  (obj)
+#define             <link linkend="NAUTILUS-MENU-ITEM-CLASS--CAPS">NAUTILUS_MENU_ITEM_CLASS</link>            (klass)
+#define             <link linkend="NAUTILUS-MENU-IS-ITEM--CAPS">NAUTILUS_MENU_IS_ITEM</link>               (obj)
+#define             <link linkend="NAUTILUS-MENU-IS-ITEM-CLASS--CAPS">NAUTILUS_MENU_IS_ITEM_CLASS</link>         (klass)
+#define             <link linkend="NAUTILUS-MENU-ITEM-GET-CLASS--CAPS">NAUTILUS_MENU_ITEM_GET_CLASS</link>        (obj)
+                    <link linkend="NautilusMenuPrivate">NautilusMenuPrivate</link>;
+                    <link linkend="NautilusMenuItemDetails">NautilusMenuItemDetails</link>;
+                    <link linkend="NautilusMenu-struct">NautilusMenu</link>;
+                    <link linkend="NautilusMenuItem-struct">NautilusMenuItem</link>;
+<link linkend="NautilusMenu">NautilusMenu</link> *      <link linkend="nautilus-menu-new">nautilus_menu_new</link>                   (void);
+<link linkend="void">void</link>                <link linkend="nautilus-menu-append-item">nautilus_menu_append_item</link>           (<link linkend="NautilusMenu">NautilusMenu</link> *this,
+                                                         <link linkend="NautilusMenuItem">NautilusMenuItem</link> *item);
+<link linkend="GList">GList</link>*              <link linkend="nautilus-menu-get-items">nautilus_menu_get_items</link>             (<link linkend="NautilusMenu">NautilusMenu</link> *this);
+<link linkend="void">void</link>                <link linkend="nautilus-menu-item-list-free">nautilus_menu_item_list_free</link>        (<link linkend="GList">GList</link> *item_list);
+<link linkend="GType">GType</link>               <link linkend="nautilus-menu-item-get-type">nautilus_menu_item_get_type</link>         (void);
+<link linkend="NautilusMenuItem">NautilusMenuItem</link> *  <link linkend="nautilus-menu-item-new">nautilus_menu_item_new</link>              (const <link linkend="char">char</link> *name,
+                                                         const <link linkend="char">char</link> *label,
+                                                         const <link linkend="char">char</link> *tip,
+                                                         const <link linkend="char">char</link> *icon);
+<link linkend="void">void</link>                <link linkend="nautilus-menu-item-activate">nautilus_menu_item_activate</link>         (<link linkend="NautilusMenuItem">NautilusMenuItem</link> *item);
+<link linkend="void">void</link>                <link linkend="nautilus-menu-item-set-submenu">nautilus_menu_item_set_submenu</link>      (<link linkend="NautilusMenuItem">NautilusMenuItem</link> *item,
+                                                         <link linkend="NautilusMenu">NautilusMenu</link> *menu);
+</synopsis>
+</refsynopsisdiv>
+
+<refsect1 id="NautilusMenuItem.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+  <link linkend="GObject">GObject</link>
+   +----NautilusMenu
+</synopsis>
+<synopsis>
+  <link linkend="GObject">GObject</link>
+   +----NautilusMenuItem
+</synopsis>
+</refsect1>
+
+
+
+
+
+<refsect1 id="NautilusMenuItem.properties" role="properties">
+<title role="properties.title">Properties</title>
+<synopsis>
+  &quot;<link linkend="NautilusMenuItem--icon">icon</link>&quot;                     <link linkend="gchar">gchar</link>*                : Read / Write
+  &quot;<link linkend="NautilusMenuItem--label">label</link>&quot;                    <link linkend="gchar">gchar</link>*                : Read / Write
+  &quot;<link linkend="NautilusMenuItem--menu">menu</link>&quot;                     <link linkend="NautilusMenu">NautilusMenu</link>*         : Read / Write
+  &quot;<link linkend="NautilusMenuItem--name">name</link>&quot;                     <link linkend="gchar">gchar</link>*                : Read / Write / Construct Only
+  &quot;<link linkend="NautilusMenuItem--priority">priority</link>&quot;                 <link linkend="gboolean">gboolean</link>              : Read / Write
+  &quot;<link linkend="NautilusMenuItem--sensitive">sensitive</link>&quot;                <link linkend="gboolean">gboolean</link>              : Read / Write
+  &quot;<link linkend="NautilusMenuItem--tip">tip</link>&quot;                      <link linkend="gchar">gchar</link>*                : Read / Write
+</synopsis>
+</refsect1>
+
+<refsect1 id="NautilusMenuItem.signals" role="signal_proto">
+<title role="signal_proto.title">Signals</title>
+<synopsis>
+  &quot;<link linkend="NautilusMenuItem-activate">activate</link>&quot;                                       : Run Last
+</synopsis>
+</refsect1>
+
+
+<refsect1 id="NautilusMenuItem.description" role="desc">
+<title role="desc.title">Description</title>
+<para>
+</para>
+</refsect1>
+
+<refsect1 id="NautilusMenuItem.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="NAUTILUS-TYPE-MENU-ITEM--CAPS" role="macro">
+<title>NAUTILUS_TYPE_MENU_ITEM</title>
+<indexterm zone="NAUTILUS-TYPE-MENU-ITEM--CAPS"><primary sortas="NAUTILUS_TYPE_MENU_ITEM">NAUTILUS_TYPE_MENU_ITEM</primary></indexterm><programlisting>#define NAUTILUS_TYPE_MENU_ITEM            (nautilus_menu_item_get_type())
+</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="NAUTILUS-MENU-ITEM--CAPS" role="macro">
+<title>NAUTILUS_MENU_ITEM()</title>
+<indexterm zone="NAUTILUS-MENU-ITEM--CAPS"><primary sortas="NAUTILUS_MENU_ITEM">NAUTILUS_MENU_ITEM</primary></indexterm><programlisting>#define NAUTILUS_MENU_ITEM(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), NAUTILUS_TYPE_MENU_ITEM, NautilusMenuItem))
+</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>obj</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="NAUTILUS-MENU-ITEM-CLASS--CAPS" role="macro">
+<title>NAUTILUS_MENU_ITEM_CLASS()</title>
+<indexterm zone="NAUTILUS-MENU-ITEM-CLASS--CAPS"><primary sortas="NAUTILUS_MENU_ITEM_CLASS">NAUTILUS_MENU_ITEM_CLASS</primary></indexterm><programlisting>#define NAUTILUS_MENU_ITEM_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), NAUTILUS_TYPE_MENU_ITEM, NautilusMenuItemClass))
+</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>klass</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="NAUTILUS-MENU-IS-ITEM--CAPS" role="macro">
+<title>NAUTILUS_MENU_IS_ITEM()</title>
+<indexterm zone="NAUTILUS-MENU-IS-ITEM--CAPS"><primary sortas="NAUTILUS_MENU_IS_ITEM">NAUTILUS_MENU_IS_ITEM</primary></indexterm><programlisting>#define NAUTILUS_MENU_IS_ITEM(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), NAUTILUS_TYPE_MENU_ITEM))
+</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>obj</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="NAUTILUS-MENU-IS-ITEM-CLASS--CAPS" role="macro">
+<title>NAUTILUS_MENU_IS_ITEM_CLASS()</title>
+<indexterm zone="NAUTILUS-MENU-IS-ITEM-CLASS--CAPS"><primary sortas="NAUTILUS_MENU_IS_ITEM_CLASS">NAUTILUS_MENU_IS_ITEM_CLASS</primary></indexterm><programlisting>#define NAUTILUS_MENU_IS_ITEM_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((obj), NAUTILUS_TYPE_MENU_ITEM))
+</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>klass</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="NAUTILUS-MENU-ITEM-GET-CLASS--CAPS" role="macro">
+<title>NAUTILUS_MENU_ITEM_GET_CLASS()</title>
+<indexterm zone="NAUTILUS-MENU-ITEM-GET-CLASS--CAPS"><primary sortas="NAUTILUS_MENU_ITEM_GET_CLASS">NAUTILUS_MENU_ITEM_GET_CLASS</primary></indexterm><programlisting>#define NAUTILUS_MENU_ITEM_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS((obj), NAUTILUS_TYPE_MENU_ITEM, NautilusMenuItemClass))
+</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>obj</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="NautilusMenuPrivate" role="struct">
+<title>NautilusMenuPrivate</title>
+<indexterm zone="NautilusMenuPrivate"><primary sortas="NautilusMenuPrivate">NautilusMenuPrivate</primary></indexterm><programlisting>typedef struct _NautilusMenuPrivate NautilusMenuPrivate;</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="NautilusMenuItemDetails" role="struct">
+<title>NautilusMenuItemDetails</title>
+<indexterm zone="NautilusMenuItemDetails"><primary sortas="NautilusMenuItemDetails">NautilusMenuItemDetails</primary></indexterm><programlisting>typedef struct _NautilusMenuItemDetails NautilusMenuItemDetails;</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="NautilusMenu-struct" role="struct">
+<title>NautilusMenu</title>
+<indexterm zone="NautilusMenu-struct"><primary sortas="NautilusMenu">NautilusMenu</primary></indexterm><programlisting>typedef struct _NautilusMenu NautilusMenu;</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="NautilusMenuItem-struct" role="struct">
+<title>NautilusMenuItem</title>
+<indexterm zone="NautilusMenuItem-struct"><primary sortas="NautilusMenuItem">NautilusMenuItem</primary></indexterm><programlisting>typedef struct _NautilusMenuItem NautilusMenuItem;</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="nautilus-menu-new" role="function">
+<title>nautilus_menu_new ()</title>
+<indexterm zone="nautilus-menu-new"><primary sortas="nautilus_menu_new">nautilus_menu_new</primary></indexterm><programlisting><link linkend="NautilusMenu">NautilusMenu</link> *      nautilus_menu_new                   (void);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="nautilus-menu-append-item" role="function">
+<title>nautilus_menu_append_item ()</title>
+<indexterm zone="nautilus-menu-append-item"><primary sortas="nautilus_menu_append_item">nautilus_menu_append_item</primary></indexterm><programlisting><link linkend="void">void</link>                nautilus_menu_append_item           (<link linkend="NautilusMenu">NautilusMenu</link> *this,
+                                                         <link linkend="NautilusMenuItem">NautilusMenuItem</link> *item);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>this</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>item</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="nautilus-menu-get-items" role="function">
+<title>nautilus_menu_get_items ()</title>
+<indexterm zone="nautilus-menu-get-items"><primary sortas="nautilus_menu_get_items">nautilus_menu_get_items</primary></indexterm><programlisting><link linkend="GList">GList</link>*              nautilus_menu_get_items             (<link linkend="NautilusMenu">NautilusMenu</link> *this);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>this</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="nautilus-menu-item-list-free" role="function">
+<title>nautilus_menu_item_list_free ()</title>
+<indexterm zone="nautilus-menu-item-list-free"><primary sortas="nautilus_menu_item_list_free">nautilus_menu_item_list_free</primary></indexterm><programlisting><link linkend="void">void</link>                nautilus_menu_item_list_free        (<link linkend="GList">GList</link> *item_list);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>item_list</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="nautilus-menu-item-get-type" role="function">
+<title>nautilus_menu_item_get_type ()</title>
+<indexterm zone="nautilus-menu-item-get-type"><primary sortas="nautilus_menu_item_get_type">nautilus_menu_item_get_type</primary></indexterm><programlisting><link linkend="GType">GType</link>               nautilus_menu_item_get_type         (void);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="nautilus-menu-item-new" role="function">
+<title>nautilus_menu_item_new ()</title>
+<indexterm zone="nautilus-menu-item-new"><primary sortas="nautilus_menu_item_new">nautilus_menu_item_new</primary></indexterm><programlisting><link linkend="NautilusMenuItem">NautilusMenuItem</link> *  nautilus_menu_item_new              (const <link linkend="char">char</link> *name,
+                                                         const <link linkend="char">char</link> *label,
+                                                         const <link linkend="char">char</link> *tip,
+                                                         const <link linkend="char">char</link> *icon);</programlisting>
+<para>
+Creates a new menu item that can be added to the toolbar or to a contextual menu.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>name</parameter>&#160;:</term>
+<listitem><simpara> the identifier for the menu item
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>label</parameter>&#160;:</term>
+<listitem><simpara> the user-visible label of the menu item
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>tip</parameter>&#160;:</term>
+<listitem><simpara> the tooltip of the menu item
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>icon</parameter>&#160;:</term>
+<listitem><simpara> the name of the icon to display in the menu item
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara> a newly create <link linkend="NautilusMenuItem"><type>NautilusMenuItem</type></link>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="nautilus-menu-item-activate" role="function">
+<title>nautilus_menu_item_activate ()</title>
+<indexterm zone="nautilus-menu-item-activate"><primary sortas="nautilus_menu_item_activate">nautilus_menu_item_activate</primary></indexterm><programlisting><link linkend="void">void</link>                nautilus_menu_item_activate         (<link linkend="NautilusMenuItem">NautilusMenuItem</link> *item);</programlisting>
+<para>
+emits the activate signal.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>item</parameter>&#160;:</term>
+<listitem><simpara> pointer to a <link linkend="NautilusMenuItem"><type>NautilusMenuItem</type></link>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="nautilus-menu-item-set-submenu" role="function">
+<title>nautilus_menu_item_set_submenu ()</title>
+<indexterm zone="nautilus-menu-item-set-submenu"><primary sortas="nautilus_menu_item_set_submenu">nautilus_menu_item_set_submenu</primary></indexterm><programlisting><link linkend="void">void</link>                nautilus_menu_item_set_submenu      (<link linkend="NautilusMenuItem">NautilusMenuItem</link> *item,
+                                                         <link linkend="NautilusMenu">NautilusMenu</link> *menu);</programlisting>
+<para>
+Attachs a menu to the given <link linkend="NautilusMenuItem"><type>NautilusMenuItem</type></link>.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>item</parameter>&#160;:</term>
+<listitem><simpara> pointer to a <link linkend="NautilusMenuItem"><type>NautilusMenuItem</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>menu</parameter>&#160;:</term>
+<listitem><simpara> pointer to a <link linkend="NautilusMenu"><type>NautilusMenu</type></link> to attach to the button
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+<refsect1 id="NautilusMenuItem.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="NautilusMenuItem--icon" role="property"><title>The <literal>&quot;icon&quot;</literal> property</title>
+<indexterm zone="NautilusMenuItem--icon"><primary sortas="NautilusMenuItem:icon">NautilusMenuItem:icon</primary></indexterm><programlisting>  &quot;icon&quot;                     <link linkend="gchar">gchar</link>*                : Read / Write</programlisting>
+<para>Name of the icon to display in the menu item.</para><para>Default value: NULL</para>
+</refsect2>
+<refsect2 id="NautilusMenuItem--label" role="property"><title>The <literal>&quot;label&quot;</literal> property</title>
+<indexterm zone="NautilusMenuItem--label"><primary sortas="NautilusMenuItem:label">NautilusMenuItem:label</primary></indexterm><programlisting>  &quot;label&quot;                    <link linkend="gchar">gchar</link>*                : Read / Write</programlisting>
+<para>Label to display to the user.</para><para>Default value: NULL</para>
+</refsect2>
+<refsect2 id="NautilusMenuItem--menu" role="property"><title>The <literal>&quot;menu&quot;</literal> property</title>
+<indexterm zone="NautilusMenuItem--menu"><primary sortas="NautilusMenuItem:menu">NautilusMenuItem:menu</primary></indexterm><programlisting>  &quot;menu&quot;                     <link linkend="NautilusMenu">NautilusMenu</link>*         : Read / Write</programlisting>
+<para>The menu belonging to this item. May be null.</para></refsect2>
+<refsect2 id="NautilusMenuItem--name" role="property"><title>The <literal>&quot;name&quot;</literal> property</title>
+<indexterm zone="NautilusMenuItem--name"><primary sortas="NautilusMenuItem:name">NautilusMenuItem:name</primary></indexterm><programlisting>  &quot;name&quot;                     <link linkend="gchar">gchar</link>*                : Read / Write / Construct Only</programlisting>
+<para>Name of the item.</para><para>Default value: NULL</para>
+</refsect2>
+<refsect2 id="NautilusMenuItem--priority" role="property"><title>The <literal>&quot;priority&quot;</literal> property</title>
+<indexterm zone="NautilusMenuItem--priority"><primary sortas="NautilusMenuItem:priority">NautilusMenuItem:priority</primary></indexterm><programlisting>  &quot;priority&quot;                 <link linkend="gboolean">gboolean</link>              : Read / Write</programlisting>
+<para>Show priority text in toolbars.</para><para>Default value: TRUE</para>
+</refsect2>
+<refsect2 id="NautilusMenuItem--sensitive" role="property"><title>The <literal>&quot;sensitive&quot;</literal> property</title>
+<indexterm zone="NautilusMenuItem--sensitive"><primary sortas="NautilusMenuItem:sensitive">NautilusMenuItem:sensitive</primary></indexterm><programlisting>  &quot;sensitive&quot;                <link linkend="gboolean">gboolean</link>              : Read / Write</programlisting>
+<para>Whether the menu item is sensitive.</para><para>Default value: TRUE</para>
+</refsect2>
+<refsect2 id="NautilusMenuItem--tip" role="property"><title>The <literal>&quot;tip&quot;</literal> property</title>
+<indexterm zone="NautilusMenuItem--tip"><primary sortas="NautilusMenuItem:tip">NautilusMenuItem:tip</primary></indexterm><programlisting>  &quot;tip&quot;                      <link linkend="gchar">gchar</link>*                : Read / Write</programlisting>
+<para>Tooltip for the menu item.</para><para>Default value: NULL</para>
+</refsect2>
+</refsect1>
+
+<refsect1 id="NautilusMenuItem.signal-details" role="signals">
+<title role="signals.title">Signal Details</title>
+<refsect2 id="NautilusMenuItem-activate" role="signal"><title>The <literal>&quot;activate&quot;</literal> signal</title>
+<indexterm zone="NautilusMenuItem-activate"><primary sortas="NautilusMenuItem::activate">NautilusMenuItem::activate</primary></indexterm><programlisting><link linkend="void">void</link>                user_function                      (<link linkend="NautilusMenuItem">NautilusMenuItem</link> *nautilusmenuitem,
+                                                        <link linkend="gpointer">gpointer</link>          user_data)             : Run Last</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>nautilusmenuitem</parameter>&#160;:</term>
+<listitem><simpara>the object which received the signal.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>user_data</parameter>&#160;:</term>
+<listitem><simpara>user data set when the signal handler was connected.</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+</refsect1>
+
+
+
+</refentry>

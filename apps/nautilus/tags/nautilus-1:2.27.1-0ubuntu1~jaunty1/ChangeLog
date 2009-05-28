@@ -1,0 +1,750 @@
+commit 956bf2c75079003c91774a675091f7133cc8be35
+Author: Cosimo Cecchi <cosimoc@gnome.org>
+Date:   2009-05-05
+
+    Prepare for 2.27.1 release
+
+M	NEWS
+M	configure.in
+
+commit ec4ce1431bda72fc66ace675d860e7c2bb3bc3e6
+Author: Cosimo Cecchi <cosimoc@gnome.org>
+Date:	2009-05-05
+
+    Fix distcheck
+
+M	Makefile.am
+M	data/Makefile.am
+M	src/nautilus-main.c
+
+commit 057dabdd59a24d863d8b10dca336a3ca2bf8609f
+Author: Shankar Prasad <svenkate@redhat.com>
+Date:	2009-05-04
+
+    Updated the Kannda translations
+
+M	po/kn.po
+
+commit 0a6012a48bd71c20d7cd32c05e1976f1127ce230
+Author: Jorge Gonzalez <jorgegonz@svn.gnome.org>
+Date:	2009-05-03
+
+    Updated Spanish translation
+
+M	po/es.po
+
+commit a6f87ffe8133a4f9205dd1ab1d441fa06c40b497
+Author: Ivar Smolin <okul@linux.ee>
+Date:	2009-05-02
+
+    Updating Estonian translation
+
+M	po/et.po
+
+commit 86cacc2fd60dbed4397567edd08021513c1a60ae
+Author: Jorge Gonzalez <jorgegonz@svn.gnome.org>
+Date:	2009-05-01
+
+    Updated Spanish translation
+
+M	po/es.po
+
+commit bcbbc3f7853ab1a3a0f2b226312a41d5987e1d5a
+Author: Vladimir Melo <vmelo@gnome.org>
+Date:	2009-05-01
+
+    Updated Brazilian Portuguese translation.
+
+M	po/pt_BR.po
+
+commit d6fa64ab439ac900a92a0467f39cdf72afa5870f
+Author: Cosimo Cecchi <cosimoc@gnome.org>
+Date:	2009-05-01
+
+    Add building tips link
+
+    Mention http://live.gnome.org/Nautilus/Development/Nautilus in the
+    README file.
+
+M	README
+
+commit 1a8adc87b49603cf14ce139e66bde0fe7bddec8e
+Author: Cosimo Cecchi <cosimoc@gnome.org>
+Date:	2009-05-01
+
+    Remove a reference to SVN
+
+    Also, update the GIT info page link.
+
+M	HACKING
+
+commit 7e17224a1e68bb755bd281d46e0533b1dcff52d8
+Author: Claude Paroz <claude@2xlibre.net>
+Date:	2009-04-30
+
+    Updated French translation
+
+M	po/fr.po
+
+commit c51ac9926e012267d305711b949a937d917f075b
+Author: Gabor Kelemen <kelemeng@gnome.hu>
+Date:	2009-04-30
+
+    Mark strings as translatable, fix bug #579769
+
+M	src/nautilus-file-management-properties.ui
+
+commit 23ff2a21d2925945dde6e04a47190ebfa27ae8c7
+Author: Gabor Kelemen <kelemeng@gnome.hu>
+Date:	2009-04-30
+
+    Update POTFILES.*, close bug #580784
+
+M	po/POTFILES.in
+M	po/POTFILES.skip
+
+commit a1a501224999d7abda06e9a2f7eb6da64c17d089
+Author: Shankar Prasad <svenkate@redhat.com>
+Date:	2009-04-30
+
+    Updated Kannada translation
+
+M	po/kn.po
+
+commit 90e5e1720d09188f3eabb67e502272a549c63dec
+Author: Maxim V. Dziumanenko <dziumanenko@gmail.com>
+Date:	2009-04-28
+
+    Updated Ukrainian translation
+
+M	po/uk.po
+
+commit 48ed43f32668e5615ac64a3de55ec7ab2f254ef7
+Author: Cosimo Cecchi <cosimoc@gnome.org>
+Date:	2009-04-27
+
+    Reverse the order for folder icons overrides
+
+    Use the correct order for folder icons overrides, so that we can
+    keep track of things like "folder-visiting" or "folder-drag-accept".
+    Patch by Krzysztof Kosiński (#567254).
+
+M	libnautilus-private/nautilus-file.c
+
+commit 43c9802d618bcb0d035b4fb0dea4807367d893ea
+Author: Cosimo Cecchi <cosimoc@gnome.org>
+Date:	2009-04-27
+
+    Don't display accelerators in Tabs menu
+
+    Set use_underline == FALSE for items in the "Tabs" menu, so that
+    folders with underscores in their names will be displayed properly
+    in the menu items (#580392).
+
+M	src/nautilus-navigation-window-menus.c
+
+commit 9c0dddfbaddfe251814ff473d9f0a734c385d931
+Author: Cosimo Cecchi <cosimoc@gnome.org>
+Date:	2009-04-27
+
+    Display the application icon in the popup menu
+
+    If available, display the application icon next to the "Open with"
+    item in the file manager window menus (#546916).
+
+M	src/file-manager/fm-directory-view.c
+
+commit fe4ca76584061215547edb55b8a0bab4cdb8e034
+Author: Cosimo Cecchi <cosimoc@gnome.org>
+Date:	2009-04-27
+
+    Fix DOAP file
+
+    Add "mailto:" prefixes to email addresses in the DOAP file.
+
+M	nautilus.doap
+
+commit 7f404a39f63ceb8d906809c2092cecca7b785574
+Author: Ivar Smolin <okul@linux.ee>
+Date:	2009-04-25
+
+    Updating Estonian translation
+
+M	po/et.po
+
+commit cffb9cf70254086a3737b37e8fad786a6e6de414
+Author: Cosimo Cecchi <cosimoc@gnome.org>
+Date:	2009-04-23
+
+    Don't show autorun hints for Win32 software media
+
+    Now that shared-mime-info supports "x-content/win32-software" vs
+    "x-content/unix-software", use this distinction to inhibit autorun
+    prompts/hints for media containing Win32 software (#524270).
+
+M	libnautilus-private/nautilus-autorun.c
+M	src/nautilus-window-manage-views.c
+
+commit 7f74d06e270d89b6de1a3f23fe3388830f2c25ab
+Author: Olav Vitters <olav@bkor.dhs.org>
+Date:	2009-04-23
+
+    doap: Add desktop category
+
+M	nautilus.doap
+
+commit 9f1c7d03c45298701320f5503e8ba1afec9fb523
+Author: Cosimo Cecchi <cosimoc@gnome.org>
+Date:	2009-04-23
+
+    Add shave to the autotools setup
+
+    Use shave to have some more meaningful build messages.
+    It can be turned off by using 'make V=1'.
+
+M	Makefile.am
+M	configure.in
+A	m4/Makefile.am
+A	m4/shave-libtool.in
+A	m4/shave.in
+A	m4/shave.m4
+
+commit 06dda37076c6e5b222f868a46fe84c070a04d680
+Author: Cosimo Cecchi <cosimoc@gnome.org>
+Date:	2009-04-23
+
+    Move desktop files into data/
+
+    Move desktop files into data/ subdirectory, so that they not clutter
+    the top source dir.
+
+M	Makefile.am
+M	configure.in
+M	data/Makefile.am
+R100	nautilus-autorun-software.desktop.in.in
+data/nautilus-autorun-software.desktop.in.in
+R100	nautilus-browser.desktop.in.in
+data/nautilus-browser.desktop.in.in
+R100	nautilus-computer.desktop.in.in
+data/nautilus-computer.desktop.in.in
+R100	nautilus-file-management-properties.desktop.in.in
+data/nautilus-file-management-properties.desktop.in.in
+R100	nautilus-folder-handler.desktop.in.in
+data/nautilus-folder-handler.desktop.in.in
+R100	nautilus-home.desktop.in.in	data/nautilus-home.desktop.in.in
+R100	nautilus.desktop.in.in	data/nautilus.desktop.in.in
+
+commit dd10aa3618b195a127014ba033eb522f907077a1
+Author: Cosimo Cecchi <cosimoc@gnome.org>
+Date:	2009-04-23
+
+    Fix typo in ChangeLog generation script
+
+    Set the right name for the start tag in the ChangeLog
+    generation script.
+
+M	Makefile.am
+
+commit c0b27cce8d33ea8220434cf59b1e504fc9d2bcea
+Author: Matej Urban <matej.urban@gmail.com>
+Date:	2009-04-22
+
+    Updated Slovenian translation
+
+M	po/sl.po
+
+commit 9826f177cb72fc9f595356b773f51059bef6cd1e
+Author: Andrew Walton <awalton@gnome.org>
+Date:	2009-04-22
+
+    Let forward/back mouse buttons work
+
+    Install a handler to link forward/back mouse buttons to
+    forward/back actions in NautilusNavigationWindow, with a preference
+    to set the right X button number in GConf.
+
+    Signed-off-by: Cosimo Cecchi <cosimoc@gnome.org>
+
+M	libnautilus-private/apps_nautilus_preferences.schemas.in
+M	libnautilus-private/nautilus-global-preferences.c
+M	libnautilus-private/nautilus-global-preferences.h
+M	src/nautilus-navigation-window.c
+
+commit b02ef0a7ec2d0de3064d322f5da103a8dfd492d3
+Author: Cosimo Cecchi <cosimoc@gnome.org>
+Date:	2009-04-22
+
+    Remove useless function
+
+    Remove nautilus_has_valid_failed_thumbnail(), as that's not used
+    anymore after the last commit.
+
+M	libnautilus-private/nautilus-thumbnails.c
+M	libnautilus-private/nautilus-thumbnails.h
+
+commit 20f4389f7cd22bd001ebf17c0c3c459cca5483ad
+Author: Matthias Clasen <mclasen@redhat.com>
+Date:	2009-04-22
+
+    Avoid duplicate function call
+
+    Don't call nautilus_has_valid_failed_thumbnail, as
+    nautilus_can_thumbnail will eventually call the same gnome_desktop
+    function (#574205).
+
+    Signed-off-by: Cosimo Cecchi <cosimoc@gnome.org>
+
+M	libnautilus-private/nautilus-file.c
+
+commit 3ffebcdbf5b5ba7e6b018f542fdc39522a42d1b2
+Author: Cosimo Cecchi <cosimoc@gnome.org>
+Date:	2009-04-22
+
+    Remove some more GTK+ deprecated macros
+
+    Remove some other bits (hopefully the last) of deprecated GTK+ macros.
+
+M	src/nautilus-history-sidebar.c
+
+commit c308f7f3e96094c4d5077655960a0910dbaa605c
+Author: Cosimo Cecchi <cosimoc@gnome.org>
+Date:	2009-04-22
+
+    Remove other deprecated GTK+ symbols
+
+    There were still some references to deprecated GTK+ symbols in some
+    files, or in some comments. Let's drop them all.
+
+M	eel/eel-editable-label.c
+M	eel/eel-gdk-pixbuf-extensions.c
+M	libnautilus-private/nautilus-cell-renderer-text-ellipsized.h
+M	libnautilus-private/nautilus-directory.h
+M	libnautilus-private/nautilus-file.h
+M	libnautilus-private/nautilus-saved-search-file.h
+M	libnautilus-private/nautilus-undo-signal-handlers.c
+M	src/file-manager/fm-empty-view.c
+M	src/file-manager/fm-empty-view.h
+M	test/test-eel-background.c
+
+commit 4485d32d41f1519313ad49d43914bbd0b78d104b
+Author: Jorge Gonzalez <jorgegonz@svn.gnome.org>
+Date:	2009-04-21
+
+    Updated Spanish translation
+
+M	po/es.po
+
+commit 7da1601ba6288e48dc6ed3023de03fff04d20b2d
+Author: Cosimo Cecchi <cosimoc@gnome.org>
+Date:	2009-04-21
+
+    Check for NULL when sorting columns
+
+    Check for a NULL value of the order array when sorting the columns.
+    This might help when dealing with strange GConf setup issues
+    (#524341).
+
+M	libnautilus-private/nautilus-column-utilities.c
+
+commit 3b5af96a5f41640d447f7215a758d4de4c0220fb
+Author: Cosimo Cecchi <cosimoc@gnome.org>
+Date:	2009-04-21
+
+    Update EggSMClient from libegg
+
+    Re-apply the reverted string freeze break commit now that we branched.
+    Don't check if the desktop file exists ourselves, as the Egg code will
+    take care of that itself.
+    Thanks to Christian Persch (#576619).
+
+M	cut-n-paste-code/libegg/eggsmclient.c
+M	src/nautilus-main.c
+
+commit 60e58366e06f42b03072e06a19f8adeece0ded6a
+Author: Nelson Benitez <nbenitezl@gmail.com>
+Date:	2009-04-21
+
+    Use g_timeout_add_seconds where appropriate
+
+    Use g_timeout_add_seconds instead of g_timeout_add where appropriate.
+    Fix bug #574033.
+
+    Signed-off-by: Cosimo Cecchi <cosimoc@gnome.org>
+
+M	libnautilus-private/nautilus-icon-container.c
+M	libnautilus-private/nautilus-thumbnails.c
+M	libnautilus-private/nautilus-tree-view-drag-dest.c
+M	libnautilus-private/nautilus-users-groups-cache.c
+M	src/file-manager/fm-desktop-icon-view.c
+M	src/file-manager/fm-icon-view.c
+M	src/file-manager/fm-list-view.c
+M	src/nautilus-notes-viewer.c
+M	src/nautilus-spatial-window.c
+
+commit 99e66a93605e056c80cebb4c3ac9b6b58167ad1c
+Author: Matthias Clasen <mclasen@redhat.com>
+Date:	2009-04-21
+
+    Avoid delays in background switching
+
+    Don't delay background switching, so that users will immediately see
+    it changing when browsing the background list (#330168).
+
+    Signed-off-by: Cosimo Cecchi <cosimoc@gnome.org>
+
+M	libnautilus-private/nautilus-directory-background.c
+
+commit 979d877c1803034be8a3ff69437974a1cfdbff30
+Author: Cosimo Cecchi <cosimoc@gnome.org>
+Date:	2009-04-21
+
+    Enforce {GDK,GTK}_DISABLE_DEPRECATED cflags
+
+    Now that we build cleanly without deprecated symbols, widen the
+    deprecated check policy to GDK/GTK+.
+
+M	configure.in
+
+commit b695c970182bbf19f2c38bf7405db506e7c23bb0
+Author: Cosimo Cecchi <cosimoc@gnome.org>
+Date:	2009-04-21
+
+    Remove deprecated GDK/GTK+ symbols
+
+    Remove all uses of deprecated GDK and GTK+ symbols, replacing them
+    with the currently supported equivalents.
+    Based on a patch from Tal Benavidor (#565038).
+
+M	eel/eel-background-box.h
+M	eel/eel-background.c
+M	eel/eel-background.h
+M	eel/eel-canvas-rect-ellipse.h
+M	eel/eel-canvas.c
+M	eel/eel-canvas.h
+M	eel/eel-debug-drawing.c
+M	eel/eel-editable-label.c
+M	eel/eel-editable-label.h
+M	eel/eel-gtk-extensions.c
+M	eel/eel-gtk-extensions.h
+M	eel/eel-gtk-macros.h
+M	eel/eel-image-table.c
+M	eel/eel-image-table.h
+M	eel/eel-labeled-image.h
+M	eel/eel-stock-dialogs.c
+M	eel/eel-types.c
+M	eel/eel-wrap-table.c
+M	eel/eel-wrap-table.h
+M	libnautilus-private/nautilus-autorun.c
+M	libnautilus-private/nautilus-bookmark.h
+M	libnautilus-private/nautilus-cell-renderer-pixbuf-emblem.h
+M	libnautilus-private/nautilus-clipboard-monitor.h
+M	libnautilus-private/nautilus-column-chooser.h
+M	libnautilus-private/nautilus-desktop-directory-file.h
+M	libnautilus-private/nautilus-desktop-directory.h
+M	libnautilus-private/nautilus-desktop-icon-file.h
+M	libnautilus-private/nautilus-desktop-link-monitor.h
+M	libnautilus-private/nautilus-desktop-link.h
+M	libnautilus-private/nautilus-directory.h
+M	libnautilus-private/nautilus-dnd.c
+M	libnautilus-private/nautilus-entry.h
+M	libnautilus-private/nautilus-file.h
+M	libnautilus-private/nautilus-horizontal-splitter.h
+M	libnautilus-private/nautilus-icon-canvas-item.h
+M	libnautilus-private/nautilus-icon-container.h
+M	libnautilus-private/nautilus-keep-last-vertical-box.h
+M	libnautilus-private/nautilus-merged-directory.h
+M	libnautilus-private/nautilus-metafile.h
+M	libnautilus-private/nautilus-open-with-dialog.c
+M	libnautilus-private/nautilus-progress-info.c
+M	libnautilus-private/nautilus-search-directory-file.h
+M	libnautilus-private/nautilus-search-directory.h
+M	libnautilus-private/nautilus-trash-monitor.h
+M	libnautilus-private/nautilus-undo-manager.h
+M	libnautilus-private/nautilus-undo-transaction.h
+M	libnautilus-private/nautilus-vfs-directory.h
+M	libnautilus-private/nautilus-vfs-file.h
+M	src/file-manager/fm-desktop-icon-view.c
+M	src/file-manager/fm-desktop-icon-view.h
+M	src/file-manager/fm-directory-view.c
+M	src/file-manager/fm-directory-view.h
+M	src/file-manager/fm-icon-container.h
+M	src/file-manager/fm-icon-view.c
+M	src/file-manager/fm-icon-view.h
+M	src/file-manager/fm-list-model.h
+M	src/file-manager/fm-list-view.c
+M	src/file-manager/fm-list-view.h
+M	src/file-manager/fm-properties-window.c
+M	src/file-manager/fm-properties-window.h
+M	src/file-manager/fm-tree-model.h
+M	src/file-manager/fm-tree-view.c
+M	src/file-manager/fm-tree-view.h
+M	src/nautilus-application.h
+M	src/nautilus-bookmark-list.h
+M	src/nautilus-desktop-window.h
+M	src/nautilus-emblem-sidebar.c
+M	src/nautilus-emblem-sidebar.h
+M	src/nautilus-history-sidebar.c
+M	src/nautilus-history-sidebar.h
+M	src/nautilus-image-properties-page.h
+M	src/nautilus-information-panel.c
+M	src/nautilus-information-panel.h
+M	src/nautilus-location-bar.h
+M	src/nautilus-location-entry.h
+M	src/nautilus-navigation-bar.h
+M	src/nautilus-navigation-window.h
+M	src/nautilus-notes-viewer.c
+M	src/nautilus-notes-viewer.h
+M	src/nautilus-places-sidebar.c
+M	src/nautilus-places-sidebar.h
+M	src/nautilus-property-browser.h
+M	src/nautilus-query-editor.h
+M	src/nautilus-search-bar.c
+M	src/nautilus-search-bar.h
+M	src/nautilus-side-pane.h
+M	src/nautilus-sidebar-title.h
+M	src/nautilus-spatial-window.c
+M	src/nautilus-spatial-window.h
+M	src/nautilus-throbber.h
+M	src/nautilus-window-menus.c
+M	src/nautilus-window.h
+M	src/nautilus-zoom-control.h
+M	test/test-nautilus-directory-async.c
+M	test/test.c
+
+commit e2f711533e1008b62c9db70fb3bcf877191866d4
+Author: Alexander Larsson <alexl@redhat.com>
+Date:	2009-04-20
+
+    Fix broken pofile
+
+    Lots of duplicated strings that makes msgfmt -c check fail.
+
+M	po/ha.po
+
+commit 42bea16f00e93441a601f3279702d1bd60f07592
+Author: Alexander Larsson <alexl@redhat.com>
+Date:	2009-04-20
+
+    Comment out invalid pofile strings
+
+    msgfmt -c bs.po said:
+    bs.po:3783: number of format specifications in 'msgid' and 'msgstr[0]'
+    does not match msgfmt: found 1 fatal error
+    which meant branching was impossible
+
+M	po/bs.po
+
+commit f9585e4f4825ab1114cd4185ec8cdca9360da3c9
+Author: Jonathon Jongsma <jonathon@quotidian.org>
+Date:	2009-04-20
+
+    Allow shift+return during typeahead find
+
+    Allow shift+rename to close parent + open when typeahead find window
+    is active. (#579551)
+
+M	libnautilus-private/nautilus-icon-container.c
+
+commit 1f9ed9598a3324278eaef2153b95f22962dd2558
+Author: Khaled Hosny <khaledhosny@eglug.org>
+Date:	2009-04-17
+
+    Updated Arabic translation
+
+M	po/ar.po
+
+commit 9c4c0254d4788ac1d7e10df30fc74cc2d64c5d09
+Author: Alexander Larsson <alexl@redhat.com>
+Date:	2009-04-17
+
+    Preload /desktop/gnome/background from gconf
+
+    We'll be reading a lot of background settings, so we want to preload
+    (and thus also add_dir) the gconf directory. (Fixes #578993)
+
+M	libnautilus-private/nautilus-global-preferences.c
+
+commit e61a17f3445be7c77f092b717f1e64a1231e01c0
+Author: Cosimo Cecchi <cosimoc@gnome.org>
+Date:	2009-04-17
+
+    Fix a copy/paste typo.
+
+M	README.commits
+
+commit bad7749c6cc88009ba5e0f9f96f9ab418a1f7193
+Author: Alexander Larsson <alexl@redhat.com>
+Date:	2009-04-17
+
+    Add .gitignore files
+
+A	.gitignore
+A	data/.gitignore
+A	docs/reference/.gitignore
+A	docs/reference/libnautilus-extension/.gitignore
+A
+docs/reference/libnautilus-extension/libnautilus-extension-overrides.txt
+A
+docs/reference/libnautilus-extension/libnautilus-extension-sections.txt
+A	eel/.gitignore
+A	libnautilus-private/.gitignore
+A	po/.gitignore
+A	src/.gitignore
+
+commit 8acf8338c97387af3b93793760a3b1d64e752a2c
+Author: Alexander Larsson <alexl@redhat.com>
+Date:	2009-04-17
+
+    Add makefile rules to generate ChangeLog
+
+M	Makefile.am
+
+commit 3f4a5c97a23acbca33836d14edb2b5c8798a6dc5
+Author: Alexander Larsson <alexl@redhat.com>
+Date:	2009-04-17
+
+    Add doap file with name, description and developer info
+
+A	nautilus.doap
+
+commit a867c35e835128647396ad5b2df498c189944ca4
+Author: Alexander Larsson <alexl@redhat.com>
+Date:	2009-04-17
+
+    Add README.commits, update HACKING for git
+
+M	HACKING
+M	Makefile.am
+A	README.commits
+
+commit 4a78eabc71df08bdf3d71877c3b3cb62d1b80bff
+Author: Alexander Larsson <alexl@redhat.com>
+Date:	2009-04-17
+
+    Move ChangeLog to ChangeLog-20090417
+
+    With the switch to git we're moving to an autogenerated ChangeLog.
+
+R099	ChangeLog	ChangeLog-20090417
+M	Makefile.am
+
+commit 6a8673c7806ad7a014feb9bc780e0dfcadb5d71c
+Author: Alexander Larsson <alexl@redhat.com>
+Date:	2009-04-16
+
+    Reversed check in last commit, fixed.
+
+    2009-04-16	Alexander Larsson  <alexl@redhat.com>
+
+	* configure.in:
+	Reversed check in last commit, fixed.
+
+
+
+    svn path=/trunk/; revision=15188
+
+M	ChangeLog
+M	configure.in
+
+commit ab550c223368c4d0bb9b7133e477430a38fe96d6
+Author: Alexander Larsson <alexl@redhat.com>
+Date:	2009-04-16
+
+    Bug 578983 – set_more_warnings check of WARNING_CFLAGS doesn't work
+
+    2009-04-16	Alexander Larsson  <alexl@redhat.com>
+
+	Bug 578983 – set_more_warnings check of WARNING_CFLAGS
+	doesn't work
+
+	* configure.in:
+	Actually check the options.
+
+
+    svn path=/trunk/; revision=15187
+
+M	ChangeLog
+M	configure.in
+
+commit 9870d42d6709fea0fd3c50d00f5a491902be27e5
+Author: Alexander Larsson <alexl@redhat.com>
+Date:	2009-04-16
+
+    Set typeahead column to the name column.
+
+    2009-04-16	Alexander Larsson  <alexl@redhat.com>
+
+	* src/nautilus-places-sidebar.c (nautilus_places_sidebar_init):
+	Set typeahead column to the name column.
+
+
+    svn path=/trunk/; revision=15186
+
+M	ChangeLog
+M	src/nautilus-places-sidebar.c
+
+commit 3125825a1cb10f38779b926050d4030f45a6003a
+Author: Alexander Larsson <alexl@redhat.com>
+Date:	2009-04-16
+
+    Bug 578468 – Change of font DPI setting does not effect desktop
+    icons
+
+    2009-04-16	Alexander Larsson  <alexl@redhat.com>
+
+	Bug 578468 – Change of font DPI setting does not effect
+	desktop icons
+
+	* libnautilus-private/nautilus-icon-canvas-item.c:
+	(nautilus_icon_canvas_item_invalidate_label_size):
+	Invalidate pango layouts since the context could have changed
+	For instance the font DPI.
+
+
+
+    svn path=/trunk/; revision=15185
+
+M	ChangeLog
+M	libnautilus-private/nautilus-icon-canvas-item.c
+
+commit 4323f9b47229312a60093587724e1aa102a8c926
+Author: Alexander Larsson <alexl@redhat.com>
+Date:	2009-04-16
+
+    Bug 579086 – Excessive white-space on right-hand side in icon view
+
+    2009-04-16	Alexander Larsson  <alexl@redhat.com>
+
+	Bug 579086 – Excessive white-space on right-hand side in
+	icon view
+
+	* libnautilus-private/nautilus-icon-container.c:
+	(nautilus_icon_container_update_scroll_region):
+	When using at allocation->width, take zoom into account
+
+
+    svn path=/trunk/; revision=15184
+
+M	ChangeLog
+M	libnautilus-private/nautilus-icon-container.c
+
+commit 649c39c7d8f6b3162e6f9142f3201eb254f26c8f
+Author: Alexander Larsson <alexl@redhat.com>
+Date:	2009-04-13
+
+    Post release version bump
+
+    2009-04-13	Alexander Larsson  <alexl@redhat.com>
+
+	* configure.in:
+	Post release version bump
+
+    === nautilus 2.26.2 ===
+
+
+    svn path=/trunk/; revision=15183
+
+M	ChangeLog
+M	configure.in
+M	eel/ChangeLog
+M	po/ChangeLog

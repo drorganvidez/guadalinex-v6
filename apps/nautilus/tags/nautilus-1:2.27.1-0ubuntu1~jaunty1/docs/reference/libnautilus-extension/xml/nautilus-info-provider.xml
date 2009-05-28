@@ -1,0 +1,183 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY version SYSTEM "version.xml">
+]>
+
+<refentry id="libnautilus-extension-nautilus-info-provider">
+<refmeta>
+<refentrytitle role="top_of_page" id="libnautilus-extension-nautilus-info-provider.top_of_page">nautilus-info-provider</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>LIBNAUTILUS-EXTENSION Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>nautilus-info-provider</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="libnautilus-extension-nautilus-info-provider.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+<anchor id="NautilusInfoProvider"/>
+<synopsis>
+                    <link linkend="NautilusInfoProvider-struct">NautilusInfoProvider</link>;
+                    <link linkend="NautilusInfoProviderIface">NautilusInfoProviderIface</link>;
+<link linkend="void">void</link>                (<link linkend="NautilusInfoProviderUpdateComplete">*NautilusInfoProviderUpdateComplete</link>)
+                                                        (<link linkend="NautilusInfoProvider">NautilusInfoProvider</link> *provider,
+                                                         <link linkend="NautilusOperationHandle">NautilusOperationHandle</link> *handle,
+                                                         <link linkend="NautilusOperationResult">NautilusOperationResult</link> result,
+                                                         <link linkend="gpointer">gpointer</link> user_data);
+<link linkend="NautilusOperationResult">NautilusOperationResult</link>  <link linkend="nautilus-info-provider-update-file-info">nautilus_info_provider_update_file_info</link>
+                                                        (<link linkend="NautilusInfoProvider">NautilusInfoProvider</link> *provider,
+                                                         <link linkend="NautilusFileInfo">NautilusFileInfo</link> *file,
+                                                         <link linkend="GClosure">GClosure</link> *update_complete,
+                                                         <link linkend="NautilusOperationHandle">NautilusOperationHandle</link> **handle);
+<link linkend="void">void</link>                <link linkend="nautilus-info-provider-cancel-update">nautilus_info_provider_cancel_update</link>
+                                                        (<link linkend="NautilusInfoProvider">NautilusInfoProvider</link> *provider,
+                                                         <link linkend="NautilusOperationHandle">NautilusOperationHandle</link> *handle);
+<link linkend="void">void</link>                <link linkend="nautilus-info-provider-update-complete-invoke">nautilus_info_provider_update_complete_invoke</link>
+                                                        (<link linkend="GClosure">GClosure</link> *update_complete,
+                                                         <link linkend="NautilusInfoProvider">NautilusInfoProvider</link> *provider,
+                                                         <link linkend="NautilusOperationHandle">NautilusOperationHandle</link> *handle,
+                                                         <link linkend="NautilusOperationResult">NautilusOperationResult</link> result);
+</synopsis>
+</refsynopsisdiv>
+
+<refsect1 id="libnautilus-extension-nautilus-info-provider.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+  <link linkend="GInterface">GInterface</link>
+   +----NautilusInfoProvider
+</synopsis>
+</refsect1>
+
+<refsect1 id="libnautilus-extension-nautilus-info-provider.prerequisites" role="prerequisites">
+<title role="prerequisites.title">Prerequisites</title>
+<para>
+NautilusInfoProvider requires
+ <link linkend="GObject">GObject</link>.</para>
+</refsect1>
+
+
+
+
+
+
+
+<refsect1 id="libnautilus-extension-nautilus-info-provider.description" role="desc">
+<title role="desc.title">Description</title>
+<para>
+</para>
+</refsect1>
+
+<refsect1 id="libnautilus-extension-nautilus-info-provider.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="NautilusInfoProvider-struct" role="struct">
+<title>NautilusInfoProvider</title>
+<indexterm zone="NautilusInfoProvider-struct"><primary sortas="NautilusInfoProvider">NautilusInfoProvider</primary></indexterm><programlisting>typedef struct _NautilusInfoProvider NautilusInfoProvider;</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="NautilusInfoProviderIface" role="struct">
+<title>NautilusInfoProviderIface</title>
+<indexterm zone="NautilusInfoProviderIface"><primary sortas="NautilusInfoProviderIface">NautilusInfoProviderIface</primary></indexterm><programlisting>typedef struct {
+	GTypeInterface g_iface;
+
+	NautilusOperationResult (*update_file_info) (NautilusInfoProvider     *provider,
+						     NautilusFileInfo         *file,
+						     GClosure                 *update_complete,
+						     NautilusOperationHandle **handle);
+	void                    (*cancel_update)    (NautilusInfoProvider     *provider,
+						     NautilusOperationHandle  *handle);
+} NautilusInfoProviderIface;
+</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="NautilusInfoProviderUpdateComplete" role="function">
+<title>NautilusInfoProviderUpdateComplete ()</title>
+<indexterm zone="NautilusInfoProviderUpdateComplete"><primary sortas="NautilusInfoProviderUpdateComplete">NautilusInfoProviderUpdateComplete</primary></indexterm><programlisting><link linkend="void">void</link>                (*NautilusInfoProviderUpdateComplete)
+                                                        (<link linkend="NautilusInfoProvider">NautilusInfoProvider</link> *provider,
+                                                         <link linkend="NautilusOperationHandle">NautilusOperationHandle</link> *handle,
+                                                         <link linkend="NautilusOperationResult">NautilusOperationResult</link> result,
+                                                         <link linkend="gpointer">gpointer</link> user_data);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>provider</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>handle</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>result</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>user_data</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="nautilus-info-provider-update-file-info" role="function">
+<title>nautilus_info_provider_update_file_info ()</title>
+<indexterm zone="nautilus-info-provider-update-file-info"><primary sortas="nautilus_info_provider_update_file_info">nautilus_info_provider_update_file_info</primary></indexterm><programlisting><link linkend="NautilusOperationResult">NautilusOperationResult</link>  nautilus_info_provider_update_file_info
+                                                        (<link linkend="NautilusInfoProvider">NautilusInfoProvider</link> *provider,
+                                                         <link linkend="NautilusFileInfo">NautilusFileInfo</link> *file,
+                                                         <link linkend="GClosure">GClosure</link> *update_complete,
+                                                         <link linkend="NautilusOperationHandle">NautilusOperationHandle</link> **handle);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>provider</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>file</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>update_complete</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>handle</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="nautilus-info-provider-cancel-update" role="function">
+<title>nautilus_info_provider_cancel_update ()</title>
+<indexterm zone="nautilus-info-provider-cancel-update"><primary sortas="nautilus_info_provider_cancel_update">nautilus_info_provider_cancel_update</primary></indexterm><programlisting><link linkend="void">void</link>                nautilus_info_provider_cancel_update
+                                                        (<link linkend="NautilusInfoProvider">NautilusInfoProvider</link> *provider,
+                                                         <link linkend="NautilusOperationHandle">NautilusOperationHandle</link> *handle);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>provider</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>handle</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="nautilus-info-provider-update-complete-invoke" role="function">
+<title>nautilus_info_provider_update_complete_invoke ()</title>
+<indexterm zone="nautilus-info-provider-update-complete-invoke"><primary sortas="nautilus_info_provider_update_complete_invoke">nautilus_info_provider_update_complete_invoke</primary></indexterm><programlisting><link linkend="void">void</link>                nautilus_info_provider_update_complete_invoke
+                                                        (<link linkend="GClosure">GClosure</link> *update_complete,
+                                                         <link linkend="NautilusInfoProvider">NautilusInfoProvider</link> *provider,
+                                                         <link linkend="NautilusOperationHandle">NautilusOperationHandle</link> *handle,
+                                                         <link linkend="NautilusOperationResult">NautilusOperationResult</link> result);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>update_complete</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>provider</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>handle</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>result</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+
+
+
+
+</refentry>

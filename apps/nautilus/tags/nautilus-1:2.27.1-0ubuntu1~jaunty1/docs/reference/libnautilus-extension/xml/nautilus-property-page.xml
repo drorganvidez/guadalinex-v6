@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY version SYSTEM "version.xml">
+]>
+
+<refentry id="NautilusPropertyPage">
+<refmeta>
+<refentrytitle role="top_of_page" id="NautilusPropertyPage.top_of_page">NautilusPropertyPage</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>LIBNAUTILUS-EXTENSION Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>NautilusPropertyPage</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="NautilusPropertyPage.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>
+                    <link linkend="NautilusPropertyPageDetails">NautilusPropertyPageDetails</link>;
+                    <link linkend="NautilusPropertyPage-struct">NautilusPropertyPage</link>;
+<link linkend="NautilusPropertyPage">NautilusPropertyPage</link> * <link linkend="nautilus-property-page-new">nautilus_property_page_new</link>       (const <link linkend="char">char</link> *name,
+                                                         <link linkend="GtkWidget">GtkWidget</link> *label,
+                                                         <link linkend="GtkWidget">GtkWidget</link> *page);
+</synopsis>
+</refsynopsisdiv>
+
+<refsect1 id="NautilusPropertyPage.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+  <link linkend="GObject">GObject</link>
+   +----NautilusPropertyPage
+</synopsis>
+</refsect1>
+
+
+
+
+
+<refsect1 id="NautilusPropertyPage.properties" role="properties">
+<title role="properties.title">Properties</title>
+<synopsis>
+  &quot;<link linkend="NautilusPropertyPage--label">label</link>&quot;                    <link linkend="GtkWidget">GtkWidget</link>*            : Read / Write
+  &quot;<link linkend="NautilusPropertyPage--name">name</link>&quot;                     <link linkend="gchar">gchar</link>*                : Read / Write / Construct Only
+  &quot;<link linkend="NautilusPropertyPage--page">page</link>&quot;                     <link linkend="GtkWidget">GtkWidget</link>*            : Read / Write
+</synopsis>
+</refsect1>
+
+
+
+<refsect1 id="NautilusPropertyPage.description" role="desc">
+<title role="desc.title">Description</title>
+<para>
+</para>
+</refsect1>
+
+<refsect1 id="NautilusPropertyPage.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="NautilusPropertyPageDetails" role="struct">
+<title>NautilusPropertyPageDetails</title>
+<indexterm zone="NautilusPropertyPageDetails"><primary sortas="NautilusPropertyPageDetails">NautilusPropertyPageDetails</primary></indexterm><programlisting>typedef struct _NautilusPropertyPageDetails NautilusPropertyPageDetails;</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="NautilusPropertyPage-struct" role="struct">
+<title>NautilusPropertyPage</title>
+<indexterm zone="NautilusPropertyPage-struct"><primary sortas="NautilusPropertyPage">NautilusPropertyPage</primary></indexterm><programlisting>typedef struct _NautilusPropertyPage NautilusPropertyPage;</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="nautilus-property-page-new" role="function">
+<title>nautilus_property_page_new ()</title>
+<indexterm zone="nautilus-property-page-new"><primary sortas="nautilus_property_page_new">nautilus_property_page_new</primary></indexterm><programlisting><link linkend="NautilusPropertyPage">NautilusPropertyPage</link> * nautilus_property_page_new       (const <link linkend="char">char</link> *name,
+                                                         <link linkend="GtkWidget">GtkWidget</link> *label,
+                                                         <link linkend="GtkWidget">GtkWidget</link> *page);</programlisting>
+<para>
+Creates a new <link linkend="NautilusPropertyPage"><type>NautilusPropertyPage</type></link> from page_widget.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>name</parameter>&#160;:</term>
+<listitem><simpara> the identifier for the property page
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>label</parameter>&#160;:</term>
+<listitem><simpara> the user-visible label of the property page
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>page</parameter>&#160;:</term>
+<listitem><simpara> the property page to display
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara> a newly created <link linkend="NautilusPropertyPage"><type>NautilusPropertyPage</type></link>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+<refsect1 id="NautilusPropertyPage.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="NautilusPropertyPage--label" role="property"><title>The <literal>&quot;label&quot;</literal> property</title>
+<indexterm zone="NautilusPropertyPage--label"><primary sortas="NautilusPropertyPage:label">NautilusPropertyPage:label</primary></indexterm><programlisting>  &quot;label&quot;                    <link linkend="GtkWidget">GtkWidget</link>*            : Read / Write</programlisting>
+<para>Label widget to display in the notebook tab.</para></refsect2>
+<refsect2 id="NautilusPropertyPage--name" role="property"><title>The <literal>&quot;name&quot;</literal> property</title>
+<indexterm zone="NautilusPropertyPage--name"><primary sortas="NautilusPropertyPage:name">NautilusPropertyPage:name</primary></indexterm><programlisting>  &quot;name&quot;                     <link linkend="gchar">gchar</link>*                : Read / Write / Construct Only</programlisting>
+<para>Name of the page.</para><para>Default value: NULL</para>
+</refsect2>
+<refsect2 id="NautilusPropertyPage--page" role="property"><title>The <literal>&quot;page&quot;</literal> property</title>
+<indexterm zone="NautilusPropertyPage--page"><primary sortas="NautilusPropertyPage:page">NautilusPropertyPage:page</primary></indexterm><programlisting>  &quot;page&quot;                     <link linkend="GtkWidget">GtkWidget</link>*            : Read / Write</programlisting>
+<para>Widget for the property page.</para></refsect2>
+</refsect1>
+
+
+
+
+</refentry>

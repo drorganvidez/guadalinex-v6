@@ -69,7 +69,10 @@ pref("browser.shell.checkDefaultBrowser", false);
 // locale-by-match-os
 pref("intl.locale.matchOS", true);
 
-
 // kerberos-for-https
 pref("network.negotiate-auth.trusted-uris", "https://");
+
+// ed2k
+pref("network.protocol-handler.external.ed2k",true);
+pref("network.protocol-handler.app.ed2k","/usr/bin/ed2k");
 

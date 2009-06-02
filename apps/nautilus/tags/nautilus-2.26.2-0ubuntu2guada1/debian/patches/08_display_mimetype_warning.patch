@@ -1,0 +1,59 @@
+# Ubuntu: https://launchpad.net/bugs/19101
+# Description: allow users to disable the mimetype mistmatch warnings
+#
+diff -Nur nautilus-2.18.0.1/libnautilus-private/apps_nautilus_preferences.schemas.in nautilus-2.18.0.1.new/libnautilus-private/apps_nautilus_preferences.schemas.in
+--- nautilus-2.18.0.1/libnautilus-private/apps_nautilus_preferences.schemas.in	2007-03-29 16:05:33.000000000 +0200
++++ nautilus-2.18.0.1.new/libnautilus-private/apps_nautilus_preferences.schemas.in	2007-03-29 16:12:04.000000000 +0200
+@@ -457,6 +457,20 @@
+          </long>
+       </locale>
+     </schema>
++
++    <schema>
++      <key>/schemas/apps/nautilus/preferences/display_mimetype_warning</key>
++      <applyto>/apps/nautilus/preferences/display_mimetype_warning</applyto>
++      <owner>nautilus</owner>
++      <type>bool</type>
++      <default>true</default>
++      <locale name="C">
++         <short>Display mimetype warning</short>
++         <long>
++	 Whether to open the file or display a warning dialog when the filename and the real mimetype are different
++         </long>
++      </locale>
++    </schema>
+     
+     <!-- Icon View -->
+ 
+diff -Nur nautilus-2.18.0.1/libnautilus-private/nautilus-global-preferences.h nautilus-2.18.0.1.new/libnautilus-private/nautilus-global-preferences.h
+--- nautilus-2.18.0.1/libnautilus-private/nautilus-global-preferences.h	2007-03-29 16:05:33.000000000 +0200
++++ nautilus-2.18.0.1.new/libnautilus-private/nautilus-global-preferences.h	2007-03-29 16:07:43.000000000 +0200
+@@ -77,6 +77,9 @@
+ /* Ubuntu spatial change */
+ #define NAUTILUS_PREFERENCES_NO_UBUNTU_SPATIAL 	        "preferences/no_ubuntu_spatial"
+ 
++/* Open file when mimetype mismatch */
++#define NAUTILUS_PREFERENCES_DISPLAY_MIMETYPE_WARNING              "preferences/display_mimetype_warning"
++
+ /* Activating executable text files */
+ #define NAUTILUS_PREFERENCES_EXECUTABLE_TEXT_ACTIVATION		"preferences/executable_text_activation"
+ 
+diff -Nur nautilus-2.18.0.1/src/file-manager/fm-directory-view.c nautilus-2.18.0.1.new/src/file-manager/fm-directory-view.c
+--- nautilus-2.18.0.1/src/file-manager/fm-directory-view.c	2007-03-29 16:05:34.000000000 +0200
++++ nautilus-2.18.0.1.new/src/file-manager/fm-directory-view.c	2007-03-29 16:19:11.000000000 +0200
+@@ -5053,10 +5053,12 @@
+ 		if (default_app != NULL &&
+ 		    guessed_default_app != NULL &&
+ 		    !gnome_vfs_mime_application_equal (default_app, guessed_default_app)) {
+-			if (warn_on_mismatch) {
+-				warn_mismatched_mime_types (view, file);
++			if (eel_preferences_get_boolean (NAUTILUS_PREFERENCES_DISPLAY_MIMETYPE_WARNING)) {
++				if (warn_on_mismatch) {
++					warn_mismatched_mime_types (view, file);
++				}
++				ret = FALSE;
+ 			}
+-			ret = FALSE;
+ 		}
+ 	}
+ 

@@ -1,0 +1,112 @@
+Fixes two security issues about disguised .desktop files.
+Debian #408556, GNOME #405291
+Debian #408948, GNOME #405052
+diff -Naur nautilus-2.22.0.old/libnautilus-private/nautilus-file.c nautilus-2.22.0/libnautilus-private/nautilus-file.c
+--- nautilus-2.22.0.old/libnautilus-private/nautilus-file.c	2008-03-19 16:04:39.000000000 +0100
++++ nautilus-2.22.0/libnautilus-private/nautilus-file.c	2008-03-19 16:06:54.000000000 +0100
+@@ -41,6 +41,7 @@
+ #include "nautilus-link.h"
+ #include "nautilus-metadata.h"
+ #include "nautilus-module.h"
++#include "nautilus-program-choosing.h"
+ #include "nautilus-search-directory.h"
+ #include "nautilus-search-directory-file.h"
+ #include "nautilus-thumbnails.h"
+@@ -1084,6 +1085,46 @@
+ 	return g_file_get_child (dir, eel_ref_str_peek (file->details->name));
+ }
+ 
++static gboolean
++safe_to_launch_desktop_file (NautilusFile *file)
++{
++	gboolean ret = TRUE;
++	GFile *uri = nautilus_file_get_location (file);
++	char *path = NULL;
++	char *scheme = NULL;
++
++	if (uri) {
++		path = g_file_get_parse_name (uri);
++	}
++
++	if (!path ||
++	    eel_str_has_prefix (path, "/mnt") ||
++	    eel_str_has_prefix (path, "/media") ||
++	    !eel_str_has_suffix (path, ".desktop")) {
++		ret = FALSE;
++	}
++	
++	scheme = g_file_get_uri_scheme (file);
++	if (scheme != NULL && strncmp (scheme, "file://", 7) == 0) {
++	  char *path_tmp = path + 7;
++
++	  if (eel_str_has_prefix (path, "/mnt") ||
++	      eel_str_has_prefix (path, "/media")) {
++	        ret = FALSE;
++	  }
++	}
++	g_free (scheme);
++
++	if (file->details->uid != -1 &&
++	    file->details->uid != 0 &&
++	    (uid_t) file->details->uid != geteuid ())
++		ret = FALSE;
++
++	g_object_unref (uri);
++	g_free (path);
++	return ret;
++}
++
+ /* Return the actual uri associated with the passed-in file. */
+ char *
+ nautilus_file_get_uri (NautilusFile *file)
+@@ -3053,7 +3094,8 @@
+ {
+ 	g_return_val_if_fail (NAUTILUS_IS_FILE (file), NULL);
+ 
+-	if (file->details->activation_location != NULL) {
++	if (file->details->activation_location != NULL &&
++	    safe_to_launch_desktop_file (file)) {
+ 		return g_file_get_uri (file->details->activation_location);
+ 	}
+ 	
+@@ -3065,7 +3107,8 @@
+ {
+ 	g_return_val_if_fail (NAUTILUS_IS_FILE (file), NULL);
+ 
+-	if (file->details->activation_location != NULL) {
++	if (file->details->activation_location != NULL &&
++	    safe_to_launch_desktop_file (file)) {
+ 		return g_object_ref (file->details->activation_location);
+ 	}
+ 	
+diff -Naur nautilus-2.22.0.old/libnautilus-private/nautilus-mime-actions.c nautilus-2.22.0/libnautilus-private/nautilus-mime-actions.c
+--- nautilus-2.22.0.old/libnautilus-private/nautilus-mime-actions.c	2008-03-19 16:04:39.000000000 +0100
++++ nautilus-2.22.0/libnautilus-private/nautilus-mime-actions.c	2008-03-19 16:04:48.000000000 +0100
+@@ -727,7 +727,8 @@
+ {
+   return (nautilus_file_is_directory (file) ||
+ 	  NAUTILUS_IS_DESKTOP_ICON_FILE (file) ||
+-	  nautilus_file_is_nautilus_link (file));
++	  (nautilus_file_is_nautilus_link (file) &&
++	   !nautilus_file_is_launcher (file)));
+ }
+ 
+ static ActivationAction
+diff -Naur nautilus-2.22.0.old/src/file-manager/fm-directory-view.c nautilus-2.22.0/src/file-manager/fm-directory-view.c
+--- nautilus-2.22.0.old/src/file-manager/fm-directory-view.c	2008-03-19 16:04:39.000000000 +0100
++++ nautilus-2.22.0/src/file-manager/fm-directory-view.c	2008-03-19 16:04:48.000000000 +0100
+@@ -4264,9 +4264,11 @@
+ 
+ 		file = NAUTILUS_FILE (node->data);
+ 
+-		other_applications_visible &=
+-			(!nautilus_mime_file_opens_in_view (file) ||
+-			 nautilus_file_is_directory (file));
++		if (nautilus_mime_file_opens_in_external_app (file) &&
++		    (NAUTILUS_IS_DESKTOP_ICON_FILE (file) ||
++		     nautilus_file_is_nautilus_link (file))) {
++			other_applications_visible = FALSE;
++		}
+ 	}
+ 
+ 	default_app = NULL;

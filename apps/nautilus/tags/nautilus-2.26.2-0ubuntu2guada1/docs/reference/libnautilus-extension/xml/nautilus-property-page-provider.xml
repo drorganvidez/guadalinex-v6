@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY version SYSTEM "version.xml">
+]>
+
+<refentry id="libnautilus-extension-nautilus-property-page-provider">
+<refmeta>
+<refentrytitle role="top_of_page" id="libnautilus-extension-nautilus-property-page-provider.top_of_page">nautilus-property-page-provider</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>LIBNAUTILUS-EXTENSION Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>nautilus-property-page-provider</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="libnautilus-extension-nautilus-property-page-provider.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+<anchor id="NautilusPropertyPageProvider"/>
+<synopsis>
+                    <link linkend="NautilusPropertyPageProvider-struct">NautilusPropertyPageProvider</link>;
+                    <link linkend="NautilusPropertyPageProviderIface">NautilusPropertyPageProviderIface</link>;
+<link linkend="GList">GList</link> *             <link linkend="nautilus-property-page-provider-get-pages">nautilus_property_page_provider_get_pages</link>
+                                                        (<link linkend="NautilusPropertyPageProvider">NautilusPropertyPageProvider</link> *provider,
+                                                         <link linkend="GList">GList</link> *files);
+</synopsis>
+</refsynopsisdiv>
+
+<refsect1 id="libnautilus-extension-nautilus-property-page-provider.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+  <link linkend="GInterface">GInterface</link>
+   +----NautilusPropertyPageProvider
+</synopsis>
+</refsect1>
+
+<refsect1 id="libnautilus-extension-nautilus-property-page-provider.prerequisites" role="prerequisites">
+<title role="prerequisites.title">Prerequisites</title>
+<para>
+NautilusPropertyPageProvider requires
+ <link linkend="GObject">GObject</link>.</para>
+</refsect1>
+
+
+
+
+
+
+
+<refsect1 id="libnautilus-extension-nautilus-property-page-provider.description" role="desc">
+<title role="desc.title">Description</title>
+<para>
+</para>
+</refsect1>
+
+<refsect1 id="libnautilus-extension-nautilus-property-page-provider.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="NautilusPropertyPageProvider-struct" role="struct">
+<title>NautilusPropertyPageProvider</title>
+<indexterm zone="NautilusPropertyPageProvider-struct"><primary>NautilusPropertyPageProvider</primary></indexterm><programlisting>typedef struct _NautilusPropertyPageProvider NautilusPropertyPageProvider;</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="NautilusPropertyPageProviderIface" role="struct">
+<title>NautilusPropertyPageProviderIface</title>
+<indexterm zone="NautilusPropertyPageProviderIface"><primary>NautilusPropertyPageProviderIface</primary></indexterm><programlisting>typedef struct {
+	GTypeInterface g_iface;
+
+	GList *(*get_pages) (NautilusPropertyPageProvider     *provider,
+			     GList                    *files);
+} NautilusPropertyPageProviderIface;
+</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="nautilus-property-page-provider-get-pages" role="function">
+<title>nautilus_property_page_provider_get_pages ()</title>
+<indexterm zone="nautilus-property-page-provider-get-pages"><primary>nautilus_property_page_provider_get_pages</primary></indexterm><programlisting><link linkend="GList">GList</link> *             nautilus_property_page_provider_get_pages
+                                                        (<link linkend="NautilusPropertyPageProvider">NautilusPropertyPageProvider</link> *provider,
+                                                         <link linkend="GList">GList</link> *files);</programlisting>
+<para>
+This function is called by Nautilus when it wants property page
+items from the extension.
+</para>
+<para>
+This function is called in the main thread before a property page
+is shown, so it should return quickly.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>provider</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="NautilusPropertyPageProvider"><type>NautilusPropertyPageProvider</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>files</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GList"><type>GList</type></link> of <link linkend="NautilusFileInfo"><type>NautilusFileInfo</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara> A <link linkend="GList"><type>GList</type></link> of allocated <link linkend="NautilusPropertyPage"><type>NautilusPropertyPage</type></link> items.
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+
+
+
+
+</refentry>

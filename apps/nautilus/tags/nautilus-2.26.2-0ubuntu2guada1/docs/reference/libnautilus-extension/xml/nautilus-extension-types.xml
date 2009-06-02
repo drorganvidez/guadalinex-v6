@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY version SYSTEM "version.xml">
+]>
+
+<refentry id="libnautilus-extension-nautilus-extension-types">
+<refmeta>
+<refentrytitle role="top_of_page" id="libnautilus-extension-nautilus-extension-types.top_of_page">nautilus-extension-types</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>LIBNAUTILUS-EXTENSION Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>nautilus-extension-types</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="libnautilus-extension-nautilus-extension-types.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>
+#define             <link linkend="NAUTILUS-TYPE-OPERATION-RESULT:CAPS">NAUTILUS_TYPE_OPERATION_RESULT</link>
+                    <link linkend="NautilusOperationHandle">NautilusOperationHandle</link>;
+enum                <link linkend="NautilusOperationResult">NautilusOperationResult</link>;
+<link linkend="GType">GType</link>               <link linkend="nautilus-operation-result-get-type">nautilus_operation_result_get_type</link>  (void);
+<link linkend="void">void</link>                <link linkend="nautilus-module-initialize">nautilus_module_initialize</link>          (<link linkend="GTypeModule">GTypeModule</link> *module);
+<link linkend="void">void</link>                <link linkend="nautilus-module-shutdown">nautilus_module_shutdown</link>            (void);
+<link linkend="void">void</link>                <link linkend="nautilus-module-list-types">nautilus_module_list_types</link>          (const <link linkend="GType">GType</link> **types,
+                                                         <link linkend="int">int</link> *num_types);
+</synopsis>
+</refsynopsisdiv>
+
+
+
+
+
+
+
+
+
+<refsect1 id="libnautilus-extension-nautilus-extension-types.description" role="desc">
+<title role="desc.title">Description</title>
+<para>
+</para>
+</refsect1>
+
+<refsect1 id="libnautilus-extension-nautilus-extension-types.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="NAUTILUS-TYPE-OPERATION-RESULT:CAPS" role="macro">
+<title>NAUTILUS_TYPE_OPERATION_RESULT</title>
+<indexterm zone="NAUTILUS-TYPE-OPERATION-RESULT:CAPS"><primary>NAUTILUS_TYPE_OPERATION_RESULT</primary></indexterm><programlisting>#define NAUTILUS_TYPE_OPERATION_RESULT (nautilus_operation_result_get_type ())
+</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="NautilusOperationHandle" role="struct">
+<title>NautilusOperationHandle</title>
+<indexterm zone="NautilusOperationHandle"><primary>NautilusOperationHandle</primary></indexterm><programlisting>typedef struct _NautilusOperationHandle NautilusOperationHandle;</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="NautilusOperationResult" role="enum">
+<title>enum NautilusOperationResult</title>
+<indexterm zone="NautilusOperationResult"><primary>NautilusOperationResult</primary></indexterm><programlisting>typedef enum {
+	/* Returned if the call succeeded, and the extension is done 
+	 * with the request */
+	NAUTILUS_OPERATION_COMPLETE,
+
+	/* Returned if the call failed */
+	NAUTILUS_OPERATION_FAILED,
+
+	/* Returned if the extension has begun an async operation. 
+	 * If this is returned, the extension must set the handle 
+	 * parameter and call the callback closure when the 
+	 * operation is complete. */
+	NAUTILUS_OPERATION_IN_PROGRESS
+} NautilusOperationResult;
+</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="nautilus-operation-result-get-type" role="function">
+<title>nautilus_operation_result_get_type ()</title>
+<indexterm zone="nautilus-operation-result-get-type"><primary>nautilus_operation_result_get_type</primary></indexterm><programlisting><link linkend="GType">GType</link>               nautilus_operation_result_get_type  (void);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="nautilus-module-initialize" role="function">
+<title>nautilus_module_initialize ()</title>
+<indexterm zone="nautilus-module-initialize"><primary>nautilus_module_initialize</primary></indexterm><programlisting><link linkend="void">void</link>                nautilus_module_initialize          (<link linkend="GTypeModule">GTypeModule</link> *module);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>module</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="nautilus-module-shutdown" role="function">
+<title>nautilus_module_shutdown ()</title>
+<indexterm zone="nautilus-module-shutdown"><primary>nautilus_module_shutdown</primary></indexterm><programlisting><link linkend="void">void</link>                nautilus_module_shutdown            (void);</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="nautilus-module-list-types" role="function">
+<title>nautilus_module_list_types ()</title>
+<indexterm zone="nautilus-module-list-types"><primary>nautilus_module_list_types</primary></indexterm><programlisting><link linkend="void">void</link>                nautilus_module_list_types          (const <link linkend="GType">GType</link> **types,
+                                                         <link linkend="int">int</link> *num_types);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>types</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>num_types</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+
+
+
+
+</refentry>

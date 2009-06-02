@@ -1,0 +1,190 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY version SYSTEM "version.xml">
+]>
+
+<refentry id="libnautilus-extension-nautilus-menu-provider">
+<refmeta>
+<refentrytitle role="top_of_page" id="libnautilus-extension-nautilus-menu-provider.top_of_page">nautilus-menu-provider</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>LIBNAUTILUS-EXTENSION Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>nautilus-menu-provider</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="libnautilus-extension-nautilus-menu-provider.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+<anchor id="NautilusMenuProvider"/>
+<synopsis>
+                    <link linkend="NautilusMenuProvider-struct">NautilusMenuProvider</link>;
+                    <link linkend="NautilusMenuProviderIface">NautilusMenuProviderIface</link>;
+<link linkend="GList">GList</link> *             <link linkend="nautilus-menu-provider-get-file-items">nautilus_menu_provider_get_file_items</link>
+                                                        (<link linkend="NautilusMenuProvider">NautilusMenuProvider</link> *provider,
+                                                         <link linkend="GtkWidget">GtkWidget</link> *window,
+                                                         <link linkend="GList">GList</link> *files);
+<link linkend="GList">GList</link> *             <link linkend="nautilus-menu-provider-get-background-items">nautilus_menu_provider_get_background_items</link>
+                                                        (<link linkend="NautilusMenuProvider">NautilusMenuProvider</link> *provider,
+                                                         <link linkend="GtkWidget">GtkWidget</link> *window,
+                                                         <link linkend="NautilusFileInfo">NautilusFileInfo</link> *current_folder);
+<link linkend="GList">GList</link> *             <link linkend="nautilus-menu-provider-get-toolbar-items">nautilus_menu_provider_get_toolbar_items</link>
+                                                        (<link linkend="NautilusMenuProvider">NautilusMenuProvider</link> *provider,
+                                                         <link linkend="GtkWidget">GtkWidget</link> *window,
+                                                         <link linkend="NautilusFileInfo">NautilusFileInfo</link> *current_folder);
+<link linkend="void">void</link>                <link linkend="nautilus-menu-provider-emit-items-updated-signal">nautilus_menu_provider_emit_items_updated_signal</link>
+                                                        (<link linkend="NautilusMenuProvider">NautilusMenuProvider</link> *provider);
+</synopsis>
+</refsynopsisdiv>
+
+<refsect1 id="libnautilus-extension-nautilus-menu-provider.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+  <link linkend="GInterface">GInterface</link>
+   +----NautilusMenuProvider
+</synopsis>
+</refsect1>
+
+<refsect1 id="libnautilus-extension-nautilus-menu-provider.prerequisites" role="prerequisites">
+<title role="prerequisites.title">Prerequisites</title>
+<para>
+NautilusMenuProvider requires
+ <link linkend="GObject">GObject</link>.</para>
+</refsect1>
+
+
+
+
+
+<refsect1 id="libnautilus-extension-nautilus-menu-provider.signals" role="signal_proto">
+<title role="signal_proto.title">Signals</title>
+<synopsis>
+  &quot;<link linkend="NautilusMenuProvider-items-updated">items-updated</link>&quot;                                  : Run Last
+</synopsis>
+</refsect1>
+
+
+<refsect1 id="libnautilus-extension-nautilus-menu-provider.description" role="desc">
+<title role="desc.title">Description</title>
+<para>
+</para>
+</refsect1>
+
+<refsect1 id="libnautilus-extension-nautilus-menu-provider.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="NautilusMenuProvider-struct" role="struct">
+<title>NautilusMenuProvider</title>
+<indexterm zone="NautilusMenuProvider-struct"><primary>NautilusMenuProvider</primary></indexterm><programlisting>typedef struct _NautilusMenuProvider NautilusMenuProvider;</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="NautilusMenuProviderIface" role="struct">
+<title>NautilusMenuProviderIface</title>
+<indexterm zone="NautilusMenuProviderIface"><primary>NautilusMenuProviderIface</primary></indexterm><programlisting>typedef struct {
+	GTypeInterface g_iface;
+
+	GList *(*get_file_items)       (NautilusMenuProvider *provider,
+					GtkWidget            *window,
+					GList                *files);
+	GList *(*get_background_items) (NautilusMenuProvider *provider,
+					GtkWidget            *window,
+					NautilusFileInfo     *current_folder);
+	GList *(*get_toolbar_items)    (NautilusMenuProvider *provider,
+					GtkWidget            *window,
+				        NautilusFileInfo     *current_folder);
+} NautilusMenuProviderIface;
+</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="nautilus-menu-provider-get-file-items" role="function">
+<title>nautilus_menu_provider_get_file_items ()</title>
+<indexterm zone="nautilus-menu-provider-get-file-items"><primary>nautilus_menu_provider_get_file_items</primary></indexterm><programlisting><link linkend="GList">GList</link> *             nautilus_menu_provider_get_file_items
+                                                        (<link linkend="NautilusMenuProvider">NautilusMenuProvider</link> *provider,
+                                                         <link linkend="GtkWidget">GtkWidget</link> *window,
+                                                         <link linkend="GList">GList</link> *files);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>provider</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>window</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>files</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="nautilus-menu-provider-get-background-items" role="function">
+<title>nautilus_menu_provider_get_background_items ()</title>
+<indexterm zone="nautilus-menu-provider-get-background-items"><primary>nautilus_menu_provider_get_background_items</primary></indexterm><programlisting><link linkend="GList">GList</link> *             nautilus_menu_provider_get_background_items
+                                                        (<link linkend="NautilusMenuProvider">NautilusMenuProvider</link> *provider,
+                                                         <link linkend="GtkWidget">GtkWidget</link> *window,
+                                                         <link linkend="NautilusFileInfo">NautilusFileInfo</link> *current_folder);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>provider</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>window</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>current_folder</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="nautilus-menu-provider-get-toolbar-items" role="function">
+<title>nautilus_menu_provider_get_toolbar_items ()</title>
+<indexterm zone="nautilus-menu-provider-get-toolbar-items"><primary>nautilus_menu_provider_get_toolbar_items</primary></indexterm><programlisting><link linkend="GList">GList</link> *             nautilus_menu_provider_get_toolbar_items
+                                                        (<link linkend="NautilusMenuProvider">NautilusMenuProvider</link> *provider,
+                                                         <link linkend="GtkWidget">GtkWidget</link> *window,
+                                                         <link linkend="NautilusFileInfo">NautilusFileInfo</link> *current_folder);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>provider</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>window</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>current_folder</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="nautilus-menu-provider-emit-items-updated-signal" role="function">
+<title>nautilus_menu_provider_emit_items_updated_signal ()</title>
+<indexterm zone="nautilus-menu-provider-emit-items-updated-signal"><primary>nautilus_menu_provider_emit_items_updated_signal</primary></indexterm><programlisting><link linkend="void">void</link>                nautilus_menu_provider_emit_items_updated_signal
+                                                        (<link linkend="NautilusMenuProvider">NautilusMenuProvider</link> *provider);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>provider</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+
+<refsect1 id="libnautilus-extension-nautilus-menu-provider.signal-details" role="signals">
+<title role="signals.title">Signal Details</title>
+<refsect2 id="NautilusMenuProvider-items-updated" role="signal"><title>The <literal>&quot;items-updated&quot;</literal> signal</title>
+<indexterm zone="NautilusMenuProvider-items-updated"><primary>NautilusMenuProvider::items-updated</primary></indexterm><programlisting><link linkend="void">void</link>                user_function                      (<link linkend="NautilusMenuProvider">NautilusMenuProvider</link> *nautilusmenuprovider,
+                                                        <link linkend="gpointer">gpointer</link>              user_data)                 : Run Last</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>nautilusmenuprovider</parameter>&#160;:</term>
+<listitem><simpara>the object which received the signal.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>user_data</parameter>&#160;:</term>
+<listitem><simpara>user data set when the signal handler was connected.</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+</refsect1>
+
+
+
+</refentry>

@@ -1,0 +1,51 @@
+#
+# Description: simplify menus by not listing some entries by default
+#
+Index: nautilus-2.25.3/nautilus-file-management-properties.desktop.in
+===================================================================
+--- nautilus-2.25.3.orig/nautilus-file-management-properties.desktop.in	2009-01-19 20:49:48.000000000 +0100
++++ nautilus-2.25.3/nautilus-file-management-properties.desktop.in	2009-01-19 23:08:45.000000000 +0100
+@@ -9,6 +9,7 @@
+ StartupNotify=true
+ Categories=GNOME;GTK;Settings;X-GNOME-PersonalSettings;
+ OnlyShowIn=GNOME;
++NoDisplay=true
+ X-GNOME-Bugzilla-Bugzilla=GNOME
+ X-GNOME-Bugzilla-Product=nautilus
+ X-GNOME-Bugzilla-Component=Preferences
+Index: nautilus-2.25.3/nautilus-file-management-properties.desktop.in.in
+===================================================================
+--- nautilus-2.25.3.orig/nautilus-file-management-properties.desktop.in.in	2008-09-14 14:14:27.000000000 +0200
++++ nautilus-2.25.3/nautilus-file-management-properties.desktop.in.in	2009-01-19 23:08:45.000000000 +0100
+@@ -9,6 +9,7 @@
+ StartupNotify=true
+ Categories=GNOME;GTK;Settings;X-GNOME-PersonalSettings;
+ OnlyShowIn=GNOME;
++NoDisplay=true
+ X-GNOME-Bugzilla-Bugzilla=GNOME
+ X-GNOME-Bugzilla-Product=nautilus
+ X-GNOME-Bugzilla-Component=Preferences
+Index: nautilus-2.25.3/nautilus-browser.desktop.in
+===================================================================
+--- nautilus-2.25.3.orig/nautilus-browser.desktop.in	2009-01-19 20:49:48.000000000 +0100
++++ nautilus-2.25.3/nautilus-browser.desktop.in	2009-01-19 23:08:45.000000000 +0100
+@@ -8,6 +8,7 @@
+ Terminal=false
+ StartupNotify=true
+ Type=Application
++NoDisplay=true
+ Categories=GNOME;GTK;System;Utility;Core;
+ OnlyShowIn=GNOME;
+ X-GNOME-Bugzilla-Bugzilla=GNOME
+Index: nautilus-2.25.3/nautilus-browser.desktop.in.in
+===================================================================
+--- nautilus-2.25.3.orig/nautilus-browser.desktop.in.in	2008-10-02 14:26:49.000000000 +0200
++++ nautilus-2.25.3/nautilus-browser.desktop.in.in	2009-01-19 23:08:45.000000000 +0100
+@@ -8,6 +8,7 @@
+ Terminal=false
+ StartupNotify=true
+ Type=Application
++NoDisplay=true
+ Categories=GNOME;GTK;System;Utility;Core;
+ OnlyShowIn=GNOME;
+ X-GNOME-Bugzilla-Bugzilla=GNOME

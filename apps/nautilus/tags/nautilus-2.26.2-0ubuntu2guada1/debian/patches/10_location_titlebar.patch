@@ -1,0 +1,193 @@
+Debian #413018
+GNOME #142087
+Option to show the full location in the title bar
+Index: nautilus-2.20.0/libnautilus-private/apps_nautilus_preferences.schemas.in
+===================================================================
+--- nautilus-2.20.0.orig/libnautilus-private/apps_nautilus_preferences.schemas.in	2007-09-18 08:51:48.000000000 +0200
++++ nautilus-2.20.0/libnautilus-private/apps_nautilus_preferences.schemas.in	2007-09-24 11:39:14.871645609 +0200
+@@ -720,6 +720,21 @@
+       </locale>
+     </schema>
+          
++     <schema>
++      <key>/schemas/apps/nautilus/preferences/location_in_title_bar</key>
++      <applyto>/apps/nautilus/preferences/location_in_title_bar</applyto>
++      <owner>nautilus</owner>
++      <type>bool</type>
++      <default>false</default>
++      <locale name="C">
++         <short>Show current location in title bar</short>
++         <long>
++             If set to true, windows will have the full location displayed
++             in their title bar. Otherwise it will only show the folder name.
++         </long>
++      </locale>
++    </schema>
++
+     <schema>
+       <key>/schemas/apps/nautilus/preferences/start_with_sidebar</key>
+       <applyto>/apps/nautilus/preferences/start_with_sidebar</applyto>
+Index: nautilus-2.20.0/libnautilus-private/nautilus-global-preferences.c
+===================================================================
+--- nautilus-2.20.0.orig/libnautilus-private/nautilus-global-preferences.c	2007-06-27 09:12:34.000000000 +0200
++++ nautilus-2.20.0/libnautilus-private/nautilus-global-preferences.c	2007-09-24 11:39:14.875645837 +0200
+@@ -378,6 +378,10 @@
+ 	  PREFERENCE_BOOLEAN,
+ 	  GINT_TO_POINTER (TRUE)
+ 	},
++	{ NAUTILUS_PREFERENCES_LOCATION_IN_TITLE_BAR,
++	  PREFERENCE_BOOLEAN,
++	  GINT_TO_POINTER (TRUE)
++	},
+ 	{ NAUTILUS_PREFERENCES_START_WITH_SIDEBAR,
+ 	  PREFERENCE_BOOLEAN,
+ 	  GINT_TO_POINTER (TRUE)
+Index: nautilus-2.20.0/libnautilus-private/nautilus-global-preferences.h
+===================================================================
+--- nautilus-2.20.0.orig/libnautilus-private/nautilus-global-preferences.h	2007-06-27 09:12:34.000000000 +0200
++++ nautilus-2.20.0/libnautilus-private/nautilus-global-preferences.h	2007-09-24 11:39:14.875645837 +0200
+@@ -84,6 +84,7 @@
+ #define NAUTILUS_PREFERENCES_START_WITH_LOCATION_BAR		"preferences/start_with_location_bar"
+ #define NAUTILUS_PREFERENCES_ALWAYS_USE_LOCATION_ENTRY		"preferences/always_use_location_entry"
+ #define NAUTILUS_PREFERENCES_START_WITH_STATUS_BAR		"preferences/start_with_status_bar"
++#define NAUTILUS_PREFERENCES_LOCATION_IN_TITLE_BAR            "preferences/location_in_title_bar"
+ #define NAUTILUS_PREFERENCES_START_WITH_SIDEBAR		 	"preferences/start_with_sidebar"
+ #define NAUTILUS_PREFERENCES_START_WITH_TOOLBAR			"preferences/start_with_toolbar"
+ #define NAUTILUS_PREFERENCES_SIDE_PANE_VIEW                     "preferences/side_pane_view"
+Index: nautilus-2.20.0/src/nautilus-navigation-window.c
+===================================================================
+--- nautilus-2.20.0.orig/src/nautilus-navigation-window.c	2007-09-03 16:49:27.000000000 +0200
++++ nautilus-2.20.0/src/nautilus-navigation-window.c	2007-09-24 11:39:14.875645837 +0200
+@@ -914,20 +914,25 @@
+ static gboolean
+ real_set_title (NautilusWindow *window, const char *title)
+ {
+-	char *full_title;
+-	char *window_title;
+ 	gboolean changed;
+ 
+ 	changed = EEL_CALL_PARENT_WITH_RETURN_VALUE
+ 		(NAUTILUS_WINDOW_CLASS, set_title, (window, title));
+ 
+ 	if (changed) {
+-		full_title = g_strdup_printf (_("%s - File Browser"), title);
++		char *full_title;
++		char *window_title;
++		char *location_titlebar;
++
++		location_titlebar = nautilus_window_set_location_in_titlebar (window, title);
++
++		full_title = g_strdup_printf (_("%s - File Browser"), location_titlebar);
+ 
+ 		window_title = eel_str_middle_truncate (full_title, MAX_TITLE_LENGTH);
+ 		gtk_window_set_title (GTK_WINDOW (window), window_title);
+ 		g_free (window_title);
+ 		g_free (full_title);
++		g_free (location_titlebar);
+ 	}
+ 
+ 	return changed;
+Index: nautilus-2.20.0/src/nautilus-spatial-window.c
+===================================================================
+--- nautilus-2.20.0.orig/src/nautilus-spatial-window.c	2007-09-10 08:56:43.000000000 +0200
++++ nautilus-2.20.0/src/nautilus-spatial-window.c	2007-09-24 11:39:14.875645837 +0200
+@@ -430,10 +430,14 @@
+ 		gtk_window_set_title (GTK_WINDOW (window), _("Nautilus"));
+ 	} else if (changed) {
+ 		char *window_title;
++		char *location_titlebar;
+ 
+-		window_title = eel_str_middle_truncate (title, MAX_TITLE_LENGTH);
++		location_titlebar = nautilus_window_set_location_in_titlebar (window, title);
++
++		window_title = eel_str_middle_truncate (location_titlebar, MAX_TITLE_LENGTH);
+ 		gtk_window_set_title (GTK_WINDOW (window), window_title);
+ 		g_free (window_title);
++		g_free (location_titlebar);
+ 	}
+ 
+ 	return changed;
+--- nautilus-2.22.0/src/nautilus-window.c.old	2008-03-17 10:49:47.000000000 +0100
++++ nautilus-2.22.0/src/nautilus-window.c	2008-03-17 11:11:29.000000000 +0100
+@@ -1709,3 +1709,71 @@
+ {
+ 	return (nautilus_window_get_window_type (window) != NAUTILUS_WINDOW_DESKTOP);
+ }
++
++char *
++nautilus_window_set_location_in_titlebar (NautilusWindow *window, const char *title)
++{
++	char *location_title;
++	GFile *uri = NULL;
++	char *location = NULL;
++	const char *path;
++	const char *scheme = NULL;
++	const char *display_location;
++	const char *tmp_location;
++	const char *location_prefix;
++	int tmp_location_len;
++	int tilde = 0;
++
++	location_title = g_strdup (title);
++
++	if (eel_preferences_get_boolean (NAUTILUS_PREFERENCES_LOCATION_IN_TITLE_BAR) != TRUE
++	    || (uri = nautilus_window_get_location (window)) == NULL
++	    || (location = g_file_get_parse_name (uri)) == NULL
++	    || location[0] == 0
++	    || location[1] == 0)
++		goto done;
++
++	if ((tmp_location = g_get_home_dir()) == NULL) {
++		display_location = location;
++		goto construct_title;
++	}
++
++	if (strcmp (location, tmp_location) == 0) {
++		tilde = 1;
++		display_location = "";
++		goto construct_title;
++	}
++	
++	tmp_location_len = strlen (tmp_location);
++	if (eel_str_has_prefix (location, tmp_location) == FALSE
++	    || location[tmp_location_len] != G_DIR_SEPARATOR) {
++		display_location = location;
++		goto construct_title;
++	}
++
++	tilde = 1;
++	display_location = location + tmp_location_len;
++
++	construct_title:
++
++		g_free (location_title);
++
++		if(scheme != NULL)
++			location_prefix = scheme;
++		else if(tilde == 1)
++			location_prefix = "~";
++		else
++			location_prefix = "";
++
++		location_title = g_strdup_printf ("%s (%s%s%s)", title, location_prefix, scheme != NULL ? " - " : "", display_location);
++
++	done:
++		if (uri != NULL)
++			g_object_unref (uri);
++
++		if (location != NULL)
++			g_free (location);
++
++		return (location_title);
++}
++
+--- nautilus-2.22.0/src/nautilus-window.h.old	2008-03-17 10:49:50.000000000 +0100
++++ nautilus-2.22.0/src/nautilus-window.h	2008-03-17 10:51:45.000000000 +0100
+@@ -152,5 +152,7 @@
+ void             nautilus_window_add_extra_location_widget (NautilusWindow  *window,
+                                                             GtkWidget       *widget);
+ gboolean         nautilus_window_has_menubar_and_statusbar (NautilusWindow *window);
++char *           nautilus_window_set_location_in_titlebar (NautilusWindow *window,
++                                                           const char        *title);
+ 
+ #endif

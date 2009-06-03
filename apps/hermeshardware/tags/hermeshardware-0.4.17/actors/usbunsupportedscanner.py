@@ -1,13 +1,12 @@
 # -*- coding: utf-8 -*-
 #
 # Authors:
-#     Gumersindo Coronel Pérez (gcoronel)
 #     Jose Chaso (pchaso) <jose.chaso at gmail>
 #
-# [es] Modulo usbsanescanner - Módulo que implementa el "actor hardware" 
-#                              para los escaneres USB soportados por SANE
-# [en] usbsanescanner module - Implements hardware actor for SANE supported
-#                              USB scanners
+# [es] Modulo usbunsuppertedscanner - Módulo que implementa el "actor hardware" 
+#                              para los escaneres USB no soportados por SANE
+# [en] usbunsupportedscanner module - Implements hardware actor for SANE 
+#                              unsupported USB scanners
 #
 # Copyright (C) 2009 Junta de Andalucía
 #
@@ -59,31 +58,33 @@ def is_valid(value):
 
 class Actor (DeviceActor):
     """ 
-    [es] Implementacion de clase Actor para escaneres USB soportados por SANE
+    [es] Implementacion de clase Actor para escaner usb no soportados por SANE
     --------------------------------------------------------------------------
-    [en] Actor class implementation for SANE supported USB Scanners
+    [en] Actor class implementation for USB unsupported SANE Scanners
     """
 
     __required__ = {'info.subsystem':'usb',
-                    'scanner.access_method':'proprietary',
+#                    'scanner.access_method':'proprietary',
                     'info.capabilities': is_valid}
     __icon_path__  = os.path.abspath('actors/img/scanner.png')
     __iconoff_path__ = os.path.abspath('actors/img/scanneroff.png')
-    __device_title__ = _("SANE supported Scanner")
-    __device_conn_description__ = _("USB SANE Scanner connected")
-    __device_disconn_description__ = _("USB SANE Scanner disconnected")
+    __device_title__ = _("SANE unsupported Scanner")
+    __device_conn_description__ = _("USB Scanner connected")
+    __device_disconn_description__ = _("USB Scanner disconnected")
 
+    
 
-    def on_added(self):
-        """
-        [es] Acciones a ejecutar cuando se conecta el dispositivo
-        -----------------------------------------------------------------------
-        [en] Actions to take when the device is connected
-        """
-        def open_xsane():
-            os.system('xsane')
-        
-        self.msg_render.show(self.__device_title__,
-                             self.__device_conn_description__,
-                             self.__icon_path__,
-                             actions = {_("Launch Scanning Application"): open_xsane})
+#    def on_added(self):
+#        """
+#        [es] Acciones a ejecutar cuando se conecta el dispositivo
+#        -----------------------------------------------------------------------
+#        [en] Actions to take when the device is connected
+#        """
+#        def open_xsane():
+#            os.system('xsane')
+#        
+#        self.msg_render.show(self.__device_title__,
+#                             self.__device_conn_description__,
+#                             self.__icon_path__,
+#                             actions = {_("Launch Scanning Application"): open_xsane})
+                                                                                                                                                                           

@@ -111,8 +111,10 @@ class Actor (DeviceActor):
                         os.system('nautilus "%s"' % mount_point) 
 
                     self.message_render.show(_("Storage"), 
-                        __device_conn_description__, __icon_path__,
-                        actions = {mount_point: open_volume})
+                         _("Volume mounted"),
+                         os.path.abspath('actors/img/volume.png'),
+#                        __device_conn_description__, __icon_path__,
+                       actions = {mount_point: open_volume})
 
                     for listener in self.listeners:
                         if listener.is_valid(self.properties):
@@ -120,7 +122,9 @@ class Actor (DeviceActor):
 
                 else:
                     self.message_render.show(_("Storage"),
-                            __device_disconn_description__, __iconoff_path__) 
+                            _("Volume umounted"),
+                            os.path.abspath('actors/img/volumeoff.png'),
+#                            __device_disconn_description__, __iconoff_path__) 
 
                     for listener in self.listeners:
                         if listener.is_valid(self.properties):

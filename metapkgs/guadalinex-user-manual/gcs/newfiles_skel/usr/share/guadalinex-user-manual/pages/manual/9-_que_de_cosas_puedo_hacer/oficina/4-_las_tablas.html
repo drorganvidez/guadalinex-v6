@@ -1,0 +1,245 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es"
+ lang="es" dir="ltr">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<!-- style sheet links -->
+<link rel="stylesheet" media="all" type="text/css" href="../../../../css/all.css" />
+<link rel="stylesheet" media="screen" type="text/css" href="../../../../css/screen.css" />
+<link rel="stylesheet" media="print" type="text/css" href="../../../../css/print.css" />
+
+</head>
+<body>
+<div class="dokuwiki">
+  <div class="stylehead">
+    <div class="header">
+      <div class="logo">
+        <a href="../../../../pages/manual/indice.html" name="dokuwiki__top">Guadalinex V6</a>
+        <a href="../../../../pages/manual/indice.html" id="subt">Gu&iacute;a de usuario</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="wrapper">
+   <div class="left_page">
+
+
+
+<h1><a name="las_tablas" id="las_tablas">4- Las tablas</a></h1>
+<div class="level1">
+
+<p>
+ Antes de empezar a explicarte cómo se crean las tablas en el programa, vamos a dejarte claros una serie de conceptos para que comprendas mejor el funcionamiento y la estructura interna de esas tablas.
+</p>
+
+<p>
+Las tablas son las herramientas que nos permiten introducir diferentes tipos de datos en nuestra base de datos. Por ejemplo: Tabla sobre los empleados de una empresa. Estas tablas contienen datos introducidos por categorías a las que llamamos “Campos”. Por ejemplo, para cada empleado que vayamos a introducir en la tabla debemos rellenar los campos de Nombre, Apellidos, fecha de nacimiento, dirección, DNI, teléfono, correo electrónico, cargo en la empresa, departamento al que pertenece, etc&hellip;  
+</p>
+
+<p>
+Y los campos a su vez contienen valores, que pueden ser numéricos o sólo de texto, y que son los datos propiamente dichos. Por ejemplo, el valor del campo “Cargo en la empresa” podría ser  “Director General”. 
+</p>
+
+<p>
+Una vez que tengamos creada nuestra tabla, cada vez que introduzcamos datos en todos los campos que componen una fila de la tabla, estaremos creando un nuevo registro.
+</p>
+
+<p>
+<strong>1- Crear una tabla:</strong>
+</p>
+
+<p>
+En el <em>Panel de la Base de datos</em> que aparece a la izquierda de tu pantalla debes hacer clic en el primer botón que es el de las tablas.
+</p>
+
+<p>
+En el <em>Cuadro de tareas</em> te aparecen dos opciones para crear tus tablas: 
+</p>
+<ul>
+<li class="level1"><div class="li">  Crear tabla en vista diseño: donde tienes que introducir de forma manual el nombre de los campos, por ejemplo: Apellidos, el tipo de campo, por ejemplo: texto, y las propiedades del campo, por ejemplo: si es obligatorio rellenarlo, el número de letras que se pueden introducir, etc&hellip;</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li">  Usar el asistente para crear la tabla: que te va guiando en todo el proceso de creación de la tabla, y te ofrece diferentes formatos de tablas ya creadas por el programa que te pueden servir tanto a nivel personal como profesional. </div>
+</li>
+</ul>
+
+<p>
+  Te aconsejamos que en los apartados en los que el programa te ofrezca un asistente, si no eres muy experto en la materia, no dudes en utilizarlos, siempre será mucho más rápido, cómodo y fácil.
+</p>
+
+<p>
+Cuando tengas abierto el asistente te vas a encontrar que puedes crear tu tabla en sólo 4 pasos o ventanas:
+</p>
+
+<p>
+-1ª ventana: Seleccionar campos.
+</p>
+
+<p>
+Para seleccionar el tipo de tabla que quieres hacer haz clic entre las opciones <em>Negocios</em> o <em>Personal</em>, y el programa te mostrará las tablas de muestra que ya tiene establecidas y puedes utilizar.
+</p>
+
+<p>
+Luego encontrarás dos recuadros, uno de <em>Campos disponibles</em> y otro de <em>Campos seleccionados</em>, lo que tienes que hacer es escoger de los <em>Campos disponibles</em> que te ofrece el programa aquellos que te sirvan para tu tabla, y la manera de hacerlo es haciendo doble clic sobre el campo en cuestión, y verás como los va añadiendo automáticamente al recuadro de los <em>Campos seleccionados</em>.
+</p>
+
+<p>
+Cuando hayas terminado de seleccionar todos los campos necesarios tienes que hacer clic en la pestaña de <em>Siguiente</em>, en la parte inferior de la ventana.
+</p>
+
+<p>
+<a href="../../../../media/manual/asistente_tabla1.jpg" class="media" title="manual:asistente_tabla1.jpg"><img src="../../../../media/manual/asistente_tabla1.jpg" class="media" title="Asistente para tablas" alt="Asistente para tablas" /></a>
+</p>
+
+<p>
+ -2ª ventana: Establecer tipos y formatos.
+</p>
+
+<p>
+Este apartado recoge información específica sobre cada uno de los campos que has seleccionado en la ventana anterior. 
+</p>
+<ul>
+<li class="level1"><div class="li">  Nombre del campo: debes poner el nombre exacto con el que quieras que aparezca el campo en tu tabla.</div>
+</li>
+<li class="level1"><div class="li">  Tipo del campo: elegir si el campo va a contener texto, números, fecha, imagen, número decimal, etc&hellip;</div>
+</li>
+<li class="level1"><div class="li">  Entrada requerida: haz clic en el “Sí” si quieres que este campo sea obligatorio rellenarlo, y en el “No” si se puede dejar en blanco.</div>
+</li>
+<li class="level1"><div class="li">  Longitud: debes especificar la capacidad que va a tener ese campo para albergar datos cortos o largos. Ten en cuenta que si es un campo de tipo texto y en el que vas a escribir más de la cuenta, pues tendrás que darle al campo una longitud mayor para que te quepa todo el texto.</div>
+</li>
+</ul>
+
+<p>
+ Haz clic en la pestaña <em>Siguiente</em>.
+</p>
+
+<p>
+<a href="../../../../media/manual/asistente_tabla2.jpg" class="media" title="manual:asistente_tabla2.jpg"><img src="../../../../media/manual/asistente_tabla2.jpg" class="media" title="Asistente para tablas" alt="Asistente para tablas" /></a>
+</p>
+
+<p>
+-3ª ventana: Establecer clave principal.
+</p>
+
+<p>
+La clave principal es un elemento muy importante dentro de la estructura de las tablas y de la base de datos. Todas las tablas deben de tener una clave principal, ya que se establecen relaciones entre las informaciones contenidas en tablas distintas, y estas relaciones se establecen a través de la clave principal.
+</p>
+
+<p>
+Para que te hagas una idea, y a modo de ejemplo, imagínate que trabajas en un vídeo club y tienes una base de datos para gestionar los alquileres de los DVDs. La clave principal de la tabla de Títulos de DVDs disponibles en el vídeo club estará relacionada con la clave principal de la tabla de los Clientes, porque lógicamente, cada título irá asociado a una persona concreta que lo alquila.   
+</p>
+
+<p>
+Lo más fácil es que elijas en esta ventana del asistente la opción <em>Agregar una clave principal automáticamente</em>, aunque también puedes asociar la clave principal a un campo que ya existe, o incluso a varios campos a la vez.
+</p>
+
+<p>
+Haz clic en la pestaña <em>Siguiente</em>.
+</p>
+
+<p>
+<a href="../../../../media/manual/asistente_tabla3.jpg" class="media" title="manual:asistente_tabla3.jpg"><img src="../../../../media/manual/asistente_tabla3.jpg" class="media" title="Asistente para tablas" alt="Asistente para tablas" /></a>
+</p>
+
+<p>
+ -4º ventana: Crear tabla. 
+</p>
+
+<p>
+Tienes que darle un nombre a tu tabla, te aconsejamos que sea representativo de los datos que contiene, y después haces clic en la pestaña de <em>Finalizar</em>.
+</p>
+
+<p>
+También tienes la posibilidad de elegir lo que quieres hacer a continuación: Insertar datos inmediatamente, modificar el diseño de la tabla, o crear un formulario basado en la tabla.
+</p>
+
+<p>
+<a href="../../../../media/manual/asistente_tabla4.jpg" class="media" title="manual:asistente_tabla4.jpg"><img src="../../../../media/manual/asistente_tabla4.jpg" class="media" title="Asistente para tablas" alt="Asistente para tablas" /></a>
+</p>
+
+<p>
+<strong>2- Añadir registros.</strong>
+</p>
+
+<p>
+Para añadir registros haz doble clic encima de la tabla, te aparecerán las columnas con los campos, y las filas para que vayas introduciendo datos.
+</p>
+
+<p>
+<a href="../../../../media/manual/insertar_registros_tabla.jpg" class="media" title="manual:insertar_registros_tabla.jpg"><img width="100%" height="100%" src="../../../../media/manual/insertar_registros_tabla.jpg" class="media" title="Añadir registros a la tabla" alt="Añadir registros a la tabla" /></a>
+</p>
+
+<p>
+ <strong>3- Relaciones entre tablas.</strong>
+</p>
+
+<p>
+Para establecer relaciones entre los atributos de dos o más tablas, accede en la barra de menús a <strong>Herramientas→Relaciones</strong>.
+</p>
+
+<p>
+<a href="../../../../media/manual/abrir_relaciones.jpg" class="media" title="manual:abrir_relaciones.jpg"><img src="../../../../media/manual/abrir_relaciones.jpg" class="media" title="Relaciones entre tablas" alt="Relaciones entre tablas" /></a>
+</p>
+
+<p>
+ Ve haciendo clic en aquellas tablas que quieras relacionar y luego haz clic en la pestaña <em>Añadir</em>.
+</p>
+
+<p>
+<a href="../../../../media/manual/agregar_tabla_relaciones.jpg" class="media" title="manual:agregar_tabla_relaciones.jpg"><img src="../../../../media/manual/agregar_tabla_relaciones.jpg" class="media" title="Relaciones entre tablas" alt="Relaciones entre tablas" /></a>
+</p>
+
+<p>
+ Una vez que tengas las tablas añadidas y visualices todos los campos tienes que posicionarte con el ratón en el campo de la primera tabla que quieras relacionar, hacer clic y sin soltar el ratón arrastrar hasta el campo de la segunda tabla con el que quieras relacionarlo, y entonces soltar el ratón. Verás que se ha quedado dibujada una linea recta negra de unión entre los dos campos, y que además informa del tipo de relación que se ha establecido.
+</p>
+
+<p>
+<a href="../../../../media/manual/relacion_de_1_a_1.jpg" class="media" title="manual:relacion_de_1_a_1.jpg"><img src="../../../../media/manual/relacion_de_1_a_1.jpg" class="media" title="Relaciones entre tablas" alt="Relaciones entre tablas" /></a>
+</p>
+
+<p>
+recuerda: 
+</p>
+<ul>
+<li class="level1"><div class="li"> Relación de 1 a 1: a cada registro de una tabla le corresponde un solo registro de otra tabla, y al revés. Por ejemplo: a cada empleado le corresponde un solo DNI y viceversa.</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> Relación de 1 a muchos: a cada registro de una tabla le pueden corresponder muchos otros registros de otra tabla. Por ejemplo: a cada autor le pueden corresponder más de un libro.</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> Relación de muchos a muchos: a cada registro de una tabla le pueden corresponder muchos otros registros de otra tabla, y al revés. Por ejemplo: a cada actor le pueden corresponder más de una película protagonizada, y a cada película le puede corresponder más de un actor que la protagonice. </div>
+</li>
+</ul>
+
+<p>
+Para eliminar relaciones que ya no nos interesen o que queramos modificar, debes situarte con el ratón encima de la línea recta negra que marca la relación, pulsar el botón derecho del ratón, y seleccionar la opción <em>Eliminar</em>. 
+</p>
+<hr />
+
+<p>
+<strong>Anterior</strong>: <a href="../../../manual/9-_que_de_cosas_puedo_hacer/oficina/3_-_entorno_de_trabajo_de_base_de_datos.html" class="wikilink1" title="manual:9-_que_de_cosas_puedo_hacer:oficina:3_-_entorno_de_trabajo_de_base_de_datos">3 - Entorno de trabajo de base de datos</a>
+</p>
+
+<p>
+<strong>Siguiente</strong>: <a href="../../../manual/9-_que_de_cosas_puedo_hacer/oficina/5-_las_consultas.html" class="wikilink1" title="manual:9-_que_de_cosas_puedo_hacer:oficina:5-_las_consultas">5 - Las consultas</a> 
+</p>
+
+</div>
+</div>
+    <div class="stylefoot">
+        <div class="meta">
+            <div class="doc">Guadalinex V6: Gu&iacute;a de usuario<a href=""></a></div>
+        </div>
+    </div>
+   </div>
+  <div class="footerinc" align="center"></div>
+ </div>
+</body>
+</html>

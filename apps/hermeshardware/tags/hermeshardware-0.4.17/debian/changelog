@@ -1,8 +1,29 @@
+hermeshardware (0.4.17) jaunty; urgency=low
+
+  [ José Jesús Chaso González ]
+  * Añadidos nuevos ficheros a POTFILES.in y nuevas cadenas de traducción
+  * Añadido actor usbdrive para detectar conexion de disco usb o pendrive.
+  * También se desvincula la detección de dispositivo (tanto usb como disco) de las particiones por lo que la notificación es mucho más rapida, sin necesidad de esperar al montaje de ningun sistema de ficheros
+  * Se han vaciado de contenido los metodos on_added y on_removed para volume.py, por lo que solo se usa para notificar el montaje/desmontaje de particiones.
+  * Esto permite desvincular los eventos de montaje/desmontaje de particiones de los eventos de conexion/desconexion o insercion/ejeccion de los dispositivos fisicos
+  * Añadida información de paquetes a instalar para el actor usbsanescanner
+  * Añadidos iconos de inserción/ejección de discos ROM para el nuevo actor disc.py
+  * Se crea un nuevo actor disc.py para los dispositivos de disco ROM y se independiza de los dispositivos de sistema de ficheros USB manejador por volume.py
+  * Separados actores para webcam, el antiguo se deja por compatibilidad con webcams antiguas en centros guadalinfo y se renombra a usbwebcam_guadalinfo
+  * Vulneramos DRY pero evitamos que el proceso se quede suspendido y emita un error cuando expira algun temporizador
+    que cierra hermes.
+  * Eliminados actores muy genericos que no hacían nada y eran los responsables de las ventanas en blanco que se lanzaban al conectar algunos dispositivos.
+  * Al tener un __required__ muy generico encajaban con muchos dispositivos.
+  * Añadidas notificaciones de dispositivo desconocido en conexion y desconexion cuando el dispositivo no encaja con ningun actor
+
+ -- Juanje Ojeda Croissier <jojeda@emergya.es>  Wed, 03 Jun 2009 09:06:41 +0200
+
 hermeshardware (0.4.16) jaunty; urgency=low
 
   [ José Jesús Chaso González ]
-  * Typo en importacion dos lineas se han pegado
-  * Eliminado el metodo is_valid que se habia colado al copiar el codigo de usbmouse.py
+  * Typo en importación dos líneas se han pegado
+  * Eliminado el metodo is_valid que se había colado al copiar
+    el código de usbmouse.py
   * Actualizado diccionario de traducciones
 
  -- Juanje Ojeda Croissier <jojeda@emergya.es>  Fri, 22 May 2009 14:01:37 +0200

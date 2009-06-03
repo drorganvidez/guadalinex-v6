@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-05-22 13:31+0200\n"
+"POT-Creation-Date: 2009-06-03 00:44+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -80,9 +80,33 @@ msgstr "Cámara digital desconectada"
 msgid "Use device"
 msgstr "Utilizar dispositivo"
 
-#: actors/deviceactor.py:363 actors/usbwebcam.py:117
+#: actors/deviceactor.py:363 actors/usbwebcam_guadalinfo.py:117
 msgid "Install required packages"
 msgstr "Instalar paquetes requeridos"
+
+#: actors/disc.py:70
+msgid "Disc"
+msgstr "Disco"
+
+#: actors/disc.py:71
+msgid "Disc inserted"
+msgstr "Disco insertado"
+
+#: actors/disc.py:72
+msgid "Disc ejected"
+msgstr "Disco expulsado"
+
+#: actors/disc.py:73 actors/volume.py:70
+msgid "Filesystem mounted"
+msgstr "Sistema de ficheros montado"
+
+#: actors/disc.py:74 actors/volume.py:71
+msgid "Filesystem umounted"
+msgstr "Sistema de ficheros desmontado"
+
+#: actors/disc.py:109 actors/volume.py:131 tests/test_notify.py:71
+msgid "Error"
+msgstr "Error"
 
 #: actors/dvb.py:84
 msgid "DVB"
@@ -191,6 +215,18 @@ msgstr "Dispositivo USB desconectado:\n"
 msgid "USB device disconnected"
 msgstr "Dispositivo USB desconectado"
 
+#: actors/usbdrive.py:69
+msgid "Storage"
+msgstr "Almacenamiento"
+
+#: actors/usbdrive.py:70
+msgid "USB storage device connected"
+msgstr "Dispositivo de almacenamiento USB conectado"
+
+#: actors/usbdrive.py:71
+msgid "USB storage device disconnected"
+msgstr "Dispositivo de almacenamiento USB desconectado"
+
 #: actors/usbjoystick.py:73
 msgid "Joystick/Gamepad connected"
 msgstr "Joystick/Gamepad conectado"
@@ -251,6 +287,10 @@ msgstr "Escáner compatible con SANE conectado"
 msgid "USB SANE Scanner disconnected"
 msgstr "Escaner compatible con SANE desconectado"
 
+#: actors/usbsanescanner.py:89
+msgid "Launch Scanning Application"
+msgstr "Abrir Aplicación de Escáner"
+
 #: actors/usbtablet.py:67
 msgid "Graphics Tablet"
 msgstr "Tableta Digitalizadora"
@@ -263,37 +303,53 @@ msgstr "Tablet conectado"
 msgid "Tablet disconnected"
 msgstr "Tableta desconectada"
 
-#: actors/usbwebcam.py:115
+#: actors/usbunsupportedscanner.py:71
+msgid "SANE unsupported Scanner"
+msgstr "Escaner no soportado por SANE"
+
+#: actors/usbunsupportedscanner.py:72
+msgid "USB Scanner connected"
+msgstr "Escáner USB conectado"
+
+#: actors/usbunsupportedscanner.py:73
+msgid "USB Scanner disconnected"
+msgstr "Escaner USB desconectado"
+
+#: actors/usbwebcam.py:71
+msgid "Webcam"
+msgstr "Cámara Web"
+
+#: actors/usbwebcam.py:72
+msgid "USB Webcam connected"
+msgstr "Cámara Web conectada"
+
+#: actors/usbwebcam.py:73
+msgid "USB Webcam disconnected"
+msgstr "Cámara web desconectada"
+
+#: actors/usbwebcam.py:88
+msgid "Launch Webcam Application"
+msgstr "Abrir Aplicacion de Cámara Web"
+
+#: actors/usbwebcam_guadalinfo.py:115
 msgid "Run capture program"
 msgstr "Ejecutar programa de captura"
 
-#: actors/usbwebcam.py:119 actors/usbwebcam.py:128
+#: actors/usbwebcam_guadalinfo.py:119 actors/usbwebcam_guadalinfo.py:128
 msgid "WEBCAM"
 msgstr "CÁMARA WEB"
 
-#: actors/usbwebcam.py:119
+#: actors/usbwebcam_guadalinfo.py:119
 msgid "Webcam connected"
 msgstr "Cámara Web conectada"
 
-#: actors/usbwebcam.py:128
+#: actors/usbwebcam_guadalinfo.py:128
 msgid "Webcam disconnected"
 msgstr "Cámara web desconectada"
 
-#: actors/volume.py:71 actors/volume.py:113 actors/volume.py:122
-msgid "Storage"
-msgstr "Almacenamiento"
-
-#: actors/volume.py:72
-msgid "Volume mounted"
-msgstr "Sistema de ficheros montado"
-
-#: actors/volume.py:73
-msgid "Volume umounted"
-msgstr "Sistema de ficheros desmontado"
-
-#: actors/volume.py:130 tests/test_notify.py:71
-msgid "Error"
-msgstr "Error"
+#: actors/volume.py:69
+msgid "Filesystem"
+msgstr ""
 
 #: actors/wifinetwork.py:79 actors/wifinetwork.py:91
 msgid "Wifi"
@@ -347,55 +403,55 @@ msgstr ""
 msgid "gtk-close"
 msgstr "Cerrar"
 
-#: hermes_hardware.py:161
+#: hermes_hardware.py:162
 msgid "Device Listener started"
 msgstr "Monitor de dispositivos iniciado"
 
-#: hermes_hardware.py:176
+#: hermes_hardware.py:177
 msgid "Device Added"
 msgstr "Dispositivo Añadido"
 
-#: hermes_hardware.py:189
+#: hermes_hardware.py:190
 msgid "Connected"
 msgstr "Conectado"
 
-#: hermes_hardware.py:208
+#: hermes_hardware.py:211
 msgid "Device Removed"
 msgstr "Dispositivo Desconectado"
 
-#: hermes_hardware.py:219
+#: hermes_hardware.py:222
 msgid "Disconnected"
 msgstr "Desconectado"
 
-#: hermes_hardware.py:252
+#: hermes_hardware.py:255
 msgid "Property Modified:"
 msgstr "Propiedad Modificada:"
 
-#: hermes_hardware.py:253
+#: hermes_hardware.py:256
 msgid "udi:"
 msgstr "Identificador Único de Dispositivo:"
 
-#: hermes_hardware.py:330
+#: hermes_hardware.py:333
 msgid "Device"
 msgstr "Dispositivo"
 
-#: hermes_hardware.py:443
+#: hermes_hardware.py:446
 msgid "usage: %prog [options]"
 msgstr "uso: %prog [opciones]"
 
-#: hermes_hardware.py:450
+#: hermes_hardware.py:453
 msgid "Starts in debug mode."
 msgstr "Inicia en modo depuración."
 
-#: hermes_hardware.py:455
+#: hermes_hardware.py:458
 msgid "Capture device logs."
 msgstr "Captura registros de dispositivos."
 
-#: hermes_hardware.py:492
+#: hermes_hardware.py:495
 msgid "------------ Hermes started."
 msgstr "------------ Hermes iniciado."
 
-#: hermes_hardware.py:517
+#: hermes_hardware.py:520
 msgid "------------ Hermes finished."
 msgstr "------------ Hermes finalizado."
 
@@ -535,7 +591,7 @@ msgstr "Introduzca contraseña"
 
 #: utils/sudo.py:80
 msgid "User pressed cancel"
-msgstr "Usuario solicito cancelación"
+msgstr "Usuario solicitó cancelación"
 
 #: utils/sudo.py:85
 msgid "Three attemps for password"

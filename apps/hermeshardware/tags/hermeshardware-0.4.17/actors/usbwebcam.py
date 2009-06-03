@@ -58,9 +58,9 @@ def is_valid(value):
 
 class Actor (DeviceActor):
     """ 
-    [es] Implementacion de clase Actor para escaneres USB soportados por SANE
+    [es] Implementacion de clase Actor para webcams USB 
     --------------------------------------------------------------------------
-    [en] Actor class implementation for SANE supported USB Scanners
+    [en] Actor class implementation for USB webcams
     """
 
     __required__ = {'info.subsystem':'video4linux',

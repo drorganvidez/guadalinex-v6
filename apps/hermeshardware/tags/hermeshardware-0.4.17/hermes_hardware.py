@@ -193,9 +193,9 @@ class DeviceListener:
                 actor.on_added()
             except:
                 self.logger.warning(str(traceback.format_exc()))
-        else:
-            self.message_render.show_warning(_("Warning"),
-                                             _("Unknown Device Connected") + ".")
+ #       else:
+ #           self.message_render.show_warning(_("Warning"),
+ #                                            _("Unknown Device Connected") + ".")
 
     def on_device_removed(self, udi, *args): 
         """
@@ -222,9 +222,9 @@ class DeviceListener:
             print _("Disconnected") + " ################################"
             self.__print_properties(disp.properties)
             del self.udi_dict[udi]
-        else:
-            self.message_render.show_warning(_("Warning"),
-                                             _("Unknown Device Removed") + ".")
+#        else:
+#            self.message_render.show_warning(_("Warning"),
+#                                             _("Unknown Device Removed") + ".")
 
 
     def on_property_modified(self, udi, num, values):

@@ -51,12 +51,11 @@
 import glob
 import os.path
 
-from volume import Actor as VolumeActor
-from volume import AutoRegister, VolumeListener, CertificateListener
+from deviceactor import DeviceActor
 from gettext import gettext as _
 
 
-class Actor (VolumeActor):
+class Actor (DeviceActor):
     """ 
     [es] Implementacion de clase Actor para discos (hereda del actor para 
          volumenes)

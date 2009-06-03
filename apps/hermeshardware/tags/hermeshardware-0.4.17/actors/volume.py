@@ -6,9 +6,9 @@
 #
 # [es] Modulo volume - Módulo que implementa el "actor hardware" para los
 #                      dispositivos de volumen (dispositivos que se montan
-#                      como unidades de disco)
+#                      como sistemas de ficheros)
 # [en] volume module - "Hardware actor" module implementation for volume
-#                      devices (devices mounted like disk mounts)
+#                      devices (devices mounted like filesystems)
 #
 # Copyright (C) 2009 Junta de Andalucía
 # 
@@ -63,12 +63,10 @@ class Actor (DeviceActor):
     [en] Actor class implementation for volume devices (filesystems)
     """
 
-    __required__ = {'info.category': 'volume', 'volume.is_disc': 0 }
+    __required__ = {'info.category': 'volume' }
     __icon_path__  = os.path.abspath('actors/img/volume.png')
     __iconoff_path__ = os.path.abspath('actors/img/volumeoff.png')
-    __device_title__ = _("Storage")
-    __device_conn_description__ = _("Volume device connected")
-    __device_disconn_description__ = _("Volume device disconnected")
+    __device_title__ = _("Filesystem")
     __filesystem_mounted__ = _("Filesystem mounted")
     __filesystem_umounted__ = _("Filesystem umounted")
     __listener_factories__ = []
@@ -93,7 +91,12 @@ class Actor (DeviceActor):
 
     register_listener = classmethod(register_listener)
 
-
+    def on_added(self):
+        pass
+    
+    def on_removed(self):
+        pass
+    
     def on_modified(self, key):
         """
         [es] Acciones a ejecutar cuando se detecta un cambio en el estado

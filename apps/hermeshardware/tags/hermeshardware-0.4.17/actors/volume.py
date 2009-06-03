@@ -56,8 +56,6 @@ import os.path
 from deviceactor import DeviceActor
 from gettext import gettext as _
 
-#VOLUMEICON = os.path.abspath('actors/img/volume.png') 
-
 class Actor (DeviceActor):
     """ 
     [es] Implementacion de clase Actor para volumenes(sistemas de ficheros)
@@ -65,12 +63,14 @@ class Actor (DeviceActor):
     [en] Actor class implementation for volume devices (filesystems)
     """
 
-    __required__ = {'info.category': 'volume'}
+    __required__ = {'info.category': 'volume', 'volume.is_disc': 0 }
     __icon_path__  = os.path.abspath('actors/img/volume.png')
     __iconoff_path__ = os.path.abspath('actors/img/volumeoff.png')
     __device_title__ = _("Storage")
-    __device_conn_description__ = _("Volume mounted")
-    __device_disconn_description__ = _("Volume umounted")
+    __device_conn_description__ = _("Volume device connected")
+    __device_disconn_description__ = _("Volume device disconnected")
+    __filesystem_mounted__ = _("Filesystem mounted")
+    __filesystem_umounted__ = _("Filesystem umounted")
     __listener_factories__ = []
 
     def __init__(self, *args, **kwargs):
@@ -93,8 +93,6 @@ class Actor (DeviceActor):
 
     register_listener = classmethod(register_listener)
 
-    #def on_added(self):
-    #    self.msg_render.show_info("Dispositivo de volumen conectado")
 
     def on_modified(self, key):
         """
@@ -110,10 +108,8 @@ class Actor (DeviceActor):
                     def open_volume():
                         os.system('nautilus "%s"' % mount_point) 
 
-                    self.msg_render.show(_("Storage"), 
-                         _("Volume mounted"),
-                         os.path.abspath('actors/img/volume.png'),
-#                        __device_conn_description__, __icon_path__,
+                    self.msg_render.show(self.__device_title__, 
+                         self.__filesystem_mounted__, self.__icon_path__,
                          actions = {mount_point: open_volume})
 
                     for listener in self.listeners:
@@ -121,9 +117,8 @@ class Actor (DeviceActor):
                             listener.volume_mounted(mount_point)
 
                 else:
-                    self.msg_render.show(_("Storage"),
-                            _("Volume umounted"),
-                            os.path.abspath('actors/img/volumeoff.png'))#, __device_disconn_description__, __iconoff_path__) 
+                    self.msg_render.show(self.__device_title__,
+                            self.__filesystem_umounted__, self.__iconoff_path__) 
 
                     for listener in self.listeners:
                         if listener.is_valid(self.properties):

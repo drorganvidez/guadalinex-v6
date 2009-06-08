@@ -1,0 +1,1226 @@
+# Spanish translations for libsmbios package.
+# Copyright (C) 2008 Dell, Inc
+# This file is distributed under the same license as the libsmbios package.
+# Michael Brown <Michael_E_Brown@dell.com>, 2008.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: libsmbios 2.2.0\n"
+"Report-Msgid-Bugs-To: libsmbios-devel@lists.us.dell.com\n"
+"POT-Creation-Date: 2009-02-03 13:02-0600\n"
+"PO-Revision-Date: 2009-05-15 06:12+0000\n"
+"Last-Translator: Paco Molinero <paco@byasl.com>\n"
+"Language-Team: Spanish\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2009-05-19 01:33+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+#: src/bin/smbios-passwd:46
+msgid "Show password information"
+msgstr "Mostrar información de contraseña"
+
+#: src/bin/smbios-passwd:53
+msgid "ASCII"
+msgstr "ASCII"
+
+#: src/bin/smbios-passwd:57
+msgid "User password"
+msgstr "Contraseña de usuario"
+
+#: src/bin/smbios-passwd:58
+msgid "Admin password"
+msgstr "Contraseña de administrador"
+
+#: src/bin/smbios-passwd:59
+msgid "Owner password"
+msgstr "Contraseña de propietario"
+
+#: src/bin/smbios-passwd:100 src/bin/smbios-sys-info:113
+#: src/bin/smbios-token-ctl:298 src/bin/smbios-wakeup-ctl:120
+#: src/bin/smbios-wireless-ctl:353 src/bin/smbios-lcd-brightness:120
+#: src/bin/smbios-rbu-bios-update:169
+msgid "ERROR: Could not parse system SMBIOS table."
+msgstr "ERROR: No se puede analizar la tabla SMBIOS de sistema."
+
+#: src/bin/smbios-passwd:101 src/bin/smbios-sys-info:114
+#: src/bin/smbios-token-ctl:299 src/bin/smbios-wakeup-ctl:121
+#: src/bin/smbios-wireless-ctl:354 src/bin/smbios-lcd-brightness:121
+#: src/bin/smbios-rbu-bios-update:170
+msgid "The smbios library returned this error:"
+msgstr "La biblioteca smbios envió este error:"
+
+#: src/bin/smbios-sys-info:52
+msgid "Libsmbios version"
+msgstr "Versión de Libsmbios"
+
+#: src/bin/smbios-sys-info:53
+msgid "Product Name"
+msgstr "Nombre de producto"
+
+#: src/bin/smbios-sys-info:54
+msgid "Vendor"
+msgstr "Vendedor"
+
+#: src/bin/smbios-sys-info:55
+msgid "BIOS Version"
+msgstr "Versión de la BIOS"
+
+#: src/bin/smbios-sys-info:56
+msgid "System ID"
+msgstr "ID del sistema"
+
+#: src/bin/smbios-sys-info:57
+msgid "Service Tag"
+msgstr "Etiqueta de servicio"
+
+#: src/bin/smbios-sys-info:72
+msgid "Show or set service tag"
+msgstr "Mostrar o establecer la etiqueta de servicio"
+
+#: src/bin/smbios-sys-info:74
+msgid "Show or set property tag"
+msgstr "Mostrar o establecer la etiqueta de propiedad"
+
+#: src/bin/smbios-sys-info:90
+msgid "Specify which tag to set."
+msgstr "Especifica que etiqueta establecer."
+
+#: src/bin/smbios-sys-info:92
+msgid "Current tag value:"
+msgstr "Valor actual de la etiqueta:"
+
+#: src/bin/smbios-sys-info:107
+#, c-format
+msgid "Setting new tag value: %s"
+msgstr "Estableciendo nuevo valor de la etiqueta: %s"
+
+#: src/bin/smbios-token-ctl:86
+msgid "Filter only token with name."
+msgstr "Filtrar sólo token con nombre."
+
+#: src/bin/smbios-token-ctl:114 src/bin/smbios-token-ctl:115
+#: src/bin/smbios-token-ctl:116 src/bin/smbios-token-ctl:117
+msgid "unknown"
+msgstr "desconocido"
+
+#: src/bin/smbios-token-ctl:158
+msgid "Ignoring parsing error in CSV file:"
+msgstr "Ignorando el error de análisis en el archivo CSV:"
+
+#: src/bin/smbios-token-ctl:170
+#, c-format
+msgid "Skipping '%s' due to IOError.\n"
+msgstr "Omitiendo «%s» debido a un error ES.\n"
+
+#: src/bin/smbios-token-ctl:171
+#, c-format
+msgid "The error message was: %s"
+msgstr "El mensaje de error fue: %s"
+
+#: src/bin/smbios-token-ctl:179
+msgid "<unknown value>"
+msgstr "<Valor desconocido>"
+
+#: src/bin/smbios-token-ctl:215
+#, c-format
+msgid "  Token: %s - %s (%s)"
+msgstr "  Token: %s - %s (%s)"
+
+#: src/bin/smbios-token-ctl:219
+#, c-format
+msgid "  value: %s = %s"
+msgstr "  valor: %s = %s"
+
+#: src/bin/smbios-token-ctl:223
+msgid "   Desc: "
+msgstr "   Desc: "
+
+#: src/bin/smbios-token-ctl:270 src/bin/smbios-token-ctl:282
+msgid "Original Values"
+msgstr "Valores originales"
+
+#: src/bin/smbios-token-ctl:271 src/bin/smbios-token-ctl:283
+#: src/bin/smbios-token-ctl:293
+#, c-format
+msgid "        type: %s"
+msgstr "        tipo: %s"
+
+#: src/bin/smbios-token-ctl:272 src/bin/smbios-token-ctl:284
+#: src/bin/smbios-token-ctl:294
+#, c-format
+msgid "       value: %s"
+msgstr "       valor: %s"
+
+#: src/bin/smbios-token-ctl:274
+msgid "Setting string value ..."
+msgstr "Estableciendo el valor de la cadena"
+
+#: src/bin/smbios-token-ctl:286
+msgid "Activating token..."
+msgstr "Activando token..."
+
+#: src/bin/smbios-token-ctl:289
+msgid "New values"
+msgstr "Nuevos valores"
+
+#: src/bin/smbios-token-ctl:305 src/bin/smbios-wakeup-ctl:128
+#: src/bin/smbios-wireless-ctl:361 src/bin/smbios-lcd-brightness:128
+#: src/bin/smbios-rbu-bios-update:176
+msgid "The token library returned this error:"
+msgstr "La biblioteca de token devuelve este error:"
+
+#: src/bin/smbios-wireless-ctl:47
+msgid "Show wireless configuration (default)"
+msgstr "Mostrar la configuración inalámbrica (predeterminado)"
+
+#: src/bin/smbios-wireless-ctl:90
+msgid "WLAN"
+msgstr "WLAN"
+
+#: src/bin/smbios-wireless-ctl:99
+msgid "Bluetooth"
+msgstr "Bluetooth"
+
+#: src/bin/smbios-wireless-ctl:106
+msgid "WWAN"
+msgstr "WWAN"
+
+#: src/bin/smbios-wireless-ctl:137
+#, c-format
+msgid "Set runtime settings for %s"
+msgstr "Establecer la configuración ejecutable para %s"
+
+#: src/bin/smbios-wireless-ctl:146 src/bin/smbios-wireless-ctl:220
+#: src/bin/smbios-wireless-ctl:269
+msgid "This system does not support runtime control of wireless settings."
+msgstr ""
+"Este sistema no permite el control ejecutable de la configuración "
+"inalámbrica."
+
+#: src/bin/smbios-wireless-ctl:222
+#, c-format
+msgid "\t%s disabled at boot"
+msgstr "\t%s desactivar en el arranque"
+
+#: src/bin/smbios-wireless-ctl:225
+#, c-format
+msgid "\t%s supported"
+msgstr "\t%s soportado"
+
+#: src/bin/smbios-wireless-ctl:229
+#, c-format
+msgid "\t%s disabled"
+msgstr "\t%s desactivado"
+
+#: src/bin/smbios-wireless-ctl:232
+#, c-format
+msgid "\t%s enabled"
+msgstr "\t%s activado"
+
+#: src/bin/smbios-wireless-ctl:235
+#, c-format
+msgid "\t%s installed"
+msgstr "\t%s instalado"
+
+#: src/bin/smbios-wireless-ctl:238
+#, c-format
+msgid "\t%s not installed"
+msgstr "\t%s no instalado"
+
+#: src/bin/smbios-wireless-ctl:250
+#, c-format
+msgid "\t%s not supported"
+msgstr "\t%s no soportado"
+
+#: src/bin/smbios-wireless-ctl:265
+msgid "Wireless Info:"
+msgstr "Información de la red inalámbrica"
+
+#: src/bin/smbios-wireless-ctl:278
+#, c-format
+msgid "\tNVRAM Size: %d bytes"
+msgstr "\tTamaño NVRAM: %d bytes"
+
+#: src/bin/smbios-wireless-ctl:289 src/bin/smbios-wireless-ctl:290
+#: src/bin/smbios-wireless-ctl:291
+msgid "on"
+msgstr "encendido"
+
+#: src/bin/smbios-wireless-ctl:289 src/bin/smbios-wireless-ctl:290
+#: src/bin/smbios-wireless-ctl:291
+msgid "off"
+msgstr "apagado"
+
+#: src/bin/smbios-wireless-ctl:292 src/bin/smbios-wireless-ctl:294
+msgid "locked"
+msgstr "bloqueado"
+
+#: src/bin/smbios-wireless-ctl:292 src/bin/smbios-wireless-ctl:294
+msgid "not locked"
+msgstr "no bloqueado"
+
+#: src/bin/smbios-wireless-ctl:293
+msgid "enabled"
+msgstr "activado"
+
+#: src/bin/smbios-wireless-ctl:293
+msgid "disabled"
+msgstr "desactivado"
+
+#: src/bin/smbios-wireless-ctl:310
+#, c-format
+msgid "Libsmbios version : %s"
+msgstr "Versión Libsmbios : %s"
+
+#: src/bin/smbios-wireless-ctl:311
+#, c-format
+msgid "smbios-wireless-ctl version : %s"
+msgstr "Versión smbios-wireless-ct : %s"
+
+#: src/bin/smbios-wireless-ctl:346 src/bin/smbios-lcd-brightness:113
+msgid "ERROR: Could not execute SMI."
+msgstr "ERROR: No se puede ejecutar SMI."
+
+#: src/bin/smbios-wireless-ctl:347 src/bin/smbios-lcd-brightness:114
+msgid "The smi library returned this error:"
+msgstr "La biblioteca smi devolvió este error:"
+
+#: src/bin/smbios-lcd-brightness:46
+msgid "Set new value"
+msgstr "Establecer un valor nuevo"
+
+#: src/bin/smbios-lcd-brightness:54
+#, c-format
+msgid "    current: %s"
+msgstr "    actual: %s"
+
+#: src/bin/smbios-lcd-brightness:55
+#, c-format
+msgid "        min: %s"
+msgstr "        mín: %s"
+
+#: src/bin/smbios-lcd-brightness:56
+#, c-format
+msgid "        max: %s"
+msgstr "        máx: %s"
+
+#: src/bin/smbios-lcd-brightness:74
+msgid "Battery"
+msgstr "bateria"
+
+#: src/bin/smbios-lcd-brightness:78
+msgid "AC"
+msgstr "CA"
+
+#: src/bin/smbios-rbu-bios-update:103
+#, c-format
+msgid "\tMinimum size: %d"
+msgstr "\tTamaño mínimo: %d"
+
+#: src/bin/smbios-rbu-bios-update:111
+#, c-format
+msgid "\tCharacteristics: 0x%04x"
+msgstr "\tCaracterísticas: 0x%04x"
+
+#: src/bin/smbios-rbu-bios-update:112
+#, c-format
+msgid "\tUpdate modes supported: %s"
+msgstr "\tModos de actualización soportados: %s"
+
+#: src/bin/smbios-rbu-bios-update:122
+msgid "Rebooting system to update the BIOS."
+msgstr "Reiniciandom el sistema para actualizar la BIOS."
+
+#: src/bin/smbios-rbu-bios-update:146
+msgid "Cancelling BIOS update..."
+msgstr "Cancelando la actualización de la BIOS..."
+
+#: src/bin/smbios-rbu-bios-update:148
+msgid "BIOS update cancelled."
+msgstr "Actualización de la BIOS cancelada."
+
+#: src/bin/smbios-rbu-bios-update:152
+msgid "Performing BIOS update..."
+msgstr "Actualizando la BIOS..."
+
+#: src/bin/smbios-get-ut-data.c:84 src/bin/smbios-get-ut-data.c:93
+#: src/bin/smbios-sys-info-lite.c:77
+#, c-format
+msgid "Libsmbios:    %s\n"
+msgstr "Libsmbios:    %s\n"
+
+#: src/bin/smbios-get-ut-data.c:252
+#, c-format
+msgid "dumping table header.\n"
+msgstr "volcando cabecera de tabla.\n"
+
+#: src/bin/smbios-get-ut-data.c:257
+#, c-format
+msgid "dumping table.\n"
+msgstr "volcando tabla.\n"
+
+#: src/bin/smbios-get-ut-data.c:262
+#, c-format
+msgid "dumped table.\n"
+msgstr "tabla volcada.\n"
+
+#: src/bin/smbios-get-ut-data.c:271
+#, c-format
+msgid "error dumping table\n"
+msgstr "error al volcar la tabla\n"
+
+#: src/bin/smbios-sys-info-lite.c:82
+#, c-format
+msgid "System ID:    0x%04X\n"
+msgstr "ID de sistema:    0x%04X\n"
+
+#: src/bin/smbios-sys-info-lite.c:92
+#, c-format
+msgid "Service Tag:  %s\n"
+msgstr "Etiqueta de servicio:  %s\n"
+
+#: src/python/libsmbios_c/smi.py:119
+msgid "SMI is unsupported"
+msgstr "SMI no está permitido"
+
+#: src/python/libsmbios_c/smi.py:121
+msgid "SMI did not execute"
+msgstr "SMI no se ejecutó"
+
+#: src/python/libsmbios_c/token.py:155
+#, python-format
+msgid "ID 0x%04x not found"
+msgstr "ID 0x%04x no encontrada"
+
+#: src/bin/smbios-passwd:52
+msgid "Keyboard Scancodes"
+msgstr "Codigos de teclado"
+
+#: src/bin/smbios-sys-info:58
+msgid "Express Service Code"
+msgstr "Código de servicio express"
+
+#: src/bin/smbios-sys-info:59
+msgid "Asset Tag"
+msgstr ""
+
+#: src/bin/smbios-sys-info:60
+msgid "Property Ownership Tag"
+msgstr ""
+
+#: src/bin/smbios-sys-info:73
+msgid "Show or set asset tag"
+msgstr ""
+
+#: src/bin/smbios-sys-info:75
+msgid "Set specified tag to new value"
+msgstr "Establecer nuevo valor para la etiqueta seleccionada"
+
+#: src/bin/smbios-token-ctl:57
+msgid "Action: dump token table"
+msgstr "Acción: volcado de la tabla de token"
+
+#: src/bin/smbios-token-ctl:60
+msgid "Action: return true if specified token is a string."
+msgstr ""
+"Acción: Devuelve como verdadero si el token especificado es una cadena"
+
+#: src/bin/smbios-token-ctl:64
+msgid "Action: return true if specified token is a bool."
+msgstr "Acción: Devuelve como verdadero si el token especificado es bool"
+
+#: src/bin/smbios-token-ctl:68
+msgid "Action: return true if specified bool token is active."
+msgstr ""
+"Acción: devuelve como verdadero si el valor booleano especifico esta activo"
+
+#: src/bin/smbios-token-ctl:72
+msgid "Action: get string token value."
+msgstr "Acción: obtener cadena de valores de token"
+
+#: src/bin/smbios-token-ctl:76
+msgid "Action: activate specified bool token."
+msgstr "Acción: activar el valor especifico booleano"
+
+#: src/bin/smbios-token-ctl:80
+msgid "Action: set string token value."
+msgstr "Acción: Establecer valor de cadena de token"
+
+#: src/bin/smbios-token-ctl:84
+msgid "Filter only token with ID."
+msgstr "Filtrar sólo token con ID"
+
+#: src/bin/smbios-token-ctl:88
+msgid "Filter only token with setting."
+msgstr "Filtrar sólo token con ajustes"
+
+#: src/bin/smbios-token-ctl:91
+msgid "path to the token.csv file."
+msgstr "ruta al archivo token.csv"
+
+#: src/bin/smbios-token-ctl:93
+msgid "Path to token blacklist file."
+msgstr ""
+
+#: src/bin/smbios-token-ctl:178
+msgid "<wierd unknown type>"
+msgstr "<Tipo desconocido extraño>"
+
+#: src/bin/smbios-token-ctl:234
+msgid "require token-id or token name/setting pair."
+msgstr ""
+
+#: src/bin/smbios-token-ctl:248
+#, c-format
+msgid "token not found. Name(%s) Setting(%s)."
+msgstr ""
+
+#: src/bin/smbios-token-ctl:304 src/bin/smbios-wakeup-ctl:127
+#: src/bin/smbios-wireless-ctl:360 src/bin/smbios-lcd-brightness:127
+#: src/bin/smbios-rbu-bios-update:175
+msgid "ERROR: Could not manipulate system token."
+msgstr "Error: No se pudo manipular token del sistema."
+
+#: src/bin/smbios-wakeup-ctl:54
+msgid "Set wakeup hour. Must be 0-23"
+msgstr ""
+
+#: src/bin/smbios-wakeup-ctl:55
+msgid "Set wakeup minute. Must be 0-59"
+msgstr ""
+
+#: src/bin/smbios-wakeup-ctl:56
+msgid "Set wakeup for every day"
+msgstr ""
+
+#: src/bin/smbios-wakeup-ctl:57
+msgid "Set wakeup for weekdays only"
+msgstr ""
+
+#: src/bin/smbios-wakeup-ctl:58
+msgid "Disable wakeups"
+msgstr ""
+
+#: src/bin/smbios-wakeup-ctl:65
+#, c-format
+msgid "Wakeup hour must be between 0 and 23. You passed: '%s'"
+msgstr ""
+
+#: src/bin/smbios-wakeup-ctl:69
+#, c-format
+msgid "Wakeup min must be between 0 and 59. You passed: '%s'"
+msgstr ""
+
+#: src/bin/smbios-wakeup-ctl:82
+msgid "\tWakeup disabled"
+msgstr ""
+
+#: src/bin/smbios-wakeup-ctl:84
+msgid "\tWakeup every day"
+msgstr ""
+
+#: src/bin/smbios-wakeup-ctl:85 src/bin/smbios-wakeup-ctl:88
+#, c-format
+msgid "\tWakeup time:  %02d:%02d"
+msgstr ""
+
+#: src/bin/smbios-wakeup-ctl:87
+msgid "\tWakeup weekdays"
+msgstr ""
+
+#: src/bin/smbios-wakeup-ctl:100
+msgid "Current wakeup settings:"
+msgstr ""
+
+#: src/bin/smbios-wakeup-ctl:105
+msgid "Setting new wakeup time:"
+msgstr ""
+
+#: src/bin/smbios-wakeup-ctl:116
+msgid "ERROR: This system does not support programmed wakeups."
+msgstr ""
+
+#: src/bin/smbios-wireless-ctl:49
+msgid "Set BIOS boot-time setting."
+msgstr ""
+
+#: src/bin/smbios-wireless-ctl:50
+msgid "Do not set BIOS boot-time setting."
+msgstr ""
+
+#: src/bin/smbios-wireless-ctl:52
+msgid "Set BIOS runtime setting (default)."
+msgstr ""
+
+#: src/bin/smbios-wireless-ctl:54
+msgid "Do not set BIOS runtime setting."
+msgstr ""
+
+#: src/bin/smbios-wireless-ctl:57
+msgid "Set radio runtime status for wireless LAN"
+msgstr ""
+
+#: src/bin/smbios-wireless-ctl:59
+msgid "Set radio runtime status for Bluetooth"
+msgstr ""
+
+#: src/bin/smbios-wireless-ctl:61
+msgid "Set radio runtime status for cellular (wireless WAN)"
+msgstr ""
+
+#: src/bin/smbios-wireless-ctl:64
+msgid "Set hardware switch so that it controls radio for wireless LAN"
+msgstr ""
+
+#: src/bin/smbios-wireless-ctl:66
+msgid "Set hardware switch so that it controls radio for Bluetooth"
+msgstr ""
+
+#: src/bin/smbios-wireless-ctl:68
+msgid ""
+"Set hardware switch so that it controls radio for cellular (wireless WAN)"
+msgstr ""
+
+#: src/bin/smbios-wireless-ctl:70
+msgid "Enable or disable the WIFI locator switch"
+msgstr ""
+
+#: src/bin/smbios-wireless-ctl:73
+msgid ""
+"Get status for wireless LAN. 0 = enabled. 1 = disabled. 2 = not present. 3 = "
+"unsupported. 4 = unknown."
+msgstr ""
+
+#: src/bin/smbios-wireless-ctl:75
+msgid ""
+"Get status for Bluetooth. 0 = enabled. 1 = disabled. 2 = not present. 3 = "
+"unsupported. 4 = unknown."
+msgstr ""
+
+#: src/bin/smbios-wireless-ctl:77
+msgid ""
+"Get status for cellular (wireless WAN). 0 = enabled. 1 = disabled. 2 = not "
+"present. 3 = unsupported. 4 = unknown."
+msgstr ""
+
+#: src/bin/smbios-wireless-ctl:80
+msgid "Get status for locator switch"
+msgstr ""
+
+#: src/bin/smbios-wireless-ctl:110
+msgid "Locator"
+msgstr ""
+
+#: src/bin/smbios-wireless-ctl:117
+#, c-format
+msgid "Set boot settings for %s"
+msgstr ""
+
+#: src/bin/smbios-wireless-ctl:131
+#, c-format
+msgid "\tThis system does not support boot time settings for %s"
+msgstr ""
+
+#: src/bin/smbios-wireless-ctl:140
+msgid ""
+"Runtime setting has no effect when boot time config is disabled. Ignoring."
+msgstr ""
+
+#: src/bin/smbios-wireless-ctl:153
+#, c-format
+msgid "Set boot switch settings for %s"
+msgstr ""
+
+#: src/bin/smbios-wireless-ctl:169
+#, c-format
+msgid ""
+"This system does not support boot-time wireless switch configuration for %s."
+msgstr ""
+
+#: src/bin/smbios-wireless-ctl:173
+#, c-format
+msgid ""
+"\n"
+"Set runtime switch settings for %s"
+msgstr ""
+
+#: src/bin/smbios-wireless-ctl:181 src/bin/smbios-wireless-ctl:197
+#: src/bin/smbios-wireless-ctl:288
+msgid ""
+"This system does not support runtime control of wireless switch settings."
+msgstr ""
+
+#: src/bin/smbios-wireless-ctl:214
+#, c-format
+msgid ""
+"\n"
+"Radio Status for %s:"
+msgstr ""
+
+#: src/bin/smbios-wireless-ctl:222
+#, c-format
+msgid "\t%s enabled at boot"
+msgstr ""
+
+#: src/bin/smbios-wireless-ctl:241
+#, c-format
+msgid "\t%s controlled by wireless switch at boot"
+msgstr ""
+
+#: src/bin/smbios-wireless-ctl:241
+#, c-format
+msgid "\t%s not controlled by wireless switch at boot"
+msgstr ""
+
+#: src/bin/smbios-wireless-ctl:243
+#, c-format
+msgid "\t%s boot-time wireless switch setting not present"
+msgstr ""
+
+#: src/bin/smbios-wireless-ctl:246
+#, c-format
+msgid "\t%s runtime switch control currently enabled"
+msgstr ""
+
+#: src/bin/smbios-wireless-ctl:246
+#, c-format
+msgid "\t%s runtime switch control currently disabled"
+msgstr ""
+
+#: src/bin/smbios-wireless-ctl:257
+#, c-format
+msgid "\t%s legacy switch enabled"
+msgstr ""
+
+#: src/bin/smbios-wireless-ctl:257
+#, c-format
+msgid "\t%s legacy switch disabled"
+msgstr ""
+
+#: src/bin/smbios-wireless-ctl:262
+#, c-format
+msgid "\tStatus Code: %d"
+msgstr ""
+
+#: src/bin/smbios-wireless-ctl:271
+msgid "\tHardware switch supported"
+msgstr ""
+
+#: src/bin/smbios-wireless-ctl:274
+msgid "\tHardware switch not supported"
+msgstr ""
+
+#: src/bin/smbios-wireless-ctl:276
+msgid "\tWiFi Locator supported"
+msgstr ""
+
+#: src/bin/smbios-wireless-ctl:276
+msgid "\tWiFi Locator not supported"
+msgstr ""
+
+#: src/bin/smbios-wireless-ctl:277
+msgid "\tWireless Keyboard supported"
+msgstr ""
+
+#: src/bin/smbios-wireless-ctl:277
+msgid "\tWireless Keyboard not supported"
+msgstr ""
+
+#: src/bin/smbios-wireless-ctl:279
+#, c-format
+msgid "\tNVRAM format version: %d"
+msgstr ""
+
+#: src/bin/smbios-wireless-ctl:284
+msgid ""
+"\n"
+"Wireless Switch Configuration"
+msgstr ""
+
+#: src/bin/smbios-wireless-ctl:289
+#, c-format
+msgid "\tWLAN switch control: %s"
+msgstr ""
+
+#: src/bin/smbios-wireless-ctl:290
+#, c-format
+msgid "\tBluetooth switch control: %s"
+msgstr ""
+
+#: src/bin/smbios-wireless-ctl:291
+#, c-format
+msgid "\tWWAN switch control: %s"
+msgstr ""
+
+#: src/bin/smbios-wireless-ctl:292
+#, c-format
+msgid "\tswitch config: %s"
+msgstr ""
+
+#: src/bin/smbios-wireless-ctl:293
+#, c-format
+msgid "\tWiFi locator: %s"
+msgstr ""
+
+#: src/bin/smbios-wireless-ctl:294
+#, c-format
+msgid "\tWiFi Locator config: %s"
+msgstr ""
+
+#: src/bin/smbios-lcd-brightness:47
+msgid "Set new value to be used while running on battery power"
+msgstr ""
+
+#: src/bin/smbios-lcd-brightness:48
+msgid "Set new value to be used while running on AC power"
+msgstr ""
+
+#: src/bin/smbios-lcd-brightness:53
+#, c-format
+msgid "Reading current %s mode setting"
+msgstr ""
+
+#: src/bin/smbios-lcd-brightness:60
+#, c-format
+msgid "Write new %s mode setting"
+msgstr ""
+
+#: src/bin/smbios-lcd-brightness:101
+msgid "LCD Brightness is not settable on this machine using this utility."
+msgstr ""
+
+#: src/bin/smbios-lcd-brightness:105
+msgid "Could not set value because the password was incorrect"
+msgstr ""
+
+#: src/bin/smbios-lcd-brightness:109
+msgid "value outside legal bounds"
+msgstr ""
+
+#: src/bin/smbios-rbu-bios-update:58
+msgid "The BIOS update file (.HDR file)"
+msgstr ""
+
+#: src/bin/smbios-rbu-bios-update:59
+msgid "Show information about a given BIOS HDR file"
+msgstr ""
+
+#: src/bin/smbios-rbu-bios-update:60
+msgid "Show system information and RBU completion codes"
+msgstr ""
+
+#: src/bin/smbios-rbu-bios-update:61
+msgid "Cancel pending BIOS update"
+msgstr ""
+
+#: src/bin/smbios-rbu-bios-update:62
+msgid "Stage BIOS for update at next reboot"
+msgstr ""
+
+#: src/bin/smbios-rbu-bios-update:63
+msgid "Test HDR file to see if it is appropriate for this system"
+msgstr ""
+
+#: src/bin/smbios-rbu-bios-update:65
+msgid "Automatically select the optimal update mode (default, recommended)"
+msgstr ""
+
+#: src/bin/smbios-rbu-bios-update:66
+msgid "Force update to use packet-mode"
+msgstr ""
+
+#: src/bin/smbios-rbu-bios-update:67
+msgid "Force update to use monolithic-mode"
+msgstr ""
+
+#: src/bin/smbios-rbu-bios-update:68
+msgid "Force update to use old dellBiosUpdate binary"
+msgstr ""
+
+#: src/bin/smbios-rbu-bios-update:70
+msgid "Allow BIOS downgrades and re-flash"
+msgstr ""
+
+#: src/bin/smbios-rbu-bios-update:71
+msgid "Disable check for system-id (Dangerous)"
+msgstr ""
+
+#: src/bin/smbios-rbu-bios-update:73
+msgid "Reboot the system after successfully staging update."
+msgstr ""
+
+#: src/bin/smbios-rbu-bios-update:74
+msgid "Do not reboot the system after staging update."
+msgstr ""
+
+#: src/bin/smbios-rbu-bios-update:102
+msgid "RBU Update information:"
+msgstr ""
+
+#: src/bin/smbios-rbu-bios-update:104
+#, c-format
+msgid "\tCompletion Code: %d"
+msgstr ""
+
+#: src/bin/smbios-rbu-bios-update:105
+#, c-format
+msgid "\tCompletion Message: %s"
+msgstr ""
+
+#: src/bin/smbios-rbu-bios-update:106
+#, c-format
+msgid "\tLast Update Date - Year  : %02x"
+msgstr ""
+
+#: src/bin/smbios-rbu-bios-update:107
+#, c-format
+msgid "\tLast Update Date - Month : %02x"
+msgstr ""
+
+#: src/bin/smbios-rbu-bios-update:108
+#, c-format
+msgid "\tLast Update Date - Day   : %02x"
+msgstr ""
+
+#: src/bin/smbios-rbu-bios-update:109
+#, c-format
+msgid "\tLast Update Date - time  : %02x:%02x"
+msgstr ""
+
+#: src/bin/smbios-rbu-bios-update:110
+#, c-format
+msgid "\tBoot Feature Flags: 0x%08x"
+msgstr ""
+
+#: src/bin/smbios-rbu-bios-update:120
+msgid ""
+"No reboot option specified. The --reboot option is highly recommended."
+msgstr ""
+
+#: src/bin/smbios-rbu-bios-update:154
+msgid "Update successfully staged. Reboot the system to begin BIOS update."
+msgstr ""
+
+#: src/bin/smbios-rbu-bios-update:158
+msgid "The BIOS update did NOT complete successfully."
+msgstr ""
+
+#: src/bin/smbios-rbu-bios-update:165
+msgid "RBU Bios Update not supported on this system."
+msgstr ""
+
+#: src/bin/smbios-upflag-ctl.c:49 src/bin/smbios-get-ut-data.c:55
+#: src/bin/smbios-sys-info-lite.c:39 src/bin/smbios-state-byte-ctl.c:47
+msgid "Debug: Memory dump file to use instead of physical memory"
+msgstr ""
+
+#: src/bin/smbios-upflag-ctl.c:50 src/bin/smbios-get-ut-data.c:54
+#: src/bin/smbios-state-byte-ctl.c:48
+msgid "Debug: CMOS dump file to use instead of physical cmos"
+msgstr ""
+
+#: src/bin/smbios-upflag-ctl.c:51 src/bin/smbios-upflag-ctl.c:53
+msgid "Set Boot To UP Flag to true"
+msgstr ""
+
+#: src/bin/smbios-upflag-ctl.c:52
+msgid "Set Boot To UP Flag to false"
+msgstr ""
+
+#: src/bin/smbios-upflag-ctl.c:54 src/bin/smbios-get-ut-data.c:56
+#: src/bin/smbios-sys-info-lite.c:40
+msgid "Display libsmbios version information"
+msgstr ""
+
+#: src/bin/smbios-upflag-ctl.c:87 src/bin/smbios-sys-info-lite.c:68
+#, c-format
+msgid "Libsmbios version:    %s\n"
+msgstr ""
+
+#: src/bin/smbios-upflag-ctl.c:102
+#, c-format
+msgid "UP Boot Flag SET\n"
+msgstr ""
+
+#: src/bin/smbios-upflag-ctl.c:107
+#, c-format
+msgid "UP Boot Flag NOT SET\n"
+msgstr ""
+
+#: src/bin/smbios-get-ut-data.c:113
+#, c-format
+msgid "Dumping CMOS index(%d) data(%d)\n"
+msgstr ""
+
+#: src/bin/smbios-get-ut-data.c:263
+#, c-format
+msgid "table length: %d\n"
+msgstr ""
+
+#: src/bin/smbios-get-ut-data.c:267
+#, c-format
+msgid "error dumping header ret(%d) sizeof(tep): %zd\n"
+msgstr ""
+
+#: src/bin/smbios-sys-info-lite.c:85
+#, c-format
+msgid "Error getting the System ID:    unknown error.\n"
+msgstr ""
+
+#: src/bin/smbios-sys-info-lite.c:93
+#, c-format
+msgid "Express Service Code: %lld\n"
+msgstr ""
+
+#: src/bin/smbios-sys-info-lite.c:97
+#, c-format
+msgid "Error getting the Service Tag:  unknown error\n"
+msgstr ""
+
+#: src/bin/smbios-sys-info-lite.c:104
+#, c-format
+msgid "Aset Tag:  %s\n"
+msgstr ""
+
+#: src/bin/smbios-sys-info-lite.c:107
+#, c-format
+msgid "Error getting the Aset Tag:  unknown error\n"
+msgstr ""
+
+#: src/bin/smbios-sys-info-lite.c:114
+#, c-format
+msgid "Product Name: %s\n"
+msgstr ""
+
+#: src/bin/smbios-sys-info-lite.c:117
+#, c-format
+msgid "Error getting the System Name:    unknown error.\n"
+msgstr ""
+
+#: src/bin/smbios-sys-info-lite.c:124
+#, c-format
+msgid "BIOS Version: %s\n"
+msgstr ""
+
+#: src/bin/smbios-sys-info-lite.c:127
+#, c-format
+msgid "Error getting the BIOS Version:    unknown error.\n"
+msgstr ""
+
+#: src/bin/smbios-sys-info-lite.c:134
+#, c-format
+msgid "Vendor:       %s\n"
+msgstr ""
+
+#: src/bin/smbios-sys-info-lite.c:137
+#, c-format
+msgid "Error getting the Vendor:    unknown error.\n"
+msgstr ""
+
+#: src/bin/smbios-sys-info-lite.c:142
+#, c-format
+msgid "Is Dell:      %d\n"
+msgstr ""
+
+#: src/bin/smbios-state-byte-ctl.c:49
+msgid "Set CMOS state byte to new value"
+msgstr ""
+
+#: src/bin/smbios-state-byte-ctl.c:50
+msgid "Set state byte owner"
+msgstr ""
+
+#: src/bin/smbios-state-byte-ctl.c:100
+#, c-format
+msgid "State Byte: 0x%04x\n"
+msgstr ""
+
+#: src/libsmbios_c/cmos/cmos_obj.c:289
+msgid ""
+"There was an allocation failure while trying to construct the cmos object."
+msgstr ""
+
+#: src/libsmbios_c/cmos/cmos_linux.c:75
+msgid "Error trying to raise IO Privilege level.\n"
+msgstr ""
+
+#: src/libsmbios_c/cmos/cmos_linux.c:76
+msgid "The OS Error string was: "
+msgstr ""
+
+#: src/libsmbios_c/common/common.c:17
+msgid ""
+"This message should be localized if setlocale() has been called and gettext "
+"compiled in.\n"
+msgstr ""
+
+#: src/libsmbios_c/memory/memory_linux.c:163
+msgid "Could not (re)open file. File: "
+msgstr ""
+
+#: src/libsmbios_c/memory/memory_linux.c:174
+msgid "The mmap() call returned mapping of -1 (failure). File: "
+msgstr ""
+
+#: src/libsmbios_c/memory/memory_linux.c:196
+#: src/libsmbios_c/memory/memory_linux.c:292
+#: src/libsmbios_c/smi/smi_linux.c:305
+msgid ""
+"\n"
+"The OS Error string was: "
+msgstr ""
+
+#: src/libsmbios_c/memory/memory_linux.c:258
+msgid ""
+"There was an allocation failure while trying to construct the memory object. "
+"Filename: "
+msgstr ""
+
+#: src/libsmbios_c/memory/memory_linux.c:277
+msgid "File open error during memory object construction. The filename: "
+msgstr ""
+
+#: src/libsmbios_c/smbios/smbios_obj.c:337
+msgid ""
+"Allocation error trying to allocate memory for error string. (ironic, yes?) "
+"\n"
+msgstr ""
+
+#: src/libsmbios_c/smbios/smbios_obj.c:344
+msgid ""
+"Could not instantiate SMBIOS table. The errors from the low-level modules "
+"were:\n"
+msgstr ""
+
+#: src/libsmbios_c/smbios/smbios_obj.c:470
+msgid "Could not read physical memory. Lowlevel error was:\n"
+msgstr ""
+
+#: src/libsmbios_c/smbios/smbios_obj.c:481
+msgid "Found _DMI_ anchor but could not parse legacy DMI structure."
+msgstr ""
+
+#: src/libsmbios_c/smbios/smbios_obj.c:496
+msgid "Found _SM_ anchor but could not parse SMBIOS structure."
+msgstr ""
+
+#: src/libsmbios_c/smbios/smbios_obj.c:509
+msgid "Did not find smbios table entry point in memory."
+msgstr ""
+
+#: src/libsmbios_c/smbios/smbios_obj.c:538
+msgid "Could not find Table Entry Point."
+msgstr ""
+
+#: src/libsmbios_c/smbios/smbios_obj.c:545
+msgid "Found table entry point but could not read table from memory. "
+msgstr ""
+
+#: src/libsmbios_c/smi/smi_obj.c:286
+msgid "Failed to find appropriate SMBIOS 0xD4 structure.\n"
+msgstr ""
+
+#: src/libsmbios_c/smi/smi_obj.c:295
+msgid "Failed to allocate memory for error string.\n"
+msgstr ""
+
+#: src/libsmbios_c/smi/smi_linux.c:304
+msgid ""
+"There was an error trying to perform the smi execute() cmd. Is the 'dcdbas' "
+"kernel module loaded?"
+msgstr ""
+
+#: src/libsmbios_c/token/token_d4.c:87
+msgid "error reading cmos. Lowlevel returned: \n"
+msgstr ""
+
+#: src/libsmbios_c/token/token_d4.c:104
+msgid "Error trying to read cmos. Lowlevel returned: \n"
+msgstr ""
+
+#: src/libsmbios_c/token/token_d4.c:124
+msgid "error trying to write cmos. Lowlevel returned: \n"
+msgstr ""
+
+#: src/libsmbios_c/token/token_d4.c:181 src/libsmbios_c/token/token_d4.c:221
+msgid "Error while trying to write cmos. Lowlevel error was:\n"
+msgstr ""
+
+#: src/libsmbios_c/token/token_d4.c:309
+msgid "Error trying to set up CMOS checksum routines.\n"
+msgstr ""
+
+#: src/libsmbios_c/token/token_d4.c:342
+msgid "Allocation failure while trying to create token object."
+msgstr ""
+
+#: src/libsmbios_c/token/token_obj.c:268
+msgid "Failed to obtain smbios table.\n"
+msgstr ""
+
+#: src/libsmbios_c/token/token_obj.c:278
+msgid "Memory allocation failure allocating error string.\n"
+msgstr ""
+
+#: src/libsmbios_c/token/token_obj.c:283
+msgid "Error while trying to add 0xD4 tokens.\n"
+msgstr ""
+
+#: src/python/libsmbios_c/_common.py:48
+msgid "null pointer returned"
+msgstr ""
+
+#: src/python/libsmbios_c/_common.py:57
+msgid "function returned error value of zero"
+msgstr ""
+
+#: src/python/libsmbios_c/_common.py:66
+msgid "function returned negative error code"
+msgstr ""
+
+#: src/python/libsmbios_c/smbios.py:86 src/python/libsmbios_c/smbios.py:97
+#: src/python/libsmbios_c/token.py:144
+msgid "hit end of table."
+msgstr ""
+
+#: src/python/libsmbios_c/smbios.py:104
+#, python-format
+msgid "No SMBIOS structure found with handle %s"
+msgstr ""
+
+#: src/python/libsmbios_c/smbios.py:112
+#, python-format
+msgid "No SMBIOS structure found with type %s"
+msgstr ""
+
+#: src/python/libsmbios_c/smbios.py:163
+#, python-format
+msgid "String from offset %d doesnt exist"
+msgstr ""
+
+#: src/python/libsmbios_c/smbios.py:168
+#, python-format
+msgid "String number %d doesnt exist"
+msgstr ""
+
+#: src/python/libsmbios_c/smbios.py:173
+msgid "Tried to get data past the end of the structure."
+msgstr ""
+
+#: src/python/libsmbios_c/smi.py:117
+msgid "SMI executed but returned error"
+msgstr ""
+
+#: src/python/libsmbios_c/smi.py:123
+msgid "The output buffer the BIOS requires is in the wrong format"
+msgstr ""
+
+#: src/python/libsmbios_c/smi.py:125
+msgid "The output buffer the BIOS requires is too small"
+msgstr ""
+
+#: src/python/libsmbios_c/token.py:149
+msgid "Cannot dereference NULL ID"
+msgstr ""

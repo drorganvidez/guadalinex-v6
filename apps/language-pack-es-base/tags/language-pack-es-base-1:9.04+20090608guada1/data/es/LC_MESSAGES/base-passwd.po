@@ -1,0 +1,242 @@
+# Spanish translation for base-passwd
+# Copyright (c) 2008 Rosetta Contributors and Canonical Ltd 2008
+# This file is distributed under the same license as the base-passwd package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2008.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: base-passwd\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2008-01-21 14:25+0000\n"
+"PO-Revision-Date: 2009-04-23 21:47+0000\n"
+"Last-Translator: Ricardo Pérez López <ricpelo@gmail.com>\n"
+"Language-Team: Spanish <es@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2009-05-18 23:42+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+#: ../update-passwd.8:1
+#, no-wrap
+msgid "UPDATE-PASSWD"
+msgstr "UPDATE-PASSWD"
+
+#: ../update-passwd.8:1
+#, no-wrap
+msgid "Debian tools"
+msgstr "Herramientas Debian"
+
+#: ../update-passwd.8:1
+#, no-wrap
+msgid "DEBIAN"
+msgstr "DEBIAN"
+
+#: ../update-passwd.8:2
+#, no-wrap
+msgid "NAME"
+msgstr "NOMBRE"
+
+#: ../update-passwd.8:4
+msgid "update-passwd - safely update /etc/passwd, /etc/shadow and /etc/group"
+msgstr ""
+"update-passwd - actualización segura de /etc/passwd, /etc/shadow y /etc/group"
+
+#: ../update-passwd.8:4
+#, no-wrap
+msgid "SYNOPSIS"
+msgstr "SINOPSIS"
+
+#: ../update-passwd.8:7
+msgid "B<update-passwd> [I<options>]"
+msgstr "B<update-passwd> [I<opciones>]"
+
+#: ../update-passwd.8:7
+#, no-wrap
+msgid "DESCRIPTION"
+msgstr "DESCRIPCIÓN"
+
+#: ../update-passwd.8:14
+msgid ""
+"B<update-passwd> handles updates of /etc/passwd, /etc/shadow and /etc/group "
+"on running Debian systems.  It compares the current files to master copies, "
+"distributed in the base-passwd package, and updates all entries in the "
+"global system range (that is, 0\\(en99)."
+msgstr ""
+"B<update-passwd> maneja actualizaciones de /etc/passwd, /etc/shadow y "
+"/etc/group en sistemas Debian. Compara los archivos actuales con copias "
+"maestras, distribuidas en el paquete base-passwd y actualiza todas las "
+"entradas en el rango del sistema global (o sea, 0\\(en99)."
+
+#: ../update-passwd.8:15
+#, no-wrap
+msgid "OPTIONS"
+msgstr "OPCIONES"
+
+#: ../update-passwd.8:19
+msgid ""
+"B<update-passwd> follows the usual GNU command line syntax, with long "
+"options starting with two dashes (\\(oq-\\(cq)."
+msgstr ""
+"B<update-passwd> sigue la sintaxis de órdenes de GNU, con largas opciones "
+"iniciadas con dos barras (\\(oq-\\(cq)."
+
+#: ../update-passwd.8:19
+#, no-wrap
+msgid "B<-p>,\\ B<--passwd-master=FILE>"
+msgstr "B<-p>,\\ B<--passwd-master=ARCHIVO>"
+
+#: ../update-passwd.8:24
+msgid ""
+"Use FILE as the master copy of the passwd database.  The default value is "
+"I</usr/share/base-passwd/passwd.master>."
+msgstr ""
+"Usar FILE como copia maestra de la base de datos de contraseñas. El valor "
+"predeterminado es I</usr/share/base-passwd/passwd.master>."
+
+#: ../update-passwd.8:24
+#, no-wrap
+msgid "B<-g>,\\ B<--group-master=FILE>"
+msgstr "B<-g>,\\ B<--group-master=ARCHIVO>"
+
+#: ../update-passwd.8:29
+msgid ""
+"Use FILE as the master copy of the group database.  The default value is "
+"I</usr/share/base-passwd/group.master>."
+msgstr ""
+"Usar FILE como copia maestra del la base de datos de grupo. El valor "
+"predeterminado es I</usr/share/base-passwd/group.master>."
+
+#: ../update-passwd.8:29
+#, no-wrap
+msgid "B<-P>,\\ B<--passwd=FILE>"
+msgstr "B<-P>,\\ B<--passwd=ARCHIVO>"
+
+#: ../update-passwd.8:34
+msgid ""
+"Use FILE as the system passwd database.  The default value is I</etc/passwd>."
+msgstr ""
+"Usar FILE como base de datos de contraseñas de sistema. El valor "
+"predeterminado es I</etc/passwd>."
+
+#: ../update-passwd.8:34
+#, no-wrap
+msgid "B<-S>,\\ B<--shadow=FILE>"
+msgstr "B<-S>,\\ B<--shadow=ARCHIVO>"
+
+#: ../update-passwd.8:39
+msgid ""
+"Use FILE as the system shadow database.  The default value is I</etc/shadow>."
+msgstr ""
+"Usar ARCHIVO como bases de datos de contraseñas («shadow») del sistema. El "
+"valor predeterminado es I</etc/shadow>."
+
+#: ../update-passwd.8:39
+#, no-wrap
+msgid "B<-G>,\\ B<--group=FILE>"
+msgstr "B<-G>,\\ B<--group=ARCHIVO>"
+
+#: ../update-passwd.8:44
+msgid ""
+"Use FILE as the system group database.  The default value is I</etc/group>."
+msgstr ""
+"Usar FILE como base de datos de grupo de sistema. El valor predeterminado es "
+"I</etc/group>."
+
+#: ../update-passwd.8:44
+#, no-wrap
+msgid "B<-s>,\\ B<--sanity-check>"
+msgstr "B<-s>,\\ B<--sanity-check>"
+
+#: ../update-passwd.8:47
+msgid "Only perform sanity-checks but don't do anything."
+msgstr "Sólo realiza controles de sanidad, pero no hace nada más."
+
+#: ../update-passwd.8:47
+#, no-wrap
+msgid "B<-v>,\\ B<--verbose>"
+msgstr "B<-v>,\\ B<--verbose>"
+
+#: ../update-passwd.8:51
+msgid ""
+"Give detailed information about we are doing.  A second -v gives additional "
+"detail."
+msgstr ""
+"da información detallada sobre lo que está haciendo. Un segundo -v da "
+"información adicional."
+
+#: ../update-passwd.8:51
+#, no-wrap
+msgid "B<-n>,\\ B<--dry-run>"
+msgstr "B<-n>,\\ B<--dry-run>"
+
+#: ../update-passwd.8:54
+msgid "Don't do anything but only show what we would do."
+msgstr "No haga nada pero muestre lo que haría."
+
+#: ../update-passwd.8:54
+#, no-wrap
+msgid "B<-L>,\\ B<--no-locking>"
+msgstr "B<-L>,\\ B<--no-locking>"
+
+#: ../update-passwd.8:59
+msgid ""
+"Don't attempt to lock the account database.  This should only be used for "
+"debugging purposes.  B<I repeat: do not do this unless you are really sure "
+"you need this!>"
+msgstr ""
+"No intentar bloquear la base de datos de cuentas. Sólo debería usarse para "
+"propósitos de depuración. B<I Repetimos: ¡no lo haga a menos que esté seguro "
+"de que es realmente necesario!>"
+
+#: ../update-passwd.8:59
+#, no-wrap
+msgid "B<-h>,\\ B<--help>"
+msgstr "B<-h>,\\ B<--help>"
+
+#: ../update-passwd.8:63
+msgid "Show a summary of how to use B<update-passwd>."
+msgstr "Mostrar un sumario sobre como usar B<update-passwd>."
+
+#: ../update-passwd.8:63
+#, no-wrap
+msgid "B<-V>,\\ B<--version>"
+msgstr "B<-V>,\\ B<--version>"
+
+#: ../update-passwd.8:66
+msgid "Show the version number"
+msgstr "Mostrar el número de versión"
+
+#: ../update-passwd.8:66
+#, no-wrap
+msgid "BUGS"
+msgstr "ERRORES"
+
+#: ../update-passwd.8:72
+msgid ""
+"At this moment B<update-passwd> does not verify the shadow-file.  It should "
+"check if the entries in the passwd are also in shadow and vice versa, and "
+"that passwords are not present in both files."
+msgstr ""
+"En este momento, B<update-passwd> no verifica correctamente el archivo "
+"«shadow». Deberá comprobar si las entradas de «passwd» están también en "
+"«shadow» y viceversa, y que no hay contraseñas en ninguno de los archivos."
+
+#: ../update-passwd.8:72
+#, no-wrap
+msgid "AUTHOR"
+msgstr "AUTOR"
+
+#: ../update-passwd.8:74
+msgid "Wichert Akkerman E<lt>wakkerma@debian.orgE<gt>"
+msgstr "Wichert Akkerman E<lt>wakkerma@debian.orgE<gt>"
+
+#: ../update-passwd.8:78
+msgid ""
+"This program was written for the Debian project, and is copyright 1999\\"
+"(en2002 Wichert Akkerman and copyright 2002, 2003 Colin Watson.  It is "
+"distributed under version 2 of the GNU General Public License."
+msgstr ""
+"Este programa fue escrito para el proyecto Debian y su copyright es de 1999\\"
+"2002 por Wichert Akkerman y el copyright de 2002 y 2003 por Colin Watson. Se "
+"distribuye bajo la GNU General Public License versión 2."

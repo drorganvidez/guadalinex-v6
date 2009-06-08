@@ -1,0 +1,151 @@
+# Spanish po-file for apt-listchanges
+# Copyright (C) 2001, 2002 Free Software Foundation, Inc.
+# Jordi Mallach <jordi@debian.org>, 2001, 2002.
+# David Martínez <ender@debian.org>
+# Ricardo Mones  <mones@aic.uniovi.es>, 2002
+#
+# Notas de traducción:
+# - changelogs: lista de cambios
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: apt-listchanges 2.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-12-18 04:34+0000\n"
+"PO-Revision-Date: 2008-12-18 04:34+0000\n"
+"Last-Translator: Javier Fernández-Sanguino <jfs@debian.org>\n"
+"Language-Team: Debian Spanish Team <debian-l10n-spanish@lists.debian.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2009-04-10 22:27+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+#: ../apt-listchanges.py:80
+msgid "database %s failed to load.\n"
+msgstr "error al cargar la base de datos %s.\n"
+
+#: ../apt-listchanges.py:97
+msgid "Unknown frontend: %s\n"
+msgstr "Interfaz desconocido: %s\n"
+
+#: ../apt-listchanges.py:120
+msgid "%s: will be newly installed"
+msgstr "%s: se instalará por primera vez"
+
+#: ../apt-listchanges.py:129
+msgid "%s: Version %s has already been seen"
+msgstr "%s: La versión %s ya se ha visualizado"
+
+#: ../apt-listchanges.py:162
+msgid "News for %s"
+msgstr "Noticias de %s"
+
+#: ../apt-listchanges.py:173
+msgid "Changes for %s"
+msgstr "Cambios de %s"
+
+#: ../apt-listchanges.py:183
+msgid "Informational notes"
+msgstr "Notas informativas"
+
+#: ../apt-listchanges.py:186
+msgid "apt-listchanges: News"
+msgstr "apt-listchanges: Noticias"
+
+#: ../apt-listchanges.py:190
+msgid "apt-listchanges: Changelogs"
+msgstr "apt-listchanges: Registro de cambios"
+
+#: ../apt-listchanges.py:197
+msgid "Aborting"
+msgstr "Cancelando"
+
+#: ../apt-listchanges.py:200
+msgid "Confirmation failed, don't save seen state"
+msgstr "Falló la confirmación; no se ha guardado el estado observado"
+
+#: ../apt-listchanges.py:206
+msgid "apt-listchanges: changelogs for %s"
+msgstr "apt-listchanges: lista de cambios para %s"
+
+#: ../apt-listchanges.py:210
+msgid "apt-listchanges: news for %s"
+msgstr "apt-listchanges: noticias de %s"
+
+#: ../apt-listchanges.py:222
+msgid "didn't find any valid .deb archives"
+msgstr "no se ha encontrado ningún fichero .deb válido"
+
+#: ../apt-listchanges/ALCConfig.py:74
+msgid "Usage: apt-listchanges [options] {--apt | filename.deb ...}\n"
+msgstr "Modo de uso: apt-listchanges [opciones] {--apt | archivo.deb ...}\n"
+
+#: ../apt-listchanges/ALCConfig.py:129
+msgid "Unknown option %s for --which.  Allowed are: %s."
+msgstr "Opción desconocida %s para --which. Se puede utilizar: %s."
+
+#: ../apt-listchanges/ALChacks.py:32
+msgid "Can't set locale; make sure $LC_* and $LANG are correct!\n"
+msgstr ""
+"No se ha podido establecer el locale; compruebe que las variables $LC_* y "
+"$LANG son correctas\n"
+
+#: ../apt-listchanges/AptListChangesGtk.py:68
+msgid "Continue Installation?"
+msgstr "¿Continuar la instalación?"
+
+#: ../apt-listchanges/AptListChangesGtk.py:68
+msgid "You can abort the installation if you select 'no'."
+msgstr "Puede cancelar la instalación si selecciona «no»."
+
+#: ../apt-listchanges/DebianFiles.py:161
+msgid "Ignoring `%s' (seems to be a directory!)"
+msgstr "Se ignorará «%s» (¡parece tratarse de un directorio!)"
+
+#: ../apt-listchanges/apt_listchanges.py:45
+msgid ""
+"Wrong or missing VERSION from apt pipeline\n"
+"(is Dpkg::Tools::Options::/usr/bin/apt-listchanges::Version set to 2?)\n"
+msgstr ""
+"VERSION errónea o inexistente desde la tubería de apt\n"
+"(¿está Dpkg::Tools::Options::/usr/bin/apt-listchanges::Version establecido a "
+"2?)\n"
+
+#: ../apt-listchanges/apt_listchanges.py:86
+msgid "Mailing %s: %s"
+msgstr "Enviando por correo %s: %s"
+
+#: ../apt-listchanges/apt_listchanges.py:111
+msgid "The %s frontend is deprecated, using pager"
+msgstr "La interfaz %s está obsoleta, usando el paginador"
+
+#: ../apt-listchanges/apt_listchanges.py:115
+msgid "The mail frontend needs a installed 'sendmail', using pager"
+msgstr ""
+"La interfaz de correo necesita que esté instalado «sendmail» se usa el "
+"paginador"
+
+#: ../apt-listchanges/apt_listchanges.py:127
+msgid ""
+"The gtk frontend needs a working python-gtk2 and python-glade2.\n"
+"Those imports can not be found. Falling back to pager.\n"
+"The error is: %s\n"
+msgstr ""
+"La interfaz gtk requiere de python-gtk2 y python-glade2.\n"
+"No se encuentran. Se pasa a usar el paginador.\n"
+"El error es: %s\n"
+
+#: ../apt-listchanges/apt_listchanges.py:180
+msgid "Do you want to continue? [Y/n] "
+msgstr "¿Quiere continuar? [Y/n] "
+
+#: ../apt-listchanges/apt_listchanges.py:193
+#: ../apt-listchanges/apt_listchanges.py:213
+#: ../apt-listchanges/apt_listchanges.py:221
+msgid "Reading changelogs"
+msgstr "Leyendo listas de cambios"
+
+#: ../apt-listchanges/apt_listchanges.py:221
+msgid "Done"
+msgstr "Hecho"

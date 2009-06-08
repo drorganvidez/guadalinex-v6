@@ -1,0 +1,651 @@
+# Spanish translation for gdebi
+# Copyright (c) (c) 2006 Canonical Ltd, and Rosetta Contributors 2006
+# This file is distributed under the same license as the gdebi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2006.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gdebi\n"
+"Report-Msgid-Bugs-To: sebastian.heinlein@web.de\n"
+"POT-Creation-Date: 2009-04-01 13:36+0000\n"
+"PO-Revision-Date: 2009-04-16 22:00+0000\n"
+"Last-Translator: Ricardo Pérez López <ricpelo@gmail.com>\n"
+"Language-Team: Spanish <es@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2009-05-18 21:00+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+#: ../gdebi:47
+#, c-format
+msgid ""
+"usage: %prog [options] filename\n"
+"For a graphical version run gdebi-gtk\n"
+msgstr ""
+"modo de uso: %prog [opciones] nombre_de_archivo\n"
+"Para una versión gráfica, ejecute gdebi-gtk\n"
+
+#: ../gdebi:53 ../gdebi-gtk:53
+msgid "Run non-interactive (dangerous!)"
+msgstr "Ejecución no interactiva (¡peligroso!)"
+
+#: ../gdebi:57
+msgid "Set an APT configuration option"
+msgstr "Establecer una opción de configuración de APT"
+
+#: ../gdebi:61
+msgid "Do not show progress information"
+msgstr "No mostrar la información del progreso"
+
+#: ../gdebi:65
+msgid "Simulate only and print a apt-get install compatible line to stderr"
+msgstr ""
+"Sólo simular e imprimir una línea compatible con apt-get install en stderr"
+
+#: ../gdebi:67
+msgid "Use alternative root dir"
+msgstr "Usar un directorio raíz alternativo"
+
+#: ../gdebi:75
+#, c-format
+msgid "gdebi error, file not found: %s\n"
+msgstr "Error de gdebi; archivo no encontrado: %s\n"
+
+#: ../gdebi:94 ../gdebi:104
+msgid "Need to be root to install packages"
+msgstr "Necesita ser administrador para instalar paquetes"
+
+#: ../gdebi:106 ../GDebi/GDebiCli.py:138
+msgid "Do you want to install the software package? [y/N]:"
+msgstr "¿Quiere instalar el paquete de software? [s/N]:"
+
+#: ../gdebi:110
+msgid "Y"
+msgstr "S"
+
+#: ../gdebi-gtk:69
+msgid "Software index is broken"
+msgstr "El índice de software está dañado"
+
+#: ../gdebi-gtk:70
+msgid ""
+"This is a major failure of your software management system. Please check for "
+"broken packages with synaptic, check the file permissions and correctness of "
+"the file '/etc/apt/sources.list' and reload the software information with: "
+"'sudo apt-get update' and 'sudo apt-get install -f'."
+msgstr ""
+"Este es un fallo importante en su sistema de gestión de software. Por favor, "
+"compruebe si existen paquetes rotos con synaptic, compruebe los permisos y "
+"la corrección del archivo «/etc/apt/sources.list» y vuelva a cargar la "
+"información del software con: «sudo apt-get update» y «sudo apt-get install -"
+"f»."
+
+#: ../data/gdebi.glade.h:1
+msgid "  "
+msgstr "  "
+
+#: ../data/gdebi.glade.h:2
+msgid "<b><big>   </big></b>"
+msgstr "<b><big> </big></b>"
+
+#: ../data/gdebi.glade.h:3 ../GDebi/GDebiKDE.py:138
+msgid "<b>Maintainer:</b>"
+msgstr "<b>Mantenedor:</b>"
+
+#: ../data/gdebi.glade.h:4 ../GDebi/GDebiKDE.py:139
+msgid "<b>Priority:</b>"
+msgstr "<b>Prioridad:</b>"
+
+#: ../data/gdebi.glade.h:5 ../GDebi/GDebiKDE.py:140
+msgid "<b>Section:</b>"
+msgstr "<b>Sección:</b>"
+
+#: ../data/gdebi.glade.h:6 ../GDebi/GDebiKDE.py:141
+msgid "<b>Size:</b>"
+msgstr "<b>Tamaño:</b>"
+
+#: ../data/gdebi.glade.h:7 ../GDebi/GDebiKDE.py:278
+msgid "<b>To install the following changes are required:</b>"
+msgstr "<b>Para instalar, se requieren los siguientes cambios:</b>"
+
+#: ../data/gdebi.glade.h:8 ../GDebi/GDebiKDE.py:137
+msgid "<b>Version:</b>"
+msgstr "<b>Versión:</b>"
+
+#: ../data/gdebi.glade.h:9
+msgid "Automatically close after the changes have been successfully applied"
+msgstr ""
+"Cerrar esta ventana automáticamente tras aplicarse los cambios con éxito"
+
+#: ../data/gdebi.glade.h:10 ../GDebi/GDebiKDE.py:132
+msgid "Description"
+msgstr "Descripción"
+
+#: ../data/gdebi.glade.h:11
+msgid "Description:"
+msgstr "Descripción:"
+
+#: ../data/gdebi.glade.h:12 ../GDebi/GDebiKDE.py:131 ../GDebi/GDebiKDE.py:133
+#: ../GDebi/GDebiKDE.py:279
+msgid "Details"
+msgstr "Detalles"
+
+#: ../data/gdebi.glade.h:13
+msgid "GPL, see /usr/share/common-licenses/GPL"
+msgstr "GPL, vea /usr/share/common-licenses/GPL"
+
+#: ../data/gdebi.glade.h:14 ../GDebi/GDebiKDE.py:134
+msgid "Included Files"
+msgstr "Archivos incluidos"
+
+#: ../data/gdebi.glade.h:15 ../data/gdebi.desktop.in.h:2
+msgid "Install and view software packages"
+msgstr "Instalar y ver paquetes de software"
+
+#: ../data/gdebi.glade.h:16
+msgid "Open..."
+msgstr "Abrir..."
+
+#: ../data/gdebi.glade.h:17 ../data/gdebi.desktop.in.h:3
+msgid "Package Installer"
+msgstr "Instalador de paquetes"
+
+#. first, we load all the default descriptions -- pyuic doesn't use
+#. gettext as default (FIXME, copy code from language-selector)
+#: ../data/gdebi.glade.h:18 ../GDebi/GDebiKDE.py:129
+msgid "Package:"
+msgstr "Paquete:"
+
+#: ../data/gdebi.glade.h:19 ../GDebi/GDebiKDE.py:130
+msgid "Status:"
+msgstr "Estado:"
+
+#: ../data/gdebi.glade.h:20
+msgid "Terminal"
+msgstr "Terminal"
+
+#: ../data/gdebi.glade.h:21
+msgid "_Details"
+msgstr "_Detalles"
+
+#: ../data/gdebi.glade.h:22
+msgid "_File"
+msgstr "_Archivo"
+
+#: ../data/gdebi.glade.h:23
+msgid "_Help"
+msgstr "Ay_uda"
+
+#: ../data/gdebi.glade.h:24 ../GDebi/GDebi.py:229 ../GDebi/GDebi.py:268
+msgid "_Install Package"
+msgstr "_Instalar el paquete"
+
+#: ../data/gdebi.glade.h:25
+msgid "_Refresh"
+msgstr "_Actualizar"
+
+#: ../data/gdebi.glade.h:26
+msgid "gdebi"
+msgstr "gdebi"
+
+#. TRANSLATORS: Replace this string with your names, one name per line.
+#: ../data/gdebi.glade.h:28
+msgid "translator-credits"
+msgstr ""
+"Daniel Fuertes Pérez, Francisco Villalobos Palma\n"
+"\n"
+"Launchpad Contributions:\n"
+"  Ariel Cabral https://launchpad.net/~acabral1961\n"
+"  Benjamín Valero Espinosa https://launchpad.net/~benjavalero\n"
+"  Daniel Fuertes Pérez (DaniFP) https://launchpad.net/~danifp25-yahoo\n"
+"  Festor https://launchpad.net/~festor\n"
+"  Francisco Villalobos Palma https://launchpad.net/~franciscovillalobos\n"
+"  Julián Alarcón https://launchpad.net/~alarconj\n"
+"  Martin Albisetti https://launchpad.net/~beuno\n"
+"  Paco Molinero https://launchpad.net/~franciscomol\n"
+"  Ricardo Pérez López https://launchpad.net/~ricardo\n"
+"  Santiago Gómez https://launchpad.net/~evadido"
+
+#: ../data/gdebi.xml.in.h:1
+msgid "Software package"
+msgstr "Paquete de software"
+
+#: ../data/gdebi.desktop.in.h:1
+msgid "GDebi Package Installer"
+msgstr "Instalador de paquetes GDebi"
+
+#: ../GDebi/GDebi.py:85
+msgid "Loading..."
+msgstr "Cargando..."
+
+#. set window title
+#. set name
+#: ../GDebi/GDebi.py:163 ../GDebi/GDebiKDE.py:179
+#, python-format
+msgid "Package Installer - %s"
+msgstr "Instalador de paquetes - %s"
+
+#: ../GDebi/GDebi.py:226
+msgid "Error: "
+msgstr "Error: "
+
+#: ../GDebi/GDebi.py:240
+msgid "Same version is already installed"
+msgstr "Ya tiene instalada una version idéntica"
+
+#: ../GDebi/GDebi.py:241
+msgid "_Reinstall Package"
+msgstr "_Reinstalar el paquete"
+
+#: ../GDebi/GDebi.py:279
+#, python-format
+msgid "<b>To be removed: %s</b>"
+msgstr "<b>Se desinstalará: %s</b>"
+
+#: ../GDebi/GDebi.py:281 ../GDebi/GDebiKDE.py:273
+#, python-format
+msgid "To be installed: %s"
+msgstr "Se instalará: %s"
+
+#: ../GDebi/GDebi.py:295
+msgid "Open Software Package"
+msgstr "Abrir paquete de software"
+
+#: ../GDebi/GDebi.py:300
+msgid "Software packages"
+msgstr "Paquetes de software"
+
+#: ../GDebi/GDebi.py:328
+msgid "File not found"
+msgstr "Archivo no encontrado"
+
+#: ../GDebi/GDebi.py:329
+msgid "You tried to install a file that does not (or no longer) exist. "
+msgstr "Ha intentado instalar un archivo que (ya) no existe. "
+
+#. do it
+#: ../GDebi/GDebi.py:339
+msgid "Installing package file..."
+msgstr "Instalando el archivo de paquete..."
+
+#: ../GDebi/GDebi.py:341
+msgid "Install unauthenticated software?"
+msgstr "¿Instalar software sin autenticar?"
+
+#: ../GDebi/GDebi.py:342
+msgid ""
+"Malicous software can damage your data and take control of your system.\n"
+"\n"
+"The packages below are not authenticated and could therefor be of malicous "
+"nature."
+msgstr ""
+"Un software malicioso podría dañar sus datos y tomar el control de su "
+"sistema.\n"
+"\n"
+"Los siguientes paquetes no están autenticados y podrían ser de naturaleza "
+"maliciosa."
+
+#: ../GDebi/GDebi.py:369
+msgid "You need to grant administrative rights to install software"
+msgstr "Necesita conceder privilegios administrativos para instalar software"
+
+#: ../GDebi/GDebi.py:370
+msgid ""
+"\n"
+"It is a possible security risk to install packages files manually.\n"
+"Install software from trustworthy software distributors only.\n"
+msgstr ""
+"\n"
+"Instalar archivos de paquetes manualmente es un potencial riesgo de "
+"seguridad.\n"
+"Instale sólo el software que provenga de distribuidores de software en los "
+"que confíe.\n"
+
+#: ../GDebi/GDebi.py:384 ../GDebi/GDebi.py:432
+msgid "Failed to install package file"
+msgstr "Falló la instalación del paquete"
+
+#: ../GDebi/GDebi.py:416 ../GDebi/GDebiKDE.py:325
+msgid "Could not download all required files"
+msgstr "No se han podido descargar todos los archivos requeridos"
+
+#: ../GDebi/GDebi.py:417 ../GDebi/GDebiKDE.py:326
+msgid "Please check your internet connection or installation medium."
+msgstr ""
+"Por favor, compruebe su conexión a Internet o el soporte de instalación."
+
+#: ../GDebi/GDebi.py:421 ../GDebi/GDebiKDE.py:330
+msgid "Could not install all dependencies"
+msgstr "No pudieron instalarse todas las dependencias"
+
+#: ../GDebi/GDebi.py:422 ../GDebi/GDebiKDE.py:331
+msgid ""
+"Usually this is related to an error of the software distributor. See the "
+"terminal window for more details."
+msgstr ""
+"Esto normalmente es debido a un error del distribuidor del software. "
+"Consulte la ventana de terminal para más detalles."
+
+#: ../GDebi/GDebi.py:437
+#, python-format
+msgid "Installing %s"
+msgstr "Instalando %s"
+
+#. self.label_action.set_markup("<b><big>"+_("Package installed")+"</big></b>")
+#. show the button
+#. self.button_deb_install_close.set_sensitive(True)
+#. self.button_deb_install_close.grab_default()
+#: ../GDebi/GDebi.py:453 ../GDebi/GDebiKDE.py:350
+msgid "Installation finished"
+msgstr "Instalación finalizada"
+
+#: ../GDebi/GDebi.py:455
+#, python-format
+msgid "Package '%s' was installed"
+msgstr "Se ha instalado el paquete '%s'"
+
+#: ../GDebi/GDebi.py:457 ../GDebi/GDebiKDE.py:354
+#, python-format
+msgid "Failed to install package '%s'"
+msgstr "Falló la instalación del paquete '%s'"
+
+#: ../GDebi/GDebi.py:459
+msgid "Installation complete"
+msgstr "Instalación completada"
+
+#: ../GDebi/GDebi.py:466 ../GDebi/GDebiKDE.py:364
+msgid "Failed to completely install all dependencies"
+msgstr "Se produjo un fallo al instalar por completo todas las dependencias"
+
+#: ../GDebi/GDebi.py:467 ../GDebi/GDebiKDE.py:365
+msgid "To fix this run 'sudo apt-get install -f' in a terminal window."
+msgstr ""
+"Para arreglar esto, ejecute «sudo apt-get install -f» en una terminal."
+
+#. ui
+#: ../GDebi/GDebi.py:551 ../GDebi/KDEAptDialogs.py:72
+#, python-format
+msgid "Installing '%s'..."
+msgstr "Instalando '%s'..."
+
+#: ../GDebi/GDebi.py:636 ../GDebi/KDEAptDialogs.py:138
+msgid "Installing dependencies..."
+msgstr "Instalando dependencias..."
+
+#. print "start()"
+#: ../GDebi/GDebi.py:665 ../GDebi/KDEAptDialogs.py:199
+#: ../GDebi/KDEAptDialogs.py:212 ../GDebi/KDEAptDialogs.py:214
+msgid "Downloading additional package files..."
+msgstr "Descargando archivos de paquetes adicionales..."
+
+#: ../GDebi/GDebi.py:673 ../GDebi/KDEAptDialogs.py:212
+#, python-format
+msgid "File %s of %s at %sB/s"
+msgstr "Archivo %s de %s a %sB/s"
+
+#: ../GDebi/GDebi.py:675 ../GDebi/KDEAptDialogs.py:214
+#, python-format
+msgid "File %s of %s"
+msgstr "Archivo %s de %s"
+
+#. print "mediaChange %s %s" % (medium, drive)
+#: ../GDebi/GDebi.py:682 ../GDebi/KDEAptDialogs.py:219
+#, python-format
+msgid "Please insert '%s' into the drive '%s'"
+msgstr "Por favor, inserte '%s' en la unidad '%s'"
+
+#: ../GDebi/DebPackage.py:130
+#, python-format
+msgid "Dependency is not satisfiable: %s\n"
+msgstr "La dependencia no se puede satisfacer: %s\n"
+
+#: ../GDebi/DebPackage.py:151
+#, python-format
+msgid "Conflicts with the installed package '%s'\n"
+msgstr "Existen confictos con el paquete instalado '%s'\n"
+
+#. TRANSLATORS: the first '%s' is the package that breaks, the second the dependency that makes it break, the third the releation (e.g. >=) and the latest the version for the releation
+#: ../GDebi/DebPackage.py:270
+#, python-format
+msgid "Breaks exisiting package '%s' dependency %s (%s %s)\n"
+msgstr "Rompe las dependencias del paquete existente «%s» %s (%s %s)\n"
+
+#. TRANSLATORS: the first '%s' is the package that conflicts, the second the packagename that it conflicts with (so the name of the deb the user tries to install), the third is the relation (e.g. >=) and the last is the version for the relation
+#: ../GDebi/DebPackage.py:282
+#, python-format
+msgid "Breaks exisiting package '%s' conflict: %s (%s %s)\n"
+msgstr "Rompe el paquete existente '%s' conflicto: %s (%s %s)\n"
+
+#: ../GDebi/DebPackage.py:325
+msgid "No Architecture field in the package"
+msgstr "En el paquete no existe el campo Architecture"
+
+#: ../GDebi/DebPackage.py:330
+#, python-format
+msgid "Wrong architecture '%s'"
+msgstr "Arquitectura incorrecta '%s'"
+
+#. the deb is older than the installed
+#: ../GDebi/DebPackage.py:336
+msgid "A later version is already installed"
+msgstr "Ya está instalada una versión posterior"
+
+#. set progress information
+#: ../GDebi/DebPackage.py:347
+msgid "Analysing dependencies"
+msgstr "Anaklizando dependencias"
+
+#: ../GDebi/DebPackage.py:365
+msgid "Failed to satisfy all dependencies (broken cache)"
+msgstr ""
+"Se produjo un fallo al intentar satisfacer todas las dependencias (caché "
+"dañado)"
+
+#: ../GDebi/DebPackage.py:392
+#, python-format
+msgid "Cannot install '%s'"
+msgstr "No se puede instalar '%s'"
+
+#: ../GDebi/DebPackage.py:443
+msgid "List of files could not be read, please report this as a bug"
+msgstr ""
+"No se ha podido leer la lista de archivos; por favor, informe de esto como "
+"un fallo"
+
+#: ../GDebi/DebPackage.py:446
+#, python-format
+msgid "IOError during filelist read: %s"
+msgstr "Error de E/S durante la lectura de la lista de archivos: %s"
+
+#. Translators: it's for missing entries in the deb package,
+#. e.g. a missing "Maintainer" field
+#: ../GDebi/DebPackage.py:455
+#, python-format
+msgid "%s is not available"
+msgstr "%s no está disponible"
+
+#: ../GDebi/GDebiCli.py:54
+msgid "Configuration items must be specified with a =<value>\n"
+msgstr "Los elementos de configuración deben especificarse con =<valor>\n"
+
+#: ../GDebi/GDebiCli.py:60
+#, python-format
+msgid "Couldn't set APT option %s to %s\n"
+msgstr "No se ha podido establecer la opción de APT %s a %s\n"
+
+#: ../GDebi/GDebiCli.py:72
+#, python-format
+msgid "Unknown package type '%s', exiting\n"
+msgstr "Tipo de paquete «%s» desconocido; saliendo\n"
+
+#: ../GDebi/GDebiCli.py:75
+msgid "Failed to open the software package\n"
+msgstr "Error al abrir el paquete de software\n"
+
+#: ../GDebi/GDebiCli.py:76
+msgid ""
+"The package might be corrupted or you are not allowed to open the file. "
+"Check the permissions of the file.\n"
+msgstr ""
+"El paquete podría estar dañado, o puede que usted no tenga permisos para "
+"abrir el archivo. Revise los permisos del archivo.\n"
+
+#: ../GDebi/GDebiCli.py:82
+msgid "This package is uninstallable\n"
+msgstr "Este paquete no es instalable\n"
+
+#: ../GDebi/GDebiCli.py:91 ../GDebi/GDebiKDE.py:215
+msgid "No description is available"
+msgstr "No hay descripción disponible"
+
+#: ../GDebi/GDebiCli.py:97
+msgid "The following packages are UNAUTHENTICATED: "
+msgstr "Los siguientes paquetes NO están AUTENTICADOS: "
+
+#: ../GDebi/GDebiCli.py:101
+msgid "Requires the REMOVAL of the following packages: "
+msgstr "Requiere la DESINSTALACIÓN de los siguientes paquetes: "
+
+#: ../GDebi/GDebiCli.py:106
+msgid "Requires the installation of the following packages: "
+msgstr "Requiere la instalación de los siguientes paquetes: "
+
+#: ../GDebi/GDebiKDE.py:136 ../GDebi/GDebiKDE.py:261
+msgid "&Install Package"
+msgstr "&Instalar paquete"
+
+#: ../GDebi/GDebiKDE.py:160
+msgid "The package file does not exist"
+msgstr "Este paquete no existe"
+
+#: ../GDebi/GDebiKDE.py:161
+msgid ""
+"A nonexistent file has been selected for installation. Please select an "
+"existing .deb package file."
+msgstr ""
+"Se ha seleccionado un archivo que no existe a fin de instalarlo. Seleccione "
+"un archivo .deb existente."
+
+#. self.textLabel1_3_2.setText(_("Same version is already installed"))
+#: ../GDebi/GDebiKDE.py:229
+msgid "&Reinstall Package"
+msgstr "&Reinstalar paquete"
+
+#: ../GDebi/GDebiKDE.py:264
+msgid "Re&install Package"
+msgstr "Re&instalar paquete"
+
+#: ../GDebi/GDebiKDE.py:275
+#, python-format
+msgid "To be removed: %s"
+msgstr "Se desinstalará: %s"
+
+#: ../GDebi/GDebiKDE.py:352
+msgid "<b>"
+msgstr "<b>"
+
+#: ../GDebi/GDebiCommon.py:66
+msgid "Broken dependencies"
+msgstr "Dependencias rotas"
+
+#: ../GDebi/GDebiCommon.py:67
+msgid ""
+"Your system has broken dependencies. This application can not continue until "
+"this is fixed. To fix it run 'gksudo synaptic' or 'sudo apt-get install -f' "
+"in a terminal window."
+msgstr ""
+"Su sistema tiene dependencia rotas. Esta aplicación no puede continuar hasta "
+"que se arregle. Para arreglarlo ejecute «gksudo synaptic» o «sudo apt-get "
+"install -f» en una terminal."
+
+#: ../GDebi/GDebiCommon.py:84
+#, python-format
+msgid "'%s' is not a Debian package"
+msgstr "«%s» no es un paquete Debian"
+
+#: ../GDebi/GDebiCommon.py:85
+#, python-format
+msgid ""
+"The MIME type of this file is '%s' and can not be installed on this system."
+msgstr ""
+"El tipo MIME de este archivo es «%s» y no se puede instalar en este sistema."
+
+#: ../GDebi/GDebiCommon.py:89
+#, python-format
+msgid "Could not open '%s'"
+msgstr "No se pudo abrir '%s'"
+
+#: ../GDebi/GDebiCommon.py:90
+msgid ""
+"The package might be corrupted or you are not allowed to open the file. "
+"Check the permissions of the file."
+msgstr ""
+"El paquete podría estar dañado, o puede que usted no tenga permisos para "
+"abrir el archivo. Revise los permisos del archivo."
+
+#: ../GDebi/GDebiCommon.py:106
+msgid "Same version is available in a software channel"
+msgstr "En un canal de software está disponible la misma versión"
+
+#: ../GDebi/GDebiCommon.py:107
+msgid "You are recommended to install the software from the channel instead."
+msgstr "Se recomienda que instale el software desde el canal."
+
+#: ../GDebi/GDebiCommon.py:111
+msgid "An older version is available in a software channel"
+msgstr "En un canal de software hay disponible una versión anterior"
+
+#: ../GDebi/GDebiCommon.py:112
+msgid ""
+"Generally you are recommended to install the version from the software "
+"channel, since it is usually better supported."
+msgstr ""
+"En general, se recomienda que instale software desde los canales de "
+"software, ya que normalmente tiene mejor soporte."
+
+#: ../GDebi/GDebiCommon.py:117
+msgid "A later version is available in a software channel"
+msgstr "En un canal de software hay disponible una versión posterior"
+
+#: ../GDebi/GDebiCommon.py:119
+msgid ""
+"You are strongly advised to install the version from the software channel, "
+"since it is usually better supported."
+msgstr ""
+"Se recomienda encarecidamente que instale esa versión desde el canal de "
+"software, ya que normalmente tiene mejor soporte."
+
+#: ../GDebi/GDebiCommon.py:127
+msgid "All dependencies are satisfied"
+msgstr "Se satisfacen todas las dependencias"
+
+#. FIXME: use ngettext here
+#: ../GDebi/GDebiCommon.py:130
+#, python-format
+msgid "Requires the <b>removal</b> of %s packages\n"
+msgstr "Requiere la <b>desinstalación</b> de %s paquetes\n"
+
+#: ../GDebi/GDebiCommon.py:132
+#, python-format
+msgid "Requires the installation of %s packages"
+msgstr "Requiere la instalación de %s paquetes"
+
+#: ../GDebi/GDebiCommon.py:140 ../GDebi/GDebiCommon.py:158
+msgid "Only one software management tool is allowed to run at the same time"
+msgstr ""
+"Sólo se permite la ejecución simultánea de una única herramienta de gestión "
+"de software"
+
+#: ../GDebi/GDebiCommon.py:142 ../GDebi/GDebiCommon.py:160
+msgid ""
+"Please close the other application e.g. 'Update Manager', 'aptitude' or "
+"'Synaptic' first."
+msgstr ""
+"Por favor, cierre primero cualquier otra aplicación como «Gestor de "
+"actualizaciones», «aptitude» o «Synaptic»."
+
+#. change = QMessageBox.question(None, _("Media Change"), msg, QMessageBox.Ok, QMessageBox.Cancel)
+#: ../GDebi/KDEAptDialogs.py:221
+msgid "Media Change"
+msgstr "Cambiar medio"

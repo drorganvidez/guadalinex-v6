@@ -1,0 +1,24 @@
+Source: language-pack-gnome-es
+Section: translations
+Priority: optional
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Build-Depends-Indep: gettext
+Build-Depends: debhelper (>= 4.1.0)
+Standards-Version: 3.7.3
+
+Package: language-pack-gnome-es
+Architecture: all
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Depends: language-pack-gnome-es-base (>= 1:9.04+20090413)
+Recommends: gnome-user-guide-es
+Replaces: language-pack-gnome-es-base, language-pack-es-base (<< ${Source-Version}), language-pack-gnome-es-base (<< ${Source-Version}), language-pack-kde-es-base (<< ${Source-Version}), language-pack-es (<< ${Source-Version}),  language-pack-gnome-es (<< ${Source-Version}), language-pack-kde-es (<< ${Source-Version})
+Description: GNOME translation updates for language Spanish; Castilian
+ Translation data updates for all supported GNOME packages for:
+ Spanish; Castilian
+ .
+ language-pack-gnome-es-base provides the bulk of translation data
+ and is updated only seldom. This package provides frequent translation
+ updates.
+ .
+ Please note that you should install language-support-es
+ to get full support for this language.

@@ -22,10 +22,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: eel.HEAD.es\n"
-"Report-Msgid-Bugs-To: "
-"http://bugzilla.gnome.org/enter_bug.cgi?product=nautilus&component=Internatio"
-"nalization (i18n)\n"
-"POT-Creation-Date: 2009-04-23 12:19+0000\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-06-09 12:47+0200\n"
 "PO-Revision-Date: 2009-05-17 21:03+0000\n"
 "Last-Translator: Ricardo Pérez López <ricpelo@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
@@ -2487,7 +2485,6 @@ msgstr "%S de %S"
 #. * The singular/plural form will be used depending on the remaining time (i.e. the %T argument).
 #.
 #: ../libnautilus-private/nautilus-file-operations.c:2893
-#| msgid "%S of %S — %T left (%S/sec)"
 msgid "%S of %S — %T left (%S/sec)"
 msgid_plural "%S of %S — %T left (%S/sec)"
 msgstr[0] "%S de %S — queda %T (%S/seg)"
@@ -3057,6 +3054,7 @@ msgid "25%"
 msgstr "25%"
 
 #: ../libnautilus-private/nautilus-global-preferences.c:76
+#: ../src/nautilus-file-management-properties.ui.h:21
 #, no-c-format
 msgid "50%"
 msgstr "50%"
@@ -3067,21 +3065,25 @@ msgid "75%"
 msgstr "75%"
 
 #: ../libnautilus-private/nautilus-global-preferences.c:80
+#: ../src/nautilus-file-management-properties.ui.h:7
 #, no-c-format
 msgid "100%"
 msgstr "100%"
 
 #: ../libnautilus-private/nautilus-global-preferences.c:82
+#: ../src/nautilus-file-management-properties.ui.h:9
 #, no-c-format
 msgid "150%"
 msgstr "150%"
 
 #: ../libnautilus-private/nautilus-global-preferences.c:84
+#: ../src/nautilus-file-management-properties.ui.h:12
 #, no-c-format
 msgid "200%"
 msgstr "200%"
 
 #: ../libnautilus-private/nautilus-global-preferences.c:86
+#: ../src/nautilus-file-management-properties.ui.h:18
 #, no-c-format
 msgid "400%"
 msgstr "400%"
@@ -3095,34 +3097,42 @@ msgid "500 K"
 msgstr "500 K"
 
 #: ../libnautilus-private/nautilus-global-preferences.c:92
+#: ../src/nautilus-file-management-properties.ui.h:2
 msgid "1 MB"
 msgstr "1 MiB"
 
 #: ../libnautilus-private/nautilus-global-preferences.c:93
+#: ../src/nautilus-file-management-properties.ui.h:13
 msgid "3 MB"
 msgstr "3 MiB"
 
 #: ../libnautilus-private/nautilus-global-preferences.c:94
+#: ../src/nautilus-file-management-properties.ui.h:19
 msgid "5 MB"
 msgstr "5 MiB"
 
 #: ../libnautilus-private/nautilus-global-preferences.c:95
+#: ../src/nautilus-file-management-properties.ui.h:3
 msgid "10 MB"
 msgstr "10 MiB"
 
 #: ../libnautilus-private/nautilus-global-preferences.c:96
+#: ../src/nautilus-file-management-properties.ui.h:5
 msgid "100 MB"
 msgstr "100 MiB"
 
 #: ../libnautilus-private/nautilus-global-preferences.c:97
+#: ../src/nautilus-file-management-properties.ui.h:1
 msgid "1 GB"
 msgstr "1 GiB"
 
 #: ../libnautilus-private/nautilus-global-preferences.c:98
+#: ../src/nautilus-file-management-properties.ui.h:10
 msgid "2 GB"
 msgstr "2 GiB"
 
 #: ../libnautilus-private/nautilus-global-preferences.c:99
+#: ../src/nautilus-file-management-properties.ui.h:16
 msgid "4 GB"
 msgstr "4 GiB"
 
@@ -3145,7 +3155,7 @@ msgid "Display _files when they are clicked"
 msgstr "Mostrar _archivos al pulsar en ellos"
 
 #: ../libnautilus-private/nautilus-global-preferences.c:123
-#: ../src/nautilus-file-management-properties.ui.h:47
+#: ../src/nautilus-file-management-properties.ui.h:82
 msgid "_Ask each time"
 msgstr "_Preguntar cada vez"
 
@@ -3166,6 +3176,7 @@ msgstr "Buscar archivos por nombre y por sus propiedades"
 #: ../libnautilus-private/nautilus-global-preferences.c:140
 #: ../src/file-manager/fm-icon-container.c:569
 #: ../src/file-manager/fm-icon-view.c:3047
+#: ../src/nautilus-file-management-properties.ui.h:65
 msgid "Icon View"
 msgstr "Vista de icono"
 
@@ -3174,6 +3185,7 @@ msgstr "Vista de icono"
 #. * of navigation windows and in the preferences dialog
 #: ../libnautilus-private/nautilus-global-preferences.c:141
 #: ../src/file-manager/fm-icon-view.c:3061
+#: ../src/nautilus-file-management-properties.ui.h:58
 msgid "Compact View"
 msgstr "Vista compacta"
 
@@ -3184,6 +3196,7 @@ msgstr "Vista compacta"
 #: ../libnautilus-private/nautilus-global-preferences.c:142
 #: ../src/file-manager/fm-list-view.c:1519
 #: ../src/file-manager/fm-list-view.c:2935
+#: ../src/nautilus-file-management-properties.ui.h:68
 msgid "List View"
 msgstr "Vista de lista"
 
@@ -3194,26 +3207,31 @@ msgstr "Manualmente"
 
 # src/file-manager/fm-icon-view.c:109
 #: ../libnautilus-private/nautilus-global-preferences.c:148
+#: ../src/nautilus-file-management-properties.ui.h:51
 msgid "By Name"
 msgstr "Por nombre"
 
 # src/file-manager/fm-icon-view.c:116
 #: ../libnautilus-private/nautilus-global-preferences.c:149
+#: ../src/nautilus-file-management-properties.ui.h:52
 msgid "By Size"
 msgstr "Por tamaño"
 
 # src/file-manager/fm-icon-view.c:123
 #: ../libnautilus-private/nautilus-global-preferences.c:150
+#: ../src/nautilus-file-management-properties.ui.h:53
 msgid "By Type"
 msgstr "Por tipo"
 
 # src/file-manager/fm-icon-view.c:130
 #: ../libnautilus-private/nautilus-global-preferences.c:151
+#: ../src/nautilus-file-management-properties.ui.h:50
 msgid "By Modification Date"
 msgstr "Por fecha de modificación"
 
 # src/file-manager/fm-icon-view.c:137
 #: ../libnautilus-private/nautilus-global-preferences.c:152
+#: ../src/nautilus-file-management-properties.ui.h:49
 msgid "By Emblems"
 msgstr "Por emblemas"
 
@@ -3390,7 +3408,6 @@ msgid "There is no application installed for %s files"
 msgstr "No existe una aplicación instalada para los archivos %s"
 
 #: ../libnautilus-private/nautilus-mime-actions.c:1223
-#| msgid "There was an internal error trying to search for applications"
 msgid "There was an internal error trying to search for applications:"
 msgstr "Hubo un error interno al intentar buscar aplicaciones:"
 
@@ -3412,7 +3429,6 @@ msgstr ""
 "¿Quiere buscar una aplicación para abrir este archivo?"
 
 #: ../libnautilus-private/nautilus-mime-actions.c:1566
-#| msgid "Choose what application to launch."
 msgid "Untrusted application launcher"
 msgstr "Lanzador de aplicación sin confianza"
 
@@ -5288,12 +5304,6 @@ msgstr "Propiedades"
 msgid "%s Properties"
 msgstr "Propiedades de %s"
 
-#: ../src/file-manager/fm-properties-window.c:1363
-#, c-format
-msgctxt "MIME type description (MIME type)"
-msgid "%s (%s)"
-msgstr "%s (%s)"
-
 # src/file-manager/fm-properties-window.c:542
 #: ../src/file-manager/fm-properties-window.c:1580
 msgid "Cancel Group Change?"
@@ -5972,111 +5982,134 @@ msgstr "El emblema no pudo añadirse."
 msgid "Show Emblems"
 msgstr "Mostrar emblemas"
 
+#: ../src/nautilus-file-management-properties.ui.h:4
+msgid "100 KB"
+msgstr "100 KB"
+
+#: ../src/nautilus-file-management-properties.ui.h:15
+#, no-c-format
+msgid "33%"
+msgstr "33%"
+
+#: ../src/nautilus-file-management-properties.ui.h:22
+msgid "500 KB"
+msgstr "500 KB"
+
+#: ../src/nautilus-file-management-properties.ui.h:24
+#, no-c-format
+msgid "66%"
+msgstr "66%"
+
 # libnautilus-private/nautilus-global-preferences.c:142
-#: ../src/nautilus-file-management-properties.ui.h:1
+#: ../src/nautilus-file-management-properties.ui.h:25
 msgid "<b>Behavior</b>"
 msgstr "<b>Comportamiento</b>"
 
-#: ../src/nautilus-file-management-properties.ui.h:2
+#: ../src/nautilus-file-management-properties.ui.h:26
 msgid "<b>Compact View Defaults</b>"
 msgstr "<b>Valores predeterminados para la vista compacta</b>"
 
-#: ../src/nautilus-file-management-properties.ui.h:3
+#: ../src/nautilus-file-management-properties.ui.h:27
 msgid "<b>Date</b>"
 msgstr "<b>Fecha</b>"
 
-#: ../src/nautilus-file-management-properties.ui.h:4
+#: ../src/nautilus-file-management-properties.ui.h:28
 msgid "<b>Default View</b>"
 msgstr "<b>Vista predeterminada</b>"
 
-#: ../src/nautilus-file-management-properties.ui.h:5
+#: ../src/nautilus-file-management-properties.ui.h:29
 msgid "<b>Executable Text Files</b>"
 msgstr "<b>Archivos de texto ejecutables</b>"
 
 # src/nautilus-window-menus.c:1235
-#: ../src/nautilus-file-management-properties.ui.h:6
+#: ../src/nautilus-file-management-properties.ui.h:30
 msgid "<b>Folders</b>"
 msgstr "<b>Carpetas</b>"
 
 # src/nautilus-location-bar.c:401
-#: ../src/nautilus-file-management-properties.ui.h:7
+#: ../src/nautilus-file-management-properties.ui.h:31
 msgid "<b>Icon Captions</b>"
 msgstr "<b>Descripciones de iconos</b>"
 
-#: ../src/nautilus-file-management-properties.ui.h:8
+#: ../src/nautilus-file-management-properties.ui.h:32
 msgid "<b>Icon View Defaults</b>"
 msgstr "<b>Valores predeterminados para la vista de iconos</b>"
 
-#: ../src/nautilus-file-management-properties.ui.h:9
+#: ../src/nautilus-file-management-properties.ui.h:33
 msgid "<b>List Columns</b>"
 msgstr "<b>Columnas de la lista</b>"
 
-#: ../src/nautilus-file-management-properties.ui.h:10
+#: ../src/nautilus-file-management-properties.ui.h:34
 msgid "<b>List View Defaults</b>"
 msgstr "<b>Valores predeterminados para la vista de lista</b>"
 
-#: ../src/nautilus-file-management-properties.ui.h:11
+#: ../src/nautilus-file-management-properties.ui.h:35
 msgid "<b>Media Handling</b>"
 msgstr "<b>Gestión de soportes</b>"
 
-#: ../src/nautilus-file-management-properties.ui.h:12
+#: ../src/nautilus-file-management-properties.ui.h:36
 msgid "<b>Other Media</b>"
 msgstr "<b>Otros soportes</b>"
 
-#: ../src/nautilus-file-management-properties.ui.h:13
+#: ../src/nautilus-file-management-properties.ui.h:37
 msgid "<b>Other Previewable Files</b>"
 msgstr "<b>Otros archivos previsualizables</b>"
 
-#: ../src/nautilus-file-management-properties.ui.h:14
+#: ../src/nautilus-file-management-properties.ui.h:38
 msgid "<b>Sound Files</b>"
 msgstr "<b>Archivos de sonido</b>"
 
 # src/file-manager/fm-properties-window.c:1563
-#: ../src/nautilus-file-management-properties.ui.h:15
+#: ../src/nautilus-file-management-properties.ui.h:39
 msgid "<b>Text Files</b>"
 msgstr "<b>Archivos de texto</b>"
 
-#: ../src/nautilus-file-management-properties.ui.h:16
+#: ../src/nautilus-file-management-properties.ui.h:40
 msgid "<b>Trash</b>"
 msgstr "<b>Papelera</b>"
 
-#: ../src/nautilus-file-management-properties.ui.h:17
+#: ../src/nautilus-file-management-properties.ui.h:41
 msgid "<b>Tree View Defaults</b>"
 msgstr "<b>Valores predeterminados para la vista de árbol</b>"
 
-#: ../src/nautilus-file-management-properties.ui.h:18
+#: ../src/nautilus-file-management-properties.ui.h:42
 msgid "A_ll columns have the same width"
 msgstr "Toda_s las columnas tienen la misma anchura"
 
 # src/nautilus-location-bar.c:401
-#: ../src/nautilus-file-management-properties.ui.h:19
+#: ../src/nautilus-file-management-properties.ui.h:43
 msgid "Acti_on:"
 msgstr "_Acción:"
 
-#: ../src/nautilus-file-management-properties.ui.h:20
+# libnautilus-private/nautilus-global-preferences.c:582
+#: ../src/nautilus-file-management-properties.ui.h:44
+msgid "Always"
+msgstr "Siempre"
+
+#: ../src/nautilus-file-management-properties.ui.h:45
 msgid "Always open in _browser windows"
 msgstr "Siempre abrir en una ventana de _navegador"
 
 # src/file-manager/fm-directory-view.c:2669
-#: ../src/nautilus-file-management-properties.ui.h:21
+#: ../src/nautilus-file-management-properties.ui.h:46
 msgid "Ask before _emptying the Trash or deleting files"
 msgstr "Preguntar antes de vacia_r la papelera o borrar archivos"
 
-#: ../src/nautilus-file-management-properties.ui.h:22
+#: ../src/nautilus-file-management-properties.ui.h:47
 msgid "B_rowse media when inserted"
 msgstr "E_xaminar los soportes al introducirlos"
 
 # libnautilus-private/nautilus-global-preferences.c:142
-#: ../src/nautilus-file-management-properties.ui.h:23
+#: ../src/nautilus-file-management-properties.ui.h:48
 msgid "Behavior"
 msgstr "Comportamiento"
 
-#: ../src/nautilus-file-management-properties.ui.h:24
+#: ../src/nautilus-file-management-properties.ui.h:54
 msgid "CD _Audio:"
 msgstr "CD de _sonido:"
 
 # src/file-manager/fm-icon-text-window.c:267
-#: ../src/nautilus-file-management-properties.ui.h:25
+#: ../src/nautilus-file-management-properties.ui.h:55
 msgid ""
 "Choose the order of information to appear beneath icon names. More "
 "information will appear when zooming in closer."
@@ -6085,12 +6118,12 @@ msgstr ""
 "los iconos. Aparecerá más información cuando aumente la ampliación."
 
 # src/file-manager/fm-icon-text-window.c:267
-#: ../src/nautilus-file-management-properties.ui.h:26
+#: ../src/nautilus-file-management-properties.ui.h:56
 msgid "Choose the order of information to appear in the list view."
 msgstr ""
 "Seleccione el orden en que la información aparecerá en la vista de lista."
 
-#: ../src/nautilus-file-management-properties.ui.h:27
+#: ../src/nautilus-file-management-properties.ui.h:57
 msgid ""
 "Choose what happens when inserting media or connecting devices to the system"
 msgstr ""
@@ -6098,149 +6131,159 @@ msgstr ""
 "en el sistema"
 
 # src/file-manager/dfos-xfer.c:763
-#: ../src/nautilus-file-management-properties.ui.h:28
+#: ../src/nautilus-file-management-properties.ui.h:59
 msgid "Count _number of items:"
 msgstr "Contar el _número de elementos:"
 
-#: ../src/nautilus-file-management-properties.ui.h:29
+#: ../src/nautilus-file-management-properties.ui.h:60
 msgid "D_efault zoom level:"
 msgstr "Niv_el de ampliación predeterminado:"
 
-#: ../src/nautilus-file-management-properties.ui.h:30
+#: ../src/nautilus-file-management-properties.ui.h:61
 msgid "Default _zoom level:"
 msgstr "_Nivel de ampliación predeterminado:"
 
 # #-#-#-#-#  nautilus-es.po (Nautilus)  #-#-#-#-#
 # libnautilus-private/nautilus-global-preferences.c:149
-#: ../src/nautilus-file-management-properties.ui.h:31
+#: ../src/nautilus-file-management-properties.ui.h:62
 msgid "Display"
 msgstr "Visualización"
 
-#: ../src/nautilus-file-management-properties.ui.h:32
+#: ../src/nautilus-file-management-properties.ui.h:63
 msgid "File Management Preferences"
 msgstr "Preferencias de administración de archivos"
 
-#: ../src/nautilus-file-management-properties.ui.h:33
+#: ../src/nautilus-file-management-properties.ui.h:64
 msgid "I_nclude a Delete command that bypasses Trash"
 msgstr "_Incluir una orden «Borrar» que no utilice la papelera"
 
-#: ../src/nautilus-file-management-properties.ui.h:34
+#: ../src/nautilus-file-management-properties.ui.h:66
 msgid "Less common media formats can be configured here"
 msgstr "Los soportes multimedia menos comunes se pueden configurar aquí"
 
-#: ../src/nautilus-file-management-properties.ui.h:35
+#: ../src/nautilus-file-management-properties.ui.h:67
 msgid "List Columns"
 msgstr "Columnas de la lista"
 
-#: ../src/nautilus-file-management-properties.ui.h:36
+# libnautilus-private/nautilus-global-preferences.c:587
+#: ../src/nautilus-file-management-properties.ui.h:69
+msgid "Local Files Only"
+msgstr "Sólo en archivos locales"
+
+#: ../src/nautilus-file-management-properties.ui.h:70
 msgid "Media"
 msgstr "Soporte"
 
+# libnautilus-private/nautilus-global-preferences.c:592
+#: ../src/nautilus-file-management-properties.ui.h:71
+msgid "Never"
+msgstr "Nunca"
+
 # #-#-#-#-#  nautilus-es.po (Nautilus)  #-#-#-#-#
 # components/music/nautilus-music-view.c:1122
-#: ../src/nautilus-file-management-properties.ui.h:37
+#: ../src/nautilus-file-management-properties.ui.h:72
 msgid "Preview"
 msgstr "Vista previa"
 
-#: ../src/nautilus-file-management-properties.ui.h:38
+#: ../src/nautilus-file-management-properties.ui.h:73
 msgid "Preview _sound files:"
 msgstr "_Escucha previa de archivos de sonido:"
 
-#: ../src/nautilus-file-management-properties.ui.h:39
+#: ../src/nautilus-file-management-properties.ui.h:74
 msgid "Show _only folders"
 msgstr "Só_lo mostrar las carpetas"
 
 # libnautilus-private/nautilus-global-preferences.c:256
-#: ../src/nautilus-file-management-properties.ui.h:40
+#: ../src/nautilus-file-management-properties.ui.h:75
 msgid "Show _thumbnails:"
 msgstr "Mostrar _miniaturas:"
 
-#: ../src/nautilus-file-management-properties.ui.h:41
+#: ../src/nautilus-file-management-properties.ui.h:76
 msgid "Show hidden and _backup files"
 msgstr "Mostrar los archivos ocultos y de _respaldo"
 
 # libnautilus-private/nautilus-global-preferences.c:249
-#: ../src/nautilus-file-management-properties.ui.h:42
+#: ../src/nautilus-file-management-properties.ui.h:77
 msgid "Show te_xt in icons:"
 msgstr "Mostrar _texto en los iconos:"
 
-#: ../src/nautilus-file-management-properties.ui.h:43
+#: ../src/nautilus-file-management-properties.ui.h:78
 msgid "Sort _folders before files"
 msgstr "Colocar las carpetas _antes que los archivos"
 
-#: ../src/nautilus-file-management-properties.ui.h:44
+#: ../src/nautilus-file-management-properties.ui.h:79
 msgid "View _new folders using:"
 msgstr "_Ver las carpetas nuevas usando:"
 
 # #-#-#-#-#  nautilus-es.po (Nautilus)  #-#-#-#-#
 # libnautilus-private/nautilus-global-preferences.c:222
-#: ../src/nautilus-file-management-properties.ui.h:45
+#: ../src/nautilus-file-management-properties.ui.h:80
 msgid "Views"
 msgstr "Vistas"
 
-#: ../src/nautilus-file-management-properties.ui.h:46
+#: ../src/nautilus-file-management-properties.ui.h:81
 msgid "_Arrange items:"
 msgstr "_Organizar los elementos:"
 
-#: ../src/nautilus-file-management-properties.ui.h:48
+#: ../src/nautilus-file-management-properties.ui.h:83
 msgid "_DVD Video:"
 msgstr "_DVD de vídeo:"
 
-#: ../src/nautilus-file-management-properties.ui.h:49
+#: ../src/nautilus-file-management-properties.ui.h:84
 msgid "_Default zoom level:"
 msgstr "N_ivel de ampliación predeterminado:"
 
-#: ../src/nautilus-file-management-properties.ui.h:50
+#: ../src/nautilus-file-management-properties.ui.h:85
 msgid "_Double click to open items"
 msgstr "_Doble pulsación para abrir los elementos"
 
-#: ../src/nautilus-file-management-properties.ui.h:51
+#: ../src/nautilus-file-management-properties.ui.h:86
 msgid "_Format:"
 msgstr "_Formato:"
 
-#: ../src/nautilus-file-management-properties.ui.h:52
+#: ../src/nautilus-file-management-properties.ui.h:87
 msgid "_Music Player:"
 msgstr "Reproductor de _música:"
 
-#: ../src/nautilus-file-management-properties.ui.h:53
+#: ../src/nautilus-file-management-properties.ui.h:88
 msgid "_Never prompt or start programs on media insertion"
 msgstr "_Nunca preguntar ni iniciar programas al introducir soportes"
 
-#: ../src/nautilus-file-management-properties.ui.h:54
+#: ../src/nautilus-file-management-properties.ui.h:89
 msgid "_Only for files smaller than:"
 msgstr "_Sólo para archivos menores de:"
 
-#: ../src/nautilus-file-management-properties.ui.h:55
+#: ../src/nautilus-file-management-properties.ui.h:90
 msgid "_Photos:"
 msgstr "_Fotos:"
 
-#: ../src/nautilus-file-management-properties.ui.h:56
+#: ../src/nautilus-file-management-properties.ui.h:91
 msgid "_Run executable text files when they are opened"
 msgstr "_Ejecutar los archivos de texto ejecutables al abrirlos"
 
-#: ../src/nautilus-file-management-properties.ui.h:57
+#: ../src/nautilus-file-management-properties.ui.h:92
 msgid "_Single click to open items"
 msgstr "Un_a sola pulsación para abrir los elementos"
 
-#: ../src/nautilus-file-management-properties.ui.h:58
+#: ../src/nautilus-file-management-properties.ui.h:93
 msgid "_Software:"
 msgstr "Soft_ware:"
 
-#: ../src/nautilus-file-management-properties.ui.h:59
+#: ../src/nautilus-file-management-properties.ui.h:94
 msgid "_Text beside icons"
 msgstr "_Texto al lado de los iconos"
 
 # #-#-#-#-#  nautilus-es.po (Nautilus)  #-#-#-#-#
 # src/file-manager/fm-properties-window.c:1094
-#: ../src/nautilus-file-management-properties.ui.h:60
+#: ../src/nautilus-file-management-properties.ui.h:95
 msgid "_Type:"
 msgstr "_Tipo:"
 
-#: ../src/nautilus-file-management-properties.ui.h:61
+#: ../src/nautilus-file-management-properties.ui.h:96
 msgid "_Use compact layout"
 msgstr "Usar distribución co_mpacta"
 
-#: ../src/nautilus-file-management-properties.ui.h:62
+#: ../src/nautilus-file-management-properties.ui.h:97
 msgid "_View executable text files when they are opened"
 msgstr "_Ver los archivos de texto ejecutables cuando al abrirlos"
 
@@ -7655,3 +7698,7 @@ msgstr "Ampliación"
 #: ../src/nautilus-zoom-control.c:894
 msgid "Set the zoom level of the current view"
 msgstr "Establece el nivel de ampliación de la vista actual"
+
+#~ msgctxt "MIME type description (MIME type)"
+#~ msgid "%s (%s)"
+#~ msgstr "%s (%s)"

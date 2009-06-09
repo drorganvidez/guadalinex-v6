@@ -1,0 +1,3 @@
+#!/bin/sh
+COOKIE=`xauth list|head -n 1 | awk '{ print $3 }'`
+gdmflexiserver -a -c "FLEXI_XNEST_USER :guest $DISPLAY `id -u` $COOKIE $HOME/.Xauthority"

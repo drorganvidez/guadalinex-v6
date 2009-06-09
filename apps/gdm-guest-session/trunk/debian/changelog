@@ -1,0 +1,86 @@
+gdm-guest-session (0.8-1) jaunty; urgency=low
+
+  * apparmor/gdm-guest-session: added execution permissions to '/tmp/**'
+   (Files and directories anywhere underneath /tmp) which hosts guest user
+   home directory. (LP: #383892)
+
+ -- Roberto C. Morano <rcmorano@emergya.es>  Wed, 10 Jun 2009 09:31:58 +0200
+
+gdm-guest-session (0.8) jaunty; urgency=low
+
+  [ David D Lowe ]
+  * Added apparmor dependency. (LP: #310776)
+  * /etc/skel is copied to guest's home directory. (LP: #296993)
+  * Added guest-prepare.sh script, a script that end users can modify to 
+    set guest's default settings.
+  * Disactivated user-dirs-gtk, jockey-gtk and update-manager services, they 
+    are redundant for the guest user. (LP: #255557)
+
+  [ Martin Pitt ]
+  * Merge guest-prepare.sh back into guest-session-setup.sh, no reason
+    to split it in two.
+
+ -- Martin Pitt <martin.pitt@ubuntu.com>  Tue, 27 Jan 2009 11:56:26 +0100
+
+gdm-guest-session (0.7) jaunty; urgency=low
+
+  * apparmor/gdm-guest-session: Generously allow flock() for most file system
+    parts, too. OpenOffice needs locking in /usr/lib/openoffice/program/, for
+    example, and does not start otherwise. (LP: #277418)
+  * gdm/guest-session-cleanup.sh: Remove guest owned leftovers in /tmp.
+    (LP: #289554)
+  * apparmor/gdm-guest-session: Allow mmap for /tmp and /var/tmp, as required
+    by F-Spot. (LP: #288682)
+
+ -- Martin Pitt <martin.pitt@ubuntu.com>  Mon, 10 Nov 2008 17:18:57 +0100
+
+gdm-guest-session (0.6) intrepid; urgency=low
+
+  * apparmor/gdm-guest-session: Allow accessing /lib32, too, to unbreak flash
+    on amd64. (LP: #282132)
+
+ -- Martin Pitt <martin.pitt@ubuntu.com>  Thu, 16 Oct 2008 18:37:59 +0200
+
+gdm-guest-session (0.5) intrepid; urgency=low
+
+  * gdm/guest-session-cleanup.sh: Kill guest processes several times,
+    sometimes bonobo-activation-server survives the first shot and then the
+    wait loop grinds forever. Thanks to John Dong for the suggestion!
+    (LP: #281835)
+
+ -- Martin Pitt <martin.pitt@ubuntu.com>  Wed, 15 Oct 2008 12:22:55 +0200
+
+gdm-guest-session (0.4) intrepid; urgency=low
+
+  * gdm/guest-session-setup.sh: Do not use variable "$UID", since this is
+    reserved in bash. This fixes the guest session if /bin/sh points to bash.
+    (LP: #275764)
+
+ -- Martin Pitt <martin.pitt@ubuntu.com>  Mon, 29 Sep 2008 12:51:45 +0200
+
+gdm-guest-session (0.3) intrepid; urgency=low
+
+  * gdm/guest-session-setup.sh: Disable screensaver startup, so that user
+    switching, suspend, etc. does not trigger the screensaver lock. guest has
+    no password, and g-screensaver isn't (and can't be) clever enough to
+    detect that. (LP: #262228)
+
+ -- Martin Pitt <martin.pitt@ubuntu.com>  Sun, 28 Sep 2008 12:24:20 +0200
+
+gdm-guest-session (0.2) intrepid; urgency=low
+
+  * Version the gdm dependency to ensure that the guest session support is
+    available.
+  * Add AppArmor profile. This restricts write privileges only to the
+    absolutely necessary parts, and does not allow access to /home at all.
+
+ -- Martin Pitt <martin.pitt@ubuntu.com>  Wed, 30 Jul 2008 17:56:23 +0200
+
+gdm-guest-session (0.1) intrepid; urgency=low
+
+  * Initial release. This package provides the guest account
+    setup/cleanup/hardening infrastructure for
+    https://wiki.ubuntu.com/DesktopTeam/Specs/Intrepid/GuestAccount
+  * Stay at debhelper compat level 6 for now, to allow hardy backports.
+
+ -- Martin Pitt <martin.pitt@ubuntu.com>  Tue, 29 Jul 2008 15:22:09 +0200

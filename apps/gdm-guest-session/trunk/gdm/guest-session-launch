@@ -1,0 +1,8 @@
+#!/bin/sh
+# (C) 2008 Canonical Ltd.
+# Author: Martin Pitt <martin.pitt@ubuntu.com>
+# License: GPL v2 or later
+#
+# Convenience wrapper to lock the screen and trigger a guest session
+gnome-screensaver-command --lock || xscreensaver-command -lock || true
+gdmflexiserver -a -c 'FLEXI_XSERVER_USER :guest'

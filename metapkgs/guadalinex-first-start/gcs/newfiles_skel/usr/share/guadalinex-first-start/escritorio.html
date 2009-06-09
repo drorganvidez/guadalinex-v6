@@ -1,304 +1,49 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-<head>
-<title>Desarrollo de Guadalinex V6 - Guadalinex Forge</title>
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<meta name="description" content="Redmine" />
-<meta name="keywords" content="issue,bug,tracker" />
-<link href="/stylesheets/application.css?1234689254" media="all" rel="stylesheet" type="text/css" />
-<script src="/javascripts/prototype.js?1234689254" type="text/javascript"></script>
-<script src="/javascripts/effects.js?1234689254" type="text/javascript"></script>
-<script src="/javascripts/dragdrop.js?1234689254" type="text/javascript"></script>
-<script src="/javascripts/controls.js?1234689254" type="text/javascript"></script>
-<script src="/javascripts/application.js?1234689254" type="text/javascript"></script>
-<link href="/stylesheets/jstoolbar.css?1234689254" media="screen" rel="stylesheet" type="text/css" />
-<!--[if IE]>
-    <style type="text/css">
-      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
-      body {behavior: url(/stylesheets/csshover.htc?1234689254);}
-    </style>
-<![endif]-->
-
-<!-- page specific tags -->
-    <link href="/stylesheets/scm.css?1234689254" media="screen" rel="stylesheet" type="text/css" /></head>
-<body>
-<div id="wrapper">
-<div id="top-menu">
-    <div id="account">
-        <ul><li><a href="/my/account" class="my-account">Mi cuenta</a></li>
-<li><a href="/logout" class="logout">DesconexiÃ³n</a></li></ul>    </div>
-    <div id="loggedas">Conectado como <a href="/account/show/5">robertoc.morano</a></div>
-    <ul><li><a href="/" class="home">Inicio</a></li>
-<li><a href="/my/page" class="my-page">Mi pÃ¡gina</a></li>
-<li><a href="/projects" class="projects">Proyectos</a></li>
-<li><a href="http://www.redmine.org/guide" class="help">Ayuda</a></li></ul></div>
-      
-<div id="header">
-    <div id="quick-search">
-        <form action="/search/index/guadalinexv6" method="get">
-        <a href="/search/index/guadalinexv6" accesskey="4">BÃºsqueda</a>:
-        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
-        </form>
-        
-<select onchange="if (this.value != '') { window.location = this.value; }">
-<option selected="selected">Ir al proyecto...</option>
-<option disabled="disabled">---</option>
-
-    <option value="/projects/show/guadalinexv6?jump=attachments">Desarrollo de Guadalinex V6</option>
-    
-        
-
-</select>
-
-    </div>
-    
-    <h1>Desarrollo de Guadalinex V6</h1>
-    
-    <div id="main-menu">
-        <ul><li><a href="/projects/show/guadalinexv6" class="overview">Vistazo</a></li>
-<li><a href="/projects/activity/guadalinexv6" class="activity">Actividad</a></li>
-<li><a href="/projects/roadmap/guadalinexv6" class="roadmap">PlanificaciÃ³n</a></li>
-<li><a href="/projects/guadalinexv6/issues" class="issues">Peticiones</a></li>
-<li><a href="/projects/guadalinexv6/issues/new" accesskey="7" class="new-issue">Nueva peticiÃ³n</a></li>
-<li><a href="/projects/guadalinexv6/documents" class="documents">Documentos</a></li>
-<li><a href="/projects/list_files/guadalinexv6" class="files">Ficheros</a></li>
-<li><a href="/repositories/show/guadalinexv6" class="repository">Repositorio</a></li>
-<li><a href="/projects/settings/guadalinexv6" class="settings">ConfiguraciÃ³n</a></li></ul>
-    </div>
-</div>
-
-<div class="nosidebar" id="main">
-    <div id="sidebar">        
-        
-    </div>
-    
-    <div id="content">
-				
-        <h2>escritorio.html</h2>
-
-<div class="attachments">
-<p>
-   <span class="author">Jose Antonio MartÃ­n, 08/06/2009 13:01</span></p>
-<p><a href="/attachments/download/22/escritorio.html">Descargar</a>   <span class="size">(5 KB)</span></p>
-
-</div>
-&nbsp;
-<div class="autoscroll">
-<table class="filecontent CodeRay">
-<tbody>
-
-
-<tr><th class="line-num" id="L1">1</th><td class="line-code"><pre><span class="pp">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01//EN&quot;&quot;http://www.w3.org/TR/html4/strict.dtd&quot;&gt;</span>
-</pre></td></tr>
-
-
-<tr><th class="line-num" id="L2">2</th><td class="line-code"><pre><span class="ta">&lt;html</span> <span class="an">lang</span>=<span class="s"><span class="dl">&quot;</span><span class="k">es</span><span class="dl">&quot;</span></span><span class="ta">&gt;</span>
-</pre></td></tr>
-
-
-<tr><th class="line-num" id="L3">3</th><td class="line-code"><pre>        <span class="ta">&lt;head&gt;</span>
-</pre></td></tr>
-
-
-<tr><th class="line-num" id="L4">4</th><td class="line-code"><pre>                  <span class="ta">&lt;meta</span> <span class="an">content</span>=<span class="s"><span class="dl">&quot;</span><span class="k">text/html; charset=ISO-8859-1</span><span class="dl">&quot;</span></span> <span class="an">http-equiv</span>=<span class="s"><span class="dl">&quot;</span><span class="k">content-type</span><span class="dl">&quot;</span></span> <span class="ta">/&gt;</span>
-</pre></td></tr>
-
-
-<tr><th class="line-num" id="L5">5</th><td class="line-code"><pre>                  <span class="ta">&lt;title&gt;</span>Ayuda del escritorio Guadalinex<span class="ta">&lt;/title&gt;</span>
-</pre></td></tr>
-
-
-<tr><th class="line-num" id="L6">6</th><td class="line-code"><pre>                          <span class="ta">&lt;link</span> <span class="an">rel</span>=<span class="s"><span class="dl">&quot;</span><span class="k">stylesheet</span><span class="dl">&quot;</span></span> <span class="an">href</span>=<span class="s"><span class="dl">&quot;</span><span class="k">css/estilos.css</span><span class="dl">&quot;</span></span> <span class="an">type</span>=<span class="s"><span class="dl">&quot;</span><span class="k">text/css</span><span class="dl">&quot;</span></span> <span class="ta">/&gt;</span>
-</pre></td></tr>
-
-
-<tr><th class="line-num" id="L7">7</th><td class="line-code"><pre>
-</pre></td></tr>
-
-
-<tr><th class="line-num" id="L8">8</th><td class="line-code"><pre>                  <span class="ta">&lt;/head&gt;</span>
-</pre></td></tr>
-
-
-<tr><th class="line-num" id="L9">9</th><td class="line-code"><pre>
-</pre></td></tr>
-
-
-<tr><th class="line-num" id="L10">10</th><td class="line-code"><pre>
-</pre></td></tr>
-
-
-<tr><th class="line-num" id="L11">11</th><td class="line-code"><pre><span class="ta">&lt;BODY&gt;</span>
-</pre></td></tr>
-
-
-<tr><th class="line-num" id="L12">12</th><td class="line-code"><pre>        <span class="ta">&lt;div</span> <span class="an">id</span>=<span class="s"><span class="dl">&quot;</span><span class="k">marco</span><span class="dl">&quot;</span></span><span class="ta">&gt;</span>
-</pre></td></tr>
-
-
-<tr><th class="line-num" id="L13">13</th><td class="line-code"><pre>        <span class="ta">&lt;a</span> <span class="an">href</span>=<span class="s"><span class="dl">&quot;</span><span class="k">primer_inicio.html</span><span class="dl">&quot;</span></span><span class="ta">&gt;</span><span class="ta">&lt;div</span> <span class="an">class</span>=<span class="s"><span class="dl">&quot;</span><span class="k">logotipo</span><span class="dl">&quot;</span></span><span class="ta">&gt;</span><span class="ta">&lt;h1&gt;</span>Guadalinex v6 - Software Libre<span class="ta">&lt;/h1&gt;</span><span class="ta">&lt;/div&gt;</span><span class="ta">&lt;/a&gt;</span>
-</pre></td></tr>
-
-
-<tr><th class="line-num" id="L14">14</th><td class="line-code"><pre>
-</pre></td></tr>
-
-
-<tr><th class="line-num" id="L15">15</th><td class="line-code"><pre><span class="ta">&lt;div</span> <span class="an">id</span>=<span class="s"><span class="dl">&quot;</span><span class="k">overDiv</span><span class="dl">&quot;</span></span> <span class="an">style</span>=<span class="s"><span class="dl">&quot;</span><span class="k">position:absolute; visibility:hidden; z-index:1000;</span><span class="dl">&quot;</span></span><span class="ta">&gt;</span><span class="ta">&lt;/div&gt;</span>
-</pre></td></tr>
-
-
-<tr><th class="line-num" id="L16">16</th><td class="line-code"><pre><span class="ta">&lt;script</span> <span class="an">language</span>=<span class="s"><span class="dl">&quot;</span><span class="k">JavaScript</span><span class="dl">&quot;</span></span> <span class="an">src</span>=<span class="s"><span class="dl">&quot;</span><span class="k">js/overlib.js</span><span class="dl">&quot;</span></span><span class="ta">&gt;</span><span class="c">&lt;!-- overLIB (c) Erik Bosrup --&gt;</span><span class="ta">&lt;/script&gt;</span> 
-</pre></td></tr>
-
-
-<tr><th class="line-num" id="L17">17</th><td class="line-code"><pre>
-</pre></td></tr>
-
-
-<tr><th class="line-num" id="L18">18</th><td class="line-code"><pre>        <span class="ta">&lt;div</span> <span class="an">class</span>=<span class="s"><span class="dl">&quot;</span><span class="k">clear</span><span class="dl">&quot;</span></span><span class="ta">&gt;</span><span class="ta">&lt;/div&gt;</span>
-</pre></td></tr>
-
-
-<tr><th class="line-num" id="L19">19</th><td class="line-code"><pre>
-</pre></td></tr>
-
-
-<tr><th class="line-num" id="L20">20</th><td class="line-code"><pre>        <span class="ta">&lt;div</span> <span class="an">class</span>=<span class="s"><span class="dl">&quot;</span><span class="k">primerinicio-superior-unico</span><span class="dl">&quot;</span></span><span class="ta">&gt;</span>
-</pre></td></tr>
-
-
-<tr><th class="line-num" id="L21">21</th><td class="line-code"><pre>                <span class="ta">&lt;h3&gt;</span>Pase el ratón sobre la zona deseada para obtener más información</h3<span class="er">&gt;</span><span class="ta">&lt;br&gt;</span>
-</pre></td></tr>
-
-
-<tr><th class="line-num" id="L22">22</th><td class="line-code"><pre><span class="ta">&lt;MAP</span> <span class="an">NAME</span>=<span class="s"><span class="dl">&quot;</span><span class="k">Escritorio</span><span class="dl">&quot;</span></span><span class="ta">&gt;</span>
-</pre></td></tr>
-
-
-<tr><th class="line-num" id="L23">23</th><td class="line-code"><pre><span class="c">&lt;!-- #AUTHOR:Alfem --&gt;</span>
-</pre></td></tr>
-
-
-<tr><th class="line-num" id="L24">24</th><td class="line-code"><pre><span class="c">&lt;!-- #DATE:Mon Nov 24 19:01:53 2003 --&gt;</span>
-</pre></td></tr>
-
-
-<tr><th class="line-num" id="L25">25</th><td class="line-code"><pre><span class="ta">&lt;AREA</span> <span class="an">SHAPE</span>=<span class="av">RECT</span> <span class="an">COORDS</span>=<span class="s"><span class="dl">&quot;</span><span class="k">18,1,60,15</span><span class="dl">&quot;</span></span> <span class="an">HREF</span>=<span class="s"><span class="dl">&quot;</span><span class="k">javascript:void(0);</span><span class="dl">&quot;</span></span> <span class="an">onmouseover</span>=<span class="s"><span class="dl">&quot;</span><span class="k">return overlib('Este es el menú de aplicaciones. Guadalinex pone a su disposición una larga lista de programas para oficina, diseño, ocio, etc&lt;br</span></span><span class="er">&gt;</span><span class="ta">&lt;br&gt;</span><span class="ta">&lt;b&gt;</span><span class="ta">&lt;center&gt;</span>¡ Sin coste alguno !');&quot; onmouseout=&quot;return nd();&quot;<span class="er">&gt;</span>
-</pre></td></tr>
-
-
-<tr><th class="line-num" id="L26">26</th><td class="line-code"><pre><span class="ta">&lt;AREA</span> <span class="an">SHAPE</span>=<span class="av">RECT</span> <span class="an">COORDS</span>=<span class="s"><span class="dl">&quot;</span><span class="k">62,1,90,15</span><span class="dl">&quot;</span></span> <span class="an">HREF</span>=<span class="s"><span class="dl">&quot;</span><span class="k">javascript:void(0);</span><span class="dl">&quot;</span></span> <span class="an">onmouseover</span>=<span class="s"><span class="dl">&quot;</span><span class="k">return overlib('Este es el menú Lugares.&lt;br</span></span><span class="er">&gt;</span><span class="ta">&lt;br&gt;</span>Puede encontrar accesos directos a carpetas frecuentes y archivos abiertos recientemente.');&quot; onmouseout=&quot;return nd();&quot;<span class="er">&gt;</span>
-</pre></td></tr>
-
-
-<tr><th class="line-num" id="L27">27</th><td class="line-code"><pre><span class="ta">&lt;AREA</span> <span class="an">SHAPE</span>=<span class="av">RECT</span> <span class="an">COORDS</span>=<span class="s"><span class="dl">&quot;</span><span class="k">100,1,125,15</span><span class="dl">&quot;</span></span> <span class="an">HREF</span>=<span class="s"><span class="dl">&quot;</span><span class="k">javascript:void(0);</span><span class="dl">&quot;</span></span> <span class="an">onmouseover</span>=<span class="s"><span class="dl">&quot;</span><span class="k">return overlib('Este es el menú Sistema.&lt;br</span></span><span class="er">&gt;</span><span class="ta">&lt;br&gt;</span>Aquí puede encontrar aplicaciones para modificar y personalizar la apariencia de Guadalinex , además de documentación de ayuda');&quot; onmouseout=&quot;return nd();&quot;<span class="er">&gt;</span>
-</pre></td></tr>
-
-
-<tr><th class="line-num" id="L28">28</th><td class="line-code"><pre><span class="ta">&lt;AREA</span> <span class="an">SHAPE</span>=<span class="av">RECT</span> <span class="an">COORDS</span>=<span class="s"><span class="dl">&quot;</span><span class="k">130,1,153,15</span><span class="dl">&quot;</span></span> <span class="an">HREF</span>=<span class="s"><span class="dl">&quot;</span><span class="k">javascript:void(0);</span><span class="dl">&quot;</span></span> <span class="an">onmouseover</span>=<span class="s"><span class="dl">&quot;</span><span class="k">return overlib('Lanzadores.&lt;br</span></span><span class="er">&gt;</span><span class="ta">&lt;br&gt;</span>Podemos crear lanzadores de las aplicaciones para poder acceder a ellas de forma más cómoda y sencilla');&quot; onmouseout=&quot;return nd();&quot;<span class="er">&gt;</span>
-</pre></td></tr>
-
-
-<tr><th class="line-num" id="L29">29</th><td class="line-code"><pre><span class="ta">&lt;AREA</span> <span class="an">SHAPE</span>=<span class="av">RECT</span> <span class="an">COORDS</span>=<span class="s"><span class="dl">&quot;</span><span class="k">475,1,505,15</span><span class="dl">&quot;</span></span> <span class="an">HREF</span>=<span class="s"><span class="dl">&quot;</span><span class="k">javascript:void(0);</span><span class="dl">&quot;</span></span> <span class="an">onmouseover</span>=<span class="s"><span class="dl">&quot;</span><span class="k">return overlib('Área de notificaciones.&lt;br</span></span><span class="er">&gt;</span><span class="ta">&lt;br&gt;</span>En este área aparecen avisos de las aplicaciones al usuario');&quot; onmouseout=&quot;return nd();&quot;<span class="er">&gt;</span>
-</pre></td></tr>
-
-
-<tr><th class="line-num" id="L30">30</th><td class="line-code"><pre><span class="ta">&lt;AREA</span> <span class="an">SHAPE</span>=<span class="av">RECT</span> <span class="an">COORDS</span>=<span class="s"><span class="dl">&quot;</span><span class="k">510,1,520,15</span><span class="dl">&quot;</span></span> <span class="an">HREF</span>=<span class="s"><span class="dl">&quot;</span><span class="k">javascript:void(0);</span><span class="dl">&quot;</span></span> <span class="an">onmouseover</span>=<span class="s"><span class="dl">&quot;</span><span class="k">return overlib('Este botón controla el volumen del altavoz');</span><span class="dl">&quot;</span></span> <span class="an">onmouseout</span>=<span class="s"><span class="dl">&quot;</span><span class="k">return nd();</span><span class="dl">&quot;</span></span><span class="ta">&gt;</span>
-</pre></td></tr>
-
-
-<tr><th class="line-num" id="L31">31</th><td class="line-code"><pre><span class="ta">&lt;AREA</span> <span class="an">SHAPE</span>=<span class="av">RECT</span> <span class="an">COORDS</span>=<span class="s"><span class="dl">&quot;</span><span class="k">525,1,595,15</span><span class="dl">&quot;</span></span> <span class="an">HREF</span>=<span class="s"><span class="dl">&quot;</span><span class="k">javascript:void(0);</span><span class="dl">&quot;</span></span> <span class="an">onmouseover</span>=<span class="s"><span class="dl">&quot;</span><span class="k">return overlib('Fecha y hora');</span><span class="dl">&quot;</span></span> <span class="an">onmouseout</span>=<span class="s"><span class="dl">&quot;</span><span class="k">return nd();</span><span class="dl">&quot;</span></span> <span class="ta">&gt;</span>
-</pre></td></tr>
-
-
-<tr><th class="line-num" id="L32">32</th><td class="line-code"><pre><span class="ta">&lt;AREA</span> <span class="an">SHAPE</span>=<span class="av">RECT</span> <span class="an">COORDS</span>=<span class="s"><span class="dl">&quot;</span><span class="k">600,1,624,15</span><span class="dl">&quot;</span></span> <span class="an">HREF</span>=<span class="s"><span class="dl">&quot;</span><span class="k">javascript:void(0);</span><span class="dl">&quot;</span></span> <span class="an">onmouseover</span>=<span class="s"><span class="dl">&quot;</span><span class="k">return overlib('Usuario que ha entrado en el sistema');</span><span class="dl">&quot;</span></span> <span class="an">onmouseout</span>=<span class="s"><span class="dl">&quot;</span><span class="k">return nd();</span><span class="dl">&quot;</span></span> <span class="ta">&gt;</span>
-</pre></td></tr>
-
-
-<tr><th class="line-num" id="L33">33</th><td class="line-code"><pre><span class="ta">&lt;AREA</span> <span class="an">SHAPE</span>=<span class="av">RECT</span> <span class="an">COORDS</span>=<span class="s"><span class="dl">&quot;</span><span class="k">625,1,639,15</span><span class="dl">&quot;</span></span> <span class="an">HREF</span>=<span class="s"><span class="dl">&quot;</span><span class="k">javascript:void(0);</span><span class="dl">&quot;</span></span> <span class="an">onmouseover</span>=<span class="s"><span class="dl">&quot;</span><span class="k">return overlib('Apagar el equipo. También puede reiniciar el equipo o la sesión');</span><span class="dl">&quot;</span></span> <span class="an">onmouseout</span>=<span class="s"><span class="dl">&quot;</span><span class="k">return nd();</span><span class="dl">&quot;</span></span> <span class="ta">&gt;</span>
-</pre></td></tr>
-
-
-<tr><th class="line-num" id="L34">34</th><td class="line-code"><pre><span class="ta">&lt;AREA</span> <span class="an">SHAPE</span>=<span class="av">RECT</span> <span class="an">COORDS</span>=<span class="s"><span class="dl">&quot;</span><span class="k">600,500,625,511</span><span class="dl">&quot;</span></span> <span class="an">HREF</span>=<span class="s"><span class="dl">&quot;</span><span class="k">javascript:void(0);</span><span class="dl">&quot;</span></span> <span class="an">onmouseover</span>=<span class="s"><span class="dl">&quot;</span><span class="k">return overlib('Con Guadalinex dispone de varios escritorios. Haga click sobre estos cuadros para cambiar a otra pantalla virtual. Las aplicaciones que abrió permanecerán donde las dejó aunque cambie a otra pantalla.');</span><span class="dl">&quot;</span></span> <span class="an">onmouseout</span>=<span class="s"><span class="dl">&quot;</span><span class="k">return nd();</span><span class="dl">&quot;</span></span><span class="ta">&gt;</span>
-</pre></td></tr>
-
-
-<tr><th class="line-num" id="L35">35</th><td class="line-code"><pre><span class="ta">&lt;AREA</span> <span class="an">SHAPE</span>=<span class="av">RECT</span> <span class="an">COORDS</span>=<span class="s"><span class="dl">&quot;</span><span class="k">15,20,90,55</span><span class="dl">&quot;</span></span> <span class="an">HREF</span>=<span class="s"><span class="dl">&quot;</span><span class="k">javascript:void(0);</span><span class="dl">&quot;</span></span> <span class="an">onmouseover</span>=<span class="s"><span class="dl">&quot;</span><span class="k">return overlib('Puede ver el contenido de todos los discos que se encuentren en el equipo así como las carpetas remotas a las que tenga acceso.');</span><span class="dl">&quot;</span></span> <span class="an">onmouseout</span>=<span class="s"><span class="dl">&quot;</span><span class="k">return nd();</span><span class="dl">&quot;</span></span> <span class="ta">&gt;</span>
-</pre></td></tr>
-
-
-<tr><th class="line-num" id="L36">36</th><td class="line-code"><pre><span class="ta">&lt;AREA</span> <span class="an">SHAPE</span>=<span class="av">RECT</span> <span class="an">COORDS</span>=<span class="s"><span class="dl">&quot;</span><span class="k">15,56,90,110</span><span class="dl">&quot;</span></span> <span class="an">HREF</span>=<span class="s"><span class="dl">&quot;</span><span class="k">javascript:void(0);</span><span class="dl">&quot;</span></span> <span class="an">onmouseover</span>=<span class="s"><span class="dl">&quot;</span><span class="k">return overlib('En esta carpeta encontrará todos los documentos que realice o se descargue');</span><span class="dl">&quot;</span></span> <span class="an">onmouseout</span>=<span class="s"><span class="dl">&quot;</span><span class="k">return nd();</span><span class="dl">&quot;</span></span> <span class="ta">&gt;</span>
-</pre></td></tr>
-
-
-<tr><th class="line-num" id="L37">37</th><td class="line-code"><pre><span class="ta">&lt;AREA</span> <span class="an">SHAPE</span>=<span class="av">RECT</span> <span class="an">COORDS</span>=<span class="s"><span class="dl">&quot;</span><span class="k">15,111,90,165</span><span class="dl">&quot;</span></span> <span class="an">HREF</span>=<span class="s"><span class="dl">&quot;</span><span class="k">javascript:void(0);</span><span class="dl">&quot;</span></span> <span class="an">onmouseover</span>=<span class="s"><span class="dl">&quot;</span><span class="k">return overlib('Manual de uso de Guadalinex');</span><span class="dl">&quot;</span></span> <span class="an">onmouseout</span>=<span class="s"><span class="dl">&quot;</span><span class="k">return nd();</span><span class="dl">&quot;</span></span> <span class="ta">&gt;</span>
-</pre></td></tr>
-
-
-<tr><th class="line-num" id="L38">38</th><td class="line-code"><pre><span class="ta">&lt;AREA</span> <span class="an">SHAPE</span>=<span class="av">RECT</span> <span class="an">COORDS</span>=<span class="s"><span class="dl">&quot;</span><span class="k">15,156,90,285</span><span class="dl">&quot;</span></span> <span class="an">HREF</span>=<span class="s"><span class="dl">&quot;</span><span class="k">javascript:void(0);</span><span class="dl">&quot;</span></span> <span class="an">onmouseover</span>=<span class="s"><span class="dl">&quot;</span><span class="k">return overlib('Enlaces a las aplicaciones más frecuentes como son el navegador web y el procesador de textos');</span><span class="dl">&quot;</span></span> <span class="an">onmouseout</span>=<span class="s"><span class="dl">&quot;</span><span class="k">return nd();</span><span class="dl">&quot;</span></span> <span class="ta">&gt;</span>
-</pre></td></tr>
-
-
-<tr><th class="line-num" id="L39">39</th><td class="line-code"><pre><span class="ta">&lt;AREA</span> <span class="an">SHAPE</span>=<span class="av">RECT</span> <span class="an">COORDS</span>=<span class="s"><span class="dl">&quot;</span><span class="k">630,500,639,511</span><span class="dl">&quot;</span></span> <span class="an">HREF</span>=<span class="s"><span class="dl">&quot;</span><span class="k">javascript:void(0);</span><span class="dl">&quot;</span></span> <span class="an">onmouseover</span>=<span class="s"><span class="dl">&quot;</span><span class="k">return overlib('Aquí estarán los archivos que borre');</span><span class="dl">&quot;</span></span> <span class="an">onmouseout</span>=<span class="s"><span class="dl">&quot;</span><span class="k">return nd();</span><span class="dl">&quot;</span></span><span class="ta">&gt;</span>
-</pre></td></tr>
-
-
-<tr><th class="line-num" id="L40">40</th><td class="line-code"><pre><span class="ta">&lt;AREA</span> <span class="an">SHAPE</span>=<span class="av">RECT</span> <span class="an">COORDS</span>=<span class="s"><span class="dl">&quot;</span><span class="k">5,500,12,511</span><span class="dl">&quot;</span></span> <span class="an">HREF</span>=<span class="s"><span class="dl">&quot;</span><span class="k">javascript:void(0);</span><span class="dl">&quot;</span></span> <span class="an">onmouseover</span>=<span class="s"><span class="dl">&quot;</span><span class="k">return overlib('Muestra el escritorio minimizando todas las ventanas de aplicaciones abiertas');</span><span class="dl">&quot;</span></span> <span class="an">onmouseout</span>=<span class="s"><span class="dl">&quot;</span><span class="k">return nd();</span><span class="dl">&quot;</span></span><span class="ta">&gt;</span>
-</pre></td></tr>
-
-
-<tr><th class="line-num" id="L41">41</th><td class="line-code"><pre><span class="ta">&lt;AREA</span> <span class="an">SHAPE</span>=<span class="av">RECT</span> <span class="an">COORDS</span>=<span class="s"><span class="dl">&quot;</span><span class="k">90,30,625,471</span><span class="dl">&quot;</span></span> <span class="an">HREF</span>=<span class="s"><span class="dl">&quot;</span><span class="k">javascript:void(0);</span><span class="dl">&quot;</span></span> <span class="an">onmouseover</span>=<span class="s"><span class="dl">&quot;</span><span class="k">return overlib('Este es el escritorio de Guadalinex. Acerque el cursor a otros elementos para ver una descripción de sus funciones');</span><span class="dl">&quot;</span></span> <span class="an">onmouseout</span>=<span class="s"><span class="dl">&quot;</span><span class="k">return nd();</span><span class="dl">&quot;</span></span><span class="ta">&gt;</span>
-</pre></td></tr>
-
-
-<tr><th class="line-num" id="L42">42</th><td class="line-code"><pre><span class="ta">&lt;AREA</span> <span class="an">SHAPE</span>=<span class="av">CIRCLE</span> <span class="an">COORDS</span>=<span class="s"><span class="dl">&quot;</span><span class="k">585,448,3</span><span class="dl">&quot;</span></span> <span class="an">HREF</span>=<span class="s"><span class="dl">&quot;</span><span class="k">javascript:void(0);</span><span class="dl">&quot;</span></span> <span class="an">onmouseover</span>=<span class="s"><span class="dl">&quot;</span><span class="k">return overlib('¡Enhorabuena! ¡Ha encontrado un área secreta!  ;-)');</span><span class="dl">&quot;</span></span> <span class="an">onmouseout</span>=<span class="s"><span class="dl">&quot;</span><span class="k">return nd();</span><span class="dl">&quot;</span></span><span class="ta">&gt;</span> 
-</pre></td></tr>
-
-
-<tr><th class="line-num" id="L43">43</th><td class="line-code"><pre><span class="ta">&lt;AREA</span> <span class="an">SHAPE</span>=<span class="av">RECT</span> <span class="an">COORDS</span>=<span class="s"><span class="dl">&quot;</span><span class="k">22,500,580,511</span><span class="dl">&quot;</span></span> <span class="an">HREF</span>=<span class="s"><span class="dl">&quot;</span><span class="k">javascript:void(0);</span><span class="dl">&quot;</span></span> <span class="an">onmouseover</span>=<span class="s"><span class="dl">&quot;</span><span class="k">return overlib('Barra de tareas. Podrá acceder a las aplicaciones abiertas que aparecerán en esta barra.');</span><span class="dl">&quot;</span></span> <span class="an">onmouseout</span>=<span class="s"><span class="dl">&quot;</span><span class="k">return nd();</span><span class="dl">&quot;</span></span><span class="ta">&gt;</span>
-</pre></td></tr>
-
-
-<tr><th class="line-num" id="L44">44</th><td class="line-code"><pre><span class="ta">&lt;AREA</span> <span class="an">SHAPE</span>=<span class="av">default</span> <span class="an">HREF</span>=<span class="s"><span class="dl">&quot;</span><span class="k">http://www.guadalinex.org</span><span class="dl">&quot;</span></span><span class="ta">&gt;</span>
-</pre></td></tr>
-
-
-<tr><th class="line-num" id="L45">45</th><td class="line-code"><pre><span class="ta">&lt;/MAP&gt;</span>
-</pre></td></tr>
-
-
-<tr><th class="line-num" id="L46">46</th><td class="line-code"><pre><span class="ta">&lt;img</span> <span class="an">src</span>=<span class="av">escritorio640x480.png</span> <span class="an">usemap</span>=<span class="er">#</span><span class="av">Escritorio</span> <span class="an">border</span>=<span class="av">0</span><span class="ta">&gt;</span>
-</pre></td></tr>
-
-
-<tr><th class="line-num" id="L47">47</th><td class="line-code"><pre><span class="ta">&lt;/div&gt;</span>
-</pre></td></tr>
-
-
-<tr><th class="line-num" id="L48">48</th><td class="line-code"><pre><span class="ta">&lt;/div&gt;</span>
-</pre></td></tr>
-
-
-<tr><th class="line-num" id="L49">49</th><td class="line-code"><pre><span class="ta">&lt;/BODY&gt;</span>
-</pre></td></tr>
-
-
-</tbody>
-</table>
-</div>
-
-
-
-    </div>
-</div>
-
-<div id="ajax-indicator" style="display:none;"><span>Cargando...</span></div>
-	
-<div id="footer">
-    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2008 Jean-Philippe Lang
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN""http://www.w3.org/TR/html4/strict.dtd">
+<html lang="es">
+	<head>
+		  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type" />
+		  <title>Ayuda del escritorio Guadalinex</title>
+			  <link rel="stylesheet" href="css/estilos.css" type="text/css" />
+
+		  </head>
+
+
+<BODY>
+	<div id="marco">
+	<a href="primer_inicio.html"><div class="logotipo"><h1>Guadalinex v6 - Software Libre</h1></div></a>
+
+<div id="overDiv" style="position:absolute; visibility:hidden; z-index:1000;"></div>
+<script language="JavaScript" src="js/overlib.js"><!-- overLIB (c) Erik Bosrup --></script> 
+
+	<div class="clear"></div>
+
+	<div class="primerinicio-superior-unico">
+		<h3>Pase el ratón sobre la zona deseada para obtener más información</h3><br>
+<MAP NAME="Escritorio">
+<!-- #AUTHOR:Alfem -->
+<!-- #DATE:Mon Nov 24 19:01:53 2003 -->
+<AREA SHAPE=RECT COORDS="18,1,60,15" HREF="javascript:void(0);" onmouseover="return overlib('Este es el menú de aplicaciones. Guadalinex pone a su disposición una larga lista de programas para oficina, diseño, ocio, etc<br><br><b><center>¡ Sin coste alguno !');" onmouseout="return nd();">
+<AREA SHAPE=RECT COORDS="62,1,90,15" HREF="javascript:void(0);" onmouseover="return overlib('Este es el menú Lugares.<br><br>Puede encontrar accesos directos a carpetas frecuentes y archivos abiertos recientemente.');" onmouseout="return nd();">
+<AREA SHAPE=RECT COORDS="100,1,125,15" HREF="javascript:void(0);" onmouseover="return overlib('Este es el menú Sistema.<br><br>Aquí puede encontrar aplicaciones para modificar y personalizar la apariencia de Guadalinex , además de documentación de ayuda');" onmouseout="return nd();">
+<AREA SHAPE=RECT COORDS="130,1,153,15" HREF="javascript:void(0);" onmouseover="return overlib('Lanzadores.<br><br>Podemos crear lanzadores de las aplicaciones para poder acceder a ellas de forma más cómoda y sencilla');" onmouseout="return nd();">
+<AREA SHAPE=RECT COORDS="475,1,505,15" HREF="javascript:void(0);" onmouseover="return overlib('Área de notificaciones.<br><br>En este área aparecen avisos de las aplicaciones al usuario');" onmouseout="return nd();">
+<AREA SHAPE=RECT COORDS="510,1,520,15" HREF="javascript:void(0);" onmouseover="return overlib('Este botón controla el volumen del altavoz');" onmouseout="return nd();">
+<AREA SHAPE=RECT COORDS="525,1,595,15" HREF="javascript:void(0);" onmouseover="return overlib('Fecha y hora');" onmouseout="return nd();" >
+<AREA SHAPE=RECT COORDS="600,1,624,15" HREF="javascript:void(0);" onmouseover="return overlib('Usuario que ha entrado en el sistema');" onmouseout="return nd();" >
+<AREA SHAPE=RECT COORDS="625,1,639,15" HREF="javascript:void(0);" onmouseover="return overlib('Apagar el equipo. También puede reiniciar el equipo o la sesión');" onmouseout="return nd();" >
+<AREA SHAPE=RECT COORDS="600,500,625,511" HREF="javascript:void(0);" onmouseover="return overlib('Con Guadalinex dispone de varios escritorios. Haga click sobre estos cuadros para cambiar a otra pantalla virtual. Las aplicaciones que abrió permanecerán donde las dejó aunque cambie a otra pantalla.');" onmouseout="return nd();">
+<AREA SHAPE=RECT COORDS="15,20,90,55" HREF="javascript:void(0);" onmouseover="return overlib('Puede ver el contenido de todos los discos que se encuentren en el equipo así como las carpetas remotas a las que tenga acceso.');" onmouseout="return nd();" >
+<AREA SHAPE=RECT COORDS="15,56,90,110" HREF="javascript:void(0);" onmouseover="return overlib('En esta carpeta encontrará todos los documentos que realice o se descargue');" onmouseout="return nd();" >
+<AREA SHAPE=RECT COORDS="15,111,90,165" HREF="javascript:void(0);" onmouseover="return overlib('Manual de uso de Guadalinex');" onmouseout="return nd();" >
+<AREA SHAPE=RECT COORDS="15,156,90,285" HREF="javascript:void(0);" onmouseover="return overlib('Enlaces a las aplicaciones más frecuentes como son el navegador web y el procesador de textos');" onmouseout="return nd();" >
+<AREA SHAPE=RECT COORDS="630,500,639,511" HREF="javascript:void(0);" onmouseover="return overlib('Aquí estarán los archivos que borre');" onmouseout="return nd();">
+<AREA SHAPE=RECT COORDS="5,500,12,511" HREF="javascript:void(0);" onmouseover="return overlib('Muestra el escritorio minimizando todas las ventanas de aplicaciones abiertas');" onmouseout="return nd();">
+<AREA SHAPE=RECT COORDS="90,30,625,471" HREF="javascript:void(0);" onmouseover="return overlib('Este es el escritorio de Guadalinex. Acerque el cursor a otros elementos para ver una descripción de sus funciones');" onmouseout="return nd();">
+<AREA SHAPE=CIRCLE COORDS="585,448,3" HREF="javascript:void(0);" onmouseover="return overlib('¡Enhorabuena! ¡Ha encontrado un área secreta!  ;-)');" onmouseout="return nd();"> 
+<AREA SHAPE=RECT COORDS="22,500,580,511" HREF="javascript:void(0);" onmouseover="return overlib('Barra de tareas. Podrá acceder a las aplicaciones abiertas que aparecerán en esta barra.');" onmouseout="return nd();">
+<AREA SHAPE=default HREF="http://www.guadalinex.org">
+</MAP>
+<img src=escritorio640x480.png usemap=#Escritorio border=0>
 </div>
 </div>
-
-</body>
-</html>
+</BODY>

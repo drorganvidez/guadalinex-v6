@@ -1,0 +1,21 @@
+Source: gdm-guest-session
+Section: gnome
+Priority: optional
+Build-Depends: cdbs, debhelper (>= 6)
+Maintainer: Martin Pitt <martin.pitt@ubuntu.com>
+Standards-Version: 3.8.0
+Vcs-Bzr: https://code.launchpad.net/~pitti/+junk/gdm-guest-session
+
+Package: gdm-guest-session
+Architecture: all
+Depends: gdm (>= 2.20.7-0ubuntu3), passwd, apparmor
+Description: gdm extension for guest session
+ This package adds support for starting a guest session through gdm's
+ flexiserver, which any already logged in user can launch.
+ .
+ It creates a temporary guest account with a temporary home directory and
+ some restricted privileges (such as not being able to read any home 
+ directory or do any permanent change to the system).
+ .
+ Just call /usr/share/gdm/guest-session/guest-session-launch to start the
+ session.

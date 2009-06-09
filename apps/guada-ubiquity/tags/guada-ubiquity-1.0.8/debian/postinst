@@ -1,0 +1,21 @@
+#!/bin/sh
+
+set -e
+
+#DEBHELPER#
+
+dpkg-divert --package guada-ubiquity --add --rename \
+         --divert /usr/lib/ubiquity/ubiquity/frontend/__init__.py.real /usr/lib/ubiquity/ubiquity/frontend/__init__.py
+ln -fs /usr/lib/guada-ubiquity/ubiquity/frontend/__init__.py /usr/lib/ubiquity/ubiquity/frontend/__init__.py
+
+
+DESKTOP_FILE="/usr/share/applications/ubiquity-gtkui.desktop"
+if [ "${DESKTOP_FILE}" != "$(dpkg-divert --truename ${DESKTOP_FILE})" ]; then
+    rm -f ${DESKTOP_FILE}
+    dpkg-divert --rename --remove ${DESKTOP_FILE}
+fi
+dpkg-divert --package guada-ubiquity --rename --quiet --add ${DESKTOP_FILE}
+ln -fs /usr/share/guada-ubiquity/ubiquity-guadaui.desktop ${DESKTOP_FILE}
+
+
+echo "X_LOADTEMPLATEFILE /usr/share/guada-ubiquity/templates/ubiquity.templates" | debconf-communicate

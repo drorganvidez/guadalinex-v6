@@ -1,0 +1,25 @@
+#! /bin/sh
+
+PREREQ=""
+DESCRIPTION="Fixing Gru path at .desktop..."
+
+. /scripts/casper-functions
+
+prereqs()
+{
+       echo "$PREREQ"
+}
+
+case $1 in
+# get pre-requisites
+prereqs)
+       prereqs
+       exit 0
+       ;;
+esac
+
+
+if [ -f /root/usr/share/applications/gru.desktop ]; then
+    sed -i 's|/usr/sbin|/usr/bin|g' /root/usr/share/applications/gru.desktop
+fi
+

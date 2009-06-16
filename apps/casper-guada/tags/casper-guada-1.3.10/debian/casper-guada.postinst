@@ -1,0 +1,19 @@
+#! /bin/sh
+
+set -e
+
+update-initramfs -u
+
+dpkg-divert --package casper-guada --add --rename \
+         --divert /etc/casper.conf.real /etc/casper.conf
+ln -fs /usr/share/casper-guada/casper.conf /etc/casper.conf
+
+dpkg-divert --package casper-guada --add --rename \
+         --divert /etc/init.d/ubiquity.real /etc/init.d/ubiquity
+ln -fs /usr/share/casper-guada/ubiquity.init /etc/init.d/ubiquity
+
+dpkg-divert --package casper-guada --add --rename \
+         --divert /usr/bin/ubiquity-dm.real /usr/bin/ubiquity-dm
+ln -fs /usr/share/casper-guada/ubiquity-dm /usr/bin/ubiquity-dm
+
+#DEBHELPER#

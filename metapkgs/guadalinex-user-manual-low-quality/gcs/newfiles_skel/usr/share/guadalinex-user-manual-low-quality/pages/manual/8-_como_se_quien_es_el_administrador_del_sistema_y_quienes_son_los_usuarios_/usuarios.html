@@ -1,0 +1,191 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es"
+ lang="es" dir="ltr">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<!-- style sheet links -->
+<link rel="stylesheet" media="all" type="text/css" href="../../../css/all.css" />
+<link rel="stylesheet" media="screen" type="text/css" href="../../../css/screen.css" />
+<link rel="stylesheet" media="print" type="text/css" href="../../../css/print.css" />
+
+</head>
+<body>
+<div class="dokuwiki">
+  <div class="stylehead">
+    <div class="header">
+      <div class="logo">
+        <a href="../../../pages/manual/indice.html" name="dokuwiki__top">Guadalinex V6</a>
+        <a href="../../../pages/manual/indice.html" id="subt">Gu&iacute;a de usuario</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="wrapper">
+   <div class="left_page">
+
+
+
+<h1><a name="usuarios" id="usuarios">Usuarios</a></h1>
+<div class="level1">
+
+<p>
+ Guadalinex cuenta con la gran ventaja, al igual que otros sistemas operativos basados en Linux, de ser un sistema multiusuario, es decir, que pueden manejar el mismo ordenador varias personas. Puedes tener un solo ordenador en casa que maneje toda la familia.
+</p>
+
+<p>
+Por eso es tan importante definir una serie de cuestiones en relación a cada uno de los usuarios o grupos de usuarios que vayan a utilizar el ordenador. Estas cuestiones hacen referencia a: 
+</p>
+<ul>
+<li class="level1"><div class="li"> Cuentas de usuario: cada usuario del sistema debe tener una cuenta propia, con su nombre de usuario y su contraseña, para iniciar sesiones independientes de trabajo en el mismo ordenador.</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> Sesiones de trabajo: pueden ser personalizadas según el perfil de cada usuario.</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> Perfiles de usuario: tipos de usuarios según los privilegios que se les hayan concedido.</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> Privilegios de usuario: especifican que tareas puede hacer cada usuario.</div>
+</li>
+</ul>
+
+<p>
+<strong>1- Usuarios.</strong>
+</p>
+
+<p>
+Cada usuario, para asegurar la privacidad dentro del sistema, además de tener una cuenta propia debe pertenecer a un grupo de usuarios, y ser dueño de sus propios archivos.
+</p>
+
+<p>
+Todos los usuarios, dentro de la estructura de árbol del sistema tiene un espacio de disco duro asignado para guardar sus archivos, y este espacio es el directorio /home.
+</p>
+
+<p>
+ <strong>-Perfiles de usuarios:</strong> Vamos a hablarte ahora de los perfiles de usuario según los privilegios que tengan, y son: 
+</p>
+<ul>
+<li class="level1"><div class="li">  Administrador: se corresponde con aquel usuario o grupo de usuarios que pueden hacer tareas de administración y tienen control sobre el sistema.</div>
+</li>
+</ul>
+
+<p>
+El administrador puede convertirse en usuario Root, esto quiere decir, que cuando va a realizar alguna tarea administrativa el sistema le pide su contraseña y accede como usuario root para realizar cambios como instalación de programas, creación de usuarios, asignar contraseñas, configurar partes del sistema, etc&hellip;
+</p>
+
+<p>
+Quizás te preguntes por qué el administrador no entra al sistema como usuario root y así se evita tener que estar escribiendo la contraseña cada vez que quiera realizar una tarea de administración, pues la explicación es que el usuario root se crea por motivos de seguridad, si el administrador siempre fuera root podría cambiar partes del sistema o borrar archivos imprescindibles sin darse cuenta.
+</p>
+
+<p>
+El administrador como root es el único que puede crear nuevos usuarios o grupos de usuarios, asignarles contraseñas, eliminar esas contraseñas, instalar programas, asignar permisos a directorios y archivos, etc&hellip; 
+</p>
+<ul>
+<li class="level1"><div class="li">  Usuario del escritorio: aquel usuario o grupos de usuarios que pueden trabajar en su escritorio personal con todos los privilegios menos el de administración del sistema. </div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li">  Usuario sin privilegios: aquel usuario o grupos de usuarios cuyos privilegios son muy limitados, sólo para realizar operaciones muy básicas. Este perfil se usa para aquellos usuarios que, por ejemplo, van a usar tu ordenador durante un período corto de tiempo.</div>
+</li>
+</ul>
+
+<p>
+<strong>-Crear usuarios:</strong> para crear un usuario nuevo en tu sistema debes hacer clic en el panel superior del escritorio en el menú <strong>Sistema→Administración→Usuarios y Grupos.</strong>
+</p>
+
+<p>
+<a href="./../../../media/manual/8-_como_se_quien_es_el_administrador_del_sistema_y_quienes_son_los_usuarios/entrar_usuarios.jpg" class="media" title="manual:8-_como_se_quien_es_el_administrador_del_sistema_y_quienes_son_los_usuarios:entrar_usuarios.jpg"><img src="../../../media/manual/8-_como_se_quien_es_el_administrador_del_sistema_y_quienes_son_los_usuarios/entrar_usuarios.jpg" class="media" title="Crear usuarios" alt="Crear usuarios" /></a>
+</p>
+
+<p>
+Lo primero que tienes que hacer en la ventana que te aparece es hacer clic en el botón <em>Desbloquear</em> situada en la parte inferior de la ventana, ya verás como te pide tu contraseña para convertirte en usuario root y poder crear usuarios.
+</p>
+
+<p>
+<a href="./../../../media/manual/8-_como_se_quien_es_el_administrador_del_sistema_y_quienes_son_los_usuarios/desbloquear.jpg" class="media" title="manual:8-_como_se_quien_es_el_administrador_del_sistema_y_quienes_son_los_usuarios:desbloquear.jpg"><img src="../../../media/manual/8-_como_se_quien_es_el_administrador_del_sistema_y_quienes_son_los_usuarios/desbloquear.jpg" class="media" title="Desbloquear" alt="Desbloquear" /></a>
+</p>
+
+<p>
+Una vez que has tecleado tu contraseña vuelves a la ventana de antes, <em>Ajustes de los usuarios</em>, aquí haces clic en el botón <em>Añadir usuarios</em>, y se abre otra ventana con las siguientes pestañas: 
+</p>
+<ul>
+<li class="level1"><div class="li"> Cuenta:  en esta pestaña se crea la cuenta del nuevo usuario, y debes de rellenar tres apartados.</div>
+</li>
+</ul>
+
+<p>
+Configuración básica: datos sobre el nombre de usuario, su nombre real, y el tipo de perfil que vas a asignarle según los privilegios que quieres que tenga, es decir, administrador, usuario del escritorio, o usuario sin privilegios.
+</p>
+
+<p>
+Puedes generar la contraseña del nuevo usuario de dos maneras: a mano, escribiendo la contraseña que tu elijas para el usuario; y de forma aleatoria, donde es el sistema el que te da una contraseña al azar para tu usuario. Te recomendamos que generes la contraseña a mano, siempre será más fácil de recordar que la que genere el sistema.
+</p>
+
+<p>
+<a href="./../../../media/manual/8-_como_se_quien_es_el_administrador_del_sistema_y_quienes_son_los_usuarios/cuenta.jpg" class="media" title="manual:8-_como_se_quien_es_el_administrador_del_sistema_y_quienes_son_los_usuarios:cuenta.jpg"><img src="../../../media/manual/8-_como_se_quien_es_el_administrador_del_sistema_y_quienes_son_los_usuarios/cuenta.jpg" class="media" title="Cuenta del usuario" alt="Cuenta del usuario" /></a> 
+</p>
+<ul>
+<li class="level1"><div class="li">  Contacto:  datos personales sobre el usuario del tipo número de teléfono.</div>
+</li>
+</ul>
+
+<p>
+ <a href="./../../../media/manual/8-_como_se_quien_es_el_administrador_del_sistema_y_quienes_son_los_usuarios/contacto_usuario.jpg" class="media" title="manual:8-_como_se_quien_es_el_administrador_del_sistema_y_quienes_son_los_usuarios:contacto_usuario.jpg"><img src="../../../media/manual/8-_como_se_quien_es_el_administrador_del_sistema_y_quienes_son_los_usuarios/contacto_usuario.jpg" class="media" title="Datos de contacto" alt="Datos de contacto" /></a> 
+</p>
+<ul>
+<li class="level1"><div class="li">  Privilegios del usuario: esta pestaña te ofrece un listado de tareas administrativas para que tú elijas las que va a poder realizar ese usuario, es decir, los privilegios que le vas a conceder, sólo tienes que marcar la casilla de verificación para dar ese privilegio.</div>
+</li>
+</ul>
+
+<p>
+ <a href="./../../../media/manual/8-_como_se_quien_es_el_administrador_del_sistema_y_quienes_son_los_usuarios/privilegios_usuarios.jpg" class="media" title="manual:8-_como_se_quien_es_el_administrador_del_sistema_y_quienes_son_los_usuarios:privilegios_usuarios.jpg"><img src="../../../media/manual/8-_como_se_quien_es_el_administrador_del_sistema_y_quienes_son_los_usuarios/privilegios_usuarios.jpg" class="media" title="Privilegios del usuario" alt="Privilegios del usuario" /></a> 
+</p>
+<ul>
+<li class="level1"><div class="li">  Avanzado: de este apartado lo que más te interesa a tener en cuenta es el  directorio personal de ese usuario y el grupo principal al que pertenece.</div>
+</li>
+</ul>
+
+<p>
+ <a href="./../../../media/manual/8-_como_se_quien_es_el_administrador_del_sistema_y_quienes_son_los_usuarios/avanzado_usuario.jpg" class="media" title="manual:8-_como_se_quien_es_el_administrador_del_sistema_y_quienes_son_los_usuarios:avanzado_usuario.jpg"><img src="../../../media/manual/8-_como_se_quien_es_el_administrador_del_sistema_y_quienes_son_los_usuarios/avanzado_usuario.jpg" class="media" title="Avanzado" alt="Avanzado" /></a>
+</p>
+
+<p>
+<strong>-Modificar y borrar usuarios:</strong> para modificar usuarios tienes que seleccionarlo en la lista de usuarios que aparece en la ventana, para a continuación hacer clic en el botón <em>Propiedades</em>, donde te aparecerá la misma ventana que al crearlo, con información sobre su cuenta, datos de contacto,privilegios y configuración avanzada.
+</p>
+
+<p>
+Y para borrar algún usuario tienes que seleccionarlo en el listado y después haces clic en el botón <em>Borrar</em> situado en la parte derecha de la ventana. El sistema además te pregunta si estás seguro de borrar la cuenta de ese usuario, para así evitar que se elimine algún usuario por error.
+</p>
+
+<p>
+<a href="./../../../media/manual/8-_como_se_quien_es_el_administrador_del_sistema_y_quienes_son_los_usuarios/modificar_usuarios.jpg" class="media" title="manual:8-_como_se_quien_es_el_administrador_del_sistema_y_quienes_son_los_usuarios:modificar_usuarios.jpg"><img src="../../../media/manual/8-_como_se_quien_es_el_administrador_del_sistema_y_quienes_son_los_usuarios/modificar_usuarios.jpg" class="media" title="Modificar y borrar usuarios" alt="Modificar y borrar usuarios" /></a> 
+</p>
+<hr />
+
+<p>
+<strong>Anterior</strong>: <a href="../../manual/7-_como_manejo_y_organizo_mis_archivos_y_carpetas_/3-_descomprimir_archivos.html" class="wikilink1" title="manual:7-_como_manejo_y_organizo_mis_archivos_y_carpetas_:3-_descomprimir_archivos">3-_descomprimir_archivos</a>
+</p>
+
+<p>
+<strong>Siguiente</strong>: <a href="../../manual/8-_como_se_quien_es_el_administrador_del_sistema_y_quienes_son_los_usuarios_/grupos_de_usuarios.html" class="wikilink1" title="manual:8-_como_se_quien_es_el_administrador_del_sistema_y_quienes_son_los_usuarios_:grupos_de_usuarios">Grupos de usuarios</a> 
+</p>
+
+</div>
+</div>
+    <div class="stylefoot">
+        <div class="meta">
+            <div class="doc">Guadalinex V6: Gu&iacute;a de usuario<a href=""></a></div>
+        </div>
+    </div>
+   </div>
+  <div class="footerinc" align="center"></div>
+ </div>
+</body>
+</html>

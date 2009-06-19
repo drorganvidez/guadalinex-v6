@@ -1,0 +1,175 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es"
+ lang="es" dir="ltr">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<!-- style sheet links -->
+<link rel="stylesheet" media="all" type="text/css" href="../../../../css/all.css" />
+<link rel="stylesheet" media="screen" type="text/css" href="../../../../css/screen.css" />
+<link rel="stylesheet" media="print" type="text/css" href="../../../../css/print.css" />
+
+</head>
+<body>
+<div class="dokuwiki">
+  <div class="stylehead">
+    <div class="header">
+      <div class="logo">
+        <a href="../../../../pages/manual/indice.html" name="dokuwiki__top">Guadalinex V6</a>
+        <a href="../../../../pages/manual/indice.html" id="subt">Gu&iacute;a de usuario</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="wrapper">
+   <div class="left_page">
+
+
+
+<h1><a name="las_consultas" id="las_consultas">5- Las consultas</a></h1>
+<div class="level1">
+
+<p>
+ En nuestra base de datos, las consultas constituyen un elemento muy importante y útil dentro del proceso, ya que son las preguntas que le hacemos al programa para recavar la información concreta que nos hace falta dentro de los datos contenidos en las tablas. Puede decirse que las consultas es una de las finalidades de una base de datos.
+</p>
+
+<p>
+El apartado de las consultas también cuenta con un asistente que te facilita las búsquedas. Para utilizarlo, puedes hacer clic en el cuadro llamado <em>Base de datos</em> en el botón de <em>Consultas</em>, y selecciona la opción <em>Usar el asistente para crear consulta</em>.
+</p>
+
+<p>
+<a href="./../../media/manual/abrir_consultas.jpg" class="media" title="manual:abrir_consultas.jpg"><img src="../../../../media/manual/abrir_consultas.jpg" class="media" title="Asistente para consultas" alt="Asistente para consultas" /></a>
+</p>
+
+<p>
+Este asistente de las consultas te guía a través de 8 pasos o ventanas, y según las opciones que vayas escogiendo puede que no utilices los 8 pasos, que algunos no te aparezcan activos.
+</p>
+
+<p>
+-1ª ventana: Selección de campo.
+</p>
+
+<p>
+Tienes que seleccionar los campos de aquellas tablas sobre los que te interese realizar una consulta. La forma de seleccionarlos es igual a como te enseñamos en las tablas, haciendo doble clic sobre el campo en cuestión, y de esta manera, el campo pasa del cuadro de los <em>Campos disponibles</em>, al cuadro de los <em>Campos de la consulta</em>.
+</p>
+
+<p>
+<a href="./../../media/manual/asistente_consultas1.jpg" class="media" title="manual:asistente_consultas1.jpg"><img src="../../../../media/manual/asistente_consultas1.jpg" class="media" title="Asistente para consultas" alt="Asistente para consultas" /></a>
+</p>
+
+<p>
+ -2ª ventana: Orden de clasificación.
+</p>
+
+<p>
+Hace referencia al orden en el que quieres que aparezcan los campos en los resultados de la consulta. Los puedes ordenar también de manera ascendente o descendente.
+</p>
+
+<p>
+<a href="./../../media/manual/asistente_consultas2.jpg" class="media" title="manual:asistente_consultas2.jpg"><img src="../../../../media/manual/asistente_consultas2.jpg" class="media" title="Asistente para consultas" alt="Asistente para consultas" /></a>
+</p>
+
+<p>
+ -3ª ventana: Condiciones de búsqueda.
+</p>
+
+<p>
+Las condiciones de la búsqueda es la parte más importante de todos los pasos, ya que definen las características que tienen que tener las relaciones que estableces entre los campos de los que quieres sacar información. Estas relaciones que creas entre los campos pueden ser: es igual a, no es igual a, es menor que, es mayor que, es igual o menor que, es igual o mayor que, como.
+</p>
+
+<p>
+Tienes que especificar en esta ventana el campo elegido, la condición y el valor. Te ponemos un ejemplo para que lo entiendas mejor.
+</p>
+<ul>
+<li class="level1"><div class="li">  Campo: Nombre del empleado.</div>
+</li>
+<li class="level1"><div class="li">  Condición: es igual a.</div>
+</li>
+<li class="level1"><div class="li">  Valor: Manuel</div>
+</li>
+</ul>
+
+<p>
+  Traducido a un lenguaje en el que nos entendamos todos, esto quiere decir, que el programa va a realizar una búsqueda para ofrecerte como resultado todos aquellos registros en los que el nombre del empleado sea Manuel, es decir, va a recopilar a todos los empleados que se llamen Manuel en esa empresa.
+</p>
+
+<p>
+<a href="./../../media/manual/asistente_consultas3.jpg" class="media" title="manual:asistente_consultas3.jpg"><img src="../../../../media/manual/asistente_consultas3.jpg" class="media" title="Asistente para consultas" alt="Asistente para consultas" /></a>
+</p>
+
+<p>
+ -4ª ventana: Detalle o resumen.
+</p>
+
+<p>
+Hace referencia al modo en el que prefieres obtener los resultados, que puede ser: 
+</p>
+<ul>
+<li class="level1"><div class="li"> Consulta detallada: que te enseña todos los resultados de la consulta.</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> Consulta resumida: muestra sólo los resultados de las funciones que nosotros hayamos agregado, por ejemplo, que te muestre sólo la suma de los resultados, el promedio, el máximo, o el mínimo.</div>
+</li>
+</ul>
+
+<p>
+ <a href="./../../media/manual/asistente_consultas4.jpg" class="media" title="manual:asistente_consultas4.jpg"><img src="../../../../media/manual/asistente_consultas4.jpg" class="media" title="Asistente para consultas" alt="Asistente para consultas" /></a>
+</p>
+
+<p>
+ -5ª y 6ª ventana: Agrupación y condiciones de agrupación.
+</p>
+
+<p>
+En el caso de que en el paso anterior utilizaras la opción de consulta resumida, en estas dos ventanas seleccionas los campos a los que quieres que se le aplique la función, y las condiciones para cada uno de esas funciones. Por ejemplo, puedes enfocar la consulta de manera que el resultado sea la suma de determinados campos, y que ese valor de la suma sea menor que 45.
+</p>
+
+<p>
+-7ª ventana: Alias.
+</p>
+
+<p>
+En esta ventana puedes ponerle otro nombre más corto o diferente a los campos de las tablas sobre las que has realizado la consulta.
+</p>
+
+<p>
+<a href="./../../media/manual/asistente_consultas7.jpg" class="media" title="manual:asistente_consultas7.jpg"><img src="../../../../media/manual/asistente_consultas7.jpg" class="media" title="Asistente para consultas" alt="Asistente para consultas" /></a>
+</p>
+
+<p>
+ -8ª ventana: Información general.
+</p>
+
+<p>
+Resumen de todas las opciones que hemos elegido en nuestra consulta, y también debes escribir el nombre que quieres darle a esa consulta para diferenciarla de las demás que realices.
+</p>
+
+<p>
+<a href="./../../media/manual/asistente_consultas8.jpg" class="media" title="manual:asistente_consultas8.jpg"><img src="../../../../media/manual/asistente_consultas8.jpg" class="media" title="Asistente para consultas" alt="Asistente para consultas" /></a> 
+</p>
+<hr />
+
+<p>
+<strong>Anterior</strong>: <a href="../../../manual/9-_que_de_cosas_puedo_hacer/oficina/4-_las_tablas.html" class="wikilink1" title="manual:9-_que_de_cosas_puedo_hacer:oficina:4-_las_tablas">4 - Las tablas</a>
+</p>
+
+<p>
+<strong>Sgiuente</strong>: <a href="../../../manual/9-_que_de_cosas_puedo_hacer/oficina/6-_los_formularios.html" class="wikilink1" title="manual:9-_que_de_cosas_puedo_hacer:oficina:6-_los_formularios">6 - Los formularios</a> 
+</p>
+
+</div>
+</div>
+    <div class="stylefoot">
+        <div class="meta">
+            <div class="doc">Guadalinex V6: Gu&iacute;a de usuario<a href=""></a></div>
+        </div>
+    </div>
+   </div>
+  <div class="footerinc" align="center"></div>
+ </div>
+</body>
+</html>

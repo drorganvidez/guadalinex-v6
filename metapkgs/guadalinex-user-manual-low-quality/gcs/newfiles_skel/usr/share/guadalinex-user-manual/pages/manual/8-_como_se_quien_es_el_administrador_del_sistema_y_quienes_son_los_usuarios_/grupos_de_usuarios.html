@@ -1,0 +1,111 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es"
+ lang="es" dir="ltr">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<!-- style sheet links -->
+<link rel="stylesheet" media="all" type="text/css" href="../../../css/all.css" />
+<link rel="stylesheet" media="screen" type="text/css" href="../../../css/screen.css" />
+<link rel="stylesheet" media="print" type="text/css" href="../../../css/print.css" />
+
+</head>
+<body>
+<div class="dokuwiki">
+  <div class="stylehead">
+    <div class="header">
+      <div class="logo">
+        <a href="../../../pages/manual/indice.html" name="dokuwiki__top">Guadalinex V6</a>
+        <a href="../../../pages/manual/indice.html" id="subt">Gu&iacute;a de usuario</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="wrapper">
+   <div class="left_page">
+
+
+
+<h1><a name="grupos_de_usuarios" id="grupos_de_usuarios">Grupos de Usuarios</a></h1>
+<div class="level1">
+
+<p>
+ Los grupos son conjuntos de usuarios que tienen los mismos privilegios sobre el sistema concedidos por el administrador.
+</p>
+
+<p>
+El sistema te da por defecto una serie de grupos ya creados que tienen privilegios sobre determinados elementos, para que si quieres hacer uso de ellos sólo tengas que ir añadiendo usuarios a estos grupos predefinidos.
+</p>
+
+<p>
+Cuando instalas Guadalinex se crea automáticamente un usuario que pertenece al grupo <em>Users</em> predefinido por el sistema, pero cuando después vas creando usuarios se genera a la misma vez un grupo nuevo que lleva el mismo nombre que el del usuario. Por ejemplo, si creas un usuario con el nombre de <em>Carlos</em>, el sistema automáticamente crea también un grupo nuevo de usuarios llamado <em>Carlos</em>.
+</p>
+
+<p>
+Aunque existen varias formas de agrupar a los usuarios en Guadalinex, te recomendamos que utilices esta fórmula en la que cada usuario tiene su propio grupo principal, de esta manera se conserva la confidencialidad de la información, ya que los directorios de cada usuario solo pueden ser consultados por ese usuario. Después siempre tendrás tiempo de agregar a los usuarios que quieras a un grupo para que dicho grupo tenga acceso, por ejemplo, a determinadas carpetas o archivos.
+</p>
+
+<p>
+Si sigues otras maneras de agrupar usuarios, por ejemplo, reunirlos a todos en el grupo principal denominado <em>Users</em> puedes encontrarte con el hecho de que los directorios personales de los usuarios de un grupo son accesibles a todo ese grupo, y tendrás que valorar si esa libertad de acceso es la que te conviene a ti y a los usuarios del grupo.
+</p>
+
+<p>
+ <strong>-Crear grupos principales</strong>: en primer lugar para entrar en la ventana desde la cual puedes gestionar grupos de usuarios haz clic en el panel superior del escritorio en el menú <strong>Sistema→Administración→Usuarios y Grupos</strong>. 
+</p>
+
+<p>
+<a href="./../../../media/manual/8-_como_se_quien_es_el_administrador_del_sistema_y_quienes_son_los_usuarios/entrar_usuarios.jpg" class="media" title="manual:8-_como_se_quien_es_el_administrador_del_sistema_y_quienes_son_los_usuarios:entrar_usuarios.jpg"><img src="../../../media/manual/8-_como_se_quien_es_el_administrador_del_sistema_y_quienes_son_los_usuarios/entrar_usuarios.jpg" class="media" title="Crear grupos de usuarios" alt="Crear grupos de usuarios" /></a>
+</p>
+
+<p>
+A continuación debes hacer clic en el botón <em>Desbloquear</em> y el sistema te pedirá tu contraseña para que puedas convertirte en usuario root y poder crear un grupo. 
+</p>
+
+<p>
+Sigue  haciendo clic en el botón <em>Gestionar grupos</em> y después en <em>Añadir grupo</em>. 
+</p>
+
+<p>
+<a href="./../../../media/manual/8-_como_se_quien_es_el_administrador_del_sistema_y_quienes_son_los_usuarios/modificar_usuarios.jpg" class="media" title="manual:8-_como_se_quien_es_el_administrador_del_sistema_y_quienes_son_los_usuarios:modificar_usuarios.jpg"><img src="../../../media/manual/8-_como_se_quien_es_el_administrador_del_sistema_y_quienes_son_los_usuarios/modificar_usuarios.jpg" class="media" title="Gestionar grupos" alt="Gestionar grupos" /></a>
+</p>
+
+<p>
+Se te abrirá una ventana donde tienes que rellenar datos acerca del <em>Nombre del grupo</em>, el <em>ID del grupo</em> dejas el que haya asignado el sistema por defecto, y seleccionas del listado los usuarios que quieres que formen parte del grupo marcando la casilla de verificación correspondiente.
+</p>
+
+<p>
+<a href="./../../../media/manual/8-_como_se_quien_es_el_administrador_del_sistema_y_quienes_son_los_usuarios/crear_grupo.jpg" class="media" title="manual:8-_como_se_quien_es_el_administrador_del_sistema_y_quienes_son_los_usuarios:crear_grupo.jpg"><img src="../../../media/manual/8-_como_se_quien_es_el_administrador_del_sistema_y_quienes_son_los_usuarios/crear_grupo.jpg" class="media" title="Crear grupo de usuarios" alt="Crear grupo de usuarios" /></a>
+</p>
+
+<p>
+<strong>-Modificar y borrar grupos de usuarios</strong>: Posteriormente a la creación del grupo, cuando quieras añadir o quitar a un usuario de ese grupo, tienes que hacer clic en el botón <em>Gestionar grupo</em>, seleccionas un grupo de la lista y haces clic en el botón <em>Propiedades</em>, luego sólo tienes que marcar la casilla de verificación del usuario que quieras añadir, y desmarcar la casilla del usuario que quieras eliminar del grupo.  
+</p>
+
+<p>
+Si quieres borrar grupos de usuarios tienes que hacer clic en el botón <em>Gestionar grupos</em>, seleccionar en el listado el grupo que quieres eliminar, y seguir haciendo clic en el botón <em>Borrar</em> que está colocado en la parte derecha de la ventana. Podrás observar que después de hacer esto el grupo de usuarios ya no aparece en el listado. 
+</p>
+<hr />
+
+<p>
+<strong>Anterior</strong>: <a href="../../manual/8-_como_se_quien_es_el_administrador_del_sistema_y_quienes_son_los_usuarios_/usuarios.html" class="wikilink1" title="manual:8-_como_se_quien_es_el_administrador_del_sistema_y_quienes_son_los_usuarios_:usuarios">Usuarios</a>
+</p>
+
+<p>
+<strong>Siguiente</strong>: <a href="../../manual/8-_como_se_quien_es_el_administrador_del_sistema_y_quienes_son_los_usuarios_/permisos.html" class="wikilink1" title="manual:8-_como_se_quien_es_el_administrador_del_sistema_y_quienes_son_los_usuarios_:permisos">Permisos</a> 
+</p>
+
+</div>
+</div>
+    <div class="stylefoot">
+        <div class="meta">
+            <div class="doc">Guadalinex V6: Gu&iacute;a de usuario<a href=""></a></div>
+        </div>
+    </div>
+   </div>
+  <div class="footerinc" align="center"></div>
+ </div>
+</body>
+</html>
